@@ -1,0 +1,17 @@
+.gradle
+build/
+generated_*/
+out/
+target/
+.project
+.settings/
+classes/
+.classpath
+bin
+
+gradle-wrapper.jar
+gradlew.bat
+gradlew
+
+.idea
+cache/

@@ -1,7 +1,5 @@
 rootProject.name = 'commercetools-java-sdks'
 include 'builder-renderer'
-include 'commercetools-java-base'
-include 'commercetools-java-base'
-include 'commercetools-java-client'
-include 'generated-code'
-
+include 'builder-renderer:commercetools-java-base'
+include 'builder-renderer:commercetools-java-client'
+include 'builder-renderer:generated-code'

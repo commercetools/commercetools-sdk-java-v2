@@ -42,7 +42,7 @@ public class CommercetoolsTestUtils {
     }
 
     public static String getScopes() {
-        return "manage_project:"+getProjectKey();
+        return "manage_project:"+getProjectKey() + " manage_api_clients:"+getProjectKey();
     }
 
     public static ApiRoot getApiRoot(){

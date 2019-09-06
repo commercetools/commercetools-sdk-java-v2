@@ -1,0 +1,41 @@
+package com.commercetools.models.Cart;
+
+import com.commercetools.models.Cart.CartUpdateAction;
+import com.commercetools.models.Cart.TaxCalculationMode;
+import java.lang.String;
+import com.commercetools.models.Cart.CartChangeTaxCalculationModeAction;
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Map;
+import java.time.ZonedDateTime;
+
+public final class CartChangeTaxCalculationModeActionBuilder {
+   
+   
+   private com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode;
+   
+   public CartChangeTaxCalculationModeActionBuilder taxCalculationMode( final com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode) {
+      this.taxCalculationMode = taxCalculationMode;
+      return this;
+   }
+   
+   
+   public com.commercetools.models.Cart.TaxCalculationMode getTaxCalculationMode(){
+      return this.taxCalculationMode;
+   }
+
+   public CartChangeTaxCalculationModeAction build() {
+       return new CartChangeTaxCalculationModeActionImpl(taxCalculationMode);
+   }
+   
+   public static CartChangeTaxCalculationModeActionBuilder of() {
+      return new CartChangeTaxCalculationModeActionBuilder();
+   }
+   
+   public static CartChangeTaxCalculationModeActionBuilder of(final CartChangeTaxCalculationModeAction template) {
+      CartChangeTaxCalculationModeActionBuilder builder = new CartChangeTaxCalculationModeActionBuilder();
+      builder.taxCalculationMode = template.getTaxCalculationMode();
+      return builder;
+   }
+   
+}

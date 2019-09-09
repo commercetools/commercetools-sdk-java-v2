@@ -1,6 +1,5 @@
 package commercetools.utils;
 
-import client.middlewares.CtpOAuthMiddlewareForClientCredentialsGrant;
 import client.middlewares.HttpMiddleware;
 import client.middlewares.LoggerMiddleware;
 import com.commercetools.client.ApiRoot;
@@ -42,19 +41,12 @@ public class CommercetoolsTestUtils {
     }
 
     public static String getScopes() {
-        return "manage_project:"+getProjectKey();
+        return "manage_project:"+getProjectKey() + " manage_api_clients:"+getProjectKey();
     }
 
     public static ApiRoot getApiRoot(){
         return ApiRoot.formMiddlewares(
-                new CtpOAuthMiddlewareForClientCredentialsGrant(
-                        getClientId(),
-                        getClientSecret(),
-                        getScopes(),
-                        "https://auth.sphere.io/oauth/token",
-                        "https://auth.sphere.io/"
-                ),
-                new HttpMiddleware("https://api.sphere.io"),
+                new HttpMiddleware("https://api.sphere.io", getClientId(), getClientSecret(), getScopes(), "https://auth.sphere.io/oauth/token", "https://auth.sphere.io/"),
                 new LoggerMiddleware()
         );
     }

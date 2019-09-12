@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.commercetools'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':rmf:rmf-java-base')
+    compile project(':rmf:okhttp-client')
+    compile 'com.google.code.findbugs:jsr305:3.0.2'
+    compile 'javax.validation:validation-api:2.0.1.Final'
+    testCompile ('org.junit.jupiter:junit-jupiter-engine:5.1.0')
+    testCompile ('org.junit.jupiter:junit-jupiter-api:5.3.1') 
+}

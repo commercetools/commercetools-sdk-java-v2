@@ -1,0 +1,59 @@
+package com.commercetools.models.OrderEdit;
+
+import com.commercetools.models.OrderEdit.OrderEditUpdateAction;
+import java.lang.Boolean;
+import java.lang.Long;
+import com.commercetools.models.OrderEdit.OrderEditUpdateImpl;
+
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+import javax.annotation.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Map;
+import java.time.*;
+
+import java.io.IOException;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+@JsonDeserialize(as = OrderEditUpdateImpl.class)
+public interface OrderEditUpdate  {
+
+   
+   @NotNull
+   @JsonProperty("version")
+   public Long getVersion();
+   
+   @NotNull
+   @Valid
+   @JsonProperty("actions")
+   public List<OrderEditUpdateAction> getActions();
+   
+   @NotNull
+   @JsonProperty("dryRun")
+   public Boolean getDryRun();
+
+   public void setVersion(final Long version);
+   
+   public void setActions(final List<OrderEditUpdateAction> actions);
+   
+   public void setDryRun(final Boolean dryRun);
+   
+   public static OrderEditUpdateImpl of(){
+      return new OrderEditUpdateImpl();
+   }
+   
+
+   public static OrderEditUpdateImpl of(final OrderEditUpdate template) {
+      OrderEditUpdateImpl instance = new OrderEditUpdateImpl();
+      instance.setDryRun(template.getDryRun());
+      instance.setActions(template.getActions());
+      instance.setVersion(template.getVersion());
+      return instance;
+   }
+
+}

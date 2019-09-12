@@ -5,13 +5,27 @@ import com.commercetools.models.Common.LocalizedString;
 import com.commercetools.models.Common.LocalizedStringImpl;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.middlewares.HttpMiddleware;
-import io.vrap.rmf.base.client.middlewares.LoggerMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
 
 import java.util.UUID;
 
 public class CommercetoolsTestUtils {
+
+    private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
+    private static final ApiRoot apiRoot = ApiRoot.formMiddlewares(
+            new HttpMiddleware(
+                    "https://api.sphere.io",
+                    vrapHttpClient,
+                    new ClientCredentialsTokenSupplier(
+                            getClientId(),
+                            getClientSecret(),
+                            getScopes(),
+                            "https://auth.sphere.io/oauth/token"
+                            , vrapHttpClient
+                    )
+            )
+    );
 
     public static String randomString() {
         return "random-string-" + UUID.randomUUID().toString();
@@ -48,20 +62,6 @@ public class CommercetoolsTestUtils {
     }
 
     public static ApiRoot getApiRoot() {
-        VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
-        return ApiRoot.formMiddlewares(
-                new HttpMiddleware(
-                        "https://api.sphere.io",
-                        vrapHttpClient,
-                        new ClientCredentialsTokenSupplier(
-                                getClientId(),
-                                getClientSecret(),
-                                getScopes(),
-                                "https://auth.sphere.io/oauth/token"
-                                , vrapHttpClient
-                        )
-                ),
-                new LoggerMiddleware()
-        );
+        return apiRoot;
     }
 }

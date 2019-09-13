@@ -1,0 +1,55 @@
+package com.commercetools.models.product_type;
+
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product_type.ProductTypeUpdateAction;
+import java.lang.String;
+import com.commercetools.models.product_type.ProductTypeSetInputTipAction;
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Map;
+import java.time.ZonedDateTime;
+
+public final class ProductTypeSetInputTipActionBuilder {
+   
+   
+   private java.lang.String attributeName;
+   
+   @Nullable
+   private com.commercetools.models.common.LocalizedString inputTip;
+   
+   public ProductTypeSetInputTipActionBuilder attributeName( final java.lang.String attributeName) {
+      this.attributeName = attributeName;
+      return this;
+   }
+   
+   public ProductTypeSetInputTipActionBuilder inputTip(@Nullable final com.commercetools.models.common.LocalizedString inputTip) {
+      this.inputTip = inputTip;
+      return this;
+   }
+   
+   
+   public java.lang.String getAttributeName(){
+      return this.attributeName;
+   }
+   
+   @Nullable
+   public com.commercetools.models.common.LocalizedString getInputTip(){
+      return this.inputTip;
+   }
+
+   public ProductTypeSetInputTipAction build() {
+       return new ProductTypeSetInputTipActionImpl(attributeName, inputTip);
+   }
+   
+   public static ProductTypeSetInputTipActionBuilder of() {
+      return new ProductTypeSetInputTipActionBuilder();
+   }
+   
+   public static ProductTypeSetInputTipActionBuilder of(final ProductTypeSetInputTipAction template) {
+      ProductTypeSetInputTipActionBuilder builder = new ProductTypeSetInputTipActionBuilder();
+      builder.attributeName = template.getAttributeName();
+      builder.inputTip = template.getInputTip();
+      return builder;
+   }
+   
+}

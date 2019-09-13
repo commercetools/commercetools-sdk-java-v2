@@ -1,0 +1,423 @@
+package com.commercetools.models.me;
+
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.type.CustomFields;
+import java.lang.Boolean;
+import java.lang.String;
+import java.time.LocalDate;
+import com.commercetools.models.me.MyCustomer;
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Map;
+import java.time.ZonedDateTime;
+
+public final class MyCustomerBuilder {
+   
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
+   
+   private java.lang.String id;
+   
+   
+   private java.lang.Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
+   
+   @Nullable
+   private java.lang.String lastName;
+   
+   
+   private java.util.List<com.commercetools.models.common.Address> addresses;
+   
+   @Nullable
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
+   
+   @Nullable
+   private com.commercetools.models.type.CustomFields custom;
+   
+   @Nullable
+   private java.lang.String companyName;
+   
+   @Nullable
+   private java.lang.String vatId;
+   
+   @Nullable
+   private java.lang.String externalId;
+   
+   @Nullable
+   private java.time.LocalDate dateOfBirth;
+   
+   @Nullable
+   private java.lang.String locale;
+   
+   @Nullable
+   private java.util.List<java.lang.String> billingAddressIds;
+   
+   @Nullable
+   private java.lang.String defaultShippingAddressId;
+   
+   @Nullable
+   private java.lang.String title;
+   
+   @Nullable
+   private java.lang.String customerNumber;
+   
+   
+   private java.lang.Boolean isEmailVerified;
+   
+   @Nullable
+   private java.lang.String defaultBillingAddressId;
+   
+   @Nullable
+   private java.util.List<java.lang.String> shippingAddressIds;
+   
+   @Nullable
+   private java.lang.String firstName;
+   
+   
+   private java.lang.String password;
+   
+   @Nullable
+   private java.lang.String middleName;
+   
+   @Nullable
+   private java.lang.String salutation;
+   
+   @Nullable
+   private java.lang.String key;
+   
+   
+   private java.lang.String email;
+   
+   public MyCustomerBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
+      return this;
+   }
+   
+   public MyCustomerBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
+      return this;
+   }
+   
+   public MyCustomerBuilder id( final java.lang.String id) {
+      this.id = id;
+      return this;
+   }
+   
+   public MyCustomerBuilder version( final java.lang.Long version) {
+      this.version = version;
+      return this;
+   }
+   
+   public MyCustomerBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public MyCustomerBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public MyCustomerBuilder lastName(@Nullable final java.lang.String lastName) {
+      this.lastName = lastName;
+      return this;
+   }
+   
+   public MyCustomerBuilder addresses( final java.util.List<com.commercetools.models.common.Address> addresses) {
+      this.addresses = addresses;
+      return this;
+   }
+   
+   public MyCustomerBuilder customerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupReference customerGroup) {
+      this.customerGroup = customerGroup;
+      return this;
+   }
+   
+   public MyCustomerBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
+      this.custom = custom;
+      return this;
+   }
+   
+   public MyCustomerBuilder companyName(@Nullable final java.lang.String companyName) {
+      this.companyName = companyName;
+      return this;
+   }
+   
+   public MyCustomerBuilder vatId(@Nullable final java.lang.String vatId) {
+      this.vatId = vatId;
+      return this;
+   }
+   
+   public MyCustomerBuilder externalId(@Nullable final java.lang.String externalId) {
+      this.externalId = externalId;
+      return this;
+   }
+   
+   public MyCustomerBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
+      this.dateOfBirth = dateOfBirth;
+      return this;
+   }
+   
+   public MyCustomerBuilder locale(@Nullable final java.lang.String locale) {
+      this.locale = locale;
+      return this;
+   }
+   
+   public MyCustomerBuilder billingAddressIds(@Nullable final java.util.List<java.lang.String> billingAddressIds) {
+      this.billingAddressIds = billingAddressIds;
+      return this;
+   }
+   
+   public MyCustomerBuilder defaultShippingAddressId(@Nullable final java.lang.String defaultShippingAddressId) {
+      this.defaultShippingAddressId = defaultShippingAddressId;
+      return this;
+   }
+   
+   public MyCustomerBuilder title(@Nullable final java.lang.String title) {
+      this.title = title;
+      return this;
+   }
+   
+   public MyCustomerBuilder customerNumber(@Nullable final java.lang.String customerNumber) {
+      this.customerNumber = customerNumber;
+      return this;
+   }
+   
+   public MyCustomerBuilder isEmailVerified( final java.lang.Boolean isEmailVerified) {
+      this.isEmailVerified = isEmailVerified;
+      return this;
+   }
+   
+   public MyCustomerBuilder defaultBillingAddressId(@Nullable final java.lang.String defaultBillingAddressId) {
+      this.defaultBillingAddressId = defaultBillingAddressId;
+      return this;
+   }
+   
+   public MyCustomerBuilder shippingAddressIds(@Nullable final java.util.List<java.lang.String> shippingAddressIds) {
+      this.shippingAddressIds = shippingAddressIds;
+      return this;
+   }
+   
+   public MyCustomerBuilder firstName(@Nullable final java.lang.String firstName) {
+      this.firstName = firstName;
+      return this;
+   }
+   
+   public MyCustomerBuilder password( final java.lang.String password) {
+      this.password = password;
+      return this;
+   }
+   
+   public MyCustomerBuilder middleName(@Nullable final java.lang.String middleName) {
+      this.middleName = middleName;
+      return this;
+   }
+   
+   public MyCustomerBuilder salutation(@Nullable final java.lang.String salutation) {
+      this.salutation = salutation;
+      return this;
+   }
+   
+   public MyCustomerBuilder key(@Nullable final java.lang.String key) {
+      this.key = key;
+      return this;
+   }
+   
+   public MyCustomerBuilder email( final java.lang.String email) {
+      this.email = email;
+      return this;
+   }
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
+   
+   public java.lang.String getId(){
+      return this.id;
+   }
+   
+   
+   public java.lang.Long getVersion(){
+      return this.version;
+   }
+   
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   @Nullable
+   public java.lang.String getLastName(){
+      return this.lastName;
+   }
+   
+   
+   public java.util.List<com.commercetools.models.common.Address> getAddresses(){
+      return this.addresses;
+   }
+   
+   @Nullable
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
+      return this.customerGroup;
+   }
+   
+   @Nullable
+   public com.commercetools.models.type.CustomFields getCustom(){
+      return this.custom;
+   }
+   
+   @Nullable
+   public java.lang.String getCompanyName(){
+      return this.companyName;
+   }
+   
+   @Nullable
+   public java.lang.String getVatId(){
+      return this.vatId;
+   }
+   
+   @Nullable
+   public java.lang.String getExternalId(){
+      return this.externalId;
+   }
+   
+   @Nullable
+   public java.time.LocalDate getDateOfBirth(){
+      return this.dateOfBirth;
+   }
+   
+   @Nullable
+   public java.lang.String getLocale(){
+      return this.locale;
+   }
+   
+   @Nullable
+   public java.util.List<java.lang.String> getBillingAddressIds(){
+      return this.billingAddressIds;
+   }
+   
+   @Nullable
+   public java.lang.String getDefaultShippingAddressId(){
+      return this.defaultShippingAddressId;
+   }
+   
+   @Nullable
+   public java.lang.String getTitle(){
+      return this.title;
+   }
+   
+   @Nullable
+   public java.lang.String getCustomerNumber(){
+      return this.customerNumber;
+   }
+   
+   
+   public java.lang.Boolean getIsEmailVerified(){
+      return this.isEmailVerified;
+   }
+   
+   @Nullable
+   public java.lang.String getDefaultBillingAddressId(){
+      return this.defaultBillingAddressId;
+   }
+   
+   @Nullable
+   public java.util.List<java.lang.String> getShippingAddressIds(){
+      return this.shippingAddressIds;
+   }
+   
+   @Nullable
+   public java.lang.String getFirstName(){
+      return this.firstName;
+   }
+   
+   
+   public java.lang.String getPassword(){
+      return this.password;
+   }
+   
+   @Nullable
+   public java.lang.String getMiddleName(){
+      return this.middleName;
+   }
+   
+   @Nullable
+   public java.lang.String getSalutation(){
+      return this.salutation;
+   }
+   
+   @Nullable
+   public java.lang.String getKey(){
+      return this.key;
+   }
+   
+   
+   public java.lang.String getEmail(){
+      return this.email;
+   }
+
+   public MyCustomer build() {
+       return new MyCustomerImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, lastName, addresses, customerGroup, custom, companyName, vatId, externalId, dateOfBirth, locale, billingAddressIds, defaultShippingAddressId, title, customerNumber, isEmailVerified, defaultBillingAddressId, shippingAddressIds, firstName, password, middleName, salutation, key, email);
+   }
+   
+   public static MyCustomerBuilder of() {
+      return new MyCustomerBuilder();
+   }
+   
+   public static MyCustomerBuilder of(final MyCustomer template) {
+      MyCustomerBuilder builder = new MyCustomerBuilder();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
+      builder.id = template.getId();
+      builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
+      builder.lastName = template.getLastName();
+      builder.addresses = template.getAddresses();
+      builder.customerGroup = template.getCustomerGroup();
+      builder.custom = template.getCustom();
+      builder.companyName = template.getCompanyName();
+      builder.vatId = template.getVatId();
+      builder.externalId = template.getExternalId();
+      builder.dateOfBirth = template.getDateOfBirth();
+      builder.locale = template.getLocale();
+      builder.billingAddressIds = template.getBillingAddressIds();
+      builder.defaultShippingAddressId = template.getDefaultShippingAddressId();
+      builder.title = template.getTitle();
+      builder.customerNumber = template.getCustomerNumber();
+      builder.isEmailVerified = template.getIsEmailVerified();
+      builder.defaultBillingAddressId = template.getDefaultBillingAddressId();
+      builder.shippingAddressIds = template.getShippingAddressIds();
+      builder.firstName = template.getFirstName();
+      builder.password = template.getPassword();
+      builder.middleName = template.getMiddleName();
+      builder.salutation = template.getSalutation();
+      builder.key = template.getKey();
+      builder.email = template.getEmail();
+      return builder;
+   }
+   
+}

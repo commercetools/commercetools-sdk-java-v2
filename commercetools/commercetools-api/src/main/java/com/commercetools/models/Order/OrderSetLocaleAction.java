@@ -1,0 +1,43 @@
+package com.commercetools.models.order;
+
+import com.commercetools.models.order.OrderUpdateAction;
+import java.lang.String;
+import com.commercetools.models.order.OrderSetLocaleActionImpl;
+
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+import javax.annotation.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Map;
+import java.time.*;
+
+import java.io.IOException;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+@JsonDeserialize(as = OrderSetLocaleActionImpl.class)
+public interface OrderSetLocaleAction extends OrderUpdateAction {
+
+   
+   
+   @JsonProperty("locale")
+   public String getLocale();
+
+   public void setLocale(final String locale);
+   
+   public static OrderSetLocaleActionImpl of(){
+      return new OrderSetLocaleActionImpl();
+   }
+   
+
+   public static OrderSetLocaleActionImpl of(final OrderSetLocaleAction template) {
+      OrderSetLocaleActionImpl instance = new OrderSetLocaleActionImpl();
+      instance.setLocale(template.getLocale());
+      return instance;
+   }
+
+}

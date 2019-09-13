@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.commercetools'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.9'
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8'
+    compile 'com.github.scribejava:scribejava-apis:6.8.1'
+}

@@ -1,8 +1,8 @@
 package commercetools.product_type;
 
-import com.commercetools.models.ProductType.ProductType;
-import com.commercetools.models.ProductType.ProductTypeDraft;
-import com.commercetools.models.ProductType.ProductTypeDraftBuilder;
+import com.commercetools.models.product_type.ProductType;
+import com.commercetools.models.product_type.ProductTypeDraft;
+import com.commercetools.models.product_type.ProductTypeDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

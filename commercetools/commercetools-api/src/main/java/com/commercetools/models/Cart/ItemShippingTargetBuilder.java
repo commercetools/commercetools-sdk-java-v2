@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.ItemShippingTarget;
+import com.commercetools.models.cart.ItemShippingTarget;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

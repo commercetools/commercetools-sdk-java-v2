@@ -1,8 +1,8 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.Zone;
+import com.commercetools.models.zone.Zone;
 import java.lang.Long;
-import com.commercetools.models.Zone.ZonePagedQueryResponse;
+import com.commercetools.models.zone.ZonePagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ZonePagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Zone.Zone> results;
+   private java.util.List<com.commercetools.models.zone.Zone> results;
    
    public ZonePagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class ZonePagedQueryResponseBuilder {
       return this;
    }
    
-   public ZonePagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Zone.Zone> results) {
+   public ZonePagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.zone.Zone> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class ZonePagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Zone.Zone> getResults(){
+   public java.util.List<com.commercetools.models.zone.Zone> getResults(){
       return this.results;
    }
 

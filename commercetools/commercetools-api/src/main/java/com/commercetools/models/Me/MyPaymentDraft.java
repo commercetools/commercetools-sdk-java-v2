@@ -1,10 +1,10 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Me.MyTransactionDraft;
-import com.commercetools.models.Payment.PaymentMethodInfo;
-import com.commercetools.models.Type.CustomFieldsDraft;
-import com.commercetools.models.Me.MyPaymentDraftImpl;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.me.MyTransactionDraft;
+import com.commercetools.models.payment.PaymentMethodInfo;
+import com.commercetools.models.type.CustomFieldsDraft;
+import com.commercetools.models.me.MyPaymentDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

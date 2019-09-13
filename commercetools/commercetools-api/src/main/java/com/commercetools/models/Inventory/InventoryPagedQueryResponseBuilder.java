@@ -1,8 +1,8 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntry;
+import com.commercetools.models.inventory.InventoryEntry;
 import java.lang.Long;
-import com.commercetools.models.Inventory.InventoryPagedQueryResponse;
+import com.commercetools.models.inventory.InventoryPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class InventoryPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Inventory.InventoryEntry> results;
+   private java.util.List<com.commercetools.models.inventory.InventoryEntry> results;
    
    public InventoryPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class InventoryPagedQueryResponseBuilder {
       return this;
    }
    
-   public InventoryPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Inventory.InventoryEntry> results) {
+   public InventoryPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.inventory.InventoryEntry> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class InventoryPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Inventory.InventoryEntry> getResults(){
+   public java.util.List<com.commercetools.models.inventory.InventoryEntry> getResults(){
       return this.results;
    }
 

@@ -1,10 +1,10 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerUpdateAction;
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.customer.CustomerUpdateAction;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerSetCustomTypeActionImpl;
+import com.commercetools.models.customer.CustomerSetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

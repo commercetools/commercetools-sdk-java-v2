@@ -1,7 +1,7 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelRoleEnum;
-import com.commercetools.models.Channel.ChannelUpdateAction;
+import com.commercetools.models.channel.ChannelRoleEnum;
+import com.commercetools.models.channel.ChannelUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ChannelAddRolesActionImpl implements ChannelAddRolesAction {
 
    private java.lang.String action;
    
-   private java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles;
+   private java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles;
 
    @JsonCreator
-   ChannelAddRolesActionImpl(@JsonProperty("roles") final java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles) {
+   ChannelAddRolesActionImpl(@JsonProperty("roles") final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles) {
       this.roles = roles;
       this.action = "addRoles";
    }
@@ -43,11 +43,11 @@ public final class ChannelAddRolesActionImpl implements ChannelAddRolesAction {
    }
    
    
-   public java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
 
-   public void setRoles(final java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles){
+   public void setRoles(final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles){
       this.roles = roles;
    }
 

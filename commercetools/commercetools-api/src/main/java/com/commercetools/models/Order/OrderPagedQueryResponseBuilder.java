@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.Order;
+import com.commercetools.models.order.Order;
 import java.lang.Long;
-import com.commercetools.models.Order.OrderPagedQueryResponse;
+import com.commercetools.models.order.OrderPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class OrderPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Order.Order> results;
+   private java.util.List<com.commercetools.models.order.Order> results;
    
    public OrderPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class OrderPagedQueryResponseBuilder {
       return this;
    }
    
-   public OrderPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Order.Order> results) {
+   public OrderPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.order.Order> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class OrderPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.Order> getResults(){
+   public java.util.List<com.commercetools.models.order.Order> getResults(){
       return this.results;
    }
 

@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Common.ResourceIdentifier;
-import com.commercetools.models.Customer.CustomerResourceIdentifierImpl;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.common.ResourceIdentifier;
+import com.commercetools.models.customer.CustomerResourceIdentifierImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

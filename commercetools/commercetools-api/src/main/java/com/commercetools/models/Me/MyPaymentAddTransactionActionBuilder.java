@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyPaymentUpdateAction;
-import com.commercetools.models.Payment.TransactionDraft;
+import com.commercetools.models.me.MyPaymentUpdateAction;
+import com.commercetools.models.payment.TransactionDraft;
 import java.lang.String;
-import com.commercetools.models.Me.MyPaymentAddTransactionAction;
+import com.commercetools.models.me.MyPaymentAddTransactionAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class MyPaymentAddTransactionActionBuilder {
    
    
-   private com.commercetools.models.Payment.TransactionDraft transaction;
+   private com.commercetools.models.payment.TransactionDraft transaction;
    
-   public MyPaymentAddTransactionActionBuilder transaction( final com.commercetools.models.Payment.TransactionDraft transaction) {
+   public MyPaymentAddTransactionActionBuilder transaction( final com.commercetools.models.payment.TransactionDraft transaction) {
       this.transaction = transaction;
       return this;
    }
    
    
-   public com.commercetools.models.Payment.TransactionDraft getTransaction(){
+   public com.commercetools.models.payment.TransactionDraft getTransaction(){
       return this.transaction;
    }
 

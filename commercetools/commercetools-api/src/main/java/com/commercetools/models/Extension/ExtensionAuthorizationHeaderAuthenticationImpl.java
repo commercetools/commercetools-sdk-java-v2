@@ -1,6 +1,6 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication;
+import com.commercetools.models.extension.ExtensionHttpDestinationAuthentication;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;

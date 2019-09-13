@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyCartUpdateAction;
+import com.commercetools.models.me.MyCartUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Me.MyCartRecalculateAction;
+import com.commercetools.models.me.MyCartRecalculateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

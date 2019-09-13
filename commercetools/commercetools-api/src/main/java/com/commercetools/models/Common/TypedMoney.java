@@ -1,8 +1,8 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.CentPrecisionMoney;
-import com.commercetools.models.Common.HighPrecisionMoney;
-import com.commercetools.models.Common.MoneyType;
+import com.commercetools.models.common.CentPrecisionMoney;
+import com.commercetools.models.common.HighPrecisionMoney;
+import com.commercetools.models.common.MoneyType;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
@@ -20,8 +20,8 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Common.CentPrecisionMoneyImpl.class, name = "centPrecision"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Common.HighPrecisionMoneyImpl.class, name = "highPrecision")
+   @JsonSubTypes.Type(value = com.commercetools.models.common.CentPrecisionMoneyImpl.class, name = "centPrecision"),
+   @JsonSubTypes.Type(value = com.commercetools.models.common.HighPrecisionMoneyImpl.class, name = "highPrecision")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

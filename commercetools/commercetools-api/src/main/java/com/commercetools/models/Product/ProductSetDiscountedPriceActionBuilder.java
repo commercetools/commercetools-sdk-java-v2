@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetDiscountedPriceAction;
+import com.commercetools.models.product.ProductSetDiscountedPriceAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.time.ZonedDateTime;
 public final class ProductSetDiscountedPriceActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.DiscountedPrice discounted;
+   private com.commercetools.models.common.DiscountedPrice discounted;
    
    @Nullable
    private java.lang.Boolean staged;
@@ -21,7 +21,7 @@ public final class ProductSetDiscountedPriceActionBuilder {
    
    private java.lang.String priceId;
    
-   public ProductSetDiscountedPriceActionBuilder discounted(@Nullable final com.commercetools.models.Common.DiscountedPrice discounted) {
+   public ProductSetDiscountedPriceActionBuilder discounted(@Nullable final com.commercetools.models.common.DiscountedPrice discounted) {
       this.discounted = discounted;
       return this;
    }
@@ -37,7 +37,7 @@ public final class ProductSetDiscountedPriceActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.DiscountedPrice getDiscounted(){
+   public com.commercetools.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
    

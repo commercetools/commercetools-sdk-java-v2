@@ -1,13 +1,13 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.Customer.CustomerReference;
-import com.commercetools.models.Payment.PaymentMethodInfo;
-import com.commercetools.models.Payment.Transaction;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.customer.CustomerReference;
+import com.commercetools.models.payment.PaymentMethodInfo;
+import com.commercetools.models.payment.Transaction;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Me.MyPaymentImpl;
+import com.commercetools.models.me.MyPaymentImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

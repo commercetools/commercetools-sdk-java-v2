@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerUpdateAction;
+import com.commercetools.models.customer.CustomerUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Customer.CustomerUpdate;
+import com.commercetools.models.customer.CustomerUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class CustomerUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Customer.CustomerUpdateAction> actions;
+   private java.util.List<com.commercetools.models.customer.CustomerUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public CustomerUpdateBuilder actions( final java.util.List<com.commercetools.models.Customer.CustomerUpdateAction> actions) {
+   public CustomerUpdateBuilder actions( final java.util.List<com.commercetools.models.customer.CustomerUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class CustomerUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Customer.CustomerUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.customer.CustomerUpdateAction> getActions(){
       return this.actions;
    }
    

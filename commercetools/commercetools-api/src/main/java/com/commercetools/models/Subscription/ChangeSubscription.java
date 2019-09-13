@@ -1,7 +1,7 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
 import java.lang.String;
-import com.commercetools.models.Subscription.ChangeSubscriptionImpl;
+import com.commercetools.models.subscription.ChangeSubscriptionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

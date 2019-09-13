@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.message.Message;
 import java.lang.String;
-import com.commercetools.models.Message.InventoryEntryDeletedMessage;
+import com.commercetools.models.message.InventoryEntryDeletedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class InventoryEntryDeletedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -39,7 +39,7 @@ public final class InventoryEntryDeletedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Channel.ChannelReference supplyChannel;
+   private com.commercetools.models.channel.ChannelReference supplyChannel;
    
    
    private java.lang.String sku;
@@ -69,12 +69,12 @@ public final class InventoryEntryDeletedMessageBuilder {
       return this;
    }
    
-   public InventoryEntryDeletedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public InventoryEntryDeletedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public InventoryEntryDeletedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public InventoryEntryDeletedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -89,7 +89,7 @@ public final class InventoryEntryDeletedMessageBuilder {
       return this;
    }
    
-   public InventoryEntryDeletedMessageBuilder supplyChannel( final com.commercetools.models.Channel.ChannelReference supplyChannel) {
+   public InventoryEntryDeletedMessageBuilder supplyChannel( final com.commercetools.models.channel.ChannelReference supplyChannel) {
       this.supplyChannel = supplyChannel;
       return this;
    }
@@ -125,12 +125,12 @@ public final class InventoryEntryDeletedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -145,7 +145,7 @@ public final class InventoryEntryDeletedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Channel.ChannelReference getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelReference getSupplyChannel(){
       return this.supplyChannel;
    }
    

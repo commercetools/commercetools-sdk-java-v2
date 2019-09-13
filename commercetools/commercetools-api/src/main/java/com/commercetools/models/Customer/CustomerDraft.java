@@ -1,14 +1,14 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
 import java.time.LocalDate;
-import com.commercetools.models.Customer.CustomerDraftImpl;
+import com.commercetools.models.customer.CustomerDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

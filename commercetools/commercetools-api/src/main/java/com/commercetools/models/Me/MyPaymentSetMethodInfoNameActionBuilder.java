@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Me.MyPaymentUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.me.MyPaymentUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyPaymentSetMethodInfoNameAction;
+import com.commercetools.models.me.MyPaymentSetMethodInfoNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class MyPaymentSetMethodInfoNameActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
-   public MyPaymentSetMethodInfoNameActionBuilder name(@Nullable final com.commercetools.models.Common.LocalizedString name) {
+   public MyPaymentSetMethodInfoNameActionBuilder name(@Nullable final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
 

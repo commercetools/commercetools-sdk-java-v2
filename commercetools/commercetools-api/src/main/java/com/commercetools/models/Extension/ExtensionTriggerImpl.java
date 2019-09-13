@@ -1,7 +1,7 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionAction;
-import com.commercetools.models.Extension.ExtensionResourceTypeId;
+import com.commercetools.models.extension.ExtensionAction;
+import com.commercetools.models.extension.ExtensionResourceTypeId;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionTriggerImpl implements ExtensionTrigger {
 
-   private com.commercetools.models.Extension.ExtensionResourceTypeId resourceTypeId;
+   private com.commercetools.models.extension.ExtensionResourceTypeId resourceTypeId;
    
-   private java.util.List<com.commercetools.models.Extension.ExtensionAction> actions;
+   private java.util.List<com.commercetools.models.extension.ExtensionAction> actions;
 
    @JsonCreator
-   ExtensionTriggerImpl(@JsonProperty("resourceTypeId") final com.commercetools.models.Extension.ExtensionResourceTypeId resourceTypeId, @JsonProperty("actions") final java.util.List<com.commercetools.models.Extension.ExtensionAction> actions) {
+   ExtensionTriggerImpl(@JsonProperty("resourceTypeId") final com.commercetools.models.extension.ExtensionResourceTypeId resourceTypeId, @JsonProperty("actions") final java.util.List<com.commercetools.models.extension.ExtensionAction> actions) {
       this.resourceTypeId = resourceTypeId;
       this.actions = actions;
    }
@@ -37,20 +37,20 @@ public final class ExtensionTriggerImpl implements ExtensionTrigger {
    }
    
    
-   public com.commercetools.models.Extension.ExtensionResourceTypeId getResourceTypeId(){
+   public com.commercetools.models.extension.ExtensionResourceTypeId getResourceTypeId(){
       return this.resourceTypeId;
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.ExtensionAction> getActions(){
+   public java.util.List<com.commercetools.models.extension.ExtensionAction> getActions(){
       return this.actions;
    }
 
-   public void setResourceTypeId(final com.commercetools.models.Extension.ExtensionResourceTypeId resourceTypeId){
+   public void setResourceTypeId(final com.commercetools.models.extension.ExtensionResourceTypeId resourceTypeId){
       this.resourceTypeId = resourceTypeId;
    }
    
-   public void setActions(final java.util.List<com.commercetools.models.Extension.ExtensionAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.extension.ExtensionAction> actions){
       this.actions = actions;
    }
 

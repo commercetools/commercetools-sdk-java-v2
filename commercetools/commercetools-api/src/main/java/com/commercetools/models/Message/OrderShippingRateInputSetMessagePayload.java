@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.ShippingRateInput;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.ShippingRateInput;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.OrderShippingRateInputSetMessagePayloadImpl;
+import com.commercetools.models.message.OrderShippingRateInputSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

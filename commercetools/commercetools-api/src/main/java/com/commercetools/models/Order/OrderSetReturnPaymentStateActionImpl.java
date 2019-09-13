@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ReturnPaymentState;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ReturnPaymentState;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class OrderSetReturnPaymentStateActionImpl implements OrderSetRetur
    
    private java.lang.String returnItemId;
    
-   private com.commercetools.models.Order.ReturnPaymentState paymentState;
+   private com.commercetools.models.order.ReturnPaymentState paymentState;
 
    @JsonCreator
-   OrderSetReturnPaymentStateActionImpl(@JsonProperty("returnItemId") final java.lang.String returnItemId, @JsonProperty("paymentState") final com.commercetools.models.Order.ReturnPaymentState paymentState) {
+   OrderSetReturnPaymentStateActionImpl(@JsonProperty("returnItemId") final java.lang.String returnItemId, @JsonProperty("paymentState") final com.commercetools.models.order.ReturnPaymentState paymentState) {
       this.returnItemId = returnItemId;
       this.paymentState = paymentState;
       this.action = "setReturnPaymentState";
@@ -51,7 +51,7 @@ public final class OrderSetReturnPaymentStateActionImpl implements OrderSetRetur
    }
    
    
-   public com.commercetools.models.Order.ReturnPaymentState getPaymentState(){
+   public com.commercetools.models.order.ReturnPaymentState getPaymentState(){
       return this.paymentState;
    }
 
@@ -59,7 +59,7 @@ public final class OrderSetReturnPaymentStateActionImpl implements OrderSetRetur
       this.returnItemId = returnItemId;
    }
    
-   public void setPaymentState(final com.commercetools.models.Order.ReturnPaymentState paymentState){
+   public void setPaymentState(final com.commercetools.models.order.ReturnPaymentState paymentState){
       this.paymentState = paymentState;
    }
 

@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Category.CategoryResourceIdentifier;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.category.CategoryResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductRemoveFromCategoryAction;
+import com.commercetools.models.product.ProductRemoveFromCategoryAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +16,14 @@ public final class ProductRemoveFromCategoryActionBuilder {
    private java.lang.Boolean staged;
    
    
-   private com.commercetools.models.Category.CategoryResourceIdentifier category;
+   private com.commercetools.models.category.CategoryResourceIdentifier category;
    
    public ProductRemoveFromCategoryActionBuilder staged(@Nullable final java.lang.Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductRemoveFromCategoryActionBuilder category( final com.commercetools.models.Category.CategoryResourceIdentifier category) {
+   public ProductRemoveFromCategoryActionBuilder category( final com.commercetools.models.category.CategoryResourceIdentifier category) {
       this.category = category;
       return this;
    }
@@ -34,7 +34,7 @@ public final class ProductRemoveFromCategoryActionBuilder {
    }
    
    
-   public com.commercetools.models.Category.CategoryResourceIdentifier getCategory(){
+   public com.commercetools.models.category.CategoryResourceIdentifier getCategory(){
       return this.category;
    }
 

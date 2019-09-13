@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice;
 import java.lang.String;
-import com.commercetools.models.Message.ProductPriceDiscountsSetMessagePayload;
+import com.commercetools.models.message.ProductPriceDiscountsSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ProductPriceDiscountsSetMessagePayloadBuilder {
    
    
-   private java.util.List<com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
+   private java.util.List<com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
    
-   public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices( final java.util.List<com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
+   public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices( final java.util.List<com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
       this.updatedPrices = updatedPrices;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices(){
+   public java.util.List<com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices(){
       return this.updatedPrices;
    }
 

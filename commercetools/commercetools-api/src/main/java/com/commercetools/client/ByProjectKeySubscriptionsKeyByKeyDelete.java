@@ -53,7 +53,7 @@ public class ByProjectKeySubscriptionsKeyByKeyDelete {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Subscription.Subscription> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.subscription.Subscription> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeySubscriptionsKeyByKeyDelete {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Subscription.Subscription>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.subscription.Subscription>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Subscription.Subscription.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.subscription.Subscription.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

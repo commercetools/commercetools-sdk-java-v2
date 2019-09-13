@@ -1,7 +1,7 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ProjectUpdateAction;
-import com.commercetools.models.Project.ShippingRateInputType;
+import com.commercetools.models.project.ProjectUpdateAction;
+import com.commercetools.models.project.ShippingRateInputType;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectS
 
    private java.lang.String action;
    
-   private com.commercetools.models.Project.ShippingRateInputType shippingRateInputType;
+   private com.commercetools.models.project.ShippingRateInputType shippingRateInputType;
 
    @JsonCreator
-   ProjectSetShippingRateInputTypeActionImpl(@JsonProperty("shippingRateInputType") final com.commercetools.models.Project.ShippingRateInputType shippingRateInputType) {
+   ProjectSetShippingRateInputTypeActionImpl(@JsonProperty("shippingRateInputType") final com.commercetools.models.project.ShippingRateInputType shippingRateInputType) {
       this.shippingRateInputType = shippingRateInputType;
       this.action = "setShippingRateInputType";
    }
@@ -43,11 +43,11 @@ public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectS
    }
    
    
-   public com.commercetools.models.Project.ShippingRateInputType getShippingRateInputType(){
+   public com.commercetools.models.project.ShippingRateInputType getShippingRateInputType(){
       return this.shippingRateInputType;
    }
 
-   public void setShippingRateInputType(final com.commercetools.models.Project.ShippingRateInputType shippingRateInputType){
+   public void setShippingRateInputType(final com.commercetools.models.project.ShippingRateInputType shippingRateInputType){
       this.shippingRateInputType = shippingRateInputType;
    }
 

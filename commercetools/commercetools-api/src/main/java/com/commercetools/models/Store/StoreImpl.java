@@ -1,7 +1,7 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Common.BaseResource;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -32,12 +32,12 @@ public final class StoreImpl implements Store {
    
    private java.lang.Long version;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    private java.lang.String key;
 
    @JsonCreator
-   StoreImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("key") final java.lang.String key) {
+   StoreImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("key") final java.lang.String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -70,7 +70,7 @@ public final class StoreImpl implements Store {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -95,7 +95,7 @@ public final class StoreImpl implements Store {
       this.version = version;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    

@@ -1,4 +1,4 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
 import java.lang.String;
 import java.time.ZonedDateTime;

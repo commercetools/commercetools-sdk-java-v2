@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductVariantChannelAvailability;
-import com.commercetools.models.Product.ProductVariantChannelAvailabilityMap;
+import com.commercetools.models.product.ProductVariantChannelAvailability;
+import com.commercetools.models.product.ProductVariantChannelAvailabilityMap;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ProductVariantChannelAvailabilityMapBuilder {
    
    
-   private Map<String, com.commercetools.models.Product.ProductVariantChannelAvailability> values;
+   private Map<String, com.commercetools.models.product.ProductVariantChannelAvailability> values;
    
-   public ProductVariantChannelAvailabilityMapBuilder values( final Map<String, com.commercetools.models.Product.ProductVariantChannelAvailability> values){
+   public ProductVariantChannelAvailabilityMapBuilder values( final Map<String, com.commercetools.models.product.ProductVariantChannelAvailability> values){
       this.values = values;
       return this;
    }
    
    
-   public Map<String, com.commercetools.models.Product.ProductVariantChannelAvailability> getValues(){
+   public Map<String, com.commercetools.models.product.ProductVariantChannelAvailability> getValues(){
       return this.values;
    }
 

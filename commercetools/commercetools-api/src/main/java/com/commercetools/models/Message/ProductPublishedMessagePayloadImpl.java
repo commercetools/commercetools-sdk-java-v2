@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.ProductPublishScope;
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Product.ProductProjection;
+import com.commercetools.models.cart.ProductPublishScope;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.product.ProductProjection;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -30,12 +30,12 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
    
    private java.util.List<java.lang.Object> removedImageUrls;
    
-   private com.commercetools.models.Product.ProductProjection productProjection;
+   private com.commercetools.models.product.ProductProjection productProjection;
    
-   private com.commercetools.models.Cart.ProductPublishScope scope;
+   private com.commercetools.models.cart.ProductPublishScope scope;
 
    @JsonCreator
-   ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<java.lang.Object> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.models.Product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.models.Cart.ProductPublishScope scope) {
+   ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<java.lang.Object> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.models.cart.ProductPublishScope scope) {
       this.removedImageUrls = removedImageUrls;
       this.productProjection = productProjection;
       this.scope = scope;
@@ -56,12 +56,12 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
    }
    
    
-   public com.commercetools.models.Product.ProductProjection getProductProjection(){
+   public com.commercetools.models.product.ProductProjection getProductProjection(){
       return this.productProjection;
    }
    
    
-   public com.commercetools.models.Cart.ProductPublishScope getScope(){
+   public com.commercetools.models.cart.ProductPublishScope getScope(){
       return this.scope;
    }
 
@@ -69,11 +69,11 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
       this.removedImageUrls = removedImageUrls;
    }
    
-   public void setProductProjection(final com.commercetools.models.Product.ProductProjection productProjection){
+   public void setProductProjection(final com.commercetools.models.product.ProductProjection productProjection){
       this.productProjection = productProjection;
    }
    
-   public void setScope(final com.commercetools.models.Cart.ProductPublishScope scope){
+   public void setScope(final com.commercetools.models.cart.ProductPublishScope scope){
       this.scope = scope;
    }
 

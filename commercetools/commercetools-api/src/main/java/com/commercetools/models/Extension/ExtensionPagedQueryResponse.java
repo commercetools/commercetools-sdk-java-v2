@@ -1,8 +1,8 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.Extension;
+import com.commercetools.models.extension.Extension;
 import java.lang.Long;
-import com.commercetools.models.Extension.ExtensionPagedQueryResponseImpl;
+import com.commercetools.models.extension.ExtensionPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

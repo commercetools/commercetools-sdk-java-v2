@@ -1,7 +1,7 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Store.StoreUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.store.StoreUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class StoreSetNameActionImpl implements StoreSetNameAction {
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
 
    @JsonCreator
-   StoreSetNameActionImpl(@JsonProperty("name") final com.commercetools.models.Common.LocalizedString name) {
+   StoreSetNameActionImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       this.action = "setName";
    }
@@ -43,11 +43,11 @@ public final class StoreSetNameActionImpl implements StoreSetNameAction {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
 
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
 

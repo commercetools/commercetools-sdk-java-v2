@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerResetPassword;
+import com.commercetools.models.customer.CustomerResetPassword;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

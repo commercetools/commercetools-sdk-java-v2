@@ -1,10 +1,10 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Payment.TransactionType;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.payment.TransactionType;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Me.MyTransactionDraftImpl;
+import com.commercetools.models.me.MyTransactionDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

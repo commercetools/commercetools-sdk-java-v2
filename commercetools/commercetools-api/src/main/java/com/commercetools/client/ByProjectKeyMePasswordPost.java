@@ -51,7 +51,7 @@ public class ByProjectKeyMePasswordPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Me.MyCustomer> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.me.MyCustomer> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyMePasswordPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Me.MyCustomer>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.me.MyCustomer>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Me.MyCustomer.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.me.MyCustomer.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

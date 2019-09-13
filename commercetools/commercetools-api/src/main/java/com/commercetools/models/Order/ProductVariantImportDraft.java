@@ -1,11 +1,11 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Image;
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Product.Attribute;
+import com.commercetools.models.common.Image;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.product.Attribute;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Order.ProductVariantImportDraftImpl;
+import com.commercetools.models.order.ProductVariantImportDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

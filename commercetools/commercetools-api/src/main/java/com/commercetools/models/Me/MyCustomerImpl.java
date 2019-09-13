@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Boolean;
 import java.lang.String;
 import java.time.LocalDate;
@@ -36,17 +36,17 @@ public final class MyCustomerImpl implements MyCustomer {
    
    private java.lang.Long version;
    
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    private java.lang.String lastName;
    
-   private java.util.List<com.commercetools.models.Common.Address> addresses;
+   private java.util.List<com.commercetools.models.common.Address> addresses;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    private java.lang.String companyName;
    
@@ -85,7 +85,7 @@ public final class MyCustomerImpl implements MyCustomer {
    private java.lang.String email;
 
    @JsonCreator
-   MyCustomerImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.Common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.Common.LastModifiedBy lastModifiedBy, @JsonProperty("lastName") final java.lang.String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.models.Common.Address> addresses, @JsonProperty("customerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.Type.CustomFields custom, @JsonProperty("companyName") final java.lang.String companyName, @JsonProperty("vatId") final java.lang.String vatId, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("billingAddressIds") final java.util.List<java.lang.String> billingAddressIds, @JsonProperty("defaultShippingAddressId") final java.lang.String defaultShippingAddressId, @JsonProperty("title") final java.lang.String title, @JsonProperty("customerNumber") final java.lang.String customerNumber, @JsonProperty("isEmailVerified") final java.lang.Boolean isEmailVerified, @JsonProperty("defaultBillingAddressId") final java.lang.String defaultBillingAddressId, @JsonProperty("shippingAddressIds") final java.util.List<java.lang.String> shippingAddressIds, @JsonProperty("firstName") final java.lang.String firstName, @JsonProperty("password") final java.lang.String password, @JsonProperty("middleName") final java.lang.String middleName, @JsonProperty("salutation") final java.lang.String salutation, @JsonProperty("key") final java.lang.String key, @JsonProperty("email") final java.lang.String email) {
+   MyCustomerImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("lastName") final java.lang.String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.models.common.Address> addresses, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("companyName") final java.lang.String companyName, @JsonProperty("vatId") final java.lang.String vatId, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("billingAddressIds") final java.util.List<java.lang.String> billingAddressIds, @JsonProperty("defaultShippingAddressId") final java.lang.String defaultShippingAddressId, @JsonProperty("title") final java.lang.String title, @JsonProperty("customerNumber") final java.lang.String customerNumber, @JsonProperty("isEmailVerified") final java.lang.Boolean isEmailVerified, @JsonProperty("defaultBillingAddressId") final java.lang.String defaultBillingAddressId, @JsonProperty("shippingAddressIds") final java.util.List<java.lang.String> shippingAddressIds, @JsonProperty("firstName") final java.lang.String firstName, @JsonProperty("password") final java.lang.String password, @JsonProperty("middleName") final java.lang.String middleName, @JsonProperty("salutation") final java.lang.String salutation, @JsonProperty("key") final java.lang.String key, @JsonProperty("email") final java.lang.String email) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -140,12 +140,12 @@ public final class MyCustomerImpl implements MyCustomer {
    }
    
    
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
@@ -155,17 +155,17 @@ public final class MyCustomerImpl implements MyCustomer {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.Address> getAddresses(){
+   public java.util.List<com.commercetools.models.common.Address> getAddresses(){
       return this.addresses;
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
@@ -275,11 +275,11 @@ public final class MyCustomerImpl implements MyCustomer {
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.models.Common.CreatedBy createdBy){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
       this.createdBy = createdBy;
    }
    
-   public void setLastModifiedBy(final com.commercetools.models.Common.LastModifiedBy lastModifiedBy){
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
    
@@ -287,15 +287,15 @@ public final class MyCustomerImpl implements MyCustomer {
       this.lastName = lastName;
    }
    
-   public void setAddresses(final java.util.List<com.commercetools.models.Common.Address> addresses){
+   public void setAddresses(final java.util.List<com.commercetools.models.common.Address> addresses){
       this.addresses = addresses;
    }
    
-   public void setCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup){
+   public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupReference customerGroup){
       this.customerGroup = customerGroup;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFields custom){
+   public void setCustom(final com.commercetools.models.type.CustomFields custom){
       this.custom = custom;
    }
    

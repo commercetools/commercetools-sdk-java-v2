@@ -1,13 +1,13 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Customer.CustomerResourceIdentifier;
-import com.commercetools.models.Payment.PaymentMethodInfo;
-import com.commercetools.models.Payment.PaymentStatusDraft;
-import com.commercetools.models.Payment.TransactionDraft;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.customer.CustomerResourceIdentifier;
+import com.commercetools.models.payment.PaymentMethodInfo;
+import com.commercetools.models.payment.PaymentStatusDraft;
+import com.commercetools.models.payment.TransactionDraft;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.String;
-import com.commercetools.models.Payment.PaymentDraft;
+import com.commercetools.models.payment.PaymentDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,16 +16,16 @@ import java.time.ZonedDateTime;
 public final class PaymentDraftBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.Money amountAuthorized;
+   private com.commercetools.models.common.Money amountAuthorized;
    
    @Nullable
    private java.lang.String anonymousId;
    
    @Nullable
-   private com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo;
+   private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
    private java.lang.String authorizedUntil;
@@ -34,19 +34,19 @@ public final class PaymentDraftBuilder {
    private java.lang.String externalId;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Payment.TransactionDraft> transactions;
+   private java.util.List<com.commercetools.models.payment.TransactionDraft> transactions;
    
    @Nullable
-   private com.commercetools.models.Common.Money amountPaid;
+   private com.commercetools.models.common.Money amountPaid;
    
    @Nullable
-   private com.commercetools.models.Common.Money amountRefunded;
+   private com.commercetools.models.common.Money amountRefunded;
    
    
-   private com.commercetools.models.Common.Money amountPlanned;
+   private com.commercetools.models.common.Money amountPlanned;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Type.CustomFieldsDraft> interfaceInteractions;
+   private java.util.List<com.commercetools.models.type.CustomFieldsDraft> interfaceInteractions;
    
    @Nullable
    private java.lang.String interfaceId;
@@ -55,12 +55,12 @@ public final class PaymentDraftBuilder {
    private java.lang.String key;
    
    @Nullable
-   private com.commercetools.models.Payment.PaymentStatusDraft paymentStatus;
+   private com.commercetools.models.payment.PaymentStatusDraft paymentStatus;
    
    @Nullable
-   private com.commercetools.models.Customer.CustomerResourceIdentifier customer;
+   private com.commercetools.models.customer.CustomerResourceIdentifier customer;
    
-   public PaymentDraftBuilder amountAuthorized(@Nullable final com.commercetools.models.Common.Money amountAuthorized) {
+   public PaymentDraftBuilder amountAuthorized(@Nullable final com.commercetools.models.common.Money amountAuthorized) {
       this.amountAuthorized = amountAuthorized;
       return this;
    }
@@ -70,12 +70,12 @@ public final class PaymentDraftBuilder {
       return this;
    }
    
-   public PaymentDraftBuilder paymentMethodInfo(@Nullable final com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo) {
+   public PaymentDraftBuilder paymentMethodInfo(@Nullable final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo) {
       this.paymentMethodInfo = paymentMethodInfo;
       return this;
    }
    
-   public PaymentDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public PaymentDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
@@ -90,27 +90,27 @@ public final class PaymentDraftBuilder {
       return this;
    }
    
-   public PaymentDraftBuilder transactions(@Nullable final java.util.List<com.commercetools.models.Payment.TransactionDraft> transactions) {
+   public PaymentDraftBuilder transactions(@Nullable final java.util.List<com.commercetools.models.payment.TransactionDraft> transactions) {
       this.transactions = transactions;
       return this;
    }
    
-   public PaymentDraftBuilder amountPaid(@Nullable final com.commercetools.models.Common.Money amountPaid) {
+   public PaymentDraftBuilder amountPaid(@Nullable final com.commercetools.models.common.Money amountPaid) {
       this.amountPaid = amountPaid;
       return this;
    }
    
-   public PaymentDraftBuilder amountRefunded(@Nullable final com.commercetools.models.Common.Money amountRefunded) {
+   public PaymentDraftBuilder amountRefunded(@Nullable final com.commercetools.models.common.Money amountRefunded) {
       this.amountRefunded = amountRefunded;
       return this;
    }
    
-   public PaymentDraftBuilder amountPlanned( final com.commercetools.models.Common.Money amountPlanned) {
+   public PaymentDraftBuilder amountPlanned( final com.commercetools.models.common.Money amountPlanned) {
       this.amountPlanned = amountPlanned;
       return this;
    }
    
-   public PaymentDraftBuilder interfaceInteractions(@Nullable final java.util.List<com.commercetools.models.Type.CustomFieldsDraft> interfaceInteractions) {
+   public PaymentDraftBuilder interfaceInteractions(@Nullable final java.util.List<com.commercetools.models.type.CustomFieldsDraft> interfaceInteractions) {
       this.interfaceInteractions = interfaceInteractions;
       return this;
    }
@@ -125,18 +125,18 @@ public final class PaymentDraftBuilder {
       return this;
    }
    
-   public PaymentDraftBuilder paymentStatus(@Nullable final com.commercetools.models.Payment.PaymentStatusDraft paymentStatus) {
+   public PaymentDraftBuilder paymentStatus(@Nullable final com.commercetools.models.payment.PaymentStatusDraft paymentStatus) {
       this.paymentStatus = paymentStatus;
       return this;
    }
    
-   public PaymentDraftBuilder customer(@Nullable final com.commercetools.models.Customer.CustomerResourceIdentifier customer) {
+   public PaymentDraftBuilder customer(@Nullable final com.commercetools.models.customer.CustomerResourceIdentifier customer) {
       this.customer = customer;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Money getAmountAuthorized(){
+   public com.commercetools.models.common.Money getAmountAuthorized(){
       return this.amountAuthorized;
    }
    
@@ -146,12 +146,12 @@ public final class PaymentDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Payment.PaymentMethodInfo getPaymentMethodInfo(){
+   public com.commercetools.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
       return this.paymentMethodInfo;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
@@ -166,27 +166,27 @@ public final class PaymentDraftBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Payment.TransactionDraft> getTransactions(){
+   public java.util.List<com.commercetools.models.payment.TransactionDraft> getTransactions(){
       return this.transactions;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Money getAmountPaid(){
+   public com.commercetools.models.common.Money getAmountPaid(){
       return this.amountPaid;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Money getAmountRefunded(){
+   public com.commercetools.models.common.Money getAmountRefunded(){
       return this.amountRefunded;
    }
    
    
-   public com.commercetools.models.Common.Money getAmountPlanned(){
+   public com.commercetools.models.common.Money getAmountPlanned(){
       return this.amountPlanned;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Type.CustomFieldsDraft> getInterfaceInteractions(){
+   public java.util.List<com.commercetools.models.type.CustomFieldsDraft> getInterfaceInteractions(){
       return this.interfaceInteractions;
    }
    
@@ -201,12 +201,12 @@ public final class PaymentDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Payment.PaymentStatusDraft getPaymentStatus(){
+   public com.commercetools.models.payment.PaymentStatusDraft getPaymentStatus(){
       return this.paymentStatus;
    }
    
    @Nullable
-   public com.commercetools.models.Customer.CustomerResourceIdentifier getCustomer(){
+   public com.commercetools.models.customer.CustomerResourceIdentifier getCustomer(){
       return this.customer;
    }
 

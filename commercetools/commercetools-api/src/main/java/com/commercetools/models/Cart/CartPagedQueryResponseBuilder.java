@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.Cart;
+import com.commercetools.models.cart.Cart;
 import java.lang.Long;
-import com.commercetools.models.Cart.CartPagedQueryResponse;
+import com.commercetools.models.cart.CartPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class CartPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Cart.Cart> results;
+   private java.util.List<com.commercetools.models.cart.Cart> results;
    
    public CartPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class CartPagedQueryResponseBuilder {
       return this;
    }
    
-   public CartPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Cart.Cart> results) {
+   public CartPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.cart.Cart> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class CartPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.Cart> getResults(){
+   public java.util.List<com.commercetools.models.cart.Cart> getResults(){
       return this.results;
    }
 

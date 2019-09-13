@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalLineItemTotalPrice;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalLineItemTotalPrice;
 import java.lang.String;
-import com.commercetools.models.Cart.CartSetLineItemTotalPriceAction;
+import com.commercetools.models.cart.CartSetLineItemTotalPriceAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class CartSetLineItemTotalPriceActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice;
+   private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
    
    private java.lang.String lineItemId;
    
-   public CartSetLineItemTotalPriceActionBuilder externalTotalPrice(@Nullable final com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice) {
+   public CartSetLineItemTotalPriceActionBuilder externalTotalPrice(@Nullable final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
       this.externalTotalPrice = externalTotalPrice;
       return this;
    }
@@ -28,7 +28,7 @@ public final class CartSetLineItemTotalPriceActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+   public com.commercetools.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
       return this.externalTotalPrice;
    }
    

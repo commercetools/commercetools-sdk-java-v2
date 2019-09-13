@@ -16,7 +16,7 @@ public class ByProjectKeyProductDiscountsRequestBuilder {
       return new ByProjectKeyProductDiscountsGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyProductDiscountsPost post(com.commercetools.models.ProductDiscount.ProductDiscountDraft productDiscountDraft) {
+   public ByProjectKeyProductDiscountsPost post(com.commercetools.models.product_discount.ProductDiscountDraft productDiscountDraft) {
       return new ByProjectKeyProductDiscountsPost(apiHttpClient, projectKey, productDiscountDraft);
    }
    

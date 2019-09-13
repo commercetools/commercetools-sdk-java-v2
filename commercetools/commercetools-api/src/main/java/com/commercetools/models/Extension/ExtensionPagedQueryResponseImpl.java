@@ -1,6 +1,6 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.Extension;
+import com.commercetools.models.extension.Extension;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class ExtensionPagedQueryResponseImpl implements ExtensionPagedQuer
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Extension.Extension> results;
+   private java.util.List<com.commercetools.models.extension.Extension> results;
 
    @JsonCreator
-   ExtensionPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Extension.Extension> results) {
+   ExtensionPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.extension.Extension> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class ExtensionPagedQueryResponseImpl implements ExtensionPagedQuer
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.Extension> getResults(){
+   public java.util.List<com.commercetools.models.extension.Extension> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class ExtensionPagedQueryResponseImpl implements ExtensionPagedQuer
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Extension.Extension> results){
+   public void setResults(final java.util.List<com.commercetools.models.extension.Extension> results){
       this.results = results;
    }
 

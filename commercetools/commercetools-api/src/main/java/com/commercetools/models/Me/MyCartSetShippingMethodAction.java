@@ -1,10 +1,10 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Me.MyCartUpdateAction;
-import com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.me.MyCartUpdateAction;
+import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Me.MyCartSetShippingMethodActionImpl;
+import com.commercetools.models.me.MyCartSetShippingMethodActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

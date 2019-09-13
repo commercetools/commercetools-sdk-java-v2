@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice;
-import com.commercetools.models.Message.ProductPriceDiscountsSetMessage;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice;
+import com.commercetools.models.message.ProductPriceDiscountsSetMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class ProductPriceDiscountsSetMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,7 +38,7 @@ public final class ProductPriceDiscountsSetMessageBuilder {
    private java.lang.String type;
    
    
-   private java.util.List<com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
+   private java.util.List<com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
    
    public ProductPriceDiscountsSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -65,12 +65,12 @@ public final class ProductPriceDiscountsSetMessageBuilder {
       return this;
    }
    
-   public ProductPriceDiscountsSetMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public ProductPriceDiscountsSetMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public ProductPriceDiscountsSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public ProductPriceDiscountsSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -85,7 +85,7 @@ public final class ProductPriceDiscountsSetMessageBuilder {
       return this;
    }
    
-   public ProductPriceDiscountsSetMessageBuilder updatedPrices( final java.util.List<com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
+   public ProductPriceDiscountsSetMessageBuilder updatedPrices( final java.util.List<com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
       this.updatedPrices = updatedPrices;
       return this;
    }
@@ -116,12 +116,12 @@ public final class ProductPriceDiscountsSetMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -136,7 +136,7 @@ public final class ProductPriceDiscountsSetMessageBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices(){
+   public java.util.List<com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices(){
       return this.updatedPrices;
    }
 

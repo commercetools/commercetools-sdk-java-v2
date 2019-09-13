@@ -1,8 +1,9 @@
 package commercetools.misc;
 
-import com.commercetools.models.Category.*;
-import com.commercetools.models.Common.*;
-import com.commercetools.models.Type.*;
+
+import com.commercetools.models.category.*;
+import com.commercetools.models.common.*;
+import com.commercetools.models.type.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import org.junit.jupiter.api.Assertions;

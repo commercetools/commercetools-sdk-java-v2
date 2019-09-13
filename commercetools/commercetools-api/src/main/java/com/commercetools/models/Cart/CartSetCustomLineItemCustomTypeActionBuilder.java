@@ -1,10 +1,10 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Cart.CartSetCustomLineItemCustomTypeAction;
+import com.commercetools.models.cart.CartSetCustomLineItemCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,22 +16,22 @@ public final class CartSetCustomLineItemCustomTypeActionBuilder {
    private java.lang.String customLineItemId;
    
    @Nullable
-   private com.commercetools.models.Type.FieldContainer fields;
+   private com.commercetools.models.type.FieldContainer fields;
    
    @Nullable
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
    
    public CartSetCustomLineItemCustomTypeActionBuilder customLineItemId( final java.lang.String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public CartSetCustomLineItemCustomTypeActionBuilder fields(@Nullable final com.commercetools.models.Type.FieldContainer fields) {
+   public CartSetCustomLineItemCustomTypeActionBuilder fields(@Nullable final com.commercetools.models.type.FieldContainer fields) {
       this.fields = fields;
       return this;
    }
    
-   public CartSetCustomLineItemCustomTypeActionBuilder type(@Nullable final com.commercetools.models.Type.TypeResourceIdentifier type) {
+   public CartSetCustomLineItemCustomTypeActionBuilder type(@Nullable final com.commercetools.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
@@ -42,12 +42,12 @@ public final class CartSetCustomLineItemCustomTypeActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.FieldContainer getFields(){
+   public com.commercetools.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    @Nullable
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
 

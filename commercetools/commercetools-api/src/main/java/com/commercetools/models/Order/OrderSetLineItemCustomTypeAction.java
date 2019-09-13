@@ -1,10 +1,10 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetLineItemCustomTypeActionImpl;
+import com.commercetools.models.order.OrderSetLineItemCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

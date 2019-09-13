@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
-import com.commercetools.models.Type.CustomFieldLocalizedEnumValueImpl;
+import com.commercetools.models.type.CustomFieldLocalizedEnumValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

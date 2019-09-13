@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Common.ResourceIdentifier;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.common.ResourceIdentifier;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductResourceIdentifierImpl implements ProductResourceIdentifier {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String id;
    
@@ -40,7 +40,7 @@ public final class ProductResourceIdentifierImpl implements ProductResourceIdent
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    

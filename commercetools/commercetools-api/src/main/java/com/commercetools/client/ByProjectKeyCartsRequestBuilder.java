@@ -16,7 +16,7 @@ public class ByProjectKeyCartsRequestBuilder {
       return new ByProjectKeyCartsGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyCartsPost post(com.commercetools.models.Cart.CartDraft cartDraft) {
+   public ByProjectKeyCartsPost post(com.commercetools.models.cart.CartDraft cartDraft) {
       return new ByProjectKeyCartsPost(apiHttpClient, projectKey, cartDraft);
    }
    

@@ -1,6 +1,6 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.DiscountedPrice;
+import com.commercetools.models.common.DiscountedPrice;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDiscountsSetUpdatedPrice {
 
-   private com.commercetools.models.Common.DiscountedPrice discounted;
+   private com.commercetools.models.common.DiscountedPrice discounted;
    
    private java.lang.Boolean staged;
    
@@ -38,7 +38,7 @@ public final class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPr
    private java.lang.String variantKey;
 
    @JsonCreator
-   ProductPriceDiscountsSetUpdatedPriceImpl(@JsonProperty("discounted") final com.commercetools.models.Common.DiscountedPrice discounted, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Integer variantId, @JsonProperty("priceId") final java.lang.String priceId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("variantKey") final java.lang.String variantKey) {
+   ProductPriceDiscountsSetUpdatedPriceImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Integer variantId, @JsonProperty("priceId") final java.lang.String priceId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("variantKey") final java.lang.String variantKey) {
       this.discounted = discounted;
       this.staged = staged;
       this.variantId = variantId;
@@ -51,7 +51,7 @@ public final class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPr
    }
    
    
-   public com.commercetools.models.Common.DiscountedPrice getDiscounted(){
+   public com.commercetools.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
    
@@ -80,7 +80,7 @@ public final class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPr
       return this.variantKey;
    }
 
-   public void setDiscounted(final com.commercetools.models.Common.DiscountedPrice discounted){
+   public void setDiscounted(final com.commercetools.models.common.DiscountedPrice discounted){
       this.discounted = discounted;
    }
    

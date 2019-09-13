@@ -1,10 +1,10 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.OrderUpdateSyncInfoActionImpl;
+import com.commercetools.models.order.OrderUpdateSyncInfoActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

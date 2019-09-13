@@ -1,7 +1,7 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.DeliveryCloudEventsFormat;
-import com.commercetools.models.Subscription.DeliveryPlatformFormat;
+import com.commercetools.models.subscription.DeliveryCloudEventsFormat;
+import com.commercetools.models.subscription.DeliveryPlatformFormat;
 import java.lang.String;
 
 
@@ -17,8 +17,8 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Subscription.DeliveryPlatformFormatImpl.class, name = "Platform"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Subscription.DeliveryCloudEventsFormatImpl.class, name = "CloudEvents")
+   @JsonSubTypes.Type(value = com.commercetools.models.subscription.DeliveryPlatformFormatImpl.class, name = "Platform"),
+   @JsonSubTypes.Type(value = com.commercetools.models.subscription.DeliveryCloudEventsFormatImpl.class, name = "CloudEvents")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

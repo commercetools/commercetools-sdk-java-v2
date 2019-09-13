@@ -1,10 +1,10 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.PaymentUpdateAction;
-import com.commercetools.models.State.StateResourceIdentifier;
+import com.commercetools.models.payment.PaymentUpdateAction;
+import com.commercetools.models.state.StateResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Payment.PaymentTransitionStateAction;
+import com.commercetools.models.payment.PaymentTransitionStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +16,14 @@ public final class PaymentTransitionStateActionBuilder {
    private java.lang.Boolean force;
    
    
-   private com.commercetools.models.State.StateResourceIdentifier state;
+   private com.commercetools.models.state.StateResourceIdentifier state;
    
    public PaymentTransitionStateActionBuilder force(@Nullable final java.lang.Boolean force) {
       this.force = force;
       return this;
    }
    
-   public PaymentTransitionStateActionBuilder state( final com.commercetools.models.State.StateResourceIdentifier state) {
+   public PaymentTransitionStateActionBuilder state( final com.commercetools.models.state.StateResourceIdentifier state) {
       this.state = state;
       return this;
    }
@@ -34,7 +34,7 @@ public final class PaymentTransitionStateActionBuilder {
    }
    
    
-   public com.commercetools.models.State.StateResourceIdentifier getState(){
+   public com.commercetools.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
 

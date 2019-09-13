@@ -51,7 +51,7 @@ public class ByProjectKeyApiClientsByIDGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.ApiClient.ApiClient> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.api_client.ApiClient> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyApiClientsByIDGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.ApiClient.ApiClient>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.api_client.ApiClient>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.ApiClient.ApiClient.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.api_client.ApiClient.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

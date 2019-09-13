@@ -1,8 +1,8 @@
 package commercetools.channel;
 
-import com.commercetools.models.Channel.Channel;
-import com.commercetools.models.Channel.ChannelDraft;
-import com.commercetools.models.Channel.ChannelDraftBuilder;
+import com.commercetools.models.channel.Channel;
+import com.commercetools.models.channel.ChannelDraft;
+import com.commercetools.models.channel.ChannelDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

@@ -1,8 +1,8 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyCustomerUpdateAction;
+import com.commercetools.models.me.MyCustomerUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyCustomerSetDefaultBillingAddressAction;
+import com.commercetools.models.me.MyCustomerSetDefaultBillingAddressAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -1,12 +1,12 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.State.StateResourceIdentifier;
-import com.commercetools.models.State.StateRoleEnum;
-import com.commercetools.models.State.StateTypeEnum;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.state.StateResourceIdentifier;
+import com.commercetools.models.state.StateRoleEnum;
+import com.commercetools.models.state.StateTypeEnum;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.State.StateDraft;
+import com.commercetools.models.state.StateDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -18,19 +18,19 @@ public final class StateDraftBuilder {
    private java.lang.Boolean initial;
    
    @Nullable
-   private java.util.List<com.commercetools.models.State.StateRoleEnum> roles;
+   private java.util.List<com.commercetools.models.state.StateRoleEnum> roles;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    @Nullable
-   private java.util.List<com.commercetools.models.State.StateResourceIdentifier> transitions;
+   private java.util.List<com.commercetools.models.state.StateResourceIdentifier> transitions;
    
    
-   private com.commercetools.models.State.StateTypeEnum type;
+   private com.commercetools.models.state.StateTypeEnum type;
    
    
    private java.lang.String key;
@@ -40,27 +40,27 @@ public final class StateDraftBuilder {
       return this;
    }
    
-   public StateDraftBuilder roles(@Nullable final java.util.List<com.commercetools.models.State.StateRoleEnum> roles) {
+   public StateDraftBuilder roles(@Nullable final java.util.List<com.commercetools.models.state.StateRoleEnum> roles) {
       this.roles = roles;
       return this;
    }
    
-   public StateDraftBuilder name(@Nullable final com.commercetools.models.Common.LocalizedString name) {
+   public StateDraftBuilder name(@Nullable final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public StateDraftBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public StateDraftBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
    
-   public StateDraftBuilder transitions(@Nullable final java.util.List<com.commercetools.models.State.StateResourceIdentifier> transitions) {
+   public StateDraftBuilder transitions(@Nullable final java.util.List<com.commercetools.models.state.StateResourceIdentifier> transitions) {
       this.transitions = transitions;
       return this;
    }
    
-   public StateDraftBuilder type( final com.commercetools.models.State.StateTypeEnum type) {
+   public StateDraftBuilder type( final com.commercetools.models.state.StateTypeEnum type) {
       this.type = type;
       return this;
    }
@@ -76,27 +76,27 @@ public final class StateDraftBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.State.StateRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.state.StateRoleEnum> getRoles(){
       return this.roles;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.State.StateResourceIdentifier> getTransitions(){
+   public java.util.List<com.commercetools.models.state.StateResourceIdentifier> getTransitions(){
       return this.transitions;
    }
    
    
-   public com.commercetools.models.State.StateTypeEnum getType(){
+   public com.commercetools.models.state.StateTypeEnum getType(){
       return this.type;
    }
    

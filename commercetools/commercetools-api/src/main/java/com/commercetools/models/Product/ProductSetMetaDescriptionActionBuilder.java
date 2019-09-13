@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetMetaDescriptionAction;
+import com.commercetools.models.product.ProductSetMetaDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +16,14 @@ public final class ProductSetMetaDescriptionActionBuilder {
    private java.lang.Boolean staged;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString metaDescription;
+   private com.commercetools.models.common.LocalizedString metaDescription;
    
    public ProductSetMetaDescriptionActionBuilder staged(@Nullable final java.lang.Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductSetMetaDescriptionActionBuilder metaDescription(@Nullable final com.commercetools.models.Common.LocalizedString metaDescription) {
+   public ProductSetMetaDescriptionActionBuilder metaDescription(@Nullable final com.commercetools.models.common.LocalizedString metaDescription) {
       this.metaDescription = metaDescription;
       return this;
    }
@@ -34,7 +34,7 @@ public final class ProductSetMetaDescriptionActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getMetaDescription(){
+   public com.commercetools.models.common.LocalizedString getMetaDescription(){
       return this.metaDescription;
    }
 

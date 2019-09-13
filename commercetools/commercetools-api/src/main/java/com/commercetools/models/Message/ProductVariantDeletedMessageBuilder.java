@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Product.ProductVariant;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.product.ProductVariant;
 import java.lang.Object;
-import com.commercetools.models.Message.ProductVariantDeletedMessage;
+import com.commercetools.models.message.ProductVariantDeletedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class ProductVariantDeletedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -42,7 +42,7 @@ public final class ProductVariantDeletedMessageBuilder {
    private java.util.List<java.lang.Object> removedImageUrls;
    
    
-   private com.commercetools.models.Product.ProductVariant variant;
+   private com.commercetools.models.product.ProductVariant variant;
    
    public ProductVariantDeletedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -69,12 +69,12 @@ public final class ProductVariantDeletedMessageBuilder {
       return this;
    }
    
-   public ProductVariantDeletedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public ProductVariantDeletedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public ProductVariantDeletedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public ProductVariantDeletedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -94,7 +94,7 @@ public final class ProductVariantDeletedMessageBuilder {
       return this;
    }
    
-   public ProductVariantDeletedMessageBuilder variant( final com.commercetools.models.Product.ProductVariant variant) {
+   public ProductVariantDeletedMessageBuilder variant( final com.commercetools.models.product.ProductVariant variant) {
       this.variant = variant;
       return this;
    }
@@ -125,12 +125,12 @@ public final class ProductVariantDeletedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -150,7 +150,7 @@ public final class ProductVariantDeletedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Product.ProductVariant getVariant(){
+   public com.commercetools.models.product.ProductVariant getVariant(){
       return this.variant;
    }
 

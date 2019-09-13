@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ShipmentState;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ShipmentState;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class OrderChangeShipmentStateActionImpl implements OrderChangeShip
 
    private java.lang.String action;
    
-   private com.commercetools.models.Order.ShipmentState shipmentState;
+   private com.commercetools.models.order.ShipmentState shipmentState;
 
    @JsonCreator
-   OrderChangeShipmentStateActionImpl(@JsonProperty("shipmentState") final com.commercetools.models.Order.ShipmentState shipmentState) {
+   OrderChangeShipmentStateActionImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ShipmentState shipmentState) {
       this.shipmentState = shipmentState;
       this.action = "changeShipmentState";
    }
@@ -43,11 +43,11 @@ public final class OrderChangeShipmentStateActionImpl implements OrderChangeShip
    }
    
    
-   public com.commercetools.models.Order.ShipmentState getShipmentState(){
+   public com.commercetools.models.order.ShipmentState getShipmentState(){
       return this.shipmentState;
    }
 
-   public void setShipmentState(final com.commercetools.models.Order.ShipmentState shipmentState){
+   public void setShipmentState(final com.commercetools.models.order.ShipmentState shipmentState){
       this.shipmentState = shipmentState;
    }
 

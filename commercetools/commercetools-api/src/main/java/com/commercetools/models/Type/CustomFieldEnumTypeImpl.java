@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.CustomFieldEnumValue;
-import com.commercetools.models.Type.FieldType;
+import com.commercetools.models.type.CustomFieldEnumValue;
+import com.commercetools.models.type.FieldType;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CustomFieldEnumTypeImpl implements CustomFieldEnumType {
 
    private java.lang.String name;
    
-   private java.util.List<com.commercetools.models.Type.CustomFieldEnumValue> values;
+   private java.util.List<com.commercetools.models.type.CustomFieldEnumValue> values;
 
    @JsonCreator
-   CustomFieldEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.models.Type.CustomFieldEnumValue> values) {
+   CustomFieldEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.models.type.CustomFieldEnumValue> values) {
       this.values = values;
       this.name = "Enum";
    }
@@ -43,11 +43,11 @@ public final class CustomFieldEnumTypeImpl implements CustomFieldEnumType {
    }
    
    
-   public java.util.List<com.commercetools.models.Type.CustomFieldEnumValue> getValues(){
+   public java.util.List<com.commercetools.models.type.CustomFieldEnumValue> getValues(){
       return this.values;
    }
 
-   public void setValues(final java.util.List<com.commercetools.models.Type.CustomFieldEnumValue> values){
+   public void setValues(final java.util.List<com.commercetools.models.type.CustomFieldEnumValue> values){
       this.values = values;
    }
 

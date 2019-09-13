@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Message.ProductRevertedStagedChangesMessagePayload;
+import com.commercetools.models.message.ProductRevertedStagedChangesMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -1,9 +1,9 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ProjectUpdateAction;
-import com.commercetools.models.Project.ShippingRateInputType;
+import com.commercetools.models.project.ProjectUpdateAction;
+import com.commercetools.models.project.ShippingRateInputType;
 import java.lang.String;
-import com.commercetools.models.Project.ProjectSetShippingRateInputTypeActionImpl;
+import com.commercetools.models.project.ProjectSetShippingRateInputTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

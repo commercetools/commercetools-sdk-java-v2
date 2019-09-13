@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.common.Money;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft {
 
-   private com.commercetools.models.Cart.ExternalTaxRateDraft taxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft taxRate;
    
-   private com.commercetools.models.Common.Money totalGross;
+   private com.commercetools.models.common.Money totalGross;
 
    @JsonCreator
-   ExternalTaxAmountDraftImpl(@JsonProperty("taxRate") final com.commercetools.models.Cart.ExternalTaxRateDraft taxRate, @JsonProperty("totalGross") final com.commercetools.models.Common.Money totalGross) {
+   ExternalTaxAmountDraftImpl(@JsonProperty("taxRate") final com.commercetools.models.cart.ExternalTaxRateDraft taxRate, @JsonProperty("totalGross") final com.commercetools.models.common.Money totalGross) {
       this.taxRate = taxRate;
       this.totalGross = totalGross;
    }
@@ -37,20 +37,20 @@ public final class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft 
    }
    
    
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getTaxRate(){
       return this.taxRate;
    }
    
    
-   public com.commercetools.models.Common.Money getTotalGross(){
+   public com.commercetools.models.common.Money getTotalGross(){
       return this.totalGross;
    }
 
-   public void setTaxRate(final com.commercetools.models.Cart.ExternalTaxRateDraft taxRate){
+   public void setTaxRate(final com.commercetools.models.cart.ExternalTaxRateDraft taxRate){
       this.taxRate = taxRate;
    }
    
-   public void setTotalGross(final com.commercetools.models.Common.Money totalGross){
+   public void setTotalGross(final com.commercetools.models.common.Money totalGross){
       this.totalGross = totalGross;
    }
 

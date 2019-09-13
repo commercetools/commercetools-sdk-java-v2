@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Common.ResourceIdentifier;
-import com.commercetools.models.Order.OrderResourceIdentifier;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.common.ResourceIdentifier;
+import com.commercetools.models.order.OrderResourceIdentifier;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

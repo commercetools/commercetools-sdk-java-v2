@@ -1,6 +1,6 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Review.ReviewUpdateAction;
+import com.commercetools.models.review.ReviewUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewUpdateImpl implements ReviewUpdate {
 
-   private java.util.List<com.commercetools.models.Review.ReviewUpdateAction> actions;
+   private java.util.List<com.commercetools.models.review.ReviewUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   ReviewUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Review.ReviewUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   ReviewUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.review.ReviewUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class ReviewUpdateImpl implements ReviewUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Review.ReviewUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.review.ReviewUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class ReviewUpdateImpl implements ReviewUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Review.ReviewUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.review.ReviewUpdateAction> actions){
       this.actions = actions;
    }
    

@@ -1,6 +1,6 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.message.Message;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class MessagePagedQueryResponseImpl implements MessagePagedQueryRes
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Message.Message> results;
+   private java.util.List<com.commercetools.models.message.Message> results;
 
    @JsonCreator
-   MessagePagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Message.Message> results) {
+   MessagePagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.message.Message> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class MessagePagedQueryResponseImpl implements MessagePagedQueryRes
    }
    
    
-   public java.util.List<com.commercetools.models.Message.Message> getResults(){
+   public java.util.List<com.commercetools.models.message.Message> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class MessagePagedQueryResponseImpl implements MessagePagedQueryRes
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Message.Message> results){
+   public void setResults(final java.util.List<com.commercetools.models.message.Message> results){
       this.results = results;
    }
 

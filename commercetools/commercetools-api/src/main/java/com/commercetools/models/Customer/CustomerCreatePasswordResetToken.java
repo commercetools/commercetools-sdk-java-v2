@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerCreatePasswordResetTokenImpl;
+import com.commercetools.models.customer.CustomerCreatePasswordResetTokenImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ProductSlugChangedMessagePayloadImpl implements ProductSlugCh
 
    private java.lang.String type;
    
-   private com.commercetools.models.Common.LocalizedString slug;
+   private com.commercetools.models.common.LocalizedString slug;
 
    @JsonCreator
-   ProductSlugChangedMessagePayloadImpl(@JsonProperty("slug") final com.commercetools.models.Common.LocalizedString slug) {
+   ProductSlugChangedMessagePayloadImpl(@JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug) {
       this.slug = slug;
       this.type = "ProductSlugChanged";
    }
@@ -43,11 +43,11 @@ public final class ProductSlugChangedMessagePayloadImpl implements ProductSlugCh
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getSlug(){
+   public com.commercetools.models.common.LocalizedString getSlug(){
       return this.slug;
    }
 
-   public void setSlug(final com.commercetools.models.Common.LocalizedString slug){
+   public void setSlug(final com.commercetools.models.common.LocalizedString slug){
       this.slug = slug;
    }
 

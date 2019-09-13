@@ -1,8 +1,8 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.MoneyType;
-import com.commercetools.models.Common.TypedMoneyDraft;
-import com.commercetools.models.Common.CentPrecisionMoneyDraft;
+import com.commercetools.models.common.MoneyType;
+import com.commercetools.models.common.TypedMoneyDraft;
+import com.commercetools.models.common.CentPrecisionMoneyDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

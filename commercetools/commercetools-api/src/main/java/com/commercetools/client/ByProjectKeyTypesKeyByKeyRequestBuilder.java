@@ -18,7 +18,7 @@ public class ByProjectKeyTypesKeyByKeyRequestBuilder {
       return new ByProjectKeyTypesKeyByKeyGet(apiHttpClient, projectKey, key);
    }
    
-   public ByProjectKeyTypesKeyByKeyPost post(com.commercetools.models.Type.TypeUpdate typeUpdate) {
+   public ByProjectKeyTypesKeyByKeyPost post(com.commercetools.models.type.TypeUpdate typeUpdate) {
       return new ByProjectKeyTypesKeyByKeyPost(apiHttpClient, projectKey, key, typeUpdate);
    }
    

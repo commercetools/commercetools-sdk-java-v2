@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetResults;
-import com.commercetools.models.Product.ProductProjection;
+import com.commercetools.models.product.FacetResults;
+import com.commercetools.models.product.ProductProjection;
 import java.lang.Long;
-import com.commercetools.models.Product.ProductProjectionPagedSearchResponse;
+import com.commercetools.models.product.ProductProjectionPagedSearchResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ProductProjectionPagedSearchResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Product.ProductProjection> results;
+   private java.util.List<com.commercetools.models.product.ProductProjection> results;
    
    
-   private com.commercetools.models.Product.FacetResults facets;
+   private com.commercetools.models.product.FacetResults facets;
    
    public ProductProjectionPagedSearchResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -41,12 +41,12 @@ public final class ProductProjectionPagedSearchResponseBuilder {
       return this;
    }
    
-   public ProductProjectionPagedSearchResponseBuilder results( final java.util.List<com.commercetools.models.Product.ProductProjection> results) {
+   public ProductProjectionPagedSearchResponseBuilder results( final java.util.List<com.commercetools.models.product.ProductProjection> results) {
       this.results = results;
       return this;
    }
    
-   public ProductProjectionPagedSearchResponseBuilder facets( final com.commercetools.models.Product.FacetResults facets) {
+   public ProductProjectionPagedSearchResponseBuilder facets( final com.commercetools.models.product.FacetResults facets) {
       this.facets = facets;
       return this;
    }
@@ -67,12 +67,12 @@ public final class ProductProjectionPagedSearchResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Product.ProductProjection> getResults(){
+   public java.util.List<com.commercetools.models.product.ProductProjection> getResults(){
       return this.results;
    }
    
    
-   public com.commercetools.models.Product.FacetResults getFacets(){
+   public com.commercetools.models.product.FacetResults getFacets(){
       return this.facets;
    }
 

@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.CategorySlugChangedMessage;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.CategorySlugChangedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class CategorySlugChangedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,7 +38,7 @@ public final class CategorySlugChangedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Common.LocalizedString slug;
+   private com.commercetools.models.common.LocalizedString slug;
    
    public CategorySlugChangedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -65,12 +65,12 @@ public final class CategorySlugChangedMessageBuilder {
       return this;
    }
    
-   public CategorySlugChangedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public CategorySlugChangedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public CategorySlugChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public CategorySlugChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -85,7 +85,7 @@ public final class CategorySlugChangedMessageBuilder {
       return this;
    }
    
-   public CategorySlugChangedMessageBuilder slug( final com.commercetools.models.Common.LocalizedString slug) {
+   public CategorySlugChangedMessageBuilder slug( final com.commercetools.models.common.LocalizedString slug) {
       this.slug = slug;
       return this;
    }
@@ -116,12 +116,12 @@ public final class CategorySlugChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -136,7 +136,7 @@ public final class CategorySlugChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getSlug(){
+   public com.commercetools.models.common.LocalizedString getSlug(){
       return this.slug;
    }
 

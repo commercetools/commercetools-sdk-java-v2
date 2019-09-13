@@ -1,9 +1,9 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Customer.CustomerResourceIdentifier;
-import com.commercetools.models.Review.ReviewUpdateAction;
+import com.commercetools.models.customer.CustomerResourceIdentifier;
+import com.commercetools.models.review.ReviewUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Review.ReviewSetCustomerAction;
+import com.commercetools.models.review.ReviewSetCustomerAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ReviewSetCustomerActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Customer.CustomerResourceIdentifier customer;
+   private com.commercetools.models.customer.CustomerResourceIdentifier customer;
    
-   public ReviewSetCustomerActionBuilder customer(@Nullable final com.commercetools.models.Customer.CustomerResourceIdentifier customer) {
+   public ReviewSetCustomerActionBuilder customer(@Nullable final com.commercetools.models.customer.CustomerResourceIdentifier customer) {
       this.customer = customer;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Customer.CustomerResourceIdentifier getCustomer(){
+   public com.commercetools.models.customer.CustomerResourceIdentifier getCustomer(){
       return this.customer;
    }
 

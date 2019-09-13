@@ -1,12 +1,12 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalLineItemTotalPrice;
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.common.Money;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.CartRemoveLineItemAction;
+import com.commercetools.models.cart.CartRemoveLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -18,23 +18,23 @@ public final class CartRemoveLineItemActionBuilder {
    private java.lang.Integer quantity;
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice;
+   private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
    
    private java.lang.String lineItemId;
    
    @Nullable
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetailsToRemove;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
    
    @Nullable
-   private com.commercetools.models.Common.Money externalPrice;
+   private com.commercetools.models.common.Money externalPrice;
    
    public CartRemoveLineItemActionBuilder quantity(@Nullable final java.lang.Integer quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public CartRemoveLineItemActionBuilder externalTotalPrice(@Nullable final com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice) {
+   public CartRemoveLineItemActionBuilder externalTotalPrice(@Nullable final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
       this.externalTotalPrice = externalTotalPrice;
       return this;
    }
@@ -44,12 +44,12 @@ public final class CartRemoveLineItemActionBuilder {
       return this;
    }
    
-   public CartRemoveLineItemActionBuilder shippingDetailsToRemove(@Nullable final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetailsToRemove) {
+   public CartRemoveLineItemActionBuilder shippingDetailsToRemove(@Nullable final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {
       this.shippingDetailsToRemove = shippingDetailsToRemove;
       return this;
    }
    
-   public CartRemoveLineItemActionBuilder externalPrice(@Nullable final com.commercetools.models.Common.Money externalPrice) {
+   public CartRemoveLineItemActionBuilder externalPrice(@Nullable final com.commercetools.models.common.Money externalPrice) {
       this.externalPrice = externalPrice;
       return this;
    }
@@ -60,7 +60,7 @@ public final class CartRemoveLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+   public com.commercetools.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
       return this.externalTotalPrice;
    }
    
@@ -70,12 +70,12 @@ public final class CartRemoveLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetailsToRemove(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetailsToRemove(){
       return this.shippingDetailsToRemove;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Money getExternalPrice(){
+   public com.commercetools.models.common.Money getExternalPrice(){
       return this.externalPrice;
    }
 

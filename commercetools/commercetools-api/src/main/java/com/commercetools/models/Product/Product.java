@@ -1,13 +1,13 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Product.ProductCatalogData;
-import com.commercetools.models.ProductType.ProductTypeReference;
-import com.commercetools.models.Review.ReviewRatingStatistics;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.TaxCategory.TaxCategoryReference;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.product.ProductCatalogData;
+import com.commercetools.models.product_type.ProductTypeReference;
+import com.commercetools.models.review.ReviewRatingStatistics;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.tax_category.TaxCategoryReference;
 import java.lang.String;
-import com.commercetools.models.Product.ProductImpl;
+import com.commercetools.models.product.ProductImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

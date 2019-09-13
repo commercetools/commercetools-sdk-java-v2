@@ -16,7 +16,7 @@ public class ByProjectKeyTaxCategoriesRequestBuilder {
       return new ByProjectKeyTaxCategoriesGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyTaxCategoriesPost post(com.commercetools.models.TaxCategory.TaxCategoryDraft taxCategoryDraft) {
+   public ByProjectKeyTaxCategoriesPost post(com.commercetools.models.tax_category.TaxCategoryDraft taxCategoryDraft) {
       return new ByProjectKeyTaxCategoriesPost(apiHttpClient, projectKey, taxCategoryDraft);
    }
    

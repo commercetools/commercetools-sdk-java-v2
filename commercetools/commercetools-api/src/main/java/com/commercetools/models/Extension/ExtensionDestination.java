@@ -1,7 +1,7 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionAWSLambdaDestination;
-import com.commercetools.models.Extension.ExtensionHttpDestination;
+import com.commercetools.models.extension.ExtensionAWSLambdaDestination;
+import com.commercetools.models.extension.ExtensionHttpDestination;
 import java.lang.String;
 
 
@@ -17,8 +17,8 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Extension.ExtensionHttpDestinationImpl.class, name = "HTTP"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Extension.ExtensionAWSLambdaDestinationImpl.class, name = "AWSLambda")
+   @JsonSubTypes.Type(value = com.commercetools.models.extension.ExtensionHttpDestinationImpl.class, name = "HTTP"),
+   @JsonSubTypes.Type(value = com.commercetools.models.extension.ExtensionAWSLambdaDestinationImpl.class, name = "AWSLambda")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

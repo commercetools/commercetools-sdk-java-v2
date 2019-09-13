@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Order.DeliveryItemImpl;
+import com.commercetools.models.order.DeliveryItemImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

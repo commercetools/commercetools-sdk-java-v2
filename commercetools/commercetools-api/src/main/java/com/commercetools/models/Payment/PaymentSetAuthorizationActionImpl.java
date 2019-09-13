@@ -1,7 +1,7 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Payment.PaymentUpdateAction;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.payment.PaymentUpdateAction;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -27,12 +27,12 @@ public final class PaymentSetAuthorizationActionImpl implements PaymentSetAuthor
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.Money amount;
+   private com.commercetools.models.common.Money amount;
    
    private java.time.ZonedDateTime until;
 
    @JsonCreator
-   PaymentSetAuthorizationActionImpl(@JsonProperty("amount") final com.commercetools.models.Common.Money amount, @JsonProperty("until") final java.time.ZonedDateTime until) {
+   PaymentSetAuthorizationActionImpl(@JsonProperty("amount") final com.commercetools.models.common.Money amount, @JsonProperty("until") final java.time.ZonedDateTime until) {
       this.amount = amount;
       this.until = until;
       this.action = "setAuthorization";
@@ -47,7 +47,7 @@ public final class PaymentSetAuthorizationActionImpl implements PaymentSetAuthor
    }
    
    
-   public com.commercetools.models.Common.Money getAmount(){
+   public com.commercetools.models.common.Money getAmount(){
       return this.amount;
    }
    
@@ -56,7 +56,7 @@ public final class PaymentSetAuthorizationActionImpl implements PaymentSetAuthor
       return this.until;
    }
 
-   public void setAmount(final com.commercetools.models.Common.Money amount){
+   public void setAmount(final com.commercetools.models.common.Money amount){
       this.amount = amount;
    }
    

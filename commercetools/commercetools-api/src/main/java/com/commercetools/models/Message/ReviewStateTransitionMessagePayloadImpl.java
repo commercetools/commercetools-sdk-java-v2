@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.state.StateReference;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -30,18 +30,18 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
    
    private java.lang.Boolean newIncludedInStatistics;
    
-   private com.commercetools.models.State.StateReference oldState;
+   private com.commercetools.models.state.StateReference oldState;
    
    private java.lang.Boolean force;
    
    private java.lang.Boolean oldIncludedInStatistics;
    
-   private com.commercetools.models.State.StateReference newState;
+   private com.commercetools.models.state.StateReference newState;
    
-   private com.commercetools.models.Common.Reference target;
+   private com.commercetools.models.common.Reference target;
 
    @JsonCreator
-   ReviewStateTransitionMessagePayloadImpl(@JsonProperty("newIncludedInStatistics") final java.lang.Boolean newIncludedInStatistics, @JsonProperty("oldState") final com.commercetools.models.State.StateReference oldState, @JsonProperty("force") final java.lang.Boolean force, @JsonProperty("oldIncludedInStatistics") final java.lang.Boolean oldIncludedInStatistics, @JsonProperty("newState") final com.commercetools.models.State.StateReference newState, @JsonProperty("target") final com.commercetools.models.Common.Reference target) {
+   ReviewStateTransitionMessagePayloadImpl(@JsonProperty("newIncludedInStatistics") final java.lang.Boolean newIncludedInStatistics, @JsonProperty("oldState") final com.commercetools.models.state.StateReference oldState, @JsonProperty("force") final java.lang.Boolean force, @JsonProperty("oldIncludedInStatistics") final java.lang.Boolean oldIncludedInStatistics, @JsonProperty("newState") final com.commercetools.models.state.StateReference newState, @JsonProperty("target") final com.commercetools.models.common.Reference target) {
       this.newIncludedInStatistics = newIncludedInStatistics;
       this.oldState = oldState;
       this.force = force;
@@ -65,7 +65,7 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
    }
    
    
-   public com.commercetools.models.State.StateReference getOldState(){
+   public com.commercetools.models.state.StateReference getOldState(){
       return this.oldState;
    }
    
@@ -80,12 +80,12 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
    }
    
    
-   public com.commercetools.models.State.StateReference getNewState(){
+   public com.commercetools.models.state.StateReference getNewState(){
       return this.newState;
    }
    
    
-   public com.commercetools.models.Common.Reference getTarget(){
+   public com.commercetools.models.common.Reference getTarget(){
       return this.target;
    }
 
@@ -93,7 +93,7 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
       this.newIncludedInStatistics = newIncludedInStatistics;
    }
    
-   public void setOldState(final com.commercetools.models.State.StateReference oldState){
+   public void setOldState(final com.commercetools.models.state.StateReference oldState){
       this.oldState = oldState;
    }
    
@@ -105,11 +105,11 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
       this.oldIncludedInStatistics = oldIncludedInStatistics;
    }
    
-   public void setNewState(final com.commercetools.models.State.StateReference newState){
+   public void setNewState(final com.commercetools.models.state.StateReference newState){
       this.newState = newState;
    }
    
-   public void setTarget(final com.commercetools.models.Common.Reference target){
+   public void setTarget(final com.commercetools.models.common.Reference target){
       this.target = target;
    }
 

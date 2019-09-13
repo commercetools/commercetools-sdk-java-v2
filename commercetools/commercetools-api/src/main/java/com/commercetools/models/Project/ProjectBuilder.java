@@ -1,12 +1,12 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Message.MessageConfiguration;
-import com.commercetools.models.Project.ExternalOAuth;
-import com.commercetools.models.Project.ShippingRateInputType;
+import com.commercetools.models.message.MessageConfiguration;
+import com.commercetools.models.project.ExternalOAuth;
+import com.commercetools.models.project.ShippingRateInputType;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Project.Project;
+import com.commercetools.models.project.Project;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,10 +15,10 @@ import java.time.ZonedDateTime;
 public final class ProjectBuilder {
    
    @Nullable
-   private com.commercetools.models.Project.ExternalOAuth externalOAuth;
+   private com.commercetools.models.project.ExternalOAuth externalOAuth;
    
    @Nullable
-   private com.commercetools.models.Project.ShippingRateInputType shippingRateInputType;
+   private com.commercetools.models.project.ShippingRateInputType shippingRateInputType;
    
    
    private java.time.ZonedDateTime createdAt;
@@ -30,7 +30,7 @@ public final class ProjectBuilder {
    private java.lang.String name;
    
    
-   private com.commercetools.models.Message.MessageConfiguration messages;
+   private com.commercetools.models.message.MessageConfiguration messages;
    
    
    private java.util.List<java.lang.String> countries;
@@ -47,12 +47,12 @@ public final class ProjectBuilder {
    
    private java.util.List<java.lang.String> currencies;
    
-   public ProjectBuilder externalOAuth(@Nullable final com.commercetools.models.Project.ExternalOAuth externalOAuth) {
+   public ProjectBuilder externalOAuth(@Nullable final com.commercetools.models.project.ExternalOAuth externalOAuth) {
       this.externalOAuth = externalOAuth;
       return this;
    }
    
-   public ProjectBuilder shippingRateInputType(@Nullable final com.commercetools.models.Project.ShippingRateInputType shippingRateInputType) {
+   public ProjectBuilder shippingRateInputType(@Nullable final com.commercetools.models.project.ShippingRateInputType shippingRateInputType) {
       this.shippingRateInputType = shippingRateInputType;
       return this;
    }
@@ -72,7 +72,7 @@ public final class ProjectBuilder {
       return this;
    }
    
-   public ProjectBuilder messages( final com.commercetools.models.Message.MessageConfiguration messages) {
+   public ProjectBuilder messages( final com.commercetools.models.message.MessageConfiguration messages) {
       this.messages = messages;
       return this;
    }
@@ -103,12 +103,12 @@ public final class ProjectBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Project.ExternalOAuth getExternalOAuth(){
+   public com.commercetools.models.project.ExternalOAuth getExternalOAuth(){
       return this.externalOAuth;
    }
    
    @Nullable
-   public com.commercetools.models.Project.ShippingRateInputType getShippingRateInputType(){
+   public com.commercetools.models.project.ShippingRateInputType getShippingRateInputType(){
       return this.shippingRateInputType;
    }
    
@@ -128,7 +128,7 @@ public final class ProjectBuilder {
    }
    
    
-   public com.commercetools.models.Message.MessageConfiguration getMessages(){
+   public com.commercetools.models.message.MessageConfiguration getMessages(){
       return this.messages;
    }
    

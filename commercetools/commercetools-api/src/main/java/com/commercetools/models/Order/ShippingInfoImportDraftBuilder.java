@@ -1,15 +1,15 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Cart.ShippingMethodState;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Order.Delivery;
-import com.commercetools.models.Order.DiscountedLineItemPriceDraft;
-import com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier;
-import com.commercetools.models.ShippingMethod.ShippingRateDraft;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier;
-import com.commercetools.models.TaxCategory.TaxRate;
+import com.commercetools.models.cart.ShippingMethodState;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.order.Delivery;
+import com.commercetools.models.order.DiscountedLineItemPriceDraft;
+import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.models.shipping_method.ShippingRateDraft;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.models.tax_category.TaxRate;
 import java.lang.String;
-import com.commercetools.models.Order.ShippingInfoImportDraft;
+import com.commercetools.models.order.ShippingInfoImportDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -18,58 +18,58 @@ import java.time.ZonedDateTime;
 public final class ShippingInfoImportDraftBuilder {
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxRate taxRate;
+   private com.commercetools.models.tax_category.TaxRate taxRate;
    
    
-   private com.commercetools.models.ShippingMethod.ShippingRateDraft shippingRate;
-   
-   @Nullable
-   private com.commercetools.models.Order.DiscountedLineItemPriceDraft discountedPrice;
+   private com.commercetools.models.shipping_method.ShippingRateDraft shippingRate;
    
    @Nullable
-   private com.commercetools.models.Cart.ShippingMethodState shippingMethodState;
-   
-   
-   private com.commercetools.models.Common.Money price;
+   private com.commercetools.models.order.DiscountedLineItemPriceDraft discountedPrice;
    
    @Nullable
-   private com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod;
+   private com.commercetools.models.cart.ShippingMethodState shippingMethodState;
+   
+   
+   private com.commercetools.models.common.Money price;
+   
+   @Nullable
+   private com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
    
    
    private java.lang.String shippingMethodName;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Order.Delivery> deliveries;
+   private java.util.List<com.commercetools.models.order.Delivery> deliveries;
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
    
-   public ShippingInfoImportDraftBuilder taxRate(@Nullable final com.commercetools.models.TaxCategory.TaxRate taxRate) {
+   public ShippingInfoImportDraftBuilder taxRate(@Nullable final com.commercetools.models.tax_category.TaxRate taxRate) {
       this.taxRate = taxRate;
       return this;
    }
    
-   public ShippingInfoImportDraftBuilder shippingRate( final com.commercetools.models.ShippingMethod.ShippingRateDraft shippingRate) {
+   public ShippingInfoImportDraftBuilder shippingRate( final com.commercetools.models.shipping_method.ShippingRateDraft shippingRate) {
       this.shippingRate = shippingRate;
       return this;
    }
    
-   public ShippingInfoImportDraftBuilder discountedPrice(@Nullable final com.commercetools.models.Order.DiscountedLineItemPriceDraft discountedPrice) {
+   public ShippingInfoImportDraftBuilder discountedPrice(@Nullable final com.commercetools.models.order.DiscountedLineItemPriceDraft discountedPrice) {
       this.discountedPrice = discountedPrice;
       return this;
    }
    
-   public ShippingInfoImportDraftBuilder shippingMethodState(@Nullable final com.commercetools.models.Cart.ShippingMethodState shippingMethodState) {
+   public ShippingInfoImportDraftBuilder shippingMethodState(@Nullable final com.commercetools.models.cart.ShippingMethodState shippingMethodState) {
       this.shippingMethodState = shippingMethodState;
       return this;
    }
    
-   public ShippingInfoImportDraftBuilder price( final com.commercetools.models.Common.Money price) {
+   public ShippingInfoImportDraftBuilder price( final com.commercetools.models.common.Money price) {
       this.price = price;
       return this;
    }
    
-   public ShippingInfoImportDraftBuilder shippingMethod(@Nullable final com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod) {
+   public ShippingInfoImportDraftBuilder shippingMethod(@Nullable final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
       this.shippingMethod = shippingMethod;
       return this;
    }
@@ -79,43 +79,43 @@ public final class ShippingInfoImportDraftBuilder {
       return this;
    }
    
-   public ShippingInfoImportDraftBuilder deliveries(@Nullable final java.util.List<com.commercetools.models.Order.Delivery> deliveries) {
+   public ShippingInfoImportDraftBuilder deliveries(@Nullable final java.util.List<com.commercetools.models.order.Delivery> deliveries) {
       this.deliveries = deliveries;
       return this;
    }
    
-   public ShippingInfoImportDraftBuilder taxCategory(@Nullable final com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory) {
+   public ShippingInfoImportDraftBuilder taxCategory(@Nullable final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
       this.taxCategory = taxCategory;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxRate getTaxRate(){
+   public com.commercetools.models.tax_category.TaxRate getTaxRate(){
       return this.taxRate;
    }
    
    
-   public com.commercetools.models.ShippingMethod.ShippingRateDraft getShippingRate(){
+   public com.commercetools.models.shipping_method.ShippingRateDraft getShippingRate(){
       return this.shippingRate;
    }
    
    @Nullable
-   public com.commercetools.models.Order.DiscountedLineItemPriceDraft getDiscountedPrice(){
+   public com.commercetools.models.order.DiscountedLineItemPriceDraft getDiscountedPrice(){
       return this.discountedPrice;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ShippingMethodState getShippingMethodState(){
+   public com.commercetools.models.cart.ShippingMethodState getShippingMethodState(){
       return this.shippingMethodState;
    }
    
    
-   public com.commercetools.models.Common.Money getPrice(){
+   public com.commercetools.models.common.Money getPrice(){
       return this.price;
    }
    
    @Nullable
-   public com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier getShippingMethod(){
+   public com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
       return this.shippingMethod;
    }
    
@@ -125,12 +125,12 @@ public final class ShippingInfoImportDraftBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Order.Delivery> getDeliveries(){
+   public java.util.List<com.commercetools.models.order.Delivery> getDeliveries(){
       return this.deliveries;
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }
 

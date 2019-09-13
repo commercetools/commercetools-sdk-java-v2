@@ -51,7 +51,7 @@ public class ByProjectKeyTypesByIDGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Type.Type> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.type.Type> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyTypesByIDGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Type.Type>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.type.Type>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Type.Type.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.type.Type.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

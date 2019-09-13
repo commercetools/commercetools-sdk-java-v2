@@ -1,7 +1,7 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionDestination;
-import com.commercetools.models.Extension.ExtensionTrigger;
+import com.commercetools.models.extension.ExtensionDestination;
+import com.commercetools.models.extension.ExtensionTrigger;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -27,14 +27,14 @@ public final class ExtensionDraftImpl implements ExtensionDraft {
 
    private java.lang.Integer timeoutInMs;
    
-   private com.commercetools.models.Extension.ExtensionDestination destination;
+   private com.commercetools.models.extension.ExtensionDestination destination;
    
-   private java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers;
+   private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
    
    private java.lang.String key;
 
    @JsonCreator
-   ExtensionDraftImpl(@JsonProperty("timeoutInMs") final java.lang.Integer timeoutInMs, @JsonProperty("destination") final com.commercetools.models.Extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers, @JsonProperty("key") final java.lang.String key) {
+   ExtensionDraftImpl(@JsonProperty("timeoutInMs") final java.lang.Integer timeoutInMs, @JsonProperty("destination") final com.commercetools.models.extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers, @JsonProperty("key") final java.lang.String key) {
       this.timeoutInMs = timeoutInMs;
       this.destination = destination;
       this.triggers = triggers;
@@ -50,12 +50,12 @@ public final class ExtensionDraftImpl implements ExtensionDraft {
    }
    
    
-   public com.commercetools.models.Extension.ExtensionDestination getDestination(){
+   public com.commercetools.models.extension.ExtensionDestination getDestination(){
       return this.destination;
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.ExtensionTrigger> getTriggers(){
+   public java.util.List<com.commercetools.models.extension.ExtensionTrigger> getTriggers(){
       return this.triggers;
    }
    
@@ -68,11 +68,11 @@ public final class ExtensionDraftImpl implements ExtensionDraft {
       this.timeoutInMs = timeoutInMs;
    }
    
-   public void setDestination(final com.commercetools.models.Extension.ExtensionDestination destination){
+   public void setDestination(final com.commercetools.models.extension.ExtensionDestination destination){
       this.destination = destination;
    }
    
-   public void setTriggers(final java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers){
+   public void setTriggers(final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers){
       this.triggers = triggers;
    }
    

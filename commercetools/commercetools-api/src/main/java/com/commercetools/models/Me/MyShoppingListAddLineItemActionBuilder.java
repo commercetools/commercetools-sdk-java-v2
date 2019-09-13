@@ -1,11 +1,11 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Me.MyShoppingListAddLineItemAction;
+import com.commercetools.models.me.MyShoppingListAddLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class MyShoppingListAddLineItemActionBuilder {
    private java.lang.String productId;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
    private java.lang.Long variantId;
@@ -46,7 +46,7 @@ public final class MyShoppingListAddLineItemActionBuilder {
       return this;
    }
    
-   public MyShoppingListAddLineItemActionBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public MyShoppingListAddLineItemActionBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
@@ -77,7 +77,7 @@ public final class MyShoppingListAddLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    

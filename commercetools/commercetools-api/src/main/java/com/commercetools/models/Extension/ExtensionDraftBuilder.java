@@ -1,10 +1,10 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionDestination;
-import com.commercetools.models.Extension.ExtensionTrigger;
+import com.commercetools.models.extension.ExtensionDestination;
+import com.commercetools.models.extension.ExtensionTrigger;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Extension.ExtensionDraft;
+import com.commercetools.models.extension.ExtensionDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,10 +16,10 @@ public final class ExtensionDraftBuilder {
    private java.lang.Integer timeoutInMs;
    
    
-   private com.commercetools.models.Extension.ExtensionDestination destination;
+   private com.commercetools.models.extension.ExtensionDestination destination;
    
    
-   private java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers;
+   private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
    
    @Nullable
    private java.lang.String key;
@@ -29,12 +29,12 @@ public final class ExtensionDraftBuilder {
       return this;
    }
    
-   public ExtensionDraftBuilder destination( final com.commercetools.models.Extension.ExtensionDestination destination) {
+   public ExtensionDraftBuilder destination( final com.commercetools.models.extension.ExtensionDestination destination) {
       this.destination = destination;
       return this;
    }
    
-   public ExtensionDraftBuilder triggers( final java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers) {
+   public ExtensionDraftBuilder triggers( final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers) {
       this.triggers = triggers;
       return this;
    }
@@ -50,12 +50,12 @@ public final class ExtensionDraftBuilder {
    }
    
    
-   public com.commercetools.models.Extension.ExtensionDestination getDestination(){
+   public com.commercetools.models.extension.ExtensionDestination getDestination(){
       return this.destination;
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.ExtensionTrigger> getTriggers(){
+   public java.util.List<com.commercetools.models.extension.ExtensionTrigger> getTriggers(){
       return this.triggers;
    }
    

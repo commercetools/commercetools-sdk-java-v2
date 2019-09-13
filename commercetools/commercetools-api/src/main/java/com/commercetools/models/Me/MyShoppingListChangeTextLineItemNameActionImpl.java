@@ -1,7 +1,7 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class MyShoppingListChangeTextLineItemNameActionImpl implements MyS
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    private java.lang.String textLineItemId;
 
    @JsonCreator
-   MyShoppingListChangeTextLineItemNameActionImpl(@JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
+   MyShoppingListChangeTextLineItemNameActionImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
       this.name = name;
       this.textLineItemId = textLineItemId;
       this.action = "changeTextLineItemName";
@@ -46,7 +46,7 @@ public final class MyShoppingListChangeTextLineItemNameActionImpl implements MyS
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -55,7 +55,7 @@ public final class MyShoppingListChangeTextLineItemNameActionImpl implements MyS
       return this.textLineItemId;
    }
 
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    

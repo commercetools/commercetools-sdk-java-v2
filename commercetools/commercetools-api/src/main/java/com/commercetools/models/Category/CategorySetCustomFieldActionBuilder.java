@@ -1,9 +1,9 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
+import com.commercetools.models.category.CategoryUpdateAction;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Category.CategorySetCustomFieldAction;
+import com.commercetools.models.category.CategorySetCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

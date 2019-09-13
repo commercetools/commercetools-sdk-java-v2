@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CategorySetMetaKeywordsActionImpl implements CategorySetMetaK
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString metaKeywords;
+   private com.commercetools.models.common.LocalizedString metaKeywords;
 
    @JsonCreator
-   CategorySetMetaKeywordsActionImpl(@JsonProperty("metaKeywords") final com.commercetools.models.Common.LocalizedString metaKeywords) {
+   CategorySetMetaKeywordsActionImpl(@JsonProperty("metaKeywords") final com.commercetools.models.common.LocalizedString metaKeywords) {
       this.metaKeywords = metaKeywords;
       this.action = "setMetaKeywords";
    }
@@ -43,11 +43,11 @@ public final class CategorySetMetaKeywordsActionImpl implements CategorySetMetaK
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getMetaKeywords(){
+   public com.commercetools.models.common.LocalizedString getMetaKeywords(){
       return this.metaKeywords;
    }
 
-   public void setMetaKeywords(final com.commercetools.models.Common.LocalizedString metaKeywords){
+   public void setMetaKeywords(final com.commercetools.models.common.LocalizedString metaKeywords){
       this.metaKeywords = metaKeywords;
    }
 

@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ShippingRateInputDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ShippingRateInputDraft;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CartSetShippingRateInputActionImpl implements CartSetShipping
 
    private java.lang.String action;
    
-   private com.commercetools.models.Cart.ShippingRateInputDraft shippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput;
 
    @JsonCreator
-   CartSetShippingRateInputActionImpl(@JsonProperty("shippingRateInput") final com.commercetools.models.Cart.ShippingRateInputDraft shippingRateInput) {
+   CartSetShippingRateInputActionImpl(@JsonProperty("shippingRateInput") final com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput) {
       this.shippingRateInput = shippingRateInput;
       this.action = "setShippingRateInput";
    }
@@ -43,11 +43,11 @@ public final class CartSetShippingRateInputActionImpl implements CartSetShipping
    }
    
    
-   public com.commercetools.models.Cart.ShippingRateInputDraft getShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInputDraft getShippingRateInput(){
       return this.shippingRateInput;
    }
 
-   public void setShippingRateInput(final com.commercetools.models.Cart.ShippingRateInputDraft shippingRateInput){
+   public void setShippingRateInput(final com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput){
       this.shippingRateInput = shippingRateInput;
    }
 

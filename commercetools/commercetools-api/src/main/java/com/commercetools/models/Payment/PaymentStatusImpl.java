@@ -1,6 +1,6 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.state.StateReference;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,12 +25,12 @@ public final class PaymentStatusImpl implements PaymentStatus {
 
    private java.lang.String interfaceText;
    
-   private com.commercetools.models.State.StateReference state;
+   private com.commercetools.models.state.StateReference state;
    
    private java.lang.String interfaceCode;
 
    @JsonCreator
-   PaymentStatusImpl(@JsonProperty("interfaceText") final java.lang.String interfaceText, @JsonProperty("state") final com.commercetools.models.State.StateReference state, @JsonProperty("interfaceCode") final java.lang.String interfaceCode) {
+   PaymentStatusImpl(@JsonProperty("interfaceText") final java.lang.String interfaceText, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("interfaceCode") final java.lang.String interfaceCode) {
       this.interfaceText = interfaceText;
       this.state = state;
       this.interfaceCode = interfaceCode;
@@ -45,7 +45,7 @@ public final class PaymentStatusImpl implements PaymentStatus {
    }
    
    
-   public com.commercetools.models.State.StateReference getState(){
+   public com.commercetools.models.state.StateReference getState(){
       return this.state;
    }
    
@@ -58,7 +58,7 @@ public final class PaymentStatusImpl implements PaymentStatus {
       this.interfaceText = interfaceText;
    }
    
-   public void setState(final com.commercetools.models.State.StateReference state){
+   public void setState(final com.commercetools.models.state.StateReference state){
       this.state = state;
    }
    

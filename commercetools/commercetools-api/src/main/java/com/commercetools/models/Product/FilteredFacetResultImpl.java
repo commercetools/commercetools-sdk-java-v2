@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetResult;
-import com.commercetools.models.Product.FacetTypes;
+import com.commercetools.models.product.FacetResult;
+import com.commercetools.models.product.FacetTypes;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FilteredFacetResultImpl implements FilteredFacetResult {
 
-   private com.commercetools.models.Product.FacetTypes type;
+   private com.commercetools.models.product.FacetTypes type;
    
    private java.lang.Long count;
    
@@ -41,7 +41,7 @@ public final class FilteredFacetResultImpl implements FilteredFacetResult {
    }
    
    
-   public com.commercetools.models.Product.FacetTypes getType(){
+   public com.commercetools.models.product.FacetTypes getType(){
       return this.type;
    }
    

@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -27,14 +27,14 @@ public final class ProductChangePriceActionImpl implements ProductChangePriceAct
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.PriceDraft price;
+   private com.commercetools.models.common.PriceDraft price;
    
    private java.lang.Boolean staged;
    
    private java.lang.String priceId;
 
    @JsonCreator
-   ProductChangePriceActionImpl(@JsonProperty("price") final com.commercetools.models.Common.PriceDraft price, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("priceId") final java.lang.String priceId) {
+   ProductChangePriceActionImpl(@JsonProperty("price") final com.commercetools.models.common.PriceDraft price, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("priceId") final java.lang.String priceId) {
       this.price = price;
       this.staged = staged;
       this.priceId = priceId;
@@ -50,7 +50,7 @@ public final class ProductChangePriceActionImpl implements ProductChangePriceAct
    }
    
    
-   public com.commercetools.models.Common.PriceDraft getPrice(){
+   public com.commercetools.models.common.PriceDraft getPrice(){
       return this.price;
    }
    
@@ -64,7 +64,7 @@ public final class ProductChangePriceActionImpl implements ProductChangePriceAct
       return this.priceId;
    }
 
-   public void setPrice(final com.commercetools.models.Common.PriceDraft price){
+   public void setPrice(final com.commercetools.models.common.PriceDraft price){
       this.price = price;
    }
    

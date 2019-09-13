@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.DeliveryItem;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.DeliveryItem;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,14 +28,14 @@ public final class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUp
    
    private java.lang.String deliveryId;
    
-   private java.util.List<com.commercetools.models.Order.DeliveryItem> oldItems;
+   private java.util.List<com.commercetools.models.order.DeliveryItem> oldItems;
    
-   private java.util.List<com.commercetools.models.Order.DeliveryItem> items;
+   private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
    private java.lang.String parcelId;
 
    @JsonCreator
-   ParcelItemsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("oldItems") final java.util.List<com.commercetools.models.Order.DeliveryItem> oldItems, @JsonProperty("items") final java.util.List<com.commercetools.models.Order.DeliveryItem> items, @JsonProperty("parcelId") final java.lang.String parcelId) {
+   ParcelItemsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("oldItems") final java.util.List<com.commercetools.models.order.DeliveryItem> oldItems, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("parcelId") final java.lang.String parcelId) {
       this.deliveryId = deliveryId;
       this.oldItems = oldItems;
       this.items = items;
@@ -57,12 +57,12 @@ public final class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUp
    }
    
    
-   public java.util.List<com.commercetools.models.Order.DeliveryItem> getOldItems(){
+   public java.util.List<com.commercetools.models.order.DeliveryItem> getOldItems(){
       return this.oldItems;
    }
    
    
-   public java.util.List<com.commercetools.models.Order.DeliveryItem> getItems(){
+   public java.util.List<com.commercetools.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
@@ -75,11 +75,11 @@ public final class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUp
       this.deliveryId = deliveryId;
    }
    
-   public void setOldItems(final java.util.List<com.commercetools.models.Order.DeliveryItem> oldItems){
+   public void setOldItems(final java.util.List<com.commercetools.models.order.DeliveryItem> oldItems){
       this.oldItems = oldItems;
    }
    
-   public void setItems(final java.util.List<com.commercetools.models.Order.DeliveryItem> items){
+   public void setItems(final java.util.List<com.commercetools.models.order.DeliveryItem> items){
       this.items = items;
    }
    

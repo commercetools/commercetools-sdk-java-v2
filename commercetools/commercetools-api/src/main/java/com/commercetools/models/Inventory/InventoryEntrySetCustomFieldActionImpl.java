@@ -1,6 +1,6 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntryUpdateAction;
+import com.commercetools.models.inventory.InventoryEntryUpdateAction;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;

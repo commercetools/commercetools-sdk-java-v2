@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.Cart;
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
+import com.commercetools.models.cart.Cart;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartReferenceImpl implements CartReference {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Cart.Cart obj;
+   private com.commercetools.models.cart.Cart obj;
 
    @JsonCreator
-   CartReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.Cart.Cart obj) {
+   CartReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.cart.Cart obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("cart").get();
@@ -41,7 +41,7 @@ public final class CartReferenceImpl implements CartReference {
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    
@@ -51,7 +51,7 @@ public final class CartReferenceImpl implements CartReference {
    }
    
    
-   public com.commercetools.models.Cart.Cart getObj(){
+   public com.commercetools.models.cart.Cart getObj(){
       return this.obj;
    }
 
@@ -59,7 +59,7 @@ public final class CartReferenceImpl implements CartReference {
       this.id = id;
    }
    
-   public void setObj(final com.commercetools.models.Cart.Cart obj){
+   public void setObj(final com.commercetools.models.cart.Cart obj){
       this.obj = obj;
    }
 

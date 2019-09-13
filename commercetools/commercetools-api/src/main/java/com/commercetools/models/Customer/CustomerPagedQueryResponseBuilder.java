@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.Customer;
+import com.commercetools.models.customer.Customer;
 import java.lang.Long;
-import com.commercetools.models.Customer.CustomerPagedQueryResponse;
+import com.commercetools.models.customer.CustomerPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class CustomerPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Customer.Customer> results;
+   private java.util.List<com.commercetools.models.customer.Customer> results;
    
    public CustomerPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class CustomerPagedQueryResponseBuilder {
       return this;
    }
    
-   public CustomerPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Customer.Customer> results) {
+   public CustomerPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.customer.Customer> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class CustomerPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Customer.Customer> getResults(){
+   public java.util.List<com.commercetools.models.customer.Customer> getResults(){
       return this.results;
    }
 

@@ -1,7 +1,7 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -29,14 +29,14 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl implements Dup
    
    private java.lang.String message;
    
-   private com.commercetools.models.Common.Reference conflictingResource;
+   private com.commercetools.models.common.Reference conflictingResource;
    
    private java.lang.Object duplicateValue;
    
    private java.lang.String field;
 
    @JsonCreator
-   DuplicateFieldWithConflictingResourceErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("conflictingResource") final com.commercetools.models.Common.Reference conflictingResource, @JsonProperty("duplicateValue") final java.lang.Object duplicateValue, @JsonProperty("field") final java.lang.String field) {
+   DuplicateFieldWithConflictingResourceErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("conflictingResource") final com.commercetools.models.common.Reference conflictingResource, @JsonProperty("duplicateValue") final java.lang.Object duplicateValue, @JsonProperty("field") final java.lang.String field) {
       this.message = message;
       this.conflictingResource = conflictingResource;
       this.duplicateValue = duplicateValue;
@@ -58,7 +58,7 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl implements Dup
    }
    
    
-   public com.commercetools.models.Common.Reference getConflictingResource(){
+   public com.commercetools.models.common.Reference getConflictingResource(){
       return this.conflictingResource;
    }
    
@@ -76,7 +76,7 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl implements Dup
       this.message = message;
    }
    
-   public void setConflictingResource(final com.commercetools.models.Common.Reference conflictingResource){
+   public void setConflictingResource(final com.commercetools.models.common.Reference conflictingResource){
       this.conflictingResource = conflictingResource;
    }
    

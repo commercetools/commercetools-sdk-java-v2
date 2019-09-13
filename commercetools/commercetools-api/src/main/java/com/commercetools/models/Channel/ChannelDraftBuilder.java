@@ -1,12 +1,12 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelRoleEnum;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.channel.ChannelRoleEnum;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Channel.ChannelDraft;
+import com.commercetools.models.channel.ChannelDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,27 +15,27 @@ import java.time.ZonedDateTime;
 public final class ChannelDraftBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
    @Nullable
    private java.lang.Object geoLocation;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles;
+   private java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    
    private java.lang.String key;
    
-   public ChannelDraftBuilder address(@Nullable final com.commercetools.models.Common.Address address) {
+   public ChannelDraftBuilder address(@Nullable final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
@@ -45,22 +45,22 @@ public final class ChannelDraftBuilder {
       return this;
    }
    
-   public ChannelDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public ChannelDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
    
-   public ChannelDraftBuilder roles(@Nullable final java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles) {
+   public ChannelDraftBuilder roles(@Nullable final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles) {
       this.roles = roles;
       return this;
    }
    
-   public ChannelDraftBuilder name(@Nullable final com.commercetools.models.Common.LocalizedString name) {
+   public ChannelDraftBuilder name(@Nullable final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public ChannelDraftBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public ChannelDraftBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
@@ -71,7 +71,7 @@ public final class ChannelDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
    
@@ -81,22 +81,22 @@ public final class ChannelDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    

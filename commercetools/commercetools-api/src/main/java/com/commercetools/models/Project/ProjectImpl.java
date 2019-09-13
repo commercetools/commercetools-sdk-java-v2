@@ -1,8 +1,8 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Message.MessageConfiguration;
-import com.commercetools.models.Project.ExternalOAuth;
-import com.commercetools.models.Project.ShippingRateInputType;
+import com.commercetools.models.message.MessageConfiguration;
+import com.commercetools.models.project.ExternalOAuth;
+import com.commercetools.models.project.ShippingRateInputType;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectImpl implements Project {
 
-   private com.commercetools.models.Project.ExternalOAuth externalOAuth;
+   private com.commercetools.models.project.ExternalOAuth externalOAuth;
    
-   private com.commercetools.models.Project.ShippingRateInputType shippingRateInputType;
+   private com.commercetools.models.project.ShippingRateInputType shippingRateInputType;
    
    private java.time.ZonedDateTime createdAt;
    
@@ -37,7 +37,7 @@ public final class ProjectImpl implements Project {
    
    private java.lang.String name;
    
-   private com.commercetools.models.Message.MessageConfiguration messages;
+   private com.commercetools.models.message.MessageConfiguration messages;
    
    private java.util.List<java.lang.String> countries;
    
@@ -50,7 +50,7 @@ public final class ProjectImpl implements Project {
    private java.util.List<java.lang.String> currencies;
 
    @JsonCreator
-   ProjectImpl(@JsonProperty("externalOAuth") final com.commercetools.models.Project.ExternalOAuth externalOAuth, @JsonProperty("shippingRateInputType") final com.commercetools.models.Project.ShippingRateInputType shippingRateInputType, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("languages") final java.util.List<java.lang.String> languages, @JsonProperty("name") final java.lang.String name, @JsonProperty("messages") final com.commercetools.models.Message.MessageConfiguration messages, @JsonProperty("countries") final java.util.List<java.lang.String> countries, @JsonProperty("trialUntil") final java.lang.String trialUntil, @JsonProperty("version") final java.lang.Long version, @JsonProperty("key") final java.lang.String key, @JsonProperty("currencies") final java.util.List<java.lang.String> currencies) {
+   ProjectImpl(@JsonProperty("externalOAuth") final com.commercetools.models.project.ExternalOAuth externalOAuth, @JsonProperty("shippingRateInputType") final com.commercetools.models.project.ShippingRateInputType shippingRateInputType, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("languages") final java.util.List<java.lang.String> languages, @JsonProperty("name") final java.lang.String name, @JsonProperty("messages") final com.commercetools.models.message.MessageConfiguration messages, @JsonProperty("countries") final java.util.List<java.lang.String> countries, @JsonProperty("trialUntil") final java.lang.String trialUntil, @JsonProperty("version") final java.lang.Long version, @JsonProperty("key") final java.lang.String key, @JsonProperty("currencies") final java.util.List<java.lang.String> currencies) {
       this.externalOAuth = externalOAuth;
       this.shippingRateInputType = shippingRateInputType;
       this.createdAt = createdAt;
@@ -68,12 +68,12 @@ public final class ProjectImpl implements Project {
    }
    
    
-   public com.commercetools.models.Project.ExternalOAuth getExternalOAuth(){
+   public com.commercetools.models.project.ExternalOAuth getExternalOAuth(){
       return this.externalOAuth;
    }
    
    
-   public com.commercetools.models.Project.ShippingRateInputType getShippingRateInputType(){
+   public com.commercetools.models.project.ShippingRateInputType getShippingRateInputType(){
       return this.shippingRateInputType;
    }
    
@@ -93,7 +93,7 @@ public final class ProjectImpl implements Project {
    }
    
    
-   public com.commercetools.models.Message.MessageConfiguration getMessages(){
+   public com.commercetools.models.message.MessageConfiguration getMessages(){
       return this.messages;
    }
    
@@ -122,11 +122,11 @@ public final class ProjectImpl implements Project {
       return this.currencies;
    }
 
-   public void setExternalOAuth(final com.commercetools.models.Project.ExternalOAuth externalOAuth){
+   public void setExternalOAuth(final com.commercetools.models.project.ExternalOAuth externalOAuth){
       this.externalOAuth = externalOAuth;
    }
    
-   public void setShippingRateInputType(final com.commercetools.models.Project.ShippingRateInputType shippingRateInputType){
+   public void setShippingRateInputType(final com.commercetools.models.project.ShippingRateInputType shippingRateInputType){
       this.shippingRateInputType = shippingRateInputType;
    }
    
@@ -142,7 +142,7 @@ public final class ProjectImpl implements Project {
       this.name = name;
    }
    
-   public void setMessages(final com.commercetools.models.Message.MessageConfiguration messages){
+   public void setMessages(final com.commercetools.models.message.MessageConfiguration messages){
       this.messages = messages;
    }
    

@@ -1,11 +1,11 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.DeliveryItem;
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ParcelMeasurements;
-import com.commercetools.models.Order.TrackingData;
+import com.commercetools.models.order.DeliveryItem;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ParcelMeasurements;
+import com.commercetools.models.order.TrackingData;
 import java.lang.String;
-import com.commercetools.models.Order.OrderAddParcelToDeliveryAction;
+import com.commercetools.models.order.OrderAddParcelToDeliveryAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,30 +17,30 @@ public final class OrderAddParcelToDeliveryActionBuilder {
    private java.lang.String deliveryId;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Order.DeliveryItem> items;
+   private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
    @Nullable
-   private com.commercetools.models.Order.TrackingData trackingData;
+   private com.commercetools.models.order.TrackingData trackingData;
    
    @Nullable
-   private com.commercetools.models.Order.ParcelMeasurements measurements;
+   private com.commercetools.models.order.ParcelMeasurements measurements;
    
    public OrderAddParcelToDeliveryActionBuilder deliveryId( final java.lang.String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
    
-   public OrderAddParcelToDeliveryActionBuilder items(@Nullable final java.util.List<com.commercetools.models.Order.DeliveryItem> items) {
+   public OrderAddParcelToDeliveryActionBuilder items(@Nullable final java.util.List<com.commercetools.models.order.DeliveryItem> items) {
       this.items = items;
       return this;
    }
    
-   public OrderAddParcelToDeliveryActionBuilder trackingData(@Nullable final com.commercetools.models.Order.TrackingData trackingData) {
+   public OrderAddParcelToDeliveryActionBuilder trackingData(@Nullable final com.commercetools.models.order.TrackingData trackingData) {
       this.trackingData = trackingData;
       return this;
    }
    
-   public OrderAddParcelToDeliveryActionBuilder measurements(@Nullable final com.commercetools.models.Order.ParcelMeasurements measurements) {
+   public OrderAddParcelToDeliveryActionBuilder measurements(@Nullable final com.commercetools.models.order.ParcelMeasurements measurements) {
       this.measurements = measurements;
       return this;
    }
@@ -51,17 +51,17 @@ public final class OrderAddParcelToDeliveryActionBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Order.DeliveryItem> getItems(){
+   public java.util.List<com.commercetools.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
    @Nullable
-   public com.commercetools.models.Order.TrackingData getTrackingData(){
+   public com.commercetools.models.order.TrackingData getTrackingData(){
       return this.trackingData;
    }
    
    @Nullable
-   public com.commercetools.models.Order.ParcelMeasurements getMeasurements(){
+   public com.commercetools.models.order.ParcelMeasurements getMeasurements(){
       return this.measurements;
    }
 

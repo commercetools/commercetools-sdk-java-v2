@@ -1,6 +1,6 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ShippingRateInputDraft;
+import com.commercetools.models.cart.ShippingRateInputDraft;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;

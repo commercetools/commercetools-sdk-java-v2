@@ -1,11 +1,11 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Message.ProductPriceExternalDiscountSetMessagePayload;
+import com.commercetools.models.message.ProductPriceExternalDiscountSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.time.ZonedDateTime;
 public final class ProductPriceExternalDiscountSetMessagePayloadBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.DiscountedPrice discounted;
+   private com.commercetools.models.common.DiscountedPrice discounted;
    
    
    private java.lang.Boolean staged;
@@ -31,7 +31,7 @@ public final class ProductPriceExternalDiscountSetMessagePayloadBuilder {
    @Nullable
    private java.lang.String variantKey;
    
-   public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(@Nullable final com.commercetools.models.Common.DiscountedPrice discounted) {
+   public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(@Nullable final com.commercetools.models.common.DiscountedPrice discounted) {
       this.discounted = discounted;
       return this;
    }
@@ -62,7 +62,7 @@ public final class ProductPriceExternalDiscountSetMessagePayloadBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.DiscountedPrice getDiscounted(){
+   public com.commercetools.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
    

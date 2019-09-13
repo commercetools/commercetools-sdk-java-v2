@@ -1,8 +1,8 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.DeliveryFormat;
+import com.commercetools.models.subscription.DeliveryFormat;
 import java.lang.String;
-import com.commercetools.models.Subscription.DeliveryCloudEventsFormat;
+import com.commercetools.models.subscription.DeliveryCloudEventsFormat;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

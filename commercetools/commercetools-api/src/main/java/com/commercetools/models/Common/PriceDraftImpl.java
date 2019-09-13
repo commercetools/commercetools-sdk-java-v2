@@ -1,11 +1,11 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Common.PriceTier;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.common.PriceTier;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -29,26 +29,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PriceDraftImpl implements PriceDraft {
 
-   private com.commercetools.models.Common.DiscountedPrice discounted;
+   private com.commercetools.models.common.DiscountedPrice discounted;
    
    private java.lang.String country;
    
-   private java.util.List<com.commercetools.models.Common.PriceTier> tiers;
+   private java.util.List<com.commercetools.models.common.PriceTier> tiers;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier channel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier channel;
    
    private java.time.ZonedDateTime validUntil;
    
    private java.time.ZonedDateTime validFrom;
    
-   private com.commercetools.models.Common.Money value;
+   private com.commercetools.models.common.Money value;
 
    @JsonCreator
-   PriceDraftImpl(@JsonProperty("discounted") final com.commercetools.models.Common.DiscountedPrice discounted, @JsonProperty("country") final java.lang.String country, @JsonProperty("tiers") final java.util.List<com.commercetools.models.Common.PriceTier> tiers, @JsonProperty("customerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("channel") final com.commercetools.models.Channel.ChannelResourceIdentifier channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("value") final com.commercetools.models.Common.Money value) {
+   PriceDraftImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("country") final java.lang.String country, @JsonProperty("tiers") final java.util.List<com.commercetools.models.common.PriceTier> tiers, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("channel") final com.commercetools.models.channel.ChannelResourceIdentifier channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("value") final com.commercetools.models.common.Money value) {
       this.discounted = discounted;
       this.country = country;
       this.tiers = tiers;
@@ -64,7 +64,7 @@ public final class PriceDraftImpl implements PriceDraft {
    }
    
    
-   public com.commercetools.models.Common.DiscountedPrice getDiscounted(){
+   public com.commercetools.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
    
@@ -76,22 +76,22 @@ public final class PriceDraftImpl implements PriceDraft {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.PriceTier> getTiers(){
+   public java.util.List<com.commercetools.models.common.PriceTier> getTiers(){
       return this.tiers;
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
       return this.customerGroup;
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getChannel(){
       return this.channel;
    }
    
@@ -106,11 +106,11 @@ public final class PriceDraftImpl implements PriceDraft {
    }
    
    
-   public com.commercetools.models.Common.Money getValue(){
+   public com.commercetools.models.common.Money getValue(){
       return this.value;
    }
 
-   public void setDiscounted(final com.commercetools.models.Common.DiscountedPrice discounted){
+   public void setDiscounted(final com.commercetools.models.common.DiscountedPrice discounted){
       this.discounted = discounted;
    }
    
@@ -118,19 +118,19 @@ public final class PriceDraftImpl implements PriceDraft {
       this.country = country;
    }
    
-   public void setTiers(final java.util.List<com.commercetools.models.Common.PriceTier> tiers){
+   public void setTiers(final java.util.List<com.commercetools.models.common.PriceTier> tiers){
       this.tiers = tiers;
    }
    
-   public void setCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup){
+   public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
       this.customerGroup = customerGroup;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
-   public void setChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier channel){
+   public void setChannel(final com.commercetools.models.channel.ChannelResourceIdentifier channel){
       this.channel = channel;
    }
    
@@ -142,7 +142,7 @@ public final class PriceDraftImpl implements PriceDraft {
       this.validFrom = validFrom;
    }
    
-   public void setValue(final com.commercetools.models.Common.Money value){
+   public void setValue(final com.commercetools.models.common.Money value){
       this.value = value;
    }
 

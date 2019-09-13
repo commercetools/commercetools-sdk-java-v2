@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.TaxMode;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.TaxMode;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CartChangeTaxModeActionImpl implements CartChangeTaxModeActio
 
    private java.lang.String action;
    
-   private com.commercetools.models.Cart.TaxMode taxMode;
+   private com.commercetools.models.cart.TaxMode taxMode;
 
    @JsonCreator
-   CartChangeTaxModeActionImpl(@JsonProperty("taxMode") final com.commercetools.models.Cart.TaxMode taxMode) {
+   CartChangeTaxModeActionImpl(@JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode) {
       this.taxMode = taxMode;
       this.action = "changeTaxMode";
    }
@@ -43,11 +43,11 @@ public final class CartChangeTaxModeActionImpl implements CartChangeTaxModeActio
    }
    
    
-   public com.commercetools.models.Cart.TaxMode getTaxMode(){
+   public com.commercetools.models.cart.TaxMode getTaxMode(){
       return this.taxMode;
    }
 
-   public void setTaxMode(final com.commercetools.models.Cart.TaxMode taxMode){
+   public void setTaxMode(final com.commercetools.models.cart.TaxMode taxMode){
       this.taxMode = taxMode;
    }
 

@@ -1,10 +1,10 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.AssetDraft;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.AssetDraft;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Category.CategoryAddAssetAction;
+import com.commercetools.models.category.CategoryAddAssetAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +16,14 @@ public final class CategoryAddAssetActionBuilder {
    private java.lang.Integer position;
    
    
-   private com.commercetools.models.Common.AssetDraft asset;
+   private com.commercetools.models.common.AssetDraft asset;
    
    public CategoryAddAssetActionBuilder position(@Nullable final java.lang.Integer position) {
       this.position = position;
       return this;
    }
    
-   public CategoryAddAssetActionBuilder asset( final com.commercetools.models.Common.AssetDraft asset) {
+   public CategoryAddAssetActionBuilder asset( final com.commercetools.models.common.AssetDraft asset) {
       this.asset = asset;
       return this;
    }
@@ -34,7 +34,7 @@ public final class CategoryAddAssetActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.AssetDraft getAsset(){
+   public com.commercetools.models.common.AssetDraft getAsset(){
       return this.asset;
    }
 

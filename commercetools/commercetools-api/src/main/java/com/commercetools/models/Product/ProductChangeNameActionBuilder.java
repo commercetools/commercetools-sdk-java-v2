@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductChangeNameAction;
+import com.commercetools.models.product.ProductChangeNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,12 +13,12 @@ import java.time.ZonedDateTime;
 public final class ProductChangeNameActionBuilder {
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
    private java.lang.Boolean staged;
    
-   public ProductChangeNameActionBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public ProductChangeNameActionBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
@@ -29,7 +29,7 @@ public final class ProductChangeNameActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    

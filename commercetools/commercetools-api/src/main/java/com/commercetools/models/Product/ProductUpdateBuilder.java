@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Product.ProductUpdate;
+import com.commercetools.models.product.ProductUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ProductUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Product.ProductUpdateAction> actions;
+   private java.util.List<com.commercetools.models.product.ProductUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public ProductUpdateBuilder actions( final java.util.List<com.commercetools.models.Product.ProductUpdateAction> actions) {
+   public ProductUpdateBuilder actions( final java.util.List<com.commercetools.models.product.ProductUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class ProductUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Product.ProductUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.product.ProductUpdateAction> getActions(){
       return this.actions;
    }
    

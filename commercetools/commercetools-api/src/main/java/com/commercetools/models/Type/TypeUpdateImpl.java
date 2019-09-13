@@ -1,6 +1,6 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeUpdateImpl implements TypeUpdate {
 
-   private java.util.List<com.commercetools.models.Type.TypeUpdateAction> actions;
+   private java.util.List<com.commercetools.models.type.TypeUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   TypeUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Type.TypeUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   TypeUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.type.TypeUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class TypeUpdateImpl implements TypeUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Type.TypeUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.type.TypeUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class TypeUpdateImpl implements TypeUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Type.TypeUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.type.TypeUpdateAction> actions){
       this.actions = actions;
    }
    

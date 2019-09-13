@@ -26,9 +26,9 @@ public class ByProjectKeyExtensionsPost {
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
-   private com.commercetools.models.Extension.ExtensionDraft extensionDraft;
+   private com.commercetools.models.extension.ExtensionDraft extensionDraft;
    
-   public ByProjectKeyExtensionsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Extension.ExtensionDraft extensionDraft){
+   public ByProjectKeyExtensionsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.extension.ExtensionDraft extensionDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.extensionDraft = extensionDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyExtensionsPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Extension.Extension> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.extension.Extension> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyExtensionsPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Extension.Extension>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.extension.Extension>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Extension.Extension.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.extension.Extension.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

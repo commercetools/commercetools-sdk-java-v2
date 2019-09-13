@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ReturnShipmentState;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ReturnShipmentState;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetReturnShipmentStateAction;
+import com.commercetools.models.order.OrderSetReturnShipmentStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class OrderSetReturnShipmentStateActionBuilder {
    
    
-   private com.commercetools.models.Order.ReturnShipmentState shipmentState;
+   private com.commercetools.models.order.ReturnShipmentState shipmentState;
    
    
    private java.lang.String returnItemId;
    
-   public OrderSetReturnShipmentStateActionBuilder shipmentState( final com.commercetools.models.Order.ReturnShipmentState shipmentState) {
+   public OrderSetReturnShipmentStateActionBuilder shipmentState( final com.commercetools.models.order.ReturnShipmentState shipmentState) {
       this.shipmentState = shipmentState;
       return this;
    }
@@ -28,7 +28,7 @@ public final class OrderSetReturnShipmentStateActionBuilder {
    }
    
    
-   public com.commercetools.models.Order.ReturnShipmentState getShipmentState(){
+   public com.commercetools.models.order.ReturnShipmentState getShipmentState(){
       return this.shipmentState;
    }
    

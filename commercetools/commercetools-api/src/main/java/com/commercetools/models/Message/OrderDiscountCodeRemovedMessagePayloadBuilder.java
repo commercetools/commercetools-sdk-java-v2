@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.DiscountCode.DiscountCodeReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.discount_code.DiscountCodeReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.OrderDiscountCodeRemovedMessagePayload;
+import com.commercetools.models.message.OrderDiscountCodeRemovedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class OrderDiscountCodeRemovedMessagePayloadBuilder {
    
    
-   private com.commercetools.models.DiscountCode.DiscountCodeReference discountCode;
+   private com.commercetools.models.discount_code.DiscountCodeReference discountCode;
    
-   public OrderDiscountCodeRemovedMessagePayloadBuilder discountCode( final com.commercetools.models.DiscountCode.DiscountCodeReference discountCode) {
+   public OrderDiscountCodeRemovedMessagePayloadBuilder discountCode( final com.commercetools.models.discount_code.DiscountCodeReference discountCode) {
       this.discountCode = discountCode;
       return this;
    }
    
    
-   public com.commercetools.models.DiscountCode.DiscountCodeReference getDiscountCode(){
+   public com.commercetools.models.discount_code.DiscountCodeReference getDiscountCode(){
       return this.discountCode;
    }
 

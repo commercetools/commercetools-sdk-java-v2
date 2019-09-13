@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.ReturnShipmentState;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.ReturnShipmentState;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class OrderReturnShipmentStateChangedMessagePayloadImpl implements 
    
    private java.lang.String returnItemId;
    
-   private com.commercetools.models.Order.ReturnShipmentState returnShipmentState;
+   private com.commercetools.models.order.ReturnShipmentState returnShipmentState;
 
    @JsonCreator
-   OrderReturnShipmentStateChangedMessagePayloadImpl(@JsonProperty("returnItemId") final java.lang.String returnItemId, @JsonProperty("returnShipmentState") final com.commercetools.models.Order.ReturnShipmentState returnShipmentState) {
+   OrderReturnShipmentStateChangedMessagePayloadImpl(@JsonProperty("returnItemId") final java.lang.String returnItemId, @JsonProperty("returnShipmentState") final com.commercetools.models.order.ReturnShipmentState returnShipmentState) {
       this.returnItemId = returnItemId;
       this.returnShipmentState = returnShipmentState;
       this.type = "OrderReturnShipmentStateChanged";
@@ -51,7 +51,7 @@ public final class OrderReturnShipmentStateChangedMessagePayloadImpl implements 
    }
    
    
-   public com.commercetools.models.Order.ReturnShipmentState getReturnShipmentState(){
+   public com.commercetools.models.order.ReturnShipmentState getReturnShipmentState(){
       return this.returnShipmentState;
    }
 
@@ -59,7 +59,7 @@ public final class OrderReturnShipmentStateChangedMessagePayloadImpl implements 
       this.returnItemId = returnItemId;
    }
    
-   public void setReturnShipmentState(final com.commercetools.models.Order.ReturnShipmentState returnShipmentState){
+   public void setReturnShipmentState(final com.commercetools.models.order.ReturnShipmentState returnShipmentState){
       this.returnShipmentState = returnShipmentState;
    }
 

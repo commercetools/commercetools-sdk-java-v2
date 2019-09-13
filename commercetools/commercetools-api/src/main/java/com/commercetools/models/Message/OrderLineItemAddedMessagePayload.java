@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.LineItem;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.LineItem;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Message.OrderLineItemAddedMessagePayloadImpl;
+import com.commercetools.models.message.OrderLineItemAddedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

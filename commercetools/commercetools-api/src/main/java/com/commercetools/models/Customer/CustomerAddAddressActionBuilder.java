@@ -1,9 +1,9 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Customer.CustomerUpdateAction;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.customer.CustomerUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerAddAddressAction;
+import com.commercetools.models.customer.CustomerAddAddressAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CustomerAddAddressActionBuilder {
    
    
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
-   public CustomerAddAddressActionBuilder address( final com.commercetools.models.Common.Address address) {
+   public CustomerAddAddressActionBuilder address( final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
    
    
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
 

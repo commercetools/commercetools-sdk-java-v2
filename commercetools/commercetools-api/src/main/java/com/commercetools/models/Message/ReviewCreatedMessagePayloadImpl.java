@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Review.Review;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.review.Review;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessa
 
    private java.lang.String type;
    
-   private com.commercetools.models.Review.Review review;
+   private com.commercetools.models.review.Review review;
 
    @JsonCreator
-   ReviewCreatedMessagePayloadImpl(@JsonProperty("review") final com.commercetools.models.Review.Review review) {
+   ReviewCreatedMessagePayloadImpl(@JsonProperty("review") final com.commercetools.models.review.Review review) {
       this.review = review;
       this.type = "ReviewCreated";
    }
@@ -43,11 +43,11 @@ public final class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessa
    }
    
    
-   public com.commercetools.models.Review.Review getReview(){
+   public com.commercetools.models.review.Review getReview(){
       return this.review;
    }
 
-   public void setReview(final com.commercetools.models.Review.Review review){
+   public void setReview(final com.commercetools.models.review.Review review){
       this.review = review;
    }
 

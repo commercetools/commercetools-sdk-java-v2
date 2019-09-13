@@ -1,7 +1,7 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ExternalOAuth;
-import com.commercetools.models.Project.ProjectUpdateAction;
+import com.commercetools.models.project.ExternalOAuth;
+import com.commercetools.models.project.ProjectUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ProjectSetExternalOAuthActionImpl implements ProjectSetExtern
 
    private java.lang.String action;
    
-   private com.commercetools.models.Project.ExternalOAuth externalOAuth;
+   private com.commercetools.models.project.ExternalOAuth externalOAuth;
 
    @JsonCreator
-   ProjectSetExternalOAuthActionImpl(@JsonProperty("externalOAuth") final com.commercetools.models.Project.ExternalOAuth externalOAuth) {
+   ProjectSetExternalOAuthActionImpl(@JsonProperty("externalOAuth") final com.commercetools.models.project.ExternalOAuth externalOAuth) {
       this.externalOAuth = externalOAuth;
       this.action = "setExternalOAuth";
    }
@@ -43,11 +43,11 @@ public final class ProjectSetExternalOAuthActionImpl implements ProjectSetExtern
    }
    
    
-   public com.commercetools.models.Project.ExternalOAuth getExternalOAuth(){
+   public com.commercetools.models.project.ExternalOAuth getExternalOAuth(){
       return this.externalOAuth;
    }
 
-   public void setExternalOAuth(final com.commercetools.models.Project.ExternalOAuth externalOAuth){
+   public void setExternalOAuth(final com.commercetools.models.project.ExternalOAuth externalOAuth){
       this.externalOAuth = externalOAuth;
    }
 

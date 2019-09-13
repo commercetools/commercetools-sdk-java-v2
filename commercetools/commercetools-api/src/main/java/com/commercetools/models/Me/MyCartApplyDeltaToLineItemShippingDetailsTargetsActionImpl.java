@@ -1,7 +1,7 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Cart.ItemShippingTarget;
-import com.commercetools.models.Me.MyCartUpdateAction;
+import com.commercetools.models.cart.ItemShippingTarget;
+import com.commercetools.models.me.MyCartUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl im
    
    private java.lang.String lineItemId;
    
-   private java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targetsDelta;
+   private java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta;
 
    @JsonCreator
-   MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("targetsDelta") final java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targetsDelta) {
+   MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("targetsDelta") final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta) {
       this.lineItemId = lineItemId;
       this.targetsDelta = targetsDelta;
       this.action = "applyDeltaToLineItemShippingDetailsTargets";
@@ -51,7 +51,7 @@ public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl im
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.ItemShippingTarget> getTargetsDelta(){
+   public java.util.List<com.commercetools.models.cart.ItemShippingTarget> getTargetsDelta(){
       return this.targetsDelta;
    }
 
@@ -59,7 +59,7 @@ public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl im
       this.lineItemId = lineItemId;
    }
    
-   public void setTargetsDelta(final java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targetsDelta){
+   public void setTargetsDelta(final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta){
       this.targetsDelta = targetsDelta;
    }
 

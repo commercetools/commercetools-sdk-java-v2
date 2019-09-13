@@ -1,8 +1,8 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Review.ReviewUpdateAction;
+import com.commercetools.models.review.ReviewUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Review.ReviewUpdate;
+import com.commercetools.models.review.ReviewUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ReviewUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Review.ReviewUpdateAction> actions;
+   private java.util.List<com.commercetools.models.review.ReviewUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public ReviewUpdateBuilder actions( final java.util.List<com.commercetools.models.Review.ReviewUpdateAction> actions) {
+   public ReviewUpdateBuilder actions( final java.util.List<com.commercetools.models.review.ReviewUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class ReviewUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Review.ReviewUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.review.ReviewUpdateAction> getActions(){
       return this.actions;
    }
    

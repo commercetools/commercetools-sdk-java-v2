@@ -1,8 +1,8 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntryUpdateAction;
+import com.commercetools.models.inventory.InventoryEntryUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Inventory.InventoryEntryUpdate;
+import com.commercetools.models.inventory.InventoryEntryUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class InventoryEntryUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Inventory.InventoryEntryUpdateAction> actions;
+   private java.util.List<com.commercetools.models.inventory.InventoryEntryUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public InventoryEntryUpdateBuilder actions( final java.util.List<com.commercetools.models.Inventory.InventoryEntryUpdateAction> actions) {
+   public InventoryEntryUpdateBuilder actions( final java.util.List<com.commercetools.models.inventory.InventoryEntryUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class InventoryEntryUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Inventory.InventoryEntryUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.inventory.InventoryEntryUpdateAction> getActions(){
       return this.actions;
    }
    

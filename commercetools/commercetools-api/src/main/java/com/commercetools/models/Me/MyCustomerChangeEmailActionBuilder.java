@@ -1,8 +1,8 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyCustomerUpdateAction;
+import com.commercetools.models.me.MyCustomerUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyCustomerChangeEmailAction;
+import com.commercetools.models.me.MyCustomerChangeEmailAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

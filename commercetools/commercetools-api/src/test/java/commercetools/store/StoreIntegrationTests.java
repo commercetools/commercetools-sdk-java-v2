@@ -1,7 +1,7 @@
 package commercetools.store;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Store.*;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.store.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -1,9 +1,9 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.StateTypeEnum;
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.state.StateTypeEnum;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.String;
-import com.commercetools.models.State.StateChangeTypeAction;
+import com.commercetools.models.state.StateChangeTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class StateChangeTypeActionBuilder {
    
    
-   private com.commercetools.models.State.StateTypeEnum type;
+   private com.commercetools.models.state.StateTypeEnum type;
    
-   public StateChangeTypeActionBuilder type( final com.commercetools.models.State.StateTypeEnum type) {
+   public StateChangeTypeActionBuilder type( final com.commercetools.models.state.StateTypeEnum type) {
       this.type = type;
       return this;
    }
    
    
-   public com.commercetools.models.State.StateTypeEnum getType(){
+   public com.commercetools.models.state.StateTypeEnum getType(){
       return this.type;
    }
 

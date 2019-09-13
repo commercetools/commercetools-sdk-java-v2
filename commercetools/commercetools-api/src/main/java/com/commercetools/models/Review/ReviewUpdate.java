@@ -1,8 +1,8 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Review.ReviewUpdateAction;
+import com.commercetools.models.review.ReviewUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Review.ReviewUpdateImpl;
+import com.commercetools.models.review.ReviewUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

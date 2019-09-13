@@ -1,10 +1,10 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.CreatedBy;
-import com.commercetools.models.Common.LastModifiedBy;
-import com.commercetools.models.Customer.CustomerReference;
+import com.commercetools.models.common.CreatedBy;
+import com.commercetools.models.common.LastModifiedBy;
+import com.commercetools.models.customer.CustomerReference;
 import java.lang.String;
-import com.commercetools.models.Common.ClientLogging;
+import com.commercetools.models.common.ClientLogging;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ClientLoggingBuilder {
    private java.lang.String externalUserId;
    
    @Nullable
-   private com.commercetools.models.Customer.CustomerReference customer;
+   private com.commercetools.models.customer.CustomerReference customer;
    
    public ClientLoggingBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
       this.anonymousId = anonymousId;
@@ -39,7 +39,7 @@ public final class ClientLoggingBuilder {
       return this;
    }
    
-   public ClientLoggingBuilder customer(@Nullable final com.commercetools.models.Customer.CustomerReference customer) {
+   public ClientLoggingBuilder customer(@Nullable final com.commercetools.models.customer.CustomerReference customer) {
       this.customer = customer;
       return this;
    }
@@ -60,7 +60,7 @@ public final class ClientLoggingBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Customer.CustomerReference getCustomer(){
+   public com.commercetools.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
 

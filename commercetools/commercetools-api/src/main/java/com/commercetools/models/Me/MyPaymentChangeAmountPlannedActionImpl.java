@@ -1,7 +1,7 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Me.MyPaymentUpdateAction;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.me.MyPaymentUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class MyPaymentChangeAmountPlannedActionImpl implements MyPaymentCh
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.Money amount;
+   private com.commercetools.models.common.Money amount;
 
    @JsonCreator
-   MyPaymentChangeAmountPlannedActionImpl(@JsonProperty("amount") final com.commercetools.models.Common.Money amount) {
+   MyPaymentChangeAmountPlannedActionImpl(@JsonProperty("amount") final com.commercetools.models.common.Money amount) {
       this.amount = amount;
       this.action = "changeAmountPlanned";
    }
@@ -43,11 +43,11 @@ public final class MyPaymentChangeAmountPlannedActionImpl implements MyPaymentCh
    }
    
    
-   public com.commercetools.models.Common.Money getAmount(){
+   public com.commercetools.models.common.Money getAmount(){
       return this.amount;
    }
 
-   public void setAmount(final com.commercetools.models.Common.Money amount){
+   public void setAmount(final com.commercetools.models.common.Money amount){
       this.amount = amount;
    }
 

@@ -1,14 +1,14 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Customer.CustomerReference;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.customer.CustomerReference;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Review.Review;
+import com.commercetools.models.review.Review;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -29,10 +29,10 @@ public final class ReviewBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
    @Nullable
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
    private java.lang.Boolean includedInStatistics;
@@ -44,13 +44,13 @@ public final class ReviewBuilder {
    private java.lang.String authorName;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
    private java.lang.Integer rating;
    
    @Nullable
-   private com.commercetools.models.State.StateReference state;
+   private com.commercetools.models.state.StateReference state;
    
    @Nullable
    private java.lang.String text;
@@ -65,7 +65,7 @@ public final class ReviewBuilder {
    private java.lang.String key;
    
    @Nullable
-   private com.commercetools.models.Customer.CustomerReference customer;
+   private com.commercetools.models.customer.CustomerReference customer;
    
    @Nullable
    private java.lang.Object target;
@@ -90,12 +90,12 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder createdBy(@Nullable final com.commercetools.models.Common.CreatedBy createdBy) {
+   public ReviewBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
       this.createdBy = createdBy;
       return this;
    }
    
-   public ReviewBuilder lastModifiedBy(@Nullable final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   public ReviewBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
@@ -115,7 +115,7 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public ReviewBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
@@ -125,7 +125,7 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder state(@Nullable final com.commercetools.models.State.StateReference state) {
+   public ReviewBuilder state(@Nullable final com.commercetools.models.state.StateReference state) {
       this.state = state;
       return this;
    }
@@ -150,7 +150,7 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder customer(@Nullable final com.commercetools.models.Customer.CustomerReference customer) {
+   public ReviewBuilder customer(@Nullable final com.commercetools.models.customer.CustomerReference customer) {
       this.customer = customer;
       return this;
    }
@@ -181,12 +181,12 @@ public final class ReviewBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
@@ -206,7 +206,7 @@ public final class ReviewBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
@@ -216,7 +216,7 @@ public final class ReviewBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.State.StateReference getState(){
+   public com.commercetools.models.state.StateReference getState(){
       return this.state;
    }
    
@@ -241,7 +241,7 @@ public final class ReviewBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Customer.CustomerReference getCustomer(){
+   public com.commercetools.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
    

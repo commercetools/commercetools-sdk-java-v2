@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Error.DiscountCodeNonApplicableError;
+import com.commercetools.models.error.DiscountCodeNonApplicableError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

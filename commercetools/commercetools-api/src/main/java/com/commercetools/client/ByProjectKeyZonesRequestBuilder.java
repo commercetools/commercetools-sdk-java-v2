@@ -16,7 +16,7 @@ public class ByProjectKeyZonesRequestBuilder {
       return new ByProjectKeyZonesGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyZonesPost post(com.commercetools.models.Zone.ZoneDraft zoneDraft) {
+   public ByProjectKeyZonesPost post(com.commercetools.models.zone.ZoneDraft zoneDraft) {
       return new ByProjectKeyZonesPost(apiHttpClient, projectKey, zoneDraft);
    }
    

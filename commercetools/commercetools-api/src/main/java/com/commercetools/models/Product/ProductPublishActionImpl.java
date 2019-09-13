@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Cart.ProductPublishScope;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.cart.ProductPublishScope;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ProductPublishActionImpl implements ProductPublishAction {
 
    private java.lang.String action;
    
-   private com.commercetools.models.Cart.ProductPublishScope scope;
+   private com.commercetools.models.cart.ProductPublishScope scope;
 
    @JsonCreator
-   ProductPublishActionImpl(@JsonProperty("scope") final com.commercetools.models.Cart.ProductPublishScope scope) {
+   ProductPublishActionImpl(@JsonProperty("scope") final com.commercetools.models.cart.ProductPublishScope scope) {
       this.scope = scope;
       this.action = "publish";
    }
@@ -43,11 +43,11 @@ public final class ProductPublishActionImpl implements ProductPublishAction {
    }
    
    
-   public com.commercetools.models.Cart.ProductPublishScope getScope(){
+   public com.commercetools.models.cart.ProductPublishScope getScope(){
       return this.scope;
    }
 
-   public void setScope(final com.commercetools.models.Cart.ProductPublishScope scope){
+   public void setScope(final com.commercetools.models.cart.ProductPublishScope scope){
       this.scope = scope;
    }
 

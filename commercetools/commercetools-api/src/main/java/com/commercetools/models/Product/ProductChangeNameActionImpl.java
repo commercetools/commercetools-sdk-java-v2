@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -27,12 +27,12 @@ public final class ProductChangeNameActionImpl implements ProductChangeNameActio
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    private java.lang.Boolean staged;
 
    @JsonCreator
-   ProductChangeNameActionImpl(@JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("staged") final java.lang.Boolean staged) {
+   ProductChangeNameActionImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("staged") final java.lang.Boolean staged) {
       this.name = name;
       this.staged = staged;
       this.action = "changeName";
@@ -47,7 +47,7 @@ public final class ProductChangeNameActionImpl implements ProductChangeNameActio
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -56,7 +56,7 @@ public final class ProductChangeNameActionImpl implements ProductChangeNameActio
       return this.staged;
    }
 
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    

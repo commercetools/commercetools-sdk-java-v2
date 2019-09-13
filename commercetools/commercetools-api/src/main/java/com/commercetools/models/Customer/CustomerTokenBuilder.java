@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Customer.CustomerToken;
+import com.commercetools.models.customer.CustomerToken;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

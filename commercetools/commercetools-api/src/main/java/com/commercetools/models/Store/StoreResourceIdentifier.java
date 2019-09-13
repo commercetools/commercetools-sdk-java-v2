@@ -1,8 +1,8 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Common.ResourceIdentifier;
-import com.commercetools.models.Store.StoreResourceIdentifierImpl;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.common.ResourceIdentifier;
+import com.commercetools.models.store.StoreResourceIdentifierImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

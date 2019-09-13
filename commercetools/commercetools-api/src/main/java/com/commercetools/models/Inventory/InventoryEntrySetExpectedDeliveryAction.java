@@ -1,9 +1,9 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntryUpdateAction;
+import com.commercetools.models.inventory.InventoryEntryUpdateAction;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Inventory.InventoryEntrySetExpectedDeliveryActionImpl;
+import com.commercetools.models.inventory.InventoryEntrySetExpectedDeliveryActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

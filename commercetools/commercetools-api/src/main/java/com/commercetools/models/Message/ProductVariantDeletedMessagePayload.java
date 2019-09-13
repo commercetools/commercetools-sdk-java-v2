@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Product.ProductVariant;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.product.ProductVariant;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Message.ProductVariantDeletedMessagePayloadImpl;
+import com.commercetools.models.message.ProductVariantDeletedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

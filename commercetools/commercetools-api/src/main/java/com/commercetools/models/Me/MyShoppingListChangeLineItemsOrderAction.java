@@ -1,8 +1,8 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyShoppingListChangeLineItemsOrderActionImpl;
+import com.commercetools.models.me.MyShoppingListChangeLineItemsOrderActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

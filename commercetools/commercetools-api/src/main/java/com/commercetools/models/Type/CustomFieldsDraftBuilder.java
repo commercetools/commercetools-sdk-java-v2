@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class CustomFieldsDraftBuilder {
    
    @Nullable
-   private com.commercetools.models.Type.FieldContainer fields;
+   private com.commercetools.models.type.FieldContainer fields;
    
    
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
    
-   public CustomFieldsDraftBuilder fields(@Nullable final com.commercetools.models.Type.FieldContainer fields) {
+   public CustomFieldsDraftBuilder fields(@Nullable final com.commercetools.models.type.FieldContainer fields) {
       this.fields = fields;
       return this;
    }
    
-   public CustomFieldsDraftBuilder type( final com.commercetools.models.Type.TypeResourceIdentifier type) {
+   public CustomFieldsDraftBuilder type( final com.commercetools.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Type.FieldContainer getFields(){
+   public com.commercetools.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
 

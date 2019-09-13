@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetPricesAction;
+import com.commercetools.models.product.ProductSetPricesAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ProductSetPricesActionBuilder {
    private java.lang.Long variantId;
    
    
-   private java.util.List<com.commercetools.models.Common.PriceDraft> prices;
+   private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
    @Nullable
    private java.lang.String sku;
@@ -35,7 +35,7 @@ public final class ProductSetPricesActionBuilder {
       return this;
    }
    
-   public ProductSetPricesActionBuilder prices( final java.util.List<com.commercetools.models.Common.PriceDraft> prices) {
+   public ProductSetPricesActionBuilder prices( final java.util.List<com.commercetools.models.common.PriceDraft> prices) {
       this.prices = prices;
       return this;
    }
@@ -56,7 +56,7 @@ public final class ProductSetPricesActionBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.PriceDraft> getPrices(){
+   public java.util.List<com.commercetools.models.common.PriceDraft> getPrices(){
       return this.prices;
    }
    

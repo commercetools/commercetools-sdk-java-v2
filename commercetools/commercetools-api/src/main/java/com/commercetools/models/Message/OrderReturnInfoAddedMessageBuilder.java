@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.ReturnInfo;
-import com.commercetools.models.Message.OrderReturnInfoAddedMessage;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.ReturnInfo;
+import com.commercetools.models.message.OrderReturnInfoAddedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class OrderReturnInfoAddedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,7 +38,7 @@ public final class OrderReturnInfoAddedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Order.ReturnInfo returnInfo;
+   private com.commercetools.models.order.ReturnInfo returnInfo;
    
    public OrderReturnInfoAddedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -65,12 +65,12 @@ public final class OrderReturnInfoAddedMessageBuilder {
       return this;
    }
    
-   public OrderReturnInfoAddedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public OrderReturnInfoAddedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public OrderReturnInfoAddedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public OrderReturnInfoAddedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -85,7 +85,7 @@ public final class OrderReturnInfoAddedMessageBuilder {
       return this;
    }
    
-   public OrderReturnInfoAddedMessageBuilder returnInfo( final com.commercetools.models.Order.ReturnInfo returnInfo) {
+   public OrderReturnInfoAddedMessageBuilder returnInfo( final com.commercetools.models.order.ReturnInfo returnInfo) {
       this.returnInfo = returnInfo;
       return this;
    }
@@ -116,12 +116,12 @@ public final class OrderReturnInfoAddedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -136,7 +136,7 @@ public final class OrderReturnInfoAddedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Order.ReturnInfo getReturnInfo(){
+   public com.commercetools.models.order.ReturnInfo getReturnInfo(){
       return this.returnInfo;
    }
 

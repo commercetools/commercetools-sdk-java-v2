@@ -1,13 +1,13 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ProjectChangeCountriesAction;
-import com.commercetools.models.Project.ProjectChangeCurrenciesAction;
-import com.commercetools.models.Project.ProjectChangeLanguagesAction;
-import com.commercetools.models.Project.ProjectChangeMessagesConfigurationAction;
-import com.commercetools.models.Project.ProjectChangeMessagesEnabledAction;
-import com.commercetools.models.Project.ProjectChangeNameAction;
-import com.commercetools.models.Project.ProjectSetExternalOAuthAction;
-import com.commercetools.models.Project.ProjectSetShippingRateInputTypeAction;
+import com.commercetools.models.project.ProjectChangeCountriesAction;
+import com.commercetools.models.project.ProjectChangeCurrenciesAction;
+import com.commercetools.models.project.ProjectChangeLanguagesAction;
+import com.commercetools.models.project.ProjectChangeMessagesConfigurationAction;
+import com.commercetools.models.project.ProjectChangeMessagesEnabledAction;
+import com.commercetools.models.project.ProjectChangeNameAction;
+import com.commercetools.models.project.ProjectSetExternalOAuthAction;
+import com.commercetools.models.project.ProjectSetShippingRateInputTypeAction;
 import java.lang.String;
 
 
@@ -23,14 +23,14 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.ProjectChangeCountriesActionImpl.class, name = "changeCountries"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.ProjectChangeCurrenciesActionImpl.class, name = "changeCurrencies"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.ProjectChangeLanguagesActionImpl.class, name = "changeLanguages"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.ProjectChangeMessagesConfigurationActionImpl.class, name = "changeMessagesConfiguration"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.ProjectChangeMessagesEnabledActionImpl.class, name = "changeMessagesEnabled"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.ProjectChangeNameActionImpl.class, name = "changeName"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.ProjectSetExternalOAuthActionImpl.class, name = "setExternalOAuth"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.ProjectSetShippingRateInputTypeActionImpl.class, name = "setShippingRateInputType")
+   @JsonSubTypes.Type(value = com.commercetools.models.project.ProjectChangeCountriesActionImpl.class, name = "changeCountries"),
+   @JsonSubTypes.Type(value = com.commercetools.models.project.ProjectChangeCurrenciesActionImpl.class, name = "changeCurrencies"),
+   @JsonSubTypes.Type(value = com.commercetools.models.project.ProjectChangeLanguagesActionImpl.class, name = "changeLanguages"),
+   @JsonSubTypes.Type(value = com.commercetools.models.project.ProjectChangeMessagesConfigurationActionImpl.class, name = "changeMessagesConfiguration"),
+   @JsonSubTypes.Type(value = com.commercetools.models.project.ProjectChangeMessagesEnabledActionImpl.class, name = "changeMessagesEnabled"),
+   @JsonSubTypes.Type(value = com.commercetools.models.project.ProjectChangeNameActionImpl.class, name = "changeName"),
+   @JsonSubTypes.Type(value = com.commercetools.models.project.ProjectSetExternalOAuthActionImpl.class, name = "setExternalOAuth"),
+   @JsonSubTypes.Type(value = com.commercetools.models.project.ProjectSetShippingRateInputTypeActionImpl.class, name = "setShippingRateInputType")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

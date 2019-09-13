@@ -1,8 +1,8 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.ZoneUpdateAction;
+import com.commercetools.models.zone.ZoneUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Zone.ZoneUpdate;
+import com.commercetools.models.zone.ZoneUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ZoneUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Zone.ZoneUpdateAction> actions;
+   private java.util.List<com.commercetools.models.zone.ZoneUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public ZoneUpdateBuilder actions( final java.util.List<com.commercetools.models.Zone.ZoneUpdateAction> actions) {
+   public ZoneUpdateBuilder actions( final java.util.List<com.commercetools.models.zone.ZoneUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class ZoneUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Zone.ZoneUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.zone.ZoneUpdateAction> getActions(){
       return this.actions;
    }
    

@@ -1,9 +1,9 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.Location;
-import com.commercetools.models.Zone.ZoneUpdateAction;
+import com.commercetools.models.zone.Location;
+import com.commercetools.models.zone.ZoneUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Zone.ZoneAddLocationActionImpl;
+import com.commercetools.models.zone.ZoneAddLocationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

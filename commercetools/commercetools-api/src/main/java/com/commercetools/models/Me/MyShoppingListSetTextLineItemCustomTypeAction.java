@@ -1,10 +1,10 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Me.MyShoppingListSetTextLineItemCustomTypeActionImpl;
+import com.commercetools.models.me.MyShoppingListSetTextLineItemCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

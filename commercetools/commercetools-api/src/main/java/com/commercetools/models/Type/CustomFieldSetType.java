@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.FieldType;
+import com.commercetools.models.type.FieldType;
 import java.lang.String;
-import com.commercetools.models.Type.CustomFieldSetTypeImpl;
+import com.commercetools.models.type.CustomFieldSetTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

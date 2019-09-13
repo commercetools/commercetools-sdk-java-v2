@@ -1,10 +1,10 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.PaymentUpdateAction;
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.payment.PaymentUpdateAction;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Payment.PaymentAddInterfaceInteractionActionImpl;
+import com.commercetools.models.payment.PaymentAddInterfaceInteractionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

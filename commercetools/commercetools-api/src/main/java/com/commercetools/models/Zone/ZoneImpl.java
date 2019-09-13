@@ -1,7 +1,7 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Common.BaseResource;
-import com.commercetools.models.Zone.Location;
+import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.zone.Location;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -36,12 +36,12 @@ public final class ZoneImpl implements Zone {
    
    private java.lang.String description;
    
-   private java.util.List<com.commercetools.models.Zone.Location> locations;
+   private java.util.List<com.commercetools.models.zone.Location> locations;
    
    private java.lang.String key;
 
    @JsonCreator
-   ZoneImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("name") final java.lang.String name, @JsonProperty("description") final java.lang.String description, @JsonProperty("locations") final java.util.List<com.commercetools.models.Zone.Location> locations, @JsonProperty("key") final java.lang.String key) {
+   ZoneImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("name") final java.lang.String name, @JsonProperty("description") final java.lang.String description, @JsonProperty("locations") final java.util.List<com.commercetools.models.zone.Location> locations, @JsonProperty("key") final java.lang.String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -86,7 +86,7 @@ public final class ZoneImpl implements Zone {
    }
    
    
-   public java.util.List<com.commercetools.models.Zone.Location> getLocations(){
+   public java.util.List<com.commercetools.models.zone.Location> getLocations(){
       return this.locations;
    }
    
@@ -119,7 +119,7 @@ public final class ZoneImpl implements Zone {
       this.description = description;
    }
    
-   public void setLocations(final java.util.List<com.commercetools.models.Zone.Location> locations){
+   public void setLocations(final java.util.List<com.commercetools.models.zone.Location> locations){
       this.locations = locations;
    }
    

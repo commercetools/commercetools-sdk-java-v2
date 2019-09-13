@@ -16,7 +16,7 @@ public class ByProjectKeyCategoriesRequestBuilder {
       return new ByProjectKeyCategoriesGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyCategoriesPost post(com.commercetools.models.Category.CategoryDraft categoryDraft) {
+   public ByProjectKeyCategoriesPost post(com.commercetools.models.category.CategoryDraft categoryDraft) {
       return new ByProjectKeyCategoriesPost(apiHttpClient, projectKey, categoryDraft);
    }
    

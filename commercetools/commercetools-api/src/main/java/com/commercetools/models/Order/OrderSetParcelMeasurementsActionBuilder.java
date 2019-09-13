@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ParcelMeasurements;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ParcelMeasurements;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetParcelMeasurementsAction;
+import com.commercetools.models.order.OrderSetParcelMeasurementsAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class OrderSetParcelMeasurementsActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Order.ParcelMeasurements measurements;
+   private com.commercetools.models.order.ParcelMeasurements measurements;
    
    
    private java.lang.String parcelId;
    
-   public OrderSetParcelMeasurementsActionBuilder measurements(@Nullable final com.commercetools.models.Order.ParcelMeasurements measurements) {
+   public OrderSetParcelMeasurementsActionBuilder measurements(@Nullable final com.commercetools.models.order.ParcelMeasurements measurements) {
       this.measurements = measurements;
       return this;
    }
@@ -28,7 +28,7 @@ public final class OrderSetParcelMeasurementsActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Order.ParcelMeasurements getMeasurements(){
+   public com.commercetools.models.order.ParcelMeasurements getMeasurements(){
       return this.measurements;
    }
    

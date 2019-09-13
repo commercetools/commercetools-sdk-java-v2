@@ -1,6 +1,6 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocalizedEnumValue {
 
-   private com.commercetools.models.Common.LocalizedString label;
+   private com.commercetools.models.common.LocalizedString label;
    
    private java.lang.String key;
 
    @JsonCreator
-   CustomFieldLocalizedEnumValueImpl(@JsonProperty("label") final com.commercetools.models.Common.LocalizedString label, @JsonProperty("key") final java.lang.String key) {
+   CustomFieldLocalizedEnumValueImpl(@JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("key") final java.lang.String key) {
       this.label = label;
       this.key = key;
    }
@@ -37,7 +37,7 @@ public final class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocal
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getLabel(){
+   public com.commercetools.models.common.LocalizedString getLabel(){
       return this.label;
    }
    
@@ -46,7 +46,7 @@ public final class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocal
       return this.key;
    }
 
-   public void setLabel(final com.commercetools.models.Common.LocalizedString label){
+   public void setLabel(final com.commercetools.models.common.LocalizedString label){
       this.label = label;
    }
    

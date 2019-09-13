@@ -27,9 +27,9 @@ public class ByProjectKeyOrdersEditsByIDApplyPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.OrderEdit.OrderEditApply orderEditApply;
+   private com.commercetools.models.order_edit.OrderEditApply orderEditApply;
    
-   public ByProjectKeyOrdersEditsByIDApplyPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.OrderEdit.OrderEditApply orderEditApply){
+   public ByProjectKeyOrdersEditsByIDApplyPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.order_edit.OrderEditApply orderEditApply){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;

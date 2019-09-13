@@ -12,7 +12,7 @@ public class ByProjectKeyCustomersPasswordRequestBuilder {
       this.projectKey = projectKey;
    }
    
-   public ByProjectKeyCustomersPasswordPost post(com.commercetools.models.Customer.CustomerChangePassword customerChangePassword) {
+   public ByProjectKeyCustomersPasswordPost post(com.commercetools.models.customer.CustomerChangePassword customerChangePassword) {
       return new ByProjectKeyCustomersPasswordPost(apiHttpClient, projectKey, customerChangePassword);
    }
    

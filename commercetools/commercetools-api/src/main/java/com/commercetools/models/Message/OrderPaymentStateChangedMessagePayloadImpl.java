@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.PaymentState;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.PaymentState;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class OrderPaymentStateChangedMessagePayloadImpl implements OrderPa
 
    private java.lang.String type;
    
-   private com.commercetools.models.Order.PaymentState oldPaymentState;
+   private com.commercetools.models.order.PaymentState oldPaymentState;
    
-   private com.commercetools.models.Order.PaymentState paymentState;
+   private com.commercetools.models.order.PaymentState paymentState;
 
    @JsonCreator
-   OrderPaymentStateChangedMessagePayloadImpl(@JsonProperty("oldPaymentState") final com.commercetools.models.Order.PaymentState oldPaymentState, @JsonProperty("paymentState") final com.commercetools.models.Order.PaymentState paymentState) {
+   OrderPaymentStateChangedMessagePayloadImpl(@JsonProperty("oldPaymentState") final com.commercetools.models.order.PaymentState oldPaymentState, @JsonProperty("paymentState") final com.commercetools.models.order.PaymentState paymentState) {
       this.oldPaymentState = oldPaymentState;
       this.paymentState = paymentState;
       this.type = "OrderPaymentStateChanged";
@@ -46,20 +46,20 @@ public final class OrderPaymentStateChangedMessagePayloadImpl implements OrderPa
    }
    
    
-   public com.commercetools.models.Order.PaymentState getOldPaymentState(){
+   public com.commercetools.models.order.PaymentState getOldPaymentState(){
       return this.oldPaymentState;
    }
    
    
-   public com.commercetools.models.Order.PaymentState getPaymentState(){
+   public com.commercetools.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
 
-   public void setOldPaymentState(final com.commercetools.models.Order.PaymentState oldPaymentState){
+   public void setOldPaymentState(final com.commercetools.models.order.PaymentState oldPaymentState){
       this.oldPaymentState = oldPaymentState;
    }
    
-   public void setPaymentState(final com.commercetools.models.Order.PaymentState paymentState){
+   public void setPaymentState(final com.commercetools.models.order.PaymentState paymentState){
       this.paymentState = paymentState;
    }
 

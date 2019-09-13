@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Payment.TransactionState;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.payment.TransactionState;
 import java.lang.String;
-import com.commercetools.models.Message.PaymentTransactionStateChangedMessage;
+import com.commercetools.models.message.PaymentTransactionStateChangedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class PaymentTransactionStateChangedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -39,7 +39,7 @@ public final class PaymentTransactionStateChangedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Payment.TransactionState state;
+   private com.commercetools.models.payment.TransactionState state;
    
    
    private java.lang.String transactionId;
@@ -69,12 +69,12 @@ public final class PaymentTransactionStateChangedMessageBuilder {
       return this;
    }
    
-   public PaymentTransactionStateChangedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public PaymentTransactionStateChangedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public PaymentTransactionStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public PaymentTransactionStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -89,7 +89,7 @@ public final class PaymentTransactionStateChangedMessageBuilder {
       return this;
    }
    
-   public PaymentTransactionStateChangedMessageBuilder state( final com.commercetools.models.Payment.TransactionState state) {
+   public PaymentTransactionStateChangedMessageBuilder state( final com.commercetools.models.payment.TransactionState state) {
       this.state = state;
       return this;
    }
@@ -125,12 +125,12 @@ public final class PaymentTransactionStateChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -145,7 +145,7 @@ public final class PaymentTransactionStateChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Payment.TransactionState getState(){
+   public com.commercetools.models.payment.TransactionState getState(){
       return this.state;
    }
    

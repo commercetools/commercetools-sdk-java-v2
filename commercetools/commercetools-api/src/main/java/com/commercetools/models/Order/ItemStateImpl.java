@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.state.StateReference;
 import java.lang.Integer;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,10 +25,10 @@ public final class ItemStateImpl implements ItemState {
 
    private java.lang.Integer quantity;
    
-   private com.commercetools.models.State.StateReference state;
+   private com.commercetools.models.state.StateReference state;
 
    @JsonCreator
-   ItemStateImpl(@JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("state") final com.commercetools.models.State.StateReference state) {
+   ItemStateImpl(@JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("state") final com.commercetools.models.state.StateReference state) {
       this.quantity = quantity;
       this.state = state;
    }
@@ -42,7 +42,7 @@ public final class ItemStateImpl implements ItemState {
    }
    
    
-   public com.commercetools.models.State.StateReference getState(){
+   public com.commercetools.models.state.StateReference getState(){
       return this.state;
    }
 
@@ -50,7 +50,7 @@ public final class ItemStateImpl implements ItemState {
       this.quantity = quantity;
    }
    
-   public void setState(final com.commercetools.models.State.StateReference state){
+   public void setState(final com.commercetools.models.state.StateReference state){
       this.state = state;
    }
 

@@ -1,6 +1,6 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -31,12 +31,12 @@ public final class UserProvidedIdentifiersImpl implements UserProvidedIdentifier
    
    private java.lang.String customerNumber;
    
-   private com.commercetools.models.Common.LocalizedString slug;
+   private com.commercetools.models.common.LocalizedString slug;
    
    private java.lang.String key;
 
    @JsonCreator
-   UserProvidedIdentifiersImpl(@JsonProperty("orderNumber") final java.lang.String orderNumber, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("customerNumber") final java.lang.String customerNumber, @JsonProperty("slug") final com.commercetools.models.Common.LocalizedString slug, @JsonProperty("key") final java.lang.String key) {
+   UserProvidedIdentifiersImpl(@JsonProperty("orderNumber") final java.lang.String orderNumber, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("customerNumber") final java.lang.String customerNumber, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug, @JsonProperty("key") final java.lang.String key) {
       this.orderNumber = orderNumber;
       this.externalId = externalId;
       this.sku = sku;
@@ -69,7 +69,7 @@ public final class UserProvidedIdentifiersImpl implements UserProvidedIdentifier
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getSlug(){
+   public com.commercetools.models.common.LocalizedString getSlug(){
       return this.slug;
    }
    
@@ -94,7 +94,7 @@ public final class UserProvidedIdentifiersImpl implements UserProvidedIdentifier
       this.customerNumber = customerNumber;
    }
    
-   public void setSlug(final com.commercetools.models.Common.LocalizedString slug){
+   public void setSlug(final com.commercetools.models.common.LocalizedString slug){
       this.slug = slug;
    }
    

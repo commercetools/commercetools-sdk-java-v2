@@ -1,21 +1,21 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Cart.CustomLineItemDraft;
-import com.commercetools.models.Cart.InventoryMode;
-import com.commercetools.models.Cart.RoundingMode;
-import com.commercetools.models.Cart.TaxedPrice;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
-import com.commercetools.models.Order.LineItemImportDraft;
-import com.commercetools.models.Order.OrderState;
-import com.commercetools.models.Order.PaymentState;
-import com.commercetools.models.Order.ShipmentState;
-import com.commercetools.models.Order.ShippingInfoImportDraft;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.CustomLineItemDraft;
+import com.commercetools.models.cart.InventoryMode;
+import com.commercetools.models.cart.RoundingMode;
+import com.commercetools.models.cart.TaxedPrice;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.order.LineItemImportDraft;
+import com.commercetools.models.order.OrderState;
+import com.commercetools.models.order.PaymentState;
+import com.commercetools.models.order.ShipmentState;
+import com.commercetools.models.order.ShippingInfoImportDraft;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.OrderImportDraftImpl;
+import com.commercetools.models.order.OrderImportDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

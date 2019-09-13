@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
 import java.lang.String;
-import com.commercetools.models.Common.UpdateAction;
+import com.commercetools.models.common.UpdateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

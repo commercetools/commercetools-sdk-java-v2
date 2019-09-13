@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Long;
@@ -33,13 +33,13 @@ public final class CustomerDraftImpl implements CustomerDraft {
    
    private java.lang.String lastName;
    
-   private java.util.List<com.commercetools.models.Common.Address> addresses;
+   private java.util.List<com.commercetools.models.common.Address> addresses;
    
    private java.lang.Long defaultShippingAddress;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    private java.lang.String companyName;
    
@@ -78,7 +78,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
    private java.util.List<java.lang.Integer> shippingAddresses;
 
    @JsonCreator
-   CustomerDraftImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("lastName") final java.lang.String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.models.Common.Address> addresses, @JsonProperty("defaultShippingAddress") final java.lang.Long defaultShippingAddress, @JsonProperty("customerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("companyName") final java.lang.String companyName, @JsonProperty("vatId") final java.lang.String vatId, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("billingAddresses") final java.util.List<java.lang.Integer> billingAddresses, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("title") final java.lang.String title, @JsonProperty("customerNumber") final java.lang.String customerNumber, @JsonProperty("isEmailVerified") final java.lang.Boolean isEmailVerified, @JsonProperty("firstName") final java.lang.String firstName, @JsonProperty("password") final java.lang.String password, @JsonProperty("middleName") final java.lang.String middleName, @JsonProperty("salutation") final java.lang.String salutation, @JsonProperty("anonymousCartId") final java.lang.String anonymousCartId, @JsonProperty("key") final java.lang.String key, @JsonProperty("defaultBillingAddress") final java.lang.Long defaultBillingAddress, @JsonProperty("email") final java.lang.String email, @JsonProperty("shippingAddresses") final java.util.List<java.lang.Integer> shippingAddresses) {
+   CustomerDraftImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("lastName") final java.lang.String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.models.common.Address> addresses, @JsonProperty("defaultShippingAddress") final java.lang.Long defaultShippingAddress, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("companyName") final java.lang.String companyName, @JsonProperty("vatId") final java.lang.String vatId, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("billingAddresses") final java.util.List<java.lang.Integer> billingAddresses, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("title") final java.lang.String title, @JsonProperty("customerNumber") final java.lang.String customerNumber, @JsonProperty("isEmailVerified") final java.lang.Boolean isEmailVerified, @JsonProperty("firstName") final java.lang.String firstName, @JsonProperty("password") final java.lang.String password, @JsonProperty("middleName") final java.lang.String middleName, @JsonProperty("salutation") final java.lang.String salutation, @JsonProperty("anonymousCartId") final java.lang.String anonymousCartId, @JsonProperty("key") final java.lang.String key, @JsonProperty("defaultBillingAddress") final java.lang.Long defaultBillingAddress, @JsonProperty("email") final java.lang.String email, @JsonProperty("shippingAddresses") final java.util.List<java.lang.Integer> shippingAddresses) {
       this.anonymousId = anonymousId;
       this.lastName = lastName;
       this.addresses = addresses;
@@ -119,7 +119,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.Address> getAddresses(){
+   public java.util.List<com.commercetools.models.common.Address> getAddresses(){
       return this.addresses;
    }
    
@@ -129,12 +129,12 @@ public final class CustomerDraftImpl implements CustomerDraft {
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
       return this.customerGroup;
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
@@ -236,7 +236,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
       this.lastName = lastName;
    }
    
-   public void setAddresses(final java.util.List<com.commercetools.models.Common.Address> addresses){
+   public void setAddresses(final java.util.List<com.commercetools.models.common.Address> addresses){
       this.addresses = addresses;
    }
    
@@ -244,11 +244,11 @@ public final class CustomerDraftImpl implements CustomerDraft {
       this.defaultShippingAddress = defaultShippingAddress;
    }
    
-   public void setCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup){
+   public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
       this.customerGroup = customerGroup;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    

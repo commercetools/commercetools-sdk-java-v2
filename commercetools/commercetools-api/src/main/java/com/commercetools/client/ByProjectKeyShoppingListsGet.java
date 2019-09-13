@@ -59,7 +59,7 @@ public class ByProjectKeyShoppingListsGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.ShoppingList.ShoppingListPagedQueryResponse> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.shopping_list.ShoppingListPagedQueryResponse> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -67,9 +67,9 @@ public class ByProjectKeyShoppingListsGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.ShoppingList.ShoppingListPagedQueryResponse>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.shopping_list.ShoppingListPagedQueryResponse>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.ShoppingList.ShoppingListPagedQueryResponse.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.shopping_list.ShoppingListPagedQueryResponse.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

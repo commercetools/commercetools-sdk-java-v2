@@ -1,32 +1,32 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Cart.Cart;
-import com.commercetools.models.CartDiscount.CartDiscount;
-import com.commercetools.models.Category.Category;
-import com.commercetools.models.Channel.Channel;
-import com.commercetools.models.Common.BaseResource;
-import com.commercetools.models.Common.CreatedBy;
-import com.commercetools.models.Common.LastModifiedBy;
-import com.commercetools.models.Customer.Customer;
-import com.commercetools.models.CustomerGroup.CustomerGroup;
-import com.commercetools.models.DiscountCode.DiscountCode;
-import com.commercetools.models.Extension.Extension;
-import com.commercetools.models.Inventory.InventoryEntry;
-import com.commercetools.models.Me.MyCart;
-import com.commercetools.models.Me.MyCustomer;
-import com.commercetools.models.Order.Order;
-import com.commercetools.models.OrderEdit.OrderEdit;
-import com.commercetools.models.Payment.Payment;
-import com.commercetools.models.Product.Product;
-import com.commercetools.models.ProductDiscount.ProductDiscount;
-import com.commercetools.models.ProductType.ProductType;
-import com.commercetools.models.Review.Review;
-import com.commercetools.models.ShoppingList.MyShoppingList;
-import com.commercetools.models.ShoppingList.ShoppingList;
-import com.commercetools.models.State.State;
-import com.commercetools.models.Subscription.Subscription;
-import com.commercetools.models.TaxCategory.TaxCategory;
-import com.commercetools.models.Type.Type;
+import com.commercetools.models.cart.Cart;
+import com.commercetools.models.cart_discount.CartDiscount;
+import com.commercetools.models.category.Category;
+import com.commercetools.models.channel.Channel;
+import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.common.CreatedBy;
+import com.commercetools.models.common.LastModifiedBy;
+import com.commercetools.models.customer.Customer;
+import com.commercetools.models.customer_group.CustomerGroup;
+import com.commercetools.models.discount_code.DiscountCode;
+import com.commercetools.models.extension.Extension;
+import com.commercetools.models.inventory.InventoryEntry;
+import com.commercetools.models.me.MyCart;
+import com.commercetools.models.me.MyCustomer;
+import com.commercetools.models.order.Order;
+import com.commercetools.models.order_edit.OrderEdit;
+import com.commercetools.models.payment.Payment;
+import com.commercetools.models.product.Product;
+import com.commercetools.models.product_discount.ProductDiscount;
+import com.commercetools.models.product_type.ProductType;
+import com.commercetools.models.review.Review;
+import com.commercetools.models.shopping_list.MyShoppingList;
+import com.commercetools.models.shopping_list.ShoppingList;
+import com.commercetools.models.state.State;
+import com.commercetools.models.subscription.Subscription;
+import com.commercetools.models.tax_category.TaxCategory;
+import com.commercetools.models.type.Type;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -56,12 +56,12 @@ public final class LoggedResourceImpl implements LoggedResource {
    
    private java.lang.Long version;
    
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
 
    @JsonCreator
-   LoggedResourceImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.Common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   LoggedResourceImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -94,12 +94,12 @@ public final class LoggedResourceImpl implements LoggedResource {
    }
    
    
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
 
@@ -119,11 +119,11 @@ public final class LoggedResourceImpl implements LoggedResource {
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.models.Common.CreatedBy createdBy){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
       this.createdBy = createdBy;
    }
    
-   public void setLastModifiedBy(final com.commercetools.models.Common.LastModifiedBy lastModifiedBy){
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
 

@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductProjection;
+import com.commercetools.models.product.ProductProjection;
 import java.lang.Long;
-import com.commercetools.models.Product.ProductProjectionPagedQueryResponse;
+import com.commercetools.models.product.ProductProjectionPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ProductProjectionPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Product.ProductProjection> results;
+   private java.util.List<com.commercetools.models.product.ProductProjection> results;
    
    public ProductProjectionPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class ProductProjectionPagedQueryResponseBuilder {
       return this;
    }
    
-   public ProductProjectionPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Product.ProductProjection> results) {
+   public ProductProjectionPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.product.ProductProjection> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class ProductProjectionPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Product.ProductProjection> getResults(){
+   public java.util.List<com.commercetools.models.product.ProductProjection> getResults(){
       return this.results;
    }
 

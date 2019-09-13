@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Product.ProductProjection;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.product.ProductProjection;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ProductCreatedMessagePayloadImpl implements ProductCreatedMes
 
    private java.lang.String type;
    
-   private com.commercetools.models.Product.ProductProjection productProjection;
+   private com.commercetools.models.product.ProductProjection productProjection;
 
    @JsonCreator
-   ProductCreatedMessagePayloadImpl(@JsonProperty("productProjection") final com.commercetools.models.Product.ProductProjection productProjection) {
+   ProductCreatedMessagePayloadImpl(@JsonProperty("productProjection") final com.commercetools.models.product.ProductProjection productProjection) {
       this.productProjection = productProjection;
       this.type = "ProductCreated";
    }
@@ -43,11 +43,11 @@ public final class ProductCreatedMessagePayloadImpl implements ProductCreatedMes
    }
    
    
-   public com.commercetools.models.Product.ProductProjection getProductProjection(){
+   public com.commercetools.models.product.ProductProjection getProductProjection(){
       return this.productProjection;
    }
 
-   public void setProductProjection(final com.commercetools.models.Product.ProductProjection productProjection){
+   public void setProductProjection(final com.commercetools.models.product.ProductProjection productProjection){
       this.productProjection = productProjection;
    }
 

@@ -1,10 +1,10 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionDestination;
-import com.commercetools.models.Extension.ExtensionTrigger;
+import com.commercetools.models.extension.ExtensionDestination;
+import com.commercetools.models.extension.ExtensionTrigger;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Extension.ExtensionDraftImpl;
+import com.commercetools.models.extension.ExtensionDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetShippingAddressAction;
+import com.commercetools.models.order.OrderSetShippingAddressAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class OrderSetShippingAddressActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
-   public OrderSetShippingAddressActionBuilder address(@Nullable final com.commercetools.models.Common.Address address) {
+   public OrderSetShippingAddressActionBuilder address(@Nullable final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
 

@@ -1,12 +1,12 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Me.MyLineItemDraft;
+import com.commercetools.models.me.MyLineItemDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -18,29 +18,29 @@ public final class MyLineItemDraftBuilder {
    private java.lang.Integer quantity;
    
    @Nullable
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    
    private java.lang.String productId;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    
    private java.lang.Long variantId;
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
    
    public MyLineItemDraftBuilder quantity( final java.lang.Integer quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public MyLineItemDraftBuilder shippingDetails(@Nullable final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails) {
+   public MyLineItemDraftBuilder shippingDetails(@Nullable final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.shippingDetails = shippingDetails;
       return this;
    }
@@ -50,12 +50,12 @@ public final class MyLineItemDraftBuilder {
       return this;
    }
    
-   public MyLineItemDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public MyLineItemDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
    
-   public MyLineItemDraftBuilder supplyChannel(@Nullable final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel) {
+   public MyLineItemDraftBuilder supplyChannel(@Nullable final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel) {
       this.supplyChannel = supplyChannel;
       return this;
    }
@@ -65,7 +65,7 @@ public final class MyLineItemDraftBuilder {
       return this;
    }
    
-   public MyLineItemDraftBuilder distributionChannel(@Nullable final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel) {
+   public MyLineItemDraftBuilder distributionChannel(@Nullable final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel) {
       this.distributionChannel = distributionChannel;
       return this;
    }
@@ -76,7 +76,7 @@ public final class MyLineItemDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
    
@@ -86,12 +86,12 @@ public final class MyLineItemDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
@@ -101,7 +101,7 @@ public final class MyLineItemDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getDistributionChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
    }
 

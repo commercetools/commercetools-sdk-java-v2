@@ -26,9 +26,9 @@ public class ByProjectKeyMeOrdersPost {
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
-   private com.commercetools.models.Me.MyOrderFromCartDraft myOrderFromCartDraft;
+   private com.commercetools.models.me.MyOrderFromCartDraft myOrderFromCartDraft;
    
-   public ByProjectKeyMeOrdersPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Me.MyOrderFromCartDraft myOrderFromCartDraft){
+   public ByProjectKeyMeOrdersPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.me.MyOrderFromCartDraft myOrderFromCartDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.myOrderFromCartDraft = myOrderFromCartDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyMeOrdersPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Order.Order> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.order.Order> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyMeOrdersPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Order.Order>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.order.Order>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Order.Order.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.order.Order.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

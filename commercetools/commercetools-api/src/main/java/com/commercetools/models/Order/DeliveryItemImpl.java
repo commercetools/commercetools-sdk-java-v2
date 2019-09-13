@@ -1,4 +1,4 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
 import java.lang.Integer;
 import java.lang.String;

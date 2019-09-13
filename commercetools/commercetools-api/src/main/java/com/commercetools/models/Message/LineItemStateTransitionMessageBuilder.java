@@ -1,11 +1,11 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.state.StateReference;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Message.LineItemStateTransitionMessage;
+import com.commercetools.models.message.LineItemStateTransitionMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -29,10 +29,10 @@ public final class LineItemStateTransitionMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -41,10 +41,10 @@ public final class LineItemStateTransitionMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.State.StateReference toState;
+   private com.commercetools.models.state.StateReference toState;
    
    
-   private com.commercetools.models.State.StateReference fromState;
+   private com.commercetools.models.state.StateReference fromState;
    
    
    private java.lang.Long quantity;
@@ -80,12 +80,12 @@ public final class LineItemStateTransitionMessageBuilder {
       return this;
    }
    
-   public LineItemStateTransitionMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public LineItemStateTransitionMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public LineItemStateTransitionMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public LineItemStateTransitionMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -100,12 +100,12 @@ public final class LineItemStateTransitionMessageBuilder {
       return this;
    }
    
-   public LineItemStateTransitionMessageBuilder toState( final com.commercetools.models.State.StateReference toState) {
+   public LineItemStateTransitionMessageBuilder toState( final com.commercetools.models.state.StateReference toState) {
       this.toState = toState;
       return this;
    }
    
-   public LineItemStateTransitionMessageBuilder fromState( final com.commercetools.models.State.StateReference fromState) {
+   public LineItemStateTransitionMessageBuilder fromState( final com.commercetools.models.state.StateReference fromState) {
       this.fromState = fromState;
       return this;
    }
@@ -151,12 +151,12 @@ public final class LineItemStateTransitionMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -171,12 +171,12 @@ public final class LineItemStateTransitionMessageBuilder {
    }
    
    
-   public com.commercetools.models.State.StateReference getToState(){
+   public com.commercetools.models.state.StateReference getToState(){
       return this.toState;
    }
    
    
-   public com.commercetools.models.State.StateReference getFromState(){
+   public com.commercetools.models.state.StateReference getFromState(){
       return this.fromState;
    }
    

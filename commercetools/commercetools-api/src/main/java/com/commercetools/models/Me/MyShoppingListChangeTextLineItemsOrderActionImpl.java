@@ -1,6 +1,6 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;

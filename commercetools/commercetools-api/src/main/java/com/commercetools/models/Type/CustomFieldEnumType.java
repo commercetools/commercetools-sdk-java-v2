@@ -1,9 +1,9 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.CustomFieldEnumValue;
-import com.commercetools.models.Type.FieldType;
+import com.commercetools.models.type.CustomFieldEnumValue;
+import com.commercetools.models.type.FieldType;
 import java.lang.String;
-import com.commercetools.models.Type.CustomFieldEnumTypeImpl;
+import com.commercetools.models.type.CustomFieldEnumTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

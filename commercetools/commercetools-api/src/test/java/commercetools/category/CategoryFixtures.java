@@ -1,13 +1,14 @@
 package commercetools.category;
 
-import com.commercetools.models.Category.Category;
-import com.commercetools.models.Category.CategoryDraft;
-import com.commercetools.models.Category.CategoryDraftBuilder;
-import com.commercetools.models.Common.AssetDraftBuilder;
-import com.commercetools.models.Common.AssetSource;
-import com.commercetools.models.Common.AssetSourceBuilder;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.FieldContainer;
+
+import com.commercetools.models.category.Category;
+import com.commercetools.models.category.CategoryDraft;
+import com.commercetools.models.category.CategoryDraftBuilder;
+import com.commercetools.models.common.AssetDraftBuilder;
+import com.commercetools.models.common.AssetSource;
+import com.commercetools.models.common.AssetSourceBuilder;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.FieldContainer;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import java.util.Arrays;

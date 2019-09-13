@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Order.Order;
-import com.commercetools.models.Order.OrderReference;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.order.Order;
+import com.commercetools.models.order.OrderReference;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class OrderReferenceBuilder {
    private java.lang.String id;
    
    @Nullable
-   private com.commercetools.models.Order.Order obj;
+   private com.commercetools.models.order.Order obj;
    
    public OrderReferenceBuilder id( final java.lang.String id) {
       this.id = id;
       return this;
    }
    
-   public OrderReferenceBuilder obj(@Nullable final com.commercetools.models.Order.Order obj) {
+   public OrderReferenceBuilder obj(@Nullable final com.commercetools.models.order.Order obj) {
       this.obj = obj;
       return this;
    }
@@ -33,7 +33,7 @@ public final class OrderReferenceBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Order.Order getObj(){
+   public com.commercetools.models.order.Order getObj(){
       return this.obj;
    }
 

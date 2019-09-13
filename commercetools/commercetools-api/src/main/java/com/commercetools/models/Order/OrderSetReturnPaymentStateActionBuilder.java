@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ReturnPaymentState;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ReturnPaymentState;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetReturnPaymentStateAction;
+import com.commercetools.models.order.OrderSetReturnPaymentStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class OrderSetReturnPaymentStateActionBuilder {
    private java.lang.String returnItemId;
    
    
-   private com.commercetools.models.Order.ReturnPaymentState paymentState;
+   private com.commercetools.models.order.ReturnPaymentState paymentState;
    
    public OrderSetReturnPaymentStateActionBuilder returnItemId( final java.lang.String returnItemId) {
       this.returnItemId = returnItemId;
       return this;
    }
    
-   public OrderSetReturnPaymentStateActionBuilder paymentState( final com.commercetools.models.Order.ReturnPaymentState paymentState) {
+   public OrderSetReturnPaymentStateActionBuilder paymentState( final com.commercetools.models.order.ReturnPaymentState paymentState) {
       this.paymentState = paymentState;
       return this;
    }
@@ -33,7 +33,7 @@ public final class OrderSetReturnPaymentStateActionBuilder {
    }
    
    
-   public com.commercetools.models.Order.ReturnPaymentState getPaymentState(){
+   public com.commercetools.models.order.ReturnPaymentState getPaymentState(){
       return this.paymentState;
    }
 

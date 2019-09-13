@@ -1,9 +1,9 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionTrigger;
-import com.commercetools.models.Extension.ExtensionUpdateAction;
+import com.commercetools.models.extension.ExtensionTrigger;
+import com.commercetools.models.extension.ExtensionUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Extension.ExtensionChangeTriggersAction;
+import com.commercetools.models.extension.ExtensionChangeTriggersAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ExtensionChangeTriggersActionBuilder {
    
    
-   private java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers;
+   private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
    
-   public ExtensionChangeTriggersActionBuilder triggers( final java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers) {
+   public ExtensionChangeTriggersActionBuilder triggers( final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers) {
       this.triggers = triggers;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.ExtensionTrigger> getTriggers(){
+   public java.util.List<com.commercetools.models.extension.ExtensionTrigger> getTriggers(){
       return this.triggers;
    }
 

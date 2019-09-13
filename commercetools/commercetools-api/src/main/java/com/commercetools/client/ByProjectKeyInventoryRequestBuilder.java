@@ -16,7 +16,7 @@ public class ByProjectKeyInventoryRequestBuilder {
       return new ByProjectKeyInventoryGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyInventoryPost post(com.commercetools.models.Inventory.InventoryEntryDraft inventoryEntryDraft) {
+   public ByProjectKeyInventoryPost post(com.commercetools.models.inventory.InventoryEntryDraft inventoryEntryDraft) {
       return new ByProjectKeyInventoryPost(apiHttpClient, projectKey, inventoryEntryDraft);
    }
    

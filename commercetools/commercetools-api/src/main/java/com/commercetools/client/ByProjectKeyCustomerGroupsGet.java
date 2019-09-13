@@ -59,7 +59,7 @@ public class ByProjectKeyCustomerGroupsGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.CustomerGroup.CustomerGroupPagedQueryResponse> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.customer_group.CustomerGroupPagedQueryResponse> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -67,9 +67,9 @@ public class ByProjectKeyCustomerGroupsGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.CustomerGroup.CustomerGroupPagedQueryResponse>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.customer_group.CustomerGroupPagedQueryResponse>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.CustomerGroup.CustomerGroupPagedQueryResponse.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.customer_group.CustomerGroupPagedQueryResponse.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Order.Order;
-import com.commercetools.models.Order.OrderReferenceImpl;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.order.Order;
+import com.commercetools.models.order.OrderReferenceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

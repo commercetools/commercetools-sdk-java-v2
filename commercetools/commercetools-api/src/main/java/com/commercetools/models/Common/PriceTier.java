@@ -1,8 +1,8 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.common.Money;
 import java.lang.Long;
-import com.commercetools.models.Common.PriceTierImpl;
+import com.commercetools.models.common.PriceTierImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

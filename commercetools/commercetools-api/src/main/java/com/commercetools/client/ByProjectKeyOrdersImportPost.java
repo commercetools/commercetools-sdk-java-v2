@@ -26,9 +26,9 @@ public class ByProjectKeyOrdersImportPost {
    
    private String projectKey;
    
-   private com.commercetools.models.Order.OrderImportDraft orderImportDraft;
+   private com.commercetools.models.order.OrderImportDraft orderImportDraft;
    
-   public ByProjectKeyOrdersImportPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Order.OrderImportDraft orderImportDraft){
+   public ByProjectKeyOrdersImportPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.order.OrderImportDraft orderImportDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.orderImportDraft = orderImportDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyOrdersImportPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Order.Order> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.order.Order> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyOrdersImportPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Order.Order>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.order.Order>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Order.Order.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.order.Order.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

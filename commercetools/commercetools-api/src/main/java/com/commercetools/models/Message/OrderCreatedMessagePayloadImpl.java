@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.Order;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.Order;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class OrderCreatedMessagePayloadImpl implements OrderCreatedMessage
 
    private java.lang.String type;
    
-   private com.commercetools.models.Order.Order order;
+   private com.commercetools.models.order.Order order;
 
    @JsonCreator
-   OrderCreatedMessagePayloadImpl(@JsonProperty("order") final com.commercetools.models.Order.Order order) {
+   OrderCreatedMessagePayloadImpl(@JsonProperty("order") final com.commercetools.models.order.Order order) {
       this.order = order;
       this.type = "OrderCreated";
    }
@@ -43,11 +43,11 @@ public final class OrderCreatedMessagePayloadImpl implements OrderCreatedMessage
    }
    
    
-   public com.commercetools.models.Order.Order getOrder(){
+   public com.commercetools.models.order.Order getOrder(){
       return this.order;
    }
 
-   public void setOrder(final com.commercetools.models.Order.Order order){
+   public void setOrder(final com.commercetools.models.order.Order order){
       this.order = order;
    }
 

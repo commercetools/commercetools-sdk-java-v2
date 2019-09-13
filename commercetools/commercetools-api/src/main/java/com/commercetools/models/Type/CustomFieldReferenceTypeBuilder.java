@@ -1,9 +1,9 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Type.FieldType;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.type.FieldType;
 import java.lang.String;
-import com.commercetools.models.Type.CustomFieldReferenceType;
+import com.commercetools.models.type.CustomFieldReferenceType;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CustomFieldReferenceTypeBuilder {
    
    
-   private com.commercetools.models.Common.ReferenceTypeId referenceTypeId;
+   private com.commercetools.models.common.ReferenceTypeId referenceTypeId;
    
-   public CustomFieldReferenceTypeBuilder referenceTypeId( final com.commercetools.models.Common.ReferenceTypeId referenceTypeId) {
+   public CustomFieldReferenceTypeBuilder referenceTypeId( final com.commercetools.models.common.ReferenceTypeId referenceTypeId) {
       this.referenceTypeId = referenceTypeId;
       return this;
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getReferenceTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getReferenceTypeId(){
       return this.referenceTypeId;
    }
 

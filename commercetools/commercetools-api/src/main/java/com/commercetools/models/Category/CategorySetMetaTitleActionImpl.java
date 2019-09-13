@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CategorySetMetaTitleActionImpl implements CategorySetMetaTitl
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString metaTitle;
+   private com.commercetools.models.common.LocalizedString metaTitle;
 
    @JsonCreator
-   CategorySetMetaTitleActionImpl(@JsonProperty("metaTitle") final com.commercetools.models.Common.LocalizedString metaTitle) {
+   CategorySetMetaTitleActionImpl(@JsonProperty("metaTitle") final com.commercetools.models.common.LocalizedString metaTitle) {
       this.metaTitle = metaTitle;
       this.action = "setMetaTitle";
    }
@@ -43,11 +43,11 @@ public final class CategorySetMetaTitleActionImpl implements CategorySetMetaTitl
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getMetaTitle(){
+   public com.commercetools.models.common.LocalizedString getMetaTitle(){
       return this.metaTitle;
    }
 
-   public void setMetaTitle(final com.commercetools.models.Common.LocalizedString metaTitle){
+   public void setMetaTitle(final com.commercetools.models.common.LocalizedString metaTitle){
       this.metaTitle = metaTitle;
    }
 

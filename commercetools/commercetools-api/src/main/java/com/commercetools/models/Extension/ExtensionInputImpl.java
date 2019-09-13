@@ -1,7 +1,7 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Extension.ExtensionAction;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.extension.ExtensionAction;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionInputImpl implements ExtensionInput {
 
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
-   private com.commercetools.models.Extension.ExtensionAction action;
+   private com.commercetools.models.extension.ExtensionAction action;
 
    @JsonCreator
-   ExtensionInputImpl(@JsonProperty("resource") final com.commercetools.models.Common.Reference resource, @JsonProperty("action") final com.commercetools.models.Extension.ExtensionAction action) {
+   ExtensionInputImpl(@JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("action") final com.commercetools.models.extension.ExtensionAction action) {
       this.resource = resource;
       this.action = action;
    }
@@ -37,20 +37,20 @@ public final class ExtensionInputImpl implements ExtensionInput {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    
-   public com.commercetools.models.Extension.ExtensionAction getAction(){
+   public com.commercetools.models.extension.ExtensionAction getAction(){
       return this.action;
    }
 
-   public void setResource(final com.commercetools.models.Common.Reference resource){
+   public void setResource(final com.commercetools.models.common.Reference resource){
       this.resource = resource;
    }
    
-   public void setAction(final com.commercetools.models.Extension.ExtensionAction action){
+   public void setAction(final com.commercetools.models.extension.ExtensionAction action){
       this.action = action;
    }
 

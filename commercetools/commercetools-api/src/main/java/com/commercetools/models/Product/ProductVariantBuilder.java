@@ -1,15 +1,15 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.Asset;
-import com.commercetools.models.Common.Image;
-import com.commercetools.models.Common.Price;
-import com.commercetools.models.Common.ScopedPrice;
-import com.commercetools.models.Product.Attribute;
-import com.commercetools.models.Product.ProductVariantAvailability;
+import com.commercetools.models.common.Asset;
+import com.commercetools.models.common.Image;
+import com.commercetools.models.common.Price;
+import com.commercetools.models.common.ScopedPrice;
+import com.commercetools.models.product.Attribute;
+import com.commercetools.models.product.ProductVariantAvailability;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Product.ProductVariant;
+import com.commercetools.models.product.ProductVariant;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -18,34 +18,34 @@ import java.time.ZonedDateTime;
 public final class ProductVariantBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.ScopedPrice scopedPrice;
+   private com.commercetools.models.common.ScopedPrice scopedPrice;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.Image> images;
+   private java.util.List<com.commercetools.models.common.Image> images;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.Asset> assets;
+   private java.util.List<com.commercetools.models.common.Asset> assets;
    
    @Nullable
    private java.lang.Boolean isMatchingVariant;
    
    @Nullable
-   private com.commercetools.models.Common.Price price;
+   private com.commercetools.models.common.Price price;
    
    @Nullable
    private java.lang.Boolean scopedPriceDiscounted;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Product.Attribute> attributes;
+   private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
    @Nullable
-   private com.commercetools.models.Product.ProductVariantAvailability availability;
+   private com.commercetools.models.product.ProductVariantAvailability availability;
    
    
    private java.lang.Long id;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.Price> prices;
+   private java.util.List<com.commercetools.models.common.Price> prices;
    
    @Nullable
    private java.lang.String sku;
@@ -53,17 +53,17 @@ public final class ProductVariantBuilder {
    @Nullable
    private java.lang.String key;
    
-   public ProductVariantBuilder scopedPrice(@Nullable final com.commercetools.models.Common.ScopedPrice scopedPrice) {
+   public ProductVariantBuilder scopedPrice(@Nullable final com.commercetools.models.common.ScopedPrice scopedPrice) {
       this.scopedPrice = scopedPrice;
       return this;
    }
    
-   public ProductVariantBuilder images(@Nullable final java.util.List<com.commercetools.models.Common.Image> images) {
+   public ProductVariantBuilder images(@Nullable final java.util.List<com.commercetools.models.common.Image> images) {
       this.images = images;
       return this;
    }
    
-   public ProductVariantBuilder assets(@Nullable final java.util.List<com.commercetools.models.Common.Asset> assets) {
+   public ProductVariantBuilder assets(@Nullable final java.util.List<com.commercetools.models.common.Asset> assets) {
       this.assets = assets;
       return this;
    }
@@ -73,7 +73,7 @@ public final class ProductVariantBuilder {
       return this;
    }
    
-   public ProductVariantBuilder price(@Nullable final com.commercetools.models.Common.Price price) {
+   public ProductVariantBuilder price(@Nullable final com.commercetools.models.common.Price price) {
       this.price = price;
       return this;
    }
@@ -83,12 +83,12 @@ public final class ProductVariantBuilder {
       return this;
    }
    
-   public ProductVariantBuilder attributes(@Nullable final java.util.List<com.commercetools.models.Product.Attribute> attributes) {
+   public ProductVariantBuilder attributes(@Nullable final java.util.List<com.commercetools.models.product.Attribute> attributes) {
       this.attributes = attributes;
       return this;
    }
    
-   public ProductVariantBuilder availability(@Nullable final com.commercetools.models.Product.ProductVariantAvailability availability) {
+   public ProductVariantBuilder availability(@Nullable final com.commercetools.models.product.ProductVariantAvailability availability) {
       this.availability = availability;
       return this;
    }
@@ -98,7 +98,7 @@ public final class ProductVariantBuilder {
       return this;
    }
    
-   public ProductVariantBuilder prices(@Nullable final java.util.List<com.commercetools.models.Common.Price> prices) {
+   public ProductVariantBuilder prices(@Nullable final java.util.List<com.commercetools.models.common.Price> prices) {
       this.prices = prices;
       return this;
    }
@@ -114,17 +114,17 @@ public final class ProductVariantBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.ScopedPrice getScopedPrice(){
+   public com.commercetools.models.common.ScopedPrice getScopedPrice(){
       return this.scopedPrice;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.Image> getImages(){
+   public java.util.List<com.commercetools.models.common.Image> getImages(){
       return this.images;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.Asset> getAssets(){
+   public java.util.List<com.commercetools.models.common.Asset> getAssets(){
       return this.assets;
    }
    
@@ -134,7 +134,7 @@ public final class ProductVariantBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Price getPrice(){
+   public com.commercetools.models.common.Price getPrice(){
       return this.price;
    }
    
@@ -144,12 +144,12 @@ public final class ProductVariantBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Product.Attribute> getAttributes(){
+   public java.util.List<com.commercetools.models.product.Attribute> getAttributes(){
       return this.attributes;
    }
    
    @Nullable
-   public com.commercetools.models.Product.ProductVariantAvailability getAvailability(){
+   public com.commercetools.models.product.ProductVariantAvailability getAvailability(){
       return this.availability;
    }
    
@@ -159,7 +159,7 @@ public final class ProductVariantBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.Price> getPrices(){
+   public java.util.List<com.commercetools.models.common.Price> getPrices(){
       return this.prices;
    }
    

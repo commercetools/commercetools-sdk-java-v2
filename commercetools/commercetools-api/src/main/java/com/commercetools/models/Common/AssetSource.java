@@ -1,8 +1,8 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.AssetDimensions;
+import com.commercetools.models.common.AssetDimensions;
 import java.lang.String;
-import com.commercetools.models.Common.AssetSourceImpl;
+import com.commercetools.models.common.AssetSourceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

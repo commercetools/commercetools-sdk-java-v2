@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Product.ProductVariant;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.product.ProductVariant;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -29,10 +29,10 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
    
    private java.util.List<java.lang.Object> removedImageUrls;
    
-   private com.commercetools.models.Product.ProductVariant variant;
+   private com.commercetools.models.product.ProductVariant variant;
 
    @JsonCreator
-   ProductVariantDeletedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<java.lang.Object> removedImageUrls, @JsonProperty("variant") final com.commercetools.models.Product.ProductVariant variant) {
+   ProductVariantDeletedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<java.lang.Object> removedImageUrls, @JsonProperty("variant") final com.commercetools.models.product.ProductVariant variant) {
       this.removedImageUrls = removedImageUrls;
       this.variant = variant;
       this.type = "ProductVariantDeleted";
@@ -52,7 +52,7 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
    }
    
    
-   public com.commercetools.models.Product.ProductVariant getVariant(){
+   public com.commercetools.models.product.ProductVariant getVariant(){
       return this.variant;
    }
 
@@ -60,7 +60,7 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
       this.removedImageUrls = removedImageUrls;
    }
    
-   public void setVariant(final com.commercetools.models.Product.ProductVariant variant){
+   public void setVariant(final com.commercetools.models.product.ProductVariant variant){
       this.variant = variant;
    }
 

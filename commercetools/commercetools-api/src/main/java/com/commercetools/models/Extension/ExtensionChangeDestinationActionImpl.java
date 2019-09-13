@@ -1,7 +1,7 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionDestination;
-import com.commercetools.models.Extension.ExtensionUpdateAction;
+import com.commercetools.models.extension.ExtensionDestination;
+import com.commercetools.models.extension.ExtensionUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ExtensionChangeDestinationActionImpl implements ExtensionChan
 
    private java.lang.String action;
    
-   private com.commercetools.models.Extension.ExtensionDestination destination;
+   private com.commercetools.models.extension.ExtensionDestination destination;
 
    @JsonCreator
-   ExtensionChangeDestinationActionImpl(@JsonProperty("destination") final com.commercetools.models.Extension.ExtensionDestination destination) {
+   ExtensionChangeDestinationActionImpl(@JsonProperty("destination") final com.commercetools.models.extension.ExtensionDestination destination) {
       this.destination = destination;
       this.action = "changeDestination";
    }
@@ -43,11 +43,11 @@ public final class ExtensionChangeDestinationActionImpl implements ExtensionChan
    }
    
    
-   public com.commercetools.models.Extension.ExtensionDestination getDestination(){
+   public com.commercetools.models.extension.ExtensionDestination getDestination(){
       return this.destination;
    }
 
-   public void setDestination(final com.commercetools.models.Extension.ExtensionDestination destination){
+   public void setDestination(final com.commercetools.models.extension.ExtensionDestination destination){
       this.destination = destination;
    }
 

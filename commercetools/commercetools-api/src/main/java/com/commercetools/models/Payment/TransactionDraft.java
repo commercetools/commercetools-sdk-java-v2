@@ -1,11 +1,11 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Payment.TransactionState;
-import com.commercetools.models.Payment.TransactionType;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.payment.TransactionState;
+import com.commercetools.models.payment.TransactionType;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Payment.TransactionDraftImpl;
+import com.commercetools.models.payment.TransactionDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

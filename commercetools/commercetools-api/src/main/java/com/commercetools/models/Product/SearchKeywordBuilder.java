@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Product.SearchKeyword;
+import com.commercetools.models.product.SearchKeyword;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

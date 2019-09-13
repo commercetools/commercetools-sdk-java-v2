@@ -18,7 +18,7 @@ public class ByProjectKeyReviewsByIDRequestBuilder {
       return new ByProjectKeyReviewsByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyReviewsByIDPost post(com.commercetools.models.Review.ReviewUpdate reviewUpdate) {
+   public ByProjectKeyReviewsByIDPost post(com.commercetools.models.review.ReviewUpdate reviewUpdate) {
       return new ByProjectKeyReviewsByIDPost(apiHttpClient, projectKey, ID, reviewUpdate);
    }
    

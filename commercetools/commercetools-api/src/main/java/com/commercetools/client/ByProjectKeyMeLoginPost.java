@@ -51,7 +51,7 @@ public class ByProjectKeyMeLoginPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Customer.CustomerSignInResult> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.customer.CustomerSignInResult> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyMeLoginPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Customer.CustomerSignInResult>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.customer.CustomerSignInResult>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Customer.CustomerSignInResult.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.customer.CustomerSignInResult.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

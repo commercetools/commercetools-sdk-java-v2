@@ -1,9 +1,9 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.MessageSubscription;
-import com.commercetools.models.Subscription.SubscriptionUpdateAction;
+import com.commercetools.models.subscription.MessageSubscription;
+import com.commercetools.models.subscription.SubscriptionUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Subscription.SubscriptionSetMessagesActionImpl;
+import com.commercetools.models.subscription.SubscriptionSetMessagesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

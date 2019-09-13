@@ -1,8 +1,8 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.Channel;
+import com.commercetools.models.channel.Channel;
 import java.lang.Long;
-import com.commercetools.models.Channel.ChannelPagedQueryResponse;
+import com.commercetools.models.channel.ChannelPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ChannelPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Channel.Channel> results;
+   private java.util.List<com.commercetools.models.channel.Channel> results;
    
    public ChannelPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class ChannelPagedQueryResponseBuilder {
       return this;
    }
    
-   public ChannelPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Channel.Channel> results) {
+   public ChannelPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.channel.Channel> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class ChannelPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Channel.Channel> getResults(){
+   public java.util.List<com.commercetools.models.channel.Channel> getResults(){
       return this.results;
    }
 

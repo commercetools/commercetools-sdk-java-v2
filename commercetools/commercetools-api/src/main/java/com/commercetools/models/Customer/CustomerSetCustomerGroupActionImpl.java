@@ -1,7 +1,7 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerUpdateAction;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
+import com.commercetools.models.customer.CustomerUpdateAction;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CustomerSetCustomerGroupActionImpl implements CustomerSetCust
 
    private java.lang.String action;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
    @JsonCreator
-   CustomerSetCustomerGroupActionImpl(@JsonProperty("customerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup) {
+   CustomerSetCustomerGroupActionImpl(@JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
       this.customerGroup = customerGroup;
       this.action = "setCustomerGroup";
    }
@@ -43,11 +43,11 @@ public final class CustomerSetCustomerGroupActionImpl implements CustomerSetCust
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
       return this.customerGroup;
    }
 
-   public void setCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup){
+   public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
       this.customerGroup = customerGroup;
    }
 

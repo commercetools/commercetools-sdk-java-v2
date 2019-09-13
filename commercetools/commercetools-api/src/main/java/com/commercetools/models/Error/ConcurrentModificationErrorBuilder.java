@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Error.ConcurrentModificationError;
+import com.commercetools.models.error.ConcurrentModificationError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -18,7 +18,7 @@ public class ByProjectKeyTypesByIDRequestBuilder {
       return new ByProjectKeyTypesByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyTypesByIDPost post(com.commercetools.models.Type.TypeUpdate typeUpdate) {
+   public ByProjectKeyTypesByIDPost post(com.commercetools.models.type.TypeUpdate typeUpdate) {
       return new ByProjectKeyTypesByIDPost(apiHttpClient, projectKey, ID, typeUpdate);
    }
    

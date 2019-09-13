@@ -1,10 +1,10 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -28,15 +28,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ScopedPriceImpl implements ScopedPrice {
 
-   private com.commercetools.models.Common.DiscountedPrice discounted;
+   private com.commercetools.models.common.DiscountedPrice discounted;
    
    private java.lang.String country;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
-   private com.commercetools.models.Channel.ChannelReference channel;
+   private com.commercetools.models.channel.ChannelReference channel;
    
    private java.time.ZonedDateTime validUntil;
    
@@ -44,12 +44,12 @@ public final class ScopedPriceImpl implements ScopedPrice {
    
    private java.lang.String id;
    
-   private com.commercetools.models.Common.TypedMoney value;
+   private com.commercetools.models.common.TypedMoney value;
    
-   private com.commercetools.models.Common.TypedMoney currentValue;
+   private com.commercetools.models.common.TypedMoney currentValue;
 
    @JsonCreator
-   ScopedPriceImpl(@JsonProperty("discounted") final com.commercetools.models.Common.DiscountedPrice discounted, @JsonProperty("country") final java.lang.String country, @JsonProperty("customerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.Type.CustomFields custom, @JsonProperty("channel") final com.commercetools.models.Channel.ChannelReference channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("id") final java.lang.String id, @JsonProperty("value") final com.commercetools.models.Common.TypedMoney value, @JsonProperty("currentValue") final com.commercetools.models.Common.TypedMoney currentValue) {
+   ScopedPriceImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("country") final java.lang.String country, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("id") final java.lang.String id, @JsonProperty("value") final com.commercetools.models.common.TypedMoney value, @JsonProperty("currentValue") final com.commercetools.models.common.TypedMoney currentValue) {
       this.discounted = discounted;
       this.country = country;
       this.customerGroup = customerGroup;
@@ -66,7 +66,7 @@ public final class ScopedPriceImpl implements ScopedPrice {
    }
    
    
-   public com.commercetools.models.Common.DiscountedPrice getDiscounted(){
+   public com.commercetools.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
    
@@ -78,17 +78,17 @@ public final class ScopedPriceImpl implements ScopedPrice {
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Channel.ChannelReference getChannel(){
+   public com.commercetools.models.channel.ChannelReference getChannel(){
       return this.channel;
    }
    
@@ -108,16 +108,16 @@ public final class ScopedPriceImpl implements ScopedPrice {
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getValue(){
+   public com.commercetools.models.common.TypedMoney getValue(){
       return this.value;
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getCurrentValue(){
+   public com.commercetools.models.common.TypedMoney getCurrentValue(){
       return this.currentValue;
    }
 
-   public void setDiscounted(final com.commercetools.models.Common.DiscountedPrice discounted){
+   public void setDiscounted(final com.commercetools.models.common.DiscountedPrice discounted){
       this.discounted = discounted;
    }
    
@@ -125,15 +125,15 @@ public final class ScopedPriceImpl implements ScopedPrice {
       this.country = country;
    }
    
-   public void setCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup){
+   public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupReference customerGroup){
       this.customerGroup = customerGroup;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFields custom){
+   public void setCustom(final com.commercetools.models.type.CustomFields custom){
       this.custom = custom;
    }
    
-   public void setChannel(final com.commercetools.models.Channel.ChannelReference channel){
+   public void setChannel(final com.commercetools.models.channel.ChannelReference channel){
       this.channel = channel;
    }
    
@@ -149,11 +149,11 @@ public final class ScopedPriceImpl implements ScopedPrice {
       this.id = id;
    }
    
-   public void setValue(final com.commercetools.models.Common.TypedMoney value){
+   public void setValue(final com.commercetools.models.common.TypedMoney value){
       this.value = value;
    }
    
-   public void setCurrentValue(final com.commercetools.models.Common.TypedMoney currentValue){
+   public void setCurrentValue(final com.commercetools.models.common.TypedMoney currentValue){
       this.currentValue = currentValue;
    }
 

@@ -27,9 +27,9 @@ public class ByProjectKeySubscriptionsKeyByKeyPost {
    private String projectKey;
    private String key;
    
-   private com.commercetools.models.Subscription.SubscriptionUpdate subscriptionUpdate;
+   private com.commercetools.models.subscription.SubscriptionUpdate subscriptionUpdate;
    
-   public ByProjectKeySubscriptionsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.Subscription.SubscriptionUpdate subscriptionUpdate){
+   public ByProjectKeySubscriptionsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.subscription.SubscriptionUpdate subscriptionUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.key = key;
@@ -53,7 +53,7 @@ public class ByProjectKeySubscriptionsKeyByKeyPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Subscription.Subscription> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.subscription.Subscription> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeySubscriptionsKeyByKeyPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Subscription.Subscription>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.subscription.Subscription>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Subscription.Subscription.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.subscription.Subscription.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

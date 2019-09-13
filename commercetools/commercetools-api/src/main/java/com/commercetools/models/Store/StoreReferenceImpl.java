@@ -1,8 +1,8 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Store.Store;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.store.Store;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoreReferenceImpl implements StoreReference {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Store.Store obj;
+   private com.commercetools.models.store.Store obj;
 
    @JsonCreator
-   StoreReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.Store.Store obj) {
+   StoreReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.store.Store obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("store").get();
@@ -41,7 +41,7 @@ public final class StoreReferenceImpl implements StoreReference {
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    
@@ -51,7 +51,7 @@ public final class StoreReferenceImpl implements StoreReference {
    }
    
    
-   public com.commercetools.models.Store.Store getObj(){
+   public com.commercetools.models.store.Store getObj(){
       return this.obj;
    }
 
@@ -59,7 +59,7 @@ public final class StoreReferenceImpl implements StoreReference {
       this.id = id;
    }
    
-   public void setObj(final com.commercetools.models.Store.Store obj){
+   public void setObj(final com.commercetools.models.store.Store obj){
       this.obj = obj;
    }
 

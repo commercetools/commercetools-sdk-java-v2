@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.Order;
+import com.commercetools.models.order.Order;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class OrderPagedQueryResponseImpl implements OrderPagedQueryRespons
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Order.Order> results;
+   private java.util.List<com.commercetools.models.order.Order> results;
 
    @JsonCreator
-   OrderPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Order.Order> results) {
+   OrderPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.order.Order> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class OrderPagedQueryResponseImpl implements OrderPagedQueryRespons
    }
    
    
-   public java.util.List<com.commercetools.models.Order.Order> getResults(){
+   public java.util.List<com.commercetools.models.order.Order> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class OrderPagedQueryResponseImpl implements OrderPagedQueryRespons
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Order.Order> results){
+   public void setResults(final java.util.List<com.commercetools.models.order.Order> results){
       this.results = results;
    }
 

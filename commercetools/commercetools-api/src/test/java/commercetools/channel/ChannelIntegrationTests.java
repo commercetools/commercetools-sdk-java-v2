@@ -1,6 +1,6 @@
 package commercetools.channel;
 
-import com.commercetools.models.Channel.*;
+import com.commercetools.models.channel.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

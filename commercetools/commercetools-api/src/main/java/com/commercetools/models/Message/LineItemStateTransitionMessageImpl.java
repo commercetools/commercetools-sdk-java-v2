@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.state.StateReference;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
@@ -36,17 +36,17 @@ public final class LineItemStateTransitionMessageImpl implements LineItemStateTr
    
    private java.lang.Long sequenceNumber;
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    private java.lang.Long resourceVersion;
    
    private java.lang.String type;
    
-   private com.commercetools.models.State.StateReference toState;
+   private com.commercetools.models.state.StateReference toState;
    
-   private com.commercetools.models.State.StateReference fromState;
+   private com.commercetools.models.state.StateReference fromState;
    
    private java.lang.Long quantity;
    
@@ -55,7 +55,7 @@ public final class LineItemStateTransitionMessageImpl implements LineItemStateTr
    private java.time.ZonedDateTime transitionDate;
 
    @JsonCreator
-   LineItemStateTransitionMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.Common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("toState") final com.commercetools.models.State.StateReference toState, @JsonProperty("fromState") final com.commercetools.models.State.StateReference fromState, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate) {
+   LineItemStateTransitionMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("toState") final com.commercetools.models.state.StateReference toState, @JsonProperty("fromState") final com.commercetools.models.state.StateReference fromState, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -101,12 +101,12 @@ public final class LineItemStateTransitionMessageImpl implements LineItemStateTr
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -121,12 +121,12 @@ public final class LineItemStateTransitionMessageImpl implements LineItemStateTr
    }
    
    
-   public com.commercetools.models.State.StateReference getToState(){
+   public com.commercetools.models.state.StateReference getToState(){
       return this.toState;
    }
    
    
-   public com.commercetools.models.State.StateReference getFromState(){
+   public com.commercetools.models.state.StateReference getFromState(){
       return this.fromState;
    }
    
@@ -165,11 +165,11 @@ public final class LineItemStateTransitionMessageImpl implements LineItemStateTr
       this.sequenceNumber = sequenceNumber;
    }
    
-   public void setResource(final com.commercetools.models.Common.Reference resource){
+   public void setResource(final com.commercetools.models.common.Reference resource){
       this.resource = resource;
    }
    
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
@@ -181,11 +181,11 @@ public final class LineItemStateTransitionMessageImpl implements LineItemStateTr
       this.type = type;
    }
    
-   public void setToState(final com.commercetools.models.State.StateReference toState){
+   public void setToState(final com.commercetools.models.state.StateReference toState){
       this.toState = toState;
    }
    
-   public void setFromState(final com.commercetools.models.State.StateReference fromState){
+   public void setFromState(final com.commercetools.models.state.StateReference fromState){
       this.fromState = fromState;
    }
    

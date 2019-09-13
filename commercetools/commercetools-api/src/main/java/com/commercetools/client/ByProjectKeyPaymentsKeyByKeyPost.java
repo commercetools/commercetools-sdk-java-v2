@@ -27,9 +27,9 @@ public class ByProjectKeyPaymentsKeyByKeyPost {
    private String projectKey;
    private String key;
    
-   private com.commercetools.models.Payment.PaymentUpdate paymentUpdate;
+   private com.commercetools.models.payment.PaymentUpdate paymentUpdate;
    
-   public ByProjectKeyPaymentsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.Payment.PaymentUpdate paymentUpdate){
+   public ByProjectKeyPaymentsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.payment.PaymentUpdate paymentUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.key = key;
@@ -53,7 +53,7 @@ public class ByProjectKeyPaymentsKeyByKeyPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Payment.Payment> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.payment.Payment> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyPaymentsKeyByKeyPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Payment.Payment>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.payment.Payment>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Payment.Payment.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.payment.Payment.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

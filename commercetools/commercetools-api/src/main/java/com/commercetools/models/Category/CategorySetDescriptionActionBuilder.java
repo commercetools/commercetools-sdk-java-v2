@@ -1,9 +1,9 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
-import com.commercetools.models.Category.CategorySetDescriptionAction;
+import com.commercetools.models.category.CategorySetDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CategorySetDescriptionActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
-   public CategorySetDescriptionActionBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public CategorySetDescriptionActionBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
 

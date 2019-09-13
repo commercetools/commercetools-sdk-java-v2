@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
 import java.lang.String;
-import com.commercetools.models.Common.UpdateActionImpl;
+import com.commercetools.models.common.UpdateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

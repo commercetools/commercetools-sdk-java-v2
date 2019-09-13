@@ -1,13 +1,13 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.State.StateRoleEnum;
-import com.commercetools.models.State.StateTypeEnum;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.state.StateRoleEnum;
+import com.commercetools.models.state.StateTypeEnum;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.State.State;
+import com.commercetools.models.state.State;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -28,31 +28,31 @@ public final class StateBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
    @Nullable
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
    private java.lang.Boolean initial;
    
    @Nullable
-   private java.util.List<com.commercetools.models.State.StateRoleEnum> roles;
+   private java.util.List<com.commercetools.models.state.StateRoleEnum> roles;
    
    
    private java.lang.Boolean builtIn;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    @Nullable
-   private java.util.List<com.commercetools.models.State.StateReference> transitions;
+   private java.util.List<com.commercetools.models.state.StateReference> transitions;
    
    
-   private com.commercetools.models.State.StateTypeEnum type;
+   private com.commercetools.models.state.StateTypeEnum type;
    
    
    private java.lang.String key;
@@ -77,12 +77,12 @@ public final class StateBuilder {
       return this;
    }
    
-   public StateBuilder createdBy(@Nullable final com.commercetools.models.Common.CreatedBy createdBy) {
+   public StateBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
       this.createdBy = createdBy;
       return this;
    }
    
-   public StateBuilder lastModifiedBy(@Nullable final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   public StateBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
@@ -92,7 +92,7 @@ public final class StateBuilder {
       return this;
    }
    
-   public StateBuilder roles(@Nullable final java.util.List<com.commercetools.models.State.StateRoleEnum> roles) {
+   public StateBuilder roles(@Nullable final java.util.List<com.commercetools.models.state.StateRoleEnum> roles) {
       this.roles = roles;
       return this;
    }
@@ -102,22 +102,22 @@ public final class StateBuilder {
       return this;
    }
    
-   public StateBuilder name(@Nullable final com.commercetools.models.Common.LocalizedString name) {
+   public StateBuilder name(@Nullable final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public StateBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public StateBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
    
-   public StateBuilder transitions(@Nullable final java.util.List<com.commercetools.models.State.StateReference> transitions) {
+   public StateBuilder transitions(@Nullable final java.util.List<com.commercetools.models.state.StateReference> transitions) {
       this.transitions = transitions;
       return this;
    }
    
-   public StateBuilder type( final com.commercetools.models.State.StateTypeEnum type) {
+   public StateBuilder type( final com.commercetools.models.state.StateTypeEnum type) {
       this.type = type;
       return this;
    }
@@ -148,12 +148,12 @@ public final class StateBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
@@ -163,7 +163,7 @@ public final class StateBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.State.StateRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.state.StateRoleEnum> getRoles(){
       return this.roles;
    }
    
@@ -173,22 +173,22 @@ public final class StateBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.State.StateReference> getTransitions(){
+   public java.util.List<com.commercetools.models.state.StateReference> getTransitions(){
       return this.transitions;
    }
    
    
-   public com.commercetools.models.State.StateTypeEnum getType(){
+   public com.commercetools.models.state.StateTypeEnum getType(){
       return this.type;
    }
    

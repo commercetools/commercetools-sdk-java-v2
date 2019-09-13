@@ -67,7 +67,7 @@ public class ByProjectKeyShippingMethodsGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.ShippingMethod.ShippingMethodPagedQueryResponse> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.shipping_method.ShippingMethodPagedQueryResponse> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -75,9 +75,9 @@ public class ByProjectKeyShippingMethodsGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.ShippingMethod.ShippingMethodPagedQueryResponse>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.shipping_method.ShippingMethodPagedQueryResponse>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.ShippingMethod.ShippingMethodPagedQueryResponse.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.shipping_method.ShippingMethodPagedQueryResponse.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

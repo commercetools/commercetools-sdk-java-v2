@@ -1,10 +1,10 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Cart.CartSetLineItemCustomTypeAction;
+import com.commercetools.models.cart.CartSetLineItemCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,22 +16,22 @@ public final class CartSetLineItemCustomTypeActionBuilder {
    private java.lang.String lineItemId;
    
    @Nullable
-   private com.commercetools.models.Type.FieldContainer fields;
+   private com.commercetools.models.type.FieldContainer fields;
    
    @Nullable
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
    
    public CartSetLineItemCustomTypeActionBuilder lineItemId( final java.lang.String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
    
-   public CartSetLineItemCustomTypeActionBuilder fields(@Nullable final com.commercetools.models.Type.FieldContainer fields) {
+   public CartSetLineItemCustomTypeActionBuilder fields(@Nullable final com.commercetools.models.type.FieldContainer fields) {
       this.fields = fields;
       return this;
    }
    
-   public CartSetLineItemCustomTypeActionBuilder type(@Nullable final com.commercetools.models.Type.TypeResourceIdentifier type) {
+   public CartSetLineItemCustomTypeActionBuilder type(@Nullable final com.commercetools.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
@@ -42,12 +42,12 @@ public final class CartSetLineItemCustomTypeActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.FieldContainer getFields(){
+   public com.commercetools.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    @Nullable
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
 

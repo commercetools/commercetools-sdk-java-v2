@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ParcelMeasurements;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ParcelMeasurements;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class OrderSetParcelMeasurementsActionImpl implements OrderSetParce
 
    private java.lang.String action;
    
-   private com.commercetools.models.Order.ParcelMeasurements measurements;
+   private com.commercetools.models.order.ParcelMeasurements measurements;
    
    private java.lang.String parcelId;
 
    @JsonCreator
-   OrderSetParcelMeasurementsActionImpl(@JsonProperty("measurements") final com.commercetools.models.Order.ParcelMeasurements measurements, @JsonProperty("parcelId") final java.lang.String parcelId) {
+   OrderSetParcelMeasurementsActionImpl(@JsonProperty("measurements") final com.commercetools.models.order.ParcelMeasurements measurements, @JsonProperty("parcelId") final java.lang.String parcelId) {
       this.measurements = measurements;
       this.parcelId = parcelId;
       this.action = "setParcelMeasurements";
@@ -46,7 +46,7 @@ public final class OrderSetParcelMeasurementsActionImpl implements OrderSetParce
    }
    
    
-   public com.commercetools.models.Order.ParcelMeasurements getMeasurements(){
+   public com.commercetools.models.order.ParcelMeasurements getMeasurements(){
       return this.measurements;
    }
    
@@ -55,7 +55,7 @@ public final class OrderSetParcelMeasurementsActionImpl implements OrderSetParce
       return this.parcelId;
    }
 
-   public void setMeasurements(final com.commercetools.models.Order.ParcelMeasurements measurements){
+   public void setMeasurements(final com.commercetools.models.order.ParcelMeasurements measurements){
       this.measurements = measurements;
    }
    

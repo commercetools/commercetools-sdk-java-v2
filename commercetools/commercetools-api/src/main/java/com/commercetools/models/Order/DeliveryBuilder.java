@@ -1,11 +1,11 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Order.DeliveryItem;
-import com.commercetools.models.Order.Parcel;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.order.DeliveryItem;
+import com.commercetools.models.order.Parcel;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.Delivery;
+import com.commercetools.models.order.Delivery;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,23 +17,23 @@ public final class DeliveryBuilder {
    private java.time.ZonedDateTime createdAt;
    
    @Nullable
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
    
    private java.lang.String id;
    
    
-   private java.util.List<com.commercetools.models.Order.DeliveryItem> items;
+   private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
    
-   private java.util.List<com.commercetools.models.Order.Parcel> parcels;
+   private java.util.List<com.commercetools.models.order.Parcel> parcels;
    
    public DeliveryBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
       return this;
    }
    
-   public DeliveryBuilder address(@Nullable final com.commercetools.models.Common.Address address) {
+   public DeliveryBuilder address(@Nullable final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
@@ -43,12 +43,12 @@ public final class DeliveryBuilder {
       return this;
    }
    
-   public DeliveryBuilder items( final java.util.List<com.commercetools.models.Order.DeliveryItem> items) {
+   public DeliveryBuilder items( final java.util.List<com.commercetools.models.order.DeliveryItem> items) {
       this.items = items;
       return this;
    }
    
-   public DeliveryBuilder parcels( final java.util.List<com.commercetools.models.Order.Parcel> parcels) {
+   public DeliveryBuilder parcels( final java.util.List<com.commercetools.models.order.Parcel> parcels) {
       this.parcels = parcels;
       return this;
    }
@@ -59,7 +59,7 @@ public final class DeliveryBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
    
@@ -69,12 +69,12 @@ public final class DeliveryBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.DeliveryItem> getItems(){
+   public java.util.List<com.commercetools.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
    
-   public java.util.List<com.commercetools.models.Order.Parcel> getParcels(){
+   public java.util.List<com.commercetools.models.order.Parcel> getParcels(){
       return this.parcels;
    }
 

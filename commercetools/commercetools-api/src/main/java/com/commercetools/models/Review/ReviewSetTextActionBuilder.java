@@ -1,8 +1,8 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Review.ReviewUpdateAction;
+import com.commercetools.models.review.ReviewUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Review.ReviewSetTextAction;
+import com.commercetools.models.review.ReviewSetTextAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

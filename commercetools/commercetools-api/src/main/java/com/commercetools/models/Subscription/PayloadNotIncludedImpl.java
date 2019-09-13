@@ -1,4 +1,4 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
 import java.lang.String;
 import javax.annotation.Generated;

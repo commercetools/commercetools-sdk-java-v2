@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Product.Attribute;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.product.Attribute;
 import java.lang.String;
-import com.commercetools.models.Error.VariantValues;
+import com.commercetools.models.error.VariantValues;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,20 +12,20 @@ import java.time.ZonedDateTime;
 public final class VariantValuesBuilder {
    
    
-   private java.util.List<com.commercetools.models.Product.Attribute> attributes;
+   private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
    
-   private java.util.List<com.commercetools.models.Common.PriceDraft> prices;
+   private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
    @Nullable
    private java.lang.String sku;
    
-   public VariantValuesBuilder attributes( final java.util.List<com.commercetools.models.Product.Attribute> attributes) {
+   public VariantValuesBuilder attributes( final java.util.List<com.commercetools.models.product.Attribute> attributes) {
       this.attributes = attributes;
       return this;
    }
    
-   public VariantValuesBuilder prices( final java.util.List<com.commercetools.models.Common.PriceDraft> prices) {
+   public VariantValuesBuilder prices( final java.util.List<com.commercetools.models.common.PriceDraft> prices) {
       this.prices = prices;
       return this;
    }
@@ -36,12 +36,12 @@ public final class VariantValuesBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Product.Attribute> getAttributes(){
+   public java.util.List<com.commercetools.models.product.Attribute> getAttributes(){
       return this.attributes;
    }
    
    
-   public java.util.List<com.commercetools.models.Common.PriceDraft> getPrices(){
+   public java.util.List<com.commercetools.models.common.PriceDraft> getPrices(){
       return this.prices;
    }
    

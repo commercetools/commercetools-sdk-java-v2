@@ -1,9 +1,9 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.State.StateChangeInitialActionImpl;
+import com.commercetools.models.state.StateChangeInitialActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

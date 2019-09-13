@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.DeliveryItem;
-import com.commercetools.models.Order.ParcelMeasurements;
-import com.commercetools.models.Order.TrackingData;
-import com.commercetools.models.Order.ParcelDraftImpl;
+import com.commercetools.models.order.DeliveryItem;
+import com.commercetools.models.order.ParcelMeasurements;
+import com.commercetools.models.order.TrackingData;
+import com.commercetools.models.order.ParcelDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

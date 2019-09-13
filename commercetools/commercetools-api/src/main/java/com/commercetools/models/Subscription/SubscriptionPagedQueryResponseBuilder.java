@@ -1,8 +1,8 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.Subscription;
+import com.commercetools.models.subscription.Subscription;
 import java.lang.Long;
-import com.commercetools.models.Subscription.SubscriptionPagedQueryResponse;
+import com.commercetools.models.subscription.SubscriptionPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class SubscriptionPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Subscription.Subscription> results;
+   private java.util.List<com.commercetools.models.subscription.Subscription> results;
    
    public SubscriptionPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class SubscriptionPagedQueryResponseBuilder {
       return this;
    }
    
-   public SubscriptionPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Subscription.Subscription> results) {
+   public SubscriptionPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.subscription.Subscription> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class SubscriptionPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.Subscription> getResults(){
+   public java.util.List<com.commercetools.models.subscription.Subscription> getResults(){
       return this.results;
    }
 

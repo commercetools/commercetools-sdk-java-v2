@@ -18,7 +18,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberRequestBuilder {
       return new ByProjectKeyOrdersOrderNumberByOrderNumberGet(apiHttpClient, projectKey, orderNumber);
    }
    
-   public ByProjectKeyOrdersOrderNumberByOrderNumberPost post(com.commercetools.models.Order.OrderUpdate orderUpdate) {
+   public ByProjectKeyOrdersOrderNumberByOrderNumberPost post(com.commercetools.models.order.OrderUpdate orderUpdate) {
       return new ByProjectKeyOrdersOrderNumberByOrderNumberPost(apiHttpClient, projectKey, orderNumber, orderUpdate);
    }
    

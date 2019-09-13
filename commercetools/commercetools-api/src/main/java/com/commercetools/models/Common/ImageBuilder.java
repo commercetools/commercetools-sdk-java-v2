@@ -1,8 +1,8 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.ImageDimensions;
+import com.commercetools.models.common.ImageDimensions;
 import java.lang.String;
-import com.commercetools.models.Common.Image;
+import com.commercetools.models.common.Image;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class ImageBuilder {
    private java.lang.String url;
    
    
-   private com.commercetools.models.Common.ImageDimensions dimensions;
+   private com.commercetools.models.common.ImageDimensions dimensions;
    
    public ImageBuilder label(@Nullable final java.lang.String label) {
       this.label = label;
@@ -29,7 +29,7 @@ public final class ImageBuilder {
       return this;
    }
    
-   public ImageBuilder dimensions( final com.commercetools.models.Common.ImageDimensions dimensions) {
+   public ImageBuilder dimensions( final com.commercetools.models.common.ImageDimensions dimensions) {
       this.dimensions = dimensions;
       return this;
    }
@@ -45,7 +45,7 @@ public final class ImageBuilder {
    }
    
    
-   public com.commercetools.models.Common.ImageDimensions getDimensions(){
+   public com.commercetools.models.common.ImageDimensions getDimensions(){
       return this.dimensions;
    }
 

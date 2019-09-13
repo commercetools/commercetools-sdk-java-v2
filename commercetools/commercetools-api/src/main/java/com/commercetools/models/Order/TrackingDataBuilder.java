@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Order.TrackingData;
+import com.commercetools.models.order.TrackingData;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

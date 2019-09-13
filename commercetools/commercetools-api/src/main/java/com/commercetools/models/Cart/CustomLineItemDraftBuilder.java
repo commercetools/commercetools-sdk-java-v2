@@ -1,14 +1,14 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.CustomLineItemDraft;
+import com.commercetools.models.cart.CustomLineItemDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,30 +17,30 @@ import java.time.ZonedDateTime;
 public final class CustomLineItemDraftBuilder {
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    
    private java.lang.Integer quantity;
    
    @Nullable
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    
-   private com.commercetools.models.Common.Money money;
+   private com.commercetools.models.common.Money money;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    
    private java.lang.String slug;
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
    
-   public CustomLineItemDraftBuilder externalTaxRate(@Nullable final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate) {
+   public CustomLineItemDraftBuilder externalTaxRate(@Nullable final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.externalTaxRate = externalTaxRate;
       return this;
    }
@@ -50,22 +50,22 @@ public final class CustomLineItemDraftBuilder {
       return this;
    }
    
-   public CustomLineItemDraftBuilder shippingDetails(@Nullable final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails) {
+   public CustomLineItemDraftBuilder shippingDetails(@Nullable final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.shippingDetails = shippingDetails;
       return this;
    }
    
-   public CustomLineItemDraftBuilder money( final com.commercetools.models.Common.Money money) {
+   public CustomLineItemDraftBuilder money( final com.commercetools.models.common.Money money) {
       this.money = money;
       return this;
    }
    
-   public CustomLineItemDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public CustomLineItemDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
    
-   public CustomLineItemDraftBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public CustomLineItemDraftBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
@@ -75,13 +75,13 @@ public final class CustomLineItemDraftBuilder {
       return this;
    }
    
-   public CustomLineItemDraftBuilder taxCategory(@Nullable final com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory) {
+   public CustomLineItemDraftBuilder taxCategory(@Nullable final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
       this.taxCategory = taxCategory;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
    
@@ -91,22 +91,22 @@ public final class CustomLineItemDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
    
    
-   public com.commercetools.models.Common.Money getMoney(){
+   public com.commercetools.models.common.Money getMoney(){
       return this.money;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -116,7 +116,7 @@ public final class CustomLineItemDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }
 

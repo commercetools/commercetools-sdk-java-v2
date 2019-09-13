@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.InventoryEntryDeletedMessagePayload;
+import com.commercetools.models.message.InventoryEntryDeletedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class InventoryEntryDeletedMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Channel.ChannelReference supplyChannel;
+   private com.commercetools.models.channel.ChannelReference supplyChannel;
    
    
    private java.lang.String sku;
    
-   public InventoryEntryDeletedMessagePayloadBuilder supplyChannel( final com.commercetools.models.Channel.ChannelReference supplyChannel) {
+   public InventoryEntryDeletedMessagePayloadBuilder supplyChannel( final com.commercetools.models.channel.ChannelReference supplyChannel) {
       this.supplyChannel = supplyChannel;
       return this;
    }
@@ -28,7 +28,7 @@ public final class InventoryEntryDeletedMessagePayloadBuilder {
    }
    
    
-   public com.commercetools.models.Channel.ChannelReference getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelReference getSupplyChannel(){
       return this.supplyChannel;
    }
    

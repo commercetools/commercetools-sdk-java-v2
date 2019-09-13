@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
 import java.lang.String;
-import com.commercetools.models.Product.CategoryOrderHints;
+import com.commercetools.models.product.CategoryOrderHints;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

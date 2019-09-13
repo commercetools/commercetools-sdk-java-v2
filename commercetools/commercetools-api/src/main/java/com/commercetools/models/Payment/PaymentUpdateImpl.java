@@ -1,6 +1,6 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.PaymentUpdateAction;
+import com.commercetools.models.payment.PaymentUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentUpdateImpl implements PaymentUpdate {
 
-   private java.util.List<com.commercetools.models.Payment.PaymentUpdateAction> actions;
+   private java.util.List<com.commercetools.models.payment.PaymentUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   PaymentUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Payment.PaymentUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   PaymentUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.payment.PaymentUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class PaymentUpdateImpl implements PaymentUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Payment.PaymentUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.payment.PaymentUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class PaymentUpdateImpl implements PaymentUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Payment.PaymentUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.payment.PaymentUpdateAction> actions){
       this.actions = actions;
    }
    

@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.DeliveryItem;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.DeliveryItem;
 import java.lang.String;
-import com.commercetools.models.Message.ParcelItemsUpdatedMessageImpl;
+import com.commercetools.models.message.ParcelItemsUpdatedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

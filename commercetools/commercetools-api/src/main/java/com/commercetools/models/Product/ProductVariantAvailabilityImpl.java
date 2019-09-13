@@ -1,6 +1,6 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductVariantChannelAvailabilityMap;
+import com.commercetools.models.product.ProductVariantChannelAvailabilityMap;
 import java.lang.Boolean;
 import java.lang.Long;
 import javax.annotation.Generated;
@@ -26,14 +26,14 @@ public final class ProductVariantAvailabilityImpl implements ProductVariantAvail
 
    private java.lang.Long availableQuantity;
    
-   private com.commercetools.models.Product.ProductVariantChannelAvailabilityMap channels;
+   private com.commercetools.models.product.ProductVariantChannelAvailabilityMap channels;
    
    private java.lang.Long restockableInDays;
    
    private java.lang.Boolean isOnStock;
 
    @JsonCreator
-   ProductVariantAvailabilityImpl(@JsonProperty("availableQuantity") final java.lang.Long availableQuantity, @JsonProperty("channels") final com.commercetools.models.Product.ProductVariantChannelAvailabilityMap channels, @JsonProperty("restockableInDays") final java.lang.Long restockableInDays, @JsonProperty("isOnStock") final java.lang.Boolean isOnStock) {
+   ProductVariantAvailabilityImpl(@JsonProperty("availableQuantity") final java.lang.Long availableQuantity, @JsonProperty("channels") final com.commercetools.models.product.ProductVariantChannelAvailabilityMap channels, @JsonProperty("restockableInDays") final java.lang.Long restockableInDays, @JsonProperty("isOnStock") final java.lang.Boolean isOnStock) {
       this.availableQuantity = availableQuantity;
       this.channels = channels;
       this.restockableInDays = restockableInDays;
@@ -49,7 +49,7 @@ public final class ProductVariantAvailabilityImpl implements ProductVariantAvail
    }
    
    
-   public com.commercetools.models.Product.ProductVariantChannelAvailabilityMap getChannels(){
+   public com.commercetools.models.product.ProductVariantChannelAvailabilityMap getChannels(){
       return this.channels;
    }
    
@@ -67,7 +67,7 @@ public final class ProductVariantAvailabilityImpl implements ProductVariantAvail
       this.availableQuantity = availableQuantity;
    }
    
-   public void setChannels(final com.commercetools.models.Product.ProductVariantChannelAvailabilityMap channels){
+   public void setChannels(final com.commercetools.models.product.ProductVariantChannelAvailabilityMap channels){
       this.channels = channels;
    }
    

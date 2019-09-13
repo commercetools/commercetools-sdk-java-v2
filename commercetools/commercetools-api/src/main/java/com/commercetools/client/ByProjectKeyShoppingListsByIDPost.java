@@ -27,9 +27,9 @@ public class ByProjectKeyShoppingListsByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.ShoppingList.ShoppingListUpdate shoppingListUpdate;
+   private com.commercetools.models.shopping_list.ShoppingListUpdate shoppingListUpdate;
    
-   public ByProjectKeyShoppingListsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.ShoppingList.ShoppingListUpdate shoppingListUpdate){
+   public ByProjectKeyShoppingListsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.shopping_list.ShoppingListUpdate shoppingListUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
@@ -53,7 +53,7 @@ public class ByProjectKeyShoppingListsByIDPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.ShoppingList.ShoppingList> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.shopping_list.ShoppingList> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyShoppingListsByIDPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.ShoppingList.ShoppingList>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.shopping_list.ShoppingList>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.ShoppingList.ShoppingList.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.shopping_list.ShoppingList.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

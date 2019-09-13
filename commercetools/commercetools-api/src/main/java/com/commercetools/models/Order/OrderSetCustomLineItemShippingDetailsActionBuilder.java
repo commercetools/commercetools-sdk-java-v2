@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetCustomLineItemShippingDetailsAction;
+import com.commercetools.models.order.OrderSetCustomLineItemShippingDetailsAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class OrderSetCustomLineItemShippingDetailsActionBuilder {
    private java.lang.String customLineItemId;
    
    @Nullable
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    public OrderSetCustomLineItemShippingDetailsActionBuilder customLineItemId( final java.lang.String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public OrderSetCustomLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails) {
+   public OrderSetCustomLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.shippingDetails = shippingDetails;
       return this;
    }
@@ -33,7 +33,7 @@ public final class OrderSetCustomLineItemShippingDetailsActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
 

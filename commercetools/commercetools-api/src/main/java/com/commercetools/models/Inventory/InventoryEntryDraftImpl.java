@@ -1,7 +1,7 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
@@ -28,18 +28,18 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
 
    private java.time.ZonedDateTime expectedDelivery;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    private java.lang.Long quantityOnStock;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    private java.lang.Long restockableInDays;
    
    private java.lang.String sku;
 
    @JsonCreator
-   InventoryEntryDraftImpl(@JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("quantityOnStock") final java.lang.Long quantityOnStock, @JsonProperty("supplyChannel") final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("restockableInDays") final java.lang.Long restockableInDays, @JsonProperty("sku") final java.lang.String sku) {
+   InventoryEntryDraftImpl(@JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("quantityOnStock") final java.lang.Long quantityOnStock, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("restockableInDays") final java.lang.Long restockableInDays, @JsonProperty("sku") final java.lang.String sku) {
       this.expectedDelivery = expectedDelivery;
       this.custom = custom;
       this.quantityOnStock = quantityOnStock;
@@ -57,7 +57,7 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
@@ -67,7 +67,7 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
@@ -85,7 +85,7 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
       this.expectedDelivery = expectedDelivery;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
@@ -93,7 +93,7 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
       this.quantityOnStock = quantityOnStock;
    }
    
-   public void setSupplyChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel){
+   public void setSupplyChannel(final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel){
       this.supplyChannel = supplyChannel;
    }
    

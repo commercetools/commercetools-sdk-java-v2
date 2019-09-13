@@ -1,6 +1,6 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.SubscriptionUpdateAction;
+import com.commercetools.models.subscription.SubscriptionUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubscriptionUpdateImpl implements SubscriptionUpdate {
 
-   private java.util.List<com.commercetools.models.Subscription.SubscriptionUpdateAction> actions;
+   private java.util.List<com.commercetools.models.subscription.SubscriptionUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   SubscriptionUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Subscription.SubscriptionUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   SubscriptionUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.subscription.SubscriptionUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class SubscriptionUpdateImpl implements SubscriptionUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.SubscriptionUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.subscription.SubscriptionUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class SubscriptionUpdateImpl implements SubscriptionUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Subscription.SubscriptionUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.subscription.SubscriptionUpdateAction> actions){
       this.actions = actions;
    }
    

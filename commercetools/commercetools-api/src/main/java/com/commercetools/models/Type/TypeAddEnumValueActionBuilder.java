@@ -1,9 +1,9 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.CustomFieldEnumValue;
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.CustomFieldEnumValue;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Type.TypeAddEnumValueAction;
+import com.commercetools.models.type.TypeAddEnumValueAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class TypeAddEnumValueActionBuilder {
    private java.lang.String fieldName;
    
    
-   private com.commercetools.models.Type.CustomFieldEnumValue value;
+   private com.commercetools.models.type.CustomFieldEnumValue value;
    
    public TypeAddEnumValueActionBuilder fieldName( final java.lang.String fieldName) {
       this.fieldName = fieldName;
       return this;
    }
    
-   public TypeAddEnumValueActionBuilder value( final com.commercetools.models.Type.CustomFieldEnumValue value) {
+   public TypeAddEnumValueActionBuilder value( final com.commercetools.models.type.CustomFieldEnumValue value) {
       this.value = value;
       return this;
    }
@@ -33,7 +33,7 @@ public final class TypeAddEnumValueActionBuilder {
    }
    
    
-   public com.commercetools.models.Type.CustomFieldEnumValue getValue(){
+   public com.commercetools.models.type.CustomFieldEnumValue getValue(){
       return this.value;
    }
 

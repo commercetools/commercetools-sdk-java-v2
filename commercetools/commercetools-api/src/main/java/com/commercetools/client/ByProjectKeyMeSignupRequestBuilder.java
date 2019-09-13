@@ -12,7 +12,7 @@ public class ByProjectKeyMeSignupRequestBuilder {
       this.projectKey = projectKey;
    }
    
-   public ByProjectKeyMeSignupPost post(com.commercetools.models.Me.MyCustomerDraft myCustomerDraft) {
+   public ByProjectKeyMeSignupPost post(com.commercetools.models.me.MyCustomerDraft myCustomerDraft) {
       return new ByProjectKeyMeSignupPost(apiHttpClient, projectKey, myCustomerDraft);
    }
    

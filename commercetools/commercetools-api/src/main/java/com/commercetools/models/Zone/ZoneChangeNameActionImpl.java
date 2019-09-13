@@ -1,6 +1,6 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.ZoneUpdateAction;
+import com.commercetools.models.zone.ZoneUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;

@@ -1,10 +1,10 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.State.StateRoleEnum;
-import com.commercetools.models.State.StateTypeEnum;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.state.StateRoleEnum;
+import com.commercetools.models.state.StateTypeEnum;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -36,28 +36,28 @@ public final class StateImpl implements State {
    
    private java.lang.Long version;
    
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    private java.lang.Boolean initial;
    
-   private java.util.List<com.commercetools.models.State.StateRoleEnum> roles;
+   private java.util.List<com.commercetools.models.state.StateRoleEnum> roles;
    
    private java.lang.Boolean builtIn;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
-   private java.util.List<com.commercetools.models.State.StateReference> transitions;
+   private java.util.List<com.commercetools.models.state.StateReference> transitions;
    
-   private com.commercetools.models.State.StateTypeEnum type;
+   private com.commercetools.models.state.StateTypeEnum type;
    
    private java.lang.String key;
 
    @JsonCreator
-   StateImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.Common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.Common.LastModifiedBy lastModifiedBy, @JsonProperty("initial") final java.lang.Boolean initial, @JsonProperty("roles") final java.util.List<com.commercetools.models.State.StateRoleEnum> roles, @JsonProperty("builtIn") final java.lang.Boolean builtIn, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.Common.LocalizedString description, @JsonProperty("transitions") final java.util.List<com.commercetools.models.State.StateReference> transitions, @JsonProperty("type") final com.commercetools.models.State.StateTypeEnum type, @JsonProperty("key") final java.lang.String key) {
+   StateImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("initial") final java.lang.Boolean initial, @JsonProperty("roles") final java.util.List<com.commercetools.models.state.StateRoleEnum> roles, @JsonProperty("builtIn") final java.lang.Boolean builtIn, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("transitions") final java.util.List<com.commercetools.models.state.StateReference> transitions, @JsonProperty("type") final com.commercetools.models.state.StateTypeEnum type, @JsonProperty("key") final java.lang.String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -98,12 +98,12 @@ public final class StateImpl implements State {
    }
    
    
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
@@ -113,7 +113,7 @@ public final class StateImpl implements State {
    }
    
    
-   public java.util.List<com.commercetools.models.State.StateRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.state.StateRoleEnum> getRoles(){
       return this.roles;
    }
    
@@ -123,22 +123,22 @@ public final class StateImpl implements State {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    
-   public java.util.List<com.commercetools.models.State.StateReference> getTransitions(){
+   public java.util.List<com.commercetools.models.state.StateReference> getTransitions(){
       return this.transitions;
    }
    
    
-   public com.commercetools.models.State.StateTypeEnum getType(){
+   public com.commercetools.models.state.StateTypeEnum getType(){
       return this.type;
    }
    
@@ -163,11 +163,11 @@ public final class StateImpl implements State {
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.models.Common.CreatedBy createdBy){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
       this.createdBy = createdBy;
    }
    
-   public void setLastModifiedBy(final com.commercetools.models.Common.LastModifiedBy lastModifiedBy){
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
    
@@ -175,7 +175,7 @@ public final class StateImpl implements State {
       this.initial = initial;
    }
    
-   public void setRoles(final java.util.List<com.commercetools.models.State.StateRoleEnum> roles){
+   public void setRoles(final java.util.List<com.commercetools.models.state.StateRoleEnum> roles){
       this.roles = roles;
    }
    
@@ -183,19 +183,19 @@ public final class StateImpl implements State {
       this.builtIn = builtIn;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    
-   public void setDescription(final com.commercetools.models.Common.LocalizedString description){
+   public void setDescription(final com.commercetools.models.common.LocalizedString description){
       this.description = description;
    }
    
-   public void setTransitions(final java.util.List<com.commercetools.models.State.StateReference> transitions){
+   public void setTransitions(final java.util.List<com.commercetools.models.state.StateReference> transitions){
       this.transitions = transitions;
    }
    
-   public void setType(final com.commercetools.models.State.StateTypeEnum type){
+   public void setType(final com.commercetools.models.state.StateTypeEnum type){
       this.type = type;
    }
    

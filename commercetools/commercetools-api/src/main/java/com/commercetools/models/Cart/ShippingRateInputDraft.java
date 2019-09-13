@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ClassificationShippingRateInputDraft;
-import com.commercetools.models.Cart.ScoreShippingRateInputDraft;
+import com.commercetools.models.cart.ClassificationShippingRateInputDraft;
+import com.commercetools.models.cart.ScoreShippingRateInputDraft;
 import java.lang.String;
 
 
@@ -17,8 +17,8 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Cart.ClassificationShippingRateInputDraftImpl.class, name = "Classification"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Cart.ScoreShippingRateInputDraftImpl.class, name = "Score")
+   @JsonSubTypes.Type(value = com.commercetools.models.cart.ClassificationShippingRateInputDraftImpl.class, name = "Classification"),
+   @JsonSubTypes.Type(value = com.commercetools.models.cart.ScoreShippingRateInputDraftImpl.class, name = "Score")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

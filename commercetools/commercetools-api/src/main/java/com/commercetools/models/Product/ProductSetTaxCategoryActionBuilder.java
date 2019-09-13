@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetTaxCategoryAction;
+import com.commercetools.models.product.ProductSetTaxCategoryAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ProductSetTaxCategoryActionBuilder {
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
    
-   public ProductSetTaxCategoryActionBuilder taxCategory(@Nullable final com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory) {
+   public ProductSetTaxCategoryActionBuilder taxCategory(@Nullable final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
       this.taxCategory = taxCategory;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }
 

@@ -1,7 +1,7 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
-import com.commercetools.models.Product.Attribute;
+import com.commercetools.models.error.ErrorObject;
+import com.commercetools.models.product.Attribute;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class DuplicateAttributeValuesErrorImpl implements DuplicateAttribu
    
    private java.lang.String message;
    
-   private java.util.List<com.commercetools.models.Product.Attribute> attributes;
+   private java.util.List<com.commercetools.models.product.Attribute> attributes;
 
    @JsonCreator
-   DuplicateAttributeValuesErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("attributes") final java.util.List<com.commercetools.models.Product.Attribute> attributes) {
+   DuplicateAttributeValuesErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes) {
       this.message = message;
       this.attributes = attributes;
       this.code = "DuplicateAttributeValues";
@@ -51,7 +51,7 @@ public final class DuplicateAttributeValuesErrorImpl implements DuplicateAttribu
    }
    
    
-   public java.util.List<com.commercetools.models.Product.Attribute> getAttributes(){
+   public java.util.List<com.commercetools.models.product.Attribute> getAttributes(){
       return this.attributes;
    }
 
@@ -59,7 +59,7 @@ public final class DuplicateAttributeValuesErrorImpl implements DuplicateAttribu
       this.message = message;
    }
    
-   public void setAttributes(final java.util.List<com.commercetools.models.Product.Attribute> attributes){
+   public void setAttributes(final java.util.List<com.commercetools.models.product.Attribute> attributes){
       this.attributes = attributes;
    }
 

@@ -1,8 +1,8 @@
 package commercetools.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntry;
-import com.commercetools.models.Inventory.InventoryEntryDraft;
-import com.commercetools.models.Inventory.InventoryEntryDraftBuilder;
+import com.commercetools.models.inventory.InventoryEntry;
+import com.commercetools.models.inventory.InventoryEntryDraft;
+import com.commercetools.models.inventory.InventoryEntryDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

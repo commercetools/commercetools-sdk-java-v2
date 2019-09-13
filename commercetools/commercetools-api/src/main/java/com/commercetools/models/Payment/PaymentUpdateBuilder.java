@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.PaymentUpdateAction;
+import com.commercetools.models.payment.PaymentUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Payment.PaymentUpdate;
+import com.commercetools.models.payment.PaymentUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class PaymentUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Payment.PaymentUpdateAction> actions;
+   private java.util.List<com.commercetools.models.payment.PaymentUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public PaymentUpdateBuilder actions( final java.util.List<com.commercetools.models.Payment.PaymentUpdateAction> actions) {
+   public PaymentUpdateBuilder actions( final java.util.List<com.commercetools.models.payment.PaymentUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class PaymentUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Payment.PaymentUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.payment.PaymentUpdateAction> getActions(){
       return this.actions;
    }
    

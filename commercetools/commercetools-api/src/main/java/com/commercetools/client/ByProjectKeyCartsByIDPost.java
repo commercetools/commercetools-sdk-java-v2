@@ -27,9 +27,9 @@ public class ByProjectKeyCartsByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.Cart.CartUpdate cartUpdate;
+   private com.commercetools.models.cart.CartUpdate cartUpdate;
    
-   public ByProjectKeyCartsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.Cart.CartUpdate cartUpdate){
+   public ByProjectKeyCartsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.cart.CartUpdate cartUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
@@ -53,7 +53,7 @@ public class ByProjectKeyCartsByIDPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Cart.Cart> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.cart.Cart> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyCartsByIDPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Cart.Cart>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.cart.Cart>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Cart.Cart.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.cart.Cart.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

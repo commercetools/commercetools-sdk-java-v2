@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductVariantChannelAvailabilityMap;
+import com.commercetools.models.product.ProductVariantChannelAvailabilityMap;
 import java.lang.Boolean;
 import java.lang.Long;
-import com.commercetools.models.Product.ProductVariantAvailability;
+import com.commercetools.models.product.ProductVariantAvailability;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ public final class ProductVariantAvailabilityBuilder {
    private java.lang.Long availableQuantity;
    
    @Nullable
-   private com.commercetools.models.Product.ProductVariantChannelAvailabilityMap channels;
+   private com.commercetools.models.product.ProductVariantChannelAvailabilityMap channels;
    
    @Nullable
    private java.lang.Long restockableInDays;
@@ -28,7 +28,7 @@ public final class ProductVariantAvailabilityBuilder {
       return this;
    }
    
-   public ProductVariantAvailabilityBuilder channels(@Nullable final com.commercetools.models.Product.ProductVariantChannelAvailabilityMap channels) {
+   public ProductVariantAvailabilityBuilder channels(@Nullable final com.commercetools.models.product.ProductVariantChannelAvailabilityMap channels) {
       this.channels = channels;
       return this;
    }
@@ -49,7 +49,7 @@ public final class ProductVariantAvailabilityBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Product.ProductVariantChannelAvailabilityMap getChannels(){
+   public com.commercetools.models.product.ProductVariantChannelAvailabilityMap getChannels(){
       return this.channels;
    }
    

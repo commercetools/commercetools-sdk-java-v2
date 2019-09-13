@@ -1,9 +1,9 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelRoleEnum;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.channel.ChannelRoleEnum;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -27,22 +27,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelDraftImpl implements ChannelDraft {
 
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
    private java.lang.Object geoLocation;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles;
+   private java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    private java.lang.String key;
 
    @JsonCreator
-   ChannelDraftImpl(@JsonProperty("address") final com.commercetools.models.Common.Address address, @JsonProperty("geoLocation") final java.lang.Object geoLocation, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("roles") final java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.Common.LocalizedString description, @JsonProperty("key") final java.lang.String key) {
+   ChannelDraftImpl(@JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("geoLocation") final java.lang.Object geoLocation, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("roles") final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("key") final java.lang.String key) {
       this.address = address;
       this.geoLocation = geoLocation;
       this.custom = custom;
@@ -56,7 +56,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
    }
    
    
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
    
@@ -66,22 +66,22 @@ public final class ChannelDraftImpl implements ChannelDraft {
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
@@ -90,7 +90,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
       return this.key;
    }
 
-   public void setAddress(final com.commercetools.models.Common.Address address){
+   public void setAddress(final com.commercetools.models.common.Address address){
       this.address = address;
    }
    
@@ -98,19 +98,19 @@ public final class ChannelDraftImpl implements ChannelDraft {
       this.geoLocation = geoLocation;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
-   public void setRoles(final java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles){
+   public void setRoles(final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles){
       this.roles = roles;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    
-   public void setDescription(final com.commercetools.models.Common.LocalizedString description){
+   public void setDescription(final com.commercetools.models.common.LocalizedString description){
       this.description = description;
    }
    

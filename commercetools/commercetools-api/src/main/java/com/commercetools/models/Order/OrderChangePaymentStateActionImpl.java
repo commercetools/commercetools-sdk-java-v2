@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.PaymentState;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.PaymentState;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class OrderChangePaymentStateActionImpl implements OrderChangePayme
 
    private java.lang.String action;
    
-   private com.commercetools.models.Order.PaymentState paymentState;
+   private com.commercetools.models.order.PaymentState paymentState;
 
    @JsonCreator
-   OrderChangePaymentStateActionImpl(@JsonProperty("paymentState") final com.commercetools.models.Order.PaymentState paymentState) {
+   OrderChangePaymentStateActionImpl(@JsonProperty("paymentState") final com.commercetools.models.order.PaymentState paymentState) {
       this.paymentState = paymentState;
       this.action = "changePaymentState";
    }
@@ -43,11 +43,11 @@ public final class OrderChangePaymentStateActionImpl implements OrderChangePayme
    }
    
    
-   public com.commercetools.models.Order.PaymentState getPaymentState(){
+   public com.commercetools.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
 
-   public void setPaymentState(final com.commercetools.models.Order.PaymentState paymentState){
+   public void setPaymentState(final com.commercetools.models.order.PaymentState paymentState){
       this.paymentState = paymentState;
    }
 

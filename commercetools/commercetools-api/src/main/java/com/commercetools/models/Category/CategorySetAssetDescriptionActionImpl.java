@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,12 +28,12 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
    
    private java.lang.String assetId;
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    private java.lang.String assetKey;
 
    @JsonCreator
-   CategorySetAssetDescriptionActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("description") final com.commercetools.models.Common.LocalizedString description, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   CategorySetAssetDescriptionActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("assetKey") final java.lang.String assetKey) {
       this.assetId = assetId;
       this.description = description;
       this.assetKey = assetKey;
@@ -54,7 +54,7 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
@@ -67,7 +67,7 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
       this.assetId = assetId;
    }
    
-   public void setDescription(final com.commercetools.models.Common.LocalizedString description){
+   public void setDescription(final com.commercetools.models.common.LocalizedString description){
       this.description = description;
    }
    

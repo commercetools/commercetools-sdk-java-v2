@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity;
-import com.commercetools.models.Cart.TaxedItemPrice;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.models.cart.TaxedItemPrice;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,12 +29,12 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadImpl implements O
    
    private java.lang.String customLineItemId;
    
-   private com.commercetools.models.Cart.TaxedItemPrice taxedPrice;
+   private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
    
-   private java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+   private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
    @JsonCreator
-   OrderCustomLineItemDiscountSetMessagePayloadImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("taxedPrice") final com.commercetools.models.Cart.TaxedItemPrice taxedPrice, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+   OrderCustomLineItemDiscountSetMessagePayloadImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
       this.customLineItemId = customLineItemId;
       this.taxedPrice = taxedPrice;
       this.discountedPricePerQuantity = discountedPricePerQuantity;
@@ -55,12 +55,12 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadImpl implements O
    }
    
    
-   public com.commercetools.models.Cart.TaxedItemPrice getTaxedPrice(){
+   public com.commercetools.models.cart.TaxedItemPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
+   public java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
       return this.discountedPricePerQuantity;
    }
 
@@ -68,11 +68,11 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadImpl implements O
       this.customLineItemId = customLineItemId;
    }
    
-   public void setTaxedPrice(final com.commercetools.models.Cart.TaxedItemPrice taxedPrice){
+   public void setTaxedPrice(final com.commercetools.models.cart.TaxedItemPrice taxedPrice){
       this.taxedPrice = taxedPrice;
    }
    
-   public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
+   public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
       this.discountedPricePerQuantity = discountedPricePerQuantity;
    }
 

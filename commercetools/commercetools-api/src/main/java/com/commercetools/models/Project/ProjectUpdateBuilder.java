@@ -1,8 +1,8 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ProjectUpdateAction;
+import com.commercetools.models.project.ProjectUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Project.ProjectUpdate;
+import com.commercetools.models.project.ProjectUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ProjectUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Project.ProjectUpdateAction> actions;
+   private java.util.List<com.commercetools.models.project.ProjectUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public ProjectUpdateBuilder actions( final java.util.List<com.commercetools.models.Project.ProjectUpdateAction> actions) {
+   public ProjectUpdateBuilder actions( final java.util.List<com.commercetools.models.project.ProjectUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class ProjectUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Project.ProjectUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.project.ProjectUpdateAction> getActions(){
       return this.actions;
    }
    

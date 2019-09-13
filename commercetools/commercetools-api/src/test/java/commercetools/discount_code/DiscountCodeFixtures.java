@@ -1,11 +1,11 @@
 package commercetools.discount_code;
 
-import com.commercetools.models.CartDiscount.CartDiscount;
-import com.commercetools.models.CartDiscount.CartDiscountResourceIdentifier;
-import com.commercetools.models.CartDiscount.CartDiscountResourceIdentifierBuilder;
-import com.commercetools.models.DiscountCode.DiscountCode;
-import com.commercetools.models.DiscountCode.DiscountCodeDraft;
-import com.commercetools.models.DiscountCode.DiscountCodeDraftBuilder;
+import com.commercetools.models.cart_discount.CartDiscount;
+import com.commercetools.models.cart_discount.CartDiscountResourceIdentifier;
+import com.commercetools.models.cart_discount.CartDiscountResourceIdentifierBuilder;
+import com.commercetools.models.discount_code.DiscountCode;
+import com.commercetools.models.discount_code.DiscountCodeDraft;
+import com.commercetools.models.discount_code.DiscountCodeDraftBuilder;
 import commercetools.cart_discount.CartDiscountFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;

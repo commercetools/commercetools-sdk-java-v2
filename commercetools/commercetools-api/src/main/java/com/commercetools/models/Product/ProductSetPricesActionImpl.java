@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
@@ -32,12 +32,12 @@ public final class ProductSetPricesActionImpl implements ProductSetPricesAction 
    
    private java.lang.Long variantId;
    
-   private java.util.List<com.commercetools.models.Common.PriceDraft> prices;
+   private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
    private java.lang.String sku;
 
    @JsonCreator
-   ProductSetPricesActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("prices") final java.util.List<com.commercetools.models.Common.PriceDraft> prices, @JsonProperty("sku") final java.lang.String sku) {
+   ProductSetPricesActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.PriceDraft> prices, @JsonProperty("sku") final java.lang.String sku) {
       this.staged = staged;
       this.variantId = variantId;
       this.prices = prices;
@@ -64,7 +64,7 @@ public final class ProductSetPricesActionImpl implements ProductSetPricesAction 
    }
    
    
-   public java.util.List<com.commercetools.models.Common.PriceDraft> getPrices(){
+   public java.util.List<com.commercetools.models.common.PriceDraft> getPrices(){
       return this.prices;
    }
    
@@ -81,7 +81,7 @@ public final class ProductSetPricesActionImpl implements ProductSetPricesAction 
       this.variantId = variantId;
    }
    
-   public void setPrices(final java.util.List<com.commercetools.models.Common.PriceDraft> prices){
+   public void setPrices(final java.util.List<com.commercetools.models.common.PriceDraft> prices){
       this.prices = prices;
    }
    

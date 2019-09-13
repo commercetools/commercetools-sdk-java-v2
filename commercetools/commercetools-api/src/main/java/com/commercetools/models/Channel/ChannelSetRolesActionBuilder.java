@@ -1,9 +1,9 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelRoleEnum;
-import com.commercetools.models.Channel.ChannelUpdateAction;
+import com.commercetools.models.channel.ChannelRoleEnum;
+import com.commercetools.models.channel.ChannelUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Channel.ChannelSetRolesAction;
+import com.commercetools.models.channel.ChannelSetRolesAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ChannelSetRolesActionBuilder {
    
    
-   private java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles;
+   private java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles;
    
-   public ChannelSetRolesActionBuilder roles( final java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles) {
+   public ChannelSetRolesActionBuilder roles( final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles) {
       this.roles = roles;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
 

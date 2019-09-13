@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.ShippingRateInput;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.OrderShippingRateInputSetMessage;
+import com.commercetools.models.cart.ShippingRateInput;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.OrderShippingRateInputSetMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class OrderShippingRateInputSetMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,10 +38,10 @@ public final class OrderShippingRateInputSetMessageBuilder {
    private java.lang.String type;
    
    @Nullable
-   private com.commercetools.models.Cart.ShippingRateInput shippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInput shippingRateInput;
    
    @Nullable
-   private com.commercetools.models.Cart.ShippingRateInput oldShippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInput oldShippingRateInput;
    
    public OrderShippingRateInputSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -68,12 +68,12 @@ public final class OrderShippingRateInputSetMessageBuilder {
       return this;
    }
    
-   public OrderShippingRateInputSetMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public OrderShippingRateInputSetMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public OrderShippingRateInputSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public OrderShippingRateInputSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -88,12 +88,12 @@ public final class OrderShippingRateInputSetMessageBuilder {
       return this;
    }
    
-   public OrderShippingRateInputSetMessageBuilder shippingRateInput(@Nullable final com.commercetools.models.Cart.ShippingRateInput shippingRateInput) {
+   public OrderShippingRateInputSetMessageBuilder shippingRateInput(@Nullable final com.commercetools.models.cart.ShippingRateInput shippingRateInput) {
       this.shippingRateInput = shippingRateInput;
       return this;
    }
    
-   public OrderShippingRateInputSetMessageBuilder oldShippingRateInput(@Nullable final com.commercetools.models.Cart.ShippingRateInput oldShippingRateInput) {
+   public OrderShippingRateInputSetMessageBuilder oldShippingRateInput(@Nullable final com.commercetools.models.cart.ShippingRateInput oldShippingRateInput) {
       this.oldShippingRateInput = oldShippingRateInput;
       return this;
    }
@@ -124,12 +124,12 @@ public final class OrderShippingRateInputSetMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -144,12 +144,12 @@ public final class OrderShippingRateInputSetMessageBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ShippingRateInput getShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInput getShippingRateInput(){
       return this.shippingRateInput;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ShippingRateInput getOldShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInput getOldShippingRateInput(){
       return this.oldShippingRateInput;
    }
 

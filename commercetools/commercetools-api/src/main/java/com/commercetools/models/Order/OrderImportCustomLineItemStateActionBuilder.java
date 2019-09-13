@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.ItemState;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.ItemState;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Order.OrderImportCustomLineItemStateAction;
+import com.commercetools.models.order.OrderImportCustomLineItemStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class OrderImportCustomLineItemStateActionBuilder {
    private java.lang.String customLineItemId;
    
    
-   private java.util.List<com.commercetools.models.Order.ItemState> state;
+   private java.util.List<com.commercetools.models.order.ItemState> state;
    
    public OrderImportCustomLineItemStateActionBuilder customLineItemId( final java.lang.String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public OrderImportCustomLineItemStateActionBuilder state( final java.util.List<com.commercetools.models.Order.ItemState> state) {
+   public OrderImportCustomLineItemStateActionBuilder state( final java.util.List<com.commercetools.models.order.ItemState> state) {
       this.state = state;
       return this;
    }
@@ -33,7 +33,7 @@ public final class OrderImportCustomLineItemStateActionBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.ItemState> getState(){
+   public java.util.List<com.commercetools.models.order.ItemState> getState(){
       return this.state;
    }
 

@@ -1,10 +1,10 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Review.ReviewUpdateAction;
-import com.commercetools.models.State.StateResourceIdentifier;
+import com.commercetools.models.review.ReviewUpdateAction;
+import com.commercetools.models.state.StateResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Review.ReviewTransitionStateActionImpl;
+import com.commercetools.models.review.ReviewTransitionStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

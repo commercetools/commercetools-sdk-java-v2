@@ -1,6 +1,6 @@
 package commercetools.cart_discount;
 
-import com.commercetools.models.CartDiscount.*;
+import com.commercetools.models.cart_discount.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

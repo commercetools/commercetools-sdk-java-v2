@@ -1,27 +1,27 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.PaymentAddInterfaceInteractionAction;
-import com.commercetools.models.Payment.PaymentAddTransactionAction;
-import com.commercetools.models.Payment.PaymentChangeAmountPlannedAction;
-import com.commercetools.models.Payment.PaymentChangeTransactionInteractionIdAction;
-import com.commercetools.models.Payment.PaymentChangeTransactionStateAction;
-import com.commercetools.models.Payment.PaymentChangeTransactionTimestampAction;
-import com.commercetools.models.Payment.PaymentSetAmountPaidAction;
-import com.commercetools.models.Payment.PaymentSetAmountRefundedAction;
-import com.commercetools.models.Payment.PaymentSetAnonymousIdAction;
-import com.commercetools.models.Payment.PaymentSetAuthorizationAction;
-import com.commercetools.models.Payment.PaymentSetCustomFieldAction;
-import com.commercetools.models.Payment.PaymentSetCustomTypeAction;
-import com.commercetools.models.Payment.PaymentSetCustomerAction;
-import com.commercetools.models.Payment.PaymentSetExternalIdAction;
-import com.commercetools.models.Payment.PaymentSetInterfaceIdAction;
-import com.commercetools.models.Payment.PaymentSetKeyAction;
-import com.commercetools.models.Payment.PaymentSetMethodInfoInterfaceAction;
-import com.commercetools.models.Payment.PaymentSetMethodInfoMethodAction;
-import com.commercetools.models.Payment.PaymentSetMethodInfoNameAction;
-import com.commercetools.models.Payment.PaymentSetStatusInterfaceCodeAction;
-import com.commercetools.models.Payment.PaymentSetStatusInterfaceTextAction;
-import com.commercetools.models.Payment.PaymentTransitionStateAction;
+import com.commercetools.models.payment.PaymentAddInterfaceInteractionAction;
+import com.commercetools.models.payment.PaymentAddTransactionAction;
+import com.commercetools.models.payment.PaymentChangeAmountPlannedAction;
+import com.commercetools.models.payment.PaymentChangeTransactionInteractionIdAction;
+import com.commercetools.models.payment.PaymentChangeTransactionStateAction;
+import com.commercetools.models.payment.PaymentChangeTransactionTimestampAction;
+import com.commercetools.models.payment.PaymentSetAmountPaidAction;
+import com.commercetools.models.payment.PaymentSetAmountRefundedAction;
+import com.commercetools.models.payment.PaymentSetAnonymousIdAction;
+import com.commercetools.models.payment.PaymentSetAuthorizationAction;
+import com.commercetools.models.payment.PaymentSetCustomFieldAction;
+import com.commercetools.models.payment.PaymentSetCustomTypeAction;
+import com.commercetools.models.payment.PaymentSetCustomerAction;
+import com.commercetools.models.payment.PaymentSetExternalIdAction;
+import com.commercetools.models.payment.PaymentSetInterfaceIdAction;
+import com.commercetools.models.payment.PaymentSetKeyAction;
+import com.commercetools.models.payment.PaymentSetMethodInfoInterfaceAction;
+import com.commercetools.models.payment.PaymentSetMethodInfoMethodAction;
+import com.commercetools.models.payment.PaymentSetMethodInfoNameAction;
+import com.commercetools.models.payment.PaymentSetStatusInterfaceCodeAction;
+import com.commercetools.models.payment.PaymentSetStatusInterfaceTextAction;
+import com.commercetools.models.payment.PaymentTransitionStateAction;
 import java.lang.String;
 
 
@@ -37,28 +37,28 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentAddInterfaceInteractionActionImpl.class, name = "addInterfaceInteraction"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentAddTransactionActionImpl.class, name = "addTransaction"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentChangeAmountPlannedActionImpl.class, name = "changeAmountPlanned"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentChangeTransactionInteractionIdActionImpl.class, name = "changeTransactionInteractionId"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentChangeTransactionStateActionImpl.class, name = "changeTransactionState"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentChangeTransactionTimestampActionImpl.class, name = "changeTransactionTimestamp"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetAmountPaidActionImpl.class, name = "setAmountPaid"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetAmountRefundedActionImpl.class, name = "setAmountRefunded"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetAnonymousIdActionImpl.class, name = "setAnonymousId"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetAuthorizationActionImpl.class, name = "setAuthorization"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetCustomFieldActionImpl.class, name = "setCustomField"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetCustomTypeActionImpl.class, name = "setCustomType"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetCustomerActionImpl.class, name = "setCustomer"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetExternalIdActionImpl.class, name = "setExternalId"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetInterfaceIdActionImpl.class, name = "setInterfaceId"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetKeyActionImpl.class, name = "setKey"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetMethodInfoInterfaceActionImpl.class, name = "setMethodInfoInterface"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetMethodInfoMethodActionImpl.class, name = "setMethodInfoMethod"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetMethodInfoNameActionImpl.class, name = "setMethodInfoName"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetStatusInterfaceCodeActionImpl.class, name = "setStatusInterfaceCode"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentSetStatusInterfaceTextActionImpl.class, name = "setStatusInterfaceText"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Payment.PaymentTransitionStateActionImpl.class, name = "transitionState")
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentAddInterfaceInteractionActionImpl.class, name = "addInterfaceInteraction"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentAddTransactionActionImpl.class, name = "addTransaction"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentChangeAmountPlannedActionImpl.class, name = "changeAmountPlanned"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentChangeTransactionInteractionIdActionImpl.class, name = "changeTransactionInteractionId"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentChangeTransactionStateActionImpl.class, name = "changeTransactionState"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentChangeTransactionTimestampActionImpl.class, name = "changeTransactionTimestamp"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetAmountPaidActionImpl.class, name = "setAmountPaid"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetAmountRefundedActionImpl.class, name = "setAmountRefunded"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetAnonymousIdActionImpl.class, name = "setAnonymousId"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetAuthorizationActionImpl.class, name = "setAuthorization"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetCustomFieldActionImpl.class, name = "setCustomField"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetCustomTypeActionImpl.class, name = "setCustomType"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetCustomerActionImpl.class, name = "setCustomer"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetExternalIdActionImpl.class, name = "setExternalId"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetInterfaceIdActionImpl.class, name = "setInterfaceId"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetKeyActionImpl.class, name = "setKey"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetMethodInfoInterfaceActionImpl.class, name = "setMethodInfoInterface"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetMethodInfoMethodActionImpl.class, name = "setMethodInfoMethod"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetMethodInfoNameActionImpl.class, name = "setMethodInfoName"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetStatusInterfaceCodeActionImpl.class, name = "setStatusInterfaceCode"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentSetStatusInterfaceTextActionImpl.class, name = "setStatusInterfaceText"),
+   @JsonSubTypes.Type(value = com.commercetools.models.payment.PaymentTransitionStateActionImpl.class, name = "transitionState")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

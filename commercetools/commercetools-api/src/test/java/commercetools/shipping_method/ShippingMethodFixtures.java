@@ -1,10 +1,10 @@
 package commercetools.shipping_method;
 
-import com.commercetools.models.ShippingMethod.ShippingMethod;
-import com.commercetools.models.ShippingMethod.ShippingMethodDraft;
-import com.commercetools.models.ShippingMethod.ShippingMethodDraftBuilder;
-import com.commercetools.models.TaxCategory.TaxCategory;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifierBuilder;
+import com.commercetools.models.shipping_method.ShippingMethod;
+import com.commercetools.models.shipping_method.ShippingMethodDraft;
+import com.commercetools.models.shipping_method.ShippingMethodDraftBuilder;
+import com.commercetools.models.tax_category.TaxCategory;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifierBuilder;
 import commercetools.tax_category.TaxCategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;

@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetLineItemCustomFieldAction;
+import com.commercetools.models.order.OrderSetLineItemCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

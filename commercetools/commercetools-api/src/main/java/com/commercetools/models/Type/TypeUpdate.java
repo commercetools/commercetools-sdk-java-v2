@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Type.TypeUpdateImpl;
+import com.commercetools.models.type.TypeUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

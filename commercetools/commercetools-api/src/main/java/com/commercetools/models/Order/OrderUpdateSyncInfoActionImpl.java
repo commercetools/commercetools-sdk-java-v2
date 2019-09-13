@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -27,14 +27,14 @@ public final class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoA
 
    private java.lang.String action;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier channel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier channel;
    
    private java.lang.String externalId;
    
    private java.time.ZonedDateTime syncedAt;
 
    @JsonCreator
-   OrderUpdateSyncInfoActionImpl(@JsonProperty("channel") final com.commercetools.models.Channel.ChannelResourceIdentifier channel, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("syncedAt") final java.time.ZonedDateTime syncedAt) {
+   OrderUpdateSyncInfoActionImpl(@JsonProperty("channel") final com.commercetools.models.channel.ChannelResourceIdentifier channel, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("syncedAt") final java.time.ZonedDateTime syncedAt) {
       this.channel = channel;
       this.externalId = externalId;
       this.syncedAt = syncedAt;
@@ -50,7 +50,7 @@ public final class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoA
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getChannel(){
       return this.channel;
    }
    
@@ -64,7 +64,7 @@ public final class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoA
       return this.syncedAt;
    }
 
-   public void setChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier channel){
+   public void setChannel(final com.commercetools.models.channel.ChannelResourceIdentifier channel){
       this.channel = channel;
    }
    

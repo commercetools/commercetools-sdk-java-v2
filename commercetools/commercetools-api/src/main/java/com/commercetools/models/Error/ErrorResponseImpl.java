@@ -1,6 +1,6 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -30,12 +30,12 @@ public final class ErrorResponseImpl implements ErrorResponse {
    
    private java.lang.String message;
    
-   private java.util.List<com.commercetools.models.Error.ErrorObject> errors;
+   private java.util.List<com.commercetools.models.error.ErrorObject> errors;
    
    private java.lang.Integer statusCode;
 
    @JsonCreator
-   ErrorResponseImpl(@JsonProperty("errorDescription") final java.lang.String errorDescription, @JsonProperty("error") final java.lang.String error, @JsonProperty("message") final java.lang.String message, @JsonProperty("errors") final java.util.List<com.commercetools.models.Error.ErrorObject> errors, @JsonProperty("statusCode") final java.lang.Integer statusCode) {
+   ErrorResponseImpl(@JsonProperty("errorDescription") final java.lang.String errorDescription, @JsonProperty("error") final java.lang.String error, @JsonProperty("message") final java.lang.String message, @JsonProperty("errors") final java.util.List<com.commercetools.models.error.ErrorObject> errors, @JsonProperty("statusCode") final java.lang.Integer statusCode) {
       this.errorDescription = errorDescription;
       this.error = error;
       this.message = message;
@@ -62,7 +62,7 @@ public final class ErrorResponseImpl implements ErrorResponse {
    }
    
    
-   public java.util.List<com.commercetools.models.Error.ErrorObject> getErrors(){
+   public java.util.List<com.commercetools.models.error.ErrorObject> getErrors(){
       return this.errors;
    }
    
@@ -83,7 +83,7 @@ public final class ErrorResponseImpl implements ErrorResponse {
       this.message = message;
    }
    
-   public void setErrors(final java.util.List<com.commercetools.models.Error.ErrorObject> errors){
+   public void setErrors(final java.util.List<com.commercetools.models.error.ErrorObject> errors){
       this.errors = errors;
    }
    

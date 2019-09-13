@@ -1,8 +1,8 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
@@ -29,20 +29,20 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
 
    private java.lang.Integer quantity;
    
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    private java.lang.String productId;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    private java.lang.Long variantId;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
 
    @JsonCreator
-   MyLineItemDraftImpl(@JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("supplyChannel") final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("distributionChannel") final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel) {
+   MyLineItemDraftImpl(@JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel) {
       this.quantity = quantity;
       this.shippingDetails = shippingDetails;
       this.productId = productId;
@@ -61,7 +61,7 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
    }
    
    
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
    
@@ -71,12 +71,12 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
@@ -86,7 +86,7 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getDistributionChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
    }
 
@@ -94,7 +94,7 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
       this.quantity = quantity;
    }
    
-   public void setShippingDetails(final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails){
+   public void setShippingDetails(final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails){
       this.shippingDetails = shippingDetails;
    }
    
@@ -102,11 +102,11 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
       this.productId = productId;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
-   public void setSupplyChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel){
+   public void setSupplyChannel(final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel){
       this.supplyChannel = supplyChannel;
    }
    
@@ -114,7 +114,7 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
       this.variantId = variantId;
    }
    
-   public void setDistributionChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel){
+   public void setDistributionChannel(final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel){
       this.distributionChannel = distributionChannel;
    }
 

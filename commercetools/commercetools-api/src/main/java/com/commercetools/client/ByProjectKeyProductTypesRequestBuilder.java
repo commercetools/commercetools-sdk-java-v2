@@ -16,7 +16,7 @@ public class ByProjectKeyProductTypesRequestBuilder {
       return new ByProjectKeyProductTypesGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyProductTypesPost post(com.commercetools.models.ProductType.ProductTypeDraft productTypeDraft) {
+   public ByProjectKeyProductTypesPost post(com.commercetools.models.product_type.ProductTypeDraft productTypeDraft) {
       return new ByProjectKeyProductTypesPost(apiHttpClient, projectKey, productTypeDraft);
    }
    

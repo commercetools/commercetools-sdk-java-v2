@@ -1,11 +1,11 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Type.FieldDefinition;
-import com.commercetools.models.Type.ResourceTypeId;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.type.FieldDefinition;
+import com.commercetools.models.type.ResourceTypeId;
 import java.lang.String;
-import com.commercetools.models.Type.Type;
+import com.commercetools.models.type.Type;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,25 +26,25 @@ public final class TypeBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
    @Nullable
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    
-   private java.util.List<com.commercetools.models.Type.FieldDefinition> fieldDefinitions;
+   private java.util.List<com.commercetools.models.type.FieldDefinition> fieldDefinitions;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    
    private java.lang.String key;
    
    
-   private java.util.List<com.commercetools.models.Type.ResourceTypeId> resourceTypeIds;
+   private java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds;
    
    public TypeBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -66,27 +66,27 @@ public final class TypeBuilder {
       return this;
    }
    
-   public TypeBuilder createdBy(@Nullable final com.commercetools.models.Common.CreatedBy createdBy) {
+   public TypeBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
       this.createdBy = createdBy;
       return this;
    }
    
-   public TypeBuilder lastModifiedBy(@Nullable final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   public TypeBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
    
-   public TypeBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public TypeBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public TypeBuilder fieldDefinitions( final java.util.List<com.commercetools.models.Type.FieldDefinition> fieldDefinitions) {
+   public TypeBuilder fieldDefinitions( final java.util.List<com.commercetools.models.type.FieldDefinition> fieldDefinitions) {
       this.fieldDefinitions = fieldDefinitions;
       return this;
    }
    
-   public TypeBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public TypeBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
@@ -96,7 +96,7 @@ public final class TypeBuilder {
       return this;
    }
    
-   public TypeBuilder resourceTypeIds( final java.util.List<com.commercetools.models.Type.ResourceTypeId> resourceTypeIds) {
+   public TypeBuilder resourceTypeIds( final java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds) {
       this.resourceTypeIds = resourceTypeIds;
       return this;
    }
@@ -122,27 +122,27 @@ public final class TypeBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    
-   public java.util.List<com.commercetools.models.Type.FieldDefinition> getFieldDefinitions(){
+   public java.util.List<com.commercetools.models.type.FieldDefinition> getFieldDefinitions(){
       return this.fieldDefinitions;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
@@ -152,7 +152,7 @@ public final class TypeBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Type.ResourceTypeId> getResourceTypeIds(){
+   public java.util.List<com.commercetools.models.type.ResourceTypeId> getResourceTypeIds(){
       return this.resourceTypeIds;
    }
 

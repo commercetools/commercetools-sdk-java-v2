@@ -1,6 +1,6 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.Cart;
+import com.commercetools.models.cart.Cart;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class CartPagedQueryResponseImpl implements CartPagedQueryResponse 
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Cart.Cart> results;
+   private java.util.List<com.commercetools.models.cart.Cart> results;
 
    @JsonCreator
-   CartPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Cart.Cart> results) {
+   CartPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.cart.Cart> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class CartPagedQueryResponseImpl implements CartPagedQueryResponse 
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.Cart> getResults(){
+   public java.util.List<com.commercetools.models.cart.Cart> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class CartPagedQueryResponseImpl implements CartPagedQueryResponse 
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Cart.Cart> results){
+   public void setResults(final java.util.List<com.commercetools.models.cart.Cart> results){
       this.results = results;
    }
 

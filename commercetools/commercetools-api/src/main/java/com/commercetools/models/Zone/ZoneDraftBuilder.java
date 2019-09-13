@@ -1,8 +1,8 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.Location;
+import com.commercetools.models.zone.Location;
 import java.lang.String;
-import com.commercetools.models.Zone.ZoneDraft;
+import com.commercetools.models.zone.ZoneDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class ZoneDraftBuilder {
    private java.lang.String description;
    
    
-   private java.util.List<com.commercetools.models.Zone.Location> locations;
+   private java.util.List<com.commercetools.models.zone.Location> locations;
    
    @Nullable
    private java.lang.String key;
@@ -32,7 +32,7 @@ public final class ZoneDraftBuilder {
       return this;
    }
    
-   public ZoneDraftBuilder locations( final java.util.List<com.commercetools.models.Zone.Location> locations) {
+   public ZoneDraftBuilder locations( final java.util.List<com.commercetools.models.zone.Location> locations) {
       this.locations = locations;
       return this;
    }
@@ -53,7 +53,7 @@ public final class ZoneDraftBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Zone.Location> getLocations(){
+   public java.util.List<com.commercetools.models.zone.Location> getLocations(){
       return this.locations;
    }
    

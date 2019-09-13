@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.AssetDraft;
-import com.commercetools.models.Common.Image;
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Product.Attribute;
+import com.commercetools.models.common.AssetDraft;
+import com.commercetools.models.common.Image;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.product.Attribute;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,20 +26,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantDraftImpl implements ProductVariantDraft {
 
-   private java.util.List<com.commercetools.models.Common.Image> images;
+   private java.util.List<com.commercetools.models.common.Image> images;
    
-   private java.util.List<com.commercetools.models.Common.AssetDraft> assets;
+   private java.util.List<com.commercetools.models.common.AssetDraft> assets;
    
-   private java.util.List<com.commercetools.models.Product.Attribute> attributes;
+   private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
-   private java.util.List<com.commercetools.models.Common.PriceDraft> prices;
+   private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
    private java.lang.String sku;
    
    private java.lang.String key;
 
    @JsonCreator
-   ProductVariantDraftImpl(@JsonProperty("images") final java.util.List<com.commercetools.models.Common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.models.Common.AssetDraft> assets, @JsonProperty("attributes") final java.util.List<com.commercetools.models.Product.Attribute> attributes, @JsonProperty("prices") final java.util.List<com.commercetools.models.Common.PriceDraft> prices, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("key") final java.lang.String key) {
+   ProductVariantDraftImpl(@JsonProperty("images") final java.util.List<com.commercetools.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.models.common.AssetDraft> assets, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.PriceDraft> prices, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("key") final java.lang.String key) {
       this.images = images;
       this.assets = assets;
       this.attributes = attributes;
@@ -52,22 +52,22 @@ public final class ProductVariantDraftImpl implements ProductVariantDraft {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.Image> getImages(){
+   public java.util.List<com.commercetools.models.common.Image> getImages(){
       return this.images;
    }
    
    
-   public java.util.List<com.commercetools.models.Common.AssetDraft> getAssets(){
+   public java.util.List<com.commercetools.models.common.AssetDraft> getAssets(){
       return this.assets;
    }
    
    
-   public java.util.List<com.commercetools.models.Product.Attribute> getAttributes(){
+   public java.util.List<com.commercetools.models.product.Attribute> getAttributes(){
       return this.attributes;
    }
    
    
-   public java.util.List<com.commercetools.models.Common.PriceDraft> getPrices(){
+   public java.util.List<com.commercetools.models.common.PriceDraft> getPrices(){
       return this.prices;
    }
    
@@ -81,19 +81,19 @@ public final class ProductVariantDraftImpl implements ProductVariantDraft {
       return this.key;
    }
 
-   public void setImages(final java.util.List<com.commercetools.models.Common.Image> images){
+   public void setImages(final java.util.List<com.commercetools.models.common.Image> images){
       this.images = images;
    }
    
-   public void setAssets(final java.util.List<com.commercetools.models.Common.AssetDraft> assets){
+   public void setAssets(final java.util.List<com.commercetools.models.common.AssetDraft> assets){
       this.assets = assets;
    }
    
-   public void setAttributes(final java.util.List<com.commercetools.models.Product.Attribute> attributes){
+   public void setAttributes(final java.util.List<com.commercetools.models.product.Attribute> attributes){
       this.attributes = attributes;
    }
    
-   public void setPrices(final java.util.List<com.commercetools.models.Common.PriceDraft> prices){
+   public void setPrices(final java.util.List<com.commercetools.models.common.PriceDraft> prices){
       this.prices = prices;
    }
    

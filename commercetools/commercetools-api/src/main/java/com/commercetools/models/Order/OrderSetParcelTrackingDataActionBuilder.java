@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.TrackingData;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.TrackingData;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetParcelTrackingDataAction;
+import com.commercetools.models.order.OrderSetParcelTrackingDataAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class OrderSetParcelTrackingDataActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Order.TrackingData trackingData;
+   private com.commercetools.models.order.TrackingData trackingData;
    
    
    private java.lang.String parcelId;
    
-   public OrderSetParcelTrackingDataActionBuilder trackingData(@Nullable final com.commercetools.models.Order.TrackingData trackingData) {
+   public OrderSetParcelTrackingDataActionBuilder trackingData(@Nullable final com.commercetools.models.order.TrackingData trackingData) {
       this.trackingData = trackingData;
       return this;
    }
@@ -28,7 +28,7 @@ public final class OrderSetParcelTrackingDataActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Order.TrackingData getTrackingData(){
+   public com.commercetools.models.order.TrackingData getTrackingData(){
       return this.trackingData;
    }
    

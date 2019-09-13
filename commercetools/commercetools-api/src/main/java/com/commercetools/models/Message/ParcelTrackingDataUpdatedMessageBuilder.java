@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.TrackingData;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.TrackingData;
 import java.lang.String;
-import com.commercetools.models.Message.ParcelTrackingDataUpdatedMessage;
+import com.commercetools.models.message.ParcelTrackingDataUpdatedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -42,7 +42,7 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    private java.lang.String deliveryId;
    
    @Nullable
-   private com.commercetools.models.Order.TrackingData trackingData;
+   private com.commercetools.models.order.TrackingData trackingData;
    
    
    private java.lang.String parcelId;
@@ -72,12 +72,12 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public ParcelTrackingDataUpdatedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public ParcelTrackingDataUpdatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -97,7 +97,7 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder trackingData(@Nullable final com.commercetools.models.Order.TrackingData trackingData) {
+   public ParcelTrackingDataUpdatedMessageBuilder trackingData(@Nullable final com.commercetools.models.order.TrackingData trackingData) {
       this.trackingData = trackingData;
       return this;
    }
@@ -133,12 +133,12 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -158,7 +158,7 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Order.TrackingData getTrackingData(){
+   public com.commercetools.models.order.TrackingData getTrackingData(){
       return this.trackingData;
    }
    

@@ -1,22 +1,22 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartOrigin;
-import com.commercetools.models.Cart.CustomLineItemDraft;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Cart.InventoryMode;
-import com.commercetools.models.Cart.LineItemDraft;
-import com.commercetools.models.Cart.RoundingMode;
-import com.commercetools.models.Cart.ShippingRateInputDraft;
-import com.commercetools.models.Cart.TaxCalculationMode;
-import com.commercetools.models.Cart.TaxMode;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
-import com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier;
-import com.commercetools.models.Store.StoreResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.CartOrigin;
+import com.commercetools.models.cart.CustomLineItemDraft;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.cart.InventoryMode;
+import com.commercetools.models.cart.LineItemDraft;
+import com.commercetools.models.cart.RoundingMode;
+import com.commercetools.models.cart.ShippingRateInputDraft;
+import com.commercetools.models.cart.TaxCalculationMode;
+import com.commercetools.models.cart.TaxMode;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.models.store.StoreResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Cart.CartDraft;
+import com.commercetools.models.cart.CartDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -31,52 +31,52 @@ public final class CartDraftBuilder {
    private java.lang.String anonymousId;
    
    @Nullable
-   private com.commercetools.models.Cart.ShippingRateInputDraft shippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput;
    
    @Nullable
-   private com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
    @Nullable
-   private com.commercetools.models.Cart.CartOrigin origin;
+   private com.commercetools.models.cart.CartOrigin origin;
    
    @Nullable
    private java.lang.Long deleteDaysAfterLastModification;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod;
+   private com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
    
    @Nullable
-   private com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode;
+   private com.commercetools.models.cart.TaxCalculationMode taxCalculationMode;
    
    @Nullable
-   private com.commercetools.models.Store.StoreResourceIdentifier store;
+   private com.commercetools.models.store.StoreResourceIdentifier store;
    
    @Nullable
    private java.lang.String locale;
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRateForShippingMethod;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod;
    
    @Nullable
-   private com.commercetools.models.Cart.InventoryMode inventoryMode;
+   private com.commercetools.models.cart.InventoryMode inventoryMode;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Cart.LineItemDraft> lineItems;
+   private java.util.List<com.commercetools.models.cart.LineItemDraft> lineItems;
    
    @Nullable
-   private com.commercetools.models.Cart.RoundingMode taxRoundingMode;
+   private com.commercetools.models.cart.RoundingMode taxRoundingMode;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Cart.CustomLineItemDraft> customLineItems;
+   private java.util.List<com.commercetools.models.cart.CustomLineItemDraft> customLineItems;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.Address> itemShippingAddresses;
+   private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
    @Nullable
-   private com.commercetools.models.Cart.TaxMode taxMode;
+   private com.commercetools.models.cart.TaxMode taxMode;
    
    @Nullable
    private java.lang.String customerEmail;
@@ -85,13 +85,13 @@ public final class CartDraftBuilder {
    private java.lang.String customerId;
    
    @Nullable
-   private com.commercetools.models.Common.Address shippingAddress;
+   private com.commercetools.models.common.Address shippingAddress;
    
    
    private java.lang.String currency;
    
    @Nullable
-   private com.commercetools.models.Common.Address billingAddress;
+   private com.commercetools.models.common.Address billingAddress;
    
    public CartDraftBuilder country(@Nullable final java.lang.String country) {
       this.country = country;
@@ -103,17 +103,17 @@ public final class CartDraftBuilder {
       return this;
    }
    
-   public CartDraftBuilder shippingRateInput(@Nullable final com.commercetools.models.Cart.ShippingRateInputDraft shippingRateInput) {
+   public CartDraftBuilder shippingRateInput(@Nullable final com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput) {
       this.shippingRateInput = shippingRateInput;
       return this;
    }
    
-   public CartDraftBuilder customerGroup(@Nullable final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup) {
+   public CartDraftBuilder customerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
    
-   public CartDraftBuilder origin(@Nullable final com.commercetools.models.Cart.CartOrigin origin) {
+   public CartDraftBuilder origin(@Nullable final com.commercetools.models.cart.CartOrigin origin) {
       this.origin = origin;
       return this;
    }
@@ -123,22 +123,22 @@ public final class CartDraftBuilder {
       return this;
    }
    
-   public CartDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public CartDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
    
-   public CartDraftBuilder shippingMethod(@Nullable final com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod) {
+   public CartDraftBuilder shippingMethod(@Nullable final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
       this.shippingMethod = shippingMethod;
       return this;
    }
    
-   public CartDraftBuilder taxCalculationMode(@Nullable final com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode) {
+   public CartDraftBuilder taxCalculationMode(@Nullable final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode) {
       this.taxCalculationMode = taxCalculationMode;
       return this;
    }
    
-   public CartDraftBuilder store(@Nullable final com.commercetools.models.Store.StoreResourceIdentifier store) {
+   public CartDraftBuilder store(@Nullable final com.commercetools.models.store.StoreResourceIdentifier store) {
       this.store = store;
       return this;
    }
@@ -148,37 +148,37 @@ public final class CartDraftBuilder {
       return this;
    }
    
-   public CartDraftBuilder externalTaxRateForShippingMethod(@Nullable final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRateForShippingMethod) {
+   public CartDraftBuilder externalTaxRateForShippingMethod(@Nullable final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod) {
       this.externalTaxRateForShippingMethod = externalTaxRateForShippingMethod;
       return this;
    }
    
-   public CartDraftBuilder inventoryMode(@Nullable final com.commercetools.models.Cart.InventoryMode inventoryMode) {
+   public CartDraftBuilder inventoryMode(@Nullable final com.commercetools.models.cart.InventoryMode inventoryMode) {
       this.inventoryMode = inventoryMode;
       return this;
    }
    
-   public CartDraftBuilder lineItems(@Nullable final java.util.List<com.commercetools.models.Cart.LineItemDraft> lineItems) {
+   public CartDraftBuilder lineItems(@Nullable final java.util.List<com.commercetools.models.cart.LineItemDraft> lineItems) {
       this.lineItems = lineItems;
       return this;
    }
    
-   public CartDraftBuilder taxRoundingMode(@Nullable final com.commercetools.models.Cart.RoundingMode taxRoundingMode) {
+   public CartDraftBuilder taxRoundingMode(@Nullable final com.commercetools.models.cart.RoundingMode taxRoundingMode) {
       this.taxRoundingMode = taxRoundingMode;
       return this;
    }
    
-   public CartDraftBuilder customLineItems(@Nullable final java.util.List<com.commercetools.models.Cart.CustomLineItemDraft> customLineItems) {
+   public CartDraftBuilder customLineItems(@Nullable final java.util.List<com.commercetools.models.cart.CustomLineItemDraft> customLineItems) {
       this.customLineItems = customLineItems;
       return this;
    }
    
-   public CartDraftBuilder itemShippingAddresses(@Nullable final java.util.List<com.commercetools.models.Common.Address> itemShippingAddresses) {
+   public CartDraftBuilder itemShippingAddresses(@Nullable final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses) {
       this.itemShippingAddresses = itemShippingAddresses;
       return this;
    }
    
-   public CartDraftBuilder taxMode(@Nullable final com.commercetools.models.Cart.TaxMode taxMode) {
+   public CartDraftBuilder taxMode(@Nullable final com.commercetools.models.cart.TaxMode taxMode) {
       this.taxMode = taxMode;
       return this;
    }
@@ -193,7 +193,7 @@ public final class CartDraftBuilder {
       return this;
    }
    
-   public CartDraftBuilder shippingAddress(@Nullable final com.commercetools.models.Common.Address shippingAddress) {
+   public CartDraftBuilder shippingAddress(@Nullable final com.commercetools.models.common.Address shippingAddress) {
       this.shippingAddress = shippingAddress;
       return this;
    }
@@ -203,7 +203,7 @@ public final class CartDraftBuilder {
       return this;
    }
    
-   public CartDraftBuilder billingAddress(@Nullable final com.commercetools.models.Common.Address billingAddress) {
+   public CartDraftBuilder billingAddress(@Nullable final com.commercetools.models.common.Address billingAddress) {
       this.billingAddress = billingAddress;
       return this;
    }
@@ -219,17 +219,17 @@ public final class CartDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ShippingRateInputDraft getShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInputDraft getShippingRateInput(){
       return this.shippingRateInput;
    }
    
    @Nullable
-   public com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
       return this.customerGroup;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.CartOrigin getOrigin(){
+   public com.commercetools.models.cart.CartOrigin getOrigin(){
       return this.origin;
    }
    
@@ -239,22 +239,22 @@ public final class CartDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    @Nullable
-   public com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier getShippingMethod(){
+   public com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
       return this.shippingMethod;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.TaxCalculationMode getTaxCalculationMode(){
+   public com.commercetools.models.cart.TaxCalculationMode getTaxCalculationMode(){
       return this.taxCalculationMode;
    }
    
    @Nullable
-   public com.commercetools.models.Store.StoreResourceIdentifier getStore(){
+   public com.commercetools.models.store.StoreResourceIdentifier getStore(){
       return this.store;
    }
    
@@ -264,37 +264,37 @@ public final class CartDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod(){
       return this.externalTaxRateForShippingMethod;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.InventoryMode getInventoryMode(){
+   public com.commercetools.models.cart.InventoryMode getInventoryMode(){
       return this.inventoryMode;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Cart.LineItemDraft> getLineItems(){
+   public java.util.List<com.commercetools.models.cart.LineItemDraft> getLineItems(){
       return this.lineItems;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.RoundingMode getTaxRoundingMode(){
+   public com.commercetools.models.cart.RoundingMode getTaxRoundingMode(){
       return this.taxRoundingMode;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Cart.CustomLineItemDraft> getCustomLineItems(){
+   public java.util.List<com.commercetools.models.cart.CustomLineItemDraft> getCustomLineItems(){
       return this.customLineItems;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.Address> getItemShippingAddresses(){
+   public java.util.List<com.commercetools.models.common.Address> getItemShippingAddresses(){
       return this.itemShippingAddresses;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.TaxMode getTaxMode(){
+   public com.commercetools.models.cart.TaxMode getTaxMode(){
       return this.taxMode;
    }
    
@@ -309,7 +309,7 @@ public final class CartDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getShippingAddress(){
+   public com.commercetools.models.common.Address getShippingAddress(){
       return this.shippingAddress;
    }
    
@@ -319,7 +319,7 @@ public final class CartDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getBillingAddress(){
+   public com.commercetools.models.common.Address getBillingAddress(){
       return this.billingAddress;
    }
 

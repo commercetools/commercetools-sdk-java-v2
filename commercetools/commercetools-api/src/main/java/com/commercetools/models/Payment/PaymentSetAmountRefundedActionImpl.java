@@ -1,7 +1,7 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Payment.PaymentUpdateAction;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.payment.PaymentUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class PaymentSetAmountRefundedActionImpl implements PaymentSetAmoun
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.Money amount;
+   private com.commercetools.models.common.Money amount;
 
    @JsonCreator
-   PaymentSetAmountRefundedActionImpl(@JsonProperty("amount") final com.commercetools.models.Common.Money amount) {
+   PaymentSetAmountRefundedActionImpl(@JsonProperty("amount") final com.commercetools.models.common.Money amount) {
       this.amount = amount;
       this.action = "setAmountRefunded";
    }
@@ -43,11 +43,11 @@ public final class PaymentSetAmountRefundedActionImpl implements PaymentSetAmoun
    }
    
    
-   public com.commercetools.models.Common.Money getAmount(){
+   public com.commercetools.models.common.Money getAmount(){
       return this.amount;
    }
 
-   public void setAmount(final com.commercetools.models.Common.Money amount){
+   public void setAmount(final com.commercetools.models.common.Money amount){
       this.amount = amount;
    }
 

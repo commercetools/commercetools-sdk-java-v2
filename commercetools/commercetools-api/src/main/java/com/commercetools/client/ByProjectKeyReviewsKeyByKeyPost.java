@@ -27,9 +27,9 @@ public class ByProjectKeyReviewsKeyByKeyPost {
    private String projectKey;
    private String key;
    
-   private com.commercetools.models.Review.ReviewUpdate reviewUpdate;
+   private com.commercetools.models.review.ReviewUpdate reviewUpdate;
    
-   public ByProjectKeyReviewsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.Review.ReviewUpdate reviewUpdate){
+   public ByProjectKeyReviewsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.review.ReviewUpdate reviewUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.key = key;
@@ -53,7 +53,7 @@ public class ByProjectKeyReviewsKeyByKeyPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Review.Review> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.review.Review> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyReviewsKeyByKeyPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Review.Review>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.review.Review>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Review.Review.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.review.Review.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

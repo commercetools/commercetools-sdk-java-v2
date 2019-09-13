@@ -1,7 +1,7 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
@@ -34,14 +34,14 @@ public final class MyShoppingListAddLineItemActionImpl implements MyShoppingList
    
    private java.lang.String productId;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    private java.lang.Long variantId;
    
    private java.lang.String sku;
 
    @JsonCreator
-   MyShoppingListAddLineItemActionImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku) {
+   MyShoppingListAddLineItemActionImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku) {
       this.addedAt = addedAt;
       this.quantity = quantity;
       this.productId = productId;
@@ -75,7 +75,7 @@ public final class MyShoppingListAddLineItemActionImpl implements MyShoppingList
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
@@ -101,7 +101,7 @@ public final class MyShoppingListAddLineItemActionImpl implements MyShoppingList
       this.productId = productId;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    

@@ -1,8 +1,8 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyPaymentUpdateAction;
+import com.commercetools.models.me.MyPaymentUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyPaymentSetMethodInfoMethodAction;
+import com.commercetools.models.me.MyPaymentSetMethodInfoMethodAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

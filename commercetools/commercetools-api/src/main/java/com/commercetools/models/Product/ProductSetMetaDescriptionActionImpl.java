@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -29,10 +29,10 @@ public final class ProductSetMetaDescriptionActionImpl implements ProductSetMeta
    
    private java.lang.Boolean staged;
    
-   private com.commercetools.models.Common.LocalizedString metaDescription;
+   private com.commercetools.models.common.LocalizedString metaDescription;
 
    @JsonCreator
-   ProductSetMetaDescriptionActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("metaDescription") final com.commercetools.models.Common.LocalizedString metaDescription) {
+   ProductSetMetaDescriptionActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("metaDescription") final com.commercetools.models.common.LocalizedString metaDescription) {
       this.staged = staged;
       this.metaDescription = metaDescription;
       this.action = "setMetaDescription";
@@ -52,7 +52,7 @@ public final class ProductSetMetaDescriptionActionImpl implements ProductSetMeta
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getMetaDescription(){
+   public com.commercetools.models.common.LocalizedString getMetaDescription(){
       return this.metaDescription;
    }
 
@@ -60,7 +60,7 @@ public final class ProductSetMetaDescriptionActionImpl implements ProductSetMeta
       this.staged = staged;
    }
    
-   public void setMetaDescription(final com.commercetools.models.Common.LocalizedString metaDescription){
+   public void setMetaDescription(final com.commercetools.models.common.LocalizedString metaDescription){
       this.metaDescription = metaDescription;
    }
 

@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Payment.TransactionState;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.payment.TransactionState;
 import java.lang.String;
-import com.commercetools.models.Message.PaymentTransactionStateChangedMessageImpl;
+import com.commercetools.models.message.PaymentTransactionStateChangedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

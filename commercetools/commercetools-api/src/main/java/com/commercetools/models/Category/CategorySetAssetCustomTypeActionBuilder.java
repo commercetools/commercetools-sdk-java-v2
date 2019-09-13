@@ -1,10 +1,10 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Category.CategorySetAssetCustomTypeAction;
+import com.commercetools.models.category.CategorySetAssetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class CategorySetAssetCustomTypeActionBuilder {
    private java.lang.Object fields;
    
    @Nullable
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
    
    @Nullable
    private java.lang.String assetKey;
@@ -34,7 +34,7 @@ public final class CategorySetAssetCustomTypeActionBuilder {
       return this;
    }
    
-   public CategorySetAssetCustomTypeActionBuilder type(@Nullable final com.commercetools.models.Type.TypeResourceIdentifier type) {
+   public CategorySetAssetCustomTypeActionBuilder type(@Nullable final com.commercetools.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
@@ -55,7 +55,7 @@ public final class CategorySetAssetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
    

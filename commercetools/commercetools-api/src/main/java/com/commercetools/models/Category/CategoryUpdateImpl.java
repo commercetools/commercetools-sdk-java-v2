@@ -1,6 +1,6 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
+import com.commercetools.models.category.CategoryUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryUpdateImpl implements CategoryUpdate {
 
-   private java.util.List<com.commercetools.models.Category.CategoryUpdateAction> actions;
+   private java.util.List<com.commercetools.models.category.CategoryUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   CategoryUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Category.CategoryUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   CategoryUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.category.CategoryUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class CategoryUpdateImpl implements CategoryUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Category.CategoryUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.category.CategoryUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class CategoryUpdateImpl implements CategoryUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Category.CategoryUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.category.CategoryUpdateAction> actions){
       this.actions = actions;
    }
    

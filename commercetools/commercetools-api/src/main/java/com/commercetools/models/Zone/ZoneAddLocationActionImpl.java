@@ -1,7 +1,7 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.Location;
-import com.commercetools.models.Zone.ZoneUpdateAction;
+import com.commercetools.models.zone.Location;
+import com.commercetools.models.zone.ZoneUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ZoneAddLocationActionImpl implements ZoneAddLocationAction {
 
    private java.lang.String action;
    
-   private com.commercetools.models.Zone.Location location;
+   private com.commercetools.models.zone.Location location;
 
    @JsonCreator
-   ZoneAddLocationActionImpl(@JsonProperty("location") final com.commercetools.models.Zone.Location location) {
+   ZoneAddLocationActionImpl(@JsonProperty("location") final com.commercetools.models.zone.Location location) {
       this.location = location;
       this.action = "addLocation";
    }
@@ -43,11 +43,11 @@ public final class ZoneAddLocationActionImpl implements ZoneAddLocationAction {
    }
    
    
-   public com.commercetools.models.Zone.Location getLocation(){
+   public com.commercetools.models.zone.Location getLocation(){
       return this.location;
    }
 
-   public void setLocation(final com.commercetools.models.Zone.Location location){
+   public void setLocation(final com.commercetools.models.zone.Location location){
       this.location = location;
    }
 

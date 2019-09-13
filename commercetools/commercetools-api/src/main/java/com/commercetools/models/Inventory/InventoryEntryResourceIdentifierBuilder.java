@@ -1,8 +1,8 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Common.ResourceIdentifier;
-import com.commercetools.models.Inventory.InventoryEntryResourceIdentifier;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.common.ResourceIdentifier;
+import com.commercetools.models.inventory.InventoryEntryResourceIdentifier;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

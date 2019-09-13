@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ShippingRateInput;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.cart.ShippingRateInput;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
-import com.commercetools.models.Cart.ClassificationShippingRateInputImpl;
+import com.commercetools.models.cart.ClassificationShippingRateInputImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,13 +1,13 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Boolean;
 import java.lang.String;
 import java.time.LocalDate;
-import com.commercetools.models.Customer.CustomerImpl;
+import com.commercetools.models.customer.CustomerImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,9 +1,9 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.StateRoleEnum;
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.state.StateRoleEnum;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.String;
-import com.commercetools.models.State.StateRemoveRolesAction;
+import com.commercetools.models.state.StateRemoveRolesAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class StateRemoveRolesActionBuilder {
    
    
-   private java.util.List<com.commercetools.models.State.StateRoleEnum> roles;
+   private java.util.List<com.commercetools.models.state.StateRoleEnum> roles;
    
-   public StateRemoveRolesActionBuilder roles( final java.util.List<com.commercetools.models.State.StateRoleEnum> roles) {
+   public StateRemoveRolesActionBuilder roles( final java.util.List<com.commercetools.models.state.StateRoleEnum> roles) {
       this.roles = roles;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.State.StateRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.state.StateRoleEnum> getRoles(){
       return this.roles;
    }
 

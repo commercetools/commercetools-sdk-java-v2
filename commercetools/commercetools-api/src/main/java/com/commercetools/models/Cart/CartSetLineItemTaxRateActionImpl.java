@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTa
 
    private java.lang.String action;
    
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    private java.lang.String lineItemId;
 
    @JsonCreator
-   CartSetLineItemTaxRateActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
+   CartSetLineItemTaxRateActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
       this.externalTaxRate = externalTaxRate;
       this.lineItemId = lineItemId;
       this.action = "setLineItemTaxRate";
@@ -46,7 +46,7 @@ public final class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTa
    }
    
    
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
    
@@ -55,7 +55,7 @@ public final class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTa
       return this.lineItemId;
    }
 
-   public void setExternalTaxRate(final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate){
+   public void setExternalTaxRate(final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate){
       this.externalTaxRate = externalTaxRate;
    }
    

@@ -1,6 +1,6 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.ClientLogging;
+import com.commercetools.models.common.ClientLogging;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -28,10 +28,10 @@ public final class CreatedByImpl implements CreatedBy {
    
    private java.lang.String externalUserId;
    
-   private com.commercetools.models.Customer.CustomerReference customer;
+   private com.commercetools.models.customer.CustomerReference customer;
 
    @JsonCreator
-   CreatedByImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("clientId") final java.lang.String clientId, @JsonProperty("externalUserId") final java.lang.String externalUserId, @JsonProperty("customer") final com.commercetools.models.Customer.CustomerReference customer) {
+   CreatedByImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("clientId") final java.lang.String clientId, @JsonProperty("externalUserId") final java.lang.String externalUserId, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
       this.anonymousId = anonymousId;
       this.clientId = clientId;
       this.externalUserId = externalUserId;
@@ -57,7 +57,7 @@ public final class CreatedByImpl implements CreatedBy {
    }
    
    
-   public com.commercetools.models.Customer.CustomerReference getCustomer(){
+   public com.commercetools.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
 
@@ -73,7 +73,7 @@ public final class CreatedByImpl implements CreatedBy {
       this.externalUserId = externalUserId;
    }
    
-   public void setCustomer(final com.commercetools.models.Customer.CustomerReference customer){
+   public void setCustomer(final com.commercetools.models.customer.CustomerReference customer){
       this.customer = customer;
    }
 

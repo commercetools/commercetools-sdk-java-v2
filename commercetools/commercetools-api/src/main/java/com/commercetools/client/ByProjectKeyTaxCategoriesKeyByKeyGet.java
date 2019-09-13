@@ -51,7 +51,7 @@ public class ByProjectKeyTaxCategoriesKeyByKeyGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.TaxCategory.TaxCategory> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.tax_category.TaxCategory> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyTaxCategoriesKeyByKeyGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.TaxCategory.TaxCategory>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.tax_category.TaxCategory>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.TaxCategory.TaxCategory.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.tax_category.TaxCategory.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

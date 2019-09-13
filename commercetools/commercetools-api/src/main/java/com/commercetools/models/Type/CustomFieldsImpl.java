@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeReference;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeReference;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldsImpl implements CustomFields {
 
-   private com.commercetools.models.Type.FieldContainer fields;
+   private com.commercetools.models.type.FieldContainer fields;
    
-   private com.commercetools.models.Type.TypeReference type;
+   private com.commercetools.models.type.TypeReference type;
 
    @JsonCreator
-   CustomFieldsImpl(@JsonProperty("fields") final com.commercetools.models.Type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.Type.TypeReference type) {
+   CustomFieldsImpl(@JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeReference type) {
       this.fields = fields;
       this.type = type;
    }
@@ -37,20 +37,20 @@ public final class CustomFieldsImpl implements CustomFields {
    }
    
    
-   public com.commercetools.models.Type.FieldContainer getFields(){
+   public com.commercetools.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    
-   public com.commercetools.models.Type.TypeReference getType(){
+   public com.commercetools.models.type.TypeReference getType(){
       return this.type;
    }
 
-   public void setFields(final com.commercetools.models.Type.FieldContainer fields){
+   public void setFields(final com.commercetools.models.type.FieldContainer fields){
       this.fields = fields;
    }
    
-   public void setType(final com.commercetools.models.Type.TypeReference type){
+   public void setType(final com.commercetools.models.type.TypeReference type){
       this.type = type;
    }
 

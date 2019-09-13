@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Order.Order;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.order.Order;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderReferenceImpl implements OrderReference {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Order.Order obj;
+   private com.commercetools.models.order.Order obj;
 
    @JsonCreator
-   OrderReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.Order.Order obj) {
+   OrderReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.order.Order obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("order").get();
@@ -41,7 +41,7 @@ public final class OrderReferenceImpl implements OrderReference {
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    
@@ -51,7 +51,7 @@ public final class OrderReferenceImpl implements OrderReference {
    }
    
    
-   public com.commercetools.models.Order.Order getObj(){
+   public com.commercetools.models.order.Order getObj(){
       return this.obj;
    }
 
@@ -59,7 +59,7 @@ public final class OrderReferenceImpl implements OrderReference {
       this.id = id;
    }
    
-   public void setObj(final com.commercetools.models.Order.Order obj){
+   public void setObj(final com.commercetools.models.order.Order obj){
       this.obj = obj;
    }
 

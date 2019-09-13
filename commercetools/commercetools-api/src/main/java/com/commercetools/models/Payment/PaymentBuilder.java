@@ -1,14 +1,14 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.Customer.CustomerReference;
-import com.commercetools.models.Payment.PaymentMethodInfo;
-import com.commercetools.models.Payment.PaymentStatus;
-import com.commercetools.models.Payment.Transaction;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.customer.CustomerReference;
+import com.commercetools.models.payment.PaymentMethodInfo;
+import com.commercetools.models.payment.PaymentStatus;
+import com.commercetools.models.payment.Transaction;
+import com.commercetools.models.type.CustomFields;
 import java.lang.String;
-import com.commercetools.models.Payment.Payment;
+import com.commercetools.models.payment.Payment;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -29,22 +29,22 @@ public final class PaymentBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
    @Nullable
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
-   private com.commercetools.models.Common.TypedMoney amountAuthorized;
+   private com.commercetools.models.common.TypedMoney amountAuthorized;
    
    @Nullable
    private java.lang.String anonymousId;
    
    
-   private com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo;
+   private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
    private java.lang.String authorizedUntil;
@@ -53,19 +53,19 @@ public final class PaymentBuilder {
    private java.lang.String externalId;
    
    
-   private java.util.List<com.commercetools.models.Payment.Transaction> transactions;
+   private java.util.List<com.commercetools.models.payment.Transaction> transactions;
    
    @Nullable
-   private com.commercetools.models.Common.TypedMoney amountPaid;
+   private com.commercetools.models.common.TypedMoney amountPaid;
    
    @Nullable
-   private com.commercetools.models.Common.TypedMoney amountRefunded;
+   private com.commercetools.models.common.TypedMoney amountRefunded;
    
    
-   private com.commercetools.models.Common.TypedMoney amountPlanned;
+   private com.commercetools.models.common.TypedMoney amountPlanned;
    
    
-   private java.util.List<com.commercetools.models.Type.CustomFields> interfaceInteractions;
+   private java.util.List<com.commercetools.models.type.CustomFields> interfaceInteractions;
    
    @Nullable
    private java.lang.String interfaceId;
@@ -74,10 +74,10 @@ public final class PaymentBuilder {
    private java.lang.String key;
    
    
-   private com.commercetools.models.Payment.PaymentStatus paymentStatus;
+   private com.commercetools.models.payment.PaymentStatus paymentStatus;
    
    @Nullable
-   private com.commercetools.models.Customer.CustomerReference customer;
+   private com.commercetools.models.customer.CustomerReference customer;
    
    public PaymentBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -99,17 +99,17 @@ public final class PaymentBuilder {
       return this;
    }
    
-   public PaymentBuilder createdBy(@Nullable final com.commercetools.models.Common.CreatedBy createdBy) {
+   public PaymentBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
       this.createdBy = createdBy;
       return this;
    }
    
-   public PaymentBuilder lastModifiedBy(@Nullable final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   public PaymentBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
    
-   public PaymentBuilder amountAuthorized(@Nullable final com.commercetools.models.Common.TypedMoney amountAuthorized) {
+   public PaymentBuilder amountAuthorized(@Nullable final com.commercetools.models.common.TypedMoney amountAuthorized) {
       this.amountAuthorized = amountAuthorized;
       return this;
    }
@@ -119,12 +119,12 @@ public final class PaymentBuilder {
       return this;
    }
    
-   public PaymentBuilder paymentMethodInfo( final com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo) {
+   public PaymentBuilder paymentMethodInfo( final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo) {
       this.paymentMethodInfo = paymentMethodInfo;
       return this;
    }
    
-   public PaymentBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public PaymentBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
@@ -139,27 +139,27 @@ public final class PaymentBuilder {
       return this;
    }
    
-   public PaymentBuilder transactions( final java.util.List<com.commercetools.models.Payment.Transaction> transactions) {
+   public PaymentBuilder transactions( final java.util.List<com.commercetools.models.payment.Transaction> transactions) {
       this.transactions = transactions;
       return this;
    }
    
-   public PaymentBuilder amountPaid(@Nullable final com.commercetools.models.Common.TypedMoney amountPaid) {
+   public PaymentBuilder amountPaid(@Nullable final com.commercetools.models.common.TypedMoney amountPaid) {
       this.amountPaid = amountPaid;
       return this;
    }
    
-   public PaymentBuilder amountRefunded(@Nullable final com.commercetools.models.Common.TypedMoney amountRefunded) {
+   public PaymentBuilder amountRefunded(@Nullable final com.commercetools.models.common.TypedMoney amountRefunded) {
       this.amountRefunded = amountRefunded;
       return this;
    }
    
-   public PaymentBuilder amountPlanned( final com.commercetools.models.Common.TypedMoney amountPlanned) {
+   public PaymentBuilder amountPlanned( final com.commercetools.models.common.TypedMoney amountPlanned) {
       this.amountPlanned = amountPlanned;
       return this;
    }
    
-   public PaymentBuilder interfaceInteractions( final java.util.List<com.commercetools.models.Type.CustomFields> interfaceInteractions) {
+   public PaymentBuilder interfaceInteractions( final java.util.List<com.commercetools.models.type.CustomFields> interfaceInteractions) {
       this.interfaceInteractions = interfaceInteractions;
       return this;
    }
@@ -174,12 +174,12 @@ public final class PaymentBuilder {
       return this;
    }
    
-   public PaymentBuilder paymentStatus( final com.commercetools.models.Payment.PaymentStatus paymentStatus) {
+   public PaymentBuilder paymentStatus( final com.commercetools.models.payment.PaymentStatus paymentStatus) {
       this.paymentStatus = paymentStatus;
       return this;
    }
    
-   public PaymentBuilder customer(@Nullable final com.commercetools.models.Customer.CustomerReference customer) {
+   public PaymentBuilder customer(@Nullable final com.commercetools.models.customer.CustomerReference customer) {
       this.customer = customer;
       return this;
    }
@@ -205,17 +205,17 @@ public final class PaymentBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.TypedMoney getAmountAuthorized(){
+   public com.commercetools.models.common.TypedMoney getAmountAuthorized(){
       return this.amountAuthorized;
    }
    
@@ -225,12 +225,12 @@ public final class PaymentBuilder {
    }
    
    
-   public com.commercetools.models.Payment.PaymentMethodInfo getPaymentMethodInfo(){
+   public com.commercetools.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
       return this.paymentMethodInfo;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
@@ -245,27 +245,27 @@ public final class PaymentBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Payment.Transaction> getTransactions(){
+   public java.util.List<com.commercetools.models.payment.Transaction> getTransactions(){
       return this.transactions;
    }
    
    @Nullable
-   public com.commercetools.models.Common.TypedMoney getAmountPaid(){
+   public com.commercetools.models.common.TypedMoney getAmountPaid(){
       return this.amountPaid;
    }
    
    @Nullable
-   public com.commercetools.models.Common.TypedMoney getAmountRefunded(){
+   public com.commercetools.models.common.TypedMoney getAmountRefunded(){
       return this.amountRefunded;
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getAmountPlanned(){
+   public com.commercetools.models.common.TypedMoney getAmountPlanned(){
       return this.amountPlanned;
    }
    
    
-   public java.util.List<com.commercetools.models.Type.CustomFields> getInterfaceInteractions(){
+   public java.util.List<com.commercetools.models.type.CustomFields> getInterfaceInteractions(){
       return this.interfaceInteractions;
    }
    
@@ -280,12 +280,12 @@ public final class PaymentBuilder {
    }
    
    
-   public com.commercetools.models.Payment.PaymentStatus getPaymentStatus(){
+   public com.commercetools.models.payment.PaymentStatus getPaymentStatus(){
       return this.paymentStatus;
    }
    
    @Nullable
-   public com.commercetools.models.Customer.CustomerReference getCustomer(){
+   public com.commercetools.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
 

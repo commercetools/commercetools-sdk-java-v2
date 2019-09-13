@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Store.StoreKeyReference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.store.StoreKeyReference;
 import java.lang.String;
 
 
@@ -17,7 +17,7 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Store.StoreKeyReferenceImpl.class, name = "store")
+   @JsonSubTypes.Type(value = com.commercetools.models.store.StoreKeyReferenceImpl.class, name = "store")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

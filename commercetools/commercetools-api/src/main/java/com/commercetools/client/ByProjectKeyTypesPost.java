@@ -26,9 +26,9 @@ public class ByProjectKeyTypesPost {
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
-   private com.commercetools.models.Type.TypeDraft typeDraft;
+   private com.commercetools.models.type.TypeDraft typeDraft;
    
-   public ByProjectKeyTypesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Type.TypeDraft typeDraft){
+   public ByProjectKeyTypesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.type.TypeDraft typeDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.typeDraft = typeDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyTypesPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Type.Type> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.type.Type> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyTypesPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Type.Type>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.type.Type>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Type.Type.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.type.Type.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

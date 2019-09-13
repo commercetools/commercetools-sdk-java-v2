@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -31,12 +31,12 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
    
    private java.lang.Object fields;
    
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
    
    private java.lang.String assetKey;
 
    @JsonCreator
-   CategorySetAssetCustomTypeActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("fields") final java.lang.Object fields, @JsonProperty("type") final com.commercetools.models.Type.TypeResourceIdentifier type, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   CategorySetAssetCustomTypeActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("fields") final java.lang.Object fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type, @JsonProperty("assetKey") final java.lang.String assetKey) {
       this.assetId = assetId;
       this.fields = fields;
       this.type = type;
@@ -63,7 +63,7 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
    }
    
    
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
    
@@ -80,7 +80,7 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
       this.fields = fields;
    }
    
-   public void setType(final com.commercetools.models.Type.TypeResourceIdentifier type){
+   public void setType(final com.commercetools.models.type.TypeResourceIdentifier type){
       this.type = type;
    }
    

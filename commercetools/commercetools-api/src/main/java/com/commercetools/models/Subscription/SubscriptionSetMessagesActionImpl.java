@@ -1,7 +1,7 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.MessageSubscription;
-import com.commercetools.models.Subscription.SubscriptionUpdateAction;
+import com.commercetools.models.subscription.MessageSubscription;
+import com.commercetools.models.subscription.SubscriptionUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class SubscriptionSetMessagesActionImpl implements SubscriptionSetM
 
    private java.lang.String action;
    
-   private java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages;
+   private java.util.List<com.commercetools.models.subscription.MessageSubscription> messages;
 
    @JsonCreator
-   SubscriptionSetMessagesActionImpl(@JsonProperty("messages") final java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages) {
+   SubscriptionSetMessagesActionImpl(@JsonProperty("messages") final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages) {
       this.messages = messages;
       this.action = "setMessages";
    }
@@ -43,11 +43,11 @@ public final class SubscriptionSetMessagesActionImpl implements SubscriptionSetM
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.MessageSubscription> getMessages(){
+   public java.util.List<com.commercetools.models.subscription.MessageSubscription> getMessages(){
       return this.messages;
    }
 
-   public void setMessages(final java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages){
+   public void setMessages(final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages){
       this.messages = messages;
    }
 

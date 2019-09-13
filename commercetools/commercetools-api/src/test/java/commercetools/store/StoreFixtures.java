@@ -1,8 +1,8 @@
 package commercetools.store;
 
-import com.commercetools.models.Store.Store;
-import com.commercetools.models.Store.StoreDraft;
-import com.commercetools.models.Store.StoreDraftBuilder;
+import com.commercetools.models.store.Store;
+import com.commercetools.models.store.StoreDraft;
+import com.commercetools.models.store.StoreDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

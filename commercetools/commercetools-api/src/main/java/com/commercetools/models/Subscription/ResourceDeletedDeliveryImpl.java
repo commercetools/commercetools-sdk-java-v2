@@ -1,6 +1,6 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.SubscriptionDelivery;
+import com.commercetools.models.subscription.SubscriptionDelivery;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
@@ -27,9 +27,9 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
 
    private java.lang.String projectKey;
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    private java.lang.String notificationType;
    
@@ -38,7 +38,7 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
    private java.lang.Long version;
 
    @JsonCreator
-   ResourceDeletedDeliveryImpl(@JsonProperty("projectKey") final java.lang.String projectKey, @JsonProperty("resource") final com.commercetools.models.Common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("modifiedAt") final java.time.ZonedDateTime modifiedAt, @JsonProperty("version") final java.lang.Long version) {
+   ResourceDeletedDeliveryImpl(@JsonProperty("projectKey") final java.lang.String projectKey, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("modifiedAt") final java.time.ZonedDateTime modifiedAt, @JsonProperty("version") final java.lang.Long version) {
       this.projectKey = projectKey;
       this.resource = resource;
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
@@ -56,12 +56,12 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -84,11 +84,11 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
       this.projectKey = projectKey;
    }
    
-   public void setResource(final com.commercetools.models.Common.Reference resource){
+   public void setResource(final com.commercetools.models.common.Reference resource){
       this.resource = resource;
    }
    
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    

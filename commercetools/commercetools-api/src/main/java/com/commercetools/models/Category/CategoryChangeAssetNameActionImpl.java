@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,12 +28,12 @@ public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAs
    
    private java.lang.String assetId;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    private java.lang.String assetKey;
 
    @JsonCreator
-   CategoryChangeAssetNameActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   CategoryChangeAssetNameActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("assetKey") final java.lang.String assetKey) {
       this.assetId = assetId;
       this.name = name;
       this.assetKey = assetKey;
@@ -54,7 +54,7 @@ public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAs
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -67,7 +67,7 @@ public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAs
       this.assetId = assetId;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    

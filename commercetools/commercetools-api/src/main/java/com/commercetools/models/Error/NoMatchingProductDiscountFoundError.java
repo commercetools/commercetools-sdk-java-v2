@@ -1,8 +1,8 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.String;
-import com.commercetools.models.Error.NoMatchingProductDiscountFoundErrorImpl;
+import com.commercetools.models.error.NoMatchingProductDiscountFoundErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

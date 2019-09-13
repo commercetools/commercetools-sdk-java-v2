@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Order.DeliveryItem;
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ParcelDraft;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.order.DeliveryItem;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ParcelDraft;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,14 +28,14 @@ public final class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction 
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
-   private java.util.List<com.commercetools.models.Order.DeliveryItem> items;
+   private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
-   private java.util.List<com.commercetools.models.Order.ParcelDraft> parcels;
+   private java.util.List<com.commercetools.models.order.ParcelDraft> parcels;
 
    @JsonCreator
-   OrderAddDeliveryActionImpl(@JsonProperty("address") final com.commercetools.models.Common.Address address, @JsonProperty("items") final java.util.List<com.commercetools.models.Order.DeliveryItem> items, @JsonProperty("parcels") final java.util.List<com.commercetools.models.Order.ParcelDraft> parcels) {
+   OrderAddDeliveryActionImpl(@JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("parcels") final java.util.List<com.commercetools.models.order.ParcelDraft> parcels) {
       this.address = address;
       this.items = items;
       this.parcels = parcels;
@@ -51,29 +51,29 @@ public final class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction 
    }
    
    
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
    
    
-   public java.util.List<com.commercetools.models.Order.DeliveryItem> getItems(){
+   public java.util.List<com.commercetools.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
    
-   public java.util.List<com.commercetools.models.Order.ParcelDraft> getParcels(){
+   public java.util.List<com.commercetools.models.order.ParcelDraft> getParcels(){
       return this.parcels;
    }
 
-   public void setAddress(final com.commercetools.models.Common.Address address){
+   public void setAddress(final com.commercetools.models.common.Address address){
       this.address = address;
    }
    
-   public void setItems(final java.util.List<com.commercetools.models.Order.DeliveryItem> items){
+   public void setItems(final java.util.List<com.commercetools.models.order.DeliveryItem> items){
       this.items = items;
    }
    
-   public void setParcels(final java.util.List<com.commercetools.models.Order.ParcelDraft> parcels){
+   public void setParcels(final java.util.List<com.commercetools.models.order.ParcelDraft> parcels){
       this.parcels = parcels;
    }
 

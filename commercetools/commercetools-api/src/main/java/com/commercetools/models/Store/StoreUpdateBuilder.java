@@ -1,8 +1,8 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Store.StoreUpdateAction;
+import com.commercetools.models.store.StoreUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Store.StoreUpdate;
+import com.commercetools.models.store.StoreUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class StoreUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Store.StoreUpdateAction> actions;
+   private java.util.List<com.commercetools.models.store.StoreUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public StoreUpdateBuilder actions( final java.util.List<com.commercetools.models.Store.StoreUpdateAction> actions) {
+   public StoreUpdateBuilder actions( final java.util.List<com.commercetools.models.store.StoreUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class StoreUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Store.StoreUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.store.StoreUpdateAction> getActions(){
       return this.actions;
    }
    

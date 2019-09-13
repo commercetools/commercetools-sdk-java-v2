@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
 import java.lang.String;
-import com.commercetools.models.Product.SuggestionImpl;
+import com.commercetools.models.product.SuggestionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

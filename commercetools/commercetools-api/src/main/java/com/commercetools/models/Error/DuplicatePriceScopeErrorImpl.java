@@ -1,7 +1,7 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Common.Price;
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.common.Price;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeEr
    
    private java.lang.String message;
    
-   private java.util.List<com.commercetools.models.Common.Price> conflictingPrices;
+   private java.util.List<com.commercetools.models.common.Price> conflictingPrices;
 
    @JsonCreator
-   DuplicatePriceScopeErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("conflictingPrices") final java.util.List<com.commercetools.models.Common.Price> conflictingPrices) {
+   DuplicatePriceScopeErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("conflictingPrices") final java.util.List<com.commercetools.models.common.Price> conflictingPrices) {
       this.message = message;
       this.conflictingPrices = conflictingPrices;
       this.code = "DuplicatePriceScope";
@@ -51,7 +51,7 @@ public final class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeEr
    }
    
    
-   public java.util.List<com.commercetools.models.Common.Price> getConflictingPrices(){
+   public java.util.List<com.commercetools.models.common.Price> getConflictingPrices(){
       return this.conflictingPrices;
    }
 
@@ -59,7 +59,7 @@ public final class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeEr
       this.message = message;
    }
    
-   public void setConflictingPrices(final java.util.List<com.commercetools.models.Common.Price> conflictingPrices){
+   public void setConflictingPrices(final java.util.List<com.commercetools.models.common.Price> conflictingPrices){
       this.conflictingPrices = conflictingPrices;
    }
 

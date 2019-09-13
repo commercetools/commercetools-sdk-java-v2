@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.AssetSource;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.AssetSource;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class ProductSetAssetSourcesActionImpl implements ProductSetAssetSo
 
    private java.lang.String action;
    
-   private java.util.List<com.commercetools.models.Common.AssetSource> sources;
+   private java.util.List<com.commercetools.models.common.AssetSource> sources;
    
    private java.lang.String assetId;
    
@@ -41,7 +41,7 @@ public final class ProductSetAssetSourcesActionImpl implements ProductSetAssetSo
    private java.lang.String assetKey;
 
    @JsonCreator
-   ProductSetAssetSourcesActionImpl(@JsonProperty("sources") final java.util.List<com.commercetools.models.Common.AssetSource> sources, @JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   ProductSetAssetSourcesActionImpl(@JsonProperty("sources") final java.util.List<com.commercetools.models.common.AssetSource> sources, @JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("assetKey") final java.lang.String assetKey) {
       this.sources = sources;
       this.assetId = assetId;
       this.staged = staged;
@@ -60,7 +60,7 @@ public final class ProductSetAssetSourcesActionImpl implements ProductSetAssetSo
    }
    
    
-   public java.util.List<com.commercetools.models.Common.AssetSource> getSources(){
+   public java.util.List<com.commercetools.models.common.AssetSource> getSources(){
       return this.sources;
    }
    
@@ -89,7 +89,7 @@ public final class ProductSetAssetSourcesActionImpl implements ProductSetAssetSo
       return this.assetKey;
    }
 
-   public void setSources(final java.util.List<com.commercetools.models.Common.AssetSource> sources){
+   public void setSources(final java.util.List<com.commercetools.models.common.AssetSource> sources){
       this.sources = sources;
    }
    

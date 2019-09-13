@@ -1,6 +1,6 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.ZoneUpdateAction;
+import com.commercetools.models.zone.ZoneUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneUpdateImpl implements ZoneUpdate {
 
-   private java.util.List<com.commercetools.models.Zone.ZoneUpdateAction> actions;
+   private java.util.List<com.commercetools.models.zone.ZoneUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   ZoneUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Zone.ZoneUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   ZoneUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.zone.ZoneUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class ZoneUpdateImpl implements ZoneUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Zone.ZoneUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.zone.ZoneUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class ZoneUpdateImpl implements ZoneUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Zone.ZoneUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.zone.ZoneUpdateAction> actions){
       this.actions = actions;
    }
    

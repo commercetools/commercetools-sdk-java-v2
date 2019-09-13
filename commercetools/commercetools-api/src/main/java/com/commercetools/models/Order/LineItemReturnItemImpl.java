@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.ReturnItem;
+import com.commercetools.models.order.ReturnItem;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LineItemReturnItemImpl implements LineItemReturnItem {
 
-   private com.commercetools.models.Order.ReturnShipmentState shipmentState;
+   private com.commercetools.models.order.ReturnShipmentState shipmentState;
    
    private java.time.ZonedDateTime createdAt;
    
@@ -35,14 +35,14 @@ public final class LineItemReturnItemImpl implements LineItemReturnItem {
    
    private java.lang.String id;
    
-   private com.commercetools.models.Order.ReturnPaymentState paymentState;
+   private com.commercetools.models.order.ReturnPaymentState paymentState;
    
    private java.lang.String type;
    
    private java.lang.String lineItemId;
 
    @JsonCreator
-   LineItemReturnItemImpl(@JsonProperty("shipmentState") final com.commercetools.models.Order.ReturnShipmentState shipmentState, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("comment") final java.lang.String comment, @JsonProperty("id") final java.lang.String id, @JsonProperty("paymentState") final com.commercetools.models.Order.ReturnPaymentState paymentState, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
+   LineItemReturnItemImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ReturnShipmentState shipmentState, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("comment") final java.lang.String comment, @JsonProperty("id") final java.lang.String id, @JsonProperty("paymentState") final com.commercetools.models.order.ReturnPaymentState paymentState, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
       this.shipmentState = shipmentState;
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
@@ -58,7 +58,7 @@ public final class LineItemReturnItemImpl implements LineItemReturnItem {
    }
    
    
-   public com.commercetools.models.Order.ReturnShipmentState getShipmentState(){
+   public com.commercetools.models.order.ReturnShipmentState getShipmentState(){
       return this.shipmentState;
    }
    
@@ -88,7 +88,7 @@ public final class LineItemReturnItemImpl implements LineItemReturnItem {
    }
    
    
-   public com.commercetools.models.Order.ReturnPaymentState getPaymentState(){
+   public com.commercetools.models.order.ReturnPaymentState getPaymentState(){
       return this.paymentState;
    }
    
@@ -102,7 +102,7 @@ public final class LineItemReturnItemImpl implements LineItemReturnItem {
       return this.lineItemId;
    }
 
-   public void setShipmentState(final com.commercetools.models.Order.ReturnShipmentState shipmentState){
+   public void setShipmentState(final com.commercetools.models.order.ReturnShipmentState shipmentState){
       this.shipmentState = shipmentState;
    }
    
@@ -126,7 +126,7 @@ public final class LineItemReturnItemImpl implements LineItemReturnItem {
       this.id = id;
    }
    
-   public void setPaymentState(final com.commercetools.models.Order.ReturnPaymentState paymentState){
+   public void setPaymentState(final com.commercetools.models.order.ReturnPaymentState paymentState){
       this.paymentState = paymentState;
    }
    

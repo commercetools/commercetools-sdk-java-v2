@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.ReturnShipmentState;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.ReturnShipmentState;
 import java.lang.String;
-import com.commercetools.models.Message.OrderReturnShipmentStateChangedMessagePayload;
+import com.commercetools.models.message.OrderReturnShipmentStateChangedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class OrderReturnShipmentStateChangedMessagePayloadBuilder {
    private java.lang.String returnItemId;
    
    
-   private com.commercetools.models.Order.ReturnShipmentState returnShipmentState;
+   private com.commercetools.models.order.ReturnShipmentState returnShipmentState;
    
    public OrderReturnShipmentStateChangedMessagePayloadBuilder returnItemId( final java.lang.String returnItemId) {
       this.returnItemId = returnItemId;
       return this;
    }
    
-   public OrderReturnShipmentStateChangedMessagePayloadBuilder returnShipmentState( final com.commercetools.models.Order.ReturnShipmentState returnShipmentState) {
+   public OrderReturnShipmentStateChangedMessagePayloadBuilder returnShipmentState( final com.commercetools.models.order.ReturnShipmentState returnShipmentState) {
       this.returnShipmentState = returnShipmentState;
       return this;
    }
@@ -33,7 +33,7 @@ public final class OrderReturnShipmentStateChangedMessagePayloadBuilder {
    }
    
    
-   public com.commercetools.models.Order.ReturnShipmentState getReturnShipmentState(){
+   public com.commercetools.models.order.ReturnShipmentState getReturnShipmentState(){
       return this.returnShipmentState;
    }
 

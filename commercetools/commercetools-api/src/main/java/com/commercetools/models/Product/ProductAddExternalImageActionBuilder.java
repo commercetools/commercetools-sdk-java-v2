@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.Image;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.Image;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Product.ProductAddExternalImageAction;
+import com.commercetools.models.product.ProductAddExternalImageAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.time.ZonedDateTime;
 public final class ProductAddExternalImageActionBuilder {
    
    
-   private com.commercetools.models.Common.Image image;
+   private com.commercetools.models.common.Image image;
    
    @Nullable
    private java.lang.Boolean staged;
@@ -25,7 +25,7 @@ public final class ProductAddExternalImageActionBuilder {
    @Nullable
    private java.lang.String sku;
    
-   public ProductAddExternalImageActionBuilder image( final com.commercetools.models.Common.Image image) {
+   public ProductAddExternalImageActionBuilder image( final com.commercetools.models.common.Image image) {
       this.image = image;
       return this;
    }
@@ -46,7 +46,7 @@ public final class ProductAddExternalImageActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.Image getImage(){
+   public com.commercetools.models.common.Image getImage(){
       return this.image;
    }
    

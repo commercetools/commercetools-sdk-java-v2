@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ItemShippingTarget;
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
+import com.commercetools.models.cart.ItemShippingTarget;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ItemShippingDetailsDraftBuilder {
    
    
-   private java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targets;
+   private java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets;
    
-   public ItemShippingDetailsDraftBuilder targets( final java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targets) {
+   public ItemShippingDetailsDraftBuilder targets( final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets) {
       this.targets = targets;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.ItemShippingTarget> getTargets(){
+   public java.util.List<com.commercetools.models.cart.ItemShippingTarget> getTargets(){
       return this.targets;
    }
 

@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.message.Message;
 import java.lang.String;
-import com.commercetools.models.Message.DeliveryAddressSetMessageImpl;
+import com.commercetools.models.message.DeliveryAddressSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

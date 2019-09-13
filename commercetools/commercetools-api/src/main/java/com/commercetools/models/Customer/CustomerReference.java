@@ -1,9 +1,9 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Customer.Customer;
-import com.commercetools.models.Customer.CustomerReferenceImpl;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.customer.Customer;
+import com.commercetools.models.customer.CustomerReferenceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.State.StateResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.state.StateResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductTransitionStateAction;
+import com.commercetools.models.product.ProductTransitionStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +16,14 @@ public final class ProductTransitionStateActionBuilder {
    private java.lang.Boolean force;
    
    @Nullable
-   private com.commercetools.models.State.StateResourceIdentifier state;
+   private com.commercetools.models.state.StateResourceIdentifier state;
    
    public ProductTransitionStateActionBuilder force(@Nullable final java.lang.Boolean force) {
       this.force = force;
       return this;
    }
    
-   public ProductTransitionStateActionBuilder state(@Nullable final com.commercetools.models.State.StateResourceIdentifier state) {
+   public ProductTransitionStateActionBuilder state(@Nullable final com.commercetools.models.state.StateResourceIdentifier state) {
       this.state = state;
       return this;
    }
@@ -34,7 +34,7 @@ public final class ProductTransitionStateActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.State.StateResourceIdentifier getState(){
+   public com.commercetools.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
 

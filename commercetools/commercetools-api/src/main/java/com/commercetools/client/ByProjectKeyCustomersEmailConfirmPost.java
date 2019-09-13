@@ -26,9 +26,9 @@ public class ByProjectKeyCustomersEmailConfirmPost {
    
    private String projectKey;
    
-   private com.commercetools.models.Customer.CustomerEmailVerify customerEmailVerify;
+   private com.commercetools.models.customer.CustomerEmailVerify customerEmailVerify;
    
-   public ByProjectKeyCustomersEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Customer.CustomerEmailVerify customerEmailVerify){
+   public ByProjectKeyCustomersEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.customer.CustomerEmailVerify customerEmailVerify){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.customerEmailVerify = customerEmailVerify;

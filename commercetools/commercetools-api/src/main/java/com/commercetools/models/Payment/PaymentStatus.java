@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.state.StateReference;
 import java.lang.String;
-import com.commercetools.models.Payment.PaymentStatusImpl;
+import com.commercetools.models.payment.PaymentStatusImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

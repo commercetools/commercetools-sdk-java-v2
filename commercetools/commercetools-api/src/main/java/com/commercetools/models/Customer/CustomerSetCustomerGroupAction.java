@@ -1,9 +1,9 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerUpdateAction;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
+import com.commercetools.models.customer.CustomerUpdateAction;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerSetCustomerGroupActionImpl;
+import com.commercetools.models.customer.CustomerSetCustomerGroupActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

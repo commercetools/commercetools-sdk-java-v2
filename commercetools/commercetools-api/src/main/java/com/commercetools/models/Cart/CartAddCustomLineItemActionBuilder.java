@@ -1,14 +1,14 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.CartAddCustomLineItemAction;
+import com.commercetools.models.cart.CartAddCustomLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,27 +17,27 @@ import java.time.ZonedDateTime;
 public final class CartAddCustomLineItemActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    
    private java.lang.Integer quantity;
    
    
-   private com.commercetools.models.Common.Money money;
+   private com.commercetools.models.common.Money money;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    
    private java.lang.String slug;
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
    
-   public CartAddCustomLineItemActionBuilder externalTaxRate(@Nullable final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate) {
+   public CartAddCustomLineItemActionBuilder externalTaxRate(@Nullable final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.externalTaxRate = externalTaxRate;
       return this;
    }
@@ -47,17 +47,17 @@ public final class CartAddCustomLineItemActionBuilder {
       return this;
    }
    
-   public CartAddCustomLineItemActionBuilder money( final com.commercetools.models.Common.Money money) {
+   public CartAddCustomLineItemActionBuilder money( final com.commercetools.models.common.Money money) {
       this.money = money;
       return this;
    }
    
-   public CartAddCustomLineItemActionBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public CartAddCustomLineItemActionBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
    
-   public CartAddCustomLineItemActionBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public CartAddCustomLineItemActionBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
@@ -67,13 +67,13 @@ public final class CartAddCustomLineItemActionBuilder {
       return this;
    }
    
-   public CartAddCustomLineItemActionBuilder taxCategory(@Nullable final com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory) {
+   public CartAddCustomLineItemActionBuilder taxCategory(@Nullable final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
       this.taxCategory = taxCategory;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
    
@@ -83,17 +83,17 @@ public final class CartAddCustomLineItemActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.Money getMoney(){
+   public com.commercetools.models.common.Money getMoney(){
       return this.money;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -103,7 +103,7 @@ public final class CartAddCustomLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }
 

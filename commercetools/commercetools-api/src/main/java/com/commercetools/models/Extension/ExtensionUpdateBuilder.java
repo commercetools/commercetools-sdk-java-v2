@@ -1,8 +1,8 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionUpdateAction;
+import com.commercetools.models.extension.ExtensionUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Extension.ExtensionUpdate;
+import com.commercetools.models.extension.ExtensionUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ExtensionUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Extension.ExtensionUpdateAction> actions;
+   private java.util.List<com.commercetools.models.extension.ExtensionUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public ExtensionUpdateBuilder actions( final java.util.List<com.commercetools.models.Extension.ExtensionUpdateAction> actions) {
+   public ExtensionUpdateBuilder actions( final java.util.List<com.commercetools.models.extension.ExtensionUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class ExtensionUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.ExtensionUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.extension.ExtensionUpdateAction> getActions(){
       return this.actions;
    }
    

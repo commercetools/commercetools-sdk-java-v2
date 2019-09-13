@@ -1,6 +1,6 @@
 package commercetools.inventory;
 
-import com.commercetools.models.Inventory.*;
+import com.commercetools.models.inventory.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

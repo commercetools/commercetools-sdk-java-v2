@@ -1,4 +1,4 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
 import java.lang.Object;
 import javax.annotation.Generated;

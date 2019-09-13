@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.Order;
+import com.commercetools.models.order.Order;
 import java.lang.Long;
-import com.commercetools.models.Order.OrderPagedQueryResponseImpl;
+import com.commercetools.models.order.OrderPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

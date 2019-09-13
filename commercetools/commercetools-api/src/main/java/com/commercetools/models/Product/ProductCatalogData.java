@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductData;
+import com.commercetools.models.product.ProductData;
 import java.lang.Boolean;
-import com.commercetools.models.Product.ProductCatalogDataImpl;
+import com.commercetools.models.product.ProductCatalogDataImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

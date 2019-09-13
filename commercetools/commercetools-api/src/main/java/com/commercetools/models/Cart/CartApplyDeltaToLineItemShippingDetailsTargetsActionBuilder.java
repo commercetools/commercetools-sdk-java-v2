@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ItemShippingTarget;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ItemShippingTarget;
 import java.lang.String;
-import com.commercetools.models.Cart.CartApplyDeltaToLineItemShippingDetailsTargetsAction;
+import com.commercetools.models.cart.CartApplyDeltaToLineItemShippingDetailsTargetsAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder {
    private java.lang.String lineItemId;
    
    
-   private java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targetsDelta;
+   private java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta;
    
    public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder lineItemId( final java.lang.String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
    
-   public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta( final java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targetsDelta) {
+   public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta( final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta) {
       this.targetsDelta = targetsDelta;
       return this;
    }
@@ -33,7 +33,7 @@ public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.ItemShippingTarget> getTargetsDelta(){
+   public java.util.List<com.commercetools.models.cart.ItemShippingTarget> getTargetsDelta(){
       return this.targetsDelta;
    }
 

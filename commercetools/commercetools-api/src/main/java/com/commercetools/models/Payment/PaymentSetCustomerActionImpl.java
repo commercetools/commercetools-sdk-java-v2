@@ -1,7 +1,7 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Customer.CustomerResourceIdentifier;
-import com.commercetools.models.Payment.PaymentUpdateAction;
+import com.commercetools.models.customer.CustomerResourceIdentifier;
+import com.commercetools.models.payment.PaymentUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class PaymentSetCustomerActionImpl implements PaymentSetCustomerAct
 
    private java.lang.String action;
    
-   private com.commercetools.models.Customer.CustomerResourceIdentifier customer;
+   private com.commercetools.models.customer.CustomerResourceIdentifier customer;
 
    @JsonCreator
-   PaymentSetCustomerActionImpl(@JsonProperty("customer") final com.commercetools.models.Customer.CustomerResourceIdentifier customer) {
+   PaymentSetCustomerActionImpl(@JsonProperty("customer") final com.commercetools.models.customer.CustomerResourceIdentifier customer) {
       this.customer = customer;
       this.action = "setCustomer";
    }
@@ -43,11 +43,11 @@ public final class PaymentSetCustomerActionImpl implements PaymentSetCustomerAct
    }
    
    
-   public com.commercetools.models.Customer.CustomerResourceIdentifier getCustomer(){
+   public com.commercetools.models.customer.CustomerResourceIdentifier getCustomer(){
       return this.customer;
    }
 
-   public void setCustomer(final com.commercetools.models.Customer.CustomerResourceIdentifier customer){
+   public void setCustomer(final com.commercetools.models.customer.CustomerResourceIdentifier customer){
       this.customer = customer;
    }
 

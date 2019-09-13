@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.ShippingRateInput;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.ShippingRateInput;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderS
 
    private java.lang.String type;
    
-   private com.commercetools.models.Cart.ShippingRateInput shippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInput shippingRateInput;
    
-   private com.commercetools.models.Cart.ShippingRateInput oldShippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInput oldShippingRateInput;
 
    @JsonCreator
-   OrderShippingRateInputSetMessagePayloadImpl(@JsonProperty("shippingRateInput") final com.commercetools.models.Cart.ShippingRateInput shippingRateInput, @JsonProperty("oldShippingRateInput") final com.commercetools.models.Cart.ShippingRateInput oldShippingRateInput) {
+   OrderShippingRateInputSetMessagePayloadImpl(@JsonProperty("shippingRateInput") final com.commercetools.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("oldShippingRateInput") final com.commercetools.models.cart.ShippingRateInput oldShippingRateInput) {
       this.shippingRateInput = shippingRateInput;
       this.oldShippingRateInput = oldShippingRateInput;
       this.type = "OrderShippingRateInputSet";
@@ -46,20 +46,20 @@ public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderS
    }
    
    
-   public com.commercetools.models.Cart.ShippingRateInput getShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInput getShippingRateInput(){
       return this.shippingRateInput;
    }
    
    
-   public com.commercetools.models.Cart.ShippingRateInput getOldShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInput getOldShippingRateInput(){
       return this.oldShippingRateInput;
    }
 
-   public void setShippingRateInput(final com.commercetools.models.Cart.ShippingRateInput shippingRateInput){
+   public void setShippingRateInput(final com.commercetools.models.cart.ShippingRateInput shippingRateInput){
       this.shippingRateInput = shippingRateInput;
    }
    
-   public void setOldShippingRateInput(final com.commercetools.models.Cart.ShippingRateInput oldShippingRateInput){
+   public void setOldShippingRateInput(final com.commercetools.models.cart.ShippingRateInput oldShippingRateInput){
       this.oldShippingRateInput = oldShippingRateInput;
    }
 

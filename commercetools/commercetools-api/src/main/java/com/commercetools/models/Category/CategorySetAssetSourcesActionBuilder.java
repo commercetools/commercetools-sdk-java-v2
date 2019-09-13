@@ -1,9 +1,9 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.AssetSource;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.AssetSource;
 import java.lang.String;
-import com.commercetools.models.Category.CategorySetAssetSourcesAction;
+import com.commercetools.models.category.CategorySetAssetSourcesAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.time.ZonedDateTime;
 public final class CategorySetAssetSourcesActionBuilder {
    
    
-   private java.util.List<com.commercetools.models.Common.AssetSource> sources;
+   private java.util.List<com.commercetools.models.common.AssetSource> sources;
    
    @Nullable
    private java.lang.String assetId;
@@ -20,7 +20,7 @@ public final class CategorySetAssetSourcesActionBuilder {
    @Nullable
    private java.lang.String assetKey;
    
-   public CategorySetAssetSourcesActionBuilder sources( final java.util.List<com.commercetools.models.Common.AssetSource> sources) {
+   public CategorySetAssetSourcesActionBuilder sources( final java.util.List<com.commercetools.models.common.AssetSource> sources) {
       this.sources = sources;
       return this;
    }
@@ -36,7 +36,7 @@ public final class CategorySetAssetSourcesActionBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.AssetSource> getSources(){
+   public java.util.List<com.commercetools.models.common.AssetSource> getSources(){
       return this.sources;
    }
    

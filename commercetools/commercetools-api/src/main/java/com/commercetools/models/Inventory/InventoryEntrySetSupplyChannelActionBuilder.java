@@ -1,9 +1,9 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Inventory.InventoryEntryUpdateAction;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.inventory.InventoryEntryUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Inventory.InventoryEntrySetSupplyChannelAction;
+import com.commercetools.models.inventory.InventoryEntrySetSupplyChannelAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class InventoryEntrySetSupplyChannelActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
-   public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(@Nullable final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel) {
+   public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(@Nullable final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel) {
       this.supplyChannel = supplyChannel;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
 

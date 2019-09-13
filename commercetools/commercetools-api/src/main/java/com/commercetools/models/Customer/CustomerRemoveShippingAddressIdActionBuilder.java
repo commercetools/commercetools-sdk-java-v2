@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerUpdateAction;
+import com.commercetools.models.customer.CustomerUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerRemoveShippingAddressIdAction;
+import com.commercetools.models.customer.CustomerRemoveShippingAddressIdAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

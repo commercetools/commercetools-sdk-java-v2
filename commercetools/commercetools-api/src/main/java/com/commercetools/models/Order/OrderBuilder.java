@@ -1,35 +1,35 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Cart.CartOrigin;
-import com.commercetools.models.Cart.CartReference;
-import com.commercetools.models.Cart.CustomLineItem;
-import com.commercetools.models.Cart.DiscountCodeInfo;
-import com.commercetools.models.Cart.InventoryMode;
-import com.commercetools.models.Cart.LineItem;
-import com.commercetools.models.Cart.RoundingMode;
-import com.commercetools.models.Cart.ShippingInfo;
-import com.commercetools.models.Cart.ShippingRateInput;
-import com.commercetools.models.Cart.TaxCalculationMode;
-import com.commercetools.models.Cart.TaxMode;
-import com.commercetools.models.Cart.TaxedPrice;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Order.OrderState;
-import com.commercetools.models.Order.PaymentInfo;
-import com.commercetools.models.Order.PaymentState;
-import com.commercetools.models.Order.ReturnInfo;
-import com.commercetools.models.Order.ShipmentState;
-import com.commercetools.models.Order.SyncInfo;
-import com.commercetools.models.OrderEdit.StagedOrder;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.Store.StoreKeyReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.cart.CartOrigin;
+import com.commercetools.models.cart.CartReference;
+import com.commercetools.models.cart.CustomLineItem;
+import com.commercetools.models.cart.DiscountCodeInfo;
+import com.commercetools.models.cart.InventoryMode;
+import com.commercetools.models.cart.LineItem;
+import com.commercetools.models.cart.RoundingMode;
+import com.commercetools.models.cart.ShippingInfo;
+import com.commercetools.models.cart.ShippingRateInput;
+import com.commercetools.models.cart.TaxCalculationMode;
+import com.commercetools.models.cart.TaxMode;
+import com.commercetools.models.cart.TaxedPrice;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.order.OrderState;
+import com.commercetools.models.order.PaymentInfo;
+import com.commercetools.models.order.PaymentState;
+import com.commercetools.models.order.ReturnInfo;
+import com.commercetools.models.order.ShipmentState;
+import com.commercetools.models.order.SyncInfo;
+import com.commercetools.models.order_edit.StagedOrder;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.store.StoreKeyReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.Order;
+import com.commercetools.models.order.Order;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -50,13 +50,13 @@ public final class OrderBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
    @Nullable
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
-   private com.commercetools.models.Order.ShipmentState shipmentState;
+   private com.commercetools.models.order.ShipmentState shipmentState;
    
    @Nullable
    private java.lang.String country;
@@ -65,43 +65,43 @@ public final class OrderBuilder {
    private java.lang.String orderNumber;
    
    
-   private com.commercetools.models.Common.Money totalPrice;
+   private com.commercetools.models.common.Money totalPrice;
    
    @Nullable
-   private com.commercetools.models.Cart.ShippingRateInput shippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInput shippingRateInput;
    
    @Nullable
-   private com.commercetools.models.Cart.TaxedPrice taxedPrice;
+   private com.commercetools.models.cart.TaxedPrice taxedPrice;
    
    
-   private com.commercetools.models.Cart.CartOrigin origin;
+   private com.commercetools.models.cart.CartOrigin origin;
    
    @Nullable
-   private com.commercetools.models.Cart.ShippingInfo shippingInfo;
+   private com.commercetools.models.cart.ShippingInfo shippingInfo;
    
    @Nullable
    private java.lang.String locale;
    
    @Nullable
-   private com.commercetools.models.Cart.CartReference cart;
+   private com.commercetools.models.cart.CartReference cart;
    
    @Nullable
-   private com.commercetools.models.Cart.InventoryMode inventoryMode;
+   private com.commercetools.models.cart.InventoryMode inventoryMode;
    
    
-   private com.commercetools.models.Order.OrderState orderState;
-   
-   @Nullable
-   private java.util.List<com.commercetools.models.Order.ReturnInfo> returnInfo;
-   
-   
-   private java.util.List<com.commercetools.models.Cart.LineItem> lineItems;
-   
-   
-   private java.util.List<com.commercetools.models.Cart.CustomLineItem> customLineItems;
+   private com.commercetools.models.order.OrderState orderState;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.Address> itemShippingAddresses;
+   private java.util.List<com.commercetools.models.order.ReturnInfo> returnInfo;
+   
+   
+   private java.util.List<com.commercetools.models.cart.LineItem> lineItems;
+   
+   
+   private java.util.List<com.commercetools.models.cart.CustomLineItem> customLineItems;
+   
+   @Nullable
+   private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
    @Nullable
    private java.lang.String customerEmail;
@@ -110,52 +110,52 @@ public final class OrderBuilder {
    private java.lang.String customerId;
    
    @Nullable
-   private com.commercetools.models.State.StateReference state;
+   private com.commercetools.models.state.StateReference state;
    
    @Nullable
-   private com.commercetools.models.Order.PaymentState paymentState;
+   private com.commercetools.models.order.PaymentState paymentState;
    
    @Nullable
    private java.lang.String anonymousId;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Cart.DiscountCodeInfo> discountCodes;
+   private java.util.List<com.commercetools.models.cart.DiscountCodeInfo> discountCodes;
    
    @Nullable
    private java.time.ZonedDateTime completedAt;
    
    @Nullable
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
-   private com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode;
+   private com.commercetools.models.cart.TaxCalculationMode taxCalculationMode;
    
    @Nullable
-   private com.commercetools.models.Store.StoreKeyReference store;
+   private com.commercetools.models.store.StoreKeyReference store;
    
    
    private java.lang.Long lastMessageSequenceNumber;
    
    
-   private java.util.List<com.commercetools.models.Order.SyncInfo> syncInfo;
+   private java.util.List<com.commercetools.models.order.SyncInfo> syncInfo;
    
    @Nullable
-   private com.commercetools.models.Cart.RoundingMode taxRoundingMode;
+   private com.commercetools.models.cart.RoundingMode taxRoundingMode;
    
    @Nullable
-   private com.commercetools.models.Cart.TaxMode taxMode;
+   private com.commercetools.models.cart.TaxMode taxMode;
    
    @Nullable
-   private com.commercetools.models.Common.Address shippingAddress;
+   private com.commercetools.models.common.Address shippingAddress;
    
    @Nullable
-   private com.commercetools.models.Common.Address billingAddress;
+   private com.commercetools.models.common.Address billingAddress;
    
    @Nullable
-   private com.commercetools.models.Order.PaymentInfo paymentInfo;
+   private com.commercetools.models.order.PaymentInfo paymentInfo;
    
    public OrderBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -177,17 +177,17 @@ public final class OrderBuilder {
       return this;
    }
    
-   public OrderBuilder createdBy(@Nullable final com.commercetools.models.Common.CreatedBy createdBy) {
+   public OrderBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
       this.createdBy = createdBy;
       return this;
    }
    
-   public OrderBuilder lastModifiedBy(@Nullable final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   public OrderBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
    
-   public OrderBuilder shipmentState(@Nullable final com.commercetools.models.Order.ShipmentState shipmentState) {
+   public OrderBuilder shipmentState(@Nullable final com.commercetools.models.order.ShipmentState shipmentState) {
       this.shipmentState = shipmentState;
       return this;
    }
@@ -202,27 +202,27 @@ public final class OrderBuilder {
       return this;
    }
    
-   public OrderBuilder totalPrice( final com.commercetools.models.Common.Money totalPrice) {
+   public OrderBuilder totalPrice( final com.commercetools.models.common.Money totalPrice) {
       this.totalPrice = totalPrice;
       return this;
    }
    
-   public OrderBuilder shippingRateInput(@Nullable final com.commercetools.models.Cart.ShippingRateInput shippingRateInput) {
+   public OrderBuilder shippingRateInput(@Nullable final com.commercetools.models.cart.ShippingRateInput shippingRateInput) {
       this.shippingRateInput = shippingRateInput;
       return this;
    }
    
-   public OrderBuilder taxedPrice(@Nullable final com.commercetools.models.Cart.TaxedPrice taxedPrice) {
+   public OrderBuilder taxedPrice(@Nullable final com.commercetools.models.cart.TaxedPrice taxedPrice) {
       this.taxedPrice = taxedPrice;
       return this;
    }
    
-   public OrderBuilder origin( final com.commercetools.models.Cart.CartOrigin origin) {
+   public OrderBuilder origin( final com.commercetools.models.cart.CartOrigin origin) {
       this.origin = origin;
       return this;
    }
    
-   public OrderBuilder shippingInfo(@Nullable final com.commercetools.models.Cart.ShippingInfo shippingInfo) {
+   public OrderBuilder shippingInfo(@Nullable final com.commercetools.models.cart.ShippingInfo shippingInfo) {
       this.shippingInfo = shippingInfo;
       return this;
    }
@@ -232,37 +232,37 @@ public final class OrderBuilder {
       return this;
    }
    
-   public OrderBuilder cart(@Nullable final com.commercetools.models.Cart.CartReference cart) {
+   public OrderBuilder cart(@Nullable final com.commercetools.models.cart.CartReference cart) {
       this.cart = cart;
       return this;
    }
    
-   public OrderBuilder inventoryMode(@Nullable final com.commercetools.models.Cart.InventoryMode inventoryMode) {
+   public OrderBuilder inventoryMode(@Nullable final com.commercetools.models.cart.InventoryMode inventoryMode) {
       this.inventoryMode = inventoryMode;
       return this;
    }
    
-   public OrderBuilder orderState( final com.commercetools.models.Order.OrderState orderState) {
+   public OrderBuilder orderState( final com.commercetools.models.order.OrderState orderState) {
       this.orderState = orderState;
       return this;
    }
    
-   public OrderBuilder returnInfo(@Nullable final java.util.List<com.commercetools.models.Order.ReturnInfo> returnInfo) {
+   public OrderBuilder returnInfo(@Nullable final java.util.List<com.commercetools.models.order.ReturnInfo> returnInfo) {
       this.returnInfo = returnInfo;
       return this;
    }
    
-   public OrderBuilder lineItems( final java.util.List<com.commercetools.models.Cart.LineItem> lineItems) {
+   public OrderBuilder lineItems( final java.util.List<com.commercetools.models.cart.LineItem> lineItems) {
       this.lineItems = lineItems;
       return this;
    }
    
-   public OrderBuilder customLineItems( final java.util.List<com.commercetools.models.Cart.CustomLineItem> customLineItems) {
+   public OrderBuilder customLineItems( final java.util.List<com.commercetools.models.cart.CustomLineItem> customLineItems) {
       this.customLineItems = customLineItems;
       return this;
    }
    
-   public OrderBuilder itemShippingAddresses(@Nullable final java.util.List<com.commercetools.models.Common.Address> itemShippingAddresses) {
+   public OrderBuilder itemShippingAddresses(@Nullable final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses) {
       this.itemShippingAddresses = itemShippingAddresses;
       return this;
    }
@@ -277,12 +277,12 @@ public final class OrderBuilder {
       return this;
    }
    
-   public OrderBuilder state(@Nullable final com.commercetools.models.State.StateReference state) {
+   public OrderBuilder state(@Nullable final com.commercetools.models.state.StateReference state) {
       this.state = state;
       return this;
    }
    
-   public OrderBuilder paymentState(@Nullable final com.commercetools.models.Order.PaymentState paymentState) {
+   public OrderBuilder paymentState(@Nullable final com.commercetools.models.order.PaymentState paymentState) {
       this.paymentState = paymentState;
       return this;
    }
@@ -292,7 +292,7 @@ public final class OrderBuilder {
       return this;
    }
    
-   public OrderBuilder discountCodes(@Nullable final java.util.List<com.commercetools.models.Cart.DiscountCodeInfo> discountCodes) {
+   public OrderBuilder discountCodes(@Nullable final java.util.List<com.commercetools.models.cart.DiscountCodeInfo> discountCodes) {
       this.discountCodes = discountCodes;
       return this;
    }
@@ -302,22 +302,22 @@ public final class OrderBuilder {
       return this;
    }
    
-   public OrderBuilder customerGroup(@Nullable final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup) {
+   public OrderBuilder customerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupReference customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
    
-   public OrderBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public OrderBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
    
-   public OrderBuilder taxCalculationMode(@Nullable final com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode) {
+   public OrderBuilder taxCalculationMode(@Nullable final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode) {
       this.taxCalculationMode = taxCalculationMode;
       return this;
    }
    
-   public OrderBuilder store(@Nullable final com.commercetools.models.Store.StoreKeyReference store) {
+   public OrderBuilder store(@Nullable final com.commercetools.models.store.StoreKeyReference store) {
       this.store = store;
       return this;
    }
@@ -327,32 +327,32 @@ public final class OrderBuilder {
       return this;
    }
    
-   public OrderBuilder syncInfo( final java.util.List<com.commercetools.models.Order.SyncInfo> syncInfo) {
+   public OrderBuilder syncInfo( final java.util.List<com.commercetools.models.order.SyncInfo> syncInfo) {
       this.syncInfo = syncInfo;
       return this;
    }
    
-   public OrderBuilder taxRoundingMode(@Nullable final com.commercetools.models.Cart.RoundingMode taxRoundingMode) {
+   public OrderBuilder taxRoundingMode(@Nullable final com.commercetools.models.cart.RoundingMode taxRoundingMode) {
       this.taxRoundingMode = taxRoundingMode;
       return this;
    }
    
-   public OrderBuilder taxMode(@Nullable final com.commercetools.models.Cart.TaxMode taxMode) {
+   public OrderBuilder taxMode(@Nullable final com.commercetools.models.cart.TaxMode taxMode) {
       this.taxMode = taxMode;
       return this;
    }
    
-   public OrderBuilder shippingAddress(@Nullable final com.commercetools.models.Common.Address shippingAddress) {
+   public OrderBuilder shippingAddress(@Nullable final com.commercetools.models.common.Address shippingAddress) {
       this.shippingAddress = shippingAddress;
       return this;
    }
    
-   public OrderBuilder billingAddress(@Nullable final com.commercetools.models.Common.Address billingAddress) {
+   public OrderBuilder billingAddress(@Nullable final com.commercetools.models.common.Address billingAddress) {
       this.billingAddress = billingAddress;
       return this;
    }
    
-   public OrderBuilder paymentInfo(@Nullable final com.commercetools.models.Order.PaymentInfo paymentInfo) {
+   public OrderBuilder paymentInfo(@Nullable final com.commercetools.models.order.PaymentInfo paymentInfo) {
       this.paymentInfo = paymentInfo;
       return this;
    }
@@ -378,17 +378,17 @@ public final class OrderBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    @Nullable
-   public com.commercetools.models.Order.ShipmentState getShipmentState(){
+   public com.commercetools.models.order.ShipmentState getShipmentState(){
       return this.shipmentState;
    }
    
@@ -403,27 +403,27 @@ public final class OrderBuilder {
    }
    
    
-   public com.commercetools.models.Common.Money getTotalPrice(){
+   public com.commercetools.models.common.Money getTotalPrice(){
       return this.totalPrice;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ShippingRateInput getShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInput getShippingRateInput(){
       return this.shippingRateInput;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.TaxedPrice getTaxedPrice(){
+   public com.commercetools.models.cart.TaxedPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
    
-   public com.commercetools.models.Cart.CartOrigin getOrigin(){
+   public com.commercetools.models.cart.CartOrigin getOrigin(){
       return this.origin;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ShippingInfo getShippingInfo(){
+   public com.commercetools.models.cart.ShippingInfo getShippingInfo(){
       return this.shippingInfo;
    }
    
@@ -433,37 +433,37 @@ public final class OrderBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.CartReference getCart(){
+   public com.commercetools.models.cart.CartReference getCart(){
       return this.cart;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.InventoryMode getInventoryMode(){
+   public com.commercetools.models.cart.InventoryMode getInventoryMode(){
       return this.inventoryMode;
    }
    
    
-   public com.commercetools.models.Order.OrderState getOrderState(){
+   public com.commercetools.models.order.OrderState getOrderState(){
       return this.orderState;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Order.ReturnInfo> getReturnInfo(){
+   public java.util.List<com.commercetools.models.order.ReturnInfo> getReturnInfo(){
       return this.returnInfo;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.LineItem> getLineItems(){
+   public java.util.List<com.commercetools.models.cart.LineItem> getLineItems(){
       return this.lineItems;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.CustomLineItem> getCustomLineItems(){
+   public java.util.List<com.commercetools.models.cart.CustomLineItem> getCustomLineItems(){
       return this.customLineItems;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.Address> getItemShippingAddresses(){
+   public java.util.List<com.commercetools.models.common.Address> getItemShippingAddresses(){
       return this.itemShippingAddresses;
    }
    
@@ -478,12 +478,12 @@ public final class OrderBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.State.StateReference getState(){
+   public com.commercetools.models.state.StateReference getState(){
       return this.state;
    }
    
    @Nullable
-   public com.commercetools.models.Order.PaymentState getPaymentState(){
+   public com.commercetools.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
    
@@ -493,7 +493,7 @@ public final class OrderBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Cart.DiscountCodeInfo> getDiscountCodes(){
+   public java.util.List<com.commercetools.models.cart.DiscountCodeInfo> getDiscountCodes(){
       return this.discountCodes;
    }
    
@@ -503,22 +503,22 @@ public final class OrderBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.TaxCalculationMode getTaxCalculationMode(){
+   public com.commercetools.models.cart.TaxCalculationMode getTaxCalculationMode(){
       return this.taxCalculationMode;
    }
    
    @Nullable
-   public com.commercetools.models.Store.StoreKeyReference getStore(){
+   public com.commercetools.models.store.StoreKeyReference getStore(){
       return this.store;
    }
    
@@ -528,32 +528,32 @@ public final class OrderBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.SyncInfo> getSyncInfo(){
+   public java.util.List<com.commercetools.models.order.SyncInfo> getSyncInfo(){
       return this.syncInfo;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.RoundingMode getTaxRoundingMode(){
+   public com.commercetools.models.cart.RoundingMode getTaxRoundingMode(){
       return this.taxRoundingMode;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.TaxMode getTaxMode(){
+   public com.commercetools.models.cart.TaxMode getTaxMode(){
       return this.taxMode;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getShippingAddress(){
+   public com.commercetools.models.common.Address getShippingAddress(){
       return this.shippingAddress;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getBillingAddress(){
+   public com.commercetools.models.common.Address getBillingAddress(){
       return this.billingAddress;
    }
    
    @Nullable
-   public com.commercetools.models.Order.PaymentInfo getPaymentInfo(){
+   public com.commercetools.models.order.PaymentInfo getPaymentInfo(){
       return this.paymentInfo;
    }
 

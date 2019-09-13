@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ProductPriceDiscountsSetMessagePayloadImpl implements Product
 
    private java.lang.String type;
    
-   private java.util.List<com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
+   private java.util.List<com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
 
    @JsonCreator
-   ProductPriceDiscountsSetMessagePayloadImpl(@JsonProperty("updatedPrices") final java.util.List<com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
+   ProductPriceDiscountsSetMessagePayloadImpl(@JsonProperty("updatedPrices") final java.util.List<com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
       this.updatedPrices = updatedPrices;
       this.type = "ProductPriceDiscountsSet";
    }
@@ -43,11 +43,11 @@ public final class ProductPriceDiscountsSetMessagePayloadImpl implements Product
    }
    
    
-   public java.util.List<com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices(){
+   public java.util.List<com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices(){
       return this.updatedPrices;
    }
 
-   public void setUpdatedPrices(final java.util.List<com.commercetools.models.Message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices){
+   public void setUpdatedPrices(final java.util.List<com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices){
       this.updatedPrices = updatedPrices;
    }
 

@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.State.StateResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.state.StateResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductTransitionStateActionImpl;
+import com.commercetools.models.product.ProductTransitionStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

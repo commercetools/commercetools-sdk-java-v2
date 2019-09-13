@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetCustomerIdActionImpl;
+import com.commercetools.models.order.OrderSetCustomerIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

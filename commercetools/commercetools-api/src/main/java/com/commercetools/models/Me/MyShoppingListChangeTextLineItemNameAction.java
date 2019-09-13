@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyShoppingListChangeTextLineItemNameActionImpl;
+import com.commercetools.models.me.MyShoppingListChangeTextLineItemNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

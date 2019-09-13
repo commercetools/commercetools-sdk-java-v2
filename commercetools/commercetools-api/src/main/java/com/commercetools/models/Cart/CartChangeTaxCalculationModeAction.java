@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.TaxCalculationMode;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.TaxCalculationMode;
 import java.lang.String;
-import com.commercetools.models.Cart.CartChangeTaxCalculationModeActionImpl;
+import com.commercetools.models.cart.CartChangeTaxCalculationModeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,8 +1,8 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.String;
-import com.commercetools.models.Error.InvalidCredentialsError;
+import com.commercetools.models.error.InvalidCredentialsError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

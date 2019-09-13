@@ -1,10 +1,10 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.FieldDefinition;
-import com.commercetools.models.Type.ResourceTypeId;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.FieldDefinition;
+import com.commercetools.models.type.ResourceTypeId;
 import java.lang.String;
-import com.commercetools.models.Type.TypeDraft;
+import com.commercetools.models.type.TypeDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,31 +13,31 @@ import java.time.ZonedDateTime;
 public final class TypeDraftBuilder {
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Type.FieldDefinition> fieldDefinitions;
+   private java.util.List<com.commercetools.models.type.FieldDefinition> fieldDefinitions;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    
    private java.lang.String key;
    
    
-   private java.util.List<com.commercetools.models.Type.ResourceTypeId> resourceTypeIds;
+   private java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds;
    
-   public TypeDraftBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public TypeDraftBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public TypeDraftBuilder fieldDefinitions(@Nullable final java.util.List<com.commercetools.models.Type.FieldDefinition> fieldDefinitions) {
+   public TypeDraftBuilder fieldDefinitions(@Nullable final java.util.List<com.commercetools.models.type.FieldDefinition> fieldDefinitions) {
       this.fieldDefinitions = fieldDefinitions;
       return this;
    }
    
-   public TypeDraftBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public TypeDraftBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
@@ -47,23 +47,23 @@ public final class TypeDraftBuilder {
       return this;
    }
    
-   public TypeDraftBuilder resourceTypeIds( final java.util.List<com.commercetools.models.Type.ResourceTypeId> resourceTypeIds) {
+   public TypeDraftBuilder resourceTypeIds( final java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds) {
       this.resourceTypeIds = resourceTypeIds;
       return this;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Type.FieldDefinition> getFieldDefinitions(){
+   public java.util.List<com.commercetools.models.type.FieldDefinition> getFieldDefinitions(){
       return this.fieldDefinitions;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
@@ -73,7 +73,7 @@ public final class TypeDraftBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Type.ResourceTypeId> getResourceTypeIds(){
+   public java.util.List<com.commercetools.models.type.ResourceTypeId> getResourceTypeIds(){
       return this.resourceTypeIds;
    }
 

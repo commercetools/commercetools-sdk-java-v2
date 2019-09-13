@@ -1,8 +1,8 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication;
+import com.commercetools.models.extension.ExtensionHttpDestinationAuthentication;
 import java.lang.String;
-import com.commercetools.models.Extension.ExtensionAuthorizationHeaderAuthentication;
+import com.commercetools.models.extension.ExtensionAuthorizationHeaderAuthentication;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

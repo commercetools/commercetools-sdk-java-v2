@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Category.Category;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.CategoryCreatedMessage;
+import com.commercetools.models.category.Category;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.CategoryCreatedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class CategoryCreatedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,7 +38,7 @@ public final class CategoryCreatedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Category.Category category;
+   private com.commercetools.models.category.Category category;
    
    public CategoryCreatedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -65,12 +65,12 @@ public final class CategoryCreatedMessageBuilder {
       return this;
    }
    
-   public CategoryCreatedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public CategoryCreatedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public CategoryCreatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public CategoryCreatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -85,7 +85,7 @@ public final class CategoryCreatedMessageBuilder {
       return this;
    }
    
-   public CategoryCreatedMessageBuilder category( final com.commercetools.models.Category.Category category) {
+   public CategoryCreatedMessageBuilder category( final com.commercetools.models.category.Category category) {
       this.category = category;
       return this;
    }
@@ -116,12 +116,12 @@ public final class CategoryCreatedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -136,7 +136,7 @@ public final class CategoryCreatedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Category.Category getCategory(){
+   public com.commercetools.models.category.Category getCategory(){
       return this.category;
    }
 

@@ -1,7 +1,7 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.StateTypeEnum;
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.state.StateTypeEnum;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class StateChangeTypeActionImpl implements StateChangeTypeAction {
 
    private java.lang.String action;
    
-   private com.commercetools.models.State.StateTypeEnum type;
+   private com.commercetools.models.state.StateTypeEnum type;
 
    @JsonCreator
-   StateChangeTypeActionImpl(@JsonProperty("type") final com.commercetools.models.State.StateTypeEnum type) {
+   StateChangeTypeActionImpl(@JsonProperty("type") final com.commercetools.models.state.StateTypeEnum type) {
       this.type = type;
       this.action = "changeType";
    }
@@ -43,11 +43,11 @@ public final class StateChangeTypeActionImpl implements StateChangeTypeAction {
    }
    
    
-   public com.commercetools.models.State.StateTypeEnum getType(){
+   public com.commercetools.models.state.StateTypeEnum getType(){
       return this.type;
    }
 
-   public void setType(final com.commercetools.models.State.StateTypeEnum type){
+   public void setType(final com.commercetools.models.state.StateTypeEnum type){
       this.type = type;
    }
 

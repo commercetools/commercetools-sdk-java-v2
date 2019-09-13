@@ -1,6 +1,6 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.GeoJson;
+import com.commercetools.models.common.GeoJson;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Generated;

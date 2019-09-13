@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
 import java.lang.String;
-import com.commercetools.models.Cart.CartSetCustomLineItemTaxRateAction;
+import com.commercetools.models.cart.CartSetCustomLineItemTaxRateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class CartSetCustomLineItemTaxRateActionBuilder {
    private java.lang.String customLineItemId;
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    public CartSetCustomLineItemTaxRateActionBuilder customLineItemId( final java.lang.String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public CartSetCustomLineItemTaxRateActionBuilder externalTaxRate(@Nullable final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate) {
+   public CartSetCustomLineItemTaxRateActionBuilder externalTaxRate(@Nullable final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.externalTaxRate = externalTaxRate;
       return this;
    }
@@ -33,7 +33,7 @@ public final class CartSetCustomLineItemTaxRateActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
 

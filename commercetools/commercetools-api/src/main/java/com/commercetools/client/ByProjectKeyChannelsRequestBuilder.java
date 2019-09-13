@@ -16,7 +16,7 @@ public class ByProjectKeyChannelsRequestBuilder {
       return new ByProjectKeyChannelsGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyChannelsPost post(com.commercetools.models.Channel.ChannelDraft channelDraft) {
+   public ByProjectKeyChannelsPost post(com.commercetools.models.channel.ChannelDraft channelDraft) {
       return new ByProjectKeyChannelsPost(apiHttpClient, projectKey, channelDraft);
    }
    

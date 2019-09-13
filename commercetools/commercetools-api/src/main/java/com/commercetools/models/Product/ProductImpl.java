@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Product.ProductCatalogData;
-import com.commercetools.models.ProductType.ProductTypeReference;
-import com.commercetools.models.Review.ReviewRatingStatistics;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.TaxCategory.TaxCategoryReference;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.product.ProductCatalogData;
+import com.commercetools.models.product_type.ProductTypeReference;
+import com.commercetools.models.review.ReviewRatingStatistics;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.tax_category.TaxCategoryReference;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -36,24 +36,24 @@ public final class ProductImpl implements Product {
    
    private java.lang.Long version;
    
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private com.commercetools.models.Product.ProductCatalogData masterData;
+   private com.commercetools.models.product.ProductCatalogData masterData;
    
-   private com.commercetools.models.State.StateReference state;
+   private com.commercetools.models.state.StateReference state;
    
-   private com.commercetools.models.Review.ReviewRatingStatistics reviewRatingStatistics;
+   private com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics;
    
-   private com.commercetools.models.ProductType.ProductTypeReference productType;
+   private com.commercetools.models.product_type.ProductTypeReference productType;
    
    private java.lang.String key;
    
-   private com.commercetools.models.TaxCategory.TaxCategoryReference taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryReference taxCategory;
 
    @JsonCreator
-   ProductImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.Common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.Common.LastModifiedBy lastModifiedBy, @JsonProperty("masterData") final com.commercetools.models.Product.ProductCatalogData masterData, @JsonProperty("state") final com.commercetools.models.State.StateReference state, @JsonProperty("reviewRatingStatistics") final com.commercetools.models.Review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("productType") final com.commercetools.models.ProductType.ProductTypeReference productType, @JsonProperty("key") final java.lang.String key, @JsonProperty("taxCategory") final com.commercetools.models.TaxCategory.TaxCategoryReference taxCategory) {
+   ProductImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("masterData") final com.commercetools.models.product.ProductCatalogData masterData, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("reviewRatingStatistics") final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeReference productType, @JsonProperty("key") final java.lang.String key, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryReference taxCategory) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -92,32 +92,32 @@ public final class ProductImpl implements Product {
    }
    
    
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    
-   public com.commercetools.models.Product.ProductCatalogData getMasterData(){
+   public com.commercetools.models.product.ProductCatalogData getMasterData(){
       return this.masterData;
    }
    
    
-   public com.commercetools.models.State.StateReference getState(){
+   public com.commercetools.models.state.StateReference getState(){
       return this.state;
    }
    
    
-   public com.commercetools.models.Review.ReviewRatingStatistics getReviewRatingStatistics(){
+   public com.commercetools.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
       return this.reviewRatingStatistics;
    }
    
    
-   public com.commercetools.models.ProductType.ProductTypeReference getProductType(){
+   public com.commercetools.models.product_type.ProductTypeReference getProductType(){
       return this.productType;
    }
    
@@ -127,7 +127,7 @@ public final class ProductImpl implements Product {
    }
    
    
-   public com.commercetools.models.TaxCategory.TaxCategoryReference getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryReference getTaxCategory(){
       return this.taxCategory;
    }
 
@@ -147,27 +147,27 @@ public final class ProductImpl implements Product {
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.models.Common.CreatedBy createdBy){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
       this.createdBy = createdBy;
    }
    
-   public void setLastModifiedBy(final com.commercetools.models.Common.LastModifiedBy lastModifiedBy){
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setMasterData(final com.commercetools.models.Product.ProductCatalogData masterData){
+   public void setMasterData(final com.commercetools.models.product.ProductCatalogData masterData){
       this.masterData = masterData;
    }
    
-   public void setState(final com.commercetools.models.State.StateReference state){
+   public void setState(final com.commercetools.models.state.StateReference state){
       this.state = state;
    }
    
-   public void setReviewRatingStatistics(final com.commercetools.models.Review.ReviewRatingStatistics reviewRatingStatistics){
+   public void setReviewRatingStatistics(final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics){
       this.reviewRatingStatistics = reviewRatingStatistics;
    }
    
-   public void setProductType(final com.commercetools.models.ProductType.ProductTypeReference productType){
+   public void setProductType(final com.commercetools.models.product_type.ProductTypeReference productType){
       this.productType = productType;
    }
    
@@ -175,7 +175,7 @@ public final class ProductImpl implements Product {
       this.key = key;
    }
    
-   public void setTaxCategory(final com.commercetools.models.TaxCategory.TaxCategoryReference taxCategory){
+   public void setTaxCategory(final com.commercetools.models.tax_category.TaxCategoryReference taxCategory){
       this.taxCategory = taxCategory;
    }
 

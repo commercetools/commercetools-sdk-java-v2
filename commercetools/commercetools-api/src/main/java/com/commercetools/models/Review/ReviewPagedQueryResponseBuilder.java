@@ -1,8 +1,8 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Review.Review;
+import com.commercetools.models.review.Review;
 import java.lang.Long;
-import com.commercetools.models.Review.ReviewPagedQueryResponse;
+import com.commercetools.models.review.ReviewPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ReviewPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Review.Review> results;
+   private java.util.List<com.commercetools.models.review.Review> results;
    
    public ReviewPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class ReviewPagedQueryResponseBuilder {
       return this;
    }
    
-   public ReviewPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Review.Review> results) {
+   public ReviewPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.review.Review> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class ReviewPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Review.Review> getResults(){
+   public java.util.List<com.commercetools.models.review.Review> getResults(){
       return this.results;
    }
 

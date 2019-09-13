@@ -27,9 +27,9 @@ public class ByProjectKeyMePaymentsByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.Common.Update update;
+   private com.commercetools.models.common.Update update;
    
-   public ByProjectKeyMePaymentsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.Common.Update update){
+   public ByProjectKeyMePaymentsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.common.Update update){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
@@ -53,7 +53,7 @@ public class ByProjectKeyMePaymentsByIDPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Me.MyPayment> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.me.MyPayment> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyMePaymentsByIDPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Me.MyPayment>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.me.MyPayment>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Me.MyPayment.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.me.MyPayment.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

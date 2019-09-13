@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Customer.CustomerTokenImpl;
+import com.commercetools.models.customer.CustomerTokenImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

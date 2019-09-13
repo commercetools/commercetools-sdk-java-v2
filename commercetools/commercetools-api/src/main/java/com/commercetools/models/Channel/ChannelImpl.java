@@ -1,11 +1,11 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelRoleEnum;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Review.ReviewRatingStatistics;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.channel.ChannelRoleEnum;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.review.ReviewRatingStatistics;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -37,28 +37,28 @@ public final class ChannelImpl implements Channel {
    
    private java.lang.Long version;
    
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
    private java.lang.Object geoLocation;
    
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
-   private java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles;
+   private java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
-   private com.commercetools.models.Review.ReviewRatingStatistics reviewRatingStatistics;
+   private com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics;
    
    private java.lang.String key;
 
    @JsonCreator
-   ChannelImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.Common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.Common.LastModifiedBy lastModifiedBy, @JsonProperty("address") final com.commercetools.models.Common.Address address, @JsonProperty("geoLocation") final java.lang.Object geoLocation, @JsonProperty("custom") final com.commercetools.models.Type.CustomFields custom, @JsonProperty("roles") final java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.Common.LocalizedString description, @JsonProperty("reviewRatingStatistics") final com.commercetools.models.Review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("key") final java.lang.String key) {
+   ChannelImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("geoLocation") final java.lang.Object geoLocation, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("roles") final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("reviewRatingStatistics") final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("key") final java.lang.String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -99,17 +99,17 @@ public final class ChannelImpl implements Channel {
    }
    
    
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
    
@@ -119,27 +119,27 @@ public final class ChannelImpl implements Channel {
    }
    
    
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    
-   public java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    
-   public com.commercetools.models.Review.ReviewRatingStatistics getReviewRatingStatistics(){
+   public com.commercetools.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
       return this.reviewRatingStatistics;
    }
    
@@ -164,15 +164,15 @@ public final class ChannelImpl implements Channel {
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.models.Common.CreatedBy createdBy){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
       this.createdBy = createdBy;
    }
    
-   public void setLastModifiedBy(final com.commercetools.models.Common.LastModifiedBy lastModifiedBy){
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setAddress(final com.commercetools.models.Common.Address address){
+   public void setAddress(final com.commercetools.models.common.Address address){
       this.address = address;
    }
    
@@ -180,23 +180,23 @@ public final class ChannelImpl implements Channel {
       this.geoLocation = geoLocation;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFields custom){
+   public void setCustom(final com.commercetools.models.type.CustomFields custom){
       this.custom = custom;
    }
    
-   public void setRoles(final java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles){
+   public void setRoles(final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles){
       this.roles = roles;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    
-   public void setDescription(final com.commercetools.models.Common.LocalizedString description){
+   public void setDescription(final com.commercetools.models.common.LocalizedString description){
       this.description = description;
    }
    
-   public void setReviewRatingStatistics(final com.commercetools.models.Review.ReviewRatingStatistics reviewRatingStatistics){
+   public void setReviewRatingStatistics(final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics){
       this.reviewRatingStatistics = reviewRatingStatistics;
    }
    

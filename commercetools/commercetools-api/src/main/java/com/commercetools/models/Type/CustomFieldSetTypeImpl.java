@@ -1,6 +1,6 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.FieldType;
+import com.commercetools.models.type.FieldType;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,10 +25,10 @@ public final class CustomFieldSetTypeImpl implements CustomFieldSetType {
 
    private java.lang.String name;
    
-   private com.commercetools.models.Type.FieldType elementType;
+   private com.commercetools.models.type.FieldType elementType;
 
    @JsonCreator
-   CustomFieldSetTypeImpl(@JsonProperty("elementType") final com.commercetools.models.Type.FieldType elementType) {
+   CustomFieldSetTypeImpl(@JsonProperty("elementType") final com.commercetools.models.type.FieldType elementType) {
       this.elementType = elementType;
       this.name = "Set";
    }
@@ -42,11 +42,11 @@ public final class CustomFieldSetTypeImpl implements CustomFieldSetType {
    }
    
    
-   public com.commercetools.models.Type.FieldType getElementType(){
+   public com.commercetools.models.type.FieldType getElementType(){
       return this.elementType;
    }
 
-   public void setElementType(final com.commercetools.models.Type.FieldType elementType){
+   public void setElementType(final com.commercetools.models.type.FieldType elementType){
       this.elementType = elementType;
    }
 

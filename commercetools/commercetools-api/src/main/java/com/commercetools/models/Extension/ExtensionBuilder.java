@@ -1,11 +1,11 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Extension.ExtensionDestination;
-import com.commercetools.models.Extension.ExtensionTrigger;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.extension.ExtensionDestination;
+import com.commercetools.models.extension.ExtensionTrigger;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Extension.Extension;
+import com.commercetools.models.extension.Extension;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,19 +26,19 @@ public final class ExtensionBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
    @Nullable
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
    private java.lang.Integer timeoutInMs;
    
    
-   private com.commercetools.models.Extension.ExtensionDestination destination;
+   private com.commercetools.models.extension.ExtensionDestination destination;
    
    
-   private java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers;
+   private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
    
    @Nullable
    private java.lang.String key;
@@ -63,12 +63,12 @@ public final class ExtensionBuilder {
       return this;
    }
    
-   public ExtensionBuilder createdBy(@Nullable final com.commercetools.models.Common.CreatedBy createdBy) {
+   public ExtensionBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
       this.createdBy = createdBy;
       return this;
    }
    
-   public ExtensionBuilder lastModifiedBy(@Nullable final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   public ExtensionBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
@@ -78,12 +78,12 @@ public final class ExtensionBuilder {
       return this;
    }
    
-   public ExtensionBuilder destination( final com.commercetools.models.Extension.ExtensionDestination destination) {
+   public ExtensionBuilder destination( final com.commercetools.models.extension.ExtensionDestination destination) {
       this.destination = destination;
       return this;
    }
    
-   public ExtensionBuilder triggers( final java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers) {
+   public ExtensionBuilder triggers( final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers) {
       this.triggers = triggers;
       return this;
    }
@@ -114,12 +114,12 @@ public final class ExtensionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
@@ -129,12 +129,12 @@ public final class ExtensionBuilder {
    }
    
    
-   public com.commercetools.models.Extension.ExtensionDestination getDestination(){
+   public com.commercetools.models.extension.ExtensionDestination getDestination(){
       return this.destination;
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.ExtensionTrigger> getTriggers(){
+   public java.util.List<com.commercetools.models.extension.ExtensionTrigger> getTriggers(){
       return this.triggers;
    }
    

@@ -1,8 +1,9 @@
 package commercetools.api_client;
 
-import com.commercetools.models.ApiClient.ApiClient;
-import com.commercetools.models.ApiClient.ApiClientDraft;
-import com.commercetools.models.ApiClient.ApiClientDraftBuilder;
+
+import com.commercetools.models.api_client.ApiClient;
+import com.commercetools.models.api_client.ApiClientDraft;
+import com.commercetools.models.api_client.ApiClientDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

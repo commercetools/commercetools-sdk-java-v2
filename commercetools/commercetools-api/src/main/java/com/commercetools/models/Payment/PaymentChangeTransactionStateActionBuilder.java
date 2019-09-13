@@ -1,9 +1,9 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.PaymentUpdateAction;
-import com.commercetools.models.Payment.TransactionState;
+import com.commercetools.models.payment.PaymentUpdateAction;
+import com.commercetools.models.payment.TransactionState;
 import java.lang.String;
-import com.commercetools.models.Payment.PaymentChangeTransactionStateAction;
+import com.commercetools.models.payment.PaymentChangeTransactionStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class PaymentChangeTransactionStateActionBuilder {
    
    
-   private com.commercetools.models.Payment.TransactionState state;
+   private com.commercetools.models.payment.TransactionState state;
    
    
    private java.lang.String transactionId;
    
-   public PaymentChangeTransactionStateActionBuilder state( final com.commercetools.models.Payment.TransactionState state) {
+   public PaymentChangeTransactionStateActionBuilder state( final com.commercetools.models.payment.TransactionState state) {
       this.state = state;
       return this;
    }
@@ -28,7 +28,7 @@ public final class PaymentChangeTransactionStateActionBuilder {
    }
    
    
-   public com.commercetools.models.Payment.TransactionState getState(){
+   public com.commercetools.models.payment.TransactionState getState(){
       return this.state;
    }
    

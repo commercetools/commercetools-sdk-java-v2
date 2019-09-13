@@ -1,4 +1,4 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.String;

@@ -1,12 +1,12 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.AssetDraft;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.AssetDraft;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Product.ProductAddAssetAction;
+import com.commercetools.models.product.ProductAddAssetAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ProductAddAssetActionBuilder {
    private java.lang.Long variantId;
    
    
-   private com.commercetools.models.Common.AssetDraft asset;
+   private com.commercetools.models.common.AssetDraft asset;
    
    @Nullable
    private java.lang.String sku;
@@ -44,7 +44,7 @@ public final class ProductAddAssetActionBuilder {
       return this;
    }
    
-   public ProductAddAssetActionBuilder asset( final com.commercetools.models.Common.AssetDraft asset) {
+   public ProductAddAssetActionBuilder asset( final com.commercetools.models.common.AssetDraft asset) {
       this.asset = asset;
       return this;
    }
@@ -70,7 +70,7 @@ public final class ProductAddAssetActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.AssetDraft getAsset(){
+   public com.commercetools.models.common.AssetDraft getAsset(){
       return this.asset;
    }
    

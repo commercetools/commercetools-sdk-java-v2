@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.state.StateReference;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Message.ProductStateTransitionMessagePayload;
+import com.commercetools.models.message.ProductStateTransitionMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +16,14 @@ public final class ProductStateTransitionMessagePayloadBuilder {
    private java.lang.Boolean force;
    
    
-   private com.commercetools.models.State.StateReference state;
+   private com.commercetools.models.state.StateReference state;
    
    public ProductStateTransitionMessagePayloadBuilder force( final java.lang.Boolean force) {
       this.force = force;
       return this;
    }
    
-   public ProductStateTransitionMessagePayloadBuilder state( final com.commercetools.models.State.StateReference state) {
+   public ProductStateTransitionMessagePayloadBuilder state( final com.commercetools.models.state.StateReference state) {
       this.state = state;
       return this;
    }
@@ -34,7 +34,7 @@ public final class ProductStateTransitionMessagePayloadBuilder {
    }
    
    
-   public com.commercetools.models.State.StateReference getState(){
+   public com.commercetools.models.state.StateReference getState(){
       return this.state;
    }
 

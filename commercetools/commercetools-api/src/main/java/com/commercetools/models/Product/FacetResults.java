@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
 import java.lang.Object;
-import com.commercetools.models.Product.FacetResultsImpl;
+import com.commercetools.models.product.FacetResultsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

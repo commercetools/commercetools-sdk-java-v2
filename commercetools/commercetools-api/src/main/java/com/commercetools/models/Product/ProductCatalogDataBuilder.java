@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductData;
+import com.commercetools.models.product.ProductData;
 import java.lang.Boolean;
-import com.commercetools.models.Product.ProductCatalogData;
+import com.commercetools.models.product.ProductCatalogData;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,10 +11,10 @@ import java.time.ZonedDateTime;
 public final class ProductCatalogDataBuilder {
    
    
-   private com.commercetools.models.Product.ProductData current;
+   private com.commercetools.models.product.ProductData current;
    
    
-   private com.commercetools.models.Product.ProductData staged;
+   private com.commercetools.models.product.ProductData staged;
    
    
    private java.lang.Boolean published;
@@ -22,12 +22,12 @@ public final class ProductCatalogDataBuilder {
    
    private java.lang.Boolean hasStagedChanges;
    
-   public ProductCatalogDataBuilder current( final com.commercetools.models.Product.ProductData current) {
+   public ProductCatalogDataBuilder current( final com.commercetools.models.product.ProductData current) {
       this.current = current;
       return this;
    }
    
-   public ProductCatalogDataBuilder staged( final com.commercetools.models.Product.ProductData staged) {
+   public ProductCatalogDataBuilder staged( final com.commercetools.models.product.ProductData staged) {
       this.staged = staged;
       return this;
    }
@@ -43,12 +43,12 @@ public final class ProductCatalogDataBuilder {
    }
    
    
-   public com.commercetools.models.Product.ProductData getCurrent(){
+   public com.commercetools.models.product.ProductData getCurrent(){
       return this.current;
    }
    
    
-   public com.commercetools.models.Product.ProductData getStaged(){
+   public com.commercetools.models.product.ProductData getStaged(){
       return this.staged;
    }
    

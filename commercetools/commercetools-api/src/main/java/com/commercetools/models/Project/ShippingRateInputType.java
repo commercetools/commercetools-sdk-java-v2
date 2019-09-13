@@ -1,9 +1,9 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.CartClassificationType;
-import com.commercetools.models.Project.CartScoreType;
-import com.commercetools.models.Project.CartValueType;
-import com.commercetools.models.ShippingMethod.ShippingRateTierType;
+import com.commercetools.models.project.CartClassificationType;
+import com.commercetools.models.project.CartScoreType;
+import com.commercetools.models.project.CartValueType;
+import com.commercetools.models.shipping_method.ShippingRateTierType;
 
 
 import com.fasterxml.jackson.annotation.*;
@@ -18,9 +18,9 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.CartClassificationTypeImpl.class, name = "CartClassification"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.CartScoreTypeImpl.class, name = "CartScore"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Project.CartValueTypeImpl.class, name = "CartValue")
+   @JsonSubTypes.Type(value = com.commercetools.models.project.CartClassificationTypeImpl.class, name = "CartClassification"),
+   @JsonSubTypes.Type(value = com.commercetools.models.project.CartScoreTypeImpl.class, name = "CartScore"),
+   @JsonSubTypes.Type(value = com.commercetools.models.project.CartValueTypeImpl.class, name = "CartValue")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

@@ -1,6 +1,6 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.SearchKeyword;
+import com.commercetools.models.product.SearchKeyword;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SearchKeywordsImpl implements SearchKeywords {
 
-   private Map<String, java.util.List<com.commercetools.models.Product.SearchKeyword>> values;
+   private Map<String, java.util.List<com.commercetools.models.product.SearchKeyword>> values;
 
    @JsonCreator
-   SearchKeywordsImpl(@JsonProperty("values") final Map<String, java.util.List<com.commercetools.models.Product.SearchKeyword>> values) {
+   SearchKeywordsImpl(@JsonProperty("values") final Map<String, java.util.List<com.commercetools.models.product.SearchKeyword>> values) {
       this.values = values;
    }
    public SearchKeywordsImpl() {
@@ -33,11 +33,11 @@ public final class SearchKeywordsImpl implements SearchKeywords {
    }
    
    
-   public Map<String,java.util.List<com.commercetools.models.Product.SearchKeyword>> values() {
+   public Map<String,java.util.List<com.commercetools.models.product.SearchKeyword>> values() {
        return values;
    }
 
-   public void setValue(String key, java.util.List<com.commercetools.models.Product.SearchKeyword> value) {
+   public void setValue(String key, java.util.List<com.commercetools.models.product.SearchKeyword> value) {
        if (values == null) {
            values = new HashMap<>();
        }

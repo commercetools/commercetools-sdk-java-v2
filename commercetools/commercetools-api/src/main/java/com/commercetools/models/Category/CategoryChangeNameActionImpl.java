@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CategoryChangeNameActionImpl implements CategoryChangeNameAct
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
 
    @JsonCreator
-   CategoryChangeNameActionImpl(@JsonProperty("name") final com.commercetools.models.Common.LocalizedString name) {
+   CategoryChangeNameActionImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       this.action = "changeName";
    }
@@ -43,11 +43,11 @@ public final class CategoryChangeNameActionImpl implements CategoryChangeNameAct
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
 
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
 

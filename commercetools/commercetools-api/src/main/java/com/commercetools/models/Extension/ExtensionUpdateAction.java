@@ -1,9 +1,9 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionChangeDestinationAction;
-import com.commercetools.models.Extension.ExtensionChangeTriggersAction;
-import com.commercetools.models.Extension.ExtensionSetKeyAction;
-import com.commercetools.models.Extension.ExtensionSetTimeoutInMsAction;
+import com.commercetools.models.extension.ExtensionChangeDestinationAction;
+import com.commercetools.models.extension.ExtensionChangeTriggersAction;
+import com.commercetools.models.extension.ExtensionSetKeyAction;
+import com.commercetools.models.extension.ExtensionSetTimeoutInMsAction;
 import java.lang.String;
 
 
@@ -19,10 +19,10 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Extension.ExtensionChangeDestinationActionImpl.class, name = "changeDestination"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Extension.ExtensionChangeTriggersActionImpl.class, name = "changeTriggers"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Extension.ExtensionSetKeyActionImpl.class, name = "setKey"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Extension.ExtensionSetTimeoutInMsActionImpl.class, name = "setTimeoutInMs")
+   @JsonSubTypes.Type(value = com.commercetools.models.extension.ExtensionChangeDestinationActionImpl.class, name = "changeDestination"),
+   @JsonSubTypes.Type(value = com.commercetools.models.extension.ExtensionChangeTriggersActionImpl.class, name = "changeTriggers"),
+   @JsonSubTypes.Type(value = com.commercetools.models.extension.ExtensionSetKeyActionImpl.class, name = "setKey"),
+   @JsonSubTypes.Type(value = com.commercetools.models.extension.ExtensionSetTimeoutInMsActionImpl.class, name = "setTimeoutInMs")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

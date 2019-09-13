@@ -1,9 +1,9 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Customer.CustomerReference;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.customer.CustomerReference;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -37,9 +37,9 @@ public final class ReviewImpl implements Review {
    
    private java.lang.Long version;
    
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    private java.lang.Boolean includedInStatistics;
    
@@ -47,11 +47,11 @@ public final class ReviewImpl implements Review {
    
    private java.lang.String authorName;
    
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    private java.lang.Integer rating;
    
-   private com.commercetools.models.State.StateReference state;
+   private com.commercetools.models.state.StateReference state;
    
    private java.lang.String text;
    
@@ -61,12 +61,12 @@ public final class ReviewImpl implements Review {
    
    private java.lang.String key;
    
-   private com.commercetools.models.Customer.CustomerReference customer;
+   private com.commercetools.models.customer.CustomerReference customer;
    
    private java.lang.Object target;
 
    @JsonCreator
-   ReviewImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.Common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.Common.LastModifiedBy lastModifiedBy, @JsonProperty("includedInStatistics") final java.lang.Boolean includedInStatistics, @JsonProperty("uniquenessValue") final java.lang.String uniquenessValue, @JsonProperty("authorName") final java.lang.String authorName, @JsonProperty("custom") final com.commercetools.models.Type.CustomFields custom, @JsonProperty("rating") final java.lang.Integer rating, @JsonProperty("state") final com.commercetools.models.State.StateReference state, @JsonProperty("text") final java.lang.String text, @JsonProperty("title") final java.lang.String title, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("key") final java.lang.String key, @JsonProperty("customer") final com.commercetools.models.Customer.CustomerReference customer, @JsonProperty("target") final java.lang.Object target) {
+   ReviewImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("includedInStatistics") final java.lang.Boolean includedInStatistics, @JsonProperty("uniquenessValue") final java.lang.String uniquenessValue, @JsonProperty("authorName") final java.lang.String authorName, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("rating") final java.lang.Integer rating, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("text") final java.lang.String text, @JsonProperty("title") final java.lang.String title, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("key") final java.lang.String key, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer, @JsonProperty("target") final java.lang.Object target) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -111,12 +111,12 @@ public final class ReviewImpl implements Review {
    }
    
    
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
@@ -136,7 +136,7 @@ public final class ReviewImpl implements Review {
    }
    
    
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
@@ -146,7 +146,7 @@ public final class ReviewImpl implements Review {
    }
    
    
-   public com.commercetools.models.State.StateReference getState(){
+   public com.commercetools.models.state.StateReference getState(){
       return this.state;
    }
    
@@ -171,7 +171,7 @@ public final class ReviewImpl implements Review {
    }
    
    
-   public com.commercetools.models.Customer.CustomerReference getCustomer(){
+   public com.commercetools.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
    
@@ -196,11 +196,11 @@ public final class ReviewImpl implements Review {
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.models.Common.CreatedBy createdBy){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
       this.createdBy = createdBy;
    }
    
-   public void setLastModifiedBy(final com.commercetools.models.Common.LastModifiedBy lastModifiedBy){
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
    
@@ -216,7 +216,7 @@ public final class ReviewImpl implements Review {
       this.authorName = authorName;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFields custom){
+   public void setCustom(final com.commercetools.models.type.CustomFields custom){
       this.custom = custom;
    }
    
@@ -224,7 +224,7 @@ public final class ReviewImpl implements Review {
       this.rating = rating;
    }
    
-   public void setState(final com.commercetools.models.State.StateReference state){
+   public void setState(final com.commercetools.models.state.StateReference state){
       this.state = state;
    }
    
@@ -244,7 +244,7 @@ public final class ReviewImpl implements Review {
       this.key = key;
    }
    
-   public void setCustomer(final com.commercetools.models.Customer.CustomerReference customer){
+   public void setCustomer(final com.commercetools.models.customer.CustomerReference customer){
       this.customer = customer;
    }
    

@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.PaymentUpdateAction;
+import com.commercetools.models.payment.PaymentUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Payment.PaymentSetExternalIdAction;
+import com.commercetools.models.payment.PaymentSetExternalIdAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

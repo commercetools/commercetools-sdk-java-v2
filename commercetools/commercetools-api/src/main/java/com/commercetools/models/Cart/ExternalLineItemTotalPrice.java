@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Cart.ExternalLineItemTotalPriceImpl;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.cart.ExternalLineItemTotalPriceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

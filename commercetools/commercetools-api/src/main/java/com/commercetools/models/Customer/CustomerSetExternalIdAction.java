@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerUpdateAction;
+import com.commercetools.models.customer.CustomerUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerSetExternalIdActionImpl;
+import com.commercetools.models.customer.CustomerSetExternalIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

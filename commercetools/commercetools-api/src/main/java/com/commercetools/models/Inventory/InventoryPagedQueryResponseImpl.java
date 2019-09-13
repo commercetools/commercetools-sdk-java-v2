@@ -1,6 +1,6 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntry;
+import com.commercetools.models.inventory.InventoryEntry;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class InventoryPagedQueryResponseImpl implements InventoryPagedQuer
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Inventory.InventoryEntry> results;
+   private java.util.List<com.commercetools.models.inventory.InventoryEntry> results;
 
    @JsonCreator
-   InventoryPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Inventory.InventoryEntry> results) {
+   InventoryPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.inventory.InventoryEntry> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class InventoryPagedQueryResponseImpl implements InventoryPagedQuer
    }
    
    
-   public java.util.List<com.commercetools.models.Inventory.InventoryEntry> getResults(){
+   public java.util.List<com.commercetools.models.inventory.InventoryEntry> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class InventoryPagedQueryResponseImpl implements InventoryPagedQuer
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Inventory.InventoryEntry> results){
+   public void setResults(final java.util.List<com.commercetools.models.inventory.InventoryEntry> results){
       this.results = results;
    }
 

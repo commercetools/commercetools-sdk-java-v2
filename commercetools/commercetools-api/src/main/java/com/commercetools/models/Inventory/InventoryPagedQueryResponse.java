@@ -1,8 +1,8 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntry;
+import com.commercetools.models.inventory.InventoryEntry;
 import java.lang.Long;
-import com.commercetools.models.Inventory.InventoryPagedQueryResponseImpl;
+import com.commercetools.models.inventory.InventoryPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

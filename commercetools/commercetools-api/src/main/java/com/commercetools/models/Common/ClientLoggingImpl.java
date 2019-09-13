@@ -1,8 +1,8 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.CreatedBy;
-import com.commercetools.models.Common.LastModifiedBy;
-import com.commercetools.models.Customer.CustomerReference;
+import com.commercetools.models.common.CreatedBy;
+import com.commercetools.models.common.LastModifiedBy;
+import com.commercetools.models.customer.CustomerReference;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -31,10 +31,10 @@ public final class ClientLoggingImpl implements ClientLogging {
    
    private java.lang.String externalUserId;
    
-   private com.commercetools.models.Customer.CustomerReference customer;
+   private com.commercetools.models.customer.CustomerReference customer;
 
    @JsonCreator
-   ClientLoggingImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("clientId") final java.lang.String clientId, @JsonProperty("externalUserId") final java.lang.String externalUserId, @JsonProperty("customer") final com.commercetools.models.Customer.CustomerReference customer) {
+   ClientLoggingImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("clientId") final java.lang.String clientId, @JsonProperty("externalUserId") final java.lang.String externalUserId, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
       this.anonymousId = anonymousId;
       this.clientId = clientId;
       this.externalUserId = externalUserId;
@@ -60,7 +60,7 @@ public final class ClientLoggingImpl implements ClientLogging {
    }
    
    
-   public com.commercetools.models.Customer.CustomerReference getCustomer(){
+   public com.commercetools.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
 
@@ -76,7 +76,7 @@ public final class ClientLoggingImpl implements ClientLogging {
       this.externalUserId = externalUserId;
    }
    
-   public void setCustomer(final com.commercetools.models.Customer.CustomerReference customer){
+   public void setCustomer(final com.commercetools.models.customer.CustomerReference customer){
       this.customer = customer;
    }
 

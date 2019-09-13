@@ -14,7 +14,7 @@ public class ByProjectKeyOrdersEditsByIDApplyRequestBuilder {
       this.ID = ID;
    }
    
-   public ByProjectKeyOrdersEditsByIDApplyPost post(com.commercetools.models.OrderEdit.OrderEditApply orderEditApply) {
+   public ByProjectKeyOrdersEditsByIDApplyPost post(com.commercetools.models.order_edit.OrderEditApply orderEditApply) {
       return new ByProjectKeyOrdersEditsByIDApplyPost(apiHttpClient, projectKey, ID, orderEditApply);
    }
    

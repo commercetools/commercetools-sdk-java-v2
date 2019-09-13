@@ -18,7 +18,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyRequestBuilder {
       return new ByProjectKeyCartDiscountsKeyByKeyGet(apiHttpClient, projectKey, key);
    }
    
-   public ByProjectKeyCartDiscountsKeyByKeyPost post(com.commercetools.models.CartDiscount.CartDiscountUpdate cartDiscountUpdate) {
+   public ByProjectKeyCartDiscountsKeyByKeyPost post(com.commercetools.models.cart_discount.CartDiscountUpdate cartDiscountUpdate) {
       return new ByProjectKeyCartDiscountsKeyByKeyPost(apiHttpClient, projectKey, key, cartDiscountUpdate);
    }
    

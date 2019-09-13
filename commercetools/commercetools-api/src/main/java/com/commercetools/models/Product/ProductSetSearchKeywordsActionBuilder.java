@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.Product.SearchKeywords;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.product.SearchKeywords;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetSearchKeywordsAction;
+import com.commercetools.models.product.ProductSetSearchKeywordsAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,12 +13,12 @@ import java.time.ZonedDateTime;
 public final class ProductSetSearchKeywordsActionBuilder {
    
    
-   private com.commercetools.models.Product.SearchKeywords searchKeywords;
+   private com.commercetools.models.product.SearchKeywords searchKeywords;
    
    @Nullable
    private java.lang.Boolean staged;
    
-   public ProductSetSearchKeywordsActionBuilder searchKeywords( final com.commercetools.models.Product.SearchKeywords searchKeywords) {
+   public ProductSetSearchKeywordsActionBuilder searchKeywords( final com.commercetools.models.product.SearchKeywords searchKeywords) {
       this.searchKeywords = searchKeywords;
       return this;
    }
@@ -29,7 +29,7 @@ public final class ProductSetSearchKeywordsActionBuilder {
    }
    
    
-   public com.commercetools.models.Product.SearchKeywords getSearchKeywords(){
+   public com.commercetools.models.product.SearchKeywords getSearchKeywords(){
       return this.searchKeywords;
    }
    

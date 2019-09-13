@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.Asset;
-import com.commercetools.models.Common.Image;
-import com.commercetools.models.Common.Price;
-import com.commercetools.models.Common.ScopedPrice;
-import com.commercetools.models.Product.Attribute;
-import com.commercetools.models.Product.ProductVariantAvailability;
+import com.commercetools.models.common.Asset;
+import com.commercetools.models.common.Image;
+import com.commercetools.models.common.Price;
+import com.commercetools.models.common.ScopedPrice;
+import com.commercetools.models.product.Attribute;
+import com.commercetools.models.product.ProductVariantAvailability;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
@@ -30,32 +30,32 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantImpl implements ProductVariant {
 
-   private com.commercetools.models.Common.ScopedPrice scopedPrice;
+   private com.commercetools.models.common.ScopedPrice scopedPrice;
    
-   private java.util.List<com.commercetools.models.Common.Image> images;
+   private java.util.List<com.commercetools.models.common.Image> images;
    
-   private java.util.List<com.commercetools.models.Common.Asset> assets;
+   private java.util.List<com.commercetools.models.common.Asset> assets;
    
    private java.lang.Boolean isMatchingVariant;
    
-   private com.commercetools.models.Common.Price price;
+   private com.commercetools.models.common.Price price;
    
    private java.lang.Boolean scopedPriceDiscounted;
    
-   private java.util.List<com.commercetools.models.Product.Attribute> attributes;
+   private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
-   private com.commercetools.models.Product.ProductVariantAvailability availability;
+   private com.commercetools.models.product.ProductVariantAvailability availability;
    
    private java.lang.Long id;
    
-   private java.util.List<com.commercetools.models.Common.Price> prices;
+   private java.util.List<com.commercetools.models.common.Price> prices;
    
    private java.lang.String sku;
    
    private java.lang.String key;
 
    @JsonCreator
-   ProductVariantImpl(@JsonProperty("scopedPrice") final com.commercetools.models.Common.ScopedPrice scopedPrice, @JsonProperty("images") final java.util.List<com.commercetools.models.Common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.models.Common.Asset> assets, @JsonProperty("isMatchingVariant") final java.lang.Boolean isMatchingVariant, @JsonProperty("price") final com.commercetools.models.Common.Price price, @JsonProperty("scopedPriceDiscounted") final java.lang.Boolean scopedPriceDiscounted, @JsonProperty("attributes") final java.util.List<com.commercetools.models.Product.Attribute> attributes, @JsonProperty("availability") final com.commercetools.models.Product.ProductVariantAvailability availability, @JsonProperty("id") final java.lang.Long id, @JsonProperty("prices") final java.util.List<com.commercetools.models.Common.Price> prices, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("key") final java.lang.String key) {
+   ProductVariantImpl(@JsonProperty("scopedPrice") final com.commercetools.models.common.ScopedPrice scopedPrice, @JsonProperty("images") final java.util.List<com.commercetools.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.models.common.Asset> assets, @JsonProperty("isMatchingVariant") final java.lang.Boolean isMatchingVariant, @JsonProperty("price") final com.commercetools.models.common.Price price, @JsonProperty("scopedPriceDiscounted") final java.lang.Boolean scopedPriceDiscounted, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes, @JsonProperty("availability") final com.commercetools.models.product.ProductVariantAvailability availability, @JsonProperty("id") final java.lang.Long id, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.Price> prices, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("key") final java.lang.String key) {
       this.scopedPrice = scopedPrice;
       this.images = images;
       this.assets = assets;
@@ -74,17 +74,17 @@ public final class ProductVariantImpl implements ProductVariant {
    }
    
    
-   public com.commercetools.models.Common.ScopedPrice getScopedPrice(){
+   public com.commercetools.models.common.ScopedPrice getScopedPrice(){
       return this.scopedPrice;
    }
    
    
-   public java.util.List<com.commercetools.models.Common.Image> getImages(){
+   public java.util.List<com.commercetools.models.common.Image> getImages(){
       return this.images;
    }
    
    
-   public java.util.List<com.commercetools.models.Common.Asset> getAssets(){
+   public java.util.List<com.commercetools.models.common.Asset> getAssets(){
       return this.assets;
    }
    
@@ -94,7 +94,7 @@ public final class ProductVariantImpl implements ProductVariant {
    }
    
    
-   public com.commercetools.models.Common.Price getPrice(){
+   public com.commercetools.models.common.Price getPrice(){
       return this.price;
    }
    
@@ -104,12 +104,12 @@ public final class ProductVariantImpl implements ProductVariant {
    }
    
    
-   public java.util.List<com.commercetools.models.Product.Attribute> getAttributes(){
+   public java.util.List<com.commercetools.models.product.Attribute> getAttributes(){
       return this.attributes;
    }
    
    
-   public com.commercetools.models.Product.ProductVariantAvailability getAvailability(){
+   public com.commercetools.models.product.ProductVariantAvailability getAvailability(){
       return this.availability;
    }
    
@@ -119,7 +119,7 @@ public final class ProductVariantImpl implements ProductVariant {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.Price> getPrices(){
+   public java.util.List<com.commercetools.models.common.Price> getPrices(){
       return this.prices;
    }
    
@@ -133,15 +133,15 @@ public final class ProductVariantImpl implements ProductVariant {
       return this.key;
    }
 
-   public void setScopedPrice(final com.commercetools.models.Common.ScopedPrice scopedPrice){
+   public void setScopedPrice(final com.commercetools.models.common.ScopedPrice scopedPrice){
       this.scopedPrice = scopedPrice;
    }
    
-   public void setImages(final java.util.List<com.commercetools.models.Common.Image> images){
+   public void setImages(final java.util.List<com.commercetools.models.common.Image> images){
       this.images = images;
    }
    
-   public void setAssets(final java.util.List<com.commercetools.models.Common.Asset> assets){
+   public void setAssets(final java.util.List<com.commercetools.models.common.Asset> assets){
       this.assets = assets;
    }
    
@@ -149,7 +149,7 @@ public final class ProductVariantImpl implements ProductVariant {
       this.isMatchingVariant = isMatchingVariant;
    }
    
-   public void setPrice(final com.commercetools.models.Common.Price price){
+   public void setPrice(final com.commercetools.models.common.Price price){
       this.price = price;
    }
    
@@ -157,11 +157,11 @@ public final class ProductVariantImpl implements ProductVariant {
       this.scopedPriceDiscounted = scopedPriceDiscounted;
    }
    
-   public void setAttributes(final java.util.List<com.commercetools.models.Product.Attribute> attributes){
+   public void setAttributes(final java.util.List<com.commercetools.models.product.Attribute> attributes){
       this.attributes = attributes;
    }
    
-   public void setAvailability(final com.commercetools.models.Product.ProductVariantAvailability availability){
+   public void setAvailability(final com.commercetools.models.product.ProductVariantAvailability availability){
       this.availability = availability;
    }
    
@@ -169,7 +169,7 @@ public final class ProductVariantImpl implements ProductVariant {
       this.id = id;
    }
    
-   public void setPrices(final java.util.List<com.commercetools.models.Common.Price> prices){
+   public void setPrices(final java.util.List<com.commercetools.models.common.Price> prices){
       this.prices = prices;
    }
    

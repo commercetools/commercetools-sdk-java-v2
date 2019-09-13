@@ -1,8 +1,8 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Inventory.InventoryEntry;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.inventory.InventoryEntry;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntryReferenceImpl implements InventoryEntryReference {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Inventory.InventoryEntry obj;
+   private com.commercetools.models.inventory.InventoryEntry obj;
 
    @JsonCreator
-   InventoryEntryReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.Inventory.InventoryEntry obj) {
+   InventoryEntryReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.inventory.InventoryEntry obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("inventory-entry").get();
@@ -41,7 +41,7 @@ public final class InventoryEntryReferenceImpl implements InventoryEntryReferenc
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    
@@ -51,7 +51,7 @@ public final class InventoryEntryReferenceImpl implements InventoryEntryReferenc
    }
    
    
-   public com.commercetools.models.Inventory.InventoryEntry getObj(){
+   public com.commercetools.models.inventory.InventoryEntry getObj(){
       return this.obj;
    }
 
@@ -59,7 +59,7 @@ public final class InventoryEntryReferenceImpl implements InventoryEntryReferenc
       this.id = id;
    }
    
-   public void setObj(final com.commercetools.models.Inventory.InventoryEntry obj){
+   public void setObj(final com.commercetools.models.inventory.InventoryEntry obj){
       this.obj = obj;
    }
 

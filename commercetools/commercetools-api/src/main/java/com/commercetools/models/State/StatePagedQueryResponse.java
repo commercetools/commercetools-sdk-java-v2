@@ -1,8 +1,8 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.State;
+import com.commercetools.models.state.State;
 import java.lang.Long;
-import com.commercetools.models.State.StatePagedQueryResponseImpl;
+import com.commercetools.models.state.StatePagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

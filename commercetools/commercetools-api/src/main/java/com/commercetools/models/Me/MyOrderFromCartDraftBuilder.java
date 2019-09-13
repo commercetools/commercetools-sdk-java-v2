@@ -1,8 +1,8 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Me.MyOrderFromCartDraft;
+import com.commercetools.models.me.MyOrderFromCartDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

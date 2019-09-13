@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.RoundingMode;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.RoundingMode;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxR
 
    private java.lang.String action;
    
-   private com.commercetools.models.Cart.RoundingMode taxRoundingMode;
+   private com.commercetools.models.cart.RoundingMode taxRoundingMode;
 
    @JsonCreator
-   CartChangeTaxRoundingModeActionImpl(@JsonProperty("taxRoundingMode") final com.commercetools.models.Cart.RoundingMode taxRoundingMode) {
+   CartChangeTaxRoundingModeActionImpl(@JsonProperty("taxRoundingMode") final com.commercetools.models.cart.RoundingMode taxRoundingMode) {
       this.taxRoundingMode = taxRoundingMode;
       this.action = "changeTaxRoundingMode";
    }
@@ -43,11 +43,11 @@ public final class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxR
    }
    
    
-   public com.commercetools.models.Cart.RoundingMode getTaxRoundingMode(){
+   public com.commercetools.models.cart.RoundingMode getTaxRoundingMode(){
       return this.taxRoundingMode;
    }
 
-   public void setTaxRoundingMode(final com.commercetools.models.Cart.RoundingMode taxRoundingMode){
+   public void setTaxRoundingMode(final com.commercetools.models.cart.RoundingMode taxRoundingMode){
       this.taxRoundingMode = taxRoundingMode;
    }
 

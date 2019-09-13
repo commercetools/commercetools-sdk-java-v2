@@ -1,9 +1,9 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ShippingRateInputType;
-import com.commercetools.models.ShippingMethod.ShippingRateTierType;
-import com.commercetools.models.Type.CustomFieldLocalizedEnumValue;
-import com.commercetools.models.Project.CartClassificationType;
+import com.commercetools.models.project.ShippingRateInputType;
+import com.commercetools.models.shipping_method.ShippingRateTierType;
+import com.commercetools.models.type.CustomFieldLocalizedEnumValue;
+import com.commercetools.models.project.CartClassificationType;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CartClassificationTypeBuilder {
    
    
-   private java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> values;
+   private java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> values;
    
-   public CartClassificationTypeBuilder values( final java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> values) {
+   public CartClassificationTypeBuilder values( final java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> values) {
       this.values = values;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> getValues(){
+   public java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> getValues(){
       return this.values;
    }
 

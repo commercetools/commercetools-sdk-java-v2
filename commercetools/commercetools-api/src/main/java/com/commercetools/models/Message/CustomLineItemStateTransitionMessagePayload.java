@@ -1,11 +1,11 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.state.StateReference;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Message.CustomLineItemStateTransitionMessagePayloadImpl;
+import com.commercetools.models.message.CustomLineItemStateTransitionMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

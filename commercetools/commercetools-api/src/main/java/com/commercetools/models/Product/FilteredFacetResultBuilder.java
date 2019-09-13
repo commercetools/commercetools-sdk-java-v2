@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetResult;
-import com.commercetools.models.Product.FacetTypes;
+import com.commercetools.models.product.FacetResult;
+import com.commercetools.models.product.FacetTypes;
 import java.lang.Long;
-import com.commercetools.models.Product.FilteredFacetResult;
+import com.commercetools.models.product.FilteredFacetResult;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.common.Money;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPric
    
    private java.lang.String lineItemId;
    
-   private com.commercetools.models.Common.Money externalPrice;
+   private com.commercetools.models.common.Money externalPrice;
 
    @JsonCreator
-   CartSetLineItemPriceActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("externalPrice") final com.commercetools.models.Common.Money externalPrice) {
+   CartSetLineItemPriceActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("externalPrice") final com.commercetools.models.common.Money externalPrice) {
       this.lineItemId = lineItemId;
       this.externalPrice = externalPrice;
       this.action = "setLineItemPrice";
@@ -51,7 +51,7 @@ public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPric
    }
    
    
-   public com.commercetools.models.Common.Money getExternalPrice(){
+   public com.commercetools.models.common.Money getExternalPrice(){
       return this.externalPrice;
    }
 
@@ -59,7 +59,7 @@ public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPric
       this.lineItemId = lineItemId;
    }
    
-   public void setExternalPrice(final com.commercetools.models.Common.Money externalPrice){
+   public void setExternalPrice(final com.commercetools.models.common.Money externalPrice){
       this.externalPrice = externalPrice;
    }
 

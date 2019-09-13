@@ -1,8 +1,8 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionAction;
-import com.commercetools.models.Extension.ExtensionResourceTypeId;
-import com.commercetools.models.Extension.ExtensionTriggerImpl;
+import com.commercetools.models.extension.ExtensionAction;
+import com.commercetools.models.extension.ExtensionResourceTypeId;
+import com.commercetools.models.extension.ExtensionTriggerImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

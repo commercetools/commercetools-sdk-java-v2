@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetResult;
-import com.commercetools.models.Product.FacetResultTerm;
-import com.commercetools.models.Product.FacetTypes;
-import com.commercetools.models.Product.TermFacetResultType;
+import com.commercetools.models.product.FacetResult;
+import com.commercetools.models.product.FacetResultTerm;
+import com.commercetools.models.product.FacetTypes;
+import com.commercetools.models.product.TermFacetResultType;
 import java.lang.Long;
-import com.commercetools.models.Product.TermFacetResultImpl;
+import com.commercetools.models.product.TermFacetResultImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.ReturnInfo;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.ReturnInfo;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturn
 
    private java.lang.String type;
    
-   private com.commercetools.models.Order.ReturnInfo returnInfo;
+   private com.commercetools.models.order.ReturnInfo returnInfo;
 
    @JsonCreator
-   OrderReturnInfoAddedMessagePayloadImpl(@JsonProperty("returnInfo") final com.commercetools.models.Order.ReturnInfo returnInfo) {
+   OrderReturnInfoAddedMessagePayloadImpl(@JsonProperty("returnInfo") final com.commercetools.models.order.ReturnInfo returnInfo) {
       this.returnInfo = returnInfo;
       this.type = "ReturnInfoAdded";
    }
@@ -43,11 +43,11 @@ public final class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturn
    }
    
    
-   public com.commercetools.models.Order.ReturnInfo getReturnInfo(){
+   public com.commercetools.models.order.ReturnInfo getReturnInfo(){
       return this.returnInfo;
    }
 
-   public void setReturnInfo(final com.commercetools.models.Order.ReturnInfo returnInfo){
+   public void setReturnInfo(final com.commercetools.models.order.ReturnInfo returnInfo){
       this.returnInfo = returnInfo;
    }
 

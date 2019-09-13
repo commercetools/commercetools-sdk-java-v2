@@ -1,9 +1,9 @@
 package commercetools.project;
 
-import com.commercetools.models.Project.Project;
-import com.commercetools.models.Project.ProjectChangeCountriesActionBuilder;
-import com.commercetools.models.Project.ProjectUpdateAction;
-import com.commercetools.models.Project.ProjectUpdateBuilder;
+import com.commercetools.models.project.Project;
+import com.commercetools.models.project.ProjectChangeCountriesActionBuilder;
+import com.commercetools.models.project.ProjectUpdateAction;
+import com.commercetools.models.project.ProjectUpdateBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

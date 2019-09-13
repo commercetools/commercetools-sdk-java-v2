@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.Delivery;
-import com.commercetools.models.Message.DeliveryRemovedMessageImpl;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.Delivery;
+import com.commercetools.models.message.DeliveryRemovedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

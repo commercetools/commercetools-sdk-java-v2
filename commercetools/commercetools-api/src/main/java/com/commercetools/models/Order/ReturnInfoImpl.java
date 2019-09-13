@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.ReturnItem;
+import com.commercetools.models.order.ReturnItem;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -28,10 +28,10 @@ public final class ReturnInfoImpl implements ReturnInfo {
    
    private java.lang.String returnTrackingId;
    
-   private java.util.List<com.commercetools.models.Order.ReturnItem> items;
+   private java.util.List<com.commercetools.models.order.ReturnItem> items;
 
    @JsonCreator
-   ReturnInfoImpl(@JsonProperty("returnDate") final java.time.ZonedDateTime returnDate, @JsonProperty("returnTrackingId") final java.lang.String returnTrackingId, @JsonProperty("items") final java.util.List<com.commercetools.models.Order.ReturnItem> items) {
+   ReturnInfoImpl(@JsonProperty("returnDate") final java.time.ZonedDateTime returnDate, @JsonProperty("returnTrackingId") final java.lang.String returnTrackingId, @JsonProperty("items") final java.util.List<com.commercetools.models.order.ReturnItem> items) {
       this.returnDate = returnDate;
       this.returnTrackingId = returnTrackingId;
       this.items = items;
@@ -51,7 +51,7 @@ public final class ReturnInfoImpl implements ReturnInfo {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.ReturnItem> getItems(){
+   public java.util.List<com.commercetools.models.order.ReturnItem> getItems(){
       return this.items;
    }
 
@@ -63,7 +63,7 @@ public final class ReturnInfoImpl implements ReturnInfo {
       this.returnTrackingId = returnTrackingId;
    }
    
-   public void setItems(final java.util.List<com.commercetools.models.Order.ReturnItem> items){
+   public void setItems(final java.util.List<com.commercetools.models.order.ReturnItem> items){
       this.items = items;
    }
 

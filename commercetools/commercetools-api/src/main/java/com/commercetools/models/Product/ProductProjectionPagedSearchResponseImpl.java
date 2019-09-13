@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetResults;
-import com.commercetools.models.Product.ProductProjection;
+import com.commercetools.models.product.FacetResults;
+import com.commercetools.models.product.ProductProjection;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -30,12 +30,12 @@ public final class ProductProjectionPagedSearchResponseImpl implements ProductPr
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Product.ProductProjection> results;
+   private java.util.List<com.commercetools.models.product.ProductProjection> results;
    
-   private com.commercetools.models.Product.FacetResults facets;
+   private com.commercetools.models.product.FacetResults facets;
 
    @JsonCreator
-   ProductProjectionPagedSearchResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Product.ProductProjection> results, @JsonProperty("facets") final com.commercetools.models.Product.FacetResults facets) {
+   ProductProjectionPagedSearchResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.product.ProductProjection> results, @JsonProperty("facets") final com.commercetools.models.product.FacetResults facets) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -62,12 +62,12 @@ public final class ProductProjectionPagedSearchResponseImpl implements ProductPr
    }
    
    
-   public java.util.List<com.commercetools.models.Product.ProductProjection> getResults(){
+   public java.util.List<com.commercetools.models.product.ProductProjection> getResults(){
       return this.results;
    }
    
    
-   public com.commercetools.models.Product.FacetResults getFacets(){
+   public com.commercetools.models.product.FacetResults getFacets(){
       return this.facets;
    }
 
@@ -83,11 +83,11 @@ public final class ProductProjectionPagedSearchResponseImpl implements ProductPr
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Product.ProductProjection> results){
+   public void setResults(final java.util.List<com.commercetools.models.product.ProductProjection> results){
       this.results = results;
    }
    
-   public void setFacets(final com.commercetools.models.Product.FacetResults facets){
+   public void setFacets(final com.commercetools.models.product.FacetResults facets){
       this.facets = facets;
    }
 

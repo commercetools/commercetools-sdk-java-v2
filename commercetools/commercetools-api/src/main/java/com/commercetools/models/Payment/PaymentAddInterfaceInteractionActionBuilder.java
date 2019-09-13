@@ -1,10 +1,10 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.PaymentUpdateAction;
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.payment.PaymentUpdateAction;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Payment.PaymentAddInterfaceInteractionAction;
+import com.commercetools.models.payment.PaymentAddInterfaceInteractionAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,28 +13,28 @@ import java.time.ZonedDateTime;
 public final class PaymentAddInterfaceInteractionActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Type.FieldContainer fields;
+   private com.commercetools.models.type.FieldContainer fields;
    
    
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
    
-   public PaymentAddInterfaceInteractionActionBuilder fields(@Nullable final com.commercetools.models.Type.FieldContainer fields) {
+   public PaymentAddInterfaceInteractionActionBuilder fields(@Nullable final com.commercetools.models.type.FieldContainer fields) {
       this.fields = fields;
       return this;
    }
    
-   public PaymentAddInterfaceInteractionActionBuilder type( final com.commercetools.models.Type.TypeResourceIdentifier type) {
+   public PaymentAddInterfaceInteractionActionBuilder type( final com.commercetools.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Type.FieldContainer getFields(){
+   public com.commercetools.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
 

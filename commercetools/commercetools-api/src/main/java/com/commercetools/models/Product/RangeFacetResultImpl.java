@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetResult;
-import com.commercetools.models.Product.FacetResultRange;
-import com.commercetools.models.Product.FacetTypes;
+import com.commercetools.models.product.FacetResult;
+import com.commercetools.models.product.FacetResultRange;
+import com.commercetools.models.product.FacetTypes;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +24,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class RangeFacetResultImpl implements RangeFacetResult {
 
-   private com.commercetools.models.Product.FacetTypes type;
+   private com.commercetools.models.product.FacetTypes type;
    
-   private java.util.List<com.commercetools.models.Product.FacetResultRange> ranges;
+   private java.util.List<com.commercetools.models.product.FacetResultRange> ranges;
 
    @JsonCreator
-   RangeFacetResultImpl(@JsonProperty("ranges") final java.util.List<com.commercetools.models.Product.FacetResultRange> ranges) {
+   RangeFacetResultImpl(@JsonProperty("ranges") final java.util.List<com.commercetools.models.product.FacetResultRange> ranges) {
       this.ranges = ranges;
       this.type = FacetTypes.findEnumViaJsonName("range").get();
    }
@@ -38,16 +38,16 @@ public final class RangeFacetResultImpl implements RangeFacetResult {
    }
    
    
-   public com.commercetools.models.Product.FacetTypes getType(){
+   public com.commercetools.models.product.FacetTypes getType(){
       return this.type;
    }
    
    
-   public java.util.List<com.commercetools.models.Product.FacetResultRange> getRanges(){
+   public java.util.List<com.commercetools.models.product.FacetResultRange> getRanges(){
       return this.ranges;
    }
 
-   public void setRanges(final java.util.List<com.commercetools.models.Product.FacetResultRange> ranges){
+   public void setRanges(final java.util.List<com.commercetools.models.product.FacetResultRange> ranges){
       this.ranges = ranges;
    }
 

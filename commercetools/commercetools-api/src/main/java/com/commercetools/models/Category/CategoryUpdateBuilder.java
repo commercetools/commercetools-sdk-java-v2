@@ -1,8 +1,8 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
+import com.commercetools.models.category.CategoryUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Category.CategoryUpdate;
+import com.commercetools.models.category.CategoryUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class CategoryUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Category.CategoryUpdateAction> actions;
+   private java.util.List<com.commercetools.models.category.CategoryUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public CategoryUpdateBuilder actions( final java.util.List<com.commercetools.models.Category.CategoryUpdateAction> actions) {
+   public CategoryUpdateBuilder actions( final java.util.List<com.commercetools.models.category.CategoryUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class CategoryUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Category.CategoryUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.category.CategoryUpdateAction> getActions(){
       return this.actions;
    }
    

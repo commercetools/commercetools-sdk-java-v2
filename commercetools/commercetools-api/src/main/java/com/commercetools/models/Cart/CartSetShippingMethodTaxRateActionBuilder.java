@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
 import java.lang.String;
-import com.commercetools.models.Cart.CartSetShippingMethodTaxRateAction;
+import com.commercetools.models.cart.CartSetShippingMethodTaxRateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CartSetShippingMethodTaxRateActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
-   public CartSetShippingMethodTaxRateActionBuilder externalTaxRate(@Nullable final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate) {
+   public CartSetShippingMethodTaxRateActionBuilder externalTaxRate(@Nullable final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.externalTaxRate = externalTaxRate;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
 

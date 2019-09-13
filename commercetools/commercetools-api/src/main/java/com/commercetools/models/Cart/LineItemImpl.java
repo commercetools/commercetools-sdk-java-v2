@@ -1,19 +1,19 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity;
-import com.commercetools.models.Cart.ItemShippingDetails;
-import com.commercetools.models.Cart.LineItemMode;
-import com.commercetools.models.Cart.LineItemPriceMode;
-import com.commercetools.models.Cart.TaxedItemPrice;
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Common.Price;
-import com.commercetools.models.Order.ItemState;
-import com.commercetools.models.Product.ProductVariant;
-import com.commercetools.models.ProductType.ProductTypeReference;
-import com.commercetools.models.TaxCategory.TaxRate;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.models.cart.ItemShippingDetails;
+import com.commercetools.models.cart.LineItemMode;
+import com.commercetools.models.cart.LineItemPriceMode;
+import com.commercetools.models.cart.TaxedItemPrice;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.common.Price;
+import com.commercetools.models.order.ItemState;
+import com.commercetools.models.product.ProductVariant;
+import com.commercetools.models.product_type.ProductTypeReference;
+import com.commercetools.models.tax_category.TaxRate;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Long;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -39,44 +39,44 @@ public final class LineItemImpl implements LineItem {
 
    private java.lang.Long quantity;
    
-   private com.commercetools.models.Cart.LineItemPriceMode priceMode;
+   private com.commercetools.models.cart.LineItemPriceMode priceMode;
    
    private java.lang.String productId;
    
-   private com.commercetools.models.Common.Money totalPrice;
+   private com.commercetools.models.common.Money totalPrice;
    
-   private com.commercetools.models.Cart.TaxedItemPrice taxedPrice;
+   private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
    
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
-   private java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+   private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
    
-   private com.commercetools.models.Common.LocalizedString productSlug;
+   private com.commercetools.models.common.LocalizedString productSlug;
    
-   private com.commercetools.models.TaxCategory.TaxRate taxRate;
+   private com.commercetools.models.tax_category.TaxRate taxRate;
    
-   private com.commercetools.models.Cart.ItemShippingDetails shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetails shippingDetails;
    
-   private com.commercetools.models.Common.Price price;
+   private com.commercetools.models.common.Price price;
    
-   private com.commercetools.models.Product.ProductVariant variant;
+   private com.commercetools.models.product.ProductVariant variant;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
-   private com.commercetools.models.Channel.ChannelReference supplyChannel;
+   private com.commercetools.models.channel.ChannelReference supplyChannel;
    
-   private java.util.List<com.commercetools.models.Order.ItemState> state;
+   private java.util.List<com.commercetools.models.order.ItemState> state;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Channel.ChannelReference distributionChannel;
+   private com.commercetools.models.channel.ChannelReference distributionChannel;
    
-   private com.commercetools.models.Cart.LineItemMode lineItemMode;
+   private com.commercetools.models.cart.LineItemMode lineItemMode;
    
-   private com.commercetools.models.ProductType.ProductTypeReference productType;
+   private com.commercetools.models.product_type.ProductTypeReference productType;
 
    @JsonCreator
-   LineItemImpl(@JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("priceMode") final com.commercetools.models.Cart.LineItemPriceMode priceMode, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("totalPrice") final com.commercetools.models.Common.Money totalPrice, @JsonProperty("taxedPrice") final com.commercetools.models.Cart.TaxedItemPrice taxedPrice, @JsonProperty("custom") final com.commercetools.models.Type.CustomFields custom, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("productSlug") final com.commercetools.models.Common.LocalizedString productSlug, @JsonProperty("taxRate") final com.commercetools.models.TaxCategory.TaxRate taxRate, @JsonProperty("shippingDetails") final com.commercetools.models.Cart.ItemShippingDetails shippingDetails, @JsonProperty("price") final com.commercetools.models.Common.Price price, @JsonProperty("variant") final com.commercetools.models.Product.ProductVariant variant, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("supplyChannel") final com.commercetools.models.Channel.ChannelReference supplyChannel, @JsonProperty("state") final java.util.List<com.commercetools.models.Order.ItemState> state, @JsonProperty("id") final java.lang.String id, @JsonProperty("distributionChannel") final com.commercetools.models.Channel.ChannelReference distributionChannel, @JsonProperty("lineItemMode") final com.commercetools.models.Cart.LineItemMode lineItemMode, @JsonProperty("productType") final com.commercetools.models.ProductType.ProductTypeReference productType) {
+   LineItemImpl(@JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("priceMode") final com.commercetools.models.cart.LineItemPriceMode priceMode, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("totalPrice") final com.commercetools.models.common.Money totalPrice, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("productSlug") final com.commercetools.models.common.LocalizedString productSlug, @JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRate taxRate, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetails shippingDetails, @JsonProperty("price") final com.commercetools.models.common.Price price, @JsonProperty("variant") final com.commercetools.models.product.ProductVariant variant, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelReference supplyChannel, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state, @JsonProperty("id") final java.lang.String id, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelReference distributionChannel, @JsonProperty("lineItemMode") final com.commercetools.models.cart.LineItemMode lineItemMode, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeReference productType) {
       this.quantity = quantity;
       this.priceMode = priceMode;
       this.productId = productId;
@@ -107,7 +107,7 @@ public final class LineItemImpl implements LineItem {
    }
    
    
-   public com.commercetools.models.Cart.LineItemPriceMode getPriceMode(){
+   public com.commercetools.models.cart.LineItemPriceMode getPriceMode(){
       return this.priceMode;
    }
    
@@ -117,62 +117,62 @@ public final class LineItemImpl implements LineItem {
    }
    
    
-   public com.commercetools.models.Common.Money getTotalPrice(){
+   public com.commercetools.models.common.Money getTotalPrice(){
       return this.totalPrice;
    }
    
    
-   public com.commercetools.models.Cart.TaxedItemPrice getTaxedPrice(){
+   public com.commercetools.models.cart.TaxedItemPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
    
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
+   public java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
       return this.discountedPricePerQuantity;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getProductSlug(){
+   public com.commercetools.models.common.LocalizedString getProductSlug(){
       return this.productSlug;
    }
    
    
-   public com.commercetools.models.TaxCategory.TaxRate getTaxRate(){
+   public com.commercetools.models.tax_category.TaxRate getTaxRate(){
       return this.taxRate;
    }
    
    
-   public com.commercetools.models.Cart.ItemShippingDetails getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetails getShippingDetails(){
       return this.shippingDetails;
    }
    
    
-   public com.commercetools.models.Common.Price getPrice(){
+   public com.commercetools.models.common.Price getPrice(){
       return this.price;
    }
    
    
-   public com.commercetools.models.Product.ProductVariant getVariant(){
+   public com.commercetools.models.product.ProductVariant getVariant(){
       return this.variant;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    
-   public com.commercetools.models.Channel.ChannelReference getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelReference getSupplyChannel(){
       return this.supplyChannel;
    }
    
    
-   public java.util.List<com.commercetools.models.Order.ItemState> getState(){
+   public java.util.List<com.commercetools.models.order.ItemState> getState(){
       return this.state;
    }
    
@@ -182,17 +182,17 @@ public final class LineItemImpl implements LineItem {
    }
    
    
-   public com.commercetools.models.Channel.ChannelReference getDistributionChannel(){
+   public com.commercetools.models.channel.ChannelReference getDistributionChannel(){
       return this.distributionChannel;
    }
    
    
-   public com.commercetools.models.Cart.LineItemMode getLineItemMode(){
+   public com.commercetools.models.cart.LineItemMode getLineItemMode(){
       return this.lineItemMode;
    }
    
    
-   public com.commercetools.models.ProductType.ProductTypeReference getProductType(){
+   public com.commercetools.models.product_type.ProductTypeReference getProductType(){
       return this.productType;
    }
 
@@ -200,7 +200,7 @@ public final class LineItemImpl implements LineItem {
       this.quantity = quantity;
    }
    
-   public void setPriceMode(final com.commercetools.models.Cart.LineItemPriceMode priceMode){
+   public void setPriceMode(final com.commercetools.models.cart.LineItemPriceMode priceMode){
       this.priceMode = priceMode;
    }
    
@@ -208,51 +208,51 @@ public final class LineItemImpl implements LineItem {
       this.productId = productId;
    }
    
-   public void setTotalPrice(final com.commercetools.models.Common.Money totalPrice){
+   public void setTotalPrice(final com.commercetools.models.common.Money totalPrice){
       this.totalPrice = totalPrice;
    }
    
-   public void setTaxedPrice(final com.commercetools.models.Cart.TaxedItemPrice taxedPrice){
+   public void setTaxedPrice(final com.commercetools.models.cart.TaxedItemPrice taxedPrice){
       this.taxedPrice = taxedPrice;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFields custom){
+   public void setCustom(final com.commercetools.models.type.CustomFields custom){
       this.custom = custom;
    }
    
-   public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
+   public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
       this.discountedPricePerQuantity = discountedPricePerQuantity;
    }
    
-   public void setProductSlug(final com.commercetools.models.Common.LocalizedString productSlug){
+   public void setProductSlug(final com.commercetools.models.common.LocalizedString productSlug){
       this.productSlug = productSlug;
    }
    
-   public void setTaxRate(final com.commercetools.models.TaxCategory.TaxRate taxRate){
+   public void setTaxRate(final com.commercetools.models.tax_category.TaxRate taxRate){
       this.taxRate = taxRate;
    }
    
-   public void setShippingDetails(final com.commercetools.models.Cart.ItemShippingDetails shippingDetails){
+   public void setShippingDetails(final com.commercetools.models.cart.ItemShippingDetails shippingDetails){
       this.shippingDetails = shippingDetails;
    }
    
-   public void setPrice(final com.commercetools.models.Common.Price price){
+   public void setPrice(final com.commercetools.models.common.Price price){
       this.price = price;
    }
    
-   public void setVariant(final com.commercetools.models.Product.ProductVariant variant){
+   public void setVariant(final com.commercetools.models.product.ProductVariant variant){
       this.variant = variant;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    
-   public void setSupplyChannel(final com.commercetools.models.Channel.ChannelReference supplyChannel){
+   public void setSupplyChannel(final com.commercetools.models.channel.ChannelReference supplyChannel){
       this.supplyChannel = supplyChannel;
    }
    
-   public void setState(final java.util.List<com.commercetools.models.Order.ItemState> state){
+   public void setState(final java.util.List<com.commercetools.models.order.ItemState> state){
       this.state = state;
    }
    
@@ -260,15 +260,15 @@ public final class LineItemImpl implements LineItem {
       this.id = id;
    }
    
-   public void setDistributionChannel(final com.commercetools.models.Channel.ChannelReference distributionChannel){
+   public void setDistributionChannel(final com.commercetools.models.channel.ChannelReference distributionChannel){
       this.distributionChannel = distributionChannel;
    }
    
-   public void setLineItemMode(final com.commercetools.models.Cart.LineItemMode lineItemMode){
+   public void setLineItemMode(final com.commercetools.models.cart.LineItemMode lineItemMode){
       this.lineItemMode = lineItemMode;
    }
    
-   public void setProductType(final com.commercetools.models.ProductType.ProductTypeReference productType){
+   public void setProductType(final com.commercetools.models.product_type.ProductTypeReference productType){
       this.productType = productType;
    }
 

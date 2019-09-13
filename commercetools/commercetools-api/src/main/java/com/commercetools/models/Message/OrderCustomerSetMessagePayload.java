@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Customer.CustomerReference;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.customer.CustomerReference;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.OrderCustomerSetMessagePayloadImpl;
+import com.commercetools.models.message.OrderCustomerSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

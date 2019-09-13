@@ -1,9 +1,9 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.CentPrecisionMoneyDraft;
-import com.commercetools.models.Common.HighPrecisionMoneyDraft;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Common.MoneyType;
+import com.commercetools.models.common.CentPrecisionMoneyDraft;
+import com.commercetools.models.common.HighPrecisionMoneyDraft;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.common.MoneyType;
 
 
 import com.fasterxml.jackson.annotation.*;
@@ -18,8 +18,8 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Common.CentPrecisionMoneyDraftImpl.class, name = "centPrecision"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Common.HighPrecisionMoneyDraftImpl.class, name = "highPrecision")
+   @JsonSubTypes.Type(value = com.commercetools.models.common.CentPrecisionMoneyDraftImpl.class, name = "centPrecision"),
+   @JsonSubTypes.Type(value = com.commercetools.models.common.HighPrecisionMoneyDraftImpl.class, name = "highPrecision")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

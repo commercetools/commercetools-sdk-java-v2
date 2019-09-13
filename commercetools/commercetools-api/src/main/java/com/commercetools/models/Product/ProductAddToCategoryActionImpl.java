@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Category.CategoryResourceIdentifier;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.category.CategoryResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -31,10 +31,10 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
    
    private java.lang.Boolean staged;
    
-   private com.commercetools.models.Category.CategoryResourceIdentifier category;
+   private com.commercetools.models.category.CategoryResourceIdentifier category;
 
    @JsonCreator
-   ProductAddToCategoryActionImpl(@JsonProperty("orderHint") final java.lang.String orderHint, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("category") final com.commercetools.models.Category.CategoryResourceIdentifier category) {
+   ProductAddToCategoryActionImpl(@JsonProperty("orderHint") final java.lang.String orderHint, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("category") final com.commercetools.models.category.CategoryResourceIdentifier category) {
       this.orderHint = orderHint;
       this.staged = staged;
       this.category = category;
@@ -60,7 +60,7 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
    }
    
    
-   public com.commercetools.models.Category.CategoryResourceIdentifier getCategory(){
+   public com.commercetools.models.category.CategoryResourceIdentifier getCategory(){
       return this.category;
    }
 
@@ -72,7 +72,7 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
       this.staged = staged;
    }
    
-   public void setCategory(final com.commercetools.models.Category.CategoryResourceIdentifier category){
+   public void setCategory(final com.commercetools.models.category.CategoryResourceIdentifier category){
       this.category = category;
    }
 

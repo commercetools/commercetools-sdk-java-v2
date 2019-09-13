@@ -1,4 +1,4 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
 import java.lang.Integer;
 import java.lang.Object;

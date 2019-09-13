@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.TaxCalculationMode;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.TaxCalculationMode;
 import java.lang.String;
-import com.commercetools.models.Cart.CartChangeTaxCalculationModeAction;
+import com.commercetools.models.cart.CartChangeTaxCalculationModeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CartChangeTaxCalculationModeActionBuilder {
    
    
-   private com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode;
+   private com.commercetools.models.cart.TaxCalculationMode taxCalculationMode;
    
-   public CartChangeTaxCalculationModeActionBuilder taxCalculationMode( final com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode) {
+   public CartChangeTaxCalculationModeActionBuilder taxCalculationMode( final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode) {
       this.taxCalculationMode = taxCalculationMode;
       return this;
    }
    
    
-   public com.commercetools.models.Cart.TaxCalculationMode getTaxCalculationMode(){
+   public com.commercetools.models.cart.TaxCalculationMode getTaxCalculationMode(){
       return this.taxCalculationMode;
    }
 

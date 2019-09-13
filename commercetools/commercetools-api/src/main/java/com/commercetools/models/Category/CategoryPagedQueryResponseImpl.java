@@ -1,6 +1,6 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.Category;
+import com.commercetools.models.category.Category;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class CategoryPagedQueryResponseImpl implements CategoryPagedQueryR
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Category.Category> results;
+   private java.util.List<com.commercetools.models.category.Category> results;
 
    @JsonCreator
-   CategoryPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Category.Category> results) {
+   CategoryPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.category.Category> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class CategoryPagedQueryResponseImpl implements CategoryPagedQueryR
    }
    
    
-   public java.util.List<com.commercetools.models.Category.Category> getResults(){
+   public java.util.List<com.commercetools.models.category.Category> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class CategoryPagedQueryResponseImpl implements CategoryPagedQueryR
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Category.Category> results){
+   public void setResults(final java.util.List<com.commercetools.models.category.Category> results){
       this.results = results;
    }
 

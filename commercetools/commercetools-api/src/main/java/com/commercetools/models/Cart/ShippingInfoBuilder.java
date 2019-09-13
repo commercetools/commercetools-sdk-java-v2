@@ -1,16 +1,16 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.DiscountedLineItemPrice;
-import com.commercetools.models.Cart.ShippingMethodState;
-import com.commercetools.models.Cart.TaxedItemPrice;
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.Order.Delivery;
-import com.commercetools.models.ShippingMethod.ShippingMethodReference;
-import com.commercetools.models.ShippingMethod.ShippingRate;
-import com.commercetools.models.TaxCategory.TaxCategoryReference;
-import com.commercetools.models.TaxCategory.TaxRate;
+import com.commercetools.models.cart.DiscountedLineItemPrice;
+import com.commercetools.models.cart.ShippingMethodState;
+import com.commercetools.models.cart.TaxedItemPrice;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.order.Delivery;
+import com.commercetools.models.shipping_method.ShippingMethodReference;
+import com.commercetools.models.shipping_method.ShippingRate;
+import com.commercetools.models.tax_category.TaxCategoryReference;
+import com.commercetools.models.tax_category.TaxRate;
 import java.lang.String;
-import com.commercetools.models.Cart.ShippingInfo;
+import com.commercetools.models.cart.ShippingInfo;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -19,66 +19,66 @@ import java.time.ZonedDateTime;
 public final class ShippingInfoBuilder {
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxRate taxRate;
+   private com.commercetools.models.tax_category.TaxRate taxRate;
    
    
-   private com.commercetools.models.ShippingMethod.ShippingRate shippingRate;
-   
-   @Nullable
-   private com.commercetools.models.Cart.DiscountedLineItemPrice discountedPrice;
-   
-   
-   private com.commercetools.models.Cart.ShippingMethodState shippingMethodState;
+   private com.commercetools.models.shipping_method.ShippingRate shippingRate;
    
    @Nullable
-   private com.commercetools.models.Cart.TaxedItemPrice taxedPrice;
+   private com.commercetools.models.cart.DiscountedLineItemPrice discountedPrice;
    
    
-   private com.commercetools.models.Common.TypedMoney price;
+   private com.commercetools.models.cart.ShippingMethodState shippingMethodState;
    
    @Nullable
-   private com.commercetools.models.ShippingMethod.ShippingMethodReference shippingMethod;
+   private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
+   
+   
+   private com.commercetools.models.common.TypedMoney price;
+   
+   @Nullable
+   private com.commercetools.models.shipping_method.ShippingMethodReference shippingMethod;
    
    
    private java.lang.String shippingMethodName;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Order.Delivery> deliveries;
+   private java.util.List<com.commercetools.models.order.Delivery> deliveries;
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxCategoryReference taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryReference taxCategory;
    
-   public ShippingInfoBuilder taxRate(@Nullable final com.commercetools.models.TaxCategory.TaxRate taxRate) {
+   public ShippingInfoBuilder taxRate(@Nullable final com.commercetools.models.tax_category.TaxRate taxRate) {
       this.taxRate = taxRate;
       return this;
    }
    
-   public ShippingInfoBuilder shippingRate( final com.commercetools.models.ShippingMethod.ShippingRate shippingRate) {
+   public ShippingInfoBuilder shippingRate( final com.commercetools.models.shipping_method.ShippingRate shippingRate) {
       this.shippingRate = shippingRate;
       return this;
    }
    
-   public ShippingInfoBuilder discountedPrice(@Nullable final com.commercetools.models.Cart.DiscountedLineItemPrice discountedPrice) {
+   public ShippingInfoBuilder discountedPrice(@Nullable final com.commercetools.models.cart.DiscountedLineItemPrice discountedPrice) {
       this.discountedPrice = discountedPrice;
       return this;
    }
    
-   public ShippingInfoBuilder shippingMethodState( final com.commercetools.models.Cart.ShippingMethodState shippingMethodState) {
+   public ShippingInfoBuilder shippingMethodState( final com.commercetools.models.cart.ShippingMethodState shippingMethodState) {
       this.shippingMethodState = shippingMethodState;
       return this;
    }
    
-   public ShippingInfoBuilder taxedPrice(@Nullable final com.commercetools.models.Cart.TaxedItemPrice taxedPrice) {
+   public ShippingInfoBuilder taxedPrice(@Nullable final com.commercetools.models.cart.TaxedItemPrice taxedPrice) {
       this.taxedPrice = taxedPrice;
       return this;
    }
    
-   public ShippingInfoBuilder price( final com.commercetools.models.Common.TypedMoney price) {
+   public ShippingInfoBuilder price( final com.commercetools.models.common.TypedMoney price) {
       this.price = price;
       return this;
    }
    
-   public ShippingInfoBuilder shippingMethod(@Nullable final com.commercetools.models.ShippingMethod.ShippingMethodReference shippingMethod) {
+   public ShippingInfoBuilder shippingMethod(@Nullable final com.commercetools.models.shipping_method.ShippingMethodReference shippingMethod) {
       this.shippingMethod = shippingMethod;
       return this;
    }
@@ -88,48 +88,48 @@ public final class ShippingInfoBuilder {
       return this;
    }
    
-   public ShippingInfoBuilder deliveries(@Nullable final java.util.List<com.commercetools.models.Order.Delivery> deliveries) {
+   public ShippingInfoBuilder deliveries(@Nullable final java.util.List<com.commercetools.models.order.Delivery> deliveries) {
       this.deliveries = deliveries;
       return this;
    }
    
-   public ShippingInfoBuilder taxCategory(@Nullable final com.commercetools.models.TaxCategory.TaxCategoryReference taxCategory) {
+   public ShippingInfoBuilder taxCategory(@Nullable final com.commercetools.models.tax_category.TaxCategoryReference taxCategory) {
       this.taxCategory = taxCategory;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxRate getTaxRate(){
+   public com.commercetools.models.tax_category.TaxRate getTaxRate(){
       return this.taxRate;
    }
    
    
-   public com.commercetools.models.ShippingMethod.ShippingRate getShippingRate(){
+   public com.commercetools.models.shipping_method.ShippingRate getShippingRate(){
       return this.shippingRate;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.DiscountedLineItemPrice getDiscountedPrice(){
+   public com.commercetools.models.cart.DiscountedLineItemPrice getDiscountedPrice(){
       return this.discountedPrice;
    }
    
    
-   public com.commercetools.models.Cart.ShippingMethodState getShippingMethodState(){
+   public com.commercetools.models.cart.ShippingMethodState getShippingMethodState(){
       return this.shippingMethodState;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.TaxedItemPrice getTaxedPrice(){
+   public com.commercetools.models.cart.TaxedItemPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getPrice(){
+   public com.commercetools.models.common.TypedMoney getPrice(){
       return this.price;
    }
    
    @Nullable
-   public com.commercetools.models.ShippingMethod.ShippingMethodReference getShippingMethod(){
+   public com.commercetools.models.shipping_method.ShippingMethodReference getShippingMethod(){
       return this.shippingMethod;
    }
    
@@ -139,12 +139,12 @@ public final class ShippingInfoBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Order.Delivery> getDeliveries(){
+   public java.util.List<com.commercetools.models.order.Delivery> getDeliveries(){
       return this.deliveries;
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxCategoryReference getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryReference getTaxCategory(){
       return this.taxCategory;
    }
 

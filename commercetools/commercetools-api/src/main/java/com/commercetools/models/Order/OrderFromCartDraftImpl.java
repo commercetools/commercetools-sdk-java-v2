@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.PaymentState;
+import com.commercetools.models.order.PaymentState;
 import java.lang.Long;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -28,12 +28,12 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
    
    private java.lang.String id;
    
-   private com.commercetools.models.Order.PaymentState paymentState;
+   private com.commercetools.models.order.PaymentState paymentState;
    
    private java.lang.Long version;
 
    @JsonCreator
-   OrderFromCartDraftImpl(@JsonProperty("orderNumber") final java.lang.String orderNumber, @JsonProperty("id") final java.lang.String id, @JsonProperty("paymentState") final com.commercetools.models.Order.PaymentState paymentState, @JsonProperty("version") final java.lang.Long version) {
+   OrderFromCartDraftImpl(@JsonProperty("orderNumber") final java.lang.String orderNumber, @JsonProperty("id") final java.lang.String id, @JsonProperty("paymentState") final com.commercetools.models.order.PaymentState paymentState, @JsonProperty("version") final java.lang.Long version) {
       this.orderNumber = orderNumber;
       this.id = id;
       this.paymentState = paymentState;
@@ -54,7 +54,7 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
    }
    
    
-   public com.commercetools.models.Order.PaymentState getPaymentState(){
+   public com.commercetools.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
    
@@ -71,7 +71,7 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
       this.id = id;
    }
    
-   public void setPaymentState(final com.commercetools.models.Order.PaymentState paymentState){
+   public void setPaymentState(final com.commercetools.models.order.PaymentState paymentState){
       this.paymentState = paymentState;
    }
    

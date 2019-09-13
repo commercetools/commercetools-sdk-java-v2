@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class ProductPriceExternalDiscountSetMessagePayloadImpl implements 
 
    private java.lang.String type;
    
-   private com.commercetools.models.Common.DiscountedPrice discounted;
+   private com.commercetools.models.common.DiscountedPrice discounted;
    
    private java.lang.Boolean staged;
    
@@ -41,7 +41,7 @@ public final class ProductPriceExternalDiscountSetMessagePayloadImpl implements 
    private java.lang.String variantKey;
 
    @JsonCreator
-   ProductPriceExternalDiscountSetMessagePayloadImpl(@JsonProperty("discounted") final com.commercetools.models.Common.DiscountedPrice discounted, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Integer variantId, @JsonProperty("priceId") final java.lang.String priceId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("variantKey") final java.lang.String variantKey) {
+   ProductPriceExternalDiscountSetMessagePayloadImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Integer variantId, @JsonProperty("priceId") final java.lang.String priceId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("variantKey") final java.lang.String variantKey) {
       this.discounted = discounted;
       this.staged = staged;
       this.variantId = variantId;
@@ -60,7 +60,7 @@ public final class ProductPriceExternalDiscountSetMessagePayloadImpl implements 
    }
    
    
-   public com.commercetools.models.Common.DiscountedPrice getDiscounted(){
+   public com.commercetools.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
    
@@ -89,7 +89,7 @@ public final class ProductPriceExternalDiscountSetMessagePayloadImpl implements 
       return this.variantKey;
    }
 
-   public void setDiscounted(final com.commercetools.models.Common.DiscountedPrice discounted){
+   public void setDiscounted(final com.commercetools.models.common.DiscountedPrice discounted){
       this.discounted = discounted;
    }
    

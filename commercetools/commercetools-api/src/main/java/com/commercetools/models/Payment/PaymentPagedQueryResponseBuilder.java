@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.Payment;
+import com.commercetools.models.payment.Payment;
 import java.lang.Long;
-import com.commercetools.models.Payment.PaymentPagedQueryResponse;
+import com.commercetools.models.payment.PaymentPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class PaymentPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Payment.Payment> results;
+   private java.util.List<com.commercetools.models.payment.Payment> results;
    
    public PaymentPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class PaymentPagedQueryResponseBuilder {
       return this;
    }
    
-   public PaymentPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Payment.Payment> results) {
+   public PaymentPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.payment.Payment> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class PaymentPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Payment.Payment> getResults(){
+   public java.util.List<com.commercetools.models.payment.Payment> getResults(){
       return this.results;
    }
 

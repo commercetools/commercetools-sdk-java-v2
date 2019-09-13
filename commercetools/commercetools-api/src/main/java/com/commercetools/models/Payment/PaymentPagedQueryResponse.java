@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.Payment;
+import com.commercetools.models.payment.Payment;
 import java.lang.Long;
-import com.commercetools.models.Payment.PaymentPagedQueryResponseImpl;
+import com.commercetools.models.payment.PaymentPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -59,7 +59,7 @@ public class ByProjectKeyCartDiscountsGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.CartDiscount.CartDiscountPagedQueryResponse> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.cart_discount.CartDiscountPagedQueryResponse> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -67,9 +67,9 @@ public class ByProjectKeyCartDiscountsGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.CartDiscount.CartDiscountPagedQueryResponse>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.cart_discount.CartDiscountPagedQueryResponse>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.CartDiscount.CartDiscountPagedQueryResponse.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.cart_discount.CartDiscountPagedQueryResponse.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

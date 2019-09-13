@@ -1,7 +1,7 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyPaymentUpdateAction;
-import com.commercetools.models.Payment.TransactionDraft;
+import com.commercetools.models.me.MyPaymentUpdateAction;
+import com.commercetools.models.payment.TransactionDraft;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class MyPaymentAddTransactionActionImpl implements MyPaymentAddTran
 
    private java.lang.String action;
    
-   private com.commercetools.models.Payment.TransactionDraft transaction;
+   private com.commercetools.models.payment.TransactionDraft transaction;
 
    @JsonCreator
-   MyPaymentAddTransactionActionImpl(@JsonProperty("transaction") final com.commercetools.models.Payment.TransactionDraft transaction) {
+   MyPaymentAddTransactionActionImpl(@JsonProperty("transaction") final com.commercetools.models.payment.TransactionDraft transaction) {
       this.transaction = transaction;
       this.action = "addTransaction";
    }
@@ -43,11 +43,11 @@ public final class MyPaymentAddTransactionActionImpl implements MyPaymentAddTran
    }
    
    
-   public com.commercetools.models.Payment.TransactionDraft getTransaction(){
+   public com.commercetools.models.payment.TransactionDraft getTransaction(){
       return this.transaction;
    }
 
-   public void setTransaction(final com.commercetools.models.Payment.TransactionDraft transaction){
+   public void setTransaction(final com.commercetools.models.payment.TransactionDraft transaction){
       this.transaction = transaction;
    }
 

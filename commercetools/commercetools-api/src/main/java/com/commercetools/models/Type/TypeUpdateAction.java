@@ -1,20 +1,20 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.TypeAddEnumValueAction;
-import com.commercetools.models.Type.TypeAddFieldDefinitionAction;
-import com.commercetools.models.Type.TypeAddLocalizedEnumValueAction;
-import com.commercetools.models.Type.TypeChangeEnumValueLabelAction;
-import com.commercetools.models.Type.TypeChangeEnumValueOrderAction;
-import com.commercetools.models.Type.TypeChangeFieldDefinitionLabelAction;
-import com.commercetools.models.Type.TypeChangeFieldDefinitionOrderAction;
-import com.commercetools.models.Type.TypeChangeInputHintAction;
-import com.commercetools.models.Type.TypeChangeKeyAction;
-import com.commercetools.models.Type.TypeChangeLabelAction;
-import com.commercetools.models.Type.TypeChangeLocalizedEnumValueLabelAction;
-import com.commercetools.models.Type.TypeChangeLocalizedEnumValueOrderAction;
-import com.commercetools.models.Type.TypeChangeNameAction;
-import com.commercetools.models.Type.TypeRemoveFieldDefinitionAction;
-import com.commercetools.models.Type.TypeSetDescriptionAction;
+import com.commercetools.models.type.TypeAddEnumValueAction;
+import com.commercetools.models.type.TypeAddFieldDefinitionAction;
+import com.commercetools.models.type.TypeAddLocalizedEnumValueAction;
+import com.commercetools.models.type.TypeChangeEnumValueLabelAction;
+import com.commercetools.models.type.TypeChangeEnumValueOrderAction;
+import com.commercetools.models.type.TypeChangeFieldDefinitionLabelAction;
+import com.commercetools.models.type.TypeChangeFieldDefinitionOrderAction;
+import com.commercetools.models.type.TypeChangeInputHintAction;
+import com.commercetools.models.type.TypeChangeKeyAction;
+import com.commercetools.models.type.TypeChangeLabelAction;
+import com.commercetools.models.type.TypeChangeLocalizedEnumValueLabelAction;
+import com.commercetools.models.type.TypeChangeLocalizedEnumValueOrderAction;
+import com.commercetools.models.type.TypeChangeNameAction;
+import com.commercetools.models.type.TypeRemoveFieldDefinitionAction;
+import com.commercetools.models.type.TypeSetDescriptionAction;
 import java.lang.String;
 
 
@@ -30,21 +30,21 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeAddEnumValueActionImpl.class, name = "addEnumValue"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeAddFieldDefinitionActionImpl.class, name = "addFieldDefinition"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeAddLocalizedEnumValueActionImpl.class, name = "addLocalizedEnumValue"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeChangeEnumValueLabelActionImpl.class, name = "changeEnumValueLabel"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeChangeEnumValueOrderActionImpl.class, name = "changeEnumValueOrder"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeChangeFieldDefinitionLabelActionImpl.class, name = "changeFieldDefinitionLabel"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeChangeFieldDefinitionOrderActionImpl.class, name = "changeFieldDefinitionOrder"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeChangeInputHintActionImpl.class, name = "changeInputHint"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeChangeKeyActionImpl.class, name = "changeKey"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeChangeLabelActionImpl.class, name = "changeLabel"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeChangeLocalizedEnumValueLabelActionImpl.class, name = "changeLocalizedEnumValueLabel"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeChangeLocalizedEnumValueOrderActionImpl.class, name = "changeLocalizedEnumValueOrder"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeChangeNameActionImpl.class, name = "changeName"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeRemoveFieldDefinitionActionImpl.class, name = "removeFieldDefinition"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Type.TypeSetDescriptionActionImpl.class, name = "setDescription")
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeAddEnumValueActionImpl.class, name = "addEnumValue"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeAddFieldDefinitionActionImpl.class, name = "addFieldDefinition"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeAddLocalizedEnumValueActionImpl.class, name = "addLocalizedEnumValue"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeChangeEnumValueLabelActionImpl.class, name = "changeEnumValueLabel"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeChangeEnumValueOrderActionImpl.class, name = "changeEnumValueOrder"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeChangeFieldDefinitionLabelActionImpl.class, name = "changeFieldDefinitionLabel"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeChangeFieldDefinitionOrderActionImpl.class, name = "changeFieldDefinitionOrder"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeChangeInputHintActionImpl.class, name = "changeInputHint"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeChangeKeyActionImpl.class, name = "changeKey"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeChangeLabelActionImpl.class, name = "changeLabel"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeChangeLocalizedEnumValueLabelActionImpl.class, name = "changeLocalizedEnumValueLabel"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeChangeLocalizedEnumValueOrderActionImpl.class, name = "changeLocalizedEnumValueOrder"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeChangeNameActionImpl.class, name = "changeName"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeRemoveFieldDefinitionActionImpl.class, name = "removeFieldDefinition"),
+   @JsonSubTypes.Type(value = com.commercetools.models.type.TypeSetDescriptionActionImpl.class, name = "setDescription")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

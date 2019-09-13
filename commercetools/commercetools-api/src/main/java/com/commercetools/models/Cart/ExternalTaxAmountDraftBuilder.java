@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Cart.ExternalTaxAmountDraft;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.cart.ExternalTaxAmountDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class ExternalTaxAmountDraftBuilder {
    
    
-   private com.commercetools.models.Cart.ExternalTaxRateDraft taxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft taxRate;
    
    
-   private com.commercetools.models.Common.Money totalGross;
+   private com.commercetools.models.common.Money totalGross;
    
-   public ExternalTaxAmountDraftBuilder taxRate( final com.commercetools.models.Cart.ExternalTaxRateDraft taxRate) {
+   public ExternalTaxAmountDraftBuilder taxRate( final com.commercetools.models.cart.ExternalTaxRateDraft taxRate) {
       this.taxRate = taxRate;
       return this;
    }
    
-   public ExternalTaxAmountDraftBuilder totalGross( final com.commercetools.models.Common.Money totalGross) {
+   public ExternalTaxAmountDraftBuilder totalGross( final com.commercetools.models.common.Money totalGross) {
       this.totalGross = totalGross;
       return this;
    }
    
    
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getTaxRate(){
       return this.taxRate;
    }
    
    
-   public com.commercetools.models.Common.Money getTotalGross(){
+   public com.commercetools.models.common.Money getTotalGross(){
       return this.totalGross;
    }
 

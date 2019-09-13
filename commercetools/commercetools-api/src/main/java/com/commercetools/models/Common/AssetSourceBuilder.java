@@ -1,8 +1,8 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.AssetDimensions;
+import com.commercetools.models.common.AssetDimensions;
 import java.lang.String;
-import com.commercetools.models.Common.AssetSource;
+import com.commercetools.models.common.AssetSource;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class AssetSourceBuilder {
    private java.lang.String key;
    
    @Nullable
-   private com.commercetools.models.Common.AssetDimensions dimensions;
+   private com.commercetools.models.common.AssetDimensions dimensions;
    
    public AssetSourceBuilder contentType(@Nullable final java.lang.String contentType) {
       this.contentType = contentType;
@@ -37,7 +37,7 @@ public final class AssetSourceBuilder {
       return this;
    }
    
-   public AssetSourceBuilder dimensions(@Nullable final com.commercetools.models.Common.AssetDimensions dimensions) {
+   public AssetSourceBuilder dimensions(@Nullable final com.commercetools.models.common.AssetDimensions dimensions) {
       this.dimensions = dimensions;
       return this;
    }
@@ -58,7 +58,7 @@ public final class AssetSourceBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.AssetDimensions getDimensions(){
+   public com.commercetools.models.common.AssetDimensions getDimensions(){
       return this.dimensions;
    }
 

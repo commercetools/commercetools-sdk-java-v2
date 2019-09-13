@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Product.ProductProjection;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.product.ProductProjection;
 import java.lang.String;
-import com.commercetools.models.Message.ProductCreatedMessagePayload;
+import com.commercetools.models.message.ProductCreatedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ProductCreatedMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Product.ProductProjection productProjection;
+   private com.commercetools.models.product.ProductProjection productProjection;
    
-   public ProductCreatedMessagePayloadBuilder productProjection( final com.commercetools.models.Product.ProductProjection productProjection) {
+   public ProductCreatedMessagePayloadBuilder productProjection( final com.commercetools.models.product.ProductProjection productProjection) {
       this.productProjection = productProjection;
       return this;
    }
    
    
-   public com.commercetools.models.Product.ProductProjection getProductProjection(){
+   public com.commercetools.models.product.ProductProjection getProductProjection(){
       return this.productProjection;
    }
 

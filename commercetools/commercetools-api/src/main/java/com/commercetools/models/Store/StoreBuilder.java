@@ -1,9 +1,9 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Common.BaseResource;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
-import com.commercetools.models.Store.Store;
+import com.commercetools.models.store.Store;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class StoreBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    
    private java.lang.String key;
@@ -49,7 +49,7 @@ public final class StoreBuilder {
       return this;
    }
    
-   public StoreBuilder name(@Nullable final com.commercetools.models.Common.LocalizedString name) {
+   public StoreBuilder name(@Nullable final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
@@ -80,7 +80,7 @@ public final class StoreBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    

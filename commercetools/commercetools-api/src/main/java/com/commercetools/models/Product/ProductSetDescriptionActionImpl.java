@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -27,12 +27,12 @@ public final class ProductSetDescriptionActionImpl implements ProductSetDescript
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    private java.lang.Boolean staged;
 
    @JsonCreator
-   ProductSetDescriptionActionImpl(@JsonProperty("description") final com.commercetools.models.Common.LocalizedString description, @JsonProperty("staged") final java.lang.Boolean staged) {
+   ProductSetDescriptionActionImpl(@JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("staged") final java.lang.Boolean staged) {
       this.description = description;
       this.staged = staged;
       this.action = "setDescription";
@@ -47,7 +47,7 @@ public final class ProductSetDescriptionActionImpl implements ProductSetDescript
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
@@ -56,7 +56,7 @@ public final class ProductSetDescriptionActionImpl implements ProductSetDescript
       return this.staged;
    }
 
-   public void setDescription(final com.commercetools.models.Common.LocalizedString description){
+   public void setDescription(final com.commercetools.models.common.LocalizedString description){
       this.description = description;
    }
    

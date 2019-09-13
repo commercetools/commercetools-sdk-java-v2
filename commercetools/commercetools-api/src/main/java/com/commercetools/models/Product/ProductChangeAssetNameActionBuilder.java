@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Product.ProductChangeAssetNameAction;
+import com.commercetools.models.product.ProductChangeAssetNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class ProductChangeAssetNameActionBuilder {
    private java.lang.String assetId;
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
    private java.lang.Boolean staged;
@@ -36,7 +36,7 @@ public final class ProductChangeAssetNameActionBuilder {
       return this;
    }
    
-   public ProductChangeAssetNameActionBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public ProductChangeAssetNameActionBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
@@ -67,7 +67,7 @@ public final class ProductChangeAssetNameActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    

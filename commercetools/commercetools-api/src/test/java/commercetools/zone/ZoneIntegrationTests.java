@@ -1,6 +1,6 @@
 package commercetools.zone;
 
-import com.commercetools.models.Zone.*;
+import com.commercetools.models.zone.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

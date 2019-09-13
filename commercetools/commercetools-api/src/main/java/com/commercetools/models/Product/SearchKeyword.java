@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Product.SearchKeywordImpl;
+import com.commercetools.models.product.SearchKeywordImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

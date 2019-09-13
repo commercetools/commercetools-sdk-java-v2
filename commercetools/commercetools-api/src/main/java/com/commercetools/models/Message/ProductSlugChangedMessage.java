@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.ProductSlugChangedMessageImpl;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.ProductSlugChangedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ReturnItemDraft;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ReturnItemDraft;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -31,10 +31,10 @@ public final class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAct
    
    private java.lang.String returnTrackingId;
    
-   private java.util.List<com.commercetools.models.Order.ReturnItemDraft> items;
+   private java.util.List<com.commercetools.models.order.ReturnItemDraft> items;
 
    @JsonCreator
-   OrderAddReturnInfoActionImpl(@JsonProperty("returnDate") final java.time.ZonedDateTime returnDate, @JsonProperty("returnTrackingId") final java.lang.String returnTrackingId, @JsonProperty("items") final java.util.List<com.commercetools.models.Order.ReturnItemDraft> items) {
+   OrderAddReturnInfoActionImpl(@JsonProperty("returnDate") final java.time.ZonedDateTime returnDate, @JsonProperty("returnTrackingId") final java.lang.String returnTrackingId, @JsonProperty("items") final java.util.List<com.commercetools.models.order.ReturnItemDraft> items) {
       this.returnDate = returnDate;
       this.returnTrackingId = returnTrackingId;
       this.items = items;
@@ -60,7 +60,7 @@ public final class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAct
    }
    
    
-   public java.util.List<com.commercetools.models.Order.ReturnItemDraft> getItems(){
+   public java.util.List<com.commercetools.models.order.ReturnItemDraft> getItems(){
       return this.items;
    }
 
@@ -72,7 +72,7 @@ public final class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAct
       this.returnTrackingId = returnTrackingId;
    }
    
-   public void setItems(final java.util.List<com.commercetools.models.Order.ReturnItemDraft> items){
+   public void setItems(final java.util.List<com.commercetools.models.order.ReturnItemDraft> items){
       this.items = items;
    }
 

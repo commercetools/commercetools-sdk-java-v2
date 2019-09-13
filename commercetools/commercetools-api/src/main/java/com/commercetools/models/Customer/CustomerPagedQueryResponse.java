@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.Customer;
+import com.commercetools.models.customer.Customer;
 import java.lang.Long;
-import com.commercetools.models.Customer.CustomerPagedQueryResponseImpl;
+import com.commercetools.models.customer.CustomerPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

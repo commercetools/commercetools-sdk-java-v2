@@ -1,17 +1,17 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity;
-import com.commercetools.models.Cart.ItemShippingDetails;
-import com.commercetools.models.Cart.TaxedItemPrice;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.Order.ItemState;
-import com.commercetools.models.TaxCategory.TaxCategoryReference;
-import com.commercetools.models.TaxCategory.TaxRate;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.models.cart.ItemShippingDetails;
+import com.commercetools.models.cart.TaxedItemPrice;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.order.ItemState;
+import com.commercetools.models.tax_category.TaxCategoryReference;
+import com.commercetools.models.tax_category.TaxRate;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.CustomLineItemImpl;
+import com.commercetools.models.cart.CustomLineItemImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

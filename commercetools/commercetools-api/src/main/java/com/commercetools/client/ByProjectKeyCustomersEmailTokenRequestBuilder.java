@@ -12,7 +12,7 @@ public class ByProjectKeyCustomersEmailTokenRequestBuilder {
       this.projectKey = projectKey;
    }
    
-   public ByProjectKeyCustomersEmailTokenPost post(com.commercetools.models.Customer.CustomerCreateEmailToken customerCreateEmailToken) {
+   public ByProjectKeyCustomersEmailTokenPost post(com.commercetools.models.customer.CustomerCreateEmailToken customerCreateEmailToken) {
       return new ByProjectKeyCustomersEmailTokenPost(apiHttpClient, projectKey, customerCreateEmailToken);
    }
    

@@ -1,7 +1,7 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionTrigger;
-import com.commercetools.models.Extension.ExtensionUpdateAction;
+import com.commercetools.models.extension.ExtensionTrigger;
+import com.commercetools.models.extension.ExtensionUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ExtensionChangeTriggersActionImpl implements ExtensionChangeT
 
    private java.lang.String action;
    
-   private java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers;
+   private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
 
    @JsonCreator
-   ExtensionChangeTriggersActionImpl(@JsonProperty("triggers") final java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers) {
+   ExtensionChangeTriggersActionImpl(@JsonProperty("triggers") final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers) {
       this.triggers = triggers;
       this.action = "changeTriggers";
    }
@@ -43,11 +43,11 @@ public final class ExtensionChangeTriggersActionImpl implements ExtensionChangeT
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.ExtensionTrigger> getTriggers(){
+   public java.util.List<com.commercetools.models.extension.ExtensionTrigger> getTriggers(){
       return this.triggers;
    }
 
-   public void setTriggers(final java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers){
+   public void setTriggers(final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers){
       this.triggers = triggers;
    }
 

@@ -1,10 +1,10 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.AssetSource;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.AssetSource;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.String;
-import com.commercetools.models.Common.AssetDraft;
+import com.commercetools.models.common.AssetDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,16 +13,16 @@ import java.time.ZonedDateTime;
 public final class AssetDraftBuilder {
    
    
-   private java.util.List<com.commercetools.models.Common.AssetSource> sources;
+   private java.util.List<com.commercetools.models.common.AssetSource> sources;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    @Nullable
    private java.lang.String key;
@@ -30,22 +30,22 @@ public final class AssetDraftBuilder {
    @Nullable
    private java.util.List<java.lang.String> tags;
    
-   public AssetDraftBuilder sources( final java.util.List<com.commercetools.models.Common.AssetSource> sources) {
+   public AssetDraftBuilder sources( final java.util.List<com.commercetools.models.common.AssetSource> sources) {
       this.sources = sources;
       return this;
    }
    
-   public AssetDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public AssetDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
    
-   public AssetDraftBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public AssetDraftBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public AssetDraftBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public AssetDraftBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
@@ -61,22 +61,22 @@ public final class AssetDraftBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.AssetSource> getSources(){
+   public java.util.List<com.commercetools.models.common.AssetSource> getSources(){
       return this.sources;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    

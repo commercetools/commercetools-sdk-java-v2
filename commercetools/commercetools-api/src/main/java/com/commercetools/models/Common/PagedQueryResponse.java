@@ -1,10 +1,10 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.BaseResource;
-import com.commercetools.models.Product.FacetResults;
+import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.product.FacetResults;
 import java.lang.Long;
 import java.lang.Object;
-import com.commercetools.models.Common.PagedQueryResponseImpl;
+import com.commercetools.models.common.PagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

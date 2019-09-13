@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
-import com.commercetools.models.Error.VariantValues;
+import com.commercetools.models.error.ErrorObject;
+import com.commercetools.models.error.VariantValues;
 import java.lang.String;
-import com.commercetools.models.Error.DuplicateVariantValuesErrorImpl;
+import com.commercetools.models.error.DuplicateVariantValuesErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

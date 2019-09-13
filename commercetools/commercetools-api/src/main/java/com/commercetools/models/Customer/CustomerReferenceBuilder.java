@@ -1,9 +1,9 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Customer.Customer;
-import com.commercetools.models.Customer.CustomerReference;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.customer.Customer;
+import com.commercetools.models.customer.CustomerReference;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class CustomerReferenceBuilder {
    private java.lang.String id;
    
    @Nullable
-   private com.commercetools.models.Customer.Customer obj;
+   private com.commercetools.models.customer.Customer obj;
    
    public CustomerReferenceBuilder id( final java.lang.String id) {
       this.id = id;
       return this;
    }
    
-   public CustomerReferenceBuilder obj(@Nullable final com.commercetools.models.Customer.Customer obj) {
+   public CustomerReferenceBuilder obj(@Nullable final com.commercetools.models.customer.Customer obj) {
       this.obj = obj;
       return this;
    }
@@ -33,7 +33,7 @@ public final class CustomerReferenceBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Customer.Customer getObj(){
+   public com.commercetools.models.customer.Customer getObj(){
       return this.obj;
    }
 

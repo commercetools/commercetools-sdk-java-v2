@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.CustomFieldEnumValue;
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.CustomFieldEnumValue;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumV
    
    private java.lang.String fieldName;
    
-   private com.commercetools.models.Type.CustomFieldEnumValue value;
+   private com.commercetools.models.type.CustomFieldEnumValue value;
 
    @JsonCreator
-   TypeChangeEnumValueLabelActionImpl(@JsonProperty("fieldName") final java.lang.String fieldName, @JsonProperty("value") final com.commercetools.models.Type.CustomFieldEnumValue value) {
+   TypeChangeEnumValueLabelActionImpl(@JsonProperty("fieldName") final java.lang.String fieldName, @JsonProperty("value") final com.commercetools.models.type.CustomFieldEnumValue value) {
       this.fieldName = fieldName;
       this.value = value;
       this.action = "changeEnumValueLabel";
@@ -51,7 +51,7 @@ public final class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumV
    }
    
    
-   public com.commercetools.models.Type.CustomFieldEnumValue getValue(){
+   public com.commercetools.models.type.CustomFieldEnumValue getValue(){
       return this.value;
    }
 
@@ -59,7 +59,7 @@ public final class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumV
       this.fieldName = fieldName;
    }
    
-   public void setValue(final com.commercetools.models.Type.CustomFieldEnumValue value){
+   public void setValue(final com.commercetools.models.type.CustomFieldEnumValue value){
       this.value = value;
    }
 

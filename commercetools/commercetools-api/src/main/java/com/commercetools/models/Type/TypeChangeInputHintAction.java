@@ -1,9 +1,9 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.TypeTextInputHint;
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.TypeTextInputHint;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Type.TypeChangeInputHintActionImpl;
+import com.commercetools.models.type.TypeChangeInputHintActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

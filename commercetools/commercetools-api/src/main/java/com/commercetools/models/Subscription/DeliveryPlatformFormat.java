@@ -1,8 +1,8 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.DeliveryFormat;
+import com.commercetools.models.subscription.DeliveryFormat;
 import java.lang.String;
-import com.commercetools.models.Subscription.DeliveryPlatformFormatImpl;
+import com.commercetools.models.subscription.DeliveryPlatformFormatImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

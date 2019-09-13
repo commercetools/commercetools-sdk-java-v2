@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetTaxCategoryActionImpl;
+import com.commercetools.models.product.ProductSetTaxCategoryActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

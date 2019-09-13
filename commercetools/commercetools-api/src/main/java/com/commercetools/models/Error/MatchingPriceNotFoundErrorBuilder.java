@@ -1,11 +1,11 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Error.MatchingPriceNotFoundError;
+import com.commercetools.models.error.MatchingPriceNotFoundError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class MatchingPriceNotFoundErrorBuilder {
    private java.lang.String productId;
    
    @Nullable
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelReference channel;
+   private com.commercetools.models.channel.ChannelReference channel;
    
    @Nullable
    private java.lang.String currency;
@@ -49,12 +49,12 @@ public final class MatchingPriceNotFoundErrorBuilder {
       return this;
    }
    
-   public MatchingPriceNotFoundErrorBuilder customerGroup(@Nullable final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup) {
+   public MatchingPriceNotFoundErrorBuilder customerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupReference customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
    
-   public MatchingPriceNotFoundErrorBuilder channel(@Nullable final com.commercetools.models.Channel.ChannelReference channel) {
+   public MatchingPriceNotFoundErrorBuilder channel(@Nullable final com.commercetools.models.channel.ChannelReference channel) {
       this.channel = channel;
       return this;
    }
@@ -85,12 +85,12 @@ public final class MatchingPriceNotFoundErrorBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelReference getChannel(){
+   public com.commercetools.models.channel.ChannelReference getChannel(){
       return this.channel;
    }
    

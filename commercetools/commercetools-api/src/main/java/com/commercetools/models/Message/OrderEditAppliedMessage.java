@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.OrderEdit.OrderEditApplied;
-import com.commercetools.models.OrderEdit.OrderEditReference;
-import com.commercetools.models.Message.OrderEditAppliedMessageImpl;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order_edit.OrderEditApplied;
+import com.commercetools.models.order_edit.OrderEditReference;
+import com.commercetools.models.message.OrderEditAppliedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

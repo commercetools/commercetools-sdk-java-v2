@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.Order;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.Order;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -33,18 +33,18 @@ public final class OrderImportedMessageImpl implements OrderImportedMessage {
    
    private java.lang.Long sequenceNumber;
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    private java.lang.Long resourceVersion;
    
    private java.lang.String type;
    
-   private com.commercetools.models.Order.Order order;
+   private com.commercetools.models.order.Order order;
 
    @JsonCreator
-   OrderImportedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.Common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("order") final com.commercetools.models.Order.Order order) {
+   OrderImportedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("order") final com.commercetools.models.order.Order order) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -86,12 +86,12 @@ public final class OrderImportedMessageImpl implements OrderImportedMessage {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -106,7 +106,7 @@ public final class OrderImportedMessageImpl implements OrderImportedMessage {
    }
    
    
-   public com.commercetools.models.Order.Order getOrder(){
+   public com.commercetools.models.order.Order getOrder(){
       return this.order;
    }
 
@@ -130,11 +130,11 @@ public final class OrderImportedMessageImpl implements OrderImportedMessage {
       this.sequenceNumber = sequenceNumber;
    }
    
-   public void setResource(final com.commercetools.models.Common.Reference resource){
+   public void setResource(final com.commercetools.models.common.Reference resource){
       this.resource = resource;
    }
    
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
@@ -146,7 +146,7 @@ public final class OrderImportedMessageImpl implements OrderImportedMessage {
       this.type = type;
    }
    
-   public void setOrder(final com.commercetools.models.Order.Order order){
+   public void setOrder(final com.commercetools.models.order.Order order){
       this.order = order;
    }
 

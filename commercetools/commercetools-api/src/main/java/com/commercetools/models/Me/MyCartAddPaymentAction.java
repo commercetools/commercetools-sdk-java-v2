@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyCartUpdateAction;
-import com.commercetools.models.Payment.PaymentResourceIdentifier;
+import com.commercetools.models.me.MyCartUpdateAction;
+import com.commercetools.models.payment.PaymentResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Me.MyCartAddPaymentActionImpl;
+import com.commercetools.models.me.MyCartAddPaymentActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

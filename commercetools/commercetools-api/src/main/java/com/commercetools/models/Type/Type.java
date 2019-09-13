@@ -1,11 +1,11 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Type.FieldDefinition;
-import com.commercetools.models.Type.ResourceTypeId;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.type.FieldDefinition;
+import com.commercetools.models.type.ResourceTypeId;
 import java.lang.String;
-import com.commercetools.models.Type.TypeImpl;
+import com.commercetools.models.type.TypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

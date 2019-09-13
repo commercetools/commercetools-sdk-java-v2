@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.TaxPortion;
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.TaxPortion;
+import com.commercetools.models.common.Money;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,12 +27,12 @@ public final class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxA
 
    private java.lang.String action;
    
-   private java.util.List<com.commercetools.models.Cart.TaxPortion> externalTaxPortions;
+   private java.util.List<com.commercetools.models.cart.TaxPortion> externalTaxPortions;
    
-   private com.commercetools.models.Common.Money externalTotalGross;
+   private com.commercetools.models.common.Money externalTotalGross;
 
    @JsonCreator
-   CartSetCartTotalTaxActionImpl(@JsonProperty("externalTaxPortions") final java.util.List<com.commercetools.models.Cart.TaxPortion> externalTaxPortions, @JsonProperty("externalTotalGross") final com.commercetools.models.Common.Money externalTotalGross) {
+   CartSetCartTotalTaxActionImpl(@JsonProperty("externalTaxPortions") final java.util.List<com.commercetools.models.cart.TaxPortion> externalTaxPortions, @JsonProperty("externalTotalGross") final com.commercetools.models.common.Money externalTotalGross) {
       this.externalTaxPortions = externalTaxPortions;
       this.externalTotalGross = externalTotalGross;
       this.action = "setCartTotalTax";
@@ -47,20 +47,20 @@ public final class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxA
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.TaxPortion> getExternalTaxPortions(){
+   public java.util.List<com.commercetools.models.cart.TaxPortion> getExternalTaxPortions(){
       return this.externalTaxPortions;
    }
    
    
-   public com.commercetools.models.Common.Money getExternalTotalGross(){
+   public com.commercetools.models.common.Money getExternalTotalGross(){
       return this.externalTotalGross;
    }
 
-   public void setExternalTaxPortions(final java.util.List<com.commercetools.models.Cart.TaxPortion> externalTaxPortions){
+   public void setExternalTaxPortions(final java.util.List<com.commercetools.models.cart.TaxPortion> externalTaxPortions){
       this.externalTaxPortions = externalTaxPortions;
    }
    
-   public void setExternalTotalGross(final com.commercetools.models.Common.Money externalTotalGross){
+   public void setExternalTotalGross(final com.commercetools.models.common.Money externalTotalGross){
       this.externalTotalGross = externalTotalGross;
    }
 

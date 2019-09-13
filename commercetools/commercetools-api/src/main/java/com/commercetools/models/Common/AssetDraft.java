@@ -1,10 +1,10 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.AssetSource;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.AssetSource;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.String;
-import com.commercetools.models.Common.AssetDraftImpl;
+import com.commercetools.models.common.AssetDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

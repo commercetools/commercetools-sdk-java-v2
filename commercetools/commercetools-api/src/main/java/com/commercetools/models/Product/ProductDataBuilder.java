@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Category.CategoryReference;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.CategoryOrderHints;
-import com.commercetools.models.Product.ProductVariant;
-import com.commercetools.models.Product.SearchKeywords;
-import com.commercetools.models.Product.ProductData;
+import com.commercetools.models.category.CategoryReference;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.CategoryOrderHints;
+import com.commercetools.models.product.ProductVariant;
+import com.commercetools.models.product.SearchKeywords;
+import com.commercetools.models.product.ProductData;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,145 +14,145 @@ import java.time.ZonedDateTime;
 public final class ProductDataBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString metaKeywords;
+   private com.commercetools.models.common.LocalizedString metaKeywords;
    
    @Nullable
-   private com.commercetools.models.Product.CategoryOrderHints categoryOrderHints;
+   private com.commercetools.models.product.CategoryOrderHints categoryOrderHints;
    
    
-   private com.commercetools.models.Product.SearchKeywords searchKeywords;
-   
-   @Nullable
-   private com.commercetools.models.Common.LocalizedString metaTitle;
-   
-   
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.product.SearchKeywords searchKeywords;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString metaTitle;
    
    
-   private java.util.List<com.commercetools.models.Product.ProductVariant> variants;
-   
-   
-   private com.commercetools.models.Product.ProductVariant masterVariant;
-   
-   
-   private java.util.List<com.commercetools.models.Category.CategoryReference> categories;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString metaDescription;
+   private com.commercetools.models.common.LocalizedString description;
    
    
-   private com.commercetools.models.Common.LocalizedString slug;
+   private java.util.List<com.commercetools.models.product.ProductVariant> variants;
    
-   public ProductDataBuilder metaKeywords(@Nullable final com.commercetools.models.Common.LocalizedString metaKeywords) {
+   
+   private com.commercetools.models.product.ProductVariant masterVariant;
+   
+   
+   private java.util.List<com.commercetools.models.category.CategoryReference> categories;
+   
+   @Nullable
+   private com.commercetools.models.common.LocalizedString metaDescription;
+   
+   
+   private com.commercetools.models.common.LocalizedString slug;
+   
+   public ProductDataBuilder metaKeywords(@Nullable final com.commercetools.models.common.LocalizedString metaKeywords) {
       this.metaKeywords = metaKeywords;
       return this;
    }
    
-   public ProductDataBuilder categoryOrderHints(@Nullable final com.commercetools.models.Product.CategoryOrderHints categoryOrderHints) {
+   public ProductDataBuilder categoryOrderHints(@Nullable final com.commercetools.models.product.CategoryOrderHints categoryOrderHints) {
       this.categoryOrderHints = categoryOrderHints;
       return this;
    }
    
-   public ProductDataBuilder searchKeywords( final com.commercetools.models.Product.SearchKeywords searchKeywords) {
+   public ProductDataBuilder searchKeywords( final com.commercetools.models.product.SearchKeywords searchKeywords) {
       this.searchKeywords = searchKeywords;
       return this;
    }
    
-   public ProductDataBuilder metaTitle(@Nullable final com.commercetools.models.Common.LocalizedString metaTitle) {
+   public ProductDataBuilder metaTitle(@Nullable final com.commercetools.models.common.LocalizedString metaTitle) {
       this.metaTitle = metaTitle;
       return this;
    }
    
-   public ProductDataBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public ProductDataBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public ProductDataBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public ProductDataBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
    
-   public ProductDataBuilder variants( final java.util.List<com.commercetools.models.Product.ProductVariant> variants) {
+   public ProductDataBuilder variants( final java.util.List<com.commercetools.models.product.ProductVariant> variants) {
       this.variants = variants;
       return this;
    }
    
-   public ProductDataBuilder masterVariant( final com.commercetools.models.Product.ProductVariant masterVariant) {
+   public ProductDataBuilder masterVariant( final com.commercetools.models.product.ProductVariant masterVariant) {
       this.masterVariant = masterVariant;
       return this;
    }
    
-   public ProductDataBuilder categories( final java.util.List<com.commercetools.models.Category.CategoryReference> categories) {
+   public ProductDataBuilder categories( final java.util.List<com.commercetools.models.category.CategoryReference> categories) {
       this.categories = categories;
       return this;
    }
    
-   public ProductDataBuilder metaDescription(@Nullable final com.commercetools.models.Common.LocalizedString metaDescription) {
+   public ProductDataBuilder metaDescription(@Nullable final com.commercetools.models.common.LocalizedString metaDescription) {
       this.metaDescription = metaDescription;
       return this;
    }
    
-   public ProductDataBuilder slug( final com.commercetools.models.Common.LocalizedString slug) {
+   public ProductDataBuilder slug( final com.commercetools.models.common.LocalizedString slug) {
       this.slug = slug;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getMetaKeywords(){
+   public com.commercetools.models.common.LocalizedString getMetaKeywords(){
       return this.metaKeywords;
    }
    
    @Nullable
-   public com.commercetools.models.Product.CategoryOrderHints getCategoryOrderHints(){
+   public com.commercetools.models.product.CategoryOrderHints getCategoryOrderHints(){
       return this.categoryOrderHints;
    }
    
    
-   public com.commercetools.models.Product.SearchKeywords getSearchKeywords(){
+   public com.commercetools.models.product.SearchKeywords getSearchKeywords(){
       return this.searchKeywords;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getMetaTitle(){
+   public com.commercetools.models.common.LocalizedString getMetaTitle(){
       return this.metaTitle;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    
-   public java.util.List<com.commercetools.models.Product.ProductVariant> getVariants(){
+   public java.util.List<com.commercetools.models.product.ProductVariant> getVariants(){
       return this.variants;
    }
    
    
-   public com.commercetools.models.Product.ProductVariant getMasterVariant(){
+   public com.commercetools.models.product.ProductVariant getMasterVariant(){
       return this.masterVariant;
    }
    
    
-   public java.util.List<com.commercetools.models.Category.CategoryReference> getCategories(){
+   public java.util.List<com.commercetools.models.category.CategoryReference> getCategories(){
       return this.categories;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getMetaDescription(){
+   public com.commercetools.models.common.LocalizedString getMetaDescription(){
       return this.metaDescription;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getSlug(){
+   public com.commercetools.models.common.LocalizedString getSlug(){
       return this.slug;
    }
 

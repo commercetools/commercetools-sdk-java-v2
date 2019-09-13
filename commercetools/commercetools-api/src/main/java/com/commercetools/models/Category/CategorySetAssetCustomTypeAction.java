@@ -1,10 +1,10 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Category.CategorySetAssetCustomTypeActionImpl;
+import com.commercetools.models.category.CategorySetAssetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

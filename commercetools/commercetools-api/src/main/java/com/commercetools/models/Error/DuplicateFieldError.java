@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Error.DuplicateFieldErrorImpl;
+import com.commercetools.models.error.DuplicateFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.DeliveryItem;
-import com.commercetools.models.Order.ParcelMeasurements;
-import com.commercetools.models.Order.TrackingData;
-import com.commercetools.models.Order.ParcelDraft;
+import com.commercetools.models.order.DeliveryItem;
+import com.commercetools.models.order.ParcelMeasurements;
+import com.commercetools.models.order.TrackingData;
+import com.commercetools.models.order.ParcelDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,41 +12,41 @@ import java.time.ZonedDateTime;
 public final class ParcelDraftBuilder {
    
    @Nullable
-   private java.util.List<com.commercetools.models.Order.DeliveryItem> items;
+   private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
    @Nullable
-   private com.commercetools.models.Order.TrackingData trackingData;
+   private com.commercetools.models.order.TrackingData trackingData;
    
    @Nullable
-   private com.commercetools.models.Order.ParcelMeasurements measurements;
+   private com.commercetools.models.order.ParcelMeasurements measurements;
    
-   public ParcelDraftBuilder items(@Nullable final java.util.List<com.commercetools.models.Order.DeliveryItem> items) {
+   public ParcelDraftBuilder items(@Nullable final java.util.List<com.commercetools.models.order.DeliveryItem> items) {
       this.items = items;
       return this;
    }
    
-   public ParcelDraftBuilder trackingData(@Nullable final com.commercetools.models.Order.TrackingData trackingData) {
+   public ParcelDraftBuilder trackingData(@Nullable final com.commercetools.models.order.TrackingData trackingData) {
       this.trackingData = trackingData;
       return this;
    }
    
-   public ParcelDraftBuilder measurements(@Nullable final com.commercetools.models.Order.ParcelMeasurements measurements) {
+   public ParcelDraftBuilder measurements(@Nullable final com.commercetools.models.order.ParcelMeasurements measurements) {
       this.measurements = measurements;
       return this;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Order.DeliveryItem> getItems(){
+   public java.util.List<com.commercetools.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
    @Nullable
-   public com.commercetools.models.Order.TrackingData getTrackingData(){
+   public com.commercetools.models.order.TrackingData getTrackingData(){
       return this.trackingData;
    }
    
    @Nullable
-   public com.commercetools.models.Order.ParcelMeasurements getMeasurements(){
+   public com.commercetools.models.order.ParcelMeasurements getMeasurements(){
       return this.measurements;
    }
 

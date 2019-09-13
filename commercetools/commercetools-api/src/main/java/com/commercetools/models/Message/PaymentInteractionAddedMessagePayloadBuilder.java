@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.type.CustomFields;
 import java.lang.String;
-import com.commercetools.models.Message.PaymentInteractionAddedMessagePayload;
+import com.commercetools.models.message.PaymentInteractionAddedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class PaymentInteractionAddedMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Type.CustomFields interaction;
+   private com.commercetools.models.type.CustomFields interaction;
    
-   public PaymentInteractionAddedMessagePayloadBuilder interaction( final com.commercetools.models.Type.CustomFields interaction) {
+   public PaymentInteractionAddedMessagePayloadBuilder interaction( final com.commercetools.models.type.CustomFields interaction) {
       this.interaction = interaction;
       return this;
    }
    
    
-   public com.commercetools.models.Type.CustomFields getInteraction(){
+   public com.commercetools.models.type.CustomFields getInteraction(){
       return this.interaction;
    }
 

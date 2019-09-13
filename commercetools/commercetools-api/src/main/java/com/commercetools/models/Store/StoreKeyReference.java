@@ -1,8 +1,8 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Common.KeyReference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Store.StoreKeyReferenceImpl;
+import com.commercetools.models.common.KeyReference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.store.StoreKeyReferenceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

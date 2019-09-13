@@ -1,6 +1,6 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyCustomerUpdateAction;
+import com.commercetools.models.me.MyCustomerUpdateAction;
 import java.lang.String;
 import java.time.LocalDate;
 import javax.annotation.Generated;

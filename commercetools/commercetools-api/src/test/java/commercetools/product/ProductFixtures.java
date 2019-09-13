@@ -1,10 +1,10 @@
 package commercetools.product;
 
-import com.commercetools.models.Product.Product;
-import com.commercetools.models.Product.ProductDraft;
-import com.commercetools.models.Product.ProductDraftBuilder;
-import com.commercetools.models.ProductType.ProductType;
-import com.commercetools.models.ProductType.ProductTypeResourceIdentifierBuilder;
+import com.commercetools.models.product.Product;
+import com.commercetools.models.product.ProductDraft;
+import com.commercetools.models.product.ProductDraftBuilder;
+import com.commercetools.models.product_type.ProductType;
+import com.commercetools.models.product_type.ProductTypeResourceIdentifierBuilder;
 import commercetools.product_type.ProductTypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;

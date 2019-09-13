@@ -1,6 +1,6 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductVariantChannelAvailability;
+import com.commercetools.models.product.ProductVariantChannelAvailability;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantChannelAvailabilityMapImpl implements ProductVariantChannelAvailabilityMap {
 
-   private Map<String, com.commercetools.models.Product.ProductVariantChannelAvailability> values;
+   private Map<String, com.commercetools.models.product.ProductVariantChannelAvailability> values;
 
    @JsonCreator
-   ProductVariantChannelAvailabilityMapImpl(@JsonProperty("values") final Map<String, com.commercetools.models.Product.ProductVariantChannelAvailability> values) {
+   ProductVariantChannelAvailabilityMapImpl(@JsonProperty("values") final Map<String, com.commercetools.models.product.ProductVariantChannelAvailability> values) {
       this.values = values;
    }
    public ProductVariantChannelAvailabilityMapImpl() {
@@ -33,11 +33,11 @@ public final class ProductVariantChannelAvailabilityMapImpl implements ProductVa
    }
    
    
-   public Map<String,com.commercetools.models.Product.ProductVariantChannelAvailability> values() {
+   public Map<String,com.commercetools.models.product.ProductVariantChannelAvailability> values() {
        return values;
    }
 
-   public void setValue(String key, com.commercetools.models.Product.ProductVariantChannelAvailability value) {
+   public void setValue(String key, com.commercetools.models.product.ProductVariantChannelAvailability value) {
        if (values == null) {
            values = new HashMap<>();
        }

@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Cart.ExternalTaxAmountDraftImpl;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.cart.ExternalTaxAmountDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

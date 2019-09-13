@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Me.MyPaymentUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.me.MyPaymentUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyPaymentSetMethodInfoNameActionImpl;
+import com.commercetools.models.me.MyPaymentSetMethodInfoNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

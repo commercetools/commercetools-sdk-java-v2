@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ShippingRateInputDraft;
+import com.commercetools.models.cart.ShippingRateInputDraft;
 import java.lang.String;
-import com.commercetools.models.Cart.ClassificationShippingRateInputDraft;
+import com.commercetools.models.cart.ClassificationShippingRateInputDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

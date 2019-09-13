@@ -1,9 +1,9 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntryUpdateAction;
+import com.commercetools.models.inventory.InventoryEntryUpdateAction;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Inventory.InventoryEntryRemoveQuantityActionImpl;
+import com.commercetools.models.inventory.InventoryEntryRemoveQuantityActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

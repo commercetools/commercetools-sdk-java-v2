@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.Delivery;
-import com.commercetools.models.Order.Parcel;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.Delivery;
+import com.commercetools.models.order.Parcel;
 import java.lang.String;
-import com.commercetools.models.Message.ParcelAddedToDeliveryMessagePayload;
+import com.commercetools.models.message.ParcelAddedToDeliveryMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,28 +13,28 @@ import java.time.ZonedDateTime;
 public final class ParcelAddedToDeliveryMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Order.Delivery delivery;
+   private com.commercetools.models.order.Delivery delivery;
    
    
-   private com.commercetools.models.Order.Parcel parcel;
+   private com.commercetools.models.order.Parcel parcel;
    
-   public ParcelAddedToDeliveryMessagePayloadBuilder delivery( final com.commercetools.models.Order.Delivery delivery) {
+   public ParcelAddedToDeliveryMessagePayloadBuilder delivery( final com.commercetools.models.order.Delivery delivery) {
       this.delivery = delivery;
       return this;
    }
    
-   public ParcelAddedToDeliveryMessagePayloadBuilder parcel( final com.commercetools.models.Order.Parcel parcel) {
+   public ParcelAddedToDeliveryMessagePayloadBuilder parcel( final com.commercetools.models.order.Parcel parcel) {
       this.parcel = parcel;
       return this;
    }
    
    
-   public com.commercetools.models.Order.Delivery getDelivery(){
+   public com.commercetools.models.order.Delivery getDelivery(){
       return this.delivery;
    }
    
    
-   public com.commercetools.models.Order.Parcel getParcel(){
+   public com.commercetools.models.order.Parcel getParcel(){
       return this.parcel;
    }
 

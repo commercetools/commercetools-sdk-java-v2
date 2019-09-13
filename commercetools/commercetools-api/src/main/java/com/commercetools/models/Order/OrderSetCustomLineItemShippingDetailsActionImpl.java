@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class OrderSetCustomLineItemShippingDetailsActionImpl implements Or
    
    private java.lang.String customLineItemId;
    
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
 
    @JsonCreator
-   OrderSetCustomLineItemShippingDetailsActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("shippingDetails") final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails) {
+   OrderSetCustomLineItemShippingDetailsActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.customLineItemId = customLineItemId;
       this.shippingDetails = shippingDetails;
       this.action = "setCustomLineItemShippingDetails";
@@ -51,7 +51,7 @@ public final class OrderSetCustomLineItemShippingDetailsActionImpl implements Or
    }
    
    
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
 
@@ -59,7 +59,7 @@ public final class OrderSetCustomLineItemShippingDetailsActionImpl implements Or
       this.customLineItemId = customLineItemId;
    }
    
-   public void setShippingDetails(final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails){
+   public void setShippingDetails(final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails){
       this.shippingDetails = shippingDetails;
    }
 

@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.ShoppingList.ShoppingListResourceIdentifier;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.shopping_list.ShoppingListResourceIdentifier;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,14 +27,14 @@ public final class CartAddShoppingListActionImpl implements CartAddShoppingListA
 
    private java.lang.String action;
    
-   private com.commercetools.models.ShoppingList.ShoppingListResourceIdentifier shoppingList;
+   private com.commercetools.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
 
    @JsonCreator
-   CartAddShoppingListActionImpl(@JsonProperty("shoppingList") final com.commercetools.models.ShoppingList.ShoppingListResourceIdentifier shoppingList, @JsonProperty("supplyChannel") final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel) {
+   CartAddShoppingListActionImpl(@JsonProperty("shoppingList") final com.commercetools.models.shopping_list.ShoppingListResourceIdentifier shoppingList, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel) {
       this.shoppingList = shoppingList;
       this.supplyChannel = supplyChannel;
       this.distributionChannel = distributionChannel;
@@ -50,29 +50,29 @@ public final class CartAddShoppingListActionImpl implements CartAddShoppingListA
    }
    
    
-   public com.commercetools.models.ShoppingList.ShoppingListResourceIdentifier getShoppingList(){
+   public com.commercetools.models.shopping_list.ShoppingListResourceIdentifier getShoppingList(){
       return this.shoppingList;
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getDistributionChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
    }
 
-   public void setShoppingList(final com.commercetools.models.ShoppingList.ShoppingListResourceIdentifier shoppingList){
+   public void setShoppingList(final com.commercetools.models.shopping_list.ShoppingListResourceIdentifier shoppingList){
       this.shoppingList = shoppingList;
    }
    
-   public void setSupplyChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel){
+   public void setSupplyChannel(final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel){
       this.supplyChannel = supplyChannel;
    }
    
-   public void setDistributionChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel){
+   public void setDistributionChannel(final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel){
       this.distributionChannel = distributionChannel;
    }
 

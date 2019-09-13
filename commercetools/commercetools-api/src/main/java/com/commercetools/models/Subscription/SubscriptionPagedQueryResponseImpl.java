@@ -1,6 +1,6 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.Subscription;
+import com.commercetools.models.subscription.Subscription;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class SubscriptionPagedQueryResponseImpl implements SubscriptionPag
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Subscription.Subscription> results;
+   private java.util.List<com.commercetools.models.subscription.Subscription> results;
 
    @JsonCreator
-   SubscriptionPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Subscription.Subscription> results) {
+   SubscriptionPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.subscription.Subscription> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class SubscriptionPagedQueryResponseImpl implements SubscriptionPag
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.Subscription> getResults(){
+   public java.util.List<com.commercetools.models.subscription.Subscription> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class SubscriptionPagedQueryResponseImpl implements SubscriptionPag
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Subscription.Subscription> results){
+   public void setResults(final java.util.List<com.commercetools.models.subscription.Subscription> results){
       this.results = results;
    }
 

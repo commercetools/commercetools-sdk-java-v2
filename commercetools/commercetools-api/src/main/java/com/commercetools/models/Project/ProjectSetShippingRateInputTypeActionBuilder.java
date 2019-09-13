@@ -1,9 +1,9 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ProjectUpdateAction;
-import com.commercetools.models.Project.ShippingRateInputType;
+import com.commercetools.models.project.ProjectUpdateAction;
+import com.commercetools.models.project.ShippingRateInputType;
 import java.lang.String;
-import com.commercetools.models.Project.ProjectSetShippingRateInputTypeAction;
+import com.commercetools.models.project.ProjectSetShippingRateInputTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ProjectSetShippingRateInputTypeActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Project.ShippingRateInputType shippingRateInputType;
+   private com.commercetools.models.project.ShippingRateInputType shippingRateInputType;
    
-   public ProjectSetShippingRateInputTypeActionBuilder shippingRateInputType(@Nullable final com.commercetools.models.Project.ShippingRateInputType shippingRateInputType) {
+   public ProjectSetShippingRateInputTypeActionBuilder shippingRateInputType(@Nullable final com.commercetools.models.project.ShippingRateInputType shippingRateInputType) {
       this.shippingRateInputType = shippingRateInputType;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Project.ShippingRateInputType getShippingRateInputType(){
+   public com.commercetools.models.project.ShippingRateInputType getShippingRateInputType(){
       return this.shippingRateInputType;
    }
 

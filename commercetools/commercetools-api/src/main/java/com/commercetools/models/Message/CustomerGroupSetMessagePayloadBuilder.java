@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.CustomerGroupSetMessagePayload;
+import com.commercetools.models.message.CustomerGroupSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CustomerGroupSetMessagePayloadBuilder {
    
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
-   public CustomerGroupSetMessagePayloadBuilder customerGroup( final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup) {
+   public CustomerGroupSetMessagePayloadBuilder customerGroup( final com.commercetools.models.customer_group.CustomerGroupReference customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
 

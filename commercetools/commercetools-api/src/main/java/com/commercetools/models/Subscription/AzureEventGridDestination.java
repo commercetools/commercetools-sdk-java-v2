@@ -1,8 +1,8 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.Destination;
+import com.commercetools.models.subscription.Destination;
 import java.lang.String;
-import com.commercetools.models.Subscription.AzureEventGridDestinationImpl;
+import com.commercetools.models.subscription.AzureEventGridDestinationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,13 +1,13 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Common.ScopedPrice;
+import com.commercetools.models.common.ScopedPrice;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,19 +16,19 @@ import java.time.ZonedDateTime;
 public final class ScopedPriceBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.DiscountedPrice discounted;
+   private com.commercetools.models.common.DiscountedPrice discounted;
    
    @Nullable
    private java.lang.String country;
    
    @Nullable
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelReference channel;
+   private com.commercetools.models.channel.ChannelReference channel;
    
    @Nullable
    private java.time.ZonedDateTime validUntil;
@@ -40,12 +40,12 @@ public final class ScopedPriceBuilder {
    private java.lang.String id;
    
    
-   private com.commercetools.models.Common.TypedMoney value;
+   private com.commercetools.models.common.TypedMoney value;
    
    
-   private com.commercetools.models.Common.TypedMoney currentValue;
+   private com.commercetools.models.common.TypedMoney currentValue;
    
-   public ScopedPriceBuilder discounted(@Nullable final com.commercetools.models.Common.DiscountedPrice discounted) {
+   public ScopedPriceBuilder discounted(@Nullable final com.commercetools.models.common.DiscountedPrice discounted) {
       this.discounted = discounted;
       return this;
    }
@@ -55,17 +55,17 @@ public final class ScopedPriceBuilder {
       return this;
    }
    
-   public ScopedPriceBuilder customerGroup(@Nullable final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup) {
+   public ScopedPriceBuilder customerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupReference customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
    
-   public ScopedPriceBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public ScopedPriceBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
    
-   public ScopedPriceBuilder channel(@Nullable final com.commercetools.models.Channel.ChannelReference channel) {
+   public ScopedPriceBuilder channel(@Nullable final com.commercetools.models.channel.ChannelReference channel) {
       this.channel = channel;
       return this;
    }
@@ -85,18 +85,18 @@ public final class ScopedPriceBuilder {
       return this;
    }
    
-   public ScopedPriceBuilder value( final com.commercetools.models.Common.TypedMoney value) {
+   public ScopedPriceBuilder value( final com.commercetools.models.common.TypedMoney value) {
       this.value = value;
       return this;
    }
    
-   public ScopedPriceBuilder currentValue( final com.commercetools.models.Common.TypedMoney currentValue) {
+   public ScopedPriceBuilder currentValue( final com.commercetools.models.common.TypedMoney currentValue) {
       this.currentValue = currentValue;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Common.DiscountedPrice getDiscounted(){
+   public com.commercetools.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
    
@@ -106,17 +106,17 @@ public final class ScopedPriceBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelReference getChannel(){
+   public com.commercetools.models.channel.ChannelReference getChannel(){
       return this.channel;
    }
    
@@ -136,12 +136,12 @@ public final class ScopedPriceBuilder {
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getValue(){
+   public com.commercetools.models.common.TypedMoney getValue(){
       return this.value;
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getCurrentValue(){
+   public com.commercetools.models.common.TypedMoney getCurrentValue(){
       return this.currentValue;
    }
 

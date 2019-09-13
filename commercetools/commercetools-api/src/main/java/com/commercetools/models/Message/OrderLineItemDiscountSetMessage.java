@@ -1,11 +1,11 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity;
-import com.commercetools.models.Cart.TaxedItemPrice;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.models.cart.TaxedItemPrice;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.message.Message;
 import java.lang.String;
-import com.commercetools.models.Message.OrderLineItemDiscountSetMessageImpl;
+import com.commercetools.models.message.OrderLineItemDiscountSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

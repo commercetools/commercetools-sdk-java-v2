@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.ProductSlugChangedMessagePayload;
+import com.commercetools.models.message.ProductSlugChangedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ProductSlugChangedMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Common.LocalizedString slug;
+   private com.commercetools.models.common.LocalizedString slug;
    
-   public ProductSlugChangedMessagePayloadBuilder slug( final com.commercetools.models.Common.LocalizedString slug) {
+   public ProductSlugChangedMessagePayloadBuilder slug( final com.commercetools.models.common.LocalizedString slug) {
       this.slug = slug;
       return this;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getSlug(){
+   public com.commercetools.models.common.LocalizedString getSlug(){
       return this.slug;
    }
 

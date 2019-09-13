@@ -27,9 +27,9 @@ public class ByProjectKeyCustomerGroupsKeyByKeyPost {
    private String projectKey;
    private String key;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupUpdate customerGroupUpdate;
+   private com.commercetools.models.customer_group.CustomerGroupUpdate customerGroupUpdate;
    
-   public ByProjectKeyCustomerGroupsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.CustomerGroup.CustomerGroupUpdate customerGroupUpdate){
+   public ByProjectKeyCustomerGroupsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.customer_group.CustomerGroupUpdate customerGroupUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.key = key;
@@ -53,7 +53,7 @@ public class ByProjectKeyCustomerGroupsKeyByKeyPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.CustomerGroup.CustomerGroup> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.customer_group.CustomerGroup> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyCustomerGroupsKeyByKeyPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.CustomerGroup.CustomerGroup>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.customer_group.CustomerGroup>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.CustomerGroup.CustomerGroup.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.customer_group.CustomerGroup.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

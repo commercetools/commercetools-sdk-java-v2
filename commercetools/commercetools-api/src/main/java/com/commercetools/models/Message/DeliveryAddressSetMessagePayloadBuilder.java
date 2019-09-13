@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.DeliveryAddressSetMessagePayload;
+import com.commercetools.models.message.DeliveryAddressSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class DeliveryAddressSetMessagePayloadBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.Address oldAddress;
+   private com.commercetools.models.common.Address oldAddress;
    
    
    private java.lang.String deliveryId;
    
    @Nullable
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
-   public DeliveryAddressSetMessagePayloadBuilder oldAddress(@Nullable final com.commercetools.models.Common.Address oldAddress) {
+   public DeliveryAddressSetMessagePayloadBuilder oldAddress(@Nullable final com.commercetools.models.common.Address oldAddress) {
       this.oldAddress = oldAddress;
       return this;
    }
@@ -30,13 +30,13 @@ public final class DeliveryAddressSetMessagePayloadBuilder {
       return this;
    }
    
-   public DeliveryAddressSetMessagePayloadBuilder address(@Nullable final com.commercetools.models.Common.Address address) {
+   public DeliveryAddressSetMessagePayloadBuilder address(@Nullable final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getOldAddress(){
+   public com.commercetools.models.common.Address getOldAddress(){
       return this.oldAddress;
    }
    
@@ -46,7 +46,7 @@ public final class DeliveryAddressSetMessagePayloadBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
 

@@ -1,8 +1,8 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.Subscription;
+import com.commercetools.models.subscription.Subscription;
 import java.lang.Long;
-import com.commercetools.models.Subscription.SubscriptionPagedQueryResponseImpl;
+import com.commercetools.models.subscription.SubscriptionPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

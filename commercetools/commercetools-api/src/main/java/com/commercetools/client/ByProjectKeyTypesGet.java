@@ -59,7 +59,7 @@ public class ByProjectKeyTypesGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Type.TypePagedQueryResponse> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.type.TypePagedQueryResponse> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -67,9 +67,9 @@ public class ByProjectKeyTypesGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Type.TypePagedQueryResponse>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.type.TypePagedQueryResponse>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Type.TypePagedQueryResponse.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.type.TypePagedQueryResponse.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

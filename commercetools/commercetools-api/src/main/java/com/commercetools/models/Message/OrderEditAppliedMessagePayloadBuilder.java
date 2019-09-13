@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.OrderEdit.OrderEditApplied;
-import com.commercetools.models.OrderEdit.OrderEditReference;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order_edit.OrderEditApplied;
+import com.commercetools.models.order_edit.OrderEditReference;
 import java.lang.String;
-import com.commercetools.models.Message.OrderEditAppliedMessagePayload;
+import com.commercetools.models.message.OrderEditAppliedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,28 +13,28 @@ import java.time.ZonedDateTime;
 public final class OrderEditAppliedMessagePayloadBuilder {
    
    
-   private com.commercetools.models.OrderEdit.OrderEditApplied result;
+   private com.commercetools.models.order_edit.OrderEditApplied result;
    
    
-   private com.commercetools.models.OrderEdit.OrderEditReference edit;
+   private com.commercetools.models.order_edit.OrderEditReference edit;
    
-   public OrderEditAppliedMessagePayloadBuilder result( final com.commercetools.models.OrderEdit.OrderEditApplied result) {
+   public OrderEditAppliedMessagePayloadBuilder result( final com.commercetools.models.order_edit.OrderEditApplied result) {
       this.result = result;
       return this;
    }
    
-   public OrderEditAppliedMessagePayloadBuilder edit( final com.commercetools.models.OrderEdit.OrderEditReference edit) {
+   public OrderEditAppliedMessagePayloadBuilder edit( final com.commercetools.models.order_edit.OrderEditReference edit) {
       this.edit = edit;
       return this;
    }
    
    
-   public com.commercetools.models.OrderEdit.OrderEditApplied getResult(){
+   public com.commercetools.models.order_edit.OrderEditApplied getResult(){
       return this.result;
    }
    
    
-   public com.commercetools.models.OrderEdit.OrderEditReference getEdit(){
+   public com.commercetools.models.order_edit.OrderEditReference getEdit(){
       return this.edit;
    }
 

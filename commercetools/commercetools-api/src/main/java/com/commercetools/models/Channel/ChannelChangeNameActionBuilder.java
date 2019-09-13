@@ -1,9 +1,9 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.channel.ChannelUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
-import com.commercetools.models.Channel.ChannelChangeNameAction;
+import com.commercetools.models.channel.ChannelChangeNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ChannelChangeNameActionBuilder {
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
-   public ChannelChangeNameActionBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public ChannelChangeNameActionBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
 

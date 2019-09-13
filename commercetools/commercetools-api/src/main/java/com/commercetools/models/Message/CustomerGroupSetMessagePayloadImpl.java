@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSe
 
    private java.lang.String type;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
 
    @JsonCreator
-   CustomerGroupSetMessagePayloadImpl(@JsonProperty("customerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup) {
+   CustomerGroupSetMessagePayloadImpl(@JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup) {
       this.customerGroup = customerGroup;
       this.type = "CustomerGroupSet";
    }
@@ -43,11 +43,11 @@ public final class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSe
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
 
-   public void setCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup){
+   public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupReference customerGroup){
       this.customerGroup = customerGroup;
    }
 

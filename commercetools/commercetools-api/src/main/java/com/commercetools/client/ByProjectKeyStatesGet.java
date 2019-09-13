@@ -59,7 +59,7 @@ public class ByProjectKeyStatesGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.State.StatePagedQueryResponse> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.state.StatePagedQueryResponse> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -67,9 +67,9 @@ public class ByProjectKeyStatesGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.State.StatePagedQueryResponse>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.state.StatePagedQueryResponse>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.State.StatePagedQueryResponse.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.state.StatePagedQueryResponse.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

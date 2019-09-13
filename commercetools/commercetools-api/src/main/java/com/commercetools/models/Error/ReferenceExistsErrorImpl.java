@@ -1,7 +1,7 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class ReferenceExistsErrorImpl implements ReferenceExistsError {
    
    private java.lang.String message;
    
-   private com.commercetools.models.Common.ReferenceTypeId referencedBy;
+   private com.commercetools.models.common.ReferenceTypeId referencedBy;
 
    @JsonCreator
-   ReferenceExistsErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("referencedBy") final com.commercetools.models.Common.ReferenceTypeId referencedBy) {
+   ReferenceExistsErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("referencedBy") final com.commercetools.models.common.ReferenceTypeId referencedBy) {
       this.message = message;
       this.referencedBy = referencedBy;
       this.code = "ReferenceExists";
@@ -51,7 +51,7 @@ public final class ReferenceExistsErrorImpl implements ReferenceExistsError {
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getReferencedBy(){
+   public com.commercetools.models.common.ReferenceTypeId getReferencedBy(){
       return this.referencedBy;
    }
 
@@ -59,7 +59,7 @@ public final class ReferenceExistsErrorImpl implements ReferenceExistsError {
       this.message = message;
    }
    
-   public void setReferencedBy(final com.commercetools.models.Common.ReferenceTypeId referencedBy){
+   public void setReferencedBy(final com.commercetools.models.common.ReferenceTypeId referencedBy){
       this.referencedBy = referencedBy;
    }
 

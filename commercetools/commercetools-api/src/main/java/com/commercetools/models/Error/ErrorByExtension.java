@@ -1,7 +1,7 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
 import java.lang.String;
-import com.commercetools.models.Error.ErrorByExtensionImpl;
+import com.commercetools.models.error.ErrorByExtensionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

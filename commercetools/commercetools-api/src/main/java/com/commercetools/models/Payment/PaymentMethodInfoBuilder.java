@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
-import com.commercetools.models.Payment.PaymentMethodInfo;
+import com.commercetools.models.payment.PaymentMethodInfo;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ public final class PaymentMethodInfoBuilder {
    private java.lang.String method;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
    private java.lang.String paymentInterface;
@@ -24,7 +24,7 @@ public final class PaymentMethodInfoBuilder {
       return this;
    }
    
-   public PaymentMethodInfoBuilder name(@Nullable final com.commercetools.models.Common.LocalizedString name) {
+   public PaymentMethodInfoBuilder name(@Nullable final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
@@ -40,7 +40,7 @@ public final class PaymentMethodInfoBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    

@@ -18,7 +18,7 @@ public class ByProjectKeyOrdersByIDRequestBuilder {
       return new ByProjectKeyOrdersByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyOrdersByIDPost post(com.commercetools.models.Order.OrderUpdate orderUpdate) {
+   public ByProjectKeyOrdersByIDPost post(com.commercetools.models.order.OrderUpdate orderUpdate) {
       return new ByProjectKeyOrdersByIDPost(apiHttpClient, projectKey, ID, orderUpdate);
    }
    

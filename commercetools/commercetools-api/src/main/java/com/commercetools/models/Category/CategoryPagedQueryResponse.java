@@ -1,8 +1,8 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.Category;
+import com.commercetools.models.category.Category;
 import java.lang.Long;
-import com.commercetools.models.Category.CategoryPagedQueryResponseImpl;
+import com.commercetools.models.category.CategoryPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

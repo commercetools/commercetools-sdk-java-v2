@@ -16,7 +16,7 @@ public class ByProjectKeyTypesRequestBuilder {
       return new ByProjectKeyTypesGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyTypesPost post(com.commercetools.models.Type.TypeDraft typeDraft) {
+   public ByProjectKeyTypesPost post(com.commercetools.models.type.TypeDraft typeDraft) {
       return new ByProjectKeyTypesPost(apiHttpClient, projectKey, typeDraft);
    }
    

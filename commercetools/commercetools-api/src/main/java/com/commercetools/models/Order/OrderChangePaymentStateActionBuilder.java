@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.PaymentState;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.PaymentState;
 import java.lang.String;
-import com.commercetools.models.Order.OrderChangePaymentStateAction;
+import com.commercetools.models.order.OrderChangePaymentStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class OrderChangePaymentStateActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Order.PaymentState paymentState;
+   private com.commercetools.models.order.PaymentState paymentState;
    
-   public OrderChangePaymentStateActionBuilder paymentState(@Nullable final com.commercetools.models.Order.PaymentState paymentState) {
+   public OrderChangePaymentStateActionBuilder paymentState(@Nullable final com.commercetools.models.order.PaymentState paymentState) {
       this.paymentState = paymentState;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Order.PaymentState getPaymentState(){
+   public com.commercetools.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
 

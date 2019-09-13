@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.TrackingData;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.TrackingData;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,12 +28,12 @@ public final class ParcelTrackingDataUpdatedMessagePayloadImpl implements Parcel
    
    private java.lang.String deliveryId;
    
-   private com.commercetools.models.Order.TrackingData trackingData;
+   private com.commercetools.models.order.TrackingData trackingData;
    
    private java.lang.String parcelId;
 
    @JsonCreator
-   ParcelTrackingDataUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("trackingData") final com.commercetools.models.Order.TrackingData trackingData, @JsonProperty("parcelId") final java.lang.String parcelId) {
+   ParcelTrackingDataUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("trackingData") final com.commercetools.models.order.TrackingData trackingData, @JsonProperty("parcelId") final java.lang.String parcelId) {
       this.deliveryId = deliveryId;
       this.trackingData = trackingData;
       this.parcelId = parcelId;
@@ -54,7 +54,7 @@ public final class ParcelTrackingDataUpdatedMessagePayloadImpl implements Parcel
    }
    
    
-   public com.commercetools.models.Order.TrackingData getTrackingData(){
+   public com.commercetools.models.order.TrackingData getTrackingData(){
       return this.trackingData;
    }
    
@@ -67,7 +67,7 @@ public final class ParcelTrackingDataUpdatedMessagePayloadImpl implements Parcel
       this.deliveryId = deliveryId;
    }
    
-   public void setTrackingData(final com.commercetools.models.Order.TrackingData trackingData){
+   public void setTrackingData(final com.commercetools.models.order.TrackingData trackingData){
       this.trackingData = trackingData;
    }
    

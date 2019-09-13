@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class InventoryEntryDeletedMessagePayloadImpl implements InventoryE
 
    private java.lang.String type;
    
-   private com.commercetools.models.Channel.ChannelReference supplyChannel;
+   private com.commercetools.models.channel.ChannelReference supplyChannel;
    
    private java.lang.String sku;
 
    @JsonCreator
-   InventoryEntryDeletedMessagePayloadImpl(@JsonProperty("supplyChannel") final com.commercetools.models.Channel.ChannelReference supplyChannel, @JsonProperty("sku") final java.lang.String sku) {
+   InventoryEntryDeletedMessagePayloadImpl(@JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelReference supplyChannel, @JsonProperty("sku") final java.lang.String sku) {
       this.supplyChannel = supplyChannel;
       this.sku = sku;
       this.type = "InventoryEntryDeleted";
@@ -46,7 +46,7 @@ public final class InventoryEntryDeletedMessagePayloadImpl implements InventoryE
    }
    
    
-   public com.commercetools.models.Channel.ChannelReference getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelReference getSupplyChannel(){
       return this.supplyChannel;
    }
    
@@ -55,7 +55,7 @@ public final class InventoryEntryDeletedMessagePayloadImpl implements InventoryE
       return this.sku;
    }
 
-   public void setSupplyChannel(final com.commercetools.models.Channel.ChannelReference supplyChannel){
+   public void setSupplyChannel(final com.commercetools.models.channel.ChannelReference supplyChannel){
       this.supplyChannel = supplyChannel;
    }
    

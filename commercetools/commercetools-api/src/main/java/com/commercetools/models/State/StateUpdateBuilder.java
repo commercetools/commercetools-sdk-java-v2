@@ -1,8 +1,8 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.State.StateUpdate;
+import com.commercetools.models.state.StateUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class StateUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.State.StateUpdateAction> actions;
+   private java.util.List<com.commercetools.models.state.StateUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public StateUpdateBuilder actions( final java.util.List<com.commercetools.models.State.StateUpdateAction> actions) {
+   public StateUpdateBuilder actions( final java.util.List<com.commercetools.models.state.StateUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class StateUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.State.StateUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.state.StateUpdateAction> getActions(){
       return this.actions;
    }
    

@@ -1,6 +1,6 @@
 package commercetools.shipping_method;
 
-import com.commercetools.models.ShippingMethod.*;
+import com.commercetools.models.shipping_method.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

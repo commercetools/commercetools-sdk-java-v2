@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.CustomerAddressChangedMessage;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.CustomerAddressChangedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class CustomerAddressChangedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,7 +38,7 @@ public final class CustomerAddressChangedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
    public CustomerAddressChangedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -65,12 +65,12 @@ public final class CustomerAddressChangedMessageBuilder {
       return this;
    }
    
-   public CustomerAddressChangedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public CustomerAddressChangedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public CustomerAddressChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public CustomerAddressChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -85,7 +85,7 @@ public final class CustomerAddressChangedMessageBuilder {
       return this;
    }
    
-   public CustomerAddressChangedMessageBuilder address( final com.commercetools.models.Common.Address address) {
+   public CustomerAddressChangedMessageBuilder address( final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
@@ -116,12 +116,12 @@ public final class CustomerAddressChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -136,7 +136,7 @@ public final class CustomerAddressChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
 

@@ -1,6 +1,6 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.SuggestTokenizer;
+import com.commercetools.models.product.SuggestTokenizer;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;

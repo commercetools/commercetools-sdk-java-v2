@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
 import java.lang.Boolean;
 import java.lang.Integer;
-import com.commercetools.models.Message.MessageConfigurationImpl;
+import com.commercetools.models.message.MessageConfigurationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

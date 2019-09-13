@@ -1,8 +1,8 @@
 package commercetools.utils;
 
 import com.commercetools.client.ApiRoot;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.LocalizedStringImpl;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.LocalizedStringImpl;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.middlewares.HttpMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;

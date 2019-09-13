@@ -1,9 +1,9 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.Destination;
-import com.commercetools.models.Subscription.SubscriptionUpdateAction;
+import com.commercetools.models.subscription.Destination;
+import com.commercetools.models.subscription.SubscriptionUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Subscription.SubscriptionChangeDestinationAction;
+import com.commercetools.models.subscription.SubscriptionChangeDestinationAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class SubscriptionChangeDestinationActionBuilder {
    
    
-   private com.commercetools.models.Subscription.Destination destination;
+   private com.commercetools.models.subscription.Destination destination;
    
-   public SubscriptionChangeDestinationActionBuilder destination( final com.commercetools.models.Subscription.Destination destination) {
+   public SubscriptionChangeDestinationActionBuilder destination( final com.commercetools.models.subscription.Destination destination) {
       this.destination = destination;
       return this;
    }
    
    
-   public com.commercetools.models.Subscription.Destination getDestination(){
+   public com.commercetools.models.subscription.Destination getDestination(){
       return this.destination;
    }
 

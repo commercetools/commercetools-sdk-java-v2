@@ -1,7 +1,7 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.channel.ChannelUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ChannelChangeDescriptionActionImpl implements ChannelChangeDe
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
 
    @JsonCreator
-   ChannelChangeDescriptionActionImpl(@JsonProperty("description") final com.commercetools.models.Common.LocalizedString description) {
+   ChannelChangeDescriptionActionImpl(@JsonProperty("description") final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       this.action = "changeDescription";
    }
@@ -43,11 +43,11 @@ public final class ChannelChangeDescriptionActionImpl implements ChannelChangeDe
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
 
-   public void setDescription(final com.commercetools.models.Common.LocalizedString description){
+   public void setDescription(final com.commercetools.models.common.LocalizedString description){
       this.description = description;
    }
 

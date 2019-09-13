@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.ReturnInfo;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.ReturnInfo;
 import java.lang.String;
-import com.commercetools.models.Message.OrderReturnInfoAddedMessagePayload;
+import com.commercetools.models.message.OrderReturnInfoAddedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class OrderReturnInfoAddedMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Order.ReturnInfo returnInfo;
+   private com.commercetools.models.order.ReturnInfo returnInfo;
    
-   public OrderReturnInfoAddedMessagePayloadBuilder returnInfo( final com.commercetools.models.Order.ReturnInfo returnInfo) {
+   public OrderReturnInfoAddedMessagePayloadBuilder returnInfo( final com.commercetools.models.order.ReturnInfo returnInfo) {
       this.returnInfo = returnInfo;
       return this;
    }
    
    
-   public com.commercetools.models.Order.ReturnInfo getReturnInfo(){
+   public com.commercetools.models.order.ReturnInfo getReturnInfo(){
       return this.returnInfo;
    }
 

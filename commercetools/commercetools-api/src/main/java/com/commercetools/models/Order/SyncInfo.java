@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Channel.ChannelReference;
+import com.commercetools.models.channel.ChannelReference;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.SyncInfoImpl;
+import com.commercetools.models.order.SyncInfoImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,8 +1,8 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Review.Review;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.review.Review;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewReferenceImpl implements ReviewReference {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Review.Review obj;
+   private com.commercetools.models.review.Review obj;
 
    @JsonCreator
-   ReviewReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.Review.Review obj) {
+   ReviewReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.review.Review obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("review").get();
@@ -41,7 +41,7 @@ public final class ReviewReferenceImpl implements ReviewReference {
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    
@@ -51,7 +51,7 @@ public final class ReviewReferenceImpl implements ReviewReference {
    }
    
    
-   public com.commercetools.models.Review.Review getObj(){
+   public com.commercetools.models.review.Review getObj(){
       return this.obj;
    }
 
@@ -59,7 +59,7 @@ public final class ReviewReferenceImpl implements ReviewReference {
       this.id = id;
    }
    
-   public void setObj(final com.commercetools.models.Review.Review obj){
+   public void setObj(final com.commercetools.models.review.Review obj){
       this.obj = obj;
    }
 

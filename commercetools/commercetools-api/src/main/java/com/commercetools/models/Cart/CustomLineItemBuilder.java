@@ -1,17 +1,17 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity;
-import com.commercetools.models.Cart.ItemShippingDetails;
-import com.commercetools.models.Cart.TaxedItemPrice;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.Order.ItemState;
-import com.commercetools.models.TaxCategory.TaxCategoryReference;
-import com.commercetools.models.TaxCategory.TaxRate;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.models.cart.ItemShippingDetails;
+import com.commercetools.models.cart.TaxedItemPrice;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.order.ItemState;
+import com.commercetools.models.tax_category.TaxCategoryReference;
+import com.commercetools.models.tax_category.TaxRate;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.CustomLineItem;
+import com.commercetools.models.cart.CustomLineItem;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,45 +20,45 @@ import java.time.ZonedDateTime;
 public final class CustomLineItemBuilder {
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxRate taxRate;
+   private com.commercetools.models.tax_category.TaxRate taxRate;
    
    
    private java.lang.Integer quantity;
    
    @Nullable
-   private com.commercetools.models.Cart.ItemShippingDetails shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetails shippingDetails;
    
    
-   private com.commercetools.models.Common.TypedMoney money;
+   private com.commercetools.models.common.TypedMoney money;
    
    
-   private com.commercetools.models.Common.TypedMoney totalPrice;
-   
-   @Nullable
-   private com.commercetools.models.Cart.TaxedItemPrice taxedPrice;
+   private com.commercetools.models.common.TypedMoney totalPrice;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
+   
+   @Nullable
+   private com.commercetools.models.type.CustomFields custom;
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    
-   private java.util.List<com.commercetools.models.Order.ItemState> state;
+   private java.util.List<com.commercetools.models.order.ItemState> state;
    
    
    private java.lang.String id;
    
    
-   private java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+   private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
    
    
    private java.lang.String slug;
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxCategoryReference taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryReference taxCategory;
    
-   public CustomLineItemBuilder taxRate(@Nullable final com.commercetools.models.TaxCategory.TaxRate taxRate) {
+   public CustomLineItemBuilder taxRate(@Nullable final com.commercetools.models.tax_category.TaxRate taxRate) {
       this.taxRate = taxRate;
       return this;
    }
@@ -68,37 +68,37 @@ public final class CustomLineItemBuilder {
       return this;
    }
    
-   public CustomLineItemBuilder shippingDetails(@Nullable final com.commercetools.models.Cart.ItemShippingDetails shippingDetails) {
+   public CustomLineItemBuilder shippingDetails(@Nullable final com.commercetools.models.cart.ItemShippingDetails shippingDetails) {
       this.shippingDetails = shippingDetails;
       return this;
    }
    
-   public CustomLineItemBuilder money( final com.commercetools.models.Common.TypedMoney money) {
+   public CustomLineItemBuilder money( final com.commercetools.models.common.TypedMoney money) {
       this.money = money;
       return this;
    }
    
-   public CustomLineItemBuilder totalPrice( final com.commercetools.models.Common.TypedMoney totalPrice) {
+   public CustomLineItemBuilder totalPrice( final com.commercetools.models.common.TypedMoney totalPrice) {
       this.totalPrice = totalPrice;
       return this;
    }
    
-   public CustomLineItemBuilder taxedPrice(@Nullable final com.commercetools.models.Cart.TaxedItemPrice taxedPrice) {
+   public CustomLineItemBuilder taxedPrice(@Nullable final com.commercetools.models.cart.TaxedItemPrice taxedPrice) {
       this.taxedPrice = taxedPrice;
       return this;
    }
    
-   public CustomLineItemBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public CustomLineItemBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
    
-   public CustomLineItemBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public CustomLineItemBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public CustomLineItemBuilder state( final java.util.List<com.commercetools.models.Order.ItemState> state) {
+   public CustomLineItemBuilder state( final java.util.List<com.commercetools.models.order.ItemState> state) {
       this.state = state;
       return this;
    }
@@ -108,7 +108,7 @@ public final class CustomLineItemBuilder {
       return this;
    }
    
-   public CustomLineItemBuilder discountedPricePerQuantity( final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+   public CustomLineItemBuilder discountedPricePerQuantity( final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
       this.discountedPricePerQuantity = discountedPricePerQuantity;
       return this;
    }
@@ -118,13 +118,13 @@ public final class CustomLineItemBuilder {
       return this;
    }
    
-   public CustomLineItemBuilder taxCategory(@Nullable final com.commercetools.models.TaxCategory.TaxCategoryReference taxCategory) {
+   public CustomLineItemBuilder taxCategory(@Nullable final com.commercetools.models.tax_category.TaxCategoryReference taxCategory) {
       this.taxCategory = taxCategory;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxRate getTaxRate(){
+   public com.commercetools.models.tax_category.TaxRate getTaxRate(){
       return this.taxRate;
    }
    
@@ -134,37 +134,37 @@ public final class CustomLineItemBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ItemShippingDetails getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetails getShippingDetails(){
       return this.shippingDetails;
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getMoney(){
+   public com.commercetools.models.common.TypedMoney getMoney(){
       return this.money;
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getTotalPrice(){
+   public com.commercetools.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.TaxedItemPrice getTaxedPrice(){
+   public com.commercetools.models.cart.TaxedItemPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    
-   public java.util.List<com.commercetools.models.Order.ItemState> getState(){
+   public java.util.List<com.commercetools.models.order.ItemState> getState(){
       return this.state;
    }
    
@@ -174,7 +174,7 @@ public final class CustomLineItemBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
+   public java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
       return this.discountedPricePerQuantity;
    }
    
@@ -184,7 +184,7 @@ public final class CustomLineItemBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxCategoryReference getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryReference getTaxCategory(){
       return this.taxCategory;
    }
 

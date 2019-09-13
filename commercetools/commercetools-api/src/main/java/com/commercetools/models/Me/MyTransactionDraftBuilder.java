@@ -1,10 +1,10 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Payment.TransactionType;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.payment.TransactionType;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Me.MyTransactionDraft;
+import com.commercetools.models.me.MyTransactionDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,10 +16,10 @@ public final class MyTransactionDraftBuilder {
    private java.lang.String interactionId;
    
    
-   private com.commercetools.models.Common.Money amount;
+   private com.commercetools.models.common.Money amount;
    
    
-   private com.commercetools.models.Payment.TransactionType type;
+   private com.commercetools.models.payment.TransactionType type;
    
    @Nullable
    private java.time.ZonedDateTime timestamp;
@@ -29,12 +29,12 @@ public final class MyTransactionDraftBuilder {
       return this;
    }
    
-   public MyTransactionDraftBuilder amount( final com.commercetools.models.Common.Money amount) {
+   public MyTransactionDraftBuilder amount( final com.commercetools.models.common.Money amount) {
       this.amount = amount;
       return this;
    }
    
-   public MyTransactionDraftBuilder type( final com.commercetools.models.Payment.TransactionType type) {
+   public MyTransactionDraftBuilder type( final com.commercetools.models.payment.TransactionType type) {
       this.type = type;
       return this;
    }
@@ -50,12 +50,12 @@ public final class MyTransactionDraftBuilder {
    }
    
    
-   public com.commercetools.models.Common.Money getAmount(){
+   public com.commercetools.models.common.Money getAmount(){
       return this.amount;
    }
    
    
-   public com.commercetools.models.Payment.TransactionType getType(){
+   public com.commercetools.models.payment.TransactionType getType(){
       return this.type;
    }
    

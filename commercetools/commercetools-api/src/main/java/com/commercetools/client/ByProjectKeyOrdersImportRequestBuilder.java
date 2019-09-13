@@ -12,7 +12,7 @@ public class ByProjectKeyOrdersImportRequestBuilder {
       this.projectKey = projectKey;
    }
    
-   public ByProjectKeyOrdersImportPost post(com.commercetools.models.Order.OrderImportDraft orderImportDraft) {
+   public ByProjectKeyOrdersImportPost post(com.commercetools.models.order.OrderImportDraft orderImportDraft) {
       return new ByProjectKeyOrdersImportPost(apiHttpClient, projectKey, orderImportDraft);
    }
    

@@ -1,11 +1,11 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.ShoppingList.ShoppingListLineItemDraft;
-import com.commercetools.models.ShoppingList.TextLineItemDraft;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.shopping_list.ShoppingListLineItemDraft;
+import com.commercetools.models.shopping_list.TextLineItemDraft;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
-import com.commercetools.models.Me.MyShoppingListDraftImpl;
+import com.commercetools.models.me.MyShoppingListDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

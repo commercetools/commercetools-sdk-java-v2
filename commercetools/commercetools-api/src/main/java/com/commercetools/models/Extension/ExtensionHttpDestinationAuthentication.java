@@ -1,7 +1,7 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionAuthorizationHeaderAuthentication;
-import com.commercetools.models.Extension.ExtensionAzureFunctionsAuthentication;
+import com.commercetools.models.extension.ExtensionAuthorizationHeaderAuthentication;
+import com.commercetools.models.extension.ExtensionAzureFunctionsAuthentication;
 import java.lang.String;
 
 
@@ -17,8 +17,8 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Extension.ExtensionAuthorizationHeaderAuthenticationImpl.class, name = "AuthorizationHeader"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Extension.ExtensionAzureFunctionsAuthenticationImpl.class, name = "AzureFunctions")
+   @JsonSubTypes.Type(value = com.commercetools.models.extension.ExtensionAuthorizationHeaderAuthenticationImpl.class, name = "AuthorizationHeader"),
+   @JsonSubTypes.Type(value = com.commercetools.models.extension.ExtensionAzureFunctionsAuthenticationImpl.class, name = "AzureFunctions")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

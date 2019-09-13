@@ -1,8 +1,8 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.Channel;
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
+import com.commercetools.models.channel.Channel;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelReferenceImpl implements ChannelReference {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Channel.Channel obj;
+   private com.commercetools.models.channel.Channel obj;
 
    @JsonCreator
-   ChannelReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.Channel.Channel obj) {
+   ChannelReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.channel.Channel obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("channel").get();
@@ -41,7 +41,7 @@ public final class ChannelReferenceImpl implements ChannelReference {
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    
@@ -51,7 +51,7 @@ public final class ChannelReferenceImpl implements ChannelReference {
    }
    
    
-   public com.commercetools.models.Channel.Channel getObj(){
+   public com.commercetools.models.channel.Channel getObj(){
       return this.obj;
    }
 
@@ -59,7 +59,7 @@ public final class ChannelReferenceImpl implements ChannelReference {
       this.id = id;
    }
    
-   public void setObj(final com.commercetools.models.Channel.Channel obj){
+   public void setObj(final com.commercetools.models.channel.Channel obj){
       this.obj = obj;
    }
 

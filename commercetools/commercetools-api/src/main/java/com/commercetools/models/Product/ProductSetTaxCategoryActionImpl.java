@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ProductSetTaxCategoryActionImpl implements ProductSetTaxCateg
 
    private java.lang.String action;
    
-   private com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
    @JsonCreator
-   ProductSetTaxCategoryActionImpl(@JsonProperty("taxCategory") final com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory) {
+   ProductSetTaxCategoryActionImpl(@JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
       this.taxCategory = taxCategory;
       this.action = "setTaxCategory";
    }
@@ -43,11 +43,11 @@ public final class ProductSetTaxCategoryActionImpl implements ProductSetTaxCateg
    }
    
    
-   public com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }
 
-   public void setTaxCategory(final com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory){
+   public void setTaxCategory(final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory){
       this.taxCategory = taxCategory;
    }
 

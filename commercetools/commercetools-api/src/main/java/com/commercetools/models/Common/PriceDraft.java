@@ -1,14 +1,14 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Common.PriceTier;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.common.PriceTier;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Common.PriceDraftImpl;
+import com.commercetools.models.common.PriceDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

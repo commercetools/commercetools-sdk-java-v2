@@ -1,4 +1,4 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.String;

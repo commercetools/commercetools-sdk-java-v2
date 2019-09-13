@@ -1,12 +1,12 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Me.MyShoppingListAddTextLineItemAction;
+import com.commercetools.models.me.MyShoppingListAddTextLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -21,13 +21,13 @@ public final class MyShoppingListAddTextLineItemActionBuilder {
    private java.lang.Long quantity;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    public MyShoppingListAddTextLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
       this.addedAt = addedAt;
@@ -39,17 +39,17 @@ public final class MyShoppingListAddTextLineItemActionBuilder {
       return this;
    }
    
-   public MyShoppingListAddTextLineItemActionBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public MyShoppingListAddTextLineItemActionBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
    
-   public MyShoppingListAddTextLineItemActionBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public MyShoppingListAddTextLineItemActionBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public MyShoppingListAddTextLineItemActionBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public MyShoppingListAddTextLineItemActionBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
@@ -65,17 +65,17 @@ public final class MyShoppingListAddTextLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
 

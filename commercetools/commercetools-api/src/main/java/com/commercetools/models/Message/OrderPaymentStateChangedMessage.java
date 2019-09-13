@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.PaymentState;
-import com.commercetools.models.Message.OrderPaymentStateChangedMessageImpl;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.PaymentState;
+import com.commercetools.models.message.OrderPaymentStateChangedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

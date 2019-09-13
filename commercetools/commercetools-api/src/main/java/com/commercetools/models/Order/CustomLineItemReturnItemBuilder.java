@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.ReturnItem;
+import com.commercetools.models.order.ReturnItem;
 import java.lang.String;
-import com.commercetools.models.Order.CustomLineItemReturnItem;
+import com.commercetools.models.order.CustomLineItemReturnItem;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.time.ZonedDateTime;
 public final class CustomLineItemReturnItemBuilder {
    
    
-   private com.commercetools.models.Order.ReturnShipmentState shipmentState;
+   private com.commercetools.models.order.ReturnShipmentState shipmentState;
    
    
    private java.time.ZonedDateTime createdAt;
@@ -29,12 +29,12 @@ public final class CustomLineItemReturnItemBuilder {
    private java.lang.String id;
    
    
-   private com.commercetools.models.Order.ReturnPaymentState paymentState;
+   private com.commercetools.models.order.ReturnPaymentState paymentState;
    
    
    private java.lang.String customLineItemId;
    
-   public CustomLineItemReturnItemBuilder shipmentState( final com.commercetools.models.Order.ReturnShipmentState shipmentState) {
+   public CustomLineItemReturnItemBuilder shipmentState( final com.commercetools.models.order.ReturnShipmentState shipmentState) {
       this.shipmentState = shipmentState;
       return this;
    }
@@ -64,7 +64,7 @@ public final class CustomLineItemReturnItemBuilder {
       return this;
    }
    
-   public CustomLineItemReturnItemBuilder paymentState( final com.commercetools.models.Order.ReturnPaymentState paymentState) {
+   public CustomLineItemReturnItemBuilder paymentState( final com.commercetools.models.order.ReturnPaymentState paymentState) {
       this.paymentState = paymentState;
       return this;
    }
@@ -75,7 +75,7 @@ public final class CustomLineItemReturnItemBuilder {
    }
    
    
-   public com.commercetools.models.Order.ReturnShipmentState getShipmentState(){
+   public com.commercetools.models.order.ReturnShipmentState getShipmentState(){
       return this.shipmentState;
    }
    
@@ -105,7 +105,7 @@ public final class CustomLineItemReturnItemBuilder {
    }
    
    
-   public com.commercetools.models.Order.ReturnPaymentState getPaymentState(){
+   public com.commercetools.models.order.ReturnPaymentState getPaymentState(){
       return this.paymentState;
    }
    

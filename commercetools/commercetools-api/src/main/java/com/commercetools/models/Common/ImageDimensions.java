@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
 import java.lang.Integer;
-import com.commercetools.models.Common.ImageDimensionsImpl;
+import com.commercetools.models.common.ImageDimensionsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

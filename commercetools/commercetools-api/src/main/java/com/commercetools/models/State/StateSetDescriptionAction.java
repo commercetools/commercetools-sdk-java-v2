@@ -1,9 +1,9 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.String;
-import com.commercetools.models.State.StateSetDescriptionActionImpl;
+import com.commercetools.models.state.StateSetDescriptionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

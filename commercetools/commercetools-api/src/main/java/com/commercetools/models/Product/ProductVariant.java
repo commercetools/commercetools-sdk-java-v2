@@ -1,15 +1,15 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.Asset;
-import com.commercetools.models.Common.Image;
-import com.commercetools.models.Common.Price;
-import com.commercetools.models.Common.ScopedPrice;
-import com.commercetools.models.Product.Attribute;
-import com.commercetools.models.Product.ProductVariantAvailability;
+import com.commercetools.models.common.Asset;
+import com.commercetools.models.common.Image;
+import com.commercetools.models.common.Price;
+import com.commercetools.models.common.ScopedPrice;
+import com.commercetools.models.product.Attribute;
+import com.commercetools.models.product.ProductVariantAvailability;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Product.ProductVariantImpl;
+import com.commercetools.models.product.ProductVariantImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

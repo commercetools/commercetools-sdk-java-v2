@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.OrderEdit.OrderEditApplied;
-import com.commercetools.models.OrderEdit.OrderEditReference;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order_edit.OrderEditApplied;
+import com.commercetools.models.order_edit.OrderEditReference;
 import java.lang.String;
-import com.commercetools.models.Message.OrderEditAppliedMessagePayloadImpl;
+import com.commercetools.models.message.OrderEditAppliedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.ItemState;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.ItemState;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class OrderImportLineItemStateActionImpl implements OrderImportLine
    
    private java.lang.String lineItemId;
    
-   private java.util.List<com.commercetools.models.Order.ItemState> state;
+   private java.util.List<com.commercetools.models.order.ItemState> state;
 
    @JsonCreator
-   OrderImportLineItemStateActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("state") final java.util.List<com.commercetools.models.Order.ItemState> state) {
+   OrderImportLineItemStateActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state) {
       this.lineItemId = lineItemId;
       this.state = state;
       this.action = "importLineItemState";
@@ -51,7 +51,7 @@ public final class OrderImportLineItemStateActionImpl implements OrderImportLine
    }
    
    
-   public java.util.List<com.commercetools.models.Order.ItemState> getState(){
+   public java.util.List<com.commercetools.models.order.ItemState> getState(){
       return this.state;
    }
 
@@ -59,7 +59,7 @@ public final class OrderImportLineItemStateActionImpl implements OrderImportLine
       this.lineItemId = lineItemId;
    }
    
-   public void setState(final java.util.List<com.commercetools.models.Order.ItemState> state){
+   public void setState(final java.util.List<com.commercetools.models.order.ItemState> state){
       this.state = state;
    }
 

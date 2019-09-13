@@ -1,6 +1,6 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Common.TypedMoney;
+import com.commercetools.models.common.TypedMoney;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxedItemPriceImpl implements TaxedItemPrice {
 
-   private com.commercetools.models.Common.TypedMoney totalGross;
+   private com.commercetools.models.common.TypedMoney totalGross;
    
-   private com.commercetools.models.Common.TypedMoney totalNet;
+   private com.commercetools.models.common.TypedMoney totalNet;
 
    @JsonCreator
-   TaxedItemPriceImpl(@JsonProperty("totalGross") final com.commercetools.models.Common.TypedMoney totalGross, @JsonProperty("totalNet") final com.commercetools.models.Common.TypedMoney totalNet) {
+   TaxedItemPriceImpl(@JsonProperty("totalGross") final com.commercetools.models.common.TypedMoney totalGross, @JsonProperty("totalNet") final com.commercetools.models.common.TypedMoney totalNet) {
       this.totalGross = totalGross;
       this.totalNet = totalNet;
    }
@@ -36,20 +36,20 @@ public final class TaxedItemPriceImpl implements TaxedItemPrice {
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getTotalGross(){
+   public com.commercetools.models.common.TypedMoney getTotalGross(){
       return this.totalGross;
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getTotalNet(){
+   public com.commercetools.models.common.TypedMoney getTotalNet(){
       return this.totalNet;
    }
 
-   public void setTotalGross(final com.commercetools.models.Common.TypedMoney totalGross){
+   public void setTotalGross(final com.commercetools.models.common.TypedMoney totalGross){
       this.totalGross = totalGross;
    }
    
-   public void setTotalNet(final com.commercetools.models.Common.TypedMoney totalNet){
+   public void setTotalNet(final com.commercetools.models.common.TypedMoney totalNet){
       this.totalNet = totalNet;
    }
 

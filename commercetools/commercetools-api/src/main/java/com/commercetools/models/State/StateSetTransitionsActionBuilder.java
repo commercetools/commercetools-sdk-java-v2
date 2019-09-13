@@ -1,9 +1,9 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.StateResourceIdentifier;
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.state.StateResourceIdentifier;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.String;
-import com.commercetools.models.State.StateSetTransitionsAction;
+import com.commercetools.models.state.StateSetTransitionsAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class StateSetTransitionsActionBuilder {
    
    @Nullable
-   private java.util.List<com.commercetools.models.State.StateResourceIdentifier> transitions;
+   private java.util.List<com.commercetools.models.state.StateResourceIdentifier> transitions;
    
-   public StateSetTransitionsActionBuilder transitions(@Nullable final java.util.List<com.commercetools.models.State.StateResourceIdentifier> transitions) {
+   public StateSetTransitionsActionBuilder transitions(@Nullable final java.util.List<com.commercetools.models.state.StateResourceIdentifier> transitions) {
       this.transitions = transitions;
       return this;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.State.StateResourceIdentifier> getTransitions(){
+   public java.util.List<com.commercetools.models.state.StateResourceIdentifier> getTransitions(){
       return this.transitions;
    }
 

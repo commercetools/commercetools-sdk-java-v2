@@ -1,14 +1,14 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Common.PriceTier;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.common.PriceTier;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Common.Price;
+import com.commercetools.models.common.Price;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,22 +17,22 @@ import java.time.ZonedDateTime;
 public final class PriceBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.DiscountedPrice discounted;
+   private com.commercetools.models.common.DiscountedPrice discounted;
    
    @Nullable
    private java.lang.String country;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.PriceTier> tiers;
+   private java.util.List<com.commercetools.models.common.PriceTier> tiers;
    
    @Nullable
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelReference channel;
+   private com.commercetools.models.channel.ChannelReference channel;
    
    @Nullable
    private java.time.ZonedDateTime validUntil;
@@ -44,9 +44,9 @@ public final class PriceBuilder {
    private java.lang.String id;
    
    
-   private com.commercetools.models.Common.Money value;
+   private com.commercetools.models.common.Money value;
    
-   public PriceBuilder discounted(@Nullable final com.commercetools.models.Common.DiscountedPrice discounted) {
+   public PriceBuilder discounted(@Nullable final com.commercetools.models.common.DiscountedPrice discounted) {
       this.discounted = discounted;
       return this;
    }
@@ -56,22 +56,22 @@ public final class PriceBuilder {
       return this;
    }
    
-   public PriceBuilder tiers(@Nullable final java.util.List<com.commercetools.models.Common.PriceTier> tiers) {
+   public PriceBuilder tiers(@Nullable final java.util.List<com.commercetools.models.common.PriceTier> tiers) {
       this.tiers = tiers;
       return this;
    }
    
-   public PriceBuilder customerGroup(@Nullable final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup) {
+   public PriceBuilder customerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupReference customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
    
-   public PriceBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public PriceBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
    
-   public PriceBuilder channel(@Nullable final com.commercetools.models.Channel.ChannelReference channel) {
+   public PriceBuilder channel(@Nullable final com.commercetools.models.channel.ChannelReference channel) {
       this.channel = channel;
       return this;
    }
@@ -91,13 +91,13 @@ public final class PriceBuilder {
       return this;
    }
    
-   public PriceBuilder value( final com.commercetools.models.Common.Money value) {
+   public PriceBuilder value( final com.commercetools.models.common.Money value) {
       this.value = value;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Common.DiscountedPrice getDiscounted(){
+   public com.commercetools.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
    
@@ -107,22 +107,22 @@ public final class PriceBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.PriceTier> getTiers(){
+   public java.util.List<com.commercetools.models.common.PriceTier> getTiers(){
       return this.tiers;
    }
    
    @Nullable
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelReference getChannel(){
+   public com.commercetools.models.channel.ChannelReference getChannel(){
       return this.channel;
    }
    
@@ -142,7 +142,7 @@ public final class PriceBuilder {
    }
    
    
-   public com.commercetools.models.Common.Money getValue(){
+   public com.commercetools.models.common.Money getValue(){
       return this.value;
    }
 

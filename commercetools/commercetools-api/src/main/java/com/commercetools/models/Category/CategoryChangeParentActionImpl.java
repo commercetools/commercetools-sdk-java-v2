@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryResourceIdentifier;
-import com.commercetools.models.Category.CategoryUpdateAction;
+import com.commercetools.models.category.CategoryResourceIdentifier;
+import com.commercetools.models.category.CategoryUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CategoryChangeParentActionImpl implements CategoryChangeParen
 
    private java.lang.String action;
    
-   private com.commercetools.models.Category.CategoryResourceIdentifier parent;
+   private com.commercetools.models.category.CategoryResourceIdentifier parent;
 
    @JsonCreator
-   CategoryChangeParentActionImpl(@JsonProperty("parent") final com.commercetools.models.Category.CategoryResourceIdentifier parent) {
+   CategoryChangeParentActionImpl(@JsonProperty("parent") final com.commercetools.models.category.CategoryResourceIdentifier parent) {
       this.parent = parent;
       this.action = "changeParent";
    }
@@ -43,11 +43,11 @@ public final class CategoryChangeParentActionImpl implements CategoryChangeParen
    }
    
    
-   public com.commercetools.models.Category.CategoryResourceIdentifier getParent(){
+   public com.commercetools.models.category.CategoryResourceIdentifier getParent(){
       return this.parent;
    }
 
-   public void setParent(final com.commercetools.models.Category.CategoryResourceIdentifier parent){
+   public void setParent(final com.commercetools.models.category.CategoryResourceIdentifier parent){
       this.parent = parent;
    }
 

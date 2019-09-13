@@ -1,7 +1,7 @@
 package commercetools.product_projection;
 
-import com.commercetools.models.Product.ProductProjection;
-import com.commercetools.models.Product.ProductProjectionPagedQueryResponse;
+import com.commercetools.models.product.ProductProjection;
+import com.commercetools.models.product.ProductProjectionPagedQueryResponse;
 import commercetools.product.ProductFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;

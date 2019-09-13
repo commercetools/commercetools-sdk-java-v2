@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetDescriptionAction;
+import com.commercetools.models.product.ProductSetDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,12 +13,12 @@ import java.time.ZonedDateTime;
 public final class ProductSetDescriptionActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    @Nullable
    private java.lang.Boolean staged;
    
-   public ProductSetDescriptionActionBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public ProductSetDescriptionActionBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
@@ -29,7 +29,7 @@ public final class ProductSetDescriptionActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    

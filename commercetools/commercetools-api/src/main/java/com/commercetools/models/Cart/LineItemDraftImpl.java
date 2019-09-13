@@ -1,11 +1,11 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ExternalLineItemTotalPrice;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -29,30 +29,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LineItemDraftImpl implements LineItemDraft {
 
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    private java.lang.Long quantity;
    
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    private java.lang.String productId;
    
-   private com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice;
+   private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    private java.lang.Long variantId;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
    
    private java.lang.String sku;
    
-   private com.commercetools.models.Common.Money externalPrice;
+   private com.commercetools.models.common.Money externalPrice;
 
    @JsonCreator
-   LineItemDraftImpl(@JsonProperty("externalTaxRate") final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("shippingDetails") final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("externalTotalPrice") final com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("supplyChannel") final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("distributionChannel") final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("externalPrice") final com.commercetools.models.Common.Money externalPrice) {
+   LineItemDraftImpl(@JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("externalTotalPrice") final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("externalPrice") final com.commercetools.models.common.Money externalPrice) {
       this.externalTaxRate = externalTaxRate;
       this.quantity = quantity;
       this.shippingDetails = shippingDetails;
@@ -70,7 +70,7 @@ public final class LineItemDraftImpl implements LineItemDraft {
    }
    
    
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
    
@@ -80,7 +80,7 @@ public final class LineItemDraftImpl implements LineItemDraft {
    }
    
    
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
    
@@ -90,17 +90,17 @@ public final class LineItemDraftImpl implements LineItemDraft {
    }
    
    
-   public com.commercetools.models.Cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+   public com.commercetools.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
       return this.externalTotalPrice;
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
@@ -110,7 +110,7 @@ public final class LineItemDraftImpl implements LineItemDraft {
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getDistributionChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
    }
    
@@ -120,11 +120,11 @@ public final class LineItemDraftImpl implements LineItemDraft {
    }
    
    
-   public com.commercetools.models.Common.Money getExternalPrice(){
+   public com.commercetools.models.common.Money getExternalPrice(){
       return this.externalPrice;
    }
 
-   public void setExternalTaxRate(final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate){
+   public void setExternalTaxRate(final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate){
       this.externalTaxRate = externalTaxRate;
    }
    
@@ -132,7 +132,7 @@ public final class LineItemDraftImpl implements LineItemDraft {
       this.quantity = quantity;
    }
    
-   public void setShippingDetails(final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails){
+   public void setShippingDetails(final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails){
       this.shippingDetails = shippingDetails;
    }
    
@@ -140,15 +140,15 @@ public final class LineItemDraftImpl implements LineItemDraft {
       this.productId = productId;
    }
    
-   public void setExternalTotalPrice(final com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice){
+   public void setExternalTotalPrice(final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
       this.externalTotalPrice = externalTotalPrice;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
-   public void setSupplyChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel){
+   public void setSupplyChannel(final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel){
       this.supplyChannel = supplyChannel;
    }
    
@@ -156,7 +156,7 @@ public final class LineItemDraftImpl implements LineItemDraft {
       this.variantId = variantId;
    }
    
-   public void setDistributionChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel){
+   public void setDistributionChannel(final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel){
       this.distributionChannel = distributionChannel;
    }
    
@@ -164,7 +164,7 @@ public final class LineItemDraftImpl implements LineItemDraft {
       this.sku = sku;
    }
    
-   public void setExternalPrice(final com.commercetools.models.Common.Money externalPrice){
+   public void setExternalPrice(final com.commercetools.models.common.Money externalPrice){
       this.externalPrice = externalPrice;
    }
 

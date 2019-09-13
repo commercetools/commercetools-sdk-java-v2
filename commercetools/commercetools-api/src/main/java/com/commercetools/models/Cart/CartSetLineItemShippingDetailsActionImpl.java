@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class CartSetLineItemShippingDetailsActionImpl implements CartSetLi
 
    private java.lang.String action;
    
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    private java.lang.String lineItemId;
 
    @JsonCreator
-   CartSetLineItemShippingDetailsActionImpl(@JsonProperty("shippingDetails") final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
+   CartSetLineItemShippingDetailsActionImpl(@JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
       this.shippingDetails = shippingDetails;
       this.lineItemId = lineItemId;
       this.action = "setLineItemShippingDetails";
@@ -46,7 +46,7 @@ public final class CartSetLineItemShippingDetailsActionImpl implements CartSetLi
    }
    
    
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
    
@@ -55,7 +55,7 @@ public final class CartSetLineItemShippingDetailsActionImpl implements CartSetLi
       return this.lineItemId;
    }
 
-   public void setShippingDetails(final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails){
+   public void setShippingDetails(final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails){
       this.shippingDetails = shippingDetails;
    }
    

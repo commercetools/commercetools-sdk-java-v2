@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
 import java.lang.Boolean;
 import java.lang.Long;
-import com.commercetools.models.Product.ProductVariantChannelAvailabilityImpl;
+import com.commercetools.models.product.ProductVariantChannelAvailabilityImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

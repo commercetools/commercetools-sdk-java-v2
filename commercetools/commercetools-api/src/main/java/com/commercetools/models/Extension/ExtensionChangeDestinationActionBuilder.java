@@ -1,9 +1,9 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionDestination;
-import com.commercetools.models.Extension.ExtensionUpdateAction;
+import com.commercetools.models.extension.ExtensionDestination;
+import com.commercetools.models.extension.ExtensionUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Extension.ExtensionChangeDestinationAction;
+import com.commercetools.models.extension.ExtensionChangeDestinationAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ExtensionChangeDestinationActionBuilder {
    
    
-   private com.commercetools.models.Extension.ExtensionDestination destination;
+   private com.commercetools.models.extension.ExtensionDestination destination;
    
-   public ExtensionChangeDestinationActionBuilder destination( final com.commercetools.models.Extension.ExtensionDestination destination) {
+   public ExtensionChangeDestinationActionBuilder destination( final com.commercetools.models.extension.ExtensionDestination destination) {
       this.destination = destination;
       return this;
    }
    
    
-   public com.commercetools.models.Extension.ExtensionDestination getDestination(){
+   public com.commercetools.models.extension.ExtensionDestination getDestination(){
       return this.destination;
    }
 

@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.message.Message;
 import java.time.LocalDate;
-import com.commercetools.models.Message.CustomerDateOfBirthSetMessageImpl;
+import com.commercetools.models.message.CustomerDateOfBirthSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

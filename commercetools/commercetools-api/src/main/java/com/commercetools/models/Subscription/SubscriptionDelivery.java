@@ -1,11 +1,11 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Message.UserProvidedIdentifiers;
-import com.commercetools.models.Subscription.MessageDelivery;
-import com.commercetools.models.Subscription.ResourceCreatedDelivery;
-import com.commercetools.models.Subscription.ResourceDeletedDelivery;
-import com.commercetools.models.Subscription.ResourceUpdatedDelivery;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.message.UserProvidedIdentifiers;
+import com.commercetools.models.subscription.MessageDelivery;
+import com.commercetools.models.subscription.ResourceCreatedDelivery;
+import com.commercetools.models.subscription.ResourceDeletedDelivery;
+import com.commercetools.models.subscription.ResourceUpdatedDelivery;
 import java.lang.String;
 
 
@@ -21,10 +21,10 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Subscription.MessageDeliveryImpl.class, name = "Message"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Subscription.ResourceCreatedDeliveryImpl.class, name = "ResourceCreated"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Subscription.ResourceDeletedDeliveryImpl.class, name = "ResourceDeleted"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Subscription.ResourceUpdatedDeliveryImpl.class, name = "ResourceUpdated")
+   @JsonSubTypes.Type(value = com.commercetools.models.subscription.MessageDeliveryImpl.class, name = "Message"),
+   @JsonSubTypes.Type(value = com.commercetools.models.subscription.ResourceCreatedDeliveryImpl.class, name = "ResourceCreated"),
+   @JsonSubTypes.Type(value = com.commercetools.models.subscription.ResourceDeletedDeliveryImpl.class, name = "ResourceDeleted"),
+   @JsonSubTypes.Type(value = com.commercetools.models.subscription.ResourceUpdatedDeliveryImpl.class, name = "ResourceUpdated")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

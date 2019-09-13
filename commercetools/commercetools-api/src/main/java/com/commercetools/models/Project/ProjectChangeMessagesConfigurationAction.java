@@ -1,9 +1,9 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Message.MessageConfigurationDraft;
-import com.commercetools.models.Project.ProjectUpdateAction;
+import com.commercetools.models.message.MessageConfigurationDraft;
+import com.commercetools.models.project.ProjectUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Project.ProjectChangeMessagesConfigurationActionImpl;
+import com.commercetools.models.project.ProjectChangeMessagesConfigurationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

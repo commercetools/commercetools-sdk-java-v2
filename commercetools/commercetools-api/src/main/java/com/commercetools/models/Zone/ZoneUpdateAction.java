@@ -1,10 +1,10 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.ZoneAddLocationAction;
-import com.commercetools.models.Zone.ZoneChangeNameAction;
-import com.commercetools.models.Zone.ZoneRemoveLocationAction;
-import com.commercetools.models.Zone.ZoneSetDescriptionAction;
-import com.commercetools.models.Zone.ZoneSetKeyAction;
+import com.commercetools.models.zone.ZoneAddLocationAction;
+import com.commercetools.models.zone.ZoneChangeNameAction;
+import com.commercetools.models.zone.ZoneRemoveLocationAction;
+import com.commercetools.models.zone.ZoneSetDescriptionAction;
+import com.commercetools.models.zone.ZoneSetKeyAction;
 import java.lang.String;
 
 
@@ -20,11 +20,11 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Zone.ZoneAddLocationActionImpl.class, name = "addLocation"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Zone.ZoneChangeNameActionImpl.class, name = "changeName"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Zone.ZoneRemoveLocationActionImpl.class, name = "removeLocation"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Zone.ZoneSetDescriptionActionImpl.class, name = "setDescription"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Zone.ZoneSetKeyActionImpl.class, name = "setKey")
+   @JsonSubTypes.Type(value = com.commercetools.models.zone.ZoneAddLocationActionImpl.class, name = "addLocation"),
+   @JsonSubTypes.Type(value = com.commercetools.models.zone.ZoneChangeNameActionImpl.class, name = "changeName"),
+   @JsonSubTypes.Type(value = com.commercetools.models.zone.ZoneRemoveLocationActionImpl.class, name = "removeLocation"),
+   @JsonSubTypes.Type(value = com.commercetools.models.zone.ZoneSetDescriptionActionImpl.class, name = "setDescription"),
+   @JsonSubTypes.Type(value = com.commercetools.models.zone.ZoneSetKeyActionImpl.class, name = "setKey")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

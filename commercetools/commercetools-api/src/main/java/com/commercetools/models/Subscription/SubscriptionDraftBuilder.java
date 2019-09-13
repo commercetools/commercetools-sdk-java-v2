@@ -1,11 +1,11 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.ChangeSubscription;
-import com.commercetools.models.Subscription.DeliveryFormat;
-import com.commercetools.models.Subscription.Destination;
-import com.commercetools.models.Subscription.MessageSubscription;
+import com.commercetools.models.subscription.ChangeSubscription;
+import com.commercetools.models.subscription.DeliveryFormat;
+import com.commercetools.models.subscription.Destination;
+import com.commercetools.models.subscription.MessageSubscription;
 import java.lang.String;
-import com.commercetools.models.Subscription.SubscriptionDraft;
+import com.commercetools.models.subscription.SubscriptionDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,36 +14,36 @@ import java.time.ZonedDateTime;
 public final class SubscriptionDraftBuilder {
    
    @Nullable
-   private com.commercetools.models.Subscription.DeliveryFormat format;
+   private com.commercetools.models.subscription.DeliveryFormat format;
    
    
-   private com.commercetools.models.Subscription.Destination destination;
-   
-   @Nullable
-   private java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes;
+   private com.commercetools.models.subscription.Destination destination;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages;
+   private java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes;
+   
+   @Nullable
+   private java.util.List<com.commercetools.models.subscription.MessageSubscription> messages;
    
    @Nullable
    private java.lang.String key;
    
-   public SubscriptionDraftBuilder format(@Nullable final com.commercetools.models.Subscription.DeliveryFormat format) {
+   public SubscriptionDraftBuilder format(@Nullable final com.commercetools.models.subscription.DeliveryFormat format) {
       this.format = format;
       return this;
    }
    
-   public SubscriptionDraftBuilder destination( final com.commercetools.models.Subscription.Destination destination) {
+   public SubscriptionDraftBuilder destination( final com.commercetools.models.subscription.Destination destination) {
       this.destination = destination;
       return this;
    }
    
-   public SubscriptionDraftBuilder changes(@Nullable final java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes) {
+   public SubscriptionDraftBuilder changes(@Nullable final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes) {
       this.changes = changes;
       return this;
    }
    
-   public SubscriptionDraftBuilder messages(@Nullable final java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages) {
+   public SubscriptionDraftBuilder messages(@Nullable final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages) {
       this.messages = messages;
       return this;
    }
@@ -54,22 +54,22 @@ public final class SubscriptionDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Subscription.DeliveryFormat getFormat(){
+   public com.commercetools.models.subscription.DeliveryFormat getFormat(){
       return this.format;
    }
    
    
-   public com.commercetools.models.Subscription.Destination getDestination(){
+   public com.commercetools.models.subscription.Destination getDestination(){
       return this.destination;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Subscription.ChangeSubscription> getChanges(){
+   public java.util.List<com.commercetools.models.subscription.ChangeSubscription> getChanges(){
       return this.changes;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Subscription.MessageSubscription> getMessages(){
+   public java.util.List<com.commercetools.models.subscription.MessageSubscription> getMessages(){
       return this.messages;
    }
    

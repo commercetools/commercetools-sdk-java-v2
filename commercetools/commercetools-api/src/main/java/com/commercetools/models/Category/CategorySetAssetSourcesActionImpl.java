@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.AssetSource;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.AssetSource;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,14 +26,14 @@ public final class CategorySetAssetSourcesActionImpl implements CategorySetAsset
 
    private java.lang.String action;
    
-   private java.util.List<com.commercetools.models.Common.AssetSource> sources;
+   private java.util.List<com.commercetools.models.common.AssetSource> sources;
    
    private java.lang.String assetId;
    
    private java.lang.String assetKey;
 
    @JsonCreator
-   CategorySetAssetSourcesActionImpl(@JsonProperty("sources") final java.util.List<com.commercetools.models.Common.AssetSource> sources, @JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   CategorySetAssetSourcesActionImpl(@JsonProperty("sources") final java.util.List<com.commercetools.models.common.AssetSource> sources, @JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("assetKey") final java.lang.String assetKey) {
       this.sources = sources;
       this.assetId = assetId;
       this.assetKey = assetKey;
@@ -49,7 +49,7 @@ public final class CategorySetAssetSourcesActionImpl implements CategorySetAsset
    }
    
    
-   public java.util.List<com.commercetools.models.Common.AssetSource> getSources(){
+   public java.util.List<com.commercetools.models.common.AssetSource> getSources(){
       return this.sources;
    }
    
@@ -63,7 +63,7 @@ public final class CategorySetAssetSourcesActionImpl implements CategorySetAsset
       return this.assetKey;
    }
 
-   public void setSources(final java.util.List<com.commercetools.models.Common.AssetSource> sources){
+   public void setSources(final java.util.List<com.commercetools.models.common.AssetSource> sources){
       this.sources = sources;
    }
    

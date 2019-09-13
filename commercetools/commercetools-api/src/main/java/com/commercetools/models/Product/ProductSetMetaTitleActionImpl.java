@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -27,12 +27,12 @@ public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleA
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString metaTitle;
+   private com.commercetools.models.common.LocalizedString metaTitle;
    
    private java.lang.Boolean staged;
 
    @JsonCreator
-   ProductSetMetaTitleActionImpl(@JsonProperty("metaTitle") final com.commercetools.models.Common.LocalizedString metaTitle, @JsonProperty("staged") final java.lang.Boolean staged) {
+   ProductSetMetaTitleActionImpl(@JsonProperty("metaTitle") final com.commercetools.models.common.LocalizedString metaTitle, @JsonProperty("staged") final java.lang.Boolean staged) {
       this.metaTitle = metaTitle;
       this.staged = staged;
       this.action = "setMetaTitle";
@@ -47,7 +47,7 @@ public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleA
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getMetaTitle(){
+   public com.commercetools.models.common.LocalizedString getMetaTitle(){
       return this.metaTitle;
    }
    
@@ -56,7 +56,7 @@ public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleA
       return this.staged;
    }
 
-   public void setMetaTitle(final com.commercetools.models.Common.LocalizedString metaTitle){
+   public void setMetaTitle(final com.commercetools.models.common.LocalizedString metaTitle){
       this.metaTitle = metaTitle;
    }
    

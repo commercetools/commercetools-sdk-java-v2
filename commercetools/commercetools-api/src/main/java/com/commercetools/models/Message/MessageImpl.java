@@ -1,73 +1,73 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.BaseResource;
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Message.CategoryCreatedMessage;
-import com.commercetools.models.Message.CategorySlugChangedMessage;
-import com.commercetools.models.Message.CustomLineItemStateTransitionMessage;
-import com.commercetools.models.Message.CustomerAddressAddedMessage;
-import com.commercetools.models.Message.CustomerAddressChangedMessage;
-import com.commercetools.models.Message.CustomerAddressRemovedMessage;
-import com.commercetools.models.Message.CustomerCompanyNameSetMessage;
-import com.commercetools.models.Message.CustomerCreatedMessage;
-import com.commercetools.models.Message.CustomerDateOfBirthSetMessage;
-import com.commercetools.models.Message.CustomerEmailChangedMessage;
-import com.commercetools.models.Message.CustomerEmailVerifiedMessage;
-import com.commercetools.models.Message.CustomerGroupSetMessage;
-import com.commercetools.models.Message.DeliveryAddedMessage;
-import com.commercetools.models.Message.DeliveryAddressSetMessage;
-import com.commercetools.models.Message.DeliveryItemsUpdatedMessage;
-import com.commercetools.models.Message.DeliveryRemovedMessage;
-import com.commercetools.models.Message.InventoryEntryDeletedMessage;
-import com.commercetools.models.Message.LineItemStateTransitionMessage;
-import com.commercetools.models.Message.OrderBillingAddressSetMessage;
-import com.commercetools.models.Message.OrderCreatedMessage;
-import com.commercetools.models.Message.OrderCustomLineItemDiscountSetMessage;
-import com.commercetools.models.Message.OrderCustomerEmailSetMessage;
-import com.commercetools.models.Message.OrderCustomerSetMessage;
-import com.commercetools.models.Message.OrderDeletedMessage;
-import com.commercetools.models.Message.OrderDiscountCodeAddedMessage;
-import com.commercetools.models.Message.OrderDiscountCodeRemovedMessage;
-import com.commercetools.models.Message.OrderDiscountCodeStateSetMessage;
-import com.commercetools.models.Message.OrderEditAppliedMessage;
-import com.commercetools.models.Message.OrderImportedMessage;
-import com.commercetools.models.Message.OrderLineItemAddedMessage;
-import com.commercetools.models.Message.OrderLineItemDiscountSetMessage;
-import com.commercetools.models.Message.OrderPaymentStateChangedMessage;
-import com.commercetools.models.Message.OrderReturnInfoAddedMessage;
-import com.commercetools.models.Message.OrderReturnShipmentStateChangedMessage;
-import com.commercetools.models.Message.OrderShipmentStateChangedMessage;
-import com.commercetools.models.Message.OrderShippingAddressSetMessage;
-import com.commercetools.models.Message.OrderShippingInfoSetMessage;
-import com.commercetools.models.Message.OrderShippingRateInputSetMessage;
-import com.commercetools.models.Message.OrderStateChangedMessage;
-import com.commercetools.models.Message.OrderStateTransitionMessage;
-import com.commercetools.models.Message.ParcelAddedToDeliveryMessage;
-import com.commercetools.models.Message.ParcelItemsUpdatedMessage;
-import com.commercetools.models.Message.ParcelMeasurementsUpdatedMessage;
-import com.commercetools.models.Message.ParcelRemovedFromDeliveryMessage;
-import com.commercetools.models.Message.ParcelTrackingDataUpdatedMessage;
-import com.commercetools.models.Message.PaymentCreatedMessage;
-import com.commercetools.models.Message.PaymentInteractionAddedMessage;
-import com.commercetools.models.Message.PaymentStatusInterfaceCodeSetMessage;
-import com.commercetools.models.Message.PaymentStatusStateTransitionMessage;
-import com.commercetools.models.Message.PaymentTransactionAddedMessage;
-import com.commercetools.models.Message.PaymentTransactionStateChangedMessage;
-import com.commercetools.models.Message.ProductCreatedMessage;
-import com.commercetools.models.Message.ProductDeletedMessage;
-import com.commercetools.models.Message.ProductImageAddedMessage;
-import com.commercetools.models.Message.ProductPriceDiscountsSetMessage;
-import com.commercetools.models.Message.ProductPriceExternalDiscountSetMessage;
-import com.commercetools.models.Message.ProductPublishedMessage;
-import com.commercetools.models.Message.ProductRevertedStagedChangesMessage;
-import com.commercetools.models.Message.ProductSlugChangedMessage;
-import com.commercetools.models.Message.ProductStateTransitionMessage;
-import com.commercetools.models.Message.ProductUnpublishedMessage;
-import com.commercetools.models.Message.ProductVariantDeletedMessage;
-import com.commercetools.models.Message.ReviewCreatedMessage;
-import com.commercetools.models.Message.ReviewRatingSetMessage;
-import com.commercetools.models.Message.ReviewStateTransitionMessage;
-import com.commercetools.models.Message.UserProvidedIdentifiers;
+import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.message.CategoryCreatedMessage;
+import com.commercetools.models.message.CategorySlugChangedMessage;
+import com.commercetools.models.message.CustomLineItemStateTransitionMessage;
+import com.commercetools.models.message.CustomerAddressAddedMessage;
+import com.commercetools.models.message.CustomerAddressChangedMessage;
+import com.commercetools.models.message.CustomerAddressRemovedMessage;
+import com.commercetools.models.message.CustomerCompanyNameSetMessage;
+import com.commercetools.models.message.CustomerCreatedMessage;
+import com.commercetools.models.message.CustomerDateOfBirthSetMessage;
+import com.commercetools.models.message.CustomerEmailChangedMessage;
+import com.commercetools.models.message.CustomerEmailVerifiedMessage;
+import com.commercetools.models.message.CustomerGroupSetMessage;
+import com.commercetools.models.message.DeliveryAddedMessage;
+import com.commercetools.models.message.DeliveryAddressSetMessage;
+import com.commercetools.models.message.DeliveryItemsUpdatedMessage;
+import com.commercetools.models.message.DeliveryRemovedMessage;
+import com.commercetools.models.message.InventoryEntryDeletedMessage;
+import com.commercetools.models.message.LineItemStateTransitionMessage;
+import com.commercetools.models.message.OrderBillingAddressSetMessage;
+import com.commercetools.models.message.OrderCreatedMessage;
+import com.commercetools.models.message.OrderCustomLineItemDiscountSetMessage;
+import com.commercetools.models.message.OrderCustomerEmailSetMessage;
+import com.commercetools.models.message.OrderCustomerSetMessage;
+import com.commercetools.models.message.OrderDeletedMessage;
+import com.commercetools.models.message.OrderDiscountCodeAddedMessage;
+import com.commercetools.models.message.OrderDiscountCodeRemovedMessage;
+import com.commercetools.models.message.OrderDiscountCodeStateSetMessage;
+import com.commercetools.models.message.OrderEditAppliedMessage;
+import com.commercetools.models.message.OrderImportedMessage;
+import com.commercetools.models.message.OrderLineItemAddedMessage;
+import com.commercetools.models.message.OrderLineItemDiscountSetMessage;
+import com.commercetools.models.message.OrderPaymentStateChangedMessage;
+import com.commercetools.models.message.OrderReturnInfoAddedMessage;
+import com.commercetools.models.message.OrderReturnShipmentStateChangedMessage;
+import com.commercetools.models.message.OrderShipmentStateChangedMessage;
+import com.commercetools.models.message.OrderShippingAddressSetMessage;
+import com.commercetools.models.message.OrderShippingInfoSetMessage;
+import com.commercetools.models.message.OrderShippingRateInputSetMessage;
+import com.commercetools.models.message.OrderStateChangedMessage;
+import com.commercetools.models.message.OrderStateTransitionMessage;
+import com.commercetools.models.message.ParcelAddedToDeliveryMessage;
+import com.commercetools.models.message.ParcelItemsUpdatedMessage;
+import com.commercetools.models.message.ParcelMeasurementsUpdatedMessage;
+import com.commercetools.models.message.ParcelRemovedFromDeliveryMessage;
+import com.commercetools.models.message.ParcelTrackingDataUpdatedMessage;
+import com.commercetools.models.message.PaymentCreatedMessage;
+import com.commercetools.models.message.PaymentInteractionAddedMessage;
+import com.commercetools.models.message.PaymentStatusInterfaceCodeSetMessage;
+import com.commercetools.models.message.PaymentStatusStateTransitionMessage;
+import com.commercetools.models.message.PaymentTransactionAddedMessage;
+import com.commercetools.models.message.PaymentTransactionStateChangedMessage;
+import com.commercetools.models.message.ProductCreatedMessage;
+import com.commercetools.models.message.ProductDeletedMessage;
+import com.commercetools.models.message.ProductImageAddedMessage;
+import com.commercetools.models.message.ProductPriceDiscountsSetMessage;
+import com.commercetools.models.message.ProductPriceExternalDiscountSetMessage;
+import com.commercetools.models.message.ProductPublishedMessage;
+import com.commercetools.models.message.ProductRevertedStagedChangesMessage;
+import com.commercetools.models.message.ProductSlugChangedMessage;
+import com.commercetools.models.message.ProductStateTransitionMessage;
+import com.commercetools.models.message.ProductUnpublishedMessage;
+import com.commercetools.models.message.ProductVariantDeletedMessage;
+import com.commercetools.models.message.ReviewCreatedMessage;
+import com.commercetools.models.message.ReviewRatingSetMessage;
+import com.commercetools.models.message.ReviewStateTransitionMessage;
+import com.commercetools.models.message.UserProvidedIdentifiers;
 import java.lang.Long;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -101,16 +101,16 @@ public final class MessageImpl implements Message {
    
    private java.lang.Long sequenceNumber;
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    private java.lang.Long resourceVersion;
    
    private java.lang.String type;
 
    @JsonCreator
-   MessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.Common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type) {
+   MessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -151,12 +151,12 @@ public final class MessageImpl implements Message {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -190,11 +190,11 @@ public final class MessageImpl implements Message {
       this.sequenceNumber = sequenceNumber;
    }
    
-   public void setResource(final com.commercetools.models.Common.Reference resource){
+   public void setResource(final com.commercetools.models.common.Reference resource){
       this.resource = resource;
    }
    
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    

@@ -1,9 +1,9 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.GeoJson;
+import com.commercetools.models.common.GeoJson;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Common.GeoJsonPoint;
+import com.commercetools.models.common.GeoJsonPoint;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

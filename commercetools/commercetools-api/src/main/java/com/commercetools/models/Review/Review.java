@@ -1,14 +1,14 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Customer.CustomerReference;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.customer.CustomerReference;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Review.ReviewImpl;
+import com.commercetools.models.review.ReviewImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

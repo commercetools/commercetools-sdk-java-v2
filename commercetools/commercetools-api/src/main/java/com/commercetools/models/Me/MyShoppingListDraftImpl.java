@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.ShoppingList.ShoppingListLineItemDraft;
-import com.commercetools.models.ShoppingList.TextLineItemDraft;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.shopping_list.ShoppingListLineItemDraft;
+import com.commercetools.models.shopping_list.TextLineItemDraft;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,20 +26,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListDraftImpl implements MyShoppingListDraft {
 
-   private java.util.List<com.commercetools.models.ShoppingList.ShoppingListLineItemDraft> lineItems;
+   private java.util.List<com.commercetools.models.shopping_list.ShoppingListLineItemDraft> lineItems;
    
-   private java.util.List<com.commercetools.models.ShoppingList.TextLineItemDraft> textLineItems;
+   private java.util.List<com.commercetools.models.shopping_list.TextLineItemDraft> textLineItems;
    
    private java.lang.Long deleteDaysAfterLastModification;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
 
    @JsonCreator
-   MyShoppingListDraftImpl(@JsonProperty("lineItems") final java.util.List<com.commercetools.models.ShoppingList.ShoppingListLineItemDraft> lineItems, @JsonProperty("textLineItems") final java.util.List<com.commercetools.models.ShoppingList.TextLineItemDraft> textLineItems, @JsonProperty("deleteDaysAfterLastModification") final java.lang.Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.Common.LocalizedString description) {
+   MyShoppingListDraftImpl(@JsonProperty("lineItems") final java.util.List<com.commercetools.models.shopping_list.ShoppingListLineItemDraft> lineItems, @JsonProperty("textLineItems") final java.util.List<com.commercetools.models.shopping_list.TextLineItemDraft> textLineItems, @JsonProperty("deleteDaysAfterLastModification") final java.lang.Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description) {
       this.lineItems = lineItems;
       this.textLineItems = textLineItems;
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
@@ -52,12 +52,12 @@ public final class MyShoppingListDraftImpl implements MyShoppingListDraft {
    }
    
    
-   public java.util.List<com.commercetools.models.ShoppingList.ShoppingListLineItemDraft> getLineItems(){
+   public java.util.List<com.commercetools.models.shopping_list.ShoppingListLineItemDraft> getLineItems(){
       return this.lineItems;
    }
    
    
-   public java.util.List<com.commercetools.models.ShoppingList.TextLineItemDraft> getTextLineItems(){
+   public java.util.List<com.commercetools.models.shopping_list.TextLineItemDraft> getTextLineItems(){
       return this.textLineItems;
    }
    
@@ -67,25 +67,25 @@ public final class MyShoppingListDraftImpl implements MyShoppingListDraft {
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
 
-   public void setLineItems(final java.util.List<com.commercetools.models.ShoppingList.ShoppingListLineItemDraft> lineItems){
+   public void setLineItems(final java.util.List<com.commercetools.models.shopping_list.ShoppingListLineItemDraft> lineItems){
       this.lineItems = lineItems;
    }
    
-   public void setTextLineItems(final java.util.List<com.commercetools.models.ShoppingList.TextLineItemDraft> textLineItems){
+   public void setTextLineItems(final java.util.List<com.commercetools.models.shopping_list.TextLineItemDraft> textLineItems){
       this.textLineItems = textLineItems;
    }
    
@@ -93,15 +93,15 @@ public final class MyShoppingListDraftImpl implements MyShoppingListDraft {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    
-   public void setDescription(final com.commercetools.models.Common.LocalizedString description){
+   public void setDescription(final com.commercetools.models.common.LocalizedString description){
       this.description = description;
    }
 

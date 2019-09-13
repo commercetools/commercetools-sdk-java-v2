@@ -1,13 +1,13 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.Customer.CustomerReference;
-import com.commercetools.models.Payment.PaymentMethodInfo;
-import com.commercetools.models.Payment.Transaction;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.customer.CustomerReference;
+import com.commercetools.models.payment.PaymentMethodInfo;
+import com.commercetools.models.payment.Transaction;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Me.MyPayment;
+import com.commercetools.models.me.MyPayment;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -19,42 +19,42 @@ public final class MyPaymentBuilder {
    private java.lang.String anonymousId;
    
    
-   private com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo;
+   private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    
-   private com.commercetools.models.Common.TypedMoney amountPlanned;
+   private com.commercetools.models.common.TypedMoney amountPlanned;
    
    
    private java.lang.String id;
    
    
-   private java.util.List<com.commercetools.models.Payment.Transaction> transactions;
+   private java.util.List<com.commercetools.models.payment.Transaction> transactions;
    
    
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Customer.CustomerReference customer;
+   private com.commercetools.models.customer.CustomerReference customer;
    
    public MyPaymentBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
    
-   public MyPaymentBuilder paymentMethodInfo( final com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo) {
+   public MyPaymentBuilder paymentMethodInfo( final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo) {
       this.paymentMethodInfo = paymentMethodInfo;
       return this;
    }
    
-   public MyPaymentBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public MyPaymentBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
    
-   public MyPaymentBuilder amountPlanned( final com.commercetools.models.Common.TypedMoney amountPlanned) {
+   public MyPaymentBuilder amountPlanned( final com.commercetools.models.common.TypedMoney amountPlanned) {
       this.amountPlanned = amountPlanned;
       return this;
    }
@@ -64,7 +64,7 @@ public final class MyPaymentBuilder {
       return this;
    }
    
-   public MyPaymentBuilder transactions( final java.util.List<com.commercetools.models.Payment.Transaction> transactions) {
+   public MyPaymentBuilder transactions( final java.util.List<com.commercetools.models.payment.Transaction> transactions) {
       this.transactions = transactions;
       return this;
    }
@@ -74,7 +74,7 @@ public final class MyPaymentBuilder {
       return this;
    }
    
-   public MyPaymentBuilder customer(@Nullable final com.commercetools.models.Customer.CustomerReference customer) {
+   public MyPaymentBuilder customer(@Nullable final com.commercetools.models.customer.CustomerReference customer) {
       this.customer = customer;
       return this;
    }
@@ -85,17 +85,17 @@ public final class MyPaymentBuilder {
    }
    
    
-   public com.commercetools.models.Payment.PaymentMethodInfo getPaymentMethodInfo(){
+   public com.commercetools.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
       return this.paymentMethodInfo;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getAmountPlanned(){
+   public com.commercetools.models.common.TypedMoney getAmountPlanned(){
       return this.amountPlanned;
    }
    
@@ -105,7 +105,7 @@ public final class MyPaymentBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Payment.Transaction> getTransactions(){
+   public java.util.List<com.commercetools.models.payment.Transaction> getTransactions(){
       return this.transactions;
    }
    
@@ -115,7 +115,7 @@ public final class MyPaymentBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Customer.CustomerReference getCustomer(){
+   public com.commercetools.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
 

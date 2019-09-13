@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Cart.DiscountedLineItemPortion;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Order.DiscountedLineItemPriceDraftImpl;
+import com.commercetools.models.cart.DiscountedLineItemPortion;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.order.DiscountedLineItemPriceDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,9 +1,9 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.State.State;
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.state.State;
+import com.commercetools.models.state.StateReference;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class StateReferenceBuilder {
    private java.lang.String id;
    
    @Nullable
-   private com.commercetools.models.State.State obj;
+   private com.commercetools.models.state.State obj;
    
    public StateReferenceBuilder id( final java.lang.String id) {
       this.id = id;
       return this;
    }
    
-   public StateReferenceBuilder obj(@Nullable final com.commercetools.models.State.State obj) {
+   public StateReferenceBuilder obj(@Nullable final com.commercetools.models.state.State obj) {
       this.obj = obj;
       return this;
    }
@@ -33,7 +33,7 @@ public final class StateReferenceBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.State.State getObj(){
+   public com.commercetools.models.state.State getObj(){
       return this.obj;
    }
 

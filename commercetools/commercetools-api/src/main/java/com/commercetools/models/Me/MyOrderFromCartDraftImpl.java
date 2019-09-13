@@ -1,4 +1,4 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
 import java.lang.Long;
 import java.lang.String;

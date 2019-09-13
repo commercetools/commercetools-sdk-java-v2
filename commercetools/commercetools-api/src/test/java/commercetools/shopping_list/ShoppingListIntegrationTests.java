@@ -1,6 +1,6 @@
 package commercetools.shopping_list;
 
-import com.commercetools.models.ShoppingList.*;
+import com.commercetools.models.shopping_list.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

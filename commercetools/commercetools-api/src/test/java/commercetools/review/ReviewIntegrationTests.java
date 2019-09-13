@@ -1,6 +1,6 @@
 package commercetools.review;
 
-import com.commercetools.models.Review.*;
+import com.commercetools.models.review.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

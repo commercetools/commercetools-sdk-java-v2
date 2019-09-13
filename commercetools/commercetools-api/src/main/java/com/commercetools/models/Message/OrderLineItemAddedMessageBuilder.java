@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.LineItem;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.cart.LineItem;
+import com.commercetools.models.message.Message;
 import java.lang.Long;
-import com.commercetools.models.Message.OrderLineItemAddedMessage;
+import com.commercetools.models.message.OrderLineItemAddedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class OrderLineItemAddedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -39,7 +39,7 @@ public final class OrderLineItemAddedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Cart.LineItem lineItem;
+   private com.commercetools.models.cart.LineItem lineItem;
    
    
    private java.lang.Long addedQuantity;
@@ -69,12 +69,12 @@ public final class OrderLineItemAddedMessageBuilder {
       return this;
    }
    
-   public OrderLineItemAddedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public OrderLineItemAddedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public OrderLineItemAddedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public OrderLineItemAddedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -89,7 +89,7 @@ public final class OrderLineItemAddedMessageBuilder {
       return this;
    }
    
-   public OrderLineItemAddedMessageBuilder lineItem( final com.commercetools.models.Cart.LineItem lineItem) {
+   public OrderLineItemAddedMessageBuilder lineItem( final com.commercetools.models.cart.LineItem lineItem) {
       this.lineItem = lineItem;
       return this;
    }
@@ -125,12 +125,12 @@ public final class OrderLineItemAddedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -145,7 +145,7 @@ public final class OrderLineItemAddedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Cart.LineItem getLineItem(){
+   public com.commercetools.models.cart.LineItem getLineItem(){
       return this.lineItem;
    }
    

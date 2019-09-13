@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.DiscountCode.DiscountCodeReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.discount_code.DiscountCodeReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDisc
 
    private java.lang.String type;
    
-   private com.commercetools.models.DiscountCode.DiscountCodeReference discountCode;
+   private com.commercetools.models.discount_code.DiscountCodeReference discountCode;
 
    @JsonCreator
-   OrderDiscountCodeAddedMessagePayloadImpl(@JsonProperty("discountCode") final com.commercetools.models.DiscountCode.DiscountCodeReference discountCode) {
+   OrderDiscountCodeAddedMessagePayloadImpl(@JsonProperty("discountCode") final com.commercetools.models.discount_code.DiscountCodeReference discountCode) {
       this.discountCode = discountCode;
       this.type = "OrderDiscountCodeAdded";
    }
@@ -43,11 +43,11 @@ public final class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDisc
    }
    
    
-   public com.commercetools.models.DiscountCode.DiscountCodeReference getDiscountCode(){
+   public com.commercetools.models.discount_code.DiscountCodeReference getDiscountCode(){
       return this.discountCode;
    }
 
-   public void setDiscountCode(final com.commercetools.models.DiscountCode.DiscountCodeReference discountCode){
+   public void setDiscountCode(final com.commercetools.models.discount_code.DiscountCodeReference discountCode){
       this.discountCode = discountCode;
    }
 

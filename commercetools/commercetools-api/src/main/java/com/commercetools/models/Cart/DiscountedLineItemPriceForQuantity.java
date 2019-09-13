@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.DiscountedLineItemPrice;
+import com.commercetools.models.cart.DiscountedLineItemPrice;
 import java.lang.Integer;
-import com.commercetools.models.Cart.DiscountedLineItemPriceForQuantityImpl;
+import com.commercetools.models.cart.DiscountedLineItemPriceForQuantityImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

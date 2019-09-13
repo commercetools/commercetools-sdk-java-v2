@@ -1,9 +1,9 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.TypeTextInputHint;
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.TypeTextInputHint;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Type.TypeChangeInputHintAction;
+import com.commercetools.models.type.TypeChangeInputHintAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class TypeChangeInputHintActionBuilder {
    private java.lang.String fieldName;
    
    
-   private com.commercetools.models.Type.TypeTextInputHint inputHint;
+   private com.commercetools.models.type.TypeTextInputHint inputHint;
    
    public TypeChangeInputHintActionBuilder fieldName( final java.lang.String fieldName) {
       this.fieldName = fieldName;
       return this;
    }
    
-   public TypeChangeInputHintActionBuilder inputHint( final com.commercetools.models.Type.TypeTextInputHint inputHint) {
+   public TypeChangeInputHintActionBuilder inputHint( final com.commercetools.models.type.TypeTextInputHint inputHint) {
       this.inputHint = inputHint;
       return this;
    }
@@ -33,7 +33,7 @@ public final class TypeChangeInputHintActionBuilder {
    }
    
    
-   public com.commercetools.models.Type.TypeTextInputHint getInputHint(){
+   public com.commercetools.models.type.TypeTextInputHint getInputHint(){
       return this.inputHint;
    }
 

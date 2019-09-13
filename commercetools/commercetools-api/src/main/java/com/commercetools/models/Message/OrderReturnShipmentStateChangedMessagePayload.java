@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.ReturnShipmentState;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.ReturnShipmentState;
 import java.lang.String;
-import com.commercetools.models.Message.OrderReturnShipmentStateChangedMessagePayloadImpl;
+import com.commercetools.models.message.OrderReturnShipmentStateChangedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

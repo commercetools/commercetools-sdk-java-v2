@@ -1,11 +1,11 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyPaymentAddTransactionAction;
-import com.commercetools.models.Me.MyPaymentChangeAmountPlannedAction;
-import com.commercetools.models.Me.MyPaymentSetCustomFieldAction;
-import com.commercetools.models.Me.MyPaymentSetMethodInfoInterfaceAction;
-import com.commercetools.models.Me.MyPaymentSetMethodInfoMethodAction;
-import com.commercetools.models.Me.MyPaymentSetMethodInfoNameAction;
+import com.commercetools.models.me.MyPaymentAddTransactionAction;
+import com.commercetools.models.me.MyPaymentChangeAmountPlannedAction;
+import com.commercetools.models.me.MyPaymentSetCustomFieldAction;
+import com.commercetools.models.me.MyPaymentSetMethodInfoInterfaceAction;
+import com.commercetools.models.me.MyPaymentSetMethodInfoMethodAction;
+import com.commercetools.models.me.MyPaymentSetMethodInfoNameAction;
 import java.lang.String;
 
 
@@ -21,12 +21,12 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Me.MyPaymentAddTransactionActionImpl.class, name = "addTransaction"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Me.MyPaymentChangeAmountPlannedActionImpl.class, name = "changeAmountPlanned"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Me.MyPaymentSetCustomFieldActionImpl.class, name = "setCustomField"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Me.MyPaymentSetMethodInfoInterfaceActionImpl.class, name = "setMethodInfoInterface"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Me.MyPaymentSetMethodInfoMethodActionImpl.class, name = "setMethodInfoMethod"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Me.MyPaymentSetMethodInfoNameActionImpl.class, name = "setMethodInfoName")
+   @JsonSubTypes.Type(value = com.commercetools.models.me.MyPaymentAddTransactionActionImpl.class, name = "addTransaction"),
+   @JsonSubTypes.Type(value = com.commercetools.models.me.MyPaymentChangeAmountPlannedActionImpl.class, name = "changeAmountPlanned"),
+   @JsonSubTypes.Type(value = com.commercetools.models.me.MyPaymentSetCustomFieldActionImpl.class, name = "setCustomField"),
+   @JsonSubTypes.Type(value = com.commercetools.models.me.MyPaymentSetMethodInfoInterfaceActionImpl.class, name = "setMethodInfoInterface"),
+   @JsonSubTypes.Type(value = com.commercetools.models.me.MyPaymentSetMethodInfoMethodActionImpl.class, name = "setMethodInfoMethod"),
+   @JsonSubTypes.Type(value = com.commercetools.models.me.MyPaymentSetMethodInfoNameActionImpl.class, name = "setMethodInfoName")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

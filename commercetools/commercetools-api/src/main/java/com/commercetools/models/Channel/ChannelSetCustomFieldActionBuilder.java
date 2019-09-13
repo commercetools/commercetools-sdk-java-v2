@@ -1,9 +1,9 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelUpdateAction;
+import com.commercetools.models.channel.ChannelUpdateAction;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Channel.ChannelSetCustomFieldAction;
+import com.commercetools.models.channel.ChannelSetCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

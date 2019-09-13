@@ -1,7 +1,7 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.PaymentUpdateAction;
-import com.commercetools.models.Payment.TransactionState;
+import com.commercetools.models.payment.PaymentUpdateAction;
+import com.commercetools.models.payment.TransactionState;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class PaymentChangeTransactionStateActionImpl implements PaymentCha
 
    private java.lang.String action;
    
-   private com.commercetools.models.Payment.TransactionState state;
+   private com.commercetools.models.payment.TransactionState state;
    
    private java.lang.String transactionId;
 
    @JsonCreator
-   PaymentChangeTransactionStateActionImpl(@JsonProperty("state") final com.commercetools.models.Payment.TransactionState state, @JsonProperty("transactionId") final java.lang.String transactionId) {
+   PaymentChangeTransactionStateActionImpl(@JsonProperty("state") final com.commercetools.models.payment.TransactionState state, @JsonProperty("transactionId") final java.lang.String transactionId) {
       this.state = state;
       this.transactionId = transactionId;
       this.action = "changeTransactionState";
@@ -46,7 +46,7 @@ public final class PaymentChangeTransactionStateActionImpl implements PaymentCha
    }
    
    
-   public com.commercetools.models.Payment.TransactionState getState(){
+   public com.commercetools.models.payment.TransactionState getState(){
       return this.state;
    }
    
@@ -55,7 +55,7 @@ public final class PaymentChangeTransactionStateActionImpl implements PaymentCha
       return this.transactionId;
    }
 
-   public void setState(final com.commercetools.models.Payment.TransactionState state){
+   public void setState(final com.commercetools.models.payment.TransactionState state){
       this.state = state;
    }
    

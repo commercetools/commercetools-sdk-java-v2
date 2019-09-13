@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.ParcelMeasurements;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.ParcelMeasurements;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,12 +28,12 @@ public final class ParcelMeasurementsUpdatedMessagePayloadImpl implements Parcel
    
    private java.lang.String deliveryId;
    
-   private com.commercetools.models.Order.ParcelMeasurements measurements;
+   private com.commercetools.models.order.ParcelMeasurements measurements;
    
    private java.lang.String parcelId;
 
    @JsonCreator
-   ParcelMeasurementsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("measurements") final com.commercetools.models.Order.ParcelMeasurements measurements, @JsonProperty("parcelId") final java.lang.String parcelId) {
+   ParcelMeasurementsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("measurements") final com.commercetools.models.order.ParcelMeasurements measurements, @JsonProperty("parcelId") final java.lang.String parcelId) {
       this.deliveryId = deliveryId;
       this.measurements = measurements;
       this.parcelId = parcelId;
@@ -54,7 +54,7 @@ public final class ParcelMeasurementsUpdatedMessagePayloadImpl implements Parcel
    }
    
    
-   public com.commercetools.models.Order.ParcelMeasurements getMeasurements(){
+   public com.commercetools.models.order.ParcelMeasurements getMeasurements(){
       return this.measurements;
    }
    
@@ -67,7 +67,7 @@ public final class ParcelMeasurementsUpdatedMessagePayloadImpl implements Parcel
       this.deliveryId = deliveryId;
    }
    
-   public void setMeasurements(final com.commercetools.models.Order.ParcelMeasurements measurements){
+   public void setMeasurements(final com.commercetools.models.order.ParcelMeasurements measurements){
       this.measurements = measurements;
    }
    

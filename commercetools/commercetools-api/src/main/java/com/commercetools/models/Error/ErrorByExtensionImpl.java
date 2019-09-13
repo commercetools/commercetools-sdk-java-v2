@@ -1,4 +1,4 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
 import java.lang.String;
 import javax.annotation.Generated;

@@ -1,8 +1,8 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.Category;
+import com.commercetools.models.category.Category;
 import java.lang.Long;
-import com.commercetools.models.Category.CategoryPagedQueryResponse;
+import com.commercetools.models.category.CategoryPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class CategoryPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Category.Category> results;
+   private java.util.List<com.commercetools.models.category.Category> results;
    
    public CategoryPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class CategoryPagedQueryResponseBuilder {
       return this;
    }
    
-   public CategoryPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Category.Category> results) {
+   public CategoryPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.category.Category> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class CategoryPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Category.Category> getResults(){
+   public java.util.List<com.commercetools.models.category.Category> getResults(){
       return this.results;
    }
 

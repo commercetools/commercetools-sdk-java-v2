@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.Cart;
+import com.commercetools.models.cart.Cart;
 import java.lang.Long;
-import com.commercetools.models.Cart.CartPagedQueryResponseImpl;
+import com.commercetools.models.cart.CartPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

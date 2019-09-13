@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity;
-import com.commercetools.models.Cart.TaxedItemPrice;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.models.cart.TaxedItemPrice;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,16 +28,16 @@ public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLi
 
    private java.lang.String type;
    
-   private com.commercetools.models.Common.Money totalPrice;
+   private com.commercetools.models.common.Money totalPrice;
    
    private java.lang.String lineItemId;
    
-   private com.commercetools.models.Cart.TaxedItemPrice taxedPrice;
+   private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
    
-   private java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+   private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
    @JsonCreator
-   OrderLineItemDiscountSetMessagePayloadImpl(@JsonProperty("totalPrice") final com.commercetools.models.Common.Money totalPrice, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("taxedPrice") final com.commercetools.models.Cart.TaxedItemPrice taxedPrice, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+   OrderLineItemDiscountSetMessagePayloadImpl(@JsonProperty("totalPrice") final com.commercetools.models.common.Money totalPrice, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
       this.totalPrice = totalPrice;
       this.lineItemId = lineItemId;
       this.taxedPrice = taxedPrice;
@@ -54,7 +54,7 @@ public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLi
    }
    
    
-   public com.commercetools.models.Common.Money getTotalPrice(){
+   public com.commercetools.models.common.Money getTotalPrice(){
       return this.totalPrice;
    }
    
@@ -64,16 +64,16 @@ public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLi
    }
    
    
-   public com.commercetools.models.Cart.TaxedItemPrice getTaxedPrice(){
+   public com.commercetools.models.cart.TaxedItemPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
+   public java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
       return this.discountedPricePerQuantity;
    }
 
-   public void setTotalPrice(final com.commercetools.models.Common.Money totalPrice){
+   public void setTotalPrice(final com.commercetools.models.common.Money totalPrice){
       this.totalPrice = totalPrice;
    }
    
@@ -81,11 +81,11 @@ public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLi
       this.lineItemId = lineItemId;
    }
    
-   public void setTaxedPrice(final com.commercetools.models.Cart.TaxedItemPrice taxedPrice){
+   public void setTaxedPrice(final com.commercetools.models.cart.TaxedItemPrice taxedPrice){
       this.taxedPrice = taxedPrice;
    }
    
-   public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
+   public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
       this.discountedPricePerQuantity = discountedPricePerQuantity;
    }
 

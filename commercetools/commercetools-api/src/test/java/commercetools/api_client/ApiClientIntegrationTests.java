@@ -1,7 +1,7 @@
 package commercetools.api_client;
 
-import com.commercetools.models.ApiClient.ApiClient;
-import com.commercetools.models.ApiClient.ApiClientPagedQueryResponse;
+import com.commercetools.models.api_client.ApiClient;
+import com.commercetools.models.api_client.ApiClientPagedQueryResponse;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

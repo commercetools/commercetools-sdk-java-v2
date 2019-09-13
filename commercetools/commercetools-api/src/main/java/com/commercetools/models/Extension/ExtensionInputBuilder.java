@@ -1,8 +1,8 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Extension.ExtensionAction;
-import com.commercetools.models.Extension.ExtensionInput;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.extension.ExtensionAction;
+import com.commercetools.models.extension.ExtensionInput;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class ExtensionInputBuilder {
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    
-   private com.commercetools.models.Extension.ExtensionAction action;
+   private com.commercetools.models.extension.ExtensionAction action;
    
-   public ExtensionInputBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public ExtensionInputBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public ExtensionInputBuilder action( final com.commercetools.models.Extension.ExtensionAction action) {
+   public ExtensionInputBuilder action( final com.commercetools.models.extension.ExtensionAction action) {
       this.action = action;
       return this;
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    
-   public com.commercetools.models.Extension.ExtensionAction getAction(){
+   public com.commercetools.models.extension.ExtensionAction getAction(){
       return this.action;
    }
 

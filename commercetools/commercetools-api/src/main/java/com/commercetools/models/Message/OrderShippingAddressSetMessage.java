@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.OrderShippingAddressSetMessageImpl;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.OrderShippingAddressSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

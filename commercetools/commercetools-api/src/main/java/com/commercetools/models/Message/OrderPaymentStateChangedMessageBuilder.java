@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.PaymentState;
-import com.commercetools.models.Message.OrderPaymentStateChangedMessage;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.PaymentState;
+import com.commercetools.models.message.OrderPaymentStateChangedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class OrderPaymentStateChangedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,10 +38,10 @@ public final class OrderPaymentStateChangedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Order.PaymentState oldPaymentState;
+   private com.commercetools.models.order.PaymentState oldPaymentState;
    
    
-   private com.commercetools.models.Order.PaymentState paymentState;
+   private com.commercetools.models.order.PaymentState paymentState;
    
    public OrderPaymentStateChangedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -68,12 +68,12 @@ public final class OrderPaymentStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderPaymentStateChangedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public OrderPaymentStateChangedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public OrderPaymentStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public OrderPaymentStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -88,12 +88,12 @@ public final class OrderPaymentStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderPaymentStateChangedMessageBuilder oldPaymentState( final com.commercetools.models.Order.PaymentState oldPaymentState) {
+   public OrderPaymentStateChangedMessageBuilder oldPaymentState( final com.commercetools.models.order.PaymentState oldPaymentState) {
       this.oldPaymentState = oldPaymentState;
       return this;
    }
    
-   public OrderPaymentStateChangedMessageBuilder paymentState( final com.commercetools.models.Order.PaymentState paymentState) {
+   public OrderPaymentStateChangedMessageBuilder paymentState( final com.commercetools.models.order.PaymentState paymentState) {
       this.paymentState = paymentState;
       return this;
    }
@@ -124,12 +124,12 @@ public final class OrderPaymentStateChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -144,12 +144,12 @@ public final class OrderPaymentStateChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Order.PaymentState getOldPaymentState(){
+   public com.commercetools.models.order.PaymentState getOldPaymentState(){
       return this.oldPaymentState;
    }
    
    
-   public com.commercetools.models.Order.PaymentState getPaymentState(){
+   public com.commercetools.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
 

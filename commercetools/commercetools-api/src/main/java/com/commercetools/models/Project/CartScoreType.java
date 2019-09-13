@@ -1,8 +1,8 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ShippingRateInputType;
-import com.commercetools.models.ShippingMethod.ShippingRateTierType;
-import com.commercetools.models.Project.CartScoreTypeImpl;
+import com.commercetools.models.project.ShippingRateInputType;
+import com.commercetools.models.shipping_method.ShippingRateTierType;
+import com.commercetools.models.project.CartScoreTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

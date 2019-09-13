@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Payment.TransactionState;
-import com.commercetools.models.Payment.TransactionType;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.payment.TransactionState;
+import com.commercetools.models.payment.TransactionType;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -28,16 +28,16 @@ public final class TransactionDraftImpl implements TransactionDraft {
 
    private java.lang.String interactionId;
    
-   private com.commercetools.models.Common.Money amount;
+   private com.commercetools.models.common.Money amount;
    
-   private com.commercetools.models.Payment.TransactionState state;
+   private com.commercetools.models.payment.TransactionState state;
    
-   private com.commercetools.models.Payment.TransactionType type;
+   private com.commercetools.models.payment.TransactionType type;
    
    private java.time.ZonedDateTime timestamp;
 
    @JsonCreator
-   TransactionDraftImpl(@JsonProperty("interactionId") final java.lang.String interactionId, @JsonProperty("amount") final com.commercetools.models.Common.Money amount, @JsonProperty("state") final com.commercetools.models.Payment.TransactionState state, @JsonProperty("type") final com.commercetools.models.Payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
+   TransactionDraftImpl(@JsonProperty("interactionId") final java.lang.String interactionId, @JsonProperty("amount") final com.commercetools.models.common.Money amount, @JsonProperty("state") final com.commercetools.models.payment.TransactionState state, @JsonProperty("type") final com.commercetools.models.payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
       this.interactionId = interactionId;
       this.amount = amount;
       this.state = state;
@@ -54,17 +54,17 @@ public final class TransactionDraftImpl implements TransactionDraft {
    }
    
    
-   public com.commercetools.models.Common.Money getAmount(){
+   public com.commercetools.models.common.Money getAmount(){
       return this.amount;
    }
    
    
-   public com.commercetools.models.Payment.TransactionState getState(){
+   public com.commercetools.models.payment.TransactionState getState(){
       return this.state;
    }
    
    
-   public com.commercetools.models.Payment.TransactionType getType(){
+   public com.commercetools.models.payment.TransactionType getType(){
       return this.type;
    }
    
@@ -77,15 +77,15 @@ public final class TransactionDraftImpl implements TransactionDraft {
       this.interactionId = interactionId;
    }
    
-   public void setAmount(final com.commercetools.models.Common.Money amount){
+   public void setAmount(final com.commercetools.models.common.Money amount){
       this.amount = amount;
    }
    
-   public void setState(final com.commercetools.models.Payment.TransactionState state){
+   public void setState(final com.commercetools.models.payment.TransactionState state){
       this.state = state;
    }
    
-   public void setType(final com.commercetools.models.Payment.TransactionType type){
+   public void setType(final com.commercetools.models.payment.TransactionType type){
       this.type = type;
    }
    

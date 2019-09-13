@@ -1,7 +1,7 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
-import com.commercetools.models.Error.VariantValues;
+import com.commercetools.models.error.ErrorObject;
+import com.commercetools.models.error.VariantValues;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantVa
    
    private java.lang.String message;
    
-   private com.commercetools.models.Error.VariantValues variantValues;
+   private com.commercetools.models.error.VariantValues variantValues;
 
    @JsonCreator
-   DuplicateVariantValuesErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("variantValues") final com.commercetools.models.Error.VariantValues variantValues) {
+   DuplicateVariantValuesErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("variantValues") final com.commercetools.models.error.VariantValues variantValues) {
       this.message = message;
       this.variantValues = variantValues;
       this.code = "DuplicateVariantValues";
@@ -51,7 +51,7 @@ public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantVa
    }
    
    
-   public com.commercetools.models.Error.VariantValues getVariantValues(){
+   public com.commercetools.models.error.VariantValues getVariantValues(){
       return this.variantValues;
    }
 
@@ -59,7 +59,7 @@ public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantVa
       this.message = message;
    }
    
-   public void setVariantValues(final com.commercetools.models.Error.VariantValues variantValues){
+   public void setVariantValues(final com.commercetools.models.error.VariantValues variantValues){
       this.variantValues = variantValues;
    }
 

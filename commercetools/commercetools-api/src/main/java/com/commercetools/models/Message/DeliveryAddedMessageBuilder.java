@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.Delivery;
-import com.commercetools.models.Message.DeliveryAddedMessage;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.Delivery;
+import com.commercetools.models.message.DeliveryAddedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class DeliveryAddedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,7 +38,7 @@ public final class DeliveryAddedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Order.Delivery delivery;
+   private com.commercetools.models.order.Delivery delivery;
    
    public DeliveryAddedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -65,12 +65,12 @@ public final class DeliveryAddedMessageBuilder {
       return this;
    }
    
-   public DeliveryAddedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public DeliveryAddedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public DeliveryAddedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public DeliveryAddedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -85,7 +85,7 @@ public final class DeliveryAddedMessageBuilder {
       return this;
    }
    
-   public DeliveryAddedMessageBuilder delivery( final com.commercetools.models.Order.Delivery delivery) {
+   public DeliveryAddedMessageBuilder delivery( final com.commercetools.models.order.Delivery delivery) {
       this.delivery = delivery;
       return this;
    }
@@ -116,12 +116,12 @@ public final class DeliveryAddedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -136,7 +136,7 @@ public final class DeliveryAddedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Order.Delivery getDelivery(){
+   public com.commercetools.models.order.Delivery getDelivery(){
       return this.delivery;
    }
 

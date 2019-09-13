@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.Object;
@@ -37,14 +37,14 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
    
    private java.lang.Object fields;
    
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
    
    private java.lang.String sku;
    
    private java.lang.String assetKey;
 
    @JsonCreator
-   ProductSetAssetCustomTypeActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("fields") final java.lang.Object fields, @JsonProperty("type") final com.commercetools.models.Type.TypeResourceIdentifier type, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   ProductSetAssetCustomTypeActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("fields") final java.lang.Object fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("assetKey") final java.lang.String assetKey) {
       this.assetId = assetId;
       this.staged = staged;
       this.variantId = variantId;
@@ -84,7 +84,7 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
    }
    
    
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
    
@@ -114,7 +114,7 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
       this.fields = fields;
    }
    
-   public void setType(final com.commercetools.models.Type.TypeResourceIdentifier type){
+   public void setType(final com.commercetools.models.type.TypeResourceIdentifier type){
       this.type = type;
    }
    

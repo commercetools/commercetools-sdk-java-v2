@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Product.ProductProjection;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.product.ProductProjection;
 import java.lang.String;
-import com.commercetools.models.Message.ProductDeletedMessageImpl;
+import com.commercetools.models.message.ProductDeletedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

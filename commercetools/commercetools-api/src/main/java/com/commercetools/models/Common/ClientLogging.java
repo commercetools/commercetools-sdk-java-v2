@@ -1,10 +1,10 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.CreatedBy;
-import com.commercetools.models.Common.LastModifiedBy;
-import com.commercetools.models.Customer.CustomerReference;
+import com.commercetools.models.common.CreatedBy;
+import com.commercetools.models.common.LastModifiedBy;
+import com.commercetools.models.customer.CustomerReference;
 import java.lang.String;
-import com.commercetools.models.Common.ClientLoggingImpl;
+import com.commercetools.models.common.ClientLoggingImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

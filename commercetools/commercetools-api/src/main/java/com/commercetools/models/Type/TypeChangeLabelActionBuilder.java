@@ -1,9 +1,9 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Type.TypeChangeLabelAction;
+import com.commercetools.models.type.TypeChangeLabelAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class TypeChangeLabelActionBuilder {
    private java.lang.String fieldName;
    
    
-   private com.commercetools.models.Common.LocalizedString label;
+   private com.commercetools.models.common.LocalizedString label;
    
    public TypeChangeLabelActionBuilder fieldName( final java.lang.String fieldName) {
       this.fieldName = fieldName;
       return this;
    }
    
-   public TypeChangeLabelActionBuilder label( final com.commercetools.models.Common.LocalizedString label) {
+   public TypeChangeLabelActionBuilder label( final com.commercetools.models.common.LocalizedString label) {
       this.label = label;
       return this;
    }
@@ -33,7 +33,7 @@ public final class TypeChangeLabelActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getLabel(){
+   public com.commercetools.models.common.LocalizedString getLabel(){
       return this.label;
    }
 

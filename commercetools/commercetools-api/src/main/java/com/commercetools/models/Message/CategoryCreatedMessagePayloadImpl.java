@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Category.Category;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.category.Category;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CategoryCreatedMessagePayloadImpl implements CategoryCreatedM
 
    private java.lang.String type;
    
-   private com.commercetools.models.Category.Category category;
+   private com.commercetools.models.category.Category category;
 
    @JsonCreator
-   CategoryCreatedMessagePayloadImpl(@JsonProperty("category") final com.commercetools.models.Category.Category category) {
+   CategoryCreatedMessagePayloadImpl(@JsonProperty("category") final com.commercetools.models.category.Category category) {
       this.category = category;
       this.type = "CategoryCreated";
    }
@@ -43,11 +43,11 @@ public final class CategoryCreatedMessagePayloadImpl implements CategoryCreatedM
    }
    
    
-   public com.commercetools.models.Category.Category getCategory(){
+   public com.commercetools.models.category.Category getCategory(){
       return this.category;
    }
 
-   public void setCategory(final com.commercetools.models.Category.Category category){
+   public void setCategory(final com.commercetools.models.category.Category category){
       this.category = category;
    }
 

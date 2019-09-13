@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.AssetDraft;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.AssetDraft;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -29,10 +29,10 @@ public final class CategoryAddAssetActionImpl implements CategoryAddAssetAction 
    
    private java.lang.Integer position;
    
-   private com.commercetools.models.Common.AssetDraft asset;
+   private com.commercetools.models.common.AssetDraft asset;
 
    @JsonCreator
-   CategoryAddAssetActionImpl(@JsonProperty("position") final java.lang.Integer position, @JsonProperty("asset") final com.commercetools.models.Common.AssetDraft asset) {
+   CategoryAddAssetActionImpl(@JsonProperty("position") final java.lang.Integer position, @JsonProperty("asset") final com.commercetools.models.common.AssetDraft asset) {
       this.position = position;
       this.asset = asset;
       this.action = "addAsset";
@@ -52,7 +52,7 @@ public final class CategoryAddAssetActionImpl implements CategoryAddAssetAction 
    }
    
    
-   public com.commercetools.models.Common.AssetDraft getAsset(){
+   public com.commercetools.models.common.AssetDraft getAsset(){
       return this.asset;
    }
 
@@ -60,7 +60,7 @@ public final class CategoryAddAssetActionImpl implements CategoryAddAssetAction 
       this.position = position;
    }
    
-   public void setAsset(final com.commercetools.models.Common.AssetDraft asset){
+   public void setAsset(final com.commercetools.models.common.AssetDraft asset){
       this.asset = asset;
    }
 

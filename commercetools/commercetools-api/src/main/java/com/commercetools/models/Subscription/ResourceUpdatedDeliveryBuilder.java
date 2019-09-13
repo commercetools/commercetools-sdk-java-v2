@@ -1,10 +1,10 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.SubscriptionDelivery;
+import com.commercetools.models.subscription.SubscriptionDelivery;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Subscription.ResourceUpdatedDelivery;
+import com.commercetools.models.subscription.ResourceUpdatedDelivery;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,10 +16,10 @@ public final class ResourceUpdatedDeliveryBuilder {
    private java.lang.String projectKey;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.time.ZonedDateTime modifiedAt;
@@ -35,12 +35,12 @@ public final class ResourceUpdatedDeliveryBuilder {
       return this;
    }
    
-   public ResourceUpdatedDeliveryBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public ResourceUpdatedDeliveryBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public ResourceUpdatedDeliveryBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public ResourceUpdatedDeliveryBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -66,12 +66,12 @@ public final class ResourceUpdatedDeliveryBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    

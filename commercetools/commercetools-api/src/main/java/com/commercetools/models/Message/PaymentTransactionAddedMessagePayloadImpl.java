@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Payment.Transaction;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.payment.Transaction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class PaymentTransactionAddedMessagePayloadImpl implements PaymentT
 
    private java.lang.String type;
    
-   private com.commercetools.models.Payment.Transaction transaction;
+   private com.commercetools.models.payment.Transaction transaction;
 
    @JsonCreator
-   PaymentTransactionAddedMessagePayloadImpl(@JsonProperty("transaction") final com.commercetools.models.Payment.Transaction transaction) {
+   PaymentTransactionAddedMessagePayloadImpl(@JsonProperty("transaction") final com.commercetools.models.payment.Transaction transaction) {
       this.transaction = transaction;
       this.type = "PaymentTransactionAdded";
    }
@@ -43,11 +43,11 @@ public final class PaymentTransactionAddedMessagePayloadImpl implements PaymentT
    }
    
    
-   public com.commercetools.models.Payment.Transaction getTransaction(){
+   public com.commercetools.models.payment.Transaction getTransaction(){
       return this.transaction;
    }
 
-   public void setTransaction(final com.commercetools.models.Payment.Transaction transaction){
+   public void setTransaction(final com.commercetools.models.payment.Transaction transaction){
       this.transaction = transaction;
    }
 

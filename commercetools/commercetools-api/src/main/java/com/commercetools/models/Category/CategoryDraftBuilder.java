@@ -1,11 +1,11 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryResourceIdentifier;
-import com.commercetools.models.Common.AssetDraft;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.category.CategoryResourceIdentifier;
+import com.commercetools.models.common.AssetDraft;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.String;
-import com.commercetools.models.Category.CategoryDraft;
+import com.commercetools.models.category.CategoryDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,52 +14,52 @@ import java.time.ZonedDateTime;
 public final class CategoryDraftBuilder {
    
    @Nullable
-   private com.commercetools.models.Category.CategoryResourceIdentifier parent;
+   private com.commercetools.models.category.CategoryResourceIdentifier parent;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.AssetDraft> assets;
+   private java.util.List<com.commercetools.models.common.AssetDraft> assets;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString metaKeywords;
+   private com.commercetools.models.common.LocalizedString metaKeywords;
    
    @Nullable
    private java.lang.String orderHint;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString metaTitle;
+   private com.commercetools.models.common.LocalizedString metaTitle;
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
    private java.lang.String externalId;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString metaDescription;
+   private com.commercetools.models.common.LocalizedString metaDescription;
    
    @Nullable
    private java.lang.String key;
    
    
-   private com.commercetools.models.Common.LocalizedString slug;
+   private com.commercetools.models.common.LocalizedString slug;
    
-   public CategoryDraftBuilder parent(@Nullable final com.commercetools.models.Category.CategoryResourceIdentifier parent) {
+   public CategoryDraftBuilder parent(@Nullable final com.commercetools.models.category.CategoryResourceIdentifier parent) {
       this.parent = parent;
       return this;
    }
    
-   public CategoryDraftBuilder assets(@Nullable final java.util.List<com.commercetools.models.Common.AssetDraft> assets) {
+   public CategoryDraftBuilder assets(@Nullable final java.util.List<com.commercetools.models.common.AssetDraft> assets) {
       this.assets = assets;
       return this;
    }
    
-   public CategoryDraftBuilder metaKeywords(@Nullable final com.commercetools.models.Common.LocalizedString metaKeywords) {
+   public CategoryDraftBuilder metaKeywords(@Nullable final com.commercetools.models.common.LocalizedString metaKeywords) {
       this.metaKeywords = metaKeywords;
       return this;
    }
@@ -69,17 +69,17 @@ public final class CategoryDraftBuilder {
       return this;
    }
    
-   public CategoryDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public CategoryDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
    
-   public CategoryDraftBuilder metaTitle(@Nullable final com.commercetools.models.Common.LocalizedString metaTitle) {
+   public CategoryDraftBuilder metaTitle(@Nullable final com.commercetools.models.common.LocalizedString metaTitle) {
       this.metaTitle = metaTitle;
       return this;
    }
    
-   public CategoryDraftBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public CategoryDraftBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
@@ -89,12 +89,12 @@ public final class CategoryDraftBuilder {
       return this;
    }
    
-   public CategoryDraftBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public CategoryDraftBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
    
-   public CategoryDraftBuilder metaDescription(@Nullable final com.commercetools.models.Common.LocalizedString metaDescription) {
+   public CategoryDraftBuilder metaDescription(@Nullable final com.commercetools.models.common.LocalizedString metaDescription) {
       this.metaDescription = metaDescription;
       return this;
    }
@@ -104,23 +104,23 @@ public final class CategoryDraftBuilder {
       return this;
    }
    
-   public CategoryDraftBuilder slug( final com.commercetools.models.Common.LocalizedString slug) {
+   public CategoryDraftBuilder slug( final com.commercetools.models.common.LocalizedString slug) {
       this.slug = slug;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Category.CategoryResourceIdentifier getParent(){
+   public com.commercetools.models.category.CategoryResourceIdentifier getParent(){
       return this.parent;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.AssetDraft> getAssets(){
+   public java.util.List<com.commercetools.models.common.AssetDraft> getAssets(){
       return this.assets;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getMetaKeywords(){
+   public com.commercetools.models.common.LocalizedString getMetaKeywords(){
       return this.metaKeywords;
    }
    
@@ -130,17 +130,17 @@ public final class CategoryDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getMetaTitle(){
+   public com.commercetools.models.common.LocalizedString getMetaTitle(){
       return this.metaTitle;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -150,12 +150,12 @@ public final class CategoryDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getMetaDescription(){
+   public com.commercetools.models.common.LocalizedString getMetaDescription(){
       return this.metaDescription;
    }
    
@@ -165,7 +165,7 @@ public final class CategoryDraftBuilder {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getSlug(){
+   public com.commercetools.models.common.LocalizedString getSlug(){
       return this.slug;
    }
 

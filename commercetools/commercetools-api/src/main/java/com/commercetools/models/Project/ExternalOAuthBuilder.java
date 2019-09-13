@@ -1,7 +1,7 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
 import java.lang.String;
-import com.commercetools.models.Project.ExternalOAuth;
+import com.commercetools.models.project.ExternalOAuth;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

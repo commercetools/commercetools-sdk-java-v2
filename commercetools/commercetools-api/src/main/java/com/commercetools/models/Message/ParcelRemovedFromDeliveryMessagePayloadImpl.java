@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.Parcel;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.Parcel;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class ParcelRemovedFromDeliveryMessagePayloadImpl implements Parcel
 
    private java.lang.String type;
    
-   private com.commercetools.models.Order.Parcel parcel;
+   private com.commercetools.models.order.Parcel parcel;
    
    private java.lang.String deliveryId;
 
    @JsonCreator
-   ParcelRemovedFromDeliveryMessagePayloadImpl(@JsonProperty("parcel") final com.commercetools.models.Order.Parcel parcel, @JsonProperty("deliveryId") final java.lang.String deliveryId) {
+   ParcelRemovedFromDeliveryMessagePayloadImpl(@JsonProperty("parcel") final com.commercetools.models.order.Parcel parcel, @JsonProperty("deliveryId") final java.lang.String deliveryId) {
       this.parcel = parcel;
       this.deliveryId = deliveryId;
       this.type = "ParcelRemovedFromDelivery";
@@ -46,7 +46,7 @@ public final class ParcelRemovedFromDeliveryMessagePayloadImpl implements Parcel
    }
    
    
-   public com.commercetools.models.Order.Parcel getParcel(){
+   public com.commercetools.models.order.Parcel getParcel(){
       return this.parcel;
    }
    
@@ -55,7 +55,7 @@ public final class ParcelRemovedFromDeliveryMessagePayloadImpl implements Parcel
       return this.deliveryId;
    }
 
-   public void setParcel(final com.commercetools.models.Order.Parcel parcel){
+   public void setParcel(final com.commercetools.models.order.Parcel parcel){
       this.parcel = parcel;
    }
    

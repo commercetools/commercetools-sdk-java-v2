@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.Order;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.Order;
 import java.lang.String;
-import com.commercetools.models.Message.OrderCreatedMessagePayload;
+import com.commercetools.models.message.OrderCreatedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class OrderCreatedMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Order.Order order;
+   private com.commercetools.models.order.Order order;
    
-   public OrderCreatedMessagePayloadBuilder order( final com.commercetools.models.Order.Order order) {
+   public OrderCreatedMessagePayloadBuilder order( final com.commercetools.models.order.Order order) {
       this.order = order;
       return this;
    }
    
    
-   public com.commercetools.models.Order.Order getOrder(){
+   public com.commercetools.models.order.Order getOrder(){
       return this.order;
    }
 

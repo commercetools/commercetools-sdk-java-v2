@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.Product;
+import com.commercetools.models.product.Product;
 import java.lang.Long;
-import com.commercetools.models.Product.ProductPagedQueryResponseImpl;
+import com.commercetools.models.product.ProductPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

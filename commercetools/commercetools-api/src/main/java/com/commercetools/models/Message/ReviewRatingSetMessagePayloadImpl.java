@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,10 +34,10 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
    
    private java.lang.Integer newRating;
    
-   private com.commercetools.models.Common.Reference target;
+   private com.commercetools.models.common.Reference target;
 
    @JsonCreator
-   ReviewRatingSetMessagePayloadImpl(@JsonProperty("oldRating") final java.lang.Integer oldRating, @JsonProperty("includedInStatistics") final java.lang.Boolean includedInStatistics, @JsonProperty("newRating") final java.lang.Integer newRating, @JsonProperty("target") final com.commercetools.models.Common.Reference target) {
+   ReviewRatingSetMessagePayloadImpl(@JsonProperty("oldRating") final java.lang.Integer oldRating, @JsonProperty("includedInStatistics") final java.lang.Boolean includedInStatistics, @JsonProperty("newRating") final java.lang.Integer newRating, @JsonProperty("target") final com.commercetools.models.common.Reference target) {
       this.oldRating = oldRating;
       this.includedInStatistics = includedInStatistics;
       this.newRating = newRating;
@@ -69,7 +69,7 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
    }
    
    
-   public com.commercetools.models.Common.Reference getTarget(){
+   public com.commercetools.models.common.Reference getTarget(){
       return this.target;
    }
 
@@ -85,7 +85,7 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
       this.newRating = newRating;
    }
    
-   public void setTarget(final com.commercetools.models.Common.Reference target){
+   public void setTarget(final com.commercetools.models.common.Reference target){
       this.target = target;
    }
 

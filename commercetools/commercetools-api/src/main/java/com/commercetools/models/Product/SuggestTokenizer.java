@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.CustomTokenizer;
-import com.commercetools.models.Product.WhitespaceTokenizer;
+import com.commercetools.models.product.CustomTokenizer;
+import com.commercetools.models.product.WhitespaceTokenizer;
 import java.lang.String;
 
 
@@ -17,8 +17,8 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Product.WhitespaceTokenizerImpl.class, name = "whitespace"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Product.CustomTokenizerImpl.class, name = "custom")
+   @JsonSubTypes.Type(value = com.commercetools.models.product.WhitespaceTokenizerImpl.class, name = "whitespace"),
+   @JsonSubTypes.Type(value = com.commercetools.models.product.CustomTokenizerImpl.class, name = "custom")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

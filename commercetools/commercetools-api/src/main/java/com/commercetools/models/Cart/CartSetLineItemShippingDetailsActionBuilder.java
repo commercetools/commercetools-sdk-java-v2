@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import java.lang.String;
-import com.commercetools.models.Cart.CartSetLineItemShippingDetailsAction;
+import com.commercetools.models.cart.CartSetLineItemShippingDetailsAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class CartSetLineItemShippingDetailsActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    
    private java.lang.String lineItemId;
    
-   public CartSetLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails) {
+   public CartSetLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.shippingDetails = shippingDetails;
       return this;
    }
@@ -28,7 +28,7 @@ public final class CartSetLineItemShippingDetailsActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
    

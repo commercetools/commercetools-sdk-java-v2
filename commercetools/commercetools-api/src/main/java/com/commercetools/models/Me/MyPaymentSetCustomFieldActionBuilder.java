@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyPaymentUpdateAction;
+import com.commercetools.models.me.MyPaymentUpdateAction;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Me.MyPaymentSetCustomFieldAction;
+import com.commercetools.models.me.MyPaymentSetCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

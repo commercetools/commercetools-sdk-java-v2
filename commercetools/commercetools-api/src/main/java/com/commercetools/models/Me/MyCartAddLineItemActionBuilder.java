@@ -1,16 +1,16 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Cart.ExternalLineItemTotalPrice;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Me.MyCartUpdateAction;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.me.MyCartUpdateAction;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Me.MyCartAddLineItemAction;
+import com.commercetools.models.me.MyCartAddLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -22,22 +22,22 @@ public final class MyCartAddLineItemActionBuilder {
    private java.lang.Integer quantity;
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    @Nullable
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    @Nullable
    private java.lang.String productId;
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice;
+   private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    @Nullable
    private java.lang.Long variantId;
@@ -46,22 +46,22 @@ public final class MyCartAddLineItemActionBuilder {
    private java.lang.String sku;
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
    
    @Nullable
-   private com.commercetools.models.Common.Money externalPrice;
+   private com.commercetools.models.common.Money externalPrice;
    
    public MyCartAddLineItemActionBuilder quantity(@Nullable final java.lang.Integer quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public MyCartAddLineItemActionBuilder externalTaxRate(@Nullable final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate) {
+   public MyCartAddLineItemActionBuilder externalTaxRate(@Nullable final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.externalTaxRate = externalTaxRate;
       return this;
    }
    
-   public MyCartAddLineItemActionBuilder shippingDetails(@Nullable final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails) {
+   public MyCartAddLineItemActionBuilder shippingDetails(@Nullable final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.shippingDetails = shippingDetails;
       return this;
    }
@@ -71,17 +71,17 @@ public final class MyCartAddLineItemActionBuilder {
       return this;
    }
    
-   public MyCartAddLineItemActionBuilder externalTotalPrice(@Nullable final com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice) {
+   public MyCartAddLineItemActionBuilder externalTotalPrice(@Nullable final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
       this.externalTotalPrice = externalTotalPrice;
       return this;
    }
    
-   public MyCartAddLineItemActionBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public MyCartAddLineItemActionBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
    
-   public MyCartAddLineItemActionBuilder supplyChannel(@Nullable final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel) {
+   public MyCartAddLineItemActionBuilder supplyChannel(@Nullable final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel) {
       this.supplyChannel = supplyChannel;
       return this;
    }
@@ -96,12 +96,12 @@ public final class MyCartAddLineItemActionBuilder {
       return this;
    }
    
-   public MyCartAddLineItemActionBuilder distributionChannel(@Nullable final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel) {
+   public MyCartAddLineItemActionBuilder distributionChannel(@Nullable final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel) {
       this.distributionChannel = distributionChannel;
       return this;
    }
    
-   public MyCartAddLineItemActionBuilder externalPrice(@Nullable final com.commercetools.models.Common.Money externalPrice) {
+   public MyCartAddLineItemActionBuilder externalPrice(@Nullable final com.commercetools.models.common.Money externalPrice) {
       this.externalPrice = externalPrice;
       return this;
    }
@@ -112,12 +112,12 @@ public final class MyCartAddLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
    
@@ -127,17 +127,17 @@ public final class MyCartAddLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+   public com.commercetools.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
       return this.externalTotalPrice;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
@@ -152,12 +152,12 @@ public final class MyCartAddLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getDistributionChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Money getExternalPrice(){
+   public com.commercetools.models.common.Money getExternalPrice(){
       return this.externalPrice;
    }
 

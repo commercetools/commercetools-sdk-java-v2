@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.Delivery;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.Delivery;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessa
 
    private java.lang.String type;
    
-   private com.commercetools.models.Order.Delivery delivery;
+   private com.commercetools.models.order.Delivery delivery;
 
    @JsonCreator
-   DeliveryAddedMessagePayloadImpl(@JsonProperty("delivery") final com.commercetools.models.Order.Delivery delivery) {
+   DeliveryAddedMessagePayloadImpl(@JsonProperty("delivery") final com.commercetools.models.order.Delivery delivery) {
       this.delivery = delivery;
       this.type = "DeliveryAdded";
    }
@@ -43,11 +43,11 @@ public final class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessa
    }
    
    
-   public com.commercetools.models.Order.Delivery getDelivery(){
+   public com.commercetools.models.order.Delivery getDelivery(){
       return this.delivery;
    }
 
-   public void setDelivery(final com.commercetools.models.Order.Delivery delivery){
+   public void setDelivery(final com.commercetools.models.order.Delivery delivery){
       this.delivery = delivery;
    }
 

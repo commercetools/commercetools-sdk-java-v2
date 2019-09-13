@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ShippingRateInputDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ShippingRateInputDraft;
 import java.lang.String;
-import com.commercetools.models.Cart.CartSetShippingRateInputAction;
+import com.commercetools.models.cart.CartSetShippingRateInputAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CartSetShippingRateInputActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Cart.ShippingRateInputDraft shippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput;
    
-   public CartSetShippingRateInputActionBuilder shippingRateInput(@Nullable final com.commercetools.models.Cart.ShippingRateInputDraft shippingRateInput) {
+   public CartSetShippingRateInputActionBuilder shippingRateInput(@Nullable final com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput) {
       this.shippingRateInput = shippingRateInput;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ShippingRateInputDraft getShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInputDraft getShippingRateInput(){
       return this.shippingRateInput;
    }
 

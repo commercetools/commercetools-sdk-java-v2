@@ -12,7 +12,7 @@ public class ByProjectKeyCartsReplicateRequestBuilder {
       this.projectKey = projectKey;
    }
    
-   public ByProjectKeyCartsReplicatePost post(com.commercetools.models.Cart.ReplicaCartDraft replicaCartDraft) {
+   public ByProjectKeyCartsReplicatePost post(com.commercetools.models.cart.ReplicaCartDraft replicaCartDraft) {
       return new ByProjectKeyCartsReplicatePost(apiHttpClient, projectKey, replicaCartDraft);
    }
    

@@ -51,7 +51,7 @@ public class ByProjectKeyDiscountCodesByIDGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.DiscountCode.DiscountCode> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.discount_code.DiscountCode> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyDiscountCodesByIDGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.DiscountCode.DiscountCode>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.discount_code.DiscountCode>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.DiscountCode.DiscountCode.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.discount_code.DiscountCode.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeReference;
-import com.commercetools.models.Type.CustomFieldsImpl;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeReference;
+import com.commercetools.models.type.CustomFieldsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

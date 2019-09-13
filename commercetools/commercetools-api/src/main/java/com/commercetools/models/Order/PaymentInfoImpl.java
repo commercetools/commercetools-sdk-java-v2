@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Payment.PaymentReference;
+import com.commercetools.models.payment.PaymentReference;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentInfoImpl implements PaymentInfo {
 
-   private java.util.List<com.commercetools.models.Payment.PaymentReference> payments;
+   private java.util.List<com.commercetools.models.payment.PaymentReference> payments;
 
    @JsonCreator
-   PaymentInfoImpl(@JsonProperty("payments") final java.util.List<com.commercetools.models.Payment.PaymentReference> payments) {
+   PaymentInfoImpl(@JsonProperty("payments") final java.util.List<com.commercetools.models.payment.PaymentReference> payments) {
       this.payments = payments;
    }
    public PaymentInfoImpl() {
@@ -33,11 +33,11 @@ public final class PaymentInfoImpl implements PaymentInfo {
    }
    
    
-   public java.util.List<com.commercetools.models.Payment.PaymentReference> getPayments(){
+   public java.util.List<com.commercetools.models.payment.PaymentReference> getPayments(){
       return this.payments;
    }
 
-   public void setPayments(final java.util.List<com.commercetools.models.Payment.PaymentReference> payments){
+   public void setPayments(final java.util.List<com.commercetools.models.payment.PaymentReference> payments){
       this.payments = payments;
    }
 

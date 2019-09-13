@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Product.ProductProjection;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.product.ProductProjection;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class ProductDeletedMessagePayloadImpl implements ProductDeletedMes
    
    private java.util.List<java.lang.String> removedImageUrls;
    
-   private com.commercetools.models.Product.ProductProjection currentProjection;
+   private com.commercetools.models.product.ProductProjection currentProjection;
 
    @JsonCreator
-   ProductDeletedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<java.lang.String> removedImageUrls, @JsonProperty("currentProjection") final com.commercetools.models.Product.ProductProjection currentProjection) {
+   ProductDeletedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<java.lang.String> removedImageUrls, @JsonProperty("currentProjection") final com.commercetools.models.product.ProductProjection currentProjection) {
       this.removedImageUrls = removedImageUrls;
       this.currentProjection = currentProjection;
       this.type = "ProductDeleted";
@@ -51,7 +51,7 @@ public final class ProductDeletedMessagePayloadImpl implements ProductDeletedMes
    }
    
    
-   public com.commercetools.models.Product.ProductProjection getCurrentProjection(){
+   public com.commercetools.models.product.ProductProjection getCurrentProjection(){
       return this.currentProjection;
    }
 
@@ -59,7 +59,7 @@ public final class ProductDeletedMessagePayloadImpl implements ProductDeletedMes
       this.removedImageUrls = removedImageUrls;
    }
    
-   public void setCurrentProjection(final com.commercetools.models.Product.ProductProjection currentProjection){
+   public void setCurrentProjection(final com.commercetools.models.product.ProductProjection currentProjection){
       this.currentProjection = currentProjection;
    }
 

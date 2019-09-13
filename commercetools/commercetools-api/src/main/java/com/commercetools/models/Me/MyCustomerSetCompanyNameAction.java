@@ -1,8 +1,8 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyCustomerUpdateAction;
+import com.commercetools.models.me.MyCustomerUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyCustomerSetCompanyNameActionImpl;
+import com.commercetools.models.me.MyCustomerSetCompanyNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

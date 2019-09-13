@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
 import java.lang.Integer;
-import com.commercetools.models.Order.ParcelMeasurements;
+import com.commercetools.models.order.ParcelMeasurements;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

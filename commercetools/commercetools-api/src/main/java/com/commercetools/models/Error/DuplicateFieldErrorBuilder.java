@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Error.DuplicateFieldError;
+import com.commercetools.models.error.DuplicateFieldError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

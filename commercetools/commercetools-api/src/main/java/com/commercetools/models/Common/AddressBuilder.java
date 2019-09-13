@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
 import java.lang.String;
-import com.commercetools.models.Common.Address;
+import com.commercetools.models.common.Address;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

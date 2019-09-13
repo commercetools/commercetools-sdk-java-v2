@@ -1,13 +1,13 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Customer.CustomerResourceIdentifier;
-import com.commercetools.models.Payment.PaymentMethodInfo;
-import com.commercetools.models.Payment.PaymentStatusDraft;
-import com.commercetools.models.Payment.TransactionDraft;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.customer.CustomerResourceIdentifier;
+import com.commercetools.models.payment.PaymentMethodInfo;
+import com.commercetools.models.payment.PaymentStatusDraft;
+import com.commercetools.models.payment.TransactionDraft;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.String;
-import com.commercetools.models.Payment.PaymentDraftImpl;
+import com.commercetools.models.payment.PaymentDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

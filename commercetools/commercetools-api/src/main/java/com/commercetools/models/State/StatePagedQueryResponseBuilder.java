@@ -1,8 +1,8 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.State;
+import com.commercetools.models.state.State;
 import java.lang.Long;
-import com.commercetools.models.State.StatePagedQueryResponse;
+import com.commercetools.models.state.StatePagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class StatePagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.State.State> results;
+   private java.util.List<com.commercetools.models.state.State> results;
    
    public StatePagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class StatePagedQueryResponseBuilder {
       return this;
    }
    
-   public StatePagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.State.State> results) {
+   public StatePagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.state.State> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class StatePagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.State.State> getResults(){
+   public java.util.List<com.commercetools.models.state.State> getResults(){
       return this.results;
    }
 

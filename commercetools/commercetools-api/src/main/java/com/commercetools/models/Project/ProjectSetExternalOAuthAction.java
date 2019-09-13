@@ -1,9 +1,9 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ExternalOAuth;
-import com.commercetools.models.Project.ProjectUpdateAction;
+import com.commercetools.models.project.ExternalOAuth;
+import com.commercetools.models.project.ProjectUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Project.ProjectSetExternalOAuthActionImpl;
+import com.commercetools.models.project.ProjectSetExternalOAuthActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

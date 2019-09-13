@@ -1,9 +1,9 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.GeoJson;
+import com.commercetools.models.common.GeoJson;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Common.GeoJsonPointImpl;
+import com.commercetools.models.common.GeoJsonPointImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,19 +1,19 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartOrigin;
-import com.commercetools.models.Cart.CustomLineItemDraft;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Cart.InventoryMode;
-import com.commercetools.models.Cart.LineItemDraft;
-import com.commercetools.models.Cart.RoundingMode;
-import com.commercetools.models.Cart.ShippingRateInputDraft;
-import com.commercetools.models.Cart.TaxCalculationMode;
-import com.commercetools.models.Cart.TaxMode;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
-import com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier;
-import com.commercetools.models.Store.StoreResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.CartOrigin;
+import com.commercetools.models.cart.CustomLineItemDraft;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.cart.InventoryMode;
+import com.commercetools.models.cart.LineItemDraft;
+import com.commercetools.models.cart.RoundingMode;
+import com.commercetools.models.cart.ShippingRateInputDraft;
+import com.commercetools.models.cart.TaxCalculationMode;
+import com.commercetools.models.cart.TaxMode;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.models.store.StoreResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -41,50 +41,50 @@ public final class CartDraftImpl implements CartDraft {
    
    private java.lang.String anonymousId;
    
-   private com.commercetools.models.Cart.ShippingRateInputDraft shippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
-   private com.commercetools.models.Cart.CartOrigin origin;
+   private com.commercetools.models.cart.CartOrigin origin;
    
    private java.lang.Long deleteDaysAfterLastModification;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod;
+   private com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
    
-   private com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode;
+   private com.commercetools.models.cart.TaxCalculationMode taxCalculationMode;
    
-   private com.commercetools.models.Store.StoreResourceIdentifier store;
+   private com.commercetools.models.store.StoreResourceIdentifier store;
    
    private java.lang.String locale;
    
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRateForShippingMethod;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod;
    
-   private com.commercetools.models.Cart.InventoryMode inventoryMode;
+   private com.commercetools.models.cart.InventoryMode inventoryMode;
    
-   private java.util.List<com.commercetools.models.Cart.LineItemDraft> lineItems;
+   private java.util.List<com.commercetools.models.cart.LineItemDraft> lineItems;
    
-   private com.commercetools.models.Cart.RoundingMode taxRoundingMode;
+   private com.commercetools.models.cart.RoundingMode taxRoundingMode;
    
-   private java.util.List<com.commercetools.models.Cart.CustomLineItemDraft> customLineItems;
+   private java.util.List<com.commercetools.models.cart.CustomLineItemDraft> customLineItems;
    
-   private java.util.List<com.commercetools.models.Common.Address> itemShippingAddresses;
+   private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
-   private com.commercetools.models.Cart.TaxMode taxMode;
+   private com.commercetools.models.cart.TaxMode taxMode;
    
    private java.lang.String customerEmail;
    
    private java.lang.String customerId;
    
-   private com.commercetools.models.Common.Address shippingAddress;
+   private com.commercetools.models.common.Address shippingAddress;
    
    private java.lang.String currency;
    
-   private com.commercetools.models.Common.Address billingAddress;
+   private com.commercetools.models.common.Address billingAddress;
 
    @JsonCreator
-   CartDraftImpl(@JsonProperty("country") final java.lang.String country, @JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("shippingRateInput") final com.commercetools.models.Cart.ShippingRateInputDraft shippingRateInput, @JsonProperty("customerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("origin") final com.commercetools.models.Cart.CartOrigin origin, @JsonProperty("deleteDaysAfterLastModification") final java.lang.Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("shippingMethod") final com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("taxCalculationMode") final com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode, @JsonProperty("store") final com.commercetools.models.Store.StoreResourceIdentifier store, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("externalTaxRateForShippingMethod") final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRateForShippingMethod, @JsonProperty("inventoryMode") final com.commercetools.models.Cart.InventoryMode inventoryMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.Cart.LineItemDraft> lineItems, @JsonProperty("taxRoundingMode") final com.commercetools.models.Cart.RoundingMode taxRoundingMode, @JsonProperty("customLineItems") final java.util.List<com.commercetools.models.Cart.CustomLineItemDraft> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.Common.Address> itemShippingAddresses, @JsonProperty("taxMode") final com.commercetools.models.Cart.TaxMode taxMode, @JsonProperty("customerEmail") final java.lang.String customerEmail, @JsonProperty("customerId") final java.lang.String customerId, @JsonProperty("shippingAddress") final com.commercetools.models.Common.Address shippingAddress, @JsonProperty("currency") final java.lang.String currency, @JsonProperty("billingAddress") final com.commercetools.models.Common.Address billingAddress) {
+   CartDraftImpl(@JsonProperty("country") final java.lang.String country, @JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("shippingRateInput") final com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("origin") final com.commercetools.models.cart.CartOrigin origin, @JsonProperty("deleteDaysAfterLastModification") final java.lang.Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("shippingMethod") final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("taxCalculationMode") final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("store") final com.commercetools.models.store.StoreResourceIdentifier store, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("externalTaxRateForShippingMethod") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.cart.LineItemDraft> lineItems, @JsonProperty("taxRoundingMode") final com.commercetools.models.cart.RoundingMode taxRoundingMode, @JsonProperty("customLineItems") final java.util.List<com.commercetools.models.cart.CustomLineItemDraft> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode, @JsonProperty("customerEmail") final java.lang.String customerEmail, @JsonProperty("customerId") final java.lang.String customerId, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("currency") final java.lang.String currency, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress) {
       this.country = country;
       this.anonymousId = anonymousId;
       this.shippingRateInput = shippingRateInput;
@@ -124,17 +124,17 @@ public final class CartDraftImpl implements CartDraft {
    }
    
    
-   public com.commercetools.models.Cart.ShippingRateInputDraft getShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInputDraft getShippingRateInput(){
       return this.shippingRateInput;
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
       return this.customerGroup;
    }
    
    
-   public com.commercetools.models.Cart.CartOrigin getOrigin(){
+   public com.commercetools.models.cart.CartOrigin getOrigin(){
       return this.origin;
    }
    
@@ -144,22 +144,22 @@ public final class CartDraftImpl implements CartDraft {
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier getShippingMethod(){
+   public com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
       return this.shippingMethod;
    }
    
    
-   public com.commercetools.models.Cart.TaxCalculationMode getTaxCalculationMode(){
+   public com.commercetools.models.cart.TaxCalculationMode getTaxCalculationMode(){
       return this.taxCalculationMode;
    }
    
    
-   public com.commercetools.models.Store.StoreResourceIdentifier getStore(){
+   public com.commercetools.models.store.StoreResourceIdentifier getStore(){
       return this.store;
    }
    
@@ -169,37 +169,37 @@ public final class CartDraftImpl implements CartDraft {
    }
    
    
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod(){
       return this.externalTaxRateForShippingMethod;
    }
    
    
-   public com.commercetools.models.Cart.InventoryMode getInventoryMode(){
+   public com.commercetools.models.cart.InventoryMode getInventoryMode(){
       return this.inventoryMode;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.LineItemDraft> getLineItems(){
+   public java.util.List<com.commercetools.models.cart.LineItemDraft> getLineItems(){
       return this.lineItems;
    }
    
    
-   public com.commercetools.models.Cart.RoundingMode getTaxRoundingMode(){
+   public com.commercetools.models.cart.RoundingMode getTaxRoundingMode(){
       return this.taxRoundingMode;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.CustomLineItemDraft> getCustomLineItems(){
+   public java.util.List<com.commercetools.models.cart.CustomLineItemDraft> getCustomLineItems(){
       return this.customLineItems;
    }
    
    
-   public java.util.List<com.commercetools.models.Common.Address> getItemShippingAddresses(){
+   public java.util.List<com.commercetools.models.common.Address> getItemShippingAddresses(){
       return this.itemShippingAddresses;
    }
    
    
-   public com.commercetools.models.Cart.TaxMode getTaxMode(){
+   public com.commercetools.models.cart.TaxMode getTaxMode(){
       return this.taxMode;
    }
    
@@ -214,7 +214,7 @@ public final class CartDraftImpl implements CartDraft {
    }
    
    
-   public com.commercetools.models.Common.Address getShippingAddress(){
+   public com.commercetools.models.common.Address getShippingAddress(){
       return this.shippingAddress;
    }
    
@@ -226,7 +226,7 @@ public final class CartDraftImpl implements CartDraft {
    }
    
    
-   public com.commercetools.models.Common.Address getBillingAddress(){
+   public com.commercetools.models.common.Address getBillingAddress(){
       return this.billingAddress;
    }
 
@@ -238,15 +238,15 @@ public final class CartDraftImpl implements CartDraft {
       this.anonymousId = anonymousId;
    }
    
-   public void setShippingRateInput(final com.commercetools.models.Cart.ShippingRateInputDraft shippingRateInput){
+   public void setShippingRateInput(final com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput){
       this.shippingRateInput = shippingRateInput;
    }
    
-   public void setCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup){
+   public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
       this.customerGroup = customerGroup;
    }
    
-   public void setOrigin(final com.commercetools.models.Cart.CartOrigin origin){
+   public void setOrigin(final com.commercetools.models.cart.CartOrigin origin){
       this.origin = origin;
    }
    
@@ -254,19 +254,19 @@ public final class CartDraftImpl implements CartDraft {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
-   public void setShippingMethod(final com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod){
+   public void setShippingMethod(final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod){
       this.shippingMethod = shippingMethod;
    }
    
-   public void setTaxCalculationMode(final com.commercetools.models.Cart.TaxCalculationMode taxCalculationMode){
+   public void setTaxCalculationMode(final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode){
       this.taxCalculationMode = taxCalculationMode;
    }
    
-   public void setStore(final com.commercetools.models.Store.StoreResourceIdentifier store){
+   public void setStore(final com.commercetools.models.store.StoreResourceIdentifier store){
       this.store = store;
    }
    
@@ -274,31 +274,31 @@ public final class CartDraftImpl implements CartDraft {
       this.locale = locale;
    }
    
-   public void setExternalTaxRateForShippingMethod(final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRateForShippingMethod){
+   public void setExternalTaxRateForShippingMethod(final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod){
       this.externalTaxRateForShippingMethod = externalTaxRateForShippingMethod;
    }
    
-   public void setInventoryMode(final com.commercetools.models.Cart.InventoryMode inventoryMode){
+   public void setInventoryMode(final com.commercetools.models.cart.InventoryMode inventoryMode){
       this.inventoryMode = inventoryMode;
    }
    
-   public void setLineItems(final java.util.List<com.commercetools.models.Cart.LineItemDraft> lineItems){
+   public void setLineItems(final java.util.List<com.commercetools.models.cart.LineItemDraft> lineItems){
       this.lineItems = lineItems;
    }
    
-   public void setTaxRoundingMode(final com.commercetools.models.Cart.RoundingMode taxRoundingMode){
+   public void setTaxRoundingMode(final com.commercetools.models.cart.RoundingMode taxRoundingMode){
       this.taxRoundingMode = taxRoundingMode;
    }
    
-   public void setCustomLineItems(final java.util.List<com.commercetools.models.Cart.CustomLineItemDraft> customLineItems){
+   public void setCustomLineItems(final java.util.List<com.commercetools.models.cart.CustomLineItemDraft> customLineItems){
       this.customLineItems = customLineItems;
    }
    
-   public void setItemShippingAddresses(final java.util.List<com.commercetools.models.Common.Address> itemShippingAddresses){
+   public void setItemShippingAddresses(final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses){
       this.itemShippingAddresses = itemShippingAddresses;
    }
    
-   public void setTaxMode(final com.commercetools.models.Cart.TaxMode taxMode){
+   public void setTaxMode(final com.commercetools.models.cart.TaxMode taxMode){
       this.taxMode = taxMode;
    }
    
@@ -310,7 +310,7 @@ public final class CartDraftImpl implements CartDraft {
       this.customerId = customerId;
    }
    
-   public void setShippingAddress(final com.commercetools.models.Common.Address shippingAddress){
+   public void setShippingAddress(final com.commercetools.models.common.Address shippingAddress){
       this.shippingAddress = shippingAddress;
    }
    
@@ -318,7 +318,7 @@ public final class CartDraftImpl implements CartDraft {
       this.currency = currency;
    }
    
-   public void setBillingAddress(final com.commercetools.models.Common.Address billingAddress){
+   public void setBillingAddress(final com.commercetools.models.common.Address billingAddress){
       this.billingAddress = billingAddress;
    }
 

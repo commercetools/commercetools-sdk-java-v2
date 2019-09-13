@@ -1,9 +1,9 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Customer.CustomerUpdateAction;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.customer.CustomerUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerAddAddressActionImpl;
+import com.commercetools.models.customer.CustomerAddAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

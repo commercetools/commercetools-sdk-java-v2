@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalLineItemTotalPrice;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalLineItemTotalPrice;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class CartSetLineItemTotalPriceActionImpl implements CartSetLineIte
 
    private java.lang.String action;
    
-   private com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice;
+   private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
    private java.lang.String lineItemId;
 
    @JsonCreator
-   CartSetLineItemTotalPriceActionImpl(@JsonProperty("externalTotalPrice") final com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
+   CartSetLineItemTotalPriceActionImpl(@JsonProperty("externalTotalPrice") final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
       this.externalTotalPrice = externalTotalPrice;
       this.lineItemId = lineItemId;
       this.action = "setLineItemTotalPrice";
@@ -46,7 +46,7 @@ public final class CartSetLineItemTotalPriceActionImpl implements CartSetLineIte
    }
    
    
-   public com.commercetools.models.Cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+   public com.commercetools.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
       return this.externalTotalPrice;
    }
    
@@ -55,7 +55,7 @@ public final class CartSetLineItemTotalPriceActionImpl implements CartSetLineIte
       return this.lineItemId;
    }
 
-   public void setExternalTotalPrice(final com.commercetools.models.Cart.ExternalLineItemTotalPrice externalTotalPrice){
+   public void setExternalTotalPrice(final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
       this.externalTotalPrice = externalTotalPrice;
    }
    

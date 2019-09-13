@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Payment.Payment;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.payment.Payment;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentReferenceImpl implements PaymentReference {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Payment.Payment obj;
+   private com.commercetools.models.payment.Payment obj;
 
    @JsonCreator
-   PaymentReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.Payment.Payment obj) {
+   PaymentReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.payment.Payment obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("payment").get();
@@ -41,7 +41,7 @@ public final class PaymentReferenceImpl implements PaymentReference {
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    
@@ -51,7 +51,7 @@ public final class PaymentReferenceImpl implements PaymentReference {
    }
    
    
-   public com.commercetools.models.Payment.Payment getObj(){
+   public com.commercetools.models.payment.Payment getObj(){
       return this.obj;
    }
 
@@ -59,7 +59,7 @@ public final class PaymentReferenceImpl implements PaymentReference {
       this.id = id;
    }
    
-   public void setObj(final com.commercetools.models.Payment.Payment obj){
+   public void setObj(final com.commercetools.models.payment.Payment obj){
       this.obj = obj;
    }
 

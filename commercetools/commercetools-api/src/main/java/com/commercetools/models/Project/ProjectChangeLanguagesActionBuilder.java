@@ -1,8 +1,8 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ProjectUpdateAction;
+import com.commercetools.models.project.ProjectUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Project.ProjectChangeLanguagesAction;
+import com.commercetools.models.project.ProjectChangeLanguagesAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

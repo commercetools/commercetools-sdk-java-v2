@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.Type;
+import com.commercetools.models.type.Type;
 import java.lang.Long;
-import com.commercetools.models.Type.TypePagedQueryResponse;
+import com.commercetools.models.type.TypePagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class TypePagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Type.Type> results;
+   private java.util.List<com.commercetools.models.type.Type> results;
    
    public TypePagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class TypePagedQueryResponseBuilder {
       return this;
    }
    
-   public TypePagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Type.Type> results) {
+   public TypePagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.type.Type> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class TypePagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Type.Type> getResults(){
+   public java.util.List<com.commercetools.models.type.Type> getResults(){
       return this.results;
    }
 

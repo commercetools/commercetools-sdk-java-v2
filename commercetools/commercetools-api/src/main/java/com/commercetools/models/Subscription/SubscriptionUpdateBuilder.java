@@ -1,8 +1,8 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.SubscriptionUpdateAction;
+import com.commercetools.models.subscription.SubscriptionUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Subscription.SubscriptionUpdate;
+import com.commercetools.models.subscription.SubscriptionUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class SubscriptionUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Subscription.SubscriptionUpdateAction> actions;
+   private java.util.List<com.commercetools.models.subscription.SubscriptionUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public SubscriptionUpdateBuilder actions( final java.util.List<com.commercetools.models.Subscription.SubscriptionUpdateAction> actions) {
+   public SubscriptionUpdateBuilder actions( final java.util.List<com.commercetools.models.subscription.SubscriptionUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class SubscriptionUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.SubscriptionUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.subscription.SubscriptionUpdateAction> getActions(){
       return this.actions;
    }
    

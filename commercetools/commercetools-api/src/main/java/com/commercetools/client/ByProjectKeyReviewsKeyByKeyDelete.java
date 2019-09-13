@@ -55,7 +55,7 @@ public class ByProjectKeyReviewsKeyByKeyDelete {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Review.Review> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.review.Review> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -63,9 +63,9 @@ public class ByProjectKeyReviewsKeyByKeyDelete {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Review.Review>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.review.Review>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Review.Review.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.review.Review.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

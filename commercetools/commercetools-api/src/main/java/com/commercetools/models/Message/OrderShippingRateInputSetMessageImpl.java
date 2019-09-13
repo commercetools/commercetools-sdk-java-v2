@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.ShippingRateInput;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.cart.ShippingRateInput;
+import com.commercetools.models.message.Message;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -33,20 +33,20 @@ public final class OrderShippingRateInputSetMessageImpl implements OrderShipping
    
    private java.lang.Long sequenceNumber;
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    private java.lang.Long resourceVersion;
    
    private java.lang.String type;
    
-   private com.commercetools.models.Cart.ShippingRateInput shippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInput shippingRateInput;
    
-   private com.commercetools.models.Cart.ShippingRateInput oldShippingRateInput;
+   private com.commercetools.models.cart.ShippingRateInput oldShippingRateInput;
 
    @JsonCreator
-   OrderShippingRateInputSetMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.Common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("shippingRateInput") final com.commercetools.models.Cart.ShippingRateInput shippingRateInput, @JsonProperty("oldShippingRateInput") final com.commercetools.models.Cart.ShippingRateInput oldShippingRateInput) {
+   OrderShippingRateInputSetMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("shippingRateInput") final com.commercetools.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("oldShippingRateInput") final com.commercetools.models.cart.ShippingRateInput oldShippingRateInput) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -89,12 +89,12 @@ public final class OrderShippingRateInputSetMessageImpl implements OrderShipping
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -109,12 +109,12 @@ public final class OrderShippingRateInputSetMessageImpl implements OrderShipping
    }
    
    
-   public com.commercetools.models.Cart.ShippingRateInput getShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInput getShippingRateInput(){
       return this.shippingRateInput;
    }
    
    
-   public com.commercetools.models.Cart.ShippingRateInput getOldShippingRateInput(){
+   public com.commercetools.models.cart.ShippingRateInput getOldShippingRateInput(){
       return this.oldShippingRateInput;
    }
 
@@ -138,11 +138,11 @@ public final class OrderShippingRateInputSetMessageImpl implements OrderShipping
       this.sequenceNumber = sequenceNumber;
    }
    
-   public void setResource(final com.commercetools.models.Common.Reference resource){
+   public void setResource(final com.commercetools.models.common.Reference resource){
       this.resource = resource;
    }
    
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
@@ -154,11 +154,11 @@ public final class OrderShippingRateInputSetMessageImpl implements OrderShipping
       this.type = type;
    }
    
-   public void setShippingRateInput(final com.commercetools.models.Cart.ShippingRateInput shippingRateInput){
+   public void setShippingRateInput(final com.commercetools.models.cart.ShippingRateInput shippingRateInput){
       this.shippingRateInput = shippingRateInput;
    }
    
-   public void setOldShippingRateInput(final com.commercetools.models.Cart.ShippingRateInput oldShippingRateInput){
+   public void setOldShippingRateInput(final com.commercetools.models.cart.ShippingRateInput oldShippingRateInput){
       this.oldShippingRateInput = oldShippingRateInput;
    }
 

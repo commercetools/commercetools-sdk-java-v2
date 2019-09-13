@@ -1,11 +1,11 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.State.StateResourceIdentifier;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.state.StateResourceIdentifier;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.OrderTransitionCustomLineItemStateActionImpl;
+import com.commercetools.models.order.OrderTransitionCustomLineItemStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

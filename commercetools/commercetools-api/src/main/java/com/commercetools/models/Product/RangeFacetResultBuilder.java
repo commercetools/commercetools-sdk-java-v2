@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetResult;
-import com.commercetools.models.Product.FacetResultRange;
-import com.commercetools.models.Product.FacetTypes;
-import com.commercetools.models.Product.RangeFacetResult;
+import com.commercetools.models.product.FacetResult;
+import com.commercetools.models.product.FacetResultRange;
+import com.commercetools.models.product.FacetTypes;
+import com.commercetools.models.product.RangeFacetResult;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class RangeFacetResultBuilder {
    
    
-   private java.util.List<com.commercetools.models.Product.FacetResultRange> ranges;
+   private java.util.List<com.commercetools.models.product.FacetResultRange> ranges;
    
-   public RangeFacetResultBuilder ranges( final java.util.List<com.commercetools.models.Product.FacetResultRange> ranges) {
+   public RangeFacetResultBuilder ranges( final java.util.List<com.commercetools.models.product.FacetResultRange> ranges) {
       this.ranges = ranges;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Product.FacetResultRange> getRanges(){
+   public java.util.List<com.commercetools.models.product.FacetResultRange> getRanges(){
       return this.ranges;
    }
 

@@ -1,6 +1,6 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.TypedMoneyDraft;
+import com.commercetools.models.common.TypedMoneyDraft;
 import java.lang.Long;
 import java.lang.String;
 import javax.annotation.Generated;

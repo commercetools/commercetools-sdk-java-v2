@@ -1,11 +1,11 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -31,22 +31,22 @@ public final class CartAddCustomLineItemActionImpl implements CartAddCustomLineI
 
    private java.lang.String action;
    
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    private java.lang.Integer quantity;
    
-   private com.commercetools.models.Common.Money money;
+   private com.commercetools.models.common.Money money;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    private java.lang.String slug;
    
-   private com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
    @JsonCreator
-   CartAddCustomLineItemActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("money") final com.commercetools.models.Common.Money money, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("slug") final java.lang.String slug, @JsonProperty("taxCategory") final com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory) {
+   CartAddCustomLineItemActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("money") final com.commercetools.models.common.Money money, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("slug") final java.lang.String slug, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
       this.externalTaxRate = externalTaxRate;
       this.quantity = quantity;
       this.money = money;
@@ -66,7 +66,7 @@ public final class CartAddCustomLineItemActionImpl implements CartAddCustomLineI
    }
    
    
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
    
@@ -76,17 +76,17 @@ public final class CartAddCustomLineItemActionImpl implements CartAddCustomLineI
    }
    
    
-   public com.commercetools.models.Common.Money getMoney(){
+   public com.commercetools.models.common.Money getMoney(){
       return this.money;
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -96,11 +96,11 @@ public final class CartAddCustomLineItemActionImpl implements CartAddCustomLineI
    }
    
    
-   public com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }
 
-   public void setExternalTaxRate(final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate){
+   public void setExternalTaxRate(final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate){
       this.externalTaxRate = externalTaxRate;
    }
    
@@ -108,15 +108,15 @@ public final class CartAddCustomLineItemActionImpl implements CartAddCustomLineI
       this.quantity = quantity;
    }
    
-   public void setMoney(final com.commercetools.models.Common.Money money){
+   public void setMoney(final com.commercetools.models.common.Money money){
       this.money = money;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    
@@ -124,7 +124,7 @@ public final class CartAddCustomLineItemActionImpl implements CartAddCustomLineI
       this.slug = slug;
    }
    
-   public void setTaxCategory(final com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory){
+   public void setTaxCategory(final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory){
       this.taxCategory = taxCategory;
    }
 

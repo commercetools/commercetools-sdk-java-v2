@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.FieldDefinition;
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.FieldDefinition;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefin
 
    private java.lang.String action;
    
-   private com.commercetools.models.Type.FieldDefinition fieldDefinition;
+   private com.commercetools.models.type.FieldDefinition fieldDefinition;
 
    @JsonCreator
-   TypeAddFieldDefinitionActionImpl(@JsonProperty("fieldDefinition") final com.commercetools.models.Type.FieldDefinition fieldDefinition) {
+   TypeAddFieldDefinitionActionImpl(@JsonProperty("fieldDefinition") final com.commercetools.models.type.FieldDefinition fieldDefinition) {
       this.fieldDefinition = fieldDefinition;
       this.action = "addFieldDefinition";
    }
@@ -43,11 +43,11 @@ public final class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefin
    }
    
    
-   public com.commercetools.models.Type.FieldDefinition getFieldDefinition(){
+   public com.commercetools.models.type.FieldDefinition getFieldDefinition(){
       return this.fieldDefinition;
    }
 
-   public void setFieldDefinition(final com.commercetools.models.Type.FieldDefinition fieldDefinition){
+   public void setFieldDefinition(final com.commercetools.models.type.FieldDefinition fieldDefinition){
       this.fieldDefinition = fieldDefinition;
    }
 

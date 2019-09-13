@@ -18,7 +18,7 @@ public class ByProjectKeyCategoriesKeyByKeyRequestBuilder {
       return new ByProjectKeyCategoriesKeyByKeyGet(apiHttpClient, projectKey, key);
    }
    
-   public ByProjectKeyCategoriesKeyByKeyPost post(com.commercetools.models.Category.CategoryUpdate categoryUpdate) {
+   public ByProjectKeyCategoriesKeyByKeyPost post(com.commercetools.models.category.CategoryUpdate categoryUpdate) {
       return new ByProjectKeyCategoriesKeyByKeyPost(apiHttpClient, projectKey, key, categoryUpdate);
    }
    

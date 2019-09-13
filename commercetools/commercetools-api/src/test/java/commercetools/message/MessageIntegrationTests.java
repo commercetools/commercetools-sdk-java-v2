@@ -1,8 +1,8 @@
 package commercetools.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.MessagePagedQueryResponse;
-import com.commercetools.models.Product.Product;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.MessagePagedQueryResponse;
+import com.commercetools.models.product.Product;
 import commercetools.product.ProductFixtures;
 import commercetools.product_type.ProductTypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;

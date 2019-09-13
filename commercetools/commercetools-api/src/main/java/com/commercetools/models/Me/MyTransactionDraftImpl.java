@@ -1,7 +1,7 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Payment.TransactionType;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.payment.TransactionType;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -27,14 +27,14 @@ public final class MyTransactionDraftImpl implements MyTransactionDraft {
 
    private java.lang.String interactionId;
    
-   private com.commercetools.models.Common.Money amount;
+   private com.commercetools.models.common.Money amount;
    
-   private com.commercetools.models.Payment.TransactionType type;
+   private com.commercetools.models.payment.TransactionType type;
    
    private java.time.ZonedDateTime timestamp;
 
    @JsonCreator
-   MyTransactionDraftImpl(@JsonProperty("interactionId") final java.lang.String interactionId, @JsonProperty("amount") final com.commercetools.models.Common.Money amount, @JsonProperty("type") final com.commercetools.models.Payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
+   MyTransactionDraftImpl(@JsonProperty("interactionId") final java.lang.String interactionId, @JsonProperty("amount") final com.commercetools.models.common.Money amount, @JsonProperty("type") final com.commercetools.models.payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
       this.interactionId = interactionId;
       this.amount = amount;
       this.type = type;
@@ -50,12 +50,12 @@ public final class MyTransactionDraftImpl implements MyTransactionDraft {
    }
    
    
-   public com.commercetools.models.Common.Money getAmount(){
+   public com.commercetools.models.common.Money getAmount(){
       return this.amount;
    }
    
    
-   public com.commercetools.models.Payment.TransactionType getType(){
+   public com.commercetools.models.payment.TransactionType getType(){
       return this.type;
    }
    
@@ -68,11 +68,11 @@ public final class MyTransactionDraftImpl implements MyTransactionDraft {
       this.interactionId = interactionId;
    }
    
-   public void setAmount(final com.commercetools.models.Common.Money amount){
+   public void setAmount(final com.commercetools.models.common.Money amount){
       this.amount = amount;
    }
    
-   public void setType(final com.commercetools.models.Payment.TransactionType type){
+   public void setType(final com.commercetools.models.payment.TransactionType type){
       this.type = type;
    }
    

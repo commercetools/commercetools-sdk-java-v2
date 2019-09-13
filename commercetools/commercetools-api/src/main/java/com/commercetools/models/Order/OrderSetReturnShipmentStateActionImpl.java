@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ReturnShipmentState;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ReturnShipmentState;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
 
    private java.lang.String action;
    
-   private com.commercetools.models.Order.ReturnShipmentState shipmentState;
+   private com.commercetools.models.order.ReturnShipmentState shipmentState;
    
    private java.lang.String returnItemId;
 
    @JsonCreator
-   OrderSetReturnShipmentStateActionImpl(@JsonProperty("shipmentState") final com.commercetools.models.Order.ReturnShipmentState shipmentState, @JsonProperty("returnItemId") final java.lang.String returnItemId) {
+   OrderSetReturnShipmentStateActionImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ReturnShipmentState shipmentState, @JsonProperty("returnItemId") final java.lang.String returnItemId) {
       this.shipmentState = shipmentState;
       this.returnItemId = returnItemId;
       this.action = "setReturnShipmentState";
@@ -46,7 +46,7 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
    }
    
    
-   public com.commercetools.models.Order.ReturnShipmentState getShipmentState(){
+   public com.commercetools.models.order.ReturnShipmentState getShipmentState(){
       return this.shipmentState;
    }
    
@@ -55,7 +55,7 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
       return this.returnItemId;
    }
 
-   public void setShipmentState(final com.commercetools.models.Order.ReturnShipmentState shipmentState){
+   public void setShipmentState(final com.commercetools.models.order.ReturnShipmentState shipmentState){
       this.shipmentState = shipmentState;
    }
    

@@ -1,11 +1,11 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Inventory.InventoryEntryDraft;
+import com.commercetools.models.inventory.InventoryEntryDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,13 +17,13 @@ public final class InventoryEntryDraftBuilder {
    private java.time.ZonedDateTime expectedDelivery;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    
    private java.lang.Long quantityOnStock;
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    @Nullable
    private java.lang.Long restockableInDays;
@@ -36,7 +36,7 @@ public final class InventoryEntryDraftBuilder {
       return this;
    }
    
-   public InventoryEntryDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public InventoryEntryDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
@@ -46,7 +46,7 @@ public final class InventoryEntryDraftBuilder {
       return this;
    }
    
-   public InventoryEntryDraftBuilder supplyChannel(@Nullable final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel) {
+   public InventoryEntryDraftBuilder supplyChannel(@Nullable final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel) {
       this.supplyChannel = supplyChannel;
       return this;
    }
@@ -67,7 +67,7 @@ public final class InventoryEntryDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
@@ -77,7 +77,7 @@ public final class InventoryEntryDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    

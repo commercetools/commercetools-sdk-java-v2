@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Product.ProductProjection;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.product.ProductProjection;
 import java.lang.String;
-import com.commercetools.models.Message.ProductDeletedMessage;
+import com.commercetools.models.message.ProductDeletedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class ProductDeletedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -42,7 +42,7 @@ public final class ProductDeletedMessageBuilder {
    private java.util.List<java.lang.String> removedImageUrls;
    
    
-   private com.commercetools.models.Product.ProductProjection currentProjection;
+   private com.commercetools.models.product.ProductProjection currentProjection;
    
    public ProductDeletedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -69,12 +69,12 @@ public final class ProductDeletedMessageBuilder {
       return this;
    }
    
-   public ProductDeletedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public ProductDeletedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -94,7 +94,7 @@ public final class ProductDeletedMessageBuilder {
       return this;
    }
    
-   public ProductDeletedMessageBuilder currentProjection( final com.commercetools.models.Product.ProductProjection currentProjection) {
+   public ProductDeletedMessageBuilder currentProjection( final com.commercetools.models.product.ProductProjection currentProjection) {
       this.currentProjection = currentProjection;
       return this;
    }
@@ -125,12 +125,12 @@ public final class ProductDeletedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -150,7 +150,7 @@ public final class ProductDeletedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Product.ProductProjection getCurrentProjection(){
+   public com.commercetools.models.product.ProductProjection getCurrentProjection(){
       return this.currentProjection;
    }
 

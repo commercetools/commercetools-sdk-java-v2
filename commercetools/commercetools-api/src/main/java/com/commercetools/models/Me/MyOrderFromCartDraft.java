@@ -1,8 +1,8 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Me.MyOrderFromCartDraftImpl;
+import com.commercetools.models.me.MyOrderFromCartDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

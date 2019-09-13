@@ -1,9 +1,9 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Review.Review;
-import com.commercetools.models.Review.ReviewReference;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.review.Review;
+import com.commercetools.models.review.ReviewReference;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class ReviewReferenceBuilder {
    private java.lang.String id;
    
    @Nullable
-   private com.commercetools.models.Review.Review obj;
+   private com.commercetools.models.review.Review obj;
    
    public ReviewReferenceBuilder id( final java.lang.String id) {
       this.id = id;
       return this;
    }
    
-   public ReviewReferenceBuilder obj(@Nullable final com.commercetools.models.Review.Review obj) {
+   public ReviewReferenceBuilder obj(@Nullable final com.commercetools.models.review.Review obj) {
       this.obj = obj;
       return this;
    }
@@ -33,7 +33,7 @@ public final class ReviewReferenceBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Review.Review getObj(){
+   public com.commercetools.models.review.Review getObj(){
       return this.obj;
    }
 

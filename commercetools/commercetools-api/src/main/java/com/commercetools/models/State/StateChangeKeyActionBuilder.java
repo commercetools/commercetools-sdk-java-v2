@@ -1,8 +1,8 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.String;
-import com.commercetools.models.State.StateChangeKeyAction;
+import com.commercetools.models.state.StateChangeKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

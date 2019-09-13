@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.message.Message;
 import java.lang.Object;
-import com.commercetools.models.Message.ProductRevertedStagedChangesMessageImpl;
+import com.commercetools.models.message.ProductRevertedStagedChangesMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

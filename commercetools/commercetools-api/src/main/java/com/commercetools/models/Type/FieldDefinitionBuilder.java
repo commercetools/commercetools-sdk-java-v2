@@ -1,11 +1,11 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.TypeTextInputHint;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.TypeTextInputHint;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Type.FieldDefinition;
+import com.commercetools.models.type.FieldDefinition;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,10 +17,10 @@ public final class FieldDefinitionBuilder {
    private java.lang.String name;
    
    @Nullable
-   private com.commercetools.models.Type.TypeTextInputHint inputHint;
+   private com.commercetools.models.type.TypeTextInputHint inputHint;
    
    
-   private com.commercetools.models.Common.LocalizedString label;
+   private com.commercetools.models.common.LocalizedString label;
    
    
    private java.lang.Object type;
@@ -33,12 +33,12 @@ public final class FieldDefinitionBuilder {
       return this;
    }
    
-   public FieldDefinitionBuilder inputHint(@Nullable final com.commercetools.models.Type.TypeTextInputHint inputHint) {
+   public FieldDefinitionBuilder inputHint(@Nullable final com.commercetools.models.type.TypeTextInputHint inputHint) {
       this.inputHint = inputHint;
       return this;
    }
    
-   public FieldDefinitionBuilder label( final com.commercetools.models.Common.LocalizedString label) {
+   public FieldDefinitionBuilder label( final com.commercetools.models.common.LocalizedString label) {
       this.label = label;
       return this;
    }
@@ -59,12 +59,12 @@ public final class FieldDefinitionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.TypeTextInputHint getInputHint(){
+   public com.commercetools.models.type.TypeTextInputHint getInputHint(){
       return this.inputHint;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getLabel(){
+   public com.commercetools.models.common.LocalizedString getLabel(){
       return this.label;
    }
    

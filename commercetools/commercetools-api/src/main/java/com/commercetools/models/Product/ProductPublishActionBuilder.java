@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Cart.ProductPublishScope;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.cart.ProductPublishScope;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Product.ProductPublishAction;
+import com.commercetools.models.product.ProductPublishAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ProductPublishActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Cart.ProductPublishScope scope;
+   private com.commercetools.models.cart.ProductPublishScope scope;
    
-   public ProductPublishActionBuilder scope(@Nullable final com.commercetools.models.Cart.ProductPublishScope scope) {
+   public ProductPublishActionBuilder scope(@Nullable final com.commercetools.models.cart.ProductPublishScope scope) {
       this.scope = scope;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ProductPublishScope getScope(){
+   public com.commercetools.models.cart.ProductPublishScope getScope(){
       return this.scope;
    }
 

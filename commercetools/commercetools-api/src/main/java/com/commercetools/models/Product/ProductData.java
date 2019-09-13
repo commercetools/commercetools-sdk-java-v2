@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Category.CategoryReference;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.CategoryOrderHints;
-import com.commercetools.models.Product.ProductVariant;
-import com.commercetools.models.Product.SearchKeywords;
-import com.commercetools.models.Product.ProductDataImpl;
+import com.commercetools.models.category.CategoryReference;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.CategoryOrderHints;
+import com.commercetools.models.product.ProductVariant;
+import com.commercetools.models.product.SearchKeywords;
+import com.commercetools.models.product.ProductDataImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

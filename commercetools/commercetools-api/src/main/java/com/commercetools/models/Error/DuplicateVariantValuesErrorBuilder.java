@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
-import com.commercetools.models.Error.VariantValues;
+import com.commercetools.models.error.ErrorObject;
+import com.commercetools.models.error.VariantValues;
 import java.lang.String;
-import com.commercetools.models.Error.DuplicateVariantValuesError;
+import com.commercetools.models.error.DuplicateVariantValuesError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class DuplicateVariantValuesErrorBuilder {
    private java.lang.String message;
    
    
-   private com.commercetools.models.Error.VariantValues variantValues;
+   private com.commercetools.models.error.VariantValues variantValues;
    
    public DuplicateVariantValuesErrorBuilder message( final java.lang.String message) {
       this.message = message;
       return this;
    }
    
-   public DuplicateVariantValuesErrorBuilder variantValues( final com.commercetools.models.Error.VariantValues variantValues) {
+   public DuplicateVariantValuesErrorBuilder variantValues( final com.commercetools.models.error.VariantValues variantValues) {
       this.variantValues = variantValues;
       return this;
    }
@@ -33,7 +33,7 @@ public final class DuplicateVariantValuesErrorBuilder {
    }
    
    
-   public com.commercetools.models.Error.VariantValues getVariantValues(){
+   public com.commercetools.models.error.VariantValues getVariantValues(){
       return this.variantValues;
    }
 

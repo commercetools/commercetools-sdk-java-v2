@@ -1,7 +1,7 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.Destination;
-import com.commercetools.models.Subscription.SubscriptionUpdateAction;
+import com.commercetools.models.subscription.Destination;
+import com.commercetools.models.subscription.SubscriptionUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class SubscriptionChangeDestinationActionImpl implements Subscripti
 
    private java.lang.String action;
    
-   private com.commercetools.models.Subscription.Destination destination;
+   private com.commercetools.models.subscription.Destination destination;
 
    @JsonCreator
-   SubscriptionChangeDestinationActionImpl(@JsonProperty("destination") final com.commercetools.models.Subscription.Destination destination) {
+   SubscriptionChangeDestinationActionImpl(@JsonProperty("destination") final com.commercetools.models.subscription.Destination destination) {
       this.destination = destination;
       this.action = "changeDestination";
    }
@@ -43,11 +43,11 @@ public final class SubscriptionChangeDestinationActionImpl implements Subscripti
    }
    
    
-   public com.commercetools.models.Subscription.Destination getDestination(){
+   public com.commercetools.models.subscription.Destination getDestination(){
       return this.destination;
    }
 
-   public void setDestination(final com.commercetools.models.Subscription.Destination destination){
+   public void setDestination(final com.commercetools.models.subscription.Destination destination){
       this.destination = destination;
    }
 

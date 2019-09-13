@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class TypeChangeFieldDefinitionLabelActionImpl implements TypeChang
    
    private java.lang.String fieldName;
    
-   private com.commercetools.models.Common.LocalizedString label;
+   private com.commercetools.models.common.LocalizedString label;
 
    @JsonCreator
-   TypeChangeFieldDefinitionLabelActionImpl(@JsonProperty("fieldName") final java.lang.String fieldName, @JsonProperty("label") final com.commercetools.models.Common.LocalizedString label) {
+   TypeChangeFieldDefinitionLabelActionImpl(@JsonProperty("fieldName") final java.lang.String fieldName, @JsonProperty("label") final com.commercetools.models.common.LocalizedString label) {
       this.fieldName = fieldName;
       this.label = label;
       this.action = "changeFieldDefinitionLabel";
@@ -51,7 +51,7 @@ public final class TypeChangeFieldDefinitionLabelActionImpl implements TypeChang
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getLabel(){
+   public com.commercetools.models.common.LocalizedString getLabel(){
       return this.label;
    }
 
@@ -59,7 +59,7 @@ public final class TypeChangeFieldDefinitionLabelActionImpl implements TypeChang
       this.fieldName = fieldName;
    }
    
-   public void setLabel(final com.commercetools.models.Common.LocalizedString label){
+   public void setLabel(final com.commercetools.models.common.LocalizedString label){
       this.label = label;
    }
 

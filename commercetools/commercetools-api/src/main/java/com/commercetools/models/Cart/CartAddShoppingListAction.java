@@ -1,10 +1,10 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.ShoppingList.ShoppingListResourceIdentifier;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.shopping_list.ShoppingListResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Cart.CartAddShoppingListActionImpl;
+import com.commercetools.models.cart.CartAddShoppingListActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -61,7 +61,7 @@ public class ByProjectKeyProductProjectionsByIDGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Product.ProductProjection> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.product.ProductProjection> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -69,9 +69,9 @@ public class ByProjectKeyProductProjectionsByIDGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Product.ProductProjection>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.product.ProductProjection>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Product.ProductProjection.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.product.ProductProjection.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

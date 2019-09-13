@@ -1,10 +1,10 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Me.MyCartUpdateAction;
-import com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.me.MyCartUpdateAction;
+import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Me.MyCartSetShippingMethodAction;
+import com.commercetools.models.me.MyCartSetShippingMethodAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,28 +13,28 @@ import java.time.ZonedDateTime;
 public final class MyCartSetShippingMethodActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    @Nullable
-   private com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod;
+   private com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
    
-   public MyCartSetShippingMethodActionBuilder externalTaxRate(@Nullable final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate) {
+   public MyCartSetShippingMethodActionBuilder externalTaxRate(@Nullable final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.externalTaxRate = externalTaxRate;
       return this;
    }
    
-   public MyCartSetShippingMethodActionBuilder shippingMethod(@Nullable final com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod) {
+   public MyCartSetShippingMethodActionBuilder shippingMethod(@Nullable final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
       this.shippingMethod = shippingMethod;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
    
    @Nullable
-   public com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier getShippingMethod(){
+   public com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
       return this.shippingMethod;
    }
 

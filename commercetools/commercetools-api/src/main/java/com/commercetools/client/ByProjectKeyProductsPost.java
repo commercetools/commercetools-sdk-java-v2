@@ -30,9 +30,9 @@ public class ByProjectKeyProductsPost {
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
-   private com.commercetools.models.Product.ProductDraft productDraft;
+   private com.commercetools.models.product.ProductDraft productDraft;
    
-   public ByProjectKeyProductsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Product.ProductDraft productDraft){
+   public ByProjectKeyProductsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.product.ProductDraft productDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.productDraft = productDraft;
@@ -59,7 +59,7 @@ public class ByProjectKeyProductsPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Product.Product> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.product.Product> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -67,9 +67,9 @@ public class ByProjectKeyProductsPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Product.Product>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.product.Product>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Product.Product.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.product.Product.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

@@ -1,10 +1,10 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.AssetSource;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.AssetSource;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.CustomFields;
 import java.lang.String;
-import com.commercetools.models.Common.Asset;
+import com.commercetools.models.common.Asset;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,16 +13,16 @@ import java.time.ZonedDateTime;
 public final class AssetBuilder {
    
    
-   private java.util.List<com.commercetools.models.Common.AssetSource> sources;
+   private java.util.List<com.commercetools.models.common.AssetSource> sources;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    
    private java.lang.String id;
@@ -33,22 +33,22 @@ public final class AssetBuilder {
    @Nullable
    private java.util.List<java.lang.String> tags;
    
-   public AssetBuilder sources( final java.util.List<com.commercetools.models.Common.AssetSource> sources) {
+   public AssetBuilder sources( final java.util.List<com.commercetools.models.common.AssetSource> sources) {
       this.sources = sources;
       return this;
    }
    
-   public AssetBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public AssetBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
    
-   public AssetBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public AssetBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public AssetBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public AssetBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
@@ -69,22 +69,22 @@ public final class AssetBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.AssetSource> getSources(){
+   public java.util.List<com.commercetools.models.common.AssetSource> getSources(){
       return this.sources;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    

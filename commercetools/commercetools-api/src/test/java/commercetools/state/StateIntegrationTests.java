@@ -1,6 +1,6 @@
 package commercetools.state;
 
-import com.commercetools.models.State.*;
+import com.commercetools.models.state.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

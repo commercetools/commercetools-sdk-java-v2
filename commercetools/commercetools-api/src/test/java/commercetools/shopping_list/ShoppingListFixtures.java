@@ -1,8 +1,8 @@
 package commercetools.shopping_list;
 
-import com.commercetools.models.ShoppingList.ShoppingList;
-import com.commercetools.models.ShoppingList.ShoppingListDraft;
-import com.commercetools.models.ShoppingList.ShoppingListDraftBuilder;
+import com.commercetools.models.shopping_list.ShoppingList;
+import com.commercetools.models.shopping_list.ShoppingListDraft;
+import com.commercetools.models.shopping_list.ShoppingListDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

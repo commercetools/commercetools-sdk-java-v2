@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ShippingRateInput;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.cart.ShippingRateInput;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class ClassificationShippingRateInputImpl implements Classification
 
    private java.lang.String type;
    
-   private com.commercetools.models.Common.LocalizedString label;
+   private com.commercetools.models.common.LocalizedString label;
    
    private java.lang.String key;
 
    @JsonCreator
-   ClassificationShippingRateInputImpl(@JsonProperty("label") final com.commercetools.models.Common.LocalizedString label, @JsonProperty("key") final java.lang.String key) {
+   ClassificationShippingRateInputImpl(@JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("key") final java.lang.String key) {
       this.label = label;
       this.key = key;
       this.type = "Classification";
@@ -46,7 +46,7 @@ public final class ClassificationShippingRateInputImpl implements Classification
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getLabel(){
+   public com.commercetools.models.common.LocalizedString getLabel(){
       return this.label;
    }
    
@@ -55,7 +55,7 @@ public final class ClassificationShippingRateInputImpl implements Classification
       return this.key;
    }
 
-   public void setLabel(final com.commercetools.models.Common.LocalizedString label){
+   public void setLabel(final com.commercetools.models.common.LocalizedString label){
       this.label = label;
    }
    

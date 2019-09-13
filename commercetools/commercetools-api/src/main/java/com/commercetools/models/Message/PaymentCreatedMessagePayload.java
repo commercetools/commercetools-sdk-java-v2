@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Payment.Payment;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.payment.Payment;
 import java.lang.String;
-import com.commercetools.models.Message.PaymentCreatedMessagePayloadImpl;
+import com.commercetools.models.message.PaymentCreatedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

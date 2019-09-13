@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;

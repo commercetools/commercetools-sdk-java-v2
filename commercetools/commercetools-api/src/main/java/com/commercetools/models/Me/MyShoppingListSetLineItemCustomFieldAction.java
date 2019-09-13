@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Me.MyShoppingListSetLineItemCustomFieldActionImpl;
+import com.commercetools.models.me.MyShoppingListSetLineItemCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

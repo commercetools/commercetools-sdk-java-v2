@@ -1,6 +1,6 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntryUpdateAction;
+import com.commercetools.models.inventory.InventoryEntryUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntryUpdateImpl implements InventoryEntryUpdate {
 
-   private java.util.List<com.commercetools.models.Inventory.InventoryEntryUpdateAction> actions;
+   private java.util.List<com.commercetools.models.inventory.InventoryEntryUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   InventoryEntryUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Inventory.InventoryEntryUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   InventoryEntryUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.inventory.InventoryEntryUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class InventoryEntryUpdateImpl implements InventoryEntryUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Inventory.InventoryEntryUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.inventory.InventoryEntryUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class InventoryEntryUpdateImpl implements InventoryEntryUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Inventory.InventoryEntryUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.inventory.InventoryEntryUpdateAction> actions){
       this.actions = actions;
    }
    

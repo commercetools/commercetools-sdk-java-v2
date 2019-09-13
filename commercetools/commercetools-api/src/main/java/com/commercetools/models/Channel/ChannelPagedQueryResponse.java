@@ -1,8 +1,8 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.Channel;
+import com.commercetools.models.channel.Channel;
 import java.lang.Long;
-import com.commercetools.models.Channel.ChannelPagedQueryResponseImpl;
+import com.commercetools.models.channel.ChannelPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

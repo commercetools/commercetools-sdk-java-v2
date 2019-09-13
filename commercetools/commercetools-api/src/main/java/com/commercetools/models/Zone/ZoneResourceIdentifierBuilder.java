@@ -1,8 +1,8 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Common.ResourceIdentifier;
-import com.commercetools.models.Zone.ZoneResourceIdentifier;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.common.ResourceIdentifier;
+import com.commercetools.models.zone.ZoneResourceIdentifier;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -1,6 +1,6 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Store.StoreUpdateAction;
+import com.commercetools.models.store.StoreUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoreUpdateImpl implements StoreUpdate {
 
-   private java.util.List<com.commercetools.models.Store.StoreUpdateAction> actions;
+   private java.util.List<com.commercetools.models.store.StoreUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   StoreUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Store.StoreUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   StoreUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.store.StoreUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class StoreUpdateImpl implements StoreUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Store.StoreUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.store.StoreUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class StoreUpdateImpl implements StoreUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Store.StoreUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.store.StoreUpdateAction> actions){
       this.actions = actions;
    }
    

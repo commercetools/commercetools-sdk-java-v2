@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.CustomerCompanyNameSetMessagePayload;
+import com.commercetools.models.message.CustomerCompanyNameSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

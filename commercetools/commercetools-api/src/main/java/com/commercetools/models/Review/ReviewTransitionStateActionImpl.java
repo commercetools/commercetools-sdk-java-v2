@@ -1,7 +1,7 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Review.ReviewUpdateAction;
-import com.commercetools.models.State.StateResourceIdentifier;
+import com.commercetools.models.review.ReviewUpdateAction;
+import com.commercetools.models.state.StateResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -29,10 +29,10 @@ public final class ReviewTransitionStateActionImpl implements ReviewTransitionSt
    
    private java.lang.Boolean force;
    
-   private com.commercetools.models.State.StateResourceIdentifier state;
+   private com.commercetools.models.state.StateResourceIdentifier state;
 
    @JsonCreator
-   ReviewTransitionStateActionImpl(@JsonProperty("force") final java.lang.Boolean force, @JsonProperty("state") final com.commercetools.models.State.StateResourceIdentifier state) {
+   ReviewTransitionStateActionImpl(@JsonProperty("force") final java.lang.Boolean force, @JsonProperty("state") final com.commercetools.models.state.StateResourceIdentifier state) {
       this.force = force;
       this.state = state;
       this.action = "transitionState";
@@ -52,7 +52,7 @@ public final class ReviewTransitionStateActionImpl implements ReviewTransitionSt
    }
    
    
-   public com.commercetools.models.State.StateResourceIdentifier getState(){
+   public com.commercetools.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
 
@@ -60,7 +60,7 @@ public final class ReviewTransitionStateActionImpl implements ReviewTransitionSt
       this.force = force;
    }
    
-   public void setState(final com.commercetools.models.State.StateResourceIdentifier state){
+   public void setState(final com.commercetools.models.state.StateResourceIdentifier state){
       this.state = state;
    }
 

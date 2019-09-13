@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.CustomLineItemReturnItem;
-import com.commercetools.models.Order.LineItemReturnItem;
-import com.commercetools.models.Order.ReturnPaymentState;
-import com.commercetools.models.Order.ReturnShipmentState;
+import com.commercetools.models.order.CustomLineItemReturnItem;
+import com.commercetools.models.order.LineItemReturnItem;
+import com.commercetools.models.order.ReturnPaymentState;
+import com.commercetools.models.order.ReturnShipmentState;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
@@ -21,8 +21,8 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Order.CustomLineItemReturnItemImpl.class, name = "CustomLineItemReturnItem"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Order.LineItemReturnItemImpl.class, name = "LineItemReturnItem")
+   @JsonSubTypes.Type(value = com.commercetools.models.order.CustomLineItemReturnItemImpl.class, name = "CustomLineItemReturnItem"),
+   @JsonSubTypes.Type(value = com.commercetools.models.order.LineItemReturnItemImpl.class, name = "LineItemReturnItem")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.Cart;
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Cart.CartReference;
+import com.commercetools.models.cart.Cart;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.cart.CartReference;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class CartReferenceBuilder {
    private java.lang.String id;
    
    @Nullable
-   private com.commercetools.models.Cart.Cart obj;
+   private com.commercetools.models.cart.Cart obj;
    
    public CartReferenceBuilder id( final java.lang.String id) {
       this.id = id;
       return this;
    }
    
-   public CartReferenceBuilder obj(@Nullable final com.commercetools.models.Cart.Cart obj) {
+   public CartReferenceBuilder obj(@Nullable final com.commercetools.models.cart.Cart obj) {
       this.obj = obj;
       return this;
    }
@@ -33,7 +33,7 @@ public final class CartReferenceBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.Cart getObj(){
+   public com.commercetools.models.cart.Cart getObj(){
       return this.obj;
    }
 

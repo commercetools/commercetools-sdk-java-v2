@@ -1,9 +1,9 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryResourceIdentifier;
-import com.commercetools.models.Category.CategoryUpdateAction;
+import com.commercetools.models.category.CategoryResourceIdentifier;
+import com.commercetools.models.category.CategoryUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Category.CategoryChangeParentAction;
+import com.commercetools.models.category.CategoryChangeParentAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CategoryChangeParentActionBuilder {
    
    
-   private com.commercetools.models.Category.CategoryResourceIdentifier parent;
+   private com.commercetools.models.category.CategoryResourceIdentifier parent;
    
-   public CategoryChangeParentActionBuilder parent( final com.commercetools.models.Category.CategoryResourceIdentifier parent) {
+   public CategoryChangeParentActionBuilder parent( final com.commercetools.models.category.CategoryResourceIdentifier parent) {
       this.parent = parent;
       return this;
    }
    
    
-   public com.commercetools.models.Category.CategoryResourceIdentifier getParent(){
+   public com.commercetools.models.category.CategoryResourceIdentifier getParent(){
       return this.parent;
    }
 

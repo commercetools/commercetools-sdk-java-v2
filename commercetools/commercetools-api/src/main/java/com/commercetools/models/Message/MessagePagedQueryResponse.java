@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.message.Message;
 import java.lang.Long;
-import com.commercetools.models.Message.MessagePagedQueryResponseImpl;
+import com.commercetools.models.message.MessagePagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Order.TrackingDataImpl;
+import com.commercetools.models.order.TrackingDataImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

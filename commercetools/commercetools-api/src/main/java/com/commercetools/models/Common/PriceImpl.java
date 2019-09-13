@@ -1,11 +1,11 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Common.PriceTier;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.common.PriceTier;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -29,17 +29,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PriceImpl implements Price {
 
-   private com.commercetools.models.Common.DiscountedPrice discounted;
+   private com.commercetools.models.common.DiscountedPrice discounted;
    
    private java.lang.String country;
    
-   private java.util.List<com.commercetools.models.Common.PriceTier> tiers;
+   private java.util.List<com.commercetools.models.common.PriceTier> tiers;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
-   private com.commercetools.models.Channel.ChannelReference channel;
+   private com.commercetools.models.channel.ChannelReference channel;
    
    private java.time.ZonedDateTime validUntil;
    
@@ -47,10 +47,10 @@ public final class PriceImpl implements Price {
    
    private java.lang.String id;
    
-   private com.commercetools.models.Common.Money value;
+   private com.commercetools.models.common.Money value;
 
    @JsonCreator
-   PriceImpl(@JsonProperty("discounted") final com.commercetools.models.Common.DiscountedPrice discounted, @JsonProperty("country") final java.lang.String country, @JsonProperty("tiers") final java.util.List<com.commercetools.models.Common.PriceTier> tiers, @JsonProperty("customerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.Type.CustomFields custom, @JsonProperty("channel") final com.commercetools.models.Channel.ChannelReference channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("id") final java.lang.String id, @JsonProperty("value") final com.commercetools.models.Common.Money value) {
+   PriceImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("country") final java.lang.String country, @JsonProperty("tiers") final java.util.List<com.commercetools.models.common.PriceTier> tiers, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("id") final java.lang.String id, @JsonProperty("value") final com.commercetools.models.common.Money value) {
       this.discounted = discounted;
       this.country = country;
       this.tiers = tiers;
@@ -67,7 +67,7 @@ public final class PriceImpl implements Price {
    }
    
    
-   public com.commercetools.models.Common.DiscountedPrice getDiscounted(){
+   public com.commercetools.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
    
@@ -79,22 +79,22 @@ public final class PriceImpl implements Price {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.PriceTier> getTiers(){
+   public java.util.List<com.commercetools.models.common.PriceTier> getTiers(){
       return this.tiers;
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Channel.ChannelReference getChannel(){
+   public com.commercetools.models.channel.ChannelReference getChannel(){
       return this.channel;
    }
    
@@ -114,11 +114,11 @@ public final class PriceImpl implements Price {
    }
    
    
-   public com.commercetools.models.Common.Money getValue(){
+   public com.commercetools.models.common.Money getValue(){
       return this.value;
    }
 
-   public void setDiscounted(final com.commercetools.models.Common.DiscountedPrice discounted){
+   public void setDiscounted(final com.commercetools.models.common.DiscountedPrice discounted){
       this.discounted = discounted;
    }
    
@@ -126,19 +126,19 @@ public final class PriceImpl implements Price {
       this.country = country;
    }
    
-   public void setTiers(final java.util.List<com.commercetools.models.Common.PriceTier> tiers){
+   public void setTiers(final java.util.List<com.commercetools.models.common.PriceTier> tiers){
       this.tiers = tiers;
    }
    
-   public void setCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup){
+   public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupReference customerGroup){
       this.customerGroup = customerGroup;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFields custom){
+   public void setCustom(final com.commercetools.models.type.CustomFields custom){
       this.custom = custom;
    }
    
-   public void setChannel(final com.commercetools.models.Channel.ChannelReference channel){
+   public void setChannel(final com.commercetools.models.channel.ChannelReference channel){
       this.channel = channel;
    }
    
@@ -154,7 +154,7 @@ public final class PriceImpl implements Price {
       this.id = id;
    }
    
-   public void setValue(final com.commercetools.models.Common.Money value){
+   public void setValue(final com.commercetools.models.common.Money value){
       this.value = value;
    }
 

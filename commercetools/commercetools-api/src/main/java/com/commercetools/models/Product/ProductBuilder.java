@@ -1,13 +1,13 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Product.ProductCatalogData;
-import com.commercetools.models.ProductType.ProductTypeReference;
-import com.commercetools.models.Review.ReviewRatingStatistics;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.TaxCategory.TaxCategoryReference;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.product.ProductCatalogData;
+import com.commercetools.models.product_type.ProductTypeReference;
+import com.commercetools.models.review.ReviewRatingStatistics;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.tax_category.TaxCategoryReference;
 import java.lang.String;
-import com.commercetools.models.Product.Product;
+import com.commercetools.models.product.Product;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -28,28 +28,28 @@ public final class ProductBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
    @Nullable
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private com.commercetools.models.Product.ProductCatalogData masterData;
-   
-   @Nullable
-   private com.commercetools.models.State.StateReference state;
+   private com.commercetools.models.product.ProductCatalogData masterData;
    
    @Nullable
-   private com.commercetools.models.Review.ReviewRatingStatistics reviewRatingStatistics;
+   private com.commercetools.models.state.StateReference state;
+   
+   @Nullable
+   private com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics;
    
    
-   private com.commercetools.models.ProductType.ProductTypeReference productType;
+   private com.commercetools.models.product_type.ProductTypeReference productType;
    
    @Nullable
    private java.lang.String key;
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxCategoryReference taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryReference taxCategory;
    
    public ProductBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -71,32 +71,32 @@ public final class ProductBuilder {
       return this;
    }
    
-   public ProductBuilder createdBy(@Nullable final com.commercetools.models.Common.CreatedBy createdBy) {
+   public ProductBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
       this.createdBy = createdBy;
       return this;
    }
    
-   public ProductBuilder lastModifiedBy(@Nullable final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   public ProductBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
    
-   public ProductBuilder masterData( final com.commercetools.models.Product.ProductCatalogData masterData) {
+   public ProductBuilder masterData( final com.commercetools.models.product.ProductCatalogData masterData) {
       this.masterData = masterData;
       return this;
    }
    
-   public ProductBuilder state(@Nullable final com.commercetools.models.State.StateReference state) {
+   public ProductBuilder state(@Nullable final com.commercetools.models.state.StateReference state) {
       this.state = state;
       return this;
    }
    
-   public ProductBuilder reviewRatingStatistics(@Nullable final com.commercetools.models.Review.ReviewRatingStatistics reviewRatingStatistics) {
+   public ProductBuilder reviewRatingStatistics(@Nullable final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics) {
       this.reviewRatingStatistics = reviewRatingStatistics;
       return this;
    }
    
-   public ProductBuilder productType( final com.commercetools.models.ProductType.ProductTypeReference productType) {
+   public ProductBuilder productType( final com.commercetools.models.product_type.ProductTypeReference productType) {
       this.productType = productType;
       return this;
    }
@@ -106,7 +106,7 @@ public final class ProductBuilder {
       return this;
    }
    
-   public ProductBuilder taxCategory(@Nullable final com.commercetools.models.TaxCategory.TaxCategoryReference taxCategory) {
+   public ProductBuilder taxCategory(@Nullable final com.commercetools.models.tax_category.TaxCategoryReference taxCategory) {
       this.taxCategory = taxCategory;
       return this;
    }
@@ -132,32 +132,32 @@ public final class ProductBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    
-   public com.commercetools.models.Product.ProductCatalogData getMasterData(){
+   public com.commercetools.models.product.ProductCatalogData getMasterData(){
       return this.masterData;
    }
    
    @Nullable
-   public com.commercetools.models.State.StateReference getState(){
+   public com.commercetools.models.state.StateReference getState(){
       return this.state;
    }
    
    @Nullable
-   public com.commercetools.models.Review.ReviewRatingStatistics getReviewRatingStatistics(){
+   public com.commercetools.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
       return this.reviewRatingStatistics;
    }
    
    
-   public com.commercetools.models.ProductType.ProductTypeReference getProductType(){
+   public com.commercetools.models.product_type.ProductTypeReference getProductType(){
       return this.productType;
    }
    
@@ -167,7 +167,7 @@ public final class ProductBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxCategoryReference getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryReference getTaxCategory(){
       return this.taxCategory;
    }
 

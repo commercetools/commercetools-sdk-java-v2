@@ -1,8 +1,8 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.ZoneUpdateAction;
+import com.commercetools.models.zone.ZoneUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Zone.ZoneChangeNameAction;
+import com.commercetools.models.zone.ZoneChangeNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

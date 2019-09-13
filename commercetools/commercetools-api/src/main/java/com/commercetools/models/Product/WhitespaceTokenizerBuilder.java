@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.SuggestTokenizer;
+import com.commercetools.models.product.SuggestTokenizer;
 import java.lang.String;
-import com.commercetools.models.Product.WhitespaceTokenizer;
+import com.commercetools.models.product.WhitespaceTokenizer;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

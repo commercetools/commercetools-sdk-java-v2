@@ -1,6 +1,6 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.State;
+import com.commercetools.models.state.State;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class StatePagedQueryResponseImpl implements StatePagedQueryRespons
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.State.State> results;
+   private java.util.List<com.commercetools.models.state.State> results;
 
    @JsonCreator
-   StatePagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.State.State> results) {
+   StatePagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.state.State> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class StatePagedQueryResponseImpl implements StatePagedQueryRespons
    }
    
    
-   public java.util.List<com.commercetools.models.State.State> getResults(){
+   public java.util.List<com.commercetools.models.state.State> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class StatePagedQueryResponseImpl implements StatePagedQueryRespons
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.State.State> results){
+   public void setResults(final java.util.List<com.commercetools.models.state.State> results){
       this.results = results;
    }
 

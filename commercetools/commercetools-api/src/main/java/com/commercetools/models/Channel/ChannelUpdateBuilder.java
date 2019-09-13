@@ -1,8 +1,8 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelUpdateAction;
+import com.commercetools.models.channel.ChannelUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Channel.ChannelUpdate;
+import com.commercetools.models.channel.ChannelUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ChannelUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Channel.ChannelUpdateAction> actions;
+   private java.util.List<com.commercetools.models.channel.ChannelUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public ChannelUpdateBuilder actions( final java.util.List<com.commercetools.models.Channel.ChannelUpdateAction> actions) {
+   public ChannelUpdateBuilder actions( final java.util.List<com.commercetools.models.channel.ChannelUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class ChannelUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Channel.ChannelUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.channel.ChannelUpdateAction> getActions(){
       return this.actions;
    }
    

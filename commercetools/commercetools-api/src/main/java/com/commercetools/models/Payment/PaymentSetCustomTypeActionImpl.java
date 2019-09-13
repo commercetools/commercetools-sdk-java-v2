@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.PaymentUpdateAction;
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.payment.PaymentUpdateAction;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,12 +27,12 @@ public final class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTyp
 
    private java.lang.String action;
    
-   private com.commercetools.models.Type.FieldContainer fields;
+   private com.commercetools.models.type.FieldContainer fields;
    
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
 
    @JsonCreator
-   PaymentSetCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.models.Type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.Type.TypeResourceIdentifier type) {
+   PaymentSetCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type) {
       this.fields = fields;
       this.type = type;
       this.action = "setCustomType";
@@ -47,20 +47,20 @@ public final class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTyp
    }
    
    
-   public com.commercetools.models.Type.FieldContainer getFields(){
+   public com.commercetools.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
 
-   public void setFields(final com.commercetools.models.Type.FieldContainer fields){
+   public void setFields(final com.commercetools.models.type.FieldContainer fields){
       this.fields = fields;
    }
    
-   public void setType(final com.commercetools.models.Type.TypeResourceIdentifier type){
+   public void setType(final com.commercetools.models.type.TypeResourceIdentifier type){
       this.type = type;
    }
 

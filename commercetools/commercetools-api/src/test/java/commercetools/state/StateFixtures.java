@@ -1,9 +1,9 @@
 package commercetools.state;
 
-import com.commercetools.models.State.State;
-import com.commercetools.models.State.StateDraft;
-import com.commercetools.models.State.StateDraftBuilder;
-import com.commercetools.models.State.StateTypeEnum;
+import com.commercetools.models.state.State;
+import com.commercetools.models.state.StateDraft;
+import com.commercetools.models.state.StateDraftBuilder;
+import com.commercetools.models.state.StateTypeEnum;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.MoneyType;
-import com.commercetools.models.Common.TypedMoneyDraft;
+import com.commercetools.models.common.MoneyType;
+import com.commercetools.models.common.TypedMoneyDraft;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -27,7 +27,7 @@ public final class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraf
    
    private java.lang.String currencyCode;
    
-   private com.commercetools.models.Common.MoneyType type;
+   private com.commercetools.models.common.MoneyType type;
 
    @JsonCreator
    CentPrecisionMoneyDraftImpl(@JsonProperty("centAmount") final java.lang.Long centAmount, @JsonProperty("currencyCode") final java.lang.String currencyCode) {
@@ -52,7 +52,7 @@ public final class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraf
    }
    
    
-   public com.commercetools.models.Common.MoneyType getType(){
+   public com.commercetools.models.common.MoneyType getType(){
       return this.type;
    }
 

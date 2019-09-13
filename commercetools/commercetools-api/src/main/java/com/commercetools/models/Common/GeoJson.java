@@ -1,6 +1,6 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.GeoJsonPoint;
+import com.commercetools.models.common.GeoJsonPoint;
 import java.lang.String;
 
 
@@ -16,7 +16,7 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Common.GeoJsonPointImpl.class, name = "Point")
+   @JsonSubTypes.Type(value = com.commercetools.models.common.GeoJsonPointImpl.class, name = "Point")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

@@ -1,6 +1,6 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
+import com.commercetools.models.cart.CartUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartUpdateImpl implements CartUpdate {
 
-   private java.util.List<com.commercetools.models.Cart.CartUpdateAction> actions;
+   private java.util.List<com.commercetools.models.cart.CartUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   CartUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Cart.CartUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   CartUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.cart.CartUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class CartUpdateImpl implements CartUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.CartUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.cart.CartUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class CartUpdateImpl implements CartUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Cart.CartUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.cart.CartUpdateAction> actions){
       this.actions = actions;
    }
    

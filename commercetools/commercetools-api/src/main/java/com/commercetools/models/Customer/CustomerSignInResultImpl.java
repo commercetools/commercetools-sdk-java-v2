@@ -1,6 +1,6 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.Customer;
+import com.commercetools.models.customer.Customer;
 import java.lang.Object;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,10 +25,10 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
 
    private java.lang.Object cart;
    
-   private com.commercetools.models.Customer.Customer customer;
+   private com.commercetools.models.customer.Customer customer;
 
    @JsonCreator
-   CustomerSignInResultImpl(@JsonProperty("cart") final java.lang.Object cart, @JsonProperty("customer") final com.commercetools.models.Customer.Customer customer) {
+   CustomerSignInResultImpl(@JsonProperty("cart") final java.lang.Object cart, @JsonProperty("customer") final com.commercetools.models.customer.Customer customer) {
       this.cart = cart;
       this.customer = customer;
    }
@@ -42,7 +42,7 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
    }
    
    
-   public com.commercetools.models.Customer.Customer getCustomer(){
+   public com.commercetools.models.customer.Customer getCustomer(){
       return this.customer;
    }
 
@@ -50,7 +50,7 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
       this.cart = cart;
    }
    
-   public void setCustomer(final com.commercetools.models.Customer.Customer customer){
+   public void setCustomer(final com.commercetools.models.customer.Customer customer){
       this.customer = customer;
    }
 

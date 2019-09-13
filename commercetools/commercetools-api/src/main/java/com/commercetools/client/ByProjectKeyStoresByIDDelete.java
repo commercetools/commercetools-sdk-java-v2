@@ -53,7 +53,7 @@ public class ByProjectKeyStoresByIDDelete {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Store.Store> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.store.Store> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyStoresByIDDelete {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Store.Store>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.store.Store>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Store.Store.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.store.Store.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

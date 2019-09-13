@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
 import java.lang.Integer;
-import com.commercetools.models.Common.AssetDimensions;
+import com.commercetools.models.common.AssetDimensions;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

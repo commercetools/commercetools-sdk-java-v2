@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.common.Money;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxedItemPriceDraftImpl implements TaxedItemPriceDraft {
 
-   private com.commercetools.models.Common.Money totalGross;
+   private com.commercetools.models.common.Money totalGross;
    
-   private com.commercetools.models.Common.Money totalNet;
+   private com.commercetools.models.common.Money totalNet;
 
    @JsonCreator
-   TaxedItemPriceDraftImpl(@JsonProperty("totalGross") final com.commercetools.models.Common.Money totalGross, @JsonProperty("totalNet") final com.commercetools.models.Common.Money totalNet) {
+   TaxedItemPriceDraftImpl(@JsonProperty("totalGross") final com.commercetools.models.common.Money totalGross, @JsonProperty("totalNet") final com.commercetools.models.common.Money totalNet) {
       this.totalGross = totalGross;
       this.totalNet = totalNet;
    }
@@ -36,20 +36,20 @@ public final class TaxedItemPriceDraftImpl implements TaxedItemPriceDraft {
    }
    
    
-   public com.commercetools.models.Common.Money getTotalGross(){
+   public com.commercetools.models.common.Money getTotalGross(){
       return this.totalGross;
    }
    
    
-   public com.commercetools.models.Common.Money getTotalNet(){
+   public com.commercetools.models.common.Money getTotalNet(){
       return this.totalNet;
    }
 
-   public void setTotalGross(final com.commercetools.models.Common.Money totalGross){
+   public void setTotalGross(final com.commercetools.models.common.Money totalGross){
       this.totalGross = totalGross;
    }
    
-   public void setTotalNet(final com.commercetools.models.Common.Money totalNet){
+   public void setTotalNet(final com.commercetools.models.common.Money totalNet){
       this.totalNet = totalNet;
    }
 

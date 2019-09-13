@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.common.Money;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.TaxPortion;
+import com.commercetools.models.cart.TaxPortion;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.time.ZonedDateTime;
 public final class TaxPortionBuilder {
    
    
-   private com.commercetools.models.Common.Money amount;
+   private com.commercetools.models.common.Money amount;
    
    
    private java.lang.Integer rate;
@@ -20,7 +20,7 @@ public final class TaxPortionBuilder {
    @Nullable
    private java.lang.String name;
    
-   public TaxPortionBuilder amount( final com.commercetools.models.Common.Money amount) {
+   public TaxPortionBuilder amount( final com.commercetools.models.common.Money amount) {
       this.amount = amount;
       return this;
    }
@@ -36,7 +36,7 @@ public final class TaxPortionBuilder {
    }
    
    
-   public com.commercetools.models.Common.Money getAmount(){
+   public com.commercetools.models.common.Money getAmount(){
       return this.amount;
    }
    

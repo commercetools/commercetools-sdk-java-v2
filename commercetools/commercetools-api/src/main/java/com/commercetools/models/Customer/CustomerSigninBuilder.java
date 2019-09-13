@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.AnonymousCartSignInMode;
+import com.commercetools.models.customer.AnonymousCartSignInMode;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerSignin;
+import com.commercetools.models.customer.CustomerSignin;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class CustomerSigninBuilder {
    private java.lang.String password;
    
    @Nullable
-   private com.commercetools.models.Customer.AnonymousCartSignInMode anonymousCartSignInMode;
+   private com.commercetools.models.customer.AnonymousCartSignInMode anonymousCartSignInMode;
    
    @Nullable
    private java.lang.String anonymousCartId;
@@ -35,7 +35,7 @@ public final class CustomerSigninBuilder {
       return this;
    }
    
-   public CustomerSigninBuilder anonymousCartSignInMode(@Nullable final com.commercetools.models.Customer.AnonymousCartSignInMode anonymousCartSignInMode) {
+   public CustomerSigninBuilder anonymousCartSignInMode(@Nullable final com.commercetools.models.customer.AnonymousCartSignInMode anonymousCartSignInMode) {
       this.anonymousCartSignInMode = anonymousCartSignInMode;
       return this;
    }
@@ -61,7 +61,7 @@ public final class CustomerSigninBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Customer.AnonymousCartSignInMode getAnonymousCartSignInMode(){
+   public com.commercetools.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode(){
       return this.anonymousCartSignInMode;
    }
    

@@ -1,4 +1,4 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.String;

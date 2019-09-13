@@ -27,9 +27,9 @@ public class ByProjectKeyShippingMethodsByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.ShippingMethod.ShippingMethodUpdate shippingMethodUpdate;
+   private com.commercetools.models.shipping_method.ShippingMethodUpdate shippingMethodUpdate;
    
-   public ByProjectKeyShippingMethodsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.ShippingMethod.ShippingMethodUpdate shippingMethodUpdate){
+   public ByProjectKeyShippingMethodsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.shipping_method.ShippingMethodUpdate shippingMethodUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
@@ -53,7 +53,7 @@ public class ByProjectKeyShippingMethodsByIDPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.ShippingMethod.ShippingMethod> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.shipping_method.ShippingMethod> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyShippingMethodsByIDPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.ShippingMethod.ShippingMethod>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.shipping_method.ShippingMethod>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.ShippingMethod.ShippingMethod.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.shipping_method.ShippingMethod.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

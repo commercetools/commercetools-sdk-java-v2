@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.FieldDefinition;
-import com.commercetools.models.Type.ResourceTypeId;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.FieldDefinition;
+import com.commercetools.models.type.ResourceTypeId;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,18 +25,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeDraftImpl implements TypeDraft {
 
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
-   private java.util.List<com.commercetools.models.Type.FieldDefinition> fieldDefinitions;
+   private java.util.List<com.commercetools.models.type.FieldDefinition> fieldDefinitions;
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    private java.lang.String key;
    
-   private java.util.List<com.commercetools.models.Type.ResourceTypeId> resourceTypeIds;
+   private java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds;
 
    @JsonCreator
-   TypeDraftImpl(@JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("fieldDefinitions") final java.util.List<com.commercetools.models.Type.FieldDefinition> fieldDefinitions, @JsonProperty("description") final com.commercetools.models.Common.LocalizedString description, @JsonProperty("key") final java.lang.String key, @JsonProperty("resourceTypeIds") final java.util.List<com.commercetools.models.Type.ResourceTypeId> resourceTypeIds) {
+   TypeDraftImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("fieldDefinitions") final java.util.List<com.commercetools.models.type.FieldDefinition> fieldDefinitions, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("key") final java.lang.String key, @JsonProperty("resourceTypeIds") final java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds) {
       this.name = name;
       this.fieldDefinitions = fieldDefinitions;
       this.description = description;
@@ -48,17 +48,17 @@ public final class TypeDraftImpl implements TypeDraft {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    
-   public java.util.List<com.commercetools.models.Type.FieldDefinition> getFieldDefinitions(){
+   public java.util.List<com.commercetools.models.type.FieldDefinition> getFieldDefinitions(){
       return this.fieldDefinitions;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
@@ -68,19 +68,19 @@ public final class TypeDraftImpl implements TypeDraft {
    }
    
    
-   public java.util.List<com.commercetools.models.Type.ResourceTypeId> getResourceTypeIds(){
+   public java.util.List<com.commercetools.models.type.ResourceTypeId> getResourceTypeIds(){
       return this.resourceTypeIds;
    }
 
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    
-   public void setFieldDefinitions(final java.util.List<com.commercetools.models.Type.FieldDefinition> fieldDefinitions){
+   public void setFieldDefinitions(final java.util.List<com.commercetools.models.type.FieldDefinition> fieldDefinitions){
       this.fieldDefinitions = fieldDefinitions;
    }
    
-   public void setDescription(final com.commercetools.models.Common.LocalizedString description){
+   public void setDescription(final com.commercetools.models.common.LocalizedString description){
       this.description = description;
    }
    
@@ -88,7 +88,7 @@ public final class TypeDraftImpl implements TypeDraft {
       this.key = key;
    }
    
-   public void setResourceTypeIds(final java.util.List<com.commercetools.models.Type.ResourceTypeId> resourceTypeIds){
+   public void setResourceTypeIds(final java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds){
       this.resourceTypeIds = resourceTypeIds;
    }
 

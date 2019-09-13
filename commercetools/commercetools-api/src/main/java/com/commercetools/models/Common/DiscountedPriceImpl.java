@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.ProductDiscount.ProductDiscountReference;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.product_discount.ProductDiscountReference;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountedPriceImpl implements DiscountedPrice {
 
-   private com.commercetools.models.ProductDiscount.ProductDiscountReference discount;
+   private com.commercetools.models.product_discount.ProductDiscountReference discount;
    
-   private com.commercetools.models.Common.Money value;
+   private com.commercetools.models.common.Money value;
 
    @JsonCreator
-   DiscountedPriceImpl(@JsonProperty("discount") final com.commercetools.models.ProductDiscount.ProductDiscountReference discount, @JsonProperty("value") final com.commercetools.models.Common.Money value) {
+   DiscountedPriceImpl(@JsonProperty("discount") final com.commercetools.models.product_discount.ProductDiscountReference discount, @JsonProperty("value") final com.commercetools.models.common.Money value) {
       this.discount = discount;
       this.value = value;
    }
@@ -37,20 +37,20 @@ public final class DiscountedPriceImpl implements DiscountedPrice {
    }
    
    
-   public com.commercetools.models.ProductDiscount.ProductDiscountReference getDiscount(){
+   public com.commercetools.models.product_discount.ProductDiscountReference getDiscount(){
       return this.discount;
    }
    
    
-   public com.commercetools.models.Common.Money getValue(){
+   public com.commercetools.models.common.Money getValue(){
       return this.value;
    }
 
-   public void setDiscount(final com.commercetools.models.ProductDiscount.ProductDiscountReference discount){
+   public void setDiscount(final com.commercetools.models.product_discount.ProductDiscountReference discount){
       this.discount = discount;
    }
    
-   public void setValue(final com.commercetools.models.Common.Money value){
+   public void setValue(final com.commercetools.models.common.Money value){
       this.value = value;
    }
 

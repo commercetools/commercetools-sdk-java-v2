@@ -1,6 +1,6 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Payment.Payment;
+import com.commercetools.models.payment.Payment;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class PaymentPagedQueryResponseImpl implements PaymentPagedQueryRes
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Payment.Payment> results;
+   private java.util.List<com.commercetools.models.payment.Payment> results;
 
    @JsonCreator
-   PaymentPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Payment.Payment> results) {
+   PaymentPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.payment.Payment> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class PaymentPagedQueryResponseImpl implements PaymentPagedQueryRes
    }
    
    
-   public java.util.List<com.commercetools.models.Payment.Payment> getResults(){
+   public java.util.List<com.commercetools.models.payment.Payment> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class PaymentPagedQueryResponseImpl implements PaymentPagedQueryRes
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Payment.Payment> results){
+   public void setResults(final java.util.List<com.commercetools.models.payment.Payment> results){
       this.results = results;
    }
 

@@ -1,6 +1,6 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ProjectUpdateAction;
+import com.commercetools.models.project.ProjectUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectUpdateImpl implements ProjectUpdate {
 
-   private java.util.List<com.commercetools.models.Project.ProjectUpdateAction> actions;
+   private java.util.List<com.commercetools.models.project.ProjectUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   ProjectUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Project.ProjectUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   ProjectUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.project.ProjectUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class ProjectUpdateImpl implements ProjectUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Project.ProjectUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.project.ProjectUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class ProjectUpdateImpl implements ProjectUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Project.ProjectUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.project.ProjectUpdateAction> actions){
       this.actions = actions;
    }
    

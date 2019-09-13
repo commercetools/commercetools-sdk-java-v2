@@ -1,6 +1,6 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.Type;
+import com.commercetools.models.type.Type;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class TypePagedQueryResponseImpl implements TypePagedQueryResponse 
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Type.Type> results;
+   private java.util.List<com.commercetools.models.type.Type> results;
 
    @JsonCreator
-   TypePagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Type.Type> results) {
+   TypePagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.type.Type> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class TypePagedQueryResponseImpl implements TypePagedQueryResponse 
    }
    
    
-   public java.util.List<com.commercetools.models.Type.Type> getResults(){
+   public java.util.List<com.commercetools.models.type.Type> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class TypePagedQueryResponseImpl implements TypePagedQueryResponse 
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Type.Type> results){
+   public void setResults(final java.util.List<com.commercetools.models.type.Type> results){
       this.results = results;
    }
 

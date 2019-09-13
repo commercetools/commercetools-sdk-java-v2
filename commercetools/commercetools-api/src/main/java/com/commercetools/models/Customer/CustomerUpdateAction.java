@@ -1,30 +1,30 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerAddAddressAction;
-import com.commercetools.models.Customer.CustomerAddBillingAddressIdAction;
-import com.commercetools.models.Customer.CustomerAddShippingAddressIdAction;
-import com.commercetools.models.Customer.CustomerChangeAddressAction;
-import com.commercetools.models.Customer.CustomerChangeEmailAction;
-import com.commercetools.models.Customer.CustomerRemoveAddressAction;
-import com.commercetools.models.Customer.CustomerRemoveBillingAddressIdAction;
-import com.commercetools.models.Customer.CustomerRemoveShippingAddressIdAction;
-import com.commercetools.models.Customer.CustomerSetCompanyNameAction;
-import com.commercetools.models.Customer.CustomerSetCustomFieldAction;
-import com.commercetools.models.Customer.CustomerSetCustomTypeAction;
-import com.commercetools.models.Customer.CustomerSetCustomerGroupAction;
-import com.commercetools.models.Customer.CustomerSetCustomerNumberAction;
-import com.commercetools.models.Customer.CustomerSetDateOfBirthAction;
-import com.commercetools.models.Customer.CustomerSetDefaultBillingAddressAction;
-import com.commercetools.models.Customer.CustomerSetDefaultShippingAddressAction;
-import com.commercetools.models.Customer.CustomerSetExternalIdAction;
-import com.commercetools.models.Customer.CustomerSetFirstNameAction;
-import com.commercetools.models.Customer.CustomerSetKeyAction;
-import com.commercetools.models.Customer.CustomerSetLastNameAction;
-import com.commercetools.models.Customer.CustomerSetLocaleAction;
-import com.commercetools.models.Customer.CustomerSetMiddleNameAction;
-import com.commercetools.models.Customer.CustomerSetSalutationAction;
-import com.commercetools.models.Customer.CustomerSetTitleAction;
-import com.commercetools.models.Customer.CustomerSetVatIdAction;
+import com.commercetools.models.customer.CustomerAddAddressAction;
+import com.commercetools.models.customer.CustomerAddBillingAddressIdAction;
+import com.commercetools.models.customer.CustomerAddShippingAddressIdAction;
+import com.commercetools.models.customer.CustomerChangeAddressAction;
+import com.commercetools.models.customer.CustomerChangeEmailAction;
+import com.commercetools.models.customer.CustomerRemoveAddressAction;
+import com.commercetools.models.customer.CustomerRemoveBillingAddressIdAction;
+import com.commercetools.models.customer.CustomerRemoveShippingAddressIdAction;
+import com.commercetools.models.customer.CustomerSetCompanyNameAction;
+import com.commercetools.models.customer.CustomerSetCustomFieldAction;
+import com.commercetools.models.customer.CustomerSetCustomTypeAction;
+import com.commercetools.models.customer.CustomerSetCustomerGroupAction;
+import com.commercetools.models.customer.CustomerSetCustomerNumberAction;
+import com.commercetools.models.customer.CustomerSetDateOfBirthAction;
+import com.commercetools.models.customer.CustomerSetDefaultBillingAddressAction;
+import com.commercetools.models.customer.CustomerSetDefaultShippingAddressAction;
+import com.commercetools.models.customer.CustomerSetExternalIdAction;
+import com.commercetools.models.customer.CustomerSetFirstNameAction;
+import com.commercetools.models.customer.CustomerSetKeyAction;
+import com.commercetools.models.customer.CustomerSetLastNameAction;
+import com.commercetools.models.customer.CustomerSetLocaleAction;
+import com.commercetools.models.customer.CustomerSetMiddleNameAction;
+import com.commercetools.models.customer.CustomerSetSalutationAction;
+import com.commercetools.models.customer.CustomerSetTitleAction;
+import com.commercetools.models.customer.CustomerSetVatIdAction;
 import java.lang.String;
 
 
@@ -40,31 +40,31 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerAddAddressActionImpl.class, name = "addAddress"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerAddBillingAddressIdActionImpl.class, name = "addBillingAddressId"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerAddShippingAddressIdActionImpl.class, name = "addShippingAddressId"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerChangeAddressActionImpl.class, name = "changeAddress"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerChangeEmailActionImpl.class, name = "changeEmail"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerRemoveAddressActionImpl.class, name = "removeAddress"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerRemoveBillingAddressIdActionImpl.class, name = "removeBillingAddressId"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerRemoveShippingAddressIdActionImpl.class, name = "removeShippingAddressId"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetCompanyNameActionImpl.class, name = "setCompanyName"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetCustomFieldActionImpl.class, name = "setCustomField"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetCustomTypeActionImpl.class, name = "setCustomType"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetCustomerGroupActionImpl.class, name = "setCustomerGroup"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetCustomerNumberActionImpl.class, name = "setCustomerNumber"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetDateOfBirthActionImpl.class, name = "setDateOfBirth"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetDefaultBillingAddressActionImpl.class, name = "setDefaultBillingAddress"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetDefaultShippingAddressActionImpl.class, name = "setDefaultShippingAddress"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetExternalIdActionImpl.class, name = "setExternalId"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetFirstNameActionImpl.class, name = "setFirstName"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetKeyActionImpl.class, name = "setKey"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetLastNameActionImpl.class, name = "setLastName"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetLocaleActionImpl.class, name = "setLocale"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetMiddleNameActionImpl.class, name = "setMiddleName"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetSalutationActionImpl.class, name = "setSalutation"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetTitleActionImpl.class, name = "setTitle"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Customer.CustomerSetVatIdActionImpl.class, name = "setVatId")
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerAddAddressActionImpl.class, name = "addAddress"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerAddBillingAddressIdActionImpl.class, name = "addBillingAddressId"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerAddShippingAddressIdActionImpl.class, name = "addShippingAddressId"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerChangeAddressActionImpl.class, name = "changeAddress"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerChangeEmailActionImpl.class, name = "changeEmail"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerRemoveAddressActionImpl.class, name = "removeAddress"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerRemoveBillingAddressIdActionImpl.class, name = "removeBillingAddressId"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerRemoveShippingAddressIdActionImpl.class, name = "removeShippingAddressId"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetCompanyNameActionImpl.class, name = "setCompanyName"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetCustomFieldActionImpl.class, name = "setCustomField"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetCustomTypeActionImpl.class, name = "setCustomType"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetCustomerGroupActionImpl.class, name = "setCustomerGroup"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetCustomerNumberActionImpl.class, name = "setCustomerNumber"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetDateOfBirthActionImpl.class, name = "setDateOfBirth"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetDefaultBillingAddressActionImpl.class, name = "setDefaultBillingAddress"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetDefaultShippingAddressActionImpl.class, name = "setDefaultShippingAddress"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetExternalIdActionImpl.class, name = "setExternalId"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetFirstNameActionImpl.class, name = "setFirstName"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetKeyActionImpl.class, name = "setKey"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetLastNameActionImpl.class, name = "setLastName"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetLocaleActionImpl.class, name = "setLocale"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetMiddleNameActionImpl.class, name = "setMiddleName"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetSalutationActionImpl.class, name = "setSalutation"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetTitleActionImpl.class, name = "setTitle"),
+   @JsonSubTypes.Type(value = com.commercetools.models.customer.CustomerSetVatIdActionImpl.class, name = "setVatId")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

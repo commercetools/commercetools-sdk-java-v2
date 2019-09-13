@@ -1,6 +1,6 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.common.Money;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPrice {
 
-   private com.commercetools.models.Common.Money totalPrice;
+   private com.commercetools.models.common.Money totalPrice;
    
-   private com.commercetools.models.Common.Money price;
+   private com.commercetools.models.common.Money price;
 
    @JsonCreator
-   ExternalLineItemTotalPriceImpl(@JsonProperty("totalPrice") final com.commercetools.models.Common.Money totalPrice, @JsonProperty("price") final com.commercetools.models.Common.Money price) {
+   ExternalLineItemTotalPriceImpl(@JsonProperty("totalPrice") final com.commercetools.models.common.Money totalPrice, @JsonProperty("price") final com.commercetools.models.common.Money price) {
       this.totalPrice = totalPrice;
       this.price = price;
    }
@@ -36,20 +36,20 @@ public final class ExternalLineItemTotalPriceImpl implements ExternalLineItemTot
    }
    
    
-   public com.commercetools.models.Common.Money getTotalPrice(){
+   public com.commercetools.models.common.Money getTotalPrice(){
       return this.totalPrice;
    }
    
    
-   public com.commercetools.models.Common.Money getPrice(){
+   public com.commercetools.models.common.Money getPrice(){
       return this.price;
    }
 
-   public void setTotalPrice(final com.commercetools.models.Common.Money totalPrice){
+   public void setTotalPrice(final com.commercetools.models.common.Money totalPrice){
       this.totalPrice = totalPrice;
    }
    
-   public void setPrice(final com.commercetools.models.Common.Money price){
+   public void setPrice(final com.commercetools.models.common.Money price){
       this.price = price;
    }
 

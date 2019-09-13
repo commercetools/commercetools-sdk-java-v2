@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.State.StateResourceIdentifier;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.state.StateResourceIdentifier;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
@@ -28,9 +28,9 @@ public final class OrderTransitionCustomLineItemStateActionImpl implements Order
 
    private java.lang.String action;
    
-   private com.commercetools.models.State.StateResourceIdentifier toState;
+   private com.commercetools.models.state.StateResourceIdentifier toState;
    
-   private com.commercetools.models.State.StateResourceIdentifier fromState;
+   private com.commercetools.models.state.StateResourceIdentifier fromState;
    
    private java.lang.String customLineItemId;
    
@@ -39,7 +39,7 @@ public final class OrderTransitionCustomLineItemStateActionImpl implements Order
    private java.time.ZonedDateTime actualTransitionDate;
 
    @JsonCreator
-   OrderTransitionCustomLineItemStateActionImpl(@JsonProperty("toState") final com.commercetools.models.State.StateResourceIdentifier toState, @JsonProperty("fromState") final com.commercetools.models.State.StateResourceIdentifier fromState, @JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("actualTransitionDate") final java.time.ZonedDateTime actualTransitionDate) {
+   OrderTransitionCustomLineItemStateActionImpl(@JsonProperty("toState") final com.commercetools.models.state.StateResourceIdentifier toState, @JsonProperty("fromState") final com.commercetools.models.state.StateResourceIdentifier fromState, @JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("actualTransitionDate") final java.time.ZonedDateTime actualTransitionDate) {
       this.toState = toState;
       this.fromState = fromState;
       this.customLineItemId = customLineItemId;
@@ -57,12 +57,12 @@ public final class OrderTransitionCustomLineItemStateActionImpl implements Order
    }
    
    
-   public com.commercetools.models.State.StateResourceIdentifier getToState(){
+   public com.commercetools.models.state.StateResourceIdentifier getToState(){
       return this.toState;
    }
    
    
-   public com.commercetools.models.State.StateResourceIdentifier getFromState(){
+   public com.commercetools.models.state.StateResourceIdentifier getFromState(){
       return this.fromState;
    }
    
@@ -81,11 +81,11 @@ public final class OrderTransitionCustomLineItemStateActionImpl implements Order
       return this.actualTransitionDate;
    }
 
-   public void setToState(final com.commercetools.models.State.StateResourceIdentifier toState){
+   public void setToState(final com.commercetools.models.state.StateResourceIdentifier toState){
       this.toState = toState;
    }
    
-   public void setFromState(final com.commercetools.models.State.StateResourceIdentifier fromState){
+   public void setFromState(final com.commercetools.models.state.StateResourceIdentifier fromState){
       this.fromState = fromState;
    }
    

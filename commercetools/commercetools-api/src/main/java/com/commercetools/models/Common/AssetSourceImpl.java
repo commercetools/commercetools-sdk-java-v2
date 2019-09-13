@@ -1,6 +1,6 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.AssetDimensions;
+import com.commercetools.models.common.AssetDimensions;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class AssetSourceImpl implements AssetSource {
    
    private java.lang.String key;
    
-   private com.commercetools.models.Common.AssetDimensions dimensions;
+   private com.commercetools.models.common.AssetDimensions dimensions;
 
    @JsonCreator
-   AssetSourceImpl(@JsonProperty("contentType") final java.lang.String contentType, @JsonProperty("uri") final java.lang.String uri, @JsonProperty("key") final java.lang.String key, @JsonProperty("dimensions") final com.commercetools.models.Common.AssetDimensions dimensions) {
+   AssetSourceImpl(@JsonProperty("contentType") final java.lang.String contentType, @JsonProperty("uri") final java.lang.String uri, @JsonProperty("key") final java.lang.String key, @JsonProperty("dimensions") final com.commercetools.models.common.AssetDimensions dimensions) {
       this.contentType = contentType;
       this.uri = uri;
       this.key = key;
@@ -58,7 +58,7 @@ public final class AssetSourceImpl implements AssetSource {
    }
    
    
-   public com.commercetools.models.Common.AssetDimensions getDimensions(){
+   public com.commercetools.models.common.AssetDimensions getDimensions(){
       return this.dimensions;
    }
 
@@ -74,7 +74,7 @@ public final class AssetSourceImpl implements AssetSource {
       this.key = key;
    }
    
-   public void setDimensions(final com.commercetools.models.Common.AssetDimensions dimensions){
+   public void setDimensions(final com.commercetools.models.common.AssetDimensions dimensions){
       this.dimensions = dimensions;
    }
 

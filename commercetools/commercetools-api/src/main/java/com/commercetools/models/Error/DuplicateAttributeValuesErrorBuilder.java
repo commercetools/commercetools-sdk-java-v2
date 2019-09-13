@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
-import com.commercetools.models.Product.Attribute;
+import com.commercetools.models.error.ErrorObject;
+import com.commercetools.models.product.Attribute;
 import java.lang.String;
-import com.commercetools.models.Error.DuplicateAttributeValuesError;
+import com.commercetools.models.error.DuplicateAttributeValuesError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class DuplicateAttributeValuesErrorBuilder {
    private java.lang.String message;
    
    
-   private java.util.List<com.commercetools.models.Product.Attribute> attributes;
+   private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
    public DuplicateAttributeValuesErrorBuilder message( final java.lang.String message) {
       this.message = message;
       return this;
    }
    
-   public DuplicateAttributeValuesErrorBuilder attributes( final java.util.List<com.commercetools.models.Product.Attribute> attributes) {
+   public DuplicateAttributeValuesErrorBuilder attributes( final java.util.List<com.commercetools.models.product.Attribute> attributes) {
       this.attributes = attributes;
       return this;
    }
@@ -33,7 +33,7 @@ public final class DuplicateAttributeValuesErrorBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Product.Attribute> getAttributes(){
+   public java.util.List<com.commercetools.models.product.Attribute> getAttributes(){
       return this.attributes;
    }
 

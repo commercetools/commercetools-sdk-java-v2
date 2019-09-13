@@ -1,11 +1,11 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Error.MatchingPriceNotFoundErrorImpl;
+import com.commercetools.models.error.MatchingPriceNotFoundErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

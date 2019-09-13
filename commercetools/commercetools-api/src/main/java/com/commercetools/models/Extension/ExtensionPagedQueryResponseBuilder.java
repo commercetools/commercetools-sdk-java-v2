@@ -1,8 +1,8 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.Extension;
+import com.commercetools.models.extension.Extension;
 import java.lang.Long;
-import com.commercetools.models.Extension.ExtensionPagedQueryResponse;
+import com.commercetools.models.extension.ExtensionPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ExtensionPagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Extension.Extension> results;
+   private java.util.List<com.commercetools.models.extension.Extension> results;
    
    public ExtensionPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class ExtensionPagedQueryResponseBuilder {
       return this;
    }
    
-   public ExtensionPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Extension.Extension> results) {
+   public ExtensionPagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.extension.Extension> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class ExtensionPagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.Extension> getResults(){
+   public java.util.List<com.commercetools.models.extension.Extension> getResults(){
       return this.results;
    }
 

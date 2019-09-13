@@ -1,8 +1,8 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Error.ErrorByExtension;
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.error.ErrorByExtension;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -30,14 +30,14 @@ public final class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpd
    
    private java.lang.String message;
    
-   private com.commercetools.models.Common.LocalizedString localizedMessage;
+   private com.commercetools.models.common.LocalizedString localizedMessage;
    
    private java.lang.Object extensionExtraInfo;
    
-   private com.commercetools.models.Error.ErrorByExtension errorByExtension;
+   private com.commercetools.models.error.ErrorByExtension errorByExtension;
 
    @JsonCreator
-   ExtensionUpdateActionsFailedErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("localizedMessage") final com.commercetools.models.Common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final java.lang.Object extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.models.Error.ErrorByExtension errorByExtension) {
+   ExtensionUpdateActionsFailedErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("localizedMessage") final com.commercetools.models.common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final java.lang.Object extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.models.error.ErrorByExtension errorByExtension) {
       this.message = message;
       this.localizedMessage = localizedMessage;
       this.extensionExtraInfo = extensionExtraInfo;
@@ -59,7 +59,7 @@ public final class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpd
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getLocalizedMessage(){
+   public com.commercetools.models.common.LocalizedString getLocalizedMessage(){
       return this.localizedMessage;
    }
    
@@ -69,7 +69,7 @@ public final class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpd
    }
    
    
-   public com.commercetools.models.Error.ErrorByExtension getErrorByExtension(){
+   public com.commercetools.models.error.ErrorByExtension getErrorByExtension(){
       return this.errorByExtension;
    }
 
@@ -77,7 +77,7 @@ public final class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpd
       this.message = message;
    }
    
-   public void setLocalizedMessage(final com.commercetools.models.Common.LocalizedString localizedMessage){
+   public void setLocalizedMessage(final com.commercetools.models.common.LocalizedString localizedMessage){
       this.localizedMessage = localizedMessage;
    }
    
@@ -85,7 +85,7 @@ public final class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpd
       this.extensionExtraInfo = extensionExtraInfo;
    }
    
-   public void setErrorByExtension(final com.commercetools.models.Error.ErrorByExtension errorByExtension){
+   public void setErrorByExtension(final com.commercetools.models.error.ErrorByExtension errorByExtension){
       this.errorByExtension = errorByExtension;
    }
 

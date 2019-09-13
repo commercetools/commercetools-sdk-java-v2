@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Type.TypeChangeLocalizedEnumValueOrderAction;
+import com.commercetools.models.type.TypeChangeLocalizedEnumValueOrderAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyShoppingListChangeTextLineItemNameAction;
+import com.commercetools.models.me.MyShoppingListChangeTextLineItemNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class MyShoppingListChangeTextLineItemNameActionBuilder {
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    
    private java.lang.String textLineItemId;
    
-   public MyShoppingListChangeTextLineItemNameActionBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public MyShoppingListChangeTextLineItemNameActionBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
@@ -28,7 +28,7 @@ public final class MyShoppingListChangeTextLineItemNameActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    

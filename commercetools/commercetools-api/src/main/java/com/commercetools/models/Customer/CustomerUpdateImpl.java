@@ -1,6 +1,6 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerUpdateAction;
+import com.commercetools.models.customer.CustomerUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerUpdateImpl implements CustomerUpdate {
 
-   private java.util.List<com.commercetools.models.Customer.CustomerUpdateAction> actions;
+   private java.util.List<com.commercetools.models.customer.CustomerUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   CustomerUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Customer.CustomerUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   CustomerUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.customer.CustomerUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class CustomerUpdateImpl implements CustomerUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Customer.CustomerUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.customer.CustomerUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class CustomerUpdateImpl implements CustomerUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Customer.CustomerUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.customer.CustomerUpdateAction> actions){
       this.actions = actions;
    }
    

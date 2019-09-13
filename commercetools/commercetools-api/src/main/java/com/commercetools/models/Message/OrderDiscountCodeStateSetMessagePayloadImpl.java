@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.DiscountCodeState;
-import com.commercetools.models.DiscountCode.DiscountCodeReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.DiscountCodeState;
+import com.commercetools.models.discount_code.DiscountCodeReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,14 +27,14 @@ public final class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderD
 
    private java.lang.String type;
    
-   private com.commercetools.models.DiscountCode.DiscountCodeReference discountCode;
+   private com.commercetools.models.discount_code.DiscountCodeReference discountCode;
    
-   private com.commercetools.models.Cart.DiscountCodeState oldState;
+   private com.commercetools.models.cart.DiscountCodeState oldState;
    
-   private com.commercetools.models.Cart.DiscountCodeState state;
+   private com.commercetools.models.cart.DiscountCodeState state;
 
    @JsonCreator
-   OrderDiscountCodeStateSetMessagePayloadImpl(@JsonProperty("discountCode") final com.commercetools.models.DiscountCode.DiscountCodeReference discountCode, @JsonProperty("oldState") final com.commercetools.models.Cart.DiscountCodeState oldState, @JsonProperty("state") final com.commercetools.models.Cart.DiscountCodeState state) {
+   OrderDiscountCodeStateSetMessagePayloadImpl(@JsonProperty("discountCode") final com.commercetools.models.discount_code.DiscountCodeReference discountCode, @JsonProperty("oldState") final com.commercetools.models.cart.DiscountCodeState oldState, @JsonProperty("state") final com.commercetools.models.cart.DiscountCodeState state) {
       this.discountCode = discountCode;
       this.oldState = oldState;
       this.state = state;
@@ -50,29 +50,29 @@ public final class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderD
    }
    
    
-   public com.commercetools.models.DiscountCode.DiscountCodeReference getDiscountCode(){
+   public com.commercetools.models.discount_code.DiscountCodeReference getDiscountCode(){
       return this.discountCode;
    }
    
    
-   public com.commercetools.models.Cart.DiscountCodeState getOldState(){
+   public com.commercetools.models.cart.DiscountCodeState getOldState(){
       return this.oldState;
    }
    
    
-   public com.commercetools.models.Cart.DiscountCodeState getState(){
+   public com.commercetools.models.cart.DiscountCodeState getState(){
       return this.state;
    }
 
-   public void setDiscountCode(final com.commercetools.models.DiscountCode.DiscountCodeReference discountCode){
+   public void setDiscountCode(final com.commercetools.models.discount_code.DiscountCodeReference discountCode){
       this.discountCode = discountCode;
    }
    
-   public void setOldState(final com.commercetools.models.Cart.DiscountCodeState oldState){
+   public void setOldState(final com.commercetools.models.cart.DiscountCodeState oldState){
       this.oldState = oldState;
    }
    
-   public void setState(final com.commercetools.models.Cart.DiscountCodeState state){
+   public void setState(final com.commercetools.models.cart.DiscountCodeState state){
       this.state = state;
    }
 

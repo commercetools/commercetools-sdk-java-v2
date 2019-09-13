@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CategorySetMetaDescriptionActionImpl implements CategorySetMe
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString metaDescription;
+   private com.commercetools.models.common.LocalizedString metaDescription;
 
    @JsonCreator
-   CategorySetMetaDescriptionActionImpl(@JsonProperty("metaDescription") final com.commercetools.models.Common.LocalizedString metaDescription) {
+   CategorySetMetaDescriptionActionImpl(@JsonProperty("metaDescription") final com.commercetools.models.common.LocalizedString metaDescription) {
       this.metaDescription = metaDescription;
       this.action = "setMetaDescription";
    }
@@ -43,11 +43,11 @@ public final class CategorySetMetaDescriptionActionImpl implements CategorySetMe
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getMetaDescription(){
+   public com.commercetools.models.common.LocalizedString getMetaDescription(){
       return this.metaDescription;
    }
 
-   public void setMetaDescription(final com.commercetools.models.Common.LocalizedString metaDescription){
+   public void setMetaDescription(final com.commercetools.models.common.LocalizedString metaDescription){
       this.metaDescription = metaDescription;
    }
 

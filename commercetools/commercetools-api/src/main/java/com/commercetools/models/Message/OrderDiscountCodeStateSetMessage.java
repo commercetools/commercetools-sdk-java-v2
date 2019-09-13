@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.DiscountCodeState;
-import com.commercetools.models.DiscountCode.DiscountCodeReference;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.OrderDiscountCodeStateSetMessageImpl;
+import com.commercetools.models.cart.DiscountCodeState;
+import com.commercetools.models.discount_code.DiscountCodeReference;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.OrderDiscountCodeStateSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

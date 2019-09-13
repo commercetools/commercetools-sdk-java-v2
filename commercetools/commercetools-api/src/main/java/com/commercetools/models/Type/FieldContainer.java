@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
 import java.lang.Object;
-import com.commercetools.models.Type.FieldContainerImpl;
+import com.commercetools.models.type.FieldContainerImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

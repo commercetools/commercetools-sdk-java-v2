@@ -1,9 +1,9 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntryUpdateAction;
+import com.commercetools.models.inventory.InventoryEntryUpdateAction;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Inventory.InventoryEntryRemoveQuantityAction;
+import com.commercetools.models.inventory.InventoryEntryRemoveQuantityAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

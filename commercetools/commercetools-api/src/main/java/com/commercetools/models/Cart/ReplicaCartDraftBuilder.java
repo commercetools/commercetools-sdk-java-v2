@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
 import java.lang.Object;
-import com.commercetools.models.Cart.ReplicaCartDraft;
+import com.commercetools.models.cart.ReplicaCartDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

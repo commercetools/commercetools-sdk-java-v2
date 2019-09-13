@@ -1,8 +1,8 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.ProductDiscount.ProductDiscountReference;
-import com.commercetools.models.Common.DiscountedPrice;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.product_discount.ProductDiscountReference;
+import com.commercetools.models.common.DiscountedPrice;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class DiscountedPriceBuilder {
    
    
-   private com.commercetools.models.ProductDiscount.ProductDiscountReference discount;
+   private com.commercetools.models.product_discount.ProductDiscountReference discount;
    
    
-   private com.commercetools.models.Common.Money value;
+   private com.commercetools.models.common.Money value;
    
-   public DiscountedPriceBuilder discount( final com.commercetools.models.ProductDiscount.ProductDiscountReference discount) {
+   public DiscountedPriceBuilder discount( final com.commercetools.models.product_discount.ProductDiscountReference discount) {
       this.discount = discount;
       return this;
    }
    
-   public DiscountedPriceBuilder value( final com.commercetools.models.Common.Money value) {
+   public DiscountedPriceBuilder value( final com.commercetools.models.common.Money value) {
       this.value = value;
       return this;
    }
    
    
-   public com.commercetools.models.ProductDiscount.ProductDiscountReference getDiscount(){
+   public com.commercetools.models.product_discount.ProductDiscountReference getDiscount(){
       return this.discount;
    }
    
    
-   public com.commercetools.models.Common.Money getValue(){
+   public com.commercetools.models.common.Money getValue(){
       return this.value;
    }
 

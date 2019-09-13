@@ -1,10 +1,10 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.TaxCategory.SubRate;
+import com.commercetools.models.tax_category.SubRate;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.ExternalTaxRateDraftImpl;
+import com.commercetools.models.cart.ExternalTaxRateDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

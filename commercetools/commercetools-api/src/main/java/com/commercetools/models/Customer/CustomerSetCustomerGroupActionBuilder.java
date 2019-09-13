@@ -1,9 +1,9 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerUpdateAction;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
+import com.commercetools.models.customer.CustomerUpdateAction;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerSetCustomerGroupAction;
+import com.commercetools.models.customer.CustomerSetCustomerGroupAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CustomerSetCustomerGroupActionBuilder {
    
    @Nullable
-   private com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
-   public CustomerSetCustomerGroupActionBuilder customerGroup(@Nullable final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup) {
+   public CustomerSetCustomerGroupActionBuilder customerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
       return this.customerGroup;
    }
 

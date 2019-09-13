@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.DiscountCode.DiscountCodeReference;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.discount_code.DiscountCodeReference;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CartRemoveDiscountCodeActionImpl implements CartRemoveDiscoun
 
    private java.lang.String action;
    
-   private com.commercetools.models.DiscountCode.DiscountCodeReference discountCode;
+   private com.commercetools.models.discount_code.DiscountCodeReference discountCode;
 
    @JsonCreator
-   CartRemoveDiscountCodeActionImpl(@JsonProperty("discountCode") final com.commercetools.models.DiscountCode.DiscountCodeReference discountCode) {
+   CartRemoveDiscountCodeActionImpl(@JsonProperty("discountCode") final com.commercetools.models.discount_code.DiscountCodeReference discountCode) {
       this.discountCode = discountCode;
       this.action = "removeDiscountCode";
    }
@@ -43,11 +43,11 @@ public final class CartRemoveDiscountCodeActionImpl implements CartRemoveDiscoun
    }
    
    
-   public com.commercetools.models.DiscountCode.DiscountCodeReference getDiscountCode(){
+   public com.commercetools.models.discount_code.DiscountCodeReference getDiscountCode(){
       return this.discountCode;
    }
 
-   public void setDiscountCode(final com.commercetools.models.DiscountCode.DiscountCodeReference discountCode){
+   public void setDiscountCode(final com.commercetools.models.discount_code.DiscountCodeReference discountCode){
       this.discountCode = discountCode;
    }
 

@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Product.Attribute;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.product.Attribute;
 import java.lang.String;
-import com.commercetools.models.Error.VariantValuesImpl;
+import com.commercetools.models.error.VariantValuesImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

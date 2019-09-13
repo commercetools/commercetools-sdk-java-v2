@@ -1,12 +1,12 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Inventory.InventoryEntryImpl;
+import com.commercetools.models.inventory.InventoryEntryImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

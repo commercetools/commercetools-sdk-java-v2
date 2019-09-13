@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -30,14 +30,14 @@ public final class ProductSetProductPriceCustomTypeActionImpl implements Product
    
    private java.lang.Boolean staged;
    
-   private com.commercetools.models.Type.FieldContainer fields;
+   private com.commercetools.models.type.FieldContainer fields;
    
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
    
    private java.lang.String priceId;
 
    @JsonCreator
-   ProductSetProductPriceCustomTypeActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("fields") final com.commercetools.models.Type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.Type.TypeResourceIdentifier type, @JsonProperty("priceId") final java.lang.String priceId) {
+   ProductSetProductPriceCustomTypeActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type, @JsonProperty("priceId") final java.lang.String priceId) {
       this.staged = staged;
       this.fields = fields;
       this.type = type;
@@ -59,12 +59,12 @@ public final class ProductSetProductPriceCustomTypeActionImpl implements Product
    }
    
    
-   public com.commercetools.models.Type.FieldContainer getFields(){
+   public com.commercetools.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
    
@@ -77,11 +77,11 @@ public final class ProductSetProductPriceCustomTypeActionImpl implements Product
       this.staged = staged;
    }
    
-   public void setFields(final com.commercetools.models.Type.FieldContainer fields){
+   public void setFields(final com.commercetools.models.type.FieldContainer fields){
       this.fields = fields;
    }
    
-   public void setType(final com.commercetools.models.Type.TypeResourceIdentifier type){
+   public void setType(final com.commercetools.models.type.TypeResourceIdentifier type){
       this.type = type;
    }
    

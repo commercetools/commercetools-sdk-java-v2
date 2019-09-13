@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalTaxAmountDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalTaxAmountDraft;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class CartSetLineItemTaxAmountActionImpl implements CartSetLineItem
    
    private java.lang.String lineItemId;
    
-   private com.commercetools.models.Cart.ExternalTaxAmountDraft externalTaxAmount;
+   private com.commercetools.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
    @JsonCreator
-   CartSetLineItemTaxAmountActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("externalTaxAmount") final com.commercetools.models.Cart.ExternalTaxAmountDraft externalTaxAmount) {
+   CartSetLineItemTaxAmountActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("externalTaxAmount") final com.commercetools.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
       this.lineItemId = lineItemId;
       this.externalTaxAmount = externalTaxAmount;
       this.action = "setLineItemTaxAmount";
@@ -51,7 +51,7 @@ public final class CartSetLineItemTaxAmountActionImpl implements CartSetLineItem
    }
    
    
-   public com.commercetools.models.Cart.ExternalTaxAmountDraft getExternalTaxAmount(){
+   public com.commercetools.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
       return this.externalTaxAmount;
    }
 
@@ -59,7 +59,7 @@ public final class CartSetLineItemTaxAmountActionImpl implements CartSetLineItem
       this.lineItemId = lineItemId;
    }
    
-   public void setExternalTaxAmount(final com.commercetools.models.Cart.ExternalTaxAmountDraft externalTaxAmount){
+   public void setExternalTaxAmount(final com.commercetools.models.cart.ExternalTaxAmountDraft externalTaxAmount){
       this.externalTaxAmount = externalTaxAmount;
    }
 

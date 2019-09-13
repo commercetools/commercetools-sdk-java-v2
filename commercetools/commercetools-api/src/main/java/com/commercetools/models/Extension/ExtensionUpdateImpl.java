@@ -1,6 +1,6 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionUpdateAction;
+import com.commercetools.models.extension.ExtensionUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionUpdateImpl implements ExtensionUpdate {
 
-   private java.util.List<com.commercetools.models.Extension.ExtensionUpdateAction> actions;
+   private java.util.List<com.commercetools.models.extension.ExtensionUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   ExtensionUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Extension.ExtensionUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   ExtensionUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.extension.ExtensionUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class ExtensionUpdateImpl implements ExtensionUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.ExtensionUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.extension.ExtensionUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class ExtensionUpdateImpl implements ExtensionUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Extension.ExtensionUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.extension.ExtensionUpdateAction> actions){
       this.actions = actions;
    }
    

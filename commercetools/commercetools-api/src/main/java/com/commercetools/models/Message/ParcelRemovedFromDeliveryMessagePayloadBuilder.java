@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.Parcel;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.Parcel;
 import java.lang.String;
-import com.commercetools.models.Message.ParcelRemovedFromDeliveryMessagePayload;
+import com.commercetools.models.message.ParcelRemovedFromDeliveryMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class ParcelRemovedFromDeliveryMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Order.Parcel parcel;
+   private com.commercetools.models.order.Parcel parcel;
    
    
    private java.lang.String deliveryId;
    
-   public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel( final com.commercetools.models.Order.Parcel parcel) {
+   public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel( final com.commercetools.models.order.Parcel parcel) {
       this.parcel = parcel;
       return this;
    }
@@ -28,7 +28,7 @@ public final class ParcelRemovedFromDeliveryMessagePayloadBuilder {
    }
    
    
-   public com.commercetools.models.Order.Parcel getParcel(){
+   public com.commercetools.models.order.Parcel getParcel(){
       return this.parcel;
    }
    

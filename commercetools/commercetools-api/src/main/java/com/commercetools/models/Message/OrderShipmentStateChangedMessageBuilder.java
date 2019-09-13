@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.ShipmentState;
-import com.commercetools.models.Message.OrderShipmentStateChangedMessage;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.ShipmentState;
+import com.commercetools.models.message.OrderShipmentStateChangedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class OrderShipmentStateChangedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,10 +38,10 @@ public final class OrderShipmentStateChangedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Order.ShipmentState shipmentState;
+   private com.commercetools.models.order.ShipmentState shipmentState;
    
    
-   private com.commercetools.models.Order.ShipmentState oldShipmentState;
+   private com.commercetools.models.order.ShipmentState oldShipmentState;
    
    public OrderShipmentStateChangedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -68,12 +68,12 @@ public final class OrderShipmentStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderShipmentStateChangedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public OrderShipmentStateChangedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public OrderShipmentStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public OrderShipmentStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -88,12 +88,12 @@ public final class OrderShipmentStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderShipmentStateChangedMessageBuilder shipmentState( final com.commercetools.models.Order.ShipmentState shipmentState) {
+   public OrderShipmentStateChangedMessageBuilder shipmentState( final com.commercetools.models.order.ShipmentState shipmentState) {
       this.shipmentState = shipmentState;
       return this;
    }
    
-   public OrderShipmentStateChangedMessageBuilder oldShipmentState( final com.commercetools.models.Order.ShipmentState oldShipmentState) {
+   public OrderShipmentStateChangedMessageBuilder oldShipmentState( final com.commercetools.models.order.ShipmentState oldShipmentState) {
       this.oldShipmentState = oldShipmentState;
       return this;
    }
@@ -124,12 +124,12 @@ public final class OrderShipmentStateChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -144,12 +144,12 @@ public final class OrderShipmentStateChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Order.ShipmentState getShipmentState(){
+   public com.commercetools.models.order.ShipmentState getShipmentState(){
       return this.shipmentState;
    }
    
    
-   public com.commercetools.models.Order.ShipmentState getOldShipmentState(){
+   public com.commercetools.models.order.ShipmentState getOldShipmentState(){
       return this.oldShipmentState;
    }
 

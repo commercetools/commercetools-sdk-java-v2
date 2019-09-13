@@ -27,9 +27,9 @@ public class ByProjectKeyStatesByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.State.StateUpdate stateUpdate;
+   private com.commercetools.models.state.StateUpdate stateUpdate;
    
-   public ByProjectKeyStatesByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.State.StateUpdate stateUpdate){
+   public ByProjectKeyStatesByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.state.StateUpdate stateUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
@@ -53,7 +53,7 @@ public class ByProjectKeyStatesByIDPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.State.State> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.state.State> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyStatesByIDPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.State.State>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.state.State>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.State.State.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.state.State.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

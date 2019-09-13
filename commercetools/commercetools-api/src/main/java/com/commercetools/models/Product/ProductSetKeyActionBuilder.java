@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetKeyAction;
+import com.commercetools.models.product.ProductSetKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.ClientLogging;
-import com.commercetools.models.Common.CreatedBy;
+import com.commercetools.models.common.ClientLogging;
+import com.commercetools.models.common.CreatedBy;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class CreatedByBuilder {
    private java.lang.String externalUserId;
    
    @Nullable
-   private com.commercetools.models.Customer.CustomerReference customer;
+   private com.commercetools.models.customer.CustomerReference customer;
    
    public CreatedByBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
       this.anonymousId = anonymousId;
@@ -36,7 +36,7 @@ public final class CreatedByBuilder {
       return this;
    }
    
-   public CreatedByBuilder customer(@Nullable final com.commercetools.models.Customer.CustomerReference customer) {
+   public CreatedByBuilder customer(@Nullable final com.commercetools.models.customer.CustomerReference customer) {
       this.customer = customer;
       return this;
    }
@@ -57,7 +57,7 @@ public final class CreatedByBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Customer.CustomerReference getCustomer(){
+   public com.commercetools.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
 

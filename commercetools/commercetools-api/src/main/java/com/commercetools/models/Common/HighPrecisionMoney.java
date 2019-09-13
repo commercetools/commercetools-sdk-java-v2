@@ -1,9 +1,9 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.MoneyType;
-import com.commercetools.models.Common.TypedMoney;
+import com.commercetools.models.common.MoneyType;
+import com.commercetools.models.common.TypedMoney;
 import java.lang.Long;
-import com.commercetools.models.Common.HighPrecisionMoneyImpl;
+import com.commercetools.models.common.HighPrecisionMoneyImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

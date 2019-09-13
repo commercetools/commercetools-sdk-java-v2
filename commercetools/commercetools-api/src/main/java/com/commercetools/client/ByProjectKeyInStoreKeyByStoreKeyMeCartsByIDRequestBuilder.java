@@ -20,7 +20,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDRequestBuilder {
       return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet(apiHttpClient, projectKey, storeKey, ID);
    }
    
-   public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost post(com.commercetools.models.Common.Update update) {
+   public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost post(com.commercetools.models.common.Update update) {
       return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost(apiHttpClient, projectKey, storeKey, ID, update);
    }
    

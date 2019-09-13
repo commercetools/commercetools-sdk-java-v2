@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.State.StateResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.state.StateResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -29,10 +29,10 @@ public final class ProductTransitionStateActionImpl implements ProductTransition
    
    private java.lang.Boolean force;
    
-   private com.commercetools.models.State.StateResourceIdentifier state;
+   private com.commercetools.models.state.StateResourceIdentifier state;
 
    @JsonCreator
-   ProductTransitionStateActionImpl(@JsonProperty("force") final java.lang.Boolean force, @JsonProperty("state") final com.commercetools.models.State.StateResourceIdentifier state) {
+   ProductTransitionStateActionImpl(@JsonProperty("force") final java.lang.Boolean force, @JsonProperty("state") final com.commercetools.models.state.StateResourceIdentifier state) {
       this.force = force;
       this.state = state;
       this.action = "transitionState";
@@ -52,7 +52,7 @@ public final class ProductTransitionStateActionImpl implements ProductTransition
    }
    
    
-   public com.commercetools.models.State.StateResourceIdentifier getState(){
+   public com.commercetools.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
 
@@ -60,7 +60,7 @@ public final class ProductTransitionStateActionImpl implements ProductTransition
       this.force = force;
    }
    
-   public void setState(final com.commercetools.models.State.StateResourceIdentifier state){
+   public void setState(final com.commercetools.models.state.StateResourceIdentifier state){
       this.state = state;
    }
 

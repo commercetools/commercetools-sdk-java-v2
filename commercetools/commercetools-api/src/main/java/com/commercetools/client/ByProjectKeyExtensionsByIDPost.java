@@ -27,9 +27,9 @@ public class ByProjectKeyExtensionsByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.Extension.ExtensionUpdate extensionUpdate;
+   private com.commercetools.models.extension.ExtensionUpdate extensionUpdate;
    
-   public ByProjectKeyExtensionsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.Extension.ExtensionUpdate extensionUpdate){
+   public ByProjectKeyExtensionsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.extension.ExtensionUpdate extensionUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
@@ -53,7 +53,7 @@ public class ByProjectKeyExtensionsByIDPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Extension.Extension> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.extension.Extension> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyExtensionsByIDPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Extension.Extension>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.extension.Extension>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Extension.Extension.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.extension.Extension.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

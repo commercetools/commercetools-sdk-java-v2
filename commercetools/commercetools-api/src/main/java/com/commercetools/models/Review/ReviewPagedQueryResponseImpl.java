@@ -1,6 +1,6 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Review.Review;
+import com.commercetools.models.review.Review;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class ReviewPagedQueryResponseImpl implements ReviewPagedQueryRespo
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Review.Review> results;
+   private java.util.List<com.commercetools.models.review.Review> results;
 
    @JsonCreator
-   ReviewPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Review.Review> results) {
+   ReviewPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.review.Review> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class ReviewPagedQueryResponseImpl implements ReviewPagedQueryRespo
    }
    
    
-   public java.util.List<com.commercetools.models.Review.Review> getResults(){
+   public java.util.List<com.commercetools.models.review.Review> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class ReviewPagedQueryResponseImpl implements ReviewPagedQueryRespo
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Review.Review> results){
+   public void setResults(final java.util.List<com.commercetools.models.review.Review> results){
       this.results = results;
    }
 

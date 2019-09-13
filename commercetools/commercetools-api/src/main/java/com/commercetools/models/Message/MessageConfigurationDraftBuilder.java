@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
 import java.lang.Boolean;
 import java.lang.Integer;
-import com.commercetools.models.Message.MessageConfigurationDraft;
+import com.commercetools.models.message.MessageConfigurationDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Type.CustomFields;
-import com.commercetools.models.Message.PaymentInteractionAddedMessageImpl;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.type.CustomFields;
+import com.commercetools.models.message.PaymentInteractionAddedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

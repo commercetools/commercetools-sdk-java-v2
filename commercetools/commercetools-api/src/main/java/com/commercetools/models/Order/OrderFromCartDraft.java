@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.PaymentState;
+import com.commercetools.models.order.PaymentState;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Order.OrderFromCartDraftImpl;
+import com.commercetools.models.order.OrderFromCartDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

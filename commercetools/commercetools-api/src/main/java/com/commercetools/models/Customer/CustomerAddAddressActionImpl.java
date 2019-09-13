@@ -1,7 +1,7 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Customer.CustomerUpdateAction;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.customer.CustomerUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CustomerAddAddressActionImpl implements CustomerAddAddressAct
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
 
    @JsonCreator
-   CustomerAddAddressActionImpl(@JsonProperty("address") final com.commercetools.models.Common.Address address) {
+   CustomerAddAddressActionImpl(@JsonProperty("address") final com.commercetools.models.common.Address address) {
       this.address = address;
       this.action = "addAddress";
    }
@@ -43,11 +43,11 @@ public final class CustomerAddAddressActionImpl implements CustomerAddAddressAct
    }
    
    
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
 
-   public void setAddress(final com.commercetools.models.Common.Address address){
+   public void setAddress(final com.commercetools.models.common.Address address){
       this.address = address;
    }
 

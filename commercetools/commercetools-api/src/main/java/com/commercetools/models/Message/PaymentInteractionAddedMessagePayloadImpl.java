@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.type.CustomFields;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class PaymentInteractionAddedMessagePayloadImpl implements PaymentI
 
    private java.lang.String type;
    
-   private com.commercetools.models.Type.CustomFields interaction;
+   private com.commercetools.models.type.CustomFields interaction;
 
    @JsonCreator
-   PaymentInteractionAddedMessagePayloadImpl(@JsonProperty("interaction") final com.commercetools.models.Type.CustomFields interaction) {
+   PaymentInteractionAddedMessagePayloadImpl(@JsonProperty("interaction") final com.commercetools.models.type.CustomFields interaction) {
       this.interaction = interaction;
       this.type = "PaymentInteractionAdded";
    }
@@ -43,11 +43,11 @@ public final class PaymentInteractionAddedMessagePayloadImpl implements PaymentI
    }
    
    
-   public com.commercetools.models.Type.CustomFields getInteraction(){
+   public com.commercetools.models.type.CustomFields getInteraction(){
       return this.interaction;
    }
 
-   public void setInteraction(final com.commercetools.models.Type.CustomFields interaction){
+   public void setInteraction(final com.commercetools.models.type.CustomFields interaction){
       this.interaction = interaction;
    }
 

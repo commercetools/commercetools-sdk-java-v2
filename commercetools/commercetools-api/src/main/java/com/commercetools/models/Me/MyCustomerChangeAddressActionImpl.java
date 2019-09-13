@@ -1,7 +1,7 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Me.MyCustomerUpdateAction;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.me.MyCustomerUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class MyCustomerChangeAddressActionImpl implements MyCustomerChange
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
    private java.lang.String addressId;
 
    @JsonCreator
-   MyCustomerChangeAddressActionImpl(@JsonProperty("address") final com.commercetools.models.Common.Address address, @JsonProperty("addressId") final java.lang.String addressId) {
+   MyCustomerChangeAddressActionImpl(@JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("addressId") final java.lang.String addressId) {
       this.address = address;
       this.addressId = addressId;
       this.action = "changeAddress";
@@ -46,7 +46,7 @@ public final class MyCustomerChangeAddressActionImpl implements MyCustomerChange
    }
    
    
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
    
@@ -55,7 +55,7 @@ public final class MyCustomerChangeAddressActionImpl implements MyCustomerChange
       return this.addressId;
    }
 
-   public void setAddress(final com.commercetools.models.Common.Address address){
+   public void setAddress(final com.commercetools.models.common.Address address){
       this.address = address;
    }
    

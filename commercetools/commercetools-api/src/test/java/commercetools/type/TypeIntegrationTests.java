@@ -1,6 +1,6 @@
 package commercetools.type;
 
-import com.commercetools.models.Type.*;
+import com.commercetools.models.type.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

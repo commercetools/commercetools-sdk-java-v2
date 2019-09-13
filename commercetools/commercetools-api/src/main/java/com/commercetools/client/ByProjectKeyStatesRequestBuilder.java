@@ -16,7 +16,7 @@ public class ByProjectKeyStatesRequestBuilder {
       return new ByProjectKeyStatesGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyStatesPost post(com.commercetools.models.State.StateDraft stateDraft) {
+   public ByProjectKeyStatesPost post(com.commercetools.models.state.StateDraft stateDraft) {
       return new ByProjectKeyStatesPost(apiHttpClient, projectKey, stateDraft);
    }
    

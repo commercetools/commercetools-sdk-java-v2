@@ -1,7 +1,7 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class MyShoppingListSetTextLineItemDescriptionActionImpl implements
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    private java.lang.String textLineItemId;
 
    @JsonCreator
-   MyShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("description") final com.commercetools.models.Common.LocalizedString description, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
+   MyShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
       this.description = description;
       this.textLineItemId = textLineItemId;
       this.action = "setTextLineItemDescription";
@@ -46,7 +46,7 @@ public final class MyShoppingListSetTextLineItemDescriptionActionImpl implements
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
@@ -55,7 +55,7 @@ public final class MyShoppingListSetTextLineItemDescriptionActionImpl implements
       return this.textLineItemId;
    }
 
-   public void setDescription(final com.commercetools.models.Common.LocalizedString description){
+   public void setDescription(final com.commercetools.models.common.LocalizedString description){
       this.description = description;
    }
    

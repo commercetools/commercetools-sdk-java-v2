@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.DeliveryItem;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.DeliveryItem;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetDeliveryItemsAction;
+import com.commercetools.models.order.OrderSetDeliveryItemsAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class OrderSetDeliveryItemsActionBuilder {
    private java.lang.String deliveryId;
    
    
-   private java.util.List<com.commercetools.models.Order.DeliveryItem> items;
+   private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
    public OrderSetDeliveryItemsActionBuilder deliveryId( final java.lang.String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
    
-   public OrderSetDeliveryItemsActionBuilder items( final java.util.List<com.commercetools.models.Order.DeliveryItem> items) {
+   public OrderSetDeliveryItemsActionBuilder items( final java.util.List<com.commercetools.models.order.DeliveryItem> items) {
       this.items = items;
       return this;
    }
@@ -33,7 +33,7 @@ public final class OrderSetDeliveryItemsActionBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.DeliveryItem> getItems(){
+   public java.util.List<com.commercetools.models.order.DeliveryItem> getItems(){
       return this.items;
    }
 

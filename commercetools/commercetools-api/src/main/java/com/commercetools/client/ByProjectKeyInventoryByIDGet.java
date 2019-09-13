@@ -51,7 +51,7 @@ public class ByProjectKeyInventoryByIDGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Inventory.InventoryEntry> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.inventory.InventoryEntry> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyInventoryByIDGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Inventory.InventoryEntry>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.inventory.InventoryEntry>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Inventory.InventoryEntry.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.inventory.InventoryEntry.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

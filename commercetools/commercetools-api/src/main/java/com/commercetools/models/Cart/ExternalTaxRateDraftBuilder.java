@@ -1,10 +1,10 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.TaxCategory.SubRate;
+import com.commercetools.models.tax_category.SubRate;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class ExternalTaxRateDraftBuilder {
    private java.lang.String state;
    
    @Nullable
-   private java.util.List<com.commercetools.models.TaxCategory.SubRate> subRates;
+   private java.util.List<com.commercetools.models.tax_category.SubRate> subRates;
    
    public ExternalTaxRateDraftBuilder country( final java.lang.String country) {
       this.country = country;
@@ -55,7 +55,7 @@ public final class ExternalTaxRateDraftBuilder {
       return this;
    }
    
-   public ExternalTaxRateDraftBuilder subRates(@Nullable final java.util.List<com.commercetools.models.TaxCategory.SubRate> subRates) {
+   public ExternalTaxRateDraftBuilder subRates(@Nullable final java.util.List<com.commercetools.models.tax_category.SubRate> subRates) {
       this.subRates = subRates;
       return this;
    }
@@ -86,7 +86,7 @@ public final class ExternalTaxRateDraftBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.TaxCategory.SubRate> getSubRates(){
+   public java.util.List<com.commercetools.models.tax_category.SubRate> getSubRates(){
       return this.subRates;
    }
 

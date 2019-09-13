@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.DiscountCodeState;
-import com.commercetools.models.DiscountCode.DiscountCodeReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.DiscountCodeState;
+import com.commercetools.models.discount_code.DiscountCodeReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.OrderDiscountCodeStateSetMessagePayloadImpl;
+import com.commercetools.models.message.OrderDiscountCodeStateSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

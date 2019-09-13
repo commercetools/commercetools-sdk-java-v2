@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.common.Money;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class CartChangeCustomLineItemMoneyActionImpl implements CartChange
    
    private java.lang.String customLineItemId;
    
-   private com.commercetools.models.Common.Money money;
+   private com.commercetools.models.common.Money money;
 
    @JsonCreator
-   CartChangeCustomLineItemMoneyActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("money") final com.commercetools.models.Common.Money money) {
+   CartChangeCustomLineItemMoneyActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("money") final com.commercetools.models.common.Money money) {
       this.customLineItemId = customLineItemId;
       this.money = money;
       this.action = "changeCustomLineItemMoney";
@@ -51,7 +51,7 @@ public final class CartChangeCustomLineItemMoneyActionImpl implements CartChange
    }
    
    
-   public com.commercetools.models.Common.Money getMoney(){
+   public com.commercetools.models.common.Money getMoney(){
       return this.money;
    }
 
@@ -59,7 +59,7 @@ public final class CartChangeCustomLineItemMoneyActionImpl implements CartChange
       this.customLineItemId = customLineItemId;
    }
    
-   public void setMoney(final com.commercetools.models.Common.Money money){
+   public void setMoney(final com.commercetools.models.common.Money money){
       this.money = money;
    }
 

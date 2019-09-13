@@ -1,8 +1,8 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.String;
-import com.commercetools.models.Error.InvalidJsonInputErrorImpl;
+import com.commercetools.models.error.InvalidJsonInputErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,11 +1,11 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity;
-import com.commercetools.models.Cart.TaxedItemPrice;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.models.cart.TaxedItemPrice;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.OrderLineItemDiscountSetMessagePayload;
+import com.commercetools.models.message.OrderLineItemDiscountSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,18 +14,18 @@ import java.time.ZonedDateTime;
 public final class OrderLineItemDiscountSetMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Common.Money totalPrice;
+   private com.commercetools.models.common.Money totalPrice;
    
    
    private java.lang.String lineItemId;
    
    @Nullable
-   private com.commercetools.models.Cart.TaxedItemPrice taxedPrice;
+   private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
    
    
-   private java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+   private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
    
-   public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice( final com.commercetools.models.Common.Money totalPrice) {
+   public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice( final com.commercetools.models.common.Money totalPrice) {
       this.totalPrice = totalPrice;
       return this;
    }
@@ -35,18 +35,18 @@ public final class OrderLineItemDiscountSetMessagePayloadBuilder {
       return this;
    }
    
-   public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(@Nullable final com.commercetools.models.Cart.TaxedItemPrice taxedPrice) {
+   public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(@Nullable final com.commercetools.models.cart.TaxedItemPrice taxedPrice) {
       this.taxedPrice = taxedPrice;
       return this;
    }
    
-   public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity( final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+   public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity( final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
       this.discountedPricePerQuantity = discountedPricePerQuantity;
       return this;
    }
    
    
-   public com.commercetools.models.Common.Money getTotalPrice(){
+   public com.commercetools.models.common.Money getTotalPrice(){
       return this.totalPrice;
    }
    
@@ -56,12 +56,12 @@ public final class OrderLineItemDiscountSetMessagePayloadBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.TaxedItemPrice getTaxedPrice(){
+   public com.commercetools.models.cart.TaxedItemPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
+   public java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
       return this.discountedPricePerQuantity;
    }
 

@@ -1,8 +1,8 @@
 package commercetools.tax_category;
 
-import com.commercetools.models.TaxCategory.TaxCategory;
-import com.commercetools.models.TaxCategory.TaxCategoryDraft;
-import com.commercetools.models.TaxCategory.TaxCategoryDraftBuilder;
+import com.commercetools.models.tax_category.TaxCategory;
+import com.commercetools.models.tax_category.TaxCategoryDraft;
+import com.commercetools.models.tax_category.TaxCategoryDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

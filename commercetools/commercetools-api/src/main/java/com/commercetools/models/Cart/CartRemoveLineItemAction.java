@@ -1,12 +1,12 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalLineItemTotalPrice;
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.common.Money;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.CartRemoveLineItemActionImpl;
+import com.commercetools.models.cart.CartRemoveLineItemActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

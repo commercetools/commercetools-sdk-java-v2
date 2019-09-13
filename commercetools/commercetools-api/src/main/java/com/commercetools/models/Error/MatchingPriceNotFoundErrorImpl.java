@@ -1,8 +1,8 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -34,16 +34,16 @@ public final class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFou
    
    private java.lang.String productId;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
-   private com.commercetools.models.Channel.ChannelReference channel;
+   private com.commercetools.models.channel.ChannelReference channel;
    
    private java.lang.String currency;
    
    private java.lang.Integer variantId;
 
    @JsonCreator
-   MatchingPriceNotFoundErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("country") final java.lang.String country, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("customerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup, @JsonProperty("channel") final com.commercetools.models.Channel.ChannelReference channel, @JsonProperty("currency") final java.lang.String currency, @JsonProperty("variantId") final java.lang.Integer variantId) {
+   MatchingPriceNotFoundErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("country") final java.lang.String country, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("currency") final java.lang.String currency, @JsonProperty("variantId") final java.lang.Integer variantId) {
       this.message = message;
       this.country = country;
       this.productId = productId;
@@ -78,12 +78,12 @@ public final class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFou
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    
-   public com.commercetools.models.Channel.ChannelReference getChannel(){
+   public com.commercetools.models.channel.ChannelReference getChannel(){
       return this.channel;
    }
    
@@ -109,11 +109,11 @@ public final class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFou
       this.productId = productId;
    }
    
-   public void setCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup){
+   public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupReference customerGroup){
       this.customerGroup = customerGroup;
    }
    
-   public void setChannel(final com.commercetools.models.Channel.ChannelReference channel){
+   public void setChannel(final com.commercetools.models.channel.ChannelReference channel){
       this.channel = channel;
    }
    

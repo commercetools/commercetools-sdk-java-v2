@@ -59,7 +59,7 @@ public class ByProjectKeyZonesGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Zone.ZonePagedQueryResponse> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.zone.ZonePagedQueryResponse> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -67,9 +67,9 @@ public class ByProjectKeyZonesGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Zone.ZonePagedQueryResponse>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.zone.ZonePagedQueryResponse>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Zone.ZonePagedQueryResponse.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.zone.ZonePagedQueryResponse.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

@@ -1,10 +1,10 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.BaseResource;
-import com.commercetools.models.Product.FacetResults;
+import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.product.FacetResults;
 import java.lang.Long;
 import java.lang.Object;
-import com.commercetools.models.Common.PagedQueryResponse;
+import com.commercetools.models.common.PagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class PagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Common.BaseResource> results;
+   private java.util.List<com.commercetools.models.common.BaseResource> results;
    
    @Nullable
-   private com.commercetools.models.Product.FacetResults facets;
+   private com.commercetools.models.product.FacetResults facets;
    
    public PagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -50,12 +50,12 @@ public final class PagedQueryResponseBuilder {
       return this;
    }
    
-   public PagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Common.BaseResource> results) {
+   public PagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.common.BaseResource> results) {
       this.results = results;
       return this;
    }
    
-   public PagedQueryResponseBuilder facets(@Nullable final com.commercetools.models.Product.FacetResults facets) {
+   public PagedQueryResponseBuilder facets(@Nullable final com.commercetools.models.product.FacetResults facets) {
       this.facets = facets;
       return this;
    }
@@ -81,12 +81,12 @@ public final class PagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.BaseResource> getResults(){
+   public java.util.List<com.commercetools.models.common.BaseResource> getResults(){
       return this.results;
    }
    
    @Nullable
-   public com.commercetools.models.Product.FacetResults getFacets(){
+   public com.commercetools.models.product.FacetResults getFacets(){
       return this.facets;
    }
 

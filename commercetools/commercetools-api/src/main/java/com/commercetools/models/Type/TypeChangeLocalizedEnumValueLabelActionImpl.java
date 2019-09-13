@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.CustomFieldLocalizedEnumValue;
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.CustomFieldLocalizedEnumValue;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeCh
    
    private java.lang.String fieldName;
    
-   private com.commercetools.models.Type.CustomFieldLocalizedEnumValue value;
+   private com.commercetools.models.type.CustomFieldLocalizedEnumValue value;
 
    @JsonCreator
-   TypeChangeLocalizedEnumValueLabelActionImpl(@JsonProperty("fieldName") final java.lang.String fieldName, @JsonProperty("value") final com.commercetools.models.Type.CustomFieldLocalizedEnumValue value) {
+   TypeChangeLocalizedEnumValueLabelActionImpl(@JsonProperty("fieldName") final java.lang.String fieldName, @JsonProperty("value") final com.commercetools.models.type.CustomFieldLocalizedEnumValue value) {
       this.fieldName = fieldName;
       this.value = value;
       this.action = "changeLocalizedEnumValueLabel";
@@ -51,7 +51,7 @@ public final class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeCh
    }
    
    
-   public com.commercetools.models.Type.CustomFieldLocalizedEnumValue getValue(){
+   public com.commercetools.models.type.CustomFieldLocalizedEnumValue getValue(){
       return this.value;
    }
 
@@ -59,7 +59,7 @@ public final class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeCh
       this.fieldName = fieldName;
    }
    
-   public void setValue(final com.commercetools.models.Type.CustomFieldLocalizedEnumValue value){
+   public void setValue(final com.commercetools.models.type.CustomFieldLocalizedEnumValue value){
       this.value = value;
    }
 

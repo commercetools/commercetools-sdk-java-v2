@@ -1,6 +1,6 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ItemShippingTarget;
+import com.commercetools.models.cart.ItemShippingTarget;
 import java.lang.Boolean;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,10 +25,10 @@ public final class ItemShippingDetailsImpl implements ItemShippingDetails {
 
    private java.lang.Boolean valid;
    
-   private java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targets;
+   private java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets;
 
    @JsonCreator
-   ItemShippingDetailsImpl(@JsonProperty("valid") final java.lang.Boolean valid, @JsonProperty("targets") final java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targets) {
+   ItemShippingDetailsImpl(@JsonProperty("valid") final java.lang.Boolean valid, @JsonProperty("targets") final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets) {
       this.valid = valid;
       this.targets = targets;
    }
@@ -42,7 +42,7 @@ public final class ItemShippingDetailsImpl implements ItemShippingDetails {
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.ItemShippingTarget> getTargets(){
+   public java.util.List<com.commercetools.models.cart.ItemShippingTarget> getTargets(){
       return this.targets;
    }
 
@@ -50,7 +50,7 @@ public final class ItemShippingDetailsImpl implements ItemShippingDetails {
       this.valid = valid;
    }
    
-   public void setTargets(final java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targets){
+   public void setTargets(final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets){
       this.targets = targets;
    }
 

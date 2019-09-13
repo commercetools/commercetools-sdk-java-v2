@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.AssetDraft;
-import com.commercetools.models.Common.Image;
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Product.Attribute;
+import com.commercetools.models.common.AssetDraft;
+import com.commercetools.models.common.Image;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.product.Attribute;
 import java.lang.String;
-import com.commercetools.models.Product.ProductVariantDraft;
+import com.commercetools.models.product.ProductVariantDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,16 +14,16 @@ import java.time.ZonedDateTime;
 public final class ProductVariantDraftBuilder {
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.Image> images;
+   private java.util.List<com.commercetools.models.common.Image> images;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.AssetDraft> assets;
+   private java.util.List<com.commercetools.models.common.AssetDraft> assets;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Product.Attribute> attributes;
+   private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.PriceDraft> prices;
+   private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
    @Nullable
    private java.lang.String sku;
@@ -31,22 +31,22 @@ public final class ProductVariantDraftBuilder {
    @Nullable
    private java.lang.String key;
    
-   public ProductVariantDraftBuilder images(@Nullable final java.util.List<com.commercetools.models.Common.Image> images) {
+   public ProductVariantDraftBuilder images(@Nullable final java.util.List<com.commercetools.models.common.Image> images) {
       this.images = images;
       return this;
    }
    
-   public ProductVariantDraftBuilder assets(@Nullable final java.util.List<com.commercetools.models.Common.AssetDraft> assets) {
+   public ProductVariantDraftBuilder assets(@Nullable final java.util.List<com.commercetools.models.common.AssetDraft> assets) {
       this.assets = assets;
       return this;
    }
    
-   public ProductVariantDraftBuilder attributes(@Nullable final java.util.List<com.commercetools.models.Product.Attribute> attributes) {
+   public ProductVariantDraftBuilder attributes(@Nullable final java.util.List<com.commercetools.models.product.Attribute> attributes) {
       this.attributes = attributes;
       return this;
    }
    
-   public ProductVariantDraftBuilder prices(@Nullable final java.util.List<com.commercetools.models.Common.PriceDraft> prices) {
+   public ProductVariantDraftBuilder prices(@Nullable final java.util.List<com.commercetools.models.common.PriceDraft> prices) {
       this.prices = prices;
       return this;
    }
@@ -62,22 +62,22 @@ public final class ProductVariantDraftBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.Image> getImages(){
+   public java.util.List<com.commercetools.models.common.Image> getImages(){
       return this.images;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.AssetDraft> getAssets(){
+   public java.util.List<com.commercetools.models.common.AssetDraft> getAssets(){
       return this.assets;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Product.Attribute> getAttributes(){
+   public java.util.List<com.commercetools.models.product.Attribute> getAttributes(){
       return this.attributes;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.PriceDraft> getPrices(){
+   public java.util.List<com.commercetools.models.common.PriceDraft> getPrices(){
       return this.prices;
    }
    

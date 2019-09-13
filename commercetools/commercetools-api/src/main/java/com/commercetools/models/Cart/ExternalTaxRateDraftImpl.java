@@ -1,6 +1,6 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.TaxCategory.SubRate;
+import com.commercetools.models.tax_category.SubRate;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,10 +35,10 @@ public final class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft {
    
    private java.lang.String state;
    
-   private java.util.List<com.commercetools.models.TaxCategory.SubRate> subRates;
+   private java.util.List<com.commercetools.models.tax_category.SubRate> subRates;
 
    @JsonCreator
-   ExternalTaxRateDraftImpl(@JsonProperty("country") final java.lang.String country, @JsonProperty("amount") final java.lang.Integer amount, @JsonProperty("includedInPrice") final java.lang.Boolean includedInPrice, @JsonProperty("name") final java.lang.String name, @JsonProperty("state") final java.lang.String state, @JsonProperty("subRates") final java.util.List<com.commercetools.models.TaxCategory.SubRate> subRates) {
+   ExternalTaxRateDraftImpl(@JsonProperty("country") final java.lang.String country, @JsonProperty("amount") final java.lang.Integer amount, @JsonProperty("includedInPrice") final java.lang.Boolean includedInPrice, @JsonProperty("name") final java.lang.String name, @JsonProperty("state") final java.lang.String state, @JsonProperty("subRates") final java.util.List<com.commercetools.models.tax_category.SubRate> subRates) {
       this.country = country;
       this.amount = amount;
       this.includedInPrice = includedInPrice;
@@ -76,7 +76,7 @@ public final class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft {
    }
    
    
-   public java.util.List<com.commercetools.models.TaxCategory.SubRate> getSubRates(){
+   public java.util.List<com.commercetools.models.tax_category.SubRate> getSubRates(){
       return this.subRates;
    }
 
@@ -100,7 +100,7 @@ public final class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft {
       this.state = state;
    }
    
-   public void setSubRates(final java.util.List<com.commercetools.models.TaxCategory.SubRate> subRates){
+   public void setSubRates(final java.util.List<com.commercetools.models.tax_category.SubRate> subRates){
       this.subRates = subRates;
    }
 

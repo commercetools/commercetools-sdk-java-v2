@@ -27,9 +27,9 @@ public class ByProjectKeyInventoryByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.Inventory.InventoryEntryUpdate inventoryEntryUpdate;
+   private com.commercetools.models.inventory.InventoryEntryUpdate inventoryEntryUpdate;
    
-   public ByProjectKeyInventoryByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.Inventory.InventoryEntryUpdate inventoryEntryUpdate){
+   public ByProjectKeyInventoryByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.inventory.InventoryEntryUpdate inventoryEntryUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
@@ -53,7 +53,7 @@ public class ByProjectKeyInventoryByIDPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Inventory.InventoryEntry> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.inventory.InventoryEntry> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyInventoryByIDPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Inventory.InventoryEntry>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.inventory.InventoryEntry>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Inventory.InventoryEntry.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.inventory.InventoryEntry.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

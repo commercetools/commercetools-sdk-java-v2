@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.TypeTextInputHint;
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.TypeTextInputHint;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class TypeChangeInputHintActionImpl implements TypeChangeInputHintA
    
    private java.lang.String fieldName;
    
-   private com.commercetools.models.Type.TypeTextInputHint inputHint;
+   private com.commercetools.models.type.TypeTextInputHint inputHint;
 
    @JsonCreator
-   TypeChangeInputHintActionImpl(@JsonProperty("fieldName") final java.lang.String fieldName, @JsonProperty("inputHint") final com.commercetools.models.Type.TypeTextInputHint inputHint) {
+   TypeChangeInputHintActionImpl(@JsonProperty("fieldName") final java.lang.String fieldName, @JsonProperty("inputHint") final com.commercetools.models.type.TypeTextInputHint inputHint) {
       this.fieldName = fieldName;
       this.inputHint = inputHint;
       this.action = "changeInputHint";
@@ -51,7 +51,7 @@ public final class TypeChangeInputHintActionImpl implements TypeChangeInputHintA
    }
    
    
-   public com.commercetools.models.Type.TypeTextInputHint getInputHint(){
+   public com.commercetools.models.type.TypeTextInputHint getInputHint(){
       return this.inputHint;
    }
 
@@ -59,7 +59,7 @@ public final class TypeChangeInputHintActionImpl implements TypeChangeInputHintA
       this.fieldName = fieldName;
    }
    
-   public void setInputHint(final com.commercetools.models.Type.TypeTextInputHint inputHint){
+   public void setInputHint(final com.commercetools.models.type.TypeTextInputHint inputHint){
       this.inputHint = inputHint;
    }
 

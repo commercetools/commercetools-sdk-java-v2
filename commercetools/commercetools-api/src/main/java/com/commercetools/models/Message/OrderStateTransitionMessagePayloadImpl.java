@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.state.StateReference;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -29,10 +29,10 @@ public final class OrderStateTransitionMessagePayloadImpl implements OrderStateT
    
    private java.lang.Boolean force;
    
-   private com.commercetools.models.State.StateReference state;
+   private com.commercetools.models.state.StateReference state;
 
    @JsonCreator
-   OrderStateTransitionMessagePayloadImpl(@JsonProperty("force") final java.lang.Boolean force, @JsonProperty("state") final com.commercetools.models.State.StateReference state) {
+   OrderStateTransitionMessagePayloadImpl(@JsonProperty("force") final java.lang.Boolean force, @JsonProperty("state") final com.commercetools.models.state.StateReference state) {
       this.force = force;
       this.state = state;
       this.type = "OrderStateTransition";
@@ -52,7 +52,7 @@ public final class OrderStateTransitionMessagePayloadImpl implements OrderStateT
    }
    
    
-   public com.commercetools.models.State.StateReference getState(){
+   public com.commercetools.models.state.StateReference getState(){
       return this.state;
    }
 
@@ -60,7 +60,7 @@ public final class OrderStateTransitionMessagePayloadImpl implements OrderStateT
       this.force = force;
    }
    
-   public void setState(final com.commercetools.models.State.StateReference state){
+   public void setState(final com.commercetools.models.state.StateReference state){
       this.state = state;
    }
 

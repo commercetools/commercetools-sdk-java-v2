@@ -1,8 +1,8 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Extension.ExtensionDestination;
-import com.commercetools.models.Extension.ExtensionTrigger;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.extension.ExtensionDestination;
+import com.commercetools.models.extension.ExtensionTrigger;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -34,20 +34,20 @@ public final class ExtensionImpl implements Extension {
    
    private java.lang.Long version;
    
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    private java.lang.Integer timeoutInMs;
    
-   private com.commercetools.models.Extension.ExtensionDestination destination;
+   private com.commercetools.models.extension.ExtensionDestination destination;
    
-   private java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers;
+   private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
    
    private java.lang.String key;
 
    @JsonCreator
-   ExtensionImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.Common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.Common.LastModifiedBy lastModifiedBy, @JsonProperty("timeoutInMs") final java.lang.Integer timeoutInMs, @JsonProperty("destination") final com.commercetools.models.Extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers, @JsonProperty("key") final java.lang.String key) {
+   ExtensionImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("timeoutInMs") final java.lang.Integer timeoutInMs, @JsonProperty("destination") final com.commercetools.models.extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers, @JsonProperty("key") final java.lang.String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -84,12 +84,12 @@ public final class ExtensionImpl implements Extension {
    }
    
    
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
@@ -99,12 +99,12 @@ public final class ExtensionImpl implements Extension {
    }
    
    
-   public com.commercetools.models.Extension.ExtensionDestination getDestination(){
+   public com.commercetools.models.extension.ExtensionDestination getDestination(){
       return this.destination;
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.ExtensionTrigger> getTriggers(){
+   public java.util.List<com.commercetools.models.extension.ExtensionTrigger> getTriggers(){
       return this.triggers;
    }
    
@@ -129,11 +129,11 @@ public final class ExtensionImpl implements Extension {
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.models.Common.CreatedBy createdBy){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
       this.createdBy = createdBy;
    }
    
-   public void setLastModifiedBy(final com.commercetools.models.Common.LastModifiedBy lastModifiedBy){
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
    
@@ -141,11 +141,11 @@ public final class ExtensionImpl implements Extension {
       this.timeoutInMs = timeoutInMs;
    }
    
-   public void setDestination(final com.commercetools.models.Extension.ExtensionDestination destination){
+   public void setDestination(final com.commercetools.models.extension.ExtensionDestination destination){
       this.destination = destination;
    }
    
-   public void setTriggers(final java.util.List<com.commercetools.models.Extension.ExtensionTrigger> triggers){
+   public void setTriggers(final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers){
       this.triggers = triggers;
    }
    

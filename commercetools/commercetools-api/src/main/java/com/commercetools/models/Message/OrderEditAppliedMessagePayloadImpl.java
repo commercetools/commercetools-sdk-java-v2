@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.OrderEdit.OrderEditApplied;
-import com.commercetools.models.OrderEdit.OrderEditReference;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order_edit.OrderEditApplied;
+import com.commercetools.models.order_edit.OrderEditReference;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,12 +27,12 @@ public final class OrderEditAppliedMessagePayloadImpl implements OrderEditApplie
 
    private java.lang.String type;
    
-   private com.commercetools.models.OrderEdit.OrderEditApplied result;
+   private com.commercetools.models.order_edit.OrderEditApplied result;
    
-   private com.commercetools.models.OrderEdit.OrderEditReference edit;
+   private com.commercetools.models.order_edit.OrderEditReference edit;
 
    @JsonCreator
-   OrderEditAppliedMessagePayloadImpl(@JsonProperty("result") final com.commercetools.models.OrderEdit.OrderEditApplied result, @JsonProperty("edit") final com.commercetools.models.OrderEdit.OrderEditReference edit) {
+   OrderEditAppliedMessagePayloadImpl(@JsonProperty("result") final com.commercetools.models.order_edit.OrderEditApplied result, @JsonProperty("edit") final com.commercetools.models.order_edit.OrderEditReference edit) {
       this.result = result;
       this.edit = edit;
       this.type = "OrderEditApplied";
@@ -47,20 +47,20 @@ public final class OrderEditAppliedMessagePayloadImpl implements OrderEditApplie
    }
    
    
-   public com.commercetools.models.OrderEdit.OrderEditApplied getResult(){
+   public com.commercetools.models.order_edit.OrderEditApplied getResult(){
       return this.result;
    }
    
    
-   public com.commercetools.models.OrderEdit.OrderEditReference getEdit(){
+   public com.commercetools.models.order_edit.OrderEditReference getEdit(){
       return this.edit;
    }
 
-   public void setResult(final com.commercetools.models.OrderEdit.OrderEditApplied result){
+   public void setResult(final com.commercetools.models.order_edit.OrderEditApplied result){
       this.result = result;
    }
    
-   public void setEdit(final com.commercetools.models.OrderEdit.OrderEditReference edit){
+   public void setEdit(final com.commercetools.models.order_edit.OrderEditReference edit){
       this.edit = edit;
    }
 

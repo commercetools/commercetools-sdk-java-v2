@@ -1,6 +1,6 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.AnonymousCartSignInMode;
+import com.commercetools.models.customer.AnonymousCartSignInMode;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,14 +27,14 @@ public final class CustomerSigninImpl implements CustomerSignin {
    
    private java.lang.String password;
    
-   private com.commercetools.models.Customer.AnonymousCartSignInMode anonymousCartSignInMode;
+   private com.commercetools.models.customer.AnonymousCartSignInMode anonymousCartSignInMode;
    
    private java.lang.String anonymousCartId;
    
    private java.lang.String email;
 
    @JsonCreator
-   CustomerSigninImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("password") final java.lang.String password, @JsonProperty("anonymousCartSignInMode") final com.commercetools.models.Customer.AnonymousCartSignInMode anonymousCartSignInMode, @JsonProperty("anonymousCartId") final java.lang.String anonymousCartId, @JsonProperty("email") final java.lang.String email) {
+   CustomerSigninImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("password") final java.lang.String password, @JsonProperty("anonymousCartSignInMode") final com.commercetools.models.customer.AnonymousCartSignInMode anonymousCartSignInMode, @JsonProperty("anonymousCartId") final java.lang.String anonymousCartId, @JsonProperty("email") final java.lang.String email) {
       this.anonymousId = anonymousId;
       this.password = password;
       this.anonymousCartSignInMode = anonymousCartSignInMode;
@@ -56,7 +56,7 @@ public final class CustomerSigninImpl implements CustomerSignin {
    }
    
    
-   public com.commercetools.models.Customer.AnonymousCartSignInMode getAnonymousCartSignInMode(){
+   public com.commercetools.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode(){
       return this.anonymousCartSignInMode;
    }
    
@@ -78,7 +78,7 @@ public final class CustomerSigninImpl implements CustomerSignin {
       this.password = password;
    }
    
-   public void setAnonymousCartSignInMode(final com.commercetools.models.Customer.AnonymousCartSignInMode anonymousCartSignInMode){
+   public void setAnonymousCartSignInMode(final com.commercetools.models.customer.AnonymousCartSignInMode anonymousCartSignInMode){
       this.anonymousCartSignInMode = anonymousCartSignInMode;
    }
    

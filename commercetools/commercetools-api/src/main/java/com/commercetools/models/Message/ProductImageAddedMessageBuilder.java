@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Image;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.common.Image;
+import com.commercetools.models.message.Message;
 import java.lang.Boolean;
 import java.lang.Long;
-import com.commercetools.models.Message.ProductImageAddedMessage;
+import com.commercetools.models.message.ProductImageAddedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -28,10 +28,10 @@ public final class ProductImageAddedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -40,7 +40,7 @@ public final class ProductImageAddedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Common.Image image;
+   private com.commercetools.models.common.Image image;
    
    
    private java.lang.Boolean staged;
@@ -73,12 +73,12 @@ public final class ProductImageAddedMessageBuilder {
       return this;
    }
    
-   public ProductImageAddedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public ProductImageAddedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public ProductImageAddedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public ProductImageAddedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -93,7 +93,7 @@ public final class ProductImageAddedMessageBuilder {
       return this;
    }
    
-   public ProductImageAddedMessageBuilder image( final com.commercetools.models.Common.Image image) {
+   public ProductImageAddedMessageBuilder image( final com.commercetools.models.common.Image image) {
       this.image = image;
       return this;
    }
@@ -134,12 +134,12 @@ public final class ProductImageAddedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -154,7 +154,7 @@ public final class ProductImageAddedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Image getImage(){
+   public com.commercetools.models.common.Image getImage(){
       return this.image;
    }
    

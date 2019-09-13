@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Payment.PaymentReference;
-import com.commercetools.models.Order.PaymentInfoImpl;
+import com.commercetools.models.payment.PaymentReference;
+import com.commercetools.models.order.PaymentInfoImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

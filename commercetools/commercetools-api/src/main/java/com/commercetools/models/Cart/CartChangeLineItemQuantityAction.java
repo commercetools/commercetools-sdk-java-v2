@@ -1,11 +1,11 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalLineItemTotalPrice;
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.models.common.Money;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.CartChangeLineItemQuantityActionImpl;
+import com.commercetools.models.cart.CartChangeLineItemQuantityActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

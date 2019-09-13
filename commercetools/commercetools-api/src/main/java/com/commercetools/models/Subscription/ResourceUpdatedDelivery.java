@@ -1,10 +1,10 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.SubscriptionDelivery;
+import com.commercetools.models.subscription.SubscriptionDelivery;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Subscription.ResourceUpdatedDeliveryImpl;
+import com.commercetools.models.subscription.ResourceUpdatedDeliveryImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

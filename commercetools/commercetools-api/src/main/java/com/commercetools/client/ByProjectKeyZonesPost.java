@@ -26,9 +26,9 @@ public class ByProjectKeyZonesPost {
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
-   private com.commercetools.models.Zone.ZoneDraft zoneDraft;
+   private com.commercetools.models.zone.ZoneDraft zoneDraft;
    
-   public ByProjectKeyZonesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Zone.ZoneDraft zoneDraft){
+   public ByProjectKeyZonesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.zone.ZoneDraft zoneDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.zoneDraft = zoneDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyZonesPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Zone.Zone> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.zone.Zone> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyZonesPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Zone.Zone>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.zone.Zone>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Zone.Zone.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.zone.Zone.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

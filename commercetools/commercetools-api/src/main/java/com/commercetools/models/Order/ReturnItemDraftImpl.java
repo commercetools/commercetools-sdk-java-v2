@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.ReturnShipmentState;
+import com.commercetools.models.order.ReturnShipmentState;
 import java.lang.Long;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReturnItemDraftImpl implements ReturnItemDraft {
 
-   private com.commercetools.models.Order.ReturnShipmentState shipmentState;
+   private com.commercetools.models.order.ReturnShipmentState shipmentState;
    
    private java.lang.String customLineItemId;
    
@@ -35,7 +35,7 @@ public final class ReturnItemDraftImpl implements ReturnItemDraft {
    private java.lang.String comment;
 
    @JsonCreator
-   ReturnItemDraftImpl(@JsonProperty("shipmentState") final com.commercetools.models.Order.ReturnShipmentState shipmentState, @JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("comment") final java.lang.String comment) {
+   ReturnItemDraftImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ReturnShipmentState shipmentState, @JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("comment") final java.lang.String comment) {
       this.shipmentState = shipmentState;
       this.customLineItemId = customLineItemId;
       this.quantity = quantity;
@@ -47,7 +47,7 @@ public final class ReturnItemDraftImpl implements ReturnItemDraft {
    }
    
    
-   public com.commercetools.models.Order.ReturnShipmentState getShipmentState(){
+   public com.commercetools.models.order.ReturnShipmentState getShipmentState(){
       return this.shipmentState;
    }
    
@@ -71,7 +71,7 @@ public final class ReturnItemDraftImpl implements ReturnItemDraft {
       return this.comment;
    }
 
-   public void setShipmentState(final com.commercetools.models.Order.ReturnShipmentState shipmentState){
+   public void setShipmentState(final com.commercetools.models.order.ReturnShipmentState shipmentState){
       this.shipmentState = shipmentState;
    }
    

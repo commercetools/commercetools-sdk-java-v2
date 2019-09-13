@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.LineItem;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.LineItem;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.Long;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -27,12 +27,12 @@ public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItem
 
    private java.lang.String type;
    
-   private com.commercetools.models.Cart.LineItem lineItem;
+   private com.commercetools.models.cart.LineItem lineItem;
    
    private java.lang.Long addedQuantity;
 
    @JsonCreator
-   OrderLineItemAddedMessagePayloadImpl(@JsonProperty("lineItem") final com.commercetools.models.Cart.LineItem lineItem, @JsonProperty("addedQuantity") final java.lang.Long addedQuantity) {
+   OrderLineItemAddedMessagePayloadImpl(@JsonProperty("lineItem") final com.commercetools.models.cart.LineItem lineItem, @JsonProperty("addedQuantity") final java.lang.Long addedQuantity) {
       this.lineItem = lineItem;
       this.addedQuantity = addedQuantity;
       this.type = "OrderLineItemAdded";
@@ -47,7 +47,7 @@ public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItem
    }
    
    
-   public com.commercetools.models.Cart.LineItem getLineItem(){
+   public com.commercetools.models.cart.LineItem getLineItem(){
       return this.lineItem;
    }
    
@@ -56,7 +56,7 @@ public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItem
       return this.addedQuantity;
    }
 
-   public void setLineItem(final com.commercetools.models.Cart.LineItem lineItem){
+   public void setLineItem(final com.commercetools.models.cart.LineItem lineItem){
       this.lineItem = lineItem;
    }
    

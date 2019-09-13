@@ -1,6 +1,6 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductData;
+import com.commercetools.models.product.ProductData;
 import java.lang.Boolean;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductCatalogDataImpl implements ProductCatalogData {
 
-   private com.commercetools.models.Product.ProductData current;
+   private com.commercetools.models.product.ProductData current;
    
-   private com.commercetools.models.Product.ProductData staged;
+   private com.commercetools.models.product.ProductData staged;
    
    private java.lang.Boolean published;
    
    private java.lang.Boolean hasStagedChanges;
 
    @JsonCreator
-   ProductCatalogDataImpl(@JsonProperty("current") final com.commercetools.models.Product.ProductData current, @JsonProperty("staged") final com.commercetools.models.Product.ProductData staged, @JsonProperty("published") final java.lang.Boolean published, @JsonProperty("hasStagedChanges") final java.lang.Boolean hasStagedChanges) {
+   ProductCatalogDataImpl(@JsonProperty("current") final com.commercetools.models.product.ProductData current, @JsonProperty("staged") final com.commercetools.models.product.ProductData staged, @JsonProperty("published") final java.lang.Boolean published, @JsonProperty("hasStagedChanges") final java.lang.Boolean hasStagedChanges) {
       this.current = current;
       this.staged = staged;
       this.published = published;
@@ -43,12 +43,12 @@ public final class ProductCatalogDataImpl implements ProductCatalogData {
    }
    
    
-   public com.commercetools.models.Product.ProductData getCurrent(){
+   public com.commercetools.models.product.ProductData getCurrent(){
       return this.current;
    }
    
    
-   public com.commercetools.models.Product.ProductData getStaged(){
+   public com.commercetools.models.product.ProductData getStaged(){
       return this.staged;
    }
    
@@ -62,11 +62,11 @@ public final class ProductCatalogDataImpl implements ProductCatalogData {
       return this.hasStagedChanges;
    }
 
-   public void setCurrent(final com.commercetools.models.Product.ProductData current){
+   public void setCurrent(final com.commercetools.models.product.ProductData current){
       this.current = current;
    }
    
-   public void setStaged(final com.commercetools.models.Product.ProductData staged){
+   public void setStaged(final com.commercetools.models.product.ProductData staged){
       this.staged = staged;
    }
    

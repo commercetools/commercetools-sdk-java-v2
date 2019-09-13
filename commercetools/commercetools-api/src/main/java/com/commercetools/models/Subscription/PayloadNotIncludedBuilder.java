@@ -1,7 +1,7 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
 import java.lang.String;
-import com.commercetools.models.Subscription.PayloadNotIncluded;
+import com.commercetools.models.subscription.PayloadNotIncluded;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

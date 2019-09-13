@@ -1,10 +1,10 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Error.DuplicateFieldWithConflictingResourceError;
+import com.commercetools.models.error.DuplicateFieldWithConflictingResourceError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
    private java.lang.String message;
    
    
-   private com.commercetools.models.Common.Reference conflictingResource;
+   private com.commercetools.models.common.Reference conflictingResource;
    
    
    private java.lang.Object duplicateValue;
@@ -29,7 +29,7 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
       return this;
    }
    
-   public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource( final com.commercetools.models.Common.Reference conflictingResource) {
+   public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource( final com.commercetools.models.common.Reference conflictingResource) {
       this.conflictingResource = conflictingResource;
       return this;
    }
@@ -50,7 +50,7 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getConflictingResource(){
+   public com.commercetools.models.common.Reference getConflictingResource(){
       return this.conflictingResource;
    }
    

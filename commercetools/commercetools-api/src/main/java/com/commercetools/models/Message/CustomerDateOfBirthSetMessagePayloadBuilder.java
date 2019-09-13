@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import java.time.LocalDate;
-import com.commercetools.models.Message.CustomerDateOfBirthSetMessagePayload;
+import com.commercetools.models.message.CustomerDateOfBirthSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

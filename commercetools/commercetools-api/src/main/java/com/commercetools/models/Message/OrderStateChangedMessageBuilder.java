@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.OrderState;
-import com.commercetools.models.Message.OrderStateChangedMessage;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.OrderState;
+import com.commercetools.models.message.OrderStateChangedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class OrderStateChangedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,10 +38,10 @@ public final class OrderStateChangedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Order.OrderState oldOrderState;
+   private com.commercetools.models.order.OrderState oldOrderState;
    
    
-   private com.commercetools.models.Order.OrderState orderState;
+   private com.commercetools.models.order.OrderState orderState;
    
    public OrderStateChangedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -68,12 +68,12 @@ public final class OrderStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderStateChangedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public OrderStateChangedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public OrderStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public OrderStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -88,12 +88,12 @@ public final class OrderStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderStateChangedMessageBuilder oldOrderState( final com.commercetools.models.Order.OrderState oldOrderState) {
+   public OrderStateChangedMessageBuilder oldOrderState( final com.commercetools.models.order.OrderState oldOrderState) {
       this.oldOrderState = oldOrderState;
       return this;
    }
    
-   public OrderStateChangedMessageBuilder orderState( final com.commercetools.models.Order.OrderState orderState) {
+   public OrderStateChangedMessageBuilder orderState( final com.commercetools.models.order.OrderState orderState) {
       this.orderState = orderState;
       return this;
    }
@@ -124,12 +124,12 @@ public final class OrderStateChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -144,12 +144,12 @@ public final class OrderStateChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Order.OrderState getOldOrderState(){
+   public com.commercetools.models.order.OrderState getOldOrderState(){
       return this.oldOrderState;
    }
    
    
-   public com.commercetools.models.Order.OrderState getOrderState(){
+   public com.commercetools.models.order.OrderState getOrderState(){
       return this.orderState;
    }
 

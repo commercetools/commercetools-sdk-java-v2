@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ItemShippingTarget;
+import com.commercetools.models.cart.ItemShippingTarget;
 import java.lang.Boolean;
-import com.commercetools.models.Cart.ItemShippingDetails;
+import com.commercetools.models.cart.ItemShippingDetails;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,14 +14,14 @@ public final class ItemShippingDetailsBuilder {
    private java.lang.Boolean valid;
    
    
-   private java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targets;
+   private java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets;
    
    public ItemShippingDetailsBuilder valid( final java.lang.Boolean valid) {
       this.valid = valid;
       return this;
    }
    
-   public ItemShippingDetailsBuilder targets( final java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targets) {
+   public ItemShippingDetailsBuilder targets( final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets) {
       this.targets = targets;
       return this;
    }
@@ -32,7 +32,7 @@ public final class ItemShippingDetailsBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.ItemShippingTarget> getTargets(){
+   public java.util.List<com.commercetools.models.cart.ItemShippingTarget> getTargets(){
       return this.targets;
    }
 

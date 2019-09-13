@@ -18,7 +18,7 @@ public class ByProjectKeyChannelsByIDRequestBuilder {
       return new ByProjectKeyChannelsByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyChannelsByIDPost post(com.commercetools.models.Channel.ChannelUpdate channelUpdate) {
+   public ByProjectKeyChannelsByIDPost post(com.commercetools.models.channel.ChannelUpdate channelUpdate) {
       return new ByProjectKeyChannelsByIDPost(apiHttpClient, projectKey, ID, channelUpdate);
    }
    

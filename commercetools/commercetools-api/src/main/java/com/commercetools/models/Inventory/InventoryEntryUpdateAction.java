@@ -1,13 +1,13 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntryAddQuantityAction;
-import com.commercetools.models.Inventory.InventoryEntryChangeQuantityAction;
-import com.commercetools.models.Inventory.InventoryEntryRemoveQuantityAction;
-import com.commercetools.models.Inventory.InventoryEntrySetCustomFieldAction;
-import com.commercetools.models.Inventory.InventoryEntrySetCustomTypeAction;
-import com.commercetools.models.Inventory.InventoryEntrySetExpectedDeliveryAction;
-import com.commercetools.models.Inventory.InventoryEntrySetRestockableInDaysAction;
-import com.commercetools.models.Inventory.InventoryEntrySetSupplyChannelAction;
+import com.commercetools.models.inventory.InventoryEntryAddQuantityAction;
+import com.commercetools.models.inventory.InventoryEntryChangeQuantityAction;
+import com.commercetools.models.inventory.InventoryEntryRemoveQuantityAction;
+import com.commercetools.models.inventory.InventoryEntrySetCustomFieldAction;
+import com.commercetools.models.inventory.InventoryEntrySetCustomTypeAction;
+import com.commercetools.models.inventory.InventoryEntrySetExpectedDeliveryAction;
+import com.commercetools.models.inventory.InventoryEntrySetRestockableInDaysAction;
+import com.commercetools.models.inventory.InventoryEntrySetSupplyChannelAction;
 import java.lang.String;
 
 
@@ -23,14 +23,14 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Inventory.InventoryEntryAddQuantityActionImpl.class, name = "addQuantity"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Inventory.InventoryEntryChangeQuantityActionImpl.class, name = "changeQuantity"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Inventory.InventoryEntryRemoveQuantityActionImpl.class, name = "removeQuantity"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Inventory.InventoryEntrySetCustomFieldActionImpl.class, name = "setCustomField"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Inventory.InventoryEntrySetCustomTypeActionImpl.class, name = "setCustomType"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Inventory.InventoryEntrySetExpectedDeliveryActionImpl.class, name = "setExpectedDelivery"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Inventory.InventoryEntrySetRestockableInDaysActionImpl.class, name = "setRestockableInDays"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Inventory.InventoryEntrySetSupplyChannelActionImpl.class, name = "setSupplyChannel")
+   @JsonSubTypes.Type(value = com.commercetools.models.inventory.InventoryEntryAddQuantityActionImpl.class, name = "addQuantity"),
+   @JsonSubTypes.Type(value = com.commercetools.models.inventory.InventoryEntryChangeQuantityActionImpl.class, name = "changeQuantity"),
+   @JsonSubTypes.Type(value = com.commercetools.models.inventory.InventoryEntryRemoveQuantityActionImpl.class, name = "removeQuantity"),
+   @JsonSubTypes.Type(value = com.commercetools.models.inventory.InventoryEntrySetCustomFieldActionImpl.class, name = "setCustomField"),
+   @JsonSubTypes.Type(value = com.commercetools.models.inventory.InventoryEntrySetCustomTypeActionImpl.class, name = "setCustomType"),
+   @JsonSubTypes.Type(value = com.commercetools.models.inventory.InventoryEntrySetExpectedDeliveryActionImpl.class, name = "setExpectedDelivery"),
+   @JsonSubTypes.Type(value = com.commercetools.models.inventory.InventoryEntrySetRestockableInDaysActionImpl.class, name = "setRestockableInDays"),
+   @JsonSubTypes.Type(value = com.commercetools.models.inventory.InventoryEntrySetSupplyChannelActionImpl.class, name = "setSupplyChannel")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

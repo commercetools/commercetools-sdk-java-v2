@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.state.StateReference;
 import java.lang.Integer;
-import com.commercetools.models.Order.ItemState;
+import com.commercetools.models.order.ItemState;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,14 +14,14 @@ public final class ItemStateBuilder {
    private java.lang.Integer quantity;
    
    
-   private com.commercetools.models.State.StateReference state;
+   private com.commercetools.models.state.StateReference state;
    
    public ItemStateBuilder quantity( final java.lang.Integer quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public ItemStateBuilder state( final com.commercetools.models.State.StateReference state) {
+   public ItemStateBuilder state( final com.commercetools.models.state.StateReference state) {
       this.state = state;
       return this;
    }
@@ -32,7 +32,7 @@ public final class ItemStateBuilder {
    }
    
    
-   public com.commercetools.models.State.StateReference getState(){
+   public com.commercetools.models.state.StateReference getState(){
       return this.state;
    }
 

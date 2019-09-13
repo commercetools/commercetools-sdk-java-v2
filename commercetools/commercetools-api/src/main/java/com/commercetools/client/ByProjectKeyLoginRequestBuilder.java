@@ -12,7 +12,7 @@ public class ByProjectKeyLoginRequestBuilder {
       this.projectKey = projectKey;
    }
    
-   public ByProjectKeyLoginPost post(com.commercetools.models.Customer.CustomerSignin customerSignin) {
+   public ByProjectKeyLoginPost post(com.commercetools.models.customer.CustomerSignin customerSignin) {
       return new ByProjectKeyLoginPost(apiHttpClient, projectKey, customerSignin);
    }
    

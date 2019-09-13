@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyPaymentUpdateAction;
-import com.commercetools.models.Payment.TransactionDraft;
+import com.commercetools.models.me.MyPaymentUpdateAction;
+import com.commercetools.models.payment.TransactionDraft;
 import java.lang.String;
-import com.commercetools.models.Me.MyPaymentAddTransactionActionImpl;
+import com.commercetools.models.me.MyPaymentAddTransactionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

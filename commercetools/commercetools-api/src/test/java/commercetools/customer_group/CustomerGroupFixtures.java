@@ -1,8 +1,8 @@
 package commercetools.customer_group;
 
-import com.commercetools.models.CustomerGroup.CustomerGroup;
-import com.commercetools.models.CustomerGroup.CustomerGroupDraft;
-import com.commercetools.models.CustomerGroup.CustomerGroupDraftBuilder;
+import com.commercetools.models.customer_group.CustomerGroup;
+import com.commercetools.models.customer_group.CustomerGroupDraft;
+import com.commercetools.models.customer_group.CustomerGroupDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

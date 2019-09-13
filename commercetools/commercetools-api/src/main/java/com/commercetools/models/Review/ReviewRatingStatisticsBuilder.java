@@ -1,8 +1,8 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
 import java.lang.Integer;
 import java.lang.Object;
-import com.commercetools.models.Review.ReviewRatingStatistics;
+import com.commercetools.models.review.ReviewRatingStatistics;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

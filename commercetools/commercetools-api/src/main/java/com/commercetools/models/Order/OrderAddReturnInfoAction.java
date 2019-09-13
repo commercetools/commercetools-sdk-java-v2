@@ -1,10 +1,10 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ReturnItemDraft;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ReturnItemDraft;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.OrderAddReturnInfoActionImpl;
+import com.commercetools.models.order.OrderAddReturnInfoActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

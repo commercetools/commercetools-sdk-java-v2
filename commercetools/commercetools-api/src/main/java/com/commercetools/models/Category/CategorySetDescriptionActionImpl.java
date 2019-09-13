@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CategorySetDescriptionActionImpl implements CategorySetDescri
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
 
    @JsonCreator
-   CategorySetDescriptionActionImpl(@JsonProperty("description") final com.commercetools.models.Common.LocalizedString description) {
+   CategorySetDescriptionActionImpl(@JsonProperty("description") final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       this.action = "setDescription";
    }
@@ -43,11 +43,11 @@ public final class CategorySetDescriptionActionImpl implements CategorySetDescri
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
 
-   public void setDescription(final com.commercetools.models.Common.LocalizedString description){
+   public void setDescription(final com.commercetools.models.common.LocalizedString description){
       this.description = description;
    }
 

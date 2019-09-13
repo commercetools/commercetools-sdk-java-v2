@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.State.StateResourceIdentifier;
+import com.commercetools.models.state.StateResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Payment.PaymentStatusDraft;
+import com.commercetools.models.payment.PaymentStatusDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ public final class PaymentStatusDraftBuilder {
    private java.lang.String interfaceText;
    
    @Nullable
-   private com.commercetools.models.State.StateResourceIdentifier state;
+   private com.commercetools.models.state.StateResourceIdentifier state;
    
    @Nullable
    private java.lang.String interfaceCode;
@@ -24,7 +24,7 @@ public final class PaymentStatusDraftBuilder {
       return this;
    }
    
-   public PaymentStatusDraftBuilder state(@Nullable final com.commercetools.models.State.StateResourceIdentifier state) {
+   public PaymentStatusDraftBuilder state(@Nullable final com.commercetools.models.state.StateResourceIdentifier state) {
       this.state = state;
       return this;
    }
@@ -40,7 +40,7 @@ public final class PaymentStatusDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.State.StateResourceIdentifier getState(){
+   public com.commercetools.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
    

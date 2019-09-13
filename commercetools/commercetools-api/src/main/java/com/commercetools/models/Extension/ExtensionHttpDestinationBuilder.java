@@ -1,9 +1,9 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionDestination;
-import com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication;
+import com.commercetools.models.extension.ExtensionDestination;
+import com.commercetools.models.extension.ExtensionHttpDestinationAuthentication;
 import java.lang.String;
-import com.commercetools.models.Extension.ExtensionHttpDestination;
+import com.commercetools.models.extension.ExtensionHttpDestination;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class ExtensionHttpDestinationBuilder {
    private java.lang.String url;
    
    @Nullable
-   private com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication authentication;
+   private com.commercetools.models.extension.ExtensionHttpDestinationAuthentication authentication;
    
    public ExtensionHttpDestinationBuilder url( final java.lang.String url) {
       this.url = url;
       return this;
    }
    
-   public ExtensionHttpDestinationBuilder authentication(@Nullable final com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication authentication) {
+   public ExtensionHttpDestinationBuilder authentication(@Nullable final com.commercetools.models.extension.ExtensionHttpDestinationAuthentication authentication) {
       this.authentication = authentication;
       return this;
    }
@@ -33,7 +33,7 @@ public final class ExtensionHttpDestinationBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication getAuthentication(){
+   public com.commercetools.models.extension.ExtensionHttpDestinationAuthentication getAuthentication(){
       return this.authentication;
    }
 

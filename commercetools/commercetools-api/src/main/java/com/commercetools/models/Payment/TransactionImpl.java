@@ -1,8 +1,8 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.Payment.TransactionState;
-import com.commercetools.models.Payment.TransactionType;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.payment.TransactionState;
+import com.commercetools.models.payment.TransactionType;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -28,18 +28,18 @@ public final class TransactionImpl implements Transaction {
 
    private java.lang.String interactionId;
    
-   private com.commercetools.models.Common.TypedMoney amount;
+   private com.commercetools.models.common.TypedMoney amount;
    
-   private com.commercetools.models.Payment.TransactionState state;
+   private com.commercetools.models.payment.TransactionState state;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Payment.TransactionType type;
+   private com.commercetools.models.payment.TransactionType type;
    
    private java.time.ZonedDateTime timestamp;
 
    @JsonCreator
-   TransactionImpl(@JsonProperty("interactionId") final java.lang.String interactionId, @JsonProperty("amount") final com.commercetools.models.Common.TypedMoney amount, @JsonProperty("state") final com.commercetools.models.Payment.TransactionState state, @JsonProperty("id") final java.lang.String id, @JsonProperty("type") final com.commercetools.models.Payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
+   TransactionImpl(@JsonProperty("interactionId") final java.lang.String interactionId, @JsonProperty("amount") final com.commercetools.models.common.TypedMoney amount, @JsonProperty("state") final com.commercetools.models.payment.TransactionState state, @JsonProperty("id") final java.lang.String id, @JsonProperty("type") final com.commercetools.models.payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
       this.interactionId = interactionId;
       this.amount = amount;
       this.state = state;
@@ -57,12 +57,12 @@ public final class TransactionImpl implements Transaction {
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getAmount(){
+   public com.commercetools.models.common.TypedMoney getAmount(){
       return this.amount;
    }
    
    
-   public com.commercetools.models.Payment.TransactionState getState(){
+   public com.commercetools.models.payment.TransactionState getState(){
       return this.state;
    }
    
@@ -72,7 +72,7 @@ public final class TransactionImpl implements Transaction {
    }
    
    
-   public com.commercetools.models.Payment.TransactionType getType(){
+   public com.commercetools.models.payment.TransactionType getType(){
       return this.type;
    }
    
@@ -85,11 +85,11 @@ public final class TransactionImpl implements Transaction {
       this.interactionId = interactionId;
    }
    
-   public void setAmount(final com.commercetools.models.Common.TypedMoney amount){
+   public void setAmount(final com.commercetools.models.common.TypedMoney amount){
       this.amount = amount;
    }
    
-   public void setState(final com.commercetools.models.Payment.TransactionState state){
+   public void setState(final com.commercetools.models.payment.TransactionState state){
       this.state = state;
    }
    
@@ -97,7 +97,7 @@ public final class TransactionImpl implements Transaction {
       this.id = id;
    }
    
-   public void setType(final com.commercetools.models.Payment.TransactionType type){
+   public void setType(final com.commercetools.models.payment.TransactionType type){
       this.type = type;
    }
    

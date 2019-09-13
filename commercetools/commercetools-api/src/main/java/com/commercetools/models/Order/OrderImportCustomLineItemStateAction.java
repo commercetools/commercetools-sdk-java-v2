@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.ItemState;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.ItemState;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Order.OrderImportCustomLineItemStateActionImpl;
+import com.commercetools.models.order.OrderImportCustomLineItemStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,8 +1,8 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Store.StoreUpdateAction;
+import com.commercetools.models.store.StoreUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Store.StoreUpdateImpl;
+import com.commercetools.models.store.StoreUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

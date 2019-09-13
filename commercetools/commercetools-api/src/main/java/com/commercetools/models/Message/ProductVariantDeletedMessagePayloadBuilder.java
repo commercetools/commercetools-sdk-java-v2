@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Product.ProductVariant;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.product.ProductVariant;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Message.ProductVariantDeletedMessagePayload;
+import com.commercetools.models.message.ProductVariantDeletedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +16,14 @@ public final class ProductVariantDeletedMessagePayloadBuilder {
    private java.util.List<java.lang.Object> removedImageUrls;
    
    
-   private com.commercetools.models.Product.ProductVariant variant;
+   private com.commercetools.models.product.ProductVariant variant;
    
    public ProductVariantDeletedMessagePayloadBuilder removedImageUrls( final java.util.List<java.lang.Object> removedImageUrls) {
       this.removedImageUrls = removedImageUrls;
       return this;
    }
    
-   public ProductVariantDeletedMessagePayloadBuilder variant( final com.commercetools.models.Product.ProductVariant variant) {
+   public ProductVariantDeletedMessagePayloadBuilder variant( final com.commercetools.models.product.ProductVariant variant) {
       this.variant = variant;
       return this;
    }
@@ -34,7 +34,7 @@ public final class ProductVariantDeletedMessagePayloadBuilder {
    }
    
    
-   public com.commercetools.models.Product.ProductVariant getVariant(){
+   public com.commercetools.models.product.ProductVariant getVariant(){
       return this.variant;
    }
 

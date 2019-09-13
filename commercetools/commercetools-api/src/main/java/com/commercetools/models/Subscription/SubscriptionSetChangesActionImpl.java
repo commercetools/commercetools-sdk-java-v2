@@ -1,7 +1,7 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.ChangeSubscription;
-import com.commercetools.models.Subscription.SubscriptionUpdateAction;
+import com.commercetools.models.subscription.ChangeSubscription;
+import com.commercetools.models.subscription.SubscriptionUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class SubscriptionSetChangesActionImpl implements SubscriptionSetCh
 
    private java.lang.String action;
    
-   private java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes;
+   private java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes;
 
    @JsonCreator
-   SubscriptionSetChangesActionImpl(@JsonProperty("changes") final java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes) {
+   SubscriptionSetChangesActionImpl(@JsonProperty("changes") final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes) {
       this.changes = changes;
       this.action = "setChanges";
    }
@@ -43,11 +43,11 @@ public final class SubscriptionSetChangesActionImpl implements SubscriptionSetCh
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.ChangeSubscription> getChanges(){
+   public java.util.List<com.commercetools.models.subscription.ChangeSubscription> getChanges(){
       return this.changes;
    }
 
-   public void setChanges(final java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes){
+   public void setChanges(final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes){
       this.changes = changes;
    }
 

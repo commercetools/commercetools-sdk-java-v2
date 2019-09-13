@@ -1,9 +1,9 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
-import com.commercetools.models.Category.CategoryChangeAssetNameAction;
+import com.commercetools.models.category.CategoryChangeAssetNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ public final class CategoryChangeAssetNameActionBuilder {
    private java.lang.String assetId;
    
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
    private java.lang.String assetKey;
@@ -25,7 +25,7 @@ public final class CategoryChangeAssetNameActionBuilder {
       return this;
    }
    
-   public CategoryChangeAssetNameActionBuilder name( final com.commercetools.models.Common.LocalizedString name) {
+   public CategoryChangeAssetNameActionBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
@@ -41,7 +41,7 @@ public final class CategoryChangeAssetNameActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    

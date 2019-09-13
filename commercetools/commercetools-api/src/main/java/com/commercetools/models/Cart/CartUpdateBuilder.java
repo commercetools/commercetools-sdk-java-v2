@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
+import com.commercetools.models.cart.CartUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Cart.CartUpdate;
+import com.commercetools.models.cart.CartUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class CartUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Cart.CartUpdateAction> actions;
+   private java.util.List<com.commercetools.models.cart.CartUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public CartUpdateBuilder actions( final java.util.List<com.commercetools.models.Cart.CartUpdateAction> actions) {
+   public CartUpdateBuilder actions( final java.util.List<com.commercetools.models.cart.CartUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class CartUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.CartUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.cart.CartUpdateAction> getActions(){
       return this.actions;
    }
    

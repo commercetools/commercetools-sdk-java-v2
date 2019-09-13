@@ -1,9 +1,9 @@
-package com.commercetools.models.Inventory;
+package com.commercetools.models.inventory;
 
-import com.commercetools.models.Inventory.InventoryEntryUpdateAction;
+import com.commercetools.models.inventory.InventoryEntryUpdateAction;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Inventory.InventoryEntrySetExpectedDeliveryAction;
+import com.commercetools.models.inventory.InventoryEntrySetExpectedDeliveryAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

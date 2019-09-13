@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.OrderEdit.OrderEditApplied;
-import com.commercetools.models.OrderEdit.OrderEditReference;
-import com.commercetools.models.Message.OrderEditAppliedMessage;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order_edit.OrderEditApplied;
+import com.commercetools.models.order_edit.OrderEditReference;
+import com.commercetools.models.message.OrderEditAppliedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class OrderEditAppliedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -39,10 +39,10 @@ public final class OrderEditAppliedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.OrderEdit.OrderEditApplied result;
+   private com.commercetools.models.order_edit.OrderEditApplied result;
    
    
-   private com.commercetools.models.OrderEdit.OrderEditReference edit;
+   private com.commercetools.models.order_edit.OrderEditReference edit;
    
    public OrderEditAppliedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -69,12 +69,12 @@ public final class OrderEditAppliedMessageBuilder {
       return this;
    }
    
-   public OrderEditAppliedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public OrderEditAppliedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public OrderEditAppliedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public OrderEditAppliedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -89,12 +89,12 @@ public final class OrderEditAppliedMessageBuilder {
       return this;
    }
    
-   public OrderEditAppliedMessageBuilder result( final com.commercetools.models.OrderEdit.OrderEditApplied result) {
+   public OrderEditAppliedMessageBuilder result( final com.commercetools.models.order_edit.OrderEditApplied result) {
       this.result = result;
       return this;
    }
    
-   public OrderEditAppliedMessageBuilder edit( final com.commercetools.models.OrderEdit.OrderEditReference edit) {
+   public OrderEditAppliedMessageBuilder edit( final com.commercetools.models.order_edit.OrderEditReference edit) {
       this.edit = edit;
       return this;
    }
@@ -125,12 +125,12 @@ public final class OrderEditAppliedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -145,12 +145,12 @@ public final class OrderEditAppliedMessageBuilder {
    }
    
    
-   public com.commercetools.models.OrderEdit.OrderEditApplied getResult(){
+   public com.commercetools.models.order_edit.OrderEditApplied getResult(){
       return this.result;
    }
    
    
-   public com.commercetools.models.OrderEdit.OrderEditReference getEdit(){
+   public com.commercetools.models.order_edit.OrderEditReference getEdit(){
       return this.edit;
    }
 

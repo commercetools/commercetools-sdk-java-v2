@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.PaymentState;
+import com.commercetools.models.order.PaymentState;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Order.OrderFromCartDraft;
+import com.commercetools.models.order.OrderFromCartDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ public final class OrderFromCartDraftBuilder {
    private java.lang.String id;
    
    @Nullable
-   private com.commercetools.models.Order.PaymentState paymentState;
+   private com.commercetools.models.order.PaymentState paymentState;
    
    
    private java.lang.Long version;
@@ -33,7 +33,7 @@ public final class OrderFromCartDraftBuilder {
       return this;
    }
    
-   public OrderFromCartDraftBuilder paymentState(@Nullable final com.commercetools.models.Order.PaymentState paymentState) {
+   public OrderFromCartDraftBuilder paymentState(@Nullable final com.commercetools.models.order.PaymentState paymentState) {
       this.paymentState = paymentState;
       return this;
    }
@@ -54,7 +54,7 @@ public final class OrderFromCartDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Order.PaymentState getPaymentState(){
+   public com.commercetools.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
    

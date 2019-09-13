@@ -1,6 +1,6 @@
 package commercetools.subscription;
 
-import com.commercetools.models.Subscription.*;
+import com.commercetools.models.subscription.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

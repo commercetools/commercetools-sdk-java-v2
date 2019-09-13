@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Product.ProductAddPriceAction;
+import com.commercetools.models.product.ProductAddPriceAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.time.ZonedDateTime;
 public final class ProductAddPriceActionBuilder {
    
    
-   private com.commercetools.models.Common.PriceDraft price;
+   private com.commercetools.models.common.PriceDraft price;
    
    @Nullable
    private java.lang.Boolean staged;
@@ -25,7 +25,7 @@ public final class ProductAddPriceActionBuilder {
    @Nullable
    private java.lang.String sku;
    
-   public ProductAddPriceActionBuilder price( final com.commercetools.models.Common.PriceDraft price) {
+   public ProductAddPriceActionBuilder price( final com.commercetools.models.common.PriceDraft price) {
       this.price = price;
       return this;
    }
@@ -46,7 +46,7 @@ public final class ProductAddPriceActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.PriceDraft getPrice(){
+   public com.commercetools.models.common.PriceDraft getPrice(){
       return this.price;
    }
    

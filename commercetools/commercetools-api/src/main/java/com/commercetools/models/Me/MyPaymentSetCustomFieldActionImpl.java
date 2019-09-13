@@ -1,6 +1,6 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyPaymentUpdateAction;
+import com.commercetools.models.me.MyPaymentUpdateAction;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;

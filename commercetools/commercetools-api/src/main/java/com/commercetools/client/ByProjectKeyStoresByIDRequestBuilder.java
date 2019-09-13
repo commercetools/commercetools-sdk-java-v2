@@ -18,7 +18,7 @@ public class ByProjectKeyStoresByIDRequestBuilder {
       return new ByProjectKeyStoresByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyStoresByIDPost post(com.commercetools.models.Store.StoreUpdate storeUpdate) {
+   public ByProjectKeyStoresByIDPost post(com.commercetools.models.store.StoreUpdate storeUpdate) {
       return new ByProjectKeyStoresByIDPost(apiHttpClient, projectKey, ID, storeUpdate);
    }
    

@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderState;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.OrderState;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Order.OrderChangeOrderStateAction;
+import com.commercetools.models.order.OrderChangeOrderStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class OrderChangeOrderStateActionBuilder {
    
    
-   private com.commercetools.models.Order.OrderState orderState;
+   private com.commercetools.models.order.OrderState orderState;
    
-   public OrderChangeOrderStateActionBuilder orderState( final com.commercetools.models.Order.OrderState orderState) {
+   public OrderChangeOrderStateActionBuilder orderState( final com.commercetools.models.order.OrderState orderState) {
       this.orderState = orderState;
       return this;
    }
    
    
-   public com.commercetools.models.Order.OrderState getOrderState(){
+   public com.commercetools.models.order.OrderState getOrderState(){
       return this.orderState;
    }
 

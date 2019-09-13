@@ -1,9 +1,9 @@
 package commercetools.type;
 
-import com.commercetools.models.Type.ResourceTypeId;
-import com.commercetools.models.Type.Type;
-import com.commercetools.models.Type.TypeDraft;
-import com.commercetools.models.Type.TypeDraftBuilder;
+import com.commercetools.models.type.ResourceTypeId;
+import com.commercetools.models.type.Type;
+import com.commercetools.models.type.TypeDraft;
+import com.commercetools.models.type.TypeDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

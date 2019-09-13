@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Order.OrderRemoveParcelFromDeliveryAction;
+import com.commercetools.models.order.OrderRemoveParcelFromDeliveryAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

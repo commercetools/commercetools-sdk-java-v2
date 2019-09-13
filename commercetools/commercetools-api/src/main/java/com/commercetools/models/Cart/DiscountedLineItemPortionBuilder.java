@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.CartDiscount.CartDiscountReference;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Cart.DiscountedLineItemPortion;
+import com.commercetools.models.cart_discount.CartDiscountReference;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.cart.DiscountedLineItemPortion;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class DiscountedLineItemPortionBuilder {
    
    
-   private com.commercetools.models.Common.Money discountedAmount;
+   private com.commercetools.models.common.Money discountedAmount;
    
    
-   private com.commercetools.models.CartDiscount.CartDiscountReference discount;
+   private com.commercetools.models.cart_discount.CartDiscountReference discount;
    
-   public DiscountedLineItemPortionBuilder discountedAmount( final com.commercetools.models.Common.Money discountedAmount) {
+   public DiscountedLineItemPortionBuilder discountedAmount( final com.commercetools.models.common.Money discountedAmount) {
       this.discountedAmount = discountedAmount;
       return this;
    }
    
-   public DiscountedLineItemPortionBuilder discount( final com.commercetools.models.CartDiscount.CartDiscountReference discount) {
+   public DiscountedLineItemPortionBuilder discount( final com.commercetools.models.cart_discount.CartDiscountReference discount) {
       this.discount = discount;
       return this;
    }
    
    
-   public com.commercetools.models.Common.Money getDiscountedAmount(){
+   public com.commercetools.models.common.Money getDiscountedAmount(){
       return this.discountedAmount;
    }
    
    
-   public com.commercetools.models.CartDiscount.CartDiscountReference getDiscount(){
+   public com.commercetools.models.cart_discount.CartDiscountReference getDiscount(){
       return this.discount;
    }
 

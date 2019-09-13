@@ -18,7 +18,7 @@ public class ByProjectKeyMeShoppingListsByIDRequestBuilder {
       return new ByProjectKeyMeShoppingListsByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyMeShoppingListsByIDPost post(com.commercetools.models.Common.Update update) {
+   public ByProjectKeyMeShoppingListsByIDPost post(com.commercetools.models.common.Update update) {
       return new ByProjectKeyMeShoppingListsByIDPost(apiHttpClient, projectKey, ID, update);
    }
    

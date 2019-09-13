@@ -1,11 +1,11 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Error.ErrorByExtension;
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.error.ErrorByExtension;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Error.ExtensionBadResponseError;
+import com.commercetools.models.error.ExtensionBadResponseError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,20 +17,20 @@ public final class ExtensionBadResponseErrorBuilder {
    private java.lang.String message;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString localizedMessage;
+   private com.commercetools.models.common.LocalizedString localizedMessage;
    
    @Nullable
    private java.lang.Object extensionExtraInfo;
    
    
-   private com.commercetools.models.Error.ErrorByExtension errorByExtension;
+   private com.commercetools.models.error.ErrorByExtension errorByExtension;
    
    public ExtensionBadResponseErrorBuilder message( final java.lang.String message) {
       this.message = message;
       return this;
    }
    
-   public ExtensionBadResponseErrorBuilder localizedMessage(@Nullable final com.commercetools.models.Common.LocalizedString localizedMessage) {
+   public ExtensionBadResponseErrorBuilder localizedMessage(@Nullable final com.commercetools.models.common.LocalizedString localizedMessage) {
       this.localizedMessage = localizedMessage;
       return this;
    }
@@ -40,7 +40,7 @@ public final class ExtensionBadResponseErrorBuilder {
       return this;
    }
    
-   public ExtensionBadResponseErrorBuilder errorByExtension( final com.commercetools.models.Error.ErrorByExtension errorByExtension) {
+   public ExtensionBadResponseErrorBuilder errorByExtension( final com.commercetools.models.error.ErrorByExtension errorByExtension) {
       this.errorByExtension = errorByExtension;
       return this;
    }
@@ -51,7 +51,7 @@ public final class ExtensionBadResponseErrorBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getLocalizedMessage(){
+   public com.commercetools.models.common.LocalizedString getLocalizedMessage(){
       return this.localizedMessage;
    }
    
@@ -61,7 +61,7 @@ public final class ExtensionBadResponseErrorBuilder {
    }
    
    
-   public com.commercetools.models.Error.ErrorByExtension getErrorByExtension(){
+   public com.commercetools.models.error.ErrorByExtension getErrorByExtension(){
       return this.errorByExtension;
    }
 

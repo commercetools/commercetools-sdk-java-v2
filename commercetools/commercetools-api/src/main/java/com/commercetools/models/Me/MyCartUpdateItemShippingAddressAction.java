@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Me.MyCartUpdateAction;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.me.MyCartUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyCartUpdateItemShippingAddressActionImpl;
+import com.commercetools.models.me.MyCartUpdateItemShippingAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

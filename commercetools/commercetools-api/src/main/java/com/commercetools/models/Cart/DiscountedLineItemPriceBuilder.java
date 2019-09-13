@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.DiscountedLineItemPortion;
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.Cart.DiscountedLineItemPrice;
+import com.commercetools.models.cart.DiscountedLineItemPortion;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.cart.DiscountedLineItemPrice;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class DiscountedLineItemPriceBuilder {
    
    
-   private java.util.List<com.commercetools.models.Cart.DiscountedLineItemPortion> includedDiscounts;
+   private java.util.List<com.commercetools.models.cart.DiscountedLineItemPortion> includedDiscounts;
    
    
-   private com.commercetools.models.Common.TypedMoney value;
+   private com.commercetools.models.common.TypedMoney value;
    
-   public DiscountedLineItemPriceBuilder includedDiscounts( final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPortion> includedDiscounts) {
+   public DiscountedLineItemPriceBuilder includedDiscounts( final java.util.List<com.commercetools.models.cart.DiscountedLineItemPortion> includedDiscounts) {
       this.includedDiscounts = includedDiscounts;
       return this;
    }
    
-   public DiscountedLineItemPriceBuilder value( final com.commercetools.models.Common.TypedMoney value) {
+   public DiscountedLineItemPriceBuilder value( final com.commercetools.models.common.TypedMoney value) {
       this.value = value;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.DiscountedLineItemPortion> getIncludedDiscounts(){
+   public java.util.List<com.commercetools.models.cart.DiscountedLineItemPortion> getIncludedDiscounts(){
       return this.includedDiscounts;
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getValue(){
+   public com.commercetools.models.common.TypedMoney getValue(){
       return this.value;
    }
 

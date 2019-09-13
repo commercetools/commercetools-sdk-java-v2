@@ -1,6 +1,6 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.Location;
+import com.commercetools.models.zone.Location;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,12 +27,12 @@ public final class ZoneDraftImpl implements ZoneDraft {
    
    private java.lang.String description;
    
-   private java.util.List<com.commercetools.models.Zone.Location> locations;
+   private java.util.List<com.commercetools.models.zone.Location> locations;
    
    private java.lang.String key;
 
    @JsonCreator
-   ZoneDraftImpl(@JsonProperty("name") final java.lang.String name, @JsonProperty("description") final java.lang.String description, @JsonProperty("locations") final java.util.List<com.commercetools.models.Zone.Location> locations, @JsonProperty("key") final java.lang.String key) {
+   ZoneDraftImpl(@JsonProperty("name") final java.lang.String name, @JsonProperty("description") final java.lang.String description, @JsonProperty("locations") final java.util.List<com.commercetools.models.zone.Location> locations, @JsonProperty("key") final java.lang.String key) {
       this.name = name;
       this.description = description;
       this.locations = locations;
@@ -53,7 +53,7 @@ public final class ZoneDraftImpl implements ZoneDraft {
    }
    
    
-   public java.util.List<com.commercetools.models.Zone.Location> getLocations(){
+   public java.util.List<com.commercetools.models.zone.Location> getLocations(){
       return this.locations;
    }
    
@@ -70,7 +70,7 @@ public final class ZoneDraftImpl implements ZoneDraft {
       this.description = description;
    }
    
-   public void setLocations(final java.util.List<com.commercetools.models.Zone.Location> locations){
+   public void setLocations(final java.util.List<com.commercetools.models.zone.Location> locations){
       this.locations = locations;
    }
    

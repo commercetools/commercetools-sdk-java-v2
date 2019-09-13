@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.state.StateReference;
 import java.lang.Integer;
-import com.commercetools.models.Order.ItemStateImpl;
+import com.commercetools.models.order.ItemStateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderUpdateImpl implements OrderUpdate {
 
-   private java.util.List<com.commercetools.models.Order.OrderUpdateAction> actions;
+   private java.util.List<com.commercetools.models.order.OrderUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   OrderUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Order.OrderUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   OrderUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.order.OrderUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class OrderUpdateImpl implements OrderUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.OrderUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.order.OrderUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class OrderUpdateImpl implements OrderUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Order.OrderUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.order.OrderUpdateAction> actions){
       this.actions = actions;
    }
    

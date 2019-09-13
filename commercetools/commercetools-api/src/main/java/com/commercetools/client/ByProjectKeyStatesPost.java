@@ -26,9 +26,9 @@ public class ByProjectKeyStatesPost {
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
-   private com.commercetools.models.State.StateDraft stateDraft;
+   private com.commercetools.models.state.StateDraft stateDraft;
    
-   public ByProjectKeyStatesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.State.StateDraft stateDraft){
+   public ByProjectKeyStatesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.state.StateDraft stateDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.stateDraft = stateDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyStatesPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.State.State> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.state.State> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyStatesPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.State.State>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.state.State>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.State.State.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.state.State.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

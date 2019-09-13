@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.message.Message;
 import java.lang.Boolean;
 import java.lang.Integer;
-import com.commercetools.models.Message.ReviewRatingSetMessageImpl;
+import com.commercetools.models.message.ReviewRatingSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Type.FieldType;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.type.FieldType;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CustomFieldReferenceTypeImpl implements CustomFieldReferenceT
 
    private java.lang.String name;
    
-   private com.commercetools.models.Common.ReferenceTypeId referenceTypeId;
+   private com.commercetools.models.common.ReferenceTypeId referenceTypeId;
 
    @JsonCreator
-   CustomFieldReferenceTypeImpl(@JsonProperty("referenceTypeId") final com.commercetools.models.Common.ReferenceTypeId referenceTypeId) {
+   CustomFieldReferenceTypeImpl(@JsonProperty("referenceTypeId") final com.commercetools.models.common.ReferenceTypeId referenceTypeId) {
       this.referenceTypeId = referenceTypeId;
       this.name = "Reference";
    }
@@ -43,11 +43,11 @@ public final class CustomFieldReferenceTypeImpl implements CustomFieldReferenceT
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getReferenceTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getReferenceTypeId(){
       return this.referenceTypeId;
    }
 
-   public void setReferenceTypeId(final com.commercetools.models.Common.ReferenceTypeId referenceTypeId){
+   public void setReferenceTypeId(final com.commercetools.models.common.ReferenceTypeId referenceTypeId){
       this.referenceTypeId = referenceTypeId;
    }
 

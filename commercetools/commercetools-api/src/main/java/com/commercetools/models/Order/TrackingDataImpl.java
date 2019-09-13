@@ -1,4 +1,4 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
 import java.lang.Boolean;
 import java.lang.String;

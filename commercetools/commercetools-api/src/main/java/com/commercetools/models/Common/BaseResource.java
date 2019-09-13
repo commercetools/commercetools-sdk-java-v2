@@ -1,16 +1,16 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.CustomObject.CustomObject;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Product.ProductProjection;
-import com.commercetools.models.ShippingMethod.ShippingMethod;
-import com.commercetools.models.Store.Store;
-import com.commercetools.models.Zone.Zone;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.custom_object.CustomObject;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.product.ProductProjection;
+import com.commercetools.models.shipping_method.ShippingMethod;
+import com.commercetools.models.store.Store;
+import com.commercetools.models.zone.Zone;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Common.BaseResourceImpl;
+import com.commercetools.models.common.BaseResourceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

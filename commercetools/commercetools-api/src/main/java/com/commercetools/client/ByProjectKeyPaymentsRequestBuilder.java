@@ -16,7 +16,7 @@ public class ByProjectKeyPaymentsRequestBuilder {
       return new ByProjectKeyPaymentsGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyPaymentsPost post(com.commercetools.models.Payment.PaymentDraft paymentDraft) {
+   public ByProjectKeyPaymentsPost post(com.commercetools.models.payment.PaymentDraft paymentDraft) {
       return new ByProjectKeyPaymentsPost(apiHttpClient, projectKey, paymentDraft);
    }
    

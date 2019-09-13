@@ -1,8 +1,8 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionDestination;
+import com.commercetools.models.extension.ExtensionDestination;
 import java.lang.String;
-import com.commercetools.models.Extension.ExtensionAWSLambdaDestination;
+import com.commercetools.models.extension.ExtensionAWSLambdaDestination;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

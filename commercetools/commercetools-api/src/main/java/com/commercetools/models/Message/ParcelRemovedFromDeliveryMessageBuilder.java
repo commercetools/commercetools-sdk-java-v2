@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.Parcel;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.Parcel;
 import java.lang.String;
-import com.commercetools.models.Message.ParcelRemovedFromDeliveryMessage;
+import com.commercetools.models.message.ParcelRemovedFromDeliveryMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -39,7 +39,7 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Order.Parcel parcel;
+   private com.commercetools.models.order.Parcel parcel;
    
    
    private java.lang.String deliveryId;
@@ -69,12 +69,12 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
       return this;
    }
    
-   public ParcelRemovedFromDeliveryMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public ParcelRemovedFromDeliveryMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public ParcelRemovedFromDeliveryMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public ParcelRemovedFromDeliveryMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -89,7 +89,7 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
       return this;
    }
    
-   public ParcelRemovedFromDeliveryMessageBuilder parcel( final com.commercetools.models.Order.Parcel parcel) {
+   public ParcelRemovedFromDeliveryMessageBuilder parcel( final com.commercetools.models.order.Parcel parcel) {
       this.parcel = parcel;
       return this;
    }
@@ -125,12 +125,12 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -145,7 +145,7 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
    }
    
    
-   public com.commercetools.models.Order.Parcel getParcel(){
+   public com.commercetools.models.order.Parcel getParcel(){
       return this.parcel;
    }
    

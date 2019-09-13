@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.ReturnShipmentState;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.ReturnShipmentState;
 import java.lang.String;
-import com.commercetools.models.Message.OrderReturnShipmentStateChangedMessage;
+import com.commercetools.models.message.OrderReturnShipmentStateChangedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class OrderReturnShipmentStateChangedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -42,7 +42,7 @@ public final class OrderReturnShipmentStateChangedMessageBuilder {
    private java.lang.String returnItemId;
    
    
-   private com.commercetools.models.Order.ReturnShipmentState returnShipmentState;
+   private com.commercetools.models.order.ReturnShipmentState returnShipmentState;
    
    public OrderReturnShipmentStateChangedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -69,12 +69,12 @@ public final class OrderReturnShipmentStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderReturnShipmentStateChangedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public OrderReturnShipmentStateChangedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public OrderReturnShipmentStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public OrderReturnShipmentStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -94,7 +94,7 @@ public final class OrderReturnShipmentStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderReturnShipmentStateChangedMessageBuilder returnShipmentState( final com.commercetools.models.Order.ReturnShipmentState returnShipmentState) {
+   public OrderReturnShipmentStateChangedMessageBuilder returnShipmentState( final com.commercetools.models.order.ReturnShipmentState returnShipmentState) {
       this.returnShipmentState = returnShipmentState;
       return this;
    }
@@ -125,12 +125,12 @@ public final class OrderReturnShipmentStateChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -150,7 +150,7 @@ public final class OrderReturnShipmentStateChangedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Order.ReturnShipmentState getReturnShipmentState(){
+   public com.commercetools.models.order.ReturnShipmentState getReturnShipmentState(){
       return this.returnShipmentState;
    }
 

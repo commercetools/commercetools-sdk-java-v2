@@ -1,6 +1,6 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.DeliveryFormat;
+import com.commercetools.models.subscription.DeliveryFormat;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;

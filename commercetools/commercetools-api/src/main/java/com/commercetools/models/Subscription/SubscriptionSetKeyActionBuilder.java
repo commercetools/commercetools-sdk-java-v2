@@ -1,8 +1,8 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.SubscriptionUpdateAction;
+import com.commercetools.models.subscription.SubscriptionUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Subscription.SubscriptionSetKeyAction;
+import com.commercetools.models.subscription.SubscriptionSetKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

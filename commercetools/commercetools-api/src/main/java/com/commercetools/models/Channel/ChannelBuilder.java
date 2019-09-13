@@ -1,14 +1,14 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelRoleEnum;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Review.ReviewRatingStatistics;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.channel.ChannelRoleEnum;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.review.ReviewRatingStatistics;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Channel.Channel;
+import com.commercetools.models.channel.Channel;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -29,31 +29,31 @@ public final class ChannelBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
    @Nullable
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
    @Nullable
    private java.lang.Object geoLocation;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    
-   private java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles;
-   
-   @Nullable
-   private com.commercetools.models.Common.LocalizedString name;
+   private java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private com.commercetools.models.Review.ReviewRatingStatistics reviewRatingStatistics;
+   private com.commercetools.models.common.LocalizedString description;
+   
+   @Nullable
+   private com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics;
    
    
    private java.lang.String key;
@@ -78,17 +78,17 @@ public final class ChannelBuilder {
       return this;
    }
    
-   public ChannelBuilder createdBy(@Nullable final com.commercetools.models.Common.CreatedBy createdBy) {
+   public ChannelBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
       this.createdBy = createdBy;
       return this;
    }
    
-   public ChannelBuilder lastModifiedBy(@Nullable final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   public ChannelBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
    
-   public ChannelBuilder address(@Nullable final com.commercetools.models.Common.Address address) {
+   public ChannelBuilder address(@Nullable final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
@@ -98,27 +98,27 @@ public final class ChannelBuilder {
       return this;
    }
    
-   public ChannelBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public ChannelBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
    
-   public ChannelBuilder roles( final java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> roles) {
+   public ChannelBuilder roles( final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles) {
       this.roles = roles;
       return this;
    }
    
-   public ChannelBuilder name(@Nullable final com.commercetools.models.Common.LocalizedString name) {
+   public ChannelBuilder name(@Nullable final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public ChannelBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public ChannelBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
    
-   public ChannelBuilder reviewRatingStatistics(@Nullable final com.commercetools.models.Review.ReviewRatingStatistics reviewRatingStatistics) {
+   public ChannelBuilder reviewRatingStatistics(@Nullable final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics) {
       this.reviewRatingStatistics = reviewRatingStatistics;
       return this;
    }
@@ -149,17 +149,17 @@ public final class ChannelBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
    
@@ -169,27 +169,27 @@ public final class ChannelBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    
-   public java.util.List<com.commercetools.models.Channel.ChannelRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    @Nullable
-   public com.commercetools.models.Review.ReviewRatingStatistics getReviewRatingStatistics(){
+   public com.commercetools.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
       return this.reviewRatingStatistics;
    }
    

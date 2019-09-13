@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Order.TaxedItemPriceDraft;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.order.TaxedItemPriceDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -10,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class TaxedItemPriceDraftBuilder {
    
    
-   private com.commercetools.models.Common.Money totalGross;
+   private com.commercetools.models.common.Money totalGross;
    
    
-   private com.commercetools.models.Common.Money totalNet;
+   private com.commercetools.models.common.Money totalNet;
    
-   public TaxedItemPriceDraftBuilder totalGross( final com.commercetools.models.Common.Money totalGross) {
+   public TaxedItemPriceDraftBuilder totalGross( final com.commercetools.models.common.Money totalGross) {
       this.totalGross = totalGross;
       return this;
    }
    
-   public TaxedItemPriceDraftBuilder totalNet( final com.commercetools.models.Common.Money totalNet) {
+   public TaxedItemPriceDraftBuilder totalNet( final com.commercetools.models.common.Money totalNet) {
       this.totalNet = totalNet;
       return this;
    }
    
    
-   public com.commercetools.models.Common.Money getTotalGross(){
+   public com.commercetools.models.common.Money getTotalGross(){
       return this.totalGross;
    }
    
    
-   public com.commercetools.models.Common.Money getTotalNet(){
+   public com.commercetools.models.common.Money getTotalNet(){
       return this.totalNet;
    }
 

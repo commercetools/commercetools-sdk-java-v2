@@ -1,6 +1,6 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Store.StoreSetNameAction;
+import com.commercetools.models.store.StoreSetNameAction;
 import java.lang.String;
 
 
@@ -16,7 +16,7 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Store.StoreSetNameActionImpl.class, name = "setName")
+   @JsonSubTypes.Type(value = com.commercetools.models.store.StoreSetNameActionImpl.class, name = "setName")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

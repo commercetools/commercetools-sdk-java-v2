@@ -1,8 +1,8 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.ZoneUpdateAction;
+import com.commercetools.models.zone.ZoneUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Zone.ZoneUpdateImpl;
+import com.commercetools.models.zone.ZoneUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

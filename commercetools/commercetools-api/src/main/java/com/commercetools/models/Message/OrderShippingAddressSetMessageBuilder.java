@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.OrderShippingAddressSetMessage;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.OrderShippingAddressSetMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class OrderShippingAddressSetMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,10 +38,10 @@ public final class OrderShippingAddressSetMessageBuilder {
    private java.lang.String type;
    
    @Nullable
-   private com.commercetools.models.Common.Address oldAddress;
+   private com.commercetools.models.common.Address oldAddress;
    
    @Nullable
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
    public OrderShippingAddressSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -68,12 +68,12 @@ public final class OrderShippingAddressSetMessageBuilder {
       return this;
    }
    
-   public OrderShippingAddressSetMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public OrderShippingAddressSetMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public OrderShippingAddressSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public OrderShippingAddressSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -88,12 +88,12 @@ public final class OrderShippingAddressSetMessageBuilder {
       return this;
    }
    
-   public OrderShippingAddressSetMessageBuilder oldAddress(@Nullable final com.commercetools.models.Common.Address oldAddress) {
+   public OrderShippingAddressSetMessageBuilder oldAddress(@Nullable final com.commercetools.models.common.Address oldAddress) {
       this.oldAddress = oldAddress;
       return this;
    }
    
-   public OrderShippingAddressSetMessageBuilder address(@Nullable final com.commercetools.models.Common.Address address) {
+   public OrderShippingAddressSetMessageBuilder address(@Nullable final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
@@ -124,12 +124,12 @@ public final class OrderShippingAddressSetMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -144,12 +144,12 @@ public final class OrderShippingAddressSetMessageBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getOldAddress(){
+   public com.commercetools.models.common.Address getOldAddress(){
       return this.oldAddress;
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
 

@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Product.ProductLegacySetSkuActionImpl;
+import com.commercetools.models.product.ProductLegacySetSkuActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

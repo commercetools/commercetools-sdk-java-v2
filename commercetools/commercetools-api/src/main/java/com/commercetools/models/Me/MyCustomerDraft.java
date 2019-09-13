@@ -1,11 +1,11 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Long;
 import java.lang.String;
 import java.time.LocalDate;
-import com.commercetools.models.Me.MyCustomerDraftImpl;
+import com.commercetools.models.me.MyCustomerDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

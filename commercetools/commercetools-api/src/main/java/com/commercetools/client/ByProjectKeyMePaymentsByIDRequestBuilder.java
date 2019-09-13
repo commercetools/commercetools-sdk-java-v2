@@ -18,7 +18,7 @@ public class ByProjectKeyMePaymentsByIDRequestBuilder {
       return new ByProjectKeyMePaymentsByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyMePaymentsByIDPost post(com.commercetools.models.Common.Update update) {
+   public ByProjectKeyMePaymentsByIDPost post(com.commercetools.models.common.Update update) {
       return new ByProjectKeyMePaymentsByIDPost(apiHttpClient, projectKey, ID, update);
    }
    

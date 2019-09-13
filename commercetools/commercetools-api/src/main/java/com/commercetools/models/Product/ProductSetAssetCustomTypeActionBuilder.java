@@ -1,12 +1,12 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetAssetCustomTypeAction;
+import com.commercetools.models.product.ProductSetAssetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class ProductSetAssetCustomTypeActionBuilder {
    private java.lang.Object fields;
    
    @Nullable
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
    
    @Nullable
    private java.lang.String sku;
@@ -55,7 +55,7 @@ public final class ProductSetAssetCustomTypeActionBuilder {
       return this;
    }
    
-   public ProductSetAssetCustomTypeActionBuilder type(@Nullable final com.commercetools.models.Type.TypeResourceIdentifier type) {
+   public ProductSetAssetCustomTypeActionBuilder type(@Nullable final com.commercetools.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
@@ -91,7 +91,7 @@ public final class ProductSetAssetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
    

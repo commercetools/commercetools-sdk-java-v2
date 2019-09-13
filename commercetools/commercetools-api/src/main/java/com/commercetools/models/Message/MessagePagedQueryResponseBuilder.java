@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.message.Message;
 import java.lang.Long;
-import com.commercetools.models.Message.MessagePagedQueryResponse;
+import com.commercetools.models.message.MessagePagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class MessagePagedQueryResponseBuilder {
    private java.lang.Long count;
    
    
-   private java.util.List<com.commercetools.models.Message.Message> results;
+   private java.util.List<com.commercetools.models.message.Message> results;
    
    public MessagePagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
       this.total = total;
@@ -37,7 +37,7 @@ public final class MessagePagedQueryResponseBuilder {
       return this;
    }
    
-   public MessagePagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.Message.Message> results) {
+   public MessagePagedQueryResponseBuilder results( final java.util.List<com.commercetools.models.message.Message> results) {
       this.results = results;
       return this;
    }
@@ -58,7 +58,7 @@ public final class MessagePagedQueryResponseBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Message.Message> getResults(){
+   public java.util.List<com.commercetools.models.message.Message> getResults(){
       return this.results;
    }
 

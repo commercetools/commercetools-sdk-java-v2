@@ -1,8 +1,8 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.Destination;
+import com.commercetools.models.subscription.Destination;
 import java.lang.String;
-import com.commercetools.models.Subscription.AzureEventGridDestination;
+import com.commercetools.models.subscription.AzureEventGridDestination;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

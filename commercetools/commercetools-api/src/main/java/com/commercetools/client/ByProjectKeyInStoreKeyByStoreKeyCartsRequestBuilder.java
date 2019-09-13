@@ -18,7 +18,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder {
       return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(apiHttpClient, projectKey, storeKey);
    }
    
-   public ByProjectKeyInStoreKeyByStoreKeyCartsPost post(com.commercetools.models.Cart.CartDraft cartDraft) {
+   public ByProjectKeyInStoreKeyByStoreKeyCartsPost post(com.commercetools.models.cart.CartDraft cartDraft) {
       return new ByProjectKeyInStoreKeyByStoreKeyCartsPost(apiHttpClient, projectKey, storeKey, cartDraft);
    }
    

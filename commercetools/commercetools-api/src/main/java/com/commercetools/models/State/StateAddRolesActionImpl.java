@@ -1,7 +1,7 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.StateRoleEnum;
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.state.StateRoleEnum;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class StateAddRolesActionImpl implements StateAddRolesAction {
 
    private java.lang.String action;
    
-   private java.util.List<com.commercetools.models.State.StateRoleEnum> roles;
+   private java.util.List<com.commercetools.models.state.StateRoleEnum> roles;
 
    @JsonCreator
-   StateAddRolesActionImpl(@JsonProperty("roles") final java.util.List<com.commercetools.models.State.StateRoleEnum> roles) {
+   StateAddRolesActionImpl(@JsonProperty("roles") final java.util.List<com.commercetools.models.state.StateRoleEnum> roles) {
       this.roles = roles;
       this.action = "addRoles";
    }
@@ -43,11 +43,11 @@ public final class StateAddRolesActionImpl implements StateAddRolesAction {
    }
    
    
-   public java.util.List<com.commercetools.models.State.StateRoleEnum> getRoles(){
+   public java.util.List<com.commercetools.models.state.StateRoleEnum> getRoles(){
       return this.roles;
    }
 
-   public void setRoles(final java.util.List<com.commercetools.models.State.StateRoleEnum> roles){
+   public void setRoles(final java.util.List<com.commercetools.models.state.StateRoleEnum> roles){
       this.roles = roles;
    }
 

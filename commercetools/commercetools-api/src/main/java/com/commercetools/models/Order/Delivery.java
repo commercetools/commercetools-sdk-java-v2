@@ -1,11 +1,11 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Order.DeliveryItem;
-import com.commercetools.models.Order.Parcel;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.order.DeliveryItem;
+import com.commercetools.models.order.Parcel;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.DeliveryImpl;
+import com.commercetools.models.order.DeliveryImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

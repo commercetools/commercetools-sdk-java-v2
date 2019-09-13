@@ -1,11 +1,11 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.state.StateReference;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Message.LineItemStateTransitionMessagePayload;
+import com.commercetools.models.message.LineItemStateTransitionMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,10 +14,10 @@ import java.time.ZonedDateTime;
 public final class LineItemStateTransitionMessagePayloadBuilder {
    
    
-   private com.commercetools.models.State.StateReference toState;
+   private com.commercetools.models.state.StateReference toState;
    
    
-   private com.commercetools.models.State.StateReference fromState;
+   private com.commercetools.models.state.StateReference fromState;
    
    
    private java.lang.Long quantity;
@@ -28,12 +28,12 @@ public final class LineItemStateTransitionMessagePayloadBuilder {
    
    private java.time.ZonedDateTime transitionDate;
    
-   public LineItemStateTransitionMessagePayloadBuilder toState( final com.commercetools.models.State.StateReference toState) {
+   public LineItemStateTransitionMessagePayloadBuilder toState( final com.commercetools.models.state.StateReference toState) {
       this.toState = toState;
       return this;
    }
    
-   public LineItemStateTransitionMessagePayloadBuilder fromState( final com.commercetools.models.State.StateReference fromState) {
+   public LineItemStateTransitionMessagePayloadBuilder fromState( final com.commercetools.models.state.StateReference fromState) {
       this.fromState = fromState;
       return this;
    }
@@ -54,12 +54,12 @@ public final class LineItemStateTransitionMessagePayloadBuilder {
    }
    
    
-   public com.commercetools.models.State.StateReference getToState(){
+   public com.commercetools.models.state.StateReference getToState(){
       return this.toState;
    }
    
    
-   public com.commercetools.models.State.StateReference getFromState(){
+   public com.commercetools.models.state.StateReference getFromState(){
       return this.fromState;
    }
    

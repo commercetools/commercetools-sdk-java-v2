@@ -12,7 +12,7 @@ public class ByProjectKeyCustomersEmailConfirmRequestBuilder {
       this.projectKey = projectKey;
    }
    
-   public ByProjectKeyCustomersEmailConfirmPost post(com.commercetools.models.Customer.CustomerEmailVerify customerEmailVerify) {
+   public ByProjectKeyCustomersEmailConfirmPost post(com.commercetools.models.customer.CustomerEmailVerify customerEmailVerify) {
       return new ByProjectKeyCustomersEmailConfirmPost(apiHttpClient, projectKey, customerEmailVerify);
    }
    

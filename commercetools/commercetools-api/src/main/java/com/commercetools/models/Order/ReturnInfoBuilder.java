@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.ReturnItem;
+import com.commercetools.models.order.ReturnItem;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.ReturnInfo;
+import com.commercetools.models.order.ReturnInfo;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ public final class ReturnInfoBuilder {
    private java.lang.String returnTrackingId;
    
    
-   private java.util.List<com.commercetools.models.Order.ReturnItem> items;
+   private java.util.List<com.commercetools.models.order.ReturnItem> items;
    
    public ReturnInfoBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {
       this.returnDate = returnDate;
@@ -30,7 +30,7 @@ public final class ReturnInfoBuilder {
       return this;
    }
    
-   public ReturnInfoBuilder items( final java.util.List<com.commercetools.models.Order.ReturnItem> items) {
+   public ReturnInfoBuilder items( final java.util.List<com.commercetools.models.order.ReturnItem> items) {
       this.items = items;
       return this;
    }
@@ -46,7 +46,7 @@ public final class ReturnInfoBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.ReturnItem> getItems(){
+   public java.util.List<com.commercetools.models.order.ReturnItem> getItems(){
       return this.items;
    }
 

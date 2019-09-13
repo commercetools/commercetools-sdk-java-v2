@@ -1,8 +1,8 @@
 package commercetools.customer;
 
-import com.commercetools.models.Customer.Customer;
-import com.commercetools.models.Customer.CustomerDraft;
-import com.commercetools.models.Customer.CustomerDraftBuilder;
+import com.commercetools.models.customer.Customer;
+import com.commercetools.models.customer.CustomerDraft;
+import com.commercetools.models.customer.CustomerDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

@@ -26,9 +26,9 @@ public class ByProjectKeyChannelsPost {
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
-   private com.commercetools.models.Channel.ChannelDraft channelDraft;
+   private com.commercetools.models.channel.ChannelDraft channelDraft;
    
-   public ByProjectKeyChannelsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Channel.ChannelDraft channelDraft){
+   public ByProjectKeyChannelsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.channel.ChannelDraft channelDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.channelDraft = channelDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyChannelsPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Channel.Channel> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.channel.Channel> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyChannelsPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Channel.Channel>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.channel.Channel>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Channel.Channel.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.channel.Channel.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

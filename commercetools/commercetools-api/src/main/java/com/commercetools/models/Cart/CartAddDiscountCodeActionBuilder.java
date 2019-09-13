@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
+import com.commercetools.models.cart.CartUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Cart.CartAddDiscountCodeAction;
+import com.commercetools.models.cart.CartAddDiscountCodeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

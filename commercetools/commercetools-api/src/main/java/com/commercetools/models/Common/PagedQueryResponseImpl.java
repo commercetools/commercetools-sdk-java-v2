@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.BaseResource;
-import com.commercetools.models.Product.FacetResults;
+import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.product.FacetResults;
 import java.lang.Long;
 import java.lang.Object;
 import javax.annotation.Generated;
@@ -33,12 +33,12 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Common.BaseResource> results;
+   private java.util.List<com.commercetools.models.common.BaseResource> results;
    
-   private com.commercetools.models.Product.FacetResults facets;
+   private com.commercetools.models.product.FacetResults facets;
 
    @JsonCreator
-   PagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("meta") final java.lang.Object meta, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Common.BaseResource> results, @JsonProperty("facets") final com.commercetools.models.Product.FacetResults facets) {
+   PagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("meta") final java.lang.Object meta, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.common.BaseResource> results, @JsonProperty("facets") final com.commercetools.models.product.FacetResults facets) {
       this.total = total;
       this.offset = offset;
       this.meta = meta;
@@ -71,12 +71,12 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.BaseResource> getResults(){
+   public java.util.List<com.commercetools.models.common.BaseResource> getResults(){
       return this.results;
    }
    
    
-   public com.commercetools.models.Product.FacetResults getFacets(){
+   public com.commercetools.models.product.FacetResults getFacets(){
       return this.facets;
    }
 
@@ -96,11 +96,11 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Common.BaseResource> results){
+   public void setResults(final java.util.List<com.commercetools.models.common.BaseResource> results){
       this.results = results;
    }
    
-   public void setFacets(final com.commercetools.models.Product.FacetResults facets){
+   public void setFacets(final com.commercetools.models.product.FacetResults facets){
       this.facets = facets;
    }
 

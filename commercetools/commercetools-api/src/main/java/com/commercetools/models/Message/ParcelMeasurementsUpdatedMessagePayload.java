@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.ParcelMeasurements;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.ParcelMeasurements;
 import java.lang.String;
-import com.commercetools.models.Message.ParcelMeasurementsUpdatedMessagePayloadImpl;
+import com.commercetools.models.message.ParcelMeasurementsUpdatedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

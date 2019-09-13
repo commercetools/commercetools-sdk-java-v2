@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductChangeSlugAction;
+import com.commercetools.models.product.ProductChangeSlugAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +16,14 @@ public final class ProductChangeSlugActionBuilder {
    private java.lang.Boolean staged;
    
    
-   private com.commercetools.models.Common.LocalizedString slug;
+   private com.commercetools.models.common.LocalizedString slug;
    
    public ProductChangeSlugActionBuilder staged(@Nullable final java.lang.Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductChangeSlugActionBuilder slug( final com.commercetools.models.Common.LocalizedString slug) {
+   public ProductChangeSlugActionBuilder slug( final com.commercetools.models.common.LocalizedString slug) {
       this.slug = slug;
       return this;
    }
@@ -34,7 +34,7 @@ public final class ProductChangeSlugActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getSlug(){
+   public com.commercetools.models.common.LocalizedString getSlug(){
       return this.slug;
    }
 

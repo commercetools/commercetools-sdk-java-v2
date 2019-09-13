@@ -18,7 +18,7 @@ public class ByProjectKeyShoppingListsKeyByKeyRequestBuilder {
       return new ByProjectKeyShoppingListsKeyByKeyGet(apiHttpClient, projectKey, key);
    }
    
-   public ByProjectKeyShoppingListsKeyByKeyPost post(com.commercetools.models.ShoppingList.ShoppingListUpdate shoppingListUpdate) {
+   public ByProjectKeyShoppingListsKeyByKeyPost post(com.commercetools.models.shopping_list.ShoppingListUpdate shoppingListUpdate) {
       return new ByProjectKeyShoppingListsKeyByKeyPost(apiHttpClient, projectKey, key, shoppingListUpdate);
    }
    

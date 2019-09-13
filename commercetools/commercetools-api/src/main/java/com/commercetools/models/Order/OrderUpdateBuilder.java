@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Order.OrderUpdate;
+import com.commercetools.models.order.OrderUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class OrderUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Order.OrderUpdateAction> actions;
+   private java.util.List<com.commercetools.models.order.OrderUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public OrderUpdateBuilder actions( final java.util.List<com.commercetools.models.Order.OrderUpdateAction> actions) {
+   public OrderUpdateBuilder actions( final java.util.List<com.commercetools.models.order.OrderUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class OrderUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.OrderUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.order.OrderUpdateAction> getActions(){
       return this.actions;
    }
    

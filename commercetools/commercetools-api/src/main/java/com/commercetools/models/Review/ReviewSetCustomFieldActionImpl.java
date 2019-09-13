@@ -1,6 +1,6 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Review.ReviewUpdateAction;
+import com.commercetools.models.review.ReviewUpdateAction;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Generated;

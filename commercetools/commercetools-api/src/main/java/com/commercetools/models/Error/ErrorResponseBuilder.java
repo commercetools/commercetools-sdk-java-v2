@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Error.ErrorResponse;
+import com.commercetools.models.error.ErrorResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ErrorResponseBuilder {
    private java.lang.String message;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Error.ErrorObject> errors;
+   private java.util.List<com.commercetools.models.error.ErrorObject> errors;
    
    
    private java.lang.Integer statusCode;
@@ -41,7 +41,7 @@ public final class ErrorResponseBuilder {
       return this;
    }
    
-   public ErrorResponseBuilder errors(@Nullable final java.util.List<com.commercetools.models.Error.ErrorObject> errors) {
+   public ErrorResponseBuilder errors(@Nullable final java.util.List<com.commercetools.models.error.ErrorObject> errors) {
       this.errors = errors;
       return this;
    }
@@ -67,7 +67,7 @@ public final class ErrorResponseBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Error.ErrorObject> getErrors(){
+   public java.util.List<com.commercetools.models.error.ErrorObject> getErrors(){
       return this.errors;
    }
    

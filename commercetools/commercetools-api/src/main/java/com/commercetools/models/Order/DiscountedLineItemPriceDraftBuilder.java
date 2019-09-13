@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Cart.DiscountedLineItemPortion;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Order.DiscountedLineItemPriceDraft;
+import com.commercetools.models.cart.DiscountedLineItemPortion;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.order.DiscountedLineItemPriceDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class DiscountedLineItemPriceDraftBuilder {
    
    
-   private java.util.List<com.commercetools.models.Cart.DiscountedLineItemPortion> includedDiscounts;
+   private java.util.List<com.commercetools.models.cart.DiscountedLineItemPortion> includedDiscounts;
    
    
-   private com.commercetools.models.Common.Money value;
+   private com.commercetools.models.common.Money value;
    
-   public DiscountedLineItemPriceDraftBuilder includedDiscounts( final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPortion> includedDiscounts) {
+   public DiscountedLineItemPriceDraftBuilder includedDiscounts( final java.util.List<com.commercetools.models.cart.DiscountedLineItemPortion> includedDiscounts) {
       this.includedDiscounts = includedDiscounts;
       return this;
    }
    
-   public DiscountedLineItemPriceDraftBuilder value( final com.commercetools.models.Common.Money value) {
+   public DiscountedLineItemPriceDraftBuilder value( final com.commercetools.models.common.Money value) {
       this.value = value;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.DiscountedLineItemPortion> getIncludedDiscounts(){
+   public java.util.List<com.commercetools.models.cart.DiscountedLineItemPortion> getIncludedDiscounts(){
       return this.includedDiscounts;
    }
    
    
-   public com.commercetools.models.Common.Money getValue(){
+   public com.commercetools.models.common.Money getValue(){
       return this.value;
    }
 

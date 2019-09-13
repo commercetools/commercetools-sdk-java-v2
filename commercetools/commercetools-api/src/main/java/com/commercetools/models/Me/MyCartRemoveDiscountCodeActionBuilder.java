@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.DiscountCode.DiscountCodeReference;
-import com.commercetools.models.Me.MyCartUpdateAction;
+import com.commercetools.models.discount_code.DiscountCodeReference;
+import com.commercetools.models.me.MyCartUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyCartRemoveDiscountCodeAction;
+import com.commercetools.models.me.MyCartRemoveDiscountCodeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class MyCartRemoveDiscountCodeActionBuilder {
    
    
-   private com.commercetools.models.DiscountCode.DiscountCodeReference discountCode;
+   private com.commercetools.models.discount_code.DiscountCodeReference discountCode;
    
-   public MyCartRemoveDiscountCodeActionBuilder discountCode( final com.commercetools.models.DiscountCode.DiscountCodeReference discountCode) {
+   public MyCartRemoveDiscountCodeActionBuilder discountCode( final com.commercetools.models.discount_code.DiscountCodeReference discountCode) {
       this.discountCode = discountCode;
       return this;
    }
    
    
-   public com.commercetools.models.DiscountCode.DiscountCodeReference getDiscountCode(){
+   public com.commercetools.models.discount_code.DiscountCodeReference getDiscountCode(){
       return this.discountCode;
    }
 

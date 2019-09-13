@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.Delivery;
-import com.commercetools.models.Order.Parcel;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.Delivery;
+import com.commercetools.models.order.Parcel;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,12 +27,12 @@ public final class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAdde
 
    private java.lang.String type;
    
-   private com.commercetools.models.Order.Delivery delivery;
+   private com.commercetools.models.order.Delivery delivery;
    
-   private com.commercetools.models.Order.Parcel parcel;
+   private com.commercetools.models.order.Parcel parcel;
 
    @JsonCreator
-   ParcelAddedToDeliveryMessagePayloadImpl(@JsonProperty("delivery") final com.commercetools.models.Order.Delivery delivery, @JsonProperty("parcel") final com.commercetools.models.Order.Parcel parcel) {
+   ParcelAddedToDeliveryMessagePayloadImpl(@JsonProperty("delivery") final com.commercetools.models.order.Delivery delivery, @JsonProperty("parcel") final com.commercetools.models.order.Parcel parcel) {
       this.delivery = delivery;
       this.parcel = parcel;
       this.type = "ParcelAddedToDelivery";
@@ -47,20 +47,20 @@ public final class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAdde
    }
    
    
-   public com.commercetools.models.Order.Delivery getDelivery(){
+   public com.commercetools.models.order.Delivery getDelivery(){
       return this.delivery;
    }
    
    
-   public com.commercetools.models.Order.Parcel getParcel(){
+   public com.commercetools.models.order.Parcel getParcel(){
       return this.parcel;
    }
 
-   public void setDelivery(final com.commercetools.models.Order.Delivery delivery){
+   public void setDelivery(final com.commercetools.models.order.Delivery delivery){
       this.delivery = delivery;
    }
    
-   public void setParcel(final com.commercetools.models.Order.Parcel parcel){
+   public void setParcel(final com.commercetools.models.order.Parcel parcel){
       this.parcel = parcel;
    }
 

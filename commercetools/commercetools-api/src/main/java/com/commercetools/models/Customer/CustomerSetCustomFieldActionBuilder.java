@@ -1,9 +1,9 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerUpdateAction;
+import com.commercetools.models.customer.CustomerUpdateAction;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Customer.CustomerSetCustomFieldAction;
+import com.commercetools.models.customer.CustomerSetCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -26,9 +26,9 @@ public class ByProjectKeyDiscountCodesPost {
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
-   private com.commercetools.models.DiscountCode.DiscountCodeDraft discountCodeDraft;
+   private com.commercetools.models.discount_code.DiscountCodeDraft discountCodeDraft;
    
-   public ByProjectKeyDiscountCodesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.DiscountCode.DiscountCodeDraft discountCodeDraft){
+   public ByProjectKeyDiscountCodesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.discount_code.DiscountCodeDraft discountCodeDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.discountCodeDraft = discountCodeDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyDiscountCodesPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.DiscountCode.DiscountCode> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.discount_code.DiscountCode> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyDiscountCodesPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.DiscountCode.DiscountCode>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.discount_code.DiscountCode>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.DiscountCode.DiscountCode.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.discount_code.DiscountCode.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

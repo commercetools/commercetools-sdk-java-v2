@@ -1,13 +1,13 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Order.ItemState;
-import com.commercetools.models.Order.ProductVariantImportDraft;
-import com.commercetools.models.TaxCategory.TaxRate;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.order.ItemState;
+import com.commercetools.models.order.ProductVariantImportDraft;
+import com.commercetools.models.tax_category.TaxRate;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -31,30 +31,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LineItemImportDraftImpl implements LineItemImportDraft {
 
-   private com.commercetools.models.TaxCategory.TaxRate taxRate;
+   private com.commercetools.models.tax_category.TaxRate taxRate;
    
    private java.lang.Integer quantity;
    
-   private com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails;
+   private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    private java.lang.String productId;
    
-   private com.commercetools.models.Common.PriceDraft price;
+   private com.commercetools.models.common.PriceDraft price;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private com.commercetools.models.Order.ProductVariantImportDraft variant;
+   private com.commercetools.models.order.ProductVariantImportDraft variant;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
-   private java.util.List<com.commercetools.models.Order.ItemState> state;
+   private java.util.List<com.commercetools.models.order.ItemState> state;
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
 
    @JsonCreator
-   LineItemImportDraftImpl(@JsonProperty("taxRate") final com.commercetools.models.TaxCategory.TaxRate taxRate, @JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("price") final com.commercetools.models.Common.PriceDraft price, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("variant") final com.commercetools.models.Order.ProductVariantImportDraft variant, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("supplyChannel") final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("state") final java.util.List<com.commercetools.models.Order.ItemState> state, @JsonProperty("distributionChannel") final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel) {
+   LineItemImportDraftImpl(@JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRate taxRate, @JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("price") final com.commercetools.models.common.PriceDraft price, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("variant") final com.commercetools.models.order.ProductVariantImportDraft variant, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel) {
       this.taxRate = taxRate;
       this.quantity = quantity;
       this.shippingDetails = shippingDetails;
@@ -72,7 +72,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
    }
    
    
-   public com.commercetools.models.TaxCategory.TaxRate getTaxRate(){
+   public com.commercetools.models.tax_category.TaxRate getTaxRate(){
       return this.taxRate;
    }
    
@@ -82,7 +82,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
    }
    
    
-   public com.commercetools.models.Cart.ItemShippingDetailsDraft getShippingDetails(){
+   public com.commercetools.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
    
@@ -92,41 +92,41 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
    }
    
    
-   public com.commercetools.models.Common.PriceDraft getPrice(){
+   public com.commercetools.models.common.PriceDraft getPrice(){
       return this.price;
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Order.ProductVariantImportDraft getVariant(){
+   public com.commercetools.models.order.ProductVariantImportDraft getVariant(){
       return this.variant;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
    
-   public java.util.List<com.commercetools.models.Order.ItemState> getState(){
+   public java.util.List<com.commercetools.models.order.ItemState> getState(){
       return this.state;
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getDistributionChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
    }
 
-   public void setTaxRate(final com.commercetools.models.TaxCategory.TaxRate taxRate){
+   public void setTaxRate(final com.commercetools.models.tax_category.TaxRate taxRate){
       this.taxRate = taxRate;
    }
    
@@ -134,7 +134,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
       this.quantity = quantity;
    }
    
-   public void setShippingDetails(final com.commercetools.models.Cart.ItemShippingDetailsDraft shippingDetails){
+   public void setShippingDetails(final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails){
       this.shippingDetails = shippingDetails;
    }
    
@@ -142,31 +142,31 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
       this.productId = productId;
    }
    
-   public void setPrice(final com.commercetools.models.Common.PriceDraft price){
+   public void setPrice(final com.commercetools.models.common.PriceDraft price){
       this.price = price;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
-   public void setVariant(final com.commercetools.models.Order.ProductVariantImportDraft variant){
+   public void setVariant(final com.commercetools.models.order.ProductVariantImportDraft variant){
       this.variant = variant;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    
-   public void setSupplyChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel){
+   public void setSupplyChannel(final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel){
       this.supplyChannel = supplyChannel;
    }
    
-   public void setState(final java.util.List<com.commercetools.models.Order.ItemState> state){
+   public void setState(final java.util.List<com.commercetools.models.order.ItemState> state){
       this.state = state;
    }
    
-   public void setDistributionChannel(final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel){
+   public void setDistributionChannel(final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel){
       this.distributionChannel = distributionChannel;
    }
 

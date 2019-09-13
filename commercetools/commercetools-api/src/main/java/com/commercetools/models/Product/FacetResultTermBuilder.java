@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
 import java.lang.Long;
 import java.lang.Object;
-import com.commercetools.models.Product.FacetResultTerm;
+import com.commercetools.models.product.FacetResultTerm;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -18,7 +18,7 @@ public class ByProjectKeySubscriptionsKeyByKeyRequestBuilder {
       return new ByProjectKeySubscriptionsKeyByKeyGet(apiHttpClient, projectKey, key);
    }
    
-   public ByProjectKeySubscriptionsKeyByKeyPost post(com.commercetools.models.Subscription.SubscriptionUpdate subscriptionUpdate) {
+   public ByProjectKeySubscriptionsKeyByKeyPost post(com.commercetools.models.subscription.SubscriptionUpdate subscriptionUpdate) {
       return new ByProjectKeySubscriptionsKeyByKeyPost(apiHttpClient, projectKey, key, subscriptionUpdate);
    }
    

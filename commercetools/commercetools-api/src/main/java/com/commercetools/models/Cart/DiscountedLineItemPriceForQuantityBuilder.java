@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.DiscountedLineItemPrice;
+import com.commercetools.models.cart.DiscountedLineItemPrice;
 import java.lang.Integer;
-import com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,14 +14,14 @@ public final class DiscountedLineItemPriceForQuantityBuilder {
    private java.lang.Integer quantity;
    
    
-   private com.commercetools.models.Cart.DiscountedLineItemPrice discountedPrice;
+   private com.commercetools.models.cart.DiscountedLineItemPrice discountedPrice;
    
    public DiscountedLineItemPriceForQuantityBuilder quantity( final java.lang.Integer quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public DiscountedLineItemPriceForQuantityBuilder discountedPrice( final com.commercetools.models.Cart.DiscountedLineItemPrice discountedPrice) {
+   public DiscountedLineItemPriceForQuantityBuilder discountedPrice( final com.commercetools.models.cart.DiscountedLineItemPrice discountedPrice) {
       this.discountedPrice = discountedPrice;
       return this;
    }
@@ -32,7 +32,7 @@ public final class DiscountedLineItemPriceForQuantityBuilder {
    }
    
    
-   public com.commercetools.models.Cart.DiscountedLineItemPrice getDiscountedPrice(){
+   public com.commercetools.models.cart.DiscountedLineItemPrice getDiscountedPrice(){
       return this.discountedPrice;
    }
 

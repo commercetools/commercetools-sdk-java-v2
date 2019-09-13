@@ -1,6 +1,6 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelUpdateAction;
+import com.commercetools.models.channel.ChannelUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelUpdateImpl implements ChannelUpdate {
 
-   private java.util.List<com.commercetools.models.Channel.ChannelUpdateAction> actions;
+   private java.util.List<com.commercetools.models.channel.ChannelUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   ChannelUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.Channel.ChannelUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   ChannelUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.channel.ChannelUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class ChannelUpdateImpl implements ChannelUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.Channel.ChannelUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.channel.ChannelUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class ChannelUpdateImpl implements ChannelUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.Channel.ChannelUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.channel.ChannelUpdateAction> actions){
       this.actions = actions;
    }
    

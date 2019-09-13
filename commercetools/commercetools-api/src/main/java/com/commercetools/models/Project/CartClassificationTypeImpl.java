@@ -1,8 +1,8 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ShippingRateInputType;
-import com.commercetools.models.ShippingMethod.ShippingRateTierType;
-import com.commercetools.models.Type.CustomFieldLocalizedEnumValue;
+import com.commercetools.models.project.ShippingRateInputType;
+import com.commercetools.models.shipping_method.ShippingRateTierType;
+import com.commercetools.models.type.CustomFieldLocalizedEnumValue;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +24,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartClassificationTypeImpl implements CartClassificationType {
 
-   private com.commercetools.models.ShippingMethod.ShippingRateTierType type;
+   private com.commercetools.models.shipping_method.ShippingRateTierType type;
    
-   private java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> values;
+   private java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> values;
 
    @JsonCreator
-   CartClassificationTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> values) {
+   CartClassificationTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> values) {
       this.values = values;
       this.type = ShippingRateTierType.findEnumViaJsonName("CartClassification").get();
    }
@@ -38,16 +38,16 @@ public final class CartClassificationTypeImpl implements CartClassificationType 
    }
    
    
-   public com.commercetools.models.ShippingMethod.ShippingRateTierType getType(){
+   public com.commercetools.models.shipping_method.ShippingRateTierType getType(){
       return this.type;
    }
    
    
-   public java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> getValues(){
+   public java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> getValues(){
       return this.values;
    }
 
-   public void setValues(final java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> values){
+   public void setValues(final java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> values){
       this.values = values;
    }
 

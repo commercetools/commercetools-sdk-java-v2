@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Type.TypeTextInputHint;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.TypeTextInputHint;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -28,16 +28,16 @@ public final class FieldDefinitionImpl implements FieldDefinition {
 
    private java.lang.String name;
    
-   private com.commercetools.models.Type.TypeTextInputHint inputHint;
+   private com.commercetools.models.type.TypeTextInputHint inputHint;
    
-   private com.commercetools.models.Common.LocalizedString label;
+   private com.commercetools.models.common.LocalizedString label;
    
    private java.lang.Object type;
    
    private java.lang.Boolean required;
 
    @JsonCreator
-   FieldDefinitionImpl(@JsonProperty("name") final java.lang.String name, @JsonProperty("inputHint") final com.commercetools.models.Type.TypeTextInputHint inputHint, @JsonProperty("label") final com.commercetools.models.Common.LocalizedString label, @JsonProperty("type") final java.lang.Object type, @JsonProperty("required") final java.lang.Boolean required) {
+   FieldDefinitionImpl(@JsonProperty("name") final java.lang.String name, @JsonProperty("inputHint") final com.commercetools.models.type.TypeTextInputHint inputHint, @JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("type") final java.lang.Object type, @JsonProperty("required") final java.lang.Boolean required) {
       this.name = name;
       this.inputHint = inputHint;
       this.label = label;
@@ -54,12 +54,12 @@ public final class FieldDefinitionImpl implements FieldDefinition {
    }
    
    
-   public com.commercetools.models.Type.TypeTextInputHint getInputHint(){
+   public com.commercetools.models.type.TypeTextInputHint getInputHint(){
       return this.inputHint;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getLabel(){
+   public com.commercetools.models.common.LocalizedString getLabel(){
       return this.label;
    }
    
@@ -77,11 +77,11 @@ public final class FieldDefinitionImpl implements FieldDefinition {
       this.name = name;
    }
    
-   public void setInputHint(final com.commercetools.models.Type.TypeTextInputHint inputHint){
+   public void setInputHint(final com.commercetools.models.type.TypeTextInputHint inputHint){
       this.inputHint = inputHint;
    }
    
-   public void setLabel(final com.commercetools.models.Common.LocalizedString label){
+   public void setLabel(final com.commercetools.models.common.LocalizedString label){
       this.label = label;
    }
    

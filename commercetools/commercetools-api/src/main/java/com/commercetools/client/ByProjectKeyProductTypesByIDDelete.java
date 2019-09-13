@@ -53,7 +53,7 @@ public class ByProjectKeyProductTypesByIDDelete {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.ProductType.ProductType> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.product_type.ProductType> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyProductTypesByIDDelete {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.ProductType.ProductType>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.product_type.ProductType>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.ProductType.ProductType.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.product_type.ProductType.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

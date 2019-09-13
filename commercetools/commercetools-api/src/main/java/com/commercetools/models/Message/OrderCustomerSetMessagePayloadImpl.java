@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Customer.CustomerReference;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.customer.CustomerReference;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,16 +27,16 @@ public final class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSe
 
    private java.lang.String type;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference oldCustomerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference oldCustomerGroup;
    
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
-   private com.commercetools.models.Customer.CustomerReference oldCustomer;
+   private com.commercetools.models.customer.CustomerReference oldCustomer;
    
-   private com.commercetools.models.Customer.CustomerReference customer;
+   private com.commercetools.models.customer.CustomerReference customer;
 
    @JsonCreator
-   OrderCustomerSetMessagePayloadImpl(@JsonProperty("oldCustomerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupReference oldCustomerGroup, @JsonProperty("customerGroup") final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup, @JsonProperty("oldCustomer") final com.commercetools.models.Customer.CustomerReference oldCustomer, @JsonProperty("customer") final com.commercetools.models.Customer.CustomerReference customer) {
+   OrderCustomerSetMessagePayloadImpl(@JsonProperty("oldCustomerGroup") final com.commercetools.models.customer_group.CustomerGroupReference oldCustomerGroup, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("oldCustomer") final com.commercetools.models.customer.CustomerReference oldCustomer, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
       this.oldCustomerGroup = oldCustomerGroup;
       this.customerGroup = customerGroup;
       this.oldCustomer = oldCustomer;
@@ -53,38 +53,38 @@ public final class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSe
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getOldCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getOldCustomerGroup(){
       return this.oldCustomerGroup;
    }
    
    
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    
-   public com.commercetools.models.Customer.CustomerReference getOldCustomer(){
+   public com.commercetools.models.customer.CustomerReference getOldCustomer(){
       return this.oldCustomer;
    }
    
    
-   public com.commercetools.models.Customer.CustomerReference getCustomer(){
+   public com.commercetools.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
 
-   public void setOldCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupReference oldCustomerGroup){
+   public void setOldCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupReference oldCustomerGroup){
       this.oldCustomerGroup = oldCustomerGroup;
    }
    
-   public void setCustomerGroup(final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup){
+   public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupReference customerGroup){
       this.customerGroup = customerGroup;
    }
    
-   public void setOldCustomer(final com.commercetools.models.Customer.CustomerReference oldCustomer){
+   public void setOldCustomer(final com.commercetools.models.customer.CustomerReference oldCustomer){
       this.oldCustomer = oldCustomer;
    }
    
-   public void setCustomer(final com.commercetools.models.Customer.CustomerReference customer){
+   public void setCustomer(final com.commercetools.models.customer.CustomerReference customer){
       this.customer = customer;
    }
 

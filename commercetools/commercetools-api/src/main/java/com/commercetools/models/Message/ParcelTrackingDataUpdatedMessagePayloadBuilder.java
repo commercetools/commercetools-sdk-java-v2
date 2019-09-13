@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.TrackingData;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.TrackingData;
 import java.lang.String;
-import com.commercetools.models.Message.ParcelTrackingDataUpdatedMessagePayload;
+import com.commercetools.models.message.ParcelTrackingDataUpdatedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ public final class ParcelTrackingDataUpdatedMessagePayloadBuilder {
    private java.lang.String deliveryId;
    
    @Nullable
-   private com.commercetools.models.Order.TrackingData trackingData;
+   private com.commercetools.models.order.TrackingData trackingData;
    
    
    private java.lang.String parcelId;
@@ -25,7 +25,7 @@ public final class ParcelTrackingDataUpdatedMessagePayloadBuilder {
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessagePayloadBuilder trackingData(@Nullable final com.commercetools.models.Order.TrackingData trackingData) {
+   public ParcelTrackingDataUpdatedMessagePayloadBuilder trackingData(@Nullable final com.commercetools.models.order.TrackingData trackingData) {
       this.trackingData = trackingData;
       return this;
    }
@@ -41,7 +41,7 @@ public final class ParcelTrackingDataUpdatedMessagePayloadBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Order.TrackingData getTrackingData(){
+   public com.commercetools.models.order.TrackingData getTrackingData(){
       return this.trackingData;
    }
    

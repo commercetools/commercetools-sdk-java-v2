@@ -1,7 +1,7 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.PayloadNotIncluded;
-import com.commercetools.models.Subscription.SubscriptionDelivery;
+import com.commercetools.models.subscription.PayloadNotIncluded;
+import com.commercetools.models.subscription.SubscriptionDelivery;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
@@ -28,9 +28,9 @@ public final class MessageDeliveryImpl implements MessageDelivery {
 
    private java.lang.String projectKey;
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    private java.lang.String notificationType;
    
@@ -42,14 +42,14 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    
    private java.lang.Long resourceVersion;
    
-   private com.commercetools.models.Subscription.PayloadNotIncluded payloadNotIncluded;
+   private com.commercetools.models.subscription.PayloadNotIncluded payloadNotIncluded;
    
    private java.lang.String id;
    
    private java.lang.Long version;
 
    @JsonCreator
-   MessageDeliveryImpl(@JsonProperty("projectKey") final java.lang.String projectKey, @JsonProperty("resource") final com.commercetools.models.Common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("payloadNotIncluded") final com.commercetools.models.Subscription.PayloadNotIncluded payloadNotIncluded, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version) {
+   MessageDeliveryImpl(@JsonProperty("projectKey") final java.lang.String projectKey, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("payloadNotIncluded") final com.commercetools.models.subscription.PayloadNotIncluded payloadNotIncluded, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version) {
       this.projectKey = projectKey;
       this.resource = resource;
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
@@ -72,12 +72,12 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -107,7 +107,7 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    }
    
    
-   public com.commercetools.models.Subscription.PayloadNotIncluded getPayloadNotIncluded(){
+   public com.commercetools.models.subscription.PayloadNotIncluded getPayloadNotIncluded(){
       return this.payloadNotIncluded;
    }
    
@@ -125,11 +125,11 @@ public final class MessageDeliveryImpl implements MessageDelivery {
       this.projectKey = projectKey;
    }
    
-   public void setResource(final com.commercetools.models.Common.Reference resource){
+   public void setResource(final com.commercetools.models.common.Reference resource){
       this.resource = resource;
    }
    
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
@@ -149,7 +149,7 @@ public final class MessageDeliveryImpl implements MessageDelivery {
       this.resourceVersion = resourceVersion;
    }
    
-   public void setPayloadNotIncluded(final com.commercetools.models.Subscription.PayloadNotIncluded payloadNotIncluded){
+   public void setPayloadNotIncluded(final com.commercetools.models.subscription.PayloadNotIncluded payloadNotIncluded){
       this.payloadNotIncluded = payloadNotIncluded;
    }
    

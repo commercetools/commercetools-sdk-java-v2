@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetTypes;
-import com.commercetools.models.Product.FilteredFacetResult;
-import com.commercetools.models.Product.RangeFacetResult;
-import com.commercetools.models.Product.TermFacetResult;
+import com.commercetools.models.product.FacetTypes;
+import com.commercetools.models.product.FilteredFacetResult;
+import com.commercetools.models.product.RangeFacetResult;
+import com.commercetools.models.product.TermFacetResult;
 
 
 import com.fasterxml.jackson.annotation.*;
@@ -18,9 +18,9 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Product.FilteredFacetResultImpl.class, name = "filter"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Product.RangeFacetResultImpl.class, name = "range"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Product.TermFacetResultImpl.class, name = "terms")
+   @JsonSubTypes.Type(value = com.commercetools.models.product.FilteredFacetResultImpl.class, name = "filter"),
+   @JsonSubTypes.Type(value = com.commercetools.models.product.RangeFacetResultImpl.class, name = "range"),
+   @JsonSubTypes.Type(value = com.commercetools.models.product.TermFacetResultImpl.class, name = "terms")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

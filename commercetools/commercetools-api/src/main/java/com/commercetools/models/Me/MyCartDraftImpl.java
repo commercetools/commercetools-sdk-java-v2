@@ -1,11 +1,11 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Cart.InventoryMode;
-import com.commercetools.models.Cart.TaxMode;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Me.MyLineItemDraft;
-import com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.InventoryMode;
+import com.commercetools.models.cart.TaxMode;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.me.MyLineItemDraft;
+import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -29,34 +29,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartDraftImpl implements MyCartDraft {
 
-   private java.util.List<com.commercetools.models.Me.MyLineItemDraft> lineItems;
+   private java.util.List<com.commercetools.models.me.MyLineItemDraft> lineItems;
    
    private java.lang.String country;
    
-   private java.util.List<com.commercetools.models.Common.Address> itemShippingAddresses;
+   private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
-   private com.commercetools.models.Cart.TaxMode taxMode;
+   private com.commercetools.models.cart.TaxMode taxMode;
    
    private java.lang.Long deleteDaysAfterLastModification;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod;
+   private com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
    
    private java.lang.String customerEmail;
    
-   private com.commercetools.models.Common.Address shippingAddress;
+   private com.commercetools.models.common.Address shippingAddress;
    
    private java.lang.String currency;
    
-   private com.commercetools.models.Common.Address billingAddress;
+   private com.commercetools.models.common.Address billingAddress;
    
    private java.lang.String locale;
    
-   private com.commercetools.models.Cart.InventoryMode inventoryMode;
+   private com.commercetools.models.cart.InventoryMode inventoryMode;
 
    @JsonCreator
-   MyCartDraftImpl(@JsonProperty("lineItems") final java.util.List<com.commercetools.models.Me.MyLineItemDraft> lineItems, @JsonProperty("country") final java.lang.String country, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.Common.Address> itemShippingAddresses, @JsonProperty("taxMode") final com.commercetools.models.Cart.TaxMode taxMode, @JsonProperty("deleteDaysAfterLastModification") final java.lang.Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("shippingMethod") final com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("customerEmail") final java.lang.String customerEmail, @JsonProperty("shippingAddress") final com.commercetools.models.Common.Address shippingAddress, @JsonProperty("currency") final java.lang.String currency, @JsonProperty("billingAddress") final com.commercetools.models.Common.Address billingAddress, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("inventoryMode") final com.commercetools.models.Cart.InventoryMode inventoryMode) {
+   MyCartDraftImpl(@JsonProperty("lineItems") final java.util.List<com.commercetools.models.me.MyLineItemDraft> lineItems, @JsonProperty("country") final java.lang.String country, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode, @JsonProperty("deleteDaysAfterLastModification") final java.lang.Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("shippingMethod") final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("customerEmail") final java.lang.String customerEmail, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("currency") final java.lang.String currency, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode) {
       this.lineItems = lineItems;
       this.country = country;
       this.itemShippingAddresses = itemShippingAddresses;
@@ -76,7 +76,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
    }
    
    
-   public java.util.List<com.commercetools.models.Me.MyLineItemDraft> getLineItems(){
+   public java.util.List<com.commercetools.models.me.MyLineItemDraft> getLineItems(){
       return this.lineItems;
    }
    
@@ -86,12 +86,12 @@ public final class MyCartDraftImpl implements MyCartDraft {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.Address> getItemShippingAddresses(){
+   public java.util.List<com.commercetools.models.common.Address> getItemShippingAddresses(){
       return this.itemShippingAddresses;
    }
    
    
-   public com.commercetools.models.Cart.TaxMode getTaxMode(){
+   public com.commercetools.models.cart.TaxMode getTaxMode(){
       return this.taxMode;
    }
    
@@ -101,12 +101,12 @@ public final class MyCartDraftImpl implements MyCartDraft {
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier getShippingMethod(){
+   public com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
       return this.shippingMethod;
    }
    
@@ -116,7 +116,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
    }
    
    
-   public com.commercetools.models.Common.Address getShippingAddress(){
+   public com.commercetools.models.common.Address getShippingAddress(){
       return this.shippingAddress;
    }
    
@@ -128,7 +128,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
    }
    
    
-   public com.commercetools.models.Common.Address getBillingAddress(){
+   public com.commercetools.models.common.Address getBillingAddress(){
       return this.billingAddress;
    }
    
@@ -138,11 +138,11 @@ public final class MyCartDraftImpl implements MyCartDraft {
    }
    
    
-   public com.commercetools.models.Cart.InventoryMode getInventoryMode(){
+   public com.commercetools.models.cart.InventoryMode getInventoryMode(){
       return this.inventoryMode;
    }
 
-   public void setLineItems(final java.util.List<com.commercetools.models.Me.MyLineItemDraft> lineItems){
+   public void setLineItems(final java.util.List<com.commercetools.models.me.MyLineItemDraft> lineItems){
       this.lineItems = lineItems;
    }
    
@@ -150,11 +150,11 @@ public final class MyCartDraftImpl implements MyCartDraft {
       this.country = country;
    }
    
-   public void setItemShippingAddresses(final java.util.List<com.commercetools.models.Common.Address> itemShippingAddresses){
+   public void setItemShippingAddresses(final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses){
       this.itemShippingAddresses = itemShippingAddresses;
    }
    
-   public void setTaxMode(final com.commercetools.models.Cart.TaxMode taxMode){
+   public void setTaxMode(final com.commercetools.models.cart.TaxMode taxMode){
       this.taxMode = taxMode;
    }
    
@@ -162,11 +162,11 @@ public final class MyCartDraftImpl implements MyCartDraft {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
-   public void setShippingMethod(final com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier shippingMethod){
+   public void setShippingMethod(final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod){
       this.shippingMethod = shippingMethod;
    }
    
@@ -174,7 +174,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
       this.customerEmail = customerEmail;
    }
    
-   public void setShippingAddress(final com.commercetools.models.Common.Address shippingAddress){
+   public void setShippingAddress(final com.commercetools.models.common.Address shippingAddress){
       this.shippingAddress = shippingAddress;
    }
    
@@ -182,7 +182,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
       this.currency = currency;
    }
    
-   public void setBillingAddress(final com.commercetools.models.Common.Address billingAddress){
+   public void setBillingAddress(final com.commercetools.models.common.Address billingAddress){
       this.billingAddress = billingAddress;
    }
    
@@ -190,7 +190,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
       this.locale = locale;
    }
    
-   public void setInventoryMode(final com.commercetools.models.Cart.InventoryMode inventoryMode){
+   public void setInventoryMode(final com.commercetools.models.cart.InventoryMode inventoryMode){
       this.inventoryMode = inventoryMode;
    }
 

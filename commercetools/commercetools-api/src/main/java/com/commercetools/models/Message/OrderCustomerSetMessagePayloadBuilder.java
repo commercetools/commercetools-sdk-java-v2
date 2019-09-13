@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Customer.CustomerReference;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.customer.CustomerReference;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.OrderCustomerSetMessagePayload;
+import com.commercetools.models.message.OrderCustomerSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,54 +13,54 @@ import java.time.ZonedDateTime;
 public final class OrderCustomerSetMessagePayloadBuilder {
    
    @Nullable
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference oldCustomerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference oldCustomerGroup;
    
    @Nullable
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
    @Nullable
-   private com.commercetools.models.Customer.CustomerReference oldCustomer;
+   private com.commercetools.models.customer.CustomerReference oldCustomer;
    
    @Nullable
-   private com.commercetools.models.Customer.CustomerReference customer;
+   private com.commercetools.models.customer.CustomerReference customer;
    
-   public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(@Nullable final com.commercetools.models.CustomerGroup.CustomerGroupReference oldCustomerGroup) {
+   public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupReference oldCustomerGroup) {
       this.oldCustomerGroup = oldCustomerGroup;
       return this;
    }
    
-   public OrderCustomerSetMessagePayloadBuilder customerGroup(@Nullable final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup) {
+   public OrderCustomerSetMessagePayloadBuilder customerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupReference customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
    
-   public OrderCustomerSetMessagePayloadBuilder oldCustomer(@Nullable final com.commercetools.models.Customer.CustomerReference oldCustomer) {
+   public OrderCustomerSetMessagePayloadBuilder oldCustomer(@Nullable final com.commercetools.models.customer.CustomerReference oldCustomer) {
       this.oldCustomer = oldCustomer;
       return this;
    }
    
-   public OrderCustomerSetMessagePayloadBuilder customer(@Nullable final com.commercetools.models.Customer.CustomerReference customer) {
+   public OrderCustomerSetMessagePayloadBuilder customer(@Nullable final com.commercetools.models.customer.CustomerReference customer) {
       this.customer = customer;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getOldCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getOldCustomerGroup(){
       return this.oldCustomerGroup;
    }
    
    @Nullable
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    @Nullable
-   public com.commercetools.models.Customer.CustomerReference getOldCustomer(){
+   public com.commercetools.models.customer.CustomerReference getOldCustomer(){
       return this.oldCustomer;
    }
    
    @Nullable
-   public com.commercetools.models.Customer.CustomerReference getCustomer(){
+   public com.commercetools.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
 

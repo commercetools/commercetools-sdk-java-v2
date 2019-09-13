@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Me.MyTransactionDraft;
-import com.commercetools.models.Payment.PaymentMethodInfo;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.me.MyTransactionDraft;
+import com.commercetools.models.payment.PaymentMethodInfo;
+import com.commercetools.models.type.CustomFieldsDraft;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +25,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentDraftImpl implements MyPaymentDraft {
 
-   private com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo;
+   private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
    
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private com.commercetools.models.Common.Money amountPlanned;
+   private com.commercetools.models.common.Money amountPlanned;
    
-   private com.commercetools.models.Me.MyTransactionDraft transaction;
+   private com.commercetools.models.me.MyTransactionDraft transaction;
 
    @JsonCreator
-   MyPaymentDraftImpl(@JsonProperty("paymentMethodInfo") final com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("custom") final com.commercetools.models.Type.CustomFieldsDraft custom, @JsonProperty("amountPlanned") final com.commercetools.models.Common.Money amountPlanned, @JsonProperty("transaction") final com.commercetools.models.Me.MyTransactionDraft transaction) {
+   MyPaymentDraftImpl(@JsonProperty("paymentMethodInfo") final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("amountPlanned") final com.commercetools.models.common.Money amountPlanned, @JsonProperty("transaction") final com.commercetools.models.me.MyTransactionDraft transaction) {
       this.paymentMethodInfo = paymentMethodInfo;
       this.custom = custom;
       this.amountPlanned = amountPlanned;
@@ -45,38 +45,38 @@ public final class MyPaymentDraftImpl implements MyPaymentDraft {
    }
    
    
-   public com.commercetools.models.Payment.PaymentMethodInfo getPaymentMethodInfo(){
+   public com.commercetools.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
       return this.paymentMethodInfo;
    }
    
    
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.Money getAmountPlanned(){
+   public com.commercetools.models.common.Money getAmountPlanned(){
       return this.amountPlanned;
    }
    
    
-   public com.commercetools.models.Me.MyTransactionDraft getTransaction(){
+   public com.commercetools.models.me.MyTransactionDraft getTransaction(){
       return this.transaction;
    }
 
-   public void setPaymentMethodInfo(final com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo){
+   public void setPaymentMethodInfo(final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo){
       this.paymentMethodInfo = paymentMethodInfo;
    }
    
-   public void setCustom(final com.commercetools.models.Type.CustomFieldsDraft custom){
+   public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
-   public void setAmountPlanned(final com.commercetools.models.Common.Money amountPlanned){
+   public void setAmountPlanned(final com.commercetools.models.common.Money amountPlanned){
       this.amountPlanned = amountPlanned;
    }
    
-   public void setTransaction(final com.commercetools.models.Me.MyTransactionDraft transaction){
+   public void setTransaction(final com.commercetools.models.me.MyTransactionDraft transaction){
       this.transaction = transaction;
    }
 

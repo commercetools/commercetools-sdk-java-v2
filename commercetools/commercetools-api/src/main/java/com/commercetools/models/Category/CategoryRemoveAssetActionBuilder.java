@@ -1,8 +1,8 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
+import com.commercetools.models.category.CategoryUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Category.CategoryRemoveAssetAction;
+import com.commercetools.models.category.CategoryRemoveAssetAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeReference;
+import com.commercetools.models.type.CustomFields;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class CustomFieldsBuilder {
    
    
-   private com.commercetools.models.Type.FieldContainer fields;
+   private com.commercetools.models.type.FieldContainer fields;
    
    
-   private com.commercetools.models.Type.TypeReference type;
+   private com.commercetools.models.type.TypeReference type;
    
-   public CustomFieldsBuilder fields( final com.commercetools.models.Type.FieldContainer fields) {
+   public CustomFieldsBuilder fields( final com.commercetools.models.type.FieldContainer fields) {
       this.fields = fields;
       return this;
    }
    
-   public CustomFieldsBuilder type( final com.commercetools.models.Type.TypeReference type) {
+   public CustomFieldsBuilder type( final com.commercetools.models.type.TypeReference type) {
       this.type = type;
       return this;
    }
    
    
-   public com.commercetools.models.Type.FieldContainer getFields(){
+   public com.commercetools.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    
-   public com.commercetools.models.Type.TypeReference getType(){
+   public com.commercetools.models.type.TypeReference getType(){
       return this.type;
    }
 

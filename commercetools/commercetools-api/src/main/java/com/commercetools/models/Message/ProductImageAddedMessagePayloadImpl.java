@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Image;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.common.Image;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
@@ -28,14 +28,14 @@ public final class ProductImageAddedMessagePayloadImpl implements ProductImageAd
 
    private java.lang.String type;
    
-   private com.commercetools.models.Common.Image image;
+   private com.commercetools.models.common.Image image;
    
    private java.lang.Boolean staged;
    
    private java.lang.Long variantId;
 
    @JsonCreator
-   ProductImageAddedMessagePayloadImpl(@JsonProperty("image") final com.commercetools.models.Common.Image image, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId) {
+   ProductImageAddedMessagePayloadImpl(@JsonProperty("image") final com.commercetools.models.common.Image image, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId) {
       this.image = image;
       this.staged = staged;
       this.variantId = variantId;
@@ -51,7 +51,7 @@ public final class ProductImageAddedMessagePayloadImpl implements ProductImageAd
    }
    
    
-   public com.commercetools.models.Common.Image getImage(){
+   public com.commercetools.models.common.Image getImage(){
       return this.image;
    }
    
@@ -65,7 +65,7 @@ public final class ProductImageAddedMessagePayloadImpl implements ProductImageAd
       return this.variantId;
    }
 
-   public void setImage(final com.commercetools.models.Common.Image image){
+   public void setImage(final com.commercetools.models.common.Image image){
       this.image = image;
    }
    

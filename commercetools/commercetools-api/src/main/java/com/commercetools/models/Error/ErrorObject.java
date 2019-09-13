@@ -1,37 +1,37 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.AccessDeniedError;
-import com.commercetools.models.Error.ConcurrentModificationError;
-import com.commercetools.models.Error.DiscountCodeNonApplicableError;
-import com.commercetools.models.Error.DuplicateAttributeValueError;
-import com.commercetools.models.Error.DuplicateAttributeValuesError;
-import com.commercetools.models.Error.DuplicateFieldError;
-import com.commercetools.models.Error.DuplicateFieldWithConflictingResourceError;
-import com.commercetools.models.Error.DuplicatePriceScopeError;
-import com.commercetools.models.Error.DuplicateVariantValuesError;
-import com.commercetools.models.Error.EnumValueIsUsedError;
-import com.commercetools.models.Error.ExtensionBadResponseError;
-import com.commercetools.models.Error.ExtensionNoResponseError;
-import com.commercetools.models.Error.ExtensionUpdateActionsFailedError;
-import com.commercetools.models.Error.InsufficientScopeError;
-import com.commercetools.models.Error.InvalidCredentialsError;
-import com.commercetools.models.Error.InvalidCurrentPasswordError;
-import com.commercetools.models.Error.InvalidFieldError;
-import com.commercetools.models.Error.InvalidInputError;
-import com.commercetools.models.Error.InvalidItemShippingDetailsError;
-import com.commercetools.models.Error.InvalidJsonInputError;
-import com.commercetools.models.Error.InvalidOperationError;
-import com.commercetools.models.Error.InvalidSubjectError;
-import com.commercetools.models.Error.InvalidTokenError;
-import com.commercetools.models.Error.MatchingPriceNotFoundError;
-import com.commercetools.models.Error.MissingTaxRateForCountryError;
-import com.commercetools.models.Error.NoMatchingProductDiscountFoundError;
-import com.commercetools.models.Error.OutOfStockError;
-import com.commercetools.models.Error.PriceChangedError;
-import com.commercetools.models.Error.ReferenceExistsError;
-import com.commercetools.models.Error.RequiredFieldError;
-import com.commercetools.models.Error.ResourceNotFoundError;
-import com.commercetools.models.Error.ShippingMethodDoesNotMatchCartError;
+import com.commercetools.models.error.AccessDeniedError;
+import com.commercetools.models.error.ConcurrentModificationError;
+import com.commercetools.models.error.DiscountCodeNonApplicableError;
+import com.commercetools.models.error.DuplicateAttributeValueError;
+import com.commercetools.models.error.DuplicateAttributeValuesError;
+import com.commercetools.models.error.DuplicateFieldError;
+import com.commercetools.models.error.DuplicateFieldWithConflictingResourceError;
+import com.commercetools.models.error.DuplicatePriceScopeError;
+import com.commercetools.models.error.DuplicateVariantValuesError;
+import com.commercetools.models.error.EnumValueIsUsedError;
+import com.commercetools.models.error.ExtensionBadResponseError;
+import com.commercetools.models.error.ExtensionNoResponseError;
+import com.commercetools.models.error.ExtensionUpdateActionsFailedError;
+import com.commercetools.models.error.InsufficientScopeError;
+import com.commercetools.models.error.InvalidCredentialsError;
+import com.commercetools.models.error.InvalidCurrentPasswordError;
+import com.commercetools.models.error.InvalidFieldError;
+import com.commercetools.models.error.InvalidInputError;
+import com.commercetools.models.error.InvalidItemShippingDetailsError;
+import com.commercetools.models.error.InvalidJsonInputError;
+import com.commercetools.models.error.InvalidOperationError;
+import com.commercetools.models.error.InvalidSubjectError;
+import com.commercetools.models.error.InvalidTokenError;
+import com.commercetools.models.error.MatchingPriceNotFoundError;
+import com.commercetools.models.error.MissingTaxRateForCountryError;
+import com.commercetools.models.error.NoMatchingProductDiscountFoundError;
+import com.commercetools.models.error.OutOfStockError;
+import com.commercetools.models.error.PriceChangedError;
+import com.commercetools.models.error.ReferenceExistsError;
+import com.commercetools.models.error.RequiredFieldError;
+import com.commercetools.models.error.ResourceNotFoundError;
+import com.commercetools.models.error.ShippingMethodDoesNotMatchCartError;
 import java.lang.String;
 
 
@@ -47,38 +47,38 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.ExtensionBadResponseErrorImpl.class, name = "ExtensionBadResponse"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.ExtensionNoResponseErrorImpl.class, name = "ExtensionNoResponse"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.ExtensionUpdateActionsFailedErrorImpl.class, name = "ExtensionUpdateActionsFailed"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.InsufficientScopeErrorImpl.class, name = "insufficient_scope"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.InvalidCredentialsErrorImpl.class, name = "InvalidCredentials"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.InvalidCurrentPasswordErrorImpl.class, name = "InvalidCurrentPassword"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.InvalidFieldErrorImpl.class, name = "InvalidField"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.InvalidInputErrorImpl.class, name = "InvalidInput"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.InvalidItemShippingDetailsErrorImpl.class, name = "InvalidItemShippingDetails"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.InvalidJsonInputErrorImpl.class, name = "InvalidJsonInput"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.InvalidOperationErrorImpl.class, name = "InvalidOperation"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.InvalidSubjectErrorImpl.class, name = "InvalidSubject"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.InvalidTokenErrorImpl.class, name = "invalid_token"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.MatchingPriceNotFoundErrorImpl.class, name = "MatchingPriceNotFound"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.MissingTaxRateForCountryErrorImpl.class, name = "MissingTaxRateForCountry"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.NoMatchingProductDiscountFoundErrorImpl.class, name = "NoMatchingProductDiscountFound"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.OutOfStockErrorImpl.class, name = "OutOfStock"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.PriceChangedErrorImpl.class, name = "PriceChanged"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.ReferenceExistsErrorImpl.class, name = "ReferenceExists"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.RequiredFieldErrorImpl.class, name = "RequiredField"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.ResourceNotFoundErrorImpl.class, name = "ResourceNotFound"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = "ShippingMethodDoesNotMatchCart"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.AccessDeniedErrorImpl.class, name = "access_denied"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.ConcurrentModificationErrorImpl.class, name = "ConcurrentModification"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.DiscountCodeNonApplicableErrorImpl.class, name = "DiscountCodeNonApplicable"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.DuplicateAttributeValueErrorImpl.class, name = "DuplicateAttributeValue"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.DuplicateAttributeValuesErrorImpl.class, name = "DuplicateAttributeValues"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.DuplicateFieldErrorImpl.class, name = "DuplicateField"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.DuplicateFieldWithConflictingResourceErrorImpl.class, name = "DuplicateFieldWithConflictingResource"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.DuplicatePriceScopeErrorImpl.class, name = "DuplicatePriceScope"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.DuplicateVariantValuesErrorImpl.class, name = "DuplicateVariantValues"),
-   @JsonSubTypes.Type(value = com.commercetools.models.Error.EnumValueIsUsedErrorImpl.class, name = "EnumValueIsUsed")
+   @JsonSubTypes.Type(value = com.commercetools.models.error.ExtensionBadResponseErrorImpl.class, name = "ExtensionBadResponse"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.ExtensionNoResponseErrorImpl.class, name = "ExtensionNoResponse"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.ExtensionUpdateActionsFailedErrorImpl.class, name = "ExtensionUpdateActionsFailed"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.InsufficientScopeErrorImpl.class, name = "insufficient_scope"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.InvalidCredentialsErrorImpl.class, name = "InvalidCredentials"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.InvalidCurrentPasswordErrorImpl.class, name = "InvalidCurrentPassword"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.InvalidFieldErrorImpl.class, name = "InvalidField"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.InvalidInputErrorImpl.class, name = "InvalidInput"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.InvalidItemShippingDetailsErrorImpl.class, name = "InvalidItemShippingDetails"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.InvalidJsonInputErrorImpl.class, name = "InvalidJsonInput"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.InvalidOperationErrorImpl.class, name = "InvalidOperation"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.InvalidSubjectErrorImpl.class, name = "InvalidSubject"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.InvalidTokenErrorImpl.class, name = "invalid_token"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.MatchingPriceNotFoundErrorImpl.class, name = "MatchingPriceNotFound"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.MissingTaxRateForCountryErrorImpl.class, name = "MissingTaxRateForCountry"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.NoMatchingProductDiscountFoundErrorImpl.class, name = "NoMatchingProductDiscountFound"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.OutOfStockErrorImpl.class, name = "OutOfStock"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.PriceChangedErrorImpl.class, name = "PriceChanged"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.ReferenceExistsErrorImpl.class, name = "ReferenceExists"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.RequiredFieldErrorImpl.class, name = "RequiredField"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.ResourceNotFoundErrorImpl.class, name = "ResourceNotFound"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = "ShippingMethodDoesNotMatchCart"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.AccessDeniedErrorImpl.class, name = "access_denied"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.ConcurrentModificationErrorImpl.class, name = "ConcurrentModification"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.DiscountCodeNonApplicableErrorImpl.class, name = "DiscountCodeNonApplicable"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.DuplicateAttributeValueErrorImpl.class, name = "DuplicateAttributeValue"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.DuplicateAttributeValuesErrorImpl.class, name = "DuplicateAttributeValues"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.DuplicateFieldErrorImpl.class, name = "DuplicateField"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.DuplicateFieldWithConflictingResourceErrorImpl.class, name = "DuplicateFieldWithConflictingResource"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.DuplicatePriceScopeErrorImpl.class, name = "DuplicatePriceScope"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.DuplicateVariantValuesErrorImpl.class, name = "DuplicateVariantValues"),
+   @JsonSubTypes.Type(value = com.commercetools.models.error.EnumValueIsUsedErrorImpl.class, name = "EnumValueIsUsed")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,

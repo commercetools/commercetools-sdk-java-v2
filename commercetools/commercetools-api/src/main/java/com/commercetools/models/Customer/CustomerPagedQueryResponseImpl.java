@@ -1,6 +1,6 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.Customer;
+import com.commercetools.models.customer.Customer;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class CustomerPagedQueryResponseImpl implements CustomerPagedQueryR
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Customer.Customer> results;
+   private java.util.List<com.commercetools.models.customer.Customer> results;
 
    @JsonCreator
-   CustomerPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Customer.Customer> results) {
+   CustomerPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.customer.Customer> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class CustomerPagedQueryResponseImpl implements CustomerPagedQueryR
    }
    
    
-   public java.util.List<com.commercetools.models.Customer.Customer> getResults(){
+   public java.util.List<com.commercetools.models.customer.Customer> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class CustomerPagedQueryResponseImpl implements CustomerPagedQueryR
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Customer.Customer> results){
+   public void setResults(final java.util.List<com.commercetools.models.customer.Customer> results){
       this.results = results;
    }
 

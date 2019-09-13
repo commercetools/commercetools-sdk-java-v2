@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.LineItem;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.LineItem;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Message.OrderLineItemAddedMessagePayload;
+import com.commercetools.models.message.OrderLineItemAddedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,12 +13,12 @@ import java.time.ZonedDateTime;
 public final class OrderLineItemAddedMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Cart.LineItem lineItem;
+   private com.commercetools.models.cart.LineItem lineItem;
    
    
    private java.lang.Long addedQuantity;
    
-   public OrderLineItemAddedMessagePayloadBuilder lineItem( final com.commercetools.models.Cart.LineItem lineItem) {
+   public OrderLineItemAddedMessagePayloadBuilder lineItem( final com.commercetools.models.cart.LineItem lineItem) {
       this.lineItem = lineItem;
       return this;
    }
@@ -29,7 +29,7 @@ public final class OrderLineItemAddedMessagePayloadBuilder {
    }
    
    
-   public com.commercetools.models.Cart.LineItem getLineItem(){
+   public com.commercetools.models.cart.LineItem getLineItem(){
       return this.lineItem;
    }
    

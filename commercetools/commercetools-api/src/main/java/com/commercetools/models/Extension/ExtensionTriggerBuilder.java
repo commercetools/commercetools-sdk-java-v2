@@ -1,8 +1,8 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionAction;
-import com.commercetools.models.Extension.ExtensionResourceTypeId;
-import com.commercetools.models.Extension.ExtensionTrigger;
+import com.commercetools.models.extension.ExtensionAction;
+import com.commercetools.models.extension.ExtensionResourceTypeId;
+import com.commercetools.models.extension.ExtensionTrigger;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class ExtensionTriggerBuilder {
    
    
-   private com.commercetools.models.Extension.ExtensionResourceTypeId resourceTypeId;
+   private com.commercetools.models.extension.ExtensionResourceTypeId resourceTypeId;
    
    
-   private java.util.List<com.commercetools.models.Extension.ExtensionAction> actions;
+   private java.util.List<com.commercetools.models.extension.ExtensionAction> actions;
    
-   public ExtensionTriggerBuilder resourceTypeId( final com.commercetools.models.Extension.ExtensionResourceTypeId resourceTypeId) {
+   public ExtensionTriggerBuilder resourceTypeId( final com.commercetools.models.extension.ExtensionResourceTypeId resourceTypeId) {
       this.resourceTypeId = resourceTypeId;
       return this;
    }
    
-   public ExtensionTriggerBuilder actions( final java.util.List<com.commercetools.models.Extension.ExtensionAction> actions) {
+   public ExtensionTriggerBuilder actions( final java.util.List<com.commercetools.models.extension.ExtensionAction> actions) {
       this.actions = actions;
       return this;
    }
    
    
-   public com.commercetools.models.Extension.ExtensionResourceTypeId getResourceTypeId(){
+   public com.commercetools.models.extension.ExtensionResourceTypeId getResourceTypeId(){
       return this.resourceTypeId;
    }
    
    
-   public java.util.List<com.commercetools.models.Extension.ExtensionAction> getActions(){
+   public java.util.List<com.commercetools.models.extension.ExtensionAction> getActions(){
       return this.actions;
    }
 

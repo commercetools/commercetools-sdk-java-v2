@@ -1,8 +1,8 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.Category;
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
+import com.commercetools.models.category.Category;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryReferenceImpl implements CategoryReference {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Category.Category obj;
+   private com.commercetools.models.category.Category obj;
 
    @JsonCreator
-   CategoryReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.Category.Category obj) {
+   CategoryReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.category.Category obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("category").get();
@@ -41,7 +41,7 @@ public final class CategoryReferenceImpl implements CategoryReference {
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    
@@ -51,7 +51,7 @@ public final class CategoryReferenceImpl implements CategoryReference {
    }
    
    
-   public com.commercetools.models.Category.Category getObj(){
+   public com.commercetools.models.category.Category getObj(){
       return this.obj;
    }
 
@@ -59,7 +59,7 @@ public final class CategoryReferenceImpl implements CategoryReference {
       this.id = id;
    }
    
-   public void setObj(final com.commercetools.models.Category.Category obj){
+   public void setObj(final com.commercetools.models.category.Category obj){
       this.obj = obj;
    }
 

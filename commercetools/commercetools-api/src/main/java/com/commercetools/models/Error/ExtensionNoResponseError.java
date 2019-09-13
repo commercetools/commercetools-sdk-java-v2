@@ -1,11 +1,11 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Error.ErrorByExtension;
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.error.ErrorByExtension;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Error.ExtensionNoResponseErrorImpl;
+import com.commercetools.models.error.ExtensionNoResponseErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

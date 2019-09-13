@@ -1,7 +1,7 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Message.MessageConfigurationDraft;
-import com.commercetools.models.Project.ProjectUpdateAction;
+import com.commercetools.models.message.MessageConfigurationDraft;
+import com.commercetools.models.project.ProjectUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class ProjectChangeMessagesConfigurationActionImpl implements Proje
 
    private java.lang.String action;
    
-   private com.commercetools.models.Message.MessageConfigurationDraft messagesConfiguration;
+   private com.commercetools.models.message.MessageConfigurationDraft messagesConfiguration;
 
    @JsonCreator
-   ProjectChangeMessagesConfigurationActionImpl(@JsonProperty("messagesConfiguration") final com.commercetools.models.Message.MessageConfigurationDraft messagesConfiguration) {
+   ProjectChangeMessagesConfigurationActionImpl(@JsonProperty("messagesConfiguration") final com.commercetools.models.message.MessageConfigurationDraft messagesConfiguration) {
       this.messagesConfiguration = messagesConfiguration;
       this.action = "changeMessagesConfiguration";
    }
@@ -43,11 +43,11 @@ public final class ProjectChangeMessagesConfigurationActionImpl implements Proje
    }
    
    
-   public com.commercetools.models.Message.MessageConfigurationDraft getMessagesConfiguration(){
+   public com.commercetools.models.message.MessageConfigurationDraft getMessagesConfiguration(){
       return this.messagesConfiguration;
    }
 
-   public void setMessagesConfiguration(final com.commercetools.models.Message.MessageConfigurationDraft messagesConfiguration){
+   public void setMessagesConfiguration(final com.commercetools.models.message.MessageConfigurationDraft messagesConfiguration){
       this.messagesConfiguration = messagesConfiguration;
    }
 

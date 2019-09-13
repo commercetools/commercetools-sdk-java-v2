@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.DiscountedLineItemPortion;
-import com.commercetools.models.Common.TypedMoney;
+import com.commercetools.models.cart.DiscountedLineItemPortion;
+import com.commercetools.models.common.TypedMoney;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountedLineItemPriceImpl implements DiscountedLineItemPrice {
 
-   private java.util.List<com.commercetools.models.Cart.DiscountedLineItemPortion> includedDiscounts;
+   private java.util.List<com.commercetools.models.cart.DiscountedLineItemPortion> includedDiscounts;
    
-   private com.commercetools.models.Common.TypedMoney value;
+   private com.commercetools.models.common.TypedMoney value;
 
    @JsonCreator
-   DiscountedLineItemPriceImpl(@JsonProperty("includedDiscounts") final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPortion> includedDiscounts, @JsonProperty("value") final com.commercetools.models.Common.TypedMoney value) {
+   DiscountedLineItemPriceImpl(@JsonProperty("includedDiscounts") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPortion> includedDiscounts, @JsonProperty("value") final com.commercetools.models.common.TypedMoney value) {
       this.includedDiscounts = includedDiscounts;
       this.value = value;
    }
@@ -37,20 +37,20 @@ public final class DiscountedLineItemPriceImpl implements DiscountedLineItemPric
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.DiscountedLineItemPortion> getIncludedDiscounts(){
+   public java.util.List<com.commercetools.models.cart.DiscountedLineItemPortion> getIncludedDiscounts(){
       return this.includedDiscounts;
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getValue(){
+   public com.commercetools.models.common.TypedMoney getValue(){
       return this.value;
    }
 
-   public void setIncludedDiscounts(final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPortion> includedDiscounts){
+   public void setIncludedDiscounts(final java.util.List<com.commercetools.models.cart.DiscountedLineItemPortion> includedDiscounts){
       this.includedDiscounts = includedDiscounts;
    }
    
-   public void setValue(final com.commercetools.models.Common.TypedMoney value){
+   public void setValue(final com.commercetools.models.common.TypedMoney value){
       this.value = value;
    }
 

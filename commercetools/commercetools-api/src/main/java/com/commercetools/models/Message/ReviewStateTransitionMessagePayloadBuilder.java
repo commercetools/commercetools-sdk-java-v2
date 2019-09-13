@@ -1,11 +1,11 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.state.StateReference;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Message.ReviewStateTransitionMessagePayload;
+import com.commercetools.models.message.ReviewStateTransitionMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
    private java.lang.Boolean newIncludedInStatistics;
    
    
-   private com.commercetools.models.State.StateReference oldState;
+   private com.commercetools.models.state.StateReference oldState;
    
    
    private java.lang.Boolean force;
@@ -26,17 +26,17 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
    private java.lang.Boolean oldIncludedInStatistics;
    
    
-   private com.commercetools.models.State.StateReference newState;
+   private com.commercetools.models.state.StateReference newState;
    
    
-   private com.commercetools.models.Common.Reference target;
+   private com.commercetools.models.common.Reference target;
    
    public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics( final java.lang.Boolean newIncludedInStatistics) {
       this.newIncludedInStatistics = newIncludedInStatistics;
       return this;
    }
    
-   public ReviewStateTransitionMessagePayloadBuilder oldState( final com.commercetools.models.State.StateReference oldState) {
+   public ReviewStateTransitionMessagePayloadBuilder oldState( final com.commercetools.models.state.StateReference oldState) {
       this.oldState = oldState;
       return this;
    }
@@ -51,12 +51,12 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
       return this;
    }
    
-   public ReviewStateTransitionMessagePayloadBuilder newState( final com.commercetools.models.State.StateReference newState) {
+   public ReviewStateTransitionMessagePayloadBuilder newState( final com.commercetools.models.state.StateReference newState) {
       this.newState = newState;
       return this;
    }
    
-   public ReviewStateTransitionMessagePayloadBuilder target( final com.commercetools.models.Common.Reference target) {
+   public ReviewStateTransitionMessagePayloadBuilder target( final com.commercetools.models.common.Reference target) {
       this.target = target;
       return this;
    }
@@ -67,7 +67,7 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
    }
    
    
-   public com.commercetools.models.State.StateReference getOldState(){
+   public com.commercetools.models.state.StateReference getOldState(){
       return this.oldState;
    }
    
@@ -82,12 +82,12 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
    }
    
    
-   public com.commercetools.models.State.StateReference getNewState(){
+   public com.commercetools.models.state.StateReference getNewState(){
       return this.newState;
    }
    
    
-   public com.commercetools.models.Common.Reference getTarget(){
+   public com.commercetools.models.common.Reference getTarget(){
       return this.target;
    }
 

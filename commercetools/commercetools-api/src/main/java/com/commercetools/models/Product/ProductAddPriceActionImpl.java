@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class ProductAddPriceActionImpl implements ProductAddPriceAction {
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.PriceDraft price;
+   private com.commercetools.models.common.PriceDraft price;
    
    private java.lang.Boolean staged;
    
@@ -37,7 +37,7 @@ public final class ProductAddPriceActionImpl implements ProductAddPriceAction {
    private java.lang.String sku;
 
    @JsonCreator
-   ProductAddPriceActionImpl(@JsonProperty("price") final com.commercetools.models.Common.PriceDraft price, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku) {
+   ProductAddPriceActionImpl(@JsonProperty("price") final com.commercetools.models.common.PriceDraft price, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku) {
       this.price = price;
       this.staged = staged;
       this.variantId = variantId;
@@ -54,7 +54,7 @@ public final class ProductAddPriceActionImpl implements ProductAddPriceAction {
    }
    
    
-   public com.commercetools.models.Common.PriceDraft getPrice(){
+   public com.commercetools.models.common.PriceDraft getPrice(){
       return this.price;
    }
    
@@ -73,7 +73,7 @@ public final class ProductAddPriceActionImpl implements ProductAddPriceAction {
       return this.sku;
    }
 
-   public void setPrice(final com.commercetools.models.Common.PriceDraft price){
+   public void setPrice(final com.commercetools.models.common.PriceDraft price){
       this.price = price;
    }
    

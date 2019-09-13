@@ -1,4 +1,4 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.String;

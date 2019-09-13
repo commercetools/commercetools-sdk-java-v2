@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.CustomFieldLocalizedEnumValue;
-import com.commercetools.models.Type.FieldType;
+import com.commercetools.models.type.CustomFieldLocalizedEnumValue;
+import com.commercetools.models.type.FieldType;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocali
 
    private java.lang.String name;
    
-   private java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> values;
+   private java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> values;
 
    @JsonCreator
-   CustomFieldLocalizedEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> values) {
+   CustomFieldLocalizedEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> values) {
       this.values = values;
       this.name = "LocalizedEnum";
    }
@@ -43,11 +43,11 @@ public final class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocali
    }
    
    
-   public java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> getValues(){
+   public java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> getValues(){
       return this.values;
    }
 
-   public void setValues(final java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> values){
+   public void setValues(final java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> values){
       this.values = values;
    }
 

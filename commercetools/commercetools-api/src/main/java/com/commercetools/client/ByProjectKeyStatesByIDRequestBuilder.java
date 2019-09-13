@@ -18,7 +18,7 @@ public class ByProjectKeyStatesByIDRequestBuilder {
       return new ByProjectKeyStatesByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyStatesByIDPost post(com.commercetools.models.State.StateUpdate stateUpdate) {
+   public ByProjectKeyStatesByIDPost post(com.commercetools.models.state.StateUpdate stateUpdate) {
       return new ByProjectKeyStatesByIDPost(apiHttpClient, projectKey, ID, stateUpdate);
    }
    

@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Order.DeliveryItem;
-import com.commercetools.models.Order.Parcel;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.order.DeliveryItem;
+import com.commercetools.models.order.Parcel;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -28,16 +28,16 @@ public final class DeliveryImpl implements Delivery {
 
    private java.time.ZonedDateTime createdAt;
    
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
    private java.lang.String id;
    
-   private java.util.List<com.commercetools.models.Order.DeliveryItem> items;
+   private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
-   private java.util.List<com.commercetools.models.Order.Parcel> parcels;
+   private java.util.List<com.commercetools.models.order.Parcel> parcels;
 
    @JsonCreator
-   DeliveryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("address") final com.commercetools.models.Common.Address address, @JsonProperty("id") final java.lang.String id, @JsonProperty("items") final java.util.List<com.commercetools.models.Order.DeliveryItem> items, @JsonProperty("parcels") final java.util.List<com.commercetools.models.Order.Parcel> parcels) {
+   DeliveryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("id") final java.lang.String id, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("parcels") final java.util.List<com.commercetools.models.order.Parcel> parcels) {
       this.createdAt = createdAt;
       this.address = address;
       this.id = id;
@@ -54,7 +54,7 @@ public final class DeliveryImpl implements Delivery {
    }
    
    
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
    
@@ -64,12 +64,12 @@ public final class DeliveryImpl implements Delivery {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.DeliveryItem> getItems(){
+   public java.util.List<com.commercetools.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
    
-   public java.util.List<com.commercetools.models.Order.Parcel> getParcels(){
+   public java.util.List<com.commercetools.models.order.Parcel> getParcels(){
       return this.parcels;
    }
 
@@ -77,7 +77,7 @@ public final class DeliveryImpl implements Delivery {
       this.createdAt = createdAt;
    }
    
-   public void setAddress(final com.commercetools.models.Common.Address address){
+   public void setAddress(final com.commercetools.models.common.Address address){
       this.address = address;
    }
    
@@ -85,11 +85,11 @@ public final class DeliveryImpl implements Delivery {
       this.id = id;
    }
    
-   public void setItems(final java.util.List<com.commercetools.models.Order.DeliveryItem> items){
+   public void setItems(final java.util.List<com.commercetools.models.order.DeliveryItem> items){
       this.items = items;
    }
    
-   public void setParcels(final java.util.List<com.commercetools.models.Order.Parcel> parcels){
+   public void setParcels(final java.util.List<com.commercetools.models.order.Parcel> parcels){
       this.parcels = parcels;
    }
 

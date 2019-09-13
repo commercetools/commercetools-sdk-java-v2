@@ -1,6 +1,6 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Channel.ChannelReference;
+import com.commercetools.models.channel.ChannelReference;
 import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SyncInfoImpl implements SyncInfo {
 
-   private com.commercetools.models.Channel.ChannelReference channel;
+   private com.commercetools.models.channel.ChannelReference channel;
    
    private java.lang.String externalId;
    
    private java.time.ZonedDateTime syncedAt;
 
    @JsonCreator
-   SyncInfoImpl(@JsonProperty("channel") final com.commercetools.models.Channel.ChannelReference channel, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("syncedAt") final java.time.ZonedDateTime syncedAt) {
+   SyncInfoImpl(@JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("syncedAt") final java.time.ZonedDateTime syncedAt) {
       this.channel = channel;
       this.externalId = externalId;
       this.syncedAt = syncedAt;
@@ -41,7 +41,7 @@ public final class SyncInfoImpl implements SyncInfo {
    }
    
    
-   public com.commercetools.models.Channel.ChannelReference getChannel(){
+   public com.commercetools.models.channel.ChannelReference getChannel(){
       return this.channel;
    }
    
@@ -55,7 +55,7 @@ public final class SyncInfoImpl implements SyncInfo {
       return this.syncedAt;
    }
 
-   public void setChannel(final com.commercetools.models.Channel.ChannelReference channel){
+   public void setChannel(final com.commercetools.models.channel.ChannelReference channel){
       this.channel = channel;
    }
    

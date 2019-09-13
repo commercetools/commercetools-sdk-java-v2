@@ -1,7 +1,7 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
 import java.lang.String;
-import com.commercetools.models.Zone.Location;
+import com.commercetools.models.zone.Location;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

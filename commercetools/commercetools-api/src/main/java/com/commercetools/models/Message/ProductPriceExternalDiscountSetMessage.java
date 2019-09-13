@@ -1,11 +1,11 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.message.Message;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Message.ProductPriceExternalDiscountSetMessageImpl;
+import com.commercetools.models.message.ProductPriceExternalDiscountSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

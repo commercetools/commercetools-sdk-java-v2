@@ -1,8 +1,8 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelUpdateAction;
+import com.commercetools.models.channel.ChannelUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Channel.ChannelChangeKeyActionImpl;
+import com.commercetools.models.channel.ChannelChangeKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

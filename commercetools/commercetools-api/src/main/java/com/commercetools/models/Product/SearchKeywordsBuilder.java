@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.SearchKeyword;
-import com.commercetools.models.Product.SearchKeywords;
+import com.commercetools.models.product.SearchKeyword;
+import com.commercetools.models.product.SearchKeywords;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class SearchKeywordsBuilder {
    
    
-   private Map<String, java.util.List<com.commercetools.models.Product.SearchKeyword>> values;
+   private Map<String, java.util.List<com.commercetools.models.product.SearchKeyword>> values;
    
-   public SearchKeywordsBuilder values( final Map<String, java.util.List<com.commercetools.models.Product.SearchKeyword>> values){
+   public SearchKeywordsBuilder values( final Map<String, java.util.List<com.commercetools.models.product.SearchKeyword>> values){
       this.values = values;
       return this;
    }
    
    
-   public Map<String, java.util.List<com.commercetools.models.Product.SearchKeyword>> getValues(){
+   public Map<String, java.util.List<com.commercetools.models.product.SearchKeyword>> getValues(){
       return this.values;
    }
 

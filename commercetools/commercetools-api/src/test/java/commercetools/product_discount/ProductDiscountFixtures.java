@@ -1,9 +1,9 @@
 package commercetools.product_discount;
 
-import com.commercetools.models.ProductDiscount.ProductDiscount;
-import com.commercetools.models.ProductDiscount.ProductDiscountDraft;
-import com.commercetools.models.ProductDiscount.ProductDiscountDraftBuilder;
-import com.commercetools.models.ProductDiscount.ProductDiscountValueExternalBuilder;
+import com.commercetools.models.product_discount.ProductDiscount;
+import com.commercetools.models.product_discount.ProductDiscountDraft;
+import com.commercetools.models.product_discount.ProductDiscountDraftBuilder;
+import com.commercetools.models.product_discount.ProductDiscountValueExternalBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

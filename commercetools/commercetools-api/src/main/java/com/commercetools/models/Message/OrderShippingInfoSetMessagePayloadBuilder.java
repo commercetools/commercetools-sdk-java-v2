@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.ShippingInfo;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.ShippingInfo;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.OrderShippingInfoSetMessagePayload;
+import com.commercetools.models.message.OrderShippingInfoSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,28 +12,28 @@ import java.time.ZonedDateTime;
 public final class OrderShippingInfoSetMessagePayloadBuilder {
    
    @Nullable
-   private com.commercetools.models.Cart.ShippingInfo shippingInfo;
+   private com.commercetools.models.cart.ShippingInfo shippingInfo;
    
    @Nullable
-   private com.commercetools.models.Cart.ShippingInfo oldShippingInfo;
+   private com.commercetools.models.cart.ShippingInfo oldShippingInfo;
    
-   public OrderShippingInfoSetMessagePayloadBuilder shippingInfo(@Nullable final com.commercetools.models.Cart.ShippingInfo shippingInfo) {
+   public OrderShippingInfoSetMessagePayloadBuilder shippingInfo(@Nullable final com.commercetools.models.cart.ShippingInfo shippingInfo) {
       this.shippingInfo = shippingInfo;
       return this;
    }
    
-   public OrderShippingInfoSetMessagePayloadBuilder oldShippingInfo(@Nullable final com.commercetools.models.Cart.ShippingInfo oldShippingInfo) {
+   public OrderShippingInfoSetMessagePayloadBuilder oldShippingInfo(@Nullable final com.commercetools.models.cart.ShippingInfo oldShippingInfo) {
       this.oldShippingInfo = oldShippingInfo;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ShippingInfo getShippingInfo(){
+   public com.commercetools.models.cart.ShippingInfo getShippingInfo(){
       return this.shippingInfo;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ShippingInfo getOldShippingInfo(){
+   public com.commercetools.models.cart.ShippingInfo getOldShippingInfo(){
       return this.oldShippingInfo;
    }
 

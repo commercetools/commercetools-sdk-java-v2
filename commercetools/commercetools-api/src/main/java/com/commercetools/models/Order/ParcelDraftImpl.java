@@ -1,8 +1,8 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.DeliveryItem;
-import com.commercetools.models.Order.ParcelMeasurements;
-import com.commercetools.models.Order.TrackingData;
+import com.commercetools.models.order.DeliveryItem;
+import com.commercetools.models.order.ParcelMeasurements;
+import com.commercetools.models.order.TrackingData;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ParcelDraftImpl implements ParcelDraft {
 
-   private java.util.List<com.commercetools.models.Order.DeliveryItem> items;
+   private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
-   private com.commercetools.models.Order.TrackingData trackingData;
+   private com.commercetools.models.order.TrackingData trackingData;
    
-   private com.commercetools.models.Order.ParcelMeasurements measurements;
+   private com.commercetools.models.order.ParcelMeasurements measurements;
 
    @JsonCreator
-   ParcelDraftImpl(@JsonProperty("items") final java.util.List<com.commercetools.models.Order.DeliveryItem> items, @JsonProperty("trackingData") final com.commercetools.models.Order.TrackingData trackingData, @JsonProperty("measurements") final com.commercetools.models.Order.ParcelMeasurements measurements) {
+   ParcelDraftImpl(@JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("trackingData") final com.commercetools.models.order.TrackingData trackingData, @JsonProperty("measurements") final com.commercetools.models.order.ParcelMeasurements measurements) {
       this.items = items;
       this.trackingData = trackingData;
       this.measurements = measurements;
@@ -41,29 +41,29 @@ public final class ParcelDraftImpl implements ParcelDraft {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.DeliveryItem> getItems(){
+   public java.util.List<com.commercetools.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
    
-   public com.commercetools.models.Order.TrackingData getTrackingData(){
+   public com.commercetools.models.order.TrackingData getTrackingData(){
       return this.trackingData;
    }
    
    
-   public com.commercetools.models.Order.ParcelMeasurements getMeasurements(){
+   public com.commercetools.models.order.ParcelMeasurements getMeasurements(){
       return this.measurements;
    }
 
-   public void setItems(final java.util.List<com.commercetools.models.Order.DeliveryItem> items){
+   public void setItems(final java.util.List<com.commercetools.models.order.DeliveryItem> items){
       this.items = items;
    }
    
-   public void setTrackingData(final com.commercetools.models.Order.TrackingData trackingData){
+   public void setTrackingData(final com.commercetools.models.order.TrackingData trackingData){
       this.trackingData = trackingData;
    }
    
-   public void setMeasurements(final com.commercetools.models.Order.ParcelMeasurements measurements){
+   public void setMeasurements(final com.commercetools.models.order.ParcelMeasurements measurements){
       this.measurements = measurements;
    }
 

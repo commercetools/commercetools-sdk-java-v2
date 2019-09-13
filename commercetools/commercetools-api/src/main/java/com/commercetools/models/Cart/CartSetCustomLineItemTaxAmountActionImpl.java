@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalTaxAmountDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalTaxAmountDraft;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCu
    
    private java.lang.String customLineItemId;
    
-   private com.commercetools.models.Cart.ExternalTaxAmountDraft externalTaxAmount;
+   private com.commercetools.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
    @JsonCreator
-   CartSetCustomLineItemTaxAmountActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("externalTaxAmount") final com.commercetools.models.Cart.ExternalTaxAmountDraft externalTaxAmount) {
+   CartSetCustomLineItemTaxAmountActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("externalTaxAmount") final com.commercetools.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
       this.customLineItemId = customLineItemId;
       this.externalTaxAmount = externalTaxAmount;
       this.action = "setCustomLineItemTaxAmount";
@@ -51,7 +51,7 @@ public final class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCu
    }
    
    
-   public com.commercetools.models.Cart.ExternalTaxAmountDraft getExternalTaxAmount(){
+   public com.commercetools.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
       return this.externalTaxAmount;
    }
 
@@ -59,7 +59,7 @@ public final class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCu
       this.customLineItemId = customLineItemId;
    }
    
-   public void setExternalTaxAmount(final com.commercetools.models.Cart.ExternalTaxAmountDraft externalTaxAmount){
+   public void setExternalTaxAmount(final com.commercetools.models.cart.ExternalTaxAmountDraft externalTaxAmount){
       this.externalTaxAmount = externalTaxAmount;
    }
 

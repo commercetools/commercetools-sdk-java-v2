@@ -1,10 +1,10 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.TaxPortion;
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.TaxPortion;
+import com.commercetools.models.common.Money;
 import java.lang.String;
-import com.commercetools.models.Cart.CartSetCartTotalTaxActionImpl;
+import com.commercetools.models.cart.CartSetCartTotalTaxActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

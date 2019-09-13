@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.Long;
-import com.commercetools.models.Type.TypeUpdate;
+import com.commercetools.models.type.TypeUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class TypeUpdateBuilder {
    
    
-   private java.util.List<com.commercetools.models.Type.TypeUpdateAction> actions;
+   private java.util.List<com.commercetools.models.type.TypeUpdateAction> actions;
    
    
    private java.lang.Long version;
    
-   public TypeUpdateBuilder actions( final java.util.List<com.commercetools.models.Type.TypeUpdateAction> actions) {
+   public TypeUpdateBuilder actions( final java.util.List<com.commercetools.models.type.TypeUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
@@ -27,7 +27,7 @@ public final class TypeUpdateBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Type.TypeUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.type.TypeUpdateAction> getActions(){
       return this.actions;
    }
    

@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.DeliveryItem;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.order.DeliveryItem;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsA
 
    private java.lang.String action;
    
-   private java.util.List<com.commercetools.models.Order.DeliveryItem> items;
+   private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
    private java.lang.String parcelId;
 
    @JsonCreator
-   OrderSetParcelItemsActionImpl(@JsonProperty("items") final java.util.List<com.commercetools.models.Order.DeliveryItem> items, @JsonProperty("parcelId") final java.lang.String parcelId) {
+   OrderSetParcelItemsActionImpl(@JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("parcelId") final java.lang.String parcelId) {
       this.items = items;
       this.parcelId = parcelId;
       this.action = "setParcelItems";
@@ -46,7 +46,7 @@ public final class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsA
    }
    
    
-   public java.util.List<com.commercetools.models.Order.DeliveryItem> getItems(){
+   public java.util.List<com.commercetools.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
@@ -55,7 +55,7 @@ public final class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsA
       return this.parcelId;
    }
 
-   public void setItems(final java.util.List<com.commercetools.models.Order.DeliveryItem> items){
+   public void setItems(final java.util.List<com.commercetools.models.order.DeliveryItem> items){
       this.items = items;
    }
    

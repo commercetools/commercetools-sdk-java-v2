@@ -26,9 +26,9 @@ public class ByProjectKeyCustomersPasswordTokenPost {
    
    private String projectKey;
    
-   private com.commercetools.models.Customer.CustomerCreatePasswordResetToken customerCreatePasswordResetToken;
+   private com.commercetools.models.customer.CustomerCreatePasswordResetToken customerCreatePasswordResetToken;
    
-   public ByProjectKeyCustomersPasswordTokenPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Customer.CustomerCreatePasswordResetToken customerCreatePasswordResetToken){
+   public ByProjectKeyCustomersPasswordTokenPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.customer.CustomerCreatePasswordResetToken customerCreatePasswordResetToken){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.customerCreatePasswordResetToken = customerCreatePasswordResetToken;
@@ -51,7 +51,7 @@ public class ByProjectKeyCustomersPasswordTokenPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Customer.CustomerToken> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.customer.CustomerToken> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyCustomersPasswordTokenPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Customer.CustomerToken>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.customer.CustomerToken>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Customer.CustomerToken.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.customer.CustomerToken.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

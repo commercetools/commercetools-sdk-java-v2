@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ReturnShipmentState;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ReturnShipmentState;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetReturnShipmentStateActionImpl;
+import com.commercetools.models.order.OrderSetReturnShipmentStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

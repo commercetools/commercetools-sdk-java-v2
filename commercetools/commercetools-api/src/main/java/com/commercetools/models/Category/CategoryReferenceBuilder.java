@@ -1,9 +1,9 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.Category;
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Category.CategoryReference;
+import com.commercetools.models.category.Category;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.category.CategoryReference;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class CategoryReferenceBuilder {
    private java.lang.String id;
    
    @Nullable
-   private com.commercetools.models.Category.Category obj;
+   private com.commercetools.models.category.Category obj;
    
    public CategoryReferenceBuilder id( final java.lang.String id) {
       this.id = id;
       return this;
    }
    
-   public CategoryReferenceBuilder obj(@Nullable final com.commercetools.models.Category.Category obj) {
+   public CategoryReferenceBuilder obj(@Nullable final com.commercetools.models.category.Category obj) {
       this.obj = obj;
       return this;
    }
@@ -33,7 +33,7 @@ public final class CategoryReferenceBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Category.Category getObj(){
+   public com.commercetools.models.category.Category getObj(){
       return this.obj;
    }
 

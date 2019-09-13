@@ -1,10 +1,10 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Me.MyTransactionDraft;
-import com.commercetools.models.Payment.PaymentMethodInfo;
-import com.commercetools.models.Type.CustomFieldsDraft;
-import com.commercetools.models.Me.MyPaymentDraft;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.me.MyTransactionDraft;
+import com.commercetools.models.payment.PaymentMethodInfo;
+import com.commercetools.models.type.CustomFieldsDraft;
+import com.commercetools.models.me.MyPaymentDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,54 +13,54 @@ import java.time.ZonedDateTime;
 public final class MyPaymentDraftBuilder {
    
    @Nullable
-   private com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo;
+   private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    
-   private com.commercetools.models.Common.Money amountPlanned;
+   private com.commercetools.models.common.Money amountPlanned;
    
    @Nullable
-   private com.commercetools.models.Me.MyTransactionDraft transaction;
+   private com.commercetools.models.me.MyTransactionDraft transaction;
    
-   public MyPaymentDraftBuilder paymentMethodInfo(@Nullable final com.commercetools.models.Payment.PaymentMethodInfo paymentMethodInfo) {
+   public MyPaymentDraftBuilder paymentMethodInfo(@Nullable final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo) {
       this.paymentMethodInfo = paymentMethodInfo;
       return this;
    }
    
-   public MyPaymentDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public MyPaymentDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
    
-   public MyPaymentDraftBuilder amountPlanned( final com.commercetools.models.Common.Money amountPlanned) {
+   public MyPaymentDraftBuilder amountPlanned( final com.commercetools.models.common.Money amountPlanned) {
       this.amountPlanned = amountPlanned;
       return this;
    }
    
-   public MyPaymentDraftBuilder transaction(@Nullable final com.commercetools.models.Me.MyTransactionDraft transaction) {
+   public MyPaymentDraftBuilder transaction(@Nullable final com.commercetools.models.me.MyTransactionDraft transaction) {
       this.transaction = transaction;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Payment.PaymentMethodInfo getPaymentMethodInfo(){
+   public com.commercetools.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
       return this.paymentMethodInfo;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    
-   public com.commercetools.models.Common.Money getAmountPlanned(){
+   public com.commercetools.models.common.Money getAmountPlanned(){
       return this.amountPlanned;
    }
    
    @Nullable
-   public com.commercetools.models.Me.MyTransactionDraft getTransaction(){
+   public com.commercetools.models.me.MyTransactionDraft getTransaction(){
       return this.transaction;
    }
 

@@ -1,16 +1,16 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Category.CategoryResourceIdentifier;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.CategoryOrderHints;
-import com.commercetools.models.Product.ProductVariantDraft;
-import com.commercetools.models.Product.SearchKeywords;
-import com.commercetools.models.ProductType.ProductTypeResourceIdentifier;
-import com.commercetools.models.State.StateResourceIdentifier;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier;
+import com.commercetools.models.category.CategoryResourceIdentifier;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.CategoryOrderHints;
+import com.commercetools.models.product.ProductVariantDraft;
+import com.commercetools.models.product.SearchKeywords;
+import com.commercetools.models.product_type.ProductTypeResourceIdentifier;
+import com.commercetools.models.state.StateResourceIdentifier;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductDraftImpl;
+import com.commercetools.models.product.ProductDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

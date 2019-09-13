@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity;
-import com.commercetools.models.Cart.TaxedItemPrice;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.models.cart.TaxedItemPrice;
+import com.commercetools.models.message.Message;
 import java.lang.String;
-import com.commercetools.models.Message.OrderCustomLineItemDiscountSetMessage;
+import com.commercetools.models.message.OrderCustomLineItemDiscountSetMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -28,10 +28,10 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -43,10 +43,10 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
    private java.lang.String customLineItemId;
    
    @Nullable
-   private com.commercetools.models.Cart.TaxedItemPrice taxedPrice;
+   private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
    
    
-   private java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+   private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
    
    public OrderCustomLineItemDiscountSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -73,12 +73,12 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
       return this;
    }
    
-   public OrderCustomLineItemDiscountSetMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public OrderCustomLineItemDiscountSetMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public OrderCustomLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public OrderCustomLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -98,12 +98,12 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
       return this;
    }
    
-   public OrderCustomLineItemDiscountSetMessageBuilder taxedPrice(@Nullable final com.commercetools.models.Cart.TaxedItemPrice taxedPrice) {
+   public OrderCustomLineItemDiscountSetMessageBuilder taxedPrice(@Nullable final com.commercetools.models.cart.TaxedItemPrice taxedPrice) {
       this.taxedPrice = taxedPrice;
       return this;
    }
    
-   public OrderCustomLineItemDiscountSetMessageBuilder discountedPricePerQuantity( final java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+   public OrderCustomLineItemDiscountSetMessageBuilder discountedPricePerQuantity( final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
       this.discountedPricePerQuantity = discountedPricePerQuantity;
       return this;
    }
@@ -134,12 +134,12 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -159,12 +159,12 @@ public final class OrderCustomLineItemDiscountSetMessageBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Cart.TaxedItemPrice getTaxedPrice(){
+   public com.commercetools.models.cart.TaxedItemPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
+   public java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
       return this.discountedPricePerQuantity;
    }
 

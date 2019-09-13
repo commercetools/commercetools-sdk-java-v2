@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.TaxPortion;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Cart.TaxedPriceImpl;
+import com.commercetools.models.cart.TaxPortion;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.cart.TaxedPriceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

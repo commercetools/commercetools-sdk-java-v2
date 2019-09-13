@@ -1,18 +1,18 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Category.CategoryReference;
-import com.commercetools.models.Common.BaseResource;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.CategoryOrderHints;
-import com.commercetools.models.Product.ProductVariant;
-import com.commercetools.models.Product.SearchKeywords;
-import com.commercetools.models.ProductType.ProductTypeReference;
-import com.commercetools.models.Review.ReviewRatingStatistics;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.TaxCategory.TaxCategoryReference;
+import com.commercetools.models.category.CategoryReference;
+import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.CategoryOrderHints;
+import com.commercetools.models.product.ProductVariant;
+import com.commercetools.models.product.SearchKeywords;
+import com.commercetools.models.product_type.ProductTypeReference;
+import com.commercetools.models.review.ReviewRatingStatistics;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.tax_category.TaxCategoryReference;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductProjectionImpl;
+import com.commercetools.models.product.ProductProjectionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

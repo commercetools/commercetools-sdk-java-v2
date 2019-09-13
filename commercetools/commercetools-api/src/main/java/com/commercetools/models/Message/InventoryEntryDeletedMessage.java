@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Channel.ChannelReference;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.channel.ChannelReference;
+import com.commercetools.models.message.Message;
 import java.lang.String;
-import com.commercetools.models.Message.InventoryEntryDeletedMessageImpl;
+import com.commercetools.models.message.InventoryEntryDeletedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

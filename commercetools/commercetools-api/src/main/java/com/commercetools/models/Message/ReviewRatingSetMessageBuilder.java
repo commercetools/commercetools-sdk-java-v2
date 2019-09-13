@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.message.Message;
 import java.lang.Boolean;
 import java.lang.Integer;
-import com.commercetools.models.Message.ReviewRatingSetMessage;
+import com.commercetools.models.message.ReviewRatingSetMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -28,10 +28,10 @@ public final class ReviewRatingSetMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -49,7 +49,7 @@ public final class ReviewRatingSetMessageBuilder {
    private java.lang.Integer newRating;
    
    @Nullable
-   private com.commercetools.models.Common.Reference target;
+   private com.commercetools.models.common.Reference target;
    
    public ReviewRatingSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -76,12 +76,12 @@ public final class ReviewRatingSetMessageBuilder {
       return this;
    }
    
-   public ReviewRatingSetMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public ReviewRatingSetMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public ReviewRatingSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public ReviewRatingSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -111,7 +111,7 @@ public final class ReviewRatingSetMessageBuilder {
       return this;
    }
    
-   public ReviewRatingSetMessageBuilder target(@Nullable final com.commercetools.models.Common.Reference target) {
+   public ReviewRatingSetMessageBuilder target(@Nullable final com.commercetools.models.common.Reference target) {
       this.target = target;
       return this;
    }
@@ -142,12 +142,12 @@ public final class ReviewRatingSetMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -177,7 +177,7 @@ public final class ReviewRatingSetMessageBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Reference getTarget(){
+   public com.commercetools.models.common.Reference getTarget(){
       return this.target;
    }
 

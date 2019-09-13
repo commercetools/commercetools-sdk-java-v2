@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.Cart.TaxedItemPriceImpl;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.cart.TaxedItemPriceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

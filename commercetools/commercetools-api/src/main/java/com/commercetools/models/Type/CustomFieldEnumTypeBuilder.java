@@ -1,9 +1,9 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.CustomFieldEnumValue;
-import com.commercetools.models.Type.FieldType;
+import com.commercetools.models.type.CustomFieldEnumValue;
+import com.commercetools.models.type.FieldType;
 import java.lang.String;
-import com.commercetools.models.Type.CustomFieldEnumType;
+import com.commercetools.models.type.CustomFieldEnumType;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CustomFieldEnumTypeBuilder {
    
    
-   private java.util.List<com.commercetools.models.Type.CustomFieldEnumValue> values;
+   private java.util.List<com.commercetools.models.type.CustomFieldEnumValue> values;
    
-   public CustomFieldEnumTypeBuilder values( final java.util.List<com.commercetools.models.Type.CustomFieldEnumValue> values) {
+   public CustomFieldEnumTypeBuilder values( final java.util.List<com.commercetools.models.type.CustomFieldEnumValue> values) {
       this.values = values;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Type.CustomFieldEnumValue> getValues(){
+   public java.util.List<com.commercetools.models.type.CustomFieldEnumValue> getValues(){
       return this.values;
    }
 

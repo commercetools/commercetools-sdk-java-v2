@@ -1,12 +1,12 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.product.ProductUpdateAction;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetAssetCustomTypeActionImpl;
+import com.commercetools.models.product.ProductSetAssetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

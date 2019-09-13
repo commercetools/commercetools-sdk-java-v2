@@ -26,9 +26,9 @@ public class ByProjectKeyMeSignupPost {
    
    private String projectKey;
    
-   private com.commercetools.models.Me.MyCustomerDraft myCustomerDraft;
+   private com.commercetools.models.me.MyCustomerDraft myCustomerDraft;
    
-   public ByProjectKeyMeSignupPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Me.MyCustomerDraft myCustomerDraft){
+   public ByProjectKeyMeSignupPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.me.MyCustomerDraft myCustomerDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.myCustomerDraft = myCustomerDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyMeSignupPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Customer.CustomerSignInResult> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.customer.CustomerSignInResult> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyMeSignupPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Customer.CustomerSignInResult>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.customer.CustomerSignInResult>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Customer.CustomerSignInResult.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.customer.CustomerSignInResult.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

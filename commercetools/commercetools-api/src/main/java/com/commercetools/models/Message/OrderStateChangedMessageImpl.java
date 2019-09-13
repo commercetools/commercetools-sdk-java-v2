@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.OrderState;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.OrderState;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -33,20 +33,20 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
    
    private java.lang.Long sequenceNumber;
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    private java.lang.Long resourceVersion;
    
    private java.lang.String type;
    
-   private com.commercetools.models.Order.OrderState oldOrderState;
+   private com.commercetools.models.order.OrderState oldOrderState;
    
-   private com.commercetools.models.Order.OrderState orderState;
+   private com.commercetools.models.order.OrderState orderState;
 
    @JsonCreator
-   OrderStateChangedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.Common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("oldOrderState") final com.commercetools.models.Order.OrderState oldOrderState, @JsonProperty("orderState") final com.commercetools.models.Order.OrderState orderState) {
+   OrderStateChangedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("oldOrderState") final com.commercetools.models.order.OrderState oldOrderState, @JsonProperty("orderState") final com.commercetools.models.order.OrderState orderState) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -89,12 +89,12 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -109,12 +109,12 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
    }
    
    
-   public com.commercetools.models.Order.OrderState getOldOrderState(){
+   public com.commercetools.models.order.OrderState getOldOrderState(){
       return this.oldOrderState;
    }
    
    
-   public com.commercetools.models.Order.OrderState getOrderState(){
+   public com.commercetools.models.order.OrderState getOrderState(){
       return this.orderState;
    }
 
@@ -138,11 +138,11 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
       this.sequenceNumber = sequenceNumber;
    }
    
-   public void setResource(final com.commercetools.models.Common.Reference resource){
+   public void setResource(final com.commercetools.models.common.Reference resource){
       this.resource = resource;
    }
    
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
@@ -154,11 +154,11 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
       this.type = type;
    }
    
-   public void setOldOrderState(final com.commercetools.models.Order.OrderState oldOrderState){
+   public void setOldOrderState(final com.commercetools.models.order.OrderState oldOrderState){
       this.oldOrderState = oldOrderState;
    }
    
-   public void setOrderState(final com.commercetools.models.Order.OrderState orderState){
+   public void setOrderState(final com.commercetools.models.order.OrderState orderState){
       this.orderState = orderState;
    }
 

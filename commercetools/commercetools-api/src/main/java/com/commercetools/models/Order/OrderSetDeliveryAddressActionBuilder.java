@@ -1,9 +1,9 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Order.OrderSetDeliveryAddressAction;
+import com.commercetools.models.order.OrderSetDeliveryAddressAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class OrderSetDeliveryAddressActionBuilder {
    private java.lang.String deliveryId;
    
    @Nullable
-   private com.commercetools.models.Common.Address address;
+   private com.commercetools.models.common.Address address;
    
    public OrderSetDeliveryAddressActionBuilder deliveryId( final java.lang.String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
    
-   public OrderSetDeliveryAddressActionBuilder address(@Nullable final com.commercetools.models.Common.Address address) {
+   public OrderSetDeliveryAddressActionBuilder address(@Nullable final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
@@ -33,7 +33,7 @@ public final class OrderSetDeliveryAddressActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Address getAddress(){
+   public com.commercetools.models.common.Address getAddress(){
       return this.address;
    }
 

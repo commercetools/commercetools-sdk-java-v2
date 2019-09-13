@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.ShipmentState;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.ShipmentState;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class OrderShipmentStateChangedMessagePayloadImpl implements OrderS
 
    private java.lang.String type;
    
-   private com.commercetools.models.Order.ShipmentState shipmentState;
+   private com.commercetools.models.order.ShipmentState shipmentState;
    
-   private com.commercetools.models.Order.ShipmentState oldShipmentState;
+   private com.commercetools.models.order.ShipmentState oldShipmentState;
 
    @JsonCreator
-   OrderShipmentStateChangedMessagePayloadImpl(@JsonProperty("shipmentState") final com.commercetools.models.Order.ShipmentState shipmentState, @JsonProperty("oldShipmentState") final com.commercetools.models.Order.ShipmentState oldShipmentState) {
+   OrderShipmentStateChangedMessagePayloadImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ShipmentState shipmentState, @JsonProperty("oldShipmentState") final com.commercetools.models.order.ShipmentState oldShipmentState) {
       this.shipmentState = shipmentState;
       this.oldShipmentState = oldShipmentState;
       this.type = "OrderShipmentStateChanged";
@@ -46,20 +46,20 @@ public final class OrderShipmentStateChangedMessagePayloadImpl implements OrderS
    }
    
    
-   public com.commercetools.models.Order.ShipmentState getShipmentState(){
+   public com.commercetools.models.order.ShipmentState getShipmentState(){
       return this.shipmentState;
    }
    
    
-   public com.commercetools.models.Order.ShipmentState getOldShipmentState(){
+   public com.commercetools.models.order.ShipmentState getOldShipmentState(){
       return this.oldShipmentState;
    }
 
-   public void setShipmentState(final com.commercetools.models.Order.ShipmentState shipmentState){
+   public void setShipmentState(final com.commercetools.models.order.ShipmentState shipmentState){
       this.shipmentState = shipmentState;
    }
    
-   public void setOldShipmentState(final com.commercetools.models.Order.ShipmentState oldShipmentState){
+   public void setOldShipmentState(final com.commercetools.models.order.ShipmentState oldShipmentState){
       this.oldShipmentState = oldShipmentState;
    }
 

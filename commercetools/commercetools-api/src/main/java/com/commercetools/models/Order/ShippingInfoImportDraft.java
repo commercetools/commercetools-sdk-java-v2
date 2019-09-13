@@ -1,15 +1,15 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Cart.ShippingMethodState;
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Order.Delivery;
-import com.commercetools.models.Order.DiscountedLineItemPriceDraft;
-import com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier;
-import com.commercetools.models.ShippingMethod.ShippingRateDraft;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier;
-import com.commercetools.models.TaxCategory.TaxRate;
+import com.commercetools.models.cart.ShippingMethodState;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.order.Delivery;
+import com.commercetools.models.order.DiscountedLineItemPriceDraft;
+import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.models.shipping_method.ShippingRateDraft;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.models.tax_category.TaxRate;
 import java.lang.String;
-import com.commercetools.models.Order.ShippingInfoImportDraftImpl;
+import com.commercetools.models.order.ShippingInfoImportDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

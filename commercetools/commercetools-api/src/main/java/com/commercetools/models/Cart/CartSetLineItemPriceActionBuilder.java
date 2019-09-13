@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.common.Money;
 import java.lang.String;
-import com.commercetools.models.Cart.CartSetLineItemPriceAction;
+import com.commercetools.models.cart.CartSetLineItemPriceAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class CartSetLineItemPriceActionBuilder {
    private java.lang.String lineItemId;
    
    @Nullable
-   private com.commercetools.models.Common.Money externalPrice;
+   private com.commercetools.models.common.Money externalPrice;
    
    public CartSetLineItemPriceActionBuilder lineItemId( final java.lang.String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
    
-   public CartSetLineItemPriceActionBuilder externalPrice(@Nullable final com.commercetools.models.Common.Money externalPrice) {
+   public CartSetLineItemPriceActionBuilder externalPrice(@Nullable final com.commercetools.models.common.Money externalPrice) {
       this.externalPrice = externalPrice;
       return this;
    }
@@ -33,7 +33,7 @@ public final class CartSetLineItemPriceActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Money getExternalPrice(){
+   public com.commercetools.models.common.Money getExternalPrice(){
       return this.externalPrice;
    }
 

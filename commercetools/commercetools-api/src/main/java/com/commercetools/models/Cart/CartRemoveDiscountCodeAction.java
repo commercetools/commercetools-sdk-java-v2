@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.DiscountCode.DiscountCodeReference;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.discount_code.DiscountCodeReference;
 import java.lang.String;
-import com.commercetools.models.Cart.CartRemoveDiscountCodeActionImpl;
+import com.commercetools.models.cart.CartRemoveDiscountCodeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,6 +1,6 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
+import com.commercetools.models.cart.CartUpdateAction;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Generated;

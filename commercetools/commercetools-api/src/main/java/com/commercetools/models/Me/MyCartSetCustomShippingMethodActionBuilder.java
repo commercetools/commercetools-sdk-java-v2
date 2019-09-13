@@ -1,11 +1,11 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
-import com.commercetools.models.Me.MyCartUpdateAction;
-import com.commercetools.models.ShippingMethod.ShippingRateDraft;
-import com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
+import com.commercetools.models.me.MyCartUpdateAction;
+import com.commercetools.models.shipping_method.ShippingRateDraft;
+import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Me.MyCartSetCustomShippingMethodAction;
+import com.commercetools.models.me.MyCartSetCustomShippingMethodAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,23 +14,23 @@ import java.time.ZonedDateTime;
 public final class MyCartSetCustomShippingMethodActionBuilder {
    
    
-   private com.commercetools.models.ShippingMethod.ShippingRateDraft shippingRate;
+   private com.commercetools.models.shipping_method.ShippingRateDraft shippingRate;
    
    @Nullable
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    
    private java.lang.String shippingMethodName;
    
    @Nullable
-   private com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory;
+   private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
    
-   public MyCartSetCustomShippingMethodActionBuilder shippingRate( final com.commercetools.models.ShippingMethod.ShippingRateDraft shippingRate) {
+   public MyCartSetCustomShippingMethodActionBuilder shippingRate( final com.commercetools.models.shipping_method.ShippingRateDraft shippingRate) {
       this.shippingRate = shippingRate;
       return this;
    }
    
-   public MyCartSetCustomShippingMethodActionBuilder externalTaxRate(@Nullable final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate) {
+   public MyCartSetCustomShippingMethodActionBuilder externalTaxRate(@Nullable final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.externalTaxRate = externalTaxRate;
       return this;
    }
@@ -40,18 +40,18 @@ public final class MyCartSetCustomShippingMethodActionBuilder {
       return this;
    }
    
-   public MyCartSetCustomShippingMethodActionBuilder taxCategory(@Nullable final com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier taxCategory) {
+   public MyCartSetCustomShippingMethodActionBuilder taxCategory(@Nullable final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
       this.taxCategory = taxCategory;
       return this;
    }
    
    
-   public com.commercetools.models.ShippingMethod.ShippingRateDraft getShippingRate(){
+   public com.commercetools.models.shipping_method.ShippingRateDraft getShippingRate(){
       return this.shippingRate;
    }
    
    @Nullable
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
    
@@ -61,7 +61,7 @@ public final class MyCartSetCustomShippingMethodActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.TaxCategory.TaxCategoryResourceIdentifier getTaxCategory(){
+   public com.commercetools.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }
 

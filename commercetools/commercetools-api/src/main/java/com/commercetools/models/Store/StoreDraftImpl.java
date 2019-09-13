@@ -1,6 +1,6 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoreDraftImpl implements StoreDraft {
 
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    private java.lang.String key;
 
    @JsonCreator
-   StoreDraftImpl(@JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("key") final java.lang.String key) {
+   StoreDraftImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("key") final java.lang.String key) {
       this.name = name;
       this.key = key;
    }
@@ -37,7 +37,7 @@ public final class StoreDraftImpl implements StoreDraft {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -46,7 +46,7 @@ public final class StoreDraftImpl implements StoreDraft {
       return this.key;
    }
 
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    

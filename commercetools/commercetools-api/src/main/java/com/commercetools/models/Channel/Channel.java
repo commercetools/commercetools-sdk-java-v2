@@ -1,14 +1,14 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelRoleEnum;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Review.ReviewRatingStatistics;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.channel.ChannelRoleEnum;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.review.ReviewRatingStatistics;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Channel.ChannelImpl;
+import com.commercetools.models.channel.ChannelImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,4 +1,4 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
 import java.lang.String;
 import javax.annotation.Generated;

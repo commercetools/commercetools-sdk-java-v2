@@ -1,6 +1,6 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.ImageDimensions;
+import com.commercetools.models.common.ImageDimensions;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,10 +27,10 @@ public final class ImageImpl implements Image {
    
    private java.lang.String url;
    
-   private com.commercetools.models.Common.ImageDimensions dimensions;
+   private com.commercetools.models.common.ImageDimensions dimensions;
 
    @JsonCreator
-   ImageImpl(@JsonProperty("label") final java.lang.String label, @JsonProperty("url") final java.lang.String url, @JsonProperty("dimensions") final com.commercetools.models.Common.ImageDimensions dimensions) {
+   ImageImpl(@JsonProperty("label") final java.lang.String label, @JsonProperty("url") final java.lang.String url, @JsonProperty("dimensions") final com.commercetools.models.common.ImageDimensions dimensions) {
       this.label = label;
       this.url = url;
       this.dimensions = dimensions;
@@ -50,7 +50,7 @@ public final class ImageImpl implements Image {
    }
    
    
-   public com.commercetools.models.Common.ImageDimensions getDimensions(){
+   public com.commercetools.models.common.ImageDimensions getDimensions(){
       return this.dimensions;
    }
 
@@ -62,7 +62,7 @@ public final class ImageImpl implements Image {
       this.url = url;
    }
    
-   public void setDimensions(final com.commercetools.models.Common.ImageDimensions dimensions){
+   public void setDimensions(final com.commercetools.models.common.ImageDimensions dimensions){
       this.dimensions = dimensions;
    }
 

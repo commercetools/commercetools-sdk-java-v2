@@ -1,11 +1,11 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Message.ReviewRatingSetMessagePayload;
+import com.commercetools.models.message.ReviewRatingSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ReviewRatingSetMessagePayloadBuilder {
    private java.lang.Integer newRating;
    
    @Nullable
-   private com.commercetools.models.Common.Reference target;
+   private com.commercetools.models.common.Reference target;
    
    public ReviewRatingSetMessagePayloadBuilder oldRating(@Nullable final java.lang.Integer oldRating) {
       this.oldRating = oldRating;
@@ -40,7 +40,7 @@ public final class ReviewRatingSetMessagePayloadBuilder {
       return this;
    }
    
-   public ReviewRatingSetMessagePayloadBuilder target(@Nullable final com.commercetools.models.Common.Reference target) {
+   public ReviewRatingSetMessagePayloadBuilder target(@Nullable final com.commercetools.models.common.Reference target) {
       this.target = target;
       return this;
    }
@@ -61,7 +61,7 @@ public final class ReviewRatingSetMessagePayloadBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.Reference getTarget(){
+   public com.commercetools.models.common.Reference getTarget(){
       return this.target;
    }
 

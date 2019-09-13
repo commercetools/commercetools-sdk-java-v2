@@ -16,7 +16,7 @@ public class ByProjectKeyExtensionsRequestBuilder {
       return new ByProjectKeyExtensionsGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyExtensionsPost post(com.commercetools.models.Extension.ExtensionDraft extensionDraft) {
+   public ByProjectKeyExtensionsPost post(com.commercetools.models.extension.ExtensionDraft extensionDraft) {
       return new ByProjectKeyExtensionsPost(apiHttpClient, projectKey, extensionDraft);
    }
    

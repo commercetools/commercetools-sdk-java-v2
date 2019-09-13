@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
 import java.lang.Object;
-import com.commercetools.models.Type.FieldContainer;
+import com.commercetools.models.type.FieldContainer;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

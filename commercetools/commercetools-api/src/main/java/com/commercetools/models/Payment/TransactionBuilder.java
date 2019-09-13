@@ -1,11 +1,11 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.TypedMoney;
-import com.commercetools.models.Payment.TransactionState;
-import com.commercetools.models.Payment.TransactionType;
+import com.commercetools.models.common.TypedMoney;
+import com.commercetools.models.payment.TransactionState;
+import com.commercetools.models.payment.TransactionType;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Payment.Transaction;
+import com.commercetools.models.payment.Transaction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,16 +17,16 @@ public final class TransactionBuilder {
    private java.lang.String interactionId;
    
    
-   private com.commercetools.models.Common.TypedMoney amount;
+   private com.commercetools.models.common.TypedMoney amount;
    
    @Nullable
-   private com.commercetools.models.Payment.TransactionState state;
+   private com.commercetools.models.payment.TransactionState state;
    
    
    private java.lang.String id;
    
    
-   private com.commercetools.models.Payment.TransactionType type;
+   private com.commercetools.models.payment.TransactionType type;
    
    @Nullable
    private java.time.ZonedDateTime timestamp;
@@ -36,12 +36,12 @@ public final class TransactionBuilder {
       return this;
    }
    
-   public TransactionBuilder amount( final com.commercetools.models.Common.TypedMoney amount) {
+   public TransactionBuilder amount( final com.commercetools.models.common.TypedMoney amount) {
       this.amount = amount;
       return this;
    }
    
-   public TransactionBuilder state(@Nullable final com.commercetools.models.Payment.TransactionState state) {
+   public TransactionBuilder state(@Nullable final com.commercetools.models.payment.TransactionState state) {
       this.state = state;
       return this;
    }
@@ -51,7 +51,7 @@ public final class TransactionBuilder {
       return this;
    }
    
-   public TransactionBuilder type( final com.commercetools.models.Payment.TransactionType type) {
+   public TransactionBuilder type( final com.commercetools.models.payment.TransactionType type) {
       this.type = type;
       return this;
    }
@@ -67,12 +67,12 @@ public final class TransactionBuilder {
    }
    
    
-   public com.commercetools.models.Common.TypedMoney getAmount(){
+   public com.commercetools.models.common.TypedMoney getAmount(){
       return this.amount;
    }
    
    @Nullable
-   public com.commercetools.models.Payment.TransactionState getState(){
+   public com.commercetools.models.payment.TransactionState getState(){
       return this.state;
    }
    
@@ -82,7 +82,7 @@ public final class TransactionBuilder {
    }
    
    
-   public com.commercetools.models.Payment.TransactionType getType(){
+   public com.commercetools.models.payment.TransactionType getType(){
       return this.type;
    }
    

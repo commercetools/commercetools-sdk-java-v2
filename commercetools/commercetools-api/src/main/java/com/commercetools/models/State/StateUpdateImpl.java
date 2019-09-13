@@ -1,6 +1,6 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateUpdateImpl implements StateUpdate {
 
-   private java.util.List<com.commercetools.models.State.StateUpdateAction> actions;
+   private java.util.List<com.commercetools.models.state.StateUpdateAction> actions;
    
    private java.lang.Long version;
 
    @JsonCreator
-   StateUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.State.StateUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   StateUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.state.StateUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -37,7 +37,7 @@ public final class StateUpdateImpl implements StateUpdate {
    }
    
    
-   public java.util.List<com.commercetools.models.State.StateUpdateAction> getActions(){
+   public java.util.List<com.commercetools.models.state.StateUpdateAction> getActions(){
       return this.actions;
    }
    
@@ -46,7 +46,7 @@ public final class StateUpdateImpl implements StateUpdate {
       return this.version;
    }
 
-   public void setActions(final java.util.List<com.commercetools.models.State.StateUpdateAction> actions){
+   public void setActions(final java.util.List<com.commercetools.models.state.StateUpdateAction> actions){
       this.actions = actions;
    }
    

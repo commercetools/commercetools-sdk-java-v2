@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
+import com.commercetools.models.cart.CartUpdateAction;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.CartChangeCustomLineItemQuantityAction;
+import com.commercetools.models.cart.CartChangeCustomLineItemQuantityAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

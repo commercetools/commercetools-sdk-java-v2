@@ -1,9 +1,9 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionUpdateAction;
+import com.commercetools.models.extension.ExtensionUpdateAction;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Extension.ExtensionSetTimeoutInMsAction;
+import com.commercetools.models.extension.ExtensionSetTimeoutInMsAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

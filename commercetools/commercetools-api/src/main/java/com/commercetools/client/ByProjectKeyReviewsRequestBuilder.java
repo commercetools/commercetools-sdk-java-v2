@@ -16,7 +16,7 @@ public class ByProjectKeyReviewsRequestBuilder {
       return new ByProjectKeyReviewsGet(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyReviewsPost post(com.commercetools.models.Review.ReviewDraft reviewDraft) {
+   public ByProjectKeyReviewsPost post(com.commercetools.models.review.ReviewDraft reviewDraft) {
       return new ByProjectKeyReviewsPost(apiHttpClient, projectKey, reviewDraft);
    }
    

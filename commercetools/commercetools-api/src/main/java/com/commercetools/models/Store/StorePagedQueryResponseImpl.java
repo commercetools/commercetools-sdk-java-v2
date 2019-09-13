@@ -1,6 +1,6 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Store.Store;
+import com.commercetools.models.store.Store;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,10 +29,10 @@ public final class StorePagedQueryResponseImpl implements StorePagedQueryRespons
    
    private java.lang.Long count;
    
-   private java.util.List<com.commercetools.models.Store.Store> results;
+   private java.util.List<com.commercetools.models.store.Store> results;
 
    @JsonCreator
-   StorePagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.Store.Store> results) {
+   StorePagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.store.Store> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -58,7 +58,7 @@ public final class StorePagedQueryResponseImpl implements StorePagedQueryRespons
    }
    
    
-   public java.util.List<com.commercetools.models.Store.Store> getResults(){
+   public java.util.List<com.commercetools.models.store.Store> getResults(){
       return this.results;
    }
 
@@ -74,7 +74,7 @@ public final class StorePagedQueryResponseImpl implements StorePagedQueryRespons
       this.count = count;
    }
    
-   public void setResults(final java.util.List<com.commercetools.models.Store.Store> results){
+   public void setResults(final java.util.List<com.commercetools.models.store.Store> results){
       this.results = results;
    }
 

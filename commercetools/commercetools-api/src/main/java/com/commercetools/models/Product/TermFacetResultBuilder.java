@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetResult;
-import com.commercetools.models.Product.FacetResultTerm;
-import com.commercetools.models.Product.FacetTypes;
-import com.commercetools.models.Product.TermFacetResultType;
+import com.commercetools.models.product.FacetResult;
+import com.commercetools.models.product.FacetResultTerm;
+import com.commercetools.models.product.FacetTypes;
+import com.commercetools.models.product.TermFacetResultType;
 import java.lang.Long;
-import com.commercetools.models.Product.TermFacetResult;
+import com.commercetools.models.product.TermFacetResult;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class TermFacetResultBuilder {
    private java.lang.Long total;
    
    
-   private java.util.List<com.commercetools.models.Product.FacetResultTerm> terms;
+   private java.util.List<com.commercetools.models.product.FacetResultTerm> terms;
    
    
-   private com.commercetools.models.Product.TermFacetResultType dataType;
+   private com.commercetools.models.product.TermFacetResultType dataType;
    
    
    private java.lang.Long missing;
@@ -38,12 +38,12 @@ public final class TermFacetResultBuilder {
       return this;
    }
    
-   public TermFacetResultBuilder terms( final java.util.List<com.commercetools.models.Product.FacetResultTerm> terms) {
+   public TermFacetResultBuilder terms( final java.util.List<com.commercetools.models.product.FacetResultTerm> terms) {
       this.terms = terms;
       return this;
    }
    
-   public TermFacetResultBuilder dataType( final com.commercetools.models.Product.TermFacetResultType dataType) {
+   public TermFacetResultBuilder dataType( final com.commercetools.models.product.TermFacetResultType dataType) {
       this.dataType = dataType;
       return this;
    }
@@ -64,12 +64,12 @@ public final class TermFacetResultBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Product.FacetResultTerm> getTerms(){
+   public java.util.List<com.commercetools.models.product.FacetResultTerm> getTerms(){
       return this.terms;
    }
    
    
-   public com.commercetools.models.Product.TermFacetResultType getDataType(){
+   public com.commercetools.models.product.TermFacetResultType getDataType(){
       return this.dataType;
    }
    

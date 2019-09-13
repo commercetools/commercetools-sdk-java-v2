@@ -1,9 +1,9 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
-import com.commercetools.models.Category.CategorySetAssetDescriptionAction;
+import com.commercetools.models.category.CategorySetAssetDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ public final class CategorySetAssetDescriptionActionBuilder {
    private java.lang.String assetId;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    @Nullable
    private java.lang.String assetKey;
@@ -25,7 +25,7 @@ public final class CategorySetAssetDescriptionActionBuilder {
       return this;
    }
    
-   public CategorySetAssetDescriptionActionBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public CategorySetAssetDescriptionActionBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
@@ -41,7 +41,7 @@ public final class CategorySetAssetDescriptionActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    

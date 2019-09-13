@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Cart.ExternalTaxRateDraft;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.cart.ExternalTaxRateDraft;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class CartSetCustomLineItemTaxRateActionImpl implements CartSetCust
    
    private java.lang.String customLineItemId;
    
-   private com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate;
+   private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
 
    @JsonCreator
-   CartSetCustomLineItemTaxRateActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("externalTaxRate") final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate) {
+   CartSetCustomLineItemTaxRateActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.customLineItemId = customLineItemId;
       this.externalTaxRate = externalTaxRate;
       this.action = "setCustomLineItemTaxRate";
@@ -51,7 +51,7 @@ public final class CartSetCustomLineItemTaxRateActionImpl implements CartSetCust
    }
    
    
-   public com.commercetools.models.Cart.ExternalTaxRateDraft getExternalTaxRate(){
+   public com.commercetools.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
 
@@ -59,7 +59,7 @@ public final class CartSetCustomLineItemTaxRateActionImpl implements CartSetCust
       this.customLineItemId = customLineItemId;
    }
    
-   public void setExternalTaxRate(final com.commercetools.models.Cart.ExternalTaxRateDraft externalTaxRate){
+   public void setExternalTaxRate(final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate){
       this.externalTaxRate = externalTaxRate;
    }
 

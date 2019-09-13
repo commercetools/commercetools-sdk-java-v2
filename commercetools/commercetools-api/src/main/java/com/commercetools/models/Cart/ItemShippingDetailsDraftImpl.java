@@ -1,6 +1,6 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ItemShippingTarget;
+import com.commercetools.models.cart.ItemShippingTarget;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDraft {
 
-   private java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targets;
+   private java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets;
 
    @JsonCreator
-   ItemShippingDetailsDraftImpl(@JsonProperty("targets") final java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targets) {
+   ItemShippingDetailsDraftImpl(@JsonProperty("targets") final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets) {
       this.targets = targets;
    }
    public ItemShippingDetailsDraftImpl() {
@@ -33,11 +33,11 @@ public final class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDr
    }
    
    
-   public java.util.List<com.commercetools.models.Cart.ItemShippingTarget> getTargets(){
+   public java.util.List<com.commercetools.models.cart.ItemShippingTarget> getTargets(){
       return this.targets;
    }
 
-   public void setTargets(final java.util.List<com.commercetools.models.Cart.ItemShippingTarget> targets){
+   public void setTargets(final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets){
       this.targets = targets;
    }
 

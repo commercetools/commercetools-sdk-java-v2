@@ -1,6 +1,6 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,12 +25,12 @@ public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
 
    private java.lang.String method;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    private java.lang.String paymentInterface;
 
    @JsonCreator
-   PaymentMethodInfoImpl(@JsonProperty("method") final java.lang.String method, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("paymentInterface") final java.lang.String paymentInterface) {
+   PaymentMethodInfoImpl(@JsonProperty("method") final java.lang.String method, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("paymentInterface") final java.lang.String paymentInterface) {
       this.method = method;
       this.name = name;
       this.paymentInterface = paymentInterface;
@@ -45,7 +45,7 @@ public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -58,7 +58,7 @@ public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
       this.method = method;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    

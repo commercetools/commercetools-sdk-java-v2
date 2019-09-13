@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldsDraftImpl implements CustomFieldsDraft {
 
-   private com.commercetools.models.Type.FieldContainer fields;
+   private com.commercetools.models.type.FieldContainer fields;
    
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
 
    @JsonCreator
-   CustomFieldsDraftImpl(@JsonProperty("fields") final com.commercetools.models.Type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.Type.TypeResourceIdentifier type) {
+   CustomFieldsDraftImpl(@JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type) {
       this.fields = fields;
       this.type = type;
    }
@@ -37,20 +37,20 @@ public final class CustomFieldsDraftImpl implements CustomFieldsDraft {
    }
    
    
-   public com.commercetools.models.Type.FieldContainer getFields(){
+   public com.commercetools.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
 
-   public void setFields(final com.commercetools.models.Type.FieldContainer fields){
+   public void setFields(final com.commercetools.models.type.FieldContainer fields){
       this.fields = fields;
    }
    
-   public void setType(final com.commercetools.models.Type.TypeResourceIdentifier type){
+   public void setType(final com.commercetools.models.type.TypeResourceIdentifier type){
       this.type = type;
    }
 

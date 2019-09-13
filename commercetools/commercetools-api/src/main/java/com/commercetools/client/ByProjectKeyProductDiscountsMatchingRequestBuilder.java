@@ -12,7 +12,7 @@ public class ByProjectKeyProductDiscountsMatchingRequestBuilder {
       this.projectKey = projectKey;
    }
    
-   public ByProjectKeyProductDiscountsMatchingPost post(com.commercetools.models.ProductDiscount.ProductDiscountMatchQuery productDiscountMatchQuery) {
+   public ByProjectKeyProductDiscountsMatchingPost post(com.commercetools.models.product_discount.ProductDiscountMatchQuery productDiscountMatchQuery) {
       return new ByProjectKeyProductDiscountsMatchingPost(apiHttpClient, projectKey, productDiscountMatchQuery);
    }
    

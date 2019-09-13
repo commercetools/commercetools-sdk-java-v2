@@ -1,9 +1,9 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
-import com.commercetools.models.Error.ErrorObject;
+import com.commercetools.models.error.ErrorObject;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Error.PriceChangedError;
+import com.commercetools.models.error.PriceChangedError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

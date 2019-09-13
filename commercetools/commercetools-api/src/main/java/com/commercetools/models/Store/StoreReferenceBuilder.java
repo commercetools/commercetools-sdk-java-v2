@@ -1,9 +1,9 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Store.Store;
-import com.commercetools.models.Store.StoreReference;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.store.Store;
+import com.commercetools.models.store.StoreReference;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class StoreReferenceBuilder {
    private java.lang.String id;
    
    @Nullable
-   private com.commercetools.models.Store.Store obj;
+   private com.commercetools.models.store.Store obj;
    
    public StoreReferenceBuilder id( final java.lang.String id) {
       this.id = id;
       return this;
    }
    
-   public StoreReferenceBuilder obj(@Nullable final com.commercetools.models.Store.Store obj) {
+   public StoreReferenceBuilder obj(@Nullable final com.commercetools.models.store.Store obj) {
       this.obj = obj;
       return this;
    }
@@ -33,7 +33,7 @@ public final class StoreReferenceBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Store.Store getObj(){
+   public com.commercetools.models.store.Store getObj(){
       return this.obj;
    }
 

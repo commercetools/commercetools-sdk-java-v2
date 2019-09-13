@@ -1,8 +1,8 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.Customer;
+import com.commercetools.models.customer.Customer;
 import java.lang.Object;
-import com.commercetools.models.Customer.CustomerSignInResult;
+import com.commercetools.models.customer.CustomerSignInResult;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -14,14 +14,14 @@ public final class CustomerSignInResultBuilder {
    private java.lang.Object cart;
    
    
-   private com.commercetools.models.Customer.Customer customer;
+   private com.commercetools.models.customer.Customer customer;
    
    public CustomerSignInResultBuilder cart(@Nullable final java.lang.Object cart) {
       this.cart = cart;
       return this;
    }
    
-   public CustomerSignInResultBuilder customer( final com.commercetools.models.Customer.Customer customer) {
+   public CustomerSignInResultBuilder customer( final com.commercetools.models.customer.Customer customer) {
       this.customer = customer;
       return this;
    }
@@ -32,7 +32,7 @@ public final class CustomerSignInResultBuilder {
    }
    
    
-   public com.commercetools.models.Customer.Customer getCustomer(){
+   public com.commercetools.models.customer.Customer getCustomer(){
       return this.customer;
    }
 

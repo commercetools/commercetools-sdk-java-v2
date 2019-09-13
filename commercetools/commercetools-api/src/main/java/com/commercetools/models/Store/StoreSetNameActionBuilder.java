@@ -1,9 +1,9 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Store.StoreUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.store.StoreUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Store.StoreSetNameAction;
+import com.commercetools.models.store.StoreSetNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class StoreSetNameActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
-   public StoreSetNameActionBuilder name(@Nullable final com.commercetools.models.Common.LocalizedString name) {
+   public StoreSetNameActionBuilder name(@Nullable final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
 

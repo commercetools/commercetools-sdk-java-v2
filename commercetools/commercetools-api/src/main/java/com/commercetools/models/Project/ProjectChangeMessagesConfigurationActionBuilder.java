@@ -1,9 +1,9 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Message.MessageConfigurationDraft;
-import com.commercetools.models.Project.ProjectUpdateAction;
+import com.commercetools.models.message.MessageConfigurationDraft;
+import com.commercetools.models.project.ProjectUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Project.ProjectChangeMessagesConfigurationAction;
+import com.commercetools.models.project.ProjectChangeMessagesConfigurationAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class ProjectChangeMessagesConfigurationActionBuilder {
    
    
-   private com.commercetools.models.Message.MessageConfigurationDraft messagesConfiguration;
+   private com.commercetools.models.message.MessageConfigurationDraft messagesConfiguration;
    
-   public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration( final com.commercetools.models.Message.MessageConfigurationDraft messagesConfiguration) {
+   public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration( final com.commercetools.models.message.MessageConfigurationDraft messagesConfiguration) {
       this.messagesConfiguration = messagesConfiguration;
       return this;
    }
    
    
-   public com.commercetools.models.Message.MessageConfigurationDraft getMessagesConfiguration(){
+   public com.commercetools.models.message.MessageConfigurationDraft getMessagesConfiguration(){
       return this.messagesConfiguration;
    }
 

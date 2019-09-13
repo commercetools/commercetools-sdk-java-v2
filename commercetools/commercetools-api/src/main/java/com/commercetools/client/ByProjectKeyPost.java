@@ -26,9 +26,9 @@ public class ByProjectKeyPost {
    
    private String projectKey;
    
-   private com.commercetools.models.Project.ProjectUpdate projectUpdate;
+   private com.commercetools.models.project.ProjectUpdate projectUpdate;
    
-   public ByProjectKeyPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Project.ProjectUpdate projectUpdate){
+   public ByProjectKeyPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.project.ProjectUpdate projectUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.projectUpdate = projectUpdate;
@@ -51,7 +51,7 @@ public class ByProjectKeyPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Project.Project> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.project.Project> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Project.Project>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.project.Project>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Project.Project.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.project.Project.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

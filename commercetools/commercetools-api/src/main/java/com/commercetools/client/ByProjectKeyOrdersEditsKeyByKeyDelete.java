@@ -53,7 +53,7 @@ public class ByProjectKeyOrdersEditsKeyByKeyDelete {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.OrderEdit.OrderEdit> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.order_edit.OrderEdit> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyOrdersEditsKeyByKeyDelete {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.OrderEdit.OrderEdit>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.order_edit.OrderEdit>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.OrderEdit.OrderEdit.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.order_edit.OrderEdit.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

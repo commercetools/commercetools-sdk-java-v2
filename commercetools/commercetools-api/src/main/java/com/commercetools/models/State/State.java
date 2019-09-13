@@ -1,13 +1,13 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.State.StateReference;
-import com.commercetools.models.State.StateRoleEnum;
-import com.commercetools.models.State.StateTypeEnum;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.state.StateReference;
+import com.commercetools.models.state.StateRoleEnum;
+import com.commercetools.models.state.StateTypeEnum;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.State.StateImpl;
+import com.commercetools.models.state.StateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

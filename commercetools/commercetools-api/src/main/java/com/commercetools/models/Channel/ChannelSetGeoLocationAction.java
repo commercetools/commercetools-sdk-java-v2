@@ -1,9 +1,9 @@
-package com.commercetools.models.Channel;
+package com.commercetools.models.channel;
 
-import com.commercetools.models.Channel.ChannelUpdateAction;
+import com.commercetools.models.channel.ChannelUpdateAction;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Channel.ChannelSetGeoLocationActionImpl;
+import com.commercetools.models.channel.ChannelSetGeoLocationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

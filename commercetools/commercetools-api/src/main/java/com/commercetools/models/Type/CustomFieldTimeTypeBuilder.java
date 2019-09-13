@@ -1,8 +1,8 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.FieldType;
+import com.commercetools.models.type.FieldType;
 import java.lang.String;
-import com.commercetools.models.Type.CustomFieldTimeType;
+import com.commercetools.models.type.CustomFieldTimeType;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

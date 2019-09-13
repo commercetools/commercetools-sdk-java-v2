@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Me.MyPaymentUpdateAction;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.me.MyPaymentUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyPaymentChangeAmountPlannedActionImpl;
+import com.commercetools.models.me.MyPaymentChangeAmountPlannedActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,9 +1,9 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.FieldDefinition;
-import com.commercetools.models.Type.TypeUpdateAction;
+import com.commercetools.models.type.FieldDefinition;
+import com.commercetools.models.type.TypeUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Type.TypeAddFieldDefinitionAction;
+import com.commercetools.models.type.TypeAddFieldDefinitionAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class TypeAddFieldDefinitionActionBuilder {
    
    
-   private com.commercetools.models.Type.FieldDefinition fieldDefinition;
+   private com.commercetools.models.type.FieldDefinition fieldDefinition;
    
-   public TypeAddFieldDefinitionActionBuilder fieldDefinition( final com.commercetools.models.Type.FieldDefinition fieldDefinition) {
+   public TypeAddFieldDefinitionActionBuilder fieldDefinition( final com.commercetools.models.type.FieldDefinition fieldDefinition) {
       this.fieldDefinition = fieldDefinition;
       return this;
    }
    
    
-   public com.commercetools.models.Type.FieldDefinition getFieldDefinition(){
+   public com.commercetools.models.type.FieldDefinition getFieldDefinition(){
       return this.fieldDefinition;
    }
 

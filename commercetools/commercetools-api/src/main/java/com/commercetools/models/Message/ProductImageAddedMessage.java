@@ -1,10 +1,10 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Common.Image;
-import com.commercetools.models.Message.Message;
+import com.commercetools.models.common.Image;
+import com.commercetools.models.message.Message;
 import java.lang.Boolean;
 import java.lang.Long;
-import com.commercetools.models.Message.ProductImageAddedMessageImpl;
+import com.commercetools.models.message.ProductImageAddedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,8 +1,8 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.ProductDiscount.ProductDiscountReference;
-import com.commercetools.models.Common.DiscountedPriceImpl;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.product_discount.ProductDiscountReference;
+import com.commercetools.models.common.DiscountedPriceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

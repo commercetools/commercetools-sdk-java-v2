@@ -1,4 +1,4 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
 import java.lang.Boolean;
 import java.lang.Integer;

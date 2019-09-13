@@ -1,7 +1,7 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
 import java.lang.String;
-import com.commercetools.models.Type.CustomFieldEnumValue;
+import com.commercetools.models.type.CustomFieldEnumValue;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

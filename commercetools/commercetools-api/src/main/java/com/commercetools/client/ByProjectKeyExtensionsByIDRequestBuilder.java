@@ -18,7 +18,7 @@ public class ByProjectKeyExtensionsByIDRequestBuilder {
       return new ByProjectKeyExtensionsByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyExtensionsByIDPost post(com.commercetools.models.Extension.ExtensionUpdate extensionUpdate) {
+   public ByProjectKeyExtensionsByIDPost post(com.commercetools.models.extension.ExtensionUpdate extensionUpdate) {
       return new ByProjectKeyExtensionsByIDPost(apiHttpClient, projectKey, ID, extensionUpdate);
    }
    

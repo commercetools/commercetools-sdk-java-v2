@@ -1,7 +1,7 @@
-package com.commercetools.models.Store;
+package com.commercetools.models.store;
 
-import com.commercetools.models.Common.KeyReference;
-import com.commercetools.models.Common.ReferenceTypeId;
+import com.commercetools.models.common.KeyReference;
+import com.commercetools.models.common.ReferenceTypeId;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoreKeyReferenceImpl implements StoreKeyReference {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String key;
 
@@ -37,7 +37,7 @@ public final class StoreKeyReferenceImpl implements StoreKeyReference {
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    

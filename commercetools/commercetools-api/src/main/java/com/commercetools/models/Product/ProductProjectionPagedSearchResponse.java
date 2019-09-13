@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetResults;
-import com.commercetools.models.Product.ProductProjection;
+import com.commercetools.models.product.FacetResults;
+import com.commercetools.models.product.ProductProjection;
 import java.lang.Long;
-import com.commercetools.models.Product.ProductProjectionPagedSearchResponseImpl;
+import com.commercetools.models.product.ProductProjectionPagedSearchResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

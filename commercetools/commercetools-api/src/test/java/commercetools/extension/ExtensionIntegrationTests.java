@@ -1,6 +1,6 @@
 package commercetools.extension;
 
-import com.commercetools.models.Extension.*;
+import com.commercetools.models.extension.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

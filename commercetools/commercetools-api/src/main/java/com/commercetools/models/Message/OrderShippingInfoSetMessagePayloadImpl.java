@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Cart.ShippingInfo;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.cart.ShippingInfo;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class OrderShippingInfoSetMessagePayloadImpl implements OrderShippi
 
    private java.lang.String type;
    
-   private com.commercetools.models.Cart.ShippingInfo shippingInfo;
+   private com.commercetools.models.cart.ShippingInfo shippingInfo;
    
-   private com.commercetools.models.Cart.ShippingInfo oldShippingInfo;
+   private com.commercetools.models.cart.ShippingInfo oldShippingInfo;
 
    @JsonCreator
-   OrderShippingInfoSetMessagePayloadImpl(@JsonProperty("shippingInfo") final com.commercetools.models.Cart.ShippingInfo shippingInfo, @JsonProperty("oldShippingInfo") final com.commercetools.models.Cart.ShippingInfo oldShippingInfo) {
+   OrderShippingInfoSetMessagePayloadImpl(@JsonProperty("shippingInfo") final com.commercetools.models.cart.ShippingInfo shippingInfo, @JsonProperty("oldShippingInfo") final com.commercetools.models.cart.ShippingInfo oldShippingInfo) {
       this.shippingInfo = shippingInfo;
       this.oldShippingInfo = oldShippingInfo;
       this.type = "OrderShippingInfoSet";
@@ -46,20 +46,20 @@ public final class OrderShippingInfoSetMessagePayloadImpl implements OrderShippi
    }
    
    
-   public com.commercetools.models.Cart.ShippingInfo getShippingInfo(){
+   public com.commercetools.models.cart.ShippingInfo getShippingInfo(){
       return this.shippingInfo;
    }
    
    
-   public com.commercetools.models.Cart.ShippingInfo getOldShippingInfo(){
+   public com.commercetools.models.cart.ShippingInfo getOldShippingInfo(){
       return this.oldShippingInfo;
    }
 
-   public void setShippingInfo(final com.commercetools.models.Cart.ShippingInfo shippingInfo){
+   public void setShippingInfo(final com.commercetools.models.cart.ShippingInfo shippingInfo){
       this.shippingInfo = shippingInfo;
    }
    
-   public void setOldShippingInfo(final com.commercetools.models.Cart.ShippingInfo oldShippingInfo){
+   public void setOldShippingInfo(final com.commercetools.models.cart.ShippingInfo oldShippingInfo){
       this.oldShippingInfo = oldShippingInfo;
    }
 

@@ -1,11 +1,11 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Subscription.ChangeSubscription;
-import com.commercetools.models.Subscription.DeliveryFormat;
-import com.commercetools.models.Subscription.Destination;
-import com.commercetools.models.Subscription.MessageSubscription;
-import com.commercetools.models.Subscription.SubscriptionHealthStatus;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.subscription.ChangeSubscription;
+import com.commercetools.models.subscription.DeliveryFormat;
+import com.commercetools.models.subscription.Destination;
+import com.commercetools.models.subscription.MessageSubscription;
+import com.commercetools.models.subscription.SubscriptionHealthStatus;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -36,24 +36,24 @@ public final class SubscriptionImpl implements Subscription {
    
    private java.lang.Long version;
    
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private com.commercetools.models.Subscription.DeliveryFormat format;
+   private com.commercetools.models.subscription.DeliveryFormat format;
    
-   private com.commercetools.models.Subscription.Destination destination;
+   private com.commercetools.models.subscription.Destination destination;
    
-   private java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes;
+   private java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes;
    
-   private java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages;
+   private java.util.List<com.commercetools.models.subscription.MessageSubscription> messages;
    
    private java.lang.String key;
    
-   private com.commercetools.models.Subscription.SubscriptionHealthStatus status;
+   private com.commercetools.models.subscription.SubscriptionHealthStatus status;
 
    @JsonCreator
-   SubscriptionImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.Common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.Common.LastModifiedBy lastModifiedBy, @JsonProperty("format") final com.commercetools.models.Subscription.DeliveryFormat format, @JsonProperty("destination") final com.commercetools.models.Subscription.Destination destination, @JsonProperty("changes") final java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes, @JsonProperty("messages") final java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages, @JsonProperty("key") final java.lang.String key, @JsonProperty("status") final com.commercetools.models.Subscription.SubscriptionHealthStatus status) {
+   SubscriptionImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("format") final com.commercetools.models.subscription.DeliveryFormat format, @JsonProperty("destination") final com.commercetools.models.subscription.Destination destination, @JsonProperty("changes") final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes, @JsonProperty("messages") final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages, @JsonProperty("key") final java.lang.String key, @JsonProperty("status") final com.commercetools.models.subscription.SubscriptionHealthStatus status) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -92,32 +92,32 @@ public final class SubscriptionImpl implements Subscription {
    }
    
    
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    
-   public com.commercetools.models.Subscription.DeliveryFormat getFormat(){
+   public com.commercetools.models.subscription.DeliveryFormat getFormat(){
       return this.format;
    }
    
    
-   public com.commercetools.models.Subscription.Destination getDestination(){
+   public com.commercetools.models.subscription.Destination getDestination(){
       return this.destination;
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.ChangeSubscription> getChanges(){
+   public java.util.List<com.commercetools.models.subscription.ChangeSubscription> getChanges(){
       return this.changes;
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.MessageSubscription> getMessages(){
+   public java.util.List<com.commercetools.models.subscription.MessageSubscription> getMessages(){
       return this.messages;
    }
    
@@ -127,7 +127,7 @@ public final class SubscriptionImpl implements Subscription {
    }
    
    
-   public com.commercetools.models.Subscription.SubscriptionHealthStatus getStatus(){
+   public com.commercetools.models.subscription.SubscriptionHealthStatus getStatus(){
       return this.status;
    }
 
@@ -147,27 +147,27 @@ public final class SubscriptionImpl implements Subscription {
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.models.Common.CreatedBy createdBy){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
       this.createdBy = createdBy;
    }
    
-   public void setLastModifiedBy(final com.commercetools.models.Common.LastModifiedBy lastModifiedBy){
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setFormat(final com.commercetools.models.Subscription.DeliveryFormat format){
+   public void setFormat(final com.commercetools.models.subscription.DeliveryFormat format){
       this.format = format;
    }
    
-   public void setDestination(final com.commercetools.models.Subscription.Destination destination){
+   public void setDestination(final com.commercetools.models.subscription.Destination destination){
       this.destination = destination;
    }
    
-   public void setChanges(final java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes){
+   public void setChanges(final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes){
       this.changes = changes;
    }
    
-   public void setMessages(final java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages){
+   public void setMessages(final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages){
       this.messages = messages;
    }
    
@@ -175,7 +175,7 @@ public final class SubscriptionImpl implements Subscription {
       this.key = key;
    }
    
-   public void setStatus(final com.commercetools.models.Subscription.SubscriptionHealthStatus status){
+   public void setStatus(final com.commercetools.models.subscription.SubscriptionHealthStatus status){
       this.status = status;
    }
 

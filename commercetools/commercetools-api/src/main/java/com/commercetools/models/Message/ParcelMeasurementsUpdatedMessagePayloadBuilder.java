@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Order.ParcelMeasurements;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.order.ParcelMeasurements;
 import java.lang.String;
-import com.commercetools.models.Message.ParcelMeasurementsUpdatedMessagePayload;
+import com.commercetools.models.message.ParcelMeasurementsUpdatedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ public final class ParcelMeasurementsUpdatedMessagePayloadBuilder {
    private java.lang.String deliveryId;
    
    @Nullable
-   private com.commercetools.models.Order.ParcelMeasurements measurements;
+   private com.commercetools.models.order.ParcelMeasurements measurements;
    
    
    private java.lang.String parcelId;
@@ -25,7 +25,7 @@ public final class ParcelMeasurementsUpdatedMessagePayloadBuilder {
       return this;
    }
    
-   public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(@Nullable final com.commercetools.models.Order.ParcelMeasurements measurements) {
+   public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(@Nullable final com.commercetools.models.order.ParcelMeasurements measurements) {
       this.measurements = measurements;
       return this;
    }
@@ -41,7 +41,7 @@ public final class ParcelMeasurementsUpdatedMessagePayloadBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Order.ParcelMeasurements getMeasurements(){
+   public com.commercetools.models.order.ParcelMeasurements getMeasurements(){
       return this.measurements;
    }
    

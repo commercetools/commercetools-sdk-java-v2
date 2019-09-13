@@ -1,8 +1,8 @@
 package commercetools.zone;
 
-import com.commercetools.models.Zone.Zone;
-import com.commercetools.models.Zone.ZoneDraft;
-import com.commercetools.models.Zone.ZoneDraftBuilder;
+import com.commercetools.models.zone.Zone;
+import com.commercetools.models.zone.ZoneDraft;
+import com.commercetools.models.zone.ZoneDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

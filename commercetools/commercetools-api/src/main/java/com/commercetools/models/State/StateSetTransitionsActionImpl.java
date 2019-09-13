@@ -1,7 +1,7 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.State.StateResourceIdentifier;
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.state.StateResourceIdentifier;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class StateSetTransitionsActionImpl implements StateSetTransitionsA
 
    private java.lang.String action;
    
-   private java.util.List<com.commercetools.models.State.StateResourceIdentifier> transitions;
+   private java.util.List<com.commercetools.models.state.StateResourceIdentifier> transitions;
 
    @JsonCreator
-   StateSetTransitionsActionImpl(@JsonProperty("transitions") final java.util.List<com.commercetools.models.State.StateResourceIdentifier> transitions) {
+   StateSetTransitionsActionImpl(@JsonProperty("transitions") final java.util.List<com.commercetools.models.state.StateResourceIdentifier> transitions) {
       this.transitions = transitions;
       this.action = "setTransitions";
    }
@@ -43,11 +43,11 @@ public final class StateSetTransitionsActionImpl implements StateSetTransitionsA
    }
    
    
-   public java.util.List<com.commercetools.models.State.StateResourceIdentifier> getTransitions(){
+   public java.util.List<com.commercetools.models.state.StateResourceIdentifier> getTransitions(){
       return this.transitions;
    }
 
-   public void setTransitions(final java.util.List<com.commercetools.models.State.StateResourceIdentifier> transitions){
+   public void setTransitions(final java.util.List<com.commercetools.models.state.StateResourceIdentifier> transitions){
       this.transitions = transitions;
    }
 

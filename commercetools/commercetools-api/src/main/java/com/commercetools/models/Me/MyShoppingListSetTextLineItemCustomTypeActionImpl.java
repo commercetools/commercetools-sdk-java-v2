@@ -1,8 +1,8 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
-import com.commercetools.models.Type.FieldContainer;
-import com.commercetools.models.Type.TypeResourceIdentifier;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
+import com.commercetools.models.type.FieldContainer;
+import com.commercetools.models.type.TypeResourceIdentifier;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,14 +27,14 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionImpl implements 
 
    private java.lang.String action;
    
-   private com.commercetools.models.Type.FieldContainer fields;
+   private com.commercetools.models.type.FieldContainer fields;
    
-   private com.commercetools.models.Type.TypeResourceIdentifier type;
+   private com.commercetools.models.type.TypeResourceIdentifier type;
    
    private java.lang.String textLineItemId;
 
    @JsonCreator
-   MyShoppingListSetTextLineItemCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.models.Type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.Type.TypeResourceIdentifier type, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
+   MyShoppingListSetTextLineItemCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
       this.fields = fields;
       this.type = type;
       this.textLineItemId = textLineItemId;
@@ -50,12 +50,12 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionImpl implements 
    }
    
    
-   public com.commercetools.models.Type.FieldContainer getFields(){
+   public com.commercetools.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    
-   public com.commercetools.models.Type.TypeResourceIdentifier getType(){
+   public com.commercetools.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
    
@@ -64,11 +64,11 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionImpl implements 
       return this.textLineItemId;
    }
 
-   public void setFields(final com.commercetools.models.Type.FieldContainer fields){
+   public void setFields(final com.commercetools.models.type.FieldContainer fields){
       this.fields = fields;
    }
    
-   public void setType(final com.commercetools.models.Type.TypeResourceIdentifier type){
+   public void setType(final com.commercetools.models.type.TypeResourceIdentifier type){
       this.type = type;
    }
    

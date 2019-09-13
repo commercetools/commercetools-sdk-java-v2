@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Customer.Customer;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.CustomerCreatedMessage;
+import com.commercetools.models.customer.Customer;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.CustomerCreatedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class CustomerCreatedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -38,7 +38,7 @@ public final class CustomerCreatedMessageBuilder {
    private java.lang.String type;
    
    
-   private com.commercetools.models.Customer.Customer customer;
+   private com.commercetools.models.customer.Customer customer;
    
    public CustomerCreatedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -65,12 +65,12 @@ public final class CustomerCreatedMessageBuilder {
       return this;
    }
    
-   public CustomerCreatedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public CustomerCreatedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public CustomerCreatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public CustomerCreatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -85,7 +85,7 @@ public final class CustomerCreatedMessageBuilder {
       return this;
    }
    
-   public CustomerCreatedMessageBuilder customer( final com.commercetools.models.Customer.Customer customer) {
+   public CustomerCreatedMessageBuilder customer( final com.commercetools.models.customer.Customer customer) {
       this.customer = customer;
       return this;
    }
@@ -116,12 +116,12 @@ public final class CustomerCreatedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -136,7 +136,7 @@ public final class CustomerCreatedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Customer.Customer getCustomer(){
+   public com.commercetools.models.customer.Customer getCustomer(){
       return this.customer;
    }
 

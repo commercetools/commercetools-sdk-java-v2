@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Common.Money;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.common.Money;
 import java.lang.String;
-import com.commercetools.models.Cart.CartChangeCustomLineItemMoneyAction;
+import com.commercetools.models.cart.CartChangeCustomLineItemMoneyAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +15,14 @@ public final class CartChangeCustomLineItemMoneyActionBuilder {
    private java.lang.String customLineItemId;
    
    
-   private com.commercetools.models.Common.Money money;
+   private com.commercetools.models.common.Money money;
    
    public CartChangeCustomLineItemMoneyActionBuilder customLineItemId( final java.lang.String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public CartChangeCustomLineItemMoneyActionBuilder money( final com.commercetools.models.Common.Money money) {
+   public CartChangeCustomLineItemMoneyActionBuilder money( final com.commercetools.models.common.Money money) {
       this.money = money;
       return this;
    }
@@ -33,7 +33,7 @@ public final class CartChangeCustomLineItemMoneyActionBuilder {
    }
    
    
-   public com.commercetools.models.Common.Money getMoney(){
+   public com.commercetools.models.common.Money getMoney(){
       return this.money;
    }
 

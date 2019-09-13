@@ -1,14 +1,14 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
 import java.time.LocalDate;
-import com.commercetools.models.Customer.CustomerDraft;
+import com.commercetools.models.customer.CustomerDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -23,16 +23,16 @@ public final class CustomerDraftBuilder {
    private java.lang.String lastName;
    
    @Nullable
-   private java.util.List<com.commercetools.models.Common.Address> addresses;
+   private java.util.List<com.commercetools.models.common.Address> addresses;
    
    @Nullable
    private java.lang.Long defaultShippingAddress;
    
    @Nullable
-   private com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
    private java.lang.String companyName;
@@ -98,7 +98,7 @@ public final class CustomerDraftBuilder {
       return this;
    }
    
-   public CustomerDraftBuilder addresses(@Nullable final java.util.List<com.commercetools.models.Common.Address> addresses) {
+   public CustomerDraftBuilder addresses(@Nullable final java.util.List<com.commercetools.models.common.Address> addresses) {
       this.addresses = addresses;
       return this;
    }
@@ -108,12 +108,12 @@ public final class CustomerDraftBuilder {
       return this;
    }
    
-   public CustomerDraftBuilder customerGroup(@Nullable final com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier customerGroup) {
+   public CustomerDraftBuilder customerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
    
-   public CustomerDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public CustomerDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
@@ -219,7 +219,7 @@ public final class CustomerDraftBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.Common.Address> getAddresses(){
+   public java.util.List<com.commercetools.models.common.Address> getAddresses(){
       return this.addresses;
    }
    
@@ -229,12 +229,12 @@ public final class CustomerDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.CustomerGroup.CustomerGroupResourceIdentifier getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
       return this.customerGroup;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    

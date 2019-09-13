@@ -1,9 +1,9 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Subscription.ChangeSubscription;
-import com.commercetools.models.Subscription.DeliveryFormat;
-import com.commercetools.models.Subscription.Destination;
-import com.commercetools.models.Subscription.MessageSubscription;
+import com.commercetools.models.subscription.ChangeSubscription;
+import com.commercetools.models.subscription.DeliveryFormat;
+import com.commercetools.models.subscription.Destination;
+import com.commercetools.models.subscription.MessageSubscription;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,18 +26,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubscriptionDraftImpl implements SubscriptionDraft {
 
-   private com.commercetools.models.Subscription.DeliveryFormat format;
+   private com.commercetools.models.subscription.DeliveryFormat format;
    
-   private com.commercetools.models.Subscription.Destination destination;
+   private com.commercetools.models.subscription.Destination destination;
    
-   private java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes;
+   private java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes;
    
-   private java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages;
+   private java.util.List<com.commercetools.models.subscription.MessageSubscription> messages;
    
    private java.lang.String key;
 
    @JsonCreator
-   SubscriptionDraftImpl(@JsonProperty("format") final com.commercetools.models.Subscription.DeliveryFormat format, @JsonProperty("destination") final com.commercetools.models.Subscription.Destination destination, @JsonProperty("changes") final java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes, @JsonProperty("messages") final java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages, @JsonProperty("key") final java.lang.String key) {
+   SubscriptionDraftImpl(@JsonProperty("format") final com.commercetools.models.subscription.DeliveryFormat format, @JsonProperty("destination") final com.commercetools.models.subscription.Destination destination, @JsonProperty("changes") final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes, @JsonProperty("messages") final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages, @JsonProperty("key") final java.lang.String key) {
       this.format = format;
       this.destination = destination;
       this.changes = changes;
@@ -49,22 +49,22 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
    }
    
    
-   public com.commercetools.models.Subscription.DeliveryFormat getFormat(){
+   public com.commercetools.models.subscription.DeliveryFormat getFormat(){
       return this.format;
    }
    
    
-   public com.commercetools.models.Subscription.Destination getDestination(){
+   public com.commercetools.models.subscription.Destination getDestination(){
       return this.destination;
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.ChangeSubscription> getChanges(){
+   public java.util.List<com.commercetools.models.subscription.ChangeSubscription> getChanges(){
       return this.changes;
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.MessageSubscription> getMessages(){
+   public java.util.List<com.commercetools.models.subscription.MessageSubscription> getMessages(){
       return this.messages;
    }
    
@@ -73,19 +73,19 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
       return this.key;
    }
 
-   public void setFormat(final com.commercetools.models.Subscription.DeliveryFormat format){
+   public void setFormat(final com.commercetools.models.subscription.DeliveryFormat format){
       this.format = format;
    }
    
-   public void setDestination(final com.commercetools.models.Subscription.Destination destination){
+   public void setDestination(final com.commercetools.models.subscription.Destination destination){
       this.destination = destination;
    }
    
-   public void setChanges(final java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes){
+   public void setChanges(final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes){
       this.changes = changes;
    }
    
-   public void setMessages(final java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages){
+   public void setMessages(final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages){
       this.messages = messages;
    }
    

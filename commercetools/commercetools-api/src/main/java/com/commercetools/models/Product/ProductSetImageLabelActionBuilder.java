@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetImageLabelAction;
+import com.commercetools.models.product.ProductSetImageLabelAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

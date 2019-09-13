@@ -53,7 +53,7 @@ public class ByProjectKeyMePaymentsByIDDelete {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Me.MyPayment> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.me.MyPayment> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyMePaymentsByIDDelete {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Me.MyPayment>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.me.MyPayment>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Me.MyPayment.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.me.MyPayment.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

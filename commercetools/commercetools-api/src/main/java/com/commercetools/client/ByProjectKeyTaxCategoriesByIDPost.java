@@ -27,9 +27,9 @@ public class ByProjectKeyTaxCategoriesByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.TaxCategory.TaxCategoryUpdate taxCategoryUpdate;
+   private com.commercetools.models.tax_category.TaxCategoryUpdate taxCategoryUpdate;
    
-   public ByProjectKeyTaxCategoriesByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.TaxCategory.TaxCategoryUpdate taxCategoryUpdate){
+   public ByProjectKeyTaxCategoriesByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.tax_category.TaxCategoryUpdate taxCategoryUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
@@ -53,7 +53,7 @@ public class ByProjectKeyTaxCategoriesByIDPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.TaxCategory.TaxCategory> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.tax_category.TaxCategory> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyTaxCategoriesByIDPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.TaxCategory.TaxCategory>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.tax_category.TaxCategory>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.TaxCategory.TaxCategory.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.tax_category.TaxCategory.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

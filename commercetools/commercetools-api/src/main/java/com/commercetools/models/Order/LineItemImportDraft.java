@@ -1,16 +1,16 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Cart.ItemShippingDetailsDraft;
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Common.PriceDraft;
-import com.commercetools.models.Order.ItemState;
-import com.commercetools.models.Order.ProductVariantImportDraft;
-import com.commercetools.models.TaxCategory.TaxRate;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.common.PriceDraft;
+import com.commercetools.models.order.ItemState;
+import com.commercetools.models.order.ProductVariantImportDraft;
+import com.commercetools.models.tax_category.TaxRate;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Order.LineItemImportDraftImpl;
+import com.commercetools.models.order.LineItemImportDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

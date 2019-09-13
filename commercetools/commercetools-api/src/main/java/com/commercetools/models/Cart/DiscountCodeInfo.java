@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.DiscountCodeState;
-import com.commercetools.models.DiscountCode.DiscountCodeReference;
-import com.commercetools.models.Cart.DiscountCodeInfoImpl;
+import com.commercetools.models.cart.DiscountCodeState;
+import com.commercetools.models.discount_code.DiscountCodeReference;
+import com.commercetools.models.cart.DiscountCodeInfoImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

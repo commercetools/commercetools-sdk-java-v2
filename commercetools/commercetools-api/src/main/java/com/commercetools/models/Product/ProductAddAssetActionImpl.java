@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.AssetDraft;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.AssetDraft;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Long;
@@ -35,12 +35,12 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
    
    private java.lang.Long variantId;
    
-   private com.commercetools.models.Common.AssetDraft asset;
+   private com.commercetools.models.common.AssetDraft asset;
    
    private java.lang.String sku;
 
    @JsonCreator
-   ProductAddAssetActionImpl(@JsonProperty("position") final java.lang.Integer position, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("asset") final com.commercetools.models.Common.AssetDraft asset, @JsonProperty("sku") final java.lang.String sku) {
+   ProductAddAssetActionImpl(@JsonProperty("position") final java.lang.Integer position, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("asset") final com.commercetools.models.common.AssetDraft asset, @JsonProperty("sku") final java.lang.String sku) {
       this.position = position;
       this.staged = staged;
       this.variantId = variantId;
@@ -73,7 +73,7 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
    }
    
    
-   public com.commercetools.models.Common.AssetDraft getAsset(){
+   public com.commercetools.models.common.AssetDraft getAsset(){
       return this.asset;
    }
    
@@ -94,7 +94,7 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
       this.variantId = variantId;
    }
    
-   public void setAsset(final com.commercetools.models.Common.AssetDraft asset){
+   public void setAsset(final com.commercetools.models.common.AssetDraft asset){
       this.asset = asset;
    }
    

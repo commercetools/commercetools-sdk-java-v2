@@ -59,7 +59,7 @@ public class ByProjectKeyCustomObjectsGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.CustomObject.CustomObjectPagedQueryResponse> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.custom_object.CustomObjectPagedQueryResponse> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -67,9 +67,9 @@ public class ByProjectKeyCustomObjectsGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.CustomObject.CustomObjectPagedQueryResponse>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.custom_object.CustomObjectPagedQueryResponse>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.CustomObject.CustomObjectPagedQueryResponse.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.custom_object.CustomObjectPagedQueryResponse.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

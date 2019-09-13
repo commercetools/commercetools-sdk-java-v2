@@ -1,9 +1,9 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.MoneyType;
-import com.commercetools.models.Common.TypedMoneyDraft;
+import com.commercetools.models.common.MoneyType;
+import com.commercetools.models.common.TypedMoneyDraft;
 import java.lang.Long;
-import com.commercetools.models.Common.HighPrecisionMoneyDraft;
+import com.commercetools.models.common.HighPrecisionMoneyDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

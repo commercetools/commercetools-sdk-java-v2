@@ -1,7 +1,7 @@
-package com.commercetools.models.Extension;
+package com.commercetools.models.extension;
 
-import com.commercetools.models.Extension.ExtensionDestination;
-import com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication;
+import com.commercetools.models.extension.ExtensionDestination;
+import com.commercetools.models.extension.ExtensionHttpDestinationAuthentication;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestinat
    
    private java.lang.String url;
    
-   private com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication authentication;
+   private com.commercetools.models.extension.ExtensionHttpDestinationAuthentication authentication;
 
    @JsonCreator
-   ExtensionHttpDestinationImpl(@JsonProperty("url") final java.lang.String url, @JsonProperty("authentication") final com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication authentication) {
+   ExtensionHttpDestinationImpl(@JsonProperty("url") final java.lang.String url, @JsonProperty("authentication") final com.commercetools.models.extension.ExtensionHttpDestinationAuthentication authentication) {
       this.url = url;
       this.authentication = authentication;
       this.type = "HTTP";
@@ -51,7 +51,7 @@ public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestinat
    }
    
    
-   public com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication getAuthentication(){
+   public com.commercetools.models.extension.ExtensionHttpDestinationAuthentication getAuthentication(){
       return this.authentication;
    }
 
@@ -59,7 +59,7 @@ public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestinat
       this.url = url;
    }
    
-   public void setAuthentication(final com.commercetools.models.Extension.ExtensionHttpDestinationAuthentication authentication){
+   public void setAuthentication(final com.commercetools.models.extension.ExtensionHttpDestinationAuthentication authentication){
       this.authentication = authentication;
    }
 

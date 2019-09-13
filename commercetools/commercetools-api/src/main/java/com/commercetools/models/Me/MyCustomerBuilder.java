@@ -1,13 +1,13 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.CustomerGroup.CustomerGroupReference;
-import com.commercetools.models.Type.CustomFields;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.type.CustomFields;
 import java.lang.Boolean;
 import java.lang.String;
 import java.time.LocalDate;
-import com.commercetools.models.Me.MyCustomer;
+import com.commercetools.models.me.MyCustomer;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -28,22 +28,22 @@ public final class MyCustomerBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
    @Nullable
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
    private java.lang.String lastName;
    
    
-   private java.util.List<com.commercetools.models.Common.Address> addresses;
+   private java.util.List<com.commercetools.models.common.Address> addresses;
    
    @Nullable
-   private com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup;
+   private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFields custom;
+   private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
    private java.lang.String companyName;
@@ -119,12 +119,12 @@ public final class MyCustomerBuilder {
       return this;
    }
    
-   public MyCustomerBuilder createdBy(@Nullable final com.commercetools.models.Common.CreatedBy createdBy) {
+   public MyCustomerBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
       this.createdBy = createdBy;
       return this;
    }
    
-   public MyCustomerBuilder lastModifiedBy(@Nullable final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   public MyCustomerBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
@@ -134,17 +134,17 @@ public final class MyCustomerBuilder {
       return this;
    }
    
-   public MyCustomerBuilder addresses( final java.util.List<com.commercetools.models.Common.Address> addresses) {
+   public MyCustomerBuilder addresses( final java.util.List<com.commercetools.models.common.Address> addresses) {
       this.addresses = addresses;
       return this;
    }
    
-   public MyCustomerBuilder customerGroup(@Nullable final com.commercetools.models.CustomerGroup.CustomerGroupReference customerGroup) {
+   public MyCustomerBuilder customerGroup(@Nullable final com.commercetools.models.customer_group.CustomerGroupReference customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
    
-   public MyCustomerBuilder custom(@Nullable final com.commercetools.models.Type.CustomFields custom) {
+   public MyCustomerBuilder custom(@Nullable final com.commercetools.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
    }
@@ -260,12 +260,12 @@ public final class MyCustomerBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
@@ -275,17 +275,17 @@ public final class MyCustomerBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Common.Address> getAddresses(){
+   public java.util.List<com.commercetools.models.common.Address> getAddresses(){
       return this.addresses;
    }
    
    @Nullable
-   public com.commercetools.models.CustomerGroup.CustomerGroupReference getCustomerGroup(){
+   public com.commercetools.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFields getCustom(){
+   public com.commercetools.models.type.CustomFields getCustom(){
       return this.custom;
    }
    

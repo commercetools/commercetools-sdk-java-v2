@@ -1,14 +1,14 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Cart.InventoryMode;
-import com.commercetools.models.Cart.TaxMode;
-import com.commercetools.models.Common.Address;
-import com.commercetools.models.Me.MyLineItemDraft;
-import com.commercetools.models.ShippingMethod.ShippingMethodResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.cart.InventoryMode;
+import com.commercetools.models.cart.TaxMode;
+import com.commercetools.models.common.Address;
+import com.commercetools.models.me.MyLineItemDraft;
+import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Me.MyCartDraftImpl;
+import com.commercetools.models.me.MyCartDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

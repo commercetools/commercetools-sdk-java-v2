@@ -1,12 +1,12 @@
-package com.commercetools.models.Review;
+package com.commercetools.models.review;
 
-import com.commercetools.models.Customer.CustomerResourceIdentifier;
-import com.commercetools.models.State.StateResourceIdentifier;
-import com.commercetools.models.Type.CustomFieldsDraft;
+import com.commercetools.models.customer.CustomerResourceIdentifier;
+import com.commercetools.models.state.StateResourceIdentifier;
+import com.commercetools.models.type.CustomFieldsDraft;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
-import com.commercetools.models.Review.ReviewDraft;
+import com.commercetools.models.review.ReviewDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -21,13 +21,13 @@ public final class ReviewDraftBuilder {
    private java.lang.String authorName;
    
    @Nullable
-   private com.commercetools.models.Type.CustomFieldsDraft custom;
+   private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
    private java.lang.Integer rating;
    
    @Nullable
-   private com.commercetools.models.State.StateResourceIdentifier state;
+   private com.commercetools.models.state.StateResourceIdentifier state;
    
    @Nullable
    private java.lang.String text;
@@ -42,7 +42,7 @@ public final class ReviewDraftBuilder {
    private java.lang.String key;
    
    @Nullable
-   private com.commercetools.models.Customer.CustomerResourceIdentifier customer;
+   private com.commercetools.models.customer.CustomerResourceIdentifier customer;
    
    @Nullable
    private java.lang.Object target;
@@ -57,7 +57,7 @@ public final class ReviewDraftBuilder {
       return this;
    }
    
-   public ReviewDraftBuilder custom(@Nullable final com.commercetools.models.Type.CustomFieldsDraft custom) {
+   public ReviewDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
    }
@@ -67,7 +67,7 @@ public final class ReviewDraftBuilder {
       return this;
    }
    
-   public ReviewDraftBuilder state(@Nullable final com.commercetools.models.State.StateResourceIdentifier state) {
+   public ReviewDraftBuilder state(@Nullable final com.commercetools.models.state.StateResourceIdentifier state) {
       this.state = state;
       return this;
    }
@@ -92,7 +92,7 @@ public final class ReviewDraftBuilder {
       return this;
    }
    
-   public ReviewDraftBuilder customer(@Nullable final com.commercetools.models.Customer.CustomerResourceIdentifier customer) {
+   public ReviewDraftBuilder customer(@Nullable final com.commercetools.models.customer.CustomerResourceIdentifier customer) {
       this.customer = customer;
       return this;
    }
@@ -113,7 +113,7 @@ public final class ReviewDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Type.CustomFieldsDraft getCustom(){
+   public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
@@ -123,7 +123,7 @@ public final class ReviewDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.State.StateResourceIdentifier getState(){
+   public com.commercetools.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
    
@@ -148,7 +148,7 @@ public final class ReviewDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Customer.CustomerResourceIdentifier getCustomer(){
+   public com.commercetools.models.customer.CustomerResourceIdentifier getCustomer(){
       return this.customer;
    }
    

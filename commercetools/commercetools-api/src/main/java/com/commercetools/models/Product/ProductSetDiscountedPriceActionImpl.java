@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.DiscountedPrice;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.DiscountedPrice;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Generated;
@@ -27,14 +27,14 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.DiscountedPrice discounted;
+   private com.commercetools.models.common.DiscountedPrice discounted;
    
    private java.lang.Boolean staged;
    
    private java.lang.String priceId;
 
    @JsonCreator
-   ProductSetDiscountedPriceActionImpl(@JsonProperty("discounted") final com.commercetools.models.Common.DiscountedPrice discounted, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("priceId") final java.lang.String priceId) {
+   ProductSetDiscountedPriceActionImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("priceId") final java.lang.String priceId) {
       this.discounted = discounted;
       this.staged = staged;
       this.priceId = priceId;
@@ -50,7 +50,7 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
    }
    
    
-   public com.commercetools.models.Common.DiscountedPrice getDiscounted(){
+   public com.commercetools.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
    
@@ -64,7 +64,7 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
       return this.priceId;
    }
 
-   public void setDiscounted(final com.commercetools.models.Common.DiscountedPrice discounted){
+   public void setDiscounted(final com.commercetools.models.common.DiscountedPrice discounted){
       this.discounted = discounted;
    }
    

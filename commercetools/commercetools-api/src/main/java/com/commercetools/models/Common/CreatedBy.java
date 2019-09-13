@@ -1,7 +1,7 @@
-package com.commercetools.models.Common;
+package com.commercetools.models.common;
 
-import com.commercetools.models.Common.ClientLogging;
-import com.commercetools.models.Common.CreatedByImpl;
+import com.commercetools.models.common.ClientLogging;
+import com.commercetools.models.common.CreatedByImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,7 +1,7 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class ProductChangeAssetNameActionImpl implements ProductChangeAsse
    
    private java.lang.String assetId;
    
-   private com.commercetools.models.Common.LocalizedString name;
+   private com.commercetools.models.common.LocalizedString name;
    
    private java.lang.Boolean staged;
    
@@ -41,7 +41,7 @@ public final class ProductChangeAssetNameActionImpl implements ProductChangeAsse
    private java.lang.String assetKey;
 
    @JsonCreator
-   ProductChangeAssetNameActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("name") final com.commercetools.models.Common.LocalizedString name, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   ProductChangeAssetNameActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("assetKey") final java.lang.String assetKey) {
       this.assetId = assetId;
       this.name = name;
       this.staged = staged;
@@ -65,7 +65,7 @@ public final class ProductChangeAssetNameActionImpl implements ProductChangeAsse
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getName(){
+   public com.commercetools.models.common.LocalizedString getName(){
       return this.name;
    }
    
@@ -93,7 +93,7 @@ public final class ProductChangeAssetNameActionImpl implements ProductChangeAsse
       this.assetId = assetId;
    }
    
-   public void setName(final com.commercetools.models.Common.LocalizedString name){
+   public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    

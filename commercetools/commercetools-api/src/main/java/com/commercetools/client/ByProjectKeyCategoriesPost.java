@@ -26,9 +26,9 @@ public class ByProjectKeyCategoriesPost {
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
-   private com.commercetools.models.Category.CategoryDraft categoryDraft;
+   private com.commercetools.models.category.CategoryDraft categoryDraft;
    
-   public ByProjectKeyCategoriesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.Category.CategoryDraft categoryDraft){
+   public ByProjectKeyCategoriesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.category.CategoryDraft categoryDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.categoryDraft = categoryDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyCategoriesPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Category.Category> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.category.Category> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyCategoriesPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Category.Category>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.category.Category>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Category.Category.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.category.Category.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

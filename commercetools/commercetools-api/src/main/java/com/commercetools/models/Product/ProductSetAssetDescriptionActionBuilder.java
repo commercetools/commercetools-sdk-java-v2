@@ -1,11 +1,11 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.Long;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetAssetDescriptionAction;
+import com.commercetools.models.product.ProductSetAssetDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class ProductSetAssetDescriptionActionBuilder {
    private java.lang.String assetId;
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
    @Nullable
    private java.lang.Boolean staged;
@@ -36,7 +36,7 @@ public final class ProductSetAssetDescriptionActionBuilder {
       return this;
    }
    
-   public ProductSetAssetDescriptionActionBuilder description(@Nullable final com.commercetools.models.Common.LocalizedString description) {
+   public ProductSetAssetDescriptionActionBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
@@ -67,7 +67,7 @@ public final class ProductSetAssetDescriptionActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
    

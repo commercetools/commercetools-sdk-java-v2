@@ -1,9 +1,9 @@
-package com.commercetools.models.State;
+package com.commercetools.models.state;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.State.StateUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.state.StateUpdateAction;
 import java.lang.String;
-import com.commercetools.models.State.StateSetDescriptionAction;
+import com.commercetools.models.state.StateSetDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class StateSetDescriptionActionBuilder {
    
    
-   private com.commercetools.models.Common.LocalizedString description;
+   private com.commercetools.models.common.LocalizedString description;
    
-   public StateSetDescriptionActionBuilder description( final com.commercetools.models.Common.LocalizedString description) {
+   public StateSetDescriptionActionBuilder description( final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getDescription(){
+   public com.commercetools.models.common.LocalizedString getDescription(){
       return this.description;
    }
 

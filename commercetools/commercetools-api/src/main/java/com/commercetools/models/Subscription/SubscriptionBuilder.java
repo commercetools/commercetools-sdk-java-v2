@@ -1,13 +1,13 @@
-package com.commercetools.models.Subscription;
+package com.commercetools.models.subscription;
 
-import com.commercetools.models.Common.LoggedResource;
-import com.commercetools.models.Subscription.ChangeSubscription;
-import com.commercetools.models.Subscription.DeliveryFormat;
-import com.commercetools.models.Subscription.Destination;
-import com.commercetools.models.Subscription.MessageSubscription;
-import com.commercetools.models.Subscription.SubscriptionHealthStatus;
+import com.commercetools.models.common.LoggedResource;
+import com.commercetools.models.subscription.ChangeSubscription;
+import com.commercetools.models.subscription.DeliveryFormat;
+import com.commercetools.models.subscription.Destination;
+import com.commercetools.models.subscription.MessageSubscription;
+import com.commercetools.models.subscription.SubscriptionHealthStatus;
 import java.lang.String;
-import com.commercetools.models.Subscription.Subscription;
+import com.commercetools.models.subscription.Subscription;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -28,28 +28,28 @@ public final class SubscriptionBuilder {
    private java.lang.Long version;
    
    @Nullable
-   private com.commercetools.models.Common.CreatedBy createdBy;
+   private com.commercetools.models.common.CreatedBy createdBy;
    
    @Nullable
-   private com.commercetools.models.Common.LastModifiedBy lastModifiedBy;
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private com.commercetools.models.Subscription.DeliveryFormat format;
+   private com.commercetools.models.subscription.DeliveryFormat format;
    
    
-   private com.commercetools.models.Subscription.Destination destination;
+   private com.commercetools.models.subscription.Destination destination;
    
    
-   private java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes;
+   private java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes;
    
    
-   private java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages;
+   private java.util.List<com.commercetools.models.subscription.MessageSubscription> messages;
    
    @Nullable
    private java.lang.String key;
    
    
-   private com.commercetools.models.Subscription.SubscriptionHealthStatus status;
+   private com.commercetools.models.subscription.SubscriptionHealthStatus status;
    
    public SubscriptionBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -71,32 +71,32 @@ public final class SubscriptionBuilder {
       return this;
    }
    
-   public SubscriptionBuilder createdBy(@Nullable final com.commercetools.models.Common.CreatedBy createdBy) {
+   public SubscriptionBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
       this.createdBy = createdBy;
       return this;
    }
    
-   public SubscriptionBuilder lastModifiedBy(@Nullable final com.commercetools.models.Common.LastModifiedBy lastModifiedBy) {
+   public SubscriptionBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
    
-   public SubscriptionBuilder format( final com.commercetools.models.Subscription.DeliveryFormat format) {
+   public SubscriptionBuilder format( final com.commercetools.models.subscription.DeliveryFormat format) {
       this.format = format;
       return this;
    }
    
-   public SubscriptionBuilder destination( final com.commercetools.models.Subscription.Destination destination) {
+   public SubscriptionBuilder destination( final com.commercetools.models.subscription.Destination destination) {
       this.destination = destination;
       return this;
    }
    
-   public SubscriptionBuilder changes( final java.util.List<com.commercetools.models.Subscription.ChangeSubscription> changes) {
+   public SubscriptionBuilder changes( final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes) {
       this.changes = changes;
       return this;
    }
    
-   public SubscriptionBuilder messages( final java.util.List<com.commercetools.models.Subscription.MessageSubscription> messages) {
+   public SubscriptionBuilder messages( final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages) {
       this.messages = messages;
       return this;
    }
@@ -106,7 +106,7 @@ public final class SubscriptionBuilder {
       return this;
    }
    
-   public SubscriptionBuilder status( final com.commercetools.models.Subscription.SubscriptionHealthStatus status) {
+   public SubscriptionBuilder status( final com.commercetools.models.subscription.SubscriptionHealthStatus status) {
       this.status = status;
       return this;
    }
@@ -132,32 +132,32 @@ public final class SubscriptionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.CreatedBy getCreatedBy(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    @Nullable
-   public com.commercetools.models.Common.LastModifiedBy getLastModifiedBy(){
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    
-   public com.commercetools.models.Subscription.DeliveryFormat getFormat(){
+   public com.commercetools.models.subscription.DeliveryFormat getFormat(){
       return this.format;
    }
    
    
-   public com.commercetools.models.Subscription.Destination getDestination(){
+   public com.commercetools.models.subscription.Destination getDestination(){
       return this.destination;
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.ChangeSubscription> getChanges(){
+   public java.util.List<com.commercetools.models.subscription.ChangeSubscription> getChanges(){
       return this.changes;
    }
    
    
-   public java.util.List<com.commercetools.models.Subscription.MessageSubscription> getMessages(){
+   public java.util.List<com.commercetools.models.subscription.MessageSubscription> getMessages(){
       return this.messages;
    }
    
@@ -167,7 +167,7 @@ public final class SubscriptionBuilder {
    }
    
    
-   public com.commercetools.models.Subscription.SubscriptionHealthStatus getStatus(){
+   public com.commercetools.models.subscription.SubscriptionHealthStatus getStatus(){
       return this.status;
    }
 

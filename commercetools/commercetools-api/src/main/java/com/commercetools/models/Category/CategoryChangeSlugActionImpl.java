@@ -1,7 +1,7 @@
-package com.commercetools.models.Category;
+package com.commercetools.models.category;
 
-import com.commercetools.models.Category.CategoryUpdateAction;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.category.CategoryUpdateAction;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CategoryChangeSlugActionImpl implements CategoryChangeSlugAct
 
    private java.lang.String action;
    
-   private com.commercetools.models.Common.LocalizedString slug;
+   private com.commercetools.models.common.LocalizedString slug;
 
    @JsonCreator
-   CategoryChangeSlugActionImpl(@JsonProperty("slug") final com.commercetools.models.Common.LocalizedString slug) {
+   CategoryChangeSlugActionImpl(@JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug) {
       this.slug = slug;
       this.action = "changeSlug";
    }
@@ -43,11 +43,11 @@ public final class CategoryChangeSlugActionImpl implements CategoryChangeSlugAct
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getSlug(){
+   public com.commercetools.models.common.LocalizedString getSlug(){
       return this.slug;
    }
 
-   public void setSlug(final com.commercetools.models.Common.LocalizedString slug){
+   public void setSlug(final com.commercetools.models.common.LocalizedString slug){
       this.slug = slug;
    }
 

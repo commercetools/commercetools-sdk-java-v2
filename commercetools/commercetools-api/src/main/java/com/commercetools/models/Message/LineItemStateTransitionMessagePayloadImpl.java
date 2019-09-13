@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.State.StateReference;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.state.StateReference;
 import java.lang.Long;
 import java.lang.String;
 import java.time.ZonedDateTime;
@@ -28,9 +28,9 @@ public final class LineItemStateTransitionMessagePayloadImpl implements LineItem
 
    private java.lang.String type;
    
-   private com.commercetools.models.State.StateReference toState;
+   private com.commercetools.models.state.StateReference toState;
    
-   private com.commercetools.models.State.StateReference fromState;
+   private com.commercetools.models.state.StateReference fromState;
    
    private java.lang.Long quantity;
    
@@ -39,7 +39,7 @@ public final class LineItemStateTransitionMessagePayloadImpl implements LineItem
    private java.time.ZonedDateTime transitionDate;
 
    @JsonCreator
-   LineItemStateTransitionMessagePayloadImpl(@JsonProperty("toState") final com.commercetools.models.State.StateReference toState, @JsonProperty("fromState") final com.commercetools.models.State.StateReference fromState, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate) {
+   LineItemStateTransitionMessagePayloadImpl(@JsonProperty("toState") final com.commercetools.models.state.StateReference toState, @JsonProperty("fromState") final com.commercetools.models.state.StateReference fromState, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate) {
       this.toState = toState;
       this.fromState = fromState;
       this.quantity = quantity;
@@ -57,12 +57,12 @@ public final class LineItemStateTransitionMessagePayloadImpl implements LineItem
    }
    
    
-   public com.commercetools.models.State.StateReference getToState(){
+   public com.commercetools.models.state.StateReference getToState(){
       return this.toState;
    }
    
    
-   public com.commercetools.models.State.StateReference getFromState(){
+   public com.commercetools.models.state.StateReference getFromState(){
       return this.fromState;
    }
    
@@ -81,11 +81,11 @@ public final class LineItemStateTransitionMessagePayloadImpl implements LineItem
       return this.transitionDate;
    }
 
-   public void setToState(final com.commercetools.models.State.StateReference toState){
+   public void setToState(final com.commercetools.models.state.StateReference toState){
       this.toState = toState;
    }
    
-   public void setFromState(final com.commercetools.models.State.StateReference fromState){
+   public void setFromState(final com.commercetools.models.state.StateReference fromState){
       this.fromState = fromState;
    }
    

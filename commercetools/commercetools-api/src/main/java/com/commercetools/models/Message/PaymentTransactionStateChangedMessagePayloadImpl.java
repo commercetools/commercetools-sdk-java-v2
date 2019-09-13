@@ -1,7 +1,7 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.MessagePayload;
-import com.commercetools.models.Payment.TransactionState;
+import com.commercetools.models.message.MessagePayload;
+import com.commercetools.models.payment.TransactionState;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +26,12 @@ public final class PaymentTransactionStateChangedMessagePayloadImpl implements P
 
    private java.lang.String type;
    
-   private com.commercetools.models.Payment.TransactionState state;
+   private com.commercetools.models.payment.TransactionState state;
    
    private java.lang.String transactionId;
 
    @JsonCreator
-   PaymentTransactionStateChangedMessagePayloadImpl(@JsonProperty("state") final com.commercetools.models.Payment.TransactionState state, @JsonProperty("transactionId") final java.lang.String transactionId) {
+   PaymentTransactionStateChangedMessagePayloadImpl(@JsonProperty("state") final com.commercetools.models.payment.TransactionState state, @JsonProperty("transactionId") final java.lang.String transactionId) {
       this.state = state;
       this.transactionId = transactionId;
       this.type = "PaymentTransactionStateChanged";
@@ -46,7 +46,7 @@ public final class PaymentTransactionStateChangedMessagePayloadImpl implements P
    }
    
    
-   public com.commercetools.models.Payment.TransactionState getState(){
+   public com.commercetools.models.payment.TransactionState getState(){
       return this.state;
    }
    
@@ -55,7 +55,7 @@ public final class PaymentTransactionStateChangedMessagePayloadImpl implements P
       return this.transactionId;
    }
 
-   public void setState(final com.commercetools.models.Payment.TransactionState state){
+   public void setState(final com.commercetools.models.payment.TransactionState state){
       this.state = state;
    }
    

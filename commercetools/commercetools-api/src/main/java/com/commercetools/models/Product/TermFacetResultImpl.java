@@ -1,9 +1,9 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.FacetResult;
-import com.commercetools.models.Product.FacetResultTerm;
-import com.commercetools.models.Product.FacetTypes;
-import com.commercetools.models.Product.TermFacetResultType;
+import com.commercetools.models.product.FacetResult;
+import com.commercetools.models.product.FacetResultTerm;
+import com.commercetools.models.product.FacetTypes;
+import com.commercetools.models.product.TermFacetResultType;
 import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,20 +26,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TermFacetResultImpl implements TermFacetResult {
 
-   private com.commercetools.models.Product.FacetTypes type;
+   private com.commercetools.models.product.FacetTypes type;
    
    private java.lang.Long other;
    
    private java.lang.Long total;
    
-   private java.util.List<com.commercetools.models.Product.FacetResultTerm> terms;
+   private java.util.List<com.commercetools.models.product.FacetResultTerm> terms;
    
-   private com.commercetools.models.Product.TermFacetResultType dataType;
+   private com.commercetools.models.product.TermFacetResultType dataType;
    
    private java.lang.Long missing;
 
    @JsonCreator
-   TermFacetResultImpl(@JsonProperty("other") final java.lang.Long other, @JsonProperty("total") final java.lang.Long total, @JsonProperty("terms") final java.util.List<com.commercetools.models.Product.FacetResultTerm> terms, @JsonProperty("dataType") final com.commercetools.models.Product.TermFacetResultType dataType, @JsonProperty("missing") final java.lang.Long missing) {
+   TermFacetResultImpl(@JsonProperty("other") final java.lang.Long other, @JsonProperty("total") final java.lang.Long total, @JsonProperty("terms") final java.util.List<com.commercetools.models.product.FacetResultTerm> terms, @JsonProperty("dataType") final com.commercetools.models.product.TermFacetResultType dataType, @JsonProperty("missing") final java.lang.Long missing) {
       this.other = other;
       this.total = total;
       this.terms = terms;
@@ -52,7 +52,7 @@ public final class TermFacetResultImpl implements TermFacetResult {
    }
    
    
-   public com.commercetools.models.Product.FacetTypes getType(){
+   public com.commercetools.models.product.FacetTypes getType(){
       return this.type;
    }
    
@@ -67,12 +67,12 @@ public final class TermFacetResultImpl implements TermFacetResult {
    }
    
    
-   public java.util.List<com.commercetools.models.Product.FacetResultTerm> getTerms(){
+   public java.util.List<com.commercetools.models.product.FacetResultTerm> getTerms(){
       return this.terms;
    }
    
    
-   public com.commercetools.models.Product.TermFacetResultType getDataType(){
+   public com.commercetools.models.product.TermFacetResultType getDataType(){
       return this.dataType;
    }
    
@@ -89,11 +89,11 @@ public final class TermFacetResultImpl implements TermFacetResult {
       this.total = total;
    }
    
-   public void setTerms(final java.util.List<com.commercetools.models.Product.FacetResultTerm> terms){
+   public void setTerms(final java.util.List<com.commercetools.models.product.FacetResultTerm> terms){
       this.terms = terms;
    }
    
-   public void setDataType(final com.commercetools.models.Product.TermFacetResultType dataType){
+   public void setDataType(final com.commercetools.models.product.TermFacetResultType dataType){
       this.dataType = dataType;
    }
    

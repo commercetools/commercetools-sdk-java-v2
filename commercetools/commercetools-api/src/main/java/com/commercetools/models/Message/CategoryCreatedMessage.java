@@ -1,8 +1,8 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Category.Category;
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Message.CategoryCreatedMessageImpl;
+import com.commercetools.models.category.Category;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.message.CategoryCreatedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

@@ -1,8 +1,8 @@
 package commercetools.review;
 
-import com.commercetools.models.Review.Review;
-import com.commercetools.models.Review.ReviewDraft;
-import com.commercetools.models.Review.ReviewDraftBuilder;
+import com.commercetools.models.review.Review;
+import com.commercetools.models.review.ReviewDraft;
+import com.commercetools.models.review.ReviewDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 

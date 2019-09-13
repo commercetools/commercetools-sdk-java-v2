@@ -1,9 +1,9 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Cart.ItemShippingTarget;
-import com.commercetools.models.Me.MyCartUpdateAction;
+import com.commercetools.models.cart.ItemShippingTarget;
+import com.commercetools.models.me.MyCartUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl;
+import com.commercetools.models.me.MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

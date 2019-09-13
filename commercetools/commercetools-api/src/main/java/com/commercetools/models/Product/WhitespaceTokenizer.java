@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Product.SuggestTokenizer;
+import com.commercetools.models.product.SuggestTokenizer;
 import java.lang.String;
-import com.commercetools.models.Product.WhitespaceTokenizerImpl;
+import com.commercetools.models.product.WhitespaceTokenizerImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

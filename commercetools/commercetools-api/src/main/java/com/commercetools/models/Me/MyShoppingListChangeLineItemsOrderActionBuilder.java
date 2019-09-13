@@ -1,8 +1,8 @@
-package com.commercetools.models.Me;
+package com.commercetools.models.me;
 
-import com.commercetools.models.Me.MyShoppingListUpdateAction;
+import com.commercetools.models.me.MyShoppingListUpdateAction;
 import java.lang.String;
-import com.commercetools.models.Me.MyShoppingListChangeLineItemsOrderAction;
+import com.commercetools.models.me.MyShoppingListChangeLineItemsOrderAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

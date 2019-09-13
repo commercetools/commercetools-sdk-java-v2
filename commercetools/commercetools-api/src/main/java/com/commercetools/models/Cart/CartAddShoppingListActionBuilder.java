@@ -1,10 +1,10 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.ShoppingList.ShoppingListResourceIdentifier;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.shopping_list.ShoppingListResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Cart.CartAddShoppingListAction;
+import com.commercetools.models.cart.CartAddShoppingListAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,41 +13,41 @@ import java.time.ZonedDateTime;
 public final class CartAddShoppingListActionBuilder {
    
    
-   private com.commercetools.models.ShoppingList.ShoppingListResourceIdentifier shoppingList;
+   private com.commercetools.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    @Nullable
-   private com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
    
-   public CartAddShoppingListActionBuilder shoppingList( final com.commercetools.models.ShoppingList.ShoppingListResourceIdentifier shoppingList) {
+   public CartAddShoppingListActionBuilder shoppingList( final com.commercetools.models.shopping_list.ShoppingListResourceIdentifier shoppingList) {
       this.shoppingList = shoppingList;
       return this;
    }
    
-   public CartAddShoppingListActionBuilder supplyChannel(@Nullable final com.commercetools.models.Channel.ChannelResourceIdentifier supplyChannel) {
+   public CartAddShoppingListActionBuilder supplyChannel(@Nullable final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel) {
       this.supplyChannel = supplyChannel;
       return this;
    }
    
-   public CartAddShoppingListActionBuilder distributionChannel(@Nullable final com.commercetools.models.Channel.ChannelResourceIdentifier distributionChannel) {
+   public CartAddShoppingListActionBuilder distributionChannel(@Nullable final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel) {
       this.distributionChannel = distributionChannel;
       return this;
    }
    
    
-   public com.commercetools.models.ShoppingList.ShoppingListResourceIdentifier getShoppingList(){
+   public com.commercetools.models.shopping_list.ShoppingListResourceIdentifier getShoppingList(){
       return this.shoppingList;
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getSupplyChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
    @Nullable
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getDistributionChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
    }
 

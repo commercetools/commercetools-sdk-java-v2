@@ -1,9 +1,9 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ProjectUpdateAction;
+import com.commercetools.models.project.ProjectUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Project.ProjectChangeMessagesEnabledActionImpl;
+import com.commercetools.models.project.ProjectChangeMessagesEnabledActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

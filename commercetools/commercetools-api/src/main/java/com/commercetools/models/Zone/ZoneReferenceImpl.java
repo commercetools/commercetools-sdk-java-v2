@@ -1,8 +1,8 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Common.Reference;
-import com.commercetools.models.Common.ReferenceTypeId;
-import com.commercetools.models.Zone.Zone;
+import com.commercetools.models.common.Reference;
+import com.commercetools.models.common.ReferenceTypeId;
+import com.commercetools.models.zone.Zone;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneReferenceImpl implements ZoneReference {
 
-   private com.commercetools.models.Common.ReferenceTypeId typeId;
+   private com.commercetools.models.common.ReferenceTypeId typeId;
    
    private java.lang.String id;
    
-   private com.commercetools.models.Zone.Zone obj;
+   private com.commercetools.models.zone.Zone obj;
 
    @JsonCreator
-   ZoneReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.Zone.Zone obj) {
+   ZoneReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.zone.Zone obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("zone").get();
@@ -41,7 +41,7 @@ public final class ZoneReferenceImpl implements ZoneReference {
    }
    
    
-   public com.commercetools.models.Common.ReferenceTypeId getTypeId(){
+   public com.commercetools.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    
@@ -51,7 +51,7 @@ public final class ZoneReferenceImpl implements ZoneReference {
    }
    
    
-   public com.commercetools.models.Zone.Zone getObj(){
+   public com.commercetools.models.zone.Zone getObj(){
       return this.obj;
    }
 
@@ -59,7 +59,7 @@ public final class ZoneReferenceImpl implements ZoneReference {
       this.id = id;
    }
    
-   public void setObj(final com.commercetools.models.Zone.Zone obj){
+   public void setObj(final com.commercetools.models.zone.Zone obj){
       this.obj = obj;
    }
 

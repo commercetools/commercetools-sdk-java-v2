@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Message.Message;
-import com.commercetools.models.Order.ParcelMeasurements;
+import com.commercetools.models.message.Message;
+import com.commercetools.models.order.ParcelMeasurements;
 import java.lang.String;
-import com.commercetools.models.Message.ParcelMeasurementsUpdatedMessage;
+import com.commercetools.models.message.ParcelMeasurementsUpdatedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
    private java.lang.Long sequenceNumber;
    
    
-   private com.commercetools.models.Common.Reference resource;
+   private com.commercetools.models.common.Reference resource;
    
    @Nullable
-   private com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
    private java.lang.Long resourceVersion;
@@ -42,7 +42,7 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
    private java.lang.String deliveryId;
    
    @Nullable
-   private com.commercetools.models.Order.ParcelMeasurements measurements;
+   private com.commercetools.models.order.ParcelMeasurements measurements;
    
    
    private java.lang.String parcelId;
@@ -72,12 +72,12 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelMeasurementsUpdatedMessageBuilder resource( final com.commercetools.models.Common.Reference resource) {
+   public ParcelMeasurementsUpdatedMessageBuilder resource( final com.commercetools.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
    
-   public ParcelMeasurementsUpdatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.Message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+   public ParcelMeasurementsUpdatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
@@ -97,7 +97,7 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelMeasurementsUpdatedMessageBuilder measurements(@Nullable final com.commercetools.models.Order.ParcelMeasurements measurements) {
+   public ParcelMeasurementsUpdatedMessageBuilder measurements(@Nullable final com.commercetools.models.order.ParcelMeasurements measurements) {
       this.measurements = measurements;
       return this;
    }
@@ -133,12 +133,12 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
    }
    
    
-   public com.commercetools.models.Common.Reference getResource(){
+   public com.commercetools.models.common.Reference getResource(){
       return this.resource;
    }
    
    @Nullable
-   public com.commercetools.models.Message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+   public com.commercetools.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
@@ -158,7 +158,7 @@ public final class ParcelMeasurementsUpdatedMessageBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Order.ParcelMeasurements getMeasurements(){
+   public com.commercetools.models.order.ParcelMeasurements getMeasurements(){
       return this.measurements;
    }
    

@@ -27,9 +27,9 @@ public class ByProjectKeyZonesKeyByKeyPost {
    private String projectKey;
    private String key;
    
-   private com.commercetools.models.Zone.ZoneUpdate zoneUpdate;
+   private com.commercetools.models.zone.ZoneUpdate zoneUpdate;
    
-   public ByProjectKeyZonesKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.Zone.ZoneUpdate zoneUpdate){
+   public ByProjectKeyZonesKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.zone.ZoneUpdate zoneUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.key = key;
@@ -53,7 +53,7 @@ public class ByProjectKeyZonesKeyByKeyPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.Zone.Zone> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.zone.Zone> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -61,9 +61,9 @@ public class ByProjectKeyZonesKeyByKeyPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.Zone.Zone>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.zone.Zone>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.Zone.Zone.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.zone.Zone.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

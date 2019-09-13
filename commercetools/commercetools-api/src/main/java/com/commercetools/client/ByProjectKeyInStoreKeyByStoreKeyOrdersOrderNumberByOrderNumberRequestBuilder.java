@@ -20,7 +20,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberReque
       return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(apiHttpClient, projectKey, storeKey, orderNumber);
    }
    
-   public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost post(com.commercetools.models.Order.OrderUpdate orderUpdate) {
+   public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost post(com.commercetools.models.order.OrderUpdate orderUpdate) {
       return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(apiHttpClient, projectKey, storeKey, orderNumber, orderUpdate);
    }
    

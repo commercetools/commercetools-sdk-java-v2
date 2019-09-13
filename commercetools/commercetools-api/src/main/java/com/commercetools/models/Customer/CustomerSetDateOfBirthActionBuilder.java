@@ -1,9 +1,9 @@
-package com.commercetools.models.Customer;
+package com.commercetools.models.customer;
 
-import com.commercetools.models.Customer.CustomerUpdateAction;
+import com.commercetools.models.customer.CustomerUpdateAction;
 import java.lang.String;
 import java.time.LocalDate;
-import com.commercetools.models.Customer.CustomerSetDateOfBirthAction;
+import com.commercetools.models.customer.CustomerSetDateOfBirthAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

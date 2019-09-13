@@ -1,10 +1,10 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Channel.ChannelResourceIdentifier;
-import com.commercetools.models.Order.OrderUpdateAction;
+import com.commercetools.models.channel.ChannelResourceIdentifier;
+import com.commercetools.models.order.OrderUpdateAction;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.OrderUpdateSyncInfoAction;
+import com.commercetools.models.order.OrderUpdateSyncInfoAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.time.ZonedDateTime;
 public final class OrderUpdateSyncInfoActionBuilder {
    
    
-   private com.commercetools.models.Channel.ChannelResourceIdentifier channel;
+   private com.commercetools.models.channel.ChannelResourceIdentifier channel;
    
    @Nullable
    private java.lang.String externalId;
@@ -21,7 +21,7 @@ public final class OrderUpdateSyncInfoActionBuilder {
    @Nullable
    private java.time.ZonedDateTime syncedAt;
    
-   public OrderUpdateSyncInfoActionBuilder channel( final com.commercetools.models.Channel.ChannelResourceIdentifier channel) {
+   public OrderUpdateSyncInfoActionBuilder channel( final com.commercetools.models.channel.ChannelResourceIdentifier channel) {
       this.channel = channel;
       return this;
    }
@@ -37,7 +37,7 @@ public final class OrderUpdateSyncInfoActionBuilder {
    }
    
    
-   public com.commercetools.models.Channel.ChannelResourceIdentifier getChannel(){
+   public com.commercetools.models.channel.ChannelResourceIdentifier getChannel(){
       return this.channel;
    }
    

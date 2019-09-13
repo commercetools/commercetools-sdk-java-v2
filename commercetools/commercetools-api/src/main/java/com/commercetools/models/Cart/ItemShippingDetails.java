@@ -1,8 +1,8 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ItemShippingTarget;
+import com.commercetools.models.cart.ItemShippingTarget;
 import java.lang.Boolean;
-import com.commercetools.models.Cart.ItemShippingDetailsImpl;
+import com.commercetools.models.cart.ItemShippingDetailsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

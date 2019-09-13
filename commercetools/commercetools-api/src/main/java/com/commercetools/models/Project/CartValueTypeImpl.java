@@ -1,7 +1,7 @@
-package com.commercetools.models.Project;
+package com.commercetools.models.project;
 
-import com.commercetools.models.Project.ShippingRateInputType;
-import com.commercetools.models.ShippingMethod.ShippingRateTierType;
+import com.commercetools.models.project.ShippingRateInputType;
+import com.commercetools.models.shipping_method.ShippingRateTierType;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartValueTypeImpl implements CartValueType {
 
-   private com.commercetools.models.ShippingMethod.ShippingRateTierType type;
+   private com.commercetools.models.shipping_method.ShippingRateTierType type;
 
    @JsonCreator
    CartValueTypeImpl() {
@@ -32,7 +32,7 @@ public final class CartValueTypeImpl implements CartValueType {
    
    
    
-   public com.commercetools.models.ShippingMethod.ShippingRateTierType getType(){
+   public com.commercetools.models.shipping_method.ShippingRateTierType getType(){
       return this.type;
    }
 

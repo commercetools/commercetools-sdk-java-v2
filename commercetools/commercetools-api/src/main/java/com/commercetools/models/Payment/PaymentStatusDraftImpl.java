@@ -1,6 +1,6 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.State.StateResourceIdentifier;
+import com.commercetools.models.state.StateResourceIdentifier;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,12 +25,12 @@ public final class PaymentStatusDraftImpl implements PaymentStatusDraft {
 
    private java.lang.String interfaceText;
    
-   private com.commercetools.models.State.StateResourceIdentifier state;
+   private com.commercetools.models.state.StateResourceIdentifier state;
    
    private java.lang.String interfaceCode;
 
    @JsonCreator
-   PaymentStatusDraftImpl(@JsonProperty("interfaceText") final java.lang.String interfaceText, @JsonProperty("state") final com.commercetools.models.State.StateResourceIdentifier state, @JsonProperty("interfaceCode") final java.lang.String interfaceCode) {
+   PaymentStatusDraftImpl(@JsonProperty("interfaceText") final java.lang.String interfaceText, @JsonProperty("state") final com.commercetools.models.state.StateResourceIdentifier state, @JsonProperty("interfaceCode") final java.lang.String interfaceCode) {
       this.interfaceText = interfaceText;
       this.state = state;
       this.interfaceCode = interfaceCode;
@@ -45,7 +45,7 @@ public final class PaymentStatusDraftImpl implements PaymentStatusDraft {
    }
    
    
-   public com.commercetools.models.State.StateResourceIdentifier getState(){
+   public com.commercetools.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
    
@@ -58,7 +58,7 @@ public final class PaymentStatusDraftImpl implements PaymentStatusDraft {
       this.interfaceText = interfaceText;
    }
    
-   public void setState(final com.commercetools.models.State.StateResourceIdentifier state){
+   public void setState(final com.commercetools.models.state.StateResourceIdentifier state){
       this.state = state;
    }
    

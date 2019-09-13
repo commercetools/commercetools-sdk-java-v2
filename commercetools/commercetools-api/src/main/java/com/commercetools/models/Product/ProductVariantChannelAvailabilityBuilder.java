@@ -1,8 +1,8 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
 import java.lang.Boolean;
 import java.lang.Long;
-import com.commercetools.models.Product.ProductVariantChannelAvailability;
+import com.commercetools.models.product.ProductVariantChannelAvailability;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

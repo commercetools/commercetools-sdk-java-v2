@@ -1,9 +1,9 @@
 package commercetools.custom_object;
 
-import com.commercetools.models.CustomObject.CustomObject;
-import com.commercetools.models.CustomObject.CustomObjectDraft;
-import com.commercetools.models.CustomObject.CustomObjectDraftBuilder;
-import com.commercetools.models.CustomObject.CustomObjectPagedQueryResponse;
+import com.commercetools.models.custom_object.CustomObject;
+import com.commercetools.models.custom_object.CustomObjectDraft;
+import com.commercetools.models.custom_object.CustomObjectDraftBuilder;
+import com.commercetools.models.custom_object.CustomObjectPagedQueryResponse;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

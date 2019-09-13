@@ -1,8 +1,8 @@
-package com.commercetools.models.Zone;
+package com.commercetools.models.zone;
 
-import com.commercetools.models.Zone.Zone;
+import com.commercetools.models.zone.Zone;
 import java.lang.Long;
-import com.commercetools.models.Zone.ZonePagedQueryResponseImpl;
+import com.commercetools.models.zone.ZonePagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

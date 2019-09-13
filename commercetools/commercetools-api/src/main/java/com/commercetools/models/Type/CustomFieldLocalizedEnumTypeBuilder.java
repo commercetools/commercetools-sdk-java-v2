@@ -1,9 +1,9 @@
-package com.commercetools.models.Type;
+package com.commercetools.models.type;
 
-import com.commercetools.models.Type.CustomFieldLocalizedEnumValue;
-import com.commercetools.models.Type.FieldType;
+import com.commercetools.models.type.CustomFieldLocalizedEnumValue;
+import com.commercetools.models.type.FieldType;
 import java.lang.String;
-import com.commercetools.models.Type.CustomFieldLocalizedEnumType;
+import com.commercetools.models.type.CustomFieldLocalizedEnumType;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CustomFieldLocalizedEnumTypeBuilder {
    
    
-   private java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> values;
+   private java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> values;
    
-   public CustomFieldLocalizedEnumTypeBuilder values( final java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> values) {
+   public CustomFieldLocalizedEnumTypeBuilder values( final java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> values) {
       this.values = values;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Type.CustomFieldLocalizedEnumValue> getValues(){
+   public java.util.List<com.commercetools.models.type.CustomFieldLocalizedEnumValue> getValues(){
       return this.values;
    }
 

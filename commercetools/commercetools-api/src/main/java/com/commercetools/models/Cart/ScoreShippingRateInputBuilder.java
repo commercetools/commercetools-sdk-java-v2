@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ShippingRateInput;
+import com.commercetools.models.cart.ShippingRateInput;
 import java.lang.Integer;
 import java.lang.String;
-import com.commercetools.models.Cart.ScoreShippingRateInput;
+import com.commercetools.models.cart.ScoreShippingRateInput;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

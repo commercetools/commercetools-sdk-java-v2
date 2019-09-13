@@ -1,11 +1,11 @@
-package com.commercetools.models.Payment;
+package com.commercetools.models.payment;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Payment.TransactionState;
-import com.commercetools.models.Payment.TransactionType;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.payment.TransactionState;
+import com.commercetools.models.payment.TransactionType;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Payment.TransactionDraft;
+import com.commercetools.models.payment.TransactionDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -17,13 +17,13 @@ public final class TransactionDraftBuilder {
    private java.lang.String interactionId;
    
    
-   private com.commercetools.models.Common.Money amount;
+   private com.commercetools.models.common.Money amount;
    
    @Nullable
-   private com.commercetools.models.Payment.TransactionState state;
+   private com.commercetools.models.payment.TransactionState state;
    
    
-   private com.commercetools.models.Payment.TransactionType type;
+   private com.commercetools.models.payment.TransactionType type;
    
    @Nullable
    private java.time.ZonedDateTime timestamp;
@@ -33,17 +33,17 @@ public final class TransactionDraftBuilder {
       return this;
    }
    
-   public TransactionDraftBuilder amount( final com.commercetools.models.Common.Money amount) {
+   public TransactionDraftBuilder amount( final com.commercetools.models.common.Money amount) {
       this.amount = amount;
       return this;
    }
    
-   public TransactionDraftBuilder state(@Nullable final com.commercetools.models.Payment.TransactionState state) {
+   public TransactionDraftBuilder state(@Nullable final com.commercetools.models.payment.TransactionState state) {
       this.state = state;
       return this;
    }
    
-   public TransactionDraftBuilder type( final com.commercetools.models.Payment.TransactionType type) {
+   public TransactionDraftBuilder type( final com.commercetools.models.payment.TransactionType type) {
       this.type = type;
       return this;
    }
@@ -59,17 +59,17 @@ public final class TransactionDraftBuilder {
    }
    
    
-   public com.commercetools.models.Common.Money getAmount(){
+   public com.commercetools.models.common.Money getAmount(){
       return this.amount;
    }
    
    @Nullable
-   public com.commercetools.models.Payment.TransactionState getState(){
+   public com.commercetools.models.payment.TransactionState getState(){
       return this.state;
    }
    
    
-   public com.commercetools.models.Payment.TransactionType getType(){
+   public com.commercetools.models.payment.TransactionType getType(){
       return this.type;
    }
    

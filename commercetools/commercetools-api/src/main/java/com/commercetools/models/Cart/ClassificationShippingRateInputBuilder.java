@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.ShippingRateInput;
-import com.commercetools.models.Common.LocalizedString;
+import com.commercetools.models.cart.ShippingRateInput;
+import com.commercetools.models.common.LocalizedString;
 import java.lang.String;
-import com.commercetools.models.Cart.ClassificationShippingRateInput;
+import com.commercetools.models.cart.ClassificationShippingRateInput;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class ClassificationShippingRateInputBuilder {
    
    
-   private com.commercetools.models.Common.LocalizedString label;
+   private com.commercetools.models.common.LocalizedString label;
    
    
    private java.lang.String key;
    
-   public ClassificationShippingRateInputBuilder label( final com.commercetools.models.Common.LocalizedString label) {
+   public ClassificationShippingRateInputBuilder label( final com.commercetools.models.common.LocalizedString label) {
       this.label = label;
       return this;
    }
@@ -28,7 +28,7 @@ public final class ClassificationShippingRateInputBuilder {
    }
    
    
-   public com.commercetools.models.Common.LocalizedString getLabel(){
+   public com.commercetools.models.common.LocalizedString getLabel(){
       return this.label;
    }
    

@@ -1,9 +1,9 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Payment.PaymentResourceIdentifier;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.payment.PaymentResourceIdentifier;
 import java.lang.String;
-import com.commercetools.models.Cart.CartAddPaymentAction;
+import com.commercetools.models.cart.CartAddPaymentAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CartAddPaymentActionBuilder {
    
    
-   private com.commercetools.models.Payment.PaymentResourceIdentifier payment;
+   private com.commercetools.models.payment.PaymentResourceIdentifier payment;
    
-   public CartAddPaymentActionBuilder payment( final com.commercetools.models.Payment.PaymentResourceIdentifier payment) {
+   public CartAddPaymentActionBuilder payment( final com.commercetools.models.payment.PaymentResourceIdentifier payment) {
       this.payment = payment;
       return this;
    }
    
    
-   public com.commercetools.models.Payment.PaymentResourceIdentifier getPayment(){
+   public com.commercetools.models.payment.PaymentResourceIdentifier getPayment(){
       return this.payment;
    }
 

@@ -1,10 +1,10 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Order.OrderUpdateAction;
-import com.commercetools.models.Order.ReturnItemDraft;
+import com.commercetools.models.order.OrderUpdateAction;
+import com.commercetools.models.order.ReturnItemDraft;
 import java.lang.String;
 import java.time.ZonedDateTime;
-import com.commercetools.models.Order.OrderAddReturnInfoAction;
+import com.commercetools.models.order.OrderAddReturnInfoAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class OrderAddReturnInfoActionBuilder {
    private java.lang.String returnTrackingId;
    
    
-   private java.util.List<com.commercetools.models.Order.ReturnItemDraft> items;
+   private java.util.List<com.commercetools.models.order.ReturnItemDraft> items;
    
    public OrderAddReturnInfoActionBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {
       this.returnDate = returnDate;
@@ -31,7 +31,7 @@ public final class OrderAddReturnInfoActionBuilder {
       return this;
    }
    
-   public OrderAddReturnInfoActionBuilder items( final java.util.List<com.commercetools.models.Order.ReturnItemDraft> items) {
+   public OrderAddReturnInfoActionBuilder items( final java.util.List<com.commercetools.models.order.ReturnItemDraft> items) {
       this.items = items;
       return this;
    }
@@ -47,7 +47,7 @@ public final class OrderAddReturnInfoActionBuilder {
    }
    
    
-   public java.util.List<com.commercetools.models.Order.ReturnItemDraft> getItems(){
+   public java.util.List<com.commercetools.models.order.ReturnItemDraft> getItems(){
       return this.items;
    }
 

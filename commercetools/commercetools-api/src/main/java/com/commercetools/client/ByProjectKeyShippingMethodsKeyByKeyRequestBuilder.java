@@ -18,7 +18,7 @@ public class ByProjectKeyShippingMethodsKeyByKeyRequestBuilder {
       return new ByProjectKeyShippingMethodsKeyByKeyGet(apiHttpClient, projectKey, key);
    }
    
-   public ByProjectKeyShippingMethodsKeyByKeyPost post(com.commercetools.models.ShippingMethod.ShippingMethodUpdate shippingMethodUpdate) {
+   public ByProjectKeyShippingMethodsKeyByKeyPost post(com.commercetools.models.shipping_method.ShippingMethodUpdate shippingMethodUpdate) {
       return new ByProjectKeyShippingMethodsKeyByKeyPost(apiHttpClient, projectKey, key, shippingMethodUpdate);
    }
    

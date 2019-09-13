@@ -1,7 +1,7 @@
-package com.commercetools.models.Error;
+package com.commercetools.models.error;
 
 import java.lang.String;
-import com.commercetools.models.Error.ErrorByExtension;
+import com.commercetools.models.error.ErrorByExtension;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;

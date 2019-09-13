@@ -1,10 +1,10 @@
-package com.commercetools.models.Product;
+package com.commercetools.models.product;
 
-import com.commercetools.models.Common.LocalizedString;
-import com.commercetools.models.Product.ProductUpdateAction;
+import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.product.ProductUpdateAction;
 import java.lang.Boolean;
 import java.lang.String;
-import com.commercetools.models.Product.ProductSetMetaKeywordsAction;
+import com.commercetools.models.product.ProductSetMetaKeywordsAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,12 +13,12 @@ import java.time.ZonedDateTime;
 public final class ProductSetMetaKeywordsActionBuilder {
    
    @Nullable
-   private com.commercetools.models.Common.LocalizedString metaKeywords;
+   private com.commercetools.models.common.LocalizedString metaKeywords;
    
    @Nullable
    private java.lang.Boolean staged;
    
-   public ProductSetMetaKeywordsActionBuilder metaKeywords(@Nullable final com.commercetools.models.Common.LocalizedString metaKeywords) {
+   public ProductSetMetaKeywordsActionBuilder metaKeywords(@Nullable final com.commercetools.models.common.LocalizedString metaKeywords) {
       this.metaKeywords = metaKeywords;
       return this;
    }
@@ -29,7 +29,7 @@ public final class ProductSetMetaKeywordsActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.models.Common.LocalizedString getMetaKeywords(){
+   public com.commercetools.models.common.LocalizedString getMetaKeywords(){
       return this.metaKeywords;
    }
    

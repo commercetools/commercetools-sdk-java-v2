@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Common.Money;
-import com.commercetools.models.Order.TaxedItemPriceDraftImpl;
+import com.commercetools.models.common.Money;
+import com.commercetools.models.order.TaxedItemPriceDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;

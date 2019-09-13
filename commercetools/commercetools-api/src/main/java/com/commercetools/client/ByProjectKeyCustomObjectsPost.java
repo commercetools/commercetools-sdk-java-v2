@@ -26,9 +26,9 @@ public class ByProjectKeyCustomObjectsPost {
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
-   private com.commercetools.models.CustomObject.CustomObjectDraft customObjectDraft;
+   private com.commercetools.models.custom_object.CustomObjectDraft customObjectDraft;
    
-   public ByProjectKeyCustomObjectsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.CustomObject.CustomObjectDraft customObjectDraft){
+   public ByProjectKeyCustomObjectsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.models.custom_object.CustomObjectDraft customObjectDraft){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.customObjectDraft = customObjectDraft;
@@ -51,7 +51,7 @@ public class ByProjectKeyCustomObjectsPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.commercetools.models.CustomObject.CustomObject> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.models.custom_object.CustomObject> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +59,9 @@ public class ByProjectKeyCustomObjectsPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.commercetools.models.CustomObject.CustomObject>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.models.custom_object.CustomObject>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.CustomObject.CustomObject.class));
+              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.custom_object.CustomObject.class));
    }
    
    public String getProjectKey() {return this.projectKey;}

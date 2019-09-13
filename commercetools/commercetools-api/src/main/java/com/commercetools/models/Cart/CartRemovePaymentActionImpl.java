@@ -1,7 +1,7 @@
-package com.commercetools.models.Cart;
+package com.commercetools.models.cart;
 
-import com.commercetools.models.Cart.CartUpdateAction;
-import com.commercetools.models.Payment.PaymentResourceIdentifier;
+import com.commercetools.models.cart.CartUpdateAction;
+import com.commercetools.models.payment.PaymentResourceIdentifier;
 import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,10 +26,10 @@ public final class CartRemovePaymentActionImpl implements CartRemovePaymentActio
 
    private java.lang.String action;
    
-   private com.commercetools.models.Payment.PaymentResourceIdentifier payment;
+   private com.commercetools.models.payment.PaymentResourceIdentifier payment;
 
    @JsonCreator
-   CartRemovePaymentActionImpl(@JsonProperty("payment") final com.commercetools.models.Payment.PaymentResourceIdentifier payment) {
+   CartRemovePaymentActionImpl(@JsonProperty("payment") final com.commercetools.models.payment.PaymentResourceIdentifier payment) {
       this.payment = payment;
       this.action = "removePayment";
    }
@@ -43,11 +43,11 @@ public final class CartRemovePaymentActionImpl implements CartRemovePaymentActio
    }
    
    
-   public com.commercetools.models.Payment.PaymentResourceIdentifier getPayment(){
+   public com.commercetools.models.payment.PaymentResourceIdentifier getPayment(){
       return this.payment;
    }
 
-   public void setPayment(final com.commercetools.models.Payment.PaymentResourceIdentifier payment){
+   public void setPayment(final com.commercetools.models.payment.PaymentResourceIdentifier payment){
       this.payment = payment;
    }
 

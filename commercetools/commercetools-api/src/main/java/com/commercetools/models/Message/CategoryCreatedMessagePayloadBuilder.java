@@ -1,9 +1,9 @@
-package com.commercetools.models.Message;
+package com.commercetools.models.message;
 
-import com.commercetools.models.Category.Category;
-import com.commercetools.models.Message.MessagePayload;
+import com.commercetools.models.category.Category;
+import com.commercetools.models.message.MessagePayload;
 import java.lang.String;
-import com.commercetools.models.Message.CategoryCreatedMessagePayload;
+import com.commercetools.models.message.CategoryCreatedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CategoryCreatedMessagePayloadBuilder {
    
    
-   private com.commercetools.models.Category.Category category;
+   private com.commercetools.models.category.Category category;
    
-   public CategoryCreatedMessagePayloadBuilder category( final com.commercetools.models.Category.Category category) {
+   public CategoryCreatedMessagePayloadBuilder category( final com.commercetools.models.category.Category category) {
       this.category = category;
       return this;
    }
    
    
-   public com.commercetools.models.Category.Category getCategory(){
+   public com.commercetools.models.category.Category getCategory(){
       return this.category;
    }
 

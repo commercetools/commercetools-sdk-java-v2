@@ -1,7 +1,7 @@
-package com.commercetools.models.Order;
+package com.commercetools.models.order;
 
-import com.commercetools.models.Payment.PaymentReference;
-import com.commercetools.models.Order.PaymentInfo;
+import com.commercetools.models.payment.PaymentReference;
+import com.commercetools.models.order.PaymentInfo;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class PaymentInfoBuilder {
    
    
-   private java.util.List<com.commercetools.models.Payment.PaymentReference> payments;
+   private java.util.List<com.commercetools.models.payment.PaymentReference> payments;
    
-   public PaymentInfoBuilder payments( final java.util.List<com.commercetools.models.Payment.PaymentReference> payments) {
+   public PaymentInfoBuilder payments( final java.util.List<com.commercetools.models.payment.PaymentReference> payments) {
       this.payments = payments;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.Payment.PaymentReference> getPayments(){
+   public java.util.List<com.commercetools.models.payment.PaymentReference> getPayments(){
       return this.payments;
    }
 

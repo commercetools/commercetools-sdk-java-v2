@@ -13,7 +13,7 @@ import java.util.UUID;
 public class CommercetoolsTestUtils {
 
     private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
-    private static final ApiRoot apiRoot = ApiRoot.formMiddlewares(
+    private static final ApiRoot apiRoot = ApiRoot.fromMiddlewares(
             new HttpMiddleware(
                     "https://api.sphere.io",
                     vrapHttpClient,

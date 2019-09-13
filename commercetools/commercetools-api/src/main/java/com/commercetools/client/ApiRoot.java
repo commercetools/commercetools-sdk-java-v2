@@ -14,7 +14,7 @@ public class ApiRoot {
       this.apiHttpClient = new ApiHttpClient(Arrays.asList(middlewares));
    }
       
-   public static ApiRoot formMiddlewares(final Middleware... middlewares) {
+   public static ApiRoot fromMiddlewares(final Middleware... middlewares) {
        return new ApiRoot(middlewares);
    }
            

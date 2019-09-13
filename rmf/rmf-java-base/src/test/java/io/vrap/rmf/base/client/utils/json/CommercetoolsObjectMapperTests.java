@@ -23,19 +23,19 @@ public class CommercetoolsObjectMapperTests {
     @Test
     public void serializeZonedDateTime() throws JsonProcessingException {
         ZonedDateTime zonedDateTime = ZonedDateTime.of(TEST_LOCAL_DATE, TEST_LOCAL_TIME, zoneId);
-        String serializedZonedDateTime = VrapJsonUtils.toJsonBytes(zonedDateTime);
+        String serializedZonedDateTime = VrapJsonUtils.toJsonString(zonedDateTime);
         Assert.assertEquals(serializedZonedDateTime, "\"2010-11-12T09:11:12.000Z\"");
     }
     
     @Test
     public void serializeLocalDate() throws JsonProcessingException {
-        String serializedLocalDate = VrapJsonUtils.toJsonBytes(TEST_LOCAL_DATE);
+        String serializedLocalDate = VrapJsonUtils.toJsonString(TEST_LOCAL_DATE);
         Assert.assertEquals(serializedLocalDate, "\"2010-11-12\"");
     }
     
     @Test
     public void serializeLocalTime() throws JsonProcessingException {
-        String serializedLocalTime = VrapJsonUtils.toJsonBytes(TEST_LOCAL_TIME);
+        String serializedLocalTime = VrapJsonUtils.toJsonString(TEST_LOCAL_TIME);
         Assert.assertEquals(serializedLocalTime, "\"10:11:12\"");
     }
     

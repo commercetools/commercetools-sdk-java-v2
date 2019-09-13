@@ -9,7 +9,6 @@ import io.vrap.rmf.base.client.utils.Utils;
 import okhttp3.*;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;

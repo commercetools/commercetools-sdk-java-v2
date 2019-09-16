@@ -19,14 +19,13 @@ import commercetools.product_type.ProductTypeFixtures;
 import commercetools.review.ReviewFixtures;
 import commercetools.tax_category.TaxCategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Test;
 
 /**
  * Please be careful when running these tests, as they are meant to be used as cleanup and will delete all resources in your project
  */
 public class DeleteEverythingIntegrationTest {
 
-    @Test
+    //@Test
     public void deleteAllCategories() {
         CategoryPagedQueryResponse response;
 
@@ -41,7 +40,7 @@ public class DeleteEverythingIntegrationTest {
         } while (response.getResults().size() != 0);
     }
 
-    @Test
+    //@Test
     public void deleteAllCartDiscounts() {
         CartDiscountPagedQueryResponse response;
 
@@ -55,8 +54,8 @@ public class DeleteEverythingIntegrationTest {
             });
         } while (response.getResults().size() != 0);
     }
-
-    @Test
+    
+    //@Test
     public void deleteAllInventories() {
         InventoryPagedQueryResponse response;
 
@@ -70,8 +69,8 @@ public class DeleteEverythingIntegrationTest {
             });
         } while (response.getResults().size() != 0);
     }
-
-    @Test
+    
+    //@Test
     public void deleteAllProducts() {
         ProductPagedQueryResponse response;
 
@@ -85,8 +84,8 @@ public class DeleteEverythingIntegrationTest {
             });
         } while (response.getResults().size() != 0);
     }
-
-    @Test
+    
+    //@Test
     public void deleteAllProductDiscounts() {
         ProductDiscountPagedQueryResponse response;
 
@@ -100,8 +99,8 @@ public class DeleteEverythingIntegrationTest {
             });
         } while (response.getResults().size() != 0);
     }
-
-    @Test
+    
+    //@Test
     public void deleteAllProductTypes() {
         ProductTypePagedQueryResponse response;
 
@@ -115,8 +114,8 @@ public class DeleteEverythingIntegrationTest {
             });
         } while (response.getResults().size() != 0);
     }
-
-    @Test
+    
+    //@Test
     public void deleteAllReviews() {
         ReviewPagedQueryResponse response;
 
@@ -130,8 +129,8 @@ public class DeleteEverythingIntegrationTest {
             });
         } while (response.getResults().size() != 0);
     }
-
-    @Test
+    
+    //@Test
     public void deleteAllTaxCategories() {
         TaxCategoryPagedQueryResponse response;
 
@@ -145,8 +144,8 @@ public class DeleteEverythingIntegrationTest {
             });
         } while (response.getResults().size() != 0);
     }
-
-    @Test
+    
+    //@Test
     public void deleteAllDiscountCodes() {
         DiscountCodePagedQueryResponse response;
 

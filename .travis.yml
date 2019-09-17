@@ -12,4 +12,7 @@ script: >
   cd .. && 
   cd rmf-codegen && 
   gradle clean build && 
+  gradle clean build bintrayUpload --info &&
+  cd ../.. && 
   gradle clean build bintrayUpload --info
+  

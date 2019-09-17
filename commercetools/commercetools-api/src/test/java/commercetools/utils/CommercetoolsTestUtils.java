@@ -5,6 +5,7 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LocalizedStringImpl;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.middlewares.HttpMiddleware;
+import io.vrap.rmf.base.client.middlewares.LoggerMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
 
@@ -24,7 +25,8 @@ public class CommercetoolsTestUtils {
                             "https://auth.sphere.io/oauth/token"
                             , vrapHttpClient
                     )
-            )
+            ),
+            new LoggerMiddleware()
     );
 
     public static String randomString() {

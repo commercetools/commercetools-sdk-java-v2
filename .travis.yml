@@ -12,5 +12,8 @@ script: >
   cd .. && 
   cd rmf-codegen && 
   gradle clean build
-if: branch = master
+deploy:
+  provider: script
   script: gradle clean build bintrayUpload --info && cd ../.. && gradle clean build bintrayUpload --info
+  on:
+    branch: master

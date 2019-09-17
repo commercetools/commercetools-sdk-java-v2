@@ -4,7 +4,7 @@ import com.commercetools.models.store.Store;
 import com.commercetools.models.store.StoreDraft;
 import com.commercetools.models.store.StoreDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -34,8 +34,8 @@ public class StoreFixtures {
                 .post(storeDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(store);
-        Assertions.assertEquals(storeDraft.getKey(), store.getKey());
+        Assert.assertNotNull(store);
+        Assert.assertEquals(storeDraft.getKey(), store.getKey());
         
         return store;
     }
@@ -48,8 +48,8 @@ public class StoreFixtures {
                 .addVersion(version)
                 .executeBlocking().getBody();
         
-        Assertions.assertNotNull(store);
-        Assertions.assertEquals(store.getId(), id);
+        Assert.assertNotNull(store);
+        Assert.assertEquals(store.getId(), id);
         
         return store;
     }

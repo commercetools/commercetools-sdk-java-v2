@@ -2,8 +2,8 @@ package commercetools.customer;
 
 import com.commercetools.models.customer.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ public class CustomerIntegrationTests {
     public void createAndDeleteById() {
         Customer customer = CustomerFixtures.createCustomer();
         Customer deletedCustomer = CustomerFixtures.deleteCustomer(customer.getId(), customer.getVersion());
-        Assertions.assertEquals(customer.getId(), deletedCustomer.getId());
+        Assert.assertEquals(customer.getId(), deletedCustomer.getId());
     }
     
     @Test
@@ -26,8 +26,8 @@ public class CustomerIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
             
-            Assertions.assertNotNull(queriedCustomer);
-            Assertions.assertEquals(queriedCustomer.getId(), customer.getId());
+            Assert.assertNotNull(queriedCustomer);
+            Assert.assertEquals(queriedCustomer.getId(), customer.getId());
         });
     }
 
@@ -40,8 +40,8 @@ public class CustomerIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(queriedCustomer);
-            Assertions.assertEquals(queriedCustomer.getId(), customer.getId());
+            Assert.assertNotNull(queriedCustomer);
+            Assert.assertEquals(queriedCustomer.getId(), customer.getId());
         });
     }
     
@@ -54,8 +54,8 @@ public class CustomerIntegrationTests {
                     .addWhere("id=" +  "\"" + customer.getId() + "\"")
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), customer.getId());
+            Assert.assertNotNull(response);
+            Assert.assertEquals(response.getResults().get(0).getId(), customer.getId());
         });
     }
     
@@ -72,8 +72,8 @@ public class CustomerIntegrationTests {
                     .post(CustomerUpdateBuilder.of().actions(updateActions).version(customer.getVersion()).build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedCustomer);
-            Assertions.assertEquals(updatedCustomer.getKey(), newKey);
+            Assert.assertNotNull(updatedCustomer);
+            Assert.assertEquals(updatedCustomer.getKey(), newKey);
             
             return updatedCustomer;
         });
@@ -92,8 +92,8 @@ public class CustomerIntegrationTests {
                     .post(CustomerUpdateBuilder.of().actions(updateActions).version(customer.getVersion()).build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedCustomer);
-            Assertions.assertEquals(updatedCustomer.getKey(), newKey);
+            Assert.assertNotNull(updatedCustomer);
+            Assert.assertEquals(updatedCustomer.getKey(), newKey);
 
             return updatedCustomer;
         });
@@ -109,7 +109,7 @@ public class CustomerIntegrationTests {
                 .addVersion(customer.getVersion())
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(deletedCustomer);
-        Assertions.assertEquals(customer.getId(), deletedCustomer.getId());
+        Assert.assertNotNull(deletedCustomer);
+        Assert.assertEquals(customer.getId(), deletedCustomer.getId());
     }
 }

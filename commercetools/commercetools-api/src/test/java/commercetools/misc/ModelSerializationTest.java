@@ -6,8 +6,8 @@ import com.commercetools.models.common.*;
 import com.commercetools.models.type.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.net.URL;
@@ -71,10 +71,10 @@ public class ModelSerializationTest {
         try{
             final URL url = Thread.currentThread().getContextClassLoader().getResource("json_examples/category-draft-example.json");
             String categoryDraftExample = new String(Files.readAllBytes(Paths.get(url.getPath())));
-            Assertions.assertEquals(categoryDraftJson, categoryDraftExample);
+            Assert.assertEquals(categoryDraftJson, categoryDraftExample);
         }catch (IOException e){
             e.printStackTrace();
-            Assertions.fail(e.getMessage());
+            Assert.fail(e.getMessage());
         }
     }
     
@@ -138,10 +138,10 @@ public class ModelSerializationTest {
             final URL url = Thread.currentThread().getContextClassLoader().getResource("json_examples/category-example.json");
             String categoryExampleJsonString = new String(Files.readAllBytes(Paths.get(url.getPath())));
             Category exampleCategory = VrapJsonUtils.fromJsonString(categoryExampleJsonString, Category.class);
-            Assertions.assertEquals(VrapJsonUtils.toJsonString(category), VrapJsonUtils.toJsonString(exampleCategory));
+            Assert.assertEquals(VrapJsonUtils.toJsonString(category), VrapJsonUtils.toJsonString(exampleCategory));
         }catch (IOException e){
             e.printStackTrace();
-            Assertions.fail(e.getMessage());
+            Assert.fail(e.getMessage());
         }
     }
     

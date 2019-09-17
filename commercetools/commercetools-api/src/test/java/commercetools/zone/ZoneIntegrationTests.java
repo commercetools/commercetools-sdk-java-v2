@@ -2,8 +2,8 @@ package commercetools.zone;
 
 import com.commercetools.models.zone.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +15,8 @@ public class ZoneIntegrationTests {
         Zone zone = ZoneFixtures.createZone();
         Zone deletedZone = ZoneFixtures.deleteZone(zone.getId(), zone.getVersion());
 
-        Assertions.assertNotNull(deletedZone);
-        Assertions.assertEquals(zone.getId(), deletedZone.getId());
+        Assert.assertNotNull(deletedZone);
+        Assert.assertEquals(zone.getId(), deletedZone.getId());
     }
     
     @Test
@@ -28,8 +28,8 @@ public class ZoneIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(queriedZone);
-            Assertions.assertEquals(zone.getId(), queriedZone.getId());
+            Assert.assertNotNull(queriedZone);
+            Assert.assertEquals(zone.getId(), queriedZone.getId());
         });
     }
 
@@ -42,8 +42,8 @@ public class ZoneIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(queriedZone);
-            Assertions.assertEquals(zone.getId(), queriedZone.getId());
+            Assert.assertNotNull(queriedZone);
+            Assert.assertEquals(zone.getId(), queriedZone.getId());
         });
     }
     
@@ -56,8 +56,8 @@ public class ZoneIntegrationTests {
                     .addWhere("id=" + "\"" + zone.getId() + "\"")
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), zone.getId());
+            Assert.assertNotNull(response);
+            Assert.assertEquals(response.getResults().get(0).getId(), zone.getId());
         });
     }
     
@@ -77,8 +77,8 @@ public class ZoneIntegrationTests {
                             .build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedZone);
-            Assertions.assertEquals(updatedZone.getKey(), newKey);
+            Assert.assertNotNull(updatedZone);
+            Assert.assertEquals(updatedZone.getKey(), newKey);
             
             return updatedZone;
         });
@@ -100,8 +100,8 @@ public class ZoneIntegrationTests {
                             .build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedZone);
-            Assertions.assertEquals(updatedZone.getKey(), newKey);
+            Assert.assertNotNull(updatedZone);
+            Assert.assertEquals(updatedZone.getKey(), newKey);
 
             return updatedZone;
         });
@@ -112,8 +112,8 @@ public class ZoneIntegrationTests {
         Zone zone = ZoneFixtures.createZone();
         Zone deletedZone = ZoneFixtures.deleteZone(zone.getId(), zone.getVersion());
 
-        Assertions.assertNotNull(deletedZone);
-        Assertions.assertEquals(zone.getId(), deletedZone.getId());
+        Assert.assertNotNull(deletedZone);
+        Assert.assertEquals(zone.getId(), deletedZone.getId());
     }
     
 }

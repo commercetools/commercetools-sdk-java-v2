@@ -2,15 +2,11 @@ package commercetools.discount_code;
 
 import com.commercetools.models.discount_code.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.parallel.Execution;
-import org.junit.jupiter.api.parallel.ExecutionMode;
-
+import org.junit.Assert;
+import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-@Execution(ExecutionMode.CONCURRENT)
 public class DiscountCodeIntegrationTests {
     
     @Test
@@ -28,8 +24,8 @@ public class DiscountCodeIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(queriedDiscountCode);
-            Assertions.assertEquals(queriedDiscountCode.getId(), discountCode.getId());
+            Assert.assertNotNull(queriedDiscountCode);
+            Assert.assertEquals(queriedDiscountCode.getId(), discountCode.getId());
         });
     }
     
@@ -42,8 +38,8 @@ public class DiscountCodeIntegrationTests {
                     .addWhere("id=" + "\"" + discountCode.getId() + "\"")
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), discountCode.getId());
+            Assert.assertNotNull(response);
+            Assert.assertEquals(response.getResults().get(0).getId(), discountCode.getId());
         });
     }
     
@@ -61,8 +57,8 @@ public class DiscountCodeIntegrationTests {
                         .build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedDiscountCode);
-            Assertions.assertEquals(updatedDiscountCode.getMaxApplications(), Long.valueOf(10));
+            Assert.assertNotNull(updatedDiscountCode);
+            Assert.assertEquals(updatedDiscountCode.getMaxApplications(), Long.valueOf(10));
             
             return updatedDiscountCode;
         });

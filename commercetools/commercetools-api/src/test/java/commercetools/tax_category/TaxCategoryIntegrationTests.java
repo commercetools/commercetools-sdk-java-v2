@@ -2,8 +2,8 @@ package commercetools.tax_category;
 
 import com.commercetools.models.tax_category.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +22,9 @@ public class TaxCategoryIntegrationTests {
                 .post(taxCategoryDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(taxCategory);
-        Assertions.assertEquals(taxCategoryDraft.getName(), taxCategory.getName());
-        Assertions.assertEquals(taxCategoryDraft.getKey(), taxCategory.getKey());
+        Assert.assertNotNull(taxCategory);
+        Assert.assertEquals(taxCategoryDraft.getName(), taxCategory.getName());
+        Assert.assertEquals(taxCategoryDraft.getKey(), taxCategory.getKey());
         
         TaxCategory deletedTaxCategory = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .taxCategories()
@@ -33,8 +33,8 @@ public class TaxCategoryIntegrationTests {
                 .addVersion(taxCategory.getVersion())
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(deletedTaxCategory);
-        Assertions.assertEquals(deletedTaxCategory.getId(), taxCategory.getId());
+        Assert.assertNotNull(deletedTaxCategory);
+        Assert.assertEquals(deletedTaxCategory.getId(), taxCategory.getId());
     }
     
     @Test
@@ -46,8 +46,8 @@ public class TaxCategoryIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(queriedTaxCategory);
-            Assertions.assertEquals(queriedTaxCategory.getId(), taxCategory.getId());
+            Assert.assertNotNull(queriedTaxCategory);
+            Assert.assertEquals(queriedTaxCategory.getId(), taxCategory.getId());
         });
     }
 
@@ -60,8 +60,8 @@ public class TaxCategoryIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(queriedTaxCategory);
-            Assertions.assertEquals(queriedTaxCategory.getKey(), taxCategory.getKey());
+            Assert.assertNotNull(queriedTaxCategory);
+            Assert.assertEquals(queriedTaxCategory.getKey(), taxCategory.getKey());
         });
     }
 
@@ -74,8 +74,8 @@ public class TaxCategoryIntegrationTests {
                     .addWhere("id=" + "\"" + taxCategory.getId() +"\"")
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), taxCategory.getId());
+            Assert.assertNotNull(response);
+            Assert.assertEquals(response.getResults().get(0).getId(), taxCategory.getId());
         });
     }
 
@@ -97,8 +97,8 @@ public class TaxCategoryIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assertions.assertNotNull(updatedTaxCategory);
-            Assertions.assertEquals(updatedTaxCategory.getKey(), newKey);
+            Assert.assertNotNull(updatedTaxCategory);
+            Assert.assertEquals(updatedTaxCategory.getKey(), newKey);
             
             return updatedTaxCategory;
         });
@@ -121,8 +121,8 @@ public class TaxCategoryIntegrationTests {
                             .build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedTaxCategory);
-            Assertions.assertEquals(updatedTaxCategory.getKey(), newKey);
+            Assert.assertNotNull(updatedTaxCategory);
+            Assert.assertEquals(updatedTaxCategory.getKey(), newKey);
 
             return updatedTaxCategory;
         });

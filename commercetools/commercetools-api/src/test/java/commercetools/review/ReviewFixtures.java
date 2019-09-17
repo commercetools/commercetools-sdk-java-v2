@@ -4,7 +4,7 @@ import com.commercetools.models.review.Review;
 import com.commercetools.models.review.ReviewDraft;
 import com.commercetools.models.review.ReviewDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -34,8 +34,8 @@ public class ReviewFixtures {
                 .post(reviewDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(review);
-        Assertions.assertEquals(reviewDraft.getKey(), review.getKey());
+        Assert.assertNotNull(review);
+        Assert.assertEquals(reviewDraft.getKey(), review.getKey());
         
         return review;
     }
@@ -48,8 +48,8 @@ public class ReviewFixtures {
                 .addVersion(version)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(deletedReview);
-        Assertions.assertEquals(deletedReview.getId(), id);
+        Assert.assertNotNull(deletedReview);
+        Assert.assertEquals(deletedReview.getId(), id);
         
         return deletedReview;
     }

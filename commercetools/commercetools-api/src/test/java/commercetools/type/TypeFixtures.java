@@ -5,7 +5,7 @@ import com.commercetools.models.type.Type;
 import com.commercetools.models.type.TypeDraft;
 import com.commercetools.models.type.TypeDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
@@ -37,8 +37,8 @@ public class TypeFixtures {
                 .post(typeDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(type);
-        Assertions.assertEquals(type.getKey(), typeDraft.getKey());
+        Assert.assertNotNull(type);
+        Assert.assertEquals(type.getKey(), typeDraft.getKey());
         
         return type;
     } 
@@ -51,8 +51,8 @@ public class TypeFixtures {
                 .addVersion(version)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(type);
-        Assertions.assertEquals(type.getId(), id);
+        Assert.assertNotNull(type);
+        Assert.assertEquals(type.getId(), id);
         
         return type;
     }

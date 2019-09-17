@@ -2,8 +2,8 @@ package commercetools.shopping_list;
 
 import com.commercetools.models.shopping_list.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +25,8 @@ public class ShoppingListIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(queriedShoppingList);
-            Assertions.assertEquals(shoppingList.getId(), queriedShoppingList.getId());
+            Assert.assertNotNull(queriedShoppingList);
+            Assert.assertEquals(shoppingList.getId(), queriedShoppingList.getId());
         });
     }
 
@@ -39,8 +39,8 @@ public class ShoppingListIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(queriedShoppingList);
-            Assertions.assertEquals(shoppingList.getKey(), queriedShoppingList.getKey());
+            Assert.assertNotNull(queriedShoppingList);
+            Assert.assertEquals(shoppingList.getKey(), queriedShoppingList.getKey());
         });
     }
     
@@ -53,8 +53,8 @@ public class ShoppingListIntegrationTests {
                     .addWhere("id=" + "\"" + shoppingList.getId() + "\"")
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), shoppingList.getId());
+            Assert.assertNotNull(response);
+            Assert.assertEquals(response.getResults().get(0).getId(), shoppingList.getId());
         });
     }   
     
@@ -74,8 +74,8 @@ public class ShoppingListIntegrationTests {
                             .actions(updateActions).build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedShoppingList);
-            Assertions.assertEquals(updatedShoppingList.getKey(),newKey);
+            Assert.assertNotNull(updatedShoppingList);
+            Assert.assertEquals(updatedShoppingList.getKey(),newKey);
             
             return updatedShoppingList;
         });
@@ -97,8 +97,8 @@ public class ShoppingListIntegrationTests {
                             .actions(updateActions).build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedShoppingList);
-            Assertions.assertEquals(updatedShoppingList.getKey(),newKey);
+            Assert.assertNotNull(updatedShoppingList);
+            Assert.assertEquals(updatedShoppingList.getKey(),newKey);
 
             return updatedShoppingList;
         });
@@ -108,8 +108,8 @@ public class ShoppingListIntegrationTests {
     public void deleteByKey() {
         ShoppingList shoppingList = ShoppingListFixtures.createShoppingList();
         ShoppingList deletedShoppingList = ShoppingListFixtures.deleteShoppingList(shoppingList.getId(), shoppingList.getVersion());
-        Assertions.assertNotNull(deletedShoppingList);
-        Assertions.assertEquals(shoppingList.getId(), deletedShoppingList.getId());
+        Assert.assertNotNull(deletedShoppingList);
+        Assert.assertEquals(shoppingList.getId(), deletedShoppingList.getId());
     }
     
 }

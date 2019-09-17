@@ -8,7 +8,7 @@ script: >
   git clone https://github.com/vrapio/rmf-codegen.git && 
   git clone https://github.com/commercetools/commercetools-api-reference.git && 
   cd commercetools-api-reference && 
-  export TEST_RAML_FILE=$(realpath update-actions.raml) && 
+  export TEST_RAML_FILE="$(realpath update-actions.raml)" && 
   cd .. && 
   cd rmf-codegen && 
   gradle clean build && 

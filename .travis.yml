@@ -12,8 +12,5 @@ script: >
   cd .. && 
   cd rmf-codegen && 
   gradle clean build
-jobs:
-  include:
-    - # require the branch name to be master
-      if: branch = master
-      script: gradle clean build bintrayUpload --info && cd ../.. && gradle clean build bintrayUpload --info
+if: branch = master
+  script: gradle clean build bintrayUpload --info && cd ../.. && gradle clean build bintrayUpload --info

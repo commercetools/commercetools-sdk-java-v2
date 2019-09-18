@@ -1,8 +1,14 @@
-# Introduction
+# commercetools java sdks
 
-This repository contains the commercetools java sdks generated from our api reference.
 This project is currently in the internal alpha phase.
 
+<img src="http://dev.commercetools.com/assets/img/CT-logo.svg" width="550px" alt="CT-logo"></img>
+
+[![][travis img]][travis]
+
+## Introduction
+
+This repository contains the commercetools java sdks generated from our api reference.
 
 ## Using the generated commercetools-api SDK in your project
 

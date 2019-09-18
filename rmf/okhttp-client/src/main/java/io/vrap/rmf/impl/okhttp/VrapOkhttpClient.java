@@ -13,22 +13,26 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 public class VrapOkhttpClient implements VrapHttpClient {
 
-    private final OkHttpClient okHttpClient = new OkHttpClient();
+    private final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+            .connectTimeout(120,TimeUnit.SECONDS)
+            .writeTimeout(120, TimeUnit.SECONDS)
+            .readTimeout(120, TimeUnit.SECONDS)
+            .build();
+    
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
     private static final byte[] emptyBody = new byte[0];
 
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
-
         return makeRequest(okHttpClient, toRequest(request))
                 .thenApply(VrapOkhttpClient::toResponse);
 
     }
-
-
+    
     private static ApiHttpResponse<byte[]> toResponse(final Response response) {
         ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders();
         for (Map.Entry<String, List<String>> entry : response.headers().toMultimap().entrySet()) {

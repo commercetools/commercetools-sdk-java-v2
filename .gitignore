@@ -9,9 +9,6 @@ classes/
 .classpath
 bin
 
-gradle-wrapper.jar
-gradlew.bat
-gradlew
 
 .idea
 cache/

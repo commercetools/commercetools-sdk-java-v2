@@ -19,10 +19,6 @@ plugins {
     id 'com.jfrog.bintray' version '1.8.3'
 }
 
-group 'com.commercetools'
-version '1.0-SNAPSHOT'
-
-
 import java.text.SimpleDateFormat
 
 def globalVersion = new Version("1.0.0-SNAPSHOT")
@@ -74,25 +70,43 @@ subprojects { project ->
     apply plugin: 'com.jfrog.bintray'
 
     group='com.commercetools'
-    version=globalVersion
+    version = System.getProperty('publish') ? globalVersion : currentVersion
+
+    bintray {
+        user = System.getenv('CTP_BINTRAY_USER')
+        key = System.getenv('CTP_BINTRAY_KEY')
+        publications = [ 'Maven' ]
+
+        publish = true
+
+        pkg {
+            repo = 'maven'
+            name = 'commercetools-java-sdks'
+            userOrg = 'commercetools'
+            licenses = ['MIT']
+            vcsUrl = 'https://github.com/commercetools/commercetools-java-sdks'
+        }
+    }
 
     task sourceJar(type: Jar) {
         from sourceSets.main.allSource
         classifier = 'sources'
     }
 
-    bintray {
-        user = System.getenv('BINTRAY_USER')
-        key = System.getenv('BINTRAY_KEY')
-        publications = [ 'Maven' ]
-        publish = true
+    task packageJavadoc(type: Jar) {
+        from javadoc
+        classifier = 'javadoc'
+    }
 
-        pkg {
-            repo = 'vrapio'
-            name = 'com.commercetoolss'
-            userOrg = 'vrapio'
-            licenses = ['MIT']
-            vcsUrl = 'https://github.com/vrapio/rmf-codegen'
+    javadoc {
+        source = sourceSets.main.allJava
+        classpath = configurations.compileClasspath
+
+        options {
+            setMemberLevel JavadocMemberLevel.PUBLIC
+            setAuthor false
+
+            links "https://docs.oracle.com/javase/8/docs/api/"
         }
     }
 

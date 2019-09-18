@@ -11,12 +11,9 @@ script: >
   export TEST_RAML_FILE="$(realpath update-actions.raml)" && 
   cd .. && 
   cd rmf-codegen && 
-  gradle clean build && 
-  gradle clean && 
-  cd .. && 
-  gradle clean
+  gradle clean build
 deploy:
   provider: script
-  script: gradle clean build bintrayUpload --info && cd ../.. && gradle clean build bintrayUpload --info
+  script: gradle clean && gradle build bintrayUpload --info && cd ../.. && gradle clean && gradle build bintrayUpload --info
   on:
     branch: master

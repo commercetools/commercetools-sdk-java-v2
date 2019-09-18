@@ -9,9 +9,8 @@ script: >
   git clone https://github.com/commercetools/commercetools-api-reference.git && 
   cd commercetools-api-reference && 
   export TEST_RAML_FILE="$(realpath update-actions.raml)" && 
-  cd .. && 
-  cd rmf-codegen && 
-  ./gradlew clean build &&
+  cd ../rmf-codegen &&
+  ./gradlew clean build
 deploy:
   provider: script
   script: ./gradlew clean && ./grdalew build bintrayUpload --info && cd ../.. && ./gradlew clean build bintrayUpload --info

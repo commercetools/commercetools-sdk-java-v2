@@ -13,6 +13,6 @@ script: >
   ./gradlew clean build 
 deploy:
   provider: script
-  script: ./gradlew clean && ./gradlew build bintrayUpload --info && cd ../.. && ./gradlew clean && ./gradlew build bintrayUpload --info
-  on:
-    branch: master
+  script: ./gradlew clean && ./gradlew build bintrayUpload --info && cd ../.. && ./gradlew clean && ./gradlew build bintrayUpload --info  -Dpublish=true
+#  on:
+#    branch: master

@@ -2,8 +2,8 @@ package commercetools.state;
 
 import com.commercetools.models.state.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ public class StateIntegrationTests {
     public void createAndDeleteById() {
         State state = StateFixtures.createState();
         State deletedState = StateFixtures.deleteState(state.getId(), state.getVersion());
-        Assertions.assertEquals(deletedState.getId(), state.getId());
+        Assert.assertEquals(deletedState.getId(), state.getId());
     }
     
     @Test
@@ -26,8 +26,8 @@ public class StateIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
             
-            Assertions.assertNotNull(queriedState);
-            Assertions.assertEquals(state.getId(), queriedState.getId());
+            Assert.assertNotNull(queriedState);
+            Assert.assertEquals(state.getId(), queriedState.getId());
         });
     }
     
@@ -40,8 +40,8 @@ public class StateIntegrationTests {
                     .addWhere("id=" + "\"" + state.getId() + "\"")
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), state.getId());
+            Assert.assertNotNull(response);
+            Assert.assertEquals(response.getResults().get(0).getId(), state.getId());
         });
     }
     
@@ -60,8 +60,8 @@ public class StateIntegrationTests {
                             .build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedState);
-            Assertions.assertEquals(updatedState.getKey(), newKey);
+            Assert.assertNotNull(updatedState);
+            Assert.assertEquals(updatedState.getKey(), newKey);
             return updatedState;
         });
     }

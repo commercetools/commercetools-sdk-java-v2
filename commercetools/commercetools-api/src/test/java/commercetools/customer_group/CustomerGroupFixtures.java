@@ -4,7 +4,7 @@ import com.commercetools.models.customer_group.CustomerGroup;
 import com.commercetools.models.customer_group.CustomerGroupDraft;
 import com.commercetools.models.customer_group.CustomerGroupDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -34,8 +34,8 @@ public class CustomerGroupFixtures {
                 .post(customerGroupDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(customerGroup);
-        Assertions.assertEquals(customerGroup.getKey(), customerGroupDraft.getKey());
+        Assert.assertNotNull(customerGroup);
+        Assert.assertEquals(customerGroup.getKey(), customerGroupDraft.getKey());
         
         return customerGroup;
     }
@@ -48,8 +48,8 @@ public class CustomerGroupFixtures {
                 .addVersion(version)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(customerGroup);
-        Assertions.assertEquals(customerGroup.getId(), id);
+        Assert.assertNotNull(customerGroup);
+        Assert.assertEquals(customerGroup.getId(), id);
         
         return customerGroup;
     }

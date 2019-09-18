@@ -5,8 +5,8 @@ import com.commercetools.models.project.ProjectChangeCountriesActionBuilder;
 import com.commercetools.models.project.ProjectUpdateAction;
 import com.commercetools.models.project.ProjectUpdateBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,8 +20,8 @@ public class ProjectIntegrationTests {
         Project project = CommercetoolsTestUtils.getApiRoot().withProjectKey(projectKey)
                 .get()
                 .executeBlocking().getBody();
-        Assertions.assertNotNull(project);
-        Assertions.assertEquals(projectKey, project.getKey());
+        Assert.assertNotNull(project);
+        Assert.assertEquals(projectKey, project.getKey());
     }
     
     @Test

@@ -3,8 +3,8 @@ package commercetools.store;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.store.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class StoreIntegrationTests {
         Store store = StoreFixtures.createStore();
         Store deletedStore = StoreFixtures.deleteStore(store.getId(), store.getVersion());
         
-        Assertions.assertEquals(store.getId(), deletedStore.getId());
+        Assert.assertEquals(store.getId(), deletedStore.getId());
     }
     
     @Test
@@ -28,8 +28,8 @@ public class StoreIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
             
-            Assertions.assertNotNull(queriedStore);
-            Assertions.assertEquals(queriedStore.getId(), store.getId());
+            Assert.assertNotNull(queriedStore);
+            Assert.assertEquals(queriedStore.getId(), store.getId());
         });
     }
 
@@ -42,8 +42,8 @@ public class StoreIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(queriedStore);
-            Assertions.assertEquals(queriedStore.getId(), store.getId());
+            Assert.assertNotNull(queriedStore);
+            Assert.assertEquals(queriedStore.getId(), store.getId());
         });
     }
     
@@ -56,8 +56,8 @@ public class StoreIntegrationTests {
                     .addWhere("id=" + "\"" + store.getId() + "\"")
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), store.getId());
+            Assert.assertNotNull(response);
+            Assert.assertEquals(response.getResults().get(0).getId(), store.getId());
         });
     }
     
@@ -77,7 +77,7 @@ public class StoreIntegrationTests {
                             .build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedStore);
+            Assert.assertNotNull(updatedStore);
             
             return updatedStore;
         });
@@ -99,7 +99,7 @@ public class StoreIntegrationTests {
                             .build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedStore);
+            Assert.assertNotNull(updatedStore);
 
             return updatedStore;
         });
@@ -115,8 +115,8 @@ public class StoreIntegrationTests {
                 .addVersion(store.getVersion())
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(deletedStore);
-        Assertions.assertEquals(store.getId(), deletedStore.getId());
+        Assert.assertNotNull(deletedStore);
+        Assert.assertEquals(store.getId(), deletedStore.getId());
     }
     
 }

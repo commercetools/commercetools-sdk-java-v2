@@ -2,8 +2,8 @@ package commercetools.channel;
 
 import com.commercetools.models.channel.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class ChannelIntegrationTests {
         Channel channel = ChannelFixtures.createChannel();
         Channel deletedChannel = ChannelFixtures.deleteChannel(channel.getId(), channel.getVersion());
 
-        Assertions.assertEquals(channel.getId(), deletedChannel.getId());
+        Assert.assertEquals(channel.getId(), deletedChannel.getId());
     }
     
     @Test
@@ -27,8 +27,8 @@ public class ChannelIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
             
-            Assertions.assertNotNull(queriedChannel);
-            Assertions.assertEquals(channel.getId(), queriedChannel.getId());
+            Assert.assertNotNull(queriedChannel);
+            Assert.assertEquals(channel.getId(), queriedChannel.getId());
         });
     }
     
@@ -41,8 +41,8 @@ public class ChannelIntegrationTests {
                     .addWhere("id=" + "\"" + channel.getId() + "\"")
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), channel.getId());
+            Assert.assertNotNull(response);
+            Assert.assertEquals(response.getResults().get(0).getId(), channel.getId());
         });
     }
     
@@ -61,7 +61,7 @@ public class ChannelIntegrationTests {
                             .build())
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updateChannel);
+            Assert.assertNotNull(updateChannel);
             
             return updateChannel;
         });

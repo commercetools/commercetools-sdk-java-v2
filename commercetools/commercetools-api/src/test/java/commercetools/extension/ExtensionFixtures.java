@@ -2,7 +2,7 @@ package commercetools.extension;
 
 import com.commercetools.models.extension.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
@@ -37,8 +37,8 @@ public class ExtensionFixtures {
                 .post(extensionDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(extension);
-        Assertions.assertEquals(extension.getKey(), extensionDraft.getKey());
+        Assert.assertNotNull(extension);
+        Assert.assertEquals(extension.getKey(), extensionDraft.getKey());
         
         return extension;
     }
@@ -51,8 +51,8 @@ public class ExtensionFixtures {
                 .addVersion(version)
                 .executeBlocking().getBody();
         
-        Assertions.assertNotNull(extension);
-        Assertions.assertEquals(extension.getId(), id);
+        Assert.assertNotNull(extension);
+        Assert.assertEquals(extension.getId(), id);
         
         return extension;
     }

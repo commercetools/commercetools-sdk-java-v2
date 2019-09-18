@@ -4,7 +4,7 @@ import com.commercetools.models.channel.Channel;
 import com.commercetools.models.channel.ChannelDraft;
 import com.commercetools.models.channel.ChannelDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -33,8 +33,8 @@ public class ChannelFixtures {
                 .post(channelDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(channel);
-        Assertions.assertEquals(channelDraft.getKey(), channel.getKey());
+        Assert.assertNotNull(channel);
+        Assert.assertEquals(channelDraft.getKey(), channel.getKey());
         
         return channel;
     }
@@ -47,8 +47,8 @@ public class ChannelFixtures {
                 .addVersion(version)
                 .executeBlocking().getBody();
         
-        Assertions.assertNotNull(channel);
-        Assertions.assertEquals(channel.getId(), id);
+        Assert.assertNotNull(channel);
+        Assert.assertEquals(channel.getId(), id);
         
         return channel;
     }

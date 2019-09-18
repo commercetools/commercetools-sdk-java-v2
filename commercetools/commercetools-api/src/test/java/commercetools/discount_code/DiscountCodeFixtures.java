@@ -8,7 +8,7 @@ import com.commercetools.models.discount_code.DiscountCodeDraft;
 import com.commercetools.models.discount_code.DiscountCodeDraftBuilder;
 import commercetools.cart_discount.CartDiscountFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
@@ -45,8 +45,8 @@ public class DiscountCodeFixtures {
                 .post(discountCodeDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(discountCode);
-        Assertions.assertEquals(discountCodeDraft.getCode(), discountCode.getCode());
+        Assert.assertNotNull(discountCode);
+        Assert.assertEquals(discountCodeDraft.getCode(), discountCode.getCode());
         
         return discountCode;
     }
@@ -64,8 +64,8 @@ public class DiscountCodeFixtures {
             CartDiscountFixtures.deleteCartDiscount(cartDiscountReference.getId(), cartDiscountReference.getObj().getVersion()); 
         });
 
-        Assertions.assertNotNull(discountCode);
-        Assertions.assertEquals(discountCode.getId(), id);
+        Assert.assertNotNull(discountCode);
+        Assert.assertEquals(discountCode.getId(), id);
         
         return discountCode;
     }

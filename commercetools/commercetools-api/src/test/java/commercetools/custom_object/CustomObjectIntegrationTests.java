@@ -5,8 +5,8 @@ import com.commercetools.models.custom_object.CustomObjectDraft;
 import com.commercetools.models.custom_object.CustomObjectDraftBuilder;
 import com.commercetools.models.custom_object.CustomObjectPagedQueryResponse;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class CustomObjectIntegrationTests {
     
@@ -15,7 +15,7 @@ public class CustomObjectIntegrationTests {
         CustomObject customObject = CustomObjectFixtures.createCustomObject();
         CustomObject deletedCustomObject = CustomObjectFixtures.deleteCustomObject(customObject.getId(), customObject.getVersion());
 
-        Assertions.assertEquals(customObject.getId(), deletedCustomObject.getId());
+        Assert.assertEquals(customObject.getId(), deletedCustomObject.getId());
     }
     
     @Test
@@ -27,8 +27,8 @@ public class CustomObjectIntegrationTests {
                     .get()
                     .executeBlocking().getBody();
             
-            Assertions.assertNotNull(queriedCustomObject);
-            Assertions.assertEquals(customObject.getId(), queriedCustomObject.getId());
+            Assert.assertNotNull(queriedCustomObject);
+            Assert.assertEquals(customObject.getId(), queriedCustomObject.getId());
         });
     }
     
@@ -47,8 +47,8 @@ public class CustomObjectIntegrationTests {
                     .post(customObjectDraft)
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(updatedCustomObject);
-            Assertions.assertEquals(updatedCustomObject.getValue(), newValue);
+            Assert.assertNotNull(updatedCustomObject);
+            Assert.assertEquals(updatedCustomObject.getValue(), newValue);
             
             return updatedCustomObject;
         });
@@ -63,8 +63,8 @@ public class CustomObjectIntegrationTests {
                     .addWhere("id=" + "\"" + customObject.getId() + "\"")
                     .executeBlocking().getBody();
 
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), customObject.getId());
+            Assert.assertNotNull(response);
+            Assert.assertEquals(response.getResults().get(0).getId(), customObject.getId());
         });
     }
 }

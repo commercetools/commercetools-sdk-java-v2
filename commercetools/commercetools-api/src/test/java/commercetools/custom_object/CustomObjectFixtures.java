@@ -4,7 +4,7 @@ import com.commercetools.models.custom_object.CustomObject;
 import com.commercetools.models.custom_object.CustomObjectDraft;
 import com.commercetools.models.custom_object.CustomObjectDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -35,7 +35,7 @@ public class CustomObjectFixtures {
                 .post(customObjectDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(customObject);
+        Assert.assertNotNull(customObject);
         
         return customObject;
     }
@@ -48,7 +48,7 @@ public class CustomObjectFixtures {
                 .addVersion(version)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(customObject);
+        Assert.assertNotNull(customObject);
         return customObject;
     }
 }

@@ -3,8 +3,8 @@ package commercetools.category;
 import com.commercetools.models.category.*;
 import com.commercetools.models.common.LocalizedString;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +14,9 @@ public class CategoryIntegrationTests {
     @Test
     public void createAndDelete() {
         Category category = CategoryFixtures.createCategory();
-        Assertions.assertNotNull(category);
+        Assert.assertNotNull(category);
         Category deletedCategory = CategoryFixtures.deleteCategory(category.getId(), category.getVersion());
-        Assertions.assertEquals(category.getId(), deletedCategory.getId());
+        Assert.assertEquals(category.getId(), deletedCategory.getId());
     }
     
     @Test
@@ -27,7 +27,7 @@ public class CategoryIntegrationTests {
                     .withId(category.getId())
                     .get()
                     .executeBlocking().getBody();
-            Assertions.assertEquals(category.getId(), queriedCategory.getId());
+            Assert.assertEquals(category.getId(), queriedCategory.getId());
         });
     }
     
@@ -39,8 +39,8 @@ public class CategoryIntegrationTests {
                     .withKey(category.getKey())
                     .get()
                     .executeBlocking().getBody();
-            Assertions.assertEquals(category.getId(), queriedCategory.getId());
-            Assertions.assertEquals(category.getKey(), queriedCategory.getKey());
+            Assert.assertEquals(category.getId(), queriedCategory.getId());
+            Assert.assertEquals(category.getKey(), queriedCategory.getKey());
         });
     }
     
@@ -53,7 +53,7 @@ public class CategoryIntegrationTests {
                 .delete()
                 .addVersion(category.getVersion())
                 .executeBlocking().getBody();
-        Assertions.assertEquals(category.getId(), deletedCategory.getId());
+        Assert.assertEquals(category.getId(), deletedCategory.getId());
     }
     
     @Test
@@ -65,7 +65,7 @@ public class CategoryIntegrationTests {
                 .delete()
                 .addVersion(category.getVersion())
                 .executeBlocking().getBody();
-        Assertions.assertEquals(category.getId(), deletedCategory.getId());
+        Assert.assertEquals(category.getId(), deletedCategory.getId());
     }
 
     @Test
@@ -76,8 +76,8 @@ public class CategoryIntegrationTests {
                 .get()
                 .addWhere("id=" + "\"" + category.getId() + "\"")
                 .executeBlocking().getBody();
-        Assertions.assertEquals(response.getResults().size(), 1);
-        Assertions.assertEquals(response.getResults().get(0).getId(), category.getId());
+        Assert.assertEquals(response.getResults().size(), 1);
+        Assert.assertEquals(response.getResults().get(0).getId(), category.getId());
         CategoryFixtures.deleteCategory(category.getId(), category.getVersion());
     }
 
@@ -99,8 +99,8 @@ public class CategoryIntegrationTests {
                     .withId(category.getId())
                     .post(categoryUpdate)
                     .executeBlocking().getBody();
-            Assertions.assertEquals(category.getId(), updatedCategory.getId());
-            Assertions.assertEquals(newName.values(), updatedCategory.getName().values());
+            Assert.assertEquals(category.getId(), updatedCategory.getId());
+            Assert.assertEquals(newName.values(), updatedCategory.getName().values());
             
             return updatedCategory;
         });

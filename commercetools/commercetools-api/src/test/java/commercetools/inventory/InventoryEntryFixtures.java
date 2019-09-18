@@ -4,7 +4,7 @@ import com.commercetools.models.inventory.InventoryEntry;
 import com.commercetools.models.inventory.InventoryEntryDraft;
 import com.commercetools.models.inventory.InventoryEntryDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -34,9 +34,9 @@ public class InventoryEntryFixtures {
                 .post(inventoryEntryDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(inventoryEntry);
-        Assertions.assertEquals(inventoryEntry.getSku(), inventoryEntryDraft.getSku());
-        Assertions.assertEquals(inventoryEntry.getQuantityOnStock(), inventoryEntryDraft.getQuantityOnStock());
+        Assert.assertNotNull(inventoryEntry);
+        Assert.assertEquals(inventoryEntry.getSku(), inventoryEntryDraft.getSku());
+        Assert.assertEquals(inventoryEntry.getQuantityOnStock(), inventoryEntryDraft.getQuantityOnStock());
         
         return inventoryEntry;
     }
@@ -47,7 +47,7 @@ public class InventoryEntryFixtures {
                 .withId(id)
                 .delete()
                 .executeBlocking().getBody();
-        Assertions.assertNotNull(inventoryEntry);
+        Assert.assertNotNull(inventoryEntry);
         return inventoryEntry;
     }
     

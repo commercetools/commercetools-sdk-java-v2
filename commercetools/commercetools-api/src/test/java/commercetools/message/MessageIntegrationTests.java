@@ -6,8 +6,8 @@ import com.commercetools.models.product.Product;
 import commercetools.product.ProductFixtures;
 import commercetools.product_type.ProductTypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class MessageIntegrationTests {
     
@@ -21,8 +21,8 @@ public class MessageIntegrationTests {
                 .get()
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(response);
-        Assertions.assertFalse(response.getResults().isEmpty());
+        Assert.assertNotNull(response);
+        Assert.assertFalse(response.getResults().isEmpty());
     }    
     
     @Test
@@ -42,7 +42,7 @@ public class MessageIntegrationTests {
                 .get()
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(message);
-        Assertions.assertEquals(message.getId(), messageId);
+        Assert.assertNotNull(message);
+        Assert.assertEquals(message.getId(), messageId);
     }
 }

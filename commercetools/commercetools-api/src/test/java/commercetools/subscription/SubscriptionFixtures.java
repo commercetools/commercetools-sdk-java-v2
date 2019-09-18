@@ -2,7 +2,7 @@ package commercetools.subscription;
 
 import com.commercetools.models.subscription.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
@@ -37,7 +37,7 @@ public class SubscriptionFixtures {
                 .post(subscriptionDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(subscription);
+        Assert.assertNotNull(subscription);
         
         return subscription;
     }
@@ -50,7 +50,7 @@ public class SubscriptionFixtures {
                 .addVersion(version)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(subscription);
+        Assert.assertNotNull(subscription);
         
         return subscription;
     }

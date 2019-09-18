@@ -5,7 +5,7 @@ import com.commercetools.models.state.StateDraft;
 import com.commercetools.models.state.StateDraftBuilder;
 import com.commercetools.models.state.StateTypeEnum;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -35,8 +35,8 @@ public class StateFixtures {
                 .post(stateDraft)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(state);
-        Assertions.assertEquals(stateDraft.getKey(), state.getKey());
+        Assert.assertNotNull(state);
+        Assert.assertEquals(stateDraft.getKey(), state.getKey());
         
         return state;
     }
@@ -49,8 +49,8 @@ public class StateFixtures {
                 .addVersion(version)
                 .executeBlocking().getBody();
 
-        Assertions.assertNotNull(state);
-        Assertions.assertEquals(state.getId(), id);
+        Assert.assertNotNull(state);
+        Assert.assertEquals(state.getId(), id);
         
         return state;
     }

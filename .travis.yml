@@ -10,9 +10,9 @@ script: >
   cd commercetools-api-reference && 
   export TEST_RAML_FILE="$(realpath update-actions.raml)" && 
   cd ../rmf-codegen &&
-  ./gradlew clean build
+  ./gradlew clean build 
 deploy:
   provider: script
-  script: ./gradlew clean && ./gradlew build bintrayUpload --info && cd ../.. && ./gradlew clean build bintrayUpload --info
+  script: ./gradlew clean && ./gradlew build bintrayUpload --info && cd ../.. && ./gradlew clean && ./gradlew build bintrayUpload --info
   on:
     branch: master

@@ -12,11 +12,8 @@ script: >
   cd .. && 
   cd rmf-codegen && 
   ./gradlew clean build &&
-  ./gradlew clean &&
-  cd .. && 
-  ./gradlew clean
 deploy:
   provider: script
-  script: ./gradlew clean build bintrayUpload --info && cd ../.. && ./gradlew clean build bintrayUpload --info
+  script: ./gradlew clean && ./grdalew build bintrayUpload --info && cd ../.. && ./gradlew clean build bintrayUpload --info
   on:
     branch: master

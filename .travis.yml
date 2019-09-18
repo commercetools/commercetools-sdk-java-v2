@@ -2,7 +2,7 @@ language: java
 jdk:
   - openjdk8
 script: >
-  gradle clean build && 
+  ./gradlew clean build &&
   mkdir build-process && 
   cd build-process && 
   git clone https://github.com/vrapio/rmf-codegen.git && 
@@ -11,12 +11,12 @@ script: >
   export TEST_RAML_FILE="$(realpath update-actions.raml)" && 
   cd .. && 
   cd rmf-codegen && 
-  gradle clean build && 
-  gradle clean && 
+  ./gradlew clean build &&
+  ./gradlew clean &&
   cd .. && 
-  gradle clean
+  ./gradlew clean
 deploy:
   provider: script
-  script: gradle clean build bintrayUpload --info && cd ../.. && gradle clean build bintrayUpload --info
+  script: ./gradlew clean build bintrayUpload --info && cd ../.. && ./gradlew clean build bintrayUpload --info
   on:
     branch: master

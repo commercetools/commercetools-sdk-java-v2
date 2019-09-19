@@ -15,4 +15,4 @@ deploy:
   provider: script
   script: ./gradlew clean build bintrayUpload --info && cd ../.. && ./gradlew clean build bintrayUpload --info  -Dpublish=true
   on:
-    branch: fix_bintry_deploy
+    branch: master

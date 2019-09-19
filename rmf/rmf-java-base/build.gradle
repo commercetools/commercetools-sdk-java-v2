@@ -14,5 +14,4 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
     compile 'com.fasterxml.jackson.core:jackson-core:2.9.9'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8'
-    compile 'org.apache.logging.log4j:log4j-core:2.10.0'
 }

@@ -87,17 +87,17 @@ subprojects { project ->
             vcsUrl = 'https://github.com/commercetools/commercetools-java-sdks'
         }
     }
-
-    task sourceJar(type: Jar) {
-        from sourceSets.main.allSource
-        classifier = 'sources'
+    
+    task sourcesJar(type: Jar) {
+        archiveClassifier = 'sources'
+        from sourceSets.main.allJava
     }
 
-    task packageJavadoc(type: Jar) {
-        from javadoc
-        classifier = 'javadoc'
+    task javadocJar(type: Jar) {
+        archiveClassifier = 'javadoc'
+        from javadoc.destinationDir
     }
-
+    
     javadoc {
         source = sourceSets.main.allJava
         classpath = configurations.compileClasspath

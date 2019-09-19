@@ -15,7 +15,7 @@ This repository contains the commercetools java sdks generated from our api refe
 The latest unstable SDK release can be retrieved from [jcenter](https://bintray.com/commercetools/maven/commercetools-java-sdks/)  with:
 ```gradle
 ext {
-    sdkVersion = "1.0.0-20190918102253"
+    sdkVersion = "1.0.0-20190919113231"
 }
 
 sourceCompatibility = 1.8

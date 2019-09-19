@@ -2,6 +2,9 @@ publishing {
     publications {
         Maven(MavenPublication) {
             from components.java
+
+            artifact sourcesJar
+            artifact javadocJar
         }
     }
 }

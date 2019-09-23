@@ -69,7 +69,10 @@ public class ByProjectKeyProductsByIDImagesPost {
    
    public CompletableFuture<ApiHttpResponse<com.commercetools.models.product.Product>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.product.Product.class));
+              .thenApply(response -> {
+                  
+                  return Utils.convertResponse(response,com.commercetools.models.product.Product.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

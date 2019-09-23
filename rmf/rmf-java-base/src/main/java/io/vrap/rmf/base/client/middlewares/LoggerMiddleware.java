@@ -10,6 +10,9 @@ public final class LoggerMiddleware implements Middleware {
     @Override
     public CompletableFuture<MiddlewareArg> next(MiddlewareArg arg) {
         try{
+            if(arg.getError() != null){
+                arg.getError().printStackTrace();
+            }
             LoggerMessage loggerMessage = new LoggerMessage();
             loggerMessage.setUrl(arg.getRequest().getBaseUrl() + arg.getRequest().getRelativeUrl());
             loggerMessage.setMethod(arg.getRequest().getMethod().name());

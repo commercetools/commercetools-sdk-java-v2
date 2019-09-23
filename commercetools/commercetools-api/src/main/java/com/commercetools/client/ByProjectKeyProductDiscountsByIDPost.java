@@ -63,7 +63,72 @@ public class ByProjectKeyProductDiscountsByIDPost {
    
    public CompletableFuture<ApiHttpResponse<com.commercetools.models.product_discount.ProductDiscount>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.product_discount.ProductDiscount.class));
+              .thenApply(response -> {
+                  if(response.getStatusCode() == 409){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+   
+   if(response.getStatusCode() == 400){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+   
+   if(response.getStatusCode() == 401){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+   
+   if(response.getStatusCode() == 403){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+   
+   if(response.getStatusCode() == 404){
+      throw new RuntimeException("Response status code : " + 404);
+   }
+   
+   if(response.getStatusCode() == 500){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+   
+   if(response.getStatusCode() == 503){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+                  return Utils.convertResponse(response,com.commercetools.models.product_discount.ProductDiscount.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

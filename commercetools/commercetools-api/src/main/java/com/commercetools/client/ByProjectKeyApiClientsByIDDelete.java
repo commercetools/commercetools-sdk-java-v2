@@ -1,21 +1,17 @@
 package com.commercetools.client;
 
+import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
-import java.io.InputStream;
-import java.io.IOException;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
-import java.util.concurrent.CompletableFuture;
-
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import io.vrap.rmf.base.client.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 public class ByProjectKeyApiClientsByIDDelete {
    
@@ -61,7 +57,62 @@ public class ByProjectKeyApiClientsByIDDelete {
    
    public CompletableFuture<ApiHttpResponse<com.commercetools.models.api_client.ApiClient>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.api_client.ApiClient.class));
+              .thenApply(response -> {
+                  if(response.getStatusCode() == 400){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+   
+   if(response.getStatusCode() == 401){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+   
+   if(response.getStatusCode() == 403){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+   
+   if(response.getStatusCode() == 404){
+      throw new RuntimeException("Response status code : " + 404);
+   }
+   
+   if(response.getStatusCode() == 500){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+   
+   if(response.getStatusCode() == 503){
+      try{
+          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
+          throw new RuntimeException(errorResponse.getMessage());
+      }catch(Exception e){
+          e.printStackTrace();
+          throw new RuntimeException(e.getMessage());
+      }
+   }
+                  return Utils.convertResponse(response,com.commercetools.models.api_client.ApiClient.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

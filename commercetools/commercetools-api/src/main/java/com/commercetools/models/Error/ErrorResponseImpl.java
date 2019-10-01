@@ -1,21 +1,9 @@
 package com.commercetools.models.error;
 
-import com.commercetools.models.error.ErrorObject;
-import java.lang.Integer;
-import java.lang.String;
-import javax.annotation.Generated;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.List;
-import java.util.Map;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.annotation.Generated;
 
 
 @Generated(
@@ -35,7 +23,7 @@ public final class ErrorResponseImpl implements ErrorResponse {
    private java.lang.Integer statusCode;
 
    @JsonCreator
-   ErrorResponseImpl(@JsonProperty("errorDescription") final java.lang.String errorDescription, @JsonProperty("error") final java.lang.String error, @JsonProperty("message") final java.lang.String message, @JsonProperty("errors") final java.util.List<com.commercetools.models.error.ErrorObject> errors, @JsonProperty("statusCode") final java.lang.Integer statusCode) {
+   ErrorResponseImpl(@JsonProperty("error_description") final java.lang.String errorDescription, @JsonProperty("error") final java.lang.String error, @JsonProperty("message") final java.lang.String message, @JsonProperty("errors") final java.util.List<com.commercetools.models.error.ErrorObject> errors, @JsonProperty("statusCode") final java.lang.Integer statusCode) {
       this.errorDescription = errorDescription;
       this.error = error;
       this.message = message;

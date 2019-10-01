@@ -62,15 +62,9 @@ public class ByProjectKeyPost {
    public CompletableFuture<ApiHttpResponse<com.commercetools.models.project.Project>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
               .thenApply(response -> {
-                  if(response.getStatusCode() == 409){
-      try{
-          com.commercetools.models.error.ErrorResponse errorResponse = VrapJsonUtils.fromJsonString(new String(response.getBody()), com.commercetools.models.error.ErrorResponse.class);
-          throw new RuntimeException(errorResponse.getMessage());
-      }catch(Exception e){
-          e.printStackTrace();
-          throw new RuntimeException(e.getMessage());
-      }
-   }
+                  if(response.getStatusCode() >= 400){
+                      throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                  }
                   return Utils.convertResponse(response,com.commercetools.models.project.Project.class);
               });
    }

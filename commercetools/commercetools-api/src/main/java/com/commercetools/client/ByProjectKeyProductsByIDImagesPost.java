@@ -70,7 +70,9 @@ public class ByProjectKeyProductsByIDImagesPost {
    public CompletableFuture<ApiHttpResponse<com.commercetools.models.product.Product>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
               .thenApply(response -> {
-                  
+                  if(response.getStatusCode() >= 400){
+                      throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                  }
                   return Utils.convertResponse(response,com.commercetools.models.product.Product.class);
               });
    }

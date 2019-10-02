@@ -22,14 +22,14 @@ public class CartDiscountFixtures {
     }
     
     public static CartDiscount createCartDiscount() {
-        CartDiscountValue cartDiscountValue = CartDiscountValueRelativeBuilder.of()
+        CartDiscountValueDraft cartDiscountValueDraft = CartDiscountValueRelativeDraftBuilder.of()
                 .permyriad(10L)
                 .build();
 
         CartDiscountDraft cartDiscountDraft = CartDiscountDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomLocalizedString())
                 .key(CommercetoolsTestUtils.randomKey())
-                .value(cartDiscountValue)
+                .value(cartDiscountValueDraft)
                 .cartPredicate("country=\"DE\"")
                 .target(CartDiscountShippingCostTargetBuilder.of().build())
                 .sortOrder("0.41")

@@ -1,9 +1,6 @@
 package commercetools.product_discount;
 
-import com.commercetools.models.product_discount.ProductDiscount;
-import com.commercetools.models.product_discount.ProductDiscountDraft;
-import com.commercetools.models.product_discount.ProductDiscountDraftBuilder;
-import com.commercetools.models.product_discount.ProductDiscountValueExternalBuilder;
+import com.commercetools.models.product_discount.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
@@ -30,7 +27,7 @@ public class ProductDiscountFixtures {
                 .key(CommercetoolsTestUtils.randomKey())
                 .sortOrder("0.3")
                 .predicate("product.key=\"random-key\"")
-                .value(ProductDiscountValueExternalBuilder.of().build())
+                .value(ProductDiscountValueRelativeDraftBuilder.of().permyriad(1000L).build())
                 .isActive(false)
                 .build();
 

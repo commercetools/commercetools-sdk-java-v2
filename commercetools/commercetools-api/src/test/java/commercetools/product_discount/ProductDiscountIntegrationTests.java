@@ -17,7 +17,7 @@ public class ProductDiscountIntegrationTests {
                 .key(CommercetoolsTestUtils.randomKey())
                 .sortOrder("0.4")
                 .predicate("product.key=\"random-key\"")
-                .value(ProductDiscountValueExternalBuilder.of().build())
+                .value(ProductDiscountValueRelativeDraftBuilder.of().permyriad(1000L).build())
                 .isActive(false)
                 .build();
 

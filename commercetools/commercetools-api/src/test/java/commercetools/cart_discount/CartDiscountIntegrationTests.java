@@ -21,14 +21,14 @@ public class CartDiscountIntegrationTests {
     
     @Test
     public void createAndDelete() {
-        CartDiscountValue cartDiscountValue = CartDiscountValueRelativeBuilder.of()
+        CartDiscountValueDraft cartDiscountValueDraft = CartDiscountValueRelativeDraftBuilder.of()
                 .permyriad(10L)
                 .build();
 
         CartDiscountDraft cartDiscountDraft = CartDiscountDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomLocalizedString())
                 .key(CommercetoolsTestUtils.randomKey())
-                .value(cartDiscountValue)
+                .value(cartDiscountValueDraft)
                 .cartPredicate("country=\"DE\"")
                 .target(CartDiscountShippingCostTargetBuilder.of().build())
                 .sortOrder("0.42")

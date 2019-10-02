@@ -1,7 +1,6 @@
 package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionDestination;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionAWSLambdaDestinationImpl implements ExtensionAWSLambdaDestination {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String accessKey;
+   private String accessKey;
    
-   private java.lang.String arn;
+   private String arn;
    
-   private java.lang.String accessSecret;
+   private String accessSecret;
 
    @JsonCreator
-   ExtensionAWSLambdaDestinationImpl(@JsonProperty("accessKey") final java.lang.String accessKey, @JsonProperty("arn") final java.lang.String arn, @JsonProperty("accessSecret") final java.lang.String accessSecret) {
+   ExtensionAWSLambdaDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("arn") final String arn, @JsonProperty("accessSecret") final String accessSecret) {
       this.accessKey = accessKey;
       this.arn = arn;
       this.accessSecret = accessSecret;
@@ -43,34 +42,34 @@ public final class ExtensionAWSLambdaDestinationImpl implements ExtensionAWSLamb
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getAccessKey(){
+   public String getAccessKey(){
       return this.accessKey;
    }
    
    
-   public java.lang.String getArn(){
+   public String getArn(){
       return this.arn;
    }
    
    
-   public java.lang.String getAccessSecret(){
+   public String getAccessSecret(){
       return this.accessSecret;
    }
 
-   public void setAccessKey(final java.lang.String accessKey){
+   public void setAccessKey(final String accessKey){
       this.accessKey = accessKey;
    }
    
-   public void setArn(final java.lang.String arn){
+   public void setArn(final String arn){
       this.arn = arn;
    }
    
-   public void setAccessSecret(final java.lang.String accessSecret){
+   public void setAccessSecret(final String accessSecret){
       this.accessSecret = accessSecret;
    }
 

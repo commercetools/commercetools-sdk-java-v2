@@ -1,6 +1,6 @@
 package com.commercetools.models.common;
 
-import java.lang.Integer;
+
 import com.commercetools.models.common.ImageDimensions;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class ImageDimensionsBuilder {
    
    
-   private java.lang.Integer w;
+   private Integer w;
    
    
-   private java.lang.Integer h;
+   private Integer h;
    
-   public ImageDimensionsBuilder w( final java.lang.Integer w) {
+   public ImageDimensionsBuilder w( final Integer w) {
       this.w = w;
       return this;
    }
    
-   public ImageDimensionsBuilder h( final java.lang.Integer h) {
+   public ImageDimensionsBuilder h( final Integer h) {
       this.h = h;
       return this;
    }
    
    
-   public java.lang.Integer getW(){
+   public Integer getW(){
       return this.w;
    }
    
    
-   public java.lang.Integer getH(){
+   public Integer getH(){
       return this.h;
    }
 

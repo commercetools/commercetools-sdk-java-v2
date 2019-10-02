@@ -1,6 +1,6 @@
 package com.commercetools.models.subscription;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChangeSubscriptionImpl implements ChangeSubscription {
 
-   private java.lang.String resourceTypeId;
+   private String resourceTypeId;
 
    @JsonCreator
-   ChangeSubscriptionImpl(@JsonProperty("resourceTypeId") final java.lang.String resourceTypeId) {
+   ChangeSubscriptionImpl(@JsonProperty("resourceTypeId") final String resourceTypeId) {
       this.resourceTypeId = resourceTypeId;
    }
    public ChangeSubscriptionImpl() {
@@ -33,11 +33,11 @@ public final class ChangeSubscriptionImpl implements ChangeSubscription {
    }
    
    
-   public java.lang.String getResourceTypeId(){
+   public String getResourceTypeId(){
       return this.resourceTypeId;
    }
 
-   public void setResourceTypeId(final java.lang.String resourceTypeId){
+   public void setResourceTypeId(final String resourceTypeId){
       this.resourceTypeId = resourceTypeId;
    }
 

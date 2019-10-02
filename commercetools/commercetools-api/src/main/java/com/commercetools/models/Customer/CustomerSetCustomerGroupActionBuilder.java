@@ -2,7 +2,6 @@ package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.CustomerUpdateAction;
 import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.customer.CustomerSetCustomerGroupAction;
 import javax.annotation.Nullable;
 import java.util.List;

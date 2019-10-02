@@ -2,7 +2,6 @@ package com.commercetools.models.type;
 
 import com.commercetools.models.type.CustomFieldEnumValue;
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.type.TypeAddEnumValueAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class TypeAddEnumValueActionBuilder {
    
    
-   private java.lang.String fieldName;
+   private String fieldName;
    
    
    private com.commercetools.models.type.CustomFieldEnumValue value;
    
-   public TypeAddEnumValueActionBuilder fieldName( final java.lang.String fieldName) {
+   public TypeAddEnumValueActionBuilder fieldName( final String fieldName) {
       this.fieldName = fieldName;
       return this;
    }
@@ -28,7 +27,7 @@ public final class TypeAddEnumValueActionBuilder {
    }
    
    
-   public java.lang.String getFieldName(){
+   public String getFieldName(){
       return this.fieldName;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductData;
-import java.lang.Boolean;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -27,12 +26,12 @@ public final class ProductCatalogDataImpl implements ProductCatalogData {
    
    private com.commercetools.models.product.ProductData staged;
    
-   private java.lang.Boolean published;
+   private Boolean published;
    
-   private java.lang.Boolean hasStagedChanges;
+   private Boolean hasStagedChanges;
 
    @JsonCreator
-   ProductCatalogDataImpl(@JsonProperty("current") final com.commercetools.models.product.ProductData current, @JsonProperty("staged") final com.commercetools.models.product.ProductData staged, @JsonProperty("published") final java.lang.Boolean published, @JsonProperty("hasStagedChanges") final java.lang.Boolean hasStagedChanges) {
+   ProductCatalogDataImpl(@JsonProperty("current") final com.commercetools.models.product.ProductData current, @JsonProperty("staged") final com.commercetools.models.product.ProductData staged, @JsonProperty("published") final Boolean published, @JsonProperty("hasStagedChanges") final Boolean hasStagedChanges) {
       this.current = current;
       this.staged = staged;
       this.published = published;
@@ -53,12 +52,12 @@ public final class ProductCatalogDataImpl implements ProductCatalogData {
    }
    
    
-   public java.lang.Boolean getPublished(){
+   public Boolean getPublished(){
       return this.published;
    }
    
    
-   public java.lang.Boolean getHasStagedChanges(){
+   public Boolean getHasStagedChanges(){
       return this.hasStagedChanges;
    }
 
@@ -70,11 +69,11 @@ public final class ProductCatalogDataImpl implements ProductCatalogData {
       this.staged = staged;
    }
    
-   public void setPublished(final java.lang.Boolean published){
+   public void setPublished(final Boolean published){
       this.published = published;
    }
    
-   public void setHasStagedChanges(final java.lang.Boolean hasStagedChanges){
+   public void setHasStagedChanges(final Boolean hasStagedChanges){
       this.hasStagedChanges = hasStagedChanges;
    }
 

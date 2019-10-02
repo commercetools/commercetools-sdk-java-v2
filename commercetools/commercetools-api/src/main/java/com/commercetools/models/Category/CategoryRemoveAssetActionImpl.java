@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String assetId;
+   private String assetId;
    
-   private java.lang.String assetKey;
+   private String assetKey;
 
    @JsonCreator
-   CategoryRemoveAssetActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   CategoryRemoveAssetActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey) {
       this.assetId = assetId;
       this.assetKey = assetKey;
       this.action = "removeAsset";
@@ -40,25 +39,25 @@ public final class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
 
-   public void setAssetId(final java.lang.String assetId){
+   public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
    
-   public void setAssetKey(final java.lang.String assetKey){
+   public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
    }
 

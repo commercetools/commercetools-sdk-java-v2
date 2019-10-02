@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.ReturnItem;
-import java.lang.String;
 import com.commercetools.models.order.LineItemReturnItem;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,19 +19,19 @@ public final class LineItemReturnItemBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
    @Nullable
-   private java.lang.String comment;
+   private String comment;
    
    
-   private java.lang.String id;
+   private String id;
    
    
    private com.commercetools.models.order.ReturnPaymentState paymentState;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    public LineItemReturnItemBuilder shipmentState( final com.commercetools.models.order.ReturnShipmentState shipmentState) {
       this.shipmentState = shipmentState;
@@ -49,17 +48,17 @@ public final class LineItemReturnItemBuilder {
       return this;
    }
    
-   public LineItemReturnItemBuilder quantity( final java.lang.Long quantity) {
+   public LineItemReturnItemBuilder quantity( final Long quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public LineItemReturnItemBuilder comment(@Nullable final java.lang.String comment) {
+   public LineItemReturnItemBuilder comment(@Nullable final String comment) {
       this.comment = comment;
       return this;
    }
    
-   public LineItemReturnItemBuilder id( final java.lang.String id) {
+   public LineItemReturnItemBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -69,7 +68,7 @@ public final class LineItemReturnItemBuilder {
       return this;
    }
    
-   public LineItemReturnItemBuilder lineItemId( final java.lang.String lineItemId) {
+   public LineItemReturnItemBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -90,17 +89,17 @@ public final class LineItemReturnItemBuilder {
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    @Nullable
-   public java.lang.String getComment(){
+   public String getComment(){
       return this.comment;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -110,7 +109,7 @@ public final class LineItemReturnItemBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
 

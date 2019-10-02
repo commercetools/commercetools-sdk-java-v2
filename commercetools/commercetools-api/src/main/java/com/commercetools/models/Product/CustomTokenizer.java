@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.SuggestTokenizer;
-import java.lang.String;
 import com.commercetools.models.product.CustomTokenizerImpl;
 
 import com.fasterxml.jackson.annotation.*;

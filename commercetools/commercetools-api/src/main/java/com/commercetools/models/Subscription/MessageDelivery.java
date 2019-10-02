@@ -2,8 +2,6 @@ package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.PayloadNotIncluded;
 import com.commercetools.models.subscription.SubscriptionDelivery;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.subscription.MessageDeliveryImpl;
 

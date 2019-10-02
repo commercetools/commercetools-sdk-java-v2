@@ -1,6 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.String;
+
 import com.commercetools.models.product.Suggestion;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class SuggestionBuilder {
    
    
-   private java.lang.String text;
+   private String text;
    
-   public SuggestionBuilder text( final java.lang.String text) {
+   public SuggestionBuilder text( final String text) {
       this.text = text;
       return this;
    }
    
    
-   public java.lang.String getText(){
+   public String getText(){
       return this.text;
    }
 

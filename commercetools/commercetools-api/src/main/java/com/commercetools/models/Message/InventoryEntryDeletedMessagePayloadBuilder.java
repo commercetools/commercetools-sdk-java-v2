@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.InventoryEntryDeletedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class InventoryEntryDeletedMessagePayloadBuilder {
    private com.commercetools.models.channel.ChannelReference supplyChannel;
    
    
-   private java.lang.String sku;
+   private String sku;
    
    public InventoryEntryDeletedMessagePayloadBuilder supplyChannel( final com.commercetools.models.channel.ChannelReference supplyChannel) {
       this.supplyChannel = supplyChannel;
       return this;
    }
    
-   public InventoryEntryDeletedMessagePayloadBuilder sku( final java.lang.String sku) {
+   public InventoryEntryDeletedMessagePayloadBuilder sku( final String sku) {
       this.sku = sku;
       return this;
    }
@@ -33,7 +32,7 @@ public final class InventoryEntryDeletedMessagePayloadBuilder {
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

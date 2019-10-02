@@ -9,7 +9,6 @@ import com.commercetools.models.state.StateSetDescriptionAction;
 import com.commercetools.models.state.StateSetNameAction;
 import com.commercetools.models.state.StateSetRolesAction;
 import com.commercetools.models.state.StateSetTransitionsAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

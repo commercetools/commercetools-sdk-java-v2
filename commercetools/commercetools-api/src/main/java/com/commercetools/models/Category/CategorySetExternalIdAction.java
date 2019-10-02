@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import com.commercetools.models.category.CategorySetExternalIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

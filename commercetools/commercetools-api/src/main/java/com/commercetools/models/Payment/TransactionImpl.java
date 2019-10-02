@@ -3,7 +3,6 @@ package com.commercetools.models.payment;
 import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.payment.TransactionState;
 import com.commercetools.models.payment.TransactionType;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,20 +25,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TransactionImpl implements Transaction {
 
-   private java.lang.String interactionId;
+   private String interactionId;
    
    private com.commercetools.models.common.TypedMoney amount;
    
    private com.commercetools.models.payment.TransactionState state;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.payment.TransactionType type;
    
    private java.time.ZonedDateTime timestamp;
 
    @JsonCreator
-   TransactionImpl(@JsonProperty("interactionId") final java.lang.String interactionId, @JsonProperty("amount") final com.commercetools.models.common.TypedMoney amount, @JsonProperty("state") final com.commercetools.models.payment.TransactionState state, @JsonProperty("id") final java.lang.String id, @JsonProperty("type") final com.commercetools.models.payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
+   TransactionImpl(@JsonProperty("interactionId") final String interactionId, @JsonProperty("amount") final com.commercetools.models.common.TypedMoney amount, @JsonProperty("state") final com.commercetools.models.payment.TransactionState state, @JsonProperty("id") final String id, @JsonProperty("type") final com.commercetools.models.payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
       this.interactionId = interactionId;
       this.amount = amount;
       this.state = state;
@@ -52,7 +51,7 @@ public final class TransactionImpl implements Transaction {
    }
    
    
-   public java.lang.String getInteractionId(){
+   public String getInteractionId(){
       return this.interactionId;
    }
    
@@ -67,7 +66,7 @@ public final class TransactionImpl implements Transaction {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -81,7 +80,7 @@ public final class TransactionImpl implements Transaction {
       return this.timestamp;
    }
 
-   public void setInteractionId(final java.lang.String interactionId){
+   public void setInteractionId(final String interactionId){
       this.interactionId = interactionId;
    }
    
@@ -93,7 +92,7 @@ public final class TransactionImpl implements Transaction {
       this.state = state;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

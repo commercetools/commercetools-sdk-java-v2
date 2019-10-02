@@ -2,7 +2,6 @@ package com.commercetools.models.type;
 
 import com.commercetools.models.type.CustomFieldEnumValue;
 import com.commercetools.models.type.FieldType;
-import java.lang.String;
 import com.commercetools.models.type.CustomFieldEnumTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;

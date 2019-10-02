@@ -17,13 +17,19 @@ public final class OrderShipmentStateChangedMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -32,10 +38,7 @@ public final class OrderShipmentStateChangedMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    
    private com.commercetools.models.order.ShipmentState shipmentState;
@@ -53,17 +56,27 @@ public final class OrderShipmentStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderShipmentStateChangedMessageBuilder id( final java.lang.String id) {
+   public OrderShipmentStateChangedMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public OrderShipmentStateChangedMessageBuilder version( final java.lang.Long version) {
+   public OrderShipmentStateChangedMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public OrderShipmentStateChangedMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public OrderShipmentStateChangedMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public OrderShipmentStateChangedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public OrderShipmentStateChangedMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -78,13 +91,8 @@ public final class OrderShipmentStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderShipmentStateChangedMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public OrderShipmentStateChangedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
-      return this;
-   }
-   
-   public OrderShipmentStateChangedMessageBuilder type( final java.lang.String type) {
-      this.type = type;
       return this;
    }
    
@@ -109,17 +117,27 @@ public final class OrderShipmentStateChangedMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -134,13 +152,8 @@ public final class OrderShipmentStateChangedMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
-   }
-   
-   
-   public java.lang.String getType(){
-      return this.type;
    }
    
    
@@ -154,7 +167,7 @@ public final class OrderShipmentStateChangedMessageBuilder {
    }
 
    public OrderShipmentStateChangedMessage build() {
-       return new OrderShipmentStateChangedMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, shipmentState, oldShipmentState);
+       return new OrderShipmentStateChangedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, shipmentState, oldShipmentState);
    }
    
    public static OrderShipmentStateChangedMessageBuilder of() {
@@ -167,11 +180,12 @@ public final class OrderShipmentStateChangedMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.shipmentState = template.getShipmentState();
       builder.oldShipmentState = template.getOldShipmentState();
       return builder;

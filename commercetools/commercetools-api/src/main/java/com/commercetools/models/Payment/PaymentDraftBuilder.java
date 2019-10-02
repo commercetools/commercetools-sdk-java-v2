@@ -6,7 +6,6 @@ import com.commercetools.models.payment.PaymentMethodInfo;
 import com.commercetools.models.payment.PaymentStatusDraft;
 import com.commercetools.models.payment.TransactionDraft;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -19,7 +18,7 @@ public final class PaymentDraftBuilder {
    private com.commercetools.models.common.Money amountAuthorized;
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    @Nullable
    private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
@@ -28,10 +27,10 @@ public final class PaymentDraftBuilder {
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private java.lang.String authorizedUntil;
+   private String authorizedUntil;
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
    @Nullable
    private java.util.List<com.commercetools.models.payment.TransactionDraft> transactions;
@@ -49,10 +48,10 @@ public final class PaymentDraftBuilder {
    private java.util.List<com.commercetools.models.type.CustomFieldsDraft> interfaceInteractions;
    
    @Nullable
-   private java.lang.String interfaceId;
+   private String interfaceId;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    @Nullable
    private com.commercetools.models.payment.PaymentStatusDraft paymentStatus;
@@ -65,7 +64,7 @@ public final class PaymentDraftBuilder {
       return this;
    }
    
-   public PaymentDraftBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public PaymentDraftBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
@@ -80,12 +79,12 @@ public final class PaymentDraftBuilder {
       return this;
    }
    
-   public PaymentDraftBuilder authorizedUntil(@Nullable final java.lang.String authorizedUntil) {
+   public PaymentDraftBuilder authorizedUntil(@Nullable final String authorizedUntil) {
       this.authorizedUntil = authorizedUntil;
       return this;
    }
    
-   public PaymentDraftBuilder externalId(@Nullable final java.lang.String externalId) {
+   public PaymentDraftBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
@@ -115,12 +114,12 @@ public final class PaymentDraftBuilder {
       return this;
    }
    
-   public PaymentDraftBuilder interfaceId(@Nullable final java.lang.String interfaceId) {
+   public PaymentDraftBuilder interfaceId(@Nullable final String interfaceId) {
       this.interfaceId = interfaceId;
       return this;
    }
    
-   public PaymentDraftBuilder key(@Nullable final java.lang.String key) {
+   public PaymentDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -141,7 +140,7 @@ public final class PaymentDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -156,12 +155,12 @@ public final class PaymentDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getAuthorizedUntil(){
+   public String getAuthorizedUntil(){
       return this.authorizedUntil;
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
@@ -191,12 +190,12 @@ public final class PaymentDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getInterfaceId(){
+   public String getInterfaceId(){
       return this.interfaceId;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

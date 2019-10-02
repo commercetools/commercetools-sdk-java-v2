@@ -1,8 +1,6 @@
 package com.commercetools.models.common;
 
 import com.commercetools.models.common.GeoJson;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class GeoJsonPointImpl implements GeoJsonPoint {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.util.List<java.lang.Integer> coordinates;
+   private java.util.List<Integer> coordinates;
 
    @JsonCreator
-   GeoJsonPointImpl(@JsonProperty("coordinates") final java.util.List<java.lang.Integer> coordinates) {
+   GeoJsonPointImpl(@JsonProperty("coordinates") final java.util.List<Integer> coordinates) {
       this.coordinates = coordinates;
       this.type = "Point";
    }
@@ -38,16 +36,16 @@ public final class GeoJsonPointImpl implements GeoJsonPoint {
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.util.List<java.lang.Integer> getCoordinates(){
+   public java.util.List<Integer> getCoordinates(){
       return this.coordinates;
    }
 
-   public void setCoordinates(final java.util.List<java.lang.Integer> coordinates){
+   public void setCoordinates(final java.util.List<Integer> coordinates){
       this.coordinates = coordinates;
    }
 

@@ -2,7 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.product.CustomTokenizer;
 import com.commercetools.models.product.WhitespaceTokenizer;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

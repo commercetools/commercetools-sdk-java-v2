@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingDetailsError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
-   private java.lang.String itemId;
+   private String itemId;
    
-   private java.lang.String subject;
+   private String subject;
 
    @JsonCreator
-   InvalidItemShippingDetailsErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("itemId") final java.lang.String itemId, @JsonProperty("subject") final java.lang.String subject) {
+   InvalidItemShippingDetailsErrorImpl(@JsonProperty("message") final String message, @JsonProperty("itemId") final String itemId, @JsonProperty("subject") final String subject) {
       this.message = message;
       this.itemId = itemId;
       this.subject = subject;
@@ -43,34 +42,34 @@ public final class InvalidItemShippingDetailsErrorImpl implements InvalidItemShi
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.lang.String getItemId(){
+   public String getItemId(){
       return this.itemId;
    }
    
    
-   public java.lang.String getSubject(){
+   public String getSubject(){
       return this.subject;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setItemId(final java.lang.String itemId){
+   public void setItemId(final String itemId){
       this.itemId = itemId;
    }
    
-   public void setSubject(final java.lang.String subject){
+   public void setSubject(final String subject){
       this.subject = subject;
    }
 

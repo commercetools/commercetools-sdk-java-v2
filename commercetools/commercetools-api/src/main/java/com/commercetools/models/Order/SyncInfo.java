@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.channel.ChannelReference;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.SyncInfoImpl;
 

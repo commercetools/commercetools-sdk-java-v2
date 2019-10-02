@@ -2,7 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.product.FacetResults;
 import com.commercetools.models.product.ProductProjection;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductProjectionPagedSearchResponseImpl implements ProductProjectionPagedSearchResponse {
 
-   private java.lang.Long total;
+   private Long total;
    
-   private java.lang.Long offset;
+   private Long offset;
    
-   private java.lang.Long count;
+   private Long count;
    
    private java.util.List<com.commercetools.models.product.ProductProjection> results;
    
    private com.commercetools.models.product.FacetResults facets;
 
    @JsonCreator
-   ProductProjectionPagedSearchResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.product.ProductProjection> results, @JsonProperty("facets") final com.commercetools.models.product.FacetResults facets) {
+   ProductProjectionPagedSearchResponseImpl(@JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.product.ProductProjection> results, @JsonProperty("facets") final com.commercetools.models.product.FacetResults facets) {
       this.total = total;
       this.offset = offset;
       this.count = count;
@@ -47,17 +46,17 @@ public final class ProductProjectionPagedSearchResponseImpl implements ProductPr
    }
    
    
-   public java.lang.Long getTotal(){
+   public Long getTotal(){
       return this.total;
    }
    
    
-   public java.lang.Long getOffset(){
+   public Long getOffset(){
       return this.offset;
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
    }
    
@@ -71,15 +70,15 @@ public final class ProductProjectionPagedSearchResponseImpl implements ProductPr
       return this.facets;
    }
 
-   public void setTotal(final java.lang.Long total){
+   public void setTotal(final Long total){
       this.total = total;
    }
    
-   public void setOffset(final java.lang.Long offset){
+   public void setOffset(final Long offset){
       this.offset = offset;
    }
    
-   public void setCount(final java.lang.Long count){
+   public void setCount(final Long count){
       this.count = count;
    }
    

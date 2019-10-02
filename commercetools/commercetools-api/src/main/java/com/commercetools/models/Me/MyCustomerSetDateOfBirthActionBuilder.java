@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import java.time.LocalDate;
 import com.commercetools.models.me.MyCustomerSetDateOfBirthAction;
 import javax.annotation.Nullable;

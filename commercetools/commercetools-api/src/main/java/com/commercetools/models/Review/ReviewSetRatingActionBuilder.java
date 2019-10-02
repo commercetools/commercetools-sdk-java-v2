@@ -1,8 +1,6 @@
 package com.commercetools.models.review;
 
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.review.ReviewSetRatingAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ReviewSetRatingActionBuilder {
    
    @Nullable
-   private java.lang.Integer rating;
+   private Integer rating;
    
-   public ReviewSetRatingActionBuilder rating(@Nullable final java.lang.Integer rating) {
+   public ReviewSetRatingActionBuilder rating(@Nullable final Integer rating) {
       this.rating = rating;
       return this;
    }
    
    @Nullable
-   public java.lang.Integer getRating(){
+   public Integer getRating(){
       return this.rating;
    }
 

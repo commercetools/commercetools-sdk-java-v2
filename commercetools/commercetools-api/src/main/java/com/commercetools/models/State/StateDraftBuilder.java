@@ -4,8 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.state.StateResourceIdentifier;
 import com.commercetools.models.state.StateRoleEnum;
 import com.commercetools.models.state.StateTypeEnum;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.state.StateDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,7 +13,7 @@ import java.time.ZonedDateTime;
 public final class StateDraftBuilder {
    
    @Nullable
-   private java.lang.Boolean initial;
+   private Boolean initial;
    
    @Nullable
    private java.util.List<com.commercetools.models.state.StateRoleEnum> roles;
@@ -33,9 +31,9 @@ public final class StateDraftBuilder {
    private com.commercetools.models.state.StateTypeEnum type;
    
    
-   private java.lang.String key;
+   private String key;
    
-   public StateDraftBuilder initial(@Nullable final java.lang.Boolean initial) {
+   public StateDraftBuilder initial(@Nullable final Boolean initial) {
       this.initial = initial;
       return this;
    }
@@ -65,13 +63,13 @@ public final class StateDraftBuilder {
       return this;
    }
    
-   public StateDraftBuilder key( final java.lang.String key) {
+   public StateDraftBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.Boolean getInitial(){
+   public Boolean getInitial(){
       return this.initial;
    }
    
@@ -101,7 +99,7 @@ public final class StateDraftBuilder {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

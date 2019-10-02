@@ -6,7 +6,6 @@ import com.commercetools.models.subscription.DeliveryFormat;
 import com.commercetools.models.subscription.Destination;
 import com.commercetools.models.subscription.MessageSubscription;
 import com.commercetools.models.subscription.SubscriptionHealthStatus;
-import java.lang.String;
 import com.commercetools.models.subscription.SubscriptionImpl;
 
 import com.fasterxml.jackson.annotation.*;

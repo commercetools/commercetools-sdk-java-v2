@@ -1,6 +1,6 @@
 package com.commercetools.models.project;
 
-import java.lang.String;
+
 import com.commercetools.models.project.ExternalOAuthImpl;
 
 import com.fasterxml.jackson.annotation.*;

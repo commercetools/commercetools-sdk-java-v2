@@ -2,7 +2,6 @@ package com.commercetools.models.inventory;
 
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.inventory.InventoryEntryUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntrySetSupplyChannelAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
 
@@ -38,7 +37,7 @@ public final class InventoryEntrySetSupplyChannelActionImpl implements Inventory
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

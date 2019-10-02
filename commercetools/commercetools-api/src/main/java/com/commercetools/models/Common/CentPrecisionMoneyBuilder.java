@@ -11,41 +11,41 @@ import java.time.ZonedDateTime;
 public final class CentPrecisionMoneyBuilder {
    
    
-   private java.lang.Long centAmount;
+   private Long centAmount;
    
    
-   private java.lang.Integer fractionDigits;
+   private Integer fractionDigits;
    
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
    
-   public CentPrecisionMoneyBuilder centAmount( final java.lang.Long centAmount) {
+   public CentPrecisionMoneyBuilder centAmount( final Long centAmount) {
       this.centAmount = centAmount;
       return this;
    }
    
-   public CentPrecisionMoneyBuilder fractionDigits( final java.lang.Integer fractionDigits) {
+   public CentPrecisionMoneyBuilder fractionDigits( final Integer fractionDigits) {
       this.fractionDigits = fractionDigits;
       return this;
    }
    
-   public CentPrecisionMoneyBuilder currencyCode( final java.lang.String currencyCode) {
+   public CentPrecisionMoneyBuilder currencyCode( final String currencyCode) {
       this.currencyCode = currencyCode;
       return this;
    }
    
    
-   public java.lang.Long getCentAmount(){
+   public Long getCentAmount(){
       return this.centAmount;
    }
    
    
-   public java.lang.Integer getFractionDigits(){
+   public Integer getFractionDigits(){
       return this.fractionDigits;
    }
    
    
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
 

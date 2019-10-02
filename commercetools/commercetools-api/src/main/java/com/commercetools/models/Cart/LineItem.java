@@ -7,15 +7,13 @@ import com.commercetools.models.cart.LineItemPriceMode;
 import com.commercetools.models.cart.TaxedItemPrice;
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.common.LocalizedString;
-import com.commercetools.models.common.Money;
 import com.commercetools.models.common.Price;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.order.ItemState;
 import com.commercetools.models.product.ProductVariant;
 import com.commercetools.models.product_type.ProductTypeReference;
 import com.commercetools.models.tax_category.TaxRate;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.cart.LineItemImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -76,7 +74,7 @@ public interface LineItem  {
    @NotNull
    @Valid
    @JsonProperty("totalPrice")
-   public Money getTotalPrice();
+   public TypedMoney getTotalPrice();
    
    @NotNull
    @JsonProperty("quantity")
@@ -136,7 +134,7 @@ public interface LineItem  {
    
    public void setTaxedPrice(final TaxedItemPrice taxedPrice);
    
-   public void setTotalPrice(final Money totalPrice);
+   public void setTotalPrice(final TypedMoney totalPrice);
    
    public void setQuantity(final Long quantity);
    

@@ -1,8 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetCategoryOrderHintActionImpl implements ProductSetCategoryOrderHintAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String orderHint;
+   private String orderHint;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.String categoryId;
+   private String categoryId;
 
    @JsonCreator
-   ProductSetCategoryOrderHintActionImpl(@JsonProperty("orderHint") final java.lang.String orderHint, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("categoryId") final java.lang.String categoryId) {
+   ProductSetCategoryOrderHintActionImpl(@JsonProperty("orderHint") final String orderHint, @JsonProperty("staged") final Boolean staged, @JsonProperty("categoryId") final String categoryId) {
       this.orderHint = orderHint;
       this.staged = staged;
       this.categoryId = categoryId;
@@ -44,34 +42,34 @@ public final class ProductSetCategoryOrderHintActionImpl implements ProductSetCa
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getOrderHint(){
+   public String getOrderHint(){
       return this.orderHint;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.String getCategoryId(){
+   public String getCategoryId(){
       return this.categoryId;
    }
 
-   public void setOrderHint(final java.lang.String orderHint){
+   public void setOrderHint(final String orderHint){
       this.orderHint = orderHint;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setCategoryId(final java.lang.String categoryId){
+   public void setCategoryId(final String categoryId){
       this.categoryId = categoryId;
    }
 

@@ -20,8 +20,6 @@ import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.order.PaymentInfo;
 import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.CartImpl;
 
 import com.fasterxml.jackson.annotation.*;

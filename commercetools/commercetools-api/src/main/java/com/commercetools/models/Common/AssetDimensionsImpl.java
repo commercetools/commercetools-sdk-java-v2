@@ -1,6 +1,6 @@
 package com.commercetools.models.common;
 
-import java.lang.Integer;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AssetDimensionsImpl implements AssetDimensions {
 
-   private java.lang.Integer w;
+   private Integer w;
    
-   private java.lang.Integer h;
+   private Integer h;
 
    @JsonCreator
-   AssetDimensionsImpl(@JsonProperty("w") final java.lang.Integer w, @JsonProperty("h") final java.lang.Integer h) {
+   AssetDimensionsImpl(@JsonProperty("w") final Integer w, @JsonProperty("h") final Integer h) {
       this.w = w;
       this.h = h;
    }
@@ -36,20 +36,20 @@ public final class AssetDimensionsImpl implements AssetDimensions {
    }
    
    
-   public java.lang.Integer getW(){
+   public Integer getW(){
       return this.w;
    }
    
    
-   public java.lang.Integer getH(){
+   public Integer getH(){
       return this.h;
    }
 
-   public void setW(final java.lang.Integer w){
+   public void setW(final Integer w){
       this.w = w;
    }
    
-   public void setH(final java.lang.Integer h){
+   public void setH(final Integer h){
       this.h = h;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyPaymentUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentSetMethodInfoInterfaceActionImpl implements MyPaymentSetMethodInfoInterfaceAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String _interface;
+   private String _interface;
 
    @JsonCreator
-   MyPaymentSetMethodInfoInterfaceActionImpl(@JsonProperty("interface") final java.lang.String _interface) {
+   MyPaymentSetMethodInfoInterfaceActionImpl(@JsonProperty("interface") final String _interface) {
       this._interface = _interface;
       this.action = "setMethodInfoInterface";
    }
@@ -37,15 +36,15 @@ public final class MyPaymentSetMethodInfoInterfaceActionImpl implements MyPaymen
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
-   public java.lang.String getInterface() {
+   public String getInterface() {
       return this._interface;
    }
 
-   public void setInterface(final java.lang.String _interface) {
+   public void setInterface(final String _interface) {
       this._interface = _interface;
    }
 

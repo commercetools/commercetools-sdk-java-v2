@@ -2,7 +2,6 @@ package com.commercetools.models.state;
 
 import com.commercetools.models.state.StateTypeEnum;
 import com.commercetools.models.state.StateUpdateAction;
-import java.lang.String;
 import com.commercetools.models.state.StateChangeTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

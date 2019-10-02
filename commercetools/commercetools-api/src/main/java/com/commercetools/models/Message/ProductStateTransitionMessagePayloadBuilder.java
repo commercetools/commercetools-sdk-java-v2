@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.state.StateReference;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.message.ProductStateTransitionMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ProductStateTransitionMessagePayloadBuilder {
    
    
-   private java.lang.Boolean force;
+   private Boolean force;
    
    
    private com.commercetools.models.state.StateReference state;
    
-   public ProductStateTransitionMessagePayloadBuilder force( final java.lang.Boolean force) {
+   public ProductStateTransitionMessagePayloadBuilder force( final Boolean force) {
       this.force = force;
       return this;
    }
@@ -29,7 +27,7 @@ public final class ProductStateTransitionMessagePayloadBuilder {
    }
    
    
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    

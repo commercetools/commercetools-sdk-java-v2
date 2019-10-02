@@ -4,7 +4,6 @@ import com.commercetools.models.extension.ExtensionChangeDestinationAction;
 import com.commercetools.models.extension.ExtensionChangeTriggersAction;
 import com.commercetools.models.extension.ExtensionSetKeyAction;
 import com.commercetools.models.extension.ExtensionSetTimeoutInMsAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

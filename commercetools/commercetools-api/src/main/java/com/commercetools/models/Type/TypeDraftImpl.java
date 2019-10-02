@@ -3,7 +3,6 @@ package com.commercetools.models.type;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.FieldDefinition;
 import com.commercetools.models.type.ResourceTypeId;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -31,12 +30,12 @@ public final class TypeDraftImpl implements TypeDraft {
    
    private com.commercetools.models.common.LocalizedString description;
    
-   private java.lang.String key;
+   private String key;
    
    private java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds;
 
    @JsonCreator
-   TypeDraftImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("fieldDefinitions") final java.util.List<com.commercetools.models.type.FieldDefinition> fieldDefinitions, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("key") final java.lang.String key, @JsonProperty("resourceTypeIds") final java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds) {
+   TypeDraftImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("fieldDefinitions") final java.util.List<com.commercetools.models.type.FieldDefinition> fieldDefinitions, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("key") final String key, @JsonProperty("resourceTypeIds") final java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds) {
       this.name = name;
       this.fieldDefinitions = fieldDefinitions;
       this.description = description;
@@ -63,7 +62,7 @@ public final class TypeDraftImpl implements TypeDraft {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -84,7 +83,7 @@ public final class TypeDraftImpl implements TypeDraft {
       this.description = description;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

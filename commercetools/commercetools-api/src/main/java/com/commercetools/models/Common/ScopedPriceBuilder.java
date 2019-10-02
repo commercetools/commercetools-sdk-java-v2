@@ -5,7 +5,6 @@ import com.commercetools.models.common.DiscountedPrice;
 import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.common.ScopedPrice;
 import javax.annotation.Nullable;
@@ -19,7 +18,7 @@ public final class ScopedPriceBuilder {
    private com.commercetools.models.common.DiscountedPrice discounted;
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
    @Nullable
    private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
@@ -37,7 +36,7 @@ public final class ScopedPriceBuilder {
    private java.time.ZonedDateTime validFrom;
    
    
-   private java.lang.String id;
+   private String id;
    
    
    private com.commercetools.models.common.TypedMoney value;
@@ -50,7 +49,7 @@ public final class ScopedPriceBuilder {
       return this;
    }
    
-   public ScopedPriceBuilder country(@Nullable final java.lang.String country) {
+   public ScopedPriceBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
@@ -80,7 +79,7 @@ public final class ScopedPriceBuilder {
       return this;
    }
    
-   public ScopedPriceBuilder id( final java.lang.String id) {
+   public ScopedPriceBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -101,7 +100,7 @@ public final class ScopedPriceBuilder {
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
@@ -131,7 +130,7 @@ public final class ScopedPriceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.payment.PaymentUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class PaymentUpdateBuilder {
    private java.util.List<com.commercetools.models.payment.PaymentUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public PaymentUpdateBuilder actions( final java.util.List<com.commercetools.models.payment.PaymentUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public PaymentUpdateBuilder version( final java.lang.Long version) {
+   public PaymentUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class PaymentUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

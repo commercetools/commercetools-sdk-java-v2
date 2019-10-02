@@ -3,10 +3,9 @@ package com.commercetools.models.common;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.common.DiscountedPrice;
 import com.commercetools.models.common.Money;
-import com.commercetools.models.common.PriceTier;
+import com.commercetools.models.common.PriceTierDraft;
 import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.common.PriceDraftImpl;
 
@@ -62,7 +61,7 @@ public interface PriceDraft  {
    
    @Valid
    @JsonProperty("tiers")
-   public List<PriceTier> getTiers();
+   public List<PriceTierDraft> getTiers();
    
    @Valid
    @JsonProperty("discounted")
@@ -82,7 +81,7 @@ public interface PriceDraft  {
    
    public void setCustom(final CustomFieldsDraft custom);
    
-   public void setTiers(final List<PriceTier> tiers);
+   public void setTiers(final List<PriceTierDraft> tiers);
    
    public void setDiscounted(final DiscountedPrice discounted);
    

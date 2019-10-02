@@ -5,8 +5,6 @@ import com.commercetools.models.customer.CustomerReference;
 import com.commercetools.models.payment.PaymentMethodInfo;
 import com.commercetools.models.payment.Transaction;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -28,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentImpl implements MyPayment {
 
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
    
@@ -36,16 +34,16 @@ public final class MyPaymentImpl implements MyPayment {
    
    private com.commercetools.models.common.TypedMoney amountPlanned;
    
-   private java.lang.String id;
+   private String id;
    
    private java.util.List<com.commercetools.models.payment.Transaction> transactions;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.customer.CustomerReference customer;
 
    @JsonCreator
-   MyPaymentImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("paymentMethodInfo") final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("amountPlanned") final com.commercetools.models.common.TypedMoney amountPlanned, @JsonProperty("id") final java.lang.String id, @JsonProperty("transactions") final java.util.List<com.commercetools.models.payment.Transaction> transactions, @JsonProperty("version") final java.lang.Long version, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
+   MyPaymentImpl(@JsonProperty("anonymousId") final String anonymousId, @JsonProperty("paymentMethodInfo") final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("amountPlanned") final com.commercetools.models.common.TypedMoney amountPlanned, @JsonProperty("id") final String id, @JsonProperty("transactions") final java.util.List<com.commercetools.models.payment.Transaction> transactions, @JsonProperty("version") final Long version, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
       this.anonymousId = anonymousId;
       this.paymentMethodInfo = paymentMethodInfo;
       this.custom = custom;
@@ -60,7 +58,7 @@ public final class MyPaymentImpl implements MyPayment {
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -80,7 +78,7 @@ public final class MyPaymentImpl implements MyPayment {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -90,7 +88,7 @@ public final class MyPaymentImpl implements MyPayment {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -99,7 +97,7 @@ public final class MyPaymentImpl implements MyPayment {
       return this.customer;
    }
 
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
    
@@ -115,7 +113,7 @@ public final class MyPaymentImpl implements MyPayment {
       this.amountPlanned = amountPlanned;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
@@ -123,7 +121,7 @@ public final class MyPaymentImpl implements MyPayment {
       this.transactions = transactions;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    

@@ -3,7 +3,6 @@ package com.commercetools.models.cart;
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;

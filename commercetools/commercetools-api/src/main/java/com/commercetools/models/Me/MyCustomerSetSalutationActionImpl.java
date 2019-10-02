@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCustomerSetSalutationActionImpl implements MyCustomerSetSalutationAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String salutation;
+   private String salutation;
 
    @JsonCreator
-   MyCustomerSetSalutationActionImpl(@JsonProperty("salutation") final java.lang.String salutation) {
+   MyCustomerSetSalutationActionImpl(@JsonProperty("salutation") final String salutation) {
       this.salutation = salutation;
       this.action = "setSalutation";
    }
@@ -37,16 +36,16 @@ public final class MyCustomerSetSalutationActionImpl implements MyCustomerSetSal
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getSalutation(){
+   public String getSalutation(){
       return this.salutation;
    }
 
-   public void setSalutation(final java.lang.String salutation){
+   public void setSalutation(final String salutation){
       this.salutation = salutation;
    }
 

@@ -3,9 +3,6 @@ package com.commercetools.models.me;
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.me.MyLineItemDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,13 +12,13 @@ import java.time.ZonedDateTime;
 public final class MyLineItemDraftBuilder {
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    
-   private java.lang.String productId;
+   private String productId;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
@@ -30,12 +27,12 @@ public final class MyLineItemDraftBuilder {
    private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
    private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
    
-   public MyLineItemDraftBuilder quantity( final java.lang.Integer quantity) {
+   public MyLineItemDraftBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -45,7 +42,7 @@ public final class MyLineItemDraftBuilder {
       return this;
    }
    
-   public MyLineItemDraftBuilder productId( final java.lang.String productId) {
+   public MyLineItemDraftBuilder productId( final String productId) {
       this.productId = productId;
       return this;
    }
@@ -60,7 +57,7 @@ public final class MyLineItemDraftBuilder {
       return this;
    }
    
-   public MyLineItemDraftBuilder variantId( final java.lang.Long variantId) {
+   public MyLineItemDraftBuilder variantId( final Long variantId) {
       this.variantId = variantId;
       return this;
    }
@@ -71,7 +68,7 @@ public final class MyLineItemDraftBuilder {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -81,7 +78,7 @@ public final class MyLineItemDraftBuilder {
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -96,7 +93,7 @@ public final class MyLineItemDraftBuilder {
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    

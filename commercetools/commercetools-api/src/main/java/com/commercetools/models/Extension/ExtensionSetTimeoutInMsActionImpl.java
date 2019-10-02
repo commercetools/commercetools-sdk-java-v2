@@ -1,8 +1,6 @@
 package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionSetTimeoutInMsActionImpl implements ExtensionSetTimeoutInMsAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Integer timeoutInMs;
+   private Integer timeoutInMs;
 
    @JsonCreator
-   ExtensionSetTimeoutInMsActionImpl(@JsonProperty("timeoutInMs") final java.lang.Integer timeoutInMs) {
+   ExtensionSetTimeoutInMsActionImpl(@JsonProperty("timeoutInMs") final Integer timeoutInMs) {
       this.timeoutInMs = timeoutInMs;
       this.action = "setTimeoutInMs";
    }
@@ -38,16 +36,16 @@ public final class ExtensionSetTimeoutInMsActionImpl implements ExtensionSetTime
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Integer getTimeoutInMs(){
+   public Integer getTimeoutInMs(){
       return this.timeoutInMs;
    }
 
-   public void setTimeoutInMs(final java.lang.Integer timeoutInMs){
+   public void setTimeoutInMs(final Integer timeoutInMs){
       this.timeoutInMs = timeoutInMs;
    }
 

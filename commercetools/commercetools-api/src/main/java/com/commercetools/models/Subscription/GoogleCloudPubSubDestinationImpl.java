@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestination {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String topic;
+   private String topic;
    
-   private java.lang.String projectId;
+   private String projectId;
 
    @JsonCreator
-   GoogleCloudPubSubDestinationImpl(@JsonProperty("topic") final java.lang.String topic, @JsonProperty("projectId") final java.lang.String projectId) {
+   GoogleCloudPubSubDestinationImpl(@JsonProperty("topic") final String topic, @JsonProperty("projectId") final String projectId) {
       this.topic = topic;
       this.projectId = projectId;
       this.type = "GoogleCloudPubSub";
@@ -40,25 +39,25 @@ public final class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSub
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getTopic(){
+   public String getTopic(){
       return this.topic;
    }
    
    
-   public java.lang.String getProjectId(){
+   public String getProjectId(){
       return this.projectId;
    }
 
-   public void setTopic(final java.lang.String topic){
+   public void setTopic(final String topic){
       this.topic = topic;
    }
    
-   public void setProjectId(final java.lang.String projectId){
+   public void setProjectId(final String projectId){
       this.projectId = projectId;
    }
 

@@ -5,7 +5,6 @@ import com.commercetools.models.common.Asset;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -31,9 +30,9 @@ public final class CategoryImpl implements Category {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
@@ -45,7 +44,7 @@ public final class CategoryImpl implements Category {
    
    private com.commercetools.models.common.LocalizedString metaKeywords;
    
-   private java.lang.String orderHint;
+   private String orderHint;
    
    private com.commercetools.models.type.CustomFields custom;
    
@@ -53,7 +52,7 @@ public final class CategoryImpl implements Category {
    
    private com.commercetools.models.common.LocalizedString name;
    
-   private java.lang.String externalId;
+   private String externalId;
    
    private com.commercetools.models.common.LocalizedString description;
    
@@ -61,12 +60,12 @@ public final class CategoryImpl implements Category {
    
    private com.commercetools.models.common.LocalizedString metaDescription;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.common.LocalizedString slug;
 
    @JsonCreator
-   CategoryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("parent") final com.commercetools.models.category.CategoryReference parent, @JsonProperty("assets") final java.util.List<com.commercetools.models.common.Asset> assets, @JsonProperty("metaKeywords") final com.commercetools.models.common.LocalizedString metaKeywords, @JsonProperty("orderHint") final java.lang.String orderHint, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("metaTitle") final com.commercetools.models.common.LocalizedString metaTitle, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("ancestors") final java.util.List<com.commercetools.models.category.CategoryReference> ancestors, @JsonProperty("metaDescription") final com.commercetools.models.common.LocalizedString metaDescription, @JsonProperty("key") final java.lang.String key, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug) {
+   CategoryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("parent") final com.commercetools.models.category.CategoryReference parent, @JsonProperty("assets") final java.util.List<com.commercetools.models.common.Asset> assets, @JsonProperty("metaKeywords") final com.commercetools.models.common.LocalizedString metaKeywords, @JsonProperty("orderHint") final String orderHint, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("metaTitle") final com.commercetools.models.common.LocalizedString metaTitle, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("externalId") final String externalId, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("ancestors") final java.util.List<com.commercetools.models.category.CategoryReference> ancestors, @JsonProperty("metaDescription") final com.commercetools.models.common.LocalizedString metaDescription, @JsonProperty("key") final String key, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -102,12 +101,12 @@ public final class CategoryImpl implements Category {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -137,7 +136,7 @@ public final class CategoryImpl implements Category {
    }
    
    
-   public java.lang.String getOrderHint(){
+   public String getOrderHint(){
       return this.orderHint;
    }
    
@@ -157,7 +156,7 @@ public final class CategoryImpl implements Category {
    }
    
    
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
@@ -177,7 +176,7 @@ public final class CategoryImpl implements Category {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -194,11 +193,11 @@ public final class CategoryImpl implements Category {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -222,7 +221,7 @@ public final class CategoryImpl implements Category {
       this.metaKeywords = metaKeywords;
    }
    
-   public void setOrderHint(final java.lang.String orderHint){
+   public void setOrderHint(final String orderHint){
       this.orderHint = orderHint;
    }
    
@@ -238,7 +237,7 @@ public final class CategoryImpl implements Category {
       this.name = name;
    }
    
-   public void setExternalId(final java.lang.String externalId){
+   public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
    
@@ -254,7 +253,7 @@ public final class CategoryImpl implements Category {
       this.metaDescription = metaDescription;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

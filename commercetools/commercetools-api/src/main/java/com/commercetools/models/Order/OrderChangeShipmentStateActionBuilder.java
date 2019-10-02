@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.order.ShipmentState;
-import java.lang.String;
 import com.commercetools.models.order.OrderChangeShipmentStateAction;
 import javax.annotation.Nullable;
 import java.util.List;

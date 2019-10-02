@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.LocalizedString metaTitle;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
 
    @JsonCreator
-   ProductSetMetaTitleActionImpl(@JsonProperty("metaTitle") final com.commercetools.models.common.LocalizedString metaTitle, @JsonProperty("staged") final java.lang.Boolean staged) {
+   ProductSetMetaTitleActionImpl(@JsonProperty("metaTitle") final com.commercetools.models.common.LocalizedString metaTitle, @JsonProperty("staged") final Boolean staged) {
       this.metaTitle = metaTitle;
       this.staged = staged;
       this.action = "setMetaTitle";
@@ -42,7 +40,7 @@ public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -52,7 +50,7 @@ public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleA
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
 
@@ -60,7 +58,7 @@ public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleA
       this.metaTitle = metaTitle;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
 

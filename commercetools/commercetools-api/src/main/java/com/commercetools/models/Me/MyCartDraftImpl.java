@@ -6,8 +6,6 @@ import com.commercetools.models.common.Address;
 import com.commercetools.models.me.MyLineItemDraft;
 import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -31,32 +29,32 @@ public final class MyCartDraftImpl implements MyCartDraft {
 
    private java.util.List<com.commercetools.models.me.MyLineItemDraft> lineItems;
    
-   private java.lang.String country;
+   private String country;
    
    private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
    private com.commercetools.models.cart.TaxMode taxMode;
    
-   private java.lang.Long deleteDaysAfterLastModification;
+   private Long deleteDaysAfterLastModification;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
    private com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
    
-   private java.lang.String customerEmail;
+   private String customerEmail;
    
    private com.commercetools.models.common.Address shippingAddress;
    
-   private java.lang.String currency;
+   private String currency;
    
    private com.commercetools.models.common.Address billingAddress;
    
-   private java.lang.String locale;
+   private String locale;
    
    private com.commercetools.models.cart.InventoryMode inventoryMode;
 
    @JsonCreator
-   MyCartDraftImpl(@JsonProperty("lineItems") final java.util.List<com.commercetools.models.me.MyLineItemDraft> lineItems, @JsonProperty("country") final java.lang.String country, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode, @JsonProperty("deleteDaysAfterLastModification") final java.lang.Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("shippingMethod") final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("customerEmail") final java.lang.String customerEmail, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("currency") final java.lang.String currency, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode) {
+   MyCartDraftImpl(@JsonProperty("lineItems") final java.util.List<com.commercetools.models.me.MyLineItemDraft> lineItems, @JsonProperty("country") final String country, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("shippingMethod") final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("currency") final String currency, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress, @JsonProperty("locale") final String locale, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode) {
       this.lineItems = lineItems;
       this.country = country;
       this.itemShippingAddresses = itemShippingAddresses;
@@ -81,7 +79,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
@@ -96,7 +94,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
    }
    
    
-   public java.lang.Long getDeleteDaysAfterLastModification(){
+   public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
@@ -111,7 +109,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
    }
    
    
-   public java.lang.String getCustomerEmail(){
+   public String getCustomerEmail(){
       return this.customerEmail;
    }
    
@@ -123,7 +121,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
    /**
    	<p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
    */
-   public java.lang.String getCurrency(){
+   public String getCurrency(){
       return this.currency;
    }
    
@@ -133,7 +131,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
    }
    
    
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
@@ -146,7 +144,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
       this.lineItems = lineItems;
    }
    
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
@@ -158,7 +156,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
       this.taxMode = taxMode;
    }
    
-   public void setDeleteDaysAfterLastModification(final java.lang.Long deleteDaysAfterLastModification){
+   public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification){
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
    }
    
@@ -170,7 +168,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
       this.shippingMethod = shippingMethod;
    }
    
-   public void setCustomerEmail(final java.lang.String customerEmail){
+   public void setCustomerEmail(final String customerEmail){
       this.customerEmail = customerEmail;
    }
    
@@ -178,7 +176,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
       this.shippingAddress = shippingAddress;
    }
    
-   public void setCurrency(final java.lang.String currency){
+   public void setCurrency(final String currency){
       this.currency = currency;
    }
    
@@ -186,7 +184,7 @@ public final class MyCartDraftImpl implements MyCartDraft {
       this.billingAddress = billingAddress;
    }
    
-   public void setLocale(final java.lang.String locale){
+   public void setLocale(final String locale){
       this.locale = locale;
    }
    

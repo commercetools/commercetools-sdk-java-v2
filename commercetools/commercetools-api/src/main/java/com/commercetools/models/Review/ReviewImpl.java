@@ -4,10 +4,6 @@ import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.customer.CustomerReference;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -33,40 +29,40 @@ public final class ReviewImpl implements Review {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private java.lang.Boolean includedInStatistics;
+   private Boolean includedInStatistics;
    
-   private java.lang.String uniquenessValue;
+   private String uniquenessValue;
    
-   private java.lang.String authorName;
+   private String authorName;
    
    private com.commercetools.models.type.CustomFields custom;
    
-   private java.lang.Integer rating;
+   private Integer rating;
    
    private com.commercetools.models.state.StateReference state;
    
-   private java.lang.String text;
+   private String text;
    
-   private java.lang.String title;
+   private String title;
    
-   private java.lang.String locale;
+   private String locale;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.customer.CustomerReference customer;
    
-   private java.lang.Object target;
+   private Object target;
 
    @JsonCreator
-   ReviewImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("includedInStatistics") final java.lang.Boolean includedInStatistics, @JsonProperty("uniquenessValue") final java.lang.String uniquenessValue, @JsonProperty("authorName") final java.lang.String authorName, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("rating") final java.lang.Integer rating, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("text") final java.lang.String text, @JsonProperty("title") final java.lang.String title, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("key") final java.lang.String key, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer, @JsonProperty("target") final java.lang.Object target) {
+   ReviewImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("includedInStatistics") final Boolean includedInStatistics, @JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("authorName") final String authorName, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("rating") final Integer rating, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("text") final String text, @JsonProperty("title") final String title, @JsonProperty("locale") final String locale, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer, @JsonProperty("target") final Object target) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -101,12 +97,12 @@ public final class ReviewImpl implements Review {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -121,17 +117,17 @@ public final class ReviewImpl implements Review {
    }
    
    
-   public java.lang.Boolean getIncludedInStatistics(){
+   public Boolean getIncludedInStatistics(){
       return this.includedInStatistics;
    }
    
    
-   public java.lang.String getUniquenessValue(){
+   public String getUniquenessValue(){
       return this.uniquenessValue;
    }
    
    
-   public java.lang.String getAuthorName(){
+   public String getAuthorName(){
       return this.authorName;
    }
    
@@ -141,7 +137,7 @@ public final class ReviewImpl implements Review {
    }
    
    
-   public java.lang.Integer getRating(){
+   public Integer getRating(){
       return this.rating;
    }
    
@@ -151,22 +147,22 @@ public final class ReviewImpl implements Review {
    }
    
    
-   public java.lang.String getText(){
+   public String getText(){
       return this.text;
    }
    
    
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
    
    
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -176,7 +172,7 @@ public final class ReviewImpl implements Review {
    }
    
    
-   public java.lang.Object getTarget(){
+   public Object getTarget(){
       return this.target;
    }
 
@@ -188,11 +184,11 @@ public final class ReviewImpl implements Review {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -204,15 +200,15 @@ public final class ReviewImpl implements Review {
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setIncludedInStatistics(final java.lang.Boolean includedInStatistics){
+   public void setIncludedInStatistics(final Boolean includedInStatistics){
       this.includedInStatistics = includedInStatistics;
    }
    
-   public void setUniquenessValue(final java.lang.String uniquenessValue){
+   public void setUniquenessValue(final String uniquenessValue){
       this.uniquenessValue = uniquenessValue;
    }
    
-   public void setAuthorName(final java.lang.String authorName){
+   public void setAuthorName(final String authorName){
       this.authorName = authorName;
    }
    
@@ -220,7 +216,7 @@ public final class ReviewImpl implements Review {
       this.custom = custom;
    }
    
-   public void setRating(final java.lang.Integer rating){
+   public void setRating(final Integer rating){
       this.rating = rating;
    }
    
@@ -228,19 +224,19 @@ public final class ReviewImpl implements Review {
       this.state = state;
    }
    
-   public void setText(final java.lang.String text){
+   public void setText(final String text){
       this.text = text;
    }
    
-   public void setTitle(final java.lang.String title){
+   public void setTitle(final String title){
       this.title = title;
    }
    
-   public void setLocale(final java.lang.String locale){
+   public void setLocale(final String locale){
       this.locale = locale;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    
@@ -248,7 +244,7 @@ public final class ReviewImpl implements Review {
       this.customer = customer;
    }
    
-   public void setTarget(final java.lang.Object target){
+   public void setTarget(final Object target){
       this.target = target;
    }
 

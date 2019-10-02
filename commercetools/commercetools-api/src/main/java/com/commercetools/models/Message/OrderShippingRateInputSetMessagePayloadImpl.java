@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.cart.ShippingRateInput;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippingRateInputSetMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.cart.ShippingRateInput shippingRateInput;
    
@@ -41,7 +40,7 @@ public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderS
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    

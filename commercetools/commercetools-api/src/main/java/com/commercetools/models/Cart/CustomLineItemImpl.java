@@ -9,8 +9,6 @@ import com.commercetools.models.order.ItemState;
 import com.commercetools.models.tax_category.TaxCategoryReference;
 import com.commercetools.models.tax_category.TaxRate;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -34,7 +32,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
 
    private com.commercetools.models.tax_category.TaxRate taxRate;
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    private com.commercetools.models.cart.ItemShippingDetails shippingDetails;
    
@@ -50,16 +48,16 @@ public final class CustomLineItemImpl implements CustomLineItem {
    
    private java.util.List<com.commercetools.models.order.ItemState> state;
    
-   private java.lang.String id;
+   private String id;
    
    private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
    
-   private java.lang.String slug;
+   private String slug;
    
    private com.commercetools.models.tax_category.TaxCategoryReference taxCategory;
 
    @JsonCreator
-   CustomLineItemImpl(@JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRate taxRate, @JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetails shippingDetails, @JsonProperty("money") final com.commercetools.models.common.TypedMoney money, @JsonProperty("totalPrice") final com.commercetools.models.common.TypedMoney totalPrice, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state, @JsonProperty("id") final java.lang.String id, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("slug") final java.lang.String slug, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryReference taxCategory) {
+   CustomLineItemImpl(@JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRate taxRate, @JsonProperty("quantity") final Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetails shippingDetails, @JsonProperty("money") final com.commercetools.models.common.TypedMoney money, @JsonProperty("totalPrice") final com.commercetools.models.common.TypedMoney totalPrice, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state, @JsonProperty("id") final String id, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("slug") final String slug, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryReference taxCategory) {
       this.taxRate = taxRate;
       this.quantity = quantity;
       this.shippingDetails = shippingDetails;
@@ -84,7 +82,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -124,7 +122,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -134,7 +132,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
    }
    
    
-   public java.lang.String getSlug(){
+   public String getSlug(){
       return this.slug;
    }
    
@@ -147,7 +145,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
       this.taxRate = taxRate;
    }
    
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
    
@@ -179,7 +177,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
       this.state = state;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
@@ -187,7 +185,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
       this.discountedPricePerQuantity = discountedPricePerQuantity;
    }
    
-   public void setSlug(final java.lang.String slug){
+   public void setSlug(final String slug){
       this.slug = slug;
    }
    

@@ -1,8 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,28 +22,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FacetResultRangeImpl implements FacetResultRange {
 
-   private java.lang.String toStr;
+   private String toStr;
    
-   private java.lang.Long total;
+   private Long total;
    
-   private java.lang.Integer min;
+   private Integer min;
    
-   private java.lang.String fromStr;
+   private String fromStr;
    
-   private java.lang.Integer max;
+   private Integer max;
    
-   private java.lang.Integer mean;
+   private Integer mean;
    
-   private java.lang.Long count;
+   private Long count;
    
-   private java.lang.Integer from;
+   private Integer from;
    
-   private java.lang.Integer to;
+   private Integer to;
    
-   private java.lang.Long productCount;
+   private Long productCount;
 
    @JsonCreator
-   FacetResultRangeImpl(@JsonProperty("toStr") final java.lang.String toStr, @JsonProperty("total") final java.lang.Long total, @JsonProperty("min") final java.lang.Integer min, @JsonProperty("fromStr") final java.lang.String fromStr, @JsonProperty("max") final java.lang.Integer max, @JsonProperty("mean") final java.lang.Integer mean, @JsonProperty("count") final java.lang.Long count, @JsonProperty("from") final java.lang.Integer from, @JsonProperty("to") final java.lang.Integer to, @JsonProperty("productCount") final java.lang.Long productCount) {
+   FacetResultRangeImpl(@JsonProperty("toStr") final String toStr, @JsonProperty("total") final Long total, @JsonProperty("min") final Integer min, @JsonProperty("fromStr") final String fromStr, @JsonProperty("max") final Integer max, @JsonProperty("mean") final Integer mean, @JsonProperty("count") final Long count, @JsonProperty("from") final Integer from, @JsonProperty("to") final Integer to, @JsonProperty("productCount") final Long productCount) {
       this.toStr = toStr;
       this.total = total;
       this.min = min;
@@ -62,92 +60,92 @@ public final class FacetResultRangeImpl implements FacetResultRange {
    }
    
    
-   public java.lang.String getToStr(){
+   public String getToStr(){
       return this.toStr;
    }
    
    
-   public java.lang.Long getTotal(){
+   public Long getTotal(){
       return this.total;
    }
    
    
-   public java.lang.Integer getMin(){
+   public Integer getMin(){
       return this.min;
    }
    
    
-   public java.lang.String getFromStr(){
+   public String getFromStr(){
       return this.fromStr;
    }
    
    
-   public java.lang.Integer getMax(){
+   public Integer getMax(){
       return this.max;
    }
    
    
-   public java.lang.Integer getMean(){
+   public Integer getMean(){
       return this.mean;
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
    }
    
    
-   public java.lang.Integer getFrom(){
+   public Integer getFrom(){
       return this.from;
    }
    
    
-   public java.lang.Integer getTo(){
+   public Integer getTo(){
       return this.to;
    }
    
    
-   public java.lang.Long getProductCount(){
+   public Long getProductCount(){
       return this.productCount;
    }
 
-   public void setToStr(final java.lang.String toStr){
+   public void setToStr(final String toStr){
       this.toStr = toStr;
    }
    
-   public void setTotal(final java.lang.Long total){
+   public void setTotal(final Long total){
       this.total = total;
    }
    
-   public void setMin(final java.lang.Integer min){
+   public void setMin(final Integer min){
       this.min = min;
    }
    
-   public void setFromStr(final java.lang.String fromStr){
+   public void setFromStr(final String fromStr){
       this.fromStr = fromStr;
    }
    
-   public void setMax(final java.lang.Integer max){
+   public void setMax(final Integer max){
       this.max = max;
    }
    
-   public void setMean(final java.lang.Integer mean){
+   public void setMean(final Integer mean){
       this.mean = mean;
    }
    
-   public void setCount(final java.lang.Long count){
+   public void setCount(final Long count){
       this.count = count;
    }
    
-   public void setFrom(final java.lang.Integer from){
+   public void setFrom(final Integer from){
       this.from = from;
    }
    
-   public void setTo(final java.lang.Integer to){
+   public void setTo(final Integer to){
       this.to = to;
    }
    
-   public void setProductCount(final java.lang.Long productCount){
+   public void setProductCount(final Long productCount){
       this.productCount = productCount;
    }
 

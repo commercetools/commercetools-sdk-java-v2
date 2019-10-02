@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetLocaleActionImpl implements CartSetLocaleAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String locale;
+   private String locale;
 
    @JsonCreator
-   CartSetLocaleActionImpl(@JsonProperty("locale") final java.lang.String locale) {
+   CartSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
       this.locale = locale;
       this.action = "setLocale";
    }
@@ -37,16 +36,16 @@ public final class CartSetLocaleActionImpl implements CartSetLocaleAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
 
-   public void setLocale(final java.lang.String locale){
+   public void setLocale(final String locale){
       this.locale = locale;
    }
 

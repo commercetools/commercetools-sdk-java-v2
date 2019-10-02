@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.category.CategoryResourceIdentifier;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductAddToCategoryActionImpl implements ProductAddToCategoryAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String orderHint;
+   private String orderHint;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    private com.commercetools.models.category.CategoryResourceIdentifier category;
 
    @JsonCreator
-   ProductAddToCategoryActionImpl(@JsonProperty("orderHint") final java.lang.String orderHint, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("category") final com.commercetools.models.category.CategoryResourceIdentifier category) {
+   ProductAddToCategoryActionImpl(@JsonProperty("orderHint") final String orderHint, @JsonProperty("staged") final Boolean staged, @JsonProperty("category") final com.commercetools.models.category.CategoryResourceIdentifier category) {
       this.orderHint = orderHint;
       this.staged = staged;
       this.category = category;
@@ -45,17 +43,17 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getOrderHint(){
+   public String getOrderHint(){
       return this.orderHint;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
@@ -64,11 +62,11 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
       return this.category;
    }
 
-   public void setOrderHint(final java.lang.String orderHint){
+   public void setOrderHint(final String orderHint){
       this.orderHint = orderHint;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    

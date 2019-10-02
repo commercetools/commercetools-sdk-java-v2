@@ -1,7 +1,6 @@
 package com.commercetools.models.review;
 
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.String;
 import com.commercetools.models.review.ReviewSetAuthorNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ReviewSetAuthorNameActionBuilder {
    
    @Nullable
-   private java.lang.String authorName;
+   private String authorName;
    
-   public ReviewSetAuthorNameActionBuilder authorName(@Nullable final java.lang.String authorName) {
+   public ReviewSetAuthorNameActionBuilder authorName(@Nullable final String authorName) {
       this.authorName = authorName;
       return this;
    }
    
    @Nullable
-   public java.lang.String getAuthorName(){
+   public String getAuthorName(){
       return this.authorName;
    }
 

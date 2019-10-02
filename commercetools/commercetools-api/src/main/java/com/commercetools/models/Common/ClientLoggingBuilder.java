@@ -3,7 +3,6 @@ package com.commercetools.models.common;
 import com.commercetools.models.common.CreatedBy;
 import com.commercetools.models.common.LastModifiedBy;
 import com.commercetools.models.customer.CustomerReference;
-import java.lang.String;
 import com.commercetools.models.common.ClientLogging;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,28 +12,28 @@ import java.time.ZonedDateTime;
 public final class ClientLoggingBuilder {
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    @Nullable
-   private java.lang.String clientId;
+   private String clientId;
    
    @Nullable
-   private java.lang.String externalUserId;
+   private String externalUserId;
    
    @Nullable
    private com.commercetools.models.customer.CustomerReference customer;
    
-   public ClientLoggingBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public ClientLoggingBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
    
-   public ClientLoggingBuilder clientId(@Nullable final java.lang.String clientId) {
+   public ClientLoggingBuilder clientId(@Nullable final String clientId) {
       this.clientId = clientId;
       return this;
    }
    
-   public ClientLoggingBuilder externalUserId(@Nullable final java.lang.String externalUserId) {
+   public ClientLoggingBuilder externalUserId(@Nullable final String externalUserId) {
       this.externalUserId = externalUserId;
       return this;
    }
@@ -45,17 +44,17 @@ public final class ClientLoggingBuilder {
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
    @Nullable
-   public java.lang.String getClientId(){
+   public String getClientId(){
       return this.clientId;
    }
    
    @Nullable
-   public java.lang.String getExternalUserId(){
+   public String getExternalUserId(){
       return this.externalUserId;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.payment.PaymentUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

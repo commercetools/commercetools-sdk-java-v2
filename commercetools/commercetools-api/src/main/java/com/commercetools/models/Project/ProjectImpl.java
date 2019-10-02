@@ -3,8 +3,6 @@ package com.commercetools.models.project;
 import com.commercetools.models.message.MessageConfiguration;
 import com.commercetools.models.project.ExternalOAuth;
 import com.commercetools.models.project.ShippingRateInputType;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -33,24 +31,24 @@ public final class ProjectImpl implements Project {
    
    private java.time.ZonedDateTime createdAt;
    
-   private java.util.List<java.lang.String> languages;
+   private java.util.List<String> languages;
    
-   private java.lang.String name;
+   private String name;
    
    private com.commercetools.models.message.MessageConfiguration messages;
    
-   private java.util.List<java.lang.String> countries;
+   private java.util.List<String> countries;
    
-   private java.lang.String trialUntil;
+   private String trialUntil;
    
-   private java.lang.Long version;
+   private Long version;
    
-   private java.lang.String key;
+   private String key;
    
-   private java.util.List<java.lang.String> currencies;
+   private java.util.List<String> currencies;
 
    @JsonCreator
-   ProjectImpl(@JsonProperty("externalOAuth") final com.commercetools.models.project.ExternalOAuth externalOAuth, @JsonProperty("shippingRateInputType") final com.commercetools.models.project.ShippingRateInputType shippingRateInputType, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("languages") final java.util.List<java.lang.String> languages, @JsonProperty("name") final java.lang.String name, @JsonProperty("messages") final com.commercetools.models.message.MessageConfiguration messages, @JsonProperty("countries") final java.util.List<java.lang.String> countries, @JsonProperty("trialUntil") final java.lang.String trialUntil, @JsonProperty("version") final java.lang.Long version, @JsonProperty("key") final java.lang.String key, @JsonProperty("currencies") final java.util.List<java.lang.String> currencies) {
+   ProjectImpl(@JsonProperty("externalOAuth") final com.commercetools.models.project.ExternalOAuth externalOAuth, @JsonProperty("shippingRateInputType") final com.commercetools.models.project.ShippingRateInputType shippingRateInputType, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("languages") final java.util.List<String> languages, @JsonProperty("name") final String name, @JsonProperty("messages") final com.commercetools.models.message.MessageConfiguration messages, @JsonProperty("countries") final java.util.List<String> countries, @JsonProperty("trialUntil") final String trialUntil, @JsonProperty("version") final Long version, @JsonProperty("key") final String key, @JsonProperty("currencies") final java.util.List<String> currencies) {
       this.externalOAuth = externalOAuth;
       this.shippingRateInputType = shippingRateInputType;
       this.createdAt = createdAt;
@@ -83,12 +81,12 @@ public final class ProjectImpl implements Project {
    }
    
    
-   public java.util.List<java.lang.String> getLanguages(){
+   public java.util.List<String> getLanguages(){
       return this.languages;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
@@ -98,27 +96,27 @@ public final class ProjectImpl implements Project {
    }
    
    
-   public java.util.List<java.lang.String> getCountries(){
+   public java.util.List<String> getCountries(){
       return this.countries;
    }
    
    
-   public java.lang.String getTrialUntil(){
+   public String getTrialUntil(){
       return this.trialUntil;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
    
-   public java.util.List<java.lang.String> getCurrencies(){
+   public java.util.List<String> getCurrencies(){
       return this.currencies;
    }
 
@@ -134,11 +132,11 @@ public final class ProjectImpl implements Project {
       this.createdAt = createdAt;
    }
    
-   public void setLanguages(final java.util.List<java.lang.String> languages){
+   public void setLanguages(final java.util.List<String> languages){
       this.languages = languages;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
@@ -146,23 +144,23 @@ public final class ProjectImpl implements Project {
       this.messages = messages;
    }
    
-   public void setCountries(final java.util.List<java.lang.String> countries){
+   public void setCountries(final java.util.List<String> countries){
       this.countries = countries;
    }
    
-   public void setTrialUntil(final java.lang.String trialUntil){
+   public void setTrialUntil(final String trialUntil){
       this.trialUntil = trialUntil;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    
-   public void setCurrencies(final java.util.List<java.lang.String> currencies){
+   public void setCurrencies(final java.util.List<String> currencies){
       this.currencies = currencies;
    }
 

@@ -4,7 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.type.FieldDefinition;
 import com.commercetools.models.type.ResourceTypeId;
-import java.lang.String;
 import com.commercetools.models.type.TypeImpl;
 
 import com.fasterxml.jackson.annotation.*;

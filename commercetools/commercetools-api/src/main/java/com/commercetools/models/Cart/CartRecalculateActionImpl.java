@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartRecalculateActionImpl implements CartRecalculateAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean updateProductData;
+   private Boolean updateProductData;
 
    @JsonCreator
-   CartRecalculateActionImpl(@JsonProperty("updateProductData") final java.lang.Boolean updateProductData) {
+   CartRecalculateActionImpl(@JsonProperty("updateProductData") final Boolean updateProductData) {
       this.updateProductData = updateProductData;
       this.action = "recalculate";
    }
@@ -38,16 +36,16 @@ public final class CartRecalculateActionImpl implements CartRecalculateAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getUpdateProductData(){
+   public Boolean getUpdateProductData(){
       return this.updateProductData;
    }
 
-   public void setUpdateProductData(final java.lang.Boolean updateProductData){
+   public void setUpdateProductData(final Boolean updateProductData){
       this.updateProductData = updateProductData;
    }
 

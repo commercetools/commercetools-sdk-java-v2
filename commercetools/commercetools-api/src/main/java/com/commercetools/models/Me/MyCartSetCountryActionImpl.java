@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartSetCountryActionImpl implements MyCartSetCountryAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String country;
+   private String country;
 
    @JsonCreator
-   MyCartSetCountryActionImpl(@JsonProperty("country") final java.lang.String country) {
+   MyCartSetCountryActionImpl(@JsonProperty("country") final String country) {
       this.country = country;
       this.action = "setCountry";
    }
@@ -37,18 +36,18 @@ public final class MyCartSetCountryActionImpl implements MyCartSetCountryAction 
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    /**
    	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
 
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
 

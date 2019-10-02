@@ -2,8 +2,6 @@ package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
 import com.commercetools.models.common.AssetDraft;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryAddAssetActionImpl implements CategoryAddAssetAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Integer position;
+   private Integer position;
    
    private com.commercetools.models.common.AssetDraft asset;
 
    @JsonCreator
-   CategoryAddAssetActionImpl(@JsonProperty("position") final java.lang.Integer position, @JsonProperty("asset") final com.commercetools.models.common.AssetDraft asset) {
+   CategoryAddAssetActionImpl(@JsonProperty("position") final Integer position, @JsonProperty("asset") final com.commercetools.models.common.AssetDraft asset) {
       this.position = position;
       this.asset = asset;
       this.action = "addAsset";
@@ -42,12 +40,12 @@ public final class CategoryAddAssetActionImpl implements CategoryAddAssetAction 
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Integer getPosition(){
+   public Integer getPosition(){
       return this.position;
    }
    
@@ -56,7 +54,7 @@ public final class CategoryAddAssetActionImpl implements CategoryAddAssetAction 
       return this.asset;
    }
 
-   public void setPosition(final java.lang.Integer position){
+   public void setPosition(final Integer position){
       this.position = position;
    }
    

@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.ShippingRateInput;
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import com.commercetools.models.cart.ClassificationShippingRateInput;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class ClassificationShippingRateInputBuilder {
    private com.commercetools.models.common.LocalizedString label;
    
    
-   private java.lang.String key;
+   private String key;
    
    public ClassificationShippingRateInputBuilder label( final com.commercetools.models.common.LocalizedString label) {
       this.label = label;
       return this;
    }
    
-   public ClassificationShippingRateInputBuilder key( final java.lang.String key) {
+   public ClassificationShippingRateInputBuilder key( final String key) {
       this.key = key;
       return this;
    }
@@ -33,7 +32,7 @@ public final class ClassificationShippingRateInputBuilder {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

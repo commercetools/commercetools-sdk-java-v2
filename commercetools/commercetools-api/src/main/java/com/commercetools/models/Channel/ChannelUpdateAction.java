@@ -10,7 +10,6 @@ import com.commercetools.models.channel.ChannelSetCustomFieldAction;
 import com.commercetools.models.channel.ChannelSetCustomTypeAction;
 import com.commercetools.models.channel.ChannelSetGeoLocationAction;
 import com.commercetools.models.channel.ChannelSetRolesAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

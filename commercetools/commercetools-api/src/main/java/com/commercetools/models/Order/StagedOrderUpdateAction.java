@@ -69,7 +69,6 @@ import com.commercetools.models.order_edit.StagedOrderTransitionLineItemStateAct
 import com.commercetools.models.order_edit.StagedOrderTransitionStateAction;
 import com.commercetools.models.order_edit.StagedOrderUpdateItemShippingAddressAction;
 import com.commercetools.models.order_edit.StagedOrderUpdateSyncInfoAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

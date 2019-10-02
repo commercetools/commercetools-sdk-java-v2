@@ -1,7 +1,6 @@
 package com.commercetools.models.store;
 
 import com.commercetools.models.store.StoreSetNameAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.cart.ShippingRateInput;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.OrderShippingRateInputSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;

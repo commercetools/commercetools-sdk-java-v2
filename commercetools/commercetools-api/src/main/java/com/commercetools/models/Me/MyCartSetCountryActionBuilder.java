@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCartSetCountryAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class MyCartSetCountryActionBuilder {
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
-   public MyCartSetCountryActionBuilder country(@Nullable final java.lang.String country) {
+   public MyCartSetCountryActionBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
 

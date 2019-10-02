@@ -10,8 +10,6 @@ import com.commercetools.models.product_type.ProductTypeReference;
 import com.commercetools.models.review.ReviewRatingStatistics;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.tax_category.TaxCategoryReference;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductProjectionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -6,8 +6,6 @@ import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.cart.LineItemDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,13 +18,13 @@ public final class LineItemDraftBuilder {
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    @Nullable
-   private java.lang.Long quantity;
+   private Long quantity;
    
    @Nullable
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    @Nullable
-   private java.lang.String productId;
+   private String productId;
    
    @Nullable
    private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
@@ -38,13 +36,13 @@ public final class LineItemDraftBuilder {
    private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
    private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    @Nullable
    private com.commercetools.models.common.Money externalPrice;
@@ -54,7 +52,7 @@ public final class LineItemDraftBuilder {
       return this;
    }
    
-   public LineItemDraftBuilder quantity(@Nullable final java.lang.Long quantity) {
+   public LineItemDraftBuilder quantity(@Nullable final Long quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -64,7 +62,7 @@ public final class LineItemDraftBuilder {
       return this;
    }
    
-   public LineItemDraftBuilder productId(@Nullable final java.lang.String productId) {
+   public LineItemDraftBuilder productId(@Nullable final String productId) {
       this.productId = productId;
       return this;
    }
@@ -84,7 +82,7 @@ public final class LineItemDraftBuilder {
       return this;
    }
    
-   public LineItemDraftBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public LineItemDraftBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
@@ -94,7 +92,7 @@ public final class LineItemDraftBuilder {
       return this;
    }
    
-   public LineItemDraftBuilder sku(@Nullable final java.lang.String sku) {
+   public LineItemDraftBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
@@ -110,7 +108,7 @@ public final class LineItemDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
@@ -120,7 +118,7 @@ public final class LineItemDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -140,7 +138,7 @@ public final class LineItemDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
@@ -150,7 +148,7 @@ public final class LineItemDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    

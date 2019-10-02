@@ -1,6 +1,6 @@
 package com.commercetools.models.subscription;
 
-import java.lang.String;
+
 import com.commercetools.models.subscription.MessageSubscription;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class MessageSubscriptionBuilder {
    
    @Nullable
-   private java.util.List<java.lang.String> types;
+   private java.util.List<String> types;
    
    
-   private java.lang.String resourceTypeId;
+   private String resourceTypeId;
    
-   public MessageSubscriptionBuilder types(@Nullable final java.util.List<java.lang.String> types) {
+   public MessageSubscriptionBuilder types(@Nullable final java.util.List<String> types) {
       this.types = types;
       return this;
    }
    
-   public MessageSubscriptionBuilder resourceTypeId( final java.lang.String resourceTypeId) {
+   public MessageSubscriptionBuilder resourceTypeId( final String resourceTypeId) {
       this.resourceTypeId = resourceTypeId;
       return this;
    }
    
    @Nullable
-   public java.util.List<java.lang.String> getTypes(){
+   public java.util.List<String> getTypes(){
       return this.types;
    }
    
    
-   public java.lang.String getResourceTypeId(){
+   public String getResourceTypeId(){
       return this.resourceTypeId;
    }
 

@@ -3,7 +3,6 @@ package com.commercetools.models.payment;
 import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.payment.TransactionState;
 import com.commercetools.models.payment.TransactionType;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.payment.Transaction;
 import javax.annotation.Nullable;
@@ -14,7 +13,7 @@ import java.time.ZonedDateTime;
 public final class TransactionBuilder {
    
    @Nullable
-   private java.lang.String interactionId;
+   private String interactionId;
    
    
    private com.commercetools.models.common.TypedMoney amount;
@@ -23,7 +22,7 @@ public final class TransactionBuilder {
    private com.commercetools.models.payment.TransactionState state;
    
    
-   private java.lang.String id;
+   private String id;
    
    
    private com.commercetools.models.payment.TransactionType type;
@@ -31,7 +30,7 @@ public final class TransactionBuilder {
    @Nullable
    private java.time.ZonedDateTime timestamp;
    
-   public TransactionBuilder interactionId(@Nullable final java.lang.String interactionId) {
+   public TransactionBuilder interactionId(@Nullable final String interactionId) {
       this.interactionId = interactionId;
       return this;
    }
@@ -46,7 +45,7 @@ public final class TransactionBuilder {
       return this;
    }
    
-   public TransactionBuilder id( final java.lang.String id) {
+   public TransactionBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -62,7 +61,7 @@ public final class TransactionBuilder {
    }
    
    @Nullable
-   public java.lang.String getInteractionId(){
+   public String getInteractionId(){
       return this.interactionId;
    }
    
@@ -77,7 +76,7 @@ public final class TransactionBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

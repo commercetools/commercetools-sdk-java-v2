@@ -1,7 +1,6 @@
 package com.commercetools.models.common;
 
 import com.commercetools.models.common.AssetDimensions;
-import java.lang.String;
 import com.commercetools.models.common.AssetSource;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class AssetSourceBuilder {
    
    @Nullable
-   private java.lang.String contentType;
+   private String contentType;
    
    
-   private java.lang.String uri;
+   private String uri;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    @Nullable
    private com.commercetools.models.common.AssetDimensions dimensions;
    
-   public AssetSourceBuilder contentType(@Nullable final java.lang.String contentType) {
+   public AssetSourceBuilder contentType(@Nullable final String contentType) {
       this.contentType = contentType;
       return this;
    }
    
-   public AssetSourceBuilder uri( final java.lang.String uri) {
+   public AssetSourceBuilder uri( final String uri) {
       this.uri = uri;
       return this;
    }
    
-   public AssetSourceBuilder key(@Nullable final java.lang.String key) {
+   public AssetSourceBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -43,17 +42,17 @@ public final class AssetSourceBuilder {
    }
    
    @Nullable
-   public java.lang.String getContentType(){
+   public String getContentType(){
       return this.contentType;
    }
    
    
-   public java.lang.String getUri(){
+   public String getUri(){
       return this.uri;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import com.commercetools.models.error.EnumValueIsUsedError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class EnumValueIsUsedErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
-   public EnumValueIsUsedErrorBuilder message( final java.lang.String message) {
+   public EnumValueIsUsedErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
 

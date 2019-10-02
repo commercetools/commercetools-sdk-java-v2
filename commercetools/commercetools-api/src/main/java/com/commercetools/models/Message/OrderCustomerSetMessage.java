@@ -59,11 +59,12 @@ public interface OrderCustomerSetMessage extends Message {
       instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
       instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setType(template.getType());
       instance.setOldCustomerGroup(template.getOldCustomerGroup());
       instance.setCustomerGroup(template.getCustomerGroup());
       instance.setOldCustomer(template.getOldCustomer());

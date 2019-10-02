@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddressAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    private com.commercetools.models.common.Address address;
 
    @JsonCreator
-   OrderSetDeliveryAddressActionImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("address") final com.commercetools.models.common.Address address) {
+   OrderSetDeliveryAddressActionImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("address") final com.commercetools.models.common.Address address) {
       this.deliveryId = deliveryId;
       this.address = address;
       this.action = "setDeliveryAddress";
@@ -41,12 +40,12 @@ public final class OrderSetDeliveryAddressActionImpl implements OrderSetDelivery
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    
@@ -55,7 +54,7 @@ public final class OrderSetDeliveryAddressActionImpl implements OrderSetDelivery
       return this.address;
    }
 
-   public void setDeliveryId(final java.lang.String deliveryId){
+   public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
    

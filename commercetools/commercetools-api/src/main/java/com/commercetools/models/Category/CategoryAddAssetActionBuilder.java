@@ -2,8 +2,6 @@ package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
 import com.commercetools.models.common.AssetDraft;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.category.CategoryAddAssetAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class CategoryAddAssetActionBuilder {
    
    @Nullable
-   private java.lang.Integer position;
+   private Integer position;
    
    
    private com.commercetools.models.common.AssetDraft asset;
    
-   public CategoryAddAssetActionBuilder position(@Nullable final java.lang.Integer position) {
+   public CategoryAddAssetActionBuilder position(@Nullable final Integer position) {
       this.position = position;
       return this;
    }
@@ -29,7 +27,7 @@ public final class CategoryAddAssetActionBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getPosition(){
+   public Integer getPosition(){
       return this.position;
    }
    

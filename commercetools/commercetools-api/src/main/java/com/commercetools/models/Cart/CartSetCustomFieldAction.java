@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

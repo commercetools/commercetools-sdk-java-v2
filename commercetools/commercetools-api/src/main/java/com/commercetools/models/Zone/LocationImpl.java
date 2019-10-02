@@ -1,6 +1,6 @@
 package com.commercetools.models.zone;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LocationImpl implements Location {
 
-   private java.lang.String country;
+   private String country;
    
-   private java.lang.String state;
+   private String state;
 
    @JsonCreator
-   LocationImpl(@JsonProperty("country") final java.lang.String country, @JsonProperty("state") final java.lang.String state) {
+   LocationImpl(@JsonProperty("country") final String country, @JsonProperty("state") final String state) {
       this.country = country;
       this.state = state;
    }
@@ -38,20 +38,20 @@ public final class LocationImpl implements Location {
    /**
    	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    
-   public java.lang.String getState(){
+   public String getState(){
       return this.state;
    }
 
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
-   public void setState(final java.lang.String state){
+   public void setState(final String state){
       this.state = state;
    }
 

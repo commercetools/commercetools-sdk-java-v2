@@ -2,7 +2,6 @@ package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
 import com.commercetools.models.payment.TransactionDraft;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentAddTransactionActionImpl implements PaymentAddTransactionAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.payment.TransactionDraft transaction;
 
@@ -38,7 +37,7 @@ public final class PaymentAddTransactionActionImpl implements PaymentAddTransact
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

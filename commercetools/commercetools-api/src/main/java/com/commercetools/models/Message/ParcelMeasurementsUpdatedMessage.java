@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
 import com.commercetools.models.order.ParcelMeasurements;
-import java.lang.String;
 import com.commercetools.models.message.ParcelMeasurementsUpdatedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +52,12 @@ public interface ParcelMeasurementsUpdatedMessage extends Message {
       instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
       instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setType(template.getType());
       instance.setDeliveryId(template.getDeliveryId());
       instance.setMeasurements(template.getMeasurements());
       instance.setParcelId(template.getParcelId());

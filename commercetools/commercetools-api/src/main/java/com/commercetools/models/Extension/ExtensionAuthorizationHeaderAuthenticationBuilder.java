@@ -1,7 +1,6 @@
 package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionHttpDestinationAuthentication;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionAuthorizationHeaderAuthentication;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ExtensionAuthorizationHeaderAuthenticationBuilder {
    
    
-   private java.lang.String headerValue;
+   private String headerValue;
    
-   public ExtensionAuthorizationHeaderAuthenticationBuilder headerValue( final java.lang.String headerValue) {
+   public ExtensionAuthorizationHeaderAuthenticationBuilder headerValue( final String headerValue) {
       this.headerValue = headerValue;
       return this;
    }
    
    
-   public java.lang.String getHeaderValue(){
+   public String getHeaderValue(){
       return this.headerValue;
    }
 

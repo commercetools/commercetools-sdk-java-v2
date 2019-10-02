@@ -1,6 +1,6 @@
 package com.commercetools.models.subscription;
 
-import java.lang.String;
+
 import com.commercetools.models.subscription.ChangeSubscription;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ChangeSubscriptionBuilder {
    
    
-   private java.lang.String resourceTypeId;
+   private String resourceTypeId;
    
-   public ChangeSubscriptionBuilder resourceTypeId( final java.lang.String resourceTypeId) {
+   public ChangeSubscriptionBuilder resourceTypeId( final String resourceTypeId) {
       this.resourceTypeId = resourceTypeId;
       return this;
    }
    
    
-   public java.lang.String getResourceTypeId(){
+   public String getResourceTypeId(){
       return this.resourceTypeId;
    }
 

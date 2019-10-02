@@ -3,7 +3,6 @@ package com.commercetools.models.me;
 import com.commercetools.models.me.MyCartUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +24,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLineItemCustomTypeAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    private com.commercetools.models.type.FieldContainer fields;
    
    private com.commercetools.models.type.TypeResourceIdentifier type;
 
    @JsonCreator
-   MyCartSetLineItemCustomTypeActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type) {
+   MyCartSetLineItemCustomTypeActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type) {
       this.lineItemId = lineItemId;
       this.fields = fields;
       this.type = type;
@@ -45,12 +44,12 @@ public final class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLin
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
@@ -64,7 +63,7 @@ public final class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLin
       return this.type;
    }
 
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
    

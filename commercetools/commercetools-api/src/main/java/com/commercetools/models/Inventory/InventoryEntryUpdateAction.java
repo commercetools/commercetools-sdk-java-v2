@@ -8,7 +8,6 @@ import com.commercetools.models.inventory.InventoryEntrySetCustomTypeAction;
 import com.commercetools.models.inventory.InventoryEntrySetExpectedDeliveryAction;
 import com.commercetools.models.inventory.InventoryEntrySetRestockableInDaysAction;
 import com.commercetools.models.inventory.InventoryEntrySetSupplyChannelAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

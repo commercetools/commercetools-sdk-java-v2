@@ -5,7 +5,6 @@ import com.commercetools.models.common.DiscountedPrice;
 import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -30,7 +29,7 @@ public final class ScopedPriceImpl implements ScopedPrice {
 
    private com.commercetools.models.common.DiscountedPrice discounted;
    
-   private java.lang.String country;
+   private String country;
    
    private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
@@ -42,14 +41,14 @@ public final class ScopedPriceImpl implements ScopedPrice {
    
    private java.time.ZonedDateTime validFrom;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.common.TypedMoney value;
    
    private com.commercetools.models.common.TypedMoney currentValue;
 
    @JsonCreator
-   ScopedPriceImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("country") final java.lang.String country, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("id") final java.lang.String id, @JsonProperty("value") final com.commercetools.models.common.TypedMoney value, @JsonProperty("currentValue") final com.commercetools.models.common.TypedMoney currentValue) {
+   ScopedPriceImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("country") final String country, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("id") final String id, @JsonProperty("value") final com.commercetools.models.common.TypedMoney value, @JsonProperty("currentValue") final com.commercetools.models.common.TypedMoney currentValue) {
       this.discounted = discounted;
       this.country = country;
       this.customerGroup = customerGroup;
@@ -73,7 +72,7 @@ public final class ScopedPriceImpl implements ScopedPrice {
    /**
    	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
@@ -103,7 +102,7 @@ public final class ScopedPriceImpl implements ScopedPrice {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -121,7 +120,7 @@ public final class ScopedPriceImpl implements ScopedPrice {
       this.discounted = discounted;
    }
    
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
@@ -145,7 +144,7 @@ public final class ScopedPriceImpl implements ScopedPrice {
       this.validFrom = validFrom;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

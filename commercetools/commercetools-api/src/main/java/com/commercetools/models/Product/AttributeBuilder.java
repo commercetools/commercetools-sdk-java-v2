@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Object;
-import java.lang.String;
+
 import com.commercetools.models.product.Attribute;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class AttributeBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
    
-   private java.lang.Object value;
+   private Object value;
    
-   public AttributeBuilder name( final java.lang.String name) {
+   public AttributeBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public AttributeBuilder value( final java.lang.Object value) {
+   public AttributeBuilder value( final Object value) {
       this.value = value;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 

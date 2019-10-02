@@ -3,8 +3,6 @@ package com.commercetools.models.extension;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.extension.ExtensionDestination;
 import com.commercetools.models.extension.ExtensionTrigger;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -30,24 +28,24 @@ public final class ExtensionImpl implements Extension {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private java.lang.Integer timeoutInMs;
+   private Integer timeoutInMs;
    
    private com.commercetools.models.extension.ExtensionDestination destination;
    
    private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ExtensionImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("timeoutInMs") final java.lang.Integer timeoutInMs, @JsonProperty("destination") final com.commercetools.models.extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers, @JsonProperty("key") final java.lang.String key) {
+   ExtensionImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("timeoutInMs") final Integer timeoutInMs, @JsonProperty("destination") final com.commercetools.models.extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -74,12 +72,12 @@ public final class ExtensionImpl implements Extension {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -94,7 +92,7 @@ public final class ExtensionImpl implements Extension {
    }
    
    
-   public java.lang.Integer getTimeoutInMs(){
+   public Integer getTimeoutInMs(){
       return this.timeoutInMs;
    }
    
@@ -109,7 +107,7 @@ public final class ExtensionImpl implements Extension {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -121,11 +119,11 @@ public final class ExtensionImpl implements Extension {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -137,7 +135,7 @@ public final class ExtensionImpl implements Extension {
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setTimeoutInMs(final java.lang.Integer timeoutInMs){
+   public void setTimeoutInMs(final Integer timeoutInMs){
       this.timeoutInMs = timeoutInMs;
    }
    
@@ -149,7 +147,7 @@ public final class ExtensionImpl implements Extension {
       this.triggers = triggers;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

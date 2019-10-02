@@ -3,8 +3,6 @@ package com.commercetools.models.order;
 import com.commercetools.models.common.Image;
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.Attribute;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.order.ProductVariantImportDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,13 +18,13 @@ public final class ProductVariantImportDraftBuilder {
    private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
    @Nullable
-   private java.lang.Long id;
+   private Long id;
    
    @Nullable
    private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    public ProductVariantImportDraftBuilder images(@Nullable final java.util.List<com.commercetools.models.common.Image> images) {
       this.images = images;
@@ -38,7 +36,7 @@ public final class ProductVariantImportDraftBuilder {
       return this;
    }
    
-   public ProductVariantImportDraftBuilder id(@Nullable final java.lang.Long id) {
+   public ProductVariantImportDraftBuilder id(@Nullable final Long id) {
       this.id = id;
       return this;
    }
@@ -48,7 +46,7 @@ public final class ProductVariantImportDraftBuilder {
       return this;
    }
    
-   public ProductVariantImportDraftBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductVariantImportDraftBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
@@ -64,7 +62,7 @@ public final class ProductVariantImportDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Long getId(){
+   public Long getId(){
       return this.id;
    }
    
@@ -74,7 +72,7 @@ public final class ProductVariantImportDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

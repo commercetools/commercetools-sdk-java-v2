@@ -2,7 +2,6 @@ package com.commercetools.models.store;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.store.StoreUpdateAction;
-import java.lang.String;
 import com.commercetools.models.store.StoreSetNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

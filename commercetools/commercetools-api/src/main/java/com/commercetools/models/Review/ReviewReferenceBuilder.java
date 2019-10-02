@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class ReviewReferenceBuilder {
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private com.commercetools.models.review.Review obj;
    
-   public ReviewReferenceBuilder id( final java.lang.String id) {
+   public ReviewReferenceBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -28,7 +28,7 @@ public final class ReviewReferenceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

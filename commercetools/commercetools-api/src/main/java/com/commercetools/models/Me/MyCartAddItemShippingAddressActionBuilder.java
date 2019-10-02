@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCartAddItemShippingAddressAction;
 import javax.annotation.Nullable;
 import java.util.List;

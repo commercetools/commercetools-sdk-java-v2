@@ -6,9 +6,6 @@ import com.commercetools.models.common.Price;
 import com.commercetools.models.common.ScopedPrice;
 import com.commercetools.models.product.Attribute;
 import com.commercetools.models.product.ProductVariantAvailability;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -36,26 +33,26 @@ public final class ProductVariantImpl implements ProductVariant {
    
    private java.util.List<com.commercetools.models.common.Asset> assets;
    
-   private java.lang.Boolean isMatchingVariant;
+   private Boolean isMatchingVariant;
    
    private com.commercetools.models.common.Price price;
    
-   private java.lang.Boolean scopedPriceDiscounted;
+   private Boolean scopedPriceDiscounted;
    
    private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
    private com.commercetools.models.product.ProductVariantAvailability availability;
    
-   private java.lang.Long id;
+   private Long id;
    
    private java.util.List<com.commercetools.models.common.Price> prices;
    
-   private java.lang.String sku;
+   private String sku;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ProductVariantImpl(@JsonProperty("scopedPrice") final com.commercetools.models.common.ScopedPrice scopedPrice, @JsonProperty("images") final java.util.List<com.commercetools.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.models.common.Asset> assets, @JsonProperty("isMatchingVariant") final java.lang.Boolean isMatchingVariant, @JsonProperty("price") final com.commercetools.models.common.Price price, @JsonProperty("scopedPriceDiscounted") final java.lang.Boolean scopedPriceDiscounted, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes, @JsonProperty("availability") final com.commercetools.models.product.ProductVariantAvailability availability, @JsonProperty("id") final java.lang.Long id, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.Price> prices, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("key") final java.lang.String key) {
+   ProductVariantImpl(@JsonProperty("scopedPrice") final com.commercetools.models.common.ScopedPrice scopedPrice, @JsonProperty("images") final java.util.List<com.commercetools.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.models.common.Asset> assets, @JsonProperty("isMatchingVariant") final Boolean isMatchingVariant, @JsonProperty("price") final com.commercetools.models.common.Price price, @JsonProperty("scopedPriceDiscounted") final Boolean scopedPriceDiscounted, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes, @JsonProperty("availability") final com.commercetools.models.product.ProductVariantAvailability availability, @JsonProperty("id") final Long id, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.Price> prices, @JsonProperty("sku") final String sku, @JsonProperty("key") final String key) {
       this.scopedPrice = scopedPrice;
       this.images = images;
       this.assets = assets;
@@ -89,7 +86,7 @@ public final class ProductVariantImpl implements ProductVariant {
    }
    
    
-   public java.lang.Boolean getIsMatchingVariant(){
+   public Boolean getIsMatchingVariant(){
       return this.isMatchingVariant;
    }
    
@@ -99,7 +96,7 @@ public final class ProductVariantImpl implements ProductVariant {
    }
    
    
-   public java.lang.Boolean getScopedPriceDiscounted(){
+   public Boolean getScopedPriceDiscounted(){
       return this.scopedPriceDiscounted;
    }
    
@@ -114,7 +111,7 @@ public final class ProductVariantImpl implements ProductVariant {
    }
    
    
-   public java.lang.Long getId(){
+   public Long getId(){
       return this.id;
    }
    
@@ -124,12 +121,12 @@ public final class ProductVariantImpl implements ProductVariant {
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -145,7 +142,7 @@ public final class ProductVariantImpl implements ProductVariant {
       this.assets = assets;
    }
    
-   public void setIsMatchingVariant(final java.lang.Boolean isMatchingVariant){
+   public void setIsMatchingVariant(final Boolean isMatchingVariant){
       this.isMatchingVariant = isMatchingVariant;
    }
    
@@ -153,7 +150,7 @@ public final class ProductVariantImpl implements ProductVariant {
       this.price = price;
    }
    
-   public void setScopedPriceDiscounted(final java.lang.Boolean scopedPriceDiscounted){
+   public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted){
       this.scopedPriceDiscounted = scopedPriceDiscounted;
    }
    
@@ -165,7 +162,7 @@ public final class ProductVariantImpl implements ProductVariant {
       this.availability = availability;
    }
    
-   public void setId(final java.lang.Long id){
+   public void setId(final Long id){
       this.id = id;
    }
    
@@ -173,11 +170,11 @@ public final class ProductVariantImpl implements ProductVariant {
       this.prices = prices;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

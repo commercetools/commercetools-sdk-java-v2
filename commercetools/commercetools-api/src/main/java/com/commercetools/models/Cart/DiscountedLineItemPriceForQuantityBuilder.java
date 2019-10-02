@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.DiscountedLineItemPrice;
-import java.lang.Integer;
 import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,12 +10,12 @@ import java.time.ZonedDateTime;
 public final class DiscountedLineItemPriceForQuantityBuilder {
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    
    private com.commercetools.models.cart.DiscountedLineItemPrice discountedPrice;
    
-   public DiscountedLineItemPriceForQuantityBuilder quantity( final java.lang.Integer quantity) {
+   public DiscountedLineItemPriceForQuantityBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -27,7 +26,7 @@ public final class DiscountedLineItemPriceForQuantityBuilder {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    

@@ -2,7 +2,6 @@ package com.commercetools.models.payment;
 
 import com.commercetools.models.common.Money;
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.payment.PaymentSetAuthorizationAction;
 import javax.annotation.Nullable;

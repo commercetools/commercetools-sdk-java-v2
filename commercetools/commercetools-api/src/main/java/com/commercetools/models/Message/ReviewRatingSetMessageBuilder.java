@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.message.Message;
-import java.lang.Boolean;
-import java.lang.Integer;
 import com.commercetools.models.message.ReviewRatingSetMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -19,13 +17,19 @@ public final class ReviewRatingSetMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -34,19 +38,16 @@ public final class ReviewRatingSetMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    @Nullable
-   private java.lang.Integer oldRating;
+   private Integer oldRating;
    
    
-   private java.lang.Boolean includedInStatistics;
+   private Boolean includedInStatistics;
    
    @Nullable
-   private java.lang.Integer newRating;
+   private Integer newRating;
    
    @Nullable
    private com.commercetools.models.common.Reference target;
@@ -61,17 +62,27 @@ public final class ReviewRatingSetMessageBuilder {
       return this;
    }
    
-   public ReviewRatingSetMessageBuilder id( final java.lang.String id) {
+   public ReviewRatingSetMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ReviewRatingSetMessageBuilder version( final java.lang.Long version) {
+   public ReviewRatingSetMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public ReviewRatingSetMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public ReviewRatingSetMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public ReviewRatingSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public ReviewRatingSetMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -86,27 +97,22 @@ public final class ReviewRatingSetMessageBuilder {
       return this;
    }
    
-   public ReviewRatingSetMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public ReviewRatingSetMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public ReviewRatingSetMessageBuilder type( final java.lang.String type) {
-      this.type = type;
-      return this;
-   }
-   
-   public ReviewRatingSetMessageBuilder oldRating(@Nullable final java.lang.Integer oldRating) {
+   public ReviewRatingSetMessageBuilder oldRating(@Nullable final Integer oldRating) {
       this.oldRating = oldRating;
       return this;
    }
    
-   public ReviewRatingSetMessageBuilder includedInStatistics( final java.lang.Boolean includedInStatistics) {
+   public ReviewRatingSetMessageBuilder includedInStatistics( final Boolean includedInStatistics) {
       this.includedInStatistics = includedInStatistics;
       return this;
    }
    
-   public ReviewRatingSetMessageBuilder newRating(@Nullable final java.lang.Integer newRating) {
+   public ReviewRatingSetMessageBuilder newRating(@Nullable final Integer newRating) {
       this.newRating = newRating;
       return this;
    }
@@ -127,17 +133,27 @@ public final class ReviewRatingSetMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -152,27 +168,22 @@ public final class ReviewRatingSetMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
-   
-   public java.lang.String getType(){
-      return this.type;
-   }
-   
    @Nullable
-   public java.lang.Integer getOldRating(){
+   public Integer getOldRating(){
       return this.oldRating;
    }
    
    
-   public java.lang.Boolean getIncludedInStatistics(){
+   public Boolean getIncludedInStatistics(){
       return this.includedInStatistics;
    }
    
    @Nullable
-   public java.lang.Integer getNewRating(){
+   public Integer getNewRating(){
       return this.newRating;
    }
    
@@ -182,7 +193,7 @@ public final class ReviewRatingSetMessageBuilder {
    }
 
    public ReviewRatingSetMessage build() {
-       return new ReviewRatingSetMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, oldRating, includedInStatistics, newRating, target);
+       return new ReviewRatingSetMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, oldRating, includedInStatistics, newRating, target);
    }
    
    public static ReviewRatingSetMessageBuilder of() {
@@ -195,11 +206,12 @@ public final class ReviewRatingSetMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.oldRating = template.getOldRating();
       builder.includedInStatistics = template.getIncludedInStatistics();
       builder.newRating = template.getNewRating();

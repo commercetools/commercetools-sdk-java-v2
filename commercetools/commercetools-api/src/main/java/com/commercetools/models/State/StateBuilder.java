@@ -5,8 +5,6 @@ import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.state.StateRoleEnum;
 import com.commercetools.models.state.StateTypeEnum;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.state.State;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -22,10 +20,10 @@ public final class StateBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -34,13 +32,13 @@ public final class StateBuilder {
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Boolean initial;
+   private Boolean initial;
    
    @Nullable
    private java.util.List<com.commercetools.models.state.StateRoleEnum> roles;
    
    
-   private java.lang.Boolean builtIn;
+   private Boolean builtIn;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString name;
@@ -55,7 +53,7 @@ public final class StateBuilder {
    private com.commercetools.models.state.StateTypeEnum type;
    
    
-   private java.lang.String key;
+   private String key;
    
    public StateBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -67,12 +65,12 @@ public final class StateBuilder {
       return this;
    }
    
-   public StateBuilder id( final java.lang.String id) {
+   public StateBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public StateBuilder version( final java.lang.Long version) {
+   public StateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -87,7 +85,7 @@ public final class StateBuilder {
       return this;
    }
    
-   public StateBuilder initial( final java.lang.Boolean initial) {
+   public StateBuilder initial( final Boolean initial) {
       this.initial = initial;
       return this;
    }
@@ -97,7 +95,7 @@ public final class StateBuilder {
       return this;
    }
    
-   public StateBuilder builtIn( final java.lang.Boolean builtIn) {
+   public StateBuilder builtIn( final Boolean builtIn) {
       this.builtIn = builtIn;
       return this;
    }
@@ -122,7 +120,7 @@ public final class StateBuilder {
       return this;
    }
    
-   public StateBuilder key( final java.lang.String key) {
+   public StateBuilder key( final String key) {
       this.key = key;
       return this;
    }
@@ -138,12 +136,12 @@ public final class StateBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -158,7 +156,7 @@ public final class StateBuilder {
    }
    
    
-   public java.lang.Boolean getInitial(){
+   public Boolean getInitial(){
       return this.initial;
    }
    
@@ -168,7 +166,7 @@ public final class StateBuilder {
    }
    
    
-   public java.lang.Boolean getBuiltIn(){
+   public Boolean getBuiltIn(){
       return this.builtIn;
    }
    
@@ -193,7 +191,7 @@ public final class StateBuilder {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

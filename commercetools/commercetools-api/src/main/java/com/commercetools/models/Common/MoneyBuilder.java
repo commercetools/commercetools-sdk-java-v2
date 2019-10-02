@@ -1,8 +1,6 @@
 package com.commercetools.models.common;
 
 import com.commercetools.models.common.TypedMoneyDraft;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.common.Money;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class MoneyBuilder {
    
    
-   private java.lang.Long centAmount;
+   private Long centAmount;
    
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
    
-   public MoneyBuilder centAmount( final java.lang.Long centAmount) {
+   public MoneyBuilder centAmount( final Long centAmount) {
       this.centAmount = centAmount;
       return this;
    }
    
-   public MoneyBuilder currencyCode( final java.lang.String currencyCode) {
+   public MoneyBuilder currencyCode( final String currencyCode) {
       this.currencyCode = currencyCode;
       return this;
    }
    
    
-   public java.lang.Long getCentAmount(){
+   public Long getCentAmount(){
       return this.centAmount;
    }
    
    
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
 

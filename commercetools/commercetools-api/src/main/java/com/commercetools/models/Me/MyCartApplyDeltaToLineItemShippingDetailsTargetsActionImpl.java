@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.cart.ItemShippingTarget;
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl implements MyCartApplyDeltaToLineItemShippingDetailsTargetsAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    private java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta;
 
    @JsonCreator
-   MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("targetsDelta") final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta) {
+   MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("targetsDelta") final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta) {
       this.lineItemId = lineItemId;
       this.targetsDelta = targetsDelta;
       this.action = "applyDeltaToLineItemShippingDetailsTargets";
@@ -41,12 +40,12 @@ public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl im
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
@@ -55,7 +54,7 @@ public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl im
       return this.targetsDelta;
    }
 
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
    

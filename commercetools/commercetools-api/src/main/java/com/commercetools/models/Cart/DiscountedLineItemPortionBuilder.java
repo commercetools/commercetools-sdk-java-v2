@@ -1,7 +1,7 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart_discount.CartDiscountReference;
-import com.commercetools.models.common.Money;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.cart.DiscountedLineItemPortion;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class DiscountedLineItemPortionBuilder {
    
    
-   private com.commercetools.models.common.Money discountedAmount;
+   private com.commercetools.models.common.TypedMoney discountedAmount;
    
    
    private com.commercetools.models.cart_discount.CartDiscountReference discount;
    
-   public DiscountedLineItemPortionBuilder discountedAmount( final com.commercetools.models.common.Money discountedAmount) {
+   public DiscountedLineItemPortionBuilder discountedAmount( final com.commercetools.models.common.TypedMoney discountedAmount) {
       this.discountedAmount = discountedAmount;
       return this;
    }
@@ -27,7 +27,7 @@ public final class DiscountedLineItemPortionBuilder {
    }
    
    
-   public com.commercetools.models.common.Money getDiscountedAmount(){
+   public com.commercetools.models.common.TypedMoney getDiscountedAmount(){
       return this.discountedAmount;
    }
    

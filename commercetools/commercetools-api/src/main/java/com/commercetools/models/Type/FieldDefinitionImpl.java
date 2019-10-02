@@ -1,10 +1,8 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.FieldType;
 import com.commercetools.models.type.TypeTextInputHint;
-import java.lang.Boolean;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,18 +24,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FieldDefinitionImpl implements FieldDefinition {
 
-   private java.lang.String name;
+   private String name;
    
    private com.commercetools.models.type.TypeTextInputHint inputHint;
    
    private com.commercetools.models.common.LocalizedString label;
    
-   private java.lang.Object type;
+   private com.commercetools.models.type.FieldType type;
    
-   private java.lang.Boolean required;
+   private Boolean required;
 
    @JsonCreator
-   FieldDefinitionImpl(@JsonProperty("name") final java.lang.String name, @JsonProperty("inputHint") final com.commercetools.models.type.TypeTextInputHint inputHint, @JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("type") final java.lang.Object type, @JsonProperty("required") final java.lang.Boolean required) {
+   FieldDefinitionImpl(@JsonProperty("name") final String name, @JsonProperty("inputHint") final com.commercetools.models.type.TypeTextInputHint inputHint, @JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("type") final com.commercetools.models.type.FieldType type, @JsonProperty("required") final Boolean required) {
       this.name = name;
       this.inputHint = inputHint;
       this.label = label;
@@ -49,7 +47,7 @@ public final class FieldDefinitionImpl implements FieldDefinition {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
@@ -64,16 +62,16 @@ public final class FieldDefinitionImpl implements FieldDefinition {
    }
    
    
-   public java.lang.Object getType(){
+   public com.commercetools.models.type.FieldType getType(){
       return this.type;
    }
    
    
-   public java.lang.Boolean getRequired(){
+   public Boolean getRequired(){
       return this.required;
    }
 
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
@@ -85,11 +83,11 @@ public final class FieldDefinitionImpl implements FieldDefinition {
       this.label = label;
    }
    
-   public void setType(final java.lang.Object type){
+   public void setType(final com.commercetools.models.type.FieldType type){
       this.type = type;
    }
    
-   public void setRequired(final java.lang.Boolean required){
+   public void setRequired(final Boolean required){
       this.required = required;
    }
 

@@ -2,8 +2,6 @@ package com.commercetools.models.inventory;
 
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -30,16 +28,16 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private java.lang.Long quantityOnStock;
+   private Long quantityOnStock;
    
    private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
-   private java.lang.Long restockableInDays;
+   private Long restockableInDays;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   InventoryEntryDraftImpl(@JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("quantityOnStock") final java.lang.Long quantityOnStock, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("restockableInDays") final java.lang.Long restockableInDays, @JsonProperty("sku") final java.lang.String sku) {
+   InventoryEntryDraftImpl(@JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("quantityOnStock") final Long quantityOnStock, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("restockableInDays") final Long restockableInDays, @JsonProperty("sku") final String sku) {
       this.expectedDelivery = expectedDelivery;
       this.custom = custom;
       this.quantityOnStock = quantityOnStock;
@@ -62,7 +60,7 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
    }
    
    
-   public java.lang.Long getQuantityOnStock(){
+   public Long getQuantityOnStock(){
       return this.quantityOnStock;
    }
    
@@ -72,12 +70,12 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
    }
    
    
-   public java.lang.Long getRestockableInDays(){
+   public Long getRestockableInDays(){
       return this.restockableInDays;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
@@ -89,7 +87,7 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
       this.custom = custom;
    }
    
-   public void setQuantityOnStock(final java.lang.Long quantityOnStock){
+   public void setQuantityOnStock(final Long quantityOnStock){
       this.quantityOnStock = quantityOnStock;
    }
    
@@ -97,11 +95,11 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
       this.supplyChannel = supplyChannel;
    }
    
-   public void setRestockableInDays(final java.lang.Long restockableInDays){
+   public void setRestockableInDays(final Long restockableInDays){
       this.restockableInDays = restockableInDays;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

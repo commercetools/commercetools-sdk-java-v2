@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.CustomerUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.customer.CustomerUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class CustomerUpdateBuilder {
    private java.util.List<com.commercetools.models.customer.CustomerUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public CustomerUpdateBuilder actions( final java.util.List<com.commercetools.models.customer.CustomerUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public CustomerUpdateBuilder version( final java.lang.Long version) {
+   public CustomerUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class CustomerUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import com.commercetools.models.subscription.SqsDestination;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,54 +10,54 @@ import java.time.ZonedDateTime;
 public final class SqsDestinationBuilder {
    
    
-   private java.lang.String accessKey;
+   private String accessKey;
    
    
-   private java.lang.String queueUrl;
+   private String queueUrl;
    
    
-   private java.lang.String region;
+   private String region;
    
    
-   private java.lang.String accessSecret;
+   private String accessSecret;
    
-   public SqsDestinationBuilder accessKey( final java.lang.String accessKey) {
+   public SqsDestinationBuilder accessKey( final String accessKey) {
       this.accessKey = accessKey;
       return this;
    }
    
-   public SqsDestinationBuilder queueUrl( final java.lang.String queueUrl) {
+   public SqsDestinationBuilder queueUrl( final String queueUrl) {
       this.queueUrl = queueUrl;
       return this;
    }
    
-   public SqsDestinationBuilder region( final java.lang.String region) {
+   public SqsDestinationBuilder region( final String region) {
       this.region = region;
       return this;
    }
    
-   public SqsDestinationBuilder accessSecret( final java.lang.String accessSecret) {
+   public SqsDestinationBuilder accessSecret( final String accessSecret) {
       this.accessSecret = accessSecret;
       return this;
    }
    
    
-   public java.lang.String getAccessKey(){
+   public String getAccessKey(){
       return this.accessKey;
    }
    
    
-   public java.lang.String getQueueUrl(){
+   public String getQueueUrl(){
       return this.queueUrl;
    }
    
    
-   public java.lang.String getRegion(){
+   public String getRegion(){
       return this.region;
    }
    
    
-   public java.lang.String getAccessSecret(){
+   public String getAccessSecret(){
       return this.accessSecret;
    }
 

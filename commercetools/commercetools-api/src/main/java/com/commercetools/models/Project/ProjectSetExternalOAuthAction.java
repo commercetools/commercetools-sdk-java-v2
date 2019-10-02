@@ -2,7 +2,6 @@ package com.commercetools.models.project;
 
 import com.commercetools.models.project.ExternalOAuth;
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import com.commercetools.models.project.ProjectSetExternalOAuthActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.order.ReturnItemDraft;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.OrderAddReturnInfoAction;
 import javax.annotation.Nullable;
@@ -16,7 +15,7 @@ public final class OrderAddReturnInfoActionBuilder {
    private java.time.ZonedDateTime returnDate;
    
    @Nullable
-   private java.lang.String returnTrackingId;
+   private String returnTrackingId;
    
    
    private java.util.List<com.commercetools.models.order.ReturnItemDraft> items;
@@ -26,7 +25,7 @@ public final class OrderAddReturnInfoActionBuilder {
       return this;
    }
    
-   public OrderAddReturnInfoActionBuilder returnTrackingId(@Nullable final java.lang.String returnTrackingId) {
+   public OrderAddReturnInfoActionBuilder returnTrackingId(@Nullable final String returnTrackingId) {
       this.returnTrackingId = returnTrackingId;
       return this;
    }
@@ -42,7 +41,7 @@ public final class OrderAddReturnInfoActionBuilder {
    }
    
    @Nullable
-   public java.lang.String getReturnTrackingId(){
+   public String getReturnTrackingId(){
       return this.returnTrackingId;
    }
    

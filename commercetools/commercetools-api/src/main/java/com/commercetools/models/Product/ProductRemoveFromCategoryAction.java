@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.category.CategoryResourceIdentifier;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductRemoveFromCategoryActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

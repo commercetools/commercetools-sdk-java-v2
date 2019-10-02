@@ -1,6 +1,6 @@
 package com.commercetools.models.common;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class UpdateActionImpl implements UpdateAction {
 
-   private java.lang.String action;
+   private String action;
 
    @JsonCreator
-   UpdateActionImpl(@JsonProperty("action") final java.lang.String action) {
+   UpdateActionImpl(@JsonProperty("action") final String action) {
       this.action = action;
    }
    public UpdateActionImpl() {
@@ -33,11 +33,11 @@ public final class UpdateActionImpl implements UpdateAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
 
-   public void setAction(final java.lang.String action){
+   public void setAction(final String action){
       this.action = action;
    }
 

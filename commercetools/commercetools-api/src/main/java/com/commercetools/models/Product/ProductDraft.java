@@ -8,8 +8,6 @@ import com.commercetools.models.product.SearchKeywords;
 import com.commercetools.models.product_type.ProductTypeResourceIdentifier;
 import com.commercetools.models.state.StateResourceIdentifier;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,7 +1,6 @@
 package com.commercetools.models.review;
 
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String authorName;
+   private String authorName;
 
    @JsonCreator
-   ReviewSetAuthorNameActionImpl(@JsonProperty("authorName") final java.lang.String authorName) {
+   ReviewSetAuthorNameActionImpl(@JsonProperty("authorName") final String authorName) {
       this.authorName = authorName;
       this.action = "setAuthorName";
    }
@@ -37,16 +36,16 @@ public final class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAuthorName(){
+   public String getAuthorName(){
       return this.authorName;
    }
 
-   public void setAuthorName(final java.lang.String authorName){
+   public void setAuthorName(final String authorName){
       this.authorName = authorName;
    }
 

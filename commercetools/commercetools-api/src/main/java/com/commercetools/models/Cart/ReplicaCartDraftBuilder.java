@@ -1,6 +1,6 @@
 package com.commercetools.models.cart;
 
-import java.lang.Object;
+
 import com.commercetools.models.cart.ReplicaCartDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ReplicaCartDraftBuilder {
    
    
-   private java.lang.Object reference;
+   private Object reference;
    
-   public ReplicaCartDraftBuilder reference( final java.lang.Object reference) {
+   public ReplicaCartDraftBuilder reference( final Object reference) {
       this.reference = reference;
       return this;
    }
    
    
-   public java.lang.Object getReference(){
+   public Object getReference(){
       return this.reference;
    }
 

@@ -4,7 +4,6 @@ import com.commercetools.models.subscription.ChangeSubscription;
 import com.commercetools.models.subscription.DeliveryFormat;
 import com.commercetools.models.subscription.Destination;
 import com.commercetools.models.subscription.MessageSubscription;
-import java.lang.String;
 import com.commercetools.models.subscription.SubscriptionDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

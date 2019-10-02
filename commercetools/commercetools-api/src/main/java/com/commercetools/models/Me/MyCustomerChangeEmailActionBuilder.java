@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCustomerChangeEmailAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class MyCustomerChangeEmailActionBuilder {
    
    
-   private java.lang.String email;
+   private String email;
    
-   public MyCustomerChangeEmailActionBuilder email( final java.lang.String email) {
+   public MyCustomerChangeEmailActionBuilder email( final String email) {
       this.email = email;
       return this;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 

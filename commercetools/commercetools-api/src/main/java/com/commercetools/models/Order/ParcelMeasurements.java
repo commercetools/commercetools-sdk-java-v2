@@ -1,6 +1,6 @@
 package com.commercetools.models.order;
 
-import java.lang.Integer;
+
 import com.commercetools.models.order.ParcelMeasurementsImpl;
 
 import com.fasterxml.jackson.annotation.*;

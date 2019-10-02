@@ -3,7 +3,6 @@ package com.commercetools.models.order;
 import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.ParcelMeasurements;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.Parcel;
 import javax.annotation.Nullable;
@@ -17,7 +16,7 @@ public final class ParcelBuilder {
    private java.time.ZonedDateTime createdAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
@@ -33,7 +32,7 @@ public final class ParcelBuilder {
       return this;
    }
    
-   public ParcelBuilder id( final java.lang.String id) {
+   public ParcelBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -59,7 +58,7 @@ public final class ParcelBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

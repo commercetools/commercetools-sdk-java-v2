@@ -3,7 +3,6 @@ package com.commercetools.models.type;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.FieldDefinition;
 import com.commercetools.models.type.ResourceTypeId;
-import java.lang.String;
 import com.commercetools.models.type.TypeDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -22,7 +21,7 @@ public final class TypeDraftBuilder {
    private com.commercetools.models.common.LocalizedString description;
    
    
-   private java.lang.String key;
+   private String key;
    
    
    private java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds;
@@ -42,7 +41,7 @@ public final class TypeDraftBuilder {
       return this;
    }
    
-   public TypeDraftBuilder key( final java.lang.String key) {
+   public TypeDraftBuilder key( final String key) {
       this.key = key;
       return this;
    }
@@ -68,7 +67,7 @@ public final class TypeDraftBuilder {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

@@ -2,8 +2,6 @@ package com.commercetools.models.error;
 
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DuplicateFieldWithConflictingResourceErrorImpl implements DuplicateFieldWithConflictingResourceError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
    private com.commercetools.models.common.Reference conflictingResource;
    
-   private java.lang.Object duplicateValue;
+   private Object duplicateValue;
    
-   private java.lang.String field;
+   private String field;
 
    @JsonCreator
-   DuplicateFieldWithConflictingResourceErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("conflictingResource") final com.commercetools.models.common.Reference conflictingResource, @JsonProperty("duplicateValue") final java.lang.Object duplicateValue, @JsonProperty("field") final java.lang.String field) {
+   DuplicateFieldWithConflictingResourceErrorImpl(@JsonProperty("message") final String message, @JsonProperty("conflictingResource") final com.commercetools.models.common.Reference conflictingResource, @JsonProperty("duplicateValue") final Object duplicateValue, @JsonProperty("field") final String field) {
       this.message = message;
       this.conflictingResource = conflictingResource;
       this.duplicateValue = duplicateValue;
@@ -48,12 +46,12 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl implements Dup
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
@@ -63,16 +61,16 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl implements Dup
    }
    
    
-   public java.lang.Object getDuplicateValue(){
+   public Object getDuplicateValue(){
       return this.duplicateValue;
    }
    
    
-   public java.lang.String getField(){
+   public String getField(){
       return this.field;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
@@ -80,11 +78,11 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl implements Dup
       this.conflictingResource = conflictingResource;
    }
    
-   public void setDuplicateValue(final java.lang.Object duplicateValue){
+   public void setDuplicateValue(final Object duplicateValue){
       this.duplicateValue = duplicateValue;
    }
    
-   public void setField(final java.lang.String field){
+   public void setField(final String field){
       this.field = field;
    }
 

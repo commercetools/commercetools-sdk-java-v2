@@ -4,7 +4,6 @@ import com.commercetools.models.category.CategoryResourceIdentifier;
 import com.commercetools.models.common.AssetDraft;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import com.commercetools.models.category.CategoryDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -23,7 +22,7 @@ public final class CategoryDraftBuilder {
    private com.commercetools.models.common.LocalizedString metaKeywords;
    
    @Nullable
-   private java.lang.String orderHint;
+   private String orderHint;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
@@ -35,7 +34,7 @@ public final class CategoryDraftBuilder {
    private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString description;
@@ -44,7 +43,7 @@ public final class CategoryDraftBuilder {
    private com.commercetools.models.common.LocalizedString metaDescription;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    
    private com.commercetools.models.common.LocalizedString slug;
@@ -64,7 +63,7 @@ public final class CategoryDraftBuilder {
       return this;
    }
    
-   public CategoryDraftBuilder orderHint(@Nullable final java.lang.String orderHint) {
+   public CategoryDraftBuilder orderHint(@Nullable final String orderHint) {
       this.orderHint = orderHint;
       return this;
    }
@@ -84,7 +83,7 @@ public final class CategoryDraftBuilder {
       return this;
    }
    
-   public CategoryDraftBuilder externalId(@Nullable final java.lang.String externalId) {
+   public CategoryDraftBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
@@ -99,7 +98,7 @@ public final class CategoryDraftBuilder {
       return this;
    }
    
-   public CategoryDraftBuilder key(@Nullable final java.lang.String key) {
+   public CategoryDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -125,7 +124,7 @@ public final class CategoryDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getOrderHint(){
+   public String getOrderHint(){
       return this.orderHint;
    }
    
@@ -145,7 +144,7 @@ public final class CategoryDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
@@ -160,7 +159,7 @@ public final class CategoryDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

@@ -3,7 +3,6 @@ package com.commercetools.models.order;
 import com.commercetools.models.common.Address;
 import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.Parcel;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.Delivery;
 import javax.annotation.Nullable;
@@ -20,7 +19,7 @@ public final class DeliveryBuilder {
    private com.commercetools.models.common.Address address;
    
    
-   private java.lang.String id;
+   private String id;
    
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
@@ -38,7 +37,7 @@ public final class DeliveryBuilder {
       return this;
    }
    
-   public DeliveryBuilder id( final java.lang.String id) {
+   public DeliveryBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -64,7 +63,7 @@ public final class DeliveryBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentStatusInterfaceCodeSetMessagePayloadImpl implements PaymentStatusInterfaceCodeSetMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String paymentId;
+   private String paymentId;
    
-   private java.lang.String interfaceCode;
+   private String interfaceCode;
 
    @JsonCreator
-   PaymentStatusInterfaceCodeSetMessagePayloadImpl(@JsonProperty("paymentId") final java.lang.String paymentId, @JsonProperty("interfaceCode") final java.lang.String interfaceCode) {
+   PaymentStatusInterfaceCodeSetMessagePayloadImpl(@JsonProperty("paymentId") final String paymentId, @JsonProperty("interfaceCode") final String interfaceCode) {
       this.paymentId = paymentId;
       this.interfaceCode = interfaceCode;
       this.type = "PaymentStatusInterfaceCodeSet";
@@ -40,25 +39,25 @@ public final class PaymentStatusInterfaceCodeSetMessagePayloadImpl implements Pa
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getPaymentId(){
+   public String getPaymentId(){
       return this.paymentId;
    }
    
    
-   public java.lang.String getInterfaceCode(){
+   public String getInterfaceCode(){
       return this.interfaceCode;
    }
 
-   public void setPaymentId(final java.lang.String paymentId){
+   public void setPaymentId(final String paymentId){
       this.paymentId = paymentId;
    }
    
-   public void setInterfaceCode(final java.lang.String interfaceCode){
+   public void setInterfaceCode(final String interfaceCode){
       this.interfaceCode = interfaceCode;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import com.commercetools.models.category.CategoryRemoveAssetAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class CategoryRemoveAssetActionBuilder {
    
    @Nullable
-   private java.lang.String assetId;
+   private String assetId;
    
    @Nullable
-   private java.lang.String assetKey;
+   private String assetKey;
    
-   public CategoryRemoveAssetActionBuilder assetId(@Nullable final java.lang.String assetId) {
+   public CategoryRemoveAssetActionBuilder assetId(@Nullable final String assetId) {
       this.assetId = assetId;
       return this;
    }
    
-   public CategoryRemoveAssetActionBuilder assetKey(@Nullable final java.lang.String assetKey) {
+   public CategoryRemoveAssetActionBuilder assetKey(@Nullable final String assetKey) {
       this.assetKey = assetKey;
       return this;
    }
    
    @Nullable
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    @Nullable
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
 

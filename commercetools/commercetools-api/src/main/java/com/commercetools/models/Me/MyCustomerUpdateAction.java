@@ -21,7 +21,6 @@ import com.commercetools.models.me.MyCustomerSetMiddleNameAction;
 import com.commercetools.models.me.MyCustomerSetSalutationAction;
 import com.commercetools.models.me.MyCustomerSetTitleAction;
 import com.commercetools.models.me.MyCustomerSetVatIdAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

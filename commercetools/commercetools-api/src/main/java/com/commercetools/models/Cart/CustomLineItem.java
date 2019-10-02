@@ -9,8 +9,6 @@ import com.commercetools.models.order.ItemState;
 import com.commercetools.models.tax_category.TaxCategoryReference;
 import com.commercetools.models.tax_category.TaxRate;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.CustomLineItemImpl;
 
 import com.fasterxml.jackson.annotation.*;

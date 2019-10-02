@@ -25,12 +25,12 @@ public final class ReviewResourceIdentifierImpl implements ReviewResourceIdentif
 
    private com.commercetools.models.common.ReferenceTypeId typeId;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ReviewResourceIdentifierImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("key") final java.lang.String key) {
+   ReviewResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
       this.id = id;
       this.key = key;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("review").get();
@@ -45,20 +45,20 @@ public final class ReviewResourceIdentifierImpl implements ReviewResourceIdentif
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

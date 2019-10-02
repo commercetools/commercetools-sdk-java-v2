@@ -1,8 +1,6 @@
 package com.commercetools.models.review;
 
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.review.ReviewSetTargetAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ReviewSetTargetActionBuilder {
    
    
-   private java.lang.Object target;
+   private Object target;
    
-   public ReviewSetTargetActionBuilder target( final java.lang.Object target) {
+   public ReviewSetTargetActionBuilder target( final Object target) {
       this.target = target;
       return this;
    }
    
    
-   public java.lang.Object getTarget(){
+   public Object getTarget(){
       return this.target;
    }
 

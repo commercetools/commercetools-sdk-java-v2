@@ -1,5 +1,6 @@
 package com.commercetools.models.order;
 
+import com.commercetools.models.cart.CartOrigin;
 import com.commercetools.models.cart.CustomLineItemDraft;
 import com.commercetools.models.cart.InventoryMode;
 import com.commercetools.models.cart.RoundingMode;
@@ -12,8 +13,8 @@ import com.commercetools.models.order.OrderState;
 import com.commercetools.models.order.PaymentState;
 import com.commercetools.models.order.ShipmentState;
 import com.commercetools.models.order.ShippingInfoImportDraft;
+import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.OrderImportDraft;
 import javax.annotation.Nullable;
@@ -27,13 +28,13 @@ public final class OrderImportDraftBuilder {
    private com.commercetools.models.order.ShipmentState shipmentState;
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
    @Nullable
    private java.time.ZonedDateTime completedAt;
    
    @Nullable
-   private java.lang.String orderNumber;
+   private String orderNumber;
    
    
    private com.commercetools.models.common.Money totalPrice;
@@ -45,10 +46,16 @@ public final class OrderImportDraftBuilder {
    private com.commercetools.models.cart.TaxedPrice taxedPrice;
    
    @Nullable
+   private com.commercetools.models.cart.CartOrigin origin;
+   
+   @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
    private com.commercetools.models.order.ShippingInfoImportDraft shippingInfo;
+   
+   @Nullable
+   private com.commercetools.models.store.StoreKeyReference store;
    
    @Nullable
    private com.commercetools.models.cart.InventoryMode inventoryMode;
@@ -69,10 +76,10 @@ public final class OrderImportDraftBuilder {
    private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
    @Nullable
-   private java.lang.String customerEmail;
+   private String customerEmail;
    
    @Nullable
-   private java.lang.String customerId;
+   private String customerId;
    
    @Nullable
    private com.commercetools.models.common.Address shippingAddress;
@@ -88,7 +95,7 @@ public final class OrderImportDraftBuilder {
       return this;
    }
    
-   public OrderImportDraftBuilder country(@Nullable final java.lang.String country) {
+   public OrderImportDraftBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
@@ -98,7 +105,7 @@ public final class OrderImportDraftBuilder {
       return this;
    }
    
-   public OrderImportDraftBuilder orderNumber(@Nullable final java.lang.String orderNumber) {
+   public OrderImportDraftBuilder orderNumber(@Nullable final String orderNumber) {
       this.orderNumber = orderNumber;
       return this;
    }
@@ -118,6 +125,11 @@ public final class OrderImportDraftBuilder {
       return this;
    }
    
+   public OrderImportDraftBuilder origin(@Nullable final com.commercetools.models.cart.CartOrigin origin) {
+      this.origin = origin;
+      return this;
+   }
+   
    public OrderImportDraftBuilder custom(@Nullable final com.commercetools.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
       return this;
@@ -125,6 +137,11 @@ public final class OrderImportDraftBuilder {
    
    public OrderImportDraftBuilder shippingInfo(@Nullable final com.commercetools.models.order.ShippingInfoImportDraft shippingInfo) {
       this.shippingInfo = shippingInfo;
+      return this;
+   }
+   
+   public OrderImportDraftBuilder store(@Nullable final com.commercetools.models.store.StoreKeyReference store) {
+      this.store = store;
       return this;
    }
    
@@ -158,12 +175,12 @@ public final class OrderImportDraftBuilder {
       return this;
    }
    
-   public OrderImportDraftBuilder customerEmail(@Nullable final java.lang.String customerEmail) {
+   public OrderImportDraftBuilder customerEmail(@Nullable final String customerEmail) {
       this.customerEmail = customerEmail;
       return this;
    }
    
-   public OrderImportDraftBuilder customerId(@Nullable final java.lang.String customerId) {
+   public OrderImportDraftBuilder customerId(@Nullable final String customerId) {
       this.customerId = customerId;
       return this;
    }
@@ -189,7 +206,7 @@ public final class OrderImportDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
@@ -199,7 +216,7 @@ public final class OrderImportDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getOrderNumber(){
+   public String getOrderNumber(){
       return this.orderNumber;
    }
    
@@ -219,6 +236,11 @@ public final class OrderImportDraftBuilder {
    }
    
    @Nullable
+   public com.commercetools.models.cart.CartOrigin getOrigin(){
+      return this.origin;
+   }
+   
+   @Nullable
    public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
@@ -226,6 +248,11 @@ public final class OrderImportDraftBuilder {
    @Nullable
    public com.commercetools.models.order.ShippingInfoImportDraft getShippingInfo(){
       return this.shippingInfo;
+   }
+   
+   @Nullable
+   public com.commercetools.models.store.StoreKeyReference getStore(){
+      return this.store;
    }
    
    @Nullable
@@ -259,12 +286,12 @@ public final class OrderImportDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getCustomerEmail(){
+   public String getCustomerEmail(){
       return this.customerEmail;
    }
    
    @Nullable
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
    
@@ -284,7 +311,7 @@ public final class OrderImportDraftBuilder {
    }
 
    public OrderImportDraft build() {
-       return new OrderImportDraftImpl(shipmentState, country, completedAt, orderNumber, totalPrice, customerGroup, taxedPrice, custom, shippingInfo, inventoryMode, orderState, taxRoundingMode, lineItems, customLineItems, itemShippingAddresses, customerEmail, customerId, shippingAddress, billingAddress, paymentState);
+       return new OrderImportDraftImpl(shipmentState, country, completedAt, orderNumber, totalPrice, customerGroup, taxedPrice, origin, custom, shippingInfo, store, inventoryMode, orderState, taxRoundingMode, lineItems, customLineItems, itemShippingAddresses, customerEmail, customerId, shippingAddress, billingAddress, paymentState);
    }
    
    public static OrderImportDraftBuilder of() {
@@ -300,8 +327,10 @@ public final class OrderImportDraftBuilder {
       builder.totalPrice = template.getTotalPrice();
       builder.customerGroup = template.getCustomerGroup();
       builder.taxedPrice = template.getTaxedPrice();
+      builder.origin = template.getOrigin();
       builder.custom = template.getCustom();
       builder.shippingInfo = template.getShippingInfo();
+      builder.store = template.getStore();
       builder.inventoryMode = template.getInventoryMode();
       builder.orderState = template.getOrderState();
       builder.taxRoundingMode = template.getTaxRoundingMode();

@@ -2,7 +2,6 @@ package com.commercetools.models.project;
 
 import com.commercetools.models.project.ExternalOAuth;
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectSetExternalOAuthActionImpl implements ProjectSetExternalOAuthAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.project.ExternalOAuth externalOAuth;
 
@@ -38,7 +37,7 @@ public final class ProjectSetExternalOAuthActionImpl implements ProjectSetExtern
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

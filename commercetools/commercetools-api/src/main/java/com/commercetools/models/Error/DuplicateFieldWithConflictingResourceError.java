@@ -2,8 +2,6 @@ package com.commercetools.models.error;
 
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.error.DuplicateFieldWithConflictingResourceErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;

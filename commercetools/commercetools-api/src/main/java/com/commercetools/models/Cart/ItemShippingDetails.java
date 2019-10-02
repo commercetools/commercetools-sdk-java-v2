@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.ItemShippingTarget;
-import java.lang.Boolean;
 import com.commercetools.models.cart.ItemShippingDetailsImpl;
 
 import com.fasterxml.jackson.annotation.*;

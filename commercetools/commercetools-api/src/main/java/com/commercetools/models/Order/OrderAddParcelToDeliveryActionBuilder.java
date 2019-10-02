@@ -4,7 +4,6 @@ import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.order.ParcelMeasurements;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import com.commercetools.models.order.OrderAddParcelToDeliveryAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,7 +13,7 @@ import java.time.ZonedDateTime;
 public final class OrderAddParcelToDeliveryActionBuilder {
    
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    @Nullable
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
@@ -25,7 +24,7 @@ public final class OrderAddParcelToDeliveryActionBuilder {
    @Nullable
    private com.commercetools.models.order.ParcelMeasurements measurements;
    
-   public OrderAddParcelToDeliveryActionBuilder deliveryId( final java.lang.String deliveryId) {
+   public OrderAddParcelToDeliveryActionBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -46,7 +45,7 @@ public final class OrderAddParcelToDeliveryActionBuilder {
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    

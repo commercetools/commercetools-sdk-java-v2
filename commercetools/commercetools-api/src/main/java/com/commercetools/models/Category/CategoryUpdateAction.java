@@ -22,7 +22,6 @@ import com.commercetools.models.category.CategorySetKeyAction;
 import com.commercetools.models.category.CategorySetMetaDescriptionAction;
 import com.commercetools.models.category.CategorySetMetaKeywordsAction;
 import com.commercetools.models.category.CategorySetMetaTitleAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

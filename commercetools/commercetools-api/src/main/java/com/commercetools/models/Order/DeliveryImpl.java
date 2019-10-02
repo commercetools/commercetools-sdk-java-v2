@@ -3,7 +3,6 @@ package com.commercetools.models.order;
 import com.commercetools.models.common.Address;
 import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.Parcel;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -30,14 +29,14 @@ public final class DeliveryImpl implements Delivery {
    
    private com.commercetools.models.common.Address address;
    
-   private java.lang.String id;
+   private String id;
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
    private java.util.List<com.commercetools.models.order.Parcel> parcels;
 
    @JsonCreator
-   DeliveryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("id") final java.lang.String id, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("parcels") final java.util.List<com.commercetools.models.order.Parcel> parcels) {
+   DeliveryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("id") final String id, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("parcels") final java.util.List<com.commercetools.models.order.Parcel> parcels) {
       this.createdAt = createdAt;
       this.address = address;
       this.id = id;
@@ -59,7 +58,7 @@ public final class DeliveryImpl implements Delivery {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -81,7 +80,7 @@ public final class DeliveryImpl implements Delivery {
       this.address = address;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

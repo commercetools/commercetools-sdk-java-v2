@@ -2,9 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.DiscountedPrice;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.message.ProductPriceExternalDiscountSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;

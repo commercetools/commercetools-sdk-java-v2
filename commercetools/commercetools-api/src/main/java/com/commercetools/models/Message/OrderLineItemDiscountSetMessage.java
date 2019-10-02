@@ -4,7 +4,6 @@ import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.models.cart.TaxedItemPrice;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.message.Message;
-import java.lang.String;
 import com.commercetools.models.message.OrderLineItemDiscountSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -63,11 +62,12 @@ public interface OrderLineItemDiscountSetMessage extends Message {
       instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
       instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setType(template.getType());
       instance.setTotalPrice(template.getTotalPrice());
       instance.setLineItemId(template.getLineItemId());
       instance.setTaxedPrice(template.getTaxedPrice());

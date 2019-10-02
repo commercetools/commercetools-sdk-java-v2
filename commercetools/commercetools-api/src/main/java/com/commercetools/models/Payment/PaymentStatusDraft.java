@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentStatusDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

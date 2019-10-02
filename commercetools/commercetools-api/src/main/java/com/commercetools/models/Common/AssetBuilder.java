@@ -3,7 +3,6 @@ package com.commercetools.models.common;
 import com.commercetools.models.common.AssetSource;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import com.commercetools.models.common.Asset;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -25,13 +24,13 @@ public final class AssetBuilder {
    private com.commercetools.models.common.LocalizedString description;
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    @Nullable
-   private java.util.List<java.lang.String> tags;
+   private java.util.List<String> tags;
    
    public AssetBuilder sources( final java.util.List<com.commercetools.models.common.AssetSource> sources) {
       this.sources = sources;
@@ -53,17 +52,17 @@ public final class AssetBuilder {
       return this;
    }
    
-   public AssetBuilder id( final java.lang.String id) {
+   public AssetBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public AssetBuilder key(@Nullable final java.lang.String key) {
+   public AssetBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
-   public AssetBuilder tags(@Nullable final java.util.List<java.lang.String> tags) {
+   public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
       this.tags = tags;
       return this;
    }
@@ -89,17 +88,17 @@ public final class AssetBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
    @Nullable
-   public java.util.List<java.lang.String> getTags(){
+   public java.util.List<String> getTags(){
       return this.tags;
    }
 

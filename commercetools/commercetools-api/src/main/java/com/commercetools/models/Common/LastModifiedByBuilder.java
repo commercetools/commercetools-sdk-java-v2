@@ -10,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class LastModifiedByBuilder {
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    @Nullable
-   private java.lang.String clientId;
+   private String clientId;
    
    @Nullable
-   private java.lang.String externalUserId;
+   private String externalUserId;
    
    @Nullable
    private com.commercetools.models.customer.CustomerReference customer;
    
-   public LastModifiedByBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public LastModifiedByBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
    
-   public LastModifiedByBuilder clientId(@Nullable final java.lang.String clientId) {
+   public LastModifiedByBuilder clientId(@Nullable final String clientId) {
       this.clientId = clientId;
       return this;
    }
    
-   public LastModifiedByBuilder externalUserId(@Nullable final java.lang.String externalUserId) {
+   public LastModifiedByBuilder externalUserId(@Nullable final String externalUserId) {
       this.externalUserId = externalUserId;
       return this;
    }
@@ -42,17 +42,17 @@ public final class LastModifiedByBuilder {
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
    @Nullable
-   public java.lang.String getClientId(){
+   public String getClientId(){
       return this.clientId;
    }
    
    @Nullable
-   public java.lang.String getExternalUserId(){
+   public String getExternalUserId(){
       return this.externalUserId;
    }
    

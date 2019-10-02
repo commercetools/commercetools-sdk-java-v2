@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class OrderReferenceBuilder {
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private com.commercetools.models.order.Order obj;
    
-   public OrderReferenceBuilder id( final java.lang.String id) {
+   public OrderReferenceBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -28,7 +28,7 @@ public final class OrderReferenceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetAnonymousIdAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CartSetAnonymousIdActionBuilder {
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
-   public CartSetAnonymousIdActionBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public CartSetAnonymousIdActionBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
 

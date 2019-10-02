@@ -1,9 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.common.DiscountedPrice;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.message.ProductPriceDiscountsSetUpdatedPrice;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,46 +13,46 @@ public final class ProductPriceDiscountsSetUpdatedPriceBuilder {
    private com.commercetools.models.common.DiscountedPrice discounted;
    
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    
-   private java.lang.Integer variantId;
+   private Integer variantId;
    
    
-   private java.lang.String priceId;
-   
-   @Nullable
-   private java.lang.String sku;
+   private String priceId;
    
    @Nullable
-   private java.lang.String variantKey;
+   private String sku;
+   
+   @Nullable
+   private String variantKey;
    
    public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(@Nullable final com.commercetools.models.common.DiscountedPrice discounted) {
       this.discounted = discounted;
       return this;
    }
    
-   public ProductPriceDiscountsSetUpdatedPriceBuilder staged( final java.lang.Boolean staged) {
+   public ProductPriceDiscountsSetUpdatedPriceBuilder staged( final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductPriceDiscountsSetUpdatedPriceBuilder variantId( final java.lang.Integer variantId) {
+   public ProductPriceDiscountsSetUpdatedPriceBuilder variantId( final Integer variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ProductPriceDiscountsSetUpdatedPriceBuilder priceId( final java.lang.String priceId) {
+   public ProductPriceDiscountsSetUpdatedPriceBuilder priceId( final String priceId) {
       this.priceId = priceId;
       return this;
    }
    
-   public ProductPriceDiscountsSetUpdatedPriceBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductPriceDiscountsSetUpdatedPriceBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
-   public ProductPriceDiscountsSetUpdatedPriceBuilder variantKey(@Nullable final java.lang.String variantKey) {
+   public ProductPriceDiscountsSetUpdatedPriceBuilder variantKey(@Nullable final String variantKey) {
       this.variantKey = variantKey;
       return this;
    }
@@ -66,27 +63,27 @@ public final class ProductPriceDiscountsSetUpdatedPriceBuilder {
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Integer getVariantId(){
+   public Integer getVariantId(){
       return this.variantId;
    }
    
    
-   public java.lang.String getPriceId(){
+   public String getPriceId(){
       return this.priceId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    @Nullable
-   public java.lang.String getVariantKey(){
+   public String getVariantKey(){
       return this.variantKey;
    }
 

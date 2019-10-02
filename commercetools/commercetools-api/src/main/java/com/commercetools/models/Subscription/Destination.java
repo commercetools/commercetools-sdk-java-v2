@@ -6,7 +6,6 @@ import com.commercetools.models.subscription.GoogleCloudPubSubDestination;
 import com.commercetools.models.subscription.IronMqDestination;
 import com.commercetools.models.subscription.SnsDestination;
 import com.commercetools.models.subscription.SqsDestination;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

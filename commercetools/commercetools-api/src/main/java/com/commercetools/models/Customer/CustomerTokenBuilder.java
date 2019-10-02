@@ -1,6 +1,5 @@
 package com.commercetools.models.customer;
 
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.customer.CustomerToken;
 import javax.annotation.Nullable;
@@ -17,13 +16,13 @@ public final class CustomerTokenBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String customerId;
+   private String customerId;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.String value;
+   private String value;
    
    
    private java.time.ZonedDateTime expiresAt;
@@ -38,17 +37,17 @@ public final class CustomerTokenBuilder {
       return this;
    }
    
-   public CustomerTokenBuilder customerId( final java.lang.String customerId) {
+   public CustomerTokenBuilder customerId( final String customerId) {
       this.customerId = customerId;
       return this;
    }
    
-   public CustomerTokenBuilder id( final java.lang.String id) {
+   public CustomerTokenBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public CustomerTokenBuilder value( final java.lang.String value) {
+   public CustomerTokenBuilder value( final String value) {
       this.value = value;
       return this;
    }
@@ -69,17 +68,17 @@ public final class CustomerTokenBuilder {
    }
    
    
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.String getValue(){
+   public String getValue(){
       return this.value;
    }
    

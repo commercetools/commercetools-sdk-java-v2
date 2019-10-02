@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
-import java.lang.Long;
-import java.lang.String;
+
 import com.commercetools.models.customer.CustomerChangePassword;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,54 +10,54 @@ import java.time.ZonedDateTime;
 public final class CustomerChangePasswordBuilder {
    
    
-   private java.lang.String newPassword;
+   private String newPassword;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    
-   private java.lang.String currentPassword;
+   private String currentPassword;
    
-   public CustomerChangePasswordBuilder newPassword( final java.lang.String newPassword) {
+   public CustomerChangePasswordBuilder newPassword( final String newPassword) {
       this.newPassword = newPassword;
       return this;
    }
    
-   public CustomerChangePasswordBuilder id( final java.lang.String id) {
+   public CustomerChangePasswordBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public CustomerChangePasswordBuilder version( final java.lang.Long version) {
+   public CustomerChangePasswordBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public CustomerChangePasswordBuilder currentPassword( final java.lang.String currentPassword) {
+   public CustomerChangePasswordBuilder currentPassword( final String currentPassword) {
       this.currentPassword = currentPassword;
       return this;
    }
    
    
-   public java.lang.String getNewPassword(){
+   public String getNewPassword(){
       return this.newPassword;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.String getCurrentPassword(){
+   public String getCurrentPassword(){
       return this.currentPassword;
    }
 

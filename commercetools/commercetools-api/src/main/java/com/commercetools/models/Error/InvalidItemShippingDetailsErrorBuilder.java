@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import com.commercetools.models.error.InvalidItemShippingDetailsError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class InvalidItemShippingDetailsErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    
-   private java.lang.String itemId;
+   private String itemId;
    
    
-   private java.lang.String subject;
+   private String subject;
    
-   public InvalidItemShippingDetailsErrorBuilder message( final java.lang.String message) {
+   public InvalidItemShippingDetailsErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public InvalidItemShippingDetailsErrorBuilder itemId( final java.lang.String itemId) {
+   public InvalidItemShippingDetailsErrorBuilder itemId( final String itemId) {
       this.itemId = itemId;
       return this;
    }
    
-   public InvalidItemShippingDetailsErrorBuilder subject( final java.lang.String subject) {
+   public InvalidItemShippingDetailsErrorBuilder subject( final String subject) {
       this.subject = subject;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.lang.String getItemId(){
+   public String getItemId(){
       return this.itemId;
    }
    
    
-   public java.lang.String getSubject(){
+   public String getSubject(){
       return this.subject;
    }
 

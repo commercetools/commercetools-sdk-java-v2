@@ -1,7 +1,6 @@
 package com.commercetools.models.common;
 
 import com.commercetools.models.common.ImageDimensions;
-import java.lang.String;
 import com.commercetools.models.common.Image;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,20 +10,20 @@ import java.time.ZonedDateTime;
 public final class ImageBuilder {
    
    @Nullable
-   private java.lang.String label;
+   private String label;
    
    
-   private java.lang.String url;
+   private String url;
    
    
    private com.commercetools.models.common.ImageDimensions dimensions;
    
-   public ImageBuilder label(@Nullable final java.lang.String label) {
+   public ImageBuilder label(@Nullable final String label) {
       this.label = label;
       return this;
    }
    
-   public ImageBuilder url( final java.lang.String url) {
+   public ImageBuilder url( final String url) {
       this.url = url;
       return this;
    }
@@ -35,12 +34,12 @@ public final class ImageBuilder {
    }
    
    @Nullable
-   public java.lang.String getLabel(){
+   public String getLabel(){
       return this.label;
    }
    
    
-   public java.lang.String getUrl(){
+   public String getUrl(){
       return this.url;
    }
    

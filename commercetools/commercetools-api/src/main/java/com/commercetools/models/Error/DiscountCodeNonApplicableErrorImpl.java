@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -24,24 +23,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplicableError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
-   private java.lang.String reason;
+   private String reason;
    
    private java.time.ZonedDateTime validityCheckTime;
    
-   private java.lang.String discountCode;
+   private String discountCode;
    
    private java.time.ZonedDateTime validUntil;
    
    private java.time.ZonedDateTime validFrom;
    
-   private java.lang.String dicountCodeId;
+   private String dicountCodeId;
 
    @JsonCreator
-   DiscountCodeNonApplicableErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("reason") final java.lang.String reason, @JsonProperty("validityCheckTime") final java.time.ZonedDateTime validityCheckTime, @JsonProperty("discountCode") final java.lang.String discountCode, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("dicountCodeId") final java.lang.String dicountCodeId) {
+   DiscountCodeNonApplicableErrorImpl(@JsonProperty("message") final String message, @JsonProperty("reason") final String reason, @JsonProperty("validityCheckTime") final java.time.ZonedDateTime validityCheckTime, @JsonProperty("discountCode") final String discountCode, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("dicountCodeId") final String dicountCodeId) {
       this.message = message;
       this.reason = reason;
       this.validityCheckTime = validityCheckTime;
@@ -56,17 +55,17 @@ public final class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNon
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.lang.String getReason(){
+   public String getReason(){
       return this.reason;
    }
    
@@ -76,7 +75,7 @@ public final class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNon
    }
    
    
-   public java.lang.String getDiscountCode(){
+   public String getDiscountCode(){
       return this.discountCode;
    }
    
@@ -91,15 +90,15 @@ public final class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNon
    }
    
    
-   public java.lang.String getDicountCodeId(){
+   public String getDicountCodeId(){
       return this.dicountCodeId;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setReason(final java.lang.String reason){
+   public void setReason(final String reason){
       this.reason = reason;
    }
    
@@ -107,7 +106,7 @@ public final class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNon
       this.validityCheckTime = validityCheckTime;
    }
    
-   public void setDiscountCode(final java.lang.String discountCode){
+   public void setDiscountCode(final String discountCode){
       this.discountCode = discountCode;
    }
    
@@ -119,7 +118,7 @@ public final class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNon
       this.validFrom = validFrom;
    }
    
-   public void setDicountCodeId(final java.lang.String dicountCodeId){
+   public void setDicountCodeId(final String dicountCodeId){
       this.dicountCodeId = dicountCodeId;
    }
 

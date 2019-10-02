@@ -4,10 +4,6 @@ import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.customer.CustomerReference;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.review.Review;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -23,10 +19,10 @@ public final class ReviewBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -35,40 +31,40 @@ public final class ReviewBuilder {
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Boolean includedInStatistics;
+   private Boolean includedInStatistics;
    
    @Nullable
-   private java.lang.String uniquenessValue;
+   private String uniquenessValue;
    
    @Nullable
-   private java.lang.String authorName;
+   private String authorName;
    
    @Nullable
    private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
-   private java.lang.Integer rating;
+   private Integer rating;
    
    @Nullable
    private com.commercetools.models.state.StateReference state;
    
    @Nullable
-   private java.lang.String text;
+   private String text;
    
    @Nullable
-   private java.lang.String title;
+   private String title;
    
    @Nullable
-   private java.lang.String locale;
+   private String locale;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    @Nullable
    private com.commercetools.models.customer.CustomerReference customer;
    
    @Nullable
-   private java.lang.Object target;
+   private Object target;
    
    public ReviewBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -80,12 +76,12 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder id( final java.lang.String id) {
+   public ReviewBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ReviewBuilder version( final java.lang.Long version) {
+   public ReviewBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -100,17 +96,17 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder includedInStatistics( final java.lang.Boolean includedInStatistics) {
+   public ReviewBuilder includedInStatistics( final Boolean includedInStatistics) {
       this.includedInStatistics = includedInStatistics;
       return this;
    }
    
-   public ReviewBuilder uniquenessValue(@Nullable final java.lang.String uniquenessValue) {
+   public ReviewBuilder uniquenessValue(@Nullable final String uniquenessValue) {
       this.uniquenessValue = uniquenessValue;
       return this;
    }
    
-   public ReviewBuilder authorName(@Nullable final java.lang.String authorName) {
+   public ReviewBuilder authorName(@Nullable final String authorName) {
       this.authorName = authorName;
       return this;
    }
@@ -120,7 +116,7 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder rating(@Nullable final java.lang.Integer rating) {
+   public ReviewBuilder rating(@Nullable final Integer rating) {
       this.rating = rating;
       return this;
    }
@@ -130,22 +126,22 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder text(@Nullable final java.lang.String text) {
+   public ReviewBuilder text(@Nullable final String text) {
       this.text = text;
       return this;
    }
    
-   public ReviewBuilder title(@Nullable final java.lang.String title) {
+   public ReviewBuilder title(@Nullable final String title) {
       this.title = title;
       return this;
    }
    
-   public ReviewBuilder locale(@Nullable final java.lang.String locale) {
+   public ReviewBuilder locale(@Nullable final String locale) {
       this.locale = locale;
       return this;
    }
    
-   public ReviewBuilder key(@Nullable final java.lang.String key) {
+   public ReviewBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -155,7 +151,7 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder target(@Nullable final java.lang.Object target) {
+   public ReviewBuilder target(@Nullable final Object target) {
       this.target = target;
       return this;
    }
@@ -171,12 +167,12 @@ public final class ReviewBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -191,17 +187,17 @@ public final class ReviewBuilder {
    }
    
    
-   public java.lang.Boolean getIncludedInStatistics(){
+   public Boolean getIncludedInStatistics(){
       return this.includedInStatistics;
    }
    
    @Nullable
-   public java.lang.String getUniquenessValue(){
+   public String getUniquenessValue(){
       return this.uniquenessValue;
    }
    
    @Nullable
-   public java.lang.String getAuthorName(){
+   public String getAuthorName(){
       return this.authorName;
    }
    
@@ -211,7 +207,7 @@ public final class ReviewBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getRating(){
+   public Integer getRating(){
       return this.rating;
    }
    
@@ -221,22 +217,22 @@ public final class ReviewBuilder {
    }
    
    @Nullable
-   public java.lang.String getText(){
+   public String getText(){
       return this.text;
    }
    
    @Nullable
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
    
    @Nullable
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -246,7 +242,7 @@ public final class ReviewBuilder {
    }
    
    @Nullable
-   public java.lang.Object getTarget(){
+   public Object getTarget(){
       return this.target;
    }
 

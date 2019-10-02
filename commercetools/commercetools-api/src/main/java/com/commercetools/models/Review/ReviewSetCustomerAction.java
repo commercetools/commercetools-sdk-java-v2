@@ -2,7 +2,6 @@ package com.commercetools.models.review;
 
 import com.commercetools.models.customer.CustomerResourceIdentifier;
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.String;
 import com.commercetools.models.review.ReviewSetCustomerActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

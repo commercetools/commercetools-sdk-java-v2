@@ -3,9 +3,6 @@ package com.commercetools.models.me;
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.me.MyLineItemDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

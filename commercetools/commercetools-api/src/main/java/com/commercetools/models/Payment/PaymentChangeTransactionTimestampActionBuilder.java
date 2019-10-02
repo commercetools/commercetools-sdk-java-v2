@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.payment.PaymentChangeTransactionTimestampAction;
 import javax.annotation.Nullable;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class PaymentChangeTransactionTimestampActionBuilder {
    
    
-   private java.lang.String transactionId;
+   private String transactionId;
    
    
    private java.time.ZonedDateTime timestamp;
    
-   public PaymentChangeTransactionTimestampActionBuilder transactionId( final java.lang.String transactionId) {
+   public PaymentChangeTransactionTimestampActionBuilder transactionId( final String transactionId) {
       this.transactionId = transactionId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class PaymentChangeTransactionTimestampActionBuilder {
    }
    
    
-   public java.lang.String getTransactionId(){
+   public String getTransactionId(){
       return this.transactionId;
    }
    

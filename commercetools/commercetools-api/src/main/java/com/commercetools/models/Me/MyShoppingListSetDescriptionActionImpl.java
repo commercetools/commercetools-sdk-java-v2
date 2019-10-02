@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.me.MyShoppingListUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListSetDescriptionActionImpl implements MyShoppingListSetDescriptionAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.LocalizedString description;
 
@@ -38,7 +37,7 @@ public final class MyShoppingListSetDescriptionActionImpl implements MyShoppingL
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

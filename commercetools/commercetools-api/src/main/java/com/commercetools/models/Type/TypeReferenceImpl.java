@@ -26,12 +26,12 @@ public final class TypeReferenceImpl implements TypeReference {
 
    private com.commercetools.models.common.ReferenceTypeId typeId;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.type.Type obj;
 
    @JsonCreator
-   TypeReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.type.Type obj) {
+   TypeReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.models.type.Type obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("type").get();
@@ -46,7 +46,7 @@ public final class TypeReferenceImpl implements TypeReference {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -55,7 +55,7 @@ public final class TypeReferenceImpl implements TypeReference {
       return this.obj;
    }
 
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

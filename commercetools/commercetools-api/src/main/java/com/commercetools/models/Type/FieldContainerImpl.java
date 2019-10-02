@@ -1,6 +1,6 @@
 package com.commercetools.models.type;
 
-import java.lang.Object;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FieldContainerImpl implements FieldContainer {
 
-   private Map<String, java.lang.Object> values;
+   private Map<String, Object> values;
 
    @JsonCreator
-   FieldContainerImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+   FieldContainerImpl(@JsonProperty("values") final Map<String, Object> values) {
       this.values = values;
    }
    public FieldContainerImpl() {
@@ -33,11 +33,11 @@ public final class FieldContainerImpl implements FieldContainer {
    }
    
    
-   public Map<String,java.lang.Object> values() {
+   public Map<String,Object> values() {
        return values;
    }
 
-   public void setValue(String key, java.lang.Object value) {
+   public void setValue(String key, Object value) {
        if (values == null) {
            values = new HashMap<>();
        }

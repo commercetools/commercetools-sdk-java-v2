@@ -1,7 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeCurrenciesActionImpl implements ProjectChangeCurrenciesAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.util.List<java.lang.String> currencies;
+   private java.util.List<String> currencies;
 
    @JsonCreator
-   ProjectChangeCurrenciesActionImpl(@JsonProperty("currencies") final java.util.List<java.lang.String> currencies) {
+   ProjectChangeCurrenciesActionImpl(@JsonProperty("currencies") final java.util.List<String> currencies) {
       this.currencies = currencies;
       this.action = "changeCurrencies";
    }
@@ -37,16 +36,16 @@ public final class ProjectChangeCurrenciesActionImpl implements ProjectChangeCur
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.util.List<java.lang.String> getCurrencies(){
+   public java.util.List<String> getCurrencies(){
       return this.currencies;
    }
 
-   public void setCurrencies(final java.util.List<java.lang.String> currencies){
+   public void setCurrencies(final java.util.List<String> currencies){
       this.currencies = currencies;
    }
 

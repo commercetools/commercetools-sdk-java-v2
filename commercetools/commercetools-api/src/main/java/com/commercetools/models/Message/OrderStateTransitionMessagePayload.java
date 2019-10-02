@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.state.StateReference;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.message.OrderStateTransitionMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -3,9 +3,6 @@ package com.commercetools.models.review;
 import com.commercetools.models.customer.CustomerResourceIdentifier;
 import com.commercetools.models.state.StateResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -27,30 +24,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewDraftImpl implements ReviewDraft {
 
-   private java.lang.String uniquenessValue;
+   private String uniquenessValue;
    
-   private java.lang.String authorName;
+   private String authorName;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private java.lang.Integer rating;
+   private Integer rating;
    
    private com.commercetools.models.state.StateResourceIdentifier state;
    
-   private java.lang.String text;
+   private String text;
    
-   private java.lang.String title;
+   private String title;
    
-   private java.lang.String locale;
+   private String locale;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.customer.CustomerResourceIdentifier customer;
    
-   private java.lang.Object target;
+   private Object target;
 
    @JsonCreator
-   ReviewDraftImpl(@JsonProperty("uniquenessValue") final java.lang.String uniquenessValue, @JsonProperty("authorName") final java.lang.String authorName, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("rating") final java.lang.Integer rating, @JsonProperty("state") final com.commercetools.models.state.StateResourceIdentifier state, @JsonProperty("text") final java.lang.String text, @JsonProperty("title") final java.lang.String title, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("key") final java.lang.String key, @JsonProperty("customer") final com.commercetools.models.customer.CustomerResourceIdentifier customer, @JsonProperty("target") final java.lang.Object target) {
+   ReviewDraftImpl(@JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("authorName") final String authorName, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("rating") final Integer rating, @JsonProperty("state") final com.commercetools.models.state.StateResourceIdentifier state, @JsonProperty("text") final String text, @JsonProperty("title") final String title, @JsonProperty("locale") final String locale, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.models.customer.CustomerResourceIdentifier customer, @JsonProperty("target") final Object target) {
       this.uniquenessValue = uniquenessValue;
       this.authorName = authorName;
       this.custom = custom;
@@ -68,12 +65,12 @@ public final class ReviewDraftImpl implements ReviewDraft {
    }
    
    
-   public java.lang.String getUniquenessValue(){
+   public String getUniquenessValue(){
       return this.uniquenessValue;
    }
    
    
-   public java.lang.String getAuthorName(){
+   public String getAuthorName(){
       return this.authorName;
    }
    
@@ -83,7 +80,7 @@ public final class ReviewDraftImpl implements ReviewDraft {
    }
    
    
-   public java.lang.Integer getRating(){
+   public Integer getRating(){
       return this.rating;
    }
    
@@ -93,22 +90,22 @@ public final class ReviewDraftImpl implements ReviewDraft {
    }
    
    
-   public java.lang.String getText(){
+   public String getText(){
       return this.text;
    }
    
    
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
    
    
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -118,15 +115,15 @@ public final class ReviewDraftImpl implements ReviewDraft {
    }
    
    
-   public java.lang.Object getTarget(){
+   public Object getTarget(){
       return this.target;
    }
 
-   public void setUniquenessValue(final java.lang.String uniquenessValue){
+   public void setUniquenessValue(final String uniquenessValue){
       this.uniquenessValue = uniquenessValue;
    }
    
-   public void setAuthorName(final java.lang.String authorName){
+   public void setAuthorName(final String authorName){
       this.authorName = authorName;
    }
    
@@ -134,7 +131,7 @@ public final class ReviewDraftImpl implements ReviewDraft {
       this.custom = custom;
    }
    
-   public void setRating(final java.lang.Integer rating){
+   public void setRating(final Integer rating){
       this.rating = rating;
    }
    
@@ -142,19 +139,19 @@ public final class ReviewDraftImpl implements ReviewDraft {
       this.state = state;
    }
    
-   public void setText(final java.lang.String text){
+   public void setText(final String text){
       this.text = text;
    }
    
-   public void setTitle(final java.lang.String title){
+   public void setTitle(final String title){
       this.title = title;
    }
    
-   public void setLocale(final java.lang.String locale){
+   public void setLocale(final String locale){
       this.locale = locale;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    
@@ -162,7 +159,7 @@ public final class ReviewDraftImpl implements ReviewDraft {
       this.customer = customer;
    }
    
-   public void setTarget(final java.lang.Object target){
+   public void setTarget(final Object target){
       this.target = target;
    }
 

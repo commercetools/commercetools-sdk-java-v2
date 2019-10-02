@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCartUpdateAction;
 import com.commercetools.models.payment.PaymentResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.me.MyCartRemovePaymentAction;
 import javax.annotation.Nullable;
 import java.util.List;

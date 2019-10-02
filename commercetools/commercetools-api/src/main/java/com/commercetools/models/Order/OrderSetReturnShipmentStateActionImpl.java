@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.order.ReturnShipmentState;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShipmentStateAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.order.ReturnShipmentState shipmentState;
    
-   private java.lang.String returnItemId;
+   private String returnItemId;
 
    @JsonCreator
-   OrderSetReturnShipmentStateActionImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ReturnShipmentState shipmentState, @JsonProperty("returnItemId") final java.lang.String returnItemId) {
+   OrderSetReturnShipmentStateActionImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ReturnShipmentState shipmentState, @JsonProperty("returnItemId") final String returnItemId) {
       this.shipmentState = shipmentState;
       this.returnItemId = returnItemId;
       this.action = "setReturnShipmentState";
@@ -41,7 +40,7 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
    }
    
    
-   public java.lang.String getReturnItemId(){
+   public String getReturnItemId(){
       return this.returnItemId;
    }
 
@@ -59,7 +58,7 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
       this.shipmentState = shipmentState;
    }
    
-   public void setReturnItemId(final java.lang.String returnItemId){
+   public void setReturnItemId(final String returnItemId){
       this.returnItemId = returnItemId;
    }
 

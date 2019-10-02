@@ -4,7 +4,6 @@ import com.commercetools.models.common.AssetDraft;
 import com.commercetools.models.common.Image;
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.Attribute;
-import java.lang.String;
 import com.commercetools.models.product.ProductVariantDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

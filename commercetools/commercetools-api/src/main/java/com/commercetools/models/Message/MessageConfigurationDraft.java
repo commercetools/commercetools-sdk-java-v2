@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
-import java.lang.Boolean;
-import java.lang.Integer;
+
 import com.commercetools.models.message.MessageConfigurationDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

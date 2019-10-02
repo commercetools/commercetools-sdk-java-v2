@@ -1,7 +1,6 @@
 package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionDestination;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionAWSLambdaDestinationImpl;
 
 import com.fasterxml.jackson.annotation.*;

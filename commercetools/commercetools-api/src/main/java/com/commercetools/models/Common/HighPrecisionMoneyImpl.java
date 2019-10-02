@@ -2,7 +2,6 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.common.MoneyType;
 import com.commercetools.models.common.TypedMoney;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class HighPrecisionMoneyImpl implements HighPrecisionMoney {
 
-   private java.lang.Long centAmount;
+   private Long centAmount;
    
-   private java.lang.Integer fractionDigits;
+   private Integer fractionDigits;
    
    private com.commercetools.models.common.MoneyType type;
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
    
-   private java.lang.Long preciseAmount;
+   private Long preciseAmount;
 
    @JsonCreator
-   HighPrecisionMoneyImpl(@JsonProperty("centAmount") final java.lang.Long centAmount, @JsonProperty("fractionDigits") final java.lang.Integer fractionDigits, @JsonProperty("currencyCode") final java.lang.String currencyCode, @JsonProperty("preciseAmount") final java.lang.Long preciseAmount) {
+   HighPrecisionMoneyImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("preciseAmount") final Long preciseAmount) {
       this.centAmount = centAmount;
       this.fractionDigits = fractionDigits;
       this.currencyCode = currencyCode;
@@ -47,12 +46,12 @@ public final class HighPrecisionMoneyImpl implements HighPrecisionMoney {
    }
    
    
-   public java.lang.Long getCentAmount(){
+   public Long getCentAmount(){
       return this.centAmount;
    }
    
    
-   public java.lang.Integer getFractionDigits(){
+   public Integer getFractionDigits(){
       return this.fractionDigits;
    }
    
@@ -64,28 +63,28 @@ public final class HighPrecisionMoneyImpl implements HighPrecisionMoney {
    /**
    	<p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
    */
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
    
    
-   public java.lang.Long getPreciseAmount(){
+   public Long getPreciseAmount(){
       return this.preciseAmount;
    }
 
-   public void setCentAmount(final java.lang.Long centAmount){
+   public void setCentAmount(final Long centAmount){
       this.centAmount = centAmount;
    }
    
-   public void setFractionDigits(final java.lang.Integer fractionDigits){
+   public void setFractionDigits(final Integer fractionDigits){
       this.fractionDigits = fractionDigits;
    }
    
-   public void setCurrencyCode(final java.lang.String currencyCode){
+   public void setCurrencyCode(final String currencyCode){
       this.currencyCode = currencyCode;
    }
    
-   public void setPreciseAmount(final java.lang.Long preciseAmount){
+   public void setPreciseAmount(final Long preciseAmount){
       this.preciseAmount = preciseAmount;
    }
 

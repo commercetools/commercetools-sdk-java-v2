@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.DeliveryAddressSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,7 +14,7 @@ public final class DeliveryAddressSetMessagePayloadBuilder {
    private com.commercetools.models.common.Address oldAddress;
    
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    @Nullable
    private com.commercetools.models.common.Address address;
@@ -25,7 +24,7 @@ public final class DeliveryAddressSetMessagePayloadBuilder {
       return this;
    }
    
-   public DeliveryAddressSetMessagePayloadBuilder deliveryId( final java.lang.String deliveryId) {
+   public DeliveryAddressSetMessagePayloadBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -41,7 +40,7 @@ public final class DeliveryAddressSetMessagePayloadBuilder {
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    

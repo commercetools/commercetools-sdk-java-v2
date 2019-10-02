@@ -1,7 +1,6 @@
 package com.commercetools.models.common;
 
 import com.commercetools.models.common.AssetDimensions;
-import java.lang.String;
 import com.commercetools.models.common.AssetSourceImpl;
 
 import com.fasterxml.jackson.annotation.*;

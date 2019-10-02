@@ -5,8 +5,6 @@ import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.state.StateRoleEnum;
 import com.commercetools.models.state.StateTypeEnum;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.state.StateImpl;
 
 import com.fasterxml.jackson.annotation.*;

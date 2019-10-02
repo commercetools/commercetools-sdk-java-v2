@@ -2,7 +2,6 @@ package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryResourceIdentifier;
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import com.commercetools.models.category.CategoryChangeParentAction;
 import javax.annotation.Nullable;
 import java.util.List;

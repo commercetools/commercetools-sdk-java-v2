@@ -3,8 +3,6 @@ package com.commercetools.models.product;
 import com.commercetools.models.product.ProductUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,18 +24,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetProductPriceCustomTypeActionImpl implements ProductSetProductPriceCustomTypeAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    private com.commercetools.models.type.FieldContainer fields;
    
    private com.commercetools.models.type.TypeResourceIdentifier type;
    
-   private java.lang.String priceId;
+   private String priceId;
 
    @JsonCreator
-   ProductSetProductPriceCustomTypeActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type, @JsonProperty("priceId") final java.lang.String priceId) {
+   ProductSetProductPriceCustomTypeActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type, @JsonProperty("priceId") final String priceId) {
       this.staged = staged;
       this.fields = fields;
       this.type = type;
@@ -49,12 +47,12 @@ public final class ProductSetProductPriceCustomTypeActionImpl implements Product
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
@@ -69,11 +67,11 @@ public final class ProductSetProductPriceCustomTypeActionImpl implements Product
    }
    
    
-   public java.lang.String getPriceId(){
+   public String getPriceId(){
       return this.priceId;
    }
 
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
@@ -85,7 +83,7 @@ public final class ProductSetProductPriceCustomTypeActionImpl implements Product
       this.type = type;
    }
    
-   public void setPriceId(final java.lang.String priceId){
+   public void setPriceId(final String priceId){
       this.priceId = priceId;
    }
 

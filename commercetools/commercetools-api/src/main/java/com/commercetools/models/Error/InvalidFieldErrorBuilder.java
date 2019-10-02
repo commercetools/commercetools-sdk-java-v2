@@ -1,8 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.error.InvalidFieldError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,54 +10,54 @@ import java.time.ZonedDateTime;
 public final class InvalidFieldErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    @Nullable
-   private java.util.List<java.lang.Object> allowedValues;
+   private java.util.List<Object> allowedValues;
    
    
-   private java.lang.String field;
+   private String field;
    
    
-   private java.lang.Object invalidValue;
+   private Object invalidValue;
    
-   public InvalidFieldErrorBuilder message( final java.lang.String message) {
+   public InvalidFieldErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public InvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<java.lang.Object> allowedValues) {
+   public InvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<Object> allowedValues) {
       this.allowedValues = allowedValues;
       return this;
    }
    
-   public InvalidFieldErrorBuilder field( final java.lang.String field) {
+   public InvalidFieldErrorBuilder field( final String field) {
       this.field = field;
       return this;
    }
    
-   public InvalidFieldErrorBuilder invalidValue( final java.lang.Object invalidValue) {
+   public InvalidFieldErrorBuilder invalidValue( final Object invalidValue) {
       this.invalidValue = invalidValue;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    @Nullable
-   public java.util.List<java.lang.Object> getAllowedValues(){
+   public java.util.List<Object> getAllowedValues(){
       return this.allowedValues;
    }
    
    
-   public java.lang.String getField(){
+   public String getField(){
       return this.field;
    }
    
    
-   public java.lang.Object getInvalidValue(){
+   public Object getInvalidValue(){
       return this.invalidValue;
    }
 

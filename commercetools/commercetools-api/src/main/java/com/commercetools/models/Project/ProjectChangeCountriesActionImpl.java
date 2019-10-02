@@ -1,7 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.util.List<java.lang.String> countries;
+   private java.util.List<String> countries;
 
    @JsonCreator
-   ProjectChangeCountriesActionImpl(@JsonProperty("countries") final java.util.List<java.lang.String> countries) {
+   ProjectChangeCountriesActionImpl(@JsonProperty("countries") final java.util.List<String> countries) {
       this.countries = countries;
       this.action = "changeCountries";
    }
@@ -37,16 +36,16 @@ public final class ProjectChangeCountriesActionImpl implements ProjectChangeCoun
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.util.List<java.lang.String> getCountries(){
+   public java.util.List<String> getCountries(){
       return this.countries;
    }
 
-   public void setCountries(final java.util.List<java.lang.String> countries){
+   public void setCountries(final java.util.List<String> countries){
       this.countries = countries;
    }
 

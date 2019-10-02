@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.discount_code.DiscountCodeReference;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.OrderDiscountCodeAddedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;

@@ -3,7 +3,6 @@ package com.commercetools.models.payment;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.payment.TransactionState;
 import com.commercetools.models.payment.TransactionType;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TransactionDraftImpl implements TransactionDraft {
 
-   private java.lang.String interactionId;
+   private String interactionId;
    
    private com.commercetools.models.common.Money amount;
    
@@ -37,7 +36,7 @@ public final class TransactionDraftImpl implements TransactionDraft {
    private java.time.ZonedDateTime timestamp;
 
    @JsonCreator
-   TransactionDraftImpl(@JsonProperty("interactionId") final java.lang.String interactionId, @JsonProperty("amount") final com.commercetools.models.common.Money amount, @JsonProperty("state") final com.commercetools.models.payment.TransactionState state, @JsonProperty("type") final com.commercetools.models.payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
+   TransactionDraftImpl(@JsonProperty("interactionId") final String interactionId, @JsonProperty("amount") final com.commercetools.models.common.Money amount, @JsonProperty("state") final com.commercetools.models.payment.TransactionState state, @JsonProperty("type") final com.commercetools.models.payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
       this.interactionId = interactionId;
       this.amount = amount;
       this.state = state;
@@ -49,7 +48,7 @@ public final class TransactionDraftImpl implements TransactionDraft {
    }
    
    
-   public java.lang.String getInteractionId(){
+   public String getInteractionId(){
       return this.interactionId;
    }
    
@@ -73,7 +72,7 @@ public final class TransactionDraftImpl implements TransactionDraft {
       return this.timestamp;
    }
 
-   public void setInteractionId(final java.lang.String interactionId){
+   public void setInteractionId(final String interactionId){
       this.interactionId = interactionId;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentSetExternalIdAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class PaymentSetExternalIdActionBuilder {
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
-   public PaymentSetExternalIdActionBuilder externalId(@Nullable final java.lang.String externalId) {
+   public PaymentSetExternalIdActionBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
 

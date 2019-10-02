@@ -2,7 +2,6 @@ package com.commercetools.models.error;
 
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.Attribute;
-import java.lang.String;
 import com.commercetools.models.error.VariantValues;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,7 +17,7 @@ public final class VariantValuesBuilder {
    private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    public VariantValuesBuilder attributes( final java.util.List<com.commercetools.models.product.Attribute> attributes) {
       this.attributes = attributes;
@@ -30,7 +29,7 @@ public final class VariantValuesBuilder {
       return this;
    }
    
-   public VariantValuesBuilder sku(@Nullable final java.lang.String sku) {
+   public VariantValuesBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
@@ -46,7 +45,7 @@ public final class VariantValuesBuilder {
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

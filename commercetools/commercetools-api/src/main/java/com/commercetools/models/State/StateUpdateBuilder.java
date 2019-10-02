@@ -1,7 +1,6 @@
 package com.commercetools.models.state;
 
 import com.commercetools.models.state.StateUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.state.StateUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class StateUpdateBuilder {
    private java.util.List<com.commercetools.models.state.StateUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public StateUpdateBuilder actions( final java.util.List<com.commercetools.models.state.StateUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public StateUpdateBuilder version( final java.lang.Long version) {
+   public StateUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class StateUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

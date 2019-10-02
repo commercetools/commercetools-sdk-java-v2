@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductChangeSlugActionImpl implements ProductChangeSlugAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    private com.commercetools.models.common.LocalizedString slug;
 
    @JsonCreator
-   ProductChangeSlugActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug) {
+   ProductChangeSlugActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug) {
       this.staged = staged;
       this.slug = slug;
       this.action = "changeSlug";
@@ -42,12 +40,12 @@ public final class ProductChangeSlugActionImpl implements ProductChangeSlugActio
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
@@ -56,7 +54,7 @@ public final class ProductChangeSlugActionImpl implements ProductChangeSlugActio
       return this.slug;
    }
 
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    

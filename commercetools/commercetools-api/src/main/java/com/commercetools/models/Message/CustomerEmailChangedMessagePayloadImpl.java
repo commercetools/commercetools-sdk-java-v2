@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerEmailChangedMessagePayloadImpl implements CustomerEmailChangedMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String email;
+   private String email;
 
    @JsonCreator
-   CustomerEmailChangedMessagePayloadImpl(@JsonProperty("email") final java.lang.String email) {
+   CustomerEmailChangedMessagePayloadImpl(@JsonProperty("email") final String email) {
       this.email = email;
       this.type = "CustomerEmailChanged";
    }
@@ -37,16 +36,16 @@ public final class CustomerEmailChangedMessagePayloadImpl implements CustomerEma
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 
-   public void setEmail(final java.lang.String email){
+   public void setEmail(final String email){
       this.email = email;
    }
 

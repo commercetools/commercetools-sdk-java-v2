@@ -1,7 +1,6 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeChangeFieldDefinitionOrderActionImpl implements TypeChangeFieldDefinitionOrderAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.util.List<java.lang.String> fieldNames;
+   private java.util.List<String> fieldNames;
 
    @JsonCreator
-   TypeChangeFieldDefinitionOrderActionImpl(@JsonProperty("fieldNames") final java.util.List<java.lang.String> fieldNames) {
+   TypeChangeFieldDefinitionOrderActionImpl(@JsonProperty("fieldNames") final java.util.List<String> fieldNames) {
       this.fieldNames = fieldNames;
       this.action = "changeFieldDefinitionOrder";
    }
@@ -37,16 +36,16 @@ public final class TypeChangeFieldDefinitionOrderActionImpl implements TypeChang
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.util.List<java.lang.String> getFieldNames(){
+   public java.util.List<String> getFieldNames(){
       return this.fieldNames;
    }
 
-   public void setFieldNames(final java.util.List<java.lang.String> fieldNames){
+   public void setFieldNames(final java.util.List<String> fieldNames){
       this.fieldNames = fieldNames;
    }
 

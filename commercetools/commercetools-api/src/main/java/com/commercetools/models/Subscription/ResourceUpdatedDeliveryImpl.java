@@ -1,8 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.SubscriptionDelivery;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,22 +23,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDelivery {
 
-   private java.lang.String projectKey;
+   private String projectKey;
    
    private com.commercetools.models.common.Reference resource;
    
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
-   private java.lang.String notificationType;
+   private String notificationType;
    
    private java.time.ZonedDateTime modifiedAt;
    
-   private java.lang.Long oldVersion;
+   private Long oldVersion;
    
-   private java.lang.Long version;
+   private Long version;
 
    @JsonCreator
-   ResourceUpdatedDeliveryImpl(@JsonProperty("projectKey") final java.lang.String projectKey, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("modifiedAt") final java.time.ZonedDateTime modifiedAt, @JsonProperty("oldVersion") final java.lang.Long oldVersion, @JsonProperty("version") final java.lang.Long version) {
+   ResourceUpdatedDeliveryImpl(@JsonProperty("projectKey") final String projectKey, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("modifiedAt") final java.time.ZonedDateTime modifiedAt, @JsonProperty("oldVersion") final Long oldVersion, @JsonProperty("version") final Long version) {
       this.projectKey = projectKey;
       this.resource = resource;
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
@@ -54,7 +52,7 @@ public final class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDeliver
    }
    
    
-   public java.lang.String getProjectKey(){
+   public String getProjectKey(){
       return this.projectKey;
    }
    
@@ -69,7 +67,7 @@ public final class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDeliver
    }
    
    
-   public java.lang.String getNotificationType(){
+   public String getNotificationType(){
       return this.notificationType;
    }
    
@@ -79,16 +77,16 @@ public final class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDeliver
    }
    
    
-   public java.lang.Long getOldVersion(){
+   public Long getOldVersion(){
       return this.oldVersion;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 
-   public void setProjectKey(final java.lang.String projectKey){
+   public void setProjectKey(final String projectKey){
       this.projectKey = projectKey;
    }
    
@@ -104,11 +102,11 @@ public final class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDeliver
       this.modifiedAt = modifiedAt;
    }
    
-   public void setOldVersion(final java.lang.Long oldVersion){
+   public void setOldVersion(final Long oldVersion){
       this.oldVersion = oldVersion;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
 

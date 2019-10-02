@@ -2,9 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.DiscountedPrice;
 import com.commercetools.models.message.Message;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -30,49 +27,55 @@ public final class ProductPriceExternalDiscountSetMessageImpl implements Product
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
-   private java.lang.Long sequenceNumber;
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
+   
+   private Long sequenceNumber;
    
    private com.commercetools.models.common.Reference resource;
    
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.common.DiscountedPrice discounted;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.Integer variantId;
+   private Integer variantId;
    
-   private java.lang.String priceId;
+   private String priceId;
    
-   private java.lang.String sku;
+   private String sku;
    
-   private java.lang.String variantKey;
+   private String variantKey;
 
    @JsonCreator
-   ProductPriceExternalDiscountSetMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Integer variantId, @JsonProperty("priceId") final java.lang.String priceId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("variantKey") final java.lang.String variantKey) {
+   ProductPriceExternalDiscountSetMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Integer variantId, @JsonProperty("priceId") final String priceId, @JsonProperty("sku") final String sku, @JsonProperty("variantKey") final String variantKey) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
       this.version = version;
+      this.createdBy = createdBy;
+      this.lastModifiedBy = lastModifiedBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
-      this.type = type;
       this.discounted = discounted;
       this.staged = staged;
       this.variantId = variantId;
       this.priceId = priceId;
       this.sku = sku;
       this.variantKey = variantKey;
+      this.type = "ProductPriceExternalDiscountSet";
    }
    public ProductPriceExternalDiscountSetMessageImpl() {
       
@@ -89,17 +92,27 @@ public final class ProductPriceExternalDiscountSetMessageImpl implements Product
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.Long getSequenceNumber(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -114,12 +127,12 @@ public final class ProductPriceExternalDiscountSetMessageImpl implements Product
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -129,27 +142,27 @@ public final class ProductPriceExternalDiscountSetMessageImpl implements Product
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Integer getVariantId(){
+   public Integer getVariantId(){
       return this.variantId;
    }
    
    
-   public java.lang.String getPriceId(){
+   public String getPriceId(){
       return this.priceId;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    
-   public java.lang.String getVariantKey(){
+   public String getVariantKey(){
       return this.variantKey;
    }
 
@@ -161,15 +174,23 @@ public final class ProductPriceExternalDiscountSetMessageImpl implements Product
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
-   public void setSequenceNumber(final java.lang.Long sequenceNumber){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
+      this.lastModifiedBy = lastModifiedBy;
+   }
+   
+   public void setSequenceNumber(final Long sequenceNumber){
       this.sequenceNumber = sequenceNumber;
    }
    
@@ -181,35 +202,31 @@ public final class ProductPriceExternalDiscountSetMessageImpl implements Product
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
-   public void setResourceVersion(final java.lang.Long resourceVersion){
+   public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
-   }
-   
-   public void setType(final java.lang.String type){
-      this.type = type;
    }
    
    public void setDiscounted(final com.commercetools.models.common.DiscountedPrice discounted){
       this.discounted = discounted;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setVariantId(final java.lang.Integer variantId){
+   public void setVariantId(final Integer variantId){
       this.variantId = variantId;
    }
    
-   public void setPriceId(final java.lang.String priceId){
+   public void setPriceId(final String priceId){
       this.priceId = priceId;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
    
-   public void setVariantKey(final java.lang.String variantKey){
+   public void setVariantKey(final String variantKey){
       this.variantKey = variantKey;
    }
 

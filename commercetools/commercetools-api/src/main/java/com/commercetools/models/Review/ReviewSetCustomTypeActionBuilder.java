@@ -3,7 +3,6 @@ package com.commercetools.models.review;
 import com.commercetools.models.review.ReviewUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.review.ReviewSetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;

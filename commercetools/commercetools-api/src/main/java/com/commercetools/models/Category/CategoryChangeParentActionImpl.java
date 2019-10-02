@@ -2,7 +2,6 @@ package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryResourceIdentifier;
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryChangeParentActionImpl implements CategoryChangeParentAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.category.CategoryResourceIdentifier parent;
 
@@ -38,7 +37,7 @@ public final class CategoryChangeParentActionImpl implements CategoryChangeParen
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

@@ -3,7 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.models.cart.TaxedItemPrice;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +24,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderCustomLineItemDiscountSetMessagePayloadImpl implements OrderCustomLineItemDiscountSetMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
    
    private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
    @JsonCreator
-   OrderCustomLineItemDiscountSetMessagePayloadImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+   OrderCustomLineItemDiscountSetMessagePayloadImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
       this.customLineItemId = customLineItemId;
       this.taxedPrice = taxedPrice;
       this.discountedPricePerQuantity = discountedPricePerQuantity;
@@ -45,12 +44,12 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadImpl implements O
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
@@ -64,7 +63,7 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadImpl implements O
       return this.discountedPricePerQuantity;
    }
 
-   public void setCustomLineItemId(final java.lang.String customLineItemId){
+   public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
    

@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCartSetLineItemShippingDetailsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class MyCartSetLineItemShippingDetailsActionBuilder {
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    public MyCartSetLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.shippingDetails = shippingDetails;
       return this;
    }
    
-   public MyCartSetLineItemShippingDetailsActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public MyCartSetLineItemShippingDetailsActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class MyCartSetLineItemShippingDetailsActionBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
 

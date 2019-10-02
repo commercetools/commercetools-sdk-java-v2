@@ -3,7 +3,6 @@ package com.commercetools.models.me;
 import com.commercetools.models.cart.ExternalTaxRateDraft;
 import com.commercetools.models.me.MyCartUpdateAction;
 import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartSetShippingMethodActionImpl implements MyCartSetShippingMethodAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
@@ -42,7 +41,7 @@ public final class MyCartSetShippingMethodActionImpl implements MyCartSetShippin
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCartUpdateAction;
 import com.commercetools.models.payment.PaymentResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartRemovePaymentActionImpl implements MyCartRemovePaymentAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.payment.PaymentResourceIdentifier payment;
 
@@ -38,7 +37,7 @@ public final class MyCartRemovePaymentActionImpl implements MyCartRemovePaymentA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

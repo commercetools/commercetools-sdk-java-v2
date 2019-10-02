@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AzureEventGridDestinationImpl implements AzureEventGridDestination {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String accessKey;
+   private String accessKey;
    
-   private java.lang.String uri;
+   private String uri;
 
    @JsonCreator
-   AzureEventGridDestinationImpl(@JsonProperty("accessKey") final java.lang.String accessKey, @JsonProperty("uri") final java.lang.String uri) {
+   AzureEventGridDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("uri") final String uri) {
       this.accessKey = accessKey;
       this.uri = uri;
       this.type = "EventGrid";
@@ -40,25 +39,25 @@ public final class AzureEventGridDestinationImpl implements AzureEventGridDestin
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getAccessKey(){
+   public String getAccessKey(){
       return this.accessKey;
    }
    
    
-   public java.lang.String getUri(){
+   public String getUri(){
       return this.uri;
    }
 
-   public void setAccessKey(final java.lang.String accessKey){
+   public void setAccessKey(final String accessKey){
       this.accessKey = accessKey;
    }
    
-   public void setUri(final java.lang.String uri){
+   public void setUri(final String uri){
       this.uri = uri;
    }
 

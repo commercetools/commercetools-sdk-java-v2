@@ -4,7 +4,6 @@ import com.commercetools.models.common.AssetDraft;
 import com.commercetools.models.common.Image;
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.Attribute;
-import java.lang.String;
 import com.commercetools.models.product.ProductVariantDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -26,10 +25,10 @@ public final class ProductVariantDraftBuilder {
    private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public ProductVariantDraftBuilder images(@Nullable final java.util.List<com.commercetools.models.common.Image> images) {
       this.images = images;
@@ -51,12 +50,12 @@ public final class ProductVariantDraftBuilder {
       return this;
    }
    
-   public ProductVariantDraftBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductVariantDraftBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
-   public ProductVariantDraftBuilder key(@Nullable final java.lang.String key) {
+   public ProductVariantDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -82,12 +81,12 @@ public final class ProductVariantDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

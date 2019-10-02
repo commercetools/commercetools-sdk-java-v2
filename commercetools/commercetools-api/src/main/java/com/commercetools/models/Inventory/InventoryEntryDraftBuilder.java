@@ -2,8 +2,6 @@ package com.commercetools.models.inventory;
 
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.inventory.InventoryEntryDraft;
 import javax.annotation.Nullable;
@@ -20,16 +18,16 @@ public final class InventoryEntryDraftBuilder {
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
    
-   private java.lang.Long quantityOnStock;
+   private Long quantityOnStock;
    
    @Nullable
    private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    @Nullable
-   private java.lang.Long restockableInDays;
+   private Long restockableInDays;
    
    
-   private java.lang.String sku;
+   private String sku;
    
    public InventoryEntryDraftBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
       this.expectedDelivery = expectedDelivery;
@@ -41,7 +39,7 @@ public final class InventoryEntryDraftBuilder {
       return this;
    }
    
-   public InventoryEntryDraftBuilder quantityOnStock( final java.lang.Long quantityOnStock) {
+   public InventoryEntryDraftBuilder quantityOnStock( final Long quantityOnStock) {
       this.quantityOnStock = quantityOnStock;
       return this;
    }
@@ -51,12 +49,12 @@ public final class InventoryEntryDraftBuilder {
       return this;
    }
    
-   public InventoryEntryDraftBuilder restockableInDays(@Nullable final java.lang.Long restockableInDays) {
+   public InventoryEntryDraftBuilder restockableInDays(@Nullable final Long restockableInDays) {
       this.restockableInDays = restockableInDays;
       return this;
    }
    
-   public InventoryEntryDraftBuilder sku( final java.lang.String sku) {
+   public InventoryEntryDraftBuilder sku( final String sku) {
       this.sku = sku;
       return this;
    }
@@ -72,7 +70,7 @@ public final class InventoryEntryDraftBuilder {
    }
    
    
-   public java.lang.Long getQuantityOnStock(){
+   public Long getQuantityOnStock(){
       return this.quantityOnStock;
    }
    
@@ -82,12 +80,12 @@ public final class InventoryEntryDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Long getRestockableInDays(){
+   public Long getRestockableInDays(){
       return this.restockableInDays;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

@@ -1,10 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetAssetCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,93 +10,93 @@ import java.time.ZonedDateTime;
 public final class ProductSetAssetCustomFieldActionBuilder {
    
    @Nullable
-   private java.lang.String assetId;
+   private String assetId;
    
    
-   private java.lang.String name;
-   
-   @Nullable
-   private java.lang.Boolean staged;
+   private String name;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.String sku;
+   private Long variantId;
    
    @Nullable
-   private java.lang.Object value;
+   private String sku;
    
    @Nullable
-   private java.lang.String assetKey;
+   private Object value;
    
-   public ProductSetAssetCustomFieldActionBuilder assetId(@Nullable final java.lang.String assetId) {
+   @Nullable
+   private String assetKey;
+   
+   public ProductSetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
       this.assetId = assetId;
       return this;
    }
    
-   public ProductSetAssetCustomFieldActionBuilder name( final java.lang.String name) {
+   public ProductSetAssetCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ProductSetAssetCustomFieldActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetAssetCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductSetAssetCustomFieldActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ProductSetAssetCustomFieldActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ProductSetAssetCustomFieldActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductSetAssetCustomFieldActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
-   public ProductSetAssetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
+   public ProductSetAssetCustomFieldActionBuilder value(@Nullable final Object value) {
       this.value = value;
       return this;
    }
    
-   public ProductSetAssetCustomFieldActionBuilder assetKey(@Nullable final java.lang.String assetKey) {
+   public ProductSetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {
       this.assetKey = assetKey;
       return this;
    }
    
    @Nullable
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    @Nullable
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
    
    @Nullable
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
 

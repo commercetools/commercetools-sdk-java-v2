@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.ItemState;
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order.OrderImportLineItemStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class OrderImportLineItemStateActionBuilder {
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    
    private java.util.List<com.commercetools.models.order.ItemState> state;
    
-   public OrderImportLineItemStateActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public OrderImportLineItemStateActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class OrderImportLineItemStateActionBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    

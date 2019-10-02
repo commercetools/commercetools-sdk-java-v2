@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String assetId;
+   private String assetId;
    
-   private java.lang.String assetKey;
+   private String assetKey;
    
-   private java.util.List<java.lang.String> tags;
+   private java.util.List<String> tags;
 
    @JsonCreator
-   CategorySetAssetTagsActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("assetKey") final java.lang.String assetKey, @JsonProperty("tags") final java.util.List<java.lang.String> tags) {
+   CategorySetAssetTagsActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("tags") final java.util.List<String> tags) {
       this.assetId = assetId;
       this.assetKey = assetKey;
       this.tags = tags;
@@ -43,34 +42,34 @@ public final class CategorySetAssetTagsActionImpl implements CategorySetAssetTag
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
    
    
-   public java.util.List<java.lang.String> getTags(){
+   public java.util.List<String> getTags(){
       return this.tags;
    }
 
-   public void setAssetId(final java.lang.String assetId){
+   public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
    
-   public void setAssetKey(final java.lang.String assetKey){
+   public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
    }
    
-   public void setTags(final java.util.List<java.lang.String> tags){
+   public void setTags(final java.util.List<String> tags){
       this.tags = tags;
    }
 

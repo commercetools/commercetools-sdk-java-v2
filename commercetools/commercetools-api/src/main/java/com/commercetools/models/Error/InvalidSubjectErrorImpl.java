@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InvalidSubjectErrorImpl implements InvalidSubjectError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
 
    @JsonCreator
-   InvalidSubjectErrorImpl(@JsonProperty("message") final java.lang.String message) {
+   InvalidSubjectErrorImpl(@JsonProperty("message") final String message) {
       this.message = message;
       this.code = "InvalidSubject";
    }
@@ -37,16 +36,16 @@ public final class InvalidSubjectErrorImpl implements InvalidSubjectError {
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
 

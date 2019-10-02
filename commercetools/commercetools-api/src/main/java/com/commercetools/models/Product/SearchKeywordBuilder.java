@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Object;
-import java.lang.String;
+
 import com.commercetools.models.product.SearchKeyword;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class SearchKeywordBuilder {
    
    @Nullable
-   private java.lang.Object suggestTokenizer;
+   private Object suggestTokenizer;
    
    
-   private java.lang.String text;
+   private String text;
    
-   public SearchKeywordBuilder suggestTokenizer(@Nullable final java.lang.Object suggestTokenizer) {
+   public SearchKeywordBuilder suggestTokenizer(@Nullable final Object suggestTokenizer) {
       this.suggestTokenizer = suggestTokenizer;
       return this;
    }
    
-   public SearchKeywordBuilder text( final java.lang.String text) {
+   public SearchKeywordBuilder text( final String text) {
       this.text = text;
       return this;
    }
    
    @Nullable
-   public java.lang.Object getSuggestTokenizer(){
+   public Object getSuggestTokenizer(){
       return this.suggestTokenizer;
    }
    
    
-   public java.lang.String getText(){
+   public String getText(){
       return this.text;
    }
 

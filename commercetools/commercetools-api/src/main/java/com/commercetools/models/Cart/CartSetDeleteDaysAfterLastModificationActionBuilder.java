@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetDeleteDaysAfterLastModificationAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CartSetDeleteDaysAfterLastModificationActionBuilder {
    
    @Nullable
-   private java.lang.Integer deleteDaysAfterLastModification;
+   private Integer deleteDaysAfterLastModification;
    
-   public CartSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(@Nullable final java.lang.Integer deleteDaysAfterLastModification) {
+   public CartSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
       return this;
    }
    
    @Nullable
-   public java.lang.Integer getDeleteDaysAfterLastModification(){
+   public Integer getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
 

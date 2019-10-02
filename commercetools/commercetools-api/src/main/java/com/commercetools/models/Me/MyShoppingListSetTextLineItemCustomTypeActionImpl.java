@@ -3,7 +3,6 @@ package com.commercetools.models.me;
 import com.commercetools.models.me.MyShoppingListUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +24,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListSetTextLineItemCustomTypeActionImpl implements MyShoppingListSetTextLineItemCustomTypeAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.type.FieldContainer fields;
    
    private com.commercetools.models.type.TypeResourceIdentifier type;
    
-   private java.lang.String textLineItemId;
+   private String textLineItemId;
 
    @JsonCreator
-   MyShoppingListSetTextLineItemCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
+   MyShoppingListSetTextLineItemCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type, @JsonProperty("textLineItemId") final String textLineItemId) {
       this.fields = fields;
       this.type = type;
       this.textLineItemId = textLineItemId;
@@ -45,7 +44,7 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionImpl implements 
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -60,7 +59,7 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionImpl implements 
    }
    
    
-   public java.lang.String getTextLineItemId(){
+   public String getTextLineItemId(){
       return this.textLineItemId;
    }
 
@@ -72,7 +71,7 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionImpl implements 
       this.type = type;
    }
    
-   public void setTextLineItemId(final java.lang.String textLineItemId){
+   public void setTextLineItemId(final String textLineItemId){
       this.textLineItemId = textLineItemId;
    }
 

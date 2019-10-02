@@ -8,8 +8,6 @@ import com.commercetools.models.product.SearchKeywords;
 import com.commercetools.models.product_type.ProductTypeResourceIdentifier;
 import com.commercetools.models.state.StateResourceIdentifier;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -45,7 +43,7 @@ public final class ProductDraftImpl implements ProductDraft {
    
    private com.commercetools.models.product.CategoryOrderHints categoryOrderHints;
    
-   private java.lang.Boolean publish;
+   private Boolean publish;
    
    private com.commercetools.models.common.LocalizedString metaTitle;
    
@@ -57,14 +55,14 @@ public final class ProductDraftImpl implements ProductDraft {
    
    private java.util.List<com.commercetools.models.category.CategoryResourceIdentifier> categories;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.common.LocalizedString slug;
    
    private com.commercetools.models.product_type.ProductTypeResourceIdentifier productType;
 
    @JsonCreator
-   ProductDraftImpl(@JsonProperty("searchKeywords") final com.commercetools.models.product.SearchKeywords searchKeywords, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("variants") final java.util.List<com.commercetools.models.product.ProductVariantDraft> variants, @JsonProperty("metaDescription") final com.commercetools.models.common.LocalizedString metaDescription, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory, @JsonProperty("metaKeywords") final com.commercetools.models.common.LocalizedString metaKeywords, @JsonProperty("categoryOrderHints") final com.commercetools.models.product.CategoryOrderHints categoryOrderHints, @JsonProperty("publish") final java.lang.Boolean publish, @JsonProperty("metaTitle") final com.commercetools.models.common.LocalizedString metaTitle, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("state") final com.commercetools.models.state.StateResourceIdentifier state, @JsonProperty("masterVariant") final com.commercetools.models.product.ProductVariantDraft masterVariant, @JsonProperty("categories") final java.util.List<com.commercetools.models.category.CategoryResourceIdentifier> categories, @JsonProperty("key") final java.lang.String key, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeResourceIdentifier productType) {
+   ProductDraftImpl(@JsonProperty("searchKeywords") final com.commercetools.models.product.SearchKeywords searchKeywords, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("variants") final java.util.List<com.commercetools.models.product.ProductVariantDraft> variants, @JsonProperty("metaDescription") final com.commercetools.models.common.LocalizedString metaDescription, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory, @JsonProperty("metaKeywords") final com.commercetools.models.common.LocalizedString metaKeywords, @JsonProperty("categoryOrderHints") final com.commercetools.models.product.CategoryOrderHints categoryOrderHints, @JsonProperty("publish") final Boolean publish, @JsonProperty("metaTitle") final com.commercetools.models.common.LocalizedString metaTitle, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("state") final com.commercetools.models.state.StateResourceIdentifier state, @JsonProperty("masterVariant") final com.commercetools.models.product.ProductVariantDraft masterVariant, @JsonProperty("categories") final java.util.List<com.commercetools.models.category.CategoryResourceIdentifier> categories, @JsonProperty("key") final String key, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeResourceIdentifier productType) {
       this.searchKeywords = searchKeywords;
       this.description = description;
       this.variants = variants;
@@ -122,7 +120,7 @@ public final class ProductDraftImpl implements ProductDraft {
    }
    
    
-   public java.lang.Boolean getPublish(){
+   public Boolean getPublish(){
       return this.publish;
    }
    
@@ -152,7 +150,7 @@ public final class ProductDraftImpl implements ProductDraft {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -194,7 +192,7 @@ public final class ProductDraftImpl implements ProductDraft {
       this.categoryOrderHints = categoryOrderHints;
    }
    
-   public void setPublish(final java.lang.Boolean publish){
+   public void setPublish(final Boolean publish){
       this.publish = publish;
    }
    
@@ -218,7 +216,7 @@ public final class ProductDraftImpl implements ProductDraft {
       this.categories = categories;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

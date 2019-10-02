@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetExternalIdActionImpl implements CategorySetExternalIdAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String externalId;
+   private String externalId;
 
    @JsonCreator
-   CategorySetExternalIdActionImpl(@JsonProperty("externalId") final java.lang.String externalId) {
+   CategorySetExternalIdActionImpl(@JsonProperty("externalId") final String externalId) {
       this.externalId = externalId;
       this.action = "setExternalId";
    }
@@ -37,16 +36,16 @@ public final class CategorySetExternalIdActionImpl implements CategorySetExterna
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
 
-   public void setExternalId(final java.lang.String externalId){
+   public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
 

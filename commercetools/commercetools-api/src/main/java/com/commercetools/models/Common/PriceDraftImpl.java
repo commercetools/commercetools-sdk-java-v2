@@ -3,10 +3,9 @@ package com.commercetools.models.common;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.common.DiscountedPrice;
 import com.commercetools.models.common.Money;
-import com.commercetools.models.common.PriceTier;
+import com.commercetools.models.common.PriceTierDraft;
 import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -31,9 +30,9 @@ public final class PriceDraftImpl implements PriceDraft {
 
    private com.commercetools.models.common.DiscountedPrice discounted;
    
-   private java.lang.String country;
+   private String country;
    
-   private java.util.List<com.commercetools.models.common.PriceTier> tiers;
+   private java.util.List<com.commercetools.models.common.PriceTierDraft> tiers;
    
    private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
@@ -48,7 +47,7 @@ public final class PriceDraftImpl implements PriceDraft {
    private com.commercetools.models.common.Money value;
 
    @JsonCreator
-   PriceDraftImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("country") final java.lang.String country, @JsonProperty("tiers") final java.util.List<com.commercetools.models.common.PriceTier> tiers, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("channel") final com.commercetools.models.channel.ChannelResourceIdentifier channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("value") final com.commercetools.models.common.Money value) {
+   PriceDraftImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("country") final String country, @JsonProperty("tiers") final java.util.List<com.commercetools.models.common.PriceTierDraft> tiers, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("channel") final com.commercetools.models.channel.ChannelResourceIdentifier channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("value") final com.commercetools.models.common.Money value) {
       this.discounted = discounted;
       this.country = country;
       this.tiers = tiers;
@@ -71,12 +70,12 @@ public final class PriceDraftImpl implements PriceDraft {
    /**
    	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    
-   public java.util.List<com.commercetools.models.common.PriceTier> getTiers(){
+   public java.util.List<com.commercetools.models.common.PriceTierDraft> getTiers(){
       return this.tiers;
    }
    
@@ -114,11 +113,11 @@ public final class PriceDraftImpl implements PriceDraft {
       this.discounted = discounted;
    }
    
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
-   public void setTiers(final java.util.List<com.commercetools.models.common.PriceTier> tiers){
+   public void setTiers(final java.util.List<com.commercetools.models.common.PriceTierDraft> tiers){
       this.tiers = tiers;
    }
    

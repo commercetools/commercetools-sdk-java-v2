@@ -1,7 +1,6 @@
 package com.commercetools.models.common;
 
-import com.commercetools.models.common.Money;
-import java.lang.Long;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.common.PriceTier;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class PriceTierBuilder {
    
    
-   private com.commercetools.models.common.Money value;
+   private com.commercetools.models.common.TypedMoney value;
    
    
-   private java.lang.Long minimumQuantity;
+   private Long minimumQuantity;
    
-   public PriceTierBuilder value( final com.commercetools.models.common.Money value) {
+   public PriceTierBuilder value( final com.commercetools.models.common.TypedMoney value) {
       this.value = value;
       return this;
    }
    
-   public PriceTierBuilder minimumQuantity( final java.lang.Long minimumQuantity) {
+   public PriceTierBuilder minimumQuantity( final Long minimumQuantity) {
       this.minimumQuantity = minimumQuantity;
       return this;
    }
    
    
-   public com.commercetools.models.common.Money getValue(){
+   public com.commercetools.models.common.TypedMoney getValue(){
       return this.value;
    }
    
    
-   public java.lang.Long getMinimumQuantity(){
+   public Long getMinimumQuantity(){
       return this.minimumQuantity;
    }
 

@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.cart.LineItem;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.cart.LineItem lineItem;
    
-   private java.lang.Long addedQuantity;
+   private Long addedQuantity;
 
    @JsonCreator
-   OrderLineItemAddedMessagePayloadImpl(@JsonProperty("lineItem") final com.commercetools.models.cart.LineItem lineItem, @JsonProperty("addedQuantity") final java.lang.Long addedQuantity) {
+   OrderLineItemAddedMessagePayloadImpl(@JsonProperty("lineItem") final com.commercetools.models.cart.LineItem lineItem, @JsonProperty("addedQuantity") final Long addedQuantity) {
       this.lineItem = lineItem;
       this.addedQuantity = addedQuantity;
       this.type = "OrderLineItemAdded";
@@ -42,7 +40,7 @@ public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItem
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -52,7 +50,7 @@ public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItem
    }
    
    
-   public java.lang.Long getAddedQuantity(){
+   public Long getAddedQuantity(){
       return this.addedQuantity;
    }
 
@@ -60,7 +58,7 @@ public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItem
       this.lineItem = lineItem;
    }
    
-   public void setAddedQuantity(final java.lang.Long addedQuantity){
+   public void setAddedQuantity(final Long addedQuantity){
       this.addedQuantity = addedQuantity;
    }
 

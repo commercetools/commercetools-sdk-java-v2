@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order.ReturnShipmentState;
-import java.lang.String;
 import com.commercetools.models.message.OrderReturnShipmentStateChangedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class OrderReturnShipmentStateChangedMessagePayloadBuilder {
    
    
-   private java.lang.String returnItemId;
+   private String returnItemId;
    
    
    private com.commercetools.models.order.ReturnShipmentState returnShipmentState;
    
-   public OrderReturnShipmentStateChangedMessagePayloadBuilder returnItemId( final java.lang.String returnItemId) {
+   public OrderReturnShipmentStateChangedMessagePayloadBuilder returnItemId( final String returnItemId) {
       this.returnItemId = returnItemId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class OrderReturnShipmentStateChangedMessagePayloadBuilder {
    }
    
    
-   public java.lang.String getReturnItemId(){
+   public String getReturnItemId(){
       return this.returnItemId;
    }
    

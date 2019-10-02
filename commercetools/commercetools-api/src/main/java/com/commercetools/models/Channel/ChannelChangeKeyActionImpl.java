@@ -1,7 +1,6 @@
 package com.commercetools.models.channel;
 
 import com.commercetools.models.channel.ChannelUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelChangeKeyActionImpl implements ChannelChangeKeyAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ChannelChangeKeyActionImpl(@JsonProperty("key") final java.lang.String key) {
+   ChannelChangeKeyActionImpl(@JsonProperty("key") final String key) {
       this.key = key;
       this.action = "changeKey";
    }
@@ -37,16 +36,16 @@ public final class ChannelChangeKeyActionImpl implements ChannelChangeKeyAction 
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

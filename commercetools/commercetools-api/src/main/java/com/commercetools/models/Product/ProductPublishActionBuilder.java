@@ -2,7 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.cart.ProductPublishScope;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product.ProductPublishAction;
 import javax.annotation.Nullable;
 import java.util.List;

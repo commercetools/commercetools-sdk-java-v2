@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.product.ProductProjection;
-import java.lang.String;
 import com.commercetools.models.message.ProductDeletedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ProductDeletedMessagePayloadBuilder {
    
    
-   private java.util.List<java.lang.String> removedImageUrls;
+   private java.util.List<String> removedImageUrls;
    
    
    private com.commercetools.models.product.ProductProjection currentProjection;
    
-   public ProductDeletedMessagePayloadBuilder removedImageUrls( final java.util.List<java.lang.String> removedImageUrls) {
+   public ProductDeletedMessagePayloadBuilder removedImageUrls( final java.util.List<String> removedImageUrls) {
       this.removedImageUrls = removedImageUrls;
       return this;
    }
@@ -28,7 +27,7 @@ public final class ProductDeletedMessagePayloadBuilder {
    }
    
    
-   public java.util.List<java.lang.String> getRemovedImageUrls(){
+   public java.util.List<String> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
    

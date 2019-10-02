@@ -7,9 +7,6 @@ import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.cart.CartAddLineItemActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

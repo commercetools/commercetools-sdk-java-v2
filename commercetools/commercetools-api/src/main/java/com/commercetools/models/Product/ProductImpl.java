@@ -6,7 +6,6 @@ import com.commercetools.models.product_type.ProductTypeReference;
 import com.commercetools.models.review.ReviewRatingStatistics;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.tax_category.TaxCategoryReference;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -32,9 +31,9 @@ public final class ProductImpl implements Product {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
@@ -48,12 +47,12 @@ public final class ProductImpl implements Product {
    
    private com.commercetools.models.product_type.ProductTypeReference productType;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.tax_category.TaxCategoryReference taxCategory;
 
    @JsonCreator
-   ProductImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("masterData") final com.commercetools.models.product.ProductCatalogData masterData, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("reviewRatingStatistics") final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeReference productType, @JsonProperty("key") final java.lang.String key, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryReference taxCategory) {
+   ProductImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("masterData") final com.commercetools.models.product.ProductCatalogData masterData, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("reviewRatingStatistics") final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeReference productType, @JsonProperty("key") final String key, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryReference taxCategory) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -82,12 +81,12 @@ public final class ProductImpl implements Product {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -122,7 +121,7 @@ public final class ProductImpl implements Product {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -139,11 +138,11 @@ public final class ProductImpl implements Product {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -171,7 +170,7 @@ public final class ProductImpl implements Product {
       this.productType = productType;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

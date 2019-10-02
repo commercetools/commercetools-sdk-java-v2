@@ -2,9 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.Image;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.common.Image image;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.Long variantId;
+   private Long variantId;
 
    @JsonCreator
-   ProductImageAddedMessagePayloadImpl(@JsonProperty("image") final com.commercetools.models.common.Image image, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId) {
+   ProductImageAddedMessagePayloadImpl(@JsonProperty("image") final com.commercetools.models.common.Image image, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId) {
       this.image = image;
       this.staged = staged;
       this.variantId = variantId;
@@ -46,7 +43,7 @@ public final class ProductImageAddedMessagePayloadImpl implements ProductImageAd
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -56,12 +53,12 @@ public final class ProductImageAddedMessagePayloadImpl implements ProductImageAd
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
 
@@ -69,11 +66,11 @@ public final class ProductImageAddedMessagePayloadImpl implements ProductImageAd
       this.image = image;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
 

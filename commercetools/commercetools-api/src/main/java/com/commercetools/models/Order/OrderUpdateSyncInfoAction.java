@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.OrderUpdateSyncInfoActionImpl;
 

@@ -22,7 +22,6 @@ import com.commercetools.models.payment.PaymentSetMethodInfoNameAction;
 import com.commercetools.models.payment.PaymentSetStatusInterfaceCodeAction;
 import com.commercetools.models.payment.PaymentSetStatusInterfaceTextAction;
 import com.commercetools.models.payment.PaymentTransitionStateAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

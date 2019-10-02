@@ -2,7 +2,6 @@ package com.commercetools.models.zone;
 
 import com.commercetools.models.zone.Location;
 import com.commercetools.models.zone.ZoneUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneAddLocationActionImpl implements ZoneAddLocationAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.zone.Location location;
 
@@ -38,7 +37,7 @@ public final class ZoneAddLocationActionImpl implements ZoneAddLocationAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

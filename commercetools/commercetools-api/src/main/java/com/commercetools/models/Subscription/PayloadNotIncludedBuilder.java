@@ -1,6 +1,6 @@
 package com.commercetools.models.subscription;
 
-import java.lang.String;
+
 import com.commercetools.models.subscription.PayloadNotIncluded;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class PayloadNotIncludedBuilder {
    
    
-   private java.lang.String reason;
+   private String reason;
    
    
-   private java.lang.String payloadType;
+   private String payloadType;
    
-   public PayloadNotIncludedBuilder reason( final java.lang.String reason) {
+   public PayloadNotIncludedBuilder reason( final String reason) {
       this.reason = reason;
       return this;
    }
    
-   public PayloadNotIncludedBuilder payloadType( final java.lang.String payloadType) {
+   public PayloadNotIncludedBuilder payloadType( final String payloadType) {
       this.payloadType = payloadType;
       return this;
    }
    
    
-   public java.lang.String getReason(){
+   public String getReason(){
       return this.reason;
    }
    
    
-   public java.lang.String getPayloadType(){
+   public String getPayloadType(){
       return this.payloadType;
    }
 

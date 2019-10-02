@@ -1,8 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.ReturnShipmentState;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.order.ReturnItemDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,38 +13,38 @@ public final class ReturnItemDraftBuilder {
    private com.commercetools.models.order.ReturnShipmentState shipmentState;
    
    @Nullable
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    
-   private java.lang.Long quantity;
-   
-   @Nullable
-   private java.lang.String lineItemId;
+   private Long quantity;
    
    @Nullable
-   private java.lang.String comment;
+   private String lineItemId;
+   
+   @Nullable
+   private String comment;
    
    public ReturnItemDraftBuilder shipmentState( final com.commercetools.models.order.ReturnShipmentState shipmentState) {
       this.shipmentState = shipmentState;
       return this;
    }
    
-   public ReturnItemDraftBuilder customLineItemId(@Nullable final java.lang.String customLineItemId) {
+   public ReturnItemDraftBuilder customLineItemId(@Nullable final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public ReturnItemDraftBuilder quantity( final java.lang.Long quantity) {
+   public ReturnItemDraftBuilder quantity( final Long quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public ReturnItemDraftBuilder lineItemId(@Nullable final java.lang.String lineItemId) {
+   public ReturnItemDraftBuilder lineItemId(@Nullable final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
    
-   public ReturnItemDraftBuilder comment(@Nullable final java.lang.String comment) {
+   public ReturnItemDraftBuilder comment(@Nullable final String comment) {
       this.comment = comment;
       return this;
    }
@@ -57,22 +55,22 @@ public final class ReturnItemDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    @Nullable
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
    @Nullable
-   public java.lang.String getComment(){
+   public String getComment(){
       return this.comment;
    }
 

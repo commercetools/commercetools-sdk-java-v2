@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.PaymentStatusInterfaceCodeSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class PaymentStatusInterfaceCodeSetMessagePayloadBuilder {
    
    
-   private java.lang.String paymentId;
+   private String paymentId;
    
    
-   private java.lang.String interfaceCode;
+   private String interfaceCode;
    
-   public PaymentStatusInterfaceCodeSetMessagePayloadBuilder paymentId( final java.lang.String paymentId) {
+   public PaymentStatusInterfaceCodeSetMessagePayloadBuilder paymentId( final String paymentId) {
       this.paymentId = paymentId;
       return this;
    }
    
-   public PaymentStatusInterfaceCodeSetMessagePayloadBuilder interfaceCode( final java.lang.String interfaceCode) {
+   public PaymentStatusInterfaceCodeSetMessagePayloadBuilder interfaceCode( final String interfaceCode) {
       this.interfaceCode = interfaceCode;
       return this;
    }
    
    
-   public java.lang.String getPaymentId(){
+   public String getPaymentId(){
       return this.paymentId;
    }
    
    
-   public java.lang.String getInterfaceCode(){
+   public String getInterfaceCode(){
       return this.interfaceCode;
    }
 

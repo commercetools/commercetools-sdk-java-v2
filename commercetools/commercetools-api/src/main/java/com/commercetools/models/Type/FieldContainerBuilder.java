@@ -1,6 +1,6 @@
 package com.commercetools.models.type;
 
-import java.lang.Object;
+
 import com.commercetools.models.type.FieldContainer;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class FieldContainerBuilder {
    
    
-   private Map<String, java.lang.Object> values;
+   private Map<String, Object> values;
    
-   public FieldContainerBuilder values( final Map<String, java.lang.Object> values){
+   public FieldContainerBuilder values( final Map<String, Object> values){
       this.values = values;
       return this;
    }
    
    
-   public Map<String, java.lang.Object> getValues(){
+   public Map<String, Object> getValues(){
       return this.values;
    }
 

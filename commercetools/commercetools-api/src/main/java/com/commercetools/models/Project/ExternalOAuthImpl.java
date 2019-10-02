@@ -1,6 +1,6 @@
 package com.commercetools.models.project;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExternalOAuthImpl implements ExternalOAuth {
 
-   private java.lang.String authorizationHeader;
+   private String authorizationHeader;
    
-   private java.lang.String url;
+   private String url;
 
    @JsonCreator
-   ExternalOAuthImpl(@JsonProperty("authorizationHeader") final java.lang.String authorizationHeader, @JsonProperty("url") final java.lang.String url) {
+   ExternalOAuthImpl(@JsonProperty("authorizationHeader") final String authorizationHeader, @JsonProperty("url") final String url) {
       this.authorizationHeader = authorizationHeader;
       this.url = url;
    }
@@ -36,20 +36,20 @@ public final class ExternalOAuthImpl implements ExternalOAuth {
    }
    
    
-   public java.lang.String getAuthorizationHeader(){
+   public String getAuthorizationHeader(){
       return this.authorizationHeader;
    }
    
    
-   public java.lang.String getUrl(){
+   public String getUrl(){
       return this.url;
    }
 
-   public void setAuthorizationHeader(final java.lang.String authorizationHeader){
+   public void setAuthorizationHeader(final String authorizationHeader){
       this.authorizationHeader = authorizationHeader;
    }
    
-   public void setUrl(final java.lang.String url){
+   public void setUrl(final String url){
       this.url = url;
    }
 

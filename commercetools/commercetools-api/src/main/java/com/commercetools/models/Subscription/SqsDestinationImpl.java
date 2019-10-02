@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SqsDestinationImpl implements SqsDestination {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String accessKey;
+   private String accessKey;
    
-   private java.lang.String queueUrl;
+   private String queueUrl;
    
-   private java.lang.String region;
+   private String region;
    
-   private java.lang.String accessSecret;
+   private String accessSecret;
 
    @JsonCreator
-   SqsDestinationImpl(@JsonProperty("accessKey") final java.lang.String accessKey, @JsonProperty("queueUrl") final java.lang.String queueUrl, @JsonProperty("region") final java.lang.String region, @JsonProperty("accessSecret") final java.lang.String accessSecret) {
+   SqsDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("queueUrl") final String queueUrl, @JsonProperty("region") final String region, @JsonProperty("accessSecret") final String accessSecret) {
       this.accessKey = accessKey;
       this.queueUrl = queueUrl;
       this.region = region;
@@ -46,43 +45,43 @@ public final class SqsDestinationImpl implements SqsDestination {
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getAccessKey(){
+   public String getAccessKey(){
       return this.accessKey;
    }
    
    
-   public java.lang.String getQueueUrl(){
+   public String getQueueUrl(){
       return this.queueUrl;
    }
    
    
-   public java.lang.String getRegion(){
+   public String getRegion(){
       return this.region;
    }
    
    
-   public java.lang.String getAccessSecret(){
+   public String getAccessSecret(){
       return this.accessSecret;
    }
 
-   public void setAccessKey(final java.lang.String accessKey){
+   public void setAccessKey(final String accessKey){
       this.accessKey = accessKey;
    }
    
-   public void setQueueUrl(final java.lang.String queueUrl){
+   public void setQueueUrl(final String queueUrl){
       this.queueUrl = queueUrl;
    }
    
-   public void setRegion(final java.lang.String region){
+   public void setRegion(final String region){
       this.region = region;
    }
    
-   public void setAccessSecret(final java.lang.String accessSecret){
+   public void setAccessSecret(final String accessSecret){
       this.accessSecret = accessSecret;
    }
 

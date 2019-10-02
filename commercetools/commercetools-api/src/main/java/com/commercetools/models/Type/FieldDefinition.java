@@ -1,10 +1,8 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.FieldType;
 import com.commercetools.models.type.TypeTextInputHint;
-import java.lang.Boolean;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.type.FieldDefinitionImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -29,7 +27,7 @@ public interface FieldDefinition  {
    @NotNull
    @Valid
    @JsonProperty("type")
-   public Object getType();
+   public FieldType getType();
    
    @NotNull
    @JsonProperty("name")
@@ -48,7 +46,7 @@ public interface FieldDefinition  {
    @JsonProperty("inputHint")
    public TypeTextInputHint getInputHint();
 
-   public void setType(final Object type);
+   public void setType(final FieldType type);
    
    public void setName(final String name);
    

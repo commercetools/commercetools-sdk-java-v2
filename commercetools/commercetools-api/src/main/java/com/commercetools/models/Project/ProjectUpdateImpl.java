@@ -1,7 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,10 +24,10 @@ public final class ProjectUpdateImpl implements ProjectUpdate {
 
    private java.util.List<com.commercetools.models.project.ProjectUpdateAction> actions;
    
-   private java.lang.Long version;
+   private Long version;
 
    @JsonCreator
-   ProjectUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.project.ProjectUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   ProjectUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.project.ProjectUpdateAction> actions, @JsonProperty("version") final Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -42,7 +41,7 @@ public final class ProjectUpdateImpl implements ProjectUpdate {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 
@@ -50,7 +49,7 @@ public final class ProjectUpdateImpl implements ProjectUpdate {
       this.actions = actions;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
 

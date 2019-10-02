@@ -17,13 +17,19 @@ public final class CategorySlugChangedMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -32,10 +38,7 @@ public final class CategorySlugChangedMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    
    private com.commercetools.models.common.LocalizedString slug;
@@ -50,17 +53,27 @@ public final class CategorySlugChangedMessageBuilder {
       return this;
    }
    
-   public CategorySlugChangedMessageBuilder id( final java.lang.String id) {
+   public CategorySlugChangedMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public CategorySlugChangedMessageBuilder version( final java.lang.Long version) {
+   public CategorySlugChangedMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public CategorySlugChangedMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public CategorySlugChangedMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public CategorySlugChangedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public CategorySlugChangedMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -75,13 +88,8 @@ public final class CategorySlugChangedMessageBuilder {
       return this;
    }
    
-   public CategorySlugChangedMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public CategorySlugChangedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
-      return this;
-   }
-   
-   public CategorySlugChangedMessageBuilder type( final java.lang.String type) {
-      this.type = type;
       return this;
    }
    
@@ -101,17 +109,27 @@ public final class CategorySlugChangedMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -126,13 +144,8 @@ public final class CategorySlugChangedMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
-   }
-   
-   
-   public java.lang.String getType(){
-      return this.type;
    }
    
    
@@ -141,7 +154,7 @@ public final class CategorySlugChangedMessageBuilder {
    }
 
    public CategorySlugChangedMessage build() {
-       return new CategorySlugChangedMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, slug);
+       return new CategorySlugChangedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, slug);
    }
    
    public static CategorySlugChangedMessageBuilder of() {
@@ -154,11 +167,12 @@ public final class CategorySlugChangedMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.slug = template.getSlug();
       return builder;
    }

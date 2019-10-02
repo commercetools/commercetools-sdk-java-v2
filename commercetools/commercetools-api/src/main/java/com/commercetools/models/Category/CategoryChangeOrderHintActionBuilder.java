@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import com.commercetools.models.category.CategoryChangeOrderHintAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CategoryChangeOrderHintActionBuilder {
    
    
-   private java.lang.String orderHint;
+   private String orderHint;
    
-   public CategoryChangeOrderHintActionBuilder orderHint( final java.lang.String orderHint) {
+   public CategoryChangeOrderHintActionBuilder orderHint( final String orderHint) {
       this.orderHint = orderHint;
       return this;
    }
    
    
-   public java.lang.String getOrderHint(){
+   public String getOrderHint(){
       return this.orderHint;
    }
 

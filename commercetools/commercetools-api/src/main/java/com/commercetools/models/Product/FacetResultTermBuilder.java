@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Long;
-import java.lang.Object;
+
 import com.commercetools.models.product.FacetResultTerm;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class FacetResultTermBuilder {
    
    
-   private java.lang.Long count;
+   private Long count;
    
    
-   private java.lang.Object term;
+   private Object term;
    
    @Nullable
-   private java.lang.Long productCount;
+   private Long productCount;
    
-   public FacetResultTermBuilder count( final java.lang.Long count) {
+   public FacetResultTermBuilder count( final Long count) {
       this.count = count;
       return this;
    }
    
-   public FacetResultTermBuilder term( final java.lang.Object term) {
+   public FacetResultTermBuilder term( final Object term) {
       this.term = term;
       return this;
    }
    
-   public FacetResultTermBuilder productCount(@Nullable final java.lang.Long productCount) {
+   public FacetResultTermBuilder productCount(@Nullable final Long productCount) {
       this.productCount = productCount;
       return this;
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
    }
    
    
-   public java.lang.Object getTerm(){
+   public Object getTerm(){
       return this.term;
    }
    
    @Nullable
-   public java.lang.Long getProductCount(){
+   public Long getProductCount(){
       return this.productCount;
    }
 

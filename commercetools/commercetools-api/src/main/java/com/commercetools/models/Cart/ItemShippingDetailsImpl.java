@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.ItemShippingTarget;
-import java.lang.Boolean;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ItemShippingDetailsImpl implements ItemShippingDetails {
 
-   private java.lang.Boolean valid;
+   private Boolean valid;
    
    private java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets;
 
    @JsonCreator
-   ItemShippingDetailsImpl(@JsonProperty("valid") final java.lang.Boolean valid, @JsonProperty("targets") final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets) {
+   ItemShippingDetailsImpl(@JsonProperty("valid") final Boolean valid, @JsonProperty("targets") final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targets) {
       this.valid = valid;
       this.targets = targets;
    }
@@ -37,7 +36,7 @@ public final class ItemShippingDetailsImpl implements ItemShippingDetails {
    }
    
    
-   public java.lang.Boolean getValid(){
+   public Boolean getValid(){
       return this.valid;
    }
    
@@ -46,7 +45,7 @@ public final class ItemShippingDetailsImpl implements ItemShippingDetails {
       return this.targets;
    }
 
-   public void setValid(final java.lang.Boolean valid){
+   public void setValid(final Boolean valid){
       this.valid = valid;
    }
    

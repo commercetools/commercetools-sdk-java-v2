@@ -2,7 +2,6 @@ package com.commercetools.models.payment;
 
 import com.commercetools.models.customer.CustomerResourceIdentifier;
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentSetCustomerActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

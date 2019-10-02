@@ -1,7 +1,6 @@
 package com.commercetools.models.review;
 
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.review.ReviewUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class ReviewUpdateBuilder {
    private java.util.List<com.commercetools.models.review.ReviewUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public ReviewUpdateBuilder actions( final java.util.List<com.commercetools.models.review.ReviewUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public ReviewUpdateBuilder version( final java.lang.Long version) {
+   public ReviewUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class ReviewUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

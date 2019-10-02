@@ -1,8 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InvalidFieldErrorImpl implements InvalidFieldError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
-   private java.util.List<java.lang.Object> allowedValues;
+   private java.util.List<Object> allowedValues;
    
-   private java.lang.String field;
+   private String field;
    
-   private java.lang.Object invalidValue;
+   private Object invalidValue;
 
    @JsonCreator
-   InvalidFieldErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("allowedValues") final java.util.List<java.lang.Object> allowedValues, @JsonProperty("field") final java.lang.String field, @JsonProperty("invalidValue") final java.lang.Object invalidValue) {
+   InvalidFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("allowedValues") final java.util.List<Object> allowedValues, @JsonProperty("field") final String field, @JsonProperty("invalidValue") final Object invalidValue) {
       this.message = message;
       this.allowedValues = allowedValues;
       this.field = field;
@@ -47,43 +45,43 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.util.List<java.lang.Object> getAllowedValues(){
+   public java.util.List<Object> getAllowedValues(){
       return this.allowedValues;
    }
    
    
-   public java.lang.String getField(){
+   public String getField(){
       return this.field;
    }
    
    
-   public java.lang.Object getInvalidValue(){
+   public Object getInvalidValue(){
       return this.invalidValue;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setAllowedValues(final java.util.List<java.lang.Object> allowedValues){
+   public void setAllowedValues(final java.util.List<Object> allowedValues){
       this.allowedValues = allowedValues;
    }
    
-   public void setField(final java.lang.String field){
+   public void setField(final String field){
       this.field = field;
    }
    
-   public void setInvalidValue(final java.lang.Object invalidValue){
+   public void setInvalidValue(final Object invalidValue){
       this.invalidValue = invalidValue;
    }
 

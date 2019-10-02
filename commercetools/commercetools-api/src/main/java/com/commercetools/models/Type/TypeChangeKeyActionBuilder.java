@@ -1,7 +1,6 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.type.TypeChangeKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class TypeChangeKeyActionBuilder {
    
    
-   private java.lang.String key;
+   private String key;
    
-   public TypeChangeKeyActionBuilder key( final java.lang.String key) {
+   public TypeChangeKeyActionBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

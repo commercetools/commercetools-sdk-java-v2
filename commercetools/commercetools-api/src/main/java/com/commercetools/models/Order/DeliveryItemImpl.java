@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
-import java.lang.Integer;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DeliveryItemImpl implements DeliveryItem {
 
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
-   private java.lang.String id;
+   private String id;
 
    @JsonCreator
-   DeliveryItemImpl(@JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("id") final java.lang.String id) {
+   DeliveryItemImpl(@JsonProperty("quantity") final Integer quantity, @JsonProperty("id") final String id) {
       this.quantity = quantity;
       this.id = id;
    }
@@ -37,20 +36,20 @@ public final class DeliveryItemImpl implements DeliveryItem {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
 
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
 

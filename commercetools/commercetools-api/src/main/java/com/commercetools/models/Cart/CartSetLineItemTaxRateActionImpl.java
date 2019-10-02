@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ExternalTaxRateDraft;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTaxRateAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
 
    @JsonCreator
-   CartSetLineItemTaxRateActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
+   CartSetLineItemTaxRateActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("lineItemId") final String lineItemId) {
       this.externalTaxRate = externalTaxRate;
       this.lineItemId = lineItemId;
       this.action = "setLineItemTaxRate";
@@ -41,7 +40,7 @@ public final class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTa
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTa
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
 
@@ -59,7 +58,7 @@ public final class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTa
       this.externalTaxRate = externalTaxRate;
    }
    
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
 

@@ -1,8 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentSetCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class PaymentSetCustomFieldActionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.Object value;
+   private Object value;
    
-   public PaymentSetCustomFieldActionBuilder name( final java.lang.String name) {
+   public PaymentSetCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public PaymentSetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
+   public PaymentSetCustomFieldActionBuilder value(@Nullable final Object value) {
       this.value = value;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 

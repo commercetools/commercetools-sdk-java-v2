@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.message.Message;
-import java.lang.String;
 import com.commercetools.models.message.DeliveryAddressSetMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,13 +17,19 @@ public final class DeliveryAddressSetMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -33,16 +38,13 @@ public final class DeliveryAddressSetMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    @Nullable
    private com.commercetools.models.common.Address oldAddress;
    
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    @Nullable
    private com.commercetools.models.common.Address address;
@@ -57,17 +59,27 @@ public final class DeliveryAddressSetMessageBuilder {
       return this;
    }
    
-   public DeliveryAddressSetMessageBuilder id( final java.lang.String id) {
+   public DeliveryAddressSetMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public DeliveryAddressSetMessageBuilder version( final java.lang.Long version) {
+   public DeliveryAddressSetMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public DeliveryAddressSetMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public DeliveryAddressSetMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public DeliveryAddressSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public DeliveryAddressSetMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -82,13 +94,8 @@ public final class DeliveryAddressSetMessageBuilder {
       return this;
    }
    
-   public DeliveryAddressSetMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public DeliveryAddressSetMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
-      return this;
-   }
-   
-   public DeliveryAddressSetMessageBuilder type( final java.lang.String type) {
-      this.type = type;
       return this;
    }
    
@@ -97,7 +104,7 @@ public final class DeliveryAddressSetMessageBuilder {
       return this;
    }
    
-   public DeliveryAddressSetMessageBuilder deliveryId( final java.lang.String deliveryId) {
+   public DeliveryAddressSetMessageBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -118,17 +125,27 @@ public final class DeliveryAddressSetMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -143,13 +160,8 @@ public final class DeliveryAddressSetMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
-   }
-   
-   
-   public java.lang.String getType(){
-      return this.type;
    }
    
    @Nullable
@@ -158,7 +170,7 @@ public final class DeliveryAddressSetMessageBuilder {
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    
@@ -168,7 +180,7 @@ public final class DeliveryAddressSetMessageBuilder {
    }
 
    public DeliveryAddressSetMessage build() {
-       return new DeliveryAddressSetMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, oldAddress, deliveryId, address);
+       return new DeliveryAddressSetMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, oldAddress, deliveryId, address);
    }
    
    public static DeliveryAddressSetMessageBuilder of() {
@@ -181,11 +193,12 @@ public final class DeliveryAddressSetMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.oldAddress = template.getOldAddress();
       builder.deliveryId = template.getDeliveryId();
       builder.address = template.getAddress();

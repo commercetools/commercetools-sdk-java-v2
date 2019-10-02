@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
-import java.lang.String;
 import com.commercetools.models.message.PaymentStatusInterfaceCodeSetMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -17,13 +16,19 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -32,16 +37,13 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
    
-   private java.lang.String type;
+   private String paymentId;
    
    
-   private java.lang.String paymentId;
-   
-   
-   private java.lang.String interfaceCode;
+   private String interfaceCode;
    
    public PaymentStatusInterfaceCodeSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -53,17 +55,27 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder {
       return this;
    }
    
-   public PaymentStatusInterfaceCodeSetMessageBuilder id( final java.lang.String id) {
+   public PaymentStatusInterfaceCodeSetMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public PaymentStatusInterfaceCodeSetMessageBuilder version( final java.lang.Long version) {
+   public PaymentStatusInterfaceCodeSetMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public PaymentStatusInterfaceCodeSetMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public PaymentStatusInterfaceCodeSetMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public PaymentStatusInterfaceCodeSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public PaymentStatusInterfaceCodeSetMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -78,22 +90,17 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder {
       return this;
    }
    
-   public PaymentStatusInterfaceCodeSetMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public PaymentStatusInterfaceCodeSetMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public PaymentStatusInterfaceCodeSetMessageBuilder type( final java.lang.String type) {
-      this.type = type;
-      return this;
-   }
-   
-   public PaymentStatusInterfaceCodeSetMessageBuilder paymentId( final java.lang.String paymentId) {
+   public PaymentStatusInterfaceCodeSetMessageBuilder paymentId( final String paymentId) {
       this.paymentId = paymentId;
       return this;
    }
    
-   public PaymentStatusInterfaceCodeSetMessageBuilder interfaceCode( final java.lang.String interfaceCode) {
+   public PaymentStatusInterfaceCodeSetMessageBuilder interfaceCode( final String interfaceCode) {
       this.interfaceCode = interfaceCode;
       return this;
    }
@@ -109,17 +116,27 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -134,27 +151,22 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
-      return this.type;
-   }
-   
-   
-   public java.lang.String getPaymentId(){
+   public String getPaymentId(){
       return this.paymentId;
    }
    
    
-   public java.lang.String getInterfaceCode(){
+   public String getInterfaceCode(){
       return this.interfaceCode;
    }
 
    public PaymentStatusInterfaceCodeSetMessage build() {
-       return new PaymentStatusInterfaceCodeSetMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, paymentId, interfaceCode);
+       return new PaymentStatusInterfaceCodeSetMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, paymentId, interfaceCode);
    }
    
    public static PaymentStatusInterfaceCodeSetMessageBuilder of() {
@@ -167,11 +179,12 @@ public final class PaymentStatusInterfaceCodeSetMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.paymentId = template.getPaymentId();
       builder.interfaceCode = template.getInterfaceCode();
       return builder;

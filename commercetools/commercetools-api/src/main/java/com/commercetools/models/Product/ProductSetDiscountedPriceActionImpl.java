@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.DiscountedPrice;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetDiscountedPriceActionImpl implements ProductSetDiscountedPriceAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.DiscountedPrice discounted;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.String priceId;
+   private String priceId;
 
    @JsonCreator
-   ProductSetDiscountedPriceActionImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("priceId") final java.lang.String priceId) {
+   ProductSetDiscountedPriceActionImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("staged") final Boolean staged, @JsonProperty("priceId") final String priceId) {
       this.discounted = discounted;
       this.staged = staged;
       this.priceId = priceId;
@@ -45,7 +43,7 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -55,12 +53,12 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.String getPriceId(){
+   public String getPriceId(){
       return this.priceId;
    }
 
@@ -68,11 +66,11 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
       this.discounted = discounted;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setPriceId(final java.lang.String priceId){
+   public void setPriceId(final String priceId){
       this.priceId = priceId;
    }
 

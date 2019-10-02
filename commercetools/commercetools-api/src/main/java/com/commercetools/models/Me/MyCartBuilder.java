@@ -20,8 +20,6 @@ import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.order.PaymentInfo;
 import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.me.MyCart;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -37,10 +35,10 @@ public final class MyCartBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -49,7 +47,7 @@ public final class MyCartBuilder {
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
    
    private com.commercetools.models.common.TypedMoney totalPrice;
@@ -64,7 +62,7 @@ public final class MyCartBuilder {
    private com.commercetools.models.cart.CartOrigin origin;
    
    @Nullable
-   private java.lang.Integer deleteDaysAfterLastModification;
+   private Integer deleteDaysAfterLastModification;
    
    @Nullable
    private com.commercetools.models.cart.ShippingInfo shippingInfo;
@@ -73,7 +71,7 @@ public final class MyCartBuilder {
    private java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> refusedGifts;
    
    @Nullable
-   private java.lang.String locale;
+   private String locale;
    
    @Nullable
    private com.commercetools.models.cart.InventoryMode inventoryMode;
@@ -88,16 +86,16 @@ public final class MyCartBuilder {
    private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
    @Nullable
-   private java.lang.String customerEmail;
+   private String customerEmail;
    
    
    private com.commercetools.models.cart.CartState cartState;
    
    @Nullable
-   private java.lang.String customerId;
+   private String customerId;
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    @Nullable
    private java.util.List<com.commercetools.models.cart.DiscountCodeInfo> discountCodes;
@@ -139,12 +137,12 @@ public final class MyCartBuilder {
       return this;
    }
    
-   public MyCartBuilder id( final java.lang.String id) {
+   public MyCartBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public MyCartBuilder version( final java.lang.Long version) {
+   public MyCartBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -159,7 +157,7 @@ public final class MyCartBuilder {
       return this;
    }
    
-   public MyCartBuilder country(@Nullable final java.lang.String country) {
+   public MyCartBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
@@ -184,7 +182,7 @@ public final class MyCartBuilder {
       return this;
    }
    
-   public MyCartBuilder deleteDaysAfterLastModification(@Nullable final java.lang.Integer deleteDaysAfterLastModification) {
+   public MyCartBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
       return this;
    }
@@ -199,7 +197,7 @@ public final class MyCartBuilder {
       return this;
    }
    
-   public MyCartBuilder locale(@Nullable final java.lang.String locale) {
+   public MyCartBuilder locale(@Nullable final String locale) {
       this.locale = locale;
       return this;
    }
@@ -224,7 +222,7 @@ public final class MyCartBuilder {
       return this;
    }
    
-   public MyCartBuilder customerEmail(@Nullable final java.lang.String customerEmail) {
+   public MyCartBuilder customerEmail(@Nullable final String customerEmail) {
       this.customerEmail = customerEmail;
       return this;
    }
@@ -234,12 +232,12 @@ public final class MyCartBuilder {
       return this;
    }
    
-   public MyCartBuilder customerId(@Nullable final java.lang.String customerId) {
+   public MyCartBuilder customerId(@Nullable final String customerId) {
       this.customerId = customerId;
       return this;
    }
    
-   public MyCartBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public MyCartBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
@@ -305,12 +303,12 @@ public final class MyCartBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -325,7 +323,7 @@ public final class MyCartBuilder {
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
@@ -350,7 +348,7 @@ public final class MyCartBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getDeleteDaysAfterLastModification(){
+   public Integer getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
@@ -365,7 +363,7 @@ public final class MyCartBuilder {
    }
    
    @Nullable
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
@@ -390,7 +388,7 @@ public final class MyCartBuilder {
    }
    
    @Nullable
-   public java.lang.String getCustomerEmail(){
+   public String getCustomerEmail(){
       return this.customerEmail;
    }
    
@@ -400,12 +398,12 @@ public final class MyCartBuilder {
    }
    
    @Nullable
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    

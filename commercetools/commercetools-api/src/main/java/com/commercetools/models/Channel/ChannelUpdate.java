@@ -1,7 +1,6 @@
 package com.commercetools.models.channel;
 
 import com.commercetools.models.channel.ChannelUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.channel.ChannelUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

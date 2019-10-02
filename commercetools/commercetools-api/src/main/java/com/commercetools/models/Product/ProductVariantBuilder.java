@@ -6,9 +6,6 @@ import com.commercetools.models.common.Price;
 import com.commercetools.models.common.ScopedPrice;
 import com.commercetools.models.product.Attribute;
 import com.commercetools.models.product.ProductVariantAvailability;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductVariant;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -27,13 +24,13 @@ public final class ProductVariantBuilder {
    private java.util.List<com.commercetools.models.common.Asset> assets;
    
    @Nullable
-   private java.lang.Boolean isMatchingVariant;
+   private Boolean isMatchingVariant;
    
    @Nullable
    private com.commercetools.models.common.Price price;
    
    @Nullable
-   private java.lang.Boolean scopedPriceDiscounted;
+   private Boolean scopedPriceDiscounted;
    
    @Nullable
    private java.util.List<com.commercetools.models.product.Attribute> attributes;
@@ -42,16 +39,16 @@ public final class ProductVariantBuilder {
    private com.commercetools.models.product.ProductVariantAvailability availability;
    
    
-   private java.lang.Long id;
+   private Long id;
    
    @Nullable
    private java.util.List<com.commercetools.models.common.Price> prices;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public ProductVariantBuilder scopedPrice(@Nullable final com.commercetools.models.common.ScopedPrice scopedPrice) {
       this.scopedPrice = scopedPrice;
@@ -68,7 +65,7 @@ public final class ProductVariantBuilder {
       return this;
    }
    
-   public ProductVariantBuilder isMatchingVariant(@Nullable final java.lang.Boolean isMatchingVariant) {
+   public ProductVariantBuilder isMatchingVariant(@Nullable final Boolean isMatchingVariant) {
       this.isMatchingVariant = isMatchingVariant;
       return this;
    }
@@ -78,7 +75,7 @@ public final class ProductVariantBuilder {
       return this;
    }
    
-   public ProductVariantBuilder scopedPriceDiscounted(@Nullable final java.lang.Boolean scopedPriceDiscounted) {
+   public ProductVariantBuilder scopedPriceDiscounted(@Nullable final Boolean scopedPriceDiscounted) {
       this.scopedPriceDiscounted = scopedPriceDiscounted;
       return this;
    }
@@ -93,7 +90,7 @@ public final class ProductVariantBuilder {
       return this;
    }
    
-   public ProductVariantBuilder id( final java.lang.Long id) {
+   public ProductVariantBuilder id( final Long id) {
       this.id = id;
       return this;
    }
@@ -103,12 +100,12 @@ public final class ProductVariantBuilder {
       return this;
    }
    
-   public ProductVariantBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductVariantBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
-   public ProductVariantBuilder key(@Nullable final java.lang.String key) {
+   public ProductVariantBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -129,7 +126,7 @@ public final class ProductVariantBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getIsMatchingVariant(){
+   public Boolean getIsMatchingVariant(){
       return this.isMatchingVariant;
    }
    
@@ -139,7 +136,7 @@ public final class ProductVariantBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getScopedPriceDiscounted(){
+   public Boolean getScopedPriceDiscounted(){
       return this.scopedPriceDiscounted;
    }
    
@@ -154,7 +151,7 @@ public final class ProductVariantBuilder {
    }
    
    
-   public java.lang.Long getId(){
+   public Long getId(){
       return this.id;
    }
    
@@ -164,12 +161,12 @@ public final class ProductVariantBuilder {
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.zone;
 
 import com.commercetools.models.zone.ZoneUpdateAction;
-import java.lang.String;
 import com.commercetools.models.zone.ZoneSetDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ZoneSetDescriptionActionBuilder {
    
    @Nullable
-   private java.lang.String description;
+   private String description;
    
-   public ZoneSetDescriptionActionBuilder description(@Nullable final java.lang.String description) {
+   public ZoneSetDescriptionActionBuilder description(@Nullable final String description) {
       this.description = description;
       return this;
    }
    
    @Nullable
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
 

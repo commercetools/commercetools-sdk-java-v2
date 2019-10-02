@@ -1,8 +1,6 @@
 package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionSetTimeoutInMsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ExtensionSetTimeoutInMsActionBuilder {
    
    @Nullable
-   private java.lang.Integer timeoutInMs;
+   private Integer timeoutInMs;
    
-   public ExtensionSetTimeoutInMsActionBuilder timeoutInMs(@Nullable final java.lang.Integer timeoutInMs) {
+   public ExtensionSetTimeoutInMsActionBuilder timeoutInMs(@Nullable final Integer timeoutInMs) {
       this.timeoutInMs = timeoutInMs;
       return this;
    }
    
    @Nullable
-   public java.lang.Integer getTimeoutInMs(){
+   public Integer getTimeoutInMs(){
       return this.timeoutInMs;
    }
 

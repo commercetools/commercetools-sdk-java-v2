@@ -2,9 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetPricesActionImpl implements ProductSetPricesAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
    private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   ProductSetPricesActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.PriceDraft> prices, @JsonProperty("sku") final java.lang.String sku) {
+   ProductSetPricesActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.PriceDraft> prices, @JsonProperty("sku") final String sku) {
       this.staged = staged;
       this.variantId = variantId;
       this.prices = prices;
@@ -49,17 +46,17 @@ public final class ProductSetPricesActionImpl implements ProductSetPricesAction 
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
@@ -69,15 +66,15 @@ public final class ProductSetPricesActionImpl implements ProductSetPricesAction 
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    
@@ -85,7 +82,7 @@ public final class ProductSetPricesActionImpl implements ProductSetPricesAction 
       this.prices = prices;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

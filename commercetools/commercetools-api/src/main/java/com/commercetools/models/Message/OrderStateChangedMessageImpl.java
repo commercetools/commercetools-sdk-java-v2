@@ -27,37 +27,43 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
-   private java.lang.Long sequenceNumber;
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
+   
+   private Long sequenceNumber;
    
    private com.commercetools.models.common.Reference resource;
    
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.order.OrderState oldOrderState;
    
    private com.commercetools.models.order.OrderState orderState;
 
    @JsonCreator
-   OrderStateChangedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("oldOrderState") final com.commercetools.models.order.OrderState oldOrderState, @JsonProperty("orderState") final com.commercetools.models.order.OrderState orderState) {
+   OrderStateChangedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("oldOrderState") final com.commercetools.models.order.OrderState oldOrderState, @JsonProperty("orderState") final com.commercetools.models.order.OrderState orderState) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
       this.version = version;
+      this.createdBy = createdBy;
+      this.lastModifiedBy = lastModifiedBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
-      this.type = type;
       this.oldOrderState = oldOrderState;
       this.orderState = orderState;
+      this.type = "OrderStateChanged";
    }
    public OrderStateChangedMessageImpl() {
       
@@ -74,17 +80,27 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.Long getSequenceNumber(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -99,12 +115,12 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -126,15 +142,23 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
-   public void setSequenceNumber(final java.lang.Long sequenceNumber){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
+      this.lastModifiedBy = lastModifiedBy;
+   }
+   
+   public void setSequenceNumber(final Long sequenceNumber){
       this.sequenceNumber = sequenceNumber;
    }
    
@@ -146,12 +170,8 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
-   public void setResourceVersion(final java.lang.Long resourceVersion){
+   public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
-   }
-   
-   public void setType(final java.lang.String type){
-      this.type = type;
    }
    
    public void setOldOrderState(final com.commercetools.models.order.OrderState oldOrderState){

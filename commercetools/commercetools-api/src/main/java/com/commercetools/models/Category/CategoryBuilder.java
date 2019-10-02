@@ -5,7 +5,6 @@ import com.commercetools.models.common.Asset;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import com.commercetools.models.category.Category;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -21,10 +20,10 @@ public final class CategoryBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -42,7 +41,7 @@ public final class CategoryBuilder {
    private com.commercetools.models.common.LocalizedString metaKeywords;
    
    
-   private java.lang.String orderHint;
+   private String orderHint;
    
    @Nullable
    private com.commercetools.models.type.CustomFields custom;
@@ -54,7 +53,7 @@ public final class CategoryBuilder {
    private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString description;
@@ -66,7 +65,7 @@ public final class CategoryBuilder {
    private com.commercetools.models.common.LocalizedString metaDescription;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    
    private com.commercetools.models.common.LocalizedString slug;
@@ -81,12 +80,12 @@ public final class CategoryBuilder {
       return this;
    }
    
-   public CategoryBuilder id( final java.lang.String id) {
+   public CategoryBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public CategoryBuilder version( final java.lang.Long version) {
+   public CategoryBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -116,7 +115,7 @@ public final class CategoryBuilder {
       return this;
    }
    
-   public CategoryBuilder orderHint( final java.lang.String orderHint) {
+   public CategoryBuilder orderHint( final String orderHint) {
       this.orderHint = orderHint;
       return this;
    }
@@ -136,7 +135,7 @@ public final class CategoryBuilder {
       return this;
    }
    
-   public CategoryBuilder externalId(@Nullable final java.lang.String externalId) {
+   public CategoryBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
@@ -156,7 +155,7 @@ public final class CategoryBuilder {
       return this;
    }
    
-   public CategoryBuilder key(@Nullable final java.lang.String key) {
+   public CategoryBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -177,12 +176,12 @@ public final class CategoryBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -212,7 +211,7 @@ public final class CategoryBuilder {
    }
    
    
-   public java.lang.String getOrderHint(){
+   public String getOrderHint(){
       return this.orderHint;
    }
    
@@ -232,7 +231,7 @@ public final class CategoryBuilder {
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
@@ -252,7 +251,7 @@ public final class CategoryBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

@@ -2,7 +2,6 @@ package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionTrigger;
 import com.commercetools.models.extension.ExtensionUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionChangeTriggersActionImpl implements ExtensionChangeTriggersAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
 
@@ -38,7 +37,7 @@ public final class ExtensionChangeTriggersActionImpl implements ExtensionChangeT
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import com.commercetools.models.project.ProjectChangeCurrenciesAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ProjectChangeCurrenciesActionBuilder {
    
    
-   private java.util.List<java.lang.String> currencies;
+   private java.util.List<String> currencies;
    
-   public ProjectChangeCurrenciesActionBuilder currencies( final java.util.List<java.lang.String> currencies) {
+   public ProjectChangeCurrenciesActionBuilder currencies( final java.util.List<String> currencies) {
       this.currencies = currencies;
       return this;
    }
    
    
-   public java.util.List<java.lang.String> getCurrencies(){
+   public java.util.List<String> getCurrencies(){
       return this.currencies;
    }
 

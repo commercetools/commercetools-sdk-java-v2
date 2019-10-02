@@ -2,8 +2,6 @@ package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCustomTypeAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String assetId;
+   private String assetId;
    
-   private java.lang.Object fields;
+   private Object fields;
    
    private com.commercetools.models.type.TypeResourceIdentifier type;
    
-   private java.lang.String assetKey;
+   private String assetKey;
 
    @JsonCreator
-   CategorySetAssetCustomTypeActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("fields") final java.lang.Object fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   CategorySetAssetCustomTypeActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("fields") final Object fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type, @JsonProperty("assetKey") final String assetKey) {
       this.assetId = assetId;
       this.fields = fields;
       this.type = type;
@@ -48,17 +46,17 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    
-   public java.lang.Object getFields(){
+   public Object getFields(){
       return this.fields;
    }
    
@@ -68,15 +66,15 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
    }
    
    
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
 
-   public void setAssetId(final java.lang.String assetId){
+   public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
    
-   public void setFields(final java.lang.Object fields){
+   public void setFields(final Object fields){
       this.fields = fields;
    }
    
@@ -84,7 +82,7 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
       this.type = type;
    }
    
-   public void setAssetKey(final java.lang.String assetKey){
+   public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
    }
 

@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.Image;
 import com.commercetools.models.message.Message;
-import java.lang.Boolean;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -29,40 +27,46 @@ public final class ProductImageAddedMessageImpl implements ProductImageAddedMess
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
-   private java.lang.Long sequenceNumber;
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
+   
+   private Long sequenceNumber;
    
    private com.commercetools.models.common.Reference resource;
    
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.common.Image image;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.Long variantId;
+   private Long variantId;
 
    @JsonCreator
-   ProductImageAddedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("image") final com.commercetools.models.common.Image image, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId) {
+   ProductImageAddedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("image") final com.commercetools.models.common.Image image, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
       this.version = version;
+      this.createdBy = createdBy;
+      this.lastModifiedBy = lastModifiedBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
-      this.type = type;
       this.image = image;
       this.staged = staged;
       this.variantId = variantId;
+      this.type = "ProductImageAdded";
    }
    public ProductImageAddedMessageImpl() {
       
@@ -79,17 +83,27 @@ public final class ProductImageAddedMessageImpl implements ProductImageAddedMess
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.Long getSequenceNumber(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -104,12 +118,12 @@ public final class ProductImageAddedMessageImpl implements ProductImageAddedMess
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -119,12 +133,12 @@ public final class ProductImageAddedMessageImpl implements ProductImageAddedMess
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
 
@@ -136,15 +150,23 @@ public final class ProductImageAddedMessageImpl implements ProductImageAddedMess
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
-   public void setSequenceNumber(final java.lang.Long sequenceNumber){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
+      this.lastModifiedBy = lastModifiedBy;
+   }
+   
+   public void setSequenceNumber(final Long sequenceNumber){
       this.sequenceNumber = sequenceNumber;
    }
    
@@ -156,23 +178,19 @@ public final class ProductImageAddedMessageImpl implements ProductImageAddedMess
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
-   public void setResourceVersion(final java.lang.Long resourceVersion){
+   public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
-   }
-   
-   public void setType(final java.lang.String type){
-      this.type = type;
    }
    
    public void setImage(final com.commercetools.models.common.Image image){
       this.image = image;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
 

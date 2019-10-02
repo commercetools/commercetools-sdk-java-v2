@@ -23,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CentPrecisionMoneyImpl implements CentPrecisionMoney {
 
-   private java.lang.Long centAmount;
+   private Long centAmount;
    
-   private java.lang.Integer fractionDigits;
+   private Integer fractionDigits;
    
    private com.commercetools.models.common.MoneyType type;
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
 
    @JsonCreator
-   CentPrecisionMoneyImpl(@JsonProperty("centAmount") final java.lang.Long centAmount, @JsonProperty("fractionDigits") final java.lang.Integer fractionDigits, @JsonProperty("currencyCode") final java.lang.String currencyCode) {
+   CentPrecisionMoneyImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("currencyCode") final String currencyCode) {
       this.centAmount = centAmount;
       this.fractionDigits = fractionDigits;
       this.currencyCode = currencyCode;
@@ -43,12 +43,12 @@ public final class CentPrecisionMoneyImpl implements CentPrecisionMoney {
    }
    
    
-   public java.lang.Long getCentAmount(){
+   public Long getCentAmount(){
       return this.centAmount;
    }
    
    
-   public java.lang.Integer getFractionDigits(){
+   public Integer getFractionDigits(){
       return this.fractionDigits;
    }
    
@@ -60,19 +60,19 @@ public final class CentPrecisionMoneyImpl implements CentPrecisionMoney {
    /**
    	<p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
    */
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
 
-   public void setCentAmount(final java.lang.Long centAmount){
+   public void setCentAmount(final Long centAmount){
       this.centAmount = centAmount;
    }
    
-   public void setFractionDigits(final java.lang.Integer fractionDigits){
+   public void setFractionDigits(final Integer fractionDigits){
       this.fractionDigits = fractionDigits;
    }
    
-   public void setCurrencyCode(final java.lang.String currencyCode){
+   public void setCurrencyCode(final String currencyCode){
       this.currencyCode = currencyCode;
    }
 

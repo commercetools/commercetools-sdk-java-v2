@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.CartChangeCustomLineItemQuantityAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class CartChangeCustomLineItemQuantityActionBuilder {
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
-   public CartChangeCustomLineItemQuantityActionBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public CartChangeCustomLineItemQuantityActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public CartChangeCustomLineItemQuantityActionBuilder quantity( final java.lang.Integer quantity) {
+   public CartChangeCustomLineItemQuantityActionBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
 

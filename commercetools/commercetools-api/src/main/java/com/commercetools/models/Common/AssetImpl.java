@@ -3,7 +3,6 @@ package com.commercetools.models.common;
 import com.commercetools.models.common.AssetSource;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -33,14 +32,14 @@ public final class AssetImpl implements Asset {
    
    private com.commercetools.models.common.LocalizedString description;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.String key;
+   private String key;
    
-   private java.util.List<java.lang.String> tags;
+   private java.util.List<String> tags;
 
    @JsonCreator
-   AssetImpl(@JsonProperty("sources") final java.util.List<com.commercetools.models.common.AssetSource> sources, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("id") final java.lang.String id, @JsonProperty("key") final java.lang.String key, @JsonProperty("tags") final java.util.List<java.lang.String> tags) {
+   AssetImpl(@JsonProperty("sources") final java.util.List<com.commercetools.models.common.AssetSource> sources, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("id") final String id, @JsonProperty("key") final String key, @JsonProperty("tags") final java.util.List<String> tags) {
       this.sources = sources;
       this.custom = custom;
       this.name = name;
@@ -74,17 +73,17 @@ public final class AssetImpl implements Asset {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
    
-   public java.util.List<java.lang.String> getTags(){
+   public java.util.List<String> getTags(){
       return this.tags;
    }
 
@@ -104,15 +103,15 @@ public final class AssetImpl implements Asset {
       this.description = description;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    
-   public void setTags(final java.util.List<java.lang.String> tags){
+   public void setTags(final java.util.List<String> tags){
       this.tags = tags;
    }
 

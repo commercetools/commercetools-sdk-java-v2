@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductMoveImageToPositionAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,67 +10,67 @@ import java.time.ZonedDateTime;
 public final class ProductMoveImageToPositionActionBuilder {
    
    
-   private java.lang.String imageUrl;
+   private String imageUrl;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    
-   private java.lang.Long position;
-   
-   @Nullable
-   private java.lang.Long variantId;
+   private Long position;
    
    @Nullable
-   private java.lang.String sku;
+   private Long variantId;
    
-   public ProductMoveImageToPositionActionBuilder imageUrl( final java.lang.String imageUrl) {
+   @Nullable
+   private String sku;
+   
+   public ProductMoveImageToPositionActionBuilder imageUrl( final String imageUrl) {
       this.imageUrl = imageUrl;
       return this;
    }
    
-   public ProductMoveImageToPositionActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductMoveImageToPositionActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductMoveImageToPositionActionBuilder position( final java.lang.Long position) {
+   public ProductMoveImageToPositionActionBuilder position( final Long position) {
       this.position = position;
       return this;
    }
    
-   public ProductMoveImageToPositionActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ProductMoveImageToPositionActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ProductMoveImageToPositionActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductMoveImageToPositionActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
    
-   public java.lang.String getImageUrl(){
+   public String getImageUrl(){
       return this.imageUrl;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Long getPosition(){
+   public Long getPosition(){
       return this.position;
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

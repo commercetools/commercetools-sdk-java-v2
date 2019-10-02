@@ -6,8 +6,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.CustomLineItemDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

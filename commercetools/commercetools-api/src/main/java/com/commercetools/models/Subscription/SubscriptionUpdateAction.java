@@ -4,7 +4,6 @@ import com.commercetools.models.subscription.SubscriptionChangeDestinationAction
 import com.commercetools.models.subscription.SubscriptionSetChangesAction;
 import com.commercetools.models.subscription.SubscriptionSetKeyAction;
 import com.commercetools.models.subscription.SubscriptionSetMessagesAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,8 +1,6 @@
 package com.commercetools.models.common;
 
 import com.commercetools.models.common.TypedMoneyDraft;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.common.MoneyImpl;
 
 import com.fasterxml.jackson.annotation.*;

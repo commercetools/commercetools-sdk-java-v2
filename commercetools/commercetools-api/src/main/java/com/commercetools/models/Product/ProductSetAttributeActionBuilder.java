@@ -1,10 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetAttributeAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,67 +10,67 @@ import java.time.ZonedDateTime;
 public final class ProductSetAttributeActionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    @Nullable
-   private java.lang.Object value;
+   private Object value;
    
-   public ProductSetAttributeActionBuilder name( final java.lang.String name) {
+   public ProductSetAttributeActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ProductSetAttributeActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetAttributeActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductSetAttributeActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ProductSetAttributeActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ProductSetAttributeActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductSetAttributeActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
-   public ProductSetAttributeActionBuilder value(@Nullable final java.lang.Object value) {
+   public ProductSetAttributeActionBuilder value(@Nullable final Object value) {
       this.value = value;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    @Nullable
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 

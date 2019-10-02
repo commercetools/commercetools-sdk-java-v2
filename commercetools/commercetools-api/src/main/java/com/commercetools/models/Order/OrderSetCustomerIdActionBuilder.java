@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetCustomerIdAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class OrderSetCustomerIdActionBuilder {
    
    @Nullable
-   private java.lang.String customerId;
+   private String customerId;
    
-   public OrderSetCustomerIdActionBuilder customerId(@Nullable final java.lang.String customerId) {
+   public OrderSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {
       this.customerId = customerId;
       return this;
    }
    
    @Nullable
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
 

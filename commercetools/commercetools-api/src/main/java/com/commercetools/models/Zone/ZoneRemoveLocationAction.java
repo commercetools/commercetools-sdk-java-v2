@@ -2,7 +2,6 @@ package com.commercetools.models.zone;
 
 import com.commercetools.models.zone.Location;
 import com.commercetools.models.zone.ZoneUpdateAction;
-import java.lang.String;
 import com.commercetools.models.zone.ZoneRemoveLocationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

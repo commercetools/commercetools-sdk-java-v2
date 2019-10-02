@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
 import com.commercetools.models.product.SearchKeywords;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywordsAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.product.SearchKeywords searchKeywords;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
 
    @JsonCreator
-   ProductSetSearchKeywordsActionImpl(@JsonProperty("searchKeywords") final com.commercetools.models.product.SearchKeywords searchKeywords, @JsonProperty("staged") final java.lang.Boolean staged) {
+   ProductSetSearchKeywordsActionImpl(@JsonProperty("searchKeywords") final com.commercetools.models.product.SearchKeywords searchKeywords, @JsonProperty("staged") final Boolean staged) {
       this.searchKeywords = searchKeywords;
       this.staged = staged;
       this.action = "setSearchKeywords";
@@ -42,7 +40,7 @@ public final class ProductSetSearchKeywordsActionImpl implements ProductSetSearc
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -52,7 +50,7 @@ public final class ProductSetSearchKeywordsActionImpl implements ProductSetSearc
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
 
@@ -60,7 +58,7 @@ public final class ProductSetSearchKeywordsActionImpl implements ProductSetSearc
       this.searchKeywords = searchKeywords;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
 

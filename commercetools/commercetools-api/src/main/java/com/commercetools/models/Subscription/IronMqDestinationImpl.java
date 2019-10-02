@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class IronMqDestinationImpl implements IronMqDestination {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String uri;
+   private String uri;
 
    @JsonCreator
-   IronMqDestinationImpl(@JsonProperty("uri") final java.lang.String uri) {
+   IronMqDestinationImpl(@JsonProperty("uri") final String uri) {
       this.uri = uri;
       this.type = "IronMQ";
    }
@@ -37,16 +36,16 @@ public final class IronMqDestinationImpl implements IronMqDestination {
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getUri(){
+   public String getUri(){
       return this.uri;
    }
 
-   public void setUri(final java.lang.String uri){
+   public void setUri(final String uri){
       this.uri = uri;
    }
 

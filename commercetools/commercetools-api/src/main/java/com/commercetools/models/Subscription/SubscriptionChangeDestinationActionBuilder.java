@@ -2,7 +2,6 @@ package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
 import com.commercetools.models.subscription.SubscriptionUpdateAction;
-import java.lang.String;
 import com.commercetools.models.subscription.SubscriptionChangeDestinationAction;
 import javax.annotation.Nullable;
 import java.util.List;

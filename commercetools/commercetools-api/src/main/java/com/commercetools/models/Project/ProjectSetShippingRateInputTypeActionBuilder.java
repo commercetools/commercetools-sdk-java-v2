@@ -2,7 +2,6 @@ package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
 import com.commercetools.models.project.ShippingRateInputType;
-import java.lang.String;
 import com.commercetools.models.project.ProjectSetShippingRateInputTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;

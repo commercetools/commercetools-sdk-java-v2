@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductRemoveVariantActionImpl implements ProductRemoveVariantAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.Long id;
+   private Long id;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   ProductRemoveVariantActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("id") final java.lang.Long id, @JsonProperty("sku") final java.lang.String sku) {
+   ProductRemoveVariantActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("id") final Long id, @JsonProperty("sku") final String sku) {
       this.staged = staged;
       this.id = id;
       this.sku = sku;
@@ -45,34 +42,34 @@ public final class ProductRemoveVariantActionImpl implements ProductRemoveVarian
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Long getId(){
+   public Long getId(){
       return this.id;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setId(final java.lang.Long id){
+   public void setId(final Long id){
       this.id = id;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

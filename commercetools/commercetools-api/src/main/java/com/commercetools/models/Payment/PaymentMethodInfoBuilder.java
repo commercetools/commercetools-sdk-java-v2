@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentMethodInfo;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class PaymentMethodInfoBuilder {
    
    @Nullable
-   private java.lang.String method;
+   private String method;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private java.lang.String paymentInterface;
+   private String paymentInterface;
    
-   public PaymentMethodInfoBuilder method(@Nullable final java.lang.String method) {
+   public PaymentMethodInfoBuilder method(@Nullable final String method) {
       this.method = method;
       return this;
    }
@@ -29,13 +28,13 @@ public final class PaymentMethodInfoBuilder {
       return this;
    }
    
-   public PaymentMethodInfoBuilder paymentInterface(@Nullable final java.lang.String paymentInterface) {
+   public PaymentMethodInfoBuilder paymentInterface(@Nullable final String paymentInterface) {
       this.paymentInterface = paymentInterface;
       return this;
    }
    
    @Nullable
-   public java.lang.String getMethod(){
+   public String getMethod(){
       return this.method;
    }
    
@@ -45,7 +44,7 @@ public final class PaymentMethodInfoBuilder {
    }
    
    @Nullable
-   public java.lang.String getPaymentInterface(){
+   public String getPaymentInterface(){
       return this.paymentInterface;
    }
 

@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetMetaKeywordsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,14 +14,14 @@ public final class ProductSetMetaKeywordsActionBuilder {
    private com.commercetools.models.common.LocalizedString metaKeywords;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    public ProductSetMetaKeywordsActionBuilder metaKeywords(@Nullable final com.commercetools.models.common.LocalizedString metaKeywords) {
       this.metaKeywords = metaKeywords;
       return this;
    }
    
-   public ProductSetMetaKeywordsActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetMetaKeywordsActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
@@ -34,7 +32,7 @@ public final class ProductSetMetaKeywordsActionBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
 

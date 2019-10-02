@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
-import java.lang.Long;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerResetPasswordImpl implements CustomerResetPassword {
 
-   private java.lang.String newPassword;
+   private String newPassword;
    
-   private java.lang.Long version;
+   private Long version;
    
-   private java.lang.String tokenValue;
+   private String tokenValue;
 
    @JsonCreator
-   CustomerResetPasswordImpl(@JsonProperty("newPassword") final java.lang.String newPassword, @JsonProperty("version") final java.lang.Long version, @JsonProperty("tokenValue") final java.lang.String tokenValue) {
+   CustomerResetPasswordImpl(@JsonProperty("newPassword") final String newPassword, @JsonProperty("version") final Long version, @JsonProperty("tokenValue") final String tokenValue) {
       this.newPassword = newPassword;
       this.version = version;
       this.tokenValue = tokenValue;
@@ -40,29 +39,29 @@ public final class CustomerResetPasswordImpl implements CustomerResetPassword {
    }
    
    
-   public java.lang.String getNewPassword(){
+   public String getNewPassword(){
       return this.newPassword;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.String getTokenValue(){
+   public String getTokenValue(){
       return this.tokenValue;
    }
 
-   public void setNewPassword(final java.lang.String newPassword){
+   public void setNewPassword(final String newPassword){
       this.newPassword = newPassword;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
-   public void setTokenValue(final java.lang.String tokenValue){
+   public void setTokenValue(final String tokenValue){
       this.tokenValue = tokenValue;
    }
 

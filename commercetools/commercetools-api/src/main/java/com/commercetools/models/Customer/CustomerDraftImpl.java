@@ -2,11 +2,8 @@ package com.commercetools.models.customer;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import java.time.LocalDate;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,60 +26,63 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerDraftImpl implements CustomerDraft {
 
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
-   private java.lang.String lastName;
+   private String lastName;
    
    private java.util.List<com.commercetools.models.common.Address> addresses;
    
-   private java.lang.Long defaultShippingAddress;
+   private Long defaultShippingAddress;
+   
+   private java.util.List<com.commercetools.models.store.StoreKeyReference> stores;
    
    private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private java.lang.String companyName;
+   private String companyName;
    
-   private java.lang.String vatId;
+   private String vatId;
    
-   private java.lang.String externalId;
+   private String externalId;
    
-   private java.util.List<java.lang.Integer> billingAddresses;
+   private java.util.List<Integer> billingAddresses;
    
    private java.time.LocalDate dateOfBirth;
    
-   private java.lang.String locale;
+   private String locale;
    
-   private java.lang.String title;
+   private String title;
    
-   private java.lang.String customerNumber;
+   private String customerNumber;
    
-   private java.lang.Boolean isEmailVerified;
+   private Boolean isEmailVerified;
    
-   private java.lang.String firstName;
+   private String firstName;
    
-   private java.lang.String password;
+   private String password;
    
-   private java.lang.String middleName;
+   private String middleName;
    
-   private java.lang.String salutation;
+   private String salutation;
    
-   private java.lang.String anonymousCartId;
+   private String anonymousCartId;
    
-   private java.lang.String key;
+   private String key;
    
-   private java.lang.Long defaultBillingAddress;
+   private Long defaultBillingAddress;
    
-   private java.lang.String email;
+   private String email;
    
-   private java.util.List<java.lang.Integer> shippingAddresses;
+   private java.util.List<Integer> shippingAddresses;
 
    @JsonCreator
-   CustomerDraftImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("lastName") final java.lang.String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.models.common.Address> addresses, @JsonProperty("defaultShippingAddress") final java.lang.Long defaultShippingAddress, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("companyName") final java.lang.String companyName, @JsonProperty("vatId") final java.lang.String vatId, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("billingAddresses") final java.util.List<java.lang.Integer> billingAddresses, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("title") final java.lang.String title, @JsonProperty("customerNumber") final java.lang.String customerNumber, @JsonProperty("isEmailVerified") final java.lang.Boolean isEmailVerified, @JsonProperty("firstName") final java.lang.String firstName, @JsonProperty("password") final java.lang.String password, @JsonProperty("middleName") final java.lang.String middleName, @JsonProperty("salutation") final java.lang.String salutation, @JsonProperty("anonymousCartId") final java.lang.String anonymousCartId, @JsonProperty("key") final java.lang.String key, @JsonProperty("defaultBillingAddress") final java.lang.Long defaultBillingAddress, @JsonProperty("email") final java.lang.String email, @JsonProperty("shippingAddresses") final java.util.List<java.lang.Integer> shippingAddresses) {
+   CustomerDraftImpl(@JsonProperty("anonymousId") final String anonymousId, @JsonProperty("lastName") final String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.models.common.Address> addresses, @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress, @JsonProperty("stores") final java.util.List<com.commercetools.models.store.StoreKeyReference> stores, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId, @JsonProperty("externalId") final String externalId, @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final String locale, @JsonProperty("title") final String title, @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("isEmailVerified") final Boolean isEmailVerified, @JsonProperty("firstName") final String firstName, @JsonProperty("password") final String password, @JsonProperty("middleName") final String middleName, @JsonProperty("salutation") final String salutation, @JsonProperty("anonymousCartId") final String anonymousCartId, @JsonProperty("key") final String key, @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress, @JsonProperty("email") final String email, @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses) {
       this.anonymousId = anonymousId;
       this.lastName = lastName;
       this.addresses = addresses;
       this.defaultShippingAddress = defaultShippingAddress;
+      this.stores = stores;
       this.customerGroup = customerGroup;
       this.custom = custom;
       this.companyName = companyName;
@@ -109,12 +109,12 @@ public final class CustomerDraftImpl implements CustomerDraft {
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
    
-   public java.lang.String getLastName(){
+   public String getLastName(){
       return this.lastName;
    }
    
@@ -124,8 +124,13 @@ public final class CustomerDraftImpl implements CustomerDraft {
    }
    
    
-   public java.lang.Long getDefaultShippingAddress(){
+   public Long getDefaultShippingAddress(){
       return this.defaultShippingAddress;
+   }
+   
+   
+   public java.util.List<com.commercetools.models.store.StoreKeyReference> getStores(){
+      return this.stores;
    }
    
    
@@ -139,22 +144,22 @@ public final class CustomerDraftImpl implements CustomerDraft {
    }
    
    
-   public java.lang.String getCompanyName(){
+   public String getCompanyName(){
       return this.companyName;
    }
    
    
-   public java.lang.String getVatId(){
+   public String getVatId(){
       return this.vatId;
    }
    
    
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
    
-   public java.util.List<java.lang.Integer> getBillingAddresses(){
+   public java.util.List<Integer> getBillingAddresses(){
       return this.billingAddresses;
    }
    
@@ -164,75 +169,75 @@ public final class CustomerDraftImpl implements CustomerDraft {
    }
    
    
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
    
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
    
    
-   public java.lang.String getCustomerNumber(){
+   public String getCustomerNumber(){
       return this.customerNumber;
    }
    
    
-   public java.lang.Boolean getIsEmailVerified(){
+   public Boolean getIsEmailVerified(){
       return this.isEmailVerified;
    }
    
    
-   public java.lang.String getFirstName(){
+   public String getFirstName(){
       return this.firstName;
    }
    
    
-   public java.lang.String getPassword(){
+   public String getPassword(){
       return this.password;
    }
    
    
-   public java.lang.String getMiddleName(){
+   public String getMiddleName(){
       return this.middleName;
    }
    
    
-   public java.lang.String getSalutation(){
+   public String getSalutation(){
       return this.salutation;
    }
    
    
-   public java.lang.String getAnonymousCartId(){
+   public String getAnonymousCartId(){
       return this.anonymousCartId;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
    
-   public java.lang.Long getDefaultBillingAddress(){
+   public Long getDefaultBillingAddress(){
       return this.defaultBillingAddress;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
    
    
-   public java.util.List<java.lang.Integer> getShippingAddresses(){
+   public java.util.List<Integer> getShippingAddresses(){
       return this.shippingAddresses;
    }
 
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
    
-   public void setLastName(final java.lang.String lastName){
+   public void setLastName(final String lastName){
       this.lastName = lastName;
    }
    
@@ -240,8 +245,12 @@ public final class CustomerDraftImpl implements CustomerDraft {
       this.addresses = addresses;
    }
    
-   public void setDefaultShippingAddress(final java.lang.Long defaultShippingAddress){
+   public void setDefaultShippingAddress(final Long defaultShippingAddress){
       this.defaultShippingAddress = defaultShippingAddress;
+   }
+   
+   public void setStores(final java.util.List<com.commercetools.models.store.StoreKeyReference> stores){
+      this.stores = stores;
    }
    
    public void setCustomerGroup(final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
@@ -252,19 +261,19 @@ public final class CustomerDraftImpl implements CustomerDraft {
       this.custom = custom;
    }
    
-   public void setCompanyName(final java.lang.String companyName){
+   public void setCompanyName(final String companyName){
       this.companyName = companyName;
    }
    
-   public void setVatId(final java.lang.String vatId){
+   public void setVatId(final String vatId){
       this.vatId = vatId;
    }
    
-   public void setExternalId(final java.lang.String externalId){
+   public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
    
-   public void setBillingAddresses(final java.util.List<java.lang.Integer> billingAddresses){
+   public void setBillingAddresses(final java.util.List<Integer> billingAddresses){
       this.billingAddresses = billingAddresses;
    }
    
@@ -272,55 +281,55 @@ public final class CustomerDraftImpl implements CustomerDraft {
       this.dateOfBirth = dateOfBirth;
    }
    
-   public void setLocale(final java.lang.String locale){
+   public void setLocale(final String locale){
       this.locale = locale;
    }
    
-   public void setTitle(final java.lang.String title){
+   public void setTitle(final String title){
       this.title = title;
    }
    
-   public void setCustomerNumber(final java.lang.String customerNumber){
+   public void setCustomerNumber(final String customerNumber){
       this.customerNumber = customerNumber;
    }
    
-   public void setIsEmailVerified(final java.lang.Boolean isEmailVerified){
+   public void setIsEmailVerified(final Boolean isEmailVerified){
       this.isEmailVerified = isEmailVerified;
    }
    
-   public void setFirstName(final java.lang.String firstName){
+   public void setFirstName(final String firstName){
       this.firstName = firstName;
    }
    
-   public void setPassword(final java.lang.String password){
+   public void setPassword(final String password){
       this.password = password;
    }
    
-   public void setMiddleName(final java.lang.String middleName){
+   public void setMiddleName(final String middleName){
       this.middleName = middleName;
    }
    
-   public void setSalutation(final java.lang.String salutation){
+   public void setSalutation(final String salutation){
       this.salutation = salutation;
    }
    
-   public void setAnonymousCartId(final java.lang.String anonymousCartId){
+   public void setAnonymousCartId(final String anonymousCartId){
       this.anonymousCartId = anonymousCartId;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    
-   public void setDefaultBillingAddress(final java.lang.Long defaultBillingAddress){
+   public void setDefaultBillingAddress(final Long defaultBillingAddress){
       this.defaultBillingAddress = defaultBillingAddress;
    }
    
-   public void setEmail(final java.lang.String email){
+   public void setEmail(final String email){
       this.email = email;
    }
    
-   public void setShippingAddresses(final java.util.List<java.lang.Integer> shippingAddresses){
+   public void setShippingAddresses(final java.util.List<Integer> shippingAddresses){
       this.shippingAddresses = shippingAddresses;
    }
 

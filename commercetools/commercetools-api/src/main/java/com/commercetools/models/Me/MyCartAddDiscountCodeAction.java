@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCartAddDiscountCodeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,8 +1,6 @@
 package com.commercetools.models.common;
 
 import com.commercetools.models.common.GeoJson;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.common.GeoJsonPoint;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class GeoJsonPointBuilder {
    
    
-   private java.util.List<java.lang.Integer> coordinates;
+   private java.util.List<Integer> coordinates;
    
-   public GeoJsonPointBuilder coordinates( final java.util.List<java.lang.Integer> coordinates) {
+   public GeoJsonPointBuilder coordinates( final java.util.List<Integer> coordinates) {
       this.coordinates = coordinates;
       return this;
    }
    
    
-   public java.util.List<java.lang.Integer> getCoordinates(){
+   public java.util.List<Integer> getCoordinates(){
       return this.coordinates;
    }
 

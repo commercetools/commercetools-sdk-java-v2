@@ -3,8 +3,6 @@ package com.commercetools.models.extension;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.extension.ExtensionDestination;
 import com.commercetools.models.extension.ExtensionTrigger;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionImpl;
 
 import com.fasterxml.jackson.annotation.*;

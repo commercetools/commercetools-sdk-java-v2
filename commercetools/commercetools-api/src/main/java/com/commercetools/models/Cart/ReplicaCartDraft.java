@@ -1,6 +1,6 @@
 package com.commercetools.models.cart;
 
-import java.lang.Object;
+
 import com.commercetools.models.cart.ReplicaCartDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

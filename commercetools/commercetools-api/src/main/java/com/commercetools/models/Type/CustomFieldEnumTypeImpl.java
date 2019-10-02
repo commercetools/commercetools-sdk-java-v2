@@ -2,7 +2,6 @@ package com.commercetools.models.type;
 
 import com.commercetools.models.type.CustomFieldEnumValue;
 import com.commercetools.models.type.FieldType;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldEnumTypeImpl implements CustomFieldEnumType {
 
-   private java.lang.String name;
+   private String name;
    
    private java.util.List<com.commercetools.models.type.CustomFieldEnumValue> values;
 
@@ -38,7 +37,7 @@ public final class CustomFieldEnumTypeImpl implements CustomFieldEnumType {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    

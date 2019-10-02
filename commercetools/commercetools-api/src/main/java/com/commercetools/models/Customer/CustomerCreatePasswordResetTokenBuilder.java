@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
-import java.lang.Long;
-import java.lang.String;
+
 import com.commercetools.models.customer.CustomerCreatePasswordResetToken;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class CustomerCreatePasswordResetTokenBuilder {
    
    @Nullable
-   private java.lang.Long ttlMinutes;
+   private Long ttlMinutes;
    
    
-   private java.lang.String email;
+   private String email;
    
-   public CustomerCreatePasswordResetTokenBuilder ttlMinutes(@Nullable final java.lang.Long ttlMinutes) {
+   public CustomerCreatePasswordResetTokenBuilder ttlMinutes(@Nullable final Long ttlMinutes) {
       this.ttlMinutes = ttlMinutes;
       return this;
    }
    
-   public CustomerCreatePasswordResetTokenBuilder email( final java.lang.String email) {
+   public CustomerCreatePasswordResetTokenBuilder email( final String email) {
       this.email = email;
       return this;
    }
    
    @Nullable
-   public java.lang.Long getTtlMinutes(){
+   public Long getTtlMinutes(){
       return this.ttlMinutes;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 

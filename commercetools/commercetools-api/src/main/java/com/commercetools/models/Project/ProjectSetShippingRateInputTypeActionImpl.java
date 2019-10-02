@@ -2,7 +2,6 @@ package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
 import com.commercetools.models.project.ShippingRateInputType;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectSetShippingRateInputTypeAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.project.ShippingRateInputType shippingRateInputType;
 
@@ -38,7 +37,7 @@ public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectS
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

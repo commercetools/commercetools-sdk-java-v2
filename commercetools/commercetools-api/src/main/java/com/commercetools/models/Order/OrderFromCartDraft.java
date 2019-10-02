@@ -1,8 +1,9 @@
 package com.commercetools.models.order;
 
+import com.commercetools.models.order.OrderState;
 import com.commercetools.models.order.PaymentState;
-import java.lang.Long;
-import java.lang.String;
+import com.commercetools.models.order.ShipmentState;
+import com.commercetools.models.state.StateResourceIdentifier;
 import com.commercetools.models.order.OrderFromCartDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -39,6 +40,18 @@ public interface OrderFromCartDraft  {
    
    @JsonProperty("paymentState")
    public PaymentState getPaymentState();
+   
+   
+   @JsonProperty("shipmentState")
+   public ShipmentState getShipmentState();
+   
+   
+   @JsonProperty("orderState")
+   public OrderState getOrderState();
+   
+   @Valid
+   @JsonProperty("state")
+   public StateResourceIdentifier getState();
 
    public void setId(final String id);
    
@@ -48,6 +61,12 @@ public interface OrderFromCartDraft  {
    
    public void setPaymentState(final PaymentState paymentState);
    
+   public void setShipmentState(final ShipmentState shipmentState);
+   
+   public void setOrderState(final OrderState orderState);
+   
+   public void setState(final StateResourceIdentifier state);
+   
    public static OrderFromCartDraftImpl of(){
       return new OrderFromCartDraftImpl();
    }
@@ -55,10 +74,13 @@ public interface OrderFromCartDraft  {
 
    public static OrderFromCartDraftImpl of(final OrderFromCartDraft template) {
       OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();
+      instance.setShipmentState(template.getShipmentState());
       instance.setOrderNumber(template.getOrderNumber());
+      instance.setState(template.getState());
       instance.setId(template.getId());
       instance.setPaymentState(template.getPaymentState());
       instance.setVersion(template.getVersion());
+      instance.setOrderState(template.getOrderState());
       return instance;
    }
 

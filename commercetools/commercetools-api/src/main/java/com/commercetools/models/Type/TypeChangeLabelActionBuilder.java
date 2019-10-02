@@ -2,7 +2,6 @@ package com.commercetools.models.type;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.type.TypeChangeLabelAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class TypeChangeLabelActionBuilder {
    
    
-   private java.lang.String fieldName;
+   private String fieldName;
    
    
    private com.commercetools.models.common.LocalizedString label;
    
-   public TypeChangeLabelActionBuilder fieldName( final java.lang.String fieldName) {
+   public TypeChangeLabelActionBuilder fieldName( final String fieldName) {
       this.fieldName = fieldName;
       return this;
    }
@@ -28,7 +27,7 @@ public final class TypeChangeLabelActionBuilder {
    }
    
    
-   public java.lang.String getFieldName(){
+   public String getFieldName(){
       return this.fieldName;
    }
    

@@ -3,8 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.cart.ProductPublishScope;
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.product.ProductProjection;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,16 +24,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductPublishedMessagePayloadImpl implements ProductPublishedMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.util.List<java.lang.Object> removedImageUrls;
+   private java.util.List<Object> removedImageUrls;
    
    private com.commercetools.models.product.ProductProjection productProjection;
    
    private com.commercetools.models.cart.ProductPublishScope scope;
 
    @JsonCreator
-   ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<java.lang.Object> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.models.cart.ProductPublishScope scope) {
+   ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<Object> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.models.cart.ProductPublishScope scope) {
       this.removedImageUrls = removedImageUrls;
       this.productProjection = productProjection;
       this.scope = scope;
@@ -46,12 +44,12 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.util.List<java.lang.Object> getRemovedImageUrls(){
+   public java.util.List<Object> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
    
@@ -65,7 +63,7 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
       return this.scope;
    }
 
-   public void setRemovedImageUrls(final java.util.List<java.lang.Object> removedImageUrls){
+   public void setRemovedImageUrls(final java.util.List<Object> removedImageUrls){
       this.removedImageUrls = removedImageUrls;
    }
    

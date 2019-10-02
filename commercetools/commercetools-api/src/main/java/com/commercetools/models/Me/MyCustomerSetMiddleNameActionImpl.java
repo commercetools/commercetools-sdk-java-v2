@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCustomerSetMiddleNameActionImpl implements MyCustomerSetMiddleNameAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String middleName;
+   private String middleName;
 
    @JsonCreator
-   MyCustomerSetMiddleNameActionImpl(@JsonProperty("middleName") final java.lang.String middleName) {
+   MyCustomerSetMiddleNameActionImpl(@JsonProperty("middleName") final String middleName) {
       this.middleName = middleName;
       this.action = "setMiddleName";
    }
@@ -37,16 +36,16 @@ public final class MyCustomerSetMiddleNameActionImpl implements MyCustomerSetMid
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getMiddleName(){
+   public String getMiddleName(){
       return this.middleName;
    }
 
-   public void setMiddleName(final java.lang.String middleName){
+   public void setMiddleName(final String middleName){
       this.middleName = middleName;
    }
 

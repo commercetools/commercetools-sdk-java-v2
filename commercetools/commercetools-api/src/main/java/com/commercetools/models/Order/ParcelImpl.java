@@ -3,7 +3,6 @@ package com.commercetools.models.order;
 import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.ParcelMeasurements;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,7 +27,7 @@ public final class ParcelImpl implements Parcel {
 
    private java.time.ZonedDateTime createdAt;
    
-   private java.lang.String id;
+   private String id;
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
@@ -37,7 +36,7 @@ public final class ParcelImpl implements Parcel {
    private com.commercetools.models.order.ParcelMeasurements measurements;
 
    @JsonCreator
-   ParcelImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("trackingData") final com.commercetools.models.order.TrackingData trackingData, @JsonProperty("measurements") final com.commercetools.models.order.ParcelMeasurements measurements) {
+   ParcelImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("id") final String id, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("trackingData") final com.commercetools.models.order.TrackingData trackingData, @JsonProperty("measurements") final com.commercetools.models.order.ParcelMeasurements measurements) {
       this.createdAt = createdAt;
       this.id = id;
       this.items = items;
@@ -54,7 +53,7 @@ public final class ParcelImpl implements Parcel {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -77,7 +76,7 @@ public final class ParcelImpl implements Parcel {
       this.createdAt = createdAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

@@ -6,8 +6,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.review.ReviewRatingStatistics;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.channel.ChannelImpl;
 
 import com.fasterxml.jackson.annotation.*;

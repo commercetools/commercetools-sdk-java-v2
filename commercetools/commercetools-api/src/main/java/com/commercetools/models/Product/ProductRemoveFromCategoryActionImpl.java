@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.category.CategoryResourceIdentifier;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCategoryAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    private com.commercetools.models.category.CategoryResourceIdentifier category;
 
    @JsonCreator
-   ProductRemoveFromCategoryActionImpl(@JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("category") final com.commercetools.models.category.CategoryResourceIdentifier category) {
+   ProductRemoveFromCategoryActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("category") final com.commercetools.models.category.CategoryResourceIdentifier category) {
       this.staged = staged;
       this.category = category;
       this.action = "removeFromCategory";
@@ -42,12 +40,12 @@ public final class ProductRemoveFromCategoryActionImpl implements ProductRemoveF
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
@@ -56,7 +54,7 @@ public final class ProductRemoveFromCategoryActionImpl implements ProductRemoveF
       return this.category;
    }
 
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    

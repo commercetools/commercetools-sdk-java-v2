@@ -1,7 +1,6 @@
 package com.commercetools.models.review;
 
-import java.lang.Integer;
-import java.lang.Object;
+
 import com.commercetools.models.review.ReviewRatingStatisticsImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetAssetTagsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,80 +10,80 @@ import java.time.ZonedDateTime;
 public final class ProductSetAssetTagsActionBuilder {
    
    @Nullable
-   private java.lang.String assetId;
+   private String assetId;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    @Nullable
-   private java.lang.String assetKey;
+   private String assetKey;
    
    @Nullable
-   private java.util.List<java.lang.String> tags;
+   private java.util.List<String> tags;
    
-   public ProductSetAssetTagsActionBuilder assetId(@Nullable final java.lang.String assetId) {
+   public ProductSetAssetTagsActionBuilder assetId(@Nullable final String assetId) {
       this.assetId = assetId;
       return this;
    }
    
-   public ProductSetAssetTagsActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetAssetTagsActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductSetAssetTagsActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ProductSetAssetTagsActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ProductSetAssetTagsActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductSetAssetTagsActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
-   public ProductSetAssetTagsActionBuilder assetKey(@Nullable final java.lang.String assetKey) {
+   public ProductSetAssetTagsActionBuilder assetKey(@Nullable final String assetKey) {
       this.assetKey = assetKey;
       return this;
    }
    
-   public ProductSetAssetTagsActionBuilder tags(@Nullable final java.util.List<java.lang.String> tags) {
+   public ProductSetAssetTagsActionBuilder tags(@Nullable final java.util.List<String> tags) {
       this.tags = tags;
       return this;
    }
    
    @Nullable
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    @Nullable
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
    
    @Nullable
-   public java.util.List<java.lang.String> getTags(){
+   public java.util.List<String> getTags(){
       return this.tags;
    }
 

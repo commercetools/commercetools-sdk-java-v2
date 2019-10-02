@@ -1,8 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.product.ProductLegacySetSkuAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class ProductLegacySetSkuActionBuilder {
    
    
-   private java.lang.Integer variantId;
+   private Integer variantId;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
-   public ProductLegacySetSkuActionBuilder variantId( final java.lang.Integer variantId) {
+   public ProductLegacySetSkuActionBuilder variantId( final Integer variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ProductLegacySetSkuActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductLegacySetSkuActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
    
-   public java.lang.Integer getVariantId(){
+   public Integer getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.review;
 
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.review.ReviewUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

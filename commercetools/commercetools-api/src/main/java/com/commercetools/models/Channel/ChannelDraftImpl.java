@@ -4,8 +4,6 @@ import com.commercetools.models.channel.ChannelRoleEnum;
 import com.commercetools.models.common.Address;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -29,7 +27,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
 
    private com.commercetools.models.common.Address address;
    
-   private java.lang.Object geoLocation;
+   private Object geoLocation;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
@@ -39,10 +37,10 @@ public final class ChannelDraftImpl implements ChannelDraft {
    
    private com.commercetools.models.common.LocalizedString description;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ChannelDraftImpl(@JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("geoLocation") final java.lang.Object geoLocation, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("roles") final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("key") final java.lang.String key) {
+   ChannelDraftImpl(@JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("geoLocation") final Object geoLocation, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("roles") final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("key") final String key) {
       this.address = address;
       this.geoLocation = geoLocation;
       this.custom = custom;
@@ -61,7 +59,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
    }
    
    
-   public java.lang.Object getGeoLocation(){
+   public Object getGeoLocation(){
       return this.geoLocation;
    }
    
@@ -86,7 +84,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -94,7 +92,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
       this.address = address;
    }
    
-   public void setGeoLocation(final java.lang.Object geoLocation){
+   public void setGeoLocation(final Object geoLocation){
       this.geoLocation = geoLocation;
    }
    
@@ -114,7 +112,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
       this.description = description;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

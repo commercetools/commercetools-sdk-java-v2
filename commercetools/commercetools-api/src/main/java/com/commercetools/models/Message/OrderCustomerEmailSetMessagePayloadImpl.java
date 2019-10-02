@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEmailSetMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String oldEmail;
+   private String oldEmail;
    
-   private java.lang.String email;
+   private String email;
 
    @JsonCreator
-   OrderCustomerEmailSetMessagePayloadImpl(@JsonProperty("oldEmail") final java.lang.String oldEmail, @JsonProperty("email") final java.lang.String email) {
+   OrderCustomerEmailSetMessagePayloadImpl(@JsonProperty("oldEmail") final String oldEmail, @JsonProperty("email") final String email) {
       this.oldEmail = oldEmail;
       this.email = email;
       this.type = "OrderCustomerEmailSet";
@@ -40,25 +39,25 @@ public final class OrderCustomerEmailSetMessagePayloadImpl implements OrderCusto
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getOldEmail(){
+   public String getOldEmail(){
       return this.oldEmail;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 
-   public void setOldEmail(final java.lang.String oldEmail){
+   public void setOldEmail(final String oldEmail){
       this.oldEmail = oldEmail;
    }
    
-   public void setEmail(final java.lang.String email){
+   public void setEmail(final String email){
       this.email = email;
    }
 

@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ExternalTaxAmountDraft;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetLineItemTaxAmountActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,6 +1,6 @@
 package com.commercetools.models.type;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldEnumValueImpl implements CustomFieldEnumValue {
 
-   private java.lang.String label;
+   private String label;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   CustomFieldEnumValueImpl(@JsonProperty("label") final java.lang.String label, @JsonProperty("key") final java.lang.String key) {
+   CustomFieldEnumValueImpl(@JsonProperty("label") final String label, @JsonProperty("key") final String key) {
       this.label = label;
       this.key = key;
    }
@@ -36,20 +36,20 @@ public final class CustomFieldEnumValueImpl implements CustomFieldEnumValue {
    }
    
    
-   public java.lang.String getLabel(){
+   public String getLabel(){
       return this.label;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setLabel(final java.lang.String label){
+   public void setLabel(final String label){
       this.label = label;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

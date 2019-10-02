@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetCustomerEmailActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

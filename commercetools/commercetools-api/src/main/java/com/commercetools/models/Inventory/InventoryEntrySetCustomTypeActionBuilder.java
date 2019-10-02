@@ -3,7 +3,6 @@ package com.commercetools.models.inventory;
 import com.commercetools.models.inventory.InventoryEntryUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.inventory.InventoryEntrySetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;

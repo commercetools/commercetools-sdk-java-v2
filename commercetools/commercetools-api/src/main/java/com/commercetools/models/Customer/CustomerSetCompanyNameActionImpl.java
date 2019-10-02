@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.CustomerUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSetCompanyNameActionImpl implements CustomerSetCompanyNameAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String companyName;
+   private String companyName;
 
    @JsonCreator
-   CustomerSetCompanyNameActionImpl(@JsonProperty("companyName") final java.lang.String companyName) {
+   CustomerSetCompanyNameActionImpl(@JsonProperty("companyName") final String companyName) {
       this.companyName = companyName;
       this.action = "setCompanyName";
    }
@@ -37,16 +36,16 @@ public final class CustomerSetCompanyNameActionImpl implements CustomerSetCompan
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCompanyName(){
+   public String getCompanyName(){
       return this.companyName;
    }
 
-   public void setCompanyName(final java.lang.String companyName){
+   public void setCompanyName(final String companyName){
       this.companyName = companyName;
    }
 

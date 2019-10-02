@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetProductPriceCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

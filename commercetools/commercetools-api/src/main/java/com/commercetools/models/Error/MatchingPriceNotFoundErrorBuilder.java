@@ -3,8 +3,6 @@ package com.commercetools.models.error;
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.error.MatchingPriceNotFoundError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,13 +12,13 @@ import java.time.ZonedDateTime;
 public final class MatchingPriceNotFoundErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
    
-   private java.lang.String productId;
+   private String productId;
    
    @Nullable
    private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
@@ -29,22 +27,22 @@ public final class MatchingPriceNotFoundErrorBuilder {
    private com.commercetools.models.channel.ChannelReference channel;
    
    @Nullable
-   private java.lang.String currency;
+   private String currency;
    
    
-   private java.lang.Integer variantId;
+   private Integer variantId;
    
-   public MatchingPriceNotFoundErrorBuilder message( final java.lang.String message) {
+   public MatchingPriceNotFoundErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public MatchingPriceNotFoundErrorBuilder country(@Nullable final java.lang.String country) {
+   public MatchingPriceNotFoundErrorBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
    
-   public MatchingPriceNotFoundErrorBuilder productId( final java.lang.String productId) {
+   public MatchingPriceNotFoundErrorBuilder productId( final String productId) {
       this.productId = productId;
       return this;
    }
@@ -59,28 +57,28 @@ public final class MatchingPriceNotFoundErrorBuilder {
       return this;
    }
    
-   public MatchingPriceNotFoundErrorBuilder currency(@Nullable final java.lang.String currency) {
+   public MatchingPriceNotFoundErrorBuilder currency(@Nullable final String currency) {
       this.currency = currency;
       return this;
    }
    
-   public MatchingPriceNotFoundErrorBuilder variantId( final java.lang.Integer variantId) {
+   public MatchingPriceNotFoundErrorBuilder variantId( final Integer variantId) {
       this.variantId = variantId;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -95,12 +93,12 @@ public final class MatchingPriceNotFoundErrorBuilder {
    }
    
    @Nullable
-   public java.lang.String getCurrency(){
+   public String getCurrency(){
       return this.currency;
    }
    
    
-   public java.lang.Integer getVariantId(){
+   public Integer getVariantId(){
       return this.variantId;
    }
 

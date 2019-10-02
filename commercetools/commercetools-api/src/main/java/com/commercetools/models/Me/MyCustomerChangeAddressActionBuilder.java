@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCustomerChangeAddressAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class MyCustomerChangeAddressActionBuilder {
    private com.commercetools.models.common.Address address;
    
    
-   private java.lang.String addressId;
+   private String addressId;
    
    public MyCustomerChangeAddressActionBuilder address( final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
    
-   public MyCustomerChangeAddressActionBuilder addressId( final java.lang.String addressId) {
+   public MyCustomerChangeAddressActionBuilder addressId( final String addressId) {
       this.addressId = addressId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class MyCustomerChangeAddressActionBuilder {
    }
    
    
-   public java.lang.String getAddressId(){
+   public String getAddressId(){
       return this.addressId;
    }
 

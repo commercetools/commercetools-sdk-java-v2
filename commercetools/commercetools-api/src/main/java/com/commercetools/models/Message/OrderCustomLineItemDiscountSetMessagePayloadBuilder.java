@@ -3,7 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.models.cart.TaxedItemPrice;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.OrderCustomLineItemDiscountSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,7 +12,7 @@ import java.time.ZonedDateTime;
 public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    @Nullable
    private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
@@ -21,7 +20,7 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
    
    private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
    
-   public OrderCustomLineItemDiscountSetMessagePayloadBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public OrderCustomLineItemDiscountSetMessagePayloadBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
@@ -37,7 +36,7 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    

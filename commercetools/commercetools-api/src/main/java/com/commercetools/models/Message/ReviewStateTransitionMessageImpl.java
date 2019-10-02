@@ -3,7 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.message.Message;
 import com.commercetools.models.state.StateReference;
-import java.lang.Boolean;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -29,49 +28,55 @@ public final class ReviewStateTransitionMessageImpl implements ReviewStateTransi
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
-   private java.lang.Long sequenceNumber;
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
+   
+   private Long sequenceNumber;
    
    private com.commercetools.models.common.Reference resource;
    
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.Boolean newIncludedInStatistics;
+   private Boolean newIncludedInStatistics;
    
    private com.commercetools.models.state.StateReference oldState;
    
-   private java.lang.Boolean force;
+   private Boolean force;
    
-   private java.lang.Boolean oldIncludedInStatistics;
+   private Boolean oldIncludedInStatistics;
    
    private com.commercetools.models.state.StateReference newState;
    
    private com.commercetools.models.common.Reference target;
 
    @JsonCreator
-   ReviewStateTransitionMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("newIncludedInStatistics") final java.lang.Boolean newIncludedInStatistics, @JsonProperty("oldState") final com.commercetools.models.state.StateReference oldState, @JsonProperty("force") final java.lang.Boolean force, @JsonProperty("oldIncludedInStatistics") final java.lang.Boolean oldIncludedInStatistics, @JsonProperty("newState") final com.commercetools.models.state.StateReference newState, @JsonProperty("target") final com.commercetools.models.common.Reference target) {
+   ReviewStateTransitionMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("newIncludedInStatistics") final Boolean newIncludedInStatistics, @JsonProperty("oldState") final com.commercetools.models.state.StateReference oldState, @JsonProperty("force") final Boolean force, @JsonProperty("oldIncludedInStatistics") final Boolean oldIncludedInStatistics, @JsonProperty("newState") final com.commercetools.models.state.StateReference newState, @JsonProperty("target") final com.commercetools.models.common.Reference target) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
       this.version = version;
+      this.createdBy = createdBy;
+      this.lastModifiedBy = lastModifiedBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
-      this.type = type;
       this.newIncludedInStatistics = newIncludedInStatistics;
       this.oldState = oldState;
       this.force = force;
       this.oldIncludedInStatistics = oldIncludedInStatistics;
       this.newState = newState;
       this.target = target;
+      this.type = "ReviewStateTransition";
    }
    public ReviewStateTransitionMessageImpl() {
       
@@ -88,17 +93,27 @@ public final class ReviewStateTransitionMessageImpl implements ReviewStateTransi
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.Long getSequenceNumber(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -113,17 +128,17 @@ public final class ReviewStateTransitionMessageImpl implements ReviewStateTransi
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.Boolean getNewIncludedInStatistics(){
+   public Boolean getNewIncludedInStatistics(){
       return this.newIncludedInStatistics;
    }
    
@@ -133,12 +148,12 @@ public final class ReviewStateTransitionMessageImpl implements ReviewStateTransi
    }
    
    
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    
    
-   public java.lang.Boolean getOldIncludedInStatistics(){
+   public Boolean getOldIncludedInStatistics(){
       return this.oldIncludedInStatistics;
    }
    
@@ -160,15 +175,23 @@ public final class ReviewStateTransitionMessageImpl implements ReviewStateTransi
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
-   public void setSequenceNumber(final java.lang.Long sequenceNumber){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
+      this.lastModifiedBy = lastModifiedBy;
+   }
+   
+   public void setSequenceNumber(final Long sequenceNumber){
       this.sequenceNumber = sequenceNumber;
    }
    
@@ -180,15 +203,11 @@ public final class ReviewStateTransitionMessageImpl implements ReviewStateTransi
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
-   public void setResourceVersion(final java.lang.Long resourceVersion){
+   public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
    }
    
-   public void setType(final java.lang.String type){
-      this.type = type;
-   }
-   
-   public void setNewIncludedInStatistics(final java.lang.Boolean newIncludedInStatistics){
+   public void setNewIncludedInStatistics(final Boolean newIncludedInStatistics){
       this.newIncludedInStatistics = newIncludedInStatistics;
    }
    
@@ -196,11 +215,11 @@ public final class ReviewStateTransitionMessageImpl implements ReviewStateTransi
       this.oldState = oldState;
    }
    
-   public void setForce(final java.lang.Boolean force){
+   public void setForce(final Boolean force){
       this.force = force;
    }
    
-   public void setOldIncludedInStatistics(final java.lang.Boolean oldIncludedInStatistics){
+   public void setOldIncludedInStatistics(final Boolean oldIncludedInStatistics){
       this.oldIncludedInStatistics = oldIncludedInStatistics;
    }
    

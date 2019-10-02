@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.me.MyShoppingListUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyShoppingListChangeTextLineItemNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class MyShoppingListChangeTextLineItemNameActionBuilder {
    private com.commercetools.models.common.LocalizedString name;
    
    
-   private java.lang.String textLineItemId;
+   private String textLineItemId;
    
    public MyShoppingListChangeTextLineItemNameActionBuilder name( final com.commercetools.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public MyShoppingListChangeTextLineItemNameActionBuilder textLineItemId( final java.lang.String textLineItemId) {
+   public MyShoppingListChangeTextLineItemNameActionBuilder textLineItemId( final String textLineItemId) {
       this.textLineItemId = textLineItemId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class MyShoppingListChangeTextLineItemNameActionBuilder {
    }
    
    
-   public java.lang.String getTextLineItemId(){
+   public String getTextLineItemId(){
       return this.textLineItemId;
    }
 

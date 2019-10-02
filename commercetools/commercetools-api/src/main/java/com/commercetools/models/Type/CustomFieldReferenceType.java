@@ -2,7 +2,6 @@ package com.commercetools.models.type;
 
 import com.commercetools.models.common.ReferenceTypeId;
 import com.commercetools.models.type.FieldType;
-import java.lang.String;
 import com.commercetools.models.type.CustomFieldReferenceTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;

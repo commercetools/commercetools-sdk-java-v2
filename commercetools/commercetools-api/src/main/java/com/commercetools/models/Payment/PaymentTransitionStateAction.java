@@ -2,8 +2,6 @@ package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentTransitionStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

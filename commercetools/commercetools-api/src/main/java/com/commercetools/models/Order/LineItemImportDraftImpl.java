@@ -8,8 +8,6 @@ import com.commercetools.models.order.ItemState;
 import com.commercetools.models.order.ProductVariantImportDraft;
 import com.commercetools.models.tax_category.TaxRate;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -33,11 +31,11 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
 
    private com.commercetools.models.tax_category.TaxRate taxRate;
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
-   private java.lang.String productId;
+   private String productId;
    
    private com.commercetools.models.common.PriceDraft price;
    
@@ -54,7 +52,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
    private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
 
    @JsonCreator
-   LineItemImportDraftImpl(@JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRate taxRate, @JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("price") final com.commercetools.models.common.PriceDraft price, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("variant") final com.commercetools.models.order.ProductVariantImportDraft variant, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel) {
+   LineItemImportDraftImpl(@JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRate taxRate, @JsonProperty("quantity") final Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final String productId, @JsonProperty("price") final com.commercetools.models.common.PriceDraft price, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("variant") final com.commercetools.models.order.ProductVariantImportDraft variant, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel) {
       this.taxRate = taxRate;
       this.quantity = quantity;
       this.shippingDetails = shippingDetails;
@@ -77,7 +75,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -87,7 +85,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -130,7 +128,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
       this.taxRate = taxRate;
    }
    
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
    
@@ -138,7 +136,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
       this.shippingDetails = shippingDetails;
    }
    
-   public void setProductId(final java.lang.String productId){
+   public void setProductId(final String productId){
       this.productId = productId;
    }
    

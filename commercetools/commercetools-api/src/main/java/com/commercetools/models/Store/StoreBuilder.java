@@ -1,8 +1,7 @@
 package com.commercetools.models.store;
 
-import com.commercetools.models.common.BaseResource;
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
+import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.store.Store;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,16 +17,22 @@ public final class StoreBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString name;
    
    
-   private java.lang.String key;
+   private String key;
    
    public StoreBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -39,13 +44,23 @@ public final class StoreBuilder {
       return this;
    }
    
-   public StoreBuilder id( final java.lang.String id) {
+   public StoreBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public StoreBuilder version( final java.lang.Long version) {
+   public StoreBuilder version( final Long version) {
       this.version = version;
+      return this;
+   }
+   
+   public StoreBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public StoreBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
       return this;
    }
    
@@ -54,7 +69,7 @@ public final class StoreBuilder {
       return this;
    }
    
-   public StoreBuilder key( final java.lang.String key) {
+   public StoreBuilder key( final String key) {
       this.key = key;
       return this;
    }
@@ -70,13 +85,23 @@ public final class StoreBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
+   }
+   
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
    }
    
    @Nullable
@@ -85,12 +110,12 @@ public final class StoreBuilder {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
    public Store build() {
-       return new StoreImpl(createdAt, lastModifiedAt, id, version, name, key);
+       return new StoreImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, name, key);
    }
    
    public static StoreBuilder of() {
@@ -103,6 +128,8 @@ public final class StoreBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.name = template.getName();
       builder.key = template.getKey();
       return builder;

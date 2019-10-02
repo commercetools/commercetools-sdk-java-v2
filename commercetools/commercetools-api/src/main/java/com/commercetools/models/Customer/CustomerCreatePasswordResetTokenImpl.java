@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
-import java.lang.Long;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePasswordResetToken {
 
-   private java.lang.Long ttlMinutes;
+   private Long ttlMinutes;
    
-   private java.lang.String email;
+   private String email;
 
    @JsonCreator
-   CustomerCreatePasswordResetTokenImpl(@JsonProperty("ttlMinutes") final java.lang.Long ttlMinutes, @JsonProperty("email") final java.lang.String email) {
+   CustomerCreatePasswordResetTokenImpl(@JsonProperty("ttlMinutes") final Long ttlMinutes, @JsonProperty("email") final String email) {
       this.ttlMinutes = ttlMinutes;
       this.email = email;
    }
@@ -37,20 +36,20 @@ public final class CustomerCreatePasswordResetTokenImpl implements CustomerCreat
    }
    
    
-   public java.lang.Long getTtlMinutes(){
+   public Long getTtlMinutes(){
       return this.ttlMinutes;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 
-   public void setTtlMinutes(final java.lang.Long ttlMinutes){
+   public void setTtlMinutes(final Long ttlMinutes){
       this.ttlMinutes = ttlMinutes;
    }
    
-   public void setEmail(final java.lang.String email){
+   public void setEmail(final String email){
       this.email = email;
    }
 

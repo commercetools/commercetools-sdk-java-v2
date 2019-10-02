@@ -2,7 +2,6 @@ package com.commercetools.models.project;
 
 import com.commercetools.models.project.ExternalOAuth;
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import com.commercetools.models.project.ProjectSetExternalOAuthAction;
 import javax.annotation.Nullable;
 import java.util.List;

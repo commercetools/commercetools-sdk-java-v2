@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OutOfStockErrorImpl implements OutOfStockError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
-   private java.util.List<java.lang.String> lineItems;
+   private java.util.List<String> lineItems;
    
-   private java.util.List<java.lang.String> skus;
+   private java.util.List<String> skus;
 
    @JsonCreator
-   OutOfStockErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("lineItems") final java.util.List<java.lang.String> lineItems, @JsonProperty("skus") final java.util.List<java.lang.String> skus) {
+   OutOfStockErrorImpl(@JsonProperty("message") final String message, @JsonProperty("lineItems") final java.util.List<String> lineItems, @JsonProperty("skus") final java.util.List<String> skus) {
       this.message = message;
       this.lineItems = lineItems;
       this.skus = skus;
@@ -43,34 +42,34 @@ public final class OutOfStockErrorImpl implements OutOfStockError {
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.util.List<java.lang.String> getLineItems(){
+   public java.util.List<String> getLineItems(){
       return this.lineItems;
    }
    
    
-   public java.util.List<java.lang.String> getSkus(){
+   public java.util.List<String> getSkus(){
       return this.skus;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setLineItems(final java.util.List<java.lang.String> lineItems){
+   public void setLineItems(final java.util.List<String> lineItems){
       this.lineItems = lineItems;
    }
    
-   public void setSkus(final java.util.List<java.lang.String> skus){
+   public void setSkus(final java.util.List<String> skus){
       this.skus = skus;
    }
 

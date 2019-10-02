@@ -2,7 +2,6 @@ package com.commercetools.models.project;
 
 import com.commercetools.models.message.MessageConfigurationDraft;
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeMessagesConfigurationActionImpl implements ProjectChangeMessagesConfigurationAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.message.MessageConfigurationDraft messagesConfiguration;
 
@@ -38,7 +37,7 @@ public final class ProjectChangeMessagesConfigurationActionImpl implements Proje
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

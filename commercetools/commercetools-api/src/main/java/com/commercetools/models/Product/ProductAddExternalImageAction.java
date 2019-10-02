@@ -2,9 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.Image;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductAddExternalImageActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

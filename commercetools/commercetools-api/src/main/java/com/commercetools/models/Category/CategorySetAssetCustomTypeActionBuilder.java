@@ -2,8 +2,6 @@ package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.category.CategorySetAssetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,23 +11,23 @@ import java.time.ZonedDateTime;
 public final class CategorySetAssetCustomTypeActionBuilder {
    
    @Nullable
-   private java.lang.String assetId;
+   private String assetId;
    
    @Nullable
-   private java.lang.Object fields;
+   private Object fields;
    
    @Nullable
    private com.commercetools.models.type.TypeResourceIdentifier type;
    
    @Nullable
-   private java.lang.String assetKey;
+   private String assetKey;
    
-   public CategorySetAssetCustomTypeActionBuilder assetId(@Nullable final java.lang.String assetId) {
+   public CategorySetAssetCustomTypeActionBuilder assetId(@Nullable final String assetId) {
       this.assetId = assetId;
       return this;
    }
    
-   public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {
+   public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final Object fields) {
       this.fields = fields;
       return this;
    }
@@ -39,18 +37,18 @@ public final class CategorySetAssetCustomTypeActionBuilder {
       return this;
    }
    
-   public CategorySetAssetCustomTypeActionBuilder assetKey(@Nullable final java.lang.String assetKey) {
+   public CategorySetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
       this.assetKey = assetKey;
       return this;
    }
    
    @Nullable
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    @Nullable
-   public java.lang.Object getFields(){
+   public Object getFields(){
       return this.fields;
    }
    
@@ -60,7 +58,7 @@ public final class CategorySetAssetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
 

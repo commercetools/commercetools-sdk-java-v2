@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
-import java.lang.Boolean;
-import java.lang.Integer;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MessageConfigurationDraftImpl implements MessageConfigurationDraft {
 
-   private java.lang.Integer deleteDaysAfterCreation;
+   private Integer deleteDaysAfterCreation;
    
-   private java.lang.Boolean enabled;
+   private Boolean enabled;
 
    @JsonCreator
-   MessageConfigurationDraftImpl(@JsonProperty("deleteDaysAfterCreation") final java.lang.Integer deleteDaysAfterCreation, @JsonProperty("enabled") final java.lang.Boolean enabled) {
+   MessageConfigurationDraftImpl(@JsonProperty("deleteDaysAfterCreation") final Integer deleteDaysAfterCreation, @JsonProperty("enabled") final Boolean enabled) {
       this.deleteDaysAfterCreation = deleteDaysAfterCreation;
       this.enabled = enabled;
    }
@@ -37,20 +36,20 @@ public final class MessageConfigurationDraftImpl implements MessageConfiguration
    }
    
    
-   public java.lang.Integer getDeleteDaysAfterCreation(){
+   public Integer getDeleteDaysAfterCreation(){
       return this.deleteDaysAfterCreation;
    }
    
    
-   public java.lang.Boolean getEnabled(){
+   public Boolean getEnabled(){
       return this.enabled;
    }
 
-   public void setDeleteDaysAfterCreation(final java.lang.Integer deleteDaysAfterCreation){
+   public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation){
       this.deleteDaysAfterCreation = deleteDaysAfterCreation;
    }
    
-   public void setEnabled(final java.lang.Boolean enabled){
+   public void setEnabled(final Boolean enabled){
       this.enabled = enabled;
    }
 

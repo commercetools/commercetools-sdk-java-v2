@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.ShippingRateInput;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.ScoreShippingRateInputImpl;
 
 import com.fasterxml.jackson.annotation.*;

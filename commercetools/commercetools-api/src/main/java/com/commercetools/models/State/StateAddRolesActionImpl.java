@@ -2,7 +2,6 @@ package com.commercetools.models.state;
 
 import com.commercetools.models.state.StateRoleEnum;
 import com.commercetools.models.state.StateUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateAddRolesActionImpl implements StateAddRolesAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.util.List<com.commercetools.models.state.StateRoleEnum> roles;
 
@@ -38,7 +37,7 @@ public final class StateAddRolesActionImpl implements StateAddRolesAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

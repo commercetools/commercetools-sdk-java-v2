@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
-import java.lang.Long;
-import java.lang.String;
+
 import com.commercetools.models.customer.CustomerEmailVerify;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class CustomerEmailVerifyBuilder {
    
    
-   private java.lang.String tokenValue;
+   private String tokenValue;
    
    @Nullable
-   private java.lang.Long version;
+   private Long version;
    
-   public CustomerEmailVerifyBuilder tokenValue( final java.lang.String tokenValue) {
+   public CustomerEmailVerifyBuilder tokenValue( final String tokenValue) {
       this.tokenValue = tokenValue;
       return this;
    }
    
-   public CustomerEmailVerifyBuilder version(@Nullable final java.lang.Long version) {
+   public CustomerEmailVerifyBuilder version(@Nullable final Long version) {
       this.version = version;
       return this;
    }
    
    
-   public java.lang.String getTokenValue(){
+   public String getTokenValue(){
       return this.tokenValue;
    }
    
    @Nullable
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

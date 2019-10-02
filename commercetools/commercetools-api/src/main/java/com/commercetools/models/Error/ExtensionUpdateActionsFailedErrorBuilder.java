@@ -3,8 +3,6 @@ package com.commercetools.models.error;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.error.ErrorByExtension;
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.error.ExtensionUpdateActionsFailedError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,18 +12,18 @@ import java.time.ZonedDateTime;
 public final class ExtensionUpdateActionsFailedErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString localizedMessage;
    
    @Nullable
-   private java.lang.Object extensionExtraInfo;
+   private Object extensionExtraInfo;
    
    
    private com.commercetools.models.error.ErrorByExtension errorByExtension;
    
-   public ExtensionUpdateActionsFailedErrorBuilder message( final java.lang.String message) {
+   public ExtensionUpdateActionsFailedErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
@@ -35,7 +33,7 @@ public final class ExtensionUpdateActionsFailedErrorBuilder {
       return this;
    }
    
-   public ExtensionUpdateActionsFailedErrorBuilder extensionExtraInfo(@Nullable final java.lang.Object extensionExtraInfo) {
+   public ExtensionUpdateActionsFailedErrorBuilder extensionExtraInfo(@Nullable final Object extensionExtraInfo) {
       this.extensionExtraInfo = extensionExtraInfo;
       return this;
    }
@@ -46,7 +44,7 @@ public final class ExtensionUpdateActionsFailedErrorBuilder {
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
@@ -56,7 +54,7 @@ public final class ExtensionUpdateActionsFailedErrorBuilder {
    }
    
    @Nullable
-   public java.lang.Object getExtensionExtraInfo(){
+   public Object getExtensionExtraInfo(){
       return this.extensionExtraInfo;
    }
    

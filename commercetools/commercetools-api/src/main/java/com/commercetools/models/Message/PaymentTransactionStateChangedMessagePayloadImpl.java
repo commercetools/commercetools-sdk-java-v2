@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.payment.TransactionState;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentTransactionStateChangedMessagePayloadImpl implements PaymentTransactionStateChangedMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.payment.TransactionState state;
    
-   private java.lang.String transactionId;
+   private String transactionId;
 
    @JsonCreator
-   PaymentTransactionStateChangedMessagePayloadImpl(@JsonProperty("state") final com.commercetools.models.payment.TransactionState state, @JsonProperty("transactionId") final java.lang.String transactionId) {
+   PaymentTransactionStateChangedMessagePayloadImpl(@JsonProperty("state") final com.commercetools.models.payment.TransactionState state, @JsonProperty("transactionId") final String transactionId) {
       this.state = state;
       this.transactionId = transactionId;
       this.type = "PaymentTransactionStateChanged";
@@ -41,7 +40,7 @@ public final class PaymentTransactionStateChangedMessagePayloadImpl implements P
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -51,7 +50,7 @@ public final class PaymentTransactionStateChangedMessagePayloadImpl implements P
    }
    
    
-   public java.lang.String getTransactionId(){
+   public String getTransactionId(){
       return this.transactionId;
    }
 
@@ -59,7 +58,7 @@ public final class PaymentTransactionStateChangedMessagePayloadImpl implements P
       this.state = state;
    }
    
-   public void setTransactionId(final java.lang.String transactionId){
+   public void setTransactionId(final String transactionId){
       this.transactionId = transactionId;
    }
 

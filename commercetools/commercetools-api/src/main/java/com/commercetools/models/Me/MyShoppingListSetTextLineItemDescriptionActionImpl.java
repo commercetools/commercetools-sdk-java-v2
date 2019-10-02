@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.me.MyShoppingListUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListSetTextLineItemDescriptionActionImpl implements MyShoppingListSetTextLineItemDescriptionAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.LocalizedString description;
    
-   private java.lang.String textLineItemId;
+   private String textLineItemId;
 
    @JsonCreator
-   MyShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
+   MyShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("textLineItemId") final String textLineItemId) {
       this.description = description;
       this.textLineItemId = textLineItemId;
       this.action = "setTextLineItemDescription";
@@ -41,7 +40,7 @@ public final class MyShoppingListSetTextLineItemDescriptionActionImpl implements
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class MyShoppingListSetTextLineItemDescriptionActionImpl implements
    }
    
    
-   public java.lang.String getTextLineItemId(){
+   public String getTextLineItemId(){
       return this.textLineItemId;
    }
 
@@ -59,7 +58,7 @@ public final class MyShoppingListSetTextLineItemDescriptionActionImpl implements
       this.description = description;
    }
    
-   public void setTextLineItemId(final java.lang.String textLineItemId){
+   public void setTextLineItemId(final String textLineItemId){
       this.textLineItemId = textLineItemId;
    }
 

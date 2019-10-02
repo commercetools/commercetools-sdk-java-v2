@@ -3,9 +3,6 @@ package com.commercetools.models.common;
 import com.commercetools.models.common.CentPrecisionMoney;
 import com.commercetools.models.common.HighPrecisionMoney;
 import com.commercetools.models.common.MoneyType;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

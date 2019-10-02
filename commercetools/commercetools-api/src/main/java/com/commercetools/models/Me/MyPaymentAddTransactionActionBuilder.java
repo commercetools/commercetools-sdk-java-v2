@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyPaymentUpdateAction;
 import com.commercetools.models.payment.TransactionDraft;
-import java.lang.String;
 import com.commercetools.models.me.MyPaymentAddTransactionAction;
 import javax.annotation.Nullable;
 import java.util.List;

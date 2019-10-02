@@ -3,8 +3,6 @@ package com.commercetools.models.error;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.error.ErrorByExtension;
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,18 +24,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
    private com.commercetools.models.common.LocalizedString localizedMessage;
    
-   private java.lang.Object extensionExtraInfo;
+   private Object extensionExtraInfo;
    
    private com.commercetools.models.error.ErrorByExtension errorByExtension;
 
    @JsonCreator
-   ExtensionBadResponseErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("localizedMessage") final com.commercetools.models.common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final java.lang.Object extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.models.error.ErrorByExtension errorByExtension) {
+   ExtensionBadResponseErrorImpl(@JsonProperty("message") final String message, @JsonProperty("localizedMessage") final com.commercetools.models.common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final Object extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.models.error.ErrorByExtension errorByExtension) {
       this.message = message;
       this.localizedMessage = localizedMessage;
       this.extensionExtraInfo = extensionExtraInfo;
@@ -49,12 +47,12 @@ public final class ExtensionBadResponseErrorImpl implements ExtensionBadResponse
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
@@ -64,7 +62,7 @@ public final class ExtensionBadResponseErrorImpl implements ExtensionBadResponse
    }
    
    
-   public java.lang.Object getExtensionExtraInfo(){
+   public Object getExtensionExtraInfo(){
       return this.extensionExtraInfo;
    }
    
@@ -73,7 +71,7 @@ public final class ExtensionBadResponseErrorImpl implements ExtensionBadResponse
       return this.errorByExtension;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
@@ -81,7 +79,7 @@ public final class ExtensionBadResponseErrorImpl implements ExtensionBadResponse
       this.localizedMessage = localizedMessage;
    }
    
-   public void setExtensionExtraInfo(final java.lang.Object extensionExtraInfo){
+   public void setExtensionExtraInfo(final Object extensionExtraInfo){
       this.extensionExtraInfo = extensionExtraInfo;
    }
    

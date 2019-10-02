@@ -1,8 +1,9 @@
 package com.commercetools.models.order;
 
+import com.commercetools.models.order.OrderState;
 import com.commercetools.models.order.PaymentState;
-import java.lang.Long;
-import java.lang.String;
+import com.commercetools.models.order.ShipmentState;
+import com.commercetools.models.state.StateResourceIdentifier;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,32 +25,51 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
 
-   private java.lang.String orderNumber;
+   private com.commercetools.models.order.ShipmentState shipmentState;
    
-   private java.lang.String id;
+   private String orderNumber;
+   
+   private com.commercetools.models.state.StateResourceIdentifier state;
+   
+   private String id;
    
    private com.commercetools.models.order.PaymentState paymentState;
    
-   private java.lang.Long version;
+   private Long version;
+   
+   private com.commercetools.models.order.OrderState orderState;
 
    @JsonCreator
-   OrderFromCartDraftImpl(@JsonProperty("orderNumber") final java.lang.String orderNumber, @JsonProperty("id") final java.lang.String id, @JsonProperty("paymentState") final com.commercetools.models.order.PaymentState paymentState, @JsonProperty("version") final java.lang.Long version) {
+   OrderFromCartDraftImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ShipmentState shipmentState, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("state") final com.commercetools.models.state.StateResourceIdentifier state, @JsonProperty("id") final String id, @JsonProperty("paymentState") final com.commercetools.models.order.PaymentState paymentState, @JsonProperty("version") final Long version, @JsonProperty("orderState") final com.commercetools.models.order.OrderState orderState) {
+      this.shipmentState = shipmentState;
       this.orderNumber = orderNumber;
+      this.state = state;
       this.id = id;
       this.paymentState = paymentState;
       this.version = version;
+      this.orderState = orderState;
    }
    public OrderFromCartDraftImpl() {
       
    }
    
    
-   public java.lang.String getOrderNumber(){
+   public com.commercetools.models.order.ShipmentState getShipmentState(){
+      return this.shipmentState;
+   }
+   
+   
+   public String getOrderNumber(){
       return this.orderNumber;
    }
    
    
-   public java.lang.String getId(){
+   public com.commercetools.models.state.StateResourceIdentifier getState(){
+      return this.state;
+   }
+   
+   
+   public String getId(){
       return this.id;
    }
    
@@ -59,15 +79,28 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
+   
+   
+   public com.commercetools.models.order.OrderState getOrderState(){
+      return this.orderState;
+   }
 
-   public void setOrderNumber(final java.lang.String orderNumber){
+   public void setShipmentState(final com.commercetools.models.order.ShipmentState shipmentState){
+      this.shipmentState = shipmentState;
+   }
+   
+   public void setOrderNumber(final String orderNumber){
       this.orderNumber = orderNumber;
    }
    
-   public void setId(final java.lang.String id){
+   public void setState(final com.commercetools.models.state.StateResourceIdentifier state){
+      this.state = state;
+   }
+   
+   public void setId(final String id){
       this.id = id;
    }
    
@@ -75,8 +108,12 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
       this.paymentState = paymentState;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setOrderState(final com.commercetools.models.order.OrderState orderState){
+      this.orderState = orderState;
    }
 
 }

@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.DeliveryFormat;
-import java.lang.String;
 import com.commercetools.models.subscription.DeliveryCloudEventsFormat;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class DeliveryCloudEventsFormatBuilder {
    
    
-   private java.lang.String cloudEventsVersion;
+   private String cloudEventsVersion;
    
-   public DeliveryCloudEventsFormatBuilder cloudEventsVersion( final java.lang.String cloudEventsVersion) {
+   public DeliveryCloudEventsFormatBuilder cloudEventsVersion( final String cloudEventsVersion) {
       this.cloudEventsVersion = cloudEventsVersion;
       return this;
    }
    
    
-   public java.lang.String getCloudEventsVersion(){
+   public String getCloudEventsVersion(){
       return this.cloudEventsVersion;
    }
 

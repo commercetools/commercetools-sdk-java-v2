@@ -6,7 +6,6 @@ import com.commercetools.models.subscription.MessageDelivery;
 import com.commercetools.models.subscription.ResourceCreatedDelivery;
 import com.commercetools.models.subscription.ResourceDeletedDelivery;
 import com.commercetools.models.subscription.ResourceUpdatedDelivery;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

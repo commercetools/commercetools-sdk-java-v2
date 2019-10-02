@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCustomerSetTitleAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class MyCustomerSetTitleActionBuilder {
    
    @Nullable
-   private java.lang.String title;
+   private String title;
    
-   public MyCustomerSetTitleActionBuilder title(@Nullable final java.lang.String title) {
+   public MyCustomerSetTitleActionBuilder title(@Nullable final String title) {
       this.title = title;
       return this;
    }
    
    @Nullable
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.zone;
 
 import com.commercetools.models.zone.ZoneUpdateAction;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,10 +24,10 @@ public final class ZoneUpdateImpl implements ZoneUpdate {
 
    private java.util.List<com.commercetools.models.zone.ZoneUpdateAction> actions;
    
-   private java.lang.Long version;
+   private Long version;
 
    @JsonCreator
-   ZoneUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.zone.ZoneUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   ZoneUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.zone.ZoneUpdateAction> actions, @JsonProperty("version") final Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -42,7 +41,7 @@ public final class ZoneUpdateImpl implements ZoneUpdate {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 
@@ -50,7 +49,7 @@ public final class ZoneUpdateImpl implements ZoneUpdate {
       this.actions = actions;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
 

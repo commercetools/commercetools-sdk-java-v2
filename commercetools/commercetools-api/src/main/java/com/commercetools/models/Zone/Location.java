@@ -1,6 +1,6 @@
 package com.commercetools.models.zone;
 
-import java.lang.String;
+
 import com.commercetools.models.zone.LocationImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,8 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.ReturnShipmentState;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,16 +24,16 @@ public final class ReturnItemDraftImpl implements ReturnItemDraft {
 
    private com.commercetools.models.order.ReturnShipmentState shipmentState;
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
-   private java.lang.String comment;
+   private String comment;
 
    @JsonCreator
-   ReturnItemDraftImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ReturnShipmentState shipmentState, @JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("comment") final java.lang.String comment) {
+   ReturnItemDraftImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ReturnShipmentState shipmentState, @JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("quantity") final Long quantity, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("comment") final String comment) {
       this.shipmentState = shipmentState;
       this.customLineItemId = customLineItemId;
       this.quantity = quantity;
@@ -52,22 +50,22 @@ public final class ReturnItemDraftImpl implements ReturnItemDraft {
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
    
-   public java.lang.String getComment(){
+   public String getComment(){
       return this.comment;
    }
 
@@ -75,19 +73,19 @@ public final class ReturnItemDraftImpl implements ReturnItemDraft {
       this.shipmentState = shipmentState;
    }
    
-   public void setCustomLineItemId(final java.lang.String customLineItemId){
+   public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
    
-   public void setQuantity(final java.lang.Long quantity){
+   public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
    
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
    
-   public void setComment(final java.lang.String comment){
+   public void setComment(final String comment){
       this.comment = comment;
    }
 

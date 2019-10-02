@@ -2,7 +2,6 @@ package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
 import com.commercetools.models.product.Attribute;
-import java.lang.String;
 import com.commercetools.models.error.DuplicateAttributeValuesError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class DuplicateAttributeValuesErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    
    private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
-   public DuplicateAttributeValuesErrorBuilder message( final java.lang.String message) {
+   public DuplicateAttributeValuesErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
@@ -28,7 +27,7 @@ public final class DuplicateAttributeValuesErrorBuilder {
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    

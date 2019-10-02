@@ -2,9 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.message.ReviewRatingSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class ReviewRatingSetMessagePayloadBuilder {
    
    @Nullable
-   private java.lang.Integer oldRating;
+   private Integer oldRating;
    
    
-   private java.lang.Boolean includedInStatistics;
+   private Boolean includedInStatistics;
    
    @Nullable
-   private java.lang.Integer newRating;
+   private Integer newRating;
    
    @Nullable
    private com.commercetools.models.common.Reference target;
    
-   public ReviewRatingSetMessagePayloadBuilder oldRating(@Nullable final java.lang.Integer oldRating) {
+   public ReviewRatingSetMessagePayloadBuilder oldRating(@Nullable final Integer oldRating) {
       this.oldRating = oldRating;
       return this;
    }
    
-   public ReviewRatingSetMessagePayloadBuilder includedInStatistics( final java.lang.Boolean includedInStatistics) {
+   public ReviewRatingSetMessagePayloadBuilder includedInStatistics( final Boolean includedInStatistics) {
       this.includedInStatistics = includedInStatistics;
       return this;
    }
    
-   public ReviewRatingSetMessagePayloadBuilder newRating(@Nullable final java.lang.Integer newRating) {
+   public ReviewRatingSetMessagePayloadBuilder newRating(@Nullable final Integer newRating) {
       this.newRating = newRating;
       return this;
    }
@@ -46,17 +43,17 @@ public final class ReviewRatingSetMessagePayloadBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getOldRating(){
+   public Integer getOldRating(){
       return this.oldRating;
    }
    
    
-   public java.lang.Boolean getIncludedInStatistics(){
+   public Boolean getIncludedInStatistics(){
       return this.includedInStatistics;
    }
    
    @Nullable
-   public java.lang.Integer getNewRating(){
+   public Integer getNewRating(){
       return this.newRating;
    }
    

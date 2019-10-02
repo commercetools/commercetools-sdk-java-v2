@@ -3,7 +3,6 @@ package com.commercetools.models.order;
 import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.ParcelMeasurements;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.ParcelImpl;
 

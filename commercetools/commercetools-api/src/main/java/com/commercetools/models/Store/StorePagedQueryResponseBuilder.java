@@ -1,7 +1,6 @@
 package com.commercetools.models.store;
 
 import com.commercetools.models.store.Store;
-import java.lang.Long;
 import com.commercetools.models.store.StorePagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,29 +10,37 @@ import java.time.ZonedDateTime;
 public final class StorePagedQueryResponseBuilder {
    
    @Nullable
-   private java.lang.Long total;
+   private Long total;
    
    
-   private java.lang.Long offset;
+   private Long offset;
    
    
-   private java.lang.Long count;
+   private Long count;
+   
+   
+   private Long limit;
    
    
    private java.util.List<com.commercetools.models.store.Store> results;
    
-   public StorePagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
+   public StorePagedQueryResponseBuilder total(@Nullable final Long total) {
       this.total = total;
       return this;
    }
    
-   public StorePagedQueryResponseBuilder offset( final java.lang.Long offset) {
+   public StorePagedQueryResponseBuilder offset( final Long offset) {
       this.offset = offset;
       return this;
    }
    
-   public StorePagedQueryResponseBuilder count( final java.lang.Long count) {
+   public StorePagedQueryResponseBuilder count( final Long count) {
       this.count = count;
+      return this;
+   }
+   
+   public StorePagedQueryResponseBuilder limit( final Long limit) {
+      this.limit = limit;
       return this;
    }
    
@@ -43,18 +50,23 @@ public final class StorePagedQueryResponseBuilder {
    }
    
    @Nullable
-   public java.lang.Long getTotal(){
+   public Long getTotal(){
       return this.total;
    }
    
    
-   public java.lang.Long getOffset(){
+   public Long getOffset(){
       return this.offset;
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
+   }
+   
+   
+   public Long getLimit(){
+      return this.limit;
    }
    
    
@@ -63,7 +75,7 @@ public final class StorePagedQueryResponseBuilder {
    }
 
    public StorePagedQueryResponse build() {
-       return new StorePagedQueryResponseImpl(total, offset, count, results);
+       return new StorePagedQueryResponseImpl(total, offset, count, limit, results);
    }
    
    public static StorePagedQueryResponseBuilder of() {
@@ -75,6 +87,7 @@ public final class StorePagedQueryResponseBuilder {
       builder.total = template.getTotal();
       builder.offset = template.getOffset();
       builder.count = template.getCount();
+      builder.limit = template.getLimit();
       builder.results = template.getResults();
       return builder;
    }

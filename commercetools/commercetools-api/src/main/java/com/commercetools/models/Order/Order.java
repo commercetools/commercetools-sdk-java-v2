@@ -12,10 +12,12 @@ import com.commercetools.models.cart.ShippingRateInput;
 import com.commercetools.models.cart.TaxCalculationMode;
 import com.commercetools.models.cart.TaxMode;
 import com.commercetools.models.cart.TaxedPrice;
+import com.commercetools.models.cart_discount.CartDiscountReference;
 import com.commercetools.models.common.Address;
 import com.commercetools.models.common.LoggedResource;
-import com.commercetools.models.common.Money;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.me.MyOrder;
 import com.commercetools.models.order.OrderState;
 import com.commercetools.models.order.PaymentInfo;
 import com.commercetools.models.order.PaymentState;
@@ -26,8 +28,6 @@ import com.commercetools.models.order_edit.StagedOrder;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.OrderImpl;
 
@@ -87,7 +87,7 @@ public interface Order extends LoggedResource {
    @NotNull
    @Valid
    @JsonProperty("totalPrice")
-   public Money getTotalPrice();
+   public TypedMoney getTotalPrice();
    
    @Valid
    @JsonProperty("taxedPrice")
@@ -189,6 +189,11 @@ public interface Order extends LoggedResource {
    @Valid
    @JsonProperty("itemShippingAddresses")
    public List<Address> getItemShippingAddresses();
+   
+   @NotNull
+   @Valid
+   @JsonProperty("refusedGifts")
+   public List<CartDiscountReference> getRefusedGifts();
 
    public void setCompletedAt(final ZonedDateTime completedAt);
    
@@ -206,7 +211,7 @@ public interface Order extends LoggedResource {
    
    public void setCustomLineItems(final List<CustomLineItem> customLineItems);
    
-   public void setTotalPrice(final Money totalPrice);
+   public void setTotalPrice(final TypedMoney totalPrice);
    
    public void setTaxedPrice(final TaxedPrice taxedPrice);
    
@@ -258,6 +263,8 @@ public interface Order extends LoggedResource {
    
    public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
    
+   public void setRefusedGifts(final List<CartDiscountReference> refusedGifts);
+   
    public static OrderImpl of(){
       return new OrderImpl();
    }
@@ -279,6 +286,7 @@ public interface Order extends LoggedResource {
       instance.setTaxedPrice(template.getTaxedPrice());
       instance.setOrigin(template.getOrigin());
       instance.setShippingInfo(template.getShippingInfo());
+      instance.setRefusedGifts(template.getRefusedGifts());
       instance.setLocale(template.getLocale());
       instance.setCart(template.getCart());
       instance.setInventoryMode(template.getInventoryMode());

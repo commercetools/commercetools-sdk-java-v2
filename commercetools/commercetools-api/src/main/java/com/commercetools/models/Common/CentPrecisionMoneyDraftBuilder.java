@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class CentPrecisionMoneyDraftBuilder {
    
    
-   private java.lang.Long centAmount;
+   private Long centAmount;
    
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
    
-   public CentPrecisionMoneyDraftBuilder centAmount( final java.lang.Long centAmount) {
+   public CentPrecisionMoneyDraftBuilder centAmount( final Long centAmount) {
       this.centAmount = centAmount;
       return this;
    }
    
-   public CentPrecisionMoneyDraftBuilder currencyCode( final java.lang.String currencyCode) {
+   public CentPrecisionMoneyDraftBuilder currencyCode( final String currencyCode) {
       this.currencyCode = currencyCode;
       return this;
    }
    
    
-   public java.lang.Long getCentAmount(){
+   public Long getCentAmount(){
       return this.centAmount;
    }
    
    
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import com.commercetools.models.subscription.AzureServiceBusDestinationImpl;
 
 import com.fasterxml.jackson.annotation.*;

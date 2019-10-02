@@ -8,7 +8,6 @@ import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier
 import com.commercetools.models.shipping_method.ShippingRateDraft;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.models.tax_category.TaxRate;
-import java.lang.String;
 import com.commercetools.models.order.ShippingInfoImportDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -36,7 +35,7 @@ public final class ShippingInfoImportDraftBuilder {
    private com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
    
    
-   private java.lang.String shippingMethodName;
+   private String shippingMethodName;
    
    @Nullable
    private java.util.List<com.commercetools.models.order.Delivery> deliveries;
@@ -74,7 +73,7 @@ public final class ShippingInfoImportDraftBuilder {
       return this;
    }
    
-   public ShippingInfoImportDraftBuilder shippingMethodName( final java.lang.String shippingMethodName) {
+   public ShippingInfoImportDraftBuilder shippingMethodName( final String shippingMethodName) {
       this.shippingMethodName = shippingMethodName;
       return this;
    }
@@ -120,7 +119,7 @@ public final class ShippingInfoImportDraftBuilder {
    }
    
    
-   public java.lang.String getShippingMethodName(){
+   public String getShippingMethodName(){
       return this.shippingMethodName;
    }
    

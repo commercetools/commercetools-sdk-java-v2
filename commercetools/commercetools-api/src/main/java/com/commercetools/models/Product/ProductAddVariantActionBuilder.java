@@ -5,8 +5,6 @@ import com.commercetools.models.common.Image;
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.Attribute;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductAddVariantAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -25,16 +23,16 @@ public final class ProductAddVariantActionBuilder {
    private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
    private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public ProductAddVariantActionBuilder images(@Nullable final java.util.List<com.commercetools.models.common.Image> images) {
       this.images = images;
@@ -51,7 +49,7 @@ public final class ProductAddVariantActionBuilder {
       return this;
    }
    
-   public ProductAddVariantActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductAddVariantActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
@@ -61,12 +59,12 @@ public final class ProductAddVariantActionBuilder {
       return this;
    }
    
-   public ProductAddVariantActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductAddVariantActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
-   public ProductAddVariantActionBuilder key(@Nullable final java.lang.String key) {
+   public ProductAddVariantActionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -87,7 +85,7 @@ public final class ProductAddVariantActionBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
@@ -97,12 +95,12 @@ public final class ProductAddVariantActionBuilder {
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

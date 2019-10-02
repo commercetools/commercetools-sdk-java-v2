@@ -1,6 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Object;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FacetResultsImpl implements FacetResults {
 
-   private Map<String, java.lang.Object> values;
+   private Map<String, Object> values;
 
    @JsonCreator
-   FacetResultsImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+   FacetResultsImpl(@JsonProperty("values") final Map<String, Object> values) {
       this.values = values;
    }
    public FacetResultsImpl() {
@@ -33,11 +33,11 @@ public final class FacetResultsImpl implements FacetResults {
    }
    
    
-   public Map<String,java.lang.Object> values() {
+   public Map<String,Object> values() {
        return values;
    }
 
-   public void setValue(String key, java.lang.Object value) {
+   public void setValue(String key, Object value) {
        if (values == null) {
            values = new HashMap<>();
        }

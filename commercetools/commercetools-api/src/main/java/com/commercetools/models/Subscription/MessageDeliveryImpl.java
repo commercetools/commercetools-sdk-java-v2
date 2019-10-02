@@ -2,8 +2,6 @@ package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.PayloadNotIncluded;
 import com.commercetools.models.subscription.SubscriptionDelivery;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,30 +24,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MessageDeliveryImpl implements MessageDelivery {
 
-   private java.lang.String projectKey;
+   private String projectKey;
    
    private com.commercetools.models.common.Reference resource;
    
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
-   private java.lang.String notificationType;
+   private String notificationType;
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    private java.time.ZonedDateTime createdAt;
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
    private com.commercetools.models.subscription.PayloadNotIncluded payloadNotIncluded;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
 
    @JsonCreator
-   MessageDeliveryImpl(@JsonProperty("projectKey") final java.lang.String projectKey, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("payloadNotIncluded") final com.commercetools.models.subscription.PayloadNotIncluded payloadNotIncluded, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version) {
+   MessageDeliveryImpl(@JsonProperty("projectKey") final String projectKey, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("payloadNotIncluded") final com.commercetools.models.subscription.PayloadNotIncluded payloadNotIncluded, @JsonProperty("id") final String id, @JsonProperty("version") final Long version) {
       this.projectKey = projectKey;
       this.resource = resource;
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
@@ -67,7 +65,7 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    }
    
    
-   public java.lang.String getProjectKey(){
+   public String getProjectKey(){
       return this.projectKey;
    }
    
@@ -82,12 +80,12 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    }
    
    
-   public java.lang.String getNotificationType(){
+   public String getNotificationType(){
       return this.notificationType;
    }
    
    
-   public java.lang.Long getSequenceNumber(){
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -102,7 +100,7 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
@@ -112,16 +110,16 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 
-   public void setProjectKey(final java.lang.String projectKey){
+   public void setProjectKey(final String projectKey){
       this.projectKey = projectKey;
    }
    
@@ -133,7 +131,7 @@ public final class MessageDeliveryImpl implements MessageDelivery {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
-   public void setSequenceNumber(final java.lang.Long sequenceNumber){
+   public void setSequenceNumber(final Long sequenceNumber){
       this.sequenceNumber = sequenceNumber;
    }
    
@@ -145,7 +143,7 @@ public final class MessageDeliveryImpl implements MessageDelivery {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setResourceVersion(final java.lang.Long resourceVersion){
+   public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
    }
    
@@ -153,11 +151,11 @@ public final class MessageDeliveryImpl implements MessageDelivery {
       this.payloadNotIncluded = payloadNotIncluded;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.common;
 
-import com.commercetools.models.common.Money;
-import java.lang.Long;
+import com.commercetools.models.common.TypedMoney;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PriceTierImpl implements PriceTier {
 
-   private com.commercetools.models.common.Money value;
+   private com.commercetools.models.common.TypedMoney value;
    
-   private java.lang.Long minimumQuantity;
+   private Long minimumQuantity;
 
    @JsonCreator
-   PriceTierImpl(@JsonProperty("value") final com.commercetools.models.common.Money value, @JsonProperty("minimumQuantity") final java.lang.Long minimumQuantity) {
+   PriceTierImpl(@JsonProperty("value") final com.commercetools.models.common.TypedMoney value, @JsonProperty("minimumQuantity") final Long minimumQuantity) {
       this.value = value;
       this.minimumQuantity = minimumQuantity;
    }
@@ -37,20 +36,20 @@ public final class PriceTierImpl implements PriceTier {
    }
    
    
-   public com.commercetools.models.common.Money getValue(){
+   public com.commercetools.models.common.TypedMoney getValue(){
       return this.value;
    }
    
    
-   public java.lang.Long getMinimumQuantity(){
+   public Long getMinimumQuantity(){
       return this.minimumQuantity;
    }
 
-   public void setValue(final com.commercetools.models.common.Money value){
+   public void setValue(final com.commercetools.models.common.TypedMoney value){
       this.value = value;
    }
    
-   public void setMinimumQuantity(final java.lang.Long minimumQuantity){
+   public void setMinimumQuantity(final Long minimumQuantity){
       this.minimumQuantity = minimumQuantity;
    }
 

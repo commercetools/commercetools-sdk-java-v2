@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartSetLineItemShippingDetailsActionImpl implements MyCartSetLineItemShippingDetailsAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
 
    @JsonCreator
-   MyCartSetLineItemShippingDetailsActionImpl(@JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
+   MyCartSetLineItemShippingDetailsActionImpl(@JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("lineItemId") final String lineItemId) {
       this.shippingDetails = shippingDetails;
       this.lineItemId = lineItemId;
       this.action = "setLineItemShippingDetails";
@@ -41,7 +40,7 @@ public final class MyCartSetLineItemShippingDetailsActionImpl implements MyCartS
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class MyCartSetLineItemShippingDetailsActionImpl implements MyCartS
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
 
@@ -59,7 +58,7 @@ public final class MyCartSetLineItemShippingDetailsActionImpl implements MyCartS
       this.shippingDetails = shippingDetails;
    }
    
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.CustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.customer.CustomerSetVatIdAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CustomerSetVatIdActionBuilder {
    
    @Nullable
-   private java.lang.String vatId;
+   private String vatId;
    
-   public CustomerSetVatIdActionBuilder vatId(@Nullable final java.lang.String vatId) {
+   public CustomerSetVatIdActionBuilder vatId(@Nullable final String vatId) {
       this.vatId = vatId;
       return this;
    }
    
    @Nullable
-   public java.lang.String getVatId(){
+   public String getVatId(){
       return this.vatId;
    }
 

@@ -3,7 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.cart.DiscountCodeState;
 import com.commercetools.models.discount_code.DiscountCodeReference;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscountCodeStateSetMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.discount_code.DiscountCodeReference discountCode;
    
@@ -45,7 +44,7 @@ public final class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderD
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    

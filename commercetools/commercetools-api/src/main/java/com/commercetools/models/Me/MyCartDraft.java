@@ -6,8 +6,6 @@ import com.commercetools.models.common.Address;
 import com.commercetools.models.me.MyLineItemDraft;
 import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.me.MyCartDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

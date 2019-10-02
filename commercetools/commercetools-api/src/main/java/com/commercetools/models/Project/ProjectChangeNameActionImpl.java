@@ -1,7 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeNameActionImpl implements ProjectChangeNameAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String name;
+   private String name;
 
    @JsonCreator
-   ProjectChangeNameActionImpl(@JsonProperty("name") final java.lang.String name) {
+   ProjectChangeNameActionImpl(@JsonProperty("name") final String name) {
       this.name = name;
       this.action = "changeName";
    }
@@ -37,16 +36,16 @@ public final class ProjectChangeNameActionImpl implements ProjectChangeNameActio
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
 
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
 

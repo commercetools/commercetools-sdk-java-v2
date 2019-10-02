@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.DiscountedLineItemPrice;
-import java.lang.Integer;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineItemPriceForQuantity {
 
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    private com.commercetools.models.cart.DiscountedLineItemPrice discountedPrice;
 
    @JsonCreator
-   DiscountedLineItemPriceForQuantityImpl(@JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("discountedPrice") final com.commercetools.models.cart.DiscountedLineItemPrice discountedPrice) {
+   DiscountedLineItemPriceForQuantityImpl(@JsonProperty("quantity") final Integer quantity, @JsonProperty("discountedPrice") final com.commercetools.models.cart.DiscountedLineItemPrice discountedPrice) {
       this.quantity = quantity;
       this.discountedPrice = discountedPrice;
    }
@@ -37,7 +36,7 @@ public final class DiscountedLineItemPriceForQuantityImpl implements DiscountedL
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -46,7 +45,7 @@ public final class DiscountedLineItemPriceForQuantityImpl implements DiscountedL
       return this.discountedPrice;
    }
 
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
    

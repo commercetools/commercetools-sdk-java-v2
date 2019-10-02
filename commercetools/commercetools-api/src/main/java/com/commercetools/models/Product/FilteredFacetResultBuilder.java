@@ -2,7 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.product.FacetResult;
 import com.commercetools.models.product.FacetTypes;
-import java.lang.Long;
 import com.commercetools.models.product.FilteredFacetResult;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class FilteredFacetResultBuilder {
    
    
-   private java.lang.Long count;
+   private Long count;
    
    @Nullable
-   private java.lang.Long productCount;
+   private Long productCount;
    
-   public FilteredFacetResultBuilder count( final java.lang.Long count) {
+   public FilteredFacetResultBuilder count( final Long count) {
       this.count = count;
       return this;
    }
    
-   public FilteredFacetResultBuilder productCount(@Nullable final java.lang.Long productCount) {
+   public FilteredFacetResultBuilder productCount(@Nullable final Long productCount) {
       this.productCount = productCount;
       return this;
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
    }
    
    @Nullable
-   public java.lang.Long getProductCount(){
+   public Long getProductCount(){
       return this.productCount;
    }
 

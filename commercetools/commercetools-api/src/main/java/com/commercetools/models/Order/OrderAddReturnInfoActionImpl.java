@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.order.ReturnItemDraft;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,16 +24,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.time.ZonedDateTime returnDate;
    
-   private java.lang.String returnTrackingId;
+   private String returnTrackingId;
    
    private java.util.List<com.commercetools.models.order.ReturnItemDraft> items;
 
    @JsonCreator
-   OrderAddReturnInfoActionImpl(@JsonProperty("returnDate") final java.time.ZonedDateTime returnDate, @JsonProperty("returnTrackingId") final java.lang.String returnTrackingId, @JsonProperty("items") final java.util.List<com.commercetools.models.order.ReturnItemDraft> items) {
+   OrderAddReturnInfoActionImpl(@JsonProperty("returnDate") final java.time.ZonedDateTime returnDate, @JsonProperty("returnTrackingId") final String returnTrackingId, @JsonProperty("items") final java.util.List<com.commercetools.models.order.ReturnItemDraft> items) {
       this.returnDate = returnDate;
       this.returnTrackingId = returnTrackingId;
       this.items = items;
@@ -45,7 +44,7 @@ public final class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAct
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -55,7 +54,7 @@ public final class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAct
    }
    
    
-   public java.lang.String getReturnTrackingId(){
+   public String getReturnTrackingId(){
       return this.returnTrackingId;
    }
    
@@ -68,7 +67,7 @@ public final class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAct
       this.returnDate = returnDate;
    }
    
-   public void setReturnTrackingId(final java.lang.String returnTrackingId){
+   public void setReturnTrackingId(final String returnTrackingId){
       this.returnTrackingId = returnTrackingId;
    }
    

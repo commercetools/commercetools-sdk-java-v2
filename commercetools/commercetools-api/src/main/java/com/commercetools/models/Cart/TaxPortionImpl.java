@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
-import com.commercetools.models.common.Money;
-import java.lang.Integer;
-import java.lang.String;
+import com.commercetools.models.common.TypedMoney;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxPortionImpl implements TaxPortion {
 
-   private com.commercetools.models.common.Money amount;
+   private com.commercetools.models.common.TypedMoney amount;
    
-   private java.lang.Integer rate;
+   private Integer rate;
    
-   private java.lang.String name;
+   private String name;
 
    @JsonCreator
-   TaxPortionImpl(@JsonProperty("amount") final com.commercetools.models.common.Money amount, @JsonProperty("rate") final java.lang.Integer rate, @JsonProperty("name") final java.lang.String name) {
+   TaxPortionImpl(@JsonProperty("amount") final com.commercetools.models.common.TypedMoney amount, @JsonProperty("rate") final Integer rate, @JsonProperty("name") final String name) {
       this.amount = amount;
       this.rate = rate;
       this.name = name;
@@ -41,29 +39,29 @@ public final class TaxPortionImpl implements TaxPortion {
    }
    
    
-   public com.commercetools.models.common.Money getAmount(){
+   public com.commercetools.models.common.TypedMoney getAmount(){
       return this.amount;
    }
    
    
-   public java.lang.Integer getRate(){
+   public Integer getRate(){
       return this.rate;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
 
-   public void setAmount(final com.commercetools.models.common.Money amount){
+   public void setAmount(final com.commercetools.models.common.TypedMoney amount){
       this.amount = amount;
    }
    
-   public void setRate(final java.lang.Integer rate){
+   public void setRate(final Integer rate){
       this.rate = rate;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
 

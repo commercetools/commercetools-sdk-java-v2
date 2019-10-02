@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,20 +22,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetImageLabelActionImpl implements ProductSetImageLabelAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String imageUrl;
+   private String imageUrl;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.String label;
+   private String label;
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   ProductSetImageLabelActionImpl(@JsonProperty("imageUrl") final java.lang.String imageUrl, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("label") final java.lang.String label, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku) {
+   ProductSetImageLabelActionImpl(@JsonProperty("imageUrl") final String imageUrl, @JsonProperty("staged") final Boolean staged, @JsonProperty("label") final String label, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku) {
       this.imageUrl = imageUrl;
       this.staged = staged;
       this.label = label;
@@ -51,52 +48,52 @@ public final class ProductSetImageLabelActionImpl implements ProductSetImageLabe
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getImageUrl(){
+   public String getImageUrl(){
       return this.imageUrl;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.String getLabel(){
+   public String getLabel(){
       return this.label;
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
-   public void setImageUrl(final java.lang.String imageUrl){
+   public void setImageUrl(final String imageUrl){
       this.imageUrl = imageUrl;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setLabel(final java.lang.String label){
+   public void setLabel(final String label){
       this.label = label;
    }
    
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

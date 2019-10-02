@@ -1,9 +1,8 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import com.commercetools.models.cart.TaxPortion;
+import com.commercetools.models.cart.TaxPortionDraft;
 import com.commercetools.models.common.Money;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetCartTotalTaxActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -32,11 +31,11 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
    
    @Valid
    @JsonProperty("externalTaxPortions")
-   public List<TaxPortion> getExternalTaxPortions();
+   public List<TaxPortionDraft> getExternalTaxPortions();
 
    public void setExternalTotalGross(final Money externalTotalGross);
    
-   public void setExternalTaxPortions(final List<TaxPortion> externalTaxPortions);
+   public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
    
    public static CartSetCartTotalTaxActionImpl of(){
       return new CartSetCartTotalTaxActionImpl();

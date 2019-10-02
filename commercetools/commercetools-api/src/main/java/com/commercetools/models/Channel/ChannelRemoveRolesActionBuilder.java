@@ -2,7 +2,6 @@ package com.commercetools.models.channel;
 
 import com.commercetools.models.channel.ChannelRoleEnum;
 import com.commercetools.models.channel.ChannelUpdateAction;
-import java.lang.String;
 import com.commercetools.models.channel.ChannelRemoveRolesAction;
 import javax.annotation.Nullable;
 import java.util.List;

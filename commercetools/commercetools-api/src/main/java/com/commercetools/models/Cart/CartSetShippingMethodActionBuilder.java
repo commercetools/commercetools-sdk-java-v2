@@ -3,7 +3,6 @@ package com.commercetools.models.cart;
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ExternalTaxRateDraft;
 import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetShippingMethodAction;
 import javax.annotation.Nullable;
 import java.util.List;

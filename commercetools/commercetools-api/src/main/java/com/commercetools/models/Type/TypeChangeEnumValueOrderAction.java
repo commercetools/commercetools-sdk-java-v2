@@ -1,7 +1,6 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.type.TypeChangeEnumValueOrderActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

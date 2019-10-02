@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.order.ReturnItemDraft;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.OrderAddReturnInfoActionImpl;
 

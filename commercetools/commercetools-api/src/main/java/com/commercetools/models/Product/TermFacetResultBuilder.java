@@ -4,7 +4,6 @@ import com.commercetools.models.product.FacetResult;
 import com.commercetools.models.product.FacetResultTerm;
 import com.commercetools.models.product.FacetTypes;
 import com.commercetools.models.product.TermFacetResultType;
-import java.lang.Long;
 import com.commercetools.models.product.TermFacetResult;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,10 +13,10 @@ import java.time.ZonedDateTime;
 public final class TermFacetResultBuilder {
    
    
-   private java.lang.Long other;
+   private Long other;
    
    
-   private java.lang.Long total;
+   private Long total;
    
    
    private java.util.List<com.commercetools.models.product.FacetResultTerm> terms;
@@ -26,14 +25,14 @@ public final class TermFacetResultBuilder {
    private com.commercetools.models.product.TermFacetResultType dataType;
    
    
-   private java.lang.Long missing;
+   private Long missing;
    
-   public TermFacetResultBuilder other( final java.lang.Long other) {
+   public TermFacetResultBuilder other( final Long other) {
       this.other = other;
       return this;
    }
    
-   public TermFacetResultBuilder total( final java.lang.Long total) {
+   public TermFacetResultBuilder total( final Long total) {
       this.total = total;
       return this;
    }
@@ -48,18 +47,18 @@ public final class TermFacetResultBuilder {
       return this;
    }
    
-   public TermFacetResultBuilder missing( final java.lang.Long missing) {
+   public TermFacetResultBuilder missing( final Long missing) {
       this.missing = missing;
       return this;
    }
    
    
-   public java.lang.Long getOther(){
+   public Long getOther(){
       return this.other;
    }
    
    
-   public java.lang.Long getTotal(){
+   public Long getTotal(){
       return this.total;
    }
    
@@ -74,7 +73,7 @@ public final class TermFacetResultBuilder {
    }
    
    
-   public java.lang.Long getMissing(){
+   public Long getMissing(){
       return this.missing;
    }
 

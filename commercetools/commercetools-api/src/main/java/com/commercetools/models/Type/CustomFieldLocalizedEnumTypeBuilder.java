@@ -2,7 +2,6 @@ package com.commercetools.models.type;
 
 import com.commercetools.models.type.CustomFieldLocalizedEnumValue;
 import com.commercetools.models.type.FieldType;
-import java.lang.String;
 import com.commercetools.models.type.CustomFieldLocalizedEnumType;
 import javax.annotation.Nullable;
 import java.util.List;

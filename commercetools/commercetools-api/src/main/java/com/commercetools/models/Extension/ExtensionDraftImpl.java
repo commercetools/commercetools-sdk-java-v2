@@ -2,8 +2,6 @@ package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionDestination;
 import com.commercetools.models.extension.ExtensionTrigger;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionDraftImpl implements ExtensionDraft {
 
-   private java.lang.Integer timeoutInMs;
+   private Integer timeoutInMs;
    
    private com.commercetools.models.extension.ExtensionDestination destination;
    
    private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ExtensionDraftImpl(@JsonProperty("timeoutInMs") final java.lang.Integer timeoutInMs, @JsonProperty("destination") final com.commercetools.models.extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers, @JsonProperty("key") final java.lang.String key) {
+   ExtensionDraftImpl(@JsonProperty("timeoutInMs") final Integer timeoutInMs, @JsonProperty("destination") final com.commercetools.models.extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers, @JsonProperty("key") final String key) {
       this.timeoutInMs = timeoutInMs;
       this.destination = destination;
       this.triggers = triggers;
@@ -45,7 +43,7 @@ public final class ExtensionDraftImpl implements ExtensionDraft {
    }
    
    
-   public java.lang.Integer getTimeoutInMs(){
+   public Integer getTimeoutInMs(){
       return this.timeoutInMs;
    }
    
@@ -60,11 +58,11 @@ public final class ExtensionDraftImpl implements ExtensionDraft {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setTimeoutInMs(final java.lang.Integer timeoutInMs){
+   public void setTimeoutInMs(final Integer timeoutInMs){
       this.timeoutInMs = timeoutInMs;
    }
    
@@ -76,7 +74,7 @@ public final class ExtensionDraftImpl implements ExtensionDraft {
       this.triggers = triggers;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

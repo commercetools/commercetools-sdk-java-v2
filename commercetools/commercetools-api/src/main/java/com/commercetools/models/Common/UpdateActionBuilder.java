@@ -1,6 +1,6 @@
 package com.commercetools.models.common;
 
-import java.lang.String;
+
 import com.commercetools.models.common.UpdateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class UpdateActionBuilder {
    
    
-   private java.lang.String action;
+   private String action;
    
-   public UpdateActionBuilder action( final java.lang.String action) {
+   public UpdateActionBuilder action( final String action) {
       this.action = action;
       return this;
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
 

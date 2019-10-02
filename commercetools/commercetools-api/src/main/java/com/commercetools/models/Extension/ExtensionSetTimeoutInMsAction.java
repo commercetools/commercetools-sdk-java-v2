@@ -1,8 +1,6 @@
 package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionSetTimeoutInMsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

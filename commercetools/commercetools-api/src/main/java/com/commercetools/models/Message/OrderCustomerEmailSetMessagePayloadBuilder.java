@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.OrderCustomerEmailSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class OrderCustomerEmailSetMessagePayloadBuilder {
    
    @Nullable
-   private java.lang.String oldEmail;
+   private String oldEmail;
    
    @Nullable
-   private java.lang.String email;
+   private String email;
    
-   public OrderCustomerEmailSetMessagePayloadBuilder oldEmail(@Nullable final java.lang.String oldEmail) {
+   public OrderCustomerEmailSetMessagePayloadBuilder oldEmail(@Nullable final String oldEmail) {
       this.oldEmail = oldEmail;
       return this;
    }
    
-   public OrderCustomerEmailSetMessagePayloadBuilder email(@Nullable final java.lang.String email) {
+   public OrderCustomerEmailSetMessagePayloadBuilder email(@Nullable final String email) {
       this.email = email;
       return this;
    }
    
    @Nullable
-   public java.lang.String getOldEmail(){
+   public String getOldEmail(){
       return this.oldEmail;
    }
    
    @Nullable
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 

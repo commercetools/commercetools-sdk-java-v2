@@ -2,8 +2,6 @@ package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.PayloadNotIncluded;
 import com.commercetools.models.subscription.SubscriptionDelivery;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.subscription.MessageDelivery;
 import javax.annotation.Nullable;
@@ -14,7 +12,7 @@ import java.time.ZonedDateTime;
 public final class MessageDeliveryBuilder {
    
    
-   private java.lang.String projectKey;
+   private String projectKey;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -23,7 +21,7 @@ public final class MessageDeliveryBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private java.time.ZonedDateTime createdAt;
@@ -32,18 +30,18 @@ public final class MessageDeliveryBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
    
    private com.commercetools.models.subscription.PayloadNotIncluded payloadNotIncluded;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
-   public MessageDeliveryBuilder projectKey( final java.lang.String projectKey) {
+   public MessageDeliveryBuilder projectKey( final String projectKey) {
       this.projectKey = projectKey;
       return this;
    }
@@ -58,7 +56,7 @@ public final class MessageDeliveryBuilder {
       return this;
    }
    
-   public MessageDeliveryBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public MessageDeliveryBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -73,7 +71,7 @@ public final class MessageDeliveryBuilder {
       return this;
    }
    
-   public MessageDeliveryBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public MessageDeliveryBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
@@ -83,18 +81,18 @@ public final class MessageDeliveryBuilder {
       return this;
    }
    
-   public MessageDeliveryBuilder id( final java.lang.String id) {
+   public MessageDeliveryBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public MessageDeliveryBuilder version( final java.lang.Long version) {
+   public MessageDeliveryBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
    
-   public java.lang.String getProjectKey(){
+   public String getProjectKey(){
       return this.projectKey;
    }
    
@@ -109,7 +107,7 @@ public final class MessageDeliveryBuilder {
    }
    
    
-   public java.lang.Long getSequenceNumber(){
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -124,7 +122,7 @@ public final class MessageDeliveryBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
@@ -134,12 +132,12 @@ public final class MessageDeliveryBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

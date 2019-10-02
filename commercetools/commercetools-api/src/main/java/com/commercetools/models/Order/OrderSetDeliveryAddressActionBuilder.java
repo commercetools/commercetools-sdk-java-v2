@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetDeliveryAddressAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class OrderSetDeliveryAddressActionBuilder {
    
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    @Nullable
    private com.commercetools.models.common.Address address;
    
-   public OrderSetDeliveryAddressActionBuilder deliveryId( final java.lang.String deliveryId) {
+   public OrderSetDeliveryAddressActionBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class OrderSetDeliveryAddressActionBuilder {
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    

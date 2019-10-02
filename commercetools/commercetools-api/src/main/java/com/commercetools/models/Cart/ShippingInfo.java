@@ -9,7 +9,6 @@ import com.commercetools.models.shipping_method.ShippingMethodReference;
 import com.commercetools.models.shipping_method.ShippingRate;
 import com.commercetools.models.tax_category.TaxCategoryReference;
 import com.commercetools.models.tax_category.TaxRate;
-import java.lang.String;
 import com.commercetools.models.cart.ShippingInfoImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -4,7 +4,6 @@ import com.commercetools.models.product.FacetResult;
 import com.commercetools.models.product.FacetResultTerm;
 import com.commercetools.models.product.FacetTypes;
 import com.commercetools.models.product.TermFacetResultType;
-import java.lang.Long;
 import com.commercetools.models.product.TermFacetResultImpl;
 
 import com.fasterxml.jackson.annotation.*;

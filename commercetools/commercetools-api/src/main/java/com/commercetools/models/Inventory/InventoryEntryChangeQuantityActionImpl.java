@@ -1,8 +1,6 @@
 package com.commercetools.models.inventory;
 
 import com.commercetools.models.inventory.InventoryEntryUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntryChangeQuantityActionImpl implements InventoryEntryChangeQuantityAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Long quantity;
+   private Long quantity;
 
    @JsonCreator
-   InventoryEntryChangeQuantityActionImpl(@JsonProperty("quantity") final java.lang.Long quantity) {
+   InventoryEntryChangeQuantityActionImpl(@JsonProperty("quantity") final Long quantity) {
       this.quantity = quantity;
       this.action = "changeQuantity";
    }
@@ -38,16 +36,16 @@ public final class InventoryEntryChangeQuantityActionImpl implements InventoryEn
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
 
-   public void setQuantity(final java.lang.Long quantity){
+   public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
 

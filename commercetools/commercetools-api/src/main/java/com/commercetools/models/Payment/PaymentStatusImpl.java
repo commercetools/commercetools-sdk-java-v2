@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.state.StateReference;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentStatusImpl implements PaymentStatus {
 
-   private java.lang.String interfaceText;
+   private String interfaceText;
    
    private com.commercetools.models.state.StateReference state;
    
-   private java.lang.String interfaceCode;
+   private String interfaceCode;
 
    @JsonCreator
-   PaymentStatusImpl(@JsonProperty("interfaceText") final java.lang.String interfaceText, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("interfaceCode") final java.lang.String interfaceCode) {
+   PaymentStatusImpl(@JsonProperty("interfaceText") final String interfaceText, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("interfaceCode") final String interfaceCode) {
       this.interfaceText = interfaceText;
       this.state = state;
       this.interfaceCode = interfaceCode;
@@ -40,7 +39,7 @@ public final class PaymentStatusImpl implements PaymentStatus {
    }
    
    
-   public java.lang.String getInterfaceText(){
+   public String getInterfaceText(){
       return this.interfaceText;
    }
    
@@ -50,11 +49,11 @@ public final class PaymentStatusImpl implements PaymentStatus {
    }
    
    
-   public java.lang.String getInterfaceCode(){
+   public String getInterfaceCode(){
       return this.interfaceCode;
    }
 
-   public void setInterfaceText(final java.lang.String interfaceText){
+   public void setInterfaceText(final String interfaceText){
       this.interfaceText = interfaceText;
    }
    
@@ -62,7 +61,7 @@ public final class PaymentStatusImpl implements PaymentStatus {
       this.state = state;
    }
    
-   public void setInterfaceCode(final java.lang.String interfaceCode){
+   public void setInterfaceCode(final String interfaceCode){
       this.interfaceCode = interfaceCode;
    }
 

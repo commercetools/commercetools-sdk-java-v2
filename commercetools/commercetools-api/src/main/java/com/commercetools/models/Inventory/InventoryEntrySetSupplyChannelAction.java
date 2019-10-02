@@ -2,7 +2,6 @@ package com.commercetools.models.inventory;
 
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.inventory.InventoryEntryUpdateAction;
-import java.lang.String;
 import com.commercetools.models.inventory.InventoryEntrySetSupplyChannelActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

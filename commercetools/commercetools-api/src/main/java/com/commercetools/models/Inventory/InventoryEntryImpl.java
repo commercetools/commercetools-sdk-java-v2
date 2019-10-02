@@ -3,8 +3,6 @@ package com.commercetools.models.inventory;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -31,30 +29,30 @@ public final class InventoryEntryImpl implements InventoryEntry {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private java.lang.Long availableQuantity;
+   private Long availableQuantity;
    
    private java.time.ZonedDateTime expectedDelivery;
    
    private com.commercetools.models.type.CustomFields custom;
    
-   private java.lang.Long quantityOnStock;
+   private Long quantityOnStock;
    
    private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
-   private java.lang.Long restockableInDays;
+   private Long restockableInDays;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   InventoryEntryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("availableQuantity") final java.lang.Long availableQuantity, @JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("quantityOnStock") final java.lang.Long quantityOnStock, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("restockableInDays") final java.lang.Long restockableInDays, @JsonProperty("sku") final java.lang.String sku) {
+   InventoryEntryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("availableQuantity") final Long availableQuantity, @JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("quantityOnStock") final Long quantityOnStock, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("restockableInDays") final Long restockableInDays, @JsonProperty("sku") final String sku) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -84,12 +82,12 @@ public final class InventoryEntryImpl implements InventoryEntry {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -104,7 +102,7 @@ public final class InventoryEntryImpl implements InventoryEntry {
    }
    
    
-   public java.lang.Long getAvailableQuantity(){
+   public Long getAvailableQuantity(){
       return this.availableQuantity;
    }
    
@@ -119,7 +117,7 @@ public final class InventoryEntryImpl implements InventoryEntry {
    }
    
    
-   public java.lang.Long getQuantityOnStock(){
+   public Long getQuantityOnStock(){
       return this.quantityOnStock;
    }
    
@@ -129,12 +127,12 @@ public final class InventoryEntryImpl implements InventoryEntry {
    }
    
    
-   public java.lang.Long getRestockableInDays(){
+   public Long getRestockableInDays(){
       return this.restockableInDays;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
@@ -146,11 +144,11 @@ public final class InventoryEntryImpl implements InventoryEntry {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -162,7 +160,7 @@ public final class InventoryEntryImpl implements InventoryEntry {
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setAvailableQuantity(final java.lang.Long availableQuantity){
+   public void setAvailableQuantity(final Long availableQuantity){
       this.availableQuantity = availableQuantity;
    }
    
@@ -174,7 +172,7 @@ public final class InventoryEntryImpl implements InventoryEntry {
       this.custom = custom;
    }
    
-   public void setQuantityOnStock(final java.lang.Long quantityOnStock){
+   public void setQuantityOnStock(final Long quantityOnStock){
       this.quantityOnStock = quantityOnStock;
    }
    
@@ -182,11 +180,11 @@ public final class InventoryEntryImpl implements InventoryEntry {
       this.supplyChannel = supplyChannel;
    }
    
-   public void setRestockableInDays(final java.lang.Long restockableInDays){
+   public void setRestockableInDays(final Long restockableInDays){
       this.restockableInDays = restockableInDays;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

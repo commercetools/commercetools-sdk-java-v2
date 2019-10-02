@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.SuggestTokenizer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomTokenizerImpl implements CustomTokenizer {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.util.List<java.lang.String> inputs;
+   private java.util.List<String> inputs;
 
    @JsonCreator
-   CustomTokenizerImpl(@JsonProperty("inputs") final java.util.List<java.lang.String> inputs) {
+   CustomTokenizerImpl(@JsonProperty("inputs") final java.util.List<String> inputs) {
       this.inputs = inputs;
       this.type = "custom";
    }
@@ -37,16 +36,16 @@ public final class CustomTokenizerImpl implements CustomTokenizer {
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.util.List<java.lang.String> getInputs(){
+   public java.util.List<String> getInputs(){
       return this.inputs;
    }
 
-   public void setInputs(final java.util.List<java.lang.String> inputs){
+   public void setInputs(final java.util.List<String> inputs){
       this.inputs = inputs;
    }
 

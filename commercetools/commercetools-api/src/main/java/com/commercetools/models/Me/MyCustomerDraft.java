@@ -1,9 +1,8 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.common.Address;
+import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import java.time.LocalDate;
 import com.commercetools.models.me.MyCustomerDraftImpl;
 
@@ -81,6 +80,10 @@ public interface MyCustomerDraft  {
    
    @JsonProperty("locale")
    public String getLocale();
+   
+   @Valid
+   @JsonProperty("stores")
+   public List<StoreKeyReference> getStores();
 
    public void setEmail(final String email);
    
@@ -110,6 +113,8 @@ public interface MyCustomerDraft  {
    
    public void setLocale(final String locale);
    
+   public void setStores(final List<StoreKeyReference> stores);
+   
    public static MyCustomerDraftImpl of(){
       return new MyCustomerDraftImpl();
    }
@@ -120,6 +125,7 @@ public interface MyCustomerDraft  {
       instance.setLastName(template.getLastName());
       instance.setAddresses(template.getAddresses());
       instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
+      instance.setStores(template.getStores());
       instance.setCustom(template.getCustom());
       instance.setCompanyName(template.getCompanyName());
       instance.setVatId(template.getVatId());

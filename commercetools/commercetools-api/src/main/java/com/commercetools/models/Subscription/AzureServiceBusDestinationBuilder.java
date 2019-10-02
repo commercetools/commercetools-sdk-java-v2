@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import com.commercetools.models.subscription.AzureServiceBusDestination;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class AzureServiceBusDestinationBuilder {
    
    
-   private java.lang.String connectionString;
+   private String connectionString;
    
-   public AzureServiceBusDestinationBuilder connectionString( final java.lang.String connectionString) {
+   public AzureServiceBusDestinationBuilder connectionString( final String connectionString) {
       this.connectionString = connectionString;
       return this;
    }
    
    
-   public java.lang.String getConnectionString(){
+   public String getConnectionString(){
       return this.connectionString;
    }
 

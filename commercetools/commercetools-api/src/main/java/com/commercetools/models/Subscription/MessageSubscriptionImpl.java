@@ -1,6 +1,6 @@
 package com.commercetools.models.subscription;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MessageSubscriptionImpl implements MessageSubscription {
 
-   private java.util.List<java.lang.String> types;
+   private java.util.List<String> types;
    
-   private java.lang.String resourceTypeId;
+   private String resourceTypeId;
 
    @JsonCreator
-   MessageSubscriptionImpl(@JsonProperty("types") final java.util.List<java.lang.String> types, @JsonProperty("resourceTypeId") final java.lang.String resourceTypeId) {
+   MessageSubscriptionImpl(@JsonProperty("types") final java.util.List<String> types, @JsonProperty("resourceTypeId") final String resourceTypeId) {
       this.types = types;
       this.resourceTypeId = resourceTypeId;
    }
@@ -36,20 +36,20 @@ public final class MessageSubscriptionImpl implements MessageSubscription {
    }
    
    
-   public java.util.List<java.lang.String> getTypes(){
+   public java.util.List<String> getTypes(){
       return this.types;
    }
    
    
-   public java.lang.String getResourceTypeId(){
+   public String getResourceTypeId(){
       return this.resourceTypeId;
    }
 
-   public void setTypes(final java.util.List<java.lang.String> types){
+   public void setTypes(final java.util.List<String> types){
       this.types = types;
    }
    
-   public void setResourceTypeId(final java.lang.String resourceTypeId){
+   public void setResourceTypeId(final String resourceTypeId){
       this.resourceTypeId = resourceTypeId;
    }
 

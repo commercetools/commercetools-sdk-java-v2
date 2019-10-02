@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.order.OrderUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class OrderUpdateBuilder {
    private java.util.List<com.commercetools.models.order.OrderUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public OrderUpdateBuilder actions( final java.util.List<com.commercetools.models.order.OrderUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public OrderUpdateBuilder version( final java.lang.Long version) {
+   public OrderUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class OrderUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

@@ -2,7 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.product.FacetResult;
 import com.commercetools.models.product.FacetTypes;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,12 +25,12 @@ public final class FilteredFacetResultImpl implements FilteredFacetResult {
 
    private com.commercetools.models.product.FacetTypes type;
    
-   private java.lang.Long count;
+   private Long count;
    
-   private java.lang.Long productCount;
+   private Long productCount;
 
    @JsonCreator
-   FilteredFacetResultImpl(@JsonProperty("count") final java.lang.Long count, @JsonProperty("productCount") final java.lang.Long productCount) {
+   FilteredFacetResultImpl(@JsonProperty("count") final Long count, @JsonProperty("productCount") final Long productCount) {
       this.count = count;
       this.productCount = productCount;
       this.type = FacetTypes.findEnumViaJsonName("filter").get();
@@ -46,20 +45,20 @@ public final class FilteredFacetResultImpl implements FilteredFacetResult {
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
    }
    
    
-   public java.lang.Long getProductCount(){
+   public Long getProductCount(){
       return this.productCount;
    }
 
-   public void setCount(final java.lang.Long count){
+   public void setCount(final Long count){
       this.count = count;
    }
    
-   public void setProductCount(final java.lang.Long productCount){
+   public void setProductCount(final Long productCount){
       this.productCount = productCount;
    }
 

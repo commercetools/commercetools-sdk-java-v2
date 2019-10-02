@@ -3,7 +3,6 @@ package com.commercetools.models.cart;
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.shopping_list.ShoppingListResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.cart.CartAddShoppingListActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

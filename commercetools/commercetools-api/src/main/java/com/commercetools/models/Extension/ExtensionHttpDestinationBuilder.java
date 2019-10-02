@@ -2,7 +2,6 @@ package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionDestination;
 import com.commercetools.models.extension.ExtensionHttpDestinationAuthentication;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionHttpDestination;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ExtensionHttpDestinationBuilder {
    
    
-   private java.lang.String url;
+   private String url;
    
    @Nullable
    private com.commercetools.models.extension.ExtensionHttpDestinationAuthentication authentication;
    
-   public ExtensionHttpDestinationBuilder url( final java.lang.String url) {
+   public ExtensionHttpDestinationBuilder url( final String url) {
       this.url = url;
       return this;
    }
@@ -28,7 +27,7 @@ public final class ExtensionHttpDestinationBuilder {
    }
    
    
-   public java.lang.String getUrl(){
+   public String getUrl(){
       return this.url;
    }
    

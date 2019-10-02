@@ -1,7 +1,6 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,10 +24,10 @@ public final class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocal
 
    private com.commercetools.models.common.LocalizedString label;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   CustomFieldLocalizedEnumValueImpl(@JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("key") final java.lang.String key) {
+   CustomFieldLocalizedEnumValueImpl(@JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("key") final String key) {
       this.label = label;
       this.key = key;
    }
@@ -42,7 +41,7 @@ public final class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocal
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -50,7 +49,7 @@ public final class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocal
       this.label = label;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

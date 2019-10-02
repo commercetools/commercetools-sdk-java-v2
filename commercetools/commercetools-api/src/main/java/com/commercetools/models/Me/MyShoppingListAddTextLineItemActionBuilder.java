@@ -3,8 +3,6 @@ package com.commercetools.models.me;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.me.MyShoppingListUpdateAction;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.me.MyShoppingListAddTextLineItemAction;
 import javax.annotation.Nullable;
@@ -18,7 +16,7 @@ public final class MyShoppingListAddTextLineItemActionBuilder {
    private java.time.ZonedDateTime addedAt;
    
    @Nullable
-   private java.lang.Long quantity;
+   private Long quantity;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
@@ -34,7 +32,7 @@ public final class MyShoppingListAddTextLineItemActionBuilder {
       return this;
    }
    
-   public MyShoppingListAddTextLineItemActionBuilder quantity(@Nullable final java.lang.Long quantity) {
+   public MyShoppingListAddTextLineItemActionBuilder quantity(@Nullable final Long quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -60,7 +58,7 @@ public final class MyShoppingListAddTextLineItemActionBuilder {
    }
    
    @Nullable
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    

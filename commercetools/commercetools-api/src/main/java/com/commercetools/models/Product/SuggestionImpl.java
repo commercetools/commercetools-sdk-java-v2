@@ -1,6 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SuggestionImpl implements Suggestion {
 
-   private java.lang.String text;
+   private String text;
 
    @JsonCreator
-   SuggestionImpl(@JsonProperty("text") final java.lang.String text) {
+   SuggestionImpl(@JsonProperty("text") final String text) {
       this.text = text;
    }
    public SuggestionImpl() {
@@ -33,11 +33,11 @@ public final class SuggestionImpl implements Suggestion {
    }
    
    
-   public java.lang.String getText(){
+   public String getText(){
       return this.text;
    }
 
-   public void setText(final java.lang.String text){
+   public void setText(final String text){
       this.text = text;
    }
 

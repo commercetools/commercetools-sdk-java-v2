@@ -5,8 +5,6 @@ import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.state.StateRoleEnum;
 import com.commercetools.models.state.StateTypeEnum;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -32,19 +30,19 @@ public final class StateImpl implements State {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private java.lang.Boolean initial;
+   private Boolean initial;
    
    private java.util.List<com.commercetools.models.state.StateRoleEnum> roles;
    
-   private java.lang.Boolean builtIn;
+   private Boolean builtIn;
    
    private com.commercetools.models.common.LocalizedString name;
    
@@ -54,10 +52,10 @@ public final class StateImpl implements State {
    
    private com.commercetools.models.state.StateTypeEnum type;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   StateImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("initial") final java.lang.Boolean initial, @JsonProperty("roles") final java.util.List<com.commercetools.models.state.StateRoleEnum> roles, @JsonProperty("builtIn") final java.lang.Boolean builtIn, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("transitions") final java.util.List<com.commercetools.models.state.StateReference> transitions, @JsonProperty("type") final com.commercetools.models.state.StateTypeEnum type, @JsonProperty("key") final java.lang.String key) {
+   StateImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("initial") final Boolean initial, @JsonProperty("roles") final java.util.List<com.commercetools.models.state.StateRoleEnum> roles, @JsonProperty("builtIn") final Boolean builtIn, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("transitions") final java.util.List<com.commercetools.models.state.StateReference> transitions, @JsonProperty("type") final com.commercetools.models.state.StateTypeEnum type, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -88,12 +86,12 @@ public final class StateImpl implements State {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -108,7 +106,7 @@ public final class StateImpl implements State {
    }
    
    
-   public java.lang.Boolean getInitial(){
+   public Boolean getInitial(){
       return this.initial;
    }
    
@@ -118,7 +116,7 @@ public final class StateImpl implements State {
    }
    
    
-   public java.lang.Boolean getBuiltIn(){
+   public Boolean getBuiltIn(){
       return this.builtIn;
    }
    
@@ -143,7 +141,7 @@ public final class StateImpl implements State {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -155,11 +153,11 @@ public final class StateImpl implements State {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -171,7 +169,7 @@ public final class StateImpl implements State {
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setInitial(final java.lang.Boolean initial){
+   public void setInitial(final Boolean initial){
       this.initial = initial;
    }
    
@@ -179,7 +177,7 @@ public final class StateImpl implements State {
       this.roles = roles;
    }
    
-   public void setBuiltIn(final java.lang.Boolean builtIn){
+   public void setBuiltIn(final Boolean builtIn){
       this.builtIn = builtIn;
    }
    
@@ -199,7 +197,7 @@ public final class StateImpl implements State {
       this.type = type;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

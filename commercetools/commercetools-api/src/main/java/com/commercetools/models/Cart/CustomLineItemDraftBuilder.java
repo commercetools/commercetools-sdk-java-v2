@@ -6,8 +6,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.CustomLineItemDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,7 +18,7 @@ public final class CustomLineItemDraftBuilder {
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
@@ -35,7 +33,7 @@ public final class CustomLineItemDraftBuilder {
    private com.commercetools.models.common.LocalizedString name;
    
    
-   private java.lang.String slug;
+   private String slug;
    
    @Nullable
    private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
@@ -45,7 +43,7 @@ public final class CustomLineItemDraftBuilder {
       return this;
    }
    
-   public CustomLineItemDraftBuilder quantity( final java.lang.Integer quantity) {
+   public CustomLineItemDraftBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -70,7 +68,7 @@ public final class CustomLineItemDraftBuilder {
       return this;
    }
    
-   public CustomLineItemDraftBuilder slug( final java.lang.String slug) {
+   public CustomLineItemDraftBuilder slug( final String slug) {
       this.slug = slug;
       return this;
    }
@@ -86,7 +84,7 @@ public final class CustomLineItemDraftBuilder {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -111,7 +109,7 @@ public final class CustomLineItemDraftBuilder {
    }
    
    
-   public java.lang.String getSlug(){
+   public String getSlug(){
       return this.slug;
    }
    

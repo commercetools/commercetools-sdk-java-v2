@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCartAddDiscountCodeAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class MyCartAddDiscountCodeActionBuilder {
    
    
-   private java.lang.String code;
+   private String code;
    
-   public MyCartAddDiscountCodeActionBuilder code( final java.lang.String code) {
+   public MyCartAddDiscountCodeActionBuilder code( final String code) {
       this.code = code;
       return this;
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
 

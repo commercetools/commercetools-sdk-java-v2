@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductRemoveImageAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,54 +10,54 @@ import java.time.ZonedDateTime;
 public final class ProductRemoveImageActionBuilder {
    
    
-   private java.lang.String imageUrl;
+   private String imageUrl;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
-   public ProductRemoveImageActionBuilder imageUrl( final java.lang.String imageUrl) {
+   public ProductRemoveImageActionBuilder imageUrl( final String imageUrl) {
       this.imageUrl = imageUrl;
       return this;
    }
    
-   public ProductRemoveImageActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductRemoveImageActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductRemoveImageActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ProductRemoveImageActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ProductRemoveImageActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductRemoveImageActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
    
-   public java.lang.String getImageUrl(){
+   public String getImageUrl(){
       return this.imageUrl;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

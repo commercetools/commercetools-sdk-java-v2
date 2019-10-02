@@ -1,6 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.String;
+
 import com.commercetools.models.product.CategoryOrderHints;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CategoryOrderHintsBuilder {
    
    
-   private Map<String, java.lang.String> values;
+   private Map<String, String> values;
    
-   public CategoryOrderHintsBuilder values( final Map<String, java.lang.String> values){
+   public CategoryOrderHintsBuilder values( final Map<String, String> values){
       this.values = values;
       return this;
    }
    
    
-   public Map<String, java.lang.String> getValues(){
+   public Map<String, String> getValues(){
       return this.values;
    }
 

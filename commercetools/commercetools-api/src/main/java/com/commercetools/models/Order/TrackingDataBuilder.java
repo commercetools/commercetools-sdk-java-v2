@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
-import java.lang.Boolean;
-import java.lang.String;
+
 import com.commercetools.models.order.TrackingData;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,67 +10,67 @@ import java.time.ZonedDateTime;
 public final class TrackingDataBuilder {
    
    @Nullable
-   private java.lang.Boolean isReturn;
+   private Boolean isReturn;
    
    @Nullable
-   private java.lang.String carrier;
+   private String carrier;
    
    @Nullable
-   private java.lang.String providerTransaction;
+   private String providerTransaction;
    
    @Nullable
-   private java.lang.String provider;
+   private String provider;
    
    @Nullable
-   private java.lang.String trackingId;
+   private String trackingId;
    
-   public TrackingDataBuilder isReturn(@Nullable final java.lang.Boolean isReturn) {
+   public TrackingDataBuilder isReturn(@Nullable final Boolean isReturn) {
       this.isReturn = isReturn;
       return this;
    }
    
-   public TrackingDataBuilder carrier(@Nullable final java.lang.String carrier) {
+   public TrackingDataBuilder carrier(@Nullable final String carrier) {
       this.carrier = carrier;
       return this;
    }
    
-   public TrackingDataBuilder providerTransaction(@Nullable final java.lang.String providerTransaction) {
+   public TrackingDataBuilder providerTransaction(@Nullable final String providerTransaction) {
       this.providerTransaction = providerTransaction;
       return this;
    }
    
-   public TrackingDataBuilder provider(@Nullable final java.lang.String provider) {
+   public TrackingDataBuilder provider(@Nullable final String provider) {
       this.provider = provider;
       return this;
    }
    
-   public TrackingDataBuilder trackingId(@Nullable final java.lang.String trackingId) {
+   public TrackingDataBuilder trackingId(@Nullable final String trackingId) {
       this.trackingId = trackingId;
       return this;
    }
    
    @Nullable
-   public java.lang.Boolean getIsReturn(){
+   public Boolean getIsReturn(){
       return this.isReturn;
    }
    
    @Nullable
-   public java.lang.String getCarrier(){
+   public String getCarrier(){
       return this.carrier;
    }
    
    @Nullable
-   public java.lang.String getProviderTransaction(){
+   public String getProviderTransaction(){
       return this.providerTransaction;
    }
    
    @Nullable
-   public java.lang.String getProvider(){
+   public String getProvider(){
       return this.provider;
    }
    
    @Nullable
-   public java.lang.String getTrackingId(){
+   public String getTrackingId(){
       return this.trackingId;
    }
 

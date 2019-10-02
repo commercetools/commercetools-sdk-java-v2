@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductChangePriceAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,22 +14,22 @@ public final class ProductChangePriceActionBuilder {
    private com.commercetools.models.common.PriceDraft price;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    
-   private java.lang.String priceId;
+   private String priceId;
    
    public ProductChangePriceActionBuilder price( final com.commercetools.models.common.PriceDraft price) {
       this.price = price;
       return this;
    }
    
-   public ProductChangePriceActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductChangePriceActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductChangePriceActionBuilder priceId( final java.lang.String priceId) {
+   public ProductChangePriceActionBuilder priceId( final String priceId) {
       this.priceId = priceId;
       return this;
    }
@@ -42,12 +40,12 @@ public final class ProductChangePriceActionBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.String getPriceId(){
+   public String getPriceId(){
       return this.priceId;
    }
 

@@ -14,8 +14,6 @@ import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.models.store.StoreResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -37,9 +35,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDraftImpl implements CartDraft {
 
-   private java.lang.String country;
+   private String country;
    
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    private com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput;
    
@@ -47,7 +45,7 @@ public final class CartDraftImpl implements CartDraft {
    
    private com.commercetools.models.cart.CartOrigin origin;
    
-   private java.lang.Long deleteDaysAfterLastModification;
+   private Long deleteDaysAfterLastModification;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
@@ -57,7 +55,7 @@ public final class CartDraftImpl implements CartDraft {
    
    private com.commercetools.models.store.StoreResourceIdentifier store;
    
-   private java.lang.String locale;
+   private String locale;
    
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod;
    
@@ -73,18 +71,18 @@ public final class CartDraftImpl implements CartDraft {
    
    private com.commercetools.models.cart.TaxMode taxMode;
    
-   private java.lang.String customerEmail;
+   private String customerEmail;
    
-   private java.lang.String customerId;
+   private String customerId;
    
    private com.commercetools.models.common.Address shippingAddress;
    
-   private java.lang.String currency;
+   private String currency;
    
    private com.commercetools.models.common.Address billingAddress;
 
    @JsonCreator
-   CartDraftImpl(@JsonProperty("country") final java.lang.String country, @JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("shippingRateInput") final com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("origin") final com.commercetools.models.cart.CartOrigin origin, @JsonProperty("deleteDaysAfterLastModification") final java.lang.Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("shippingMethod") final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("taxCalculationMode") final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("store") final com.commercetools.models.store.StoreResourceIdentifier store, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("externalTaxRateForShippingMethod") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.cart.LineItemDraft> lineItems, @JsonProperty("taxRoundingMode") final com.commercetools.models.cart.RoundingMode taxRoundingMode, @JsonProperty("customLineItems") final java.util.List<com.commercetools.models.cart.CustomLineItemDraft> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode, @JsonProperty("customerEmail") final java.lang.String customerEmail, @JsonProperty("customerId") final java.lang.String customerId, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("currency") final java.lang.String currency, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress) {
+   CartDraftImpl(@JsonProperty("country") final String country, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("shippingRateInput") final com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("origin") final com.commercetools.models.cart.CartOrigin origin, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("shippingMethod") final com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("taxCalculationMode") final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("store") final com.commercetools.models.store.StoreResourceIdentifier store, @JsonProperty("locale") final String locale, @JsonProperty("externalTaxRateForShippingMethod") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.cart.LineItemDraft> lineItems, @JsonProperty("taxRoundingMode") final com.commercetools.models.cart.RoundingMode taxRoundingMode, @JsonProperty("customLineItems") final java.util.List<com.commercetools.models.cart.CustomLineItemDraft> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("customerId") final String customerId, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("currency") final String currency, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress) {
       this.country = country;
       this.anonymousId = anonymousId;
       this.shippingRateInput = shippingRateInput;
@@ -114,12 +112,12 @@ public final class CartDraftImpl implements CartDraft {
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -139,7 +137,7 @@ public final class CartDraftImpl implements CartDraft {
    }
    
    
-   public java.lang.Long getDeleteDaysAfterLastModification(){
+   public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
@@ -164,7 +162,7 @@ public final class CartDraftImpl implements CartDraft {
    }
    
    
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
@@ -204,12 +202,12 @@ public final class CartDraftImpl implements CartDraft {
    }
    
    
-   public java.lang.String getCustomerEmail(){
+   public String getCustomerEmail(){
       return this.customerEmail;
    }
    
    
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
    
@@ -221,7 +219,7 @@ public final class CartDraftImpl implements CartDraft {
    /**
    	<p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
    */
-   public java.lang.String getCurrency(){
+   public String getCurrency(){
       return this.currency;
    }
    
@@ -230,11 +228,11 @@ public final class CartDraftImpl implements CartDraft {
       return this.billingAddress;
    }
 
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
    
@@ -250,7 +248,7 @@ public final class CartDraftImpl implements CartDraft {
       this.origin = origin;
    }
    
-   public void setDeleteDaysAfterLastModification(final java.lang.Long deleteDaysAfterLastModification){
+   public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification){
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
    }
    
@@ -270,7 +268,7 @@ public final class CartDraftImpl implements CartDraft {
       this.store = store;
    }
    
-   public void setLocale(final java.lang.String locale){
+   public void setLocale(final String locale){
       this.locale = locale;
    }
    
@@ -302,11 +300,11 @@ public final class CartDraftImpl implements CartDraft {
       this.taxMode = taxMode;
    }
    
-   public void setCustomerEmail(final java.lang.String customerEmail){
+   public void setCustomerEmail(final String customerEmail){
       this.customerEmail = customerEmail;
    }
    
-   public void setCustomerId(final java.lang.String customerId){
+   public void setCustomerId(final String customerId){
       this.customerId = customerId;
    }
    
@@ -314,7 +312,7 @@ public final class CartDraftImpl implements CartDraft {
       this.shippingAddress = shippingAddress;
    }
    
-   public void setCurrency(final java.lang.String currency){
+   public void setCurrency(final String currency){
       this.currency = currency;
    }
    

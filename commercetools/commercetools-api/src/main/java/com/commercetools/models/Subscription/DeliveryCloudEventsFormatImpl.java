@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.DeliveryFormat;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DeliveryCloudEventsFormatImpl implements DeliveryCloudEventsFormat {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String cloudEventsVersion;
+   private String cloudEventsVersion;
 
    @JsonCreator
-   DeliveryCloudEventsFormatImpl(@JsonProperty("cloudEventsVersion") final java.lang.String cloudEventsVersion) {
+   DeliveryCloudEventsFormatImpl(@JsonProperty("cloudEventsVersion") final String cloudEventsVersion) {
       this.cloudEventsVersion = cloudEventsVersion;
       this.type = "CloudEvents";
    }
@@ -37,16 +36,16 @@ public final class DeliveryCloudEventsFormatImpl implements DeliveryCloudEventsF
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getCloudEventsVersion(){
+   public String getCloudEventsVersion(){
       return this.cloudEventsVersion;
    }
 
-   public void setCloudEventsVersion(final java.lang.String cloudEventsVersion){
+   public void setCloudEventsVersion(final String cloudEventsVersion){
       this.cloudEventsVersion = cloudEventsVersion;
    }
 

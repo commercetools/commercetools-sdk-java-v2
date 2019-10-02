@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ItemShippingTarget;
-import java.lang.String;
 import com.commercetools.models.cart.CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder {
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    
    private java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta;
    
-   public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBui
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    

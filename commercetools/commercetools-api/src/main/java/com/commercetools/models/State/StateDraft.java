@@ -4,8 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.state.StateResourceIdentifier;
 import com.commercetools.models.state.StateRoleEnum;
 import com.commercetools.models.state.StateTypeEnum;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.state.StateDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

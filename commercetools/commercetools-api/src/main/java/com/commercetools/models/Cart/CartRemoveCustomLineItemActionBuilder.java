@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.cart.CartRemoveCustomLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CartRemoveCustomLineItemActionBuilder {
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
-   public CartRemoveCustomLineItemActionBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public CartRemoveCustomLineItemActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
 

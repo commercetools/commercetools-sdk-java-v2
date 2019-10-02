@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String customerId;
+   private String customerId;
 
    @JsonCreator
-   CartSetCustomerIdActionImpl(@JsonProperty("customerId") final java.lang.String customerId) {
+   CartSetCustomerIdActionImpl(@JsonProperty("customerId") final String customerId) {
       this.customerId = customerId;
       this.action = "setCustomerId";
    }
@@ -37,16 +36,16 @@ public final class CartSetCustomerIdActionImpl implements CartSetCustomerIdActio
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
 
-   public void setCustomerId(final java.lang.String customerId){
+   public void setCustomerId(final String customerId){
       this.customerId = customerId;
    }
 

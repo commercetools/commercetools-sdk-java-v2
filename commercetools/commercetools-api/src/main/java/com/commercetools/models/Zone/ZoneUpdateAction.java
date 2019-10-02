@@ -5,7 +5,6 @@ import com.commercetools.models.zone.ZoneChangeNameAction;
 import com.commercetools.models.zone.ZoneRemoveLocationAction;
 import com.commercetools.models.zone.ZoneSetDescriptionAction;
 import com.commercetools.models.zone.ZoneSetKeyAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentSetMethodInfoInterfaceAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class PaymentSetMethodInfoInterfaceActionBuilder {
    
    
-   private java.lang.String _interface;
+   private String _interface;
    
-   public PaymentSetMethodInfoInterfaceActionBuilder _interface( final java.lang.String _interface) {
+   public PaymentSetMethodInfoInterfaceActionBuilder _interface( final String _interface) {
       this._interface = _interface;
       return this;
    }
    
    
-   public java.lang.String getInterface(){
+   public String getInterface(){
       return this._interface;
    }
 

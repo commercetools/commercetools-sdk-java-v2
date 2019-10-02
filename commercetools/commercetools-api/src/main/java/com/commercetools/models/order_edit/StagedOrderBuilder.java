@@ -16,10 +16,10 @@ public final class StagedOrderBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -31,13 +31,13 @@ public final class StagedOrderBuilder {
    private com.commercetools.models.order.ShipmentState shipmentState;
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
    @Nullable
-   private java.lang.String orderNumber;
+   private String orderNumber;
    
    
-   private com.commercetools.models.common.Money totalPrice;
+   private com.commercetools.models.common.TypedMoney totalPrice;
    
    @Nullable
    private com.commercetools.models.cart.ShippingRateInput shippingRateInput;
@@ -51,8 +51,11 @@ public final class StagedOrderBuilder {
    @Nullable
    private com.commercetools.models.cart.ShippingInfo shippingInfo;
    
+   
+   private java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> refusedGifts;
+   
    @Nullable
-   private java.lang.String locale;
+   private String locale;
    
    @Nullable
    private com.commercetools.models.cart.CartReference cart;
@@ -76,10 +79,10 @@ public final class StagedOrderBuilder {
    private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
    @Nullable
-   private java.lang.String customerEmail;
+   private String customerEmail;
    
    @Nullable
-   private java.lang.String customerId;
+   private String customerId;
    
    @Nullable
    private com.commercetools.models.state.StateReference state;
@@ -88,7 +91,7 @@ public final class StagedOrderBuilder {
    private com.commercetools.models.order.PaymentState paymentState;
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    @Nullable
    private java.util.List<com.commercetools.models.cart.DiscountCodeInfo> discountCodes;
@@ -109,7 +112,7 @@ public final class StagedOrderBuilder {
    private com.commercetools.models.store.StoreKeyReference store;
    
    
-   private java.lang.Long lastMessageSequenceNumber;
+   private Long lastMessageSequenceNumber;
    
    
    private java.util.List<com.commercetools.models.order.SyncInfo> syncInfo;
@@ -139,12 +142,12 @@ public final class StagedOrderBuilder {
       return this;
    }
    
-   public StagedOrderBuilder id( final java.lang.String id) {
+   public StagedOrderBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public StagedOrderBuilder version( final java.lang.Long version) {
+   public StagedOrderBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -164,17 +167,17 @@ public final class StagedOrderBuilder {
       return this;
    }
    
-   public StagedOrderBuilder country(@Nullable final java.lang.String country) {
+   public StagedOrderBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
    
-   public StagedOrderBuilder orderNumber(@Nullable final java.lang.String orderNumber) {
+   public StagedOrderBuilder orderNumber(@Nullable final String orderNumber) {
       this.orderNumber = orderNumber;
       return this;
    }
    
-   public StagedOrderBuilder totalPrice( final com.commercetools.models.common.Money totalPrice) {
+   public StagedOrderBuilder totalPrice( final com.commercetools.models.common.TypedMoney totalPrice) {
       this.totalPrice = totalPrice;
       return this;
    }
@@ -199,7 +202,12 @@ public final class StagedOrderBuilder {
       return this;
    }
    
-   public StagedOrderBuilder locale(@Nullable final java.lang.String locale) {
+   public StagedOrderBuilder refusedGifts( final java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> refusedGifts) {
+      this.refusedGifts = refusedGifts;
+      return this;
+   }
+   
+   public StagedOrderBuilder locale(@Nullable final String locale) {
       this.locale = locale;
       return this;
    }
@@ -239,12 +247,12 @@ public final class StagedOrderBuilder {
       return this;
    }
    
-   public StagedOrderBuilder customerEmail(@Nullable final java.lang.String customerEmail) {
+   public StagedOrderBuilder customerEmail(@Nullable final String customerEmail) {
       this.customerEmail = customerEmail;
       return this;
    }
    
-   public StagedOrderBuilder customerId(@Nullable final java.lang.String customerId) {
+   public StagedOrderBuilder customerId(@Nullable final String customerId) {
       this.customerId = customerId;
       return this;
    }
@@ -259,7 +267,7 @@ public final class StagedOrderBuilder {
       return this;
    }
    
-   public StagedOrderBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public StagedOrderBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
@@ -294,7 +302,7 @@ public final class StagedOrderBuilder {
       return this;
    }
    
-   public StagedOrderBuilder lastMessageSequenceNumber( final java.lang.Long lastMessageSequenceNumber) {
+   public StagedOrderBuilder lastMessageSequenceNumber( final Long lastMessageSequenceNumber) {
       this.lastMessageSequenceNumber = lastMessageSequenceNumber;
       return this;
    }
@@ -340,12 +348,12 @@ public final class StagedOrderBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -365,17 +373,17 @@ public final class StagedOrderBuilder {
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    @Nullable
-   public java.lang.String getOrderNumber(){
+   public String getOrderNumber(){
       return this.orderNumber;
    }
    
    
-   public com.commercetools.models.common.Money getTotalPrice(){
+   public com.commercetools.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
    
@@ -399,8 +407,13 @@ public final class StagedOrderBuilder {
       return this.shippingInfo;
    }
    
+   
+   public java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> getRefusedGifts(){
+      return this.refusedGifts;
+   }
+   
    @Nullable
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
@@ -440,12 +453,12 @@ public final class StagedOrderBuilder {
    }
    
    @Nullable
-   public java.lang.String getCustomerEmail(){
+   public String getCustomerEmail(){
       return this.customerEmail;
    }
    
    @Nullable
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
    
@@ -460,7 +473,7 @@ public final class StagedOrderBuilder {
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -495,7 +508,7 @@ public final class StagedOrderBuilder {
    }
    
    
-   public java.lang.Long getLastMessageSequenceNumber(){
+   public Long getLastMessageSequenceNumber(){
       return this.lastMessageSequenceNumber;
    }
    
@@ -530,7 +543,7 @@ public final class StagedOrderBuilder {
    }
 
    public StagedOrder build() {
-       return new StagedOrderImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, shipmentState, country, orderNumber, totalPrice, shippingRateInput, taxedPrice, origin, shippingInfo, locale, cart, inventoryMode, orderState, returnInfo, lineItems, customLineItems, itemShippingAddresses, customerEmail, customerId, state, paymentState, anonymousId, discountCodes, completedAt, customerGroup, custom, taxCalculationMode, store, lastMessageSequenceNumber, syncInfo, taxRoundingMode, taxMode, shippingAddress, billingAddress, paymentInfo);
+       return new StagedOrderImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, shipmentState, country, orderNumber, totalPrice, shippingRateInput, taxedPrice, origin, shippingInfo, refusedGifts, locale, cart, inventoryMode, orderState, returnInfo, lineItems, customLineItems, itemShippingAddresses, customerEmail, customerId, state, paymentState, anonymousId, discountCodes, completedAt, customerGroup, custom, taxCalculationMode, store, lastMessageSequenceNumber, syncInfo, taxRoundingMode, taxMode, shippingAddress, billingAddress, paymentInfo);
    }
    
    public static StagedOrderBuilder of() {
@@ -553,6 +566,7 @@ public final class StagedOrderBuilder {
       builder.taxedPrice = template.getTaxedPrice();
       builder.origin = template.getOrigin();
       builder.shippingInfo = template.getShippingInfo();
+      builder.refusedGifts = template.getRefusedGifts();
       builder.locale = template.getLocale();
       builder.cart = template.getCart();
       builder.inventoryMode = template.getInventoryMode();

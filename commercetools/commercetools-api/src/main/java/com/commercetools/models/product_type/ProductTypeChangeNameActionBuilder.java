@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeChangeNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ProductTypeChangeNameActionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
-   public ProductTypeChangeNameActionBuilder name( final java.lang.String name) {
+   public ProductTypeChangeNameActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
 

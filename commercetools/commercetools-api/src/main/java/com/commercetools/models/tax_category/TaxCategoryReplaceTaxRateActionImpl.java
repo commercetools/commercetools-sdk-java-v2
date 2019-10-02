@@ -2,7 +2,6 @@ package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategoryUpdateAction;
 import com.commercetools.models.tax_category.TaxRateDraft;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTaxRateAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.tax_category.TaxRateDraft taxRate;
    
-   private java.lang.String taxRateId;
+   private String taxRateId;
 
    @JsonCreator
-   TaxCategoryReplaceTaxRateActionImpl(@JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRateDraft taxRate, @JsonProperty("taxRateId") final java.lang.String taxRateId) {
+   TaxCategoryReplaceTaxRateActionImpl(@JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRateDraft taxRate, @JsonProperty("taxRateId") final String taxRateId) {
       this.taxRate = taxRate;
       this.taxRateId = taxRateId;
       this.action = "replaceTaxRate";
@@ -41,7 +40,7 @@ public final class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryRep
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryRep
    }
    
    
-   public java.lang.String getTaxRateId(){
+   public String getTaxRateId(){
       return this.taxRateId;
    }
 
@@ -59,7 +58,7 @@ public final class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryRep
       this.taxRate = taxRate;
    }
    
-   public void setTaxRateId(final java.lang.String taxRateId){
+   public void setTaxRateId(final String taxRateId){
       this.taxRateId = taxRateId;
    }
 

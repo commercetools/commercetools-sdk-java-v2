@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeDefinitionDraft;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

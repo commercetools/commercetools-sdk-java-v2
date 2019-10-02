@@ -2,7 +2,6 @@ package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.shipping_method.ShippingMethodChangeTaxCategoryActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

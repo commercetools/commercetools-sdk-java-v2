@@ -1,8 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChangeIsSearchableAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
-   private java.lang.Boolean isSearchable;
+   private Boolean isSearchable;
 
    @JsonCreator
-   ProductTypeChangeIsSearchableActionImpl(@JsonProperty("attributeName") final java.lang.String attributeName, @JsonProperty("isSearchable") final java.lang.Boolean isSearchable) {
+   ProductTypeChangeIsSearchableActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("isSearchable") final Boolean isSearchable) {
       this.attributeName = attributeName;
       this.isSearchable = isSearchable;
       this.action = "changeIsSearchable";
@@ -41,25 +39,25 @@ public final class ProductTypeChangeIsSearchableActionImpl implements ProductTyp
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
    
    
-   public java.lang.Boolean getIsSearchable(){
+   public Boolean getIsSearchable(){
       return this.isSearchable;
    }
 
-   public void setAttributeName(final java.lang.String attributeName){
+   public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
    }
    
-   public void setIsSearchable(final java.lang.Boolean isSearchable){
+   public void setIsSearchable(final Boolean isSearchable){
       this.isSearchable = isSearchable;
    }
 

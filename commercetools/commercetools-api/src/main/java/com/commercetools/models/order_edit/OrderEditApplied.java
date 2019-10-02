@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditResult;
 import com.commercetools.models.order_edit.OrderExcerpt;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order_edit.OrderEditAppliedImpl;
 

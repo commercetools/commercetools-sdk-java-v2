@@ -1,7 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountSetKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CartDiscountSetKeyActionBuilder {
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public CartDiscountSetKeyActionBuilder key(@Nullable final java.lang.String key) {
+   public CartDiscountSetKeyActionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

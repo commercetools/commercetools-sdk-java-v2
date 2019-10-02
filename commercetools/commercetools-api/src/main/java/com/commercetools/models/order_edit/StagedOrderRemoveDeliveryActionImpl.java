@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderRemoveDeliveryActionImpl implements StagedOrderRemoveDeliveryAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
 
    @JsonCreator
-   StagedOrderRemoveDeliveryActionImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId) {
+   StagedOrderRemoveDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId) {
       this.deliveryId = deliveryId;
       this.action = "removeDelivery";
    }
@@ -37,16 +36,16 @@ public final class StagedOrderRemoveDeliveryActionImpl implements StagedOrderRem
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
 
-   public void setDeliveryId(final java.lang.String deliveryId){
+   public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
 

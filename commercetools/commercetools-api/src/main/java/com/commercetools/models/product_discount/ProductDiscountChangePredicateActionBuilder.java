@@ -1,7 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_discount.ProductDiscountChangePredicateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ProductDiscountChangePredicateActionBuilder {
    
    
-   private java.lang.String predicate;
+   private String predicate;
    
-   public ProductDiscountChangePredicateActionBuilder predicate( final java.lang.String predicate) {
+   public ProductDiscountChangePredicateActionBuilder predicate( final String predicate) {
       this.predicate = predicate;
       return this;
    }
    
    
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
 

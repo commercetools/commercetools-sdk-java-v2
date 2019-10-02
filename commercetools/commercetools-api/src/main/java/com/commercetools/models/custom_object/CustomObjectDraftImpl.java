@@ -1,8 +1,6 @@
 package com.commercetools.models.custom_object;
 
-import java.lang.Long;
-import java.lang.Object;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomObjectDraftImpl implements CustomObjectDraft {
 
-   private java.lang.String container;
+   private String container;
    
-   private java.lang.Long version;
+   private Long version;
    
-   private java.lang.Object value;
+   private Object value;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   CustomObjectDraftImpl(@JsonProperty("container") final java.lang.String container, @JsonProperty("version") final java.lang.Long version, @JsonProperty("value") final java.lang.Object value, @JsonProperty("key") final java.lang.String key) {
+   CustomObjectDraftImpl(@JsonProperty("container") final String container, @JsonProperty("version") final Long version, @JsonProperty("value") final Object value, @JsonProperty("key") final String key) {
       this.container = container;
       this.version = version;
       this.value = value;
@@ -44,38 +42,38 @@ public final class CustomObjectDraftImpl implements CustomObjectDraft {
    }
    
    
-   public java.lang.String getContainer(){
+   public String getContainer(){
       return this.container;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setContainer(final java.lang.String container){
+   public void setContainer(final String container){
       this.container = container;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
-   public void setValue(final java.lang.Object value){
+   public void setValue(final Object value){
       this.value = value;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

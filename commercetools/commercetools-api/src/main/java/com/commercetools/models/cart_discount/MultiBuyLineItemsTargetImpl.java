@@ -2,8 +2,6 @@ package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountTarget;
 import com.commercetools.models.cart_discount.SelectionMode;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,20 +23,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String predicate;
+   private String predicate;
    
-   private java.lang.Integer triggerQuantity;
+   private Integer triggerQuantity;
    
-   private java.lang.Integer discountedQuantity;
+   private Integer discountedQuantity;
    
-   private java.lang.Integer maxOccurrence;
+   private Integer maxOccurrence;
    
    private com.commercetools.models.cart_discount.SelectionMode selectionMode;
 
    @JsonCreator
-   MultiBuyLineItemsTargetImpl(@JsonProperty("predicate") final java.lang.String predicate, @JsonProperty("triggerQuantity") final java.lang.Integer triggerQuantity, @JsonProperty("discountedQuantity") final java.lang.Integer discountedQuantity, @JsonProperty("maxOccurrence") final java.lang.Integer maxOccurrence, @JsonProperty("selectionMode") final com.commercetools.models.cart_discount.SelectionMode selectionMode) {
+   MultiBuyLineItemsTargetImpl(@JsonProperty("predicate") final String predicate, @JsonProperty("triggerQuantity") final Integer triggerQuantity, @JsonProperty("discountedQuantity") final Integer discountedQuantity, @JsonProperty("maxOccurrence") final Integer maxOccurrence, @JsonProperty("selectionMode") final com.commercetools.models.cart_discount.SelectionMode selectionMode) {
       this.predicate = predicate;
       this.triggerQuantity = triggerQuantity;
       this.discountedQuantity = discountedQuantity;
@@ -51,35 +49,35 @@ public final class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarge
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    /**
    	<p>A valid line item target predicate. The discount will be applied to line items that are matched by the predicate.</p>
    */
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
    
    /**
    	<p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
    */
-   public java.lang.Integer getTriggerQuantity(){
+   public Integer getTriggerQuantity(){
       return this.triggerQuantity;
    }
    
    /**
    	<p>Quantity of line items that are discounted per application of this discount.</p>
    */
-   public java.lang.Integer getDiscountedQuantity(){
+   public Integer getDiscountedQuantity(){
       return this.discountedQuantity;
    }
    
    /**
    	<p>Maximum number of applications of this discount.</p>
    */
-   public java.lang.Integer getMaxOccurrence(){
+   public Integer getMaxOccurrence(){
       return this.maxOccurrence;
    }
    
@@ -88,19 +86,19 @@ public final class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarge
       return this.selectionMode;
    }
 
-   public void setPredicate(final java.lang.String predicate){
+   public void setPredicate(final String predicate){
       this.predicate = predicate;
    }
    
-   public void setTriggerQuantity(final java.lang.Integer triggerQuantity){
+   public void setTriggerQuantity(final Integer triggerQuantity){
       this.triggerQuantity = triggerQuantity;
    }
    
-   public void setDiscountedQuantity(final java.lang.Integer discountedQuantity){
+   public void setDiscountedQuantity(final Integer discountedQuantity){
       this.discountedQuantity = discountedQuantity;
    }
    
-   public void setMaxOccurrence(final java.lang.Integer maxOccurrence){
+   public void setMaxOccurrence(final Integer maxOccurrence){
       this.maxOccurrence = maxOccurrence;
    }
    

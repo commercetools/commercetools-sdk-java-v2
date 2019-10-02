@@ -4,8 +4,6 @@ import com.commercetools.models.common.Money;
 import com.commercetools.models.shipping_method.PriceFunction;
 import com.commercetools.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.models.shipping_method.ShippingRateTierType;
-import java.lang.Boolean;
-import java.lang.Integer;
 import com.commercetools.models.shipping_method.CartScoreTierImpl;
 
 import com.fasterxml.jackson.annotation.*;

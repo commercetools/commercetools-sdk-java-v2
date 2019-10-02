@@ -1,8 +1,7 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import com.commercetools.models.cart_discount.CartDiscountValue;
-import java.lang.String;
+import com.commercetools.models.cart_discount.CartDiscountValueDraft;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountChangeValueActionImpl implements CartDiscountChangeValueAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private com.commercetools.models.cart_discount.CartDiscountValue value;
+   private com.commercetools.models.cart_discount.CartDiscountValueDraft value;
 
    @JsonCreator
-   CartDiscountChangeValueActionImpl(@JsonProperty("value") final com.commercetools.models.cart_discount.CartDiscountValue value) {
+   CartDiscountChangeValueActionImpl(@JsonProperty("value") final com.commercetools.models.cart_discount.CartDiscountValueDraft value) {
       this.value = value;
       this.action = "changeValue";
    }
@@ -38,16 +37,16 @@ public final class CartDiscountChangeValueActionImpl implements CartDiscountChan
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public com.commercetools.models.cart_discount.CartDiscountValue getValue(){
+   public com.commercetools.models.cart_discount.CartDiscountValueDraft getValue(){
       return this.value;
    }
 
-   public void setValue(final com.commercetools.models.cart_discount.CartDiscountValue value){
+   public void setValue(final com.commercetools.models.cart_discount.CartDiscountValueDraft value){
       this.value = value;
    }
 

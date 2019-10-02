@@ -7,8 +7,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -35,19 +33,19 @@ public final class CartDiscountImpl implements CartDiscount {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private java.lang.Boolean requiresDiscountCode;
+   private Boolean requiresDiscountCode;
    
    private java.util.List<com.commercetools.models.common.Reference> references;
    
-   private java.lang.String cartPredicate;
+   private String cartPredicate;
    
    private com.commercetools.models.type.CustomFields custom;
    
@@ -55,13 +53,13 @@ public final class CartDiscountImpl implements CartDiscount {
    
    private java.time.ZonedDateTime validFrom;
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
    private com.commercetools.models.cart_discount.CartDiscountTarget target;
    
    private com.commercetools.models.cart_discount.StackingMode stackingMode;
    
-   private java.lang.String sortOrder;
+   private String sortOrder;
    
    private com.commercetools.models.common.LocalizedString name;
    
@@ -69,10 +67,10 @@ public final class CartDiscountImpl implements CartDiscount {
    
    private com.commercetools.models.cart_discount.CartDiscountValue value;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   CartDiscountImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("requiresDiscountCode") final java.lang.Boolean requiresDiscountCode, @JsonProperty("references") final java.util.List<com.commercetools.models.common.Reference> references, @JsonProperty("cartPredicate") final java.lang.String cartPredicate, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("isActive") final java.lang.Boolean isActive, @JsonProperty("target") final com.commercetools.models.cart_discount.CartDiscountTarget target, @JsonProperty("stackingMode") final com.commercetools.models.cart_discount.StackingMode stackingMode, @JsonProperty("sortOrder") final java.lang.String sortOrder, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("value") final com.commercetools.models.cart_discount.CartDiscountValue value, @JsonProperty("key") final java.lang.String key) {
+   CartDiscountImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode, @JsonProperty("references") final java.util.List<com.commercetools.models.common.Reference> references, @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("target") final com.commercetools.models.cart_discount.CartDiscountTarget target, @JsonProperty("stackingMode") final com.commercetools.models.cart_discount.StackingMode stackingMode, @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("value") final com.commercetools.models.cart_discount.CartDiscountValue value, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -109,12 +107,12 @@ public final class CartDiscountImpl implements CartDiscount {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -129,7 +127,7 @@ public final class CartDiscountImpl implements CartDiscount {
    }
    
    
-   public java.lang.Boolean getRequiresDiscountCode(){
+   public Boolean getRequiresDiscountCode(){
       return this.requiresDiscountCode;
    }
    
@@ -139,7 +137,7 @@ public final class CartDiscountImpl implements CartDiscount {
    }
    
    
-   public java.lang.String getCartPredicate(){
+   public String getCartPredicate(){
       return this.cartPredicate;
    }
    
@@ -159,7 +157,7 @@ public final class CartDiscountImpl implements CartDiscount {
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
@@ -177,7 +175,7 @@ public final class CartDiscountImpl implements CartDiscount {
    }
    
    
-   public java.lang.String getSortOrder(){
+   public String getSortOrder(){
       return this.sortOrder;
    }
    
@@ -197,7 +195,7 @@ public final class CartDiscountImpl implements CartDiscount {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -209,11 +207,11 @@ public final class CartDiscountImpl implements CartDiscount {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -225,7 +223,7 @@ public final class CartDiscountImpl implements CartDiscount {
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setRequiresDiscountCode(final java.lang.Boolean requiresDiscountCode){
+   public void setRequiresDiscountCode(final Boolean requiresDiscountCode){
       this.requiresDiscountCode = requiresDiscountCode;
    }
    
@@ -233,7 +231,7 @@ public final class CartDiscountImpl implements CartDiscount {
       this.references = references;
    }
    
-   public void setCartPredicate(final java.lang.String cartPredicate){
+   public void setCartPredicate(final String cartPredicate){
       this.cartPredicate = cartPredicate;
    }
    
@@ -249,7 +247,7 @@ public final class CartDiscountImpl implements CartDiscount {
       this.validFrom = validFrom;
    }
    
-   public void setIsActive(final java.lang.Boolean isActive){
+   public void setIsActive(final Boolean isActive){
       this.isActive = isActive;
    }
    
@@ -261,7 +259,7 @@ public final class CartDiscountImpl implements CartDiscount {
       this.stackingMode = stackingMode;
    }
    
-   public void setSortOrder(final java.lang.String sortOrder){
+   public void setSortOrder(final String sortOrder){
       this.sortOrder = sortOrder;
    }
    
@@ -277,7 +275,7 @@ public final class CartDiscountImpl implements CartDiscount {
       this.value = value;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

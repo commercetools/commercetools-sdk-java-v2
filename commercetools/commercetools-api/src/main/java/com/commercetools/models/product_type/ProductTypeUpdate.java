@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.product_type.ProductTypeUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

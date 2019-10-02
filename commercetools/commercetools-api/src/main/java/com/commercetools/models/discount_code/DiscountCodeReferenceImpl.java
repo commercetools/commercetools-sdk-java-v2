@@ -26,12 +26,12 @@ public final class DiscountCodeReferenceImpl implements DiscountCodeReference {
 
    private com.commercetools.models.common.ReferenceTypeId typeId;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.discount_code.DiscountCode obj;
 
    @JsonCreator
-   DiscountCodeReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.discount_code.DiscountCode obj) {
+   DiscountCodeReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.models.discount_code.DiscountCode obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("discount-code").get();
@@ -46,7 +46,7 @@ public final class DiscountCodeReferenceImpl implements DiscountCodeReference {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -55,7 +55,7 @@ public final class DiscountCodeReferenceImpl implements DiscountCodeReference {
       return this.obj;
    }
 
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

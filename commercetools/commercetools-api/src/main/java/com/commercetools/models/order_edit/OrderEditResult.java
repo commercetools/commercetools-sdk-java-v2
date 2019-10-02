@@ -4,7 +4,6 @@ import com.commercetools.models.order_edit.OrderEditApplied;
 import com.commercetools.models.order_edit.OrderEditNotProcessed;
 import com.commercetools.models.order_edit.OrderEditPreviewFailure;
 import com.commercetools.models.order_edit.OrderEditPreviewSuccess;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

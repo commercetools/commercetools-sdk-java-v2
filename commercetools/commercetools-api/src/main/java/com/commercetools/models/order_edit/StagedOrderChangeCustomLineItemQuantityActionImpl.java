@@ -1,8 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderChangeCustomLineItemQuantityActionImpl implements StagedOrderChangeCustomLineItemQuantityAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
 
    @JsonCreator
-   StagedOrderChangeCustomLineItemQuantityActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("quantity") final java.lang.Integer quantity) {
+   StagedOrderChangeCustomLineItemQuantityActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("quantity") final Integer quantity) {
       this.customLineItemId = customLineItemId;
       this.quantity = quantity;
       this.action = "changeCustomLineItemQuantity";
@@ -41,25 +39,25 @@ public final class StagedOrderChangeCustomLineItemQuantityActionImpl implements 
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
 
-   public void setCustomLineItemId(final java.lang.String customLineItemId){
+   public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
    
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
 

@@ -1,8 +1,7 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountUpdateAction;
-import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.String;
+import com.commercetools.models.product_discount.ProductDiscountValueDraft;
 import com.commercetools.models.product_discount.ProductDiscountChangeValueAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +11,15 @@ import java.time.ZonedDateTime;
 public final class ProductDiscountChangeValueActionBuilder {
    
    
-   private com.commercetools.models.product_discount.ProductDiscountValue value;
+   private com.commercetools.models.product_discount.ProductDiscountValueDraft value;
    
-   public ProductDiscountChangeValueActionBuilder value( final com.commercetools.models.product_discount.ProductDiscountValue value) {
+   public ProductDiscountChangeValueActionBuilder value( final com.commercetools.models.product_discount.ProductDiscountValueDraft value) {
       this.value = value;
       return this;
    }
    
    
-   public com.commercetools.models.product_discount.ProductDiscountValue getValue(){
+   public com.commercetools.models.product_discount.ProductDiscountValueDraft getValue(){
       return this.value;
    }
 

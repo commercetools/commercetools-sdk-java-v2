@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.ReturnPaymentState;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetReturnPaymentStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class StagedOrderSetReturnPaymentStateActionBuilder {
    
    
-   private java.lang.String returnItemId;
+   private String returnItemId;
    
    
    private com.commercetools.models.order.ReturnPaymentState paymentState;
    
-   public StagedOrderSetReturnPaymentStateActionBuilder returnItemId( final java.lang.String returnItemId) {
+   public StagedOrderSetReturnPaymentStateActionBuilder returnItemId( final String returnItemId) {
       this.returnItemId = returnItemId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class StagedOrderSetReturnPaymentStateActionBuilder {
    }
    
    
-   public java.lang.String getReturnItemId(){
+   public String getReturnItemId(){
       return this.returnItemId;
    }
    

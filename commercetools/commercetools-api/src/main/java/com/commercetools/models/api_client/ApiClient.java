@@ -1,6 +1,5 @@
 package com.commercetools.models.api_client;
 
-import java.lang.String;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import com.commercetools.models.api_client.ApiClientImpl;

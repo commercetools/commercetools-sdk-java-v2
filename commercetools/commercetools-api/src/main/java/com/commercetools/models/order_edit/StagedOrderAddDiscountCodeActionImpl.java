@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDiscountCodeAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String code;
+   private String code;
 
    @JsonCreator
-   StagedOrderAddDiscountCodeActionImpl(@JsonProperty("code") final java.lang.String code) {
+   StagedOrderAddDiscountCodeActionImpl(@JsonProperty("code") final String code) {
       this.code = code;
       this.action = "addDiscountCode";
    }
@@ -37,16 +36,16 @@ public final class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAd
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
 
-   public void setCode(final java.lang.String code){
+   public void setCode(final String code){
       this.code = code;
    }
 

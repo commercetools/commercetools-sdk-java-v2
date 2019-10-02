@@ -2,7 +2,6 @@ package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
 import java.time.ZonedDateTime;
 import com.commercetools.models.shopping_list.TextLineItemDraft;
 import javax.annotation.Nullable;
@@ -16,7 +15,7 @@ public final class TextLineItemDraftBuilder {
    private java.time.ZonedDateTime addedAt;
    
    @Nullable
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
@@ -32,7 +31,7 @@ public final class TextLineItemDraftBuilder {
       return this;
    }
    
-   public TextLineItemDraftBuilder quantity(@Nullable final java.lang.Integer quantity) {
+   public TextLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -58,7 +57,7 @@ public final class TextLineItemDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    

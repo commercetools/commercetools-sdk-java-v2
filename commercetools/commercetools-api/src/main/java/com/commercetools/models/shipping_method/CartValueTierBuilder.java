@@ -3,8 +3,6 @@ package com.commercetools.models.shipping_method;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.models.shipping_method.ShippingRateTierType;
-import java.lang.Boolean;
-import java.lang.Long;
 import com.commercetools.models.shipping_method.CartValueTier;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,15 +12,15 @@ import java.time.ZonedDateTime;
 public final class CartValueTierBuilder {
    
    
-   private java.lang.Long minimumCentAmount;
+   private Long minimumCentAmount;
    
    
    private com.commercetools.models.common.Money price;
    
    @Nullable
-   private java.lang.Boolean isMatching;
+   private Boolean isMatching;
    
-   public CartValueTierBuilder minimumCentAmount( final java.lang.Long minimumCentAmount) {
+   public CartValueTierBuilder minimumCentAmount( final Long minimumCentAmount) {
       this.minimumCentAmount = minimumCentAmount;
       return this;
    }
@@ -32,13 +30,13 @@ public final class CartValueTierBuilder {
       return this;
    }
    
-   public CartValueTierBuilder isMatching(@Nullable final java.lang.Boolean isMatching) {
+   public CartValueTierBuilder isMatching(@Nullable final Boolean isMatching) {
       this.isMatching = isMatching;
       return this;
    }
    
    
-   public java.lang.Long getMinimumCentAmount(){
+   public Long getMinimumCentAmount(){
       return this.minimumCentAmount;
    }
    
@@ -48,7 +46,7 @@ public final class CartValueTierBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getIsMatching(){
+   public Boolean getIsMatching(){
       return this.isMatching;
    }
 

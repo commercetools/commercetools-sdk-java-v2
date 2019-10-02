@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetCountryAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class StagedOrderSetCountryActionBuilder {
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
-   public StagedOrderSetCountryActionBuilder country(@Nullable final java.lang.String country) {
+   public StagedOrderSetCountryActionBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
 

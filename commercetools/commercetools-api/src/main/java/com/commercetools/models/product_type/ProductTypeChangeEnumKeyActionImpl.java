@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnumKeyAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String newKey;
+   private String newKey;
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ProductTypeChangeEnumKeyActionImpl(@JsonProperty("newKey") final java.lang.String newKey, @JsonProperty("attributeName") final java.lang.String attributeName, @JsonProperty("key") final java.lang.String key) {
+   ProductTypeChangeEnumKeyActionImpl(@JsonProperty("newKey") final String newKey, @JsonProperty("attributeName") final String attributeName, @JsonProperty("key") final String key) {
       this.newKey = newKey;
       this.attributeName = attributeName;
       this.key = key;
@@ -43,34 +42,34 @@ public final class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChan
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getNewKey(){
+   public String getNewKey(){
       return this.newKey;
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setNewKey(final java.lang.String newKey){
+   public void setNewKey(final String newKey){
       this.newKey = newKey;
    }
    
-   public void setAttributeName(final java.lang.String attributeName){
+   public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

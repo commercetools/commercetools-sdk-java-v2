@@ -3,8 +3,6 @@ package com.commercetools.models.shipping_method;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.models.shipping_method.ShippingRateTierType;
-import java.lang.Boolean;
-import java.lang.Long;
 import com.commercetools.models.shipping_method.CartValueTierImpl;
 
 import com.fasterxml.jackson.annotation.*;

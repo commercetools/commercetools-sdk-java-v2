@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.product_type.AttributeDefinition;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductType;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,10 +17,10 @@ public final class ProductTypeBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -30,16 +29,16 @@ public final class ProductTypeBuilder {
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.String name;
+   private String name;
    
    
-   private java.lang.String description;
+   private String description;
    
    @Nullable
    private java.util.List<com.commercetools.models.product_type.AttributeDefinition> attributes;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public ProductTypeBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -51,12 +50,12 @@ public final class ProductTypeBuilder {
       return this;
    }
    
-   public ProductTypeBuilder id( final java.lang.String id) {
+   public ProductTypeBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ProductTypeBuilder version( final java.lang.Long version) {
+   public ProductTypeBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -71,12 +70,12 @@ public final class ProductTypeBuilder {
       return this;
    }
    
-   public ProductTypeBuilder name( final java.lang.String name) {
+   public ProductTypeBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ProductTypeBuilder description( final java.lang.String description) {
+   public ProductTypeBuilder description( final String description) {
       this.description = description;
       return this;
    }
@@ -86,7 +85,7 @@ public final class ProductTypeBuilder {
       return this;
    }
    
-   public ProductTypeBuilder key(@Nullable final java.lang.String key) {
+   public ProductTypeBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -102,12 +101,12 @@ public final class ProductTypeBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -122,12 +121,12 @@ public final class ProductTypeBuilder {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
@@ -137,7 +136,7 @@ public final class ProductTypeBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

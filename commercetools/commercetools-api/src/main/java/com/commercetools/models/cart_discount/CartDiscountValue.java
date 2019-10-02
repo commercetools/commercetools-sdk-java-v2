@@ -3,7 +3,6 @@ package com.commercetools.models.cart_discount;
 import com.commercetools.models.cart_discount.CartDiscountValueAbsolute;
 import com.commercetools.models.cart_discount.CartDiscountValueGiftLineItem;
 import com.commercetools.models.cart_discount.CartDiscountValueRelative;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

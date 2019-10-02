@@ -2,7 +2,6 @@ package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingListSetTextLineItemDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class ShoppingListSetTextLineItemDescriptionActionBuilder {
    private com.commercetools.models.common.LocalizedString description;
    
    
-   private java.lang.String textLineItemId;
+   private String textLineItemId;
    
    public ShoppingListSetTextLineItemDescriptionActionBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
    
-   public ShoppingListSetTextLineItemDescriptionActionBuilder textLineItemId( final java.lang.String textLineItemId) {
+   public ShoppingListSetTextLineItemDescriptionActionBuilder textLineItemId( final String textLineItemId) {
       this.textLineItemId = textLineItemId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class ShoppingListSetTextLineItemDescriptionActionBuilder {
    }
    
    
-   public java.lang.String getTextLineItemId(){
+   public String getTextLineItemId(){
       return this.textLineItemId;
    }
 

@@ -4,7 +4,6 @@ import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.ParcelMeasurements;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddParcelToDeliveryAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
@@ -37,7 +36,7 @@ public final class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrd
    private com.commercetools.models.order.ParcelMeasurements measurements;
 
    @JsonCreator
-   StagedOrderAddParcelToDeliveryActionImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("trackingData") final com.commercetools.models.order.TrackingData trackingData, @JsonProperty("measurements") final com.commercetools.models.order.ParcelMeasurements measurements) {
+   StagedOrderAddParcelToDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("trackingData") final com.commercetools.models.order.TrackingData trackingData, @JsonProperty("measurements") final com.commercetools.models.order.ParcelMeasurements measurements) {
       this.deliveryId = deliveryId;
       this.items = items;
       this.trackingData = trackingData;
@@ -49,12 +48,12 @@ public final class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrd
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    
@@ -73,7 +72,7 @@ public final class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrd
       return this.measurements;
    }
 
-   public void setDeliveryId(final java.lang.String deliveryId){
+   public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
    

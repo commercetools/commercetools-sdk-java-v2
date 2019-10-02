@@ -1,7 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountTarget;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountCustomLineItemsTargetImpl implements CartDiscountCustomLineItemsTarget {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String predicate;
+   private String predicate;
 
    @JsonCreator
-   CartDiscountCustomLineItemsTargetImpl(@JsonProperty("predicate") final java.lang.String predicate) {
+   CartDiscountCustomLineItemsTargetImpl(@JsonProperty("predicate") final String predicate) {
       this.predicate = predicate;
       this.type = "customLineItems";
    }
@@ -37,16 +36,16 @@ public final class CartDiscountCustomLineItemsTargetImpl implements CartDiscount
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
 
-   public void setPredicate(final java.lang.String predicate){
+   public void setPredicate(final String predicate){
       this.predicate = predicate;
    }
 

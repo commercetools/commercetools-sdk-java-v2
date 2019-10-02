@@ -2,7 +2,6 @@ package com.commercetools.models.customer_group;
 
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import com.commercetools.models.customer_group.CustomerGroupImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,7 +1,6 @@
 package com.commercetools.models.customer_group;
 
 import com.commercetools.models.customer_group.CustomerGroup;
-import java.lang.Long;
 import com.commercetools.models.customer_group.CustomerGroupPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,29 +10,37 @@ import java.time.ZonedDateTime;
 public final class CustomerGroupPagedQueryResponseBuilder {
    
    @Nullable
-   private java.lang.Long total;
+   private Long total;
    
    
-   private java.lang.Long offset;
+   private Long offset;
    
    
-   private java.lang.Long count;
+   private Long count;
+   
+   
+   private Long limit;
    
    
    private java.util.List<com.commercetools.models.customer_group.CustomerGroup> results;
    
-   public CustomerGroupPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
+   public CustomerGroupPagedQueryResponseBuilder total(@Nullable final Long total) {
       this.total = total;
       return this;
    }
    
-   public CustomerGroupPagedQueryResponseBuilder offset( final java.lang.Long offset) {
+   public CustomerGroupPagedQueryResponseBuilder offset( final Long offset) {
       this.offset = offset;
       return this;
    }
    
-   public CustomerGroupPagedQueryResponseBuilder count( final java.lang.Long count) {
+   public CustomerGroupPagedQueryResponseBuilder count( final Long count) {
       this.count = count;
+      return this;
+   }
+   
+   public CustomerGroupPagedQueryResponseBuilder limit( final Long limit) {
+      this.limit = limit;
       return this;
    }
    
@@ -43,18 +50,23 @@ public final class CustomerGroupPagedQueryResponseBuilder {
    }
    
    @Nullable
-   public java.lang.Long getTotal(){
+   public Long getTotal(){
       return this.total;
    }
    
    
-   public java.lang.Long getOffset(){
+   public Long getOffset(){
       return this.offset;
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
+   }
+   
+   
+   public Long getLimit(){
+      return this.limit;
    }
    
    
@@ -63,7 +75,7 @@ public final class CustomerGroupPagedQueryResponseBuilder {
    }
 
    public CustomerGroupPagedQueryResponse build() {
-       return new CustomerGroupPagedQueryResponseImpl(total, offset, count, results);
+       return new CustomerGroupPagedQueryResponseImpl(total, offset, count, limit, results);
    }
    
    public static CustomerGroupPagedQueryResponseBuilder of() {
@@ -75,6 +87,7 @@ public final class CustomerGroupPagedQueryResponseBuilder {
       builder.total = template.getTotal();
       builder.offset = template.getOffset();
       builder.count = template.getCount();
+      builder.limit = template.getLimit();
       builder.results = template.getResults();
       return builder;
    }

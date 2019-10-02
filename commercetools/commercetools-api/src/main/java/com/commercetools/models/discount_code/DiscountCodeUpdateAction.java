@@ -13,7 +13,6 @@ import com.commercetools.models.discount_code.DiscountCodeSetNameAction;
 import com.commercetools.models.discount_code.DiscountCodeSetValidFromAction;
 import com.commercetools.models.discount_code.DiscountCodeSetValidFromAndUntilAction;
 import com.commercetools.models.discount_code.DiscountCodeSetValidUntilAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

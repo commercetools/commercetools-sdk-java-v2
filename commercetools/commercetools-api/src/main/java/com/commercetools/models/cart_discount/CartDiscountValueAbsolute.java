@@ -1,8 +1,7 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountValue;
-import com.commercetools.models.common.Money;
-import java.lang.String;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.cart_discount.CartDiscountValueAbsoluteImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -27,9 +26,9 @@ public interface CartDiscountValueAbsolute extends CartDiscountValue {
    @NotNull
    @Valid
    @JsonProperty("money")
-   public List<Money> getMoney();
+   public List<TypedMoney> getMoney();
 
-   public void setMoney(final List<Money> money);
+   public void setMoney(final List<TypedMoney> money);
    
    public static CartDiscountValueAbsoluteImpl of(){
       return new CartDiscountValueAbsoluteImpl();

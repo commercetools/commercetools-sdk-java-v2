@@ -1,10 +1,8 @@
 package com.commercetools.models.shipping_method;
 
-import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.shipping_method.ZoneRate;
 import com.commercetools.models.tax_category.TaxCategoryReference;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.shipping_method.ShippingMethod;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,28 +18,34 @@ public final class ShippingMethodBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
    private java.util.List<com.commercetools.models.shipping_method.ZoneRate> zoneRates;
    
    @Nullable
-   private java.lang.String predicate;
+   private String predicate;
    
    
-   private java.lang.Boolean isDefault;
+   private Boolean isDefault;
    
    
-   private java.lang.String name;
-   
-   @Nullable
-   private java.lang.String description;
+   private String name;
    
    @Nullable
-   private java.lang.String key;
+   private String description;
+   
+   @Nullable
+   private String key;
    
    
    private com.commercetools.models.tax_category.TaxCategoryReference taxCategory;
@@ -56,13 +60,23 @@ public final class ShippingMethodBuilder {
       return this;
    }
    
-   public ShippingMethodBuilder id( final java.lang.String id) {
+   public ShippingMethodBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ShippingMethodBuilder version( final java.lang.Long version) {
+   public ShippingMethodBuilder version( final Long version) {
       this.version = version;
+      return this;
+   }
+   
+   public ShippingMethodBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public ShippingMethodBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
       return this;
    }
    
@@ -71,27 +85,27 @@ public final class ShippingMethodBuilder {
       return this;
    }
    
-   public ShippingMethodBuilder predicate(@Nullable final java.lang.String predicate) {
+   public ShippingMethodBuilder predicate(@Nullable final String predicate) {
       this.predicate = predicate;
       return this;
    }
    
-   public ShippingMethodBuilder isDefault( final java.lang.Boolean isDefault) {
+   public ShippingMethodBuilder isDefault( final Boolean isDefault) {
       this.isDefault = isDefault;
       return this;
    }
    
-   public ShippingMethodBuilder name( final java.lang.String name) {
+   public ShippingMethodBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ShippingMethodBuilder description(@Nullable final java.lang.String description) {
+   public ShippingMethodBuilder description(@Nullable final String description) {
       this.description = description;
       return this;
    }
    
-   public ShippingMethodBuilder key(@Nullable final java.lang.String key) {
+   public ShippingMethodBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -112,13 +126,23 @@ public final class ShippingMethodBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
+   }
+   
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
    }
    
    
@@ -127,27 +151,27 @@ public final class ShippingMethodBuilder {
    }
    
    @Nullable
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
    
    
-   public java.lang.Boolean getIsDefault(){
+   public Boolean getIsDefault(){
       return this.isDefault;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -157,7 +181,7 @@ public final class ShippingMethodBuilder {
    }
 
    public ShippingMethod build() {
-       return new ShippingMethodImpl(createdAt, lastModifiedAt, id, version, zoneRates, predicate, isDefault, name, description, key, taxCategory);
+       return new ShippingMethodImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, zoneRates, predicate, isDefault, name, description, key, taxCategory);
    }
    
    public static ShippingMethodBuilder of() {
@@ -170,6 +194,8 @@ public final class ShippingMethodBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.zoneRates = template.getZoneRates();
       builder.predicate = template.getPredicate();
       builder.isDefault = template.getIsDefault();

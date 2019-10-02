@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeChangeLocalizedEnumValueOrderAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionBuilder {
    private java.util.List<com.commercetools.models.product_type.AttributeLocalizedEnumValue> values;
    
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
    public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values( final java.util.List<com.commercetools.models.product_type.AttributeLocalizedEnumValue> values) {
       this.values = values;
       return this;
    }
    
-   public ProductTypeChangeLocalizedEnumValueOrderActionBuilder attributeName( final java.lang.String attributeName) {
+   public ProductTypeChangeLocalizedEnumValueOrderActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
@@ -33,7 +32,7 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionBuilder {
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
 

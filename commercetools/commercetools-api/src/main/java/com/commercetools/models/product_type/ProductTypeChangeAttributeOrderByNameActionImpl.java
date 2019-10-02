@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeAttributeOrderByNameActionImpl implements ProductTypeChangeAttributeOrderByNameAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.util.List<java.lang.String> attributeNames;
+   private java.util.List<String> attributeNames;
 
    @JsonCreator
-   ProductTypeChangeAttributeOrderByNameActionImpl(@JsonProperty("attributeNames") final java.util.List<java.lang.String> attributeNames) {
+   ProductTypeChangeAttributeOrderByNameActionImpl(@JsonProperty("attributeNames") final java.util.List<String> attributeNames) {
       this.attributeNames = attributeNames;
       this.action = "changeAttributeOrderByName";
    }
@@ -37,16 +36,16 @@ public final class ProductTypeChangeAttributeOrderByNameActionImpl implements Pr
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.util.List<java.lang.String> getAttributeNames(){
+   public java.util.List<String> getAttributeNames(){
       return this.attributeNames;
    }
 
-   public void setAttributeNames(final java.util.List<java.lang.String> attributeNames){
+   public void setAttributeNames(final java.util.List<String> attributeNames){
       this.attributeNames = attributeNames;
    }
 

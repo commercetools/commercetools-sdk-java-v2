@@ -18,8 +18,8 @@ public class ByProjectKeyMeShoppingListsByIDRequestBuilder {
       return new ByProjectKeyMeShoppingListsByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyMeShoppingListsByIDPost post(com.commercetools.models.common.Update update) {
-      return new ByProjectKeyMeShoppingListsByIDPost(apiHttpClient, projectKey, ID, update);
+   public ByProjectKeyMeShoppingListsByIDPost post(com.commercetools.models.me.MyShoppingListUpdate myShoppingListUpdate) {
+      return new ByProjectKeyMeShoppingListsByIDPost(apiHttpClient, projectKey, ID, myShoppingListUpdate);
    }
    
    public ByProjectKeyMeShoppingListsByIDDelete delete() {

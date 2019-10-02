@@ -3,7 +3,6 @@ package com.commercetools.models.order_edit;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetCustomLineItemCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,7 +12,7 @@ import java.time.ZonedDateTime;
 public final class StagedOrderSetCustomLineItemCustomTypeActionBuilder {
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    @Nullable
    private com.commercetools.models.type.FieldContainer fields;
@@ -21,7 +20,7 @@ public final class StagedOrderSetCustomLineItemCustomTypeActionBuilder {
    @Nullable
    private com.commercetools.models.type.TypeResourceIdentifier type;
    
-   public StagedOrderSetCustomLineItemCustomTypeActionBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public StagedOrderSetCustomLineItemCustomTypeActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
@@ -37,7 +36,7 @@ public final class StagedOrderSetCustomLineItemCustomTypeActionBuilder {
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    

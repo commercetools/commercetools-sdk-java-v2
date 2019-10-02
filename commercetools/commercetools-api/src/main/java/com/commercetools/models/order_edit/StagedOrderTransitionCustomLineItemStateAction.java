@@ -2,8 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order_edit.StagedOrderTransitionCustomLineItemStateActionImpl;
 

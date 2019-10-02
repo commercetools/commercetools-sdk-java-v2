@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class ProductDiscountReferenceBuilder {
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private com.commercetools.models.product_discount.ProductDiscount obj;
    
-   public ProductDiscountReferenceBuilder id( final java.lang.String id) {
+   public ProductDiscountReferenceBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -28,7 +28,7 @@ public final class ProductDiscountReferenceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

@@ -26,12 +26,12 @@ public final class ShippingMethodReferenceImpl implements ShippingMethodReferenc
 
    private com.commercetools.models.common.ReferenceTypeId typeId;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.shipping_method.ShippingMethod obj;
 
    @JsonCreator
-   ShippingMethodReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.shipping_method.ShippingMethod obj) {
+   ShippingMethodReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.models.shipping_method.ShippingMethod obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("shipping-method").get();
@@ -46,7 +46,7 @@ public final class ShippingMethodReferenceImpl implements ShippingMethodReferenc
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -55,7 +55,7 @@ public final class ShippingMethodReferenceImpl implements ShippingMethodReferenc
       return this.obj;
    }
 
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.String;
 import com.commercetools.models.product_discount.ProductDiscountValueExternalImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategoryUpdateAction;
-import java.lang.String;
 import com.commercetools.models.tax_category.TaxCategoryRemoveTaxRateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class TaxCategoryRemoveTaxRateActionBuilder {
    
    
-   private java.lang.String taxRateId;
+   private String taxRateId;
    
-   public TaxCategoryRemoveTaxRateActionBuilder taxRateId( final java.lang.String taxRateId) {
+   public TaxCategoryRemoveTaxRateActionBuilder taxRateId( final String taxRateId) {
       this.taxRateId = taxRateId;
       return this;
    }
    
    
-   public java.lang.String getTaxRateId(){
+   public String getTaxRateId(){
       return this.taxRateId;
    }
 

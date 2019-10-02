@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeLocalizedEnumValueOrderActionImpl implements ProductTypeChangeLocalizedEnumValueOrderAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.util.List<com.commercetools.models.product_type.AttributeLocalizedEnumValue> values;
    
-   private java.lang.String attributeName;
+   private String attributeName;
 
    @JsonCreator
-   ProductTypeChangeLocalizedEnumValueOrderActionImpl(@JsonProperty("values") final java.util.List<com.commercetools.models.product_type.AttributeLocalizedEnumValue> values, @JsonProperty("attributeName") final java.lang.String attributeName) {
+   ProductTypeChangeLocalizedEnumValueOrderActionImpl(@JsonProperty("values") final java.util.List<com.commercetools.models.product_type.AttributeLocalizedEnumValue> values, @JsonProperty("attributeName") final String attributeName) {
       this.values = values;
       this.attributeName = attributeName;
       this.action = "changeLocalizedEnumValueOrder";
@@ -41,7 +40,7 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionImpl implements
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionImpl implements
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
 
@@ -59,7 +58,7 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionImpl implements
       this.values = values;
    }
    
-   public void setAttributeName(final java.lang.String attributeName){
+   public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
    }
 

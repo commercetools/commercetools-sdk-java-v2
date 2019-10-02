@@ -1,8 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountValue;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountValueRelative;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CartDiscountValueRelativeBuilder {
    
    
-   private java.lang.Long permyriad;
+   private Long permyriad;
    
-   public CartDiscountValueRelativeBuilder permyriad( final java.lang.Long permyriad) {
+   public CartDiscountValueRelativeBuilder permyriad( final Long permyriad) {
       this.permyriad = permyriad;
       return this;
    }
    
    
-   public java.lang.Long getPermyriad(){
+   public Long getPermyriad(){
       return this.permyriad;
    }
 

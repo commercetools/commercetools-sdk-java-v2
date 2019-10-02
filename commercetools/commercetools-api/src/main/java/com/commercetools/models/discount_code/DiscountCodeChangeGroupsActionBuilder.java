@@ -1,7 +1,6 @@
 package com.commercetools.models.discount_code;
 
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.discount_code.DiscountCodeChangeGroupsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class DiscountCodeChangeGroupsActionBuilder {
    
    
-   private java.util.List<java.lang.String> groups;
+   private java.util.List<String> groups;
    
-   public DiscountCodeChangeGroupsActionBuilder groups( final java.util.List<java.lang.String> groups) {
+   public DiscountCodeChangeGroupsActionBuilder groups( final java.util.List<String> groups) {
       this.groups = groups;
       return this;
    }
    
    
-   public java.util.List<java.lang.String> getGroups(){
+   public java.util.List<String> getGroups(){
       return this.groups;
    }
 

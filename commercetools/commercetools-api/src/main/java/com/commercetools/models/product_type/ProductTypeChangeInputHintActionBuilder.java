@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
 import com.commercetools.models.product_type.TextInputHint;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeChangeInputHintAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class ProductTypeChangeInputHintActionBuilder {
    private com.commercetools.models.product_type.TextInputHint newValue;
    
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
    public ProductTypeChangeInputHintActionBuilder newValue( final com.commercetools.models.product_type.TextInputHint newValue) {
       this.newValue = newValue;
       return this;
    }
    
-   public ProductTypeChangeInputHintActionBuilder attributeName( final java.lang.String attributeName) {
+   public ProductTypeChangeInputHintActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
@@ -33,7 +32,7 @@ public final class ProductTypeChangeInputHintActionBuilder {
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
 

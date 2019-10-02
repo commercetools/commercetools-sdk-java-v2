@@ -1,7 +1,6 @@
 package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.shipping_method.ShippingMethodUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class ShippingMethodUpdateBuilder {
    private java.util.List<com.commercetools.models.shipping_method.ShippingMethodUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public ShippingMethodUpdateBuilder actions( final java.util.List<com.commercetools.models.shipping_method.ShippingMethodUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public ShippingMethodUpdateBuilder version( final java.lang.Long version) {
+   public ShippingMethodUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class ShippingMethodUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

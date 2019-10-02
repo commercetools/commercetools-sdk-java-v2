@@ -1,8 +1,6 @@
 package com.commercetools.models.custom_object;
 
-import com.commercetools.models.common.BaseResource;
-import java.lang.Object;
-import java.lang.String;
+import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.custom_object.CustomObjectImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -21,7 +19,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = CustomObjectImpl.class)
-public interface CustomObject extends BaseResource {
+public interface CustomObject extends LoggedResource {
 
    
    @NotNull
@@ -53,6 +51,8 @@ public interface CustomObject extends BaseResource {
       instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setContainer(template.getContainer());
       instance.setValue(template.getValue());
       instance.setKey(template.getKey());

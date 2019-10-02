@@ -2,7 +2,6 @@ package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.customer.CustomerResourceIdentifier;
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingListSetCustomerAction;
 import javax.annotation.Nullable;
 import java.util.List;

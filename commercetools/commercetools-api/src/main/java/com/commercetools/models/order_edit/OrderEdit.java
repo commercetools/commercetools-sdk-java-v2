@@ -5,7 +5,6 @@ import com.commercetools.models.order.OrderReference;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.order_edit.OrderEditResult;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order_edit.OrderEditImpl;
 

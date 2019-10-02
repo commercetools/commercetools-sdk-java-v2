@@ -2,7 +2,6 @@ package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountTarget;
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountChangeTargetActionImpl implements CartDiscountChangeTargetAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart_discount.CartDiscountTarget target;
 
@@ -38,7 +37,7 @@ public final class CartDiscountChangeTargetActionImpl implements CartDiscountCha
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

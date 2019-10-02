@@ -2,7 +2,6 @@ package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
 import com.commercetools.models.zone.ZoneResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZoneAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.zone.ZoneResourceIdentifier zone;
 
@@ -38,7 +37,7 @@ public final class ShippingMethodRemoveZoneActionImpl implements ShippingMethodR
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

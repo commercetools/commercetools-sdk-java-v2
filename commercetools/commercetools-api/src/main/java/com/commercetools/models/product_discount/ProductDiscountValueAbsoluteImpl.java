@@ -1,8 +1,7 @@
 package com.commercetools.models.product_discount;
 
-import com.commercetools.models.common.Money;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountValueAbsoluteImpl implements ProductDiscountValueAbsolute {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.util.List<com.commercetools.models.common.Money> money;
+   private java.util.List<com.commercetools.models.common.TypedMoney> money;
 
    @JsonCreator
-   ProductDiscountValueAbsoluteImpl(@JsonProperty("money") final java.util.List<com.commercetools.models.common.Money> money) {
+   ProductDiscountValueAbsoluteImpl(@JsonProperty("money") final java.util.List<com.commercetools.models.common.TypedMoney> money) {
       this.money = money;
       this.type = "absolute";
    }
@@ -38,16 +37,16 @@ public final class ProductDiscountValueAbsoluteImpl implements ProductDiscountVa
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.util.List<com.commercetools.models.common.Money> getMoney(){
+   public java.util.List<com.commercetools.models.common.TypedMoney> getMoney(){
       return this.money;
    }
 
-   public void setMoney(final java.util.List<com.commercetools.models.common.Money> money){
+   public void setMoney(final java.util.List<com.commercetools.models.common.TypedMoney> money){
       this.money = money;
    }
 

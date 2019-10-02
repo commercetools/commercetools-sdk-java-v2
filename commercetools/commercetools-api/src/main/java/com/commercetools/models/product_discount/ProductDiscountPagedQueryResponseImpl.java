@@ -1,7 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscount;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,19 +22,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountPagedQueryResponseImpl implements ProductDiscountPagedQueryResponse {
 
-   private java.lang.Long total;
+   private Long total;
    
-   private java.lang.Long offset;
+   private Long offset;
    
-   private java.lang.Long count;
+   private Long count;
+   
+   private Long limit;
    
    private java.util.List<com.commercetools.models.product_discount.ProductDiscount> results;
 
    @JsonCreator
-   ProductDiscountPagedQueryResponseImpl(@JsonProperty("total") final java.lang.Long total, @JsonProperty("offset") final java.lang.Long offset, @JsonProperty("count") final java.lang.Long count, @JsonProperty("results") final java.util.List<com.commercetools.models.product_discount.ProductDiscount> results) {
+   ProductDiscountPagedQueryResponseImpl(@JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count, @JsonProperty("limit") final Long limit, @JsonProperty("results") final java.util.List<com.commercetools.models.product_discount.ProductDiscount> results) {
       this.total = total;
       this.offset = offset;
       this.count = count;
+      this.limit = limit;
       this.results = results;
    }
    public ProductDiscountPagedQueryResponseImpl() {
@@ -43,18 +45,23 @@ public final class ProductDiscountPagedQueryResponseImpl implements ProductDisco
    }
    
    
-   public java.lang.Long getTotal(){
+   public Long getTotal(){
       return this.total;
    }
    
    
-   public java.lang.Long getOffset(){
+   public Long getOffset(){
       return this.offset;
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
+   }
+   
+   
+   public Long getLimit(){
+      return this.limit;
    }
    
    
@@ -62,16 +69,20 @@ public final class ProductDiscountPagedQueryResponseImpl implements ProductDisco
       return this.results;
    }
 
-   public void setTotal(final java.lang.Long total){
+   public void setTotal(final Long total){
       this.total = total;
    }
    
-   public void setOffset(final java.lang.Long offset){
+   public void setOffset(final Long offset){
       this.offset = offset;
    }
    
-   public void setCount(final java.lang.Long count){
+   public void setCount(final Long count){
       this.count = count;
+   }
+   
+   public void setLimit(final Long limit){
+      this.limit = limit;
    }
    
    public void setResults(final java.util.List<com.commercetools.models.product_discount.ProductDiscount> results){

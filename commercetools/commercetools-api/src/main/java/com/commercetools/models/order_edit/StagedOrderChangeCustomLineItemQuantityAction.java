@@ -1,8 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderChangeCustomLineItemQuantityActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

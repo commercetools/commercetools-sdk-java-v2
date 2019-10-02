@@ -1,7 +1,6 @@
 package com.commercetools.models.discount_code;
 
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.discount_code.DiscountCodeSetCartPredicateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class DiscountCodeSetCartPredicateActionBuilder {
    
    @Nullable
-   private java.lang.String cartPredicate;
+   private String cartPredicate;
    
-   public DiscountCodeSetCartPredicateActionBuilder cartPredicate(@Nullable final java.lang.String cartPredicate) {
+   public DiscountCodeSetCartPredicateActionBuilder cartPredicate(@Nullable final String cartPredicate) {
       this.cartPredicate = cartPredicate;
       return this;
    }
    
    @Nullable
-   public java.lang.String getCartPredicate(){
+   public String getCartPredicate(){
       return this.cartPredicate;
    }
 

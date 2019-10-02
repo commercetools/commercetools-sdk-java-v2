@@ -1,7 +1,6 @@
 package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
-import java.lang.String;
 import com.commercetools.models.shipping_method.ShippingMethodSetPredicateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ShippingMethodSetPredicateActionBuilder {
    
    @Nullable
-   private java.lang.String predicate;
+   private String predicate;
    
-   public ShippingMethodSetPredicateActionBuilder predicate(@Nullable final java.lang.String predicate) {
+   public ShippingMethodSetPredicateActionBuilder predicate(@Nullable final String predicate) {
       this.predicate = predicate;
       return this;
    }
    
    @Nullable
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
 

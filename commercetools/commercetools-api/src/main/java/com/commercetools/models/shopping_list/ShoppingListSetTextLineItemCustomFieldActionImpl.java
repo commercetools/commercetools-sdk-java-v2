@@ -1,8 +1,6 @@
 package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListSetTextLineItemCustomFieldActionImpl implements ShoppingListSetTextLineItemCustomFieldAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.Object value;
+   private Object value;
    
-   private java.lang.String textLineItemId;
+   private String textLineItemId;
 
    @JsonCreator
-   ShoppingListSetTextLineItemCustomFieldActionImpl(@JsonProperty("name") final java.lang.String name, @JsonProperty("value") final java.lang.Object value, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
+   ShoppingListSetTextLineItemCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Object value, @JsonProperty("textLineItemId") final String textLineItemId) {
       this.name = name;
       this.value = value;
       this.textLineItemId = textLineItemId;
@@ -44,34 +42,34 @@ public final class ShoppingListSetTextLineItemCustomFieldActionImpl implements S
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
    
    
-   public java.lang.String getTextLineItemId(){
+   public String getTextLineItemId(){
       return this.textLineItemId;
    }
 
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setValue(final java.lang.Object value){
+   public void setValue(final Object value){
       this.value = value;
    }
    
-   public void setTextLineItemId(final java.lang.String textLineItemId){
+   public void setTextLineItemId(final String textLineItemId){
       this.textLineItemId = textLineItemId;
    }
 

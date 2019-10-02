@@ -1,7 +1,6 @@
 package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingListSetKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ShoppingListSetKeyActionBuilder {
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public ShoppingListSetKeyActionBuilder key(@Nullable final java.lang.String key) {
+   public ShoppingListSetKeyActionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

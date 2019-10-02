@@ -1,7 +1,6 @@
 package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodSetPredicateActionImpl implements ShippingMethodSetPredicateAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String predicate;
+   private String predicate;
 
    @JsonCreator
-   ShippingMethodSetPredicateActionImpl(@JsonProperty("predicate") final java.lang.String predicate) {
+   ShippingMethodSetPredicateActionImpl(@JsonProperty("predicate") final String predicate) {
       this.predicate = predicate;
       this.action = "setPredicate";
    }
@@ -37,16 +36,16 @@ public final class ShippingMethodSetPredicateActionImpl implements ShippingMetho
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
 
-   public void setPredicate(final java.lang.String predicate){
+   public void setPredicate(final String predicate){
       this.predicate = predicate;
    }
 

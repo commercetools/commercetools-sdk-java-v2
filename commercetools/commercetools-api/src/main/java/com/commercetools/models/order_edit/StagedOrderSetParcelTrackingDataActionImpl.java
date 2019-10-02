@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetParcelTrackingDataActionImpl implements StagedOrderSetParcelTrackingDataAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.order.TrackingData trackingData;
    
-   private java.lang.String parcelId;
+   private String parcelId;
 
    @JsonCreator
-   StagedOrderSetParcelTrackingDataActionImpl(@JsonProperty("trackingData") final com.commercetools.models.order.TrackingData trackingData, @JsonProperty("parcelId") final java.lang.String parcelId) {
+   StagedOrderSetParcelTrackingDataActionImpl(@JsonProperty("trackingData") final com.commercetools.models.order.TrackingData trackingData, @JsonProperty("parcelId") final String parcelId) {
       this.trackingData = trackingData;
       this.parcelId = parcelId;
       this.action = "setParcelTrackingData";
@@ -41,7 +40,7 @@ public final class StagedOrderSetParcelTrackingDataActionImpl implements StagedO
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class StagedOrderSetParcelTrackingDataActionImpl implements StagedO
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 
@@ -59,7 +58,7 @@ public final class StagedOrderSetParcelTrackingDataActionImpl implements StagedO
       this.trackingData = trackingData;
    }
    
-   public void setParcelId(final java.lang.String parcelId){
+   public void setParcelId(final String parcelId){
       this.parcelId = parcelId;
    }
 

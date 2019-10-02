@@ -1,7 +1,6 @@
 package com.commercetools.models.customer_group;
 
 import com.commercetools.models.customer_group.CustomerGroupUpdateAction;
-import java.lang.String;
 import com.commercetools.models.customer_group.CustomerGroupChangeNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CustomerGroupChangeNameActionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
-   public CustomerGroupChangeNameActionBuilder name( final java.lang.String name) {
+   public CustomerGroupChangeNameActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
 

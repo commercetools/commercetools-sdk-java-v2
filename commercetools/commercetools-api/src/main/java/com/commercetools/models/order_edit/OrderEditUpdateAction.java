@@ -6,7 +6,6 @@ import com.commercetools.models.order_edit.OrderEditSetCustomFieldAction;
 import com.commercetools.models.order_edit.OrderEditSetCustomTypeAction;
 import com.commercetools.models.order_edit.OrderEditSetKeyAction;
 import com.commercetools.models.order_edit.OrderEditSetStagedActionsAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

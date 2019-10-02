@@ -4,8 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.Boolean;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.product_discount.ProductDiscount;
 import javax.annotation.Nullable;
@@ -22,10 +20,10 @@ public final class ProductDiscountBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -34,13 +32,13 @@ public final class ProductDiscountBuilder {
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.String predicate;
+   private String predicate;
    
    
    private java.util.List<com.commercetools.models.common.Reference> references;
    
    
-   private java.lang.String sortOrder;
+   private String sortOrder;
    
    
    private com.commercetools.models.common.LocalizedString name;
@@ -55,13 +53,13 @@ public final class ProductDiscountBuilder {
    private java.time.ZonedDateTime validFrom;
    
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
    
    private com.commercetools.models.product_discount.ProductDiscountValue value;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public ProductDiscountBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -73,12 +71,12 @@ public final class ProductDiscountBuilder {
       return this;
    }
    
-   public ProductDiscountBuilder id( final java.lang.String id) {
+   public ProductDiscountBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ProductDiscountBuilder version( final java.lang.Long version) {
+   public ProductDiscountBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -93,7 +91,7 @@ public final class ProductDiscountBuilder {
       return this;
    }
    
-   public ProductDiscountBuilder predicate( final java.lang.String predicate) {
+   public ProductDiscountBuilder predicate( final String predicate) {
       this.predicate = predicate;
       return this;
    }
@@ -103,7 +101,7 @@ public final class ProductDiscountBuilder {
       return this;
    }
    
-   public ProductDiscountBuilder sortOrder( final java.lang.String sortOrder) {
+   public ProductDiscountBuilder sortOrder( final String sortOrder) {
       this.sortOrder = sortOrder;
       return this;
    }
@@ -128,7 +126,7 @@ public final class ProductDiscountBuilder {
       return this;
    }
    
-   public ProductDiscountBuilder isActive( final java.lang.Boolean isActive) {
+   public ProductDiscountBuilder isActive( final Boolean isActive) {
       this.isActive = isActive;
       return this;
    }
@@ -138,7 +136,7 @@ public final class ProductDiscountBuilder {
       return this;
    }
    
-   public ProductDiscountBuilder key(@Nullable final java.lang.String key) {
+   public ProductDiscountBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -154,12 +152,12 @@ public final class ProductDiscountBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -174,7 +172,7 @@ public final class ProductDiscountBuilder {
    }
    
    
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
    
@@ -184,7 +182,7 @@ public final class ProductDiscountBuilder {
    }
    
    
-   public java.lang.String getSortOrder(){
+   public String getSortOrder(){
       return this.sortOrder;
    }
    
@@ -209,7 +207,7 @@ public final class ProductDiscountBuilder {
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
@@ -219,7 +217,7 @@ public final class ProductDiscountBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_discount.ProductDiscountChangeSortOrderAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ProductDiscountChangeSortOrderActionBuilder {
    
    
-   private java.lang.String sortOrder;
+   private String sortOrder;
    
-   public ProductDiscountChangeSortOrderActionBuilder sortOrder( final java.lang.String sortOrder) {
+   public ProductDiscountChangeSortOrderActionBuilder sortOrder( final String sortOrder) {
       this.sortOrder = sortOrder;
       return this;
    }
    
    
-   public java.lang.String getSortOrder(){
+   public String getSortOrder(){
       return this.sortOrder;
    }
 

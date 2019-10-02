@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditResult;
 import com.commercetools.models.order_edit.OrderExcerpt;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditAppliedImpl implements OrderEditApplied {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.order_edit.OrderExcerpt excerptAfterEdit;
    
@@ -45,7 +44,7 @@ public final class OrderEditAppliedImpl implements OrderEditApplied {
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    

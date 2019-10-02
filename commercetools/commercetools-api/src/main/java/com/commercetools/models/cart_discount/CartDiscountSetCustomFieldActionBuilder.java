@@ -1,8 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountSetCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class CartDiscountSetCustomFieldActionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.Object value;
+   private Object value;
    
-   public CartDiscountSetCustomFieldActionBuilder name( final java.lang.String name) {
+   public CartDiscountSetCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public CartDiscountSetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
+   public CartDiscountSetCustomFieldActionBuilder value(@Nullable final Object value) {
       this.value = value;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 

@@ -1,8 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
 import com.commercetools.models.order_edit.OrderEditUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class OrderEditUpdateBuilder {
    
    
-   private java.lang.Boolean dryRun;
+   private Boolean dryRun;
    
    
    private java.util.List<com.commercetools.models.order_edit.OrderEditUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
-   public OrderEditUpdateBuilder dryRun( final java.lang.Boolean dryRun) {
+   public OrderEditUpdateBuilder dryRun( final Boolean dryRun) {
       this.dryRun = dryRun;
       return this;
    }
@@ -30,13 +28,13 @@ public final class OrderEditUpdateBuilder {
       return this;
    }
    
-   public OrderEditUpdateBuilder version( final java.lang.Long version) {
+   public OrderEditUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
    
-   public java.lang.Boolean getDryRun(){
+   public Boolean getDryRun(){
       return this.dryRun;
    }
    
@@ -46,7 +44,7 @@ public final class OrderEditUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

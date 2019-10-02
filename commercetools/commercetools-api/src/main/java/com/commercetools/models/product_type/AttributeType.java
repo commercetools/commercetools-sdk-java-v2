@@ -13,7 +13,6 @@ import com.commercetools.models.product_type.AttributeReferenceType;
 import com.commercetools.models.product_type.AttributeSetType;
 import com.commercetools.models.product_type.AttributeTextType;
 import com.commercetools.models.product_type.AttributeTimeType;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

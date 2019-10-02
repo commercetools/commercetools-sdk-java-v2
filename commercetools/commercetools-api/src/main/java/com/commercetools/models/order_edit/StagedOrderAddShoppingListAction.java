@@ -3,7 +3,6 @@ package com.commercetools.models.order_edit;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.shopping_list.ShoppingListResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderAddShoppingListActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -2,8 +2,6 @@ package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.shopping_list.TextLineItem;
 import javax.annotation.Nullable;
@@ -17,7 +15,7 @@ public final class TextLineItemBuilder {
    private java.time.ZonedDateTime addedAt;
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.type.CustomFields custom;
@@ -29,14 +27,14 @@ public final class TextLineItemBuilder {
    private com.commercetools.models.common.LocalizedString description;
    
    
-   private java.lang.String id;
+   private String id;
    
    public TextLineItemBuilder addedAt( final java.time.ZonedDateTime addedAt) {
       this.addedAt = addedAt;
       return this;
    }
    
-   public TextLineItemBuilder quantity( final java.lang.Integer quantity) {
+   public TextLineItemBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -56,7 +54,7 @@ public final class TextLineItemBuilder {
       return this;
    }
    
-   public TextLineItemBuilder id( final java.lang.String id) {
+   public TextLineItemBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -67,7 +65,7 @@ public final class TextLineItemBuilder {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -87,7 +85,7 @@ public final class TextLineItemBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
 

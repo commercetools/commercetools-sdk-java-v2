@@ -4,8 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product_type.AttributeConstraintEnum;
 import com.commercetools.models.product_type.AttributeType;
 import com.commercetools.models.product_type.TextInputHint;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product_type.AttributeDefinitionDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

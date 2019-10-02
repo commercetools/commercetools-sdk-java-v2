@@ -3,8 +3,6 @@ package com.commercetools.models.shipping_method;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.models.shipping_method.ShippingRateTierType;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -30,12 +28,12 @@ public final class CartClassificationTierImpl implements CartClassificationTier 
    
    private com.commercetools.models.common.Money price;
    
-   private java.lang.Boolean isMatching;
+   private Boolean isMatching;
    
-   private java.lang.String value;
+   private String value;
 
    @JsonCreator
-   CartClassificationTierImpl(@JsonProperty("price") final com.commercetools.models.common.Money price, @JsonProperty("isMatching") final java.lang.Boolean isMatching, @JsonProperty("value") final java.lang.String value) {
+   CartClassificationTierImpl(@JsonProperty("price") final com.commercetools.models.common.Money price, @JsonProperty("isMatching") final Boolean isMatching, @JsonProperty("value") final String value) {
       this.price = price;
       this.isMatching = isMatching;
       this.value = value;
@@ -56,12 +54,12 @@ public final class CartClassificationTierImpl implements CartClassificationTier 
    }
    
    
-   public java.lang.Boolean getIsMatching(){
+   public Boolean getIsMatching(){
       return this.isMatching;
    }
    
    
-   public java.lang.String getValue(){
+   public String getValue(){
       return this.value;
    }
 
@@ -69,11 +67,11 @@ public final class CartClassificationTierImpl implements CartClassificationTier 
       this.price = price;
    }
    
-   public void setIsMatching(final java.lang.Boolean isMatching){
+   public void setIsMatching(final Boolean isMatching){
       this.isMatching = isMatching;
    }
    
-   public void setValue(final java.lang.String value){
+   public void setValue(final String value){
       this.value = value;
    }
 

@@ -1,9 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.common.Price;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.product_discount.ProductDiscountMatchQueryImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,8 +1,7 @@
 package com.commercetools.models.product_discount;
 
-import com.commercetools.models.common.Money;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.String;
 import com.commercetools.models.product_discount.ProductDiscountValueAbsoluteImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -27,9 +26,9 @@ public interface ProductDiscountValueAbsolute extends ProductDiscountValue {
    @NotNull
    @Valid
    @JsonProperty("money")
-   public List<Money> getMoney();
+   public List<TypedMoney> getMoney();
 
-   public void setMoney(final List<Money> money);
+   public void setMoney(final List<TypedMoney> money);
    
    public static ProductDiscountValueAbsoluteImpl of(){
       return new ProductDiscountValueAbsoluteImpl();

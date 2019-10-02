@@ -2,7 +2,6 @@ package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategoryUpdateAction;
 import com.commercetools.models.tax_category.TaxRateDraft;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.tax_category.TaxRateDraft taxRate;
 
@@ -38,7 +37,7 @@ public final class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxR
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

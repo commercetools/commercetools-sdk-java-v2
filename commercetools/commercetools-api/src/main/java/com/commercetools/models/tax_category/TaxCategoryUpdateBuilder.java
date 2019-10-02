@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategoryUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.tax_category.TaxCategoryUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class TaxCategoryUpdateBuilder {
    private java.util.List<com.commercetools.models.tax_category.TaxCategoryUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public TaxCategoryUpdateBuilder actions( final java.util.List<com.commercetools.models.tax_category.TaxCategoryUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public TaxCategoryUpdateBuilder version( final java.lang.Long version) {
+   public TaxCategoryUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class TaxCategoryUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

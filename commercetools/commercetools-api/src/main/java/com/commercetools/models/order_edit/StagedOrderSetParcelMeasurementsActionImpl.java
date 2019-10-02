@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.ParcelMeasurements;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetParcelMeasurementsActionImpl implements StagedOrderSetParcelMeasurementsAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.order.ParcelMeasurements measurements;
    
-   private java.lang.String parcelId;
+   private String parcelId;
 
    @JsonCreator
-   StagedOrderSetParcelMeasurementsActionImpl(@JsonProperty("measurements") final com.commercetools.models.order.ParcelMeasurements measurements, @JsonProperty("parcelId") final java.lang.String parcelId) {
+   StagedOrderSetParcelMeasurementsActionImpl(@JsonProperty("measurements") final com.commercetools.models.order.ParcelMeasurements measurements, @JsonProperty("parcelId") final String parcelId) {
       this.measurements = measurements;
       this.parcelId = parcelId;
       this.action = "setParcelMeasurements";
@@ -41,7 +40,7 @@ public final class StagedOrderSetParcelMeasurementsActionImpl implements StagedO
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class StagedOrderSetParcelMeasurementsActionImpl implements StagedO
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 
@@ -59,7 +58,7 @@ public final class StagedOrderSetParcelMeasurementsActionImpl implements StagedO
       this.measurements = measurements;
    }
    
-   public void setParcelId(final java.lang.String parcelId){
+   public void setParcelId(final String parcelId){
       this.parcelId = parcelId;
    }
 

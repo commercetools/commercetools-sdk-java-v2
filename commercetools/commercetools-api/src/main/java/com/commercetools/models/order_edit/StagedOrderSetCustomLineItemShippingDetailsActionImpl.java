@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetCustomLineItemShippingDetailsActionImpl implements StagedOrderSetCustomLineItemShippingDetailsAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
 
    @JsonCreator
-   StagedOrderSetCustomLineItemShippingDetailsActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails) {
+   StagedOrderSetCustomLineItemShippingDetailsActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.customLineItemId = customLineItemId;
       this.shippingDetails = shippingDetails;
       this.action = "setCustomLineItemShippingDetails";
@@ -41,12 +40,12 @@ public final class StagedOrderSetCustomLineItemShippingDetailsActionImpl impleme
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
@@ -55,7 +54,7 @@ public final class StagedOrderSetCustomLineItemShippingDetailsActionImpl impleme
       return this.shippingDetails;
    }
 
-   public void setCustomLineItemId(final java.lang.String customLineItemId){
+   public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
    

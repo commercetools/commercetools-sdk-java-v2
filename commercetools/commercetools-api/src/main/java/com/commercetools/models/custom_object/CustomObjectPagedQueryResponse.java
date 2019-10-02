@@ -1,7 +1,6 @@
 package com.commercetools.models.custom_object;
 
 import com.commercetools.models.custom_object.CustomObject;
-import java.lang.Long;
 import com.commercetools.models.custom_object.CustomObjectPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -24,6 +23,10 @@ public interface CustomObjectPagedQueryResponse  {
 
    
    @NotNull
+   @JsonProperty("limit")
+   public Long getLimit();
+   
+   @NotNull
    @JsonProperty("count")
    public Long getCount();
    
@@ -40,6 +43,8 @@ public interface CustomObjectPagedQueryResponse  {
    @JsonProperty("results")
    public List<CustomObject> getResults();
 
+   public void setLimit(final Long limit);
+   
    public void setCount(final Long count);
    
    public void setTotal(final Long total);
@@ -58,6 +63,7 @@ public interface CustomObjectPagedQueryResponse  {
       instance.setTotal(template.getTotal());
       instance.setOffset(template.getOffset());
       instance.setCount(template.getCount());
+      instance.setLimit(template.getLimit());
       instance.setResults(template.getResults());
       return instance;
    }

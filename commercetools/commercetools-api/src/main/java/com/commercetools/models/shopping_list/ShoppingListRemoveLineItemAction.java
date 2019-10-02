@@ -1,8 +1,6 @@
 package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingListRemoveLineItemActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

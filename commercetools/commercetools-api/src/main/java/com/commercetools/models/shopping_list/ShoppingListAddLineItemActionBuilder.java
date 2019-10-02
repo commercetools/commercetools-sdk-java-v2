@@ -2,8 +2,6 @@ package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.shopping_list.ShoppingListAddLineItemAction;
 import javax.annotation.Nullable;
@@ -17,31 +15,31 @@ public final class ShoppingListAddLineItemActionBuilder {
    private java.time.ZonedDateTime addedAt;
    
    @Nullable
-   private java.lang.Long quantity;
+   private Long quantity;
    
    @Nullable
-   private java.lang.String productId;
+   private String productId;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    public ShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
       this.addedAt = addedAt;
       return this;
    }
    
-   public ShoppingListAddLineItemActionBuilder quantity(@Nullable final java.lang.Long quantity) {
+   public ShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public ShoppingListAddLineItemActionBuilder productId(@Nullable final java.lang.String productId) {
+   public ShoppingListAddLineItemActionBuilder productId(@Nullable final String productId) {
       this.productId = productId;
       return this;
    }
@@ -51,12 +49,12 @@ public final class ShoppingListAddLineItemActionBuilder {
       return this;
    }
    
-   public ShoppingListAddLineItemActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ShoppingListAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ShoppingListAddLineItemActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
@@ -67,12 +65,12 @@ public final class ShoppingListAddLineItemActionBuilder {
    }
    
    @Nullable
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    @Nullable
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -82,12 +80,12 @@ public final class ShoppingListAddLineItemActionBuilder {
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

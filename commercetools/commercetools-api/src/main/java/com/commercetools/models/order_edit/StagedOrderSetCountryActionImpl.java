@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetCountryActionImpl implements StagedOrderSetCountryAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String country;
+   private String country;
 
    @JsonCreator
-   StagedOrderSetCountryActionImpl(@JsonProperty("country") final java.lang.String country) {
+   StagedOrderSetCountryActionImpl(@JsonProperty("country") final String country) {
       this.country = country;
       this.action = "setCountry";
    }
@@ -37,16 +36,16 @@ public final class StagedOrderSetCountryActionImpl implements StagedOrderSetCoun
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
 
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
 

@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.cart.ExternalTaxRateDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetCustomLineItemTaxRateActionImpl implements StagedOrderSetCustomLineItemTaxRateAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
 
    @JsonCreator
-   StagedOrderSetCustomLineItemTaxRateActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
+   StagedOrderSetCustomLineItemTaxRateActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.customLineItemId = customLineItemId;
       this.externalTaxRate = externalTaxRate;
       this.action = "setCustomLineItemTaxRate";
@@ -41,12 +40,12 @@ public final class StagedOrderSetCustomLineItemTaxRateActionImpl implements Stag
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
@@ -55,7 +54,7 @@ public final class StagedOrderSetCustomLineItemTaxRateActionImpl implements Stag
       return this.externalTaxRate;
    }
 
-   public void setCustomLineItemId(final java.lang.String customLineItemId){
+   public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
    

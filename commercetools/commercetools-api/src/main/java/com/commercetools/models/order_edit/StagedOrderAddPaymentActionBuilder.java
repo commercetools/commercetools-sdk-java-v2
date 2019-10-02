@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.payment.PaymentResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderAddPaymentAction;
 import javax.annotation.Nullable;
 import java.util.List;

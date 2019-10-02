@@ -4,8 +4,6 @@ import com.commercetools.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderRemoveLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,13 +13,13 @@ import java.time.ZonedDateTime;
 public final class StagedOrderRemoveLineItemActionBuilder {
    
    @Nullable
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    @Nullable
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
@@ -29,7 +27,7 @@ public final class StagedOrderRemoveLineItemActionBuilder {
    @Nullable
    private com.commercetools.models.common.Money externalPrice;
    
-   public StagedOrderRemoveLineItemActionBuilder quantity(@Nullable final java.lang.Integer quantity) {
+   public StagedOrderRemoveLineItemActionBuilder quantity(@Nullable final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -39,7 +37,7 @@ public final class StagedOrderRemoveLineItemActionBuilder {
       return this;
    }
    
-   public StagedOrderRemoveLineItemActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public StagedOrderRemoveLineItemActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -55,7 +53,7 @@ public final class StagedOrderRemoveLineItemActionBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -65,7 +63,7 @@ public final class StagedOrderRemoveLineItemActionBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    

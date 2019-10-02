@@ -18,8 +18,8 @@ public class ByProjectKeyOrdersEditsKeyByKeyRequestBuilder {
       return new ByProjectKeyOrdersEditsKeyByKeyGet(apiHttpClient, projectKey, key);
    }
    
-   public ByProjectKeyOrdersEditsKeyByKeyPost post(com.commercetools.models.common.Update update) {
-      return new ByProjectKeyOrdersEditsKeyByKeyPost(apiHttpClient, projectKey, key, update);
+   public ByProjectKeyOrdersEditsKeyByKeyPost post(com.commercetools.models.order_edit.OrderEditUpdate orderEditUpdate) {
+      return new ByProjectKeyOrdersEditsKeyByKeyPost(apiHttpClient, projectKey, key, orderEditUpdate);
    }
    
    public ByProjectKeyOrdersEditsKeyByKeyDelete delete() {

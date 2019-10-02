@@ -21,7 +21,6 @@ import com.commercetools.models.product_type.ProductTypeRemoveAttributeDefinitio
 import com.commercetools.models.product_type.ProductTypeRemoveEnumValuesAction;
 import com.commercetools.models.product_type.ProductTypeSetInputTipAction;
 import com.commercetools.models.product_type.ProductTypeSetKeyAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

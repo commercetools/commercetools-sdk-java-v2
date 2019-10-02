@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeChangeAttributeNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class ProductTypeChangeAttributeNameActionBuilder {
    
    
-   private java.lang.String newAttributeName;
+   private String newAttributeName;
    
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
-   public ProductTypeChangeAttributeNameActionBuilder newAttributeName( final java.lang.String newAttributeName) {
+   public ProductTypeChangeAttributeNameActionBuilder newAttributeName( final String newAttributeName) {
       this.newAttributeName = newAttributeName;
       return this;
    }
    
-   public ProductTypeChangeAttributeNameActionBuilder attributeName( final java.lang.String attributeName) {
+   public ProductTypeChangeAttributeNameActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
    
    
-   public java.lang.String getNewAttributeName(){
+   public String getNewAttributeName(){
       return this.newAttributeName;
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
 

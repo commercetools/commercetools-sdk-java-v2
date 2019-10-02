@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class ShoppingListReferenceBuilder {
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private com.commercetools.models.shopping_list.ShoppingList obj;
    
-   public ShoppingListReferenceBuilder id( final java.lang.String id) {
+   public ShoppingListReferenceBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -28,7 +28,7 @@ public final class ShoppingListReferenceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

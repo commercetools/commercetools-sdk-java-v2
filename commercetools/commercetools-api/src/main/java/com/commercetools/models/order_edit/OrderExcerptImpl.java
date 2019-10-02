@@ -1,8 +1,7 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.cart.TaxedPrice;
-import com.commercetools.models.common.Money;
-import java.lang.Integer;
+import com.commercetools.models.common.TypedMoney;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderExcerptImpl implements OrderExcerpt {
 
-   private com.commercetools.models.common.Money totalPrice;
+   private com.commercetools.models.common.TypedMoney totalPrice;
    
    private com.commercetools.models.cart.TaxedPrice taxedPrice;
    
-   private java.lang.Integer version;
+   private Integer version;
 
    @JsonCreator
-   OrderExcerptImpl(@JsonProperty("totalPrice") final com.commercetools.models.common.Money totalPrice, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedPrice taxedPrice, @JsonProperty("version") final java.lang.Integer version) {
+   OrderExcerptImpl(@JsonProperty("totalPrice") final com.commercetools.models.common.TypedMoney totalPrice, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedPrice taxedPrice, @JsonProperty("version") final Integer version) {
       this.totalPrice = totalPrice;
       this.taxedPrice = taxedPrice;
       this.version = version;
@@ -41,7 +40,7 @@ public final class OrderExcerptImpl implements OrderExcerpt {
    }
    
    
-   public com.commercetools.models.common.Money getTotalPrice(){
+   public com.commercetools.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
    
@@ -51,11 +50,11 @@ public final class OrderExcerptImpl implements OrderExcerpt {
    }
    
    
-   public java.lang.Integer getVersion(){
+   public Integer getVersion(){
       return this.version;
    }
 
-   public void setTotalPrice(final com.commercetools.models.common.Money totalPrice){
+   public void setTotalPrice(final com.commercetools.models.common.TypedMoney totalPrice){
       this.totalPrice = totalPrice;
    }
    
@@ -63,7 +62,7 @@ public final class OrderExcerptImpl implements OrderExcerpt {
       this.taxedPrice = taxedPrice;
    }
    
-   public void setVersion(final java.lang.Integer version){
+   public void setVersion(final Integer version){
       this.version = version;
    }
 

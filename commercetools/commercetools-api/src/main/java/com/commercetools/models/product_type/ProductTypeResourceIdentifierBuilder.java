@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class ProductTypeResourceIdentifierBuilder {
    
    @Nullable
-   private java.lang.String id;
+   private String id;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public ProductTypeResourceIdentifierBuilder id(@Nullable final java.lang.String id) {
+   public ProductTypeResourceIdentifierBuilder id(@Nullable final String id) {
       this.id = id;
       return this;
    }
    
-   public ProductTypeResourceIdentifierBuilder key(@Nullable final java.lang.String key) {
+   public ProductTypeResourceIdentifierBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

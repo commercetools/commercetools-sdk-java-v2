@@ -2,8 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditUpdateAction;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.order_edit.OrderEditSetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class OrderEditSetCustomTypeActionBuilder {
    
    @Nullable
-   private java.lang.Object fields;
+   private Object fields;
    
    @Nullable
    private com.commercetools.models.type.TypeResourceIdentifier type;
    
-   public OrderEditSetCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {
+   public OrderEditSetCustomTypeActionBuilder fields(@Nullable final Object fields) {
       this.fields = fields;
       return this;
    }
@@ -29,7 +27,7 @@ public final class OrderEditSetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public java.lang.Object getFields(){
+   public Object getFields(){
       return this.fields;
    }
    

@@ -12,8 +12,8 @@ public class ByProjectKeyGraphqlRequestBuilder {
       this.projectKey = projectKey;
    }
    
-   public ByProjectKeyGraphqlPost post(java.lang.Object object) {
-      return new ByProjectKeyGraphqlPost(apiHttpClient, projectKey, object);
+   public ByProjectKeyGraphqlPost post(com.fasterxml.jackson.databind.JsonNode jsonNode) {
+      return new ByProjectKeyGraphqlPost(apiHttpClient, projectKey, jsonNode);
    }
    
 }

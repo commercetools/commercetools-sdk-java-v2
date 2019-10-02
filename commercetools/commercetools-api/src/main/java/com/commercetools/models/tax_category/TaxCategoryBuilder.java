@@ -2,7 +2,6 @@ package com.commercetools.models.tax_category;
 
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.tax_category.TaxRate;
-import java.lang.String;
 import com.commercetools.models.tax_category.TaxCategory;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,10 +17,10 @@ public final class TaxCategoryBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -33,13 +32,13 @@ public final class TaxCategoryBuilder {
    private java.util.List<com.commercetools.models.tax_category.TaxRate> rates;
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.String description;
+   private String description;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public TaxCategoryBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -51,12 +50,12 @@ public final class TaxCategoryBuilder {
       return this;
    }
    
-   public TaxCategoryBuilder id( final java.lang.String id) {
+   public TaxCategoryBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public TaxCategoryBuilder version( final java.lang.Long version) {
+   public TaxCategoryBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -76,17 +75,17 @@ public final class TaxCategoryBuilder {
       return this;
    }
    
-   public TaxCategoryBuilder name( final java.lang.String name) {
+   public TaxCategoryBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public TaxCategoryBuilder description(@Nullable final java.lang.String description) {
+   public TaxCategoryBuilder description(@Nullable final String description) {
       this.description = description;
       return this;
    }
    
-   public TaxCategoryBuilder key(@Nullable final java.lang.String key) {
+   public TaxCategoryBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -102,12 +101,12 @@ public final class TaxCategoryBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -127,17 +126,17 @@ public final class TaxCategoryBuilder {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

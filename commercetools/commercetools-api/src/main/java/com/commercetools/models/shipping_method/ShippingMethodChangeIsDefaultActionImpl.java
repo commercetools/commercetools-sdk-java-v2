@@ -1,8 +1,6 @@
 package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodChangeIsDefaultAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean isDefault;
+   private Boolean isDefault;
 
    @JsonCreator
-   ShippingMethodChangeIsDefaultActionImpl(@JsonProperty("isDefault") final java.lang.Boolean isDefault) {
+   ShippingMethodChangeIsDefaultActionImpl(@JsonProperty("isDefault") final Boolean isDefault) {
       this.isDefault = isDefault;
       this.action = "changeIsDefault";
    }
@@ -38,16 +36,16 @@ public final class ShippingMethodChangeIsDefaultActionImpl implements ShippingMe
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getIsDefault(){
+   public Boolean getIsDefault(){
       return this.isDefault;
    }
 
-   public void setIsDefault(final java.lang.Boolean isDefault){
+   public void setIsDefault(final Boolean isDefault){
       this.isDefault = isDefault;
    }
 

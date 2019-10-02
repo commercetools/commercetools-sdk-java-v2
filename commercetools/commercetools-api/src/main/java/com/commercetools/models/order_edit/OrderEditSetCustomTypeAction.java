@@ -2,8 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditUpdateAction;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.order_edit.OrderEditSetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

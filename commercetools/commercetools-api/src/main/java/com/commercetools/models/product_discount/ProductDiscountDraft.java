@@ -1,9 +1,7 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.common.LocalizedString;
-import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.Boolean;
-import java.lang.String;
+import com.commercetools.models.product_discount.ProductDiscountValueDraft;
 import java.time.ZonedDateTime;
 import com.commercetools.models.product_discount.ProductDiscountDraftImpl;
 
@@ -42,7 +40,7 @@ public interface ProductDiscountDraft  {
    @NotNull
    @Valid
    @JsonProperty("value")
-   public ProductDiscountValue getValue();
+   public ProductDiscountValueDraft getValue();
    
    @NotNull
    @JsonProperty("predicate")
@@ -70,7 +68,7 @@ public interface ProductDiscountDraft  {
    
    public void setDescription(final LocalizedString description);
    
-   public void setValue(final ProductDiscountValue value);
+   public void setValue(final ProductDiscountValueDraft value);
    
    public void setPredicate(final String predicate);
    

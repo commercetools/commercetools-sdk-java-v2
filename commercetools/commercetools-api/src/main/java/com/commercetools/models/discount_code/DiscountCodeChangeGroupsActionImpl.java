@@ -1,7 +1,6 @@
 package com.commercetools.models.discount_code;
 
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeChangeGroupsActionImpl implements DiscountCodeChangeGroupsAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.util.List<java.lang.String> groups;
+   private java.util.List<String> groups;
 
    @JsonCreator
-   DiscountCodeChangeGroupsActionImpl(@JsonProperty("groups") final java.util.List<java.lang.String> groups) {
+   DiscountCodeChangeGroupsActionImpl(@JsonProperty("groups") final java.util.List<String> groups) {
       this.groups = groups;
       this.action = "changeGroups";
    }
@@ -37,16 +36,16 @@ public final class DiscountCodeChangeGroupsActionImpl implements DiscountCodeCha
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.util.List<java.lang.String> getGroups(){
+   public java.util.List<String> getGroups(){
       return this.groups;
    }
 
-   public void setGroups(final java.util.List<java.lang.String> groups){
+   public void setGroups(final java.util.List<String> groups){
       this.groups = groups;
    }
 

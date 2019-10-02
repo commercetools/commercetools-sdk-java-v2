@@ -1,8 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountChangeIsActiveAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CartDiscountChangeIsActiveActionBuilder {
    
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
-   public CartDiscountChangeIsActiveActionBuilder isActive( final java.lang.Boolean isActive) {
+   public CartDiscountChangeIsActiveActionBuilder isActive( final Boolean isActive) {
       this.isActive = isActive;
       return this;
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
 

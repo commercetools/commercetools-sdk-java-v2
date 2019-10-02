@@ -1,7 +1,6 @@
 package com.commercetools.models.customer_group;
 
 import com.commercetools.models.customer_group.CustomerGroupUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.customer_group.CustomerGroupUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class CustomerGroupUpdateBuilder {
    private java.util.List<com.commercetools.models.customer_group.CustomerGroupUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public CustomerGroupUpdateBuilder actions( final java.util.List<com.commercetools.models.customer_group.CustomerGroupUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public CustomerGroupUpdateBuilder version( final java.lang.Long version) {
+   public CustomerGroupUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class CustomerGroupUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

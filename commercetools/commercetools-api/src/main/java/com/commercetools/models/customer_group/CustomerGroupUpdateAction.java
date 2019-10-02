@@ -4,7 +4,6 @@ import com.commercetools.models.customer_group.CustomerGroupChangeNameAction;
 import com.commercetools.models.customer_group.CustomerGroupSetCustomFieldAction;
 import com.commercetools.models.customer_group.CustomerGroupSetCustomTypeAction;
 import com.commercetools.models.customer_group.CustomerGroupSetKeyAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

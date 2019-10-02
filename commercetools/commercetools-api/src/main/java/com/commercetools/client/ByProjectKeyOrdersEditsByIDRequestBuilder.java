@@ -18,8 +18,8 @@ public class ByProjectKeyOrdersEditsByIDRequestBuilder {
       return new ByProjectKeyOrdersEditsByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyOrdersEditsByIDPost post(com.commercetools.models.common.Update update) {
-      return new ByProjectKeyOrdersEditsByIDPost(apiHttpClient, projectKey, ID, update);
+   public ByProjectKeyOrdersEditsByIDPost post(com.commercetools.models.order_edit.OrderEditUpdate orderEditUpdate) {
+      return new ByProjectKeyOrdersEditsByIDPost(apiHttpClient, projectKey, ID, orderEditUpdate);
    }
    
    public ByProjectKeyOrdersEditsByIDDelete delete() {

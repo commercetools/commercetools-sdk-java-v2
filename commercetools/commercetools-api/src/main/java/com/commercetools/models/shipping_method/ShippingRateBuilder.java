@@ -2,7 +2,6 @@ package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.shipping_method.ShippingRatePriceTier;
-import java.lang.Boolean;
 import com.commercetools.models.shipping_method.ShippingRate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -21,7 +20,7 @@ public final class ShippingRateBuilder {
    private com.commercetools.models.common.TypedMoney freeAbove;
    
    @Nullable
-   private java.lang.Boolean isMatching;
+   private Boolean isMatching;
    
    public ShippingRateBuilder tiers( final java.util.List<com.commercetools.models.shipping_method.ShippingRatePriceTier> tiers) {
       this.tiers = tiers;
@@ -38,7 +37,7 @@ public final class ShippingRateBuilder {
       return this;
    }
    
-   public ShippingRateBuilder isMatching(@Nullable final java.lang.Boolean isMatching) {
+   public ShippingRateBuilder isMatching(@Nullable final Boolean isMatching) {
       this.isMatching = isMatching;
       return this;
    }
@@ -59,7 +58,7 @@ public final class ShippingRateBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getIsMatching(){
+   public Boolean getIsMatching(){
       return this.isMatching;
    }
 

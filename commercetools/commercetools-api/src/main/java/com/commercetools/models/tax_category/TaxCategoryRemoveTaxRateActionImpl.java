@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategoryUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxRateAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String taxRateId;
+   private String taxRateId;
 
    @JsonCreator
-   TaxCategoryRemoveTaxRateActionImpl(@JsonProperty("taxRateId") final java.lang.String taxRateId) {
+   TaxCategoryRemoveTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId) {
       this.taxRateId = taxRateId;
       this.action = "removeTaxRate";
    }
@@ -37,16 +36,16 @@ public final class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemo
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getTaxRateId(){
+   public String getTaxRateId(){
       return this.taxRateId;
    }
 
-   public void setTaxRateId(final java.lang.String taxRateId){
+   public void setTaxRateId(final String taxRateId){
       this.taxRateId = taxRateId;
    }
 

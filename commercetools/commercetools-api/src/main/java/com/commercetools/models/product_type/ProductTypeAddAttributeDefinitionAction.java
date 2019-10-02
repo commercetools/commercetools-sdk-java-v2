@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeDefinitionDraft;
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeAddAttributeDefinitionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

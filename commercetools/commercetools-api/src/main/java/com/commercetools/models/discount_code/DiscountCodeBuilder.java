@@ -5,9 +5,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.discount_code.DiscountCode;
 import javax.annotation.Nullable;
@@ -24,10 +21,10 @@ public final class DiscountCodeBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -39,13 +36,13 @@ public final class DiscountCodeBuilder {
    private java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> cartDiscounts;
    
    
-   private java.lang.String code;
+   private String code;
    
    
    private java.util.List<com.commercetools.models.common.Reference> references;
    
    @Nullable
-   private java.lang.String cartPredicate;
+   private String cartPredicate;
    
    @Nullable
    private com.commercetools.models.type.CustomFields custom;
@@ -57,7 +54,7 @@ public final class DiscountCodeBuilder {
    private java.time.ZonedDateTime validUntil;
    
    
-   private java.util.List<java.lang.String> groups;
+   private java.util.List<String> groups;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString description;
@@ -66,13 +63,13 @@ public final class DiscountCodeBuilder {
    private java.time.ZonedDateTime validFrom;
    
    @Nullable
-   private java.lang.Long maxApplicationsPerCustomer;
+   private Long maxApplicationsPerCustomer;
    
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
    @Nullable
-   private java.lang.Long maxApplications;
+   private Long maxApplications;
    
    public DiscountCodeBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -84,12 +81,12 @@ public final class DiscountCodeBuilder {
       return this;
    }
    
-   public DiscountCodeBuilder id( final java.lang.String id) {
+   public DiscountCodeBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public DiscountCodeBuilder version( final java.lang.Long version) {
+   public DiscountCodeBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -109,7 +106,7 @@ public final class DiscountCodeBuilder {
       return this;
    }
    
-   public DiscountCodeBuilder code( final java.lang.String code) {
+   public DiscountCodeBuilder code( final String code) {
       this.code = code;
       return this;
    }
@@ -119,7 +116,7 @@ public final class DiscountCodeBuilder {
       return this;
    }
    
-   public DiscountCodeBuilder cartPredicate(@Nullable final java.lang.String cartPredicate) {
+   public DiscountCodeBuilder cartPredicate(@Nullable final String cartPredicate) {
       this.cartPredicate = cartPredicate;
       return this;
    }
@@ -139,7 +136,7 @@ public final class DiscountCodeBuilder {
       return this;
    }
    
-   public DiscountCodeBuilder groups( final java.util.List<java.lang.String> groups) {
+   public DiscountCodeBuilder groups( final java.util.List<String> groups) {
       this.groups = groups;
       return this;
    }
@@ -154,17 +151,17 @@ public final class DiscountCodeBuilder {
       return this;
    }
    
-   public DiscountCodeBuilder maxApplicationsPerCustomer(@Nullable final java.lang.Long maxApplicationsPerCustomer) {
+   public DiscountCodeBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
       this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
       return this;
    }
    
-   public DiscountCodeBuilder isActive( final java.lang.Boolean isActive) {
+   public DiscountCodeBuilder isActive( final Boolean isActive) {
       this.isActive = isActive;
       return this;
    }
    
-   public DiscountCodeBuilder maxApplications(@Nullable final java.lang.Long maxApplications) {
+   public DiscountCodeBuilder maxApplications(@Nullable final Long maxApplications) {
       this.maxApplications = maxApplications;
       return this;
    }
@@ -180,12 +177,12 @@ public final class DiscountCodeBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -205,7 +202,7 @@ public final class DiscountCodeBuilder {
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
@@ -215,7 +212,7 @@ public final class DiscountCodeBuilder {
    }
    
    @Nullable
-   public java.lang.String getCartPredicate(){
+   public String getCartPredicate(){
       return this.cartPredicate;
    }
    
@@ -235,7 +232,7 @@ public final class DiscountCodeBuilder {
    }
    
    
-   public java.util.List<java.lang.String> getGroups(){
+   public java.util.List<String> getGroups(){
       return this.groups;
    }
    
@@ -250,17 +247,17 @@ public final class DiscountCodeBuilder {
    }
    
    @Nullable
-   public java.lang.Long getMaxApplicationsPerCustomer(){
+   public Long getMaxApplicationsPerCustomer(){
       return this.maxApplicationsPerCustomer;
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
    @Nullable
-   public java.lang.Long getMaxApplications(){
+   public Long getMaxApplications(){
       return this.maxApplications;
    }
 

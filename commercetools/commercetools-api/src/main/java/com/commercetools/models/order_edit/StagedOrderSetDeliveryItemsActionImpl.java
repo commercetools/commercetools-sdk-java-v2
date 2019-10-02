@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeliveryItemsAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
 
    @JsonCreator
-   StagedOrderSetDeliveryItemsActionImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items) {
+   StagedOrderSetDeliveryItemsActionImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items) {
       this.deliveryId = deliveryId;
       this.items = items;
       this.action = "setDeliveryItems";
@@ -41,12 +40,12 @@ public final class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderS
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    
@@ -55,7 +54,7 @@ public final class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderS
       return this.items;
    }
 
-   public void setDeliveryId(final java.lang.String deliveryId){
+   public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
    

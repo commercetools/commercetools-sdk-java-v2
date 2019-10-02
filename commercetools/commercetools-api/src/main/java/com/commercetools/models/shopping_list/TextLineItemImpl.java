@@ -2,8 +2,6 @@ package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -28,7 +26,7 @@ public final class TextLineItemImpl implements TextLineItem {
 
    private java.time.ZonedDateTime addedAt;
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    private com.commercetools.models.type.CustomFields custom;
    
@@ -36,10 +34,10 @@ public final class TextLineItemImpl implements TextLineItem {
    
    private com.commercetools.models.common.LocalizedString description;
    
-   private java.lang.String id;
+   private String id;
 
    @JsonCreator
-   TextLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("id") final java.lang.String id) {
+   TextLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final Integer quantity, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("id") final String id) {
       this.addedAt = addedAt;
       this.quantity = quantity;
       this.custom = custom;
@@ -57,7 +55,7 @@ public final class TextLineItemImpl implements TextLineItem {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -77,7 +75,7 @@ public final class TextLineItemImpl implements TextLineItem {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
 
@@ -85,7 +83,7 @@ public final class TextLineItemImpl implements TextLineItem {
       this.addedAt = addedAt;
    }
    
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
    
@@ -101,7 +99,7 @@ public final class TextLineItemImpl implements TextLineItem {
       this.description = description;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
 

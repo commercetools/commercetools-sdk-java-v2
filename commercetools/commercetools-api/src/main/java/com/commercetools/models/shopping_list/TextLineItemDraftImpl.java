@@ -2,7 +2,6 @@ package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,7 +26,7 @@ public final class TextLineItemDraftImpl implements TextLineItemDraft {
 
    private java.time.ZonedDateTime addedAt;
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
@@ -36,7 +35,7 @@ public final class TextLineItemDraftImpl implements TextLineItemDraft {
    private com.commercetools.models.common.LocalizedString description;
 
    @JsonCreator
-   TextLineItemDraftImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description) {
+   TextLineItemDraftImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final Integer quantity, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description) {
       this.addedAt = addedAt;
       this.quantity = quantity;
       this.custom = custom;
@@ -53,7 +52,7 @@ public final class TextLineItemDraftImpl implements TextLineItemDraft {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -76,7 +75,7 @@ public final class TextLineItemDraftImpl implements TextLineItemDraft {
       this.addedAt = addedAt;
    }
    
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
    

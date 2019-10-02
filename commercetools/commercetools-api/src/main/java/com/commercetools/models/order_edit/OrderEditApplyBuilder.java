@@ -1,6 +1,6 @@
 package com.commercetools.models.order_edit;
 
-import java.lang.Integer;
+
 import com.commercetools.models.order_edit.OrderEditApply;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class OrderEditApplyBuilder {
    
    
-   private java.lang.Integer resourceVersion;
+   private Integer resourceVersion;
    
    
-   private java.lang.Integer editVersion;
+   private Integer editVersion;
    
-   public OrderEditApplyBuilder resourceVersion( final java.lang.Integer resourceVersion) {
+   public OrderEditApplyBuilder resourceVersion( final Integer resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public OrderEditApplyBuilder editVersion( final java.lang.Integer editVersion) {
+   public OrderEditApplyBuilder editVersion( final Integer editVersion) {
       this.editVersion = editVersion;
       return this;
    }
    
    
-   public java.lang.Integer getResourceVersion(){
+   public Integer getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.Integer getEditVersion(){
+   public Integer getEditVersion(){
       return this.editVersion;
    }
 

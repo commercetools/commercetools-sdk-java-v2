@@ -4,8 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product_type.AttributeConstraintEnum;
 import com.commercetools.models.product_type.AttributeType;
 import com.commercetools.models.product_type.TextInputHint;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product_type.AttributeDefinition;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,19 +13,19 @@ import java.time.ZonedDateTime;
 public final class AttributeDefinitionBuilder {
    
    
-   private java.lang.Boolean isRequired;
+   private Boolean isRequired;
    
    
    private com.commercetools.models.product_type.AttributeConstraintEnum attributeConstraint;
    
    
-   private java.lang.String name;
+   private String name;
    
    
    private com.commercetools.models.product_type.TextInputHint inputHint;
    
    
-   private java.lang.Boolean isSearchable;
+   private Boolean isSearchable;
    
    
    private com.commercetools.models.common.LocalizedString label;
@@ -38,7 +36,7 @@ public final class AttributeDefinitionBuilder {
    @Nullable
    private com.commercetools.models.common.LocalizedString inputTip;
    
-   public AttributeDefinitionBuilder isRequired( final java.lang.Boolean isRequired) {
+   public AttributeDefinitionBuilder isRequired( final Boolean isRequired) {
       this.isRequired = isRequired;
       return this;
    }
@@ -48,7 +46,7 @@ public final class AttributeDefinitionBuilder {
       return this;
    }
    
-   public AttributeDefinitionBuilder name( final java.lang.String name) {
+   public AttributeDefinitionBuilder name( final String name) {
       this.name = name;
       return this;
    }
@@ -58,7 +56,7 @@ public final class AttributeDefinitionBuilder {
       return this;
    }
    
-   public AttributeDefinitionBuilder isSearchable( final java.lang.Boolean isSearchable) {
+   public AttributeDefinitionBuilder isSearchable( final Boolean isSearchable) {
       this.isSearchable = isSearchable;
       return this;
    }
@@ -79,7 +77,7 @@ public final class AttributeDefinitionBuilder {
    }
    
    
-   public java.lang.Boolean getIsRequired(){
+   public Boolean getIsRequired(){
       return this.isRequired;
    }
    
@@ -89,7 +87,7 @@ public final class AttributeDefinitionBuilder {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
@@ -99,7 +97,7 @@ public final class AttributeDefinitionBuilder {
    }
    
    
-   public java.lang.Boolean getIsSearchable(){
+   public Boolean getIsSearchable(){
       return this.isSearchable;
    }
    

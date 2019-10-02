@@ -5,8 +5,6 @@ import com.commercetools.models.customer.CustomerResourceIdentifier;
 import com.commercetools.models.shopping_list.ShoppingListLineItemDraft;
 import com.commercetools.models.shopping_list.TextLineItemDraft;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingListDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

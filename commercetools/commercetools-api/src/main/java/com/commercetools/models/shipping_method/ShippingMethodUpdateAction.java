@@ -10,7 +10,6 @@ import com.commercetools.models.shipping_method.ShippingMethodRemoveZoneAction;
 import com.commercetools.models.shipping_method.ShippingMethodSetDescriptionAction;
 import com.commercetools.models.shipping_method.ShippingMethodSetKeyAction;
 import com.commercetools.models.shipping_method.ShippingMethodSetPredicateAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

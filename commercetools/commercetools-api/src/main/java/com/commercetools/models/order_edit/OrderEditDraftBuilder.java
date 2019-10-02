@@ -3,8 +3,6 @@ package com.commercetools.models.order_edit;
 import com.commercetools.models.order.OrderReference;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.order_edit.OrderEditDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,7 +12,7 @@ import java.time.ZonedDateTime;
 public final class OrderEditDraftBuilder {
    
    @Nullable
-   private java.lang.Boolean dryRun;
+   private Boolean dryRun;
    
    
    private com.commercetools.models.order.OrderReference resource;
@@ -23,15 +21,15 @@ public final class OrderEditDraftBuilder {
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private java.lang.String comment;
+   private String comment;
    
    @Nullable
    private java.util.List<com.commercetools.models.order.StagedOrderUpdateAction> stagedActions;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public OrderEditDraftBuilder dryRun(@Nullable final java.lang.Boolean dryRun) {
+   public OrderEditDraftBuilder dryRun(@Nullable final Boolean dryRun) {
       this.dryRun = dryRun;
       return this;
    }
@@ -46,7 +44,7 @@ public final class OrderEditDraftBuilder {
       return this;
    }
    
-   public OrderEditDraftBuilder comment(@Nullable final java.lang.String comment) {
+   public OrderEditDraftBuilder comment(@Nullable final String comment) {
       this.comment = comment;
       return this;
    }
@@ -56,13 +54,13 @@ public final class OrderEditDraftBuilder {
       return this;
    }
    
-   public OrderEditDraftBuilder key(@Nullable final java.lang.String key) {
+   public OrderEditDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.Boolean getDryRun(){
+   public Boolean getDryRun(){
       return this.dryRun;
    }
    
@@ -77,7 +75,7 @@ public final class OrderEditDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getComment(){
+   public String getComment(){
       return this.comment;
    }
    
@@ -87,7 +85,7 @@ public final class OrderEditDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

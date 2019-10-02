@@ -1,7 +1,6 @@
 package com.commercetools.models.discount_code;
 
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeSetValidFromActionImpl implements DiscountCodeSetValidFromAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.time.ZonedDateTime validFrom;
 
@@ -38,7 +37,7 @@ public final class DiscountCodeSetValidFromActionImpl implements DiscountCodeSet
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

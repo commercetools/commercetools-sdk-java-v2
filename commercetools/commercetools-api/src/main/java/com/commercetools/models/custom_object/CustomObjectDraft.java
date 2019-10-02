@@ -1,8 +1,6 @@
 package com.commercetools.models.custom_object;
 
-import java.lang.Long;
-import java.lang.Object;
-import java.lang.String;
+
 import com.commercetools.models.custom_object.CustomObjectDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

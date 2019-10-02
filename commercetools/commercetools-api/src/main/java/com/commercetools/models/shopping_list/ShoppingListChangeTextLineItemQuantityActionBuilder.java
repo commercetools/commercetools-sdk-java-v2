@@ -1,8 +1,6 @@
 package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingListChangeTextLineItemQuantityAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class ShoppingListChangeTextLineItemQuantityActionBuilder {
    
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
    
-   private java.lang.String textLineItemId;
+   private String textLineItemId;
    
-   public ShoppingListChangeTextLineItemQuantityActionBuilder quantity( final java.lang.Long quantity) {
+   public ShoppingListChangeTextLineItemQuantityActionBuilder quantity( final Long quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public ShoppingListChangeTextLineItemQuantityActionBuilder textLineItemId( final java.lang.String textLineItemId) {
+   public ShoppingListChangeTextLineItemQuantityActionBuilder textLineItemId( final String textLineItemId) {
       this.textLineItemId = textLineItemId;
       return this;
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getTextLineItemId(){
+   public String getTextLineItemId(){
       return this.textLineItemId;
    }
 

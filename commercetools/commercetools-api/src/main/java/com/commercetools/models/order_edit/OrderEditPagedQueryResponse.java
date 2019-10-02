@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEdit;
-import java.lang.Long;
 import com.commercetools.models.order_edit.OrderEditPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -24,6 +23,10 @@ public interface OrderEditPagedQueryResponse  {
 
    
    @NotNull
+   @JsonProperty("limit")
+   public Long getLimit();
+   
+   @NotNull
    @JsonProperty("count")
    public Long getCount();
    
@@ -40,6 +43,8 @@ public interface OrderEditPagedQueryResponse  {
    @JsonProperty("results")
    public List<OrderEdit> getResults();
 
+   public void setLimit(final Long limit);
+   
    public void setCount(final Long count);
    
    public void setTotal(final Long total);
@@ -58,6 +63,7 @@ public interface OrderEditPagedQueryResponse  {
       instance.setTotal(template.getTotal());
       instance.setOffset(template.getOffset());
       instance.setCount(template.getCount());
+      instance.setLimit(template.getLimit());
       instance.setResults(template.getResults());
       return instance;
    }

@@ -3,7 +3,6 @@ package com.commercetools.models.shopping_list;
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingListSetLineItemCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,7 +12,7 @@ import java.time.ZonedDateTime;
 public final class ShoppingListSetLineItemCustomTypeActionBuilder {
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    @Nullable
    private com.commercetools.models.type.FieldContainer fields;
@@ -21,7 +20,7 @@ public final class ShoppingListSetLineItemCustomTypeActionBuilder {
    @Nullable
    private com.commercetools.models.type.TypeResourceIdentifier type;
    
-   public ShoppingListSetLineItemCustomTypeActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public ShoppingListSetLineItemCustomTypeActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -37,7 +36,7 @@ public final class ShoppingListSetLineItemCustomTypeActionBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    

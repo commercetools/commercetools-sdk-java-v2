@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategoryUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxCategorySetDescriptionActionImpl implements TaxCategorySetDescriptionAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String description;
+   private String description;
 
    @JsonCreator
-   TaxCategorySetDescriptionActionImpl(@JsonProperty("description") final java.lang.String description) {
+   TaxCategorySetDescriptionActionImpl(@JsonProperty("description") final String description) {
       this.description = description;
       this.action = "setDescription";
    }
@@ -37,16 +36,16 @@ public final class TaxCategorySetDescriptionActionImpl implements TaxCategorySet
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
 
-   public void setDescription(final java.lang.String description){
+   public void setDescription(final String description){
       this.description = description;
    }
 

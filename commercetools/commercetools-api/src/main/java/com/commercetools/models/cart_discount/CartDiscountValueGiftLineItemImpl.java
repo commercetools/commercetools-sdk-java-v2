@@ -3,8 +3,6 @@ package com.commercetools.models.cart_discount;
 import com.commercetools.models.cart_discount.CartDiscountValue;
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.product.ProductReference;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,18 +24,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftLineItem {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.product.ProductReference product;
    
    private com.commercetools.models.channel.ChannelReference supplyChannel;
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
    private com.commercetools.models.channel.ChannelReference distributionChannel;
 
    @JsonCreator
-   CartDiscountValueGiftLineItemImpl(@JsonProperty("product") final com.commercetools.models.product.ProductReference product, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelReference supplyChannel, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelReference distributionChannel) {
+   CartDiscountValueGiftLineItemImpl(@JsonProperty("product") final com.commercetools.models.product.ProductReference product, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelReference supplyChannel, @JsonProperty("variantId") final Long variantId, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelReference distributionChannel) {
       this.product = product;
       this.supplyChannel = supplyChannel;
       this.variantId = variantId;
@@ -49,7 +47,7 @@ public final class CartDiscountValueGiftLineItemImpl implements CartDiscountValu
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -64,7 +62,7 @@ public final class CartDiscountValueGiftLineItemImpl implements CartDiscountValu
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
@@ -81,7 +79,7 @@ public final class CartDiscountValueGiftLineItemImpl implements CartDiscountValu
       this.supplyChannel = supplyChannel;
    }
    
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    

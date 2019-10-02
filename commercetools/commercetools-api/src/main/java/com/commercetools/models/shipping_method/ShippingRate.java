@@ -2,7 +2,6 @@ package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.shipping_method.ShippingRatePriceTier;
-import java.lang.Boolean;
 import com.commercetools.models.shipping_method.ShippingRateImpl;
 
 import com.fasterxml.jackson.annotation.*;

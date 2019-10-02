@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributePlainEnumValue;
 import com.commercetools.models.product_type.AttributeType;
-import java.lang.String;
 import com.commercetools.models.product_type.AttributeEnumTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -5,7 +5,6 @@ import com.commercetools.models.common.Address;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.shipping_method.ShippingRateDraft;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetShippingAddressAndCustomShippingMethodAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -24,7 +23,7 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionBui
    private com.commercetools.models.common.Address address;
    
    
-   private java.lang.String shippingMethodName;
+   private String shippingMethodName;
    
    @Nullable
    private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
@@ -44,7 +43,7 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionBui
       return this;
    }
    
-   public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingMethodName( final java.lang.String shippingMethodName) {
+   public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingMethodName( final String shippingMethodName) {
       this.shippingMethodName = shippingMethodName;
       return this;
    }
@@ -70,7 +69,7 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionBui
    }
    
    
-   public java.lang.String getShippingMethodName(){
+   public String getShippingMethodName(){
       return this.shippingMethodName;
    }
    

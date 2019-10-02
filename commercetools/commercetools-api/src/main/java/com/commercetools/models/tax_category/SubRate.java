@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
-import java.lang.Integer;
-import java.lang.String;
+
 import com.commercetools.models.tax_category.SubRateImpl;
 
 import com.fasterxml.jackson.annotation.*;

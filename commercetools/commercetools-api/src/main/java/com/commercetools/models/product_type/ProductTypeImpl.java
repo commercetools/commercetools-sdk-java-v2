@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.product_type.AttributeDefinition;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -28,24 +27,24 @@ public final class ProductTypeImpl implements ProductType {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.String description;
+   private String description;
    
    private java.util.List<com.commercetools.models.product_type.AttributeDefinition> attributes;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ProductTypeImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("name") final java.lang.String name, @JsonProperty("description") final java.lang.String description, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product_type.AttributeDefinition> attributes, @JsonProperty("key") final java.lang.String key) {
+   ProductTypeImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product_type.AttributeDefinition> attributes, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -72,12 +71,12 @@ public final class ProductTypeImpl implements ProductType {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -92,12 +91,12 @@ public final class ProductTypeImpl implements ProductType {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
@@ -107,7 +106,7 @@ public final class ProductTypeImpl implements ProductType {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -119,11 +118,11 @@ public final class ProductTypeImpl implements ProductType {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -135,11 +134,11 @@ public final class ProductTypeImpl implements ProductType {
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setDescription(final java.lang.String description){
+   public void setDescription(final String description){
       this.description = description;
    }
    
@@ -147,7 +146,7 @@ public final class ProductTypeImpl implements ProductType {
       this.attributes = attributes;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

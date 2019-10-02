@@ -1,8 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountChangeRequiresDiscountCodeActionImpl implements CartDiscountChangeRequiresDiscountCodeAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean requiresDiscountCode;
+   private Boolean requiresDiscountCode;
 
    @JsonCreator
-   CartDiscountChangeRequiresDiscountCodeActionImpl(@JsonProperty("requiresDiscountCode") final java.lang.Boolean requiresDiscountCode) {
+   CartDiscountChangeRequiresDiscountCodeActionImpl(@JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode) {
       this.requiresDiscountCode = requiresDiscountCode;
       this.action = "changeRequiresDiscountCode";
    }
@@ -38,16 +36,16 @@ public final class CartDiscountChangeRequiresDiscountCodeActionImpl implements C
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getRequiresDiscountCode(){
+   public Boolean getRequiresDiscountCode(){
       return this.requiresDiscountCode;
    }
 
-   public void setRequiresDiscountCode(final java.lang.Boolean requiresDiscountCode){
+   public void setRequiresDiscountCode(final Boolean requiresDiscountCode){
       this.requiresDiscountCode = requiresDiscountCode;
    }
 

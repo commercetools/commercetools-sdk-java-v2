@@ -5,7 +5,6 @@ import com.commercetools.models.order.OrderReference;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.order_edit.OrderEditResult;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -32,9 +31,9 @@ public final class OrderEditImpl implements OrderEdit {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
@@ -46,14 +45,14 @@ public final class OrderEditImpl implements OrderEdit {
    
    private com.commercetools.models.type.CustomFields custom;
    
-   private java.lang.String comment;
+   private String comment;
    
    private java.util.List<com.commercetools.models.order.StagedOrderUpdateAction> stagedActions;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   OrderEditImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("result") final com.commercetools.models.order_edit.OrderEditResult result, @JsonProperty("resource") final com.commercetools.models.order.OrderReference resource, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("comment") final java.lang.String comment, @JsonProperty("stagedActions") final java.util.List<com.commercetools.models.order.StagedOrderUpdateAction> stagedActions, @JsonProperty("key") final java.lang.String key) {
+   OrderEditImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("result") final com.commercetools.models.order_edit.OrderEditResult result, @JsonProperty("resource") final com.commercetools.models.order.OrderReference resource, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("comment") final String comment, @JsonProperty("stagedActions") final java.util.List<com.commercetools.models.order.StagedOrderUpdateAction> stagedActions, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -82,12 +81,12 @@ public final class OrderEditImpl implements OrderEdit {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -117,7 +116,7 @@ public final class OrderEditImpl implements OrderEdit {
    }
    
    
-   public java.lang.String getComment(){
+   public String getComment(){
       return this.comment;
    }
    
@@ -127,7 +126,7 @@ public final class OrderEditImpl implements OrderEdit {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -139,11 +138,11 @@ public final class OrderEditImpl implements OrderEdit {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -167,7 +166,7 @@ public final class OrderEditImpl implements OrderEdit {
       this.custom = custom;
    }
    
-   public void setComment(final java.lang.String comment){
+   public void setComment(final String comment){
       this.comment = comment;
    }
    
@@ -175,7 +174,7 @@ public final class OrderEditImpl implements OrderEdit {
       this.stagedActions = stagedActions;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

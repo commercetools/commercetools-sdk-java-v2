@@ -1,8 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountValueRelativeImpl implements ProductDiscountValueRelative {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.Long permyriad;
+   private Long permyriad;
 
    @JsonCreator
-   ProductDiscountValueRelativeImpl(@JsonProperty("permyriad") final java.lang.Long permyriad) {
+   ProductDiscountValueRelativeImpl(@JsonProperty("permyriad") final Long permyriad) {
       this.permyriad = permyriad;
       this.type = "relative";
    }
@@ -38,16 +36,16 @@ public final class ProductDiscountValueRelativeImpl implements ProductDiscountVa
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.Long getPermyriad(){
+   public Long getPermyriad(){
       return this.permyriad;
    }
 
-   public void setPermyriad(final java.lang.Long permyriad){
+   public void setPermyriad(final Long permyriad){
       this.permyriad = permyriad;
    }
 

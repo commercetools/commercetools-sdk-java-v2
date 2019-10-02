@@ -1,7 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountValueExternalImpl implements ProductDiscountValueExternal {
 
-   private java.lang.String type;
+   private String type;
 
    @JsonCreator
    ProductDiscountValueExternalImpl() {
@@ -32,7 +31,7 @@ public final class ProductDiscountValueExternalImpl implements ProductDiscountVa
    
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
 

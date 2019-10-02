@@ -3,7 +3,6 @@ package com.commercetools.models.discount_code;
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.discount_code.DiscountCodeSetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

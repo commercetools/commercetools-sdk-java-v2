@@ -1,7 +1,6 @@
 package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.shipping_method.ShippingMethodUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

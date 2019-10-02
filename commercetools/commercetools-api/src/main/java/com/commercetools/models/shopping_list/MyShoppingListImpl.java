@@ -6,8 +6,6 @@ import com.commercetools.models.customer.CustomerReference;
 import com.commercetools.models.shopping_list.ShoppingListLineItem;
 import com.commercetools.models.shopping_list.TextLineItem;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -33,9 +31,9 @@ public final class MyShoppingListImpl implements MyShoppingList {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
@@ -43,11 +41,11 @@ public final class MyShoppingListImpl implements MyShoppingList {
    
    private java.util.List<com.commercetools.models.shopping_list.ShoppingListLineItem> lineItems;
    
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    private java.util.List<com.commercetools.models.shopping_list.TextLineItem> textLineItems;
    
-   private java.lang.Long deleteDaysAfterLastModification;
+   private Long deleteDaysAfterLastModification;
    
    private com.commercetools.models.type.CustomFields custom;
    
@@ -57,12 +55,12 @@ public final class MyShoppingListImpl implements MyShoppingList {
    
    private com.commercetools.models.common.LocalizedString slug;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.customer.CustomerReference customer;
 
    @JsonCreator
-   MyShoppingListImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.shopping_list.ShoppingListLineItem> lineItems, @JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("textLineItems") final java.util.List<com.commercetools.models.shopping_list.TextLineItem> textLineItems, @JsonProperty("deleteDaysAfterLastModification") final java.lang.Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug, @JsonProperty("key") final java.lang.String key, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
+   MyShoppingListImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.shopping_list.ShoppingListLineItem> lineItems, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("textLineItems") final java.util.List<com.commercetools.models.shopping_list.TextLineItem> textLineItems, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -95,12 +93,12 @@ public final class MyShoppingListImpl implements MyShoppingList {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -120,7 +118,7 @@ public final class MyShoppingListImpl implements MyShoppingList {
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -130,7 +128,7 @@ public final class MyShoppingListImpl implements MyShoppingList {
    }
    
    
-   public java.lang.Long getDeleteDaysAfterLastModification(){
+   public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
@@ -155,7 +153,7 @@ public final class MyShoppingListImpl implements MyShoppingList {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -172,11 +170,11 @@ public final class MyShoppingListImpl implements MyShoppingList {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -192,7 +190,7 @@ public final class MyShoppingListImpl implements MyShoppingList {
       this.lineItems = lineItems;
    }
    
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
    
@@ -200,7 +198,7 @@ public final class MyShoppingListImpl implements MyShoppingList {
       this.textLineItems = textLineItems;
    }
    
-   public void setDeleteDaysAfterLastModification(final java.lang.Long deleteDaysAfterLastModification){
+   public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification){
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
    }
    
@@ -220,7 +218,7 @@ public final class MyShoppingListImpl implements MyShoppingList {
       this.slug = slug;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

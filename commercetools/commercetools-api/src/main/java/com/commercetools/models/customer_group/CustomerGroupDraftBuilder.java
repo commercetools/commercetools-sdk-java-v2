@@ -1,7 +1,6 @@
 package com.commercetools.models.customer_group;
 
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import com.commercetools.models.customer_group.CustomerGroupDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CustomerGroupDraftBuilder {
    
    
-   private java.lang.String groupName;
+   private String groupName;
    
    @Nullable
    private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public CustomerGroupDraftBuilder groupName( final java.lang.String groupName) {
+   public CustomerGroupDraftBuilder groupName( final String groupName) {
       this.groupName = groupName;
       return this;
    }
@@ -29,13 +28,13 @@ public final class CustomerGroupDraftBuilder {
       return this;
    }
    
-   public CustomerGroupDraftBuilder key(@Nullable final java.lang.String key) {
+   public CustomerGroupDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getGroupName(){
+   public String getGroupName(){
       return this.groupName;
    }
    
@@ -45,7 +44,7 @@ public final class CustomerGroupDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

@@ -3,7 +3,6 @@ package com.commercetools.models.shipping_method;
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
 import com.commercetools.models.shipping_method.ShippingRateDraft;
 import com.commercetools.models.zone.ZoneResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.shipping_method.ShippingMethodRemoveShippingRateAction;
 import javax.annotation.Nullable;
 import java.util.List;

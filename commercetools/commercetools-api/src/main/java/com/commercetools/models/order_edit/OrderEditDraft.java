@@ -3,8 +3,6 @@ package com.commercetools.models.order_edit;
 import com.commercetools.models.order.OrderReference;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.order_edit.OrderEditDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

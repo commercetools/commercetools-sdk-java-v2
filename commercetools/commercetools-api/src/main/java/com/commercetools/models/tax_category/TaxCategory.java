@@ -2,7 +2,6 @@ package com.commercetools.models.tax_category;
 
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.tax_category.TaxRate;
-import java.lang.String;
 import com.commercetools.models.tax_category.TaxCategoryImpl;
 
 import com.fasterxml.jackson.annotation.*;

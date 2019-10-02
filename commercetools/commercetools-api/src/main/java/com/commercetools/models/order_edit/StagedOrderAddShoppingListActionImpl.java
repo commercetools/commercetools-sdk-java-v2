@@ -3,7 +3,6 @@ package com.commercetools.models.order_edit;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.shopping_list.ShoppingListResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderAddShoppingListActionImpl implements StagedOrderAddShoppingListAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
    
@@ -45,7 +44,7 @@ public final class StagedOrderAddShoppingListActionImpl implements StagedOrderAd
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

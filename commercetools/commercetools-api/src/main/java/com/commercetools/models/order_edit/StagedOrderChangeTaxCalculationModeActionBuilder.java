@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.cart.TaxCalculationMode;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderChangeTaxCalculationModeAction;
 import javax.annotation.Nullable;
 import java.util.List;

@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeChangeAttributeOrderByNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ProductTypeChangeAttributeOrderByNameActionBuilder {
    
    
-   private java.util.List<java.lang.String> attributeNames;
+   private java.util.List<String> attributeNames;
    
-   public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames( final java.util.List<java.lang.String> attributeNames) {
+   public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames( final java.util.List<String> attributeNames) {
       this.attributeNames = attributeNames;
       return this;
    }
    
    
-   public java.util.List<java.lang.String> getAttributeNames(){
+   public java.util.List<String> getAttributeNames(){
       return this.attributeNames;
    }
 

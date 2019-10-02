@@ -3,9 +3,6 @@ package com.commercetools.models.discount_code;
 import com.commercetools.models.cart_discount.CartDiscountResourceIdentifier;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -30,9 +27,9 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
 
    private java.util.List<com.commercetools.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
    
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String cartPredicate;
+   private String cartPredicate;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
@@ -40,20 +37,20 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
    
    private java.time.ZonedDateTime validUntil;
    
-   private java.util.List<java.lang.String> groups;
+   private java.util.List<String> groups;
    
    private com.commercetools.models.common.LocalizedString description;
    
    private java.time.ZonedDateTime validFrom;
    
-   private java.lang.Long maxApplicationsPerCustomer;
+   private Long maxApplicationsPerCustomer;
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
-   private java.lang.Long maxApplications;
+   private Long maxApplications;
 
    @JsonCreator
-   DiscountCodeDraftImpl(@JsonProperty("cartDiscounts") final java.util.List<com.commercetools.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts, @JsonProperty("code") final java.lang.String code, @JsonProperty("cartPredicate") final java.lang.String cartPredicate, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("groups") final java.util.List<java.lang.String> groups, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("maxApplicationsPerCustomer") final java.lang.Long maxApplicationsPerCustomer, @JsonProperty("isActive") final java.lang.Boolean isActive, @JsonProperty("maxApplications") final java.lang.Long maxApplications) {
+   DiscountCodeDraftImpl(@JsonProperty("cartDiscounts") final java.util.List<com.commercetools.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts, @JsonProperty("code") final String code, @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("groups") final java.util.List<String> groups, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("maxApplicationsPerCustomer") final Long maxApplicationsPerCustomer, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("maxApplications") final Long maxApplications) {
       this.cartDiscounts = cartDiscounts;
       this.code = code;
       this.cartPredicate = cartPredicate;
@@ -77,12 +74,12 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getCartPredicate(){
+   public String getCartPredicate(){
       return this.cartPredicate;
    }
    
@@ -102,7 +99,7 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
    }
    
    
-   public java.util.List<java.lang.String> getGroups(){
+   public java.util.List<String> getGroups(){
       return this.groups;
    }
    
@@ -117,17 +114,17 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
    }
    
    
-   public java.lang.Long getMaxApplicationsPerCustomer(){
+   public Long getMaxApplicationsPerCustomer(){
       return this.maxApplicationsPerCustomer;
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
    
-   public java.lang.Long getMaxApplications(){
+   public Long getMaxApplications(){
       return this.maxApplications;
    }
 
@@ -135,11 +132,11 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
       this.cartDiscounts = cartDiscounts;
    }
    
-   public void setCode(final java.lang.String code){
+   public void setCode(final String code){
       this.code = code;
    }
    
-   public void setCartPredicate(final java.lang.String cartPredicate){
+   public void setCartPredicate(final String cartPredicate){
       this.cartPredicate = cartPredicate;
    }
    
@@ -155,7 +152,7 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
       this.validUntil = validUntil;
    }
    
-   public void setGroups(final java.util.List<java.lang.String> groups){
+   public void setGroups(final java.util.List<String> groups){
       this.groups = groups;
    }
    
@@ -167,15 +164,15 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
       this.validFrom = validFrom;
    }
    
-   public void setMaxApplicationsPerCustomer(final java.lang.Long maxApplicationsPerCustomer){
+   public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer){
       this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
    }
    
-   public void setIsActive(final java.lang.Boolean isActive){
+   public void setIsActive(final Boolean isActive){
       this.isActive = isActive;
    }
    
-   public void setMaxApplications(final java.lang.Long maxApplications){
+   public void setMaxApplications(final Long maxApplications){
       this.maxApplications = maxApplications;
    }
 

@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAddLocalizedEnumValueAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
    private com.commercetools.models.product_type.AttributeLocalizedEnumValue value;
 
    @JsonCreator
-   ProductTypeAddLocalizedEnumValueActionImpl(@JsonProperty("attributeName") final java.lang.String attributeName, @JsonProperty("value") final com.commercetools.models.product_type.AttributeLocalizedEnumValue value) {
+   ProductTypeAddLocalizedEnumValueActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("value") final com.commercetools.models.product_type.AttributeLocalizedEnumValue value) {
       this.attributeName = attributeName;
       this.value = value;
       this.action = "addLocalizedEnumValue";
@@ -41,12 +40,12 @@ public final class ProductTypeAddLocalizedEnumValueActionImpl implements Product
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
    
@@ -55,7 +54,7 @@ public final class ProductTypeAddLocalizedEnumValueActionImpl implements Product
       return this.value;
    }
 
-   public void setAttributeName(final java.lang.String attributeName){
+   public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
    }
    

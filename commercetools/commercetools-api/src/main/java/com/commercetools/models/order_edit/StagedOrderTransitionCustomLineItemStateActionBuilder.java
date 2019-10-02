@@ -2,8 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order_edit.StagedOrderTransitionCustomLineItemStateAction;
 import javax.annotation.Nullable;
@@ -20,10 +18,10 @@ public final class StagedOrderTransitionCustomLineItemStateActionBuilder {
    private com.commercetools.models.state.StateResourceIdentifier fromState;
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
    @Nullable
    private java.time.ZonedDateTime actualTransitionDate;
@@ -38,12 +36,12 @@ public final class StagedOrderTransitionCustomLineItemStateActionBuilder {
       return this;
    }
    
-   public StagedOrderTransitionCustomLineItemStateActionBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public StagedOrderTransitionCustomLineItemStateActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public StagedOrderTransitionCustomLineItemStateActionBuilder quantity( final java.lang.Long quantity) {
+   public StagedOrderTransitionCustomLineItemStateActionBuilder quantity( final Long quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -64,12 +62,12 @@ public final class StagedOrderTransitionCustomLineItemStateActionBuilder {
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    

@@ -1,6 +1,5 @@
 package com.commercetools.models.api_client;
 
-import java.lang.String;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
@@ -30,16 +29,16 @@ public final class ApiClientImpl implements ApiClient {
    
    private java.time.LocalDate lastUsedAt;
    
-   private java.lang.String scope;
+   private String scope;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.String secret;
+   private String secret;
    
-   private java.lang.String id;
+   private String id;
 
    @JsonCreator
-   ApiClientImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("deleteAt") final java.time.ZonedDateTime deleteAt, @JsonProperty("lastUsedAt") final java.time.LocalDate lastUsedAt, @JsonProperty("scope") final java.lang.String scope, @JsonProperty("name") final java.lang.String name, @JsonProperty("secret") final java.lang.String secret, @JsonProperty("id") final java.lang.String id) {
+   ApiClientImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("deleteAt") final java.time.ZonedDateTime deleteAt, @JsonProperty("lastUsedAt") final java.time.LocalDate lastUsedAt, @JsonProperty("scope") final String scope, @JsonProperty("name") final String name, @JsonProperty("secret") final String secret, @JsonProperty("id") final String id) {
       this.createdAt = createdAt;
       this.deleteAt = deleteAt;
       this.lastUsedAt = lastUsedAt;
@@ -68,22 +67,22 @@ public final class ApiClientImpl implements ApiClient {
    }
    
    
-   public java.lang.String getScope(){
+   public String getScope(){
       return this.scope;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.String getSecret(){
+   public String getSecret(){
       return this.secret;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
 
@@ -99,19 +98,19 @@ public final class ApiClientImpl implements ApiClient {
       this.lastUsedAt = lastUsedAt;
    }
    
-   public void setScope(final java.lang.String scope){
+   public void setScope(final String scope){
       this.scope = scope;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setSecret(final java.lang.String secret){
+   public void setSecret(final String secret){
       this.secret = secret;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
 

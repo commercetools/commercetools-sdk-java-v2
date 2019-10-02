@@ -1,8 +1,6 @@
 package com.commercetools.models.discount_code;
 
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeSetMaxApplicationsPerCustomerActionImpl implements DiscountCodeSetMaxApplicationsPerCustomerAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Long maxApplicationsPerCustomer;
+   private Long maxApplicationsPerCustomer;
 
    @JsonCreator
-   DiscountCodeSetMaxApplicationsPerCustomerActionImpl(@JsonProperty("maxApplicationsPerCustomer") final java.lang.Long maxApplicationsPerCustomer) {
+   DiscountCodeSetMaxApplicationsPerCustomerActionImpl(@JsonProperty("maxApplicationsPerCustomer") final Long maxApplicationsPerCustomer) {
       this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
       this.action = "setMaxApplicationsPerCustomer";
    }
@@ -38,16 +36,16 @@ public final class DiscountCodeSetMaxApplicationsPerCustomerActionImpl implement
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Long getMaxApplicationsPerCustomer(){
+   public Long getMaxApplicationsPerCustomer(){
       return this.maxApplicationsPerCustomer;
    }
 
-   public void setMaxApplicationsPerCustomer(final java.lang.Long maxApplicationsPerCustomer){
+   public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer){
       this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
    }
 

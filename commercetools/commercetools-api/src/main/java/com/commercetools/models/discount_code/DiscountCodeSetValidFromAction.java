@@ -1,7 +1,6 @@
 package com.commercetools.models.discount_code;
 
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.discount_code.DiscountCodeSetValidFromActionImpl;
 

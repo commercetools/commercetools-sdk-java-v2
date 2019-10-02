@@ -2,8 +2,6 @@ package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ZoneRateDraft;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.shipping_method.ShippingMethodDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,19 +14,19 @@ public final class ShippingMethodDraftBuilder {
    private java.util.List<com.commercetools.models.shipping_method.ZoneRateDraft> zoneRates;
    
    @Nullable
-   private java.lang.String predicate;
+   private String predicate;
    
    
-   private java.lang.Boolean isDefault;
+   private Boolean isDefault;
    
    
-   private java.lang.String name;
-   
-   @Nullable
-   private java.lang.String description;
+   private String name;
    
    @Nullable
-   private java.lang.String key;
+   private String description;
+   
+   @Nullable
+   private String key;
    
    
    private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
@@ -38,27 +36,27 @@ public final class ShippingMethodDraftBuilder {
       return this;
    }
    
-   public ShippingMethodDraftBuilder predicate(@Nullable final java.lang.String predicate) {
+   public ShippingMethodDraftBuilder predicate(@Nullable final String predicate) {
       this.predicate = predicate;
       return this;
    }
    
-   public ShippingMethodDraftBuilder isDefault( final java.lang.Boolean isDefault) {
+   public ShippingMethodDraftBuilder isDefault( final Boolean isDefault) {
       this.isDefault = isDefault;
       return this;
    }
    
-   public ShippingMethodDraftBuilder name( final java.lang.String name) {
+   public ShippingMethodDraftBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ShippingMethodDraftBuilder description(@Nullable final java.lang.String description) {
+   public ShippingMethodDraftBuilder description(@Nullable final String description) {
       this.description = description;
       return this;
    }
    
-   public ShippingMethodDraftBuilder key(@Nullable final java.lang.String key) {
+   public ShippingMethodDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -74,27 +72,27 @@ public final class ShippingMethodDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
    
    
-   public java.lang.Boolean getIsDefault(){
+   public Boolean getIsDefault(){
       return this.isDefault;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

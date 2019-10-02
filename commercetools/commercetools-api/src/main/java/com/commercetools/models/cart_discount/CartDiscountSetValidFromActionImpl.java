@@ -1,7 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountSetValidFromActionImpl implements CartDiscountSetValidFromAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.time.ZonedDateTime validFrom;
 
@@ -38,7 +37,7 @@ public final class CartDiscountSetValidFromActionImpl implements CartDiscountSet
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

@@ -1,8 +1,7 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.cart.TaxedPrice;
-import com.commercetools.models.common.Money;
-import java.lang.Integer;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.order_edit.OrderExcerpt;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +11,15 @@ import java.time.ZonedDateTime;
 public final class OrderExcerptBuilder {
    
    
-   private com.commercetools.models.common.Money totalPrice;
+   private com.commercetools.models.common.TypedMoney totalPrice;
    
    @Nullable
    private com.commercetools.models.cart.TaxedPrice taxedPrice;
    
    
-   private java.lang.Integer version;
+   private Integer version;
    
-   public OrderExcerptBuilder totalPrice( final com.commercetools.models.common.Money totalPrice) {
+   public OrderExcerptBuilder totalPrice( final com.commercetools.models.common.TypedMoney totalPrice) {
       this.totalPrice = totalPrice;
       return this;
    }
@@ -30,13 +29,13 @@ public final class OrderExcerptBuilder {
       return this;
    }
    
-   public OrderExcerptBuilder version( final java.lang.Integer version) {
+   public OrderExcerptBuilder version( final Integer version) {
       this.version = version;
       return this;
    }
    
    
-   public com.commercetools.models.common.Money getTotalPrice(){
+   public com.commercetools.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
    
@@ -46,7 +45,7 @@ public final class OrderExcerptBuilder {
    }
    
    
-   public java.lang.Integer getVersion(){
+   public Integer getVersion(){
       return this.version;
    }
 

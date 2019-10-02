@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
 public class ByProjectKeyMeShoppingListsByIDPost {
    
    
@@ -27,13 +28,13 @@ public class ByProjectKeyMeShoppingListsByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.common.Update update;
+   private com.commercetools.models.me.MyShoppingListUpdate myShoppingListUpdate;
    
-   public ByProjectKeyMeShoppingListsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.common.Update update){
+   public ByProjectKeyMeShoppingListsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.me.MyShoppingListUpdate myShoppingListUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
-      this.update = update;
+      this.myShoppingListUpdate = myShoppingListUpdate;
    }
    
    public ApiHttpRequest createHttpRequest() {
@@ -49,7 +50,7 @@ public class ByProjectKeyMeShoppingListsByIDPost {
       httpRequest.setRelativeUrl(httpRequestPath); 
       httpRequest.setMethod(ApiHttpMethod.POST);
       httpRequest.setHeaders(headers);
-      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(update));}catch(Exception e){e.printStackTrace();}
+      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(myShoppingListUpdate));}catch(Exception e){e.printStackTrace();}
       return httpRequest;
    }
    

@@ -15,7 +15,6 @@ import com.commercetools.models.cart_discount.CartDiscountSetKeyAction;
 import com.commercetools.models.cart_discount.CartDiscountSetValidFromAction;
 import com.commercetools.models.cart_discount.CartDiscountSetValidFromAndUntilAction;
 import com.commercetools.models.cart_discount.CartDiscountSetValidUntilAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

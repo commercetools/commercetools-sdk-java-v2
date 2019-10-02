@@ -2,8 +2,6 @@ package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountSetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

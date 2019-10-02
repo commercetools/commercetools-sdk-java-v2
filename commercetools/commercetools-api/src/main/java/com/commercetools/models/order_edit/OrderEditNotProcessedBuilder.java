@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditResult;
-import java.lang.String;
 import com.commercetools.models.order_edit.OrderEditNotProcessed;
 import javax.annotation.Nullable;
 import java.util.List;

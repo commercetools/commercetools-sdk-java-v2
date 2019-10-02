@@ -4,8 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.Boolean;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -32,19 +30,19 @@ public final class ProductDiscountImpl implements ProductDiscount {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private java.lang.String predicate;
+   private String predicate;
    
    private java.util.List<com.commercetools.models.common.Reference> references;
    
-   private java.lang.String sortOrder;
+   private String sortOrder;
    
    private com.commercetools.models.common.LocalizedString name;
    
@@ -54,14 +52,14 @@ public final class ProductDiscountImpl implements ProductDiscount {
    
    private java.time.ZonedDateTime validFrom;
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
    private com.commercetools.models.product_discount.ProductDiscountValue value;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ProductDiscountImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("predicate") final java.lang.String predicate, @JsonProperty("references") final java.util.List<com.commercetools.models.common.Reference> references, @JsonProperty("sortOrder") final java.lang.String sortOrder, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("isActive") final java.lang.Boolean isActive, @JsonProperty("value") final com.commercetools.models.product_discount.ProductDiscountValue value, @JsonProperty("key") final java.lang.String key) {
+   ProductDiscountImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("predicate") final String predicate, @JsonProperty("references") final java.util.List<com.commercetools.models.common.Reference> references, @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("value") final com.commercetools.models.product_discount.ProductDiscountValue value, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -94,12 +92,12 @@ public final class ProductDiscountImpl implements ProductDiscount {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -114,7 +112,7 @@ public final class ProductDiscountImpl implements ProductDiscount {
    }
    
    
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
    
@@ -124,7 +122,7 @@ public final class ProductDiscountImpl implements ProductDiscount {
    }
    
    
-   public java.lang.String getSortOrder(){
+   public String getSortOrder(){
       return this.sortOrder;
    }
    
@@ -149,7 +147,7 @@ public final class ProductDiscountImpl implements ProductDiscount {
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
@@ -159,7 +157,7 @@ public final class ProductDiscountImpl implements ProductDiscount {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -171,11 +169,11 @@ public final class ProductDiscountImpl implements ProductDiscount {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -187,7 +185,7 @@ public final class ProductDiscountImpl implements ProductDiscount {
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setPredicate(final java.lang.String predicate){
+   public void setPredicate(final String predicate){
       this.predicate = predicate;
    }
    
@@ -195,7 +193,7 @@ public final class ProductDiscountImpl implements ProductDiscount {
       this.references = references;
    }
    
-   public void setSortOrder(final java.lang.String sortOrder){
+   public void setSortOrder(final String sortOrder){
       this.sortOrder = sortOrder;
    }
    
@@ -215,7 +213,7 @@ public final class ProductDiscountImpl implements ProductDiscount {
       this.validFrom = validFrom;
    }
    
-   public void setIsActive(final java.lang.Boolean isActive){
+   public void setIsActive(final Boolean isActive){
       this.isActive = isActive;
    }
    
@@ -223,7 +221,7 @@ public final class ProductDiscountImpl implements ProductDiscount {
       this.value = value;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

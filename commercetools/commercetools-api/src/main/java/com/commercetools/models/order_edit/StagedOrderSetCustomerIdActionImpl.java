@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetCustomerIdActionImpl implements StagedOrderSetCustomerIdAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String customerId;
+   private String customerId;
 
    @JsonCreator
-   StagedOrderSetCustomerIdActionImpl(@JsonProperty("customerId") final java.lang.String customerId) {
+   StagedOrderSetCustomerIdActionImpl(@JsonProperty("customerId") final String customerId) {
       this.customerId = customerId;
       this.action = "setCustomerId";
    }
@@ -37,16 +36,16 @@ public final class StagedOrderSetCustomerIdActionImpl implements StagedOrderSetC
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
 
-   public void setCustomerId(final java.lang.String customerId){
+   public void setCustomerId(final String customerId){
       this.customerId = customerId;
    }
 

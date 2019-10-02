@@ -2,8 +2,6 @@ package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,22 +24,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineItemAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.time.ZonedDateTime addedAt;
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
-   private java.lang.String productId;
+   private String productId;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   ShoppingListAddLineItemActionImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku) {
+   ShoppingListAddLineItemActionImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final Long quantity, @JsonProperty("productId") final String productId, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku) {
       this.addedAt = addedAt;
       this.quantity = quantity;
       this.productId = productId;
@@ -55,7 +53,7 @@ public final class ShoppingListAddLineItemActionImpl implements ShoppingListAddL
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -65,12 +63,12 @@ public final class ShoppingListAddLineItemActionImpl implements ShoppingListAddL
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -80,12 +78,12 @@ public final class ShoppingListAddLineItemActionImpl implements ShoppingListAddL
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
@@ -93,11 +91,11 @@ public final class ShoppingListAddLineItemActionImpl implements ShoppingListAddL
       this.addedAt = addedAt;
    }
    
-   public void setQuantity(final java.lang.Long quantity){
+   public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
    
-   public void setProductId(final java.lang.String productId){
+   public void setProductId(final String productId){
       this.productId = productId;
    }
    
@@ -105,11 +103,11 @@ public final class ShoppingListAddLineItemActionImpl implements ShoppingListAddL
       this.custom = custom;
    }
    
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

@@ -1,9 +1,8 @@
 package com.commercetools.models.order_edit;
 
-import com.commercetools.models.cart.TaxPortion;
+import com.commercetools.models.cart.TaxPortionDraft;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetOrderTotalTaxActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -32,11 +31,11 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
    
    @Valid
    @JsonProperty("externalTaxPortions")
-   public List<TaxPortion> getExternalTaxPortions();
+   public List<TaxPortionDraft> getExternalTaxPortions();
 
    public void setExternalTotalGross(final Money externalTotalGross);
    
-   public void setExternalTaxPortions(final List<TaxPortion> externalTaxPortions);
+   public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
    
    public static StagedOrderSetOrderTotalTaxActionImpl of(){
       return new StagedOrderSetOrderTotalTaxActionImpl();

@@ -4,7 +4,6 @@ import com.commercetools.models.cart.ExternalTaxRateDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.shipping_method.ShippingRateDraft;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,18 +25,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetCustomShippingMethodActionImpl implements StagedOrderSetCustomShippingMethodAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.shipping_method.ShippingRateDraft shippingRate;
    
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
-   private java.lang.String shippingMethodName;
+   private String shippingMethodName;
    
    private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
    @JsonCreator
-   StagedOrderSetCustomShippingMethodActionImpl(@JsonProperty("shippingRate") final com.commercetools.models.shipping_method.ShippingRateDraft shippingRate, @JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("shippingMethodName") final java.lang.String shippingMethodName, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
+   StagedOrderSetCustomShippingMethodActionImpl(@JsonProperty("shippingRate") final com.commercetools.models.shipping_method.ShippingRateDraft shippingRate, @JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("shippingMethodName") final String shippingMethodName, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
       this.shippingRate = shippingRate;
       this.externalTaxRate = externalTaxRate;
       this.shippingMethodName = shippingMethodName;
@@ -49,7 +48,7 @@ public final class StagedOrderSetCustomShippingMethodActionImpl implements Stage
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -64,7 +63,7 @@ public final class StagedOrderSetCustomShippingMethodActionImpl implements Stage
    }
    
    
-   public java.lang.String getShippingMethodName(){
+   public String getShippingMethodName(){
       return this.shippingMethodName;
    }
    
@@ -81,7 +80,7 @@ public final class StagedOrderSetCustomShippingMethodActionImpl implements Stage
       this.externalTaxRate = externalTaxRate;
    }
    
-   public void setShippingMethodName(final java.lang.String shippingMethodName){
+   public void setShippingMethodName(final String shippingMethodName){
       this.shippingMethodName = shippingMethodName;
    }
    

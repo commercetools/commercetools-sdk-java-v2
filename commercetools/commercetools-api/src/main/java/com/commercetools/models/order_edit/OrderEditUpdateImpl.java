@@ -1,8 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditUpdateImpl implements OrderEditUpdate {
 
-   private java.lang.Boolean dryRun;
+   private Boolean dryRun;
    
    private java.util.List<com.commercetools.models.order_edit.OrderEditUpdateAction> actions;
    
-   private java.lang.Long version;
+   private Long version;
 
    @JsonCreator
-   OrderEditUpdateImpl(@JsonProperty("dryRun") final java.lang.Boolean dryRun, @JsonProperty("actions") final java.util.List<com.commercetools.models.order_edit.OrderEditUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   OrderEditUpdateImpl(@JsonProperty("dryRun") final Boolean dryRun, @JsonProperty("actions") final java.util.List<com.commercetools.models.order_edit.OrderEditUpdateAction> actions, @JsonProperty("version") final Long version) {
       this.dryRun = dryRun;
       this.actions = actions;
       this.version = version;
@@ -41,7 +39,7 @@ public final class OrderEditUpdateImpl implements OrderEditUpdate {
    }
    
    
-   public java.lang.Boolean getDryRun(){
+   public Boolean getDryRun(){
       return this.dryRun;
    }
    
@@ -51,11 +49,11 @@ public final class OrderEditUpdateImpl implements OrderEditUpdate {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 
-   public void setDryRun(final java.lang.Boolean dryRun){
+   public void setDryRun(final Boolean dryRun){
       this.dryRun = dryRun;
    }
    
@@ -63,7 +61,7 @@ public final class OrderEditUpdateImpl implements OrderEditUpdate {
       this.actions = actions;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
 

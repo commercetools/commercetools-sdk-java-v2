@@ -1,8 +1,6 @@
 package com.commercetools.models.custom_object;
 
-import com.commercetools.models.common.BaseResource;
-import java.lang.Object;
-import java.lang.String;
+import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.custom_object.CustomObject;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,19 +16,25 @@ public final class CustomObjectBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.String container;
+   private String container;
    
    
-   private java.lang.Object value;
+   private Object value;
    
    
-   private java.lang.String key;
+   private String key;
    
    public CustomObjectBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -42,27 +46,37 @@ public final class CustomObjectBuilder {
       return this;
    }
    
-   public CustomObjectBuilder id( final java.lang.String id) {
+   public CustomObjectBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public CustomObjectBuilder version( final java.lang.Long version) {
+   public CustomObjectBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public CustomObjectBuilder container( final java.lang.String container) {
+   public CustomObjectBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public CustomObjectBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public CustomObjectBuilder container( final String container) {
       this.container = container;
       return this;
    }
    
-   public CustomObjectBuilder value( final java.lang.Object value) {
+   public CustomObjectBuilder value( final Object value) {
       this.value = value;
       return this;
    }
    
-   public CustomObjectBuilder key( final java.lang.String key) {
+   public CustomObjectBuilder key( final String key) {
       this.key = key;
       return this;
    }
@@ -78,32 +92,42 @@ public final class CustomObjectBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.String getContainer(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public String getContainer(){
       return this.container;
    }
    
    
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
    public CustomObject build() {
-       return new CustomObjectImpl(createdAt, lastModifiedAt, id, version, container, value, key);
+       return new CustomObjectImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, container, value, key);
    }
    
    public static CustomObjectBuilder of() {
@@ -116,6 +140,8 @@ public final class CustomObjectBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.container = template.getContainer();
       builder.value = template.getValue();
       builder.key = template.getKey();

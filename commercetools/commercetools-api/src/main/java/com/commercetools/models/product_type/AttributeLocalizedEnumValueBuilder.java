@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import com.commercetools.models.product_type.AttributeLocalizedEnumValue;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class AttributeLocalizedEnumValueBuilder {
    private com.commercetools.models.common.LocalizedString label;
    
    
-   private java.lang.String key;
+   private String key;
    
    public AttributeLocalizedEnumValueBuilder label( final com.commercetools.models.common.LocalizedString label) {
       this.label = label;
       return this;
    }
    
-   public AttributeLocalizedEnumValueBuilder key( final java.lang.String key) {
+   public AttributeLocalizedEnumValueBuilder key( final String key) {
       this.key = key;
       return this;
    }
@@ -32,7 +31,7 @@ public final class AttributeLocalizedEnumValueBuilder {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

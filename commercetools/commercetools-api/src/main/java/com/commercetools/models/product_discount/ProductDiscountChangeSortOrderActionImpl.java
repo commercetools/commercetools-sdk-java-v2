@@ -1,7 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountChangeSortOrderActionImpl implements ProductDiscountChangeSortOrderAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String sortOrder;
+   private String sortOrder;
 
    @JsonCreator
-   ProductDiscountChangeSortOrderActionImpl(@JsonProperty("sortOrder") final java.lang.String sortOrder) {
+   ProductDiscountChangeSortOrderActionImpl(@JsonProperty("sortOrder") final String sortOrder) {
       this.sortOrder = sortOrder;
       this.action = "changeSortOrder";
    }
@@ -37,16 +36,16 @@ public final class ProductDiscountChangeSortOrderActionImpl implements ProductDi
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getSortOrder(){
+   public String getSortOrder(){
       return this.sortOrder;
    }
 
-   public void setSortOrder(final java.lang.String sortOrder){
+   public void setSortOrder(final String sortOrder){
       this.sortOrder = sortOrder;
    }
 

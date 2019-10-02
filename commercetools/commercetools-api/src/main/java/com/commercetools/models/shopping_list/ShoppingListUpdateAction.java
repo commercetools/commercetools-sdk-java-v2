@@ -23,7 +23,6 @@ import com.commercetools.models.shopping_list.ShoppingListSetSlugAction;
 import com.commercetools.models.shopping_list.ShoppingListSetTextLineItemCustomFieldAction;
 import com.commercetools.models.shopping_list.ShoppingListSetTextLineItemCustomTypeAction;
 import com.commercetools.models.shopping_list.ShoppingListSetTextLineItemDescriptionAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

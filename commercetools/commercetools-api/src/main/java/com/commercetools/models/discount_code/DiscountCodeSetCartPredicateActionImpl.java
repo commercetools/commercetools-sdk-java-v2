@@ -1,7 +1,6 @@
 package com.commercetools.models.discount_code;
 
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeSetCartPredicateActionImpl implements DiscountCodeSetCartPredicateAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String cartPredicate;
+   private String cartPredicate;
 
    @JsonCreator
-   DiscountCodeSetCartPredicateActionImpl(@JsonProperty("cartPredicate") final java.lang.String cartPredicate) {
+   DiscountCodeSetCartPredicateActionImpl(@JsonProperty("cartPredicate") final String cartPredicate) {
       this.cartPredicate = cartPredicate;
       this.action = "setCartPredicate";
    }
@@ -37,16 +36,16 @@ public final class DiscountCodeSetCartPredicateActionImpl implements DiscountCod
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCartPredicate(){
+   public String getCartPredicate(){
       return this.cartPredicate;
    }
 
-   public void setCartPredicate(final java.lang.String cartPredicate){
+   public void setCartPredicate(final String cartPredicate){
       this.cartPredicate = cartPredicate;
    }
 

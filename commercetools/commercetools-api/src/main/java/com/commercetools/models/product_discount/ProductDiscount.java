@@ -4,8 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.Boolean;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.product_discount.ProductDiscountImpl;
 

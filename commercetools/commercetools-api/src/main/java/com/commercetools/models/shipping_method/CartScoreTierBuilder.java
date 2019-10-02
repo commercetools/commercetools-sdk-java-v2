@@ -4,8 +4,6 @@ import com.commercetools.models.common.Money;
 import com.commercetools.models.shipping_method.PriceFunction;
 import com.commercetools.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.models.shipping_method.ShippingRateTierType;
-import java.lang.Boolean;
-import java.lang.Integer;
 import com.commercetools.models.shipping_method.CartScoreTier;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,18 +13,18 @@ import java.time.ZonedDateTime;
 public final class CartScoreTierBuilder {
    
    
-   private java.lang.Integer score;
+   private Integer score;
    
    @Nullable
    private com.commercetools.models.common.Money price;
    
    @Nullable
-   private java.lang.Boolean isMatching;
+   private Boolean isMatching;
    
    @Nullable
    private com.commercetools.models.shipping_method.PriceFunction priceFunction;
    
-   public CartScoreTierBuilder score( final java.lang.Integer score) {
+   public CartScoreTierBuilder score( final Integer score) {
       this.score = score;
       return this;
    }
@@ -36,7 +34,7 @@ public final class CartScoreTierBuilder {
       return this;
    }
    
-   public CartScoreTierBuilder isMatching(@Nullable final java.lang.Boolean isMatching) {
+   public CartScoreTierBuilder isMatching(@Nullable final Boolean isMatching) {
       this.isMatching = isMatching;
       return this;
    }
@@ -47,7 +45,7 @@ public final class CartScoreTierBuilder {
    }
    
    
-   public java.lang.Integer getScore(){
+   public Integer getScore(){
       return this.score;
    }
    
@@ -57,7 +55,7 @@ public final class CartScoreTierBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getIsMatching(){
+   public Boolean getIsMatching(){
       return this.isMatching;
    }
    

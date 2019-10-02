@@ -1,6 +1,6 @@
 package com.commercetools.models.product_type;
 
-import java.lang.String;
+
 import com.commercetools.models.product_type.AttributePlainEnumValue;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class AttributePlainEnumValueBuilder {
    
    
-   private java.lang.String label;
+   private String label;
    
    
-   private java.lang.String key;
+   private String key;
    
-   public AttributePlainEnumValueBuilder label( final java.lang.String label) {
+   public AttributePlainEnumValueBuilder label( final String label) {
       this.label = label;
       return this;
    }
    
-   public AttributePlainEnumValueBuilder key( final java.lang.String key) {
+   public AttributePlainEnumValueBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getLabel(){
+   public String getLabel(){
       return this.label;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

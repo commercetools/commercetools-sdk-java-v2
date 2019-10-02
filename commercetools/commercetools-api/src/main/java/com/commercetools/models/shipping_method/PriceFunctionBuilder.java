@@ -1,6 +1,6 @@
 package com.commercetools.models.shipping_method;
 
-import java.lang.String;
+
 import com.commercetools.models.shipping_method.PriceFunction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class PriceFunctionBuilder {
    
    
-   private java.lang.String function;
+   private String function;
    
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
    
-   public PriceFunctionBuilder function( final java.lang.String function) {
+   public PriceFunctionBuilder function( final String function) {
       this.function = function;
       return this;
    }
    
-   public PriceFunctionBuilder currencyCode( final java.lang.String currencyCode) {
+   public PriceFunctionBuilder currencyCode( final String currencyCode) {
       this.currencyCode = currencyCode;
       return this;
    }
    
    
-   public java.lang.String getFunction(){
+   public String getFunction(){
       return this.function;
    }
    
    
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
 

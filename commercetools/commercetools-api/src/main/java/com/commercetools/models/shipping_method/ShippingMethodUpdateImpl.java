@@ -1,7 +1,6 @@
 package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,10 +24,10 @@ public final class ShippingMethodUpdateImpl implements ShippingMethodUpdate {
 
    private java.util.List<com.commercetools.models.shipping_method.ShippingMethodUpdateAction> actions;
    
-   private java.lang.Long version;
+   private Long version;
 
    @JsonCreator
-   ShippingMethodUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.shipping_method.ShippingMethodUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   ShippingMethodUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.shipping_method.ShippingMethodUpdateAction> actions, @JsonProperty("version") final Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -42,7 +41,7 @@ public final class ShippingMethodUpdateImpl implements ShippingMethodUpdate {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 
@@ -50,7 +49,7 @@ public final class ShippingMethodUpdateImpl implements ShippingMethodUpdate {
       this.actions = actions;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListChangeLineItemsOrderAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.util.List<java.lang.String> lineItemOrder;
+   private java.util.List<String> lineItemOrder;
 
    @JsonCreator
-   ShoppingListChangeLineItemsOrderActionImpl(@JsonProperty("lineItemOrder") final java.util.List<java.lang.String> lineItemOrder) {
+   ShoppingListChangeLineItemsOrderActionImpl(@JsonProperty("lineItemOrder") final java.util.List<String> lineItemOrder) {
       this.lineItemOrder = lineItemOrder;
       this.action = "changeLineItemsOrder";
    }
@@ -37,16 +36,16 @@ public final class ShoppingListChangeLineItemsOrderActionImpl implements Shoppin
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.util.List<java.lang.String> getLineItemOrder(){
+   public java.util.List<String> getLineItemOrder(){
       return this.lineItemOrder;
    }
 
-   public void setLineItemOrder(final java.util.List<java.lang.String> lineItemOrder){
+   public void setLineItemOrder(final java.util.List<String> lineItemOrder){
       this.lineItemOrder = lineItemOrder;
    }
 

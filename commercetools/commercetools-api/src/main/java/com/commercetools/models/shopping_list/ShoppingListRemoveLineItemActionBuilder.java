@@ -1,8 +1,6 @@
 package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingListRemoveLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class ShoppingListRemoveLineItemActionBuilder {
    
    @Nullable
-   private java.lang.Long quantity;
+   private Long quantity;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
-   public ShoppingListRemoveLineItemActionBuilder quantity(@Nullable final java.lang.Long quantity) {
+   public ShoppingListRemoveLineItemActionBuilder quantity(@Nullable final Long quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public ShoppingListRemoveLineItemActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public ShoppingListRemoveLineItemActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
    
    @Nullable
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
 

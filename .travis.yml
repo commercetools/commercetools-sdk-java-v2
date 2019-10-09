@@ -2,15 +2,7 @@ language: java
 jdk:
   - openjdk8
 script: >
-  ./gradlew clean build &&
-  mkdir build-process && 
-  cd build-process && 
-  git clone https://github.com/vrapio/rmf-codegen.git && 
-  git clone https://github.com/commercetools/commercetools-api-reference.git && 
-  cd commercetools-api-reference && 
-  export TEST_RAML_FILE="$(realpath update-actions.raml)" && 
-  cd ../rmf-codegen &&
-  ./gradlew clean build 
+  ./gradlew clean build
 deploy:
   provider: script
   script: ./gradlew clean build bintrayUpload --info && cd ../.. && ./gradlew clean build bintrayUpload --info  -Dpublish=true

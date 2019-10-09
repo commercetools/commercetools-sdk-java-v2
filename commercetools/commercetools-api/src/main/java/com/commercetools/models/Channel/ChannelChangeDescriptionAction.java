@@ -2,7 +2,6 @@ package com.commercetools.models.channel;
 
 import com.commercetools.models.channel.ChannelUpdateAction;
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import com.commercetools.models.channel.ChannelChangeDescriptionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

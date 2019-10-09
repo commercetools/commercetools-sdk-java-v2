@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String orderNumber;
+   private String orderNumber;
 
    @JsonCreator
-   OrderSetOrderNumberActionImpl(@JsonProperty("orderNumber") final java.lang.String orderNumber) {
+   OrderSetOrderNumberActionImpl(@JsonProperty("orderNumber") final String orderNumber) {
       this.orderNumber = orderNumber;
       this.action = "setOrderNumber";
    }
@@ -37,16 +36,16 @@ public final class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getOrderNumber(){
+   public String getOrderNumber(){
       return this.orderNumber;
    }
 
-   public void setOrderNumber(final java.lang.String orderNumber){
+   public void setOrderNumber(final String orderNumber){
       this.orderNumber = orderNumber;
    }
 

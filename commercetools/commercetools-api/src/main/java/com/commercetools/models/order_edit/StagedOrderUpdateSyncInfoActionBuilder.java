@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order_edit.StagedOrderUpdateSyncInfoAction;
 import javax.annotation.Nullable;
@@ -16,7 +15,7 @@ public final class StagedOrderUpdateSyncInfoActionBuilder {
    private com.commercetools.models.channel.ChannelResourceIdentifier channel;
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
    @Nullable
    private java.time.ZonedDateTime syncedAt;
@@ -26,7 +25,7 @@ public final class StagedOrderUpdateSyncInfoActionBuilder {
       return this;
    }
    
-   public StagedOrderUpdateSyncInfoActionBuilder externalId(@Nullable final java.lang.String externalId) {
+   public StagedOrderUpdateSyncInfoActionBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
@@ -42,7 +41,7 @@ public final class StagedOrderUpdateSyncInfoActionBuilder {
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    

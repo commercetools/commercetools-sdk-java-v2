@@ -1,8 +1,7 @@
 package com.commercetools.models.store;
 
-import com.commercetools.models.common.BaseResource;
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
+import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.store.StoreImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -21,7 +20,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = StoreImpl.class)
-public interface Store extends BaseResource {
+public interface Store extends LoggedResource {
 
    
    @NotNull
@@ -47,6 +46,8 @@ public interface Store extends BaseResource {
       instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setName(template.getName());
       instance.setKey(template.getKey());
       return instance;

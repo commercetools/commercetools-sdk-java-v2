@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
 import com.commercetools.models.order.Parcel;
-import java.lang.String;
 import com.commercetools.models.message.ParcelRemovedFromDeliveryMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,13 +17,19 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -33,16 +38,13 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    
    private com.commercetools.models.order.Parcel parcel;
    
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    public ParcelRemovedFromDeliveryMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -54,17 +56,27 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
       return this;
    }
    
-   public ParcelRemovedFromDeliveryMessageBuilder id( final java.lang.String id) {
+   public ParcelRemovedFromDeliveryMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ParcelRemovedFromDeliveryMessageBuilder version( final java.lang.Long version) {
+   public ParcelRemovedFromDeliveryMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public ParcelRemovedFromDeliveryMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public ParcelRemovedFromDeliveryMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public ParcelRemovedFromDeliveryMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public ParcelRemovedFromDeliveryMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -79,13 +91,8 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
       return this;
    }
    
-   public ParcelRemovedFromDeliveryMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public ParcelRemovedFromDeliveryMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
-      return this;
-   }
-   
-   public ParcelRemovedFromDeliveryMessageBuilder type( final java.lang.String type) {
-      this.type = type;
       return this;
    }
    
@@ -94,7 +101,7 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
       return this;
    }
    
-   public ParcelRemovedFromDeliveryMessageBuilder deliveryId( final java.lang.String deliveryId) {
+   public ParcelRemovedFromDeliveryMessageBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -110,17 +117,27 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -135,13 +152,8 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
-   }
-   
-   
-   public java.lang.String getType(){
-      return this.type;
    }
    
    
@@ -150,12 +162,12 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
 
    public ParcelRemovedFromDeliveryMessage build() {
-       return new ParcelRemovedFromDeliveryMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, parcel, deliveryId);
+       return new ParcelRemovedFromDeliveryMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, parcel, deliveryId);
    }
    
    public static ParcelRemovedFromDeliveryMessageBuilder of() {
@@ -168,11 +180,12 @@ public final class ParcelRemovedFromDeliveryMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.parcel = template.getParcel();
       builder.deliveryId = template.getDeliveryId();
       return builder;

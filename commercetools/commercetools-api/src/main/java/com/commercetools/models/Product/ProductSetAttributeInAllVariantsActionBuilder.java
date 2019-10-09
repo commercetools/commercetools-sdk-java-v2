@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetAttributeInAllVariantsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class ProductSetAttributeInAllVariantsActionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.Object value;
+   private Object value;
    
-   public ProductSetAttributeInAllVariantsActionBuilder name( final java.lang.String name) {
+   public ProductSetAttributeInAllVariantsActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ProductSetAttributeInAllVariantsActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetAttributeInAllVariantsActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductSetAttributeInAllVariantsActionBuilder value(@Nullable final java.lang.Object value) {
+   public ProductSetAttributeInAllVariantsActionBuilder value(@Nullable final Object value) {
       this.value = value;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 

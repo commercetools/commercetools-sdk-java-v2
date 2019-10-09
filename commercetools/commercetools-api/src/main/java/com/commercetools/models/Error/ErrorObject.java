@@ -32,7 +32,6 @@ import com.commercetools.models.error.ReferenceExistsError;
 import com.commercetools.models.error.RequiredFieldError;
 import com.commercetools.models.error.ResourceNotFoundError;
 import com.commercetools.models.error.ShippingMethodDoesNotMatchCartError;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

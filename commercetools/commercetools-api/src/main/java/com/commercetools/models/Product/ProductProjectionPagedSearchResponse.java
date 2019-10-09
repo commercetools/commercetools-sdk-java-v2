@@ -2,7 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.product.FacetResults;
 import com.commercetools.models.product.ProductProjection;
-import java.lang.Long;
 import com.commercetools.models.product.ProductProjectionPagedSearchResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;

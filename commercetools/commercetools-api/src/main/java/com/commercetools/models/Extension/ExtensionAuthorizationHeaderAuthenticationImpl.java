@@ -1,7 +1,6 @@
 package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionHttpDestinationAuthentication;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionAuthorizationHeaderAuthenticationImpl implements ExtensionAuthorizationHeaderAuthentication {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String headerValue;
+   private String headerValue;
 
    @JsonCreator
-   ExtensionAuthorizationHeaderAuthenticationImpl(@JsonProperty("headerValue") final java.lang.String headerValue) {
+   ExtensionAuthorizationHeaderAuthenticationImpl(@JsonProperty("headerValue") final String headerValue) {
       this.headerValue = headerValue;
       this.type = "AuthorizationHeader";
    }
@@ -37,16 +36,16 @@ public final class ExtensionAuthorizationHeaderAuthenticationImpl implements Ext
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getHeaderValue(){
+   public String getHeaderValue(){
       return this.headerValue;
    }
 
-   public void setHeaderValue(final java.lang.String headerValue){
+   public void setHeaderValue(final String headerValue){
       this.headerValue = headerValue;
    }
 

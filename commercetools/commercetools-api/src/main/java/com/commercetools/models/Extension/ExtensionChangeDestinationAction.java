@@ -2,7 +2,6 @@ package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionDestination;
 import com.commercetools.models.extension.ExtensionUpdateAction;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionChangeDestinationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

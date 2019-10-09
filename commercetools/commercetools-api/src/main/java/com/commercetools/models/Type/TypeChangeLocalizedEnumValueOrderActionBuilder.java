@@ -1,7 +1,6 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.type.TypeChangeLocalizedEnumValueOrderAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class TypeChangeLocalizedEnumValueOrderActionBuilder {
    
    
-   private java.lang.String fieldName;
+   private String fieldName;
    
    
-   private java.util.List<java.lang.String> keys;
+   private java.util.List<String> keys;
    
-   public TypeChangeLocalizedEnumValueOrderActionBuilder fieldName( final java.lang.String fieldName) {
+   public TypeChangeLocalizedEnumValueOrderActionBuilder fieldName( final String fieldName) {
       this.fieldName = fieldName;
       return this;
    }
    
-   public TypeChangeLocalizedEnumValueOrderActionBuilder keys( final java.util.List<java.lang.String> keys) {
+   public TypeChangeLocalizedEnumValueOrderActionBuilder keys( final java.util.List<String> keys) {
       this.keys = keys;
       return this;
    }
    
    
-   public java.lang.String getFieldName(){
+   public String getFieldName(){
       return this.fieldName;
    }
    
    
-   public java.util.List<java.lang.String> getKeys(){
+   public java.util.List<String> getKeys(){
       return this.keys;
    }
 

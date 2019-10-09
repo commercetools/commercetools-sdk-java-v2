@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.common.Money;
 import com.commercetools.models.me.MyPaymentUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyPaymentChangeAmountPlannedAction;
 import javax.annotation.Nullable;
 import java.util.List;

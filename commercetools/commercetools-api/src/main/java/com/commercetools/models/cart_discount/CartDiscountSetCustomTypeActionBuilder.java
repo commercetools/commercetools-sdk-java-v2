@@ -2,8 +2,6 @@ package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountSetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class CartDiscountSetCustomTypeActionBuilder {
    
    @Nullable
-   private java.lang.Object fields;
+   private Object fields;
    
    @Nullable
    private com.commercetools.models.type.TypeResourceIdentifier type;
    
-   public CartDiscountSetCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {
+   public CartDiscountSetCustomTypeActionBuilder fields(@Nullable final Object fields) {
       this.fields = fields;
       return this;
    }
@@ -29,7 +27,7 @@ public final class CartDiscountSetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public java.lang.Object getFields(){
+   public Object getFields(){
       return this.fields;
    }
    

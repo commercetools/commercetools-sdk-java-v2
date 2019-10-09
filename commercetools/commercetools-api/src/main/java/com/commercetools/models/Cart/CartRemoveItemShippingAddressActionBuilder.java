@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.cart.CartRemoveItemShippingAddressAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CartRemoveItemShippingAddressActionBuilder {
    
    
-   private java.lang.String addressKey;
+   private String addressKey;
    
-   public CartRemoveItemShippingAddressActionBuilder addressKey( final java.lang.String addressKey) {
+   public CartRemoveItemShippingAddressActionBuilder addressKey( final String addressKey) {
       this.addressKey = addressKey;
       return this;
    }
    
    
-   public java.lang.String getAddressKey(){
+   public String getAddressKey(){
       return this.addressKey;
    }
 

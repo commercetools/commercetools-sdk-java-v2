@@ -3,8 +3,6 @@ package com.commercetools.models.order;
 import com.commercetools.models.common.Image;
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.Attribute;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.order.ProductVariantImportDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

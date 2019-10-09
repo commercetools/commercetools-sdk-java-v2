@@ -65,7 +65,6 @@ import com.commercetools.models.message.ProductVariantDeletedMessagePayload;
 import com.commercetools.models.message.ReviewCreatedMessagePayload;
 import com.commercetools.models.message.ReviewRatingSetMessagePayload;
 import com.commercetools.models.message.ReviewStateTransitionMessagePayload;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

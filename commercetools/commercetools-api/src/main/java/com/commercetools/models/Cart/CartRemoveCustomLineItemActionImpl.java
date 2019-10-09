@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineItemAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
 
    @JsonCreator
-   CartRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId) {
+   CartRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       this.action = "removeCustomLineItem";
    }
@@ -37,16 +36,16 @@ public final class CartRemoveCustomLineItemActionImpl implements CartRemoveCusto
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
 
-   public void setCustomLineItemId(final java.lang.String customLineItemId){
+   public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
 

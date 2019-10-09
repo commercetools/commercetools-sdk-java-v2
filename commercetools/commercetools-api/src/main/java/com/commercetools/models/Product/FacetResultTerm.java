@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Long;
-import java.lang.Object;
+
 import com.commercetools.models.product.FacetResultTermImpl;
 
 import com.fasterxml.jackson.annotation.*;

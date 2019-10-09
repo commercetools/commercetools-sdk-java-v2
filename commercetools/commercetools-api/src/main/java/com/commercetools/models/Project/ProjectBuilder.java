@@ -3,8 +3,6 @@ package com.commercetools.models.project;
 import com.commercetools.models.message.MessageConfiguration;
 import com.commercetools.models.project.ExternalOAuth;
 import com.commercetools.models.project.ShippingRateInputType;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.project.Project;
 import javax.annotation.Nullable;
@@ -24,28 +22,28 @@ public final class ProjectBuilder {
    private java.time.ZonedDateTime createdAt;
    
    
-   private java.util.List<java.lang.String> languages;
+   private java.util.List<String> languages;
    
    
-   private java.lang.String name;
+   private String name;
    
    
    private com.commercetools.models.message.MessageConfiguration messages;
    
    
-   private java.util.List<java.lang.String> countries;
+   private java.util.List<String> countries;
    
    @Nullable
-   private java.lang.String trialUntil;
+   private String trialUntil;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    
-   private java.lang.String key;
+   private String key;
    
    
-   private java.util.List<java.lang.String> currencies;
+   private java.util.List<String> currencies;
    
    public ProjectBuilder externalOAuth(@Nullable final com.commercetools.models.project.ExternalOAuth externalOAuth) {
       this.externalOAuth = externalOAuth;
@@ -62,12 +60,12 @@ public final class ProjectBuilder {
       return this;
    }
    
-   public ProjectBuilder languages( final java.util.List<java.lang.String> languages) {
+   public ProjectBuilder languages( final java.util.List<String> languages) {
       this.languages = languages;
       return this;
    }
    
-   public ProjectBuilder name( final java.lang.String name) {
+   public ProjectBuilder name( final String name) {
       this.name = name;
       return this;
    }
@@ -77,27 +75,27 @@ public final class ProjectBuilder {
       return this;
    }
    
-   public ProjectBuilder countries( final java.util.List<java.lang.String> countries) {
+   public ProjectBuilder countries( final java.util.List<String> countries) {
       this.countries = countries;
       return this;
    }
    
-   public ProjectBuilder trialUntil(@Nullable final java.lang.String trialUntil) {
+   public ProjectBuilder trialUntil(@Nullable final String trialUntil) {
       this.trialUntil = trialUntil;
       return this;
    }
    
-   public ProjectBuilder version( final java.lang.Long version) {
+   public ProjectBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public ProjectBuilder key( final java.lang.String key) {
+   public ProjectBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
-   public ProjectBuilder currencies( final java.util.List<java.lang.String> currencies) {
+   public ProjectBuilder currencies( final java.util.List<String> currencies) {
       this.currencies = currencies;
       return this;
    }
@@ -118,12 +116,12 @@ public final class ProjectBuilder {
    }
    
    
-   public java.util.List<java.lang.String> getLanguages(){
+   public java.util.List<String> getLanguages(){
       return this.languages;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
@@ -133,27 +131,27 @@ public final class ProjectBuilder {
    }
    
    
-   public java.util.List<java.lang.String> getCountries(){
+   public java.util.List<String> getCountries(){
       return this.countries;
    }
    
    @Nullable
-   public java.lang.String getTrialUntil(){
+   public String getTrialUntil(){
       return this.trialUntil;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
    
-   public java.util.List<java.lang.String> getCurrencies(){
+   public java.util.List<String> getCurrencies(){
       return this.currencies;
    }
 

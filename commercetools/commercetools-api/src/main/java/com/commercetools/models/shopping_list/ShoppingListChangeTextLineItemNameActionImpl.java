@@ -2,7 +2,6 @@ package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListChangeTextLineItemNameActionImpl implements ShoppingListChangeTextLineItemNameAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.LocalizedString name;
    
-   private java.lang.String textLineItemId;
+   private String textLineItemId;
 
    @JsonCreator
-   ShoppingListChangeTextLineItemNameActionImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
+   ShoppingListChangeTextLineItemNameActionImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("textLineItemId") final String textLineItemId) {
       this.name = name;
       this.textLineItemId = textLineItemId;
       this.action = "changeTextLineItemName";
@@ -41,7 +40,7 @@ public final class ShoppingListChangeTextLineItemNameActionImpl implements Shopp
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class ShoppingListChangeTextLineItemNameActionImpl implements Shopp
    }
    
    
-   public java.lang.String getTextLineItemId(){
+   public String getTextLineItemId(){
       return this.textLineItemId;
    }
 
@@ -59,7 +58,7 @@ public final class ShoppingListChangeTextLineItemNameActionImpl implements Shopp
       this.name = name;
    }
    
-   public void setTextLineItemId(final java.lang.String textLineItemId){
+   public void setTextLineItemId(final String textLineItemId){
       this.textLineItemId = textLineItemId;
    }
 

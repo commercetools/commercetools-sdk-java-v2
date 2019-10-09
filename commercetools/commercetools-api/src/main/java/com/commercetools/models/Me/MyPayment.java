@@ -5,8 +5,6 @@ import com.commercetools.models.customer.CustomerReference;
 import com.commercetools.models.payment.PaymentMethodInfo;
 import com.commercetools.models.payment.Transaction;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.me.MyPaymentImpl;
 
 import com.fasterxml.jackson.annotation.*;

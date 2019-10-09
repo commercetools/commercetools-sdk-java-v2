@@ -1,6 +1,6 @@
 package com.commercetools.models.common;
 
-import java.lang.String;
+
 import com.commercetools.models.common.UpdateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

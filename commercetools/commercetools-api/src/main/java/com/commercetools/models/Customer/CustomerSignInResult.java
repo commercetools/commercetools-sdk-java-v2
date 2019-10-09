@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.Customer;
-import java.lang.Object;
 import com.commercetools.models.customer.CustomerSignInResultImpl;
 
 import com.fasterxml.jackson.annotation.*;

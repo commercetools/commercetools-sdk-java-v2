@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order.ShipmentState;
-import java.lang.String;
 import com.commercetools.models.message.OrderShipmentStateChangedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;

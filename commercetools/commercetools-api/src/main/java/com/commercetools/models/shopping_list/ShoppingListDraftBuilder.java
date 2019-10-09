@@ -5,8 +5,6 @@ import com.commercetools.models.customer.CustomerResourceIdentifier;
 import com.commercetools.models.shopping_list.ShoppingListLineItemDraft;
 import com.commercetools.models.shopping_list.TextLineItemDraft;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingListDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -19,13 +17,13 @@ public final class ShoppingListDraftBuilder {
    private java.util.List<com.commercetools.models.shopping_list.ShoppingListLineItemDraft> lineItems;
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    @Nullable
    private java.util.List<com.commercetools.models.shopping_list.TextLineItemDraft> textLineItems;
    
    @Nullable
-   private java.lang.Long deleteDaysAfterLastModification;
+   private Long deleteDaysAfterLastModification;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
@@ -40,7 +38,7 @@ public final class ShoppingListDraftBuilder {
    private com.commercetools.models.common.LocalizedString slug;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    @Nullable
    private com.commercetools.models.customer.CustomerResourceIdentifier customer;
@@ -50,7 +48,7 @@ public final class ShoppingListDraftBuilder {
       return this;
    }
    
-   public ShoppingListDraftBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public ShoppingListDraftBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
@@ -60,7 +58,7 @@ public final class ShoppingListDraftBuilder {
       return this;
    }
    
-   public ShoppingListDraftBuilder deleteDaysAfterLastModification(@Nullable final java.lang.Long deleteDaysAfterLastModification) {
+   public ShoppingListDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
       return this;
    }
@@ -85,7 +83,7 @@ public final class ShoppingListDraftBuilder {
       return this;
    }
    
-   public ShoppingListDraftBuilder key(@Nullable final java.lang.String key) {
+   public ShoppingListDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -101,7 +99,7 @@ public final class ShoppingListDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -111,7 +109,7 @@ public final class ShoppingListDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Long getDeleteDaysAfterLastModification(){
+   public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
@@ -136,7 +134,7 @@ public final class ShoppingListDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

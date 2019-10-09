@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategory;
-import java.lang.Long;
 import com.commercetools.models.tax_category.TaxCategoryPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -24,6 +23,10 @@ public interface TaxCategoryPagedQueryResponse  {
 
    
    @NotNull
+   @JsonProperty("limit")
+   public Long getLimit();
+   
+   @NotNull
    @JsonProperty("count")
    public Long getCount();
    
@@ -40,6 +43,8 @@ public interface TaxCategoryPagedQueryResponse  {
    @JsonProperty("results")
    public List<TaxCategory> getResults();
 
+   public void setLimit(final Long limit);
+   
    public void setCount(final Long count);
    
    public void setTotal(final Long total);
@@ -58,6 +63,7 @@ public interface TaxCategoryPagedQueryResponse  {
       instance.setTotal(template.getTotal());
       instance.setOffset(template.getOffset());
       instance.setCount(template.getCount());
+      instance.setLimit(template.getLimit());
       instance.setResults(template.getResults());
       return instance;
    }

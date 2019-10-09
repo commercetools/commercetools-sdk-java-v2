@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Object;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeImpl implements Attribute {
 
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.Object value;
+   private Object value;
 
    @JsonCreator
-   AttributeImpl(@JsonProperty("name") final java.lang.String name, @JsonProperty("value") final java.lang.Object value) {
+   AttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Object value) {
       this.name = name;
       this.value = value;
    }
@@ -37,20 +36,20 @@ public final class AttributeImpl implements Attribute {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setValue(final java.lang.Object value){
+   public void setValue(final Object value){
       this.value = value;
    }
 

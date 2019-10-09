@@ -3,7 +3,6 @@ package com.commercetools.models.common;
 import com.commercetools.models.common.CreatedBy;
 import com.commercetools.models.common.LastModifiedBy;
 import com.commercetools.models.customer.CustomerReference;
-import java.lang.String;
 import com.commercetools.models.common.ClientLoggingImpl;
 
 import com.fasterxml.jackson.annotation.*;

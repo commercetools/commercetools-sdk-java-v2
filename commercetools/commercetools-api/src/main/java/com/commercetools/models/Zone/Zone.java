@@ -1,8 +1,7 @@
 package com.commercetools.models.zone;
 
-import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.zone.Location;
-import java.lang.String;
 import com.commercetools.models.zone.ZoneImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -21,7 +20,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ZoneImpl.class)
-public interface Zone extends BaseResource {
+public interface Zone extends LoggedResource {
 
    
    
@@ -60,6 +59,8 @@ public interface Zone extends BaseResource {
       instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setName(template.getName());
       instance.setDescription(template.getDescription());
       instance.setLocations(template.getLocations());

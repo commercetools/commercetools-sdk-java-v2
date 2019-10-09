@@ -1,9 +1,8 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.common.Address;
+import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import java.time.LocalDate;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,39 +25,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCustomerDraftImpl implements MyCustomerDraft {
 
-   private java.lang.String lastName;
+   private String lastName;
    
    private java.util.List<com.commercetools.models.common.Address> addresses;
    
-   private java.lang.Long defaultShippingAddress;
+   private Long defaultShippingAddress;
+   
+   private java.util.List<com.commercetools.models.store.StoreKeyReference> stores;
    
    private com.commercetools.models.type.CustomFields custom;
    
-   private java.lang.String companyName;
+   private String companyName;
    
-   private java.lang.String vatId;
+   private String vatId;
    
    private java.time.LocalDate dateOfBirth;
    
-   private java.lang.String locale;
+   private String locale;
    
-   private java.lang.String title;
+   private String title;
    
-   private java.lang.String firstName;
+   private String firstName;
    
-   private java.lang.String password;
+   private String password;
    
-   private java.lang.String middleName;
+   private String middleName;
    
-   private java.lang.Long defaultBillingAddress;
+   private Long defaultBillingAddress;
    
-   private java.lang.String email;
+   private String email;
 
    @JsonCreator
-   MyCustomerDraftImpl(@JsonProperty("lastName") final java.lang.String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.models.common.Address> addresses, @JsonProperty("defaultShippingAddress") final java.lang.Long defaultShippingAddress, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("companyName") final java.lang.String companyName, @JsonProperty("vatId") final java.lang.String vatId, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("title") final java.lang.String title, @JsonProperty("firstName") final java.lang.String firstName, @JsonProperty("password") final java.lang.String password, @JsonProperty("middleName") final java.lang.String middleName, @JsonProperty("defaultBillingAddress") final java.lang.Long defaultBillingAddress, @JsonProperty("email") final java.lang.String email) {
+   MyCustomerDraftImpl(@JsonProperty("lastName") final String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.models.common.Address> addresses, @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress, @JsonProperty("stores") final java.util.List<com.commercetools.models.store.StoreKeyReference> stores, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final String locale, @JsonProperty("title") final String title, @JsonProperty("firstName") final String firstName, @JsonProperty("password") final String password, @JsonProperty("middleName") final String middleName, @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress, @JsonProperty("email") final String email) {
       this.lastName = lastName;
       this.addresses = addresses;
       this.defaultShippingAddress = defaultShippingAddress;
+      this.stores = stores;
       this.custom = custom;
       this.companyName = companyName;
       this.vatId = vatId;
@@ -76,7 +78,7 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
    }
    
    
-   public java.lang.String getLastName(){
+   public String getLastName(){
       return this.lastName;
    }
    
@@ -86,8 +88,13 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
    }
    
    
-   public java.lang.Long getDefaultShippingAddress(){
+   public Long getDefaultShippingAddress(){
       return this.defaultShippingAddress;
+   }
+   
+   
+   public java.util.List<com.commercetools.models.store.StoreKeyReference> getStores(){
+      return this.stores;
    }
    
    
@@ -96,12 +103,12 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
    }
    
    
-   public java.lang.String getCompanyName(){
+   public String getCompanyName(){
       return this.companyName;
    }
    
    
-   public java.lang.String getVatId(){
+   public String getVatId(){
       return this.vatId;
    }
    
@@ -111,41 +118,41 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
    }
    
    
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
    
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
    
    
-   public java.lang.String getFirstName(){
+   public String getFirstName(){
       return this.firstName;
    }
    
    
-   public java.lang.String getPassword(){
+   public String getPassword(){
       return this.password;
    }
    
    
-   public java.lang.String getMiddleName(){
+   public String getMiddleName(){
       return this.middleName;
    }
    
    
-   public java.lang.Long getDefaultBillingAddress(){
+   public Long getDefaultBillingAddress(){
       return this.defaultBillingAddress;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 
-   public void setLastName(final java.lang.String lastName){
+   public void setLastName(final String lastName){
       this.lastName = lastName;
    }
    
@@ -153,19 +160,23 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
       this.addresses = addresses;
    }
    
-   public void setDefaultShippingAddress(final java.lang.Long defaultShippingAddress){
+   public void setDefaultShippingAddress(final Long defaultShippingAddress){
       this.defaultShippingAddress = defaultShippingAddress;
+   }
+   
+   public void setStores(final java.util.List<com.commercetools.models.store.StoreKeyReference> stores){
+      this.stores = stores;
    }
    
    public void setCustom(final com.commercetools.models.type.CustomFields custom){
       this.custom = custom;
    }
    
-   public void setCompanyName(final java.lang.String companyName){
+   public void setCompanyName(final String companyName){
       this.companyName = companyName;
    }
    
-   public void setVatId(final java.lang.String vatId){
+   public void setVatId(final String vatId){
       this.vatId = vatId;
    }
    
@@ -173,31 +184,31 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
       this.dateOfBirth = dateOfBirth;
    }
    
-   public void setLocale(final java.lang.String locale){
+   public void setLocale(final String locale){
       this.locale = locale;
    }
    
-   public void setTitle(final java.lang.String title){
+   public void setTitle(final String title){
       this.title = title;
    }
    
-   public void setFirstName(final java.lang.String firstName){
+   public void setFirstName(final String firstName){
       this.firstName = firstName;
    }
    
-   public void setPassword(final java.lang.String password){
+   public void setPassword(final String password){
       this.password = password;
    }
    
-   public void setMiddleName(final java.lang.String middleName){
+   public void setMiddleName(final String middleName){
       this.middleName = middleName;
    }
    
-   public void setDefaultBillingAddress(final java.lang.Long defaultBillingAddress){
+   public void setDefaultBillingAddress(final Long defaultBillingAddress){
       this.defaultBillingAddress = defaultBillingAddress;
    }
    
-   public void setEmail(final java.lang.String email){
+   public void setEmail(final String email){
       this.email = email;
    }
 

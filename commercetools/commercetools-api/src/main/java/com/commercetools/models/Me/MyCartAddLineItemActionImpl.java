@@ -7,9 +7,6 @@ import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.me.MyCartUpdateAction;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -31,15 +28,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
-   private java.lang.String productId;
+   private String productId;
    
    private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
@@ -47,16 +44,16 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
    
    private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
-   private java.lang.String sku;
+   private String sku;
    
    private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
    
    private com.commercetools.models.common.Money externalPrice;
 
    @JsonCreator
-   MyCartAddLineItemActionImpl(@JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("externalTotalPrice") final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("externalPrice") final com.commercetools.models.common.Money externalPrice) {
+   MyCartAddLineItemActionImpl(@JsonProperty("quantity") final Integer quantity, @JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final String productId, @JsonProperty("externalTotalPrice") final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("externalPrice") final com.commercetools.models.common.Money externalPrice) {
       this.quantity = quantity;
       this.externalTaxRate = externalTaxRate;
       this.shippingDetails = shippingDetails;
@@ -75,12 +72,12 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -95,7 +92,7 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -115,12 +112,12 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
@@ -134,7 +131,7 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
       return this.externalPrice;
    }
 
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
    
@@ -146,7 +143,7 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
       this.shippingDetails = shippingDetails;
    }
    
-   public void setProductId(final java.lang.String productId){
+   public void setProductId(final String productId){
       this.productId = productId;
    }
    
@@ -162,11 +159,11 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
       this.supplyChannel = supplyChannel;
    }
    
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
    

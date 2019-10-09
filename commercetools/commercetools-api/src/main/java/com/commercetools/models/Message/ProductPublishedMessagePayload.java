@@ -3,8 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.cart.ProductPublishScope;
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.product.ProductProjection;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.message.ProductPublishedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;

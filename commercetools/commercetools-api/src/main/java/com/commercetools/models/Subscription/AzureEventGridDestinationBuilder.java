@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import com.commercetools.models.subscription.AzureEventGridDestination;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class AzureEventGridDestinationBuilder {
    
    
-   private java.lang.String accessKey;
+   private String accessKey;
    
    
-   private java.lang.String uri;
+   private String uri;
    
-   public AzureEventGridDestinationBuilder accessKey( final java.lang.String accessKey) {
+   public AzureEventGridDestinationBuilder accessKey( final String accessKey) {
       this.accessKey = accessKey;
       return this;
    }
    
-   public AzureEventGridDestinationBuilder uri( final java.lang.String uri) {
+   public AzureEventGridDestinationBuilder uri( final String uri) {
       this.uri = uri;
       return this;
    }
    
    
-   public java.lang.String getAccessKey(){
+   public String getAccessKey(){
       return this.accessKey;
    }
    
    
-   public java.lang.String getUri(){
+   public String getUri(){
       return this.uri;
    }
 

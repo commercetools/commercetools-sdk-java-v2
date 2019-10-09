@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.CustomerUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.customer.CustomerUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

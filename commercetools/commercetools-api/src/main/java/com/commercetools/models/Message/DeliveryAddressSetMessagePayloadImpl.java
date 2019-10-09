@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.common.Address oldAddress;
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    private com.commercetools.models.common.Address address;
 
    @JsonCreator
-   DeliveryAddressSetMessagePayloadImpl(@JsonProperty("oldAddress") final com.commercetools.models.common.Address oldAddress, @JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("address") final com.commercetools.models.common.Address address) {
+   DeliveryAddressSetMessagePayloadImpl(@JsonProperty("oldAddress") final com.commercetools.models.common.Address oldAddress, @JsonProperty("deliveryId") final String deliveryId, @JsonProperty("address") final com.commercetools.models.common.Address address) {
       this.oldAddress = oldAddress;
       this.deliveryId = deliveryId;
       this.address = address;
@@ -44,7 +43,7 @@ public final class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddre
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -54,7 +53,7 @@ public final class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddre
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    
@@ -67,7 +66,7 @@ public final class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddre
       this.oldAddress = oldAddress;
    }
    
-   public void setDeliveryId(final java.lang.String deliveryId){
+   public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
    

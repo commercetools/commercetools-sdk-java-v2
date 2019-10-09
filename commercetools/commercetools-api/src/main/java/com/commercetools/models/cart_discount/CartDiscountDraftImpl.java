@@ -1,12 +1,10 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountTarget;
-import com.commercetools.models.cart_discount.CartDiscountValue;
+import com.commercetools.models.cart_discount.CartDiscountValueDraft;
 import com.commercetools.models.cart_discount.StackingMode;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -29,15 +27,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountDraftImpl implements CartDiscountDraft {
 
-   private java.lang.Boolean requiresDiscountCode;
+   private Boolean requiresDiscountCode;
    
-   private java.lang.String cartPredicate;
+   private String cartPredicate;
    
    private com.commercetools.models.type.CustomFields custom;
    
    private com.commercetools.models.cart_discount.StackingMode stackingMode;
    
-   private java.lang.String sortOrder;
+   private String sortOrder;
    
    private com.commercetools.models.common.LocalizedString name;
    
@@ -47,16 +45,16 @@ public final class CartDiscountDraftImpl implements CartDiscountDraft {
    
    private java.time.ZonedDateTime validFrom;
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
-   private com.commercetools.models.cart_discount.CartDiscountValue value;
+   private com.commercetools.models.cart_discount.CartDiscountValueDraft value;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.cart_discount.CartDiscountTarget target;
 
    @JsonCreator
-   CartDiscountDraftImpl(@JsonProperty("requiresDiscountCode") final java.lang.Boolean requiresDiscountCode, @JsonProperty("cartPredicate") final java.lang.String cartPredicate, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("stackingMode") final com.commercetools.models.cart_discount.StackingMode stackingMode, @JsonProperty("sortOrder") final java.lang.String sortOrder, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("isActive") final java.lang.Boolean isActive, @JsonProperty("value") final com.commercetools.models.cart_discount.CartDiscountValue value, @JsonProperty("key") final java.lang.String key, @JsonProperty("target") final com.commercetools.models.cart_discount.CartDiscountTarget target) {
+   CartDiscountDraftImpl(@JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode, @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("stackingMode") final com.commercetools.models.cart_discount.StackingMode stackingMode, @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("value") final com.commercetools.models.cart_discount.CartDiscountValueDraft value, @JsonProperty("key") final String key, @JsonProperty("target") final com.commercetools.models.cart_discount.CartDiscountTarget target) {
       this.requiresDiscountCode = requiresDiscountCode;
       this.cartPredicate = cartPredicate;
       this.custom = custom;
@@ -76,12 +74,12 @@ public final class CartDiscountDraftImpl implements CartDiscountDraft {
    }
    
    
-   public java.lang.Boolean getRequiresDiscountCode(){
+   public Boolean getRequiresDiscountCode(){
       return this.requiresDiscountCode;
    }
    
    
-   public java.lang.String getCartPredicate(){
+   public String getCartPredicate(){
       return this.cartPredicate;
    }
    
@@ -99,7 +97,7 @@ public final class CartDiscountDraftImpl implements CartDiscountDraft {
    }
    
    
-   public java.lang.String getSortOrder(){
+   public String getSortOrder(){
       return this.sortOrder;
    }
    
@@ -124,17 +122,17 @@ public final class CartDiscountDraftImpl implements CartDiscountDraft {
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
    
-   public com.commercetools.models.cart_discount.CartDiscountValue getValue(){
+   public com.commercetools.models.cart_discount.CartDiscountValueDraft getValue(){
       return this.value;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -143,11 +141,11 @@ public final class CartDiscountDraftImpl implements CartDiscountDraft {
       return this.target;
    }
 
-   public void setRequiresDiscountCode(final java.lang.Boolean requiresDiscountCode){
+   public void setRequiresDiscountCode(final Boolean requiresDiscountCode){
       this.requiresDiscountCode = requiresDiscountCode;
    }
    
-   public void setCartPredicate(final java.lang.String cartPredicate){
+   public void setCartPredicate(final String cartPredicate){
       this.cartPredicate = cartPredicate;
    }
    
@@ -159,7 +157,7 @@ public final class CartDiscountDraftImpl implements CartDiscountDraft {
       this.stackingMode = stackingMode;
    }
    
-   public void setSortOrder(final java.lang.String sortOrder){
+   public void setSortOrder(final String sortOrder){
       this.sortOrder = sortOrder;
    }
    
@@ -179,15 +177,15 @@ public final class CartDiscountDraftImpl implements CartDiscountDraft {
       this.validFrom = validFrom;
    }
    
-   public void setIsActive(final java.lang.Boolean isActive){
+   public void setIsActive(final Boolean isActive){
       this.isActive = isActive;
    }
    
-   public void setValue(final com.commercetools.models.cart_discount.CartDiscountValue value){
+   public void setValue(final com.commercetools.models.cart_discount.CartDiscountValueDraft value){
       this.value = value;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

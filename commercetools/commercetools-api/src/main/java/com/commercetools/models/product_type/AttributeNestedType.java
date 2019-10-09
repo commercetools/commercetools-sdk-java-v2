@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeType;
 import com.commercetools.models.product_type.ProductTypeReference;
-import java.lang.String;
 import com.commercetools.models.product_type.AttributeNestedTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;

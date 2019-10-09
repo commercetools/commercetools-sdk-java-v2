@@ -1,8 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetAssetCustomFieldActionImpl implements CategorySetAssetCustomFieldAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String assetId;
+   private String assetId;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.Object value;
+   private Object value;
    
-   private java.lang.String assetKey;
+   private String assetKey;
 
    @JsonCreator
-   CategorySetAssetCustomFieldActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("name") final java.lang.String name, @JsonProperty("value") final java.lang.Object value, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   CategorySetAssetCustomFieldActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("name") final String name, @JsonProperty("value") final Object value, @JsonProperty("assetKey") final String assetKey) {
       this.assetId = assetId;
       this.name = name;
       this.value = value;
@@ -47,43 +45,43 @@ public final class CategorySetAssetCustomFieldActionImpl implements CategorySetA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
    
    
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
 
-   public void setAssetId(final java.lang.String assetId){
+   public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setValue(final java.lang.Object value){
+   public void setValue(final Object value){
       this.value = value;
    }
    
-   public void setAssetKey(final java.lang.String assetKey){
+   public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
    }
 

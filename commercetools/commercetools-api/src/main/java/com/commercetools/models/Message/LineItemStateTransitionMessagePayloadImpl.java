@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.state.StateReference;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,20 +24,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LineItemStateTransitionMessagePayloadImpl implements LineItemStateTransitionMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.state.StateReference toState;
    
    private com.commercetools.models.state.StateReference fromState;
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    private java.time.ZonedDateTime transitionDate;
 
    @JsonCreator
-   LineItemStateTransitionMessagePayloadImpl(@JsonProperty("toState") final com.commercetools.models.state.StateReference toState, @JsonProperty("fromState") final com.commercetools.models.state.StateReference fromState, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate) {
+   LineItemStateTransitionMessagePayloadImpl(@JsonProperty("toState") final com.commercetools.models.state.StateReference toState, @JsonProperty("fromState") final com.commercetools.models.state.StateReference fromState, @JsonProperty("quantity") final Long quantity, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate) {
       this.toState = toState;
       this.fromState = fromState;
       this.quantity = quantity;
@@ -52,7 +50,7 @@ public final class LineItemStateTransitionMessagePayloadImpl implements LineItem
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -67,12 +65,12 @@ public final class LineItemStateTransitionMessagePayloadImpl implements LineItem
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
@@ -89,11 +87,11 @@ public final class LineItemStateTransitionMessagePayloadImpl implements LineItem
       this.fromState = fromState;
    }
    
-   public void setQuantity(final java.lang.Long quantity){
+   public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
    
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
    

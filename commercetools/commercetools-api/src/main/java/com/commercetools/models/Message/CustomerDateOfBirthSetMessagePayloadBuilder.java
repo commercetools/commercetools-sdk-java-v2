@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import java.time.LocalDate;
 import com.commercetools.models.message.CustomerDateOfBirthSetMessagePayload;
 import javax.annotation.Nullable;

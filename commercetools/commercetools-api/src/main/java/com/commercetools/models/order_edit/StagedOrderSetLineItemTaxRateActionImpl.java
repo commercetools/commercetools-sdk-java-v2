@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.cart.ExternalTaxRateDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLineItemTaxRateAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
 
    @JsonCreator
-   StagedOrderSetLineItemTaxRateActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
+   StagedOrderSetLineItemTaxRateActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("lineItemId") final String lineItemId) {
       this.externalTaxRate = externalTaxRate;
       this.lineItemId = lineItemId;
       this.action = "setLineItemTaxRate";
@@ -41,7 +40,7 @@ public final class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrde
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrde
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
 
@@ -59,7 +58,7 @@ public final class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrde
       this.externalTaxRate = externalTaxRate;
    }
    
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
 

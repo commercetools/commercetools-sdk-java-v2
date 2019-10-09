@@ -4,8 +4,6 @@ import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.common.Money;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.CartRemoveLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,13 +13,13 @@ import java.time.ZonedDateTime;
 public final class CartRemoveLineItemActionBuilder {
    
    @Nullable
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    @Nullable
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
@@ -29,7 +27,7 @@ public final class CartRemoveLineItemActionBuilder {
    @Nullable
    private com.commercetools.models.common.Money externalPrice;
    
-   public CartRemoveLineItemActionBuilder quantity(@Nullable final java.lang.Integer quantity) {
+   public CartRemoveLineItemActionBuilder quantity(@Nullable final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -39,7 +37,7 @@ public final class CartRemoveLineItemActionBuilder {
       return this;
    }
    
-   public CartRemoveLineItemActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public CartRemoveLineItemActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -55,7 +53,7 @@ public final class CartRemoveLineItemActionBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -65,7 +63,7 @@ public final class CartRemoveLineItemActionBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    

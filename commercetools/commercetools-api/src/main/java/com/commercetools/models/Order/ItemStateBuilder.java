@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.state.StateReference;
-import java.lang.Integer;
 import com.commercetools.models.order.ItemState;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,12 +10,12 @@ import java.time.ZonedDateTime;
 public final class ItemStateBuilder {
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    
    private com.commercetools.models.state.StateReference state;
    
-   public ItemStateBuilder quantity( final java.lang.Integer quantity) {
+   public ItemStateBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -27,7 +26,7 @@ public final class ItemStateBuilder {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    

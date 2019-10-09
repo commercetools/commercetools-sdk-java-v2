@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.state.StateReference;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.message.LineItemStateTransitionMessagePayload;
 import javax.annotation.Nullable;
@@ -20,10 +18,10 @@ public final class LineItemStateTransitionMessagePayloadBuilder {
    private com.commercetools.models.state.StateReference fromState;
    
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    
    private java.time.ZonedDateTime transitionDate;
@@ -38,12 +36,12 @@ public final class LineItemStateTransitionMessagePayloadBuilder {
       return this;
    }
    
-   public LineItemStateTransitionMessagePayloadBuilder quantity( final java.lang.Long quantity) {
+   public LineItemStateTransitionMessagePayloadBuilder quantity( final Long quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public LineItemStateTransitionMessagePayloadBuilder lineItemId( final java.lang.String lineItemId) {
+   public LineItemStateTransitionMessagePayloadBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -64,12 +62,12 @@ public final class LineItemStateTransitionMessagePayloadBuilder {
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    

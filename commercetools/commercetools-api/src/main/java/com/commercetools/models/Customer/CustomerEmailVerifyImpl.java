@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
-import java.lang.Long;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerEmailVerifyImpl implements CustomerEmailVerify {
 
-   private java.lang.String tokenValue;
+   private String tokenValue;
    
-   private java.lang.Long version;
+   private Long version;
 
    @JsonCreator
-   CustomerEmailVerifyImpl(@JsonProperty("tokenValue") final java.lang.String tokenValue, @JsonProperty("version") final java.lang.Long version) {
+   CustomerEmailVerifyImpl(@JsonProperty("tokenValue") final String tokenValue, @JsonProperty("version") final Long version) {
       this.tokenValue = tokenValue;
       this.version = version;
    }
@@ -37,20 +36,20 @@ public final class CustomerEmailVerifyImpl implements CustomerEmailVerify {
    }
    
    
-   public java.lang.String getTokenValue(){
+   public String getTokenValue(){
       return this.tokenValue;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 
-   public void setTokenValue(final java.lang.String tokenValue){
+   public void setTokenValue(final String tokenValue){
       this.tokenValue = tokenValue;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
 

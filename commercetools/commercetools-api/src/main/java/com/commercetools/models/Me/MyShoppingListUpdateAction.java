@@ -19,7 +19,6 @@ import com.commercetools.models.me.MyShoppingListSetLineItemCustomTypeAction;
 import com.commercetools.models.me.MyShoppingListSetTextLineItemCustomFieldAction;
 import com.commercetools.models.me.MyShoppingListSetTextLineItemCustomTypeAction;
 import com.commercetools.models.me.MyShoppingListSetTextLineItemDescriptionAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

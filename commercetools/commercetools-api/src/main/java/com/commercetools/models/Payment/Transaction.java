@@ -3,7 +3,6 @@ package com.commercetools.models.payment;
 import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.payment.TransactionState;
 import com.commercetools.models.payment.TransactionType;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.payment.TransactionImpl;
 

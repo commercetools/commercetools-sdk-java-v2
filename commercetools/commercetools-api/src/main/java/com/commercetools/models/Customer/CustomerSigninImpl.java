@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.AnonymousCartSignInMode;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,18 +22,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSigninImpl implements CustomerSignin {
 
-   private java.lang.String anonymousId;
+   private Boolean updateProductData;
    
-   private java.lang.String password;
+   private String anonymousId;
+   
+   private String password;
    
    private com.commercetools.models.customer.AnonymousCartSignInMode anonymousCartSignInMode;
    
-   private java.lang.String anonymousCartId;
+   private String anonymousCartId;
    
-   private java.lang.String email;
+   private String email;
 
    @JsonCreator
-   CustomerSigninImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("password") final java.lang.String password, @JsonProperty("anonymousCartSignInMode") final com.commercetools.models.customer.AnonymousCartSignInMode anonymousCartSignInMode, @JsonProperty("anonymousCartId") final java.lang.String anonymousCartId, @JsonProperty("email") final java.lang.String email) {
+   CustomerSigninImpl(@JsonProperty("updateProductData") final Boolean updateProductData, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("password") final String password, @JsonProperty("anonymousCartSignInMode") final com.commercetools.models.customer.AnonymousCartSignInMode anonymousCartSignInMode, @JsonProperty("anonymousCartId") final String anonymousCartId, @JsonProperty("email") final String email) {
+      this.updateProductData = updateProductData;
       this.anonymousId = anonymousId;
       this.password = password;
       this.anonymousCartSignInMode = anonymousCartSignInMode;
@@ -46,12 +48,17 @@ public final class CustomerSigninImpl implements CustomerSignin {
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public Boolean getUpdateProductData(){
+      return this.updateProductData;
+   }
+   
+   
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
    
-   public java.lang.String getPassword(){
+   public String getPassword(){
       return this.password;
    }
    
@@ -61,20 +68,24 @@ public final class CustomerSigninImpl implements CustomerSignin {
    }
    
    
-   public java.lang.String getAnonymousCartId(){
+   public String getAnonymousCartId(){
       return this.anonymousCartId;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setUpdateProductData(final Boolean updateProductData){
+      this.updateProductData = updateProductData;
+   }
+   
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
    
-   public void setPassword(final java.lang.String password){
+   public void setPassword(final String password){
       this.password = password;
    }
    
@@ -82,11 +93,11 @@ public final class CustomerSigninImpl implements CustomerSignin {
       this.anonymousCartSignInMode = anonymousCartSignInMode;
    }
    
-   public void setAnonymousCartId(final java.lang.String anonymousCartId){
+   public void setAnonymousCartId(final String anonymousCartId){
       this.anonymousCartId = anonymousCartId;
    }
    
-   public void setEmail(final java.lang.String email){
+   public void setEmail(final String email){
       this.email = email;
    }
 

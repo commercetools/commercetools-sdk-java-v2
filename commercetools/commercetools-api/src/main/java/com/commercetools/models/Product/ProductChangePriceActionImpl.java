@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductChangePriceActionImpl implements ProductChangePriceAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.PriceDraft price;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.String priceId;
+   private String priceId;
 
    @JsonCreator
-   ProductChangePriceActionImpl(@JsonProperty("price") final com.commercetools.models.common.PriceDraft price, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("priceId") final java.lang.String priceId) {
+   ProductChangePriceActionImpl(@JsonProperty("price") final com.commercetools.models.common.PriceDraft price, @JsonProperty("staged") final Boolean staged, @JsonProperty("priceId") final String priceId) {
       this.price = price;
       this.staged = staged;
       this.priceId = priceId;
@@ -45,7 +43,7 @@ public final class ProductChangePriceActionImpl implements ProductChangePriceAct
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -55,12 +53,12 @@ public final class ProductChangePriceActionImpl implements ProductChangePriceAct
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.String getPriceId(){
+   public String getPriceId(){
       return this.priceId;
    }
 
@@ -68,11 +66,11 @@ public final class ProductChangePriceActionImpl implements ProductChangePriceAct
       this.price = price;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setPriceId(final java.lang.String priceId){
+   public void setPriceId(final String priceId){
       this.priceId = priceId;
    }
 

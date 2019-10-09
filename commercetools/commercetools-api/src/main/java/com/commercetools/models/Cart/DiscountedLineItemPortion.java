@@ -1,7 +1,7 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart_discount.CartDiscountReference;
-import com.commercetools.models.common.Money;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.cart.DiscountedLineItemPortionImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -31,11 +31,11 @@ public interface DiscountedLineItemPortion  {
    @NotNull
    @Valid
    @JsonProperty("discountedAmount")
-   public Money getDiscountedAmount();
+   public TypedMoney getDiscountedAmount();
 
    public void setDiscount(final CartDiscountReference discount);
    
-   public void setDiscountedAmount(final Money discountedAmount);
+   public void setDiscountedAmount(final TypedMoney discountedAmount);
    
    public static DiscountedLineItemPortionImpl of(){
       return new DiscountedLineItemPortionImpl();

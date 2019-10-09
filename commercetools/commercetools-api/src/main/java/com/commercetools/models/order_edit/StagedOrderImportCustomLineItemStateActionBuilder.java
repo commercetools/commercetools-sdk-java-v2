@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.ItemState;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderImportCustomLineItemStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class StagedOrderImportCustomLineItemStateActionBuilder {
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    
    private java.util.List<com.commercetools.models.order.ItemState> state;
    
-   public StagedOrderImportCustomLineItemStateActionBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public StagedOrderImportCustomLineItemStateActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class StagedOrderImportCustomLineItemStateActionBuilder {
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    

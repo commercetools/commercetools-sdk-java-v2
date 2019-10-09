@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryChangeOrderHintActionImpl implements CategoryChangeOrderHintAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String orderHint;
+   private String orderHint;
 
    @JsonCreator
-   CategoryChangeOrderHintActionImpl(@JsonProperty("orderHint") final java.lang.String orderHint) {
+   CategoryChangeOrderHintActionImpl(@JsonProperty("orderHint") final String orderHint) {
       this.orderHint = orderHint;
       this.action = "changeOrderHint";
    }
@@ -37,16 +36,16 @@ public final class CategoryChangeOrderHintActionImpl implements CategoryChangeOr
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getOrderHint(){
+   public String getOrderHint(){
       return this.orderHint;
    }
 
-   public void setOrderHint(final java.lang.String orderHint){
+   public void setOrderHint(final String orderHint){
       this.orderHint = orderHint;
    }
 

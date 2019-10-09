@@ -2,7 +2,6 @@ package com.commercetools.models.channel;
 
 import com.commercetools.models.channel.ChannelUpdateAction;
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelChangeNameActionImpl implements ChannelChangeNameAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.LocalizedString name;
 
@@ -38,7 +37,7 @@ public final class ChannelChangeNameActionImpl implements ChannelChangeNameActio
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

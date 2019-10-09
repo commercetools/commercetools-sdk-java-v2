@@ -3,8 +3,6 @@ package com.commercetools.models.cart;
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.models.common.Money;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,18 +24,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartChangeLineItemQuantityActionImpl implements CartChangeLineItemQuantityAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    private com.commercetools.models.common.Money externalPrice;
 
    @JsonCreator
-   CartChangeLineItemQuantityActionImpl(@JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("externalTotalPrice") final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("externalPrice") final com.commercetools.models.common.Money externalPrice) {
+   CartChangeLineItemQuantityActionImpl(@JsonProperty("quantity") final Integer quantity, @JsonProperty("externalTotalPrice") final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("externalPrice") final com.commercetools.models.common.Money externalPrice) {
       this.quantity = quantity;
       this.externalTotalPrice = externalTotalPrice;
       this.lineItemId = lineItemId;
@@ -49,12 +47,12 @@ public final class CartChangeLineItemQuantityActionImpl implements CartChangeLin
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -64,7 +62,7 @@ public final class CartChangeLineItemQuantityActionImpl implements CartChangeLin
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
@@ -73,7 +71,7 @@ public final class CartChangeLineItemQuantityActionImpl implements CartChangeLin
       return this.externalPrice;
    }
 
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
    
@@ -81,7 +79,7 @@ public final class CartChangeLineItemQuantityActionImpl implements CartChangeLin
       this.externalTotalPrice = externalTotalPrice;
    }
    
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
    

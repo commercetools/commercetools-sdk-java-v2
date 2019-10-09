@@ -22,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CreatedByImpl implements CreatedBy {
 
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
-   private java.lang.String clientId;
+   private String clientId;
    
-   private java.lang.String externalUserId;
+   private String externalUserId;
    
    private com.commercetools.models.customer.CustomerReference customer;
 
    @JsonCreator
-   CreatedByImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("clientId") final java.lang.String clientId, @JsonProperty("externalUserId") final java.lang.String externalUserId, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
+   CreatedByImpl(@JsonProperty("anonymousId") final String anonymousId, @JsonProperty("clientId") final String clientId, @JsonProperty("externalUserId") final String externalUserId, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
       this.anonymousId = anonymousId;
       this.clientId = clientId;
       this.externalUserId = externalUserId;
@@ -42,17 +42,17 @@ public final class CreatedByImpl implements CreatedBy {
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
    
-   public java.lang.String getClientId(){
+   public String getClientId(){
       return this.clientId;
    }
    
    
-   public java.lang.String getExternalUserId(){
+   public String getExternalUserId(){
       return this.externalUserId;
    }
    
@@ -61,15 +61,15 @@ public final class CreatedByImpl implements CreatedBy {
       return this.customer;
    }
 
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
    
-   public void setClientId(final java.lang.String clientId){
+   public void setClientId(final String clientId){
       this.clientId = clientId;
    }
    
-   public void setExternalUserId(final java.lang.String externalUserId){
+   public void setExternalUserId(final String externalUserId){
       this.externalUserId = externalUserId;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionDestination;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionAWSLambdaDestination;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class ExtensionAWSLambdaDestinationBuilder {
    
    
-   private java.lang.String accessKey;
+   private String accessKey;
    
    
-   private java.lang.String arn;
+   private String arn;
    
    
-   private java.lang.String accessSecret;
+   private String accessSecret;
    
-   public ExtensionAWSLambdaDestinationBuilder accessKey( final java.lang.String accessKey) {
+   public ExtensionAWSLambdaDestinationBuilder accessKey( final String accessKey) {
       this.accessKey = accessKey;
       return this;
    }
    
-   public ExtensionAWSLambdaDestinationBuilder arn( final java.lang.String arn) {
+   public ExtensionAWSLambdaDestinationBuilder arn( final String arn) {
       this.arn = arn;
       return this;
    }
    
-   public ExtensionAWSLambdaDestinationBuilder accessSecret( final java.lang.String accessSecret) {
+   public ExtensionAWSLambdaDestinationBuilder accessSecret( final String accessSecret) {
       this.accessSecret = accessSecret;
       return this;
    }
    
    
-   public java.lang.String getAccessKey(){
+   public String getAccessKey(){
       return this.accessKey;
    }
    
    
-   public java.lang.String getArn(){
+   public String getArn(){
       return this.arn;
    }
    
    
-   public java.lang.String getAccessSecret(){
+   public String getAccessSecret(){
       return this.accessSecret;
    }
 

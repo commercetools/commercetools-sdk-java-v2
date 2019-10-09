@@ -1,8 +1,6 @@
 package com.commercetools.models.inventory;
 
 import com.commercetools.models.inventory.InventoryEntryUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntrySetRestockableInDaysActionImpl implements InventoryEntrySetRestockableInDaysAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Long restockableInDays;
+   private Long restockableInDays;
 
    @JsonCreator
-   InventoryEntrySetRestockableInDaysActionImpl(@JsonProperty("restockableInDays") final java.lang.Long restockableInDays) {
+   InventoryEntrySetRestockableInDaysActionImpl(@JsonProperty("restockableInDays") final Long restockableInDays) {
       this.restockableInDays = restockableInDays;
       this.action = "setRestockableInDays";
    }
@@ -38,16 +36,16 @@ public final class InventoryEntrySetRestockableInDaysActionImpl implements Inven
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Long getRestockableInDays(){
+   public Long getRestockableInDays(){
       return this.restockableInDays;
    }
 
-   public void setRestockableInDays(final java.lang.Long restockableInDays){
+   public void setRestockableInDays(final Long restockableInDays){
       this.restockableInDays = restockableInDays;
    }
 

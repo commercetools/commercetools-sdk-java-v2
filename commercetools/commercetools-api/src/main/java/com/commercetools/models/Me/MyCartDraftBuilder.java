@@ -6,8 +6,6 @@ import com.commercetools.models.common.Address;
 import com.commercetools.models.me.MyLineItemDraft;
 import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.me.MyCartDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,7 +18,7 @@ public final class MyCartDraftBuilder {
    private java.util.List<com.commercetools.models.me.MyLineItemDraft> lineItems;
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
    @Nullable
    private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
@@ -29,7 +27,7 @@ public final class MyCartDraftBuilder {
    private com.commercetools.models.cart.TaxMode taxMode;
    
    @Nullable
-   private java.lang.Long deleteDaysAfterLastModification;
+   private Long deleteDaysAfterLastModification;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
@@ -38,19 +36,19 @@ public final class MyCartDraftBuilder {
    private com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
    
    @Nullable
-   private java.lang.String customerEmail;
+   private String customerEmail;
    
    @Nullable
    private com.commercetools.models.common.Address shippingAddress;
    
    
-   private java.lang.String currency;
+   private String currency;
    
    @Nullable
    private com.commercetools.models.common.Address billingAddress;
    
    @Nullable
-   private java.lang.String locale;
+   private String locale;
    
    @Nullable
    private com.commercetools.models.cart.InventoryMode inventoryMode;
@@ -60,7 +58,7 @@ public final class MyCartDraftBuilder {
       return this;
    }
    
-   public MyCartDraftBuilder country(@Nullable final java.lang.String country) {
+   public MyCartDraftBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
@@ -75,7 +73,7 @@ public final class MyCartDraftBuilder {
       return this;
    }
    
-   public MyCartDraftBuilder deleteDaysAfterLastModification(@Nullable final java.lang.Long deleteDaysAfterLastModification) {
+   public MyCartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
       return this;
    }
@@ -90,7 +88,7 @@ public final class MyCartDraftBuilder {
       return this;
    }
    
-   public MyCartDraftBuilder customerEmail(@Nullable final java.lang.String customerEmail) {
+   public MyCartDraftBuilder customerEmail(@Nullable final String customerEmail) {
       this.customerEmail = customerEmail;
       return this;
    }
@@ -100,7 +98,7 @@ public final class MyCartDraftBuilder {
       return this;
    }
    
-   public MyCartDraftBuilder currency( final java.lang.String currency) {
+   public MyCartDraftBuilder currency( final String currency) {
       this.currency = currency;
       return this;
    }
@@ -110,7 +108,7 @@ public final class MyCartDraftBuilder {
       return this;
    }
    
-   public MyCartDraftBuilder locale(@Nullable final java.lang.String locale) {
+   public MyCartDraftBuilder locale(@Nullable final String locale) {
       this.locale = locale;
       return this;
    }
@@ -126,7 +124,7 @@ public final class MyCartDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
@@ -141,7 +139,7 @@ public final class MyCartDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Long getDeleteDaysAfterLastModification(){
+   public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
@@ -156,7 +154,7 @@ public final class MyCartDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getCustomerEmail(){
+   public String getCustomerEmail(){
       return this.customerEmail;
    }
    
@@ -166,7 +164,7 @@ public final class MyCartDraftBuilder {
    }
    
    
-   public java.lang.String getCurrency(){
+   public String getCurrency(){
       return this.currency;
    }
    
@@ -176,7 +174,7 @@ public final class MyCartDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    

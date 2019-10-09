@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetParcelItemsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class OrderSetParcelItemsActionBuilder {
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
    
-   private java.lang.String parcelId;
+   private String parcelId;
    
    public OrderSetParcelItemsActionBuilder items( final java.util.List<com.commercetools.models.order.DeliveryItem> items) {
       this.items = items;
       return this;
    }
    
-   public OrderSetParcelItemsActionBuilder parcelId( final java.lang.String parcelId) {
+   public OrderSetParcelItemsActionBuilder parcelId( final String parcelId) {
       this.parcelId = parcelId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class OrderSetParcelItemsActionBuilder {
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 

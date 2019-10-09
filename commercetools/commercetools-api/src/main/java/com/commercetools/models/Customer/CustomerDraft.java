@@ -2,11 +2,8 @@ package com.commercetools.models.customer;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import java.time.LocalDate;
 import com.commercetools.models.customer.CustomerDraftImpl;
 
@@ -124,6 +121,10 @@ public interface CustomerDraft  {
    
    @JsonProperty("key")
    public String getKey();
+   
+   @Valid
+   @JsonProperty("stores")
+   public List<StoreKeyReference> getStores();
 
    public void setCustomerNumber(final String customerNumber);
    
@@ -173,6 +174,8 @@ public interface CustomerDraft  {
    
    public void setKey(final String key);
    
+   public void setStores(final List<StoreKeyReference> stores);
+   
    public static CustomerDraftImpl of(){
       return new CustomerDraftImpl();
    }
@@ -184,6 +187,7 @@ public interface CustomerDraft  {
       instance.setLastName(template.getLastName());
       instance.setAddresses(template.getAddresses());
       instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
+      instance.setStores(template.getStores());
       instance.setCustomerGroup(template.getCustomerGroup());
       instance.setCustom(template.getCustom());
       instance.setCompanyName(template.getCompanyName());

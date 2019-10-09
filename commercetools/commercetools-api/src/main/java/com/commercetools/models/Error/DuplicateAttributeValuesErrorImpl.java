@@ -2,7 +2,6 @@ package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
 import com.commercetools.models.product.Attribute;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValuesError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
    private java.util.List<com.commercetools.models.product.Attribute> attributes;
 
    @JsonCreator
-   DuplicateAttributeValuesErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes) {
+   DuplicateAttributeValuesErrorImpl(@JsonProperty("message") final String message, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes) {
       this.message = message;
       this.attributes = attributes;
       this.code = "DuplicateAttributeValues";
@@ -41,12 +40,12 @@ public final class DuplicateAttributeValuesErrorImpl implements DuplicateAttribu
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
@@ -55,7 +54,7 @@ public final class DuplicateAttributeValuesErrorImpl implements DuplicateAttribu
       return this.attributes;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    

@@ -1,8 +1,6 @@
 package com.commercetools.models.inventory;
 
 import com.commercetools.models.inventory.InventoryEntryUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.inventory.InventoryEntrySetRestockableInDaysAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class InventoryEntrySetRestockableInDaysActionBuilder {
    
    @Nullable
-   private java.lang.Long restockableInDays;
+   private Long restockableInDays;
    
-   public InventoryEntrySetRestockableInDaysActionBuilder restockableInDays(@Nullable final java.lang.Long restockableInDays) {
+   public InventoryEntrySetRestockableInDaysActionBuilder restockableInDays(@Nullable final Long restockableInDays) {
       this.restockableInDays = restockableInDays;
       return this;
    }
    
    @Nullable
-   public java.lang.Long getRestockableInDays(){
+   public Long getRestockableInDays(){
       return this.restockableInDays;
    }
 

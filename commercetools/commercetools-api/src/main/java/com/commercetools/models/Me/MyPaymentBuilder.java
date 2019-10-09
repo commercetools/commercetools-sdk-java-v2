@@ -5,8 +5,6 @@ import com.commercetools.models.customer.CustomerReference;
 import com.commercetools.models.payment.PaymentMethodInfo;
 import com.commercetools.models.payment.Transaction;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.me.MyPayment;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,7 +14,7 @@ import java.time.ZonedDateTime;
 public final class MyPaymentBuilder {
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    
    private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
@@ -28,18 +26,18 @@ public final class MyPaymentBuilder {
    private com.commercetools.models.common.TypedMoney amountPlanned;
    
    
-   private java.lang.String id;
+   private String id;
    
    
    private java.util.List<com.commercetools.models.payment.Transaction> transactions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.customer.CustomerReference customer;
    
-   public MyPaymentBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public MyPaymentBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
@@ -59,7 +57,7 @@ public final class MyPaymentBuilder {
       return this;
    }
    
-   public MyPaymentBuilder id( final java.lang.String id) {
+   public MyPaymentBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -69,7 +67,7 @@ public final class MyPaymentBuilder {
       return this;
    }
    
-   public MyPaymentBuilder version( final java.lang.Long version) {
+   public MyPaymentBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -80,7 +78,7 @@ public final class MyPaymentBuilder {
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -100,7 +98,7 @@ public final class MyPaymentBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -110,7 +108,7 @@ public final class MyPaymentBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    

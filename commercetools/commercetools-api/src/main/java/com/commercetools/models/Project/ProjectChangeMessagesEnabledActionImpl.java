@@ -1,8 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeMessagesEnabledActionImpl implements ProjectChangeMessagesEnabledAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean messagesEnabled;
+   private Boolean messagesEnabled;
 
    @JsonCreator
-   ProjectChangeMessagesEnabledActionImpl(@JsonProperty("messagesEnabled") final java.lang.Boolean messagesEnabled) {
+   ProjectChangeMessagesEnabledActionImpl(@JsonProperty("messagesEnabled") final Boolean messagesEnabled) {
       this.messagesEnabled = messagesEnabled;
       this.action = "changeMessagesEnabled";
    }
@@ -38,16 +36,16 @@ public final class ProjectChangeMessagesEnabledActionImpl implements ProjectChan
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getMessagesEnabled(){
+   public Boolean getMessagesEnabled(){
       return this.messagesEnabled;
    }
 
-   public void setMessagesEnabled(final java.lang.Boolean messagesEnabled){
+   public void setMessagesEnabled(final Boolean messagesEnabled){
       this.messagesEnabled = messagesEnabled;
    }
 

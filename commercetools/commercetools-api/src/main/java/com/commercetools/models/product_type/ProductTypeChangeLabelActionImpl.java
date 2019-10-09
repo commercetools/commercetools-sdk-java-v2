@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
    private com.commercetools.models.common.LocalizedString label;
 
    @JsonCreator
-   ProductTypeChangeLabelActionImpl(@JsonProperty("attributeName") final java.lang.String attributeName, @JsonProperty("label") final com.commercetools.models.common.LocalizedString label) {
+   ProductTypeChangeLabelActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("label") final com.commercetools.models.common.LocalizedString label) {
       this.attributeName = attributeName;
       this.label = label;
       this.action = "changeLabel";
@@ -41,12 +40,12 @@ public final class ProductTypeChangeLabelActionImpl implements ProductTypeChange
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
    
@@ -55,7 +54,7 @@ public final class ProductTypeChangeLabelActionImpl implements ProductTypeChange
       return this.label;
    }
 
-   public void setAttributeName(final java.lang.String attributeName){
+   public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
    }
    

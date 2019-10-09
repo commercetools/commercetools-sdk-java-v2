@@ -3,9 +3,8 @@ package com.commercetools.models.customer;
 import com.commercetools.models.common.Address;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.String;
 import java.time.LocalDate;
 import com.commercetools.models.customer.Customer;
 import javax.annotation.Nullable;
@@ -22,10 +21,10 @@ public final class CustomerBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -34,10 +33,13 @@ public final class CustomerBuilder {
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
-   private java.lang.String lastName;
+   private String lastName;
    
    
    private java.util.List<com.commercetools.models.common.Address> addresses;
+   
+   @Nullable
+   private java.util.List<com.commercetools.models.store.StoreKeyReference> stores;
    
    @Nullable
    private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
@@ -46,58 +48,58 @@ public final class CustomerBuilder {
    private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
-   private java.lang.String companyName;
+   private String companyName;
    
    @Nullable
-   private java.lang.String vatId;
+   private String vatId;
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
    @Nullable
    private java.time.LocalDate dateOfBirth;
    
    @Nullable
-   private java.lang.String locale;
+   private String locale;
    
    @Nullable
-   private java.util.List<java.lang.String> billingAddressIds;
+   private java.util.List<String> billingAddressIds;
    
    @Nullable
-   private java.lang.String defaultShippingAddressId;
+   private String defaultShippingAddressId;
    
    @Nullable
-   private java.lang.String title;
+   private String title;
    
    @Nullable
-   private java.lang.String customerNumber;
+   private String customerNumber;
    
    
-   private java.lang.Boolean isEmailVerified;
-   
-   @Nullable
-   private java.lang.String defaultBillingAddressId;
+   private Boolean isEmailVerified;
    
    @Nullable
-   private java.util.List<java.lang.String> shippingAddressIds;
+   private String defaultBillingAddressId;
    
    @Nullable
-   private java.lang.String firstName;
-   
-   
-   private java.lang.String password;
+   private java.util.List<String> shippingAddressIds;
    
    @Nullable
-   private java.lang.String middleName;
+   private String firstName;
+   
+   
+   private String password;
    
    @Nullable
-   private java.lang.String salutation;
+   private String middleName;
    
    @Nullable
-   private java.lang.String key;
+   private String salutation;
+   
+   @Nullable
+   private String key;
    
    
-   private java.lang.String email;
+   private String email;
    
    public CustomerBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -109,12 +111,12 @@ public final class CustomerBuilder {
       return this;
    }
    
-   public CustomerBuilder id( final java.lang.String id) {
+   public CustomerBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public CustomerBuilder version( final java.lang.Long version) {
+   public CustomerBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -129,13 +131,18 @@ public final class CustomerBuilder {
       return this;
    }
    
-   public CustomerBuilder lastName(@Nullable final java.lang.String lastName) {
+   public CustomerBuilder lastName(@Nullable final String lastName) {
       this.lastName = lastName;
       return this;
    }
    
    public CustomerBuilder addresses( final java.util.List<com.commercetools.models.common.Address> addresses) {
       this.addresses = addresses;
+      return this;
+   }
+   
+   public CustomerBuilder stores(@Nullable final java.util.List<com.commercetools.models.store.StoreKeyReference> stores) {
+      this.stores = stores;
       return this;
    }
    
@@ -149,17 +156,17 @@ public final class CustomerBuilder {
       return this;
    }
    
-   public CustomerBuilder companyName(@Nullable final java.lang.String companyName) {
+   public CustomerBuilder companyName(@Nullable final String companyName) {
       this.companyName = companyName;
       return this;
    }
    
-   public CustomerBuilder vatId(@Nullable final java.lang.String vatId) {
+   public CustomerBuilder vatId(@Nullable final String vatId) {
       this.vatId = vatId;
       return this;
    }
    
-   public CustomerBuilder externalId(@Nullable final java.lang.String externalId) {
+   public CustomerBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
@@ -169,72 +176,72 @@ public final class CustomerBuilder {
       return this;
    }
    
-   public CustomerBuilder locale(@Nullable final java.lang.String locale) {
+   public CustomerBuilder locale(@Nullable final String locale) {
       this.locale = locale;
       return this;
    }
    
-   public CustomerBuilder billingAddressIds(@Nullable final java.util.List<java.lang.String> billingAddressIds) {
+   public CustomerBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
       this.billingAddressIds = billingAddressIds;
       return this;
    }
    
-   public CustomerBuilder defaultShippingAddressId(@Nullable final java.lang.String defaultShippingAddressId) {
+   public CustomerBuilder defaultShippingAddressId(@Nullable final String defaultShippingAddressId) {
       this.defaultShippingAddressId = defaultShippingAddressId;
       return this;
    }
    
-   public CustomerBuilder title(@Nullable final java.lang.String title) {
+   public CustomerBuilder title(@Nullable final String title) {
       this.title = title;
       return this;
    }
    
-   public CustomerBuilder customerNumber(@Nullable final java.lang.String customerNumber) {
+   public CustomerBuilder customerNumber(@Nullable final String customerNumber) {
       this.customerNumber = customerNumber;
       return this;
    }
    
-   public CustomerBuilder isEmailVerified( final java.lang.Boolean isEmailVerified) {
+   public CustomerBuilder isEmailVerified( final Boolean isEmailVerified) {
       this.isEmailVerified = isEmailVerified;
       return this;
    }
    
-   public CustomerBuilder defaultBillingAddressId(@Nullable final java.lang.String defaultBillingAddressId) {
+   public CustomerBuilder defaultBillingAddressId(@Nullable final String defaultBillingAddressId) {
       this.defaultBillingAddressId = defaultBillingAddressId;
       return this;
    }
    
-   public CustomerBuilder shippingAddressIds(@Nullable final java.util.List<java.lang.String> shippingAddressIds) {
+   public CustomerBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
       this.shippingAddressIds = shippingAddressIds;
       return this;
    }
    
-   public CustomerBuilder firstName(@Nullable final java.lang.String firstName) {
+   public CustomerBuilder firstName(@Nullable final String firstName) {
       this.firstName = firstName;
       return this;
    }
    
-   public CustomerBuilder password( final java.lang.String password) {
+   public CustomerBuilder password( final String password) {
       this.password = password;
       return this;
    }
    
-   public CustomerBuilder middleName(@Nullable final java.lang.String middleName) {
+   public CustomerBuilder middleName(@Nullable final String middleName) {
       this.middleName = middleName;
       return this;
    }
    
-   public CustomerBuilder salutation(@Nullable final java.lang.String salutation) {
+   public CustomerBuilder salutation(@Nullable final String salutation) {
       this.salutation = salutation;
       return this;
    }
    
-   public CustomerBuilder key(@Nullable final java.lang.String key) {
+   public CustomerBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
-   public CustomerBuilder email( final java.lang.String email) {
+   public CustomerBuilder email( final String email) {
       this.email = email;
       return this;
    }
@@ -250,12 +257,12 @@ public final class CustomerBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -270,13 +277,18 @@ public final class CustomerBuilder {
    }
    
    @Nullable
-   public java.lang.String getLastName(){
+   public String getLastName(){
       return this.lastName;
    }
    
    
    public java.util.List<com.commercetools.models.common.Address> getAddresses(){
       return this.addresses;
+   }
+   
+   @Nullable
+   public java.util.List<com.commercetools.models.store.StoreKeyReference> getStores(){
+      return this.stores;
    }
    
    @Nullable
@@ -290,17 +302,17 @@ public final class CustomerBuilder {
    }
    
    @Nullable
-   public java.lang.String getCompanyName(){
+   public String getCompanyName(){
       return this.companyName;
    }
    
    @Nullable
-   public java.lang.String getVatId(){
+   public String getVatId(){
       return this.vatId;
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
@@ -310,77 +322,77 @@ public final class CustomerBuilder {
    }
    
    @Nullable
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
    @Nullable
-   public java.util.List<java.lang.String> getBillingAddressIds(){
+   public java.util.List<String> getBillingAddressIds(){
       return this.billingAddressIds;
    }
    
    @Nullable
-   public java.lang.String getDefaultShippingAddressId(){
+   public String getDefaultShippingAddressId(){
       return this.defaultShippingAddressId;
    }
    
    @Nullable
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
    
    @Nullable
-   public java.lang.String getCustomerNumber(){
+   public String getCustomerNumber(){
       return this.customerNumber;
    }
    
    
-   public java.lang.Boolean getIsEmailVerified(){
+   public Boolean getIsEmailVerified(){
       return this.isEmailVerified;
    }
    
    @Nullable
-   public java.lang.String getDefaultBillingAddressId(){
+   public String getDefaultBillingAddressId(){
       return this.defaultBillingAddressId;
    }
    
    @Nullable
-   public java.util.List<java.lang.String> getShippingAddressIds(){
+   public java.util.List<String> getShippingAddressIds(){
       return this.shippingAddressIds;
    }
    
    @Nullable
-   public java.lang.String getFirstName(){
+   public String getFirstName(){
       return this.firstName;
    }
    
    
-   public java.lang.String getPassword(){
+   public String getPassword(){
       return this.password;
    }
    
    @Nullable
-   public java.lang.String getMiddleName(){
+   public String getMiddleName(){
       return this.middleName;
    }
    
    @Nullable
-   public java.lang.String getSalutation(){
+   public String getSalutation(){
       return this.salutation;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 
    public Customer build() {
-       return new CustomerImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, lastName, addresses, customerGroup, custom, companyName, vatId, externalId, dateOfBirth, locale, billingAddressIds, defaultShippingAddressId, title, customerNumber, isEmailVerified, defaultBillingAddressId, shippingAddressIds, firstName, password, middleName, salutation, key, email);
+       return new CustomerImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, lastName, addresses, stores, customerGroup, custom, companyName, vatId, externalId, dateOfBirth, locale, billingAddressIds, defaultShippingAddressId, title, customerNumber, isEmailVerified, defaultBillingAddressId, shippingAddressIds, firstName, password, middleName, salutation, key, email);
    }
    
    public static CustomerBuilder of() {
@@ -397,6 +409,7 @@ public final class CustomerBuilder {
       builder.lastModifiedBy = template.getLastModifiedBy();
       builder.lastName = template.getLastName();
       builder.addresses = template.getAddresses();
+      builder.stores = template.getStores();
       builder.customerGroup = template.getCustomerGroup();
       builder.custom = template.getCustom();
       builder.companyName = template.getCompanyName();

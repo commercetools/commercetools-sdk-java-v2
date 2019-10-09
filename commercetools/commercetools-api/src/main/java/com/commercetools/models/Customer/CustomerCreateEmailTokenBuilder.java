@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
-import java.lang.Long;
-import java.lang.String;
+
 import com.commercetools.models.customer.CustomerCreateEmailToken;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class CustomerCreateEmailTokenBuilder {
    
    
-   private java.lang.Long ttlMinutes;
+   private Long ttlMinutes;
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
-   private java.lang.Long version;
+   private Long version;
    
-   public CustomerCreateEmailTokenBuilder ttlMinutes( final java.lang.Long ttlMinutes) {
+   public CustomerCreateEmailTokenBuilder ttlMinutes( final Long ttlMinutes) {
       this.ttlMinutes = ttlMinutes;
       return this;
    }
    
-   public CustomerCreateEmailTokenBuilder id( final java.lang.String id) {
+   public CustomerCreateEmailTokenBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public CustomerCreateEmailTokenBuilder version(@Nullable final java.lang.Long version) {
+   public CustomerCreateEmailTokenBuilder version(@Nullable final Long version) {
       this.version = version;
       return this;
    }
    
    
-   public java.lang.Long getTtlMinutes(){
+   public Long getTtlMinutes(){
       return this.ttlMinutes;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    @Nullable
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

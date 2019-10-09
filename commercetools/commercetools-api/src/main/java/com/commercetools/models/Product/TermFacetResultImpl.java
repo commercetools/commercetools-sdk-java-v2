@@ -4,7 +4,6 @@ import com.commercetools.models.product.FacetResult;
 import com.commercetools.models.product.FacetResultTerm;
 import com.commercetools.models.product.FacetTypes;
 import com.commercetools.models.product.TermFacetResultType;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -28,18 +27,18 @@ public final class TermFacetResultImpl implements TermFacetResult {
 
    private com.commercetools.models.product.FacetTypes type;
    
-   private java.lang.Long other;
+   private Long other;
    
-   private java.lang.Long total;
+   private Long total;
    
    private java.util.List<com.commercetools.models.product.FacetResultTerm> terms;
    
    private com.commercetools.models.product.TermFacetResultType dataType;
    
-   private java.lang.Long missing;
+   private Long missing;
 
    @JsonCreator
-   TermFacetResultImpl(@JsonProperty("other") final java.lang.Long other, @JsonProperty("total") final java.lang.Long total, @JsonProperty("terms") final java.util.List<com.commercetools.models.product.FacetResultTerm> terms, @JsonProperty("dataType") final com.commercetools.models.product.TermFacetResultType dataType, @JsonProperty("missing") final java.lang.Long missing) {
+   TermFacetResultImpl(@JsonProperty("other") final Long other, @JsonProperty("total") final Long total, @JsonProperty("terms") final java.util.List<com.commercetools.models.product.FacetResultTerm> terms, @JsonProperty("dataType") final com.commercetools.models.product.TermFacetResultType dataType, @JsonProperty("missing") final Long missing) {
       this.other = other;
       this.total = total;
       this.terms = terms;
@@ -57,12 +56,12 @@ public final class TermFacetResultImpl implements TermFacetResult {
    }
    
    
-   public java.lang.Long getOther(){
+   public Long getOther(){
       return this.other;
    }
    
    
-   public java.lang.Long getTotal(){
+   public Long getTotal(){
       return this.total;
    }
    
@@ -77,15 +76,15 @@ public final class TermFacetResultImpl implements TermFacetResult {
    }
    
    
-   public java.lang.Long getMissing(){
+   public Long getMissing(){
       return this.missing;
    }
 
-   public void setOther(final java.lang.Long other){
+   public void setOther(final Long other){
       this.other = other;
    }
    
-   public void setTotal(final java.lang.Long total){
+   public void setTotal(final Long total){
       this.total = total;
    }
    
@@ -97,7 +96,7 @@ public final class TermFacetResultImpl implements TermFacetResult {
       this.dataType = dataType;
    }
    
-   public void setMissing(final java.lang.Long missing){
+   public void setMissing(final Long missing){
       this.missing = missing;
    }
 

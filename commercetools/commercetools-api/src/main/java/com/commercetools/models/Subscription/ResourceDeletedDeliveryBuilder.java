@@ -1,8 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.SubscriptionDelivery;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.subscription.ResourceDeletedDelivery;
 import javax.annotation.Nullable;
@@ -13,7 +11,7 @@ import java.time.ZonedDateTime;
 public final class ResourceDeletedDeliveryBuilder {
    
    
-   private java.lang.String projectKey;
+   private String projectKey;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -25,9 +23,9 @@ public final class ResourceDeletedDeliveryBuilder {
    private java.time.ZonedDateTime modifiedAt;
    
    
-   private java.lang.Long version;
+   private Long version;
    
-   public ResourceDeletedDeliveryBuilder projectKey( final java.lang.String projectKey) {
+   public ResourceDeletedDeliveryBuilder projectKey( final String projectKey) {
       this.projectKey = projectKey;
       return this;
    }
@@ -47,13 +45,13 @@ public final class ResourceDeletedDeliveryBuilder {
       return this;
    }
    
-   public ResourceDeletedDeliveryBuilder version( final java.lang.Long version) {
+   public ResourceDeletedDeliveryBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
    
-   public java.lang.String getProjectKey(){
+   public String getProjectKey(){
       return this.projectKey;
    }
    
@@ -73,7 +71,7 @@ public final class ResourceDeletedDeliveryBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

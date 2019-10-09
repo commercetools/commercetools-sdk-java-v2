@@ -1,7 +1,6 @@
 package com.commercetools.models.zone;
 
 import com.commercetools.models.zone.ZoneUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.zone.ZoneUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class ZoneUpdateBuilder {
    private java.util.List<com.commercetools.models.zone.ZoneUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public ZoneUpdateBuilder actions( final java.util.List<com.commercetools.models.zone.ZoneUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public ZoneUpdateBuilder version( final java.lang.Long version) {
+   public ZoneUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class ZoneUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

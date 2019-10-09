@@ -4,7 +4,6 @@ import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.models.cart.TaxedItemPrice;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,18 +25,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItemDiscountSetMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.common.Money totalPrice;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
    
    private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
    @JsonCreator
-   OrderLineItemDiscountSetMessagePayloadImpl(@JsonProperty("totalPrice") final com.commercetools.models.common.Money totalPrice, @JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+   OrderLineItemDiscountSetMessagePayloadImpl(@JsonProperty("totalPrice") final com.commercetools.models.common.Money totalPrice, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
       this.totalPrice = totalPrice;
       this.lineItemId = lineItemId;
       this.taxedPrice = taxedPrice;
@@ -49,7 +48,7 @@ public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLi
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -59,7 +58,7 @@ public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLi
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
@@ -77,7 +76,7 @@ public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLi
       this.totalPrice = totalPrice;
    }
    
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
-import java.lang.Long;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerChangePasswordImpl implements CustomerChangePassword {
 
-   private java.lang.String newPassword;
+   private String newPassword;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
-   private java.lang.String currentPassword;
+   private String currentPassword;
 
    @JsonCreator
-   CustomerChangePasswordImpl(@JsonProperty("newPassword") final java.lang.String newPassword, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("currentPassword") final java.lang.String currentPassword) {
+   CustomerChangePasswordImpl(@JsonProperty("newPassword") final String newPassword, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("currentPassword") final String currentPassword) {
       this.newPassword = newPassword;
       this.id = id;
       this.version = version;
@@ -43,38 +42,38 @@ public final class CustomerChangePasswordImpl implements CustomerChangePassword 
    }
    
    
-   public java.lang.String getNewPassword(){
+   public String getNewPassword(){
       return this.newPassword;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.String getCurrentPassword(){
+   public String getCurrentPassword(){
       return this.currentPassword;
    }
 
-   public void setNewPassword(final java.lang.String newPassword){
+   public void setNewPassword(final String newPassword){
       this.newPassword = newPassword;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
-   public void setCurrentPassword(final java.lang.String currentPassword){
+   public void setCurrentPassword(final String currentPassword){
       this.currentPassword = currentPassword;
    }
 

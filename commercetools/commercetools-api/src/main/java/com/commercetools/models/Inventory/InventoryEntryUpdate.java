@@ -1,7 +1,6 @@
 package com.commercetools.models.inventory;
 
 import com.commercetools.models.inventory.InventoryEntryUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.inventory.InventoryEntryUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

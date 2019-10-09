@@ -1,8 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ConcurrentModificationErrorImpl implements ConcurrentModificationError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
-   private java.lang.Long currentVersion;
+   private Long currentVersion;
 
    @JsonCreator
-   ConcurrentModificationErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("currentVersion") final java.lang.Long currentVersion) {
+   ConcurrentModificationErrorImpl(@JsonProperty("message") final String message, @JsonProperty("currentVersion") final Long currentVersion) {
       this.message = message;
       this.currentVersion = currentVersion;
       this.code = "ConcurrentModification";
@@ -41,25 +39,25 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.lang.Long getCurrentVersion(){
+   public Long getCurrentVersion(){
       return this.currentVersion;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setCurrentVersion(final java.lang.Long currentVersion){
+   public void setCurrentVersion(final Long currentVersion){
       this.currentVersion = currentVersion;
    }
 

@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
 public class ByProjectKeyProductProjectionsSearchPost {
    
    
@@ -59,7 +60,12 @@ public class ByProjectKeyProductProjectionsSearchPost {
    
    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.fasterxml.jackson.databind.JsonNode.class));
+              .thenApply(response -> {
+                  if(response.getStatusCode() >= 400){
+                      throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                  }
+                  return Utils.convertResponse(response,com.fasterxml.jackson.databind.JsonNode.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

@@ -1,7 +1,6 @@
 package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionHttpDestinationAuthentication;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionAzureFunctionsAuthentication;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ExtensionAzureFunctionsAuthenticationBuilder {
    
    
-   private java.lang.String key;
+   private String key;
    
-   public ExtensionAzureFunctionsAuthenticationBuilder key( final java.lang.String key) {
+   public ExtensionAzureFunctionsAuthenticationBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

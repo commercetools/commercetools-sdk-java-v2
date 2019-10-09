@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
 public class ByProjectKeyZonesPost {
    
    
@@ -61,7 +62,12 @@ public class ByProjectKeyZonesPost {
    
    public CompletableFuture<ApiHttpResponse<com.commercetools.models.zone.Zone>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.zone.Zone.class));
+              .thenApply(response -> {
+                  if(response.getStatusCode() >= 400){
+                      throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                  }
+                  return Utils.convertResponse(response,com.commercetools.models.zone.Zone.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

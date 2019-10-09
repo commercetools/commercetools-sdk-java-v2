@@ -2,10 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.AssetDraft;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductAddAssetAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,31 +11,31 @@ import java.time.ZonedDateTime;
 public final class ProductAddAssetActionBuilder {
    
    @Nullable
-   private java.lang.Integer position;
+   private Integer position;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    
    private com.commercetools.models.common.AssetDraft asset;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
-   public ProductAddAssetActionBuilder position(@Nullable final java.lang.Integer position) {
+   public ProductAddAssetActionBuilder position(@Nullable final Integer position) {
       this.position = position;
       return this;
    }
    
-   public ProductAddAssetActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductAddAssetActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductAddAssetActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ProductAddAssetActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
@@ -49,23 +45,23 @@ public final class ProductAddAssetActionBuilder {
       return this;
    }
    
-   public ProductAddAssetActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductAddAssetActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
    @Nullable
-   public java.lang.Integer getPosition(){
+   public Integer getPosition(){
       return this.position;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
@@ -75,7 +71,7 @@ public final class ProductAddAssetActionBuilder {
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

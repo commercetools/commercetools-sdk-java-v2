@@ -20,8 +20,6 @@ import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.order.PaymentInfo;
 import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -47,15 +45,15 @@ public final class CartImpl implements Cart {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
-   private java.lang.String country;
+   private String country;
    
    private com.commercetools.models.common.TypedMoney totalPrice;
    
@@ -65,13 +63,13 @@ public final class CartImpl implements Cart {
    
    private com.commercetools.models.cart.CartOrigin origin;
    
-   private java.lang.Integer deleteDaysAfterLastModification;
+   private Integer deleteDaysAfterLastModification;
    
    private com.commercetools.models.cart.ShippingInfo shippingInfo;
    
    private java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> refusedGifts;
    
-   private java.lang.String locale;
+   private String locale;
    
    private com.commercetools.models.cart.InventoryMode inventoryMode;
    
@@ -81,13 +79,13 @@ public final class CartImpl implements Cart {
    
    private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
-   private java.lang.String customerEmail;
+   private String customerEmail;
    
    private com.commercetools.models.cart.CartState cartState;
    
-   private java.lang.String customerId;
+   private String customerId;
    
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    private java.util.List<com.commercetools.models.cart.DiscountCodeInfo> discountCodes;
    
@@ -110,7 +108,7 @@ public final class CartImpl implements Cart {
    private com.commercetools.models.order.PaymentInfo paymentInfo;
 
    @JsonCreator
-   CartImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("country") final java.lang.String country, @JsonProperty("totalPrice") final com.commercetools.models.common.TypedMoney totalPrice, @JsonProperty("shippingRateInput") final com.commercetools.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedPrice taxedPrice, @JsonProperty("origin") final com.commercetools.models.cart.CartOrigin origin, @JsonProperty("deleteDaysAfterLastModification") final java.lang.Integer deleteDaysAfterLastModification, @JsonProperty("shippingInfo") final com.commercetools.models.cart.ShippingInfo shippingInfo, @JsonProperty("refusedGifts") final java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> refusedGifts, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.cart.LineItem> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.models.cart.CustomLineItem> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("customerEmail") final java.lang.String customerEmail, @JsonProperty("cartState") final com.commercetools.models.cart.CartState cartState, @JsonProperty("customerId") final java.lang.String customerId, @JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("discountCodes") final java.util.List<com.commercetools.models.cart.DiscountCodeInfo> discountCodes, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("taxCalculationMode") final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("store") final com.commercetools.models.store.StoreKeyReference store, @JsonProperty("taxRoundingMode") final com.commercetools.models.cart.RoundingMode taxRoundingMode, @JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress, @JsonProperty("paymentInfo") final com.commercetools.models.order.PaymentInfo paymentInfo) {
+   CartImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("country") final String country, @JsonProperty("totalPrice") final com.commercetools.models.common.TypedMoney totalPrice, @JsonProperty("shippingRateInput") final com.commercetools.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedPrice taxedPrice, @JsonProperty("origin") final com.commercetools.models.cart.CartOrigin origin, @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification, @JsonProperty("shippingInfo") final com.commercetools.models.cart.ShippingInfo shippingInfo, @JsonProperty("refusedGifts") final java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> refusedGifts, @JsonProperty("locale") final String locale, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.cart.LineItem> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.models.cart.CustomLineItem> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("cartState") final com.commercetools.models.cart.CartState cartState, @JsonProperty("customerId") final String customerId, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("discountCodes") final java.util.List<com.commercetools.models.cart.DiscountCodeInfo> discountCodes, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("taxCalculationMode") final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("store") final com.commercetools.models.store.StoreKeyReference store, @JsonProperty("taxRoundingMode") final com.commercetools.models.cart.RoundingMode taxRoundingMode, @JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress, @JsonProperty("paymentInfo") final com.commercetools.models.order.PaymentInfo paymentInfo) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -160,12 +158,12 @@ public final class CartImpl implements Cart {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -182,7 +180,7 @@ public final class CartImpl implements Cart {
    /**
    	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
@@ -207,7 +205,7 @@ public final class CartImpl implements Cart {
    }
    
    
-   public java.lang.Integer getDeleteDaysAfterLastModification(){
+   public Integer getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
@@ -222,7 +220,7 @@ public final class CartImpl implements Cart {
    }
    
    
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
@@ -247,7 +245,7 @@ public final class CartImpl implements Cart {
    }
    
    
-   public java.lang.String getCustomerEmail(){
+   public String getCustomerEmail(){
       return this.customerEmail;
    }
    
@@ -257,12 +255,12 @@ public final class CartImpl implements Cart {
    }
    
    
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -324,11 +322,11 @@ public final class CartImpl implements Cart {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -340,7 +338,7 @@ public final class CartImpl implements Cart {
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
@@ -360,7 +358,7 @@ public final class CartImpl implements Cart {
       this.origin = origin;
    }
    
-   public void setDeleteDaysAfterLastModification(final java.lang.Integer deleteDaysAfterLastModification){
+   public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification){
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
    }
    
@@ -372,7 +370,7 @@ public final class CartImpl implements Cart {
       this.refusedGifts = refusedGifts;
    }
    
-   public void setLocale(final java.lang.String locale){
+   public void setLocale(final String locale){
       this.locale = locale;
    }
    
@@ -392,7 +390,7 @@ public final class CartImpl implements Cart {
       this.itemShippingAddresses = itemShippingAddresses;
    }
    
-   public void setCustomerEmail(final java.lang.String customerEmail){
+   public void setCustomerEmail(final String customerEmail){
       this.customerEmail = customerEmail;
    }
    
@@ -400,11 +398,11 @@ public final class CartImpl implements Cart {
       this.cartState = cartState;
    }
    
-   public void setCustomerId(final java.lang.String customerId){
+   public void setCustomerId(final String customerId){
       this.customerId = customerId;
    }
    
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
    

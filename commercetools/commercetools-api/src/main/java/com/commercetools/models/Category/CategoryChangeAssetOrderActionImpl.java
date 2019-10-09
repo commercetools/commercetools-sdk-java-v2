@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOrderAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.util.List<java.lang.String> assetOrder;
+   private java.util.List<String> assetOrder;
 
    @JsonCreator
-   CategoryChangeAssetOrderActionImpl(@JsonProperty("assetOrder") final java.util.List<java.lang.String> assetOrder) {
+   CategoryChangeAssetOrderActionImpl(@JsonProperty("assetOrder") final java.util.List<String> assetOrder) {
       this.assetOrder = assetOrder;
       this.action = "changeAssetOrder";
    }
@@ -37,16 +36,16 @@ public final class CategoryChangeAssetOrderActionImpl implements CategoryChangeA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.util.List<java.lang.String> getAssetOrder(){
+   public java.util.List<String> getAssetOrder(){
       return this.assetOrder;
    }
 
-   public void setAssetOrder(final java.util.List<java.lang.String> assetOrder){
+   public void setAssetOrder(final java.util.List<String> assetOrder){
       this.assetOrder = assetOrder;
    }
 

@@ -2,7 +2,6 @@ package com.commercetools.models.type;
 
 import com.commercetools.models.type.CustomFieldLocalizedEnumValue;
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.type.TypeChangeLocalizedEnumValueLabelActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

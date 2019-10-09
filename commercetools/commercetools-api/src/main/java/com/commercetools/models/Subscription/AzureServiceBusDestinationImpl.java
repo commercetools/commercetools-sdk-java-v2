@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AzureServiceBusDestinationImpl implements AzureServiceBusDestination {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String connectionString;
+   private String connectionString;
 
    @JsonCreator
-   AzureServiceBusDestinationImpl(@JsonProperty("connectionString") final java.lang.String connectionString) {
+   AzureServiceBusDestinationImpl(@JsonProperty("connectionString") final String connectionString) {
       this.connectionString = connectionString;
       this.type = "AzureServiceBus";
    }
@@ -37,16 +36,16 @@ public final class AzureServiceBusDestinationImpl implements AzureServiceBusDest
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getConnectionString(){
+   public String getConnectionString(){
       return this.connectionString;
    }
 
-   public void setConnectionString(final java.lang.String connectionString){
+   public void setConnectionString(final String connectionString){
       this.connectionString = connectionString;
    }
 

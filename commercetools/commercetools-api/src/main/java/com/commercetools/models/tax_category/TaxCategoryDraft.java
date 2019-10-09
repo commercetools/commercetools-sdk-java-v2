@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxRateDraft;
-import java.lang.String;
 import com.commercetools.models.tax_category.TaxCategoryDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

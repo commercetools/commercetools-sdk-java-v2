@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategoryUpdateAction;
-import java.lang.String;
 import com.commercetools.models.tax_category.TaxCategorySetKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class TaxCategorySetKeyActionBuilder {
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public TaxCategorySetKeyActionBuilder key(@Nullable final java.lang.String key) {
+   public TaxCategorySetKeyActionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

@@ -2,8 +2,6 @@ package com.commercetools.models.review;
 
 import com.commercetools.models.review.ReviewUpdateAction;
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.review.ReviewTransitionStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ReviewTransitionStateActionBuilder {
    
    @Nullable
-   private java.lang.Boolean force;
+   private Boolean force;
    
    
    private com.commercetools.models.state.StateResourceIdentifier state;
    
-   public ReviewTransitionStateActionBuilder force(@Nullable final java.lang.Boolean force) {
+   public ReviewTransitionStateActionBuilder force(@Nullable final Boolean force) {
       this.force = force;
       return this;
    }
@@ -29,7 +27,7 @@ public final class ReviewTransitionStateActionBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    

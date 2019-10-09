@@ -1,6 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Object;
+
 import com.commercetools.models.product.FacetResults;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class FacetResultsBuilder {
    
    
-   private Map<String, java.lang.Object> values;
+   private Map<String, Object> values;
    
-   public FacetResultsBuilder values( final Map<String, java.lang.Object> values){
+   public FacetResultsBuilder values( final Map<String, Object> values){
       this.values = values;
       return this;
    }
    
    
-   public Map<String, java.lang.Object> getValues(){
+   public Map<String, Object> getValues(){
       return this.values;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderRemoveParcelFromDeliveryActionImpl implements OrderRemoveParcelFromDeliveryAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String parcelId;
+   private String parcelId;
 
    @JsonCreator
-   OrderRemoveParcelFromDeliveryActionImpl(@JsonProperty("parcelId") final java.lang.String parcelId) {
+   OrderRemoveParcelFromDeliveryActionImpl(@JsonProperty("parcelId") final String parcelId) {
       this.parcelId = parcelId;
       this.action = "removeParcelFromDelivery";
    }
@@ -37,16 +36,16 @@ public final class OrderRemoveParcelFromDeliveryActionImpl implements OrderRemov
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 
-   public void setParcelId(final java.lang.String parcelId){
+   public void setParcelId(final String parcelId){
       this.parcelId = parcelId;
    }
 

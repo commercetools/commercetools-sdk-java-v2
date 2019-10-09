@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ExternalLineItemTotalPrice;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotalPriceAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
 
    @JsonCreator
-   CartSetLineItemTotalPriceActionImpl(@JsonProperty("externalTotalPrice") final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("lineItemId") final java.lang.String lineItemId) {
+   CartSetLineItemTotalPriceActionImpl(@JsonProperty("externalTotalPrice") final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("lineItemId") final String lineItemId) {
       this.externalTotalPrice = externalTotalPrice;
       this.lineItemId = lineItemId;
       this.action = "setLineItemTotalPrice";
@@ -41,7 +40,7 @@ public final class CartSetLineItemTotalPriceActionImpl implements CartSetLineIte
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class CartSetLineItemTotalPriceActionImpl implements CartSetLineIte
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
 
@@ -59,7 +58,7 @@ public final class CartSetLineItemTotalPriceActionImpl implements CartSetLineIte
       this.externalTotalPrice = externalTotalPrice;
    }
    
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
 

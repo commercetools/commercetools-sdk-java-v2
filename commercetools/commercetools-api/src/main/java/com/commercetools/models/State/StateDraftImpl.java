@@ -4,8 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.state.StateResourceIdentifier;
 import com.commercetools.models.state.StateRoleEnum;
 import com.commercetools.models.state.StateTypeEnum;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -27,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateDraftImpl implements StateDraft {
 
-   private java.lang.Boolean initial;
+   private Boolean initial;
    
    private java.util.List<com.commercetools.models.state.StateRoleEnum> roles;
    
@@ -39,10 +37,10 @@ public final class StateDraftImpl implements StateDraft {
    
    private com.commercetools.models.state.StateTypeEnum type;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   StateDraftImpl(@JsonProperty("initial") final java.lang.Boolean initial, @JsonProperty("roles") final java.util.List<com.commercetools.models.state.StateRoleEnum> roles, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("transitions") final java.util.List<com.commercetools.models.state.StateResourceIdentifier> transitions, @JsonProperty("type") final com.commercetools.models.state.StateTypeEnum type, @JsonProperty("key") final java.lang.String key) {
+   StateDraftImpl(@JsonProperty("initial") final Boolean initial, @JsonProperty("roles") final java.util.List<com.commercetools.models.state.StateRoleEnum> roles, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("transitions") final java.util.List<com.commercetools.models.state.StateResourceIdentifier> transitions, @JsonProperty("type") final com.commercetools.models.state.StateTypeEnum type, @JsonProperty("key") final String key) {
       this.initial = initial;
       this.roles = roles;
       this.name = name;
@@ -56,7 +54,7 @@ public final class StateDraftImpl implements StateDraft {
    }
    
    
-   public java.lang.Boolean getInitial(){
+   public Boolean getInitial(){
       return this.initial;
    }
    
@@ -86,11 +84,11 @@ public final class StateDraftImpl implements StateDraft {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setInitial(final java.lang.Boolean initial){
+   public void setInitial(final Boolean initial){
       this.initial = initial;
    }
    
@@ -114,7 +112,7 @@ public final class StateDraftImpl implements StateDraft {
       this.type = type;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

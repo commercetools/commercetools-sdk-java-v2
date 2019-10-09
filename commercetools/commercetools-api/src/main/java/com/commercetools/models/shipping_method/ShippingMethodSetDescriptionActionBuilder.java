@@ -1,7 +1,6 @@
 package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
-import java.lang.String;
 import com.commercetools.models.shipping_method.ShippingMethodSetDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ShippingMethodSetDescriptionActionBuilder {
    
    @Nullable
-   private java.lang.String description;
+   private String description;
    
-   public ShippingMethodSetDescriptionActionBuilder description(@Nullable final java.lang.String description) {
+   public ShippingMethodSetDescriptionActionBuilder description(@Nullable final String description) {
       this.description = description;
       return this;
    }
    
    @Nullable
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
 

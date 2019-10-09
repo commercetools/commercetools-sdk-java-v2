@@ -2,8 +2,6 @@ package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionDestination;
 import com.commercetools.models.extension.ExtensionTrigger;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,7 +11,7 @@ import java.time.ZonedDateTime;
 public final class ExtensionDraftBuilder {
    
    @Nullable
-   private java.lang.Integer timeoutInMs;
+   private Integer timeoutInMs;
    
    
    private com.commercetools.models.extension.ExtensionDestination destination;
@@ -22,9 +20,9 @@ public final class ExtensionDraftBuilder {
    private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public ExtensionDraftBuilder timeoutInMs(@Nullable final java.lang.Integer timeoutInMs) {
+   public ExtensionDraftBuilder timeoutInMs(@Nullable final Integer timeoutInMs) {
       this.timeoutInMs = timeoutInMs;
       return this;
    }
@@ -39,13 +37,13 @@ public final class ExtensionDraftBuilder {
       return this;
    }
    
-   public ExtensionDraftBuilder key(@Nullable final java.lang.String key) {
+   public ExtensionDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.Integer getTimeoutInMs(){
+   public Integer getTimeoutInMs(){
       return this.timeoutInMs;
    }
    
@@ -60,7 +58,7 @@ public final class ExtensionDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

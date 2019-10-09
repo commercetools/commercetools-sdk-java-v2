@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.state.StateReference;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentStatus;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class PaymentStatusBuilder {
    
    @Nullable
-   private java.lang.String interfaceText;
+   private String interfaceText;
    
    @Nullable
    private com.commercetools.models.state.StateReference state;
    
    @Nullable
-   private java.lang.String interfaceCode;
+   private String interfaceCode;
    
-   public PaymentStatusBuilder interfaceText(@Nullable final java.lang.String interfaceText) {
+   public PaymentStatusBuilder interfaceText(@Nullable final String interfaceText) {
       this.interfaceText = interfaceText;
       return this;
    }
@@ -29,13 +28,13 @@ public final class PaymentStatusBuilder {
       return this;
    }
    
-   public PaymentStatusBuilder interfaceCode(@Nullable final java.lang.String interfaceCode) {
+   public PaymentStatusBuilder interfaceCode(@Nullable final String interfaceCode) {
       this.interfaceCode = interfaceCode;
       return this;
    }
    
    @Nullable
-   public java.lang.String getInterfaceText(){
+   public String getInterfaceText(){
       return this.interfaceText;
    }
    
@@ -45,7 +44,7 @@ public final class PaymentStatusBuilder {
    }
    
    @Nullable
-   public java.lang.String getInterfaceCode(){
+   public String getInterfaceCode(){
       return this.interfaceCode;
    }
 

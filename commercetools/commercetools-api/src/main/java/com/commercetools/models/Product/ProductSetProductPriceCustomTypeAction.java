@@ -3,8 +3,6 @@ package com.commercetools.models.product;
 import com.commercetools.models.product.ProductUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetProductPriceCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

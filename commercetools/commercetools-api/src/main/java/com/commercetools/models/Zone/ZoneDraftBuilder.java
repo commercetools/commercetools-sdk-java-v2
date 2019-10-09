@@ -1,7 +1,6 @@
 package com.commercetools.models.zone;
 
 import com.commercetools.models.zone.Location;
-import java.lang.String;
 import com.commercetools.models.zone.ZoneDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,23 +10,23 @@ import java.time.ZonedDateTime;
 public final class ZoneDraftBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.String description;
+   private String description;
    
    
    private java.util.List<com.commercetools.models.zone.Location> locations;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public ZoneDraftBuilder name( final java.lang.String name) {
+   public ZoneDraftBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ZoneDraftBuilder description(@Nullable final java.lang.String description) {
+   public ZoneDraftBuilder description(@Nullable final String description) {
       this.description = description;
       return this;
    }
@@ -37,18 +36,18 @@ public final class ZoneDraftBuilder {
       return this;
    }
    
-   public ZoneDraftBuilder key(@Nullable final java.lang.String key) {
+   public ZoneDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
@@ -58,7 +57,7 @@ public final class ZoneDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

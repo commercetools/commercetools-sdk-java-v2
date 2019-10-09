@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.ReturnItemDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order_edit.StagedOrderAddReturnInfoActionImpl;
 

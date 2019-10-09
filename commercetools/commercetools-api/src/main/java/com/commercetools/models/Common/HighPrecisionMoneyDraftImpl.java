@@ -2,7 +2,6 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.common.MoneyType;
 import com.commercetools.models.common.TypedMoneyDraft;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft {
 
-   private java.lang.Long centAmount;
+   private Long centAmount;
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
    
    private com.commercetools.models.common.MoneyType type;
    
-   private java.lang.Long preciseAmount;
+   private Long preciseAmount;
 
    @JsonCreator
-   HighPrecisionMoneyDraftImpl(@JsonProperty("centAmount") final java.lang.Long centAmount, @JsonProperty("currencyCode") final java.lang.String currencyCode, @JsonProperty("preciseAmount") final java.lang.Long preciseAmount) {
+   HighPrecisionMoneyDraftImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("preciseAmount") final Long preciseAmount) {
       this.centAmount = centAmount;
       this.currencyCode = currencyCode;
       this.preciseAmount = preciseAmount;
@@ -44,14 +43,14 @@ public final class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraf
    }
    
    
-   public java.lang.Long getCentAmount(){
+   public Long getCentAmount(){
       return this.centAmount;
    }
    
    /**
    	<p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
    */
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
    
@@ -61,19 +60,19 @@ public final class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraf
    }
    
    
-   public java.lang.Long getPreciseAmount(){
+   public Long getPreciseAmount(){
       return this.preciseAmount;
    }
 
-   public void setCentAmount(final java.lang.Long centAmount){
+   public void setCentAmount(final Long centAmount){
       this.centAmount = centAmount;
    }
    
-   public void setCurrencyCode(final java.lang.String currencyCode){
+   public void setCurrencyCode(final String currencyCode){
       this.currencyCode = currencyCode;
    }
    
-   public void setPreciseAmount(final java.lang.Long preciseAmount){
+   public void setPreciseAmount(final Long preciseAmount){
       this.preciseAmount = preciseAmount;
    }
 

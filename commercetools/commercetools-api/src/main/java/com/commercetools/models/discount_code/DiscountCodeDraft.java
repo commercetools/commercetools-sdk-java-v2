@@ -3,9 +3,6 @@ package com.commercetools.models.discount_code;
 import com.commercetools.models.cart_discount.CartDiscountResourceIdentifier;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.discount_code.DiscountCodeDraftImpl;
 

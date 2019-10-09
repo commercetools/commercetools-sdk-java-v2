@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
-import java.lang.Integer;
-import java.lang.String;
+
 import com.commercetools.models.order.DeliveryItemImpl;
 
 import com.fasterxml.jackson.annotation.*;

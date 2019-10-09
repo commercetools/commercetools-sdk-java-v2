@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentStatusDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class PaymentStatusDraftBuilder {
    
    @Nullable
-   private java.lang.String interfaceText;
+   private String interfaceText;
    
    @Nullable
    private com.commercetools.models.state.StateResourceIdentifier state;
    
    @Nullable
-   private java.lang.String interfaceCode;
+   private String interfaceCode;
    
-   public PaymentStatusDraftBuilder interfaceText(@Nullable final java.lang.String interfaceText) {
+   public PaymentStatusDraftBuilder interfaceText(@Nullable final String interfaceText) {
       this.interfaceText = interfaceText;
       return this;
    }
@@ -29,13 +28,13 @@ public final class PaymentStatusDraftBuilder {
       return this;
    }
    
-   public PaymentStatusDraftBuilder interfaceCode(@Nullable final java.lang.String interfaceCode) {
+   public PaymentStatusDraftBuilder interfaceCode(@Nullable final String interfaceCode) {
       this.interfaceCode = interfaceCode;
       return this;
    }
    
    @Nullable
-   public java.lang.String getInterfaceText(){
+   public String getInterfaceText(){
       return this.interfaceText;
    }
    
@@ -45,7 +44,7 @@ public final class PaymentStatusDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getInterfaceCode(){
+   public String getInterfaceCode(){
       return this.interfaceCode;
    }
 

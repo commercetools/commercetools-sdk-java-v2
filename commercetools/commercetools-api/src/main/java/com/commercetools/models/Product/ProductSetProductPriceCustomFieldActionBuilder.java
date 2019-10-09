@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetProductPriceCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,54 +10,54 @@ import java.time.ZonedDateTime;
 public final class ProductSetProductPriceCustomFieldActionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    
-   private java.lang.String priceId;
+   private String priceId;
    
    @Nullable
-   private java.lang.Object value;
+   private Object value;
    
-   public ProductSetProductPriceCustomFieldActionBuilder name( final java.lang.String name) {
+   public ProductSetProductPriceCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ProductSetProductPriceCustomFieldActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetProductPriceCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductSetProductPriceCustomFieldActionBuilder priceId( final java.lang.String priceId) {
+   public ProductSetProductPriceCustomFieldActionBuilder priceId( final String priceId) {
       this.priceId = priceId;
       return this;
    }
    
-   public ProductSetProductPriceCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
+   public ProductSetProductPriceCustomFieldActionBuilder value(@Nullable final Object value) {
       this.value = value;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.String getPriceId(){
+   public String getPriceId(){
       return this.priceId;
    }
    
    @Nullable
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 

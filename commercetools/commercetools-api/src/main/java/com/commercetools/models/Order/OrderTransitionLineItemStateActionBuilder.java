@@ -2,8 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.OrderTransitionLineItemStateAction;
 import javax.annotation.Nullable;
@@ -20,10 +18,10 @@ public final class OrderTransitionLineItemStateActionBuilder {
    private com.commercetools.models.state.StateResourceIdentifier fromState;
    
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    @Nullable
    private java.time.ZonedDateTime actualTransitionDate;
@@ -38,12 +36,12 @@ public final class OrderTransitionLineItemStateActionBuilder {
       return this;
    }
    
-   public OrderTransitionLineItemStateActionBuilder quantity( final java.lang.Long quantity) {
+   public OrderTransitionLineItemStateActionBuilder quantity( final Long quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public OrderTransitionLineItemStateActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public OrderTransitionLineItemStateActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -64,12 +62,12 @@ public final class OrderTransitionLineItemStateActionBuilder {
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    

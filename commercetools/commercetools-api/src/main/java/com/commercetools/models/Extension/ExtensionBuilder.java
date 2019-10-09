@@ -3,8 +3,6 @@ package com.commercetools.models.extension;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.extension.ExtensionDestination;
 import com.commercetools.models.extension.ExtensionTrigger;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.extension.Extension;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,10 +18,10 @@ public final class ExtensionBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -32,7 +30,7 @@ public final class ExtensionBuilder {
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
-   private java.lang.Integer timeoutInMs;
+   private Integer timeoutInMs;
    
    
    private com.commercetools.models.extension.ExtensionDestination destination;
@@ -41,7 +39,7 @@ public final class ExtensionBuilder {
    private java.util.List<com.commercetools.models.extension.ExtensionTrigger> triggers;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public ExtensionBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -53,12 +51,12 @@ public final class ExtensionBuilder {
       return this;
    }
    
-   public ExtensionBuilder id( final java.lang.String id) {
+   public ExtensionBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ExtensionBuilder version( final java.lang.Long version) {
+   public ExtensionBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -73,7 +71,7 @@ public final class ExtensionBuilder {
       return this;
    }
    
-   public ExtensionBuilder timeoutInMs(@Nullable final java.lang.Integer timeoutInMs) {
+   public ExtensionBuilder timeoutInMs(@Nullable final Integer timeoutInMs) {
       this.timeoutInMs = timeoutInMs;
       return this;
    }
@@ -88,7 +86,7 @@ public final class ExtensionBuilder {
       return this;
    }
    
-   public ExtensionBuilder key(@Nullable final java.lang.String key) {
+   public ExtensionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -104,12 +102,12 @@ public final class ExtensionBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -124,7 +122,7 @@ public final class ExtensionBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getTimeoutInMs(){
+   public Integer getTimeoutInMs(){
       return this.timeoutInMs;
    }
    
@@ -139,7 +137,7 @@ public final class ExtensionBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

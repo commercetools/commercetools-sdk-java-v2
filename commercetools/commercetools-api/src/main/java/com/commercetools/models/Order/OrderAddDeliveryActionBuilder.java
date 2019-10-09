@@ -4,7 +4,6 @@ import com.commercetools.models.common.Address;
 import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.order.ParcelDraft;
-import java.lang.String;
 import com.commercetools.models.order.OrderAddDeliveryAction;
 import javax.annotation.Nullable;
 import java.util.List;

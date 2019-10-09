@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.common.Money;
 import com.commercetools.models.me.MyPaymentUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentChangeAmountPlannedActionImpl implements MyPaymentChangeAmountPlannedAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.Money amount;
 
@@ -38,7 +37,7 @@ public final class MyPaymentChangeAmountPlannedActionImpl implements MyPaymentCh
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order.DeliveryItem;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> oldItems;
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
-   private java.lang.String parcelId;
+   private String parcelId;
 
    @JsonCreator
-   ParcelItemsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("oldItems") final java.util.List<com.commercetools.models.order.DeliveryItem> oldItems, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("parcelId") final java.lang.String parcelId) {
+   ParcelItemsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("oldItems") final java.util.List<com.commercetools.models.order.DeliveryItem> oldItems, @JsonProperty("items") final java.util.List<com.commercetools.models.order.DeliveryItem> items, @JsonProperty("parcelId") final String parcelId) {
       this.deliveryId = deliveryId;
       this.oldItems = oldItems;
       this.items = items;
@@ -47,12 +46,12 @@ public final class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUp
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    
@@ -67,11 +66,11 @@ public final class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUp
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 
-   public void setDeliveryId(final java.lang.String deliveryId){
+   public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
    
@@ -83,7 +82,7 @@ public final class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUp
       this.items = items;
    }
    
-   public void setParcelId(final java.lang.String parcelId){
+   public void setParcelId(final String parcelId){
       this.parcelId = parcelId;
    }
 

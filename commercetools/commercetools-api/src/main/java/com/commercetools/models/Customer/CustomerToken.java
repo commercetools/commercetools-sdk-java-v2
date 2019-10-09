@@ -1,6 +1,5 @@
 package com.commercetools.models.customer;
 
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.customer.CustomerTokenImpl;
 

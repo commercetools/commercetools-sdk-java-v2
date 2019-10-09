@@ -3,9 +3,8 @@ package com.commercetools.models.customer;
 import com.commercetools.models.common.Address;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.customer_group.CustomerGroupReference;
+import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.String;
 import java.time.LocalDate;
 import com.commercetools.models.customer.CustomerImpl;
 
@@ -116,6 +115,10 @@ public interface Customer extends LoggedResource {
    
    @JsonProperty("key")
    public String getKey();
+   
+   @Valid
+   @JsonProperty("stores")
+   public List<StoreKeyReference> getStores();
 
    public void setCustomerNumber(final String customerNumber);
    
@@ -161,6 +164,8 @@ public interface Customer extends LoggedResource {
    
    public void setKey(final String key);
    
+   public void setStores(final List<StoreKeyReference> stores);
+   
    public static CustomerImpl of(){
       return new CustomerImpl();
    }
@@ -176,6 +181,7 @@ public interface Customer extends LoggedResource {
       instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setLastName(template.getLastName());
       instance.setAddresses(template.getAddresses());
+      instance.setStores(template.getStores());
       instance.setCustomerGroup(template.getCustomerGroup());
       instance.setCustom(template.getCustom());
       instance.setCompanyName(template.getCompanyName());

@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.cart.LineItem;
 import com.commercetools.models.message.Message;
-import java.lang.Long;
 import com.commercetools.models.message.OrderLineItemAddedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -48,11 +47,12 @@ public interface OrderLineItemAddedMessage extends Message {
       instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
       instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setType(template.getType());
       instance.setLineItem(template.getLineItem());
       instance.setAddedQuantity(template.getAddedQuantity());
       return instance;

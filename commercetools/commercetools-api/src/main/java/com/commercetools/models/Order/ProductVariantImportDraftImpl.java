@@ -3,8 +3,6 @@ package com.commercetools.models.order;
 import com.commercetools.models.common.Image;
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.Attribute;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -30,14 +28,14 @@ public final class ProductVariantImportDraftImpl implements ProductVariantImport
    
    private java.util.List<com.commercetools.models.product.Attribute> attributes;
    
-   private java.lang.Long id;
+   private Long id;
    
    private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   ProductVariantImportDraftImpl(@JsonProperty("images") final java.util.List<com.commercetools.models.common.Image> images, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes, @JsonProperty("id") final java.lang.Long id, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.PriceDraft> prices, @JsonProperty("sku") final java.lang.String sku) {
+   ProductVariantImportDraftImpl(@JsonProperty("images") final java.util.List<com.commercetools.models.common.Image> images, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes, @JsonProperty("id") final Long id, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.PriceDraft> prices, @JsonProperty("sku") final String sku) {
       this.images = images;
       this.attributes = attributes;
       this.id = id;
@@ -59,7 +57,7 @@ public final class ProductVariantImportDraftImpl implements ProductVariantImport
    }
    
    
-   public java.lang.Long getId(){
+   public Long getId(){
       return this.id;
    }
    
@@ -69,7 +67,7 @@ public final class ProductVariantImportDraftImpl implements ProductVariantImport
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
@@ -81,7 +79,7 @@ public final class ProductVariantImportDraftImpl implements ProductVariantImport
       this.attributes = attributes;
    }
    
-   public void setId(final java.lang.Long id){
+   public void setId(final Long id){
       this.id = id;
    }
    
@@ -89,7 +87,7 @@ public final class ProductVariantImportDraftImpl implements ProductVariantImport
       this.prices = prices;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

@@ -1,7 +1,7 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.TaxPortion;
-import com.commercetools.models.common.Money;
+import com.commercetools.models.common.TypedMoney;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,12 +25,12 @@ public final class TaxedPriceImpl implements TaxedPrice {
 
    private java.util.List<com.commercetools.models.cart.TaxPortion> taxPortions;
    
-   private com.commercetools.models.common.Money totalGross;
+   private com.commercetools.models.common.TypedMoney totalGross;
    
-   private com.commercetools.models.common.Money totalNet;
+   private com.commercetools.models.common.TypedMoney totalNet;
 
    @JsonCreator
-   TaxedPriceImpl(@JsonProperty("taxPortions") final java.util.List<com.commercetools.models.cart.TaxPortion> taxPortions, @JsonProperty("totalGross") final com.commercetools.models.common.Money totalGross, @JsonProperty("totalNet") final com.commercetools.models.common.Money totalNet) {
+   TaxedPriceImpl(@JsonProperty("taxPortions") final java.util.List<com.commercetools.models.cart.TaxPortion> taxPortions, @JsonProperty("totalGross") final com.commercetools.models.common.TypedMoney totalGross, @JsonProperty("totalNet") final com.commercetools.models.common.TypedMoney totalNet) {
       this.taxPortions = taxPortions;
       this.totalGross = totalGross;
       this.totalNet = totalNet;
@@ -45,12 +45,12 @@ public final class TaxedPriceImpl implements TaxedPrice {
    }
    
    
-   public com.commercetools.models.common.Money getTotalGross(){
+   public com.commercetools.models.common.TypedMoney getTotalGross(){
       return this.totalGross;
    }
    
    
-   public com.commercetools.models.common.Money getTotalNet(){
+   public com.commercetools.models.common.TypedMoney getTotalNet(){
       return this.totalNet;
    }
 
@@ -58,11 +58,11 @@ public final class TaxedPriceImpl implements TaxedPrice {
       this.taxPortions = taxPortions;
    }
    
-   public void setTotalGross(final com.commercetools.models.common.Money totalGross){
+   public void setTotalGross(final com.commercetools.models.common.TypedMoney totalGross){
       this.totalGross = totalGross;
    }
    
-   public void setTotalNet(final com.commercetools.models.common.Money totalNet){
+   public void setTotalNet(final com.commercetools.models.common.TypedMoney totalNet){
       this.totalNet = totalNet;
    }
 

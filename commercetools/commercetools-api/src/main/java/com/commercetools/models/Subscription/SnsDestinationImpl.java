@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SnsDestinationImpl implements SnsDestination {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String accessKey;
+   private String accessKey;
    
-   private java.lang.String topicArn;
+   private String topicArn;
    
-   private java.lang.String accessSecret;
+   private String accessSecret;
 
    @JsonCreator
-   SnsDestinationImpl(@JsonProperty("accessKey") final java.lang.String accessKey, @JsonProperty("topicArn") final java.lang.String topicArn, @JsonProperty("accessSecret") final java.lang.String accessSecret) {
+   SnsDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("topicArn") final String topicArn, @JsonProperty("accessSecret") final String accessSecret) {
       this.accessKey = accessKey;
       this.topicArn = topicArn;
       this.accessSecret = accessSecret;
@@ -43,34 +42,34 @@ public final class SnsDestinationImpl implements SnsDestination {
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getAccessKey(){
+   public String getAccessKey(){
       return this.accessKey;
    }
    
    
-   public java.lang.String getTopicArn(){
+   public String getTopicArn(){
       return this.topicArn;
    }
    
    
-   public java.lang.String getAccessSecret(){
+   public String getAccessSecret(){
       return this.accessSecret;
    }
 
-   public void setAccessKey(final java.lang.String accessKey){
+   public void setAccessKey(final String accessKey){
       this.accessKey = accessKey;
    }
    
-   public void setTopicArn(final java.lang.String topicArn){
+   public void setTopicArn(final String topicArn){
       this.topicArn = topicArn;
    }
    
-   public void setAccessSecret(final java.lang.String accessSecret){
+   public void setAccessSecret(final String accessSecret){
       this.accessSecret = accessSecret;
    }
 

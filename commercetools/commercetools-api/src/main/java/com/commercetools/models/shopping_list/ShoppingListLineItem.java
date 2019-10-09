@@ -4,9 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product.ProductVariant;
 import com.commercetools.models.product_type.ProductTypeReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.shopping_list.ShoppingListLineItemImpl;
 

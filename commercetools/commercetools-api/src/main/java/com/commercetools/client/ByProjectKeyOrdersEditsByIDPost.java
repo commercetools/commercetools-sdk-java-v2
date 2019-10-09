@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
 public class ByProjectKeyOrdersEditsByIDPost {
    
    
@@ -27,13 +28,13 @@ public class ByProjectKeyOrdersEditsByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.models.common.Update update;
+   private com.commercetools.models.order_edit.OrderEditUpdate orderEditUpdate;
    
-   public ByProjectKeyOrdersEditsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.common.Update update){
+   public ByProjectKeyOrdersEditsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.models.order_edit.OrderEditUpdate orderEditUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
-      this.update = update;
+      this.orderEditUpdate = orderEditUpdate;
    }
    
    public ApiHttpRequest createHttpRequest() {
@@ -49,7 +50,7 @@ public class ByProjectKeyOrdersEditsByIDPost {
       httpRequest.setRelativeUrl(httpRequestPath); 
       httpRequest.setMethod(ApiHttpMethod.POST);
       httpRequest.setHeaders(headers);
-      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(update));}catch(Exception e){e.printStackTrace();}
+      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(orderEditUpdate));}catch(Exception e){e.printStackTrace();}
       return httpRequest;
    }
    
@@ -63,7 +64,12 @@ public class ByProjectKeyOrdersEditsByIDPost {
    
    public CompletableFuture<ApiHttpResponse<com.commercetools.models.order_edit.OrderEdit>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.order_edit.OrderEdit.class));
+              .thenApply(response -> {
+                  if(response.getStatusCode() >= 400){
+                      throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                  }
+                  return Utils.convertResponse(response,com.commercetools.models.order_edit.OrderEdit.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

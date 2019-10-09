@@ -1,7 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.cart_discount.CartDiscountUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,6 +1,6 @@
 package com.commercetools.models.order_edit;
 
-import java.lang.Integer;
+
 import com.commercetools.models.order_edit.OrderEditApplyImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,8 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.SubscriptionDelivery;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.subscription.ResourceUpdatedDelivery;
 import javax.annotation.Nullable;
@@ -13,7 +11,7 @@ import java.time.ZonedDateTime;
 public final class ResourceUpdatedDeliveryBuilder {
    
    
-   private java.lang.String projectKey;
+   private String projectKey;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -25,12 +23,12 @@ public final class ResourceUpdatedDeliveryBuilder {
    private java.time.ZonedDateTime modifiedAt;
    
    
-   private java.lang.Long oldVersion;
+   private Long oldVersion;
    
    
-   private java.lang.Long version;
+   private Long version;
    
-   public ResourceUpdatedDeliveryBuilder projectKey( final java.lang.String projectKey) {
+   public ResourceUpdatedDeliveryBuilder projectKey( final String projectKey) {
       this.projectKey = projectKey;
       return this;
    }
@@ -50,18 +48,18 @@ public final class ResourceUpdatedDeliveryBuilder {
       return this;
    }
    
-   public ResourceUpdatedDeliveryBuilder oldVersion( final java.lang.Long oldVersion) {
+   public ResourceUpdatedDeliveryBuilder oldVersion( final Long oldVersion) {
       this.oldVersion = oldVersion;
       return this;
    }
    
-   public ResourceUpdatedDeliveryBuilder version( final java.lang.Long version) {
+   public ResourceUpdatedDeliveryBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
    
-   public java.lang.String getProjectKey(){
+   public String getProjectKey(){
       return this.projectKey;
    }
    
@@ -81,12 +79,12 @@ public final class ResourceUpdatedDeliveryBuilder {
    }
    
    
-   public java.lang.Long getOldVersion(){
+   public Long getOldVersion(){
       return this.oldVersion;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

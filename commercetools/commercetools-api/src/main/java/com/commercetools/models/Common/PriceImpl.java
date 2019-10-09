@@ -2,11 +2,10 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.common.DiscountedPrice;
-import com.commercetools.models.common.Money;
 import com.commercetools.models.common.PriceTier;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -31,7 +30,7 @@ public final class PriceImpl implements Price {
 
    private com.commercetools.models.common.DiscountedPrice discounted;
    
-   private java.lang.String country;
+   private String country;
    
    private java.util.List<com.commercetools.models.common.PriceTier> tiers;
    
@@ -45,12 +44,12 @@ public final class PriceImpl implements Price {
    
    private java.time.ZonedDateTime validFrom;
    
-   private java.lang.String id;
+   private String id;
    
-   private com.commercetools.models.common.Money value;
+   private com.commercetools.models.common.TypedMoney value;
 
    @JsonCreator
-   PriceImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("country") final java.lang.String country, @JsonProperty("tiers") final java.util.List<com.commercetools.models.common.PriceTier> tiers, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("id") final java.lang.String id, @JsonProperty("value") final com.commercetools.models.common.Money value) {
+   PriceImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("country") final String country, @JsonProperty("tiers") final java.util.List<com.commercetools.models.common.PriceTier> tiers, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("id") final String id, @JsonProperty("value") final com.commercetools.models.common.TypedMoney value) {
       this.discounted = discounted;
       this.country = country;
       this.tiers = tiers;
@@ -74,7 +73,7 @@ public final class PriceImpl implements Price {
    /**
    	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
@@ -109,12 +108,12 @@ public final class PriceImpl implements Price {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public com.commercetools.models.common.Money getValue(){
+   public com.commercetools.models.common.TypedMoney getValue(){
       return this.value;
    }
 
@@ -122,7 +121,7 @@ public final class PriceImpl implements Price {
       this.discounted = discounted;
    }
    
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
@@ -150,11 +149,11 @@ public final class PriceImpl implements Price {
       this.validFrom = validFrom;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setValue(final com.commercetools.models.common.Money value){
+   public void setValue(final com.commercetools.models.common.TypedMoney value){
       this.value = value;
    }
 

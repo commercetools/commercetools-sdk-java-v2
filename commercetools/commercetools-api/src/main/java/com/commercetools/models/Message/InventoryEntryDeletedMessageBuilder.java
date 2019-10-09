@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.message.Message;
-import java.lang.String;
 import com.commercetools.models.message.InventoryEntryDeletedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,13 +17,19 @@ public final class InventoryEntryDeletedMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -33,16 +38,13 @@ public final class InventoryEntryDeletedMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    
    private com.commercetools.models.channel.ChannelReference supplyChannel;
    
    
-   private java.lang.String sku;
+   private String sku;
    
    public InventoryEntryDeletedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -54,17 +56,27 @@ public final class InventoryEntryDeletedMessageBuilder {
       return this;
    }
    
-   public InventoryEntryDeletedMessageBuilder id( final java.lang.String id) {
+   public InventoryEntryDeletedMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public InventoryEntryDeletedMessageBuilder version( final java.lang.Long version) {
+   public InventoryEntryDeletedMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public InventoryEntryDeletedMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public InventoryEntryDeletedMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public InventoryEntryDeletedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public InventoryEntryDeletedMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -79,13 +91,8 @@ public final class InventoryEntryDeletedMessageBuilder {
       return this;
    }
    
-   public InventoryEntryDeletedMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public InventoryEntryDeletedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
-      return this;
-   }
-   
-   public InventoryEntryDeletedMessageBuilder type( final java.lang.String type) {
-      this.type = type;
       return this;
    }
    
@@ -94,7 +101,7 @@ public final class InventoryEntryDeletedMessageBuilder {
       return this;
    }
    
-   public InventoryEntryDeletedMessageBuilder sku( final java.lang.String sku) {
+   public InventoryEntryDeletedMessageBuilder sku( final String sku) {
       this.sku = sku;
       return this;
    }
@@ -110,17 +117,27 @@ public final class InventoryEntryDeletedMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -135,13 +152,8 @@ public final class InventoryEntryDeletedMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
-   }
-   
-   
-   public java.lang.String getType(){
-      return this.type;
    }
    
    
@@ -150,12 +162,12 @@ public final class InventoryEntryDeletedMessageBuilder {
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
    public InventoryEntryDeletedMessage build() {
-       return new InventoryEntryDeletedMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, supplyChannel, sku);
+       return new InventoryEntryDeletedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, supplyChannel, sku);
    }
    
    public static InventoryEntryDeletedMessageBuilder of() {
@@ -168,11 +180,12 @@ public final class InventoryEntryDeletedMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.supplyChannel = template.getSupplyChannel();
       builder.sku = template.getSku();
       return builder;

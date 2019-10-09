@@ -1,7 +1,6 @@
 package com.commercetools.models.api_client;
 
-import java.lang.Long;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ApiClientDraftImpl implements ApiClientDraft {
 
-   private java.lang.Long deleteDaysAfterCreation;
+   private Long deleteDaysAfterCreation;
    
-   private java.lang.String scope;
+   private String scope;
    
-   private java.lang.String name;
+   private String name;
 
    @JsonCreator
-   ApiClientDraftImpl(@JsonProperty("deleteDaysAfterCreation") final java.lang.Long deleteDaysAfterCreation, @JsonProperty("scope") final java.lang.String scope, @JsonProperty("name") final java.lang.String name) {
+   ApiClientDraftImpl(@JsonProperty("deleteDaysAfterCreation") final Long deleteDaysAfterCreation, @JsonProperty("scope") final String scope, @JsonProperty("name") final String name) {
       this.deleteDaysAfterCreation = deleteDaysAfterCreation;
       this.scope = scope;
       this.name = name;
@@ -40,29 +39,29 @@ public final class ApiClientDraftImpl implements ApiClientDraft {
    }
    
    
-   public java.lang.Long getDeleteDaysAfterCreation(){
+   public Long getDeleteDaysAfterCreation(){
       return this.deleteDaysAfterCreation;
    }
    
    
-   public java.lang.String getScope(){
+   public String getScope(){
       return this.scope;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
 
-   public void setDeleteDaysAfterCreation(final java.lang.Long deleteDaysAfterCreation){
+   public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation){
       this.deleteDaysAfterCreation = deleteDaysAfterCreation;
    }
    
-   public void setScope(final java.lang.String scope){
+   public void setScope(final String scope){
       this.scope = scope;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
 

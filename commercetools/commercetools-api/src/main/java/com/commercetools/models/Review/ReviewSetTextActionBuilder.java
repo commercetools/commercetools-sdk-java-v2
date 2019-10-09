@@ -1,7 +1,6 @@
 package com.commercetools.models.review;
 
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.String;
 import com.commercetools.models.review.ReviewSetTextAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ReviewSetTextActionBuilder {
    
    @Nullable
-   private java.lang.String text;
+   private String text;
    
-   public ReviewSetTextActionBuilder text(@Nullable final java.lang.String text) {
+   public ReviewSetTextActionBuilder text(@Nullable final String text) {
       this.text = text;
       return this;
    }
    
    @Nullable
-   public java.lang.String getText(){
+   public String getText(){
       return this.text;
    }
 

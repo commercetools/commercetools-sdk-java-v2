@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
 public class ByProjectKeyOrdersEditsKeyByKeyPost {
    
    
@@ -27,13 +28,13 @@ public class ByProjectKeyOrdersEditsKeyByKeyPost {
    private String projectKey;
    private String key;
    
-   private com.commercetools.models.common.Update update;
+   private com.commercetools.models.order_edit.OrderEditUpdate orderEditUpdate;
    
-   public ByProjectKeyOrdersEditsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.common.Update update){
+   public ByProjectKeyOrdersEditsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.models.order_edit.OrderEditUpdate orderEditUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.key = key;
-      this.update = update;
+      this.orderEditUpdate = orderEditUpdate;
    }
    
    public ApiHttpRequest createHttpRequest() {
@@ -49,7 +50,7 @@ public class ByProjectKeyOrdersEditsKeyByKeyPost {
       httpRequest.setRelativeUrl(httpRequestPath); 
       httpRequest.setMethod(ApiHttpMethod.POST);
       httpRequest.setHeaders(headers);
-      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(update));}catch(Exception e){e.printStackTrace();}
+      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(orderEditUpdate));}catch(Exception e){e.printStackTrace();}
       return httpRequest;
    }
    
@@ -63,7 +64,12 @@ public class ByProjectKeyOrdersEditsKeyByKeyPost {
    
    public CompletableFuture<ApiHttpResponse<com.commercetools.models.order_edit.OrderEdit>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.order_edit.OrderEdit.class));
+              .thenApply(response -> {
+                  if(response.getStatusCode() >= 400){
+                      throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                  }
+                  return Utils.convertResponse(response,com.commercetools.models.order_edit.OrderEdit.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

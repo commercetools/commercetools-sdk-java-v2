@@ -9,7 +9,6 @@ import com.commercetools.models.shipping_method.ShippingMethodReference;
 import com.commercetools.models.shipping_method.ShippingRate;
 import com.commercetools.models.tax_category.TaxCategoryReference;
 import com.commercetools.models.tax_category.TaxRate;
-import java.lang.String;
 import com.commercetools.models.cart.ShippingInfo;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -40,7 +39,7 @@ public final class ShippingInfoBuilder {
    private com.commercetools.models.shipping_method.ShippingMethodReference shippingMethod;
    
    
-   private java.lang.String shippingMethodName;
+   private String shippingMethodName;
    
    @Nullable
    private java.util.List<com.commercetools.models.order.Delivery> deliveries;
@@ -83,7 +82,7 @@ public final class ShippingInfoBuilder {
       return this;
    }
    
-   public ShippingInfoBuilder shippingMethodName( final java.lang.String shippingMethodName) {
+   public ShippingInfoBuilder shippingMethodName( final String shippingMethodName) {
       this.shippingMethodName = shippingMethodName;
       return this;
    }
@@ -134,7 +133,7 @@ public final class ShippingInfoBuilder {
    }
    
    
-   public java.lang.String getShippingMethodName(){
+   public String getShippingMethodName(){
       return this.shippingMethodName;
    }
    

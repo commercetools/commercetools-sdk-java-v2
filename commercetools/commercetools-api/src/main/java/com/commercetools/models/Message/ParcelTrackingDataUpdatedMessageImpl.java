@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -28,40 +27,46 @@ public final class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackin
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
-   private java.lang.Long sequenceNumber;
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
+   
+   private Long sequenceNumber;
    
    private com.commercetools.models.common.Reference resource;
    
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    private com.commercetools.models.order.TrackingData trackingData;
    
-   private java.lang.String parcelId;
+   private String parcelId;
 
    @JsonCreator
-   ParcelTrackingDataUpdatedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("sequenceNumber") final java.lang.Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final java.lang.Long resourceVersion, @JsonProperty("type") final java.lang.String type, @JsonProperty("deliveryId") final java.lang.String deliveryId, @JsonProperty("trackingData") final com.commercetools.models.order.TrackingData trackingData, @JsonProperty("parcelId") final java.lang.String parcelId) {
+   ParcelTrackingDataUpdatedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("deliveryId") final String deliveryId, @JsonProperty("trackingData") final com.commercetools.models.order.TrackingData trackingData, @JsonProperty("parcelId") final String parcelId) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
       this.version = version;
+      this.createdBy = createdBy;
+      this.lastModifiedBy = lastModifiedBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
-      this.type = type;
       this.deliveryId = deliveryId;
       this.trackingData = trackingData;
       this.parcelId = parcelId;
+      this.type = "ParcelTrackingDataUpdated";
    }
    public ParcelTrackingDataUpdatedMessageImpl() {
       
@@ -78,17 +83,27 @@ public final class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackin
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.Long getSequenceNumber(){
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -103,17 +118,17 @@ public final class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackin
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    
@@ -123,7 +138,7 @@ public final class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackin
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 
@@ -135,15 +150,23 @@ public final class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackin
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
-   public void setSequenceNumber(final java.lang.Long sequenceNumber){
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
+      this.lastModifiedBy = lastModifiedBy;
+   }
+   
+   public void setSequenceNumber(final Long sequenceNumber){
       this.sequenceNumber = sequenceNumber;
    }
    
@@ -155,15 +178,11 @@ public final class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackin
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
-   public void setResourceVersion(final java.lang.Long resourceVersion){
+   public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
    }
    
-   public void setType(final java.lang.String type){
-      this.type = type;
-   }
-   
-   public void setDeliveryId(final java.lang.String deliveryId){
+   public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
    
@@ -171,7 +190,7 @@ public final class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackin
       this.trackingData = trackingData;
    }
    
-   public void setParcelId(final java.lang.String parcelId){
+   public void setParcelId(final String parcelId){
       this.parcelId = parcelId;
    }
 

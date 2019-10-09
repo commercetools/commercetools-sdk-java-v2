@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.category.CategoryUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

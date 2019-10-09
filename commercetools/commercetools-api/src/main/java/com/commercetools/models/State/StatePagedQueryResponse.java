@@ -1,7 +1,6 @@
 package com.commercetools.models.state;
 
 import com.commercetools.models.state.State;
-import java.lang.Long;
 import com.commercetools.models.state.StatePagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -24,6 +23,10 @@ public interface StatePagedQueryResponse  {
 
    
    @NotNull
+   @JsonProperty("limit")
+   public Long getLimit();
+   
+   @NotNull
    @JsonProperty("count")
    public Long getCount();
    
@@ -40,6 +43,8 @@ public interface StatePagedQueryResponse  {
    @JsonProperty("results")
    public List<State> getResults();
 
+   public void setLimit(final Long limit);
+   
    public void setCount(final Long count);
    
    public void setTotal(final Long total);
@@ -58,6 +63,7 @@ public interface StatePagedQueryResponse  {
       instance.setTotal(template.getTotal());
       instance.setOffset(template.getOffset());
       instance.setCount(template.getCount());
+      instance.setLimit(template.getLimit());
       instance.setResults(template.getResults());
       return instance;
    }

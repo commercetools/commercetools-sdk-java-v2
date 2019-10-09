@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class CustomerGroupReferenceBuilder {
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private com.commercetools.models.customer_group.CustomerGroup obj;
    
-   public CustomerGroupReferenceBuilder id( final java.lang.String id) {
+   public CustomerGroupReferenceBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -28,7 +28,7 @@ public final class CustomerGroupReferenceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

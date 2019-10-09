@@ -4,7 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.shopping_list.ShoppingListLineItemDraft;
 import com.commercetools.models.shopping_list.TextLineItemDraft;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
 import com.commercetools.models.me.MyShoppingListDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,7 +19,7 @@ public final class MyShoppingListDraftBuilder {
    private java.util.List<com.commercetools.models.shopping_list.TextLineItemDraft> textLineItems;
    
    @Nullable
-   private java.lang.Long deleteDaysAfterLastModification;
+   private Long deleteDaysAfterLastModification;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
@@ -41,7 +40,7 @@ public final class MyShoppingListDraftBuilder {
       return this;
    }
    
-   public MyShoppingListDraftBuilder deleteDaysAfterLastModification(@Nullable final java.lang.Long deleteDaysAfterLastModification) {
+   public MyShoppingListDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
       return this;
    }
@@ -72,7 +71,7 @@ public final class MyShoppingListDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Long getDeleteDaysAfterLastModification(){
+   public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    

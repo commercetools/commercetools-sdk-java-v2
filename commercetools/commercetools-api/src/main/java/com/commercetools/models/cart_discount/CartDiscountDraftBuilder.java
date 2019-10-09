@@ -1,12 +1,10 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountTarget;
-import com.commercetools.models.cart_discount.CartDiscountValue;
+import com.commercetools.models.cart_discount.CartDiscountValueDraft;
 import com.commercetools.models.cart_discount.StackingMode;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.cart_discount.CartDiscountDraft;
 import javax.annotation.Nullable;
@@ -17,10 +15,10 @@ import java.time.ZonedDateTime;
 public final class CartDiscountDraftBuilder {
    
    
-   private java.lang.Boolean requiresDiscountCode;
+   private Boolean requiresDiscountCode;
    
    
-   private java.lang.String cartPredicate;
+   private String cartPredicate;
    
    @Nullable
    private com.commercetools.models.type.CustomFields custom;
@@ -29,7 +27,7 @@ public final class CartDiscountDraftBuilder {
    private com.commercetools.models.cart_discount.StackingMode stackingMode;
    
    
-   private java.lang.String sortOrder;
+   private String sortOrder;
    
    
    private com.commercetools.models.common.LocalizedString name;
@@ -44,23 +42,23 @@ public final class CartDiscountDraftBuilder {
    private java.time.ZonedDateTime validFrom;
    
    @Nullable
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
    
-   private com.commercetools.models.cart_discount.CartDiscountValue value;
+   private com.commercetools.models.cart_discount.CartDiscountValueDraft value;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    @Nullable
    private com.commercetools.models.cart_discount.CartDiscountTarget target;
    
-   public CartDiscountDraftBuilder requiresDiscountCode( final java.lang.Boolean requiresDiscountCode) {
+   public CartDiscountDraftBuilder requiresDiscountCode( final Boolean requiresDiscountCode) {
       this.requiresDiscountCode = requiresDiscountCode;
       return this;
    }
    
-   public CartDiscountDraftBuilder cartPredicate( final java.lang.String cartPredicate) {
+   public CartDiscountDraftBuilder cartPredicate( final String cartPredicate) {
       this.cartPredicate = cartPredicate;
       return this;
    }
@@ -75,7 +73,7 @@ public final class CartDiscountDraftBuilder {
       return this;
    }
    
-   public CartDiscountDraftBuilder sortOrder( final java.lang.String sortOrder) {
+   public CartDiscountDraftBuilder sortOrder( final String sortOrder) {
       this.sortOrder = sortOrder;
       return this;
    }
@@ -100,17 +98,17 @@ public final class CartDiscountDraftBuilder {
       return this;
    }
    
-   public CartDiscountDraftBuilder isActive(@Nullable final java.lang.Boolean isActive) {
+   public CartDiscountDraftBuilder isActive(@Nullable final Boolean isActive) {
       this.isActive = isActive;
       return this;
    }
    
-   public CartDiscountDraftBuilder value( final com.commercetools.models.cart_discount.CartDiscountValue value) {
+   public CartDiscountDraftBuilder value( final com.commercetools.models.cart_discount.CartDiscountValueDraft value) {
       this.value = value;
       return this;
    }
    
-   public CartDiscountDraftBuilder key(@Nullable final java.lang.String key) {
+   public CartDiscountDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -121,12 +119,12 @@ public final class CartDiscountDraftBuilder {
    }
    
    
-   public java.lang.Boolean getRequiresDiscountCode(){
+   public Boolean getRequiresDiscountCode(){
       return this.requiresDiscountCode;
    }
    
    
-   public java.lang.String getCartPredicate(){
+   public String getCartPredicate(){
       return this.cartPredicate;
    }
    
@@ -141,7 +139,7 @@ public final class CartDiscountDraftBuilder {
    }
    
    
-   public java.lang.String getSortOrder(){
+   public String getSortOrder(){
       return this.sortOrder;
    }
    
@@ -166,17 +164,17 @@ public final class CartDiscountDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
    
-   public com.commercetools.models.cart_discount.CartDiscountValue getValue(){
+   public com.commercetools.models.cart_discount.CartDiscountValueDraft getValue(){
       return this.value;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

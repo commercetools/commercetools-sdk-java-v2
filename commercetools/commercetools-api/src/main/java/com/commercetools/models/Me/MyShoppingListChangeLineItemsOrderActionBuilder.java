@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyShoppingListUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyShoppingListChangeLineItemsOrderAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class MyShoppingListChangeLineItemsOrderActionBuilder {
    
    
-   private java.util.List<java.lang.String> lineItemOrder;
+   private java.util.List<String> lineItemOrder;
    
-   public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder( final java.util.List<java.lang.String> lineItemOrder) {
+   public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder( final java.util.List<String> lineItemOrder) {
       this.lineItemOrder = lineItemOrder;
       return this;
    }
    
    
-   public java.util.List<java.lang.String> getLineItemOrder(){
+   public java.util.List<String> getLineItemOrder(){
       return this.lineItemOrder;
    }
 

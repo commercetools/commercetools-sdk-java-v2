@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductRemoveVariantAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class ProductRemoveVariantActionBuilder {
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.Long id;
+   private Long id;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
-   public ProductRemoveVariantActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductRemoveVariantActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductRemoveVariantActionBuilder id(@Nullable final java.lang.Long id) {
+   public ProductRemoveVariantActionBuilder id(@Nullable final Long id) {
       this.id = id;
       return this;
    }
    
-   public ProductRemoveVariantActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductRemoveVariantActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.Long getId(){
+   public Long getId(){
       return this.id;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

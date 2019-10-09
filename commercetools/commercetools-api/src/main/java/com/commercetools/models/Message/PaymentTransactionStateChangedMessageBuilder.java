@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
 import com.commercetools.models.payment.TransactionState;
-import java.lang.String;
 import com.commercetools.models.message.PaymentTransactionStateChangedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,13 +17,19 @@ public final class PaymentTransactionStateChangedMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -33,16 +38,13 @@ public final class PaymentTransactionStateChangedMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    
    private com.commercetools.models.payment.TransactionState state;
    
    
-   private java.lang.String transactionId;
+   private String transactionId;
    
    public PaymentTransactionStateChangedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -54,17 +56,27 @@ public final class PaymentTransactionStateChangedMessageBuilder {
       return this;
    }
    
-   public PaymentTransactionStateChangedMessageBuilder id( final java.lang.String id) {
+   public PaymentTransactionStateChangedMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public PaymentTransactionStateChangedMessageBuilder version( final java.lang.Long version) {
+   public PaymentTransactionStateChangedMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public PaymentTransactionStateChangedMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public PaymentTransactionStateChangedMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public PaymentTransactionStateChangedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public PaymentTransactionStateChangedMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -79,13 +91,8 @@ public final class PaymentTransactionStateChangedMessageBuilder {
       return this;
    }
    
-   public PaymentTransactionStateChangedMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public PaymentTransactionStateChangedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
-      return this;
-   }
-   
-   public PaymentTransactionStateChangedMessageBuilder type( final java.lang.String type) {
-      this.type = type;
       return this;
    }
    
@@ -94,7 +101,7 @@ public final class PaymentTransactionStateChangedMessageBuilder {
       return this;
    }
    
-   public PaymentTransactionStateChangedMessageBuilder transactionId( final java.lang.String transactionId) {
+   public PaymentTransactionStateChangedMessageBuilder transactionId( final String transactionId) {
       this.transactionId = transactionId;
       return this;
    }
@@ -110,17 +117,27 @@ public final class PaymentTransactionStateChangedMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -135,13 +152,8 @@ public final class PaymentTransactionStateChangedMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
-   }
-   
-   
-   public java.lang.String getType(){
-      return this.type;
    }
    
    
@@ -150,12 +162,12 @@ public final class PaymentTransactionStateChangedMessageBuilder {
    }
    
    
-   public java.lang.String getTransactionId(){
+   public String getTransactionId(){
       return this.transactionId;
    }
 
    public PaymentTransactionStateChangedMessage build() {
-       return new PaymentTransactionStateChangedMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, state, transactionId);
+       return new PaymentTransactionStateChangedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, state, transactionId);
    }
    
    public static PaymentTransactionStateChangedMessageBuilder of() {
@@ -168,11 +180,12 @@ public final class PaymentTransactionStateChangedMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.state = template.getState();
       builder.transactionId = template.getTransactionId();
       return builder;

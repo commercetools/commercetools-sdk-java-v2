@@ -3,7 +3,6 @@ package com.commercetools.models.product_discount;
 import com.commercetools.models.product_discount.ProductDiscountValueAbsolute;
 import com.commercetools.models.product_discount.ProductDiscountValueExternal;
 import com.commercetools.models.product_discount.ProductDiscountValueRelative;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

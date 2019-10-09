@@ -1,12 +1,10 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountTarget;
-import com.commercetools.models.cart_discount.CartDiscountValue;
+import com.commercetools.models.cart_discount.CartDiscountValueDraft;
 import com.commercetools.models.cart_discount.StackingMode;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.cart_discount.CartDiscountDraftImpl;
 
@@ -45,7 +43,7 @@ public interface CartDiscountDraft  {
    @NotNull
    @Valid
    @JsonProperty("value")
-   public CartDiscountValue getValue();
+   public CartDiscountValueDraft getValue();
    
    @NotNull
    @JsonProperty("cartPredicate")
@@ -92,7 +90,7 @@ public interface CartDiscountDraft  {
    
    public void setDescription(final LocalizedString description);
    
-   public void setValue(final CartDiscountValue value);
+   public void setValue(final CartDiscountValueDraft value);
    
    public void setCartPredicate(final String cartPredicate);
    

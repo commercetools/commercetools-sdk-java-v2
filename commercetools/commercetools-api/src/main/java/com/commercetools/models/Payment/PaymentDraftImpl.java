@@ -6,7 +6,6 @@ import com.commercetools.models.payment.PaymentMethodInfo;
 import com.commercetools.models.payment.PaymentStatusDraft;
 import com.commercetools.models.payment.TransactionDraft;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -30,15 +29,15 @@ public final class PaymentDraftImpl implements PaymentDraft {
 
    private com.commercetools.models.common.Money amountAuthorized;
    
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private java.lang.String authorizedUntil;
+   private String authorizedUntil;
    
-   private java.lang.String externalId;
+   private String externalId;
    
    private java.util.List<com.commercetools.models.payment.TransactionDraft> transactions;
    
@@ -50,16 +49,16 @@ public final class PaymentDraftImpl implements PaymentDraft {
    
    private java.util.List<com.commercetools.models.type.CustomFieldsDraft> interfaceInteractions;
    
-   private java.lang.String interfaceId;
+   private String interfaceId;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.payment.PaymentStatusDraft paymentStatus;
    
    private com.commercetools.models.customer.CustomerResourceIdentifier customer;
 
    @JsonCreator
-   PaymentDraftImpl(@JsonProperty("amountAuthorized") final com.commercetools.models.common.Money amountAuthorized, @JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("paymentMethodInfo") final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("authorizedUntil") final java.lang.String authorizedUntil, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("transactions") final java.util.List<com.commercetools.models.payment.TransactionDraft> transactions, @JsonProperty("amountPaid") final com.commercetools.models.common.Money amountPaid, @JsonProperty("amountRefunded") final com.commercetools.models.common.Money amountRefunded, @JsonProperty("amountPlanned") final com.commercetools.models.common.Money amountPlanned, @JsonProperty("interfaceInteractions") final java.util.List<com.commercetools.models.type.CustomFieldsDraft> interfaceInteractions, @JsonProperty("interfaceId") final java.lang.String interfaceId, @JsonProperty("key") final java.lang.String key, @JsonProperty("paymentStatus") final com.commercetools.models.payment.PaymentStatusDraft paymentStatus, @JsonProperty("customer") final com.commercetools.models.customer.CustomerResourceIdentifier customer) {
+   PaymentDraftImpl(@JsonProperty("amountAuthorized") final com.commercetools.models.common.Money amountAuthorized, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("paymentMethodInfo") final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("authorizedUntil") final String authorizedUntil, @JsonProperty("externalId") final String externalId, @JsonProperty("transactions") final java.util.List<com.commercetools.models.payment.TransactionDraft> transactions, @JsonProperty("amountPaid") final com.commercetools.models.common.Money amountPaid, @JsonProperty("amountRefunded") final com.commercetools.models.common.Money amountRefunded, @JsonProperty("amountPlanned") final com.commercetools.models.common.Money amountPlanned, @JsonProperty("interfaceInteractions") final java.util.List<com.commercetools.models.type.CustomFieldsDraft> interfaceInteractions, @JsonProperty("interfaceId") final String interfaceId, @JsonProperty("key") final String key, @JsonProperty("paymentStatus") final com.commercetools.models.payment.PaymentStatusDraft paymentStatus, @JsonProperty("customer") final com.commercetools.models.customer.CustomerResourceIdentifier customer) {
       this.amountAuthorized = amountAuthorized;
       this.anonymousId = anonymousId;
       this.paymentMethodInfo = paymentMethodInfo;
@@ -86,7 +85,7 @@ public final class PaymentDraftImpl implements PaymentDraft {
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -101,12 +100,12 @@ public final class PaymentDraftImpl implements PaymentDraft {
    }
    
    
-   public java.lang.String getAuthorizedUntil(){
+   public String getAuthorizedUntil(){
       return this.authorizedUntil;
    }
    
    
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
@@ -136,12 +135,12 @@ public final class PaymentDraftImpl implements PaymentDraft {
    }
    
    
-   public java.lang.String getInterfaceId(){
+   public String getInterfaceId(){
       return this.interfaceId;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -159,7 +158,7 @@ public final class PaymentDraftImpl implements PaymentDraft {
       this.amountAuthorized = amountAuthorized;
    }
    
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
    
@@ -171,11 +170,11 @@ public final class PaymentDraftImpl implements PaymentDraft {
       this.custom = custom;
    }
    
-   public void setAuthorizedUntil(final java.lang.String authorizedUntil){
+   public void setAuthorizedUntil(final String authorizedUntil){
       this.authorizedUntil = authorizedUntil;
    }
    
-   public void setExternalId(final java.lang.String externalId){
+   public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
    
@@ -199,11 +198,11 @@ public final class PaymentDraftImpl implements PaymentDraft {
       this.interfaceInteractions = interfaceInteractions;
    }
    
-   public void setInterfaceId(final java.lang.String interfaceId){
+   public void setInterfaceId(final String interfaceId){
       this.interfaceId = interfaceId;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

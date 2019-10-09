@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Object;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SearchKeywordImpl implements SearchKeyword {
 
-   private java.lang.Object suggestTokenizer;
+   private Object suggestTokenizer;
    
-   private java.lang.String text;
+   private String text;
 
    @JsonCreator
-   SearchKeywordImpl(@JsonProperty("suggestTokenizer") final java.lang.Object suggestTokenizer, @JsonProperty("text") final java.lang.String text) {
+   SearchKeywordImpl(@JsonProperty("suggestTokenizer") final Object suggestTokenizer, @JsonProperty("text") final String text) {
       this.suggestTokenizer = suggestTokenizer;
       this.text = text;
    }
@@ -37,20 +36,20 @@ public final class SearchKeywordImpl implements SearchKeyword {
    }
    
    
-   public java.lang.Object getSuggestTokenizer(){
+   public Object getSuggestTokenizer(){
       return this.suggestTokenizer;
    }
    
    
-   public java.lang.String getText(){
+   public String getText(){
       return this.text;
    }
 
-   public void setSuggestTokenizer(final java.lang.Object suggestTokenizer){
+   public void setSuggestTokenizer(final Object suggestTokenizer){
       this.suggestTokenizer = suggestTokenizer;
    }
    
-   public void setText(final java.lang.String text){
+   public void setText(final String text){
       this.text = text;
    }
 

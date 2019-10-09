@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetKeyActionImpl implements CategorySetKeyAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   CategorySetKeyActionImpl(@JsonProperty("key") final java.lang.String key) {
+   CategorySetKeyActionImpl(@JsonProperty("key") final String key) {
       this.key = key;
       this.action = "setKey";
    }
@@ -37,16 +36,16 @@ public final class CategorySetKeyActionImpl implements CategorySetKeyAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

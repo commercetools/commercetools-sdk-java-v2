@@ -11,28 +11,28 @@ import java.time.ZonedDateTime;
 public final class ChannelResourceIdentifierBuilder {
    
    @Nullable
-   private java.lang.String id;
+   private String id;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public ChannelResourceIdentifierBuilder id(@Nullable final java.lang.String id) {
+   public ChannelResourceIdentifierBuilder id(@Nullable final String id) {
       this.id = id;
       return this;
    }
    
-   public ChannelResourceIdentifierBuilder key(@Nullable final java.lang.String key) {
+   public ChannelResourceIdentifierBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

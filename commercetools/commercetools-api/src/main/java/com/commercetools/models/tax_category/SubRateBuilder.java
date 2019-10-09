@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
-import java.lang.Integer;
-import java.lang.String;
+
 import com.commercetools.models.tax_category.SubRate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class SubRateBuilder {
    
    
-   private java.lang.Integer amount;
+   private Integer amount;
    
    
-   private java.lang.String name;
+   private String name;
    
-   public SubRateBuilder amount( final java.lang.Integer amount) {
+   public SubRateBuilder amount( final Integer amount) {
       this.amount = amount;
       return this;
    }
    
-   public SubRateBuilder name( final java.lang.String name) {
+   public SubRateBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
    
-   public java.lang.Integer getAmount(){
+   public Integer getAmount(){
       return this.amount;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
 

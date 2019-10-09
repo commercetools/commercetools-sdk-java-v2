@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
-import java.lang.String;
 import com.commercetools.models.message.CustomerCompanyNameSetMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -17,13 +16,19 @@ public final class CustomerCompanyNameSetMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -32,13 +37,10 @@ public final class CustomerCompanyNameSetMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
    
-   private java.lang.String type;
-   
-   
-   private java.lang.String companyName;
+   private String companyName;
    
    public CustomerCompanyNameSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -50,17 +52,27 @@ public final class CustomerCompanyNameSetMessageBuilder {
       return this;
    }
    
-   public CustomerCompanyNameSetMessageBuilder id( final java.lang.String id) {
+   public CustomerCompanyNameSetMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public CustomerCompanyNameSetMessageBuilder version( final java.lang.Long version) {
+   public CustomerCompanyNameSetMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public CustomerCompanyNameSetMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public CustomerCompanyNameSetMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public CustomerCompanyNameSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public CustomerCompanyNameSetMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -75,17 +87,12 @@ public final class CustomerCompanyNameSetMessageBuilder {
       return this;
    }
    
-   public CustomerCompanyNameSetMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public CustomerCompanyNameSetMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public CustomerCompanyNameSetMessageBuilder type( final java.lang.String type) {
-      this.type = type;
-      return this;
-   }
-   
-   public CustomerCompanyNameSetMessageBuilder companyName( final java.lang.String companyName) {
+   public CustomerCompanyNameSetMessageBuilder companyName( final String companyName) {
       this.companyName = companyName;
       return this;
    }
@@ -101,17 +108,27 @@ public final class CustomerCompanyNameSetMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -126,22 +143,17 @@ public final class CustomerCompanyNameSetMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
-      return this.type;
-   }
-   
-   
-   public java.lang.String getCompanyName(){
+   public String getCompanyName(){
       return this.companyName;
    }
 
    public CustomerCompanyNameSetMessage build() {
-       return new CustomerCompanyNameSetMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, companyName);
+       return new CustomerCompanyNameSetMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, companyName);
    }
    
    public static CustomerCompanyNameSetMessageBuilder of() {
@@ -154,11 +166,12 @@ public final class CustomerCompanyNameSetMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.companyName = template.getCompanyName();
       return builder;
    }

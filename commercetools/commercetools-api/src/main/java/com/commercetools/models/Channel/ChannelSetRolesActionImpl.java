@@ -2,7 +2,6 @@ package com.commercetools.models.channel;
 
 import com.commercetools.models.channel.ChannelRoleEnum;
 import com.commercetools.models.channel.ChannelUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelSetRolesActionImpl implements ChannelSetRolesAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles;
 
@@ -38,7 +37,7 @@ public final class ChannelSetRolesActionImpl implements ChannelSetRolesAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

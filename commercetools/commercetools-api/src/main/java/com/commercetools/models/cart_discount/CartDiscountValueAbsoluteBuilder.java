@@ -1,8 +1,7 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountValue;
-import com.commercetools.models.common.Money;
-import java.lang.String;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.cart_discount.CartDiscountValueAbsolute;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +11,15 @@ import java.time.ZonedDateTime;
 public final class CartDiscountValueAbsoluteBuilder {
    
    
-   private java.util.List<com.commercetools.models.common.Money> money;
+   private java.util.List<com.commercetools.models.common.TypedMoney> money;
    
-   public CartDiscountValueAbsoluteBuilder money( final java.util.List<com.commercetools.models.common.Money> money) {
+   public CartDiscountValueAbsoluteBuilder money( final java.util.List<com.commercetools.models.common.TypedMoney> money) {
       this.money = money;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.models.common.Money> getMoney(){
+   public java.util.List<com.commercetools.models.common.TypedMoney> getMoney(){
       return this.money;
    }
 

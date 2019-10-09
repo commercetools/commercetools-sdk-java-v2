@@ -4,7 +4,6 @@ import com.commercetools.models.subscription.ChangeSubscription;
 import com.commercetools.models.subscription.DeliveryFormat;
 import com.commercetools.models.subscription.Destination;
 import com.commercetools.models.subscription.MessageSubscription;
-import java.lang.String;
 import com.commercetools.models.subscription.SubscriptionDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -26,7 +25,7 @@ public final class SubscriptionDraftBuilder {
    private java.util.List<com.commercetools.models.subscription.MessageSubscription> messages;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public SubscriptionDraftBuilder format(@Nullable final com.commercetools.models.subscription.DeliveryFormat format) {
       this.format = format;
@@ -48,7 +47,7 @@ public final class SubscriptionDraftBuilder {
       return this;
    }
    
-   public SubscriptionDraftBuilder key(@Nullable final java.lang.String key) {
+   public SubscriptionDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -74,7 +73,7 @@ public final class SubscriptionDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

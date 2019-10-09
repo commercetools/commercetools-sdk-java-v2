@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.common.Money;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetLineItemPriceAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class CartSetLineItemPriceActionBuilder {
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    @Nullable
    private com.commercetools.models.common.Money externalPrice;
    
-   public CartSetLineItemPriceActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public CartSetLineItemPriceActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class CartSetLineItemPriceActionBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    

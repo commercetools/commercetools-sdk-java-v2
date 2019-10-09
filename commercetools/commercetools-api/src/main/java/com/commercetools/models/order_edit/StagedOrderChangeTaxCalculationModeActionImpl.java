@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.cart.TaxCalculationMode;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderChangeTaxCalculationModeActionImpl implements StagedOrderChangeTaxCalculationModeAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart.TaxCalculationMode taxCalculationMode;
 
@@ -38,7 +37,7 @@ public final class StagedOrderChangeTaxCalculationModeActionImpl implements Stag
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

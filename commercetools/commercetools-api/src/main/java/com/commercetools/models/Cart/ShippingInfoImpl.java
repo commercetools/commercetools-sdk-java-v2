@@ -9,7 +9,6 @@ import com.commercetools.models.shipping_method.ShippingMethodReference;
 import com.commercetools.models.shipping_method.ShippingRate;
 import com.commercetools.models.tax_category.TaxCategoryReference;
 import com.commercetools.models.tax_category.TaxRate;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -45,14 +44,14 @@ public final class ShippingInfoImpl implements ShippingInfo {
    
    private com.commercetools.models.shipping_method.ShippingMethodReference shippingMethod;
    
-   private java.lang.String shippingMethodName;
+   private String shippingMethodName;
    
    private java.util.List<com.commercetools.models.order.Delivery> deliveries;
    
    private com.commercetools.models.tax_category.TaxCategoryReference taxCategory;
 
    @JsonCreator
-   ShippingInfoImpl(@JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRate taxRate, @JsonProperty("shippingRate") final com.commercetools.models.shipping_method.ShippingRate shippingRate, @JsonProperty("discountedPrice") final com.commercetools.models.cart.DiscountedLineItemPrice discountedPrice, @JsonProperty("shippingMethodState") final com.commercetools.models.cart.ShippingMethodState shippingMethodState, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("price") final com.commercetools.models.common.TypedMoney price, @JsonProperty("shippingMethod") final com.commercetools.models.shipping_method.ShippingMethodReference shippingMethod, @JsonProperty("shippingMethodName") final java.lang.String shippingMethodName, @JsonProperty("deliveries") final java.util.List<com.commercetools.models.order.Delivery> deliveries, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryReference taxCategory) {
+   ShippingInfoImpl(@JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRate taxRate, @JsonProperty("shippingRate") final com.commercetools.models.shipping_method.ShippingRate shippingRate, @JsonProperty("discountedPrice") final com.commercetools.models.cart.DiscountedLineItemPrice discountedPrice, @JsonProperty("shippingMethodState") final com.commercetools.models.cart.ShippingMethodState shippingMethodState, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("price") final com.commercetools.models.common.TypedMoney price, @JsonProperty("shippingMethod") final com.commercetools.models.shipping_method.ShippingMethodReference shippingMethod, @JsonProperty("shippingMethodName") final String shippingMethodName, @JsonProperty("deliveries") final java.util.List<com.commercetools.models.order.Delivery> deliveries, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryReference taxCategory) {
       this.taxRate = taxRate;
       this.shippingRate = shippingRate;
       this.discountedPrice = discountedPrice;
@@ -104,7 +103,7 @@ public final class ShippingInfoImpl implements ShippingInfo {
    }
    
    
-   public java.lang.String getShippingMethodName(){
+   public String getShippingMethodName(){
       return this.shippingMethodName;
    }
    
@@ -146,7 +145,7 @@ public final class ShippingInfoImpl implements ShippingInfo {
       this.shippingMethod = shippingMethod;
    }
    
-   public void setShippingMethodName(final java.lang.String shippingMethodName){
+   public void setShippingMethodName(final String shippingMethodName){
       this.shippingMethodName = shippingMethodName;
    }
    

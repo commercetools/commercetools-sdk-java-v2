@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.channel.ChannelReference;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.SyncInfo;
 import javax.annotation.Nullable;
@@ -15,7 +14,7 @@ public final class SyncInfoBuilder {
    private com.commercetools.models.channel.ChannelReference channel;
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
    
    private java.time.ZonedDateTime syncedAt;
@@ -25,7 +24,7 @@ public final class SyncInfoBuilder {
       return this;
    }
    
-   public SyncInfoBuilder externalId(@Nullable final java.lang.String externalId) {
+   public SyncInfoBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
@@ -41,7 +40,7 @@ public final class SyncInfoBuilder {
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.store;
 
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,10 +24,10 @@ public final class StoreDraftImpl implements StoreDraft {
 
    private com.commercetools.models.common.LocalizedString name;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   StoreDraftImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("key") final java.lang.String key) {
+   StoreDraftImpl(@JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("key") final String key) {
       this.name = name;
       this.key = key;
    }
@@ -42,7 +41,7 @@ public final class StoreDraftImpl implements StoreDraft {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -50,7 +49,7 @@ public final class StoreDraftImpl implements StoreDraft {
       this.name = name;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

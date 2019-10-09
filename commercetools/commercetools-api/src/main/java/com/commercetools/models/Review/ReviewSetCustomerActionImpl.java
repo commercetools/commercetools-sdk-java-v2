@@ -2,7 +2,6 @@ package com.commercetools.models.review;
 
 import com.commercetools.models.customer.CustomerResourceIdentifier;
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewSetCustomerActionImpl implements ReviewSetCustomerAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.customer.CustomerResourceIdentifier customer;
 
@@ -38,7 +37,7 @@ public final class ReviewSetCustomerActionImpl implements ReviewSetCustomerActio
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

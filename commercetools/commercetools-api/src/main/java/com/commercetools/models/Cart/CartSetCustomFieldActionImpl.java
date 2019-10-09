@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetCustomFieldActionImpl implements CartSetCustomFieldAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.Object value;
+   private Object value;
 
    @JsonCreator
-   CartSetCustomFieldActionImpl(@JsonProperty("name") final java.lang.String name, @JsonProperty("value") final java.lang.Object value) {
+   CartSetCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Object value) {
       this.name = name;
       this.value = value;
       this.action = "setCustomField";
@@ -41,25 +39,25 @@ public final class CartSetCustomFieldActionImpl implements CartSetCustomFieldAct
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setValue(final java.lang.Object value){
+   public void setValue(final Object value){
       this.value = value;
    }
 

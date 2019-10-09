@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.Customer;
-import java.lang.Object;
 import com.commercetools.models.customer.CustomerSignInResult;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,12 +10,12 @@ import java.time.ZonedDateTime;
 public final class CustomerSignInResultBuilder {
    
    @Nullable
-   private java.lang.Object cart;
+   private Object cart;
    
    
    private com.commercetools.models.customer.Customer customer;
    
-   public CustomerSignInResultBuilder cart(@Nullable final java.lang.Object cart) {
+   public CustomerSignInResultBuilder cart(@Nullable final Object cart) {
       this.cart = cart;
       return this;
    }
@@ -27,7 +26,7 @@ public final class CustomerSignInResultBuilder {
    }
    
    @Nullable
-   public java.lang.Object getCart(){
+   public Object getCart(){
       return this.cart;
    }
    

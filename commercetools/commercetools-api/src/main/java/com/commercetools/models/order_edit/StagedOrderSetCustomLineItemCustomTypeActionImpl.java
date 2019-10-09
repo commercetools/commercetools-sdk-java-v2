@@ -3,7 +3,6 @@ package com.commercetools.models.order_edit;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +24,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetCustomLineItemCustomTypeActionImpl implements StagedOrderSetCustomLineItemCustomTypeAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    private com.commercetools.models.type.FieldContainer fields;
    
    private com.commercetools.models.type.TypeResourceIdentifier type;
 
    @JsonCreator
-   StagedOrderSetCustomLineItemCustomTypeActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type) {
+   StagedOrderSetCustomLineItemCustomTypeActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("fields") final com.commercetools.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.models.type.TypeResourceIdentifier type) {
       this.customLineItemId = customLineItemId;
       this.fields = fields;
       this.type = type;
@@ -45,12 +44,12 @@ public final class StagedOrderSetCustomLineItemCustomTypeActionImpl implements S
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
@@ -64,7 +63,7 @@ public final class StagedOrderSetCustomLineItemCustomTypeActionImpl implements S
       return this.type;
    }
 
-   public void setCustomLineItemId(final java.lang.String customLineItemId){
+   public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
    

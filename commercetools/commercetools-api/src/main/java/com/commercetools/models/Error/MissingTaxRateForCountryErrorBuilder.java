@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import com.commercetools.models.error.MissingTaxRateForCountryError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,54 +10,54 @@ import java.time.ZonedDateTime;
 public final class MissingTaxRateForCountryErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
    @Nullable
-   private java.lang.String state;
+   private String state;
    
    
-   private java.lang.String taxCategoryId;
+   private String taxCategoryId;
    
-   public MissingTaxRateForCountryErrorBuilder message( final java.lang.String message) {
+   public MissingTaxRateForCountryErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public MissingTaxRateForCountryErrorBuilder country(@Nullable final java.lang.String country) {
+   public MissingTaxRateForCountryErrorBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
    
-   public MissingTaxRateForCountryErrorBuilder state(@Nullable final java.lang.String state) {
+   public MissingTaxRateForCountryErrorBuilder state(@Nullable final String state) {
       this.state = state;
       return this;
    }
    
-   public MissingTaxRateForCountryErrorBuilder taxCategoryId( final java.lang.String taxCategoryId) {
+   public MissingTaxRateForCountryErrorBuilder taxCategoryId( final String taxCategoryId) {
       this.taxCategoryId = taxCategoryId;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    @Nullable
-   public java.lang.String getState(){
+   public String getState(){
       return this.state;
    }
    
    
-   public java.lang.String getTaxCategoryId(){
+   public String getTaxCategoryId(){
       return this.taxCategoryId;
    }
 

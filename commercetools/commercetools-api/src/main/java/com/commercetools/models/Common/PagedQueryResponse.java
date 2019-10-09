@@ -2,8 +2,6 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.common.BaseResource;
 import com.commercetools.models.product.FacetResults;
-import java.lang.Long;
-import java.lang.Object;
 import com.commercetools.models.common.PagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -24,6 +22,10 @@ import java.io.IOException;
 @JsonDeserialize(as = PagedQueryResponseImpl.class)
 public interface PagedQueryResponse  {
 
+   
+   @NotNull
+   @JsonProperty("limit")
+   public Long getLimit();
    
    @NotNull
    @JsonProperty("count")
@@ -50,6 +52,8 @@ public interface PagedQueryResponse  {
    @JsonProperty("meta")
    public Object getMeta();
 
+   public void setLimit(final Long limit);
+   
    public void setCount(final Long count);
    
    public void setTotal(final Long total);
@@ -73,6 +77,7 @@ public interface PagedQueryResponse  {
       instance.setOffset(template.getOffset());
       instance.setMeta(template.getMeta());
       instance.setCount(template.getCount());
+      instance.setLimit(template.getLimit());
       instance.setResults(template.getResults());
       instance.setFacets(template.getFacets());
       return instance;

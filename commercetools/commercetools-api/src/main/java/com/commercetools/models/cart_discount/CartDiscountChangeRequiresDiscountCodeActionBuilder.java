@@ -1,8 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountChangeRequiresDiscountCodeAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CartDiscountChangeRequiresDiscountCodeActionBuilder {
    
    
-   private java.lang.Boolean requiresDiscountCode;
+   private Boolean requiresDiscountCode;
    
-   public CartDiscountChangeRequiresDiscountCodeActionBuilder requiresDiscountCode( final java.lang.Boolean requiresDiscountCode) {
+   public CartDiscountChangeRequiresDiscountCodeActionBuilder requiresDiscountCode( final Boolean requiresDiscountCode) {
       this.requiresDiscountCode = requiresDiscountCode;
       return this;
    }
    
    
-   public java.lang.Boolean getRequiresDiscountCode(){
+   public Boolean getRequiresDiscountCode(){
       return this.requiresDiscountCode;
    }
 

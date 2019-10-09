@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.common.Money;
 import com.commercetools.models.payment.TransactionType;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -25,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyTransactionDraftImpl implements MyTransactionDraft {
 
-   private java.lang.String interactionId;
+   private String interactionId;
    
    private com.commercetools.models.common.Money amount;
    
@@ -34,7 +33,7 @@ public final class MyTransactionDraftImpl implements MyTransactionDraft {
    private java.time.ZonedDateTime timestamp;
 
    @JsonCreator
-   MyTransactionDraftImpl(@JsonProperty("interactionId") final java.lang.String interactionId, @JsonProperty("amount") final com.commercetools.models.common.Money amount, @JsonProperty("type") final com.commercetools.models.payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
+   MyTransactionDraftImpl(@JsonProperty("interactionId") final String interactionId, @JsonProperty("amount") final com.commercetools.models.common.Money amount, @JsonProperty("type") final com.commercetools.models.payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
       this.interactionId = interactionId;
       this.amount = amount;
       this.type = type;
@@ -45,7 +44,7 @@ public final class MyTransactionDraftImpl implements MyTransactionDraft {
    }
    
    
-   public java.lang.String getInteractionId(){
+   public String getInteractionId(){
       return this.interactionId;
    }
    
@@ -64,7 +63,7 @@ public final class MyTransactionDraftImpl implements MyTransactionDraft {
       return this.timestamp;
    }
 
-   public void setInteractionId(final java.lang.String interactionId){
+   public void setInteractionId(final String interactionId){
       this.interactionId = interactionId;
    }
    

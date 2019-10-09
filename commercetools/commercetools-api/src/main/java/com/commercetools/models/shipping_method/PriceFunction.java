@@ -1,6 +1,6 @@
 package com.commercetools.models.shipping_method;
 
-import java.lang.String;
+
 import com.commercetools.models.shipping_method.PriceFunctionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -23,7 +23,6 @@ import com.commercetools.models.store.StoreResourceIdentifier;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.models.type.TypeResourceIdentifier;
 import com.commercetools.models.zone.ZoneResourceIdentifier;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

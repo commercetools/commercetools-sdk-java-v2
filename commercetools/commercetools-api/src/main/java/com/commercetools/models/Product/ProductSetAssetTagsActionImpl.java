@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,22 +22,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String assetId;
+   private String assetId;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
-   private java.lang.String sku;
+   private String sku;
    
-   private java.lang.String assetKey;
+   private String assetKey;
    
-   private java.util.List<java.lang.String> tags;
+   private java.util.List<String> tags;
 
    @JsonCreator
-   ProductSetAssetTagsActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("assetKey") final java.lang.String assetKey, @JsonProperty("tags") final java.util.List<java.lang.String> tags) {
+   ProductSetAssetTagsActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("assetKey") final String assetKey, @JsonProperty("tags") final java.util.List<String> tags) {
       this.assetId = assetId;
       this.staged = staged;
       this.variantId = variantId;
@@ -54,61 +51,61 @@ public final class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
    
    
-   public java.util.List<java.lang.String> getTags(){
+   public java.util.List<String> getTags(){
       return this.tags;
    }
 
-   public void setAssetId(final java.lang.String assetId){
+   public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
    
-   public void setAssetKey(final java.lang.String assetKey){
+   public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
    }
    
-   public void setTags(final java.util.List<java.lang.String> tags){
+   public void setTags(final java.util.List<String> tags){
       this.tags = tags;
    }
 

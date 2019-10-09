@@ -1,9 +1,7 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.common.LocalizedString;
-import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.Boolean;
-import java.lang.String;
+import com.commercetools.models.product_discount.ProductDiscountValueDraft;
 import java.time.ZonedDateTime;
 import com.commercetools.models.product_discount.ProductDiscountDraft;
 import javax.annotation.Nullable;
@@ -14,10 +12,10 @@ import java.time.ZonedDateTime;
 public final class ProductDiscountDraftBuilder {
    
    
-   private java.lang.String predicate;
+   private String predicate;
    
    
-   private java.lang.String sortOrder;
+   private String sortOrder;
    
    
    private com.commercetools.models.common.LocalizedString name;
@@ -32,20 +30,20 @@ public final class ProductDiscountDraftBuilder {
    private java.time.ZonedDateTime validFrom;
    
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
    
-   private com.commercetools.models.product_discount.ProductDiscountValue value;
+   private com.commercetools.models.product_discount.ProductDiscountValueDraft value;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public ProductDiscountDraftBuilder predicate( final java.lang.String predicate) {
+   public ProductDiscountDraftBuilder predicate( final String predicate) {
       this.predicate = predicate;
       return this;
    }
    
-   public ProductDiscountDraftBuilder sortOrder( final java.lang.String sortOrder) {
+   public ProductDiscountDraftBuilder sortOrder( final String sortOrder) {
       this.sortOrder = sortOrder;
       return this;
    }
@@ -70,28 +68,28 @@ public final class ProductDiscountDraftBuilder {
       return this;
    }
    
-   public ProductDiscountDraftBuilder isActive( final java.lang.Boolean isActive) {
+   public ProductDiscountDraftBuilder isActive( final Boolean isActive) {
       this.isActive = isActive;
       return this;
    }
    
-   public ProductDiscountDraftBuilder value( final com.commercetools.models.product_discount.ProductDiscountValue value) {
+   public ProductDiscountDraftBuilder value( final com.commercetools.models.product_discount.ProductDiscountValueDraft value) {
       this.value = value;
       return this;
    }
    
-   public ProductDiscountDraftBuilder key(@Nullable final java.lang.String key) {
+   public ProductDiscountDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
    
    
-   public java.lang.String getSortOrder(){
+   public String getSortOrder(){
       return this.sortOrder;
    }
    
@@ -116,17 +114,17 @@ public final class ProductDiscountDraftBuilder {
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
    
-   public com.commercetools.models.product_discount.ProductDiscountValue getValue(){
+   public com.commercetools.models.product_discount.ProductDiscountValueDraft getValue(){
       return this.value;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

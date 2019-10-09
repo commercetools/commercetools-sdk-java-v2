@@ -6,7 +6,6 @@ import com.commercetools.models.subscription.DeliveryFormat;
 import com.commercetools.models.subscription.Destination;
 import com.commercetools.models.subscription.MessageSubscription;
 import com.commercetools.models.subscription.SubscriptionHealthStatus;
-import java.lang.String;
 import com.commercetools.models.subscription.Subscription;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -22,10 +21,10 @@ public final class SubscriptionBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -46,7 +45,7 @@ public final class SubscriptionBuilder {
    private java.util.List<com.commercetools.models.subscription.MessageSubscription> messages;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    
    private com.commercetools.models.subscription.SubscriptionHealthStatus status;
@@ -61,12 +60,12 @@ public final class SubscriptionBuilder {
       return this;
    }
    
-   public SubscriptionBuilder id( final java.lang.String id) {
+   public SubscriptionBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public SubscriptionBuilder version( final java.lang.Long version) {
+   public SubscriptionBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -101,7 +100,7 @@ public final class SubscriptionBuilder {
       return this;
    }
    
-   public SubscriptionBuilder key(@Nullable final java.lang.String key) {
+   public SubscriptionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -122,12 +121,12 @@ public final class SubscriptionBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -162,7 +161,7 @@ public final class SubscriptionBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

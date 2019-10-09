@@ -1,6 +1,6 @@
 package com.commercetools.models.zone;
 
-import java.lang.String;
+
 import com.commercetools.models.zone.Location;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class LocationBuilder {
    
    
-   private java.lang.String country;
+   private String country;
    
    @Nullable
-   private java.lang.String state;
+   private String state;
    
-   public LocationBuilder country( final java.lang.String country) {
+   public LocationBuilder country( final String country) {
       this.country = country;
       return this;
    }
    
-   public LocationBuilder state(@Nullable final java.lang.String state) {
+   public LocationBuilder state(@Nullable final String state) {
       this.state = state;
       return this;
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    @Nullable
-   public java.lang.String getState(){
+   public String getState(){
       return this.state;
    }
 

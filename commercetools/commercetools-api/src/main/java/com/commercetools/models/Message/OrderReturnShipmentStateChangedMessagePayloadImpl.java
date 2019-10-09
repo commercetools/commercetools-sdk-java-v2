@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order.ReturnShipmentState;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderReturnShipmentStateChangedMessagePayloadImpl implements OrderReturnShipmentStateChangedMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String returnItemId;
+   private String returnItemId;
    
    private com.commercetools.models.order.ReturnShipmentState returnShipmentState;
 
    @JsonCreator
-   OrderReturnShipmentStateChangedMessagePayloadImpl(@JsonProperty("returnItemId") final java.lang.String returnItemId, @JsonProperty("returnShipmentState") final com.commercetools.models.order.ReturnShipmentState returnShipmentState) {
+   OrderReturnShipmentStateChangedMessagePayloadImpl(@JsonProperty("returnItemId") final String returnItemId, @JsonProperty("returnShipmentState") final com.commercetools.models.order.ReturnShipmentState returnShipmentState) {
       this.returnItemId = returnItemId;
       this.returnShipmentState = returnShipmentState;
       this.type = "OrderReturnShipmentStateChanged";
@@ -41,12 +40,12 @@ public final class OrderReturnShipmentStateChangedMessagePayloadImpl implements 
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getReturnItemId(){
+   public String getReturnItemId(){
       return this.returnItemId;
    }
    
@@ -55,7 +54,7 @@ public final class OrderReturnShipmentStateChangedMessagePayloadImpl implements 
       return this.returnShipmentState;
    }
 
-   public void setReturnItemId(final java.lang.String returnItemId){
+   public void setReturnItemId(final String returnItemId){
       this.returnItemId = returnItemId;
    }
    

@@ -3,7 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order.Delivery;
 import com.commercetools.models.order.Parcel;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDeliveryMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.order.Delivery delivery;
    
@@ -42,7 +41,7 @@ public final class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAdde
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    

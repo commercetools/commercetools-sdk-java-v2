@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import com.commercetools.models.message.UserProvidedIdentifiersImpl;
 
 import com.fasterxml.jackson.annotation.*;

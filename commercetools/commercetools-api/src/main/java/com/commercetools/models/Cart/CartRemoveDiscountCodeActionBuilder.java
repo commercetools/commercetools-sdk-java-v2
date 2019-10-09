@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.discount_code.DiscountCodeReference;
-import java.lang.String;
 import com.commercetools.models.cart.CartRemoveDiscountCodeAction;
 import javax.annotation.Nullable;
 import java.util.List;

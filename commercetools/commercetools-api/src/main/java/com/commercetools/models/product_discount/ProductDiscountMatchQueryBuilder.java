@@ -1,9 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.common.Price;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.product_discount.ProductDiscountMatchQuery;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,18 +10,18 @@ import java.time.ZonedDateTime;
 public final class ProductDiscountMatchQueryBuilder {
    
    
-   private java.lang.String productId;
+   private String productId;
    
    
    private com.commercetools.models.common.Price price;
    
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    
-   private java.lang.Integer variantId;
+   private Integer variantId;
    
-   public ProductDiscountMatchQueryBuilder productId( final java.lang.String productId) {
+   public ProductDiscountMatchQueryBuilder productId( final String productId) {
       this.productId = productId;
       return this;
    }
@@ -34,18 +31,18 @@ public final class ProductDiscountMatchQueryBuilder {
       return this;
    }
    
-   public ProductDiscountMatchQueryBuilder staged( final java.lang.Boolean staged) {
+   public ProductDiscountMatchQueryBuilder staged( final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductDiscountMatchQueryBuilder variantId( final java.lang.Integer variantId) {
+   public ProductDiscountMatchQueryBuilder variantId( final Integer variantId) {
       this.variantId = variantId;
       return this;
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -55,12 +52,12 @@ public final class ProductDiscountMatchQueryBuilder {
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Integer getVariantId(){
+   public Integer getVariantId(){
       return this.variantId;
    }
 

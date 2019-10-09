@@ -4,9 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product.ProductVariant;
 import com.commercetools.models.product_type.ProductTypeReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.shopping_list.ShoppingListLineItem;
 import javax.annotation.Nullable;
@@ -20,10 +17,10 @@ public final class ShoppingListLineItemBuilder {
    private java.time.ZonedDateTime addedAt;
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    
-   private java.lang.String productId;
+   private String productId;
    
    @Nullable
    private com.commercetools.models.type.CustomFields custom;
@@ -35,10 +32,10 @@ public final class ShoppingListLineItemBuilder {
    private com.commercetools.models.common.LocalizedString name;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private java.time.ZonedDateTime deactivatedAt;
@@ -54,12 +51,12 @@ public final class ShoppingListLineItemBuilder {
       return this;
    }
    
-   public ShoppingListLineItemBuilder quantity( final java.lang.Integer quantity) {
+   public ShoppingListLineItemBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public ShoppingListLineItemBuilder productId( final java.lang.String productId) {
+   public ShoppingListLineItemBuilder productId( final String productId) {
       this.productId = productId;
       return this;
    }
@@ -79,12 +76,12 @@ public final class ShoppingListLineItemBuilder {
       return this;
    }
    
-   public ShoppingListLineItemBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ShoppingListLineItemBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ShoppingListLineItemBuilder id( final java.lang.String id) {
+   public ShoppingListLineItemBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -110,12 +107,12 @@ public final class ShoppingListLineItemBuilder {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -135,12 +132,12 @@ public final class ShoppingListLineItemBuilder {
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

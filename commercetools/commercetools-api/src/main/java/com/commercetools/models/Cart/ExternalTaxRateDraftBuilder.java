@@ -1,9 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.tax_category.SubRate;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.ExternalTaxRateDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,44 +10,44 @@ import java.time.ZonedDateTime;
 public final class ExternalTaxRateDraftBuilder {
    
    
-   private java.lang.String country;
+   private String country;
    
    @Nullable
-   private java.lang.Integer amount;
+   private Integer amount;
    
    @Nullable
-   private java.lang.Boolean includedInPrice;
+   private Boolean includedInPrice;
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.String state;
+   private String state;
    
    @Nullable
    private java.util.List<com.commercetools.models.tax_category.SubRate> subRates;
    
-   public ExternalTaxRateDraftBuilder country( final java.lang.String country) {
+   public ExternalTaxRateDraftBuilder country( final String country) {
       this.country = country;
       return this;
    }
    
-   public ExternalTaxRateDraftBuilder amount(@Nullable final java.lang.Integer amount) {
+   public ExternalTaxRateDraftBuilder amount(@Nullable final Integer amount) {
       this.amount = amount;
       return this;
    }
    
-   public ExternalTaxRateDraftBuilder includedInPrice(@Nullable final java.lang.Boolean includedInPrice) {
+   public ExternalTaxRateDraftBuilder includedInPrice(@Nullable final Boolean includedInPrice) {
       this.includedInPrice = includedInPrice;
       return this;
    }
    
-   public ExternalTaxRateDraftBuilder name( final java.lang.String name) {
+   public ExternalTaxRateDraftBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ExternalTaxRateDraftBuilder state(@Nullable final java.lang.String state) {
+   public ExternalTaxRateDraftBuilder state(@Nullable final String state) {
       this.state = state;
       return this;
    }
@@ -61,27 +58,27 @@ public final class ExternalTaxRateDraftBuilder {
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    @Nullable
-   public java.lang.Integer getAmount(){
+   public Integer getAmount(){
       return this.amount;
    }
    
    @Nullable
-   public java.lang.Boolean getIncludedInPrice(){
+   public Boolean getIncludedInPrice(){
       return this.includedInPrice;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.String getState(){
+   public String getState(){
       return this.state;
    }
    

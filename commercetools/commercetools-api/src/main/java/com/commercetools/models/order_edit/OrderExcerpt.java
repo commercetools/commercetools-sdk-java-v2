@@ -1,8 +1,7 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.cart.TaxedPrice;
-import com.commercetools.models.common.Money;
-import java.lang.Integer;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.order_edit.OrderExcerptImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -27,7 +26,7 @@ public interface OrderExcerpt  {
    @NotNull
    @Valid
    @JsonProperty("totalPrice")
-   public Money getTotalPrice();
+   public TypedMoney getTotalPrice();
    
    @Valid
    @JsonProperty("taxedPrice")
@@ -37,7 +36,7 @@ public interface OrderExcerpt  {
    @JsonProperty("version")
    public Integer getVersion();
 
-   public void setTotalPrice(final Money totalPrice);
+   public void setTotalPrice(final TypedMoney totalPrice);
    
    public void setTaxedPrice(final TaxedPrice taxedPrice);
    

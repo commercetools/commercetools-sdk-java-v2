@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentSetStatusInterfaceCodeActionImpl implements PaymentSetStatusInterfaceCodeAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String interfaceCode;
+   private String interfaceCode;
 
    @JsonCreator
-   PaymentSetStatusInterfaceCodeActionImpl(@JsonProperty("interfaceCode") final java.lang.String interfaceCode) {
+   PaymentSetStatusInterfaceCodeActionImpl(@JsonProperty("interfaceCode") final String interfaceCode) {
       this.interfaceCode = interfaceCode;
       this.action = "setStatusInterfaceCode";
    }
@@ -37,16 +36,16 @@ public final class PaymentSetStatusInterfaceCodeActionImpl implements PaymentSet
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getInterfaceCode(){
+   public String getInterfaceCode(){
       return this.interfaceCode;
    }
 
-   public void setInterfaceCode(final java.lang.String interfaceCode){
+   public void setInterfaceCode(final String interfaceCode){
       this.interfaceCode = interfaceCode;
    }
 

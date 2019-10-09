@@ -3,7 +3,6 @@ package com.commercetools.models.payment;
 import com.commercetools.models.payment.PaymentUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentSetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

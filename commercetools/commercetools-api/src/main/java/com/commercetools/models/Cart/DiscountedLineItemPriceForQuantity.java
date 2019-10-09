@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.DiscountedLineItemPrice;
-import java.lang.Integer;
 import com.commercetools.models.cart.DiscountedLineItemPriceForQuantityImpl;
 
 import com.fasterxml.jackson.annotation.*;

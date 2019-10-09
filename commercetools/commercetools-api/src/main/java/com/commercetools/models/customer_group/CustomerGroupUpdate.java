@@ -1,7 +1,6 @@
 package com.commercetools.models.customer_group;
 
 import com.commercetools.models.customer_group.CustomerGroupUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.customer_group.CustomerGroupUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

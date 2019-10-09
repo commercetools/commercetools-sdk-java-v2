@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
-import java.lang.Integer;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubRateImpl implements SubRate {
 
-   private java.lang.Integer amount;
+   private Integer amount;
    
-   private java.lang.String name;
+   private String name;
 
    @JsonCreator
-   SubRateImpl(@JsonProperty("amount") final java.lang.Integer amount, @JsonProperty("name") final java.lang.String name) {
+   SubRateImpl(@JsonProperty("amount") final Integer amount, @JsonProperty("name") final String name) {
       this.amount = amount;
       this.name = name;
    }
@@ -37,20 +36,20 @@ public final class SubRateImpl implements SubRate {
    }
    
    
-   public java.lang.Integer getAmount(){
+   public Integer getAmount(){
       return this.amount;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
 
-   public void setAmount(final java.lang.Integer amount){
+   public void setAmount(final Integer amount){
       this.amount = amount;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
 

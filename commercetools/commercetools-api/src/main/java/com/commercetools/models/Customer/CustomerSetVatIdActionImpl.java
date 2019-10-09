@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.CustomerUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSetVatIdActionImpl implements CustomerSetVatIdAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String vatId;
+   private String vatId;
 
    @JsonCreator
-   CustomerSetVatIdActionImpl(@JsonProperty("vatId") final java.lang.String vatId) {
+   CustomerSetVatIdActionImpl(@JsonProperty("vatId") final String vatId) {
       this.vatId = vatId;
       this.action = "setVatId";
    }
@@ -37,16 +36,16 @@ public final class CustomerSetVatIdActionImpl implements CustomerSetVatIdAction 
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getVatId(){
+   public String getVatId(){
       return this.vatId;
    }
 
-   public void setVatId(final java.lang.String vatId){
+   public void setVatId(final String vatId){
       this.vatId = vatId;
    }
 

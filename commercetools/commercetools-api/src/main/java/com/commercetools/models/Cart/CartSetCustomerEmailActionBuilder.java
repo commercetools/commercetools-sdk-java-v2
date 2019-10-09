@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetCustomerEmailAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CartSetCustomerEmailActionBuilder {
    
    
-   private java.lang.String email;
+   private String email;
    
-   public CartSetCustomerEmailActionBuilder email( final java.lang.String email) {
+   public CartSetCustomerEmailActionBuilder email( final String email) {
       this.email = email;
       return this;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 

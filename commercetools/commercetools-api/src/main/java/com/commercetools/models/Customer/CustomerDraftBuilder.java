@@ -2,11 +2,8 @@ package com.commercetools.models.customer;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import java.time.LocalDate;
 import com.commercetools.models.customer.CustomerDraft;
 import javax.annotation.Nullable;
@@ -17,16 +14,19 @@ import java.time.ZonedDateTime;
 public final class CustomerDraftBuilder {
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    @Nullable
-   private java.lang.String lastName;
+   private String lastName;
    
    @Nullable
    private java.util.List<com.commercetools.models.common.Address> addresses;
    
    @Nullable
-   private java.lang.Long defaultShippingAddress;
+   private Long defaultShippingAddress;
+   
+   @Nullable
+   private java.util.List<com.commercetools.models.store.StoreKeyReference> stores;
    
    @Nullable
    private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
@@ -35,65 +35,65 @@ public final class CustomerDraftBuilder {
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private java.lang.String companyName;
+   private String companyName;
    
    @Nullable
-   private java.lang.String vatId;
+   private String vatId;
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
    @Nullable
-   private java.util.List<java.lang.Integer> billingAddresses;
+   private java.util.List<Integer> billingAddresses;
    
    @Nullable
    private java.time.LocalDate dateOfBirth;
    
    @Nullable
-   private java.lang.String locale;
+   private String locale;
    
    @Nullable
-   private java.lang.String title;
+   private String title;
    
    @Nullable
-   private java.lang.String customerNumber;
+   private String customerNumber;
    
    @Nullable
-   private java.lang.Boolean isEmailVerified;
+   private Boolean isEmailVerified;
    
    @Nullable
-   private java.lang.String firstName;
+   private String firstName;
    
    
-   private java.lang.String password;
-   
-   @Nullable
-   private java.lang.String middleName;
+   private String password;
    
    @Nullable
-   private java.lang.String salutation;
+   private String middleName;
    
    @Nullable
-   private java.lang.String anonymousCartId;
+   private String salutation;
    
    @Nullable
-   private java.lang.String key;
+   private String anonymousCartId;
    
    @Nullable
-   private java.lang.Long defaultBillingAddress;
-   
-   
-   private java.lang.String email;
+   private String key;
    
    @Nullable
-   private java.util.List<java.lang.Integer> shippingAddresses;
+   private Long defaultBillingAddress;
    
-   public CustomerDraftBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   
+   private String email;
+   
+   @Nullable
+   private java.util.List<Integer> shippingAddresses;
+   
+   public CustomerDraftBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
    
-   public CustomerDraftBuilder lastName(@Nullable final java.lang.String lastName) {
+   public CustomerDraftBuilder lastName(@Nullable final String lastName) {
       this.lastName = lastName;
       return this;
    }
@@ -103,8 +103,13 @@ public final class CustomerDraftBuilder {
       return this;
    }
    
-   public CustomerDraftBuilder defaultShippingAddress(@Nullable final java.lang.Long defaultShippingAddress) {
+   public CustomerDraftBuilder defaultShippingAddress(@Nullable final Long defaultShippingAddress) {
       this.defaultShippingAddress = defaultShippingAddress;
+      return this;
+   }
+   
+   public CustomerDraftBuilder stores(@Nullable final java.util.List<com.commercetools.models.store.StoreKeyReference> stores) {
+      this.stores = stores;
       return this;
    }
    
@@ -118,22 +123,22 @@ public final class CustomerDraftBuilder {
       return this;
    }
    
-   public CustomerDraftBuilder companyName(@Nullable final java.lang.String companyName) {
+   public CustomerDraftBuilder companyName(@Nullable final String companyName) {
       this.companyName = companyName;
       return this;
    }
    
-   public CustomerDraftBuilder vatId(@Nullable final java.lang.String vatId) {
+   public CustomerDraftBuilder vatId(@Nullable final String vatId) {
       this.vatId = vatId;
       return this;
    }
    
-   public CustomerDraftBuilder externalId(@Nullable final java.lang.String externalId) {
+   public CustomerDraftBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
    
-   public CustomerDraftBuilder billingAddresses(@Nullable final java.util.List<java.lang.Integer> billingAddresses) {
+   public CustomerDraftBuilder billingAddresses(@Nullable final java.util.List<Integer> billingAddresses) {
       this.billingAddresses = billingAddresses;
       return this;
    }
@@ -143,78 +148,78 @@ public final class CustomerDraftBuilder {
       return this;
    }
    
-   public CustomerDraftBuilder locale(@Nullable final java.lang.String locale) {
+   public CustomerDraftBuilder locale(@Nullable final String locale) {
       this.locale = locale;
       return this;
    }
    
-   public CustomerDraftBuilder title(@Nullable final java.lang.String title) {
+   public CustomerDraftBuilder title(@Nullable final String title) {
       this.title = title;
       return this;
    }
    
-   public CustomerDraftBuilder customerNumber(@Nullable final java.lang.String customerNumber) {
+   public CustomerDraftBuilder customerNumber(@Nullable final String customerNumber) {
       this.customerNumber = customerNumber;
       return this;
    }
    
-   public CustomerDraftBuilder isEmailVerified(@Nullable final java.lang.Boolean isEmailVerified) {
+   public CustomerDraftBuilder isEmailVerified(@Nullable final Boolean isEmailVerified) {
       this.isEmailVerified = isEmailVerified;
       return this;
    }
    
-   public CustomerDraftBuilder firstName(@Nullable final java.lang.String firstName) {
+   public CustomerDraftBuilder firstName(@Nullable final String firstName) {
       this.firstName = firstName;
       return this;
    }
    
-   public CustomerDraftBuilder password( final java.lang.String password) {
+   public CustomerDraftBuilder password( final String password) {
       this.password = password;
       return this;
    }
    
-   public CustomerDraftBuilder middleName(@Nullable final java.lang.String middleName) {
+   public CustomerDraftBuilder middleName(@Nullable final String middleName) {
       this.middleName = middleName;
       return this;
    }
    
-   public CustomerDraftBuilder salutation(@Nullable final java.lang.String salutation) {
+   public CustomerDraftBuilder salutation(@Nullable final String salutation) {
       this.salutation = salutation;
       return this;
    }
    
-   public CustomerDraftBuilder anonymousCartId(@Nullable final java.lang.String anonymousCartId) {
+   public CustomerDraftBuilder anonymousCartId(@Nullable final String anonymousCartId) {
       this.anonymousCartId = anonymousCartId;
       return this;
    }
    
-   public CustomerDraftBuilder key(@Nullable final java.lang.String key) {
+   public CustomerDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
-   public CustomerDraftBuilder defaultBillingAddress(@Nullable final java.lang.Long defaultBillingAddress) {
+   public CustomerDraftBuilder defaultBillingAddress(@Nullable final Long defaultBillingAddress) {
       this.defaultBillingAddress = defaultBillingAddress;
       return this;
    }
    
-   public CustomerDraftBuilder email( final java.lang.String email) {
+   public CustomerDraftBuilder email( final String email) {
       this.email = email;
       return this;
    }
    
-   public CustomerDraftBuilder shippingAddresses(@Nullable final java.util.List<java.lang.Integer> shippingAddresses) {
+   public CustomerDraftBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
       this.shippingAddresses = shippingAddresses;
       return this;
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
    @Nullable
-   public java.lang.String getLastName(){
+   public String getLastName(){
       return this.lastName;
    }
    
@@ -224,8 +229,13 @@ public final class CustomerDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Long getDefaultShippingAddress(){
+   public Long getDefaultShippingAddress(){
       return this.defaultShippingAddress;
+   }
+   
+   @Nullable
+   public java.util.List<com.commercetools.models.store.StoreKeyReference> getStores(){
+      return this.stores;
    }
    
    @Nullable
@@ -239,22 +249,22 @@ public final class CustomerDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getCompanyName(){
+   public String getCompanyName(){
       return this.companyName;
    }
    
    @Nullable
-   public java.lang.String getVatId(){
+   public String getVatId(){
       return this.vatId;
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
    @Nullable
-   public java.util.List<java.lang.Integer> getBillingAddresses(){
+   public java.util.List<Integer> getBillingAddresses(){
       return this.billingAddresses;
    }
    
@@ -264,72 +274,72 @@ public final class CustomerDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
    @Nullable
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
    
    @Nullable
-   public java.lang.String getCustomerNumber(){
+   public String getCustomerNumber(){
       return this.customerNumber;
    }
    
    @Nullable
-   public java.lang.Boolean getIsEmailVerified(){
+   public Boolean getIsEmailVerified(){
       return this.isEmailVerified;
    }
    
    @Nullable
-   public java.lang.String getFirstName(){
+   public String getFirstName(){
       return this.firstName;
    }
    
    
-   public java.lang.String getPassword(){
+   public String getPassword(){
       return this.password;
    }
    
    @Nullable
-   public java.lang.String getMiddleName(){
+   public String getMiddleName(){
       return this.middleName;
    }
    
    @Nullable
-   public java.lang.String getSalutation(){
+   public String getSalutation(){
       return this.salutation;
    }
    
    @Nullable
-   public java.lang.String getAnonymousCartId(){
+   public String getAnonymousCartId(){
       return this.anonymousCartId;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
    @Nullable
-   public java.lang.Long getDefaultBillingAddress(){
+   public Long getDefaultBillingAddress(){
       return this.defaultBillingAddress;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
    
    @Nullable
-   public java.util.List<java.lang.Integer> getShippingAddresses(){
+   public java.util.List<Integer> getShippingAddresses(){
       return this.shippingAddresses;
    }
 
    public CustomerDraft build() {
-       return new CustomerDraftImpl(anonymousId, lastName, addresses, defaultShippingAddress, customerGroup, custom, companyName, vatId, externalId, billingAddresses, dateOfBirth, locale, title, customerNumber, isEmailVerified, firstName, password, middleName, salutation, anonymousCartId, key, defaultBillingAddress, email, shippingAddresses);
+       return new CustomerDraftImpl(anonymousId, lastName, addresses, defaultShippingAddress, stores, customerGroup, custom, companyName, vatId, externalId, billingAddresses, dateOfBirth, locale, title, customerNumber, isEmailVerified, firstName, password, middleName, salutation, anonymousCartId, key, defaultBillingAddress, email, shippingAddresses);
    }
    
    public static CustomerDraftBuilder of() {
@@ -342,6 +352,7 @@ public final class CustomerDraftBuilder {
       builder.lastName = template.getLastName();
       builder.addresses = template.getAddresses();
       builder.defaultShippingAddress = template.getDefaultShippingAddress();
+      builder.stores = template.getStores();
       builder.customerGroup = template.getCustomerGroup();
       builder.custom = template.getCustom();
       builder.companyName = template.getCompanyName();

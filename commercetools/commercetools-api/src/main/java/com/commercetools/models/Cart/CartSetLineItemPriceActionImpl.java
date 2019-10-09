@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.common.Money;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPriceAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    private com.commercetools.models.common.Money externalPrice;
 
    @JsonCreator
-   CartSetLineItemPriceActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("externalPrice") final com.commercetools.models.common.Money externalPrice) {
+   CartSetLineItemPriceActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("externalPrice") final com.commercetools.models.common.Money externalPrice) {
       this.lineItemId = lineItemId;
       this.externalPrice = externalPrice;
       this.action = "setLineItemPrice";
@@ -41,12 +40,12 @@ public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPric
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
@@ -55,7 +54,7 @@ public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPric
       return this.externalPrice;
    }
 
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
    

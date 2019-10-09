@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import com.commercetools.models.message.ParcelTrackingDataUpdatedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,13 +17,19 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -33,19 +38,16 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
    
-   private java.lang.String type;
-   
-   
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    @Nullable
    private com.commercetools.models.order.TrackingData trackingData;
    
    
-   private java.lang.String parcelId;
+   private String parcelId;
    
    public ParcelTrackingDataUpdatedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -57,17 +59,27 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder id( final java.lang.String id) {
+   public ParcelTrackingDataUpdatedMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder version( final java.lang.Long version) {
+   public ParcelTrackingDataUpdatedMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public ParcelTrackingDataUpdatedMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public ParcelTrackingDataUpdatedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public ParcelTrackingDataUpdatedMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -82,17 +94,12 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public ParcelTrackingDataUpdatedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder type( final java.lang.String type) {
-      this.type = type;
-      return this;
-   }
-   
-   public ParcelTrackingDataUpdatedMessageBuilder deliveryId( final java.lang.String deliveryId) {
+   public ParcelTrackingDataUpdatedMessageBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -102,7 +109,7 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder parcelId( final java.lang.String parcelId) {
+   public ParcelTrackingDataUpdatedMessageBuilder parcelId( final String parcelId) {
       this.parcelId = parcelId;
       return this;
    }
@@ -118,17 +125,27 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -143,17 +160,12 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
-      return this.type;
-   }
-   
-   
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    
@@ -163,12 +175,12 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 
    public ParcelTrackingDataUpdatedMessage build() {
-       return new ParcelTrackingDataUpdatedMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, deliveryId, trackingData, parcelId);
+       return new ParcelTrackingDataUpdatedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, deliveryId, trackingData, parcelId);
    }
    
    public static ParcelTrackingDataUpdatedMessageBuilder of() {
@@ -181,11 +193,12 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.deliveryId = template.getDeliveryId();
       builder.trackingData = template.getTrackingData();
       builder.parcelId = template.getParcelId();

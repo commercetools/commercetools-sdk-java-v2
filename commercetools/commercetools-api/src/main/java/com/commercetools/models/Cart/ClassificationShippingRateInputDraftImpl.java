@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.ShippingRateInputDraft;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ClassificationShippingRateInputDraftImpl implements ClassificationShippingRateInputDraft {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ClassificationShippingRateInputDraftImpl(@JsonProperty("key") final java.lang.String key) {
+   ClassificationShippingRateInputDraftImpl(@JsonProperty("key") final String key) {
       this.key = key;
       this.type = "Classification";
    }
@@ -37,16 +36,16 @@ public final class ClassificationShippingRateInputDraftImpl implements Classific
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

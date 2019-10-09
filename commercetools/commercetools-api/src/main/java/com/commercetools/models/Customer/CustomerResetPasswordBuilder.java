@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
-import java.lang.Long;
-import java.lang.String;
+
 import com.commercetools.models.customer.CustomerResetPassword;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class CustomerResetPasswordBuilder {
    
    
-   private java.lang.String newPassword;
+   private String newPassword;
    
    @Nullable
-   private java.lang.Long version;
+   private Long version;
    
    
-   private java.lang.String tokenValue;
+   private String tokenValue;
    
-   public CustomerResetPasswordBuilder newPassword( final java.lang.String newPassword) {
+   public CustomerResetPasswordBuilder newPassword( final String newPassword) {
       this.newPassword = newPassword;
       return this;
    }
    
-   public CustomerResetPasswordBuilder version(@Nullable final java.lang.Long version) {
+   public CustomerResetPasswordBuilder version(@Nullable final Long version) {
       this.version = version;
       return this;
    }
    
-   public CustomerResetPasswordBuilder tokenValue( final java.lang.String tokenValue) {
+   public CustomerResetPasswordBuilder tokenValue( final String tokenValue) {
       this.tokenValue = tokenValue;
       return this;
    }
    
    
-   public java.lang.String getNewPassword(){
+   public String getNewPassword(){
       return this.newPassword;
    }
    
    @Nullable
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
    
-   public java.lang.String getTokenValue(){
+   public String getTokenValue(){
       return this.tokenValue;
    }
 

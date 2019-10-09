@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.category.CategoryUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class CategoryUpdateBuilder {
    private java.util.List<com.commercetools.models.category.CategoryUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public CategoryUpdateBuilder actions( final java.util.List<com.commercetools.models.category.CategoryUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public CategoryUpdateBuilder version( final java.lang.Long version) {
+   public CategoryUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class CategoryUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

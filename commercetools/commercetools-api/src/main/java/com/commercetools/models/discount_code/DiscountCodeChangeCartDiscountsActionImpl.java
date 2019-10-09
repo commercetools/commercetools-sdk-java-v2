@@ -2,7 +2,6 @@ package com.commercetools.models.discount_code;
 
 import com.commercetools.models.cart_discount.CartDiscountResourceIdentifier;
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeChangeCartDiscountsAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.util.List<com.commercetools.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
 
@@ -38,7 +37,7 @@ public final class DiscountCodeChangeCartDiscountsActionImpl implements Discount
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

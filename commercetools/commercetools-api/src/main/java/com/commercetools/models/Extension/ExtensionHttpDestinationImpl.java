@@ -2,7 +2,6 @@ package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionDestination;
 import com.commercetools.models.extension.ExtensionHttpDestinationAuthentication;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestination {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String url;
+   private String url;
    
    private com.commercetools.models.extension.ExtensionHttpDestinationAuthentication authentication;
 
    @JsonCreator
-   ExtensionHttpDestinationImpl(@JsonProperty("url") final java.lang.String url, @JsonProperty("authentication") final com.commercetools.models.extension.ExtensionHttpDestinationAuthentication authentication) {
+   ExtensionHttpDestinationImpl(@JsonProperty("url") final String url, @JsonProperty("authentication") final com.commercetools.models.extension.ExtensionHttpDestinationAuthentication authentication) {
       this.url = url;
       this.authentication = authentication;
       this.type = "HTTP";
@@ -41,12 +40,12 @@ public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestinat
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getUrl(){
+   public String getUrl(){
       return this.url;
    }
    
@@ -55,7 +54,7 @@ public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestinat
       return this.authentication;
    }
 
-   public void setUrl(final java.lang.String url){
+   public void setUrl(final String url){
       this.url = url;
    }
    

@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetImageLabelAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,67 +10,67 @@ import java.time.ZonedDateTime;
 public final class ProductSetImageLabelActionBuilder {
    
    
-   private java.lang.String imageUrl;
+   private String imageUrl;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.String label;
+   private String label;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
-   public ProductSetImageLabelActionBuilder imageUrl( final java.lang.String imageUrl) {
+   public ProductSetImageLabelActionBuilder imageUrl( final String imageUrl) {
       this.imageUrl = imageUrl;
       return this;
    }
    
-   public ProductSetImageLabelActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetImageLabelActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductSetImageLabelActionBuilder label(@Nullable final java.lang.String label) {
+   public ProductSetImageLabelActionBuilder label(@Nullable final String label) {
       this.label = label;
       return this;
    }
    
-   public ProductSetImageLabelActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ProductSetImageLabelActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ProductSetImageLabelActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductSetImageLabelActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
    
-   public java.lang.String getImageUrl(){
+   public String getImageUrl(){
       return this.imageUrl;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.String getLabel(){
+   public String getLabel(){
       return this.label;
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

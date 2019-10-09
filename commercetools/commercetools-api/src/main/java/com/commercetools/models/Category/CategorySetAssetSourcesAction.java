@@ -2,7 +2,6 @@ package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
 import com.commercetools.models.common.AssetSource;
-import java.lang.String;
 import com.commercetools.models.category.CategorySetAssetSourcesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

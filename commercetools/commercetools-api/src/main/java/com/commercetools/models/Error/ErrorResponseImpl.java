@@ -1,8 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ErrorResponseImpl implements ErrorResponse {
 
-   private java.lang.String errorDescription;
+   private String errorDescription;
    
-   private java.lang.String error;
+   private String error;
    
-   private java.lang.String message;
+   private String message;
    
    private java.util.List<com.commercetools.models.error.ErrorObject> errors;
    
-   private java.lang.Integer statusCode;
+   private Integer statusCode;
 
    @JsonCreator
-   ErrorResponseImpl(@JsonProperty("errorDescription") final java.lang.String errorDescription, @JsonProperty("error") final java.lang.String error, @JsonProperty("message") final java.lang.String message, @JsonProperty("errors") final java.util.List<com.commercetools.models.error.ErrorObject> errors, @JsonProperty("statusCode") final java.lang.Integer statusCode) {
+   ErrorResponseImpl(@JsonProperty("error_description") final String errorDescription, @JsonProperty("error") final String error, @JsonProperty("message") final String message, @JsonProperty("errors") final java.util.List<com.commercetools.models.error.ErrorObject> errors, @JsonProperty("statusCode") final Integer statusCode) {
       this.errorDescription = errorDescription;
       this.error = error;
       this.message = message;
@@ -47,17 +45,17 @@ public final class ErrorResponseImpl implements ErrorResponse {
    }
    
    
-   public java.lang.String getErrorDescription(){
+   public String getErrorDescription(){
       return this.errorDescription;
    }
    
    
-   public java.lang.String getError(){
+   public String getError(){
       return this.error;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
@@ -67,19 +65,19 @@ public final class ErrorResponseImpl implements ErrorResponse {
    }
    
    
-   public java.lang.Integer getStatusCode(){
+   public Integer getStatusCode(){
       return this.statusCode;
    }
 
-   public void setErrorDescription(final java.lang.String errorDescription){
+   public void setErrorDescription(final String errorDescription){
       this.errorDescription = errorDescription;
    }
    
-   public void setError(final java.lang.String error){
+   public void setError(final String error){
       this.error = error;
    }
    
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
@@ -87,7 +85,7 @@ public final class ErrorResponseImpl implements ErrorResponse {
       this.errors = errors;
    }
    
-   public void setStatusCode(final java.lang.Integer statusCode){
+   public void setStatusCode(final Integer statusCode){
       this.statusCode = statusCode;
    }
 

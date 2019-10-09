@@ -6,7 +6,6 @@ import com.commercetools.models.subscription.DeliveryFormat;
 import com.commercetools.models.subscription.Destination;
 import com.commercetools.models.subscription.MessageSubscription;
 import com.commercetools.models.subscription.SubscriptionHealthStatus;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -32,9 +31,9 @@ public final class SubscriptionImpl implements Subscription {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
@@ -48,12 +47,12 @@ public final class SubscriptionImpl implements Subscription {
    
    private java.util.List<com.commercetools.models.subscription.MessageSubscription> messages;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.subscription.SubscriptionHealthStatus status;
 
    @JsonCreator
-   SubscriptionImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("format") final com.commercetools.models.subscription.DeliveryFormat format, @JsonProperty("destination") final com.commercetools.models.subscription.Destination destination, @JsonProperty("changes") final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes, @JsonProperty("messages") final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages, @JsonProperty("key") final java.lang.String key, @JsonProperty("status") final com.commercetools.models.subscription.SubscriptionHealthStatus status) {
+   SubscriptionImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("format") final com.commercetools.models.subscription.DeliveryFormat format, @JsonProperty("destination") final com.commercetools.models.subscription.Destination destination, @JsonProperty("changes") final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes, @JsonProperty("messages") final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages, @JsonProperty("key") final String key, @JsonProperty("status") final com.commercetools.models.subscription.SubscriptionHealthStatus status) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -82,12 +81,12 @@ public final class SubscriptionImpl implements Subscription {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -122,7 +121,7 @@ public final class SubscriptionImpl implements Subscription {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -139,11 +138,11 @@ public final class SubscriptionImpl implements Subscription {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -171,7 +170,7 @@ public final class SubscriptionImpl implements Subscription {
       this.messages = messages;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

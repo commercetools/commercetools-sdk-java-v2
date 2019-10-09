@@ -1,5 +1,6 @@
 package com.commercetools.models.order;
 
+import com.commercetools.models.cart.CartOrigin;
 import com.commercetools.models.cart.CustomLineItemDraft;
 import com.commercetools.models.cart.InventoryMode;
 import com.commercetools.models.cart.RoundingMode;
@@ -12,8 +13,8 @@ import com.commercetools.models.order.OrderState;
 import com.commercetools.models.order.PaymentState;
 import com.commercetools.models.order.ShipmentState;
 import com.commercetools.models.order.ShippingInfoImportDraft;
+import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -38,11 +39,11 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
 
    private com.commercetools.models.order.ShipmentState shipmentState;
    
-   private java.lang.String country;
+   private String country;
    
    private java.time.ZonedDateTime completedAt;
    
-   private java.lang.String orderNumber;
+   private String orderNumber;
    
    private com.commercetools.models.common.Money totalPrice;
    
@@ -50,9 +51,13 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    
    private com.commercetools.models.cart.TaxedPrice taxedPrice;
    
+   private com.commercetools.models.cart.CartOrigin origin;
+   
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
    private com.commercetools.models.order.ShippingInfoImportDraft shippingInfo;
+   
+   private com.commercetools.models.store.StoreKeyReference store;
    
    private com.commercetools.models.cart.InventoryMode inventoryMode;
    
@@ -66,9 +71,9 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    
    private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
-   private java.lang.String customerEmail;
+   private String customerEmail;
    
-   private java.lang.String customerId;
+   private String customerId;
    
    private com.commercetools.models.common.Address shippingAddress;
    
@@ -77,7 +82,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    private com.commercetools.models.order.PaymentState paymentState;
 
    @JsonCreator
-   OrderImportDraftImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ShipmentState shipmentState, @JsonProperty("country") final java.lang.String country, @JsonProperty("completedAt") final java.time.ZonedDateTime completedAt, @JsonProperty("orderNumber") final java.lang.String orderNumber, @JsonProperty("totalPrice") final com.commercetools.models.common.Money totalPrice, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedPrice taxedPrice, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("shippingInfo") final com.commercetools.models.order.ShippingInfoImportDraft shippingInfo, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode, @JsonProperty("orderState") final com.commercetools.models.order.OrderState orderState, @JsonProperty("taxRoundingMode") final com.commercetools.models.cart.RoundingMode taxRoundingMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.order.LineItemImportDraft> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.models.cart.CustomLineItemDraft> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("customerEmail") final java.lang.String customerEmail, @JsonProperty("customerId") final java.lang.String customerId, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress, @JsonProperty("paymentState") final com.commercetools.models.order.PaymentState paymentState) {
+   OrderImportDraftImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ShipmentState shipmentState, @JsonProperty("country") final String country, @JsonProperty("completedAt") final java.time.ZonedDateTime completedAt, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("totalPrice") final com.commercetools.models.common.Money totalPrice, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedPrice taxedPrice, @JsonProperty("origin") final com.commercetools.models.cart.CartOrigin origin, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("shippingInfo") final com.commercetools.models.order.ShippingInfoImportDraft shippingInfo, @JsonProperty("store") final com.commercetools.models.store.StoreKeyReference store, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode, @JsonProperty("orderState") final com.commercetools.models.order.OrderState orderState, @JsonProperty("taxRoundingMode") final com.commercetools.models.cart.RoundingMode taxRoundingMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.order.LineItemImportDraft> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.models.cart.CustomLineItemDraft> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("customerId") final String customerId, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress, @JsonProperty("paymentState") final com.commercetools.models.order.PaymentState paymentState) {
       this.shipmentState = shipmentState;
       this.country = country;
       this.completedAt = completedAt;
@@ -85,8 +90,10 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
       this.totalPrice = totalPrice;
       this.customerGroup = customerGroup;
       this.taxedPrice = taxedPrice;
+      this.origin = origin;
       this.custom = custom;
       this.shippingInfo = shippingInfo;
+      this.store = store;
       this.inventoryMode = inventoryMode;
       this.orderState = orderState;
       this.taxRoundingMode = taxRoundingMode;
@@ -109,7 +116,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
@@ -119,7 +126,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    }
    
    
-   public java.lang.String getOrderNumber(){
+   public String getOrderNumber(){
       return this.orderNumber;
    }
    
@@ -139,6 +146,11 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    }
    
    
+   public com.commercetools.models.cart.CartOrigin getOrigin(){
+      return this.origin;
+   }
+   
+   
    public com.commercetools.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
@@ -146,6 +158,11 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    
    public com.commercetools.models.order.ShippingInfoImportDraft getShippingInfo(){
       return this.shippingInfo;
+   }
+   
+   
+   public com.commercetools.models.store.StoreKeyReference getStore(){
+      return this.store;
    }
    
    
@@ -179,12 +196,12 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    }
    
    
-   public java.lang.String getCustomerEmail(){
+   public String getCustomerEmail(){
       return this.customerEmail;
    }
    
    
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
    
@@ -207,7 +224,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
       this.shipmentState = shipmentState;
    }
    
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
@@ -215,7 +232,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
       this.completedAt = completedAt;
    }
    
-   public void setOrderNumber(final java.lang.String orderNumber){
+   public void setOrderNumber(final String orderNumber){
       this.orderNumber = orderNumber;
    }
    
@@ -231,12 +248,20 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
       this.taxedPrice = taxedPrice;
    }
    
+   public void setOrigin(final com.commercetools.models.cart.CartOrigin origin){
+      this.origin = origin;
+   }
+   
    public void setCustom(final com.commercetools.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
    
    public void setShippingInfo(final com.commercetools.models.order.ShippingInfoImportDraft shippingInfo){
       this.shippingInfo = shippingInfo;
+   }
+   
+   public void setStore(final com.commercetools.models.store.StoreKeyReference store){
+      this.store = store;
    }
    
    public void setInventoryMode(final com.commercetools.models.cart.InventoryMode inventoryMode){
@@ -263,11 +288,11 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
       this.itemShippingAddresses = itemShippingAddresses;
    }
    
-   public void setCustomerEmail(final java.lang.String customerEmail){
+   public void setCustomerEmail(final String customerEmail){
       this.customerEmail = customerEmail;
    }
    
-   public void setCustomerId(final java.lang.String customerId){
+   public void setCustomerId(final String customerId){
       this.customerId = customerId;
    }
    

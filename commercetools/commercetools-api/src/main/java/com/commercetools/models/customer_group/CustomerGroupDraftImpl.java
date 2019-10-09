@@ -1,7 +1,6 @@
 package com.commercetools.models.customer_group;
 
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
 
-   private java.lang.String groupName;
+   private String groupName;
    
    private com.commercetools.models.type.CustomFields custom;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   CustomerGroupDraftImpl(@JsonProperty("groupName") final java.lang.String groupName, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("key") final java.lang.String key) {
+   CustomerGroupDraftImpl(@JsonProperty("groupName") final String groupName, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("key") final String key) {
       this.groupName = groupName;
       this.custom = custom;
       this.key = key;
@@ -40,7 +39,7 @@ public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
    }
    
    
-   public java.lang.String getGroupName(){
+   public String getGroupName(){
       return this.groupName;
    }
    
@@ -50,11 +49,11 @@ public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setGroupName(final java.lang.String groupName){
+   public void setGroupName(final String groupName){
       this.groupName = groupName;
    }
    
@@ -62,7 +61,7 @@ public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
       this.custom = custom;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

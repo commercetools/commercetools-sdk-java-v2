@@ -46,7 +46,6 @@ import com.commercetools.models.product.ProductSetSkuAction;
 import com.commercetools.models.product.ProductSetTaxCategoryAction;
 import com.commercetools.models.product.ProductTransitionStateAction;
 import com.commercetools.models.product.ProductUnpublishAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

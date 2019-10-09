@@ -1,8 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.me.MyCartSetDeleteDaysAfterLastModificationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

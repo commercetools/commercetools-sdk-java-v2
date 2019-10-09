@@ -6,8 +6,6 @@ import com.commercetools.models.customer.CustomerReference;
 import com.commercetools.models.shopping_list.ShoppingListLineItem;
 import com.commercetools.models.shopping_list.TextLineItem;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingList;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -23,10 +21,10 @@ public final class ShoppingListBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -38,13 +36,13 @@ public final class ShoppingListBuilder {
    private java.util.List<com.commercetools.models.shopping_list.ShoppingListLineItem> lineItems;
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    @Nullable
    private java.util.List<com.commercetools.models.shopping_list.TextLineItem> textLineItems;
    
    @Nullable
-   private java.lang.Long deleteDaysAfterLastModification;
+   private Long deleteDaysAfterLastModification;
    
    @Nullable
    private com.commercetools.models.type.CustomFields custom;
@@ -59,7 +57,7 @@ public final class ShoppingListBuilder {
    private com.commercetools.models.common.LocalizedString slug;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    @Nullable
    private com.commercetools.models.customer.CustomerReference customer;
@@ -74,12 +72,12 @@ public final class ShoppingListBuilder {
       return this;
    }
    
-   public ShoppingListBuilder id( final java.lang.String id) {
+   public ShoppingListBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ShoppingListBuilder version( final java.lang.Long version) {
+   public ShoppingListBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -99,7 +97,7 @@ public final class ShoppingListBuilder {
       return this;
    }
    
-   public ShoppingListBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public ShoppingListBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
@@ -109,7 +107,7 @@ public final class ShoppingListBuilder {
       return this;
    }
    
-   public ShoppingListBuilder deleteDaysAfterLastModification(@Nullable final java.lang.Long deleteDaysAfterLastModification) {
+   public ShoppingListBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
       return this;
    }
@@ -134,7 +132,7 @@ public final class ShoppingListBuilder {
       return this;
    }
    
-   public ShoppingListBuilder key(@Nullable final java.lang.String key) {
+   public ShoppingListBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -155,12 +153,12 @@ public final class ShoppingListBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -180,7 +178,7 @@ public final class ShoppingListBuilder {
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -190,7 +188,7 @@ public final class ShoppingListBuilder {
    }
    
    @Nullable
-   public java.lang.Long getDeleteDaysAfterLastModification(){
+   public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
@@ -215,7 +213,7 @@ public final class ShoppingListBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

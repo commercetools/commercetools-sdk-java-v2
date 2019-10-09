@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductTransitionStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

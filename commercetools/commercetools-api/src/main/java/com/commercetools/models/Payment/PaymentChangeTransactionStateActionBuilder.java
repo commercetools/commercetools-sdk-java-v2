@@ -2,7 +2,6 @@ package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
 import com.commercetools.models.payment.TransactionState;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentChangeTransactionStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class PaymentChangeTransactionStateActionBuilder {
    private com.commercetools.models.payment.TransactionState state;
    
    
-   private java.lang.String transactionId;
+   private String transactionId;
    
    public PaymentChangeTransactionStateActionBuilder state( final com.commercetools.models.payment.TransactionState state) {
       this.state = state;
       return this;
    }
    
-   public PaymentChangeTransactionStateActionBuilder transactionId( final java.lang.String transactionId) {
+   public PaymentChangeTransactionStateActionBuilder transactionId( final String transactionId) {
       this.transactionId = transactionId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class PaymentChangeTransactionStateActionBuilder {
    }
    
    
-   public java.lang.String getTransactionId(){
+   public String getTransactionId(){
       return this.transactionId;
    }
 

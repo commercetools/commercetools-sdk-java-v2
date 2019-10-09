@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentChangeTransactionInteractionIdActionImpl implements PaymentChangeTransactionInteractionIdAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String interactionId;
+   private String interactionId;
    
-   private java.lang.String transactionId;
+   private String transactionId;
 
    @JsonCreator
-   PaymentChangeTransactionInteractionIdActionImpl(@JsonProperty("interactionId") final java.lang.String interactionId, @JsonProperty("transactionId") final java.lang.String transactionId) {
+   PaymentChangeTransactionInteractionIdActionImpl(@JsonProperty("interactionId") final String interactionId, @JsonProperty("transactionId") final String transactionId) {
       this.interactionId = interactionId;
       this.transactionId = transactionId;
       this.action = "changeTransactionInteractionId";
@@ -40,25 +39,25 @@ public final class PaymentChangeTransactionInteractionIdActionImpl implements Pa
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getInteractionId(){
+   public String getInteractionId(){
       return this.interactionId;
    }
    
    
-   public java.lang.String getTransactionId(){
+   public String getTransactionId(){
       return this.transactionId;
    }
 
-   public void setInteractionId(final java.lang.String interactionId){
+   public void setInteractionId(final String interactionId){
       this.interactionId = interactionId;
    }
    
-   public void setTransactionId(final java.lang.String transactionId){
+   public void setTransactionId(final String transactionId){
       this.transactionId = transactionId;
    }
 

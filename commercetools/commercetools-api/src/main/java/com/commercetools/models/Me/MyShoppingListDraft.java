@@ -4,7 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.shopping_list.ShoppingListLineItemDraft;
 import com.commercetools.models.shopping_list.TextLineItemDraft;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
 import com.commercetools.models.me.MyShoppingListDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

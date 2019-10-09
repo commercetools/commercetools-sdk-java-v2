@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.category.CategoryResourceIdentifier;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductAddToCategoryAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,20 +11,20 @@ import java.time.ZonedDateTime;
 public final class ProductAddToCategoryActionBuilder {
    
    @Nullable
-   private java.lang.String orderHint;
+   private String orderHint;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    
    private com.commercetools.models.category.CategoryResourceIdentifier category;
    
-   public ProductAddToCategoryActionBuilder orderHint(@Nullable final java.lang.String orderHint) {
+   public ProductAddToCategoryActionBuilder orderHint(@Nullable final String orderHint) {
       this.orderHint = orderHint;
       return this;
    }
    
-   public ProductAddToCategoryActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductAddToCategoryActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
@@ -37,12 +35,12 @@ public final class ProductAddToCategoryActionBuilder {
    }
    
    @Nullable
-   public java.lang.String getOrderHint(){
+   public String getOrderHint(){
       return this.orderHint;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    

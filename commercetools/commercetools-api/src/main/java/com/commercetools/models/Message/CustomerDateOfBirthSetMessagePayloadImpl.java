@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import java.time.LocalDate;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfBirthSetMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private java.time.LocalDate dateOfBirth;
 
@@ -38,7 +37,7 @@ public final class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerD
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    

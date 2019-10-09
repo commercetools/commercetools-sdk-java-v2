@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.ShippingRateInput;
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ClassificationShippingRateInputImpl implements ClassificationShippingRateInput {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.common.LocalizedString label;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ClassificationShippingRateInputImpl(@JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("key") final java.lang.String key) {
+   ClassificationShippingRateInputImpl(@JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("key") final String key) {
       this.label = label;
       this.key = key;
       this.type = "Classification";
@@ -41,7 +40,7 @@ public final class ClassificationShippingRateInputImpl implements Classification
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -51,7 +50,7 @@ public final class ClassificationShippingRateInputImpl implements Classification
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -59,7 +58,7 @@ public final class ClassificationShippingRateInputImpl implements Classification
       this.label = label;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

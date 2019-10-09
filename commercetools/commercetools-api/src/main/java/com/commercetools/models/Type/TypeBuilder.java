@@ -4,7 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.type.FieldDefinition;
 import com.commercetools.models.type.ResourceTypeId;
-import java.lang.String;
 import com.commercetools.models.type.Type;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,10 +19,10 @@ public final class TypeBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -41,7 +40,7 @@ public final class TypeBuilder {
    private com.commercetools.models.common.LocalizedString description;
    
    
-   private java.lang.String key;
+   private String key;
    
    
    private java.util.List<com.commercetools.models.type.ResourceTypeId> resourceTypeIds;
@@ -56,12 +55,12 @@ public final class TypeBuilder {
       return this;
    }
    
-   public TypeBuilder id( final java.lang.String id) {
+   public TypeBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public TypeBuilder version( final java.lang.Long version) {
+   public TypeBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -91,7 +90,7 @@ public final class TypeBuilder {
       return this;
    }
    
-   public TypeBuilder key( final java.lang.String key) {
+   public TypeBuilder key( final String key) {
       this.key = key;
       return this;
    }
@@ -112,12 +111,12 @@ public final class TypeBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -147,7 +146,7 @@ public final class TypeBuilder {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

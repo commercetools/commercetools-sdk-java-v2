@@ -1,10 +1,8 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.common.LocalizedString;
+import com.commercetools.models.type.FieldType;
 import com.commercetools.models.type.TypeTextInputHint;
-import java.lang.Boolean;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.type.FieldDefinition;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,7 +12,7 @@ import java.time.ZonedDateTime;
 public final class FieldDefinitionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
    private com.commercetools.models.type.TypeTextInputHint inputHint;
@@ -23,12 +21,12 @@ public final class FieldDefinitionBuilder {
    private com.commercetools.models.common.LocalizedString label;
    
    
-   private java.lang.Object type;
+   private com.commercetools.models.type.FieldType type;
    
    
-   private java.lang.Boolean required;
+   private Boolean required;
    
-   public FieldDefinitionBuilder name( final java.lang.String name) {
+   public FieldDefinitionBuilder name( final String name) {
       this.name = name;
       return this;
    }
@@ -43,18 +41,18 @@ public final class FieldDefinitionBuilder {
       return this;
    }
    
-   public FieldDefinitionBuilder type( final java.lang.Object type) {
+   public FieldDefinitionBuilder type( final com.commercetools.models.type.FieldType type) {
       this.type = type;
       return this;
    }
    
-   public FieldDefinitionBuilder required( final java.lang.Boolean required) {
+   public FieldDefinitionBuilder required( final Boolean required) {
       this.required = required;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
@@ -69,12 +67,12 @@ public final class FieldDefinitionBuilder {
    }
    
    
-   public java.lang.Object getType(){
+   public com.commercetools.models.type.FieldType getType(){
       return this.type;
    }
    
    
-   public java.lang.Boolean getRequired(){
+   public Boolean getRequired(){
       return this.required;
    }
 

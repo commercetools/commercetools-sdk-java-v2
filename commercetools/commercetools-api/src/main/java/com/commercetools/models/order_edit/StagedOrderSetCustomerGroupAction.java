@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetCustomerGroupActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

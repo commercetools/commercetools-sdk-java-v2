@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import com.commercetools.models.subscription.SnsDestination;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class SnsDestinationBuilder {
    
    
-   private java.lang.String accessKey;
+   private String accessKey;
    
    
-   private java.lang.String topicArn;
+   private String topicArn;
    
    
-   private java.lang.String accessSecret;
+   private String accessSecret;
    
-   public SnsDestinationBuilder accessKey( final java.lang.String accessKey) {
+   public SnsDestinationBuilder accessKey( final String accessKey) {
       this.accessKey = accessKey;
       return this;
    }
    
-   public SnsDestinationBuilder topicArn( final java.lang.String topicArn) {
+   public SnsDestinationBuilder topicArn( final String topicArn) {
       this.topicArn = topicArn;
       return this;
    }
    
-   public SnsDestinationBuilder accessSecret( final java.lang.String accessSecret) {
+   public SnsDestinationBuilder accessSecret( final String accessSecret) {
       this.accessSecret = accessSecret;
       return this;
    }
    
    
-   public java.lang.String getAccessKey(){
+   public String getAccessKey(){
       return this.accessKey;
    }
    
    
-   public java.lang.String getTopicArn(){
+   public String getTopicArn(){
       return this.topicArn;
    }
    
    
-   public java.lang.String getAccessSecret(){
+   public String getAccessSecret(){
       return this.accessSecret;
    }
 

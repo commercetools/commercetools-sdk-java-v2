@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ItemShippingTarget;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl implements CartApplyDeltaToLineItemShippingDetailsTargetsAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    private java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta;
 
    @JsonCreator
-   CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("targetsDelta") final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta) {
+   CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("targetsDelta") final java.util.List<com.commercetools.models.cart.ItemShippingTarget> targetsDelta) {
       this.lineItemId = lineItemId;
       this.targetsDelta = targetsDelta;
       this.action = "applyDeltaToLineItemShippingDetailsTargets";
@@ -41,12 +40,12 @@ public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl impl
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
@@ -55,7 +54,7 @@ public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl impl
       return this.targetsDelta;
    }
 
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
    

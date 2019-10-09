@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCustomerSetSalutationAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class MyCustomerSetSalutationActionBuilder {
    
    @Nullable
-   private java.lang.String salutation;
+   private String salutation;
    
-   public MyCustomerSetSalutationActionBuilder salutation(@Nullable final java.lang.String salutation) {
+   public MyCustomerSetSalutationActionBuilder salutation(@Nullable final String salutation) {
       this.salutation = salutation;
       return this;
    }
    
    @Nullable
-   public java.lang.String getSalutation(){
+   public String getSalutation(){
       return this.salutation;
    }
 

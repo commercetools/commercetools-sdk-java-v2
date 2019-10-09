@@ -26,12 +26,12 @@ public final class PaymentReferenceImpl implements PaymentReference {
 
    private com.commercetools.models.common.ReferenceTypeId typeId;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.payment.Payment obj;
 
    @JsonCreator
-   PaymentReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.payment.Payment obj) {
+   PaymentReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.models.payment.Payment obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("payment").get();
@@ -46,7 +46,7 @@ public final class PaymentReferenceImpl implements PaymentReference {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -55,7 +55,7 @@ public final class PaymentReferenceImpl implements PaymentReference {
       return this.obj;
    }
 
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

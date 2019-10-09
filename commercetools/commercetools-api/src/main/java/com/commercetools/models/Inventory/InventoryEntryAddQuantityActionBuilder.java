@@ -1,8 +1,6 @@
 package com.commercetools.models.inventory;
 
 import com.commercetools.models.inventory.InventoryEntryUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.inventory.InventoryEntryAddQuantityAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class InventoryEntryAddQuantityActionBuilder {
    
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
-   public InventoryEntryAddQuantityActionBuilder quantity( final java.lang.Long quantity) {
+   public InventoryEntryAddQuantityActionBuilder quantity( final Long quantity) {
       this.quantity = quantity;
       return this;
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
 

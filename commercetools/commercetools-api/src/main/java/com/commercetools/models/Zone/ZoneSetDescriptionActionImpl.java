@@ -1,7 +1,6 @@
 package com.commercetools.models.zone;
 
 import com.commercetools.models.zone.ZoneUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String description;
+   private String description;
 
    @JsonCreator
-   ZoneSetDescriptionActionImpl(@JsonProperty("description") final java.lang.String description) {
+   ZoneSetDescriptionActionImpl(@JsonProperty("description") final String description) {
       this.description = description;
       this.action = "setDescription";
    }
@@ -37,16 +36,16 @@ public final class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAct
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
 
-   public void setDescription(final java.lang.String description){
+   public void setDescription(final String description){
       this.description = description;
    }
 

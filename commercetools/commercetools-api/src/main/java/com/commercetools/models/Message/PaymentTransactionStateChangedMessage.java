@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
 import com.commercetools.models.payment.TransactionState;
-import java.lang.String;
 import com.commercetools.models.message.PaymentTransactionStateChangedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -47,11 +46,12 @@ public interface PaymentTransactionStateChangedMessage extends Message {
       instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
       instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setType(template.getType());
       instance.setState(template.getState());
       instance.setTransactionId(template.getTransactionId());
       return instance;

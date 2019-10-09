@@ -14,8 +14,6 @@ import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.models.store.StoreResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.cart.CartDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

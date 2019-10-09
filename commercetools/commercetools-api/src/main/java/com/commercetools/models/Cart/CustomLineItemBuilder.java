@@ -9,8 +9,6 @@ import com.commercetools.models.order.ItemState;
 import com.commercetools.models.tax_category.TaxCategoryReference;
 import com.commercetools.models.tax_category.TaxRate;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.CustomLineItem;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -23,7 +21,7 @@ public final class CustomLineItemBuilder {
    private com.commercetools.models.tax_category.TaxRate taxRate;
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.cart.ItemShippingDetails shippingDetails;
@@ -47,13 +45,13 @@ public final class CustomLineItemBuilder {
    private java.util.List<com.commercetools.models.order.ItemState> state;
    
    
-   private java.lang.String id;
+   private String id;
    
    
    private java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
    
    
-   private java.lang.String slug;
+   private String slug;
    
    @Nullable
    private com.commercetools.models.tax_category.TaxCategoryReference taxCategory;
@@ -63,7 +61,7 @@ public final class CustomLineItemBuilder {
       return this;
    }
    
-   public CustomLineItemBuilder quantity( final java.lang.Integer quantity) {
+   public CustomLineItemBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -103,7 +101,7 @@ public final class CustomLineItemBuilder {
       return this;
    }
    
-   public CustomLineItemBuilder id( final java.lang.String id) {
+   public CustomLineItemBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -113,7 +111,7 @@ public final class CustomLineItemBuilder {
       return this;
    }
    
-   public CustomLineItemBuilder slug( final java.lang.String slug) {
+   public CustomLineItemBuilder slug( final String slug) {
       this.slug = slug;
       return this;
    }
@@ -129,7 +127,7 @@ public final class CustomLineItemBuilder {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -169,7 +167,7 @@ public final class CustomLineItemBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -179,7 +177,7 @@ public final class CustomLineItemBuilder {
    }
    
    
-   public java.lang.String getSlug(){
+   public String getSlug(){
       return this.slug;
    }
    

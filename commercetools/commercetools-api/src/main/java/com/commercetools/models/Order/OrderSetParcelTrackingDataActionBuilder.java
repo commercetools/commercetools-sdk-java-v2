@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetParcelTrackingDataAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class OrderSetParcelTrackingDataActionBuilder {
    private com.commercetools.models.order.TrackingData trackingData;
    
    
-   private java.lang.String parcelId;
+   private String parcelId;
    
    public OrderSetParcelTrackingDataActionBuilder trackingData(@Nullable final com.commercetools.models.order.TrackingData trackingData) {
       this.trackingData = trackingData;
       return this;
    }
    
-   public OrderSetParcelTrackingDataActionBuilder parcelId( final java.lang.String parcelId) {
+   public OrderSetParcelTrackingDataActionBuilder parcelId( final String parcelId) {
       this.parcelId = parcelId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class OrderSetParcelTrackingDataActionBuilder {
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 

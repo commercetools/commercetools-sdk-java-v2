@@ -2,7 +2,6 @@ package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionTrigger;
 import com.commercetools.models.extension.ExtensionUpdateAction;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionChangeTriggersAction;
 import javax.annotation.Nullable;
 import java.util.List;

@@ -1,9 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.common.DiscountedPrice;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -27,18 +24,18 @@ public final class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPr
 
    private com.commercetools.models.common.DiscountedPrice discounted;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.Integer variantId;
+   private Integer variantId;
    
-   private java.lang.String priceId;
+   private String priceId;
    
-   private java.lang.String sku;
+   private String sku;
    
-   private java.lang.String variantKey;
+   private String variantKey;
 
    @JsonCreator
-   ProductPriceDiscountsSetUpdatedPriceImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Integer variantId, @JsonProperty("priceId") final java.lang.String priceId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("variantKey") final java.lang.String variantKey) {
+   ProductPriceDiscountsSetUpdatedPriceImpl(@JsonProperty("discounted") final com.commercetools.models.common.DiscountedPrice discounted, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Integer variantId, @JsonProperty("priceId") final String priceId, @JsonProperty("sku") final String sku, @JsonProperty("variantKey") final String variantKey) {
       this.discounted = discounted;
       this.staged = staged;
       this.variantId = variantId;
@@ -56,27 +53,27 @@ public final class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPr
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Integer getVariantId(){
+   public Integer getVariantId(){
       return this.variantId;
    }
    
    
-   public java.lang.String getPriceId(){
+   public String getPriceId(){
       return this.priceId;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    
-   public java.lang.String getVariantKey(){
+   public String getVariantKey(){
       return this.variantKey;
    }
 
@@ -84,23 +81,23 @@ public final class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPr
       this.discounted = discounted;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setVariantId(final java.lang.Integer variantId){
+   public void setVariantId(final Integer variantId){
       this.variantId = variantId;
    }
    
-   public void setPriceId(final java.lang.String priceId){
+   public void setPriceId(final String priceId){
       this.priceId = priceId;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
    
-   public void setVariantKey(final java.lang.String variantKey){
+   public void setVariantKey(final String variantKey){
       this.variantKey = variantKey;
    }
 

@@ -3,7 +3,6 @@ package com.commercetools.models.payment;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.payment.TransactionState;
 import com.commercetools.models.payment.TransactionType;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.payment.TransactionDraft;
 import javax.annotation.Nullable;
@@ -14,7 +13,7 @@ import java.time.ZonedDateTime;
 public final class TransactionDraftBuilder {
    
    @Nullable
-   private java.lang.String interactionId;
+   private String interactionId;
    
    
    private com.commercetools.models.common.Money amount;
@@ -28,7 +27,7 @@ public final class TransactionDraftBuilder {
    @Nullable
    private java.time.ZonedDateTime timestamp;
    
-   public TransactionDraftBuilder interactionId(@Nullable final java.lang.String interactionId) {
+   public TransactionDraftBuilder interactionId(@Nullable final String interactionId) {
       this.interactionId = interactionId;
       return this;
    }
@@ -54,7 +53,7 @@ public final class TransactionDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getInteractionId(){
+   public String getInteractionId(){
       return this.interactionId;
    }
    

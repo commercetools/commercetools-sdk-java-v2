@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.product.ProductUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class ProductUpdateBuilder {
    private java.util.List<com.commercetools.models.product.ProductUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public ProductUpdateBuilder actions( final java.util.List<com.commercetools.models.product.ProductUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public ProductUpdateBuilder version( final java.lang.Long version) {
+   public ProductUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class ProductUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

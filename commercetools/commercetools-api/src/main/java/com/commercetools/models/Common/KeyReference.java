@@ -2,7 +2,6 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.common.ReferenceTypeId;
 import com.commercetools.models.store.StoreKeyReference;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

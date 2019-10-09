@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.ReturnPaymentState;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetReturnPaymentStateActionImpl implements StagedOrderSetReturnPaymentStateAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String returnItemId;
+   private String returnItemId;
    
    private com.commercetools.models.order.ReturnPaymentState paymentState;
 
    @JsonCreator
-   StagedOrderSetReturnPaymentStateActionImpl(@JsonProperty("returnItemId") final java.lang.String returnItemId, @JsonProperty("paymentState") final com.commercetools.models.order.ReturnPaymentState paymentState) {
+   StagedOrderSetReturnPaymentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId, @JsonProperty("paymentState") final com.commercetools.models.order.ReturnPaymentState paymentState) {
       this.returnItemId = returnItemId;
       this.paymentState = paymentState;
       this.action = "setReturnPaymentState";
@@ -41,12 +40,12 @@ public final class StagedOrderSetReturnPaymentStateActionImpl implements StagedO
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getReturnItemId(){
+   public String getReturnItemId(){
       return this.returnItemId;
    }
    
@@ -55,7 +54,7 @@ public final class StagedOrderSetReturnPaymentStateActionImpl implements StagedO
       return this.paymentState;
    }
 
-   public void setReturnItemId(final java.lang.String returnItemId){
+   public void setReturnItemId(final String returnItemId){
       this.returnItemId = returnItemId;
    }
    

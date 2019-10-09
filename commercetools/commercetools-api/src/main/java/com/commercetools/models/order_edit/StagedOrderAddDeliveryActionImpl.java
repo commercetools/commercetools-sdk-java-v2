@@ -4,7 +4,6 @@ import com.commercetools.models.common.Address;
 import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.ParcelDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.Address address;
    
@@ -46,7 +45,7 @@ public final class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDel
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

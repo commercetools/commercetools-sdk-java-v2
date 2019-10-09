@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import com.commercetools.models.error.OutOfStockError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class OutOfStockErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    
-   private java.util.List<java.lang.String> lineItems;
+   private java.util.List<String> lineItems;
    
    
-   private java.util.List<java.lang.String> skus;
+   private java.util.List<String> skus;
    
-   public OutOfStockErrorBuilder message( final java.lang.String message) {
+   public OutOfStockErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public OutOfStockErrorBuilder lineItems( final java.util.List<java.lang.String> lineItems) {
+   public OutOfStockErrorBuilder lineItems( final java.util.List<String> lineItems) {
       this.lineItems = lineItems;
       return this;
    }
    
-   public OutOfStockErrorBuilder skus( final java.util.List<java.lang.String> skus) {
+   public OutOfStockErrorBuilder skus( final java.util.List<String> skus) {
       this.skus = skus;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.util.List<java.lang.String> getLineItems(){
+   public java.util.List<String> getLineItems(){
       return this.lineItems;
    }
    
    
-   public java.util.List<java.lang.String> getSkus(){
+   public java.util.List<String> getSkus(){
       return this.skus;
    }
 

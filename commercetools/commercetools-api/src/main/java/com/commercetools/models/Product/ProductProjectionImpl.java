@@ -10,8 +10,6 @@ import com.commercetools.models.product_type.ProductTypeReference;
 import com.commercetools.models.review.ReviewRatingStatistics;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.tax_category.TaxCategoryReference;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -37,9 +35,9 @@ public final class ProductProjectionImpl implements ProductProjection {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.product.SearchKeywords searchKeywords;
    
@@ -47,9 +45,9 @@ public final class ProductProjectionImpl implements ProductProjection {
    
    private java.util.List<com.commercetools.models.product.ProductVariant> variants;
    
-   private java.lang.Boolean published;
+   private Boolean published;
    
-   private java.lang.Boolean hasStagedChanges;
+   private Boolean hasStagedChanges;
    
    private com.commercetools.models.common.LocalizedString metaDescription;
    
@@ -75,10 +73,10 @@ public final class ProductProjectionImpl implements ProductProjection {
    
    private com.commercetools.models.product_type.ProductTypeReference productType;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ProductProjectionImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("searchKeywords") final com.commercetools.models.product.SearchKeywords searchKeywords, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("variants") final java.util.List<com.commercetools.models.product.ProductVariant> variants, @JsonProperty("published") final java.lang.Boolean published, @JsonProperty("hasStagedChanges") final java.lang.Boolean hasStagedChanges, @JsonProperty("metaDescription") final com.commercetools.models.common.LocalizedString metaDescription, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryReference taxCategory, @JsonProperty("metaKeywords") final com.commercetools.models.common.LocalizedString metaKeywords, @JsonProperty("categoryOrderHints") final com.commercetools.models.product.CategoryOrderHints categoryOrderHints, @JsonProperty("metaTitle") final com.commercetools.models.common.LocalizedString metaTitle, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("masterVariant") final com.commercetools.models.product.ProductVariant masterVariant, @JsonProperty("categories") final java.util.List<com.commercetools.models.category.CategoryReference> categories, @JsonProperty("reviewRatingStatistics") final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeReference productType, @JsonProperty("key") final java.lang.String key) {
+   ProductProjectionImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("searchKeywords") final com.commercetools.models.product.SearchKeywords searchKeywords, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("variants") final java.util.List<com.commercetools.models.product.ProductVariant> variants, @JsonProperty("published") final Boolean published, @JsonProperty("hasStagedChanges") final Boolean hasStagedChanges, @JsonProperty("metaDescription") final com.commercetools.models.common.LocalizedString metaDescription, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryReference taxCategory, @JsonProperty("metaKeywords") final com.commercetools.models.common.LocalizedString metaKeywords, @JsonProperty("categoryOrderHints") final com.commercetools.models.product.CategoryOrderHints categoryOrderHints, @JsonProperty("metaTitle") final com.commercetools.models.common.LocalizedString metaTitle, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("masterVariant") final com.commercetools.models.product.ProductVariant masterVariant, @JsonProperty("categories") final java.util.List<com.commercetools.models.category.CategoryReference> categories, @JsonProperty("reviewRatingStatistics") final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeReference productType, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -117,12 +115,12 @@ public final class ProductProjectionImpl implements ProductProjection {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -142,12 +140,12 @@ public final class ProductProjectionImpl implements ProductProjection {
    }
    
    
-   public java.lang.Boolean getPublished(){
+   public Boolean getPublished(){
       return this.published;
    }
    
    
-   public java.lang.Boolean getHasStagedChanges(){
+   public Boolean getHasStagedChanges(){
       return this.hasStagedChanges;
    }
    
@@ -212,7 +210,7 @@ public final class ProductProjectionImpl implements ProductProjection {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -224,11 +222,11 @@ public final class ProductProjectionImpl implements ProductProjection {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -244,11 +242,11 @@ public final class ProductProjectionImpl implements ProductProjection {
       this.variants = variants;
    }
    
-   public void setPublished(final java.lang.Boolean published){
+   public void setPublished(final Boolean published){
       this.published = published;
    }
    
-   public void setHasStagedChanges(final java.lang.Boolean hasStagedChanges){
+   public void setHasStagedChanges(final Boolean hasStagedChanges){
       this.hasStagedChanges = hasStagedChanges;
    }
    
@@ -300,7 +298,7 @@ public final class ProductProjectionImpl implements ProductProjection {
       this.productType = productType;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

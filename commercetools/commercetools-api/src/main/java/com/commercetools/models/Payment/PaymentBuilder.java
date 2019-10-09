@@ -7,7 +7,6 @@ import com.commercetools.models.payment.PaymentMethodInfo;
 import com.commercetools.models.payment.PaymentStatus;
 import com.commercetools.models.payment.Transaction;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import com.commercetools.models.payment.Payment;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -23,10 +22,10 @@ public final class PaymentBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -38,7 +37,7 @@ public final class PaymentBuilder {
    private com.commercetools.models.common.TypedMoney amountAuthorized;
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    
    private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
@@ -47,10 +46,10 @@ public final class PaymentBuilder {
    private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
-   private java.lang.String authorizedUntil;
+   private String authorizedUntil;
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
    
    private java.util.List<com.commercetools.models.payment.Transaction> transactions;
@@ -68,10 +67,10 @@ public final class PaymentBuilder {
    private java.util.List<com.commercetools.models.type.CustomFields> interfaceInteractions;
    
    @Nullable
-   private java.lang.String interfaceId;
+   private String interfaceId;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    
    private com.commercetools.models.payment.PaymentStatus paymentStatus;
@@ -89,12 +88,12 @@ public final class PaymentBuilder {
       return this;
    }
    
-   public PaymentBuilder id( final java.lang.String id) {
+   public PaymentBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public PaymentBuilder version( final java.lang.Long version) {
+   public PaymentBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -114,7 +113,7 @@ public final class PaymentBuilder {
       return this;
    }
    
-   public PaymentBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public PaymentBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
@@ -129,12 +128,12 @@ public final class PaymentBuilder {
       return this;
    }
    
-   public PaymentBuilder authorizedUntil(@Nullable final java.lang.String authorizedUntil) {
+   public PaymentBuilder authorizedUntil(@Nullable final String authorizedUntil) {
       this.authorizedUntil = authorizedUntil;
       return this;
    }
    
-   public PaymentBuilder externalId(@Nullable final java.lang.String externalId) {
+   public PaymentBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
@@ -164,12 +163,12 @@ public final class PaymentBuilder {
       return this;
    }
    
-   public PaymentBuilder interfaceId(@Nullable final java.lang.String interfaceId) {
+   public PaymentBuilder interfaceId(@Nullable final String interfaceId) {
       this.interfaceId = interfaceId;
       return this;
    }
    
-   public PaymentBuilder key(@Nullable final java.lang.String key) {
+   public PaymentBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -195,12 +194,12 @@ public final class PaymentBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -220,7 +219,7 @@ public final class PaymentBuilder {
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -235,12 +234,12 @@ public final class PaymentBuilder {
    }
    
    @Nullable
-   public java.lang.String getAuthorizedUntil(){
+   public String getAuthorizedUntil(){
       return this.authorizedUntil;
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
@@ -270,12 +269,12 @@ public final class PaymentBuilder {
    }
    
    @Nullable
-   public java.lang.String getInterfaceId(){
+   public String getInterfaceId(){
       return this.interfaceId;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

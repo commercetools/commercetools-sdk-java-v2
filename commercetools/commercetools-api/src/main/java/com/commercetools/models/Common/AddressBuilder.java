@@ -1,6 +1,6 @@
 package com.commercetools.models.common;
 
-import java.lang.String;
+
 import com.commercetools.models.common.Address;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,327 +10,327 @@ import java.time.ZonedDateTime;
 public final class AddressBuilder {
    
    
-   private java.lang.String country;
+   private String country;
    
    @Nullable
-   private java.lang.String lastName;
+   private String lastName;
    
    @Nullable
-   private java.lang.String pOBox;
+   private String pOBox;
    
    @Nullable
-   private java.lang.String city;
+   private String city;
    
    @Nullable
-   private java.lang.String streetNumber;
+   private String streetNumber;
    
    @Nullable
-   private java.lang.String postalCode;
+   private String postalCode;
    
    @Nullable
-   private java.lang.String mobile;
+   private String mobile;
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
    @Nullable
-   private java.lang.String additionalAddressInfo;
+   private String additionalAddressInfo;
    
    @Nullable
-   private java.lang.String title;
+   private String title;
    
    @Nullable
-   private java.lang.String building;
+   private String building;
    
    @Nullable
-   private java.lang.String firstName;
+   private String firstName;
    
    @Nullable
-   private java.lang.String streetName;
+   private String streetName;
    
    @Nullable
-   private java.lang.String phone;
+   private String phone;
    
    @Nullable
-   private java.lang.String additionalStreetInfo;
+   private String additionalStreetInfo;
    
    @Nullable
-   private java.lang.String company;
+   private String company;
    
    @Nullable
-   private java.lang.String state;
+   private String state;
    
    @Nullable
-   private java.lang.String salutation;
+   private String salutation;
    
    @Nullable
-   private java.lang.String id;
+   private String id;
    
    @Nullable
-   private java.lang.String fax;
+   private String fax;
    
    @Nullable
-   private java.lang.String department;
+   private String department;
    
    @Nullable
-   private java.lang.String region;
+   private String region;
    
    @Nullable
-   private java.lang.String email;
+   private String email;
    
    @Nullable
-   private java.lang.String apartment;
+   private String apartment;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public AddressBuilder country( final java.lang.String country) {
+   public AddressBuilder country( final String country) {
       this.country = country;
       return this;
    }
    
-   public AddressBuilder lastName(@Nullable final java.lang.String lastName) {
+   public AddressBuilder lastName(@Nullable final String lastName) {
       this.lastName = lastName;
       return this;
    }
    
-   public AddressBuilder pOBox(@Nullable final java.lang.String pOBox) {
+   public AddressBuilder pOBox(@Nullable final String pOBox) {
       this.pOBox = pOBox;
       return this;
    }
    
-   public AddressBuilder city(@Nullable final java.lang.String city) {
+   public AddressBuilder city(@Nullable final String city) {
       this.city = city;
       return this;
    }
    
-   public AddressBuilder streetNumber(@Nullable final java.lang.String streetNumber) {
+   public AddressBuilder streetNumber(@Nullable final String streetNumber) {
       this.streetNumber = streetNumber;
       return this;
    }
    
-   public AddressBuilder postalCode(@Nullable final java.lang.String postalCode) {
+   public AddressBuilder postalCode(@Nullable final String postalCode) {
       this.postalCode = postalCode;
       return this;
    }
    
-   public AddressBuilder mobile(@Nullable final java.lang.String mobile) {
+   public AddressBuilder mobile(@Nullable final String mobile) {
       this.mobile = mobile;
       return this;
    }
    
-   public AddressBuilder externalId(@Nullable final java.lang.String externalId) {
+   public AddressBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
    
-   public AddressBuilder additionalAddressInfo(@Nullable final java.lang.String additionalAddressInfo) {
+   public AddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
       this.additionalAddressInfo = additionalAddressInfo;
       return this;
    }
    
-   public AddressBuilder title(@Nullable final java.lang.String title) {
+   public AddressBuilder title(@Nullable final String title) {
       this.title = title;
       return this;
    }
    
-   public AddressBuilder building(@Nullable final java.lang.String building) {
+   public AddressBuilder building(@Nullable final String building) {
       this.building = building;
       return this;
    }
    
-   public AddressBuilder firstName(@Nullable final java.lang.String firstName) {
+   public AddressBuilder firstName(@Nullable final String firstName) {
       this.firstName = firstName;
       return this;
    }
    
-   public AddressBuilder streetName(@Nullable final java.lang.String streetName) {
+   public AddressBuilder streetName(@Nullable final String streetName) {
       this.streetName = streetName;
       return this;
    }
    
-   public AddressBuilder phone(@Nullable final java.lang.String phone) {
+   public AddressBuilder phone(@Nullable final String phone) {
       this.phone = phone;
       return this;
    }
    
-   public AddressBuilder additionalStreetInfo(@Nullable final java.lang.String additionalStreetInfo) {
+   public AddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
       this.additionalStreetInfo = additionalStreetInfo;
       return this;
    }
    
-   public AddressBuilder company(@Nullable final java.lang.String company) {
+   public AddressBuilder company(@Nullable final String company) {
       this.company = company;
       return this;
    }
    
-   public AddressBuilder state(@Nullable final java.lang.String state) {
+   public AddressBuilder state(@Nullable final String state) {
       this.state = state;
       return this;
    }
    
-   public AddressBuilder salutation(@Nullable final java.lang.String salutation) {
+   public AddressBuilder salutation(@Nullable final String salutation) {
       this.salutation = salutation;
       return this;
    }
    
-   public AddressBuilder id(@Nullable final java.lang.String id) {
+   public AddressBuilder id(@Nullable final String id) {
       this.id = id;
       return this;
    }
    
-   public AddressBuilder fax(@Nullable final java.lang.String fax) {
+   public AddressBuilder fax(@Nullable final String fax) {
       this.fax = fax;
       return this;
    }
    
-   public AddressBuilder department(@Nullable final java.lang.String department) {
+   public AddressBuilder department(@Nullable final String department) {
       this.department = department;
       return this;
    }
    
-   public AddressBuilder region(@Nullable final java.lang.String region) {
+   public AddressBuilder region(@Nullable final String region) {
       this.region = region;
       return this;
    }
    
-   public AddressBuilder email(@Nullable final java.lang.String email) {
+   public AddressBuilder email(@Nullable final String email) {
       this.email = email;
       return this;
    }
    
-   public AddressBuilder apartment(@Nullable final java.lang.String apartment) {
+   public AddressBuilder apartment(@Nullable final String apartment) {
       this.apartment = apartment;
       return this;
    }
    
-   public AddressBuilder key(@Nullable final java.lang.String key) {
+   public AddressBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    @Nullable
-   public java.lang.String getLastName(){
+   public String getLastName(){
       return this.lastName;
    }
    
    @Nullable
-   public java.lang.String getPOBox(){
+   public String getPOBox(){
       return this.pOBox;
    }
    
    @Nullable
-   public java.lang.String getCity(){
+   public String getCity(){
       return this.city;
    }
    
    @Nullable
-   public java.lang.String getStreetNumber(){
+   public String getStreetNumber(){
       return this.streetNumber;
    }
    
    @Nullable
-   public java.lang.String getPostalCode(){
+   public String getPostalCode(){
       return this.postalCode;
    }
    
    @Nullable
-   public java.lang.String getMobile(){
+   public String getMobile(){
       return this.mobile;
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
    @Nullable
-   public java.lang.String getAdditionalAddressInfo(){
+   public String getAdditionalAddressInfo(){
       return this.additionalAddressInfo;
    }
    
    @Nullable
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
    
    @Nullable
-   public java.lang.String getBuilding(){
+   public String getBuilding(){
       return this.building;
    }
    
    @Nullable
-   public java.lang.String getFirstName(){
+   public String getFirstName(){
       return this.firstName;
    }
    
    @Nullable
-   public java.lang.String getStreetName(){
+   public String getStreetName(){
       return this.streetName;
    }
    
    @Nullable
-   public java.lang.String getPhone(){
+   public String getPhone(){
       return this.phone;
    }
    
    @Nullable
-   public java.lang.String getAdditionalStreetInfo(){
+   public String getAdditionalStreetInfo(){
       return this.additionalStreetInfo;
    }
    
    @Nullable
-   public java.lang.String getCompany(){
+   public String getCompany(){
       return this.company;
    }
    
    @Nullable
-   public java.lang.String getState(){
+   public String getState(){
       return this.state;
    }
    
    @Nullable
-   public java.lang.String getSalutation(){
+   public String getSalutation(){
       return this.salutation;
    }
    
    @Nullable
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    @Nullable
-   public java.lang.String getFax(){
+   public String getFax(){
       return this.fax;
    }
    
    @Nullable
-   public java.lang.String getDepartment(){
+   public String getDepartment(){
       return this.department;
    }
    
    @Nullable
-   public java.lang.String getRegion(){
+   public String getRegion(){
       return this.region;
    }
    
    @Nullable
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
    
    @Nullable
-   public java.lang.String getApartment(){
+   public String getApartment(){
       return this.apartment;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

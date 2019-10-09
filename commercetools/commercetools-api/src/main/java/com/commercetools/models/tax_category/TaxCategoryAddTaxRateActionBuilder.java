@@ -2,7 +2,6 @@ package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategoryUpdateAction;
 import com.commercetools.models.tax_category.TaxRateDraft;
-import java.lang.String;
 import com.commercetools.models.tax_category.TaxCategoryAddTaxRateAction;
 import javax.annotation.Nullable;
 import java.util.List;

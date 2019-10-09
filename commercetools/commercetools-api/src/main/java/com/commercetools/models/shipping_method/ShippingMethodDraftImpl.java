@@ -2,8 +2,6 @@ package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ZoneRateDraft;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -27,20 +25,20 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
 
    private java.util.List<com.commercetools.models.shipping_method.ZoneRateDraft> zoneRates;
    
-   private java.lang.String predicate;
+   private String predicate;
    
-   private java.lang.Boolean isDefault;
+   private Boolean isDefault;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.String description;
+   private String description;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
    @JsonCreator
-   ShippingMethodDraftImpl(@JsonProperty("zoneRates") final java.util.List<com.commercetools.models.shipping_method.ZoneRateDraft> zoneRates, @JsonProperty("predicate") final java.lang.String predicate, @JsonProperty("isDefault") final java.lang.Boolean isDefault, @JsonProperty("name") final java.lang.String name, @JsonProperty("description") final java.lang.String description, @JsonProperty("key") final java.lang.String key, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
+   ShippingMethodDraftImpl(@JsonProperty("zoneRates") final java.util.List<com.commercetools.models.shipping_method.ZoneRateDraft> zoneRates, @JsonProperty("predicate") final String predicate, @JsonProperty("isDefault") final Boolean isDefault, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("key") final String key, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
       this.zoneRates = zoneRates;
       this.predicate = predicate;
       this.isDefault = isDefault;
@@ -59,27 +57,27 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
    }
    
    
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
    
    
-   public java.lang.Boolean getIsDefault(){
+   public Boolean getIsDefault(){
       return this.isDefault;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -92,23 +90,23 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
       this.zoneRates = zoneRates;
    }
    
-   public void setPredicate(final java.lang.String predicate){
+   public void setPredicate(final String predicate){
       this.predicate = predicate;
    }
    
-   public void setIsDefault(final java.lang.Boolean isDefault){
+   public void setIsDefault(final Boolean isDefault){
       this.isDefault = isDefault;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setDescription(final java.lang.String description){
+   public void setDescription(final String description){
       this.description = description;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

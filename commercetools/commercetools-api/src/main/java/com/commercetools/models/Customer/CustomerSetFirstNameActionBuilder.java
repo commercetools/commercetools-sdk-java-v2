@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.CustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.customer.CustomerSetFirstNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CustomerSetFirstNameActionBuilder {
    
    @Nullable
-   private java.lang.String firstName;
+   private String firstName;
    
-   public CustomerSetFirstNameActionBuilder firstName(@Nullable final java.lang.String firstName) {
+   public CustomerSetFirstNameActionBuilder firstName(@Nullable final String firstName) {
       this.firstName = firstName;
       return this;
    }
    
    @Nullable
-   public java.lang.String getFirstName(){
+   public String getFirstName(){
       return this.firstName;
    }
 

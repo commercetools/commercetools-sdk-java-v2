@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderRemoveItemShippingAddressAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class StagedOrderRemoveItemShippingAddressActionBuilder {
    
    
-   private java.lang.String addressKey;
+   private String addressKey;
    
-   public StagedOrderRemoveItemShippingAddressActionBuilder addressKey( final java.lang.String addressKey) {
+   public StagedOrderRemoveItemShippingAddressActionBuilder addressKey( final String addressKey) {
       this.addressKey = addressKey;
       return this;
    }
    
    
-   public java.lang.String getAddressKey(){
+   public String getAddressKey(){
       return this.addressKey;
    }
 

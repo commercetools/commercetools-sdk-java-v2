@@ -1,9 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.common.Price;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery {
 
-   private java.lang.String productId;
+   private String productId;
    
    private com.commercetools.models.common.Price price;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.Integer variantId;
+   private Integer variantId;
 
    @JsonCreator
-   ProductDiscountMatchQueryImpl(@JsonProperty("productId") final java.lang.String productId, @JsonProperty("price") final com.commercetools.models.common.Price price, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Integer variantId) {
+   ProductDiscountMatchQueryImpl(@JsonProperty("productId") final String productId, @JsonProperty("price") final com.commercetools.models.common.Price price, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Integer variantId) {
       this.productId = productId;
       this.price = price;
       this.staged = staged;
@@ -45,7 +42,7 @@ public final class ProductDiscountMatchQueryImpl implements ProductDiscountMatch
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -55,16 +52,16 @@ public final class ProductDiscountMatchQueryImpl implements ProductDiscountMatch
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Integer getVariantId(){
+   public Integer getVariantId(){
       return this.variantId;
    }
 
-   public void setProductId(final java.lang.String productId){
+   public void setProductId(final String productId){
       this.productId = productId;
    }
    
@@ -72,11 +69,11 @@ public final class ProductDiscountMatchQueryImpl implements ProductDiscountMatch
       this.price = price;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setVariantId(final java.lang.Integer variantId){
+   public void setVariantId(final Integer variantId){
       this.variantId = variantId;
    }
 

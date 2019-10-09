@@ -2,11 +2,10 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.common.DiscountedPrice;
-import com.commercetools.models.common.Money;
 import com.commercetools.models.common.PriceTier;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.common.Price;
 import javax.annotation.Nullable;
@@ -20,7 +19,7 @@ public final class PriceBuilder {
    private com.commercetools.models.common.DiscountedPrice discounted;
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
    @Nullable
    private java.util.List<com.commercetools.models.common.PriceTier> tiers;
@@ -41,17 +40,17 @@ public final class PriceBuilder {
    private java.time.ZonedDateTime validFrom;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private com.commercetools.models.common.Money value;
+   private com.commercetools.models.common.TypedMoney value;
    
    public PriceBuilder discounted(@Nullable final com.commercetools.models.common.DiscountedPrice discounted) {
       this.discounted = discounted;
       return this;
    }
    
-   public PriceBuilder country(@Nullable final java.lang.String country) {
+   public PriceBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
@@ -86,12 +85,12 @@ public final class PriceBuilder {
       return this;
    }
    
-   public PriceBuilder id( final java.lang.String id) {
+   public PriceBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public PriceBuilder value( final com.commercetools.models.common.Money value) {
+   public PriceBuilder value( final com.commercetools.models.common.TypedMoney value) {
       this.value = value;
       return this;
    }
@@ -102,7 +101,7 @@ public final class PriceBuilder {
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
@@ -137,12 +136,12 @@ public final class PriceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public com.commercetools.models.common.Money getValue(){
+   public com.commercetools.models.common.TypedMoney getValue(){
       return this.value;
    }
 

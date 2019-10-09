@@ -25,7 +25,6 @@ import com.commercetools.models.me.MyCartSetLocaleAction;
 import com.commercetools.models.me.MyCartSetShippingAddressAction;
 import com.commercetools.models.me.MyCartSetShippingMethodAction;
 import com.commercetools.models.me.MyCartUpdateItemShippingAddressAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

@@ -6,8 +6,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.review.ReviewRatingStatistics;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -33,9 +31,9 @@ public final class ChannelImpl implements Channel {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
@@ -43,7 +41,7 @@ public final class ChannelImpl implements Channel {
    
    private com.commercetools.models.common.Address address;
    
-   private java.lang.Object geoLocation;
+   private Object geoLocation;
    
    private com.commercetools.models.type.CustomFields custom;
    
@@ -55,10 +53,10 @@ public final class ChannelImpl implements Channel {
    
    private com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ChannelImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("geoLocation") final java.lang.Object geoLocation, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("roles") final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("reviewRatingStatistics") final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("key") final java.lang.String key) {
+   ChannelImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("geoLocation") final Object geoLocation, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("roles") final java.util.List<com.commercetools.models.channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("reviewRatingStatistics") final com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -89,12 +87,12 @@ public final class ChannelImpl implements Channel {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -114,7 +112,7 @@ public final class ChannelImpl implements Channel {
    }
    
    
-   public java.lang.Object getGeoLocation(){
+   public Object getGeoLocation(){
       return this.geoLocation;
    }
    
@@ -144,7 +142,7 @@ public final class ChannelImpl implements Channel {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -156,11 +154,11 @@ public final class ChannelImpl implements Channel {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -176,7 +174,7 @@ public final class ChannelImpl implements Channel {
       this.address = address;
    }
    
-   public void setGeoLocation(final java.lang.Object geoLocation){
+   public void setGeoLocation(final Object geoLocation){
       this.geoLocation = geoLocation;
    }
    
@@ -200,7 +198,7 @@ public final class ChannelImpl implements Channel {
       this.reviewRatingStatistics = reviewRatingStatistics;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
-import java.lang.Long;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken {
 
-   private java.lang.Long ttlMinutes;
+   private Long ttlMinutes;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
 
    @JsonCreator
-   CustomerCreateEmailTokenImpl(@JsonProperty("ttlMinutes") final java.lang.Long ttlMinutes, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version) {
+   CustomerCreateEmailTokenImpl(@JsonProperty("ttlMinutes") final Long ttlMinutes, @JsonProperty("id") final String id, @JsonProperty("version") final Long version) {
       this.ttlMinutes = ttlMinutes;
       this.id = id;
       this.version = version;
@@ -40,29 +39,29 @@ public final class CustomerCreateEmailTokenImpl implements CustomerCreateEmailTo
    }
    
    
-   public java.lang.Long getTtlMinutes(){
+   public Long getTtlMinutes(){
       return this.ttlMinutes;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 
-   public void setTtlMinutes(final java.lang.Long ttlMinutes){
+   public void setTtlMinutes(final Long ttlMinutes){
       this.ttlMinutes = ttlMinutes;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
 

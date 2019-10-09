@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
 public class ByProjectKeyOrdersEditsGet {
    
    
@@ -69,7 +70,12 @@ public class ByProjectKeyOrdersEditsGet {
    
    public CompletableFuture<ApiHttpResponse<com.commercetools.models.order_edit.OrderEditPagedQueryResponse>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.order_edit.OrderEditPagedQueryResponse.class));
+              .thenApply(response -> {
+                  if(response.getStatusCode() >= 400){
+                      throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                  }
+                  return Utils.convertResponse(response,com.commercetools.models.order_edit.OrderEditPagedQueryResponse.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

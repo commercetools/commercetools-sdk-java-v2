@@ -1,8 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductRevertStagedVariantChangesActionImpl implements ProductRevertStagedVariantChangesAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Long variantId;
+   private Long variantId;
 
    @JsonCreator
-   ProductRevertStagedVariantChangesActionImpl(@JsonProperty("variantId") final java.lang.Long variantId) {
+   ProductRevertStagedVariantChangesActionImpl(@JsonProperty("variantId") final Long variantId) {
       this.variantId = variantId;
       this.action = "revertStagedVariantChanges";
    }
@@ -38,16 +36,16 @@ public final class ProductRevertStagedVariantChangesActionImpl implements Produc
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
 
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
 

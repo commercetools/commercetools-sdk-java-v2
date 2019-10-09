@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.order_edit.OrderEditUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedActionsAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.util.List<com.commercetools.models.order.StagedOrderUpdateAction> stagedActions;
 
@@ -38,7 +37,7 @@ public final class OrderEditSetStagedActionsActionImpl implements OrderEditSetSt
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

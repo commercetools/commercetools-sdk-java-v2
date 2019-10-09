@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetDeleteDaysAfterLastModificationActionImpl implements CartSetDeleteDaysAfterLastModificationAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Integer deleteDaysAfterLastModification;
+   private Integer deleteDaysAfterLastModification;
 
    @JsonCreator
-   CartSetDeleteDaysAfterLastModificationActionImpl(@JsonProperty("deleteDaysAfterLastModification") final java.lang.Integer deleteDaysAfterLastModification) {
+   CartSetDeleteDaysAfterLastModificationActionImpl(@JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification) {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
       this.action = "setDeleteDaysAfterLastModification";
    }
@@ -38,16 +36,16 @@ public final class CartSetDeleteDaysAfterLastModificationActionImpl implements C
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Integer getDeleteDaysAfterLastModification(){
+   public Integer getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
 
-   public void setDeleteDaysAfterLastModification(final java.lang.Integer deleteDaysAfterLastModification){
+   public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification){
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
    }
 

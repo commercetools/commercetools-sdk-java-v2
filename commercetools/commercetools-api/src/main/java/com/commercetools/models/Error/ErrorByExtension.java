@@ -1,6 +1,6 @@
 package com.commercetools.models.error;
 
-import java.lang.String;
+
 import com.commercetools.models.error.ErrorByExtensionImpl;
 
 import com.fasterxml.jackson.annotation.*;

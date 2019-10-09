@@ -10,8 +10,6 @@ import com.commercetools.models.product_type.ProductTypeReference;
 import com.commercetools.models.review.ReviewRatingStatistics;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.tax_category.TaxCategoryReference;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductProjection;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -27,10 +25,10 @@ public final class ProductProjectionBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.product.SearchKeywords searchKeywords;
@@ -42,10 +40,10 @@ public final class ProductProjectionBuilder {
    private java.util.List<com.commercetools.models.product.ProductVariant> variants;
    
    @Nullable
-   private java.lang.Boolean published;
+   private Boolean published;
    
    @Nullable
-   private java.lang.Boolean hasStagedChanges;
+   private Boolean hasStagedChanges;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString metaDescription;
@@ -84,7 +82,7 @@ public final class ProductProjectionBuilder {
    private com.commercetools.models.product_type.ProductTypeReference productType;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public ProductProjectionBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -96,12 +94,12 @@ public final class ProductProjectionBuilder {
       return this;
    }
    
-   public ProductProjectionBuilder id( final java.lang.String id) {
+   public ProductProjectionBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ProductProjectionBuilder version( final java.lang.Long version) {
+   public ProductProjectionBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -121,12 +119,12 @@ public final class ProductProjectionBuilder {
       return this;
    }
    
-   public ProductProjectionBuilder published(@Nullable final java.lang.Boolean published) {
+   public ProductProjectionBuilder published(@Nullable final Boolean published) {
       this.published = published;
       return this;
    }
    
-   public ProductProjectionBuilder hasStagedChanges(@Nullable final java.lang.Boolean hasStagedChanges) {
+   public ProductProjectionBuilder hasStagedChanges(@Nullable final Boolean hasStagedChanges) {
       this.hasStagedChanges = hasStagedChanges;
       return this;
    }
@@ -191,7 +189,7 @@ public final class ProductProjectionBuilder {
       return this;
    }
    
-   public ProductProjectionBuilder key(@Nullable final java.lang.String key) {
+   public ProductProjectionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -207,12 +205,12 @@ public final class ProductProjectionBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -232,12 +230,12 @@ public final class ProductProjectionBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getPublished(){
+   public Boolean getPublished(){
       return this.published;
    }
    
    @Nullable
-   public java.lang.Boolean getHasStagedChanges(){
+   public Boolean getHasStagedChanges(){
       return this.hasStagedChanges;
    }
    
@@ -302,7 +300,7 @@ public final class ProductProjectionBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

@@ -3,7 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order_edit.OrderEditApplied;
 import com.commercetools.models.order_edit.OrderEditReference;
-import java.lang.String;
 import com.commercetools.models.message.OrderEditAppliedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;

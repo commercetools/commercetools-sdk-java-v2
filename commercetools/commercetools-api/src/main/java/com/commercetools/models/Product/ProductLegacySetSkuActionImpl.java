@@ -1,8 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Integer variantId;
+   private Integer variantId;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   ProductLegacySetSkuActionImpl(@JsonProperty("variantId") final java.lang.Integer variantId, @JsonProperty("sku") final java.lang.String sku) {
+   ProductLegacySetSkuActionImpl(@JsonProperty("variantId") final Integer variantId, @JsonProperty("sku") final String sku) {
       this.variantId = variantId;
       this.sku = sku;
       this.action = "legacySetSku";
@@ -41,25 +39,25 @@ public final class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Integer getVariantId(){
+   public Integer getVariantId(){
       return this.variantId;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
-   public void setVariantId(final java.lang.Integer variantId){
+   public void setVariantId(final Integer variantId){
       this.variantId = variantId;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

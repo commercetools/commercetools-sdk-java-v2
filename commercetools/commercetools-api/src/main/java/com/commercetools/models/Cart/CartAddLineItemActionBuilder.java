@@ -7,9 +7,6 @@ import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.cart.CartAddLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -19,7 +16,7 @@ import java.time.ZonedDateTime;
 public final class CartAddLineItemActionBuilder {
    
    @Nullable
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
@@ -28,7 +25,7 @@ public final class CartAddLineItemActionBuilder {
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    @Nullable
-   private java.lang.String productId;
+   private String productId;
    
    @Nullable
    private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
@@ -40,10 +37,10 @@ public final class CartAddLineItemActionBuilder {
    private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    @Nullable
    private com.commercetools.models.channel.ChannelResourceIdentifier distributionChannel;
@@ -51,7 +48,7 @@ public final class CartAddLineItemActionBuilder {
    @Nullable
    private com.commercetools.models.common.Money externalPrice;
    
-   public CartAddLineItemActionBuilder quantity(@Nullable final java.lang.Integer quantity) {
+   public CartAddLineItemActionBuilder quantity(@Nullable final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -66,7 +63,7 @@ public final class CartAddLineItemActionBuilder {
       return this;
    }
    
-   public CartAddLineItemActionBuilder productId(@Nullable final java.lang.String productId) {
+   public CartAddLineItemActionBuilder productId(@Nullable final String productId) {
       this.productId = productId;
       return this;
    }
@@ -86,12 +83,12 @@ public final class CartAddLineItemActionBuilder {
       return this;
    }
    
-   public CartAddLineItemActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public CartAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public CartAddLineItemActionBuilder sku(@Nullable final java.lang.String sku) {
+   public CartAddLineItemActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
@@ -107,7 +104,7 @@ public final class CartAddLineItemActionBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -122,7 +119,7 @@ public final class CartAddLineItemActionBuilder {
    }
    
    @Nullable
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -142,12 +139,12 @@ public final class CartAddLineItemActionBuilder {
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    

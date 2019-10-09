@@ -26,12 +26,12 @@ public final class CartReferenceImpl implements CartReference {
 
    private com.commercetools.models.common.ReferenceTypeId typeId;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.cart.Cart obj;
 
    @JsonCreator
-   CartReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.cart.Cart obj) {
+   CartReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.models.cart.Cart obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("cart").get();
@@ -46,7 +46,7 @@ public final class CartReferenceImpl implements CartReference {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -55,7 +55,7 @@ public final class CartReferenceImpl implements CartReference {
       return this.obj;
    }
 
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

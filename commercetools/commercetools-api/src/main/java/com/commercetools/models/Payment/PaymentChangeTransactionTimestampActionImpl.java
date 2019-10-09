@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentChangeTransactionTimestampActionImpl implements PaymentChangeTransactionTimestampAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String transactionId;
+   private String transactionId;
    
    private java.time.ZonedDateTime timestamp;
 
    @JsonCreator
-   PaymentChangeTransactionTimestampActionImpl(@JsonProperty("transactionId") final java.lang.String transactionId, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
+   PaymentChangeTransactionTimestampActionImpl(@JsonProperty("transactionId") final String transactionId, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
       this.transactionId = transactionId;
       this.timestamp = timestamp;
       this.action = "changeTransactionTimestamp";
@@ -41,12 +40,12 @@ public final class PaymentChangeTransactionTimestampActionImpl implements Paymen
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getTransactionId(){
+   public String getTransactionId(){
       return this.transactionId;
    }
    
@@ -55,7 +54,7 @@ public final class PaymentChangeTransactionTimestampActionImpl implements Paymen
       return this.timestamp;
    }
 
-   public void setTransactionId(final java.lang.String transactionId){
+   public void setTransactionId(final String transactionId){
       this.transactionId = transactionId;
    }
    

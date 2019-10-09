@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.cart.ExternalTaxRateDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetLineItemTaxRateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class StagedOrderSetLineItemTaxRateActionBuilder {
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    public StagedOrderSetLineItemTaxRateActionBuilder externalTaxRate(@Nullable final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.externalTaxRate = externalTaxRate;
       return this;
    }
    
-   public StagedOrderSetLineItemTaxRateActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public StagedOrderSetLineItemTaxRateActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class StagedOrderSetLineItemTaxRateActionBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
 

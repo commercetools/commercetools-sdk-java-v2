@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
 public class ByProjectKeyProductProjectionsSuggestGet {
    
    
@@ -59,7 +60,7 @@ public class ByProjectKeyProductProjectionsSuggestGet {
       return httpRequest;
    }
    
-   public ApiHttpResponse<java.lang.Object> executeBlocking(){
+   public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -67,9 +68,14 @@ public class ByProjectKeyProductProjectionsSuggestGet {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,java.lang.Object.class));
+              .thenApply(response -> {
+                  if(response.getStatusCode() >= 400){
+                      throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                  }
+                  return Utils.convertResponse(response,com.fasterxml.jackson.databind.JsonNode.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

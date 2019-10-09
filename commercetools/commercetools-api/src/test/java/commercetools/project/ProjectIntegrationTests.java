@@ -30,9 +30,12 @@ public class ProjectIntegrationTests {
         List<ProjectUpdateAction> updateActions = new ArrayList<>();
         updateActions.add(ProjectChangeCountriesActionBuilder.of().countries(countries).build());
         Project project = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
-                .post(ProjectUpdateBuilder.of().actions(updateActions).build())
+                .get()
+                .executeBlocking()
+                .getBody();
+        Project updatedProject = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+                .post(ProjectUpdateBuilder.of().actions(updateActions).version(project.getVersion()).build())
                 .executeBlocking().getBody();
-        System.out.println(project.getCountries());
+        Assert.assertNotNull(updatedProject);
     }
-    
 }

@@ -1,8 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PriceChangedErrorImpl implements PriceChangedError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
-   private java.util.List<java.lang.String> lineItems;
+   private java.util.List<String> lineItems;
    
-   private java.lang.Boolean shipping;
+   private Boolean shipping;
 
    @JsonCreator
-   PriceChangedErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("lineItems") final java.util.List<java.lang.String> lineItems, @JsonProperty("shipping") final java.lang.Boolean shipping) {
+   PriceChangedErrorImpl(@JsonProperty("message") final String message, @JsonProperty("lineItems") final java.util.List<String> lineItems, @JsonProperty("shipping") final Boolean shipping) {
       this.message = message;
       this.lineItems = lineItems;
       this.shipping = shipping;
@@ -44,34 +42,34 @@ public final class PriceChangedErrorImpl implements PriceChangedError {
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.util.List<java.lang.String> getLineItems(){
+   public java.util.List<String> getLineItems(){
       return this.lineItems;
    }
    
    
-   public java.lang.Boolean getShipping(){
+   public Boolean getShipping(){
       return this.shipping;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setLineItems(final java.util.List<java.lang.String> lineItems){
+   public void setLineItems(final java.util.List<String> lineItems){
       this.lineItems = lineItems;
    }
    
-   public void setShipping(final java.lang.Boolean shipping){
+   public void setShipping(final Boolean shipping){
       this.shipping = shipping;
    }
 

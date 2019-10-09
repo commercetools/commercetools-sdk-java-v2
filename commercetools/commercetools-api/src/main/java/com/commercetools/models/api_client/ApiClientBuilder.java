@@ -1,6 +1,5 @@
 package com.commercetools.models.api_client;
 
-import java.lang.String;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import com.commercetools.models.api_client.ApiClient;
@@ -21,16 +20,16 @@ public final class ApiClientBuilder {
    private java.time.LocalDate lastUsedAt;
    
    
-   private java.lang.String scope;
+   private String scope;
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.String secret;
+   private String secret;
    
    
-   private java.lang.String id;
+   private String id;
    
    public ApiClientBuilder createdAt(@Nullable final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -47,22 +46,22 @@ public final class ApiClientBuilder {
       return this;
    }
    
-   public ApiClientBuilder scope( final java.lang.String scope) {
+   public ApiClientBuilder scope( final String scope) {
       this.scope = scope;
       return this;
    }
    
-   public ApiClientBuilder name( final java.lang.String name) {
+   public ApiClientBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ApiClientBuilder secret(@Nullable final java.lang.String secret) {
+   public ApiClientBuilder secret(@Nullable final String secret) {
       this.secret = secret;
       return this;
    }
    
-   public ApiClientBuilder id( final java.lang.String id) {
+   public ApiClientBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -83,22 +82,22 @@ public final class ApiClientBuilder {
    }
    
    
-   public java.lang.String getScope(){
+   public String getScope(){
       return this.scope;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.String getSecret(){
+   public String getSecret(){
       return this.secret;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
 

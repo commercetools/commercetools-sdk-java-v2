@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.OrderEditSetCommentActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

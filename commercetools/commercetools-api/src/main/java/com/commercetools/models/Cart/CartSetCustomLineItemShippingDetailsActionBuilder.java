@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetCustomLineItemShippingDetailsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class CartSetCustomLineItemShippingDetailsActionBuilder {
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    @Nullable
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
-   public CartSetCustomLineItemShippingDetailsActionBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public CartSetCustomLineItemShippingDetailsActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class CartSetCustomLineItemShippingDetailsActionBuilder {
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    

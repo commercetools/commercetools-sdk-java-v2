@@ -1,8 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.me.MyCartSetLineItemCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class MyCartSetLineItemCustomFieldActionBuilder {
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.Object value;
+   private Object value;
    
-   public MyCartSetLineItemCustomFieldActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public MyCartSetLineItemCustomFieldActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
    
-   public MyCartSetLineItemCustomFieldActionBuilder name( final java.lang.String name) {
+   public MyCartSetLineItemCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public MyCartSetLineItemCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
+   public MyCartSetLineItemCustomFieldActionBuilder value(@Nullable final Object value) {
       this.value = value;
       return this;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 

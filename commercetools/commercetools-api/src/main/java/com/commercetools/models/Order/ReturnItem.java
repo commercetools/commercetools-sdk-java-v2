@@ -4,8 +4,6 @@ import com.commercetools.models.order.CustomLineItemReturnItem;
 import com.commercetools.models.order.LineItemReturnItem;
 import com.commercetools.models.order.ReturnPaymentState;
 import com.commercetools.models.order.ReturnShipmentState;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 
 

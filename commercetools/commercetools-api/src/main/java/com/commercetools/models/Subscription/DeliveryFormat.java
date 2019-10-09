@@ -2,7 +2,6 @@ package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.DeliveryCloudEventsFormat;
 import com.commercetools.models.subscription.DeliveryPlatformFormat;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

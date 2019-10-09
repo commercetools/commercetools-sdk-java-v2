@@ -5,7 +5,6 @@ import com.commercetools.models.order.OrderReference;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.order_edit.OrderEditResult;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order_edit.OrderEdit;
 import javax.annotation.Nullable;
@@ -22,10 +21,10 @@ public final class OrderEditBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -43,13 +42,13 @@ public final class OrderEditBuilder {
    private com.commercetools.models.type.CustomFields custom;
    
    @Nullable
-   private java.lang.String comment;
+   private String comment;
    
    
    private java.util.List<com.commercetools.models.order.StagedOrderUpdateAction> stagedActions;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public OrderEditBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -61,12 +60,12 @@ public final class OrderEditBuilder {
       return this;
    }
    
-   public OrderEditBuilder id( final java.lang.String id) {
+   public OrderEditBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public OrderEditBuilder version( final java.lang.Long version) {
+   public OrderEditBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -96,7 +95,7 @@ public final class OrderEditBuilder {
       return this;
    }
    
-   public OrderEditBuilder comment(@Nullable final java.lang.String comment) {
+   public OrderEditBuilder comment(@Nullable final String comment) {
       this.comment = comment;
       return this;
    }
@@ -106,7 +105,7 @@ public final class OrderEditBuilder {
       return this;
    }
    
-   public OrderEditBuilder key(@Nullable final java.lang.String key) {
+   public OrderEditBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -122,12 +121,12 @@ public final class OrderEditBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -157,7 +156,7 @@ public final class OrderEditBuilder {
    }
    
    @Nullable
-   public java.lang.String getComment(){
+   public String getComment(){
       return this.comment;
    }
    
@@ -167,7 +166,7 @@ public final class OrderEditBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

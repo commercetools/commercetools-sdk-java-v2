@@ -3,8 +3,6 @@ package com.commercetools.models.cart_discount;
 import com.commercetools.models.cart_discount.CartDiscountValue;
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.product.ProductReference;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountValueGiftLineItem;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,7 +18,7 @@ public final class CartDiscountValueGiftLineItemBuilder {
    private com.commercetools.models.channel.ChannelReference supplyChannel;
    
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
    private com.commercetools.models.channel.ChannelReference distributionChannel;
@@ -35,7 +33,7 @@ public final class CartDiscountValueGiftLineItemBuilder {
       return this;
    }
    
-   public CartDiscountValueGiftLineItemBuilder variantId( final java.lang.Long variantId) {
+   public CartDiscountValueGiftLineItemBuilder variantId( final Long variantId) {
       this.variantId = variantId;
       return this;
    }
@@ -56,7 +54,7 @@ public final class CartDiscountValueGiftLineItemBuilder {
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    

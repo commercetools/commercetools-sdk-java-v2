@@ -1,8 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductRevertedStagedChangesMessagePayloadImpl implements ProductRevertedStagedChangesMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.util.List<java.lang.Object> removedImageUrls;
+   private java.util.List<Object> removedImageUrls;
 
    @JsonCreator
-   ProductRevertedStagedChangesMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<java.lang.Object> removedImageUrls) {
+   ProductRevertedStagedChangesMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<Object> removedImageUrls) {
       this.removedImageUrls = removedImageUrls;
       this.type = "ProductRevertedStagedChanges";
    }
@@ -38,16 +36,16 @@ public final class ProductRevertedStagedChangesMessagePayloadImpl implements Pro
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.util.List<java.lang.Object> getRemovedImageUrls(){
+   public java.util.List<Object> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
 
-   public void setRemovedImageUrls(final java.util.List<java.lang.Object> removedImageUrls){
+   public void setRemovedImageUrls(final java.util.List<Object> removedImageUrls){
       this.removedImageUrls = removedImageUrls;
    }
 

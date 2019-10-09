@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCustomerRemoveAddressAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class MyCustomerRemoveAddressActionBuilder {
    
    
-   private java.lang.String addressId;
+   private String addressId;
    
-   public MyCustomerRemoveAddressActionBuilder addressId( final java.lang.String addressId) {
+   public MyCustomerRemoveAddressActionBuilder addressId( final String addressId) {
       this.addressId = addressId;
       return this;
    }
    
    
-   public java.lang.String getAddressId(){
+   public String getAddressId(){
       return this.addressId;
    }
 

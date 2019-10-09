@@ -1,6 +1,6 @@
 package com.commercetools.models.subscription;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PayloadNotIncludedImpl implements PayloadNotIncluded {
 
-   private java.lang.String reason;
+   private String reason;
    
-   private java.lang.String payloadType;
+   private String payloadType;
 
    @JsonCreator
-   PayloadNotIncludedImpl(@JsonProperty("reason") final java.lang.String reason, @JsonProperty("payloadType") final java.lang.String payloadType) {
+   PayloadNotIncludedImpl(@JsonProperty("reason") final String reason, @JsonProperty("payloadType") final String payloadType) {
       this.reason = reason;
       this.payloadType = payloadType;
    }
@@ -36,20 +36,20 @@ public final class PayloadNotIncludedImpl implements PayloadNotIncluded {
    }
    
    
-   public java.lang.String getReason(){
+   public String getReason(){
       return this.reason;
    }
    
    
-   public java.lang.String getPayloadType(){
+   public String getPayloadType(){
       return this.payloadType;
    }
 
-   public void setReason(final java.lang.String reason){
+   public void setReason(final String reason){
       this.reason = reason;
    }
    
-   public void setPayloadType(final java.lang.String payloadType){
+   public void setPayloadType(final String payloadType){
       this.payloadType = payloadType;
    }
 

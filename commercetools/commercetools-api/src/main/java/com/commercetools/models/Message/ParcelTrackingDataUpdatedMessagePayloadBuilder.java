@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import com.commercetools.models.message.ParcelTrackingDataUpdatedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +11,15 @@ import java.time.ZonedDateTime;
 public final class ParcelTrackingDataUpdatedMessagePayloadBuilder {
    
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    @Nullable
    private com.commercetools.models.order.TrackingData trackingData;
    
    
-   private java.lang.String parcelId;
+   private String parcelId;
    
-   public ParcelTrackingDataUpdatedMessagePayloadBuilder deliveryId( final java.lang.String deliveryId) {
+   public ParcelTrackingDataUpdatedMessagePayloadBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -30,13 +29,13 @@ public final class ParcelTrackingDataUpdatedMessagePayloadBuilder {
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessagePayloadBuilder parcelId( final java.lang.String parcelId) {
+   public ParcelTrackingDataUpdatedMessagePayloadBuilder parcelId( final String parcelId) {
       this.parcelId = parcelId;
       return this;
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    
@@ -46,7 +45,7 @@ public final class ParcelTrackingDataUpdatedMessagePayloadBuilder {
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 

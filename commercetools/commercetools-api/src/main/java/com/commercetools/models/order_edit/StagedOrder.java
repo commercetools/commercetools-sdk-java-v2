@@ -44,6 +44,7 @@ public interface StagedOrder extends Order {
       instance.setTaxedPrice(template.getTaxedPrice());
       instance.setOrigin(template.getOrigin());
       instance.setShippingInfo(template.getShippingInfo());
+      instance.setRefusedGifts(template.getRefusedGifts());
       instance.setLocale(template.getLocale());
       instance.setCart(template.getCart());
       instance.setInventoryMode(template.getInventoryMode());

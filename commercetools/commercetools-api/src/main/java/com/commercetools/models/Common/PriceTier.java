@@ -1,7 +1,6 @@
 package com.commercetools.models.common;
 
-import com.commercetools.models.common.Money;
-import java.lang.Long;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.common.PriceTierImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -30,11 +29,11 @@ public interface PriceTier  {
    @NotNull
    @Valid
    @JsonProperty("value")
-   public Money getValue();
+   public TypedMoney getValue();
 
    public void setMinimumQuantity(final Long minimumQuantity);
    
-   public void setValue(final Money value);
+   public void setValue(final TypedMoney value);
    
    public static PriceTierImpl of(){
       return new PriceTierImpl();

@@ -6,8 +6,6 @@ import com.commercetools.models.common.Money;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderAddCustomLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,7 +18,7 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    @Nullable
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    
    private com.commercetools.models.common.Money money;
@@ -32,7 +30,7 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
    private com.commercetools.models.common.LocalizedString name;
    
    
-   private java.lang.String slug;
+   private String slug;
    
    @Nullable
    private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
@@ -42,7 +40,7 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
       return this;
    }
    
-   public StagedOrderAddCustomLineItemActionBuilder quantity(@Nullable final java.lang.Integer quantity) {
+   public StagedOrderAddCustomLineItemActionBuilder quantity(@Nullable final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -62,7 +60,7 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
       return this;
    }
    
-   public StagedOrderAddCustomLineItemActionBuilder slug( final java.lang.String slug) {
+   public StagedOrderAddCustomLineItemActionBuilder slug( final String slug) {
       this.slug = slug;
       return this;
    }
@@ -78,7 +76,7 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -98,7 +96,7 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
    }
    
    
-   public java.lang.String getSlug(){
+   public String getSlug(){
       return this.slug;
    }
    

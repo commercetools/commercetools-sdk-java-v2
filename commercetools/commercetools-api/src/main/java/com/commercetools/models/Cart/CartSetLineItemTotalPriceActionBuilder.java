@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ExternalLineItemTotalPrice;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetLineItemTotalPriceAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class CartSetLineItemTotalPriceActionBuilder {
    private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    public CartSetLineItemTotalPriceActionBuilder externalTotalPrice(@Nullable final com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
       this.externalTotalPrice = externalTotalPrice;
       return this;
    }
    
-   public CartSetLineItemTotalPriceActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public CartSetLineItemTotalPriceActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class CartSetLineItemTotalPriceActionBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
 

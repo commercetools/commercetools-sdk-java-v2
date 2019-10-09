@@ -1,7 +1,6 @@
 package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodSetDescriptionActionImpl implements ShippingMethodSetDescriptionAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String description;
+   private String description;
 
    @JsonCreator
-   ShippingMethodSetDescriptionActionImpl(@JsonProperty("description") final java.lang.String description) {
+   ShippingMethodSetDescriptionActionImpl(@JsonProperty("description") final String description) {
       this.description = description;
       this.action = "setDescription";
    }
@@ -37,16 +36,16 @@ public final class ShippingMethodSetDescriptionActionImpl implements ShippingMet
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
 
-   public void setDescription(final java.lang.String description){
+   public void setDescription(final String description){
       this.description = description;
    }
 

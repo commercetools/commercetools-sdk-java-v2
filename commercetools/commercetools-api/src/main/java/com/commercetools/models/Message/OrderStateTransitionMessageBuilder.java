@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
 import com.commercetools.models.state.StateReference;
-import java.lang.Boolean;
 import com.commercetools.models.message.OrderStateTransitionMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,13 +17,19 @@ public final class OrderStateTransitionMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -33,13 +38,10 @@ public final class OrderStateTransitionMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
    
-   private java.lang.String type;
-   
-   
-   private java.lang.Boolean force;
+   private Boolean force;
    
    
    private com.commercetools.models.state.StateReference state;
@@ -54,17 +56,27 @@ public final class OrderStateTransitionMessageBuilder {
       return this;
    }
    
-   public OrderStateTransitionMessageBuilder id( final java.lang.String id) {
+   public OrderStateTransitionMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public OrderStateTransitionMessageBuilder version( final java.lang.Long version) {
+   public OrderStateTransitionMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public OrderStateTransitionMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public OrderStateTransitionMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public OrderStateTransitionMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public OrderStateTransitionMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -79,17 +91,12 @@ public final class OrderStateTransitionMessageBuilder {
       return this;
    }
    
-   public OrderStateTransitionMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public OrderStateTransitionMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public OrderStateTransitionMessageBuilder type( final java.lang.String type) {
-      this.type = type;
-      return this;
-   }
-   
-   public OrderStateTransitionMessageBuilder force( final java.lang.Boolean force) {
+   public OrderStateTransitionMessageBuilder force( final Boolean force) {
       this.force = force;
       return this;
    }
@@ -110,17 +117,27 @@ public final class OrderStateTransitionMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -135,17 +152,12 @@ public final class OrderStateTransitionMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
-      return this.type;
-   }
-   
-   
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    
@@ -155,7 +167,7 @@ public final class OrderStateTransitionMessageBuilder {
    }
 
    public OrderStateTransitionMessage build() {
-       return new OrderStateTransitionMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, force, state);
+       return new OrderStateTransitionMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, force, state);
    }
    
    public static OrderStateTransitionMessageBuilder of() {
@@ -168,11 +180,12 @@ public final class OrderStateTransitionMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.force = template.getForce();
       builder.state = template.getState();
       return builder;

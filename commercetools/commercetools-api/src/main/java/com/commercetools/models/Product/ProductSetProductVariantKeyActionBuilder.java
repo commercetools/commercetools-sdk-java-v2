@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetProductVariantKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,54 +10,54 @@ import java.time.ZonedDateTime;
 public final class ProductSetProductVariantKeyActionBuilder {
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public ProductSetProductVariantKeyActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetProductVariantKeyActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductSetProductVariantKeyActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ProductSetProductVariantKeyActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ProductSetProductVariantKeyActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductSetProductVariantKeyActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
-   public ProductSetProductVariantKeyActionBuilder key(@Nullable final java.lang.String key) {
+   public ProductSetProductVariantKeyActionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

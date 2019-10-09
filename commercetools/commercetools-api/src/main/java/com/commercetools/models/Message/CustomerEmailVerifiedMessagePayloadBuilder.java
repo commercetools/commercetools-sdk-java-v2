@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.CustomerEmailVerifiedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;

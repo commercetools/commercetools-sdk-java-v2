@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.error.ErrorObject;
 import com.commercetools.models.order_edit.OrderEditResult;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure {
 
-   private java.lang.String type;
+   private String type;
    
    private java.util.List<com.commercetools.models.error.ErrorObject> errors;
 
@@ -38,7 +37,7 @@ public final class OrderEditPreviewFailureImpl implements OrderEditPreviewFailur
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    

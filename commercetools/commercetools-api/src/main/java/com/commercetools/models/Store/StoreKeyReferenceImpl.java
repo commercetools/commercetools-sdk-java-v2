@@ -25,10 +25,10 @@ public final class StoreKeyReferenceImpl implements StoreKeyReference {
 
    private com.commercetools.models.common.ReferenceTypeId typeId;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   StoreKeyReferenceImpl(@JsonProperty("key") final java.lang.String key) {
+   StoreKeyReferenceImpl(@JsonProperty("key") final String key) {
       this.key = key;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("store").get();
    }
@@ -42,11 +42,11 @@ public final class StoreKeyReferenceImpl implements StoreKeyReference {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

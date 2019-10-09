@@ -2,7 +2,6 @@ package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNameAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String assetId;
+   private String assetId;
    
    private com.commercetools.models.common.LocalizedString name;
    
-   private java.lang.String assetKey;
+   private String assetKey;
 
    @JsonCreator
-   CategoryChangeAssetNameActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   CategoryChangeAssetNameActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("assetKey") final String assetKey) {
       this.assetId = assetId;
       this.name = name;
       this.assetKey = assetKey;
@@ -44,12 +43,12 @@ public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAs
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
@@ -59,11 +58,11 @@ public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAs
    }
    
    
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
 
-   public void setAssetId(final java.lang.String assetId){
+   public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
    
@@ -71,7 +70,7 @@ public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAs
       this.name = name;
    }
    
-   public void setAssetKey(final java.lang.String assetKey){
+   public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
    }
 

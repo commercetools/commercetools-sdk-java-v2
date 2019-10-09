@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeConstraintEnumDraft;
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeChangeAttributeConstraintAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class ProductTypeChangeAttributeConstraintActionBuilder {
    private com.commercetools.models.product_type.AttributeConstraintEnumDraft newValue;
    
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
    public ProductTypeChangeAttributeConstraintActionBuilder newValue( final com.commercetools.models.product_type.AttributeConstraintEnumDraft newValue) {
       this.newValue = newValue;
       return this;
    }
    
-   public ProductTypeChangeAttributeConstraintActionBuilder attributeName( final java.lang.String attributeName) {
+   public ProductTypeChangeAttributeConstraintActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
@@ -33,7 +32,7 @@ public final class ProductTypeChangeAttributeConstraintActionBuilder {
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
 

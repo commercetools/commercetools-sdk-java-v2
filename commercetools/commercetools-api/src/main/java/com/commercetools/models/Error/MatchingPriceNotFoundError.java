@@ -3,8 +3,6 @@ package com.commercetools.models.error;
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.error.MatchingPriceNotFoundErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;

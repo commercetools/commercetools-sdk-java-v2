@@ -1,8 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.error.PriceChangedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;

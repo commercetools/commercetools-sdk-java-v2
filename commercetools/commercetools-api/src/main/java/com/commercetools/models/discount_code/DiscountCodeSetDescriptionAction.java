@@ -2,7 +2,6 @@ package com.commercetools.models.discount_code;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.discount_code.DiscountCodeSetDescriptionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.product.ProductVariant;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDeletedMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.util.List<java.lang.Object> removedImageUrls;
+   private java.util.List<Object> removedImageUrls;
    
    private com.commercetools.models.product.ProductVariant variant;
 
    @JsonCreator
-   ProductVariantDeletedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<java.lang.Object> removedImageUrls, @JsonProperty("variant") final com.commercetools.models.product.ProductVariant variant) {
+   ProductVariantDeletedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<Object> removedImageUrls, @JsonProperty("variant") final com.commercetools.models.product.ProductVariant variant) {
       this.removedImageUrls = removedImageUrls;
       this.variant = variant;
       this.type = "ProductVariantDeleted";
@@ -42,12 +40,12 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.util.List<java.lang.Object> getRemovedImageUrls(){
+   public java.util.List<Object> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
    
@@ -56,7 +54,7 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
       return this.variant;
    }
 
-   public void setRemovedImageUrls(final java.util.List<java.lang.Object> removedImageUrls){
+   public void setRemovedImageUrls(final java.util.List<Object> removedImageUrls){
       this.removedImageUrls = removedImageUrls;
    }
    

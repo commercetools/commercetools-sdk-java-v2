@@ -3,8 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.state.StateReference;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,22 +24,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTransitionMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.Boolean newIncludedInStatistics;
+   private Boolean newIncludedInStatistics;
    
    private com.commercetools.models.state.StateReference oldState;
    
-   private java.lang.Boolean force;
+   private Boolean force;
    
-   private java.lang.Boolean oldIncludedInStatistics;
+   private Boolean oldIncludedInStatistics;
    
    private com.commercetools.models.state.StateReference newState;
    
    private com.commercetools.models.common.Reference target;
 
    @JsonCreator
-   ReviewStateTransitionMessagePayloadImpl(@JsonProperty("newIncludedInStatistics") final java.lang.Boolean newIncludedInStatistics, @JsonProperty("oldState") final com.commercetools.models.state.StateReference oldState, @JsonProperty("force") final java.lang.Boolean force, @JsonProperty("oldIncludedInStatistics") final java.lang.Boolean oldIncludedInStatistics, @JsonProperty("newState") final com.commercetools.models.state.StateReference newState, @JsonProperty("target") final com.commercetools.models.common.Reference target) {
+   ReviewStateTransitionMessagePayloadImpl(@JsonProperty("newIncludedInStatistics") final Boolean newIncludedInStatistics, @JsonProperty("oldState") final com.commercetools.models.state.StateReference oldState, @JsonProperty("force") final Boolean force, @JsonProperty("oldIncludedInStatistics") final Boolean oldIncludedInStatistics, @JsonProperty("newState") final com.commercetools.models.state.StateReference newState, @JsonProperty("target") final com.commercetools.models.common.Reference target) {
       this.newIncludedInStatistics = newIncludedInStatistics;
       this.oldState = oldState;
       this.force = force;
@@ -55,12 +53,12 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.Boolean getNewIncludedInStatistics(){
+   public Boolean getNewIncludedInStatistics(){
       return this.newIncludedInStatistics;
    }
    
@@ -70,12 +68,12 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
    }
    
    
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    
    
-   public java.lang.Boolean getOldIncludedInStatistics(){
+   public Boolean getOldIncludedInStatistics(){
       return this.oldIncludedInStatistics;
    }
    
@@ -89,7 +87,7 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
       return this.target;
    }
 
-   public void setNewIncludedInStatistics(final java.lang.Boolean newIncludedInStatistics){
+   public void setNewIncludedInStatistics(final Boolean newIncludedInStatistics){
       this.newIncludedInStatistics = newIncludedInStatistics;
    }
    
@@ -97,11 +95,11 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
       this.oldState = oldState;
    }
    
-   public void setForce(final java.lang.Boolean force){
+   public void setForce(final Boolean force){
       this.force = force;
    }
    
-   public void setOldIncludedInStatistics(final java.lang.Boolean oldIncludedInStatistics){
+   public void setOldIncludedInStatistics(final Boolean oldIncludedInStatistics){
       this.oldIncludedInStatistics = oldIncludedInStatistics;
    }
    

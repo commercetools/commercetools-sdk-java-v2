@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product.ProductRevertStagedChangesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

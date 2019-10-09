@@ -6,7 +6,6 @@ import com.commercetools.models.payment.PaymentMethodInfo;
 import com.commercetools.models.payment.PaymentStatusDraft;
 import com.commercetools.models.payment.TransactionDraft;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

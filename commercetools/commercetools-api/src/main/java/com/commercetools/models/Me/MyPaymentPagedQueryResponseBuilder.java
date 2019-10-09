@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyPayment;
-import java.lang.Long;
 import com.commercetools.models.me.MyPaymentPagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,29 +10,37 @@ import java.time.ZonedDateTime;
 public final class MyPaymentPagedQueryResponseBuilder {
    
    @Nullable
-   private java.lang.Long total;
+   private Long total;
    
    
-   private java.lang.Long offset;
+   private Long offset;
    
    
-   private java.lang.Long count;
+   private Long count;
+   
+   
+   private Long limit;
    
    
    private java.util.List<com.commercetools.models.me.MyPayment> results;
    
-   public MyPaymentPagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
+   public MyPaymentPagedQueryResponseBuilder total(@Nullable final Long total) {
       this.total = total;
       return this;
    }
    
-   public MyPaymentPagedQueryResponseBuilder offset( final java.lang.Long offset) {
+   public MyPaymentPagedQueryResponseBuilder offset( final Long offset) {
       this.offset = offset;
       return this;
    }
    
-   public MyPaymentPagedQueryResponseBuilder count( final java.lang.Long count) {
+   public MyPaymentPagedQueryResponseBuilder count( final Long count) {
       this.count = count;
+      return this;
+   }
+   
+   public MyPaymentPagedQueryResponseBuilder limit( final Long limit) {
+      this.limit = limit;
       return this;
    }
    
@@ -43,18 +50,23 @@ public final class MyPaymentPagedQueryResponseBuilder {
    }
    
    @Nullable
-   public java.lang.Long getTotal(){
+   public Long getTotal(){
       return this.total;
    }
    
    
-   public java.lang.Long getOffset(){
+   public Long getOffset(){
       return this.offset;
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
+   }
+   
+   
+   public Long getLimit(){
+      return this.limit;
    }
    
    
@@ -63,7 +75,7 @@ public final class MyPaymentPagedQueryResponseBuilder {
    }
 
    public MyPaymentPagedQueryResponse build() {
-       return new MyPaymentPagedQueryResponseImpl(total, offset, count, results);
+       return new MyPaymentPagedQueryResponseImpl(total, offset, count, limit, results);
    }
    
    public static MyPaymentPagedQueryResponseBuilder of() {
@@ -75,6 +87,7 @@ public final class MyPaymentPagedQueryResponseBuilder {
       builder.total = template.getTotal();
       builder.offset = template.getOffset();
       builder.count = template.getCount();
+      builder.limit = template.getLimit();
       builder.results = template.getResults();
       return builder;
    }

@@ -1,8 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.project.ProjectChangeMessagesEnabledAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ProjectChangeMessagesEnabledActionBuilder {
    
    
-   private java.lang.Boolean messagesEnabled;
+   private Boolean messagesEnabled;
    
-   public ProjectChangeMessagesEnabledActionBuilder messagesEnabled( final java.lang.Boolean messagesEnabled) {
+   public ProjectChangeMessagesEnabledActionBuilder messagesEnabled( final Boolean messagesEnabled) {
       this.messagesEnabled = messagesEnabled;
       return this;
    }
    
    
-   public java.lang.Boolean getMessagesEnabled(){
+   public Boolean getMessagesEnabled(){
       return this.messagesEnabled;
    }
 

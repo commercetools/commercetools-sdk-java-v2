@@ -1,7 +1,6 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeRemoveFieldDefinitionActionImpl implements TypeRemoveFieldDefinitionAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String fieldName;
+   private String fieldName;
 
    @JsonCreator
-   TypeRemoveFieldDefinitionActionImpl(@JsonProperty("fieldName") final java.lang.String fieldName) {
+   TypeRemoveFieldDefinitionActionImpl(@JsonProperty("fieldName") final String fieldName) {
       this.fieldName = fieldName;
       this.action = "removeFieldDefinition";
    }
@@ -37,16 +36,16 @@ public final class TypeRemoveFieldDefinitionActionImpl implements TypeRemoveFiel
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getFieldName(){
+   public String getFieldName(){
       return this.fieldName;
    }
 
-   public void setFieldName(final java.lang.String fieldName){
+   public void setFieldName(final String fieldName){
       this.fieldName = fieldName;
    }
 

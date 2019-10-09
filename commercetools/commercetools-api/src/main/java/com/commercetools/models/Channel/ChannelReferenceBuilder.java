@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class ChannelReferenceBuilder {
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private com.commercetools.models.channel.Channel obj;
    
-   public ChannelReferenceBuilder id( final java.lang.String id) {
+   public ChannelReferenceBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -28,7 +28,7 @@ public final class ChannelReferenceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

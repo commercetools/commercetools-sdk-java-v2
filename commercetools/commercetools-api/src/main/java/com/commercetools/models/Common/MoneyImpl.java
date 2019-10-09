@@ -1,8 +1,6 @@
 package com.commercetools.models.common;
 
 import com.commercetools.models.common.TypedMoneyDraft;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MoneyImpl implements Money {
 
-   private java.lang.Long centAmount;
+   private Long centAmount;
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
 
    @JsonCreator
-   MoneyImpl(@JsonProperty("centAmount") final java.lang.Long centAmount, @JsonProperty("currencyCode") final java.lang.String currencyCode) {
+   MoneyImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
       this.centAmount = centAmount;
       this.currencyCode = currencyCode;
    }
@@ -38,22 +36,22 @@ public final class MoneyImpl implements Money {
    }
    
    
-   public java.lang.Long getCentAmount(){
+   public Long getCentAmount(){
       return this.centAmount;
    }
    
    /**
    	<p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
    */
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
 
-   public void setCentAmount(final java.lang.Long centAmount){
+   public void setCentAmount(final Long centAmount){
       this.centAmount = centAmount;
    }
    
-   public void setCurrencyCode(final java.lang.String currencyCode){
+   public void setCurrencyCode(final String currencyCode){
       this.currencyCode = currencyCode;
    }
 

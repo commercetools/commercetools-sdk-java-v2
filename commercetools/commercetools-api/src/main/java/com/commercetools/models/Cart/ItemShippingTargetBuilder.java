@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
-import java.lang.Integer;
-import java.lang.String;
+
 import com.commercetools.models.cart.ItemShippingTarget;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class ItemShippingTargetBuilder {
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    
-   private java.lang.String addressKey;
+   private String addressKey;
    
-   public ItemShippingTargetBuilder quantity( final java.lang.Integer quantity) {
+   public ItemShippingTargetBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
    
-   public ItemShippingTargetBuilder addressKey( final java.lang.String addressKey) {
+   public ItemShippingTargetBuilder addressKey( final String addressKey) {
       this.addressKey = addressKey;
       return this;
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getAddressKey(){
+   public String getAddressKey(){
       return this.addressKey;
    }
 

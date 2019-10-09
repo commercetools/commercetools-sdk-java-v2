@@ -4,7 +4,6 @@ import com.commercetools.models.common.AssetDraft;
 import com.commercetools.models.common.Image;
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.Attribute;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -34,12 +33,12 @@ public final class ProductVariantDraftImpl implements ProductVariantDraft {
    
    private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
-   private java.lang.String sku;
+   private String sku;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ProductVariantDraftImpl(@JsonProperty("images") final java.util.List<com.commercetools.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.models.common.AssetDraft> assets, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.PriceDraft> prices, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("key") final java.lang.String key) {
+   ProductVariantDraftImpl(@JsonProperty("images") final java.util.List<com.commercetools.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.models.common.AssetDraft> assets, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.PriceDraft> prices, @JsonProperty("sku") final String sku, @JsonProperty("key") final String key) {
       this.images = images;
       this.assets = assets;
       this.attributes = attributes;
@@ -72,12 +71,12 @@ public final class ProductVariantDraftImpl implements ProductVariantDraft {
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -97,11 +96,11 @@ public final class ProductVariantDraftImpl implements ProductVariantDraft {
       this.prices = prices;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

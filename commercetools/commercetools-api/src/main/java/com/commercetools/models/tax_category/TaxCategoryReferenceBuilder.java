@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class TaxCategoryReferenceBuilder {
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private com.commercetools.models.tax_category.TaxCategory obj;
    
-   public TaxCategoryReferenceBuilder id( final java.lang.String id) {
+   public TaxCategoryReferenceBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -28,7 +28,7 @@ public final class TaxCategoryReferenceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

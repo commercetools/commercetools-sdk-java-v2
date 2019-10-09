@@ -1,6 +1,6 @@
 package com.commercetools.models.order_edit;
 
-import java.lang.Integer;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditApplyImpl implements OrderEditApply {
 
-   private java.lang.Integer resourceVersion;
+   private Integer resourceVersion;
    
-   private java.lang.Integer editVersion;
+   private Integer editVersion;
 
    @JsonCreator
-   OrderEditApplyImpl(@JsonProperty("resourceVersion") final java.lang.Integer resourceVersion, @JsonProperty("editVersion") final java.lang.Integer editVersion) {
+   OrderEditApplyImpl(@JsonProperty("resourceVersion") final Integer resourceVersion, @JsonProperty("editVersion") final Integer editVersion) {
       this.resourceVersion = resourceVersion;
       this.editVersion = editVersion;
    }
@@ -36,20 +36,20 @@ public final class OrderEditApplyImpl implements OrderEditApply {
    }
    
    
-   public java.lang.Integer getResourceVersion(){
+   public Integer getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.Integer getEditVersion(){
+   public Integer getEditVersion(){
       return this.editVersion;
    }
 
-   public void setResourceVersion(final java.lang.Integer resourceVersion){
+   public void setResourceVersion(final Integer resourceVersion){
       this.resourceVersion = resourceVersion;
    }
    
-   public void setEditVersion(final java.lang.Integer editVersion){
+   public void setEditVersion(final Integer editVersion){
       this.editVersion = editVersion;
    }
 

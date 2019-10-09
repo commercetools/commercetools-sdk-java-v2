@@ -1,8 +1,6 @@
 package com.commercetools.models.customer_group;
 
 import com.commercetools.models.customer_group.CustomerGroupUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.customer_group.CustomerGroupSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

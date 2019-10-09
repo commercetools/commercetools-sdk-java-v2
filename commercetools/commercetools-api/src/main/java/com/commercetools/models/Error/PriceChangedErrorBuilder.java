@@ -1,8 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.error.PriceChangedError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class PriceChangedErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    
-   private java.util.List<java.lang.String> lineItems;
+   private java.util.List<String> lineItems;
    
    
-   private java.lang.Boolean shipping;
+   private Boolean shipping;
    
-   public PriceChangedErrorBuilder message( final java.lang.String message) {
+   public PriceChangedErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public PriceChangedErrorBuilder lineItems( final java.util.List<java.lang.String> lineItems) {
+   public PriceChangedErrorBuilder lineItems( final java.util.List<String> lineItems) {
       this.lineItems = lineItems;
       return this;
    }
    
-   public PriceChangedErrorBuilder shipping( final java.lang.Boolean shipping) {
+   public PriceChangedErrorBuilder shipping( final Boolean shipping) {
       this.shipping = shipping;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.util.List<java.lang.String> getLineItems(){
+   public java.util.List<String> getLineItems(){
       return this.lineItems;
    }
    
    
-   public java.lang.Boolean getShipping(){
+   public Boolean getShipping(){
       return this.shipping;
    }
 

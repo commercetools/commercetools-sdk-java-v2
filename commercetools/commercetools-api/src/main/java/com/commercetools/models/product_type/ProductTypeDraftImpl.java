@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeDefinitionDraft;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeDraftImpl implements ProductTypeDraft {
 
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.String description;
+   private String description;
    
    private java.util.List<com.commercetools.models.product_type.AttributeDefinitionDraft> attributes;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ProductTypeDraftImpl(@JsonProperty("name") final java.lang.String name, @JsonProperty("description") final java.lang.String description, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product_type.AttributeDefinitionDraft> attributes, @JsonProperty("key") final java.lang.String key) {
+   ProductTypeDraftImpl(@JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("attributes") final java.util.List<com.commercetools.models.product_type.AttributeDefinitionDraft> attributes, @JsonProperty("key") final String key) {
       this.name = name;
       this.description = description;
       this.attributes = attributes;
@@ -43,12 +42,12 @@ public final class ProductTypeDraftImpl implements ProductTypeDraft {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
@@ -58,15 +57,15 @@ public final class ProductTypeDraftImpl implements ProductTypeDraft {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setDescription(final java.lang.String description){
+   public void setDescription(final String description){
       this.description = description;
    }
    
@@ -74,7 +73,7 @@ public final class ProductTypeDraftImpl implements ProductTypeDraft {
       this.attributes = attributes;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

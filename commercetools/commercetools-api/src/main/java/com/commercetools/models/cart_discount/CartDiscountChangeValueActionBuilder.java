@@ -1,8 +1,7 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import com.commercetools.models.cart_discount.CartDiscountValue;
-import java.lang.String;
+import com.commercetools.models.cart_discount.CartDiscountValueDraft;
 import com.commercetools.models.cart_discount.CartDiscountChangeValueAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +11,15 @@ import java.time.ZonedDateTime;
 public final class CartDiscountChangeValueActionBuilder {
    
    
-   private com.commercetools.models.cart_discount.CartDiscountValue value;
+   private com.commercetools.models.cart_discount.CartDiscountValueDraft value;
    
-   public CartDiscountChangeValueActionBuilder value( final com.commercetools.models.cart_discount.CartDiscountValue value) {
+   public CartDiscountChangeValueActionBuilder value( final com.commercetools.models.cart_discount.CartDiscountValueDraft value) {
       this.value = value;
       return this;
    }
    
    
-   public com.commercetools.models.cart_discount.CartDiscountValue getValue(){
+   public com.commercetools.models.cart_discount.CartDiscountValueDraft getValue(){
       return this.value;
    }
 

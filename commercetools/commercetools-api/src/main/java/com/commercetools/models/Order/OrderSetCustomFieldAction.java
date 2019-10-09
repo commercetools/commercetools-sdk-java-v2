@@ -1,8 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

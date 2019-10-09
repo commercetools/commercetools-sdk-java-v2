@@ -1,7 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.util.List<java.lang.String> languages;
+   private java.util.List<String> languages;
 
    @JsonCreator
-   ProjectChangeLanguagesActionImpl(@JsonProperty("languages") final java.util.List<java.lang.String> languages) {
+   ProjectChangeLanguagesActionImpl(@JsonProperty("languages") final java.util.List<String> languages) {
       this.languages = languages;
       this.action = "changeLanguages";
    }
@@ -37,16 +36,16 @@ public final class ProjectChangeLanguagesActionImpl implements ProjectChangeLang
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.util.List<java.lang.String> getLanguages(){
+   public java.util.List<String> getLanguages(){
       return this.languages;
    }
 
-   public void setLanguages(final java.util.List<java.lang.String> languages){
+   public void setLanguages(final java.util.List<String> languages){
       this.languages = languages;
    }
 

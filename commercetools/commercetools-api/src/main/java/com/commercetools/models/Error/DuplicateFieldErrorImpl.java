@@ -1,8 +1,7 @@
 package com.commercetools.models.error;
 
+import com.commercetools.models.common.Reference;
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,17 +23,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
-   private java.lang.Object duplicateValue;
+   private com.commercetools.models.common.Reference conflictingResource;
    
-   private java.lang.String field;
+   private Object duplicateValue;
+   
+   private String field;
 
    @JsonCreator
-   DuplicateFieldErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("duplicateValue") final java.lang.Object duplicateValue, @JsonProperty("field") final java.lang.String field) {
+   DuplicateFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("conflictingResource") final com.commercetools.models.common.Reference conflictingResource, @JsonProperty("duplicateValue") final Object duplicateValue, @JsonProperty("field") final String field) {
       this.message = message;
+      this.conflictingResource = conflictingResource;
       this.duplicateValue = duplicateValue;
       this.field = field;
       this.code = "DuplicateField";
@@ -44,34 +46,43 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.lang.Object getDuplicateValue(){
+   public com.commercetools.models.common.Reference getConflictingResource(){
+      return this.conflictingResource;
+   }
+   
+   
+   public Object getDuplicateValue(){
       return this.duplicateValue;
    }
    
    
-   public java.lang.String getField(){
+   public String getField(){
       return this.field;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setDuplicateValue(final java.lang.Object duplicateValue){
+   public void setConflictingResource(final com.commercetools.models.common.Reference conflictingResource){
+      this.conflictingResource = conflictingResource;
+   }
+   
+   public void setDuplicateValue(final Object duplicateValue){
       this.duplicateValue = duplicateValue;
    }
    
-   public void setField(final java.lang.String field){
+   public void setField(final String field){
       this.field = field;
    }
 

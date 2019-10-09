@@ -50,7 +50,6 @@ import com.commercetools.models.cart.CartSetShippingMethodTaxAmountAction;
 import com.commercetools.models.cart.CartSetShippingMethodTaxRateAction;
 import com.commercetools.models.cart.CartSetShippingRateInputAction;
 import com.commercetools.models.cart.CartUpdateItemShippingAddressAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

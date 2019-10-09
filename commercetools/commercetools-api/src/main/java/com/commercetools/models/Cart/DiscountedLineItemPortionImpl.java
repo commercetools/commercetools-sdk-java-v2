@@ -1,7 +1,7 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart_discount.CartDiscountReference;
-import com.commercetools.models.common.Money;
+import com.commercetools.models.common.TypedMoney;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion {
 
-   private com.commercetools.models.common.Money discountedAmount;
+   private com.commercetools.models.common.TypedMoney discountedAmount;
    
    private com.commercetools.models.cart_discount.CartDiscountReference discount;
 
    @JsonCreator
-   DiscountedLineItemPortionImpl(@JsonProperty("discountedAmount") final com.commercetools.models.common.Money discountedAmount, @JsonProperty("discount") final com.commercetools.models.cart_discount.CartDiscountReference discount) {
+   DiscountedLineItemPortionImpl(@JsonProperty("discountedAmount") final com.commercetools.models.common.TypedMoney discountedAmount, @JsonProperty("discount") final com.commercetools.models.cart_discount.CartDiscountReference discount) {
       this.discountedAmount = discountedAmount;
       this.discount = discount;
    }
@@ -37,7 +37,7 @@ public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPo
    }
    
    
-   public com.commercetools.models.common.Money getDiscountedAmount(){
+   public com.commercetools.models.common.TypedMoney getDiscountedAmount(){
       return this.discountedAmount;
    }
    
@@ -46,7 +46,7 @@ public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPo
       return this.discount;
    }
 
-   public void setDiscountedAmount(final com.commercetools.models.common.Money discountedAmount){
+   public void setDiscountedAmount(final com.commercetools.models.common.TypedMoney discountedAmount){
       this.discountedAmount = discountedAmount;
    }
    

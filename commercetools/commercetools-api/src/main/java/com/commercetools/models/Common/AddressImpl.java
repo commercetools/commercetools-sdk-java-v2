@@ -1,6 +1,6 @@
 package com.commercetools.models.common;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,58 +22,58 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AddressImpl implements Address {
 
-   private java.lang.String country;
+   private String country;
    
-   private java.lang.String lastName;
+   private String lastName;
    
-   private java.lang.String pOBox;
+   private String pOBox;
    
-   private java.lang.String city;
+   private String city;
    
-   private java.lang.String streetNumber;
+   private String streetNumber;
    
-   private java.lang.String postalCode;
+   private String postalCode;
    
-   private java.lang.String mobile;
+   private String mobile;
    
-   private java.lang.String externalId;
+   private String externalId;
    
-   private java.lang.String additionalAddressInfo;
+   private String additionalAddressInfo;
    
-   private java.lang.String title;
+   private String title;
    
-   private java.lang.String building;
+   private String building;
    
-   private java.lang.String firstName;
+   private String firstName;
    
-   private java.lang.String streetName;
+   private String streetName;
    
-   private java.lang.String phone;
+   private String phone;
    
-   private java.lang.String additionalStreetInfo;
+   private String additionalStreetInfo;
    
-   private java.lang.String company;
+   private String company;
    
-   private java.lang.String state;
+   private String state;
    
-   private java.lang.String salutation;
+   private String salutation;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.String fax;
+   private String fax;
    
-   private java.lang.String department;
+   private String department;
    
-   private java.lang.String region;
+   private String region;
    
-   private java.lang.String email;
+   private String email;
    
-   private java.lang.String apartment;
+   private String apartment;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   AddressImpl(@JsonProperty("country") final java.lang.String country, @JsonProperty("lastName") final java.lang.String lastName, @JsonProperty("pOBox") final java.lang.String pOBox, @JsonProperty("city") final java.lang.String city, @JsonProperty("streetNumber") final java.lang.String streetNumber, @JsonProperty("postalCode") final java.lang.String postalCode, @JsonProperty("mobile") final java.lang.String mobile, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("additionalAddressInfo") final java.lang.String additionalAddressInfo, @JsonProperty("title") final java.lang.String title, @JsonProperty("building") final java.lang.String building, @JsonProperty("firstName") final java.lang.String firstName, @JsonProperty("streetName") final java.lang.String streetName, @JsonProperty("phone") final java.lang.String phone, @JsonProperty("additionalStreetInfo") final java.lang.String additionalStreetInfo, @JsonProperty("company") final java.lang.String company, @JsonProperty("state") final java.lang.String state, @JsonProperty("salutation") final java.lang.String salutation, @JsonProperty("id") final java.lang.String id, @JsonProperty("fax") final java.lang.String fax, @JsonProperty("department") final java.lang.String department, @JsonProperty("region") final java.lang.String region, @JsonProperty("email") final java.lang.String email, @JsonProperty("apartment") final java.lang.String apartment, @JsonProperty("key") final java.lang.String key) {
+   AddressImpl(@JsonProperty("country") final String country, @JsonProperty("lastName") final String lastName, @JsonProperty("pOBox") final String pOBox, @JsonProperty("city") final String city, @JsonProperty("streetNumber") final String streetNumber, @JsonProperty("postalCode") final String postalCode, @JsonProperty("mobile") final String mobile, @JsonProperty("externalId") final String externalId, @JsonProperty("additionalAddressInfo") final String additionalAddressInfo, @JsonProperty("title") final String title, @JsonProperty("building") final String building, @JsonProperty("firstName") final String firstName, @JsonProperty("streetName") final String streetName, @JsonProperty("phone") final String phone, @JsonProperty("additionalStreetInfo") final String additionalStreetInfo, @JsonProperty("company") final String company, @JsonProperty("state") final String state, @JsonProperty("salutation") final String salutation, @JsonProperty("id") final String id, @JsonProperty("fax") final String fax, @JsonProperty("department") final String department, @JsonProperty("region") final String region, @JsonProperty("email") final String email, @JsonProperty("apartment") final String apartment, @JsonProperty("key") final String key) {
       this.country = country;
       this.lastName = lastName;
       this.pOBox = pOBox;
@@ -107,227 +107,227 @@ public final class AddressImpl implements Address {
    /**
    	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    
-   public java.lang.String getLastName(){
+   public String getLastName(){
       return this.lastName;
    }
    
    
-   public java.lang.String getPOBox(){
+   public String getPOBox(){
       return this.pOBox;
    }
    
    
-   public java.lang.String getCity(){
+   public String getCity(){
       return this.city;
    }
    
    
-   public java.lang.String getStreetNumber(){
+   public String getStreetNumber(){
       return this.streetNumber;
    }
    
    
-   public java.lang.String getPostalCode(){
+   public String getPostalCode(){
       return this.postalCode;
    }
    
    
-   public java.lang.String getMobile(){
+   public String getMobile(){
       return this.mobile;
    }
    
    
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
    
-   public java.lang.String getAdditionalAddressInfo(){
+   public String getAdditionalAddressInfo(){
       return this.additionalAddressInfo;
    }
    
    
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
    
    
-   public java.lang.String getBuilding(){
+   public String getBuilding(){
       return this.building;
    }
    
    
-   public java.lang.String getFirstName(){
+   public String getFirstName(){
       return this.firstName;
    }
    
    
-   public java.lang.String getStreetName(){
+   public String getStreetName(){
       return this.streetName;
    }
    
    
-   public java.lang.String getPhone(){
+   public String getPhone(){
       return this.phone;
    }
    
    
-   public java.lang.String getAdditionalStreetInfo(){
+   public String getAdditionalStreetInfo(){
       return this.additionalStreetInfo;
    }
    
    
-   public java.lang.String getCompany(){
+   public String getCompany(){
       return this.company;
    }
    
    
-   public java.lang.String getState(){
+   public String getState(){
       return this.state;
    }
    
    
-   public java.lang.String getSalutation(){
+   public String getSalutation(){
       return this.salutation;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.String getFax(){
+   public String getFax(){
       return this.fax;
    }
    
    
-   public java.lang.String getDepartment(){
+   public String getDepartment(){
       return this.department;
    }
    
    
-   public java.lang.String getRegion(){
+   public String getRegion(){
       return this.region;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
    
    
-   public java.lang.String getApartment(){
+   public String getApartment(){
       return this.apartment;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
-   public void setLastName(final java.lang.String lastName){
+   public void setLastName(final String lastName){
       this.lastName = lastName;
    }
    
-   public void setPOBox(final java.lang.String pOBox){
+   public void setPOBox(final String pOBox){
       this.pOBox = pOBox;
    }
    
-   public void setCity(final java.lang.String city){
+   public void setCity(final String city){
       this.city = city;
    }
    
-   public void setStreetNumber(final java.lang.String streetNumber){
+   public void setStreetNumber(final String streetNumber){
       this.streetNumber = streetNumber;
    }
    
-   public void setPostalCode(final java.lang.String postalCode){
+   public void setPostalCode(final String postalCode){
       this.postalCode = postalCode;
    }
    
-   public void setMobile(final java.lang.String mobile){
+   public void setMobile(final String mobile){
       this.mobile = mobile;
    }
    
-   public void setExternalId(final java.lang.String externalId){
+   public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
    
-   public void setAdditionalAddressInfo(final java.lang.String additionalAddressInfo){
+   public void setAdditionalAddressInfo(final String additionalAddressInfo){
       this.additionalAddressInfo = additionalAddressInfo;
    }
    
-   public void setTitle(final java.lang.String title){
+   public void setTitle(final String title){
       this.title = title;
    }
    
-   public void setBuilding(final java.lang.String building){
+   public void setBuilding(final String building){
       this.building = building;
    }
    
-   public void setFirstName(final java.lang.String firstName){
+   public void setFirstName(final String firstName){
       this.firstName = firstName;
    }
    
-   public void setStreetName(final java.lang.String streetName){
+   public void setStreetName(final String streetName){
       this.streetName = streetName;
    }
    
-   public void setPhone(final java.lang.String phone){
+   public void setPhone(final String phone){
       this.phone = phone;
    }
    
-   public void setAdditionalStreetInfo(final java.lang.String additionalStreetInfo){
+   public void setAdditionalStreetInfo(final String additionalStreetInfo){
       this.additionalStreetInfo = additionalStreetInfo;
    }
    
-   public void setCompany(final java.lang.String company){
+   public void setCompany(final String company){
       this.company = company;
    }
    
-   public void setState(final java.lang.String state){
+   public void setState(final String state){
       this.state = state;
    }
    
-   public void setSalutation(final java.lang.String salutation){
+   public void setSalutation(final String salutation){
       this.salutation = salutation;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setFax(final java.lang.String fax){
+   public void setFax(final String fax){
       this.fax = fax;
    }
    
-   public void setDepartment(final java.lang.String department){
+   public void setDepartment(final String department){
       this.department = department;
    }
    
-   public void setRegion(final java.lang.String region){
+   public void setRegion(final String region){
       this.region = region;
    }
    
-   public void setEmail(final java.lang.String email){
+   public void setEmail(final String email){
       this.email = email;
    }
    
-   public void setApartment(final java.lang.String apartment){
+   public void setApartment(final String apartment){
       this.apartment = apartment;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

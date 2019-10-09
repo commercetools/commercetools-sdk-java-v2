@@ -2,8 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderTransitionStateActionImpl implements OrderTransitionStateAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean force;
+   private Boolean force;
    
    private com.commercetools.models.state.StateResourceIdentifier state;
 
    @JsonCreator
-   OrderTransitionStateActionImpl(@JsonProperty("force") final java.lang.Boolean force, @JsonProperty("state") final com.commercetools.models.state.StateResourceIdentifier state) {
+   OrderTransitionStateActionImpl(@JsonProperty("force") final Boolean force, @JsonProperty("state") final com.commercetools.models.state.StateResourceIdentifier state) {
       this.force = force;
       this.state = state;
       this.action = "transitionState";
@@ -42,12 +40,12 @@ public final class OrderTransitionStateActionImpl implements OrderTransitionStat
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    
@@ -56,7 +54,7 @@ public final class OrderTransitionStateActionImpl implements OrderTransitionStat
       return this.state;
    }
 
-   public void setForce(final java.lang.Boolean force){
+   public void setForce(final Boolean force){
       this.force = force;
    }
    

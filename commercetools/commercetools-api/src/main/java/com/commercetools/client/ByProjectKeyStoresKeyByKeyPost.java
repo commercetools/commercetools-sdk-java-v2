@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
 public class ByProjectKeyStoresKeyByKeyPost {
    
    
@@ -63,7 +64,12 @@ public class ByProjectKeyStoresKeyByKeyPost {
    
    public CompletableFuture<ApiHttpResponse<com.commercetools.models.store.Store>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,com.commercetools.models.store.Store.class));
+              .thenApply(response -> {
+                  if(response.getStatusCode() >= 400){
+                      throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                  }
+                  return Utils.convertResponse(response,com.commercetools.models.store.Store.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

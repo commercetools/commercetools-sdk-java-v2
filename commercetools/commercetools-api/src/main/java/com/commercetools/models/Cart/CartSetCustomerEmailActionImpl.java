@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetCustomerEmailActionImpl implements CartSetCustomerEmailAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String email;
+   private String email;
 
    @JsonCreator
-   CartSetCustomerEmailActionImpl(@JsonProperty("email") final java.lang.String email) {
+   CartSetCustomerEmailActionImpl(@JsonProperty("email") final String email) {
       this.email = email;
       this.action = "setCustomerEmail";
    }
@@ -37,16 +36,16 @@ public final class CartSetCustomerEmailActionImpl implements CartSetCustomerEmai
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 
-   public void setEmail(final java.lang.String email){
+   public void setEmail(final String email){
       this.email = email;
    }
 

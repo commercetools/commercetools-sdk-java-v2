@@ -4,9 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product.ProductVariant;
 import com.commercetools.models.product_type.ProductTypeReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -31,9 +28,9 @@ public final class ShoppingListLineItemImpl implements ShoppingListLineItem {
 
    private java.time.ZonedDateTime addedAt;
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
-   private java.lang.String productId;
+   private String productId;
    
    private com.commercetools.models.type.CustomFields custom;
    
@@ -41,9 +38,9 @@ public final class ShoppingListLineItemImpl implements ShoppingListLineItem {
    
    private com.commercetools.models.common.LocalizedString name;
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
-   private java.lang.String id;
+   private String id;
    
    private java.time.ZonedDateTime deactivatedAt;
    
@@ -52,7 +49,7 @@ public final class ShoppingListLineItemImpl implements ShoppingListLineItem {
    private com.commercetools.models.product_type.ProductTypeReference productType;
 
    @JsonCreator
-   ShoppingListLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("variant") final com.commercetools.models.product.ProductVariant variant, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("id") final java.lang.String id, @JsonProperty("deactivatedAt") final java.time.ZonedDateTime deactivatedAt, @JsonProperty("productSlug") final com.commercetools.models.common.LocalizedString productSlug, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeReference productType) {
+   ShoppingListLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final Integer quantity, @JsonProperty("productId") final String productId, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("variant") final com.commercetools.models.product.ProductVariant variant, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("variantId") final Long variantId, @JsonProperty("id") final String id, @JsonProperty("deactivatedAt") final java.time.ZonedDateTime deactivatedAt, @JsonProperty("productSlug") final com.commercetools.models.common.LocalizedString productSlug, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeReference productType) {
       this.addedAt = addedAt;
       this.quantity = quantity;
       this.productId = productId;
@@ -75,12 +72,12 @@ public final class ShoppingListLineItemImpl implements ShoppingListLineItem {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -100,12 +97,12 @@ public final class ShoppingListLineItemImpl implements ShoppingListLineItem {
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -128,11 +125,11 @@ public final class ShoppingListLineItemImpl implements ShoppingListLineItem {
       this.addedAt = addedAt;
    }
    
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
    
-   public void setProductId(final java.lang.String productId){
+   public void setProductId(final String productId){
       this.productId = productId;
    }
    
@@ -148,11 +145,11 @@ public final class ShoppingListLineItemImpl implements ShoppingListLineItem {
       this.name = name;
    }
    
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

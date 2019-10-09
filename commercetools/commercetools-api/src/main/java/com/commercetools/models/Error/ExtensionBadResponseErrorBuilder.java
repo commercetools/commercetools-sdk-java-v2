@@ -3,8 +3,6 @@ package com.commercetools.models.error;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.error.ErrorByExtension;
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.error.ExtensionBadResponseError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,18 +12,18 @@ import java.time.ZonedDateTime;
 public final class ExtensionBadResponseErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString localizedMessage;
    
    @Nullable
-   private java.lang.Object extensionExtraInfo;
+   private Object extensionExtraInfo;
    
    
    private com.commercetools.models.error.ErrorByExtension errorByExtension;
    
-   public ExtensionBadResponseErrorBuilder message( final java.lang.String message) {
+   public ExtensionBadResponseErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
@@ -35,7 +33,7 @@ public final class ExtensionBadResponseErrorBuilder {
       return this;
    }
    
-   public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final java.lang.Object extensionExtraInfo) {
+   public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final Object extensionExtraInfo) {
       this.extensionExtraInfo = extensionExtraInfo;
       return this;
    }
@@ -46,7 +44,7 @@ public final class ExtensionBadResponseErrorBuilder {
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
@@ -56,7 +54,7 @@ public final class ExtensionBadResponseErrorBuilder {
    }
    
    @Nullable
-   public java.lang.Object getExtensionExtraInfo(){
+   public Object getExtensionExtraInfo(){
       return this.extensionExtraInfo;
    }
    

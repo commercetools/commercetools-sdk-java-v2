@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.ItemState;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderImportLineItemStateActionImpl implements StagedOrderImportLineItemStateAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    private java.util.List<com.commercetools.models.order.ItemState> state;
 
    @JsonCreator
-   StagedOrderImportLineItemStateActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state) {
+   StagedOrderImportLineItemStateActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state) {
       this.lineItemId = lineItemId;
       this.state = state;
       this.action = "importLineItemState";
@@ -41,12 +40,12 @@ public final class StagedOrderImportLineItemStateActionImpl implements StagedOrd
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
@@ -55,7 +54,7 @@ public final class StagedOrderImportLineItemStateActionImpl implements StagedOrd
       return this.state;
    }
 
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
    

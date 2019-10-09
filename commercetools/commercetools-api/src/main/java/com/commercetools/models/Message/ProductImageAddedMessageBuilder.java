@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.Image;
 import com.commercetools.models.message.Message;
-import java.lang.Boolean;
-import java.lang.Long;
 import com.commercetools.models.message.ProductImageAddedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -19,13 +17,19 @@ public final class ProductImageAddedMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -34,19 +38,16 @@ public final class ProductImageAddedMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    
    private com.commercetools.models.common.Image image;
    
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
    public ProductImageAddedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -58,17 +59,27 @@ public final class ProductImageAddedMessageBuilder {
       return this;
    }
    
-   public ProductImageAddedMessageBuilder id( final java.lang.String id) {
+   public ProductImageAddedMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ProductImageAddedMessageBuilder version( final java.lang.Long version) {
+   public ProductImageAddedMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public ProductImageAddedMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public ProductImageAddedMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public ProductImageAddedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public ProductImageAddedMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -83,13 +94,8 @@ public final class ProductImageAddedMessageBuilder {
       return this;
    }
    
-   public ProductImageAddedMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public ProductImageAddedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
-      return this;
-   }
-   
-   public ProductImageAddedMessageBuilder type( final java.lang.String type) {
-      this.type = type;
       return this;
    }
    
@@ -98,12 +104,12 @@ public final class ProductImageAddedMessageBuilder {
       return this;
    }
    
-   public ProductImageAddedMessageBuilder staged( final java.lang.Boolean staged) {
+   public ProductImageAddedMessageBuilder staged( final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductImageAddedMessageBuilder variantId( final java.lang.Long variantId) {
+   public ProductImageAddedMessageBuilder variantId( final Long variantId) {
       this.variantId = variantId;
       return this;
    }
@@ -119,17 +125,27 @@ public final class ProductImageAddedMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -144,13 +160,8 @@ public final class ProductImageAddedMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
-   }
-   
-   
-   public java.lang.String getType(){
-      return this.type;
    }
    
    
@@ -159,17 +170,17 @@ public final class ProductImageAddedMessageBuilder {
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
 
    public ProductImageAddedMessage build() {
-       return new ProductImageAddedMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, image, staged, variantId);
+       return new ProductImageAddedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, image, staged, variantId);
    }
    
    public static ProductImageAddedMessageBuilder of() {
@@ -182,11 +193,12 @@ public final class ProductImageAddedMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.image = template.getImage();
       builder.staged = template.getStaged();
       builder.variantId = template.getVariantId();

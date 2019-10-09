@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.cart.CartRecalculateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CartRecalculateActionBuilder {
    
    @Nullable
-   private java.lang.Boolean updateProductData;
+   private Boolean updateProductData;
    
-   public CartRecalculateActionBuilder updateProductData(@Nullable final java.lang.Boolean updateProductData) {
+   public CartRecalculateActionBuilder updateProductData(@Nullable final Boolean updateProductData) {
       this.updateProductData = updateProductData;
       return this;
    }
    
    @Nullable
-   public java.lang.Boolean getUpdateProductData(){
+   public Boolean getUpdateProductData(){
       return this.updateProductData;
    }
 

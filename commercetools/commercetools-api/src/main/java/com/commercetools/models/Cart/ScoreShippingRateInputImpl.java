@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.ShippingRateInput;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ScoreShippingRateInputImpl implements ScoreShippingRateInput {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.Integer score;
+   private Integer score;
 
    @JsonCreator
-   ScoreShippingRateInputImpl(@JsonProperty("score") final java.lang.Integer score) {
+   ScoreShippingRateInputImpl(@JsonProperty("score") final Integer score) {
       this.score = score;
       this.type = "Score";
    }
@@ -38,16 +36,16 @@ public final class ScoreShippingRateInputImpl implements ScoreShippingRateInput 
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.Integer getScore(){
+   public Integer getScore(){
       return this.score;
    }
 
-   public void setScore(final java.lang.Integer score){
+   public void setScore(final Integer score){
       this.score = score;
    }
 

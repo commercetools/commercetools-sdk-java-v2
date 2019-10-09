@@ -1,7 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountChangeCartPredicateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

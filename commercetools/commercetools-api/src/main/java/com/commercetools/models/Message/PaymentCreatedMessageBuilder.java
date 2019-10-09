@@ -17,13 +17,19 @@ public final class PaymentCreatedMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -32,10 +38,7 @@ public final class PaymentCreatedMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    
    private com.commercetools.models.payment.Payment payment;
@@ -50,17 +53,27 @@ public final class PaymentCreatedMessageBuilder {
       return this;
    }
    
-   public PaymentCreatedMessageBuilder id( final java.lang.String id) {
+   public PaymentCreatedMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public PaymentCreatedMessageBuilder version( final java.lang.Long version) {
+   public PaymentCreatedMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public PaymentCreatedMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public PaymentCreatedMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public PaymentCreatedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public PaymentCreatedMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -75,13 +88,8 @@ public final class PaymentCreatedMessageBuilder {
       return this;
    }
    
-   public PaymentCreatedMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public PaymentCreatedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
-      return this;
-   }
-   
-   public PaymentCreatedMessageBuilder type( final java.lang.String type) {
-      this.type = type;
       return this;
    }
    
@@ -101,17 +109,27 @@ public final class PaymentCreatedMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -126,13 +144,8 @@ public final class PaymentCreatedMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
-   }
-   
-   
-   public java.lang.String getType(){
-      return this.type;
    }
    
    
@@ -141,7 +154,7 @@ public final class PaymentCreatedMessageBuilder {
    }
 
    public PaymentCreatedMessage build() {
-       return new PaymentCreatedMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, payment);
+       return new PaymentCreatedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, payment);
    }
    
    public static PaymentCreatedMessageBuilder of() {
@@ -154,11 +167,12 @@ public final class PaymentCreatedMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.payment = template.getPayment();
       return builder;
    }

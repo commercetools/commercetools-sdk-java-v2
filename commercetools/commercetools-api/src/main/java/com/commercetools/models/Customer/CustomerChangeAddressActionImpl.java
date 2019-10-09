@@ -2,7 +2,6 @@ package com.commercetools.models.customer;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.customer.CustomerUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerChangeAddressActionImpl implements CustomerChangeAddressAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.Address address;
    
-   private java.lang.String addressId;
+   private String addressId;
 
    @JsonCreator
-   CustomerChangeAddressActionImpl(@JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("addressId") final java.lang.String addressId) {
+   CustomerChangeAddressActionImpl(@JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("addressId") final String addressId) {
       this.address = address;
       this.addressId = addressId;
       this.action = "changeAddress";
@@ -41,7 +40,7 @@ public final class CustomerChangeAddressActionImpl implements CustomerChangeAddr
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -51,7 +50,7 @@ public final class CustomerChangeAddressActionImpl implements CustomerChangeAddr
    }
    
    
-   public java.lang.String getAddressId(){
+   public String getAddressId(){
       return this.addressId;
    }
 
@@ -59,7 +58,7 @@ public final class CustomerChangeAddressActionImpl implements CustomerChangeAddr
       this.address = address;
    }
    
-   public void setAddressId(final java.lang.String addressId){
+   public void setAddressId(final String addressId){
       this.addressId = addressId;
    }
 

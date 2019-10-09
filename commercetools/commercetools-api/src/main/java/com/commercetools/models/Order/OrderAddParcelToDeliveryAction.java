@@ -4,7 +4,6 @@ import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.order.ParcelMeasurements;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import com.commercetools.models.order.OrderAddParcelToDeliveryActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

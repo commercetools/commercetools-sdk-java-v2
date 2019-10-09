@@ -4,8 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product_type.AttributeConstraintEnum;
 import com.commercetools.models.product_type.AttributeType;
 import com.commercetools.models.product_type.TextInputHint;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product_type.AttributeDefinitionDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,19 +13,19 @@ import java.time.ZonedDateTime;
 public final class AttributeDefinitionDraftBuilder {
    
    
-   private java.lang.Boolean isRequired;
+   private Boolean isRequired;
    
    @Nullable
    private com.commercetools.models.product_type.AttributeConstraintEnum attributeConstraint;
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
    private com.commercetools.models.product_type.TextInputHint inputHint;
    
    @Nullable
-   private java.lang.Boolean isSearchable;
+   private Boolean isSearchable;
    
    
    private com.commercetools.models.common.LocalizedString label;
@@ -38,7 +36,7 @@ public final class AttributeDefinitionDraftBuilder {
    @Nullable
    private com.commercetools.models.common.LocalizedString inputTip;
    
-   public AttributeDefinitionDraftBuilder isRequired( final java.lang.Boolean isRequired) {
+   public AttributeDefinitionDraftBuilder isRequired( final Boolean isRequired) {
       this.isRequired = isRequired;
       return this;
    }
@@ -48,7 +46,7 @@ public final class AttributeDefinitionDraftBuilder {
       return this;
    }
    
-   public AttributeDefinitionDraftBuilder name( final java.lang.String name) {
+   public AttributeDefinitionDraftBuilder name( final String name) {
       this.name = name;
       return this;
    }
@@ -58,7 +56,7 @@ public final class AttributeDefinitionDraftBuilder {
       return this;
    }
    
-   public AttributeDefinitionDraftBuilder isSearchable(@Nullable final java.lang.Boolean isSearchable) {
+   public AttributeDefinitionDraftBuilder isSearchable(@Nullable final Boolean isSearchable) {
       this.isSearchable = isSearchable;
       return this;
    }
@@ -79,7 +77,7 @@ public final class AttributeDefinitionDraftBuilder {
    }
    
    
-   public java.lang.Boolean getIsRequired(){
+   public Boolean getIsRequired(){
       return this.isRequired;
    }
    
@@ -89,7 +87,7 @@ public final class AttributeDefinitionDraftBuilder {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
@@ -99,7 +97,7 @@ public final class AttributeDefinitionDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getIsSearchable(){
+   public Boolean getIsSearchable(){
       return this.isSearchable;
    }
    

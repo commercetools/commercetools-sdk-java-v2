@@ -3,7 +3,6 @@ package com.commercetools.models.shopping_list;
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.shopping_list.ShoppingListSetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

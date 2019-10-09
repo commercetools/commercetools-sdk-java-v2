@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetOrderNumberAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class StagedOrderSetOrderNumberActionBuilder {
    
    @Nullable
-   private java.lang.String orderNumber;
+   private String orderNumber;
    
-   public StagedOrderSetOrderNumberActionBuilder orderNumber(@Nullable final java.lang.String orderNumber) {
+   public StagedOrderSetOrderNumberActionBuilder orderNumber(@Nullable final String orderNumber) {
       this.orderNumber = orderNumber;
       return this;
    }
    
    @Nullable
-   public java.lang.String getOrderNumber(){
+   public String getOrderNumber(){
       return this.orderNumber;
    }
 

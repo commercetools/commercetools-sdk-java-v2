@@ -2,7 +2,6 @@ package com.commercetools.models.customer;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.customer.CustomerUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerAddAddressActionImpl implements CustomerAddAddressAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.common.Address address;
 
@@ -38,7 +37,7 @@ public final class CustomerAddAddressActionImpl implements CustomerAddAddressAct
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

@@ -2,7 +2,6 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.common.MoneyType;
 import com.commercetools.models.common.TypedMoney;
-import java.lang.Long;
 import com.commercetools.models.common.HighPrecisionMoney;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,54 +11,54 @@ import java.time.ZonedDateTime;
 public final class HighPrecisionMoneyBuilder {
    
    
-   private java.lang.Long centAmount;
+   private Long centAmount;
    
    
-   private java.lang.Integer fractionDigits;
+   private Integer fractionDigits;
    
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
    
    
-   private java.lang.Long preciseAmount;
+   private Long preciseAmount;
    
-   public HighPrecisionMoneyBuilder centAmount( final java.lang.Long centAmount) {
+   public HighPrecisionMoneyBuilder centAmount( final Long centAmount) {
       this.centAmount = centAmount;
       return this;
    }
    
-   public HighPrecisionMoneyBuilder fractionDigits( final java.lang.Integer fractionDigits) {
+   public HighPrecisionMoneyBuilder fractionDigits( final Integer fractionDigits) {
       this.fractionDigits = fractionDigits;
       return this;
    }
    
-   public HighPrecisionMoneyBuilder currencyCode( final java.lang.String currencyCode) {
+   public HighPrecisionMoneyBuilder currencyCode( final String currencyCode) {
       this.currencyCode = currencyCode;
       return this;
    }
    
-   public HighPrecisionMoneyBuilder preciseAmount( final java.lang.Long preciseAmount) {
+   public HighPrecisionMoneyBuilder preciseAmount( final Long preciseAmount) {
       this.preciseAmount = preciseAmount;
       return this;
    }
    
    
-   public java.lang.Long getCentAmount(){
+   public Long getCentAmount(){
       return this.centAmount;
    }
    
    
-   public java.lang.Integer getFractionDigits(){
+   public Integer getFractionDigits(){
       return this.fractionDigits;
    }
    
    
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
    
    
-   public java.lang.Long getPreciseAmount(){
+   public Long getPreciseAmount(){
       return this.preciseAmount;
    }
 

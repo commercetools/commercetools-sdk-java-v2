@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order.Parcel;
-import java.lang.String;
 import com.commercetools.models.message.ParcelRemovedFromDeliveryMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class ParcelRemovedFromDeliveryMessagePayloadBuilder {
    private com.commercetools.models.order.Parcel parcel;
    
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel( final com.commercetools.models.order.Parcel parcel) {
       this.parcel = parcel;
       return this;
    }
    
-   public ParcelRemovedFromDeliveryMessagePayloadBuilder deliveryId( final java.lang.String deliveryId) {
+   public ParcelRemovedFromDeliveryMessagePayloadBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class ParcelRemovedFromDeliveryMessagePayloadBuilder {
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
 

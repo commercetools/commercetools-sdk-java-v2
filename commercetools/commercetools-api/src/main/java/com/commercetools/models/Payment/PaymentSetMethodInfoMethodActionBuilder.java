@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentSetMethodInfoMethodAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class PaymentSetMethodInfoMethodActionBuilder {
    
    @Nullable
-   private java.lang.String method;
+   private String method;
    
-   public PaymentSetMethodInfoMethodActionBuilder method(@Nullable final java.lang.String method) {
+   public PaymentSetMethodInfoMethodActionBuilder method(@Nullable final String method) {
       this.method = method;
       return this;
    }
    
    @Nullable
-   public java.lang.String getMethod(){
+   public String getMethod(){
       return this.method;
    }
 

@@ -1,10 +1,8 @@
 package com.commercetools.models.shipping_method;
 
-import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.shipping_method.ZoneRate;
 import com.commercetools.models.tax_category.TaxCategoryReference;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.shipping_method.ShippingMethodImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -23,7 +21,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ShippingMethodImpl.class)
-public interface ShippingMethod extends BaseResource {
+public interface ShippingMethod extends LoggedResource {
 
    
    
@@ -81,6 +79,8 @@ public interface ShippingMethod extends BaseResource {
       instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setZoneRates(template.getZoneRates());
       instance.setPredicate(template.getPredicate());
       instance.setIsDefault(template.getIsDefault());

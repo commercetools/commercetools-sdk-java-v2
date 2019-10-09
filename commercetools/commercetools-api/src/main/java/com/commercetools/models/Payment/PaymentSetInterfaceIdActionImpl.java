@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String interfaceId;
+   private String interfaceId;
 
    @JsonCreator
-   PaymentSetInterfaceIdActionImpl(@JsonProperty("interfaceId") final java.lang.String interfaceId) {
+   PaymentSetInterfaceIdActionImpl(@JsonProperty("interfaceId") final String interfaceId) {
       this.interfaceId = interfaceId;
       this.action = "setInterfaceId";
    }
@@ -37,16 +36,16 @@ public final class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfac
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getInterfaceId(){
+   public String getInterfaceId(){
       return this.interfaceId;
    }
 
-   public void setInterfaceId(final java.lang.String interfaceId){
+   public void setInterfaceId(final String interfaceId){
       this.interfaceId = interfaceId;
    }
 

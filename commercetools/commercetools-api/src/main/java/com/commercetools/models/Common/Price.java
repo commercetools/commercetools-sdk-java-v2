@@ -2,11 +2,10 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.common.DiscountedPrice;
-import com.commercetools.models.common.Money;
 import com.commercetools.models.common.PriceTier;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.common.PriceImpl;
 
@@ -36,7 +35,7 @@ public interface Price  {
    @NotNull
    @Valid
    @JsonProperty("value")
-   public Money getValue();
+   public TypedMoney getValue();
    /**
    	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
@@ -74,7 +73,7 @@ public interface Price  {
 
    public void setId(final String id);
    
-   public void setValue(final Money value);
+   public void setValue(final TypedMoney value);
    
    public void setCountry(final String country);
    

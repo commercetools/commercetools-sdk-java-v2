@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.CustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.customer.CustomerAddBillingAddressIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

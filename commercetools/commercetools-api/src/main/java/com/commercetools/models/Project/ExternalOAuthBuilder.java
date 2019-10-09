@@ -1,6 +1,6 @@
 package com.commercetools.models.project;
 
-import java.lang.String;
+
 import com.commercetools.models.project.ExternalOAuth;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class ExternalOAuthBuilder {
    
    
-   private java.lang.String authorizationHeader;
+   private String authorizationHeader;
    
    
-   private java.lang.String url;
+   private String url;
    
-   public ExternalOAuthBuilder authorizationHeader( final java.lang.String authorizationHeader) {
+   public ExternalOAuthBuilder authorizationHeader( final String authorizationHeader) {
       this.authorizationHeader = authorizationHeader;
       return this;
    }
    
-   public ExternalOAuthBuilder url( final java.lang.String url) {
+   public ExternalOAuthBuilder url( final String url) {
       this.url = url;
       return this;
    }
    
    
-   public java.lang.String getAuthorizationHeader(){
+   public String getAuthorizationHeader(){
       return this.authorizationHeader;
    }
    
    
-   public java.lang.String getUrl(){
+   public String getUrl(){
       return this.url;
    }
 

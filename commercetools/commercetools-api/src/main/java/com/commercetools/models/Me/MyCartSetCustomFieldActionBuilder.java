@@ -1,8 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.me.MyCartSetCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class MyCartSetCustomFieldActionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.Object value;
+   private Object value;
    
-   public MyCartSetCustomFieldActionBuilder name( final java.lang.String name) {
+   public MyCartSetCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public MyCartSetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
+   public MyCartSetCustomFieldActionBuilder value(@Nullable final Object value) {
       this.value = value;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 

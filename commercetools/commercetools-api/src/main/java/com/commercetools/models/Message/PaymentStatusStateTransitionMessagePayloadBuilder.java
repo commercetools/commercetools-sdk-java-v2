@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.state.StateReference;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.message.PaymentStatusStateTransitionMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class PaymentStatusStateTransitionMessagePayloadBuilder {
    
    
-   private java.lang.Boolean force;
+   private Boolean force;
    
    
    private com.commercetools.models.state.StateReference state;
    
-   public PaymentStatusStateTransitionMessagePayloadBuilder force( final java.lang.Boolean force) {
+   public PaymentStatusStateTransitionMessagePayloadBuilder force( final Boolean force) {
       this.force = force;
       return this;
    }
@@ -29,7 +27,7 @@ public final class PaymentStatusStateTransitionMessagePayloadBuilder {
    }
    
    
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    

@@ -2,8 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.order.OrderTransitionStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -3,7 +3,6 @@ package com.commercetools.models.common;
 import com.commercetools.models.common.AssetSource;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import com.commercetools.models.common.AssetDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -25,10 +24,10 @@ public final class AssetDraftBuilder {
    private com.commercetools.models.common.LocalizedString description;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    @Nullable
-   private java.util.List<java.lang.String> tags;
+   private java.util.List<String> tags;
    
    public AssetDraftBuilder sources( final java.util.List<com.commercetools.models.common.AssetSource> sources) {
       this.sources = sources;
@@ -50,12 +49,12 @@ public final class AssetDraftBuilder {
       return this;
    }
    
-   public AssetDraftBuilder key(@Nullable final java.lang.String key) {
+   public AssetDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
-   public AssetDraftBuilder tags(@Nullable final java.util.List<java.lang.String> tags) {
+   public AssetDraftBuilder tags(@Nullable final java.util.List<String> tags) {
       this.tags = tags;
       return this;
    }
@@ -81,12 +80,12 @@ public final class AssetDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
    @Nullable
-   public java.util.List<java.lang.String> getTags(){
+   public java.util.List<String> getTags(){
       return this.tags;
    }
 

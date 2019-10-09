@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.state.StateReference;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentStatusImpl;
 
 import com.fasterxml.jackson.annotation.*;

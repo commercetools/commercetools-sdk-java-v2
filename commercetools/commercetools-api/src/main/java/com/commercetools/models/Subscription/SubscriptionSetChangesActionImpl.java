@@ -2,7 +2,6 @@ package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.ChangeSubscription;
 import com.commercetools.models.subscription.SubscriptionUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubscriptionSetChangesActionImpl implements SubscriptionSetChangesAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes;
 
@@ -38,7 +37,7 @@ public final class SubscriptionSetChangesActionImpl implements SubscriptionSetCh
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

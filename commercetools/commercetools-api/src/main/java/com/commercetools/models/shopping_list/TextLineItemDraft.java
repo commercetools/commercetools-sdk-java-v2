@@ -2,7 +2,6 @@ package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
 import java.time.ZonedDateTime;
 import com.commercetools.models.shopping_list.TextLineItemDraftImpl;
 

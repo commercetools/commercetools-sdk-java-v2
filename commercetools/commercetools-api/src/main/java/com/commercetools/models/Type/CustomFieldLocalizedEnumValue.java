@@ -1,7 +1,6 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import com.commercetools.models.type.CustomFieldLocalizedEnumValueImpl;
 
 import com.fasterxml.jackson.annotation.*;

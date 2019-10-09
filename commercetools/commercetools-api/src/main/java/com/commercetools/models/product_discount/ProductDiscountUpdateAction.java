@@ -10,7 +10,6 @@ import com.commercetools.models.product_discount.ProductDiscountSetKeyAction;
 import com.commercetools.models.product_discount.ProductDiscountSetValidFromAction;
 import com.commercetools.models.product_discount.ProductDiscountSetValidFromAndUntilAction;
 import com.commercetools.models.product_discount.ProductDiscountSetValidUntilAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

@@ -11,7 +11,6 @@ import com.commercetools.models.review.ReviewSetTargetAction;
 import com.commercetools.models.review.ReviewSetTextAction;
 import com.commercetools.models.review.ReviewSetTitleAction;
 import com.commercetools.models.review.ReviewTransitionStateAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

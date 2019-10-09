@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.SubscriptionUpdateAction;
-import java.lang.String;
 import com.commercetools.models.subscription.SubscriptionSetKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class SubscriptionSetKeyActionBuilder {
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public SubscriptionSetKeyActionBuilder key(@Nullable final java.lang.String key) {
+   public SubscriptionSetKeyActionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

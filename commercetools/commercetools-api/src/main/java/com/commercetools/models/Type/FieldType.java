@@ -12,7 +12,6 @@ import com.commercetools.models.type.CustomFieldReferenceType;
 import com.commercetools.models.type.CustomFieldSetType;
 import com.commercetools.models.type.CustomFieldStringType;
 import com.commercetools.models.type.CustomFieldTimeType;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

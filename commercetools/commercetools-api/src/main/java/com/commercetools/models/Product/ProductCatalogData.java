@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductData;
-import java.lang.Boolean;
 import com.commercetools.models.product.ProductCatalogDataImpl;
 
 import com.fasterxml.jackson.annotation.*;

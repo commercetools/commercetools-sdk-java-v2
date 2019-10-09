@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.SubscriptionUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.subscription.SubscriptionUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class SubscriptionUpdateBuilder {
    private java.util.List<com.commercetools.models.subscription.SubscriptionUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public SubscriptionUpdateBuilder actions( final java.util.List<com.commercetools.models.subscription.SubscriptionUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public SubscriptionUpdateBuilder version( final java.lang.Long version) {
+   public SubscriptionUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class SubscriptionUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

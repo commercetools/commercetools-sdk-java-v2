@@ -3,10 +3,9 @@ package com.commercetools.models.common;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.common.DiscountedPrice;
 import com.commercetools.models.common.Money;
-import com.commercetools.models.common.PriceTier;
+import com.commercetools.models.common.PriceTierDraft;
 import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.common.PriceDraft;
 import javax.annotation.Nullable;
@@ -20,10 +19,10 @@ public final class PriceDraftBuilder {
    private com.commercetools.models.common.DiscountedPrice discounted;
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
    @Nullable
-   private java.util.List<com.commercetools.models.common.PriceTier> tiers;
+   private java.util.List<com.commercetools.models.common.PriceTierDraft> tiers;
    
    @Nullable
    private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
@@ -48,12 +47,12 @@ public final class PriceDraftBuilder {
       return this;
    }
    
-   public PriceDraftBuilder country(@Nullable final java.lang.String country) {
+   public PriceDraftBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
    
-   public PriceDraftBuilder tiers(@Nullable final java.util.List<com.commercetools.models.common.PriceTier> tiers) {
+   public PriceDraftBuilder tiers(@Nullable final java.util.List<com.commercetools.models.common.PriceTierDraft> tiers) {
       this.tiers = tiers;
       return this;
    }
@@ -94,12 +93,12 @@ public final class PriceDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.models.common.PriceTier> getTiers(){
+   public java.util.List<com.commercetools.models.common.PriceTierDraft> getTiers(){
       return this.tiers;
    }
    

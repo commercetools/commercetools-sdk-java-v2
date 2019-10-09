@@ -1,8 +1,6 @@
 package com.commercetools.models.state;
 
 import com.commercetools.models.state.StateUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateChangeInitialActionImpl implements StateChangeInitialAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean initial;
+   private Boolean initial;
 
    @JsonCreator
-   StateChangeInitialActionImpl(@JsonProperty("initial") final java.lang.Boolean initial) {
+   StateChangeInitialActionImpl(@JsonProperty("initial") final Boolean initial) {
       this.initial = initial;
       this.action = "changeInitial";
    }
@@ -38,16 +36,16 @@ public final class StateChangeInitialActionImpl implements StateChangeInitialAct
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getInitial(){
+   public Boolean getInitial(){
       return this.initial;
    }
 
-   public void setInitial(final java.lang.Boolean initial){
+   public void setInitial(final Boolean initial){
       this.initial = initial;
    }
 

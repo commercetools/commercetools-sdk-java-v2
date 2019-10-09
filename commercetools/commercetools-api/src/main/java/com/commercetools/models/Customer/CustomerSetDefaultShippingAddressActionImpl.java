@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.CustomerUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSetDefaultShippingAddressActionImpl implements CustomerSetDefaultShippingAddressAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String addressId;
+   private String addressId;
 
    @JsonCreator
-   CustomerSetDefaultShippingAddressActionImpl(@JsonProperty("addressId") final java.lang.String addressId) {
+   CustomerSetDefaultShippingAddressActionImpl(@JsonProperty("addressId") final String addressId) {
       this.addressId = addressId;
       this.action = "setDefaultShippingAddress";
    }
@@ -37,16 +36,16 @@ public final class CustomerSetDefaultShippingAddressActionImpl implements Custom
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAddressId(){
+   public String getAddressId(){
       return this.addressId;
    }
 
-   public void setAddressId(final java.lang.String addressId){
+   public void setAddressId(final String addressId){
       this.addressId = addressId;
    }
 

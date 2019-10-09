@@ -1,6 +1,6 @@
 package com.commercetools.models.order;
 
-import java.lang.Integer;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ParcelMeasurementsImpl implements ParcelMeasurements {
 
-   private java.lang.Integer weightInGram;
+   private Integer weightInGram;
    
-   private java.lang.Integer lengthInMillimeter;
+   private Integer lengthInMillimeter;
    
-   private java.lang.Integer heightInMillimeter;
+   private Integer heightInMillimeter;
    
-   private java.lang.Integer widthInMillimeter;
+   private Integer widthInMillimeter;
 
    @JsonCreator
-   ParcelMeasurementsImpl(@JsonProperty("weightInGram") final java.lang.Integer weightInGram, @JsonProperty("lengthInMillimeter") final java.lang.Integer lengthInMillimeter, @JsonProperty("heightInMillimeter") final java.lang.Integer heightInMillimeter, @JsonProperty("widthInMillimeter") final java.lang.Integer widthInMillimeter) {
+   ParcelMeasurementsImpl(@JsonProperty("weightInGram") final Integer weightInGram, @JsonProperty("lengthInMillimeter") final Integer lengthInMillimeter, @JsonProperty("heightInMillimeter") final Integer heightInMillimeter, @JsonProperty("widthInMillimeter") final Integer widthInMillimeter) {
       this.weightInGram = weightInGram;
       this.lengthInMillimeter = lengthInMillimeter;
       this.heightInMillimeter = heightInMillimeter;
@@ -42,38 +42,38 @@ public final class ParcelMeasurementsImpl implements ParcelMeasurements {
    }
    
    
-   public java.lang.Integer getWeightInGram(){
+   public Integer getWeightInGram(){
       return this.weightInGram;
    }
    
    
-   public java.lang.Integer getLengthInMillimeter(){
+   public Integer getLengthInMillimeter(){
       return this.lengthInMillimeter;
    }
    
    
-   public java.lang.Integer getHeightInMillimeter(){
+   public Integer getHeightInMillimeter(){
       return this.heightInMillimeter;
    }
    
    
-   public java.lang.Integer getWidthInMillimeter(){
+   public Integer getWidthInMillimeter(){
       return this.widthInMillimeter;
    }
 
-   public void setWeightInGram(final java.lang.Integer weightInGram){
+   public void setWeightInGram(final Integer weightInGram){
       this.weightInGram = weightInGram;
    }
    
-   public void setLengthInMillimeter(final java.lang.Integer lengthInMillimeter){
+   public void setLengthInMillimeter(final Integer lengthInMillimeter){
       this.lengthInMillimeter = lengthInMillimeter;
    }
    
-   public void setHeightInMillimeter(final java.lang.Integer heightInMillimeter){
+   public void setHeightInMillimeter(final Integer heightInMillimeter){
       this.heightInMillimeter = heightInMillimeter;
    }
    
-   public void setWidthInMillimeter(final java.lang.Integer widthInMillimeter){
+   public void setWidthInMillimeter(final Integer widthInMillimeter){
       this.widthInMillimeter = widthInMillimeter;
    }
 

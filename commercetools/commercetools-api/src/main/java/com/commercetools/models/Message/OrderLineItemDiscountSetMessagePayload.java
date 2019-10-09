@@ -4,7 +4,6 @@ import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.models.cart.TaxedItemPrice;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.OrderLineItemDiscountSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;

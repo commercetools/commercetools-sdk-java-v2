@@ -1,7 +1,6 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOrderAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String fieldName;
+   private String fieldName;
    
-   private java.util.List<java.lang.String> keys;
+   private java.util.List<String> keys;
 
    @JsonCreator
-   TypeChangeEnumValueOrderActionImpl(@JsonProperty("fieldName") final java.lang.String fieldName, @JsonProperty("keys") final java.util.List<java.lang.String> keys) {
+   TypeChangeEnumValueOrderActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("keys") final java.util.List<String> keys) {
       this.fieldName = fieldName;
       this.keys = keys;
       this.action = "changeEnumValueOrder";
@@ -40,25 +39,25 @@ public final class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumV
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getFieldName(){
+   public String getFieldName(){
       return this.fieldName;
    }
    
    
-   public java.util.List<java.lang.String> getKeys(){
+   public java.util.List<String> getKeys(){
       return this.keys;
    }
 
-   public void setFieldName(final java.lang.String fieldName){
+   public void setFieldName(final String fieldName){
       this.fieldName = fieldName;
    }
    
-   public void setKeys(final java.util.List<java.lang.String> keys){
+   public void setKeys(final java.util.List<String> keys){
       this.keys = keys;
    }
 

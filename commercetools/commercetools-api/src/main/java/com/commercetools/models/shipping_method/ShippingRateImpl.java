@@ -2,7 +2,6 @@ package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.shipping_method.ShippingRatePriceTier;
-import java.lang.Boolean;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -30,10 +29,10 @@ public final class ShippingRateImpl implements ShippingRate {
    
    private com.commercetools.models.common.TypedMoney freeAbove;
    
-   private java.lang.Boolean isMatching;
+   private Boolean isMatching;
 
    @JsonCreator
-   ShippingRateImpl(@JsonProperty("tiers") final java.util.List<com.commercetools.models.shipping_method.ShippingRatePriceTier> tiers, @JsonProperty("price") final com.commercetools.models.common.TypedMoney price, @JsonProperty("freeAbove") final com.commercetools.models.common.TypedMoney freeAbove, @JsonProperty("isMatching") final java.lang.Boolean isMatching) {
+   ShippingRateImpl(@JsonProperty("tiers") final java.util.List<com.commercetools.models.shipping_method.ShippingRatePriceTier> tiers, @JsonProperty("price") final com.commercetools.models.common.TypedMoney price, @JsonProperty("freeAbove") final com.commercetools.models.common.TypedMoney freeAbove, @JsonProperty("isMatching") final Boolean isMatching) {
       this.tiers = tiers;
       this.price = price;
       this.freeAbove = freeAbove;
@@ -59,7 +58,7 @@ public final class ShippingRateImpl implements ShippingRate {
    }
    
    
-   public java.lang.Boolean getIsMatching(){
+   public Boolean getIsMatching(){
       return this.isMatching;
    }
 
@@ -75,7 +74,7 @@ public final class ShippingRateImpl implements ShippingRate {
       this.freeAbove = freeAbove;
    }
    
-   public void setIsMatching(final java.lang.Boolean isMatching){
+   public void setIsMatching(final Boolean isMatching){
       this.isMatching = isMatching;
    }
 

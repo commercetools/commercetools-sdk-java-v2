@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderRemoveCustomLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class StagedOrderRemoveCustomLineItemActionBuilder {
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
-   public StagedOrderRemoveCustomLineItemActionBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public StagedOrderRemoveCustomLineItemActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
 

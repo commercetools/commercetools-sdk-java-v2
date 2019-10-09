@@ -8,8 +8,6 @@ import com.commercetools.models.order.ItemState;
 import com.commercetools.models.order.ProductVariantImportDraft;
 import com.commercetools.models.tax_category.TaxRate;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.order.LineItemImportDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -22,13 +20,13 @@ public final class LineItemImportDraftBuilder {
    private com.commercetools.models.tax_category.TaxRate taxRate;
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    @Nullable
-   private java.lang.String productId;
+   private String productId;
    
    
    private com.commercetools.models.common.PriceDraft price;
@@ -56,7 +54,7 @@ public final class LineItemImportDraftBuilder {
       return this;
    }
    
-   public LineItemImportDraftBuilder quantity( final java.lang.Integer quantity) {
+   public LineItemImportDraftBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -66,7 +64,7 @@ public final class LineItemImportDraftBuilder {
       return this;
    }
    
-   public LineItemImportDraftBuilder productId(@Nullable final java.lang.String productId) {
+   public LineItemImportDraftBuilder productId(@Nullable final String productId) {
       this.productId = productId;
       return this;
    }
@@ -112,7 +110,7 @@ public final class LineItemImportDraftBuilder {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -122,7 +120,7 @@ public final class LineItemImportDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    

@@ -1,8 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetCustomLineItemCustomFieldActionImpl implements StagedOrderSetCustomLineItemCustomFieldAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.Object value;
+   private Object value;
 
    @JsonCreator
-   StagedOrderSetCustomLineItemCustomFieldActionImpl(@JsonProperty("customLineItemId") final java.lang.String customLineItemId, @JsonProperty("name") final java.lang.String name, @JsonProperty("value") final java.lang.Object value) {
+   StagedOrderSetCustomLineItemCustomFieldActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("name") final String name, @JsonProperty("value") final Object value) {
       this.customLineItemId = customLineItemId;
       this.name = name;
       this.value = value;
@@ -44,34 +42,34 @@ public final class StagedOrderSetCustomLineItemCustomFieldActionImpl implements 
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 
-   public void setCustomLineItemId(final java.lang.String customLineItemId){
+   public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setValue(final java.lang.Object value){
+   public void setValue(final Object value){
       this.value = value;
    }
 

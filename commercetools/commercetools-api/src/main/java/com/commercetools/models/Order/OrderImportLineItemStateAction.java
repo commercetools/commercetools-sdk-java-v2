@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.ItemState;
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order.OrderImportLineItemStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

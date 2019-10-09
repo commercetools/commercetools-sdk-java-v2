@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.CustomerEmailChangedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CustomerEmailChangedMessagePayloadBuilder {
    
    
-   private java.lang.String email;
+   private String email;
    
-   public CustomerEmailChangedMessagePayloadBuilder email( final java.lang.String email) {
+   public CustomerEmailChangedMessagePayloadBuilder email( final String email) {
       this.email = email;
       return this;
    }
    
    
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 

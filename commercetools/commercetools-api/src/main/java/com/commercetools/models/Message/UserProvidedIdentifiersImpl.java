@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,20 +22,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers {
 
-   private java.lang.String orderNumber;
+   private String orderNumber;
    
-   private java.lang.String externalId;
+   private String externalId;
    
-   private java.lang.String sku;
+   private String sku;
    
-   private java.lang.String customerNumber;
+   private String customerNumber;
    
    private com.commercetools.models.common.LocalizedString slug;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   UserProvidedIdentifiersImpl(@JsonProperty("orderNumber") final java.lang.String orderNumber, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("sku") final java.lang.String sku, @JsonProperty("customerNumber") final java.lang.String customerNumber, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug, @JsonProperty("key") final java.lang.String key) {
+   UserProvidedIdentifiersImpl(@JsonProperty("orderNumber") final String orderNumber, @JsonProperty("externalId") final String externalId, @JsonProperty("sku") final String sku, @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("slug") final com.commercetools.models.common.LocalizedString slug, @JsonProperty("key") final String key) {
       this.orderNumber = orderNumber;
       this.externalId = externalId;
       this.sku = sku;
@@ -49,22 +48,22 @@ public final class UserProvidedIdentifiersImpl implements UserProvidedIdentifier
    }
    
    
-   public java.lang.String getOrderNumber(){
+   public String getOrderNumber(){
       return this.orderNumber;
    }
    
    
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    
-   public java.lang.String getCustomerNumber(){
+   public String getCustomerNumber(){
       return this.customerNumber;
    }
    
@@ -74,23 +73,23 @@ public final class UserProvidedIdentifiersImpl implements UserProvidedIdentifier
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setOrderNumber(final java.lang.String orderNumber){
+   public void setOrderNumber(final String orderNumber){
       this.orderNumber = orderNumber;
    }
    
-   public void setExternalId(final java.lang.String externalId){
+   public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
    
-   public void setCustomerNumber(final java.lang.String customerNumber){
+   public void setCustomerNumber(final String customerNumber){
       this.customerNumber = customerNumber;
    }
    
@@ -98,7 +97,7 @@ public final class UserProvidedIdentifiersImpl implements UserProvidedIdentifier
       this.slug = slug;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

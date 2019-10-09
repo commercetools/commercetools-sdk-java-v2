@@ -40,7 +40,6 @@ import com.commercetools.models.order.OrderTransitionLineItemStateAction;
 import com.commercetools.models.order.OrderTransitionStateAction;
 import com.commercetools.models.order.OrderUpdateItemShippingAddressAction;
 import com.commercetools.models.order.OrderUpdateSyncInfoAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

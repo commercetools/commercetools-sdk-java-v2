@@ -1,8 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product_discount.ProductDiscountChangeIsActiveActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

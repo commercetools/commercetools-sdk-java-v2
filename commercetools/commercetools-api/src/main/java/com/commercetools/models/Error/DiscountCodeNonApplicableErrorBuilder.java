@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.error.DiscountCodeNonApplicableError;
 import javax.annotation.Nullable;
@@ -12,16 +11,16 @@ import java.time.ZonedDateTime;
 public final class DiscountCodeNonApplicableErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    @Nullable
-   private java.lang.String reason;
+   private String reason;
    
    @Nullable
    private java.time.ZonedDateTime validityCheckTime;
    
    @Nullable
-   private java.lang.String discountCode;
+   private String discountCode;
    
    @Nullable
    private java.time.ZonedDateTime validUntil;
@@ -30,14 +29,14 @@ public final class DiscountCodeNonApplicableErrorBuilder {
    private java.time.ZonedDateTime validFrom;
    
    @Nullable
-   private java.lang.String dicountCodeId;
+   private String dicountCodeId;
    
-   public DiscountCodeNonApplicableErrorBuilder message( final java.lang.String message) {
+   public DiscountCodeNonApplicableErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public DiscountCodeNonApplicableErrorBuilder reason(@Nullable final java.lang.String reason) {
+   public DiscountCodeNonApplicableErrorBuilder reason(@Nullable final String reason) {
       this.reason = reason;
       return this;
    }
@@ -47,7 +46,7 @@ public final class DiscountCodeNonApplicableErrorBuilder {
       return this;
    }
    
-   public DiscountCodeNonApplicableErrorBuilder discountCode(@Nullable final java.lang.String discountCode) {
+   public DiscountCodeNonApplicableErrorBuilder discountCode(@Nullable final String discountCode) {
       this.discountCode = discountCode;
       return this;
    }
@@ -62,18 +61,18 @@ public final class DiscountCodeNonApplicableErrorBuilder {
       return this;
    }
    
-   public DiscountCodeNonApplicableErrorBuilder dicountCodeId(@Nullable final java.lang.String dicountCodeId) {
+   public DiscountCodeNonApplicableErrorBuilder dicountCodeId(@Nullable final String dicountCodeId) {
       this.dicountCodeId = dicountCodeId;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    @Nullable
-   public java.lang.String getReason(){
+   public String getReason(){
       return this.reason;
    }
    
@@ -83,7 +82,7 @@ public final class DiscountCodeNonApplicableErrorBuilder {
    }
    
    @Nullable
-   public java.lang.String getDiscountCode(){
+   public String getDiscountCode(){
       return this.discountCode;
    }
    
@@ -98,7 +97,7 @@ public final class DiscountCodeNonApplicableErrorBuilder {
    }
    
    @Nullable
-   public java.lang.String getDicountCodeId(){
+   public String getDicountCodeId(){
       return this.dicountCodeId;
    }
 

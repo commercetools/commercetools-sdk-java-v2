@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentChangeTransactionInteractionIdAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class PaymentChangeTransactionInteractionIdActionBuilder {
    
    
-   private java.lang.String interactionId;
+   private String interactionId;
    
    
-   private java.lang.String transactionId;
+   private String transactionId;
    
-   public PaymentChangeTransactionInteractionIdActionBuilder interactionId( final java.lang.String interactionId) {
+   public PaymentChangeTransactionInteractionIdActionBuilder interactionId( final String interactionId) {
       this.interactionId = interactionId;
       return this;
    }
    
-   public PaymentChangeTransactionInteractionIdActionBuilder transactionId( final java.lang.String transactionId) {
+   public PaymentChangeTransactionInteractionIdActionBuilder transactionId( final String transactionId) {
       this.transactionId = transactionId;
       return this;
    }
    
    
-   public java.lang.String getInteractionId(){
+   public String getInteractionId(){
       return this.interactionId;
    }
    
    
-   public java.lang.String getTransactionId(){
+   public String getTransactionId(){
       return this.transactionId;
    }
 

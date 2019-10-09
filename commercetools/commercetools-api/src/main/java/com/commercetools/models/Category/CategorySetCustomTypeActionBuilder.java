@@ -3,7 +3,6 @@ package com.commercetools.models.category;
 import com.commercetools.models.category.CategoryUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.category.CategorySetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;

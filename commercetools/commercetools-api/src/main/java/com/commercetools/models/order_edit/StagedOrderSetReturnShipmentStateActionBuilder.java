@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.ReturnShipmentState;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetReturnShipmentStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class StagedOrderSetReturnShipmentStateActionBuilder {
    private com.commercetools.models.order.ReturnShipmentState shipmentState;
    
    
-   private java.lang.String returnItemId;
+   private String returnItemId;
    
    public StagedOrderSetReturnShipmentStateActionBuilder shipmentState( final com.commercetools.models.order.ReturnShipmentState shipmentState) {
       this.shipmentState = shipmentState;
       return this;
    }
    
-   public StagedOrderSetReturnShipmentStateActionBuilder returnItemId( final java.lang.String returnItemId) {
+   public StagedOrderSetReturnShipmentStateActionBuilder returnItemId( final String returnItemId) {
       this.returnItemId = returnItemId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class StagedOrderSetReturnShipmentStateActionBuilder {
    }
    
    
-   public java.lang.String getReturnItemId(){
+   public String getReturnItemId(){
       return this.returnItemId;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveEnumValuesAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.util.List<java.lang.String> keys;
+   private java.util.List<String> keys;
    
-   private java.lang.String attributeName;
+   private String attributeName;
 
    @JsonCreator
-   ProductTypeRemoveEnumValuesActionImpl(@JsonProperty("keys") final java.util.List<java.lang.String> keys, @JsonProperty("attributeName") final java.lang.String attributeName) {
+   ProductTypeRemoveEnumValuesActionImpl(@JsonProperty("keys") final java.util.List<String> keys, @JsonProperty("attributeName") final String attributeName) {
       this.keys = keys;
       this.attributeName = attributeName;
       this.action = "removeEnumValues";
@@ -40,25 +39,25 @@ public final class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeR
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.util.List<java.lang.String> getKeys(){
+   public java.util.List<String> getKeys(){
       return this.keys;
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
 
-   public void setKeys(final java.util.List<java.lang.String> keys){
+   public void setKeys(final java.util.List<String> keys){
       this.keys = keys;
    }
    
-   public void setAttributeName(final java.lang.String attributeName){
+   public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
    }
 

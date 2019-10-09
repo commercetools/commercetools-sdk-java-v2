@@ -1,7 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import com.commercetools.models.project.ProjectChangeLanguagesAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ProjectChangeLanguagesActionBuilder {
    
    
-   private java.util.List<java.lang.String> languages;
+   private java.util.List<String> languages;
    
-   public ProjectChangeLanguagesActionBuilder languages( final java.util.List<java.lang.String> languages) {
+   public ProjectChangeLanguagesActionBuilder languages( final java.util.List<String> languages) {
       this.languages = languages;
       return this;
    }
    
    
-   public java.util.List<java.lang.String> getLanguages(){
+   public java.util.List<String> getLanguages(){
       return this.languages;
    }
 

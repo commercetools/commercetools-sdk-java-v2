@@ -1,8 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
+
 import com.commercetools.models.product.FacetResultRange;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,132 +10,132 @@ import java.time.ZonedDateTime;
 public final class FacetResultRangeBuilder {
    
    
-   private java.lang.String toStr;
+   private String toStr;
    
    
-   private java.lang.Long total;
+   private Long total;
    
    
-   private java.lang.Integer min;
+   private Integer min;
    
    
-   private java.lang.String fromStr;
+   private String fromStr;
    
    
-   private java.lang.Integer max;
+   private Integer max;
    
    
-   private java.lang.Integer mean;
+   private Integer mean;
    
    
-   private java.lang.Long count;
+   private Long count;
    
    
-   private java.lang.Integer from;
+   private Integer from;
    
    
-   private java.lang.Integer to;
+   private Integer to;
    
    @Nullable
-   private java.lang.Long productCount;
+   private Long productCount;
    
-   public FacetResultRangeBuilder toStr( final java.lang.String toStr) {
+   public FacetResultRangeBuilder toStr( final String toStr) {
       this.toStr = toStr;
       return this;
    }
    
-   public FacetResultRangeBuilder total( final java.lang.Long total) {
+   public FacetResultRangeBuilder total( final Long total) {
       this.total = total;
       return this;
    }
    
-   public FacetResultRangeBuilder min( final java.lang.Integer min) {
+   public FacetResultRangeBuilder min( final Integer min) {
       this.min = min;
       return this;
    }
    
-   public FacetResultRangeBuilder fromStr( final java.lang.String fromStr) {
+   public FacetResultRangeBuilder fromStr( final String fromStr) {
       this.fromStr = fromStr;
       return this;
    }
    
-   public FacetResultRangeBuilder max( final java.lang.Integer max) {
+   public FacetResultRangeBuilder max( final Integer max) {
       this.max = max;
       return this;
    }
    
-   public FacetResultRangeBuilder mean( final java.lang.Integer mean) {
+   public FacetResultRangeBuilder mean( final Integer mean) {
       this.mean = mean;
       return this;
    }
    
-   public FacetResultRangeBuilder count( final java.lang.Long count) {
+   public FacetResultRangeBuilder count( final Long count) {
       this.count = count;
       return this;
    }
    
-   public FacetResultRangeBuilder from( final java.lang.Integer from) {
+   public FacetResultRangeBuilder from( final Integer from) {
       this.from = from;
       return this;
    }
    
-   public FacetResultRangeBuilder to( final java.lang.Integer to) {
+   public FacetResultRangeBuilder to( final Integer to) {
       this.to = to;
       return this;
    }
    
-   public FacetResultRangeBuilder productCount(@Nullable final java.lang.Long productCount) {
+   public FacetResultRangeBuilder productCount(@Nullable final Long productCount) {
       this.productCount = productCount;
       return this;
    }
    
    
-   public java.lang.String getToStr(){
+   public String getToStr(){
       return this.toStr;
    }
    
    
-   public java.lang.Long getTotal(){
+   public Long getTotal(){
       return this.total;
    }
    
    
-   public java.lang.Integer getMin(){
+   public Integer getMin(){
       return this.min;
    }
    
    
-   public java.lang.String getFromStr(){
+   public String getFromStr(){
       return this.fromStr;
    }
    
    
-   public java.lang.Integer getMax(){
+   public Integer getMax(){
       return this.max;
    }
    
    
-   public java.lang.Integer getMean(){
+   public Integer getMean(){
       return this.mean;
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
    }
    
    
-   public java.lang.Integer getFrom(){
+   public Integer getFrom(){
       return this.from;
    }
    
    
-   public java.lang.Integer getTo(){
+   public Integer getTo(){
       return this.to;
    }
    
    @Nullable
-   public java.lang.Long getProductCount(){
+   public Long getProductCount(){
       return this.productCount;
    }
 

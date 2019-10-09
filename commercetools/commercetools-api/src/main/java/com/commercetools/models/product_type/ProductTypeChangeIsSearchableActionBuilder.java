@@ -1,8 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeChangeIsSearchableAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class ProductTypeChangeIsSearchableActionBuilder {
    
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
    
-   private java.lang.Boolean isSearchable;
+   private Boolean isSearchable;
    
-   public ProductTypeChangeIsSearchableActionBuilder attributeName( final java.lang.String attributeName) {
+   public ProductTypeChangeIsSearchableActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
    
-   public ProductTypeChangeIsSearchableActionBuilder isSearchable( final java.lang.Boolean isSearchable) {
+   public ProductTypeChangeIsSearchableActionBuilder isSearchable( final Boolean isSearchable) {
       this.isSearchable = isSearchable;
       return this;
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
    
    
-   public java.lang.Boolean getIsSearchable(){
+   public Boolean getIsSearchable(){
       return this.isSearchable;
    }
 

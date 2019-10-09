@@ -1,8 +1,7 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountUpdateAction;
-import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.String;
+import com.commercetools.models.product_discount.ProductDiscountValueDraft;
 import com.commercetools.models.product_discount.ProductDiscountChangeValueActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -27,9 +26,9 @@ public interface ProductDiscountChangeValueAction extends ProductDiscountUpdateA
    @NotNull
    @Valid
    @JsonProperty("value")
-   public ProductDiscountValue getValue();
+   public ProductDiscountValueDraft getValue();
 
-   public void setValue(final ProductDiscountValue value);
+   public void setValue(final ProductDiscountValueDraft value);
    
    public static ProductDiscountChangeValueActionImpl of(){
       return new ProductDiscountChangeValueActionImpl();

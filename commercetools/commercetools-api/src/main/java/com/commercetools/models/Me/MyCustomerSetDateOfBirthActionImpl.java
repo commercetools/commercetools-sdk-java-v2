@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import java.time.LocalDate;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDateOfBirthAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.time.LocalDate dateOfBirth;
 
@@ -38,7 +37,7 @@ public final class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDa
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

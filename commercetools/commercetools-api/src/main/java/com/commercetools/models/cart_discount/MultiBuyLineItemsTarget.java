@@ -2,8 +2,6 @@ package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountTarget;
 import com.commercetools.models.cart_discount.SelectionMode;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart_discount.MultiBuyLineItemsTargetImpl;
 
 import com.fasterxml.jackson.annotation.*;

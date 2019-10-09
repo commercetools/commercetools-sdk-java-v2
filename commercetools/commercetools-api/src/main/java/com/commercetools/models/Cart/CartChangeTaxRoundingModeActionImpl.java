@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.RoundingMode;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxRoundingModeAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart.RoundingMode taxRoundingMode;
 
@@ -38,7 +37,7 @@ public final class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxR
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

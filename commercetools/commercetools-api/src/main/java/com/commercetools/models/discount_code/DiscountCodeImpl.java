@@ -5,9 +5,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -34,9 +31,9 @@ public final class DiscountCodeImpl implements DiscountCode {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
@@ -44,11 +41,11 @@ public final class DiscountCodeImpl implements DiscountCode {
    
    private java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> cartDiscounts;
    
-   private java.lang.String code;
+   private String code;
    
    private java.util.List<com.commercetools.models.common.Reference> references;
    
-   private java.lang.String cartPredicate;
+   private String cartPredicate;
    
    private com.commercetools.models.type.CustomFields custom;
    
@@ -56,20 +53,20 @@ public final class DiscountCodeImpl implements DiscountCode {
    
    private java.time.ZonedDateTime validUntil;
    
-   private java.util.List<java.lang.String> groups;
+   private java.util.List<String> groups;
    
    private com.commercetools.models.common.LocalizedString description;
    
    private java.time.ZonedDateTime validFrom;
    
-   private java.lang.Long maxApplicationsPerCustomer;
+   private Long maxApplicationsPerCustomer;
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
-   private java.lang.Long maxApplications;
+   private Long maxApplications;
 
    @JsonCreator
-   DiscountCodeImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("cartDiscounts") final java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> cartDiscounts, @JsonProperty("code") final java.lang.String code, @JsonProperty("references") final java.util.List<com.commercetools.models.common.Reference> references, @JsonProperty("cartPredicate") final java.lang.String cartPredicate, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("groups") final java.util.List<java.lang.String> groups, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("maxApplicationsPerCustomer") final java.lang.Long maxApplicationsPerCustomer, @JsonProperty("isActive") final java.lang.Boolean isActive, @JsonProperty("maxApplications") final java.lang.Long maxApplications) {
+   DiscountCodeImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("cartDiscounts") final java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> cartDiscounts, @JsonProperty("code") final String code, @JsonProperty("references") final java.util.List<com.commercetools.models.common.Reference> references, @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("groups") final java.util.List<String> groups, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("maxApplicationsPerCustomer") final Long maxApplicationsPerCustomer, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("maxApplications") final Long maxApplications) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -105,12 +102,12 @@ public final class DiscountCodeImpl implements DiscountCode {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -130,7 +127,7 @@ public final class DiscountCodeImpl implements DiscountCode {
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
@@ -140,7 +137,7 @@ public final class DiscountCodeImpl implements DiscountCode {
    }
    
    
-   public java.lang.String getCartPredicate(){
+   public String getCartPredicate(){
       return this.cartPredicate;
    }
    
@@ -160,7 +157,7 @@ public final class DiscountCodeImpl implements DiscountCode {
    }
    
    
-   public java.util.List<java.lang.String> getGroups(){
+   public java.util.List<String> getGroups(){
       return this.groups;
    }
    
@@ -175,17 +172,17 @@ public final class DiscountCodeImpl implements DiscountCode {
    }
    
    
-   public java.lang.Long getMaxApplicationsPerCustomer(){
+   public Long getMaxApplicationsPerCustomer(){
       return this.maxApplicationsPerCustomer;
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
    
-   public java.lang.Long getMaxApplications(){
+   public Long getMaxApplications(){
       return this.maxApplications;
    }
 
@@ -197,11 +194,11 @@ public final class DiscountCodeImpl implements DiscountCode {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -217,7 +214,7 @@ public final class DiscountCodeImpl implements DiscountCode {
       this.cartDiscounts = cartDiscounts;
    }
    
-   public void setCode(final java.lang.String code){
+   public void setCode(final String code){
       this.code = code;
    }
    
@@ -225,7 +222,7 @@ public final class DiscountCodeImpl implements DiscountCode {
       this.references = references;
    }
    
-   public void setCartPredicate(final java.lang.String cartPredicate){
+   public void setCartPredicate(final String cartPredicate){
       this.cartPredicate = cartPredicate;
    }
    
@@ -241,7 +238,7 @@ public final class DiscountCodeImpl implements DiscountCode {
       this.validUntil = validUntil;
    }
    
-   public void setGroups(final java.util.List<java.lang.String> groups){
+   public void setGroups(final java.util.List<String> groups){
       this.groups = groups;
    }
    
@@ -253,15 +250,15 @@ public final class DiscountCodeImpl implements DiscountCode {
       this.validFrom = validFrom;
    }
    
-   public void setMaxApplicationsPerCustomer(final java.lang.Long maxApplicationsPerCustomer){
+   public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer){
       this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
    }
    
-   public void setIsActive(final java.lang.Boolean isActive){
+   public void setIsActive(final Boolean isActive){
       this.isActive = isActive;
    }
    
-   public void setMaxApplications(final java.lang.Long maxApplications){
+   public void setMaxApplications(final Long maxApplications){
       this.maxApplications = maxApplications;
    }
 

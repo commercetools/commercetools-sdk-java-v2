@@ -1,8 +1,6 @@
 package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListChangeTextLineItemQuantityActionImpl implements ShoppingListChangeTextLineItemQuantityAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
-   private java.lang.String textLineItemId;
+   private String textLineItemId;
 
    @JsonCreator
-   ShoppingListChangeTextLineItemQuantityActionImpl(@JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("textLineItemId") final java.lang.String textLineItemId) {
+   ShoppingListChangeTextLineItemQuantityActionImpl(@JsonProperty("quantity") final Long quantity, @JsonProperty("textLineItemId") final String textLineItemId) {
       this.quantity = quantity;
       this.textLineItemId = textLineItemId;
       this.action = "changeTextLineItemQuantity";
@@ -41,25 +39,25 @@ public final class ShoppingListChangeTextLineItemQuantityActionImpl implements S
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getTextLineItemId(){
+   public String getTextLineItemId(){
       return this.textLineItemId;
    }
 
-   public void setQuantity(final java.lang.Long quantity){
+   public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
    
-   public void setTextLineItemId(final java.lang.String textLineItemId){
+   public void setTextLineItemId(final String textLineItemId){
       this.textLineItemId = textLineItemId;
    }
 

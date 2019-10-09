@@ -3,8 +3,6 @@ package com.commercetools.models.inventory;
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.inventory.InventoryEntry;
 import javax.annotation.Nullable;
@@ -21,10 +19,10 @@ public final class InventoryEntryBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -33,7 +31,7 @@ public final class InventoryEntryBuilder {
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long availableQuantity;
+   private Long availableQuantity;
    
    @Nullable
    private java.time.ZonedDateTime expectedDelivery;
@@ -42,16 +40,16 @@ public final class InventoryEntryBuilder {
    private com.commercetools.models.type.CustomFields custom;
    
    
-   private java.lang.Long quantityOnStock;
+   private Long quantityOnStock;
    
    @Nullable
    private com.commercetools.models.channel.ChannelResourceIdentifier supplyChannel;
    
    @Nullable
-   private java.lang.Long restockableInDays;
+   private Long restockableInDays;
    
    
-   private java.lang.String sku;
+   private String sku;
    
    public InventoryEntryBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -63,12 +61,12 @@ public final class InventoryEntryBuilder {
       return this;
    }
    
-   public InventoryEntryBuilder id( final java.lang.String id) {
+   public InventoryEntryBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public InventoryEntryBuilder version( final java.lang.Long version) {
+   public InventoryEntryBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -83,7 +81,7 @@ public final class InventoryEntryBuilder {
       return this;
    }
    
-   public InventoryEntryBuilder availableQuantity( final java.lang.Long availableQuantity) {
+   public InventoryEntryBuilder availableQuantity( final Long availableQuantity) {
       this.availableQuantity = availableQuantity;
       return this;
    }
@@ -98,7 +96,7 @@ public final class InventoryEntryBuilder {
       return this;
    }
    
-   public InventoryEntryBuilder quantityOnStock( final java.lang.Long quantityOnStock) {
+   public InventoryEntryBuilder quantityOnStock( final Long quantityOnStock) {
       this.quantityOnStock = quantityOnStock;
       return this;
    }
@@ -108,12 +106,12 @@ public final class InventoryEntryBuilder {
       return this;
    }
    
-   public InventoryEntryBuilder restockableInDays(@Nullable final java.lang.Long restockableInDays) {
+   public InventoryEntryBuilder restockableInDays(@Nullable final Long restockableInDays) {
       this.restockableInDays = restockableInDays;
       return this;
    }
    
-   public InventoryEntryBuilder sku( final java.lang.String sku) {
+   public InventoryEntryBuilder sku( final String sku) {
       this.sku = sku;
       return this;
    }
@@ -129,12 +127,12 @@ public final class InventoryEntryBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -149,7 +147,7 @@ public final class InventoryEntryBuilder {
    }
    
    
-   public java.lang.Long getAvailableQuantity(){
+   public Long getAvailableQuantity(){
       return this.availableQuantity;
    }
    
@@ -164,7 +162,7 @@ public final class InventoryEntryBuilder {
    }
    
    
-   public java.lang.Long getQuantityOnStock(){
+   public Long getQuantityOnStock(){
       return this.quantityOnStock;
    }
    
@@ -174,12 +172,12 @@ public final class InventoryEntryBuilder {
    }
    
    @Nullable
-   public java.lang.Long getRestockableInDays(){
+   public Long getRestockableInDays(){
       return this.restockableInDays;
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

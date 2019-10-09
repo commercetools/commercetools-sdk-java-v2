@@ -4,8 +4,6 @@ import com.commercetools.models.common.Money;
 import com.commercetools.models.shipping_method.PriceFunction;
 import com.commercetools.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.models.shipping_method.ShippingRateTierType;
-import java.lang.Boolean;
-import java.lang.Integer;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -29,16 +27,16 @@ public final class CartScoreTierImpl implements CartScoreTier {
 
    private com.commercetools.models.shipping_method.ShippingRateTierType type;
    
-   private java.lang.Integer score;
+   private Integer score;
    
    private com.commercetools.models.common.Money price;
    
-   private java.lang.Boolean isMatching;
+   private Boolean isMatching;
    
    private com.commercetools.models.shipping_method.PriceFunction priceFunction;
 
    @JsonCreator
-   CartScoreTierImpl(@JsonProperty("score") final java.lang.Integer score, @JsonProperty("price") final com.commercetools.models.common.Money price, @JsonProperty("isMatching") final java.lang.Boolean isMatching, @JsonProperty("priceFunction") final com.commercetools.models.shipping_method.PriceFunction priceFunction) {
+   CartScoreTierImpl(@JsonProperty("score") final Integer score, @JsonProperty("price") final com.commercetools.models.common.Money price, @JsonProperty("isMatching") final Boolean isMatching, @JsonProperty("priceFunction") final com.commercetools.models.shipping_method.PriceFunction priceFunction) {
       this.score = score;
       this.price = price;
       this.isMatching = isMatching;
@@ -55,7 +53,7 @@ public final class CartScoreTierImpl implements CartScoreTier {
    }
    
    
-   public java.lang.Integer getScore(){
+   public Integer getScore(){
       return this.score;
    }
    
@@ -65,7 +63,7 @@ public final class CartScoreTierImpl implements CartScoreTier {
    }
    
    
-   public java.lang.Boolean getIsMatching(){
+   public Boolean getIsMatching(){
       return this.isMatching;
    }
    
@@ -74,7 +72,7 @@ public final class CartScoreTierImpl implements CartScoreTier {
       return this.priceFunction;
    }
 
-   public void setScore(final java.lang.Integer score){
+   public void setScore(final Integer score){
       this.score = score;
    }
    
@@ -82,7 +80,7 @@ public final class CartScoreTierImpl implements CartScoreTier {
       this.price = price;
    }
    
-   public void setIsMatching(final java.lang.Boolean isMatching){
+   public void setIsMatching(final Boolean isMatching){
       this.isMatching = isMatching;
    }
    

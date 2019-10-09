@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
 public class ByProjectKeyGraphqlPost {
    
    
@@ -26,12 +27,12 @@ public class ByProjectKeyGraphqlPost {
    
    private String projectKey;
    
-   private java.lang.Object object;
+   private com.fasterxml.jackson.databind.JsonNode jsonNode;
    
-   public ByProjectKeyGraphqlPost(final ApiHttpClient apiHttpClient, String projectKey, java.lang.Object object){
+   public ByProjectKeyGraphqlPost(final ApiHttpClient apiHttpClient, String projectKey, com.fasterxml.jackson.databind.JsonNode jsonNode){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
-      this.object = object;
+      this.jsonNode = jsonNode;
    }
    
    public ApiHttpRequest createHttpRequest() {
@@ -47,11 +48,11 @@ public class ByProjectKeyGraphqlPost {
       httpRequest.setRelativeUrl(httpRequestPath); 
       httpRequest.setMethod(ApiHttpMethod.POST);
       httpRequest.setHeaders(headers);
-      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(object));}catch(Exception e){e.printStackTrace();}
+      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(jsonNode));}catch(Exception e){e.printStackTrace();}
       return httpRequest;
    }
    
-   public ApiHttpResponse<java.lang.Object> executeBlocking(){
+   public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -59,9 +60,14 @@ public class ByProjectKeyGraphqlPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
-              .thenApply(response -> Utils.convertResponse(response,java.lang.Object.class));
+              .thenApply(response -> {
+                  if(response.getStatusCode() >= 400){
+                      throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                  }
+                  return Utils.convertResponse(response,com.fasterxml.jackson.databind.JsonNode.class);
+              });
    }
    
    public String getProjectKey() {return this.projectKey;}

@@ -1,7 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.String;
 import com.commercetools.models.project.ProjectChangeNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ProjectChangeNameActionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
-   public ProjectChangeNameActionBuilder name( final java.lang.String name) {
+   public ProjectChangeNameActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Object;
-import java.lang.String;
+
 import com.commercetools.models.product.SearchKeywordImpl;
 
 import com.fasterxml.jackson.annotation.*;

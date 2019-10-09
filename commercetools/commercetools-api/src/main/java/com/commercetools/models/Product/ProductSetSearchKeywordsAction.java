@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
 import com.commercetools.models.product.SearchKeywords;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetSearchKeywordsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

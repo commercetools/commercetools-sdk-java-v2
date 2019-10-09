@@ -1,8 +1,6 @@
 package com.commercetools.models.review;
 
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewSetRatingActionImpl implements ReviewSetRatingAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Integer rating;
+   private Integer rating;
 
    @JsonCreator
-   ReviewSetRatingActionImpl(@JsonProperty("rating") final java.lang.Integer rating) {
+   ReviewSetRatingActionImpl(@JsonProperty("rating") final Integer rating) {
       this.rating = rating;
       this.action = "setRating";
    }
@@ -38,16 +36,16 @@ public final class ReviewSetRatingActionImpl implements ReviewSetRatingAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Integer getRating(){
+   public Integer getRating(){
       return this.rating;
    }
 
-   public void setRating(final java.lang.Integer rating){
+   public void setRating(final Integer rating){
       this.rating = rating;
    }
 

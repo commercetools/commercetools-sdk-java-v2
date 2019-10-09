@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ShippingRateInputDraft;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetShippingRateInputActionImpl implements CartSetShippingRateInputAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput;
 
@@ -38,7 +37,7 @@ public final class CartSetShippingRateInputActionImpl implements CartSetShipping
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

@@ -3,9 +3,6 @@ package com.commercetools.models.review;
 import com.commercetools.models.customer.CustomerResourceIdentifier;
 import com.commercetools.models.state.StateResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.review.ReviewDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

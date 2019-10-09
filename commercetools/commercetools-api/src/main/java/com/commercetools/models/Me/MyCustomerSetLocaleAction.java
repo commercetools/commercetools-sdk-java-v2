@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCustomerSetLocaleActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

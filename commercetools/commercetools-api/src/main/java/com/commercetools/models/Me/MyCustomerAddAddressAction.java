@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCustomerAddAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Long;
-import java.lang.Object;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FacetResultTermImpl implements FacetResultTerm {
 
-   private java.lang.Long count;
+   private Long count;
    
-   private java.lang.Object term;
+   private Object term;
    
-   private java.lang.Long productCount;
+   private Long productCount;
 
    @JsonCreator
-   FacetResultTermImpl(@JsonProperty("count") final java.lang.Long count, @JsonProperty("term") final java.lang.Object term, @JsonProperty("productCount") final java.lang.Long productCount) {
+   FacetResultTermImpl(@JsonProperty("count") final Long count, @JsonProperty("term") final Object term, @JsonProperty("productCount") final Long productCount) {
       this.count = count;
       this.term = term;
       this.productCount = productCount;
@@ -40,29 +39,29 @@ public final class FacetResultTermImpl implements FacetResultTerm {
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
    }
    
    
-   public java.lang.Object getTerm(){
+   public Object getTerm(){
       return this.term;
    }
    
    
-   public java.lang.Long getProductCount(){
+   public Long getProductCount(){
       return this.productCount;
    }
 
-   public void setCount(final java.lang.Long count){
+   public void setCount(final Long count){
       this.count = count;
    }
    
-   public void setTerm(final java.lang.Object term){
+   public void setTerm(final Object term){
       this.term = term;
    }
    
-   public void setProductCount(final java.lang.Long productCount){
+   public void setProductCount(final Long productCount){
       this.productCount = productCount;
    }
 

@@ -6,7 +6,6 @@ import com.commercetools.models.product_type.ProductTypeReference;
 import com.commercetools.models.review.ReviewRatingStatistics;
 import com.commercetools.models.state.StateReference;
 import com.commercetools.models.tax_category.TaxCategoryReference;
-import java.lang.String;
 import com.commercetools.models.product.Product;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -22,10 +21,10 @@ public final class ProductBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -46,7 +45,7 @@ public final class ProductBuilder {
    private com.commercetools.models.product_type.ProductTypeReference productType;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    @Nullable
    private com.commercetools.models.tax_category.TaxCategoryReference taxCategory;
@@ -61,12 +60,12 @@ public final class ProductBuilder {
       return this;
    }
    
-   public ProductBuilder id( final java.lang.String id) {
+   public ProductBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ProductBuilder version( final java.lang.Long version) {
+   public ProductBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -101,7 +100,7 @@ public final class ProductBuilder {
       return this;
    }
    
-   public ProductBuilder key(@Nullable final java.lang.String key) {
+   public ProductBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -122,12 +121,12 @@ public final class ProductBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -162,7 +161,7 @@ public final class ProductBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

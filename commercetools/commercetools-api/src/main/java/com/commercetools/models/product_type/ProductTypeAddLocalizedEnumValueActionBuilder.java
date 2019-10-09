@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeAddLocalizedEnumValueAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ProductTypeAddLocalizedEnumValueActionBuilder {
    
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
    
    private com.commercetools.models.product_type.AttributeLocalizedEnumValue value;
    
-   public ProductTypeAddLocalizedEnumValueActionBuilder attributeName( final java.lang.String attributeName) {
+   public ProductTypeAddLocalizedEnumValueActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
@@ -28,7 +27,7 @@ public final class ProductTypeAddLocalizedEnumValueActionBuilder {
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
    

@@ -1,8 +1,7 @@
 package com.commercetools.models.zone;
 
-import com.commercetools.models.common.BaseResource;
+import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.zone.Location;
-import java.lang.String;
 import com.commercetools.models.zone.Zone;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,22 +17,28 @@ public final class ZoneBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
-   
-   
-   private java.lang.String name;
+   private Long version;
    
    @Nullable
-   private java.lang.String description;
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
+   
+   
+   private String name;
+   
+   @Nullable
+   private String description;
    
    
    private java.util.List<com.commercetools.models.zone.Location> locations;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public ZoneBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -45,22 +50,32 @@ public final class ZoneBuilder {
       return this;
    }
    
-   public ZoneBuilder id( final java.lang.String id) {
+   public ZoneBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ZoneBuilder version( final java.lang.Long version) {
+   public ZoneBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public ZoneBuilder name( final java.lang.String name) {
+   public ZoneBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public ZoneBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public ZoneBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ZoneBuilder description(@Nullable final java.lang.String description) {
+   public ZoneBuilder description(@Nullable final String description) {
       this.description = description;
       return this;
    }
@@ -70,7 +85,7 @@ public final class ZoneBuilder {
       return this;
    }
    
-   public ZoneBuilder key(@Nullable final java.lang.String key) {
+   public ZoneBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -86,22 +101,32 @@ public final class ZoneBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.String getName(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
@@ -111,12 +136,12 @@ public final class ZoneBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
    public Zone build() {
-       return new ZoneImpl(createdAt, lastModifiedAt, id, version, name, description, locations, key);
+       return new ZoneImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, name, description, locations, key);
    }
    
    public static ZoneBuilder of() {
@@ -129,6 +154,8 @@ public final class ZoneBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.name = template.getName();
       builder.description = template.getDescription();
       builder.locations = template.getLocations();

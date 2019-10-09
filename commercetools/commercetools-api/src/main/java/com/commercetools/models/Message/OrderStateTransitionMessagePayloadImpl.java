@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.state.StateReference;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderStateTransitionMessagePayloadImpl implements OrderStateTransitionMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.Boolean force;
+   private Boolean force;
    
    private com.commercetools.models.state.StateReference state;
 
    @JsonCreator
-   OrderStateTransitionMessagePayloadImpl(@JsonProperty("force") final java.lang.Boolean force, @JsonProperty("state") final com.commercetools.models.state.StateReference state) {
+   OrderStateTransitionMessagePayloadImpl(@JsonProperty("force") final Boolean force, @JsonProperty("state") final com.commercetools.models.state.StateReference state) {
       this.force = force;
       this.state = state;
       this.type = "OrderStateTransition";
@@ -42,12 +40,12 @@ public final class OrderStateTransitionMessagePayloadImpl implements OrderStateT
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    
@@ -56,7 +54,7 @@ public final class OrderStateTransitionMessagePayloadImpl implements OrderStateT
       return this.state;
    }
 
-   public void setForce(final java.lang.Boolean force){
+   public void setForce(final Boolean force){
       this.force = force;
    }
    

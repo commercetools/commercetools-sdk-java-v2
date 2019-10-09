@@ -2,9 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetPricesAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,23 +11,23 @@ import java.time.ZonedDateTime;
 public final class ProductSetPricesActionBuilder {
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    
    private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
-   public ProductSetPricesActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetPricesActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductSetPricesActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ProductSetPricesActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
@@ -40,18 +37,18 @@ public final class ProductSetPricesActionBuilder {
       return this;
    }
    
-   public ProductSetPricesActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductSetPricesActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
@@ -61,7 +58,7 @@ public final class ProductSetPricesActionBuilder {
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 

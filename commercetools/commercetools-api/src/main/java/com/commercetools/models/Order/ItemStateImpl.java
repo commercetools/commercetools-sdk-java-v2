@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.state.StateReference;
-import java.lang.Integer;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ItemStateImpl implements ItemState {
 
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    private com.commercetools.models.state.StateReference state;
 
    @JsonCreator
-   ItemStateImpl(@JsonProperty("quantity") final java.lang.Integer quantity, @JsonProperty("state") final com.commercetools.models.state.StateReference state) {
+   ItemStateImpl(@JsonProperty("quantity") final Integer quantity, @JsonProperty("state") final com.commercetools.models.state.StateReference state) {
       this.quantity = quantity;
       this.state = state;
    }
@@ -37,7 +36,7 @@ public final class ItemStateImpl implements ItemState {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -46,7 +45,7 @@ public final class ItemStateImpl implements ItemState {
       return this.state;
    }
 
-   public void setQuantity(final java.lang.Integer quantity){
+   public void setQuantity(final Integer quantity){
       this.quantity = quantity;
    }
    

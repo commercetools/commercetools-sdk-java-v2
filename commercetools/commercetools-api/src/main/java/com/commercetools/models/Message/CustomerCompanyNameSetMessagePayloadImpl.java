@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompanyNameSetMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String companyName;
+   private String companyName;
 
    @JsonCreator
-   CustomerCompanyNameSetMessagePayloadImpl(@JsonProperty("companyName") final java.lang.String companyName) {
+   CustomerCompanyNameSetMessagePayloadImpl(@JsonProperty("companyName") final String companyName) {
       this.companyName = companyName;
       this.type = "CustomerCompanyNameSet";
    }
@@ -37,16 +36,16 @@ public final class CustomerCompanyNameSetMessagePayloadImpl implements CustomerC
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getCompanyName(){
+   public String getCompanyName(){
       return this.companyName;
    }
 
-   public void setCompanyName(final java.lang.String companyName){
+   public void setCompanyName(final String companyName){
       this.companyName = companyName;
    }
 

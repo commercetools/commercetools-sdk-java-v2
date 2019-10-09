@@ -1,9 +1,7 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.common.LocalizedString;
-import com.commercetools.models.product_discount.ProductDiscountValue;
-import java.lang.Boolean;
-import java.lang.String;
+import com.commercetools.models.product_discount.ProductDiscountValueDraft;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountDraftImpl implements ProductDiscountDraft {
 
-   private java.lang.String predicate;
+   private String predicate;
    
-   private java.lang.String sortOrder;
+   private String sortOrder;
    
    private com.commercetools.models.common.LocalizedString name;
    
@@ -38,14 +36,14 @@ public final class ProductDiscountDraftImpl implements ProductDiscountDraft {
    
    private java.time.ZonedDateTime validFrom;
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
-   private com.commercetools.models.product_discount.ProductDiscountValue value;
+   private com.commercetools.models.product_discount.ProductDiscountValueDraft value;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   ProductDiscountDraftImpl(@JsonProperty("predicate") final java.lang.String predicate, @JsonProperty("sortOrder") final java.lang.String sortOrder, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("isActive") final java.lang.Boolean isActive, @JsonProperty("value") final com.commercetools.models.product_discount.ProductDiscountValue value, @JsonProperty("key") final java.lang.String key) {
+   ProductDiscountDraftImpl(@JsonProperty("predicate") final String predicate, @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("value") final com.commercetools.models.product_discount.ProductDiscountValueDraft value, @JsonProperty("key") final String key) {
       this.predicate = predicate;
       this.sortOrder = sortOrder;
       this.name = name;
@@ -61,12 +59,12 @@ public final class ProductDiscountDraftImpl implements ProductDiscountDraft {
    }
    
    
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
    
    
-   public java.lang.String getSortOrder(){
+   public String getSortOrder(){
       return this.sortOrder;
    }
    
@@ -91,25 +89,25 @@ public final class ProductDiscountDraftImpl implements ProductDiscountDraft {
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
    
-   public com.commercetools.models.product_discount.ProductDiscountValue getValue(){
+   public com.commercetools.models.product_discount.ProductDiscountValueDraft getValue(){
       return this.value;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setPredicate(final java.lang.String predicate){
+   public void setPredicate(final String predicate){
       this.predicate = predicate;
    }
    
-   public void setSortOrder(final java.lang.String sortOrder){
+   public void setSortOrder(final String sortOrder){
       this.sortOrder = sortOrder;
    }
    
@@ -129,15 +127,15 @@ public final class ProductDiscountDraftImpl implements ProductDiscountDraft {
       this.validFrom = validFrom;
    }
    
-   public void setIsActive(final java.lang.Boolean isActive){
+   public void setIsActive(final Boolean isActive){
       this.isActive = isActive;
    }
    
-   public void setValue(final com.commercetools.models.product_discount.ProductDiscountValue value){
+   public void setValue(final com.commercetools.models.product_discount.ProductDiscountValueDraft value){
       this.value = value;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

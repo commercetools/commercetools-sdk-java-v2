@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.SubscriptionUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.subscription.SubscriptionUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

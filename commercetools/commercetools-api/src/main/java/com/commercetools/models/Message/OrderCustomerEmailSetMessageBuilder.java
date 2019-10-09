@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
-import java.lang.String;
 import com.commercetools.models.message.OrderCustomerEmailSetMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -17,13 +16,19 @@ public final class OrderCustomerEmailSetMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -32,16 +37,13 @@ public final class OrderCustomerEmailSetMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    @Nullable
-   private java.lang.String oldEmail;
+   private String oldEmail;
    
    @Nullable
-   private java.lang.String email;
+   private String email;
    
    public OrderCustomerEmailSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -53,17 +55,27 @@ public final class OrderCustomerEmailSetMessageBuilder {
       return this;
    }
    
-   public OrderCustomerEmailSetMessageBuilder id( final java.lang.String id) {
+   public OrderCustomerEmailSetMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public OrderCustomerEmailSetMessageBuilder version( final java.lang.Long version) {
+   public OrderCustomerEmailSetMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public OrderCustomerEmailSetMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public OrderCustomerEmailSetMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public OrderCustomerEmailSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public OrderCustomerEmailSetMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -78,22 +90,17 @@ public final class OrderCustomerEmailSetMessageBuilder {
       return this;
    }
    
-   public OrderCustomerEmailSetMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public OrderCustomerEmailSetMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public OrderCustomerEmailSetMessageBuilder type( final java.lang.String type) {
-      this.type = type;
-      return this;
-   }
-   
-   public OrderCustomerEmailSetMessageBuilder oldEmail(@Nullable final java.lang.String oldEmail) {
+   public OrderCustomerEmailSetMessageBuilder oldEmail(@Nullable final String oldEmail) {
       this.oldEmail = oldEmail;
       return this;
    }
    
-   public OrderCustomerEmailSetMessageBuilder email(@Nullable final java.lang.String email) {
+   public OrderCustomerEmailSetMessageBuilder email(@Nullable final String email) {
       this.email = email;
       return this;
    }
@@ -109,17 +116,27 @@ public final class OrderCustomerEmailSetMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -134,27 +151,22 @@ public final class OrderCustomerEmailSetMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
-   
-   public java.lang.String getType(){
-      return this.type;
-   }
-   
    @Nullable
-   public java.lang.String getOldEmail(){
+   public String getOldEmail(){
       return this.oldEmail;
    }
    
    @Nullable
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 
    public OrderCustomerEmailSetMessage build() {
-       return new OrderCustomerEmailSetMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, oldEmail, email);
+       return new OrderCustomerEmailSetMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, oldEmail, email);
    }
    
    public static OrderCustomerEmailSetMessageBuilder of() {
@@ -167,11 +179,12 @@ public final class OrderCustomerEmailSetMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.oldEmail = template.getOldEmail();
       builder.email = template.getEmail();
       return builder;

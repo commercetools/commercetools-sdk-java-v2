@@ -2,7 +2,6 @@ package com.commercetools.models.type;
 
 import com.commercetools.models.type.FieldDefinition;
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.type.TypeAddFieldDefinitionAction;
 import javax.annotation.Nullable;
 import java.util.List;

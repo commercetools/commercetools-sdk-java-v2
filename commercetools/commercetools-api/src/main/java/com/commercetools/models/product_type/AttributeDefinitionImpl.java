@@ -4,8 +4,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product_type.AttributeConstraintEnum;
 import com.commercetools.models.product_type.AttributeType;
 import com.commercetools.models.product_type.TextInputHint;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -27,15 +25,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeDefinitionImpl implements AttributeDefinition {
 
-   private java.lang.Boolean isRequired;
+   private Boolean isRequired;
    
    private com.commercetools.models.product_type.AttributeConstraintEnum attributeConstraint;
    
-   private java.lang.String name;
+   private String name;
    
    private com.commercetools.models.product_type.TextInputHint inputHint;
    
-   private java.lang.Boolean isSearchable;
+   private Boolean isSearchable;
    
    private com.commercetools.models.common.LocalizedString label;
    
@@ -44,7 +42,7 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
    private com.commercetools.models.common.LocalizedString inputTip;
 
    @JsonCreator
-   AttributeDefinitionImpl(@JsonProperty("isRequired") final java.lang.Boolean isRequired, @JsonProperty("attributeConstraint") final com.commercetools.models.product_type.AttributeConstraintEnum attributeConstraint, @JsonProperty("name") final java.lang.String name, @JsonProperty("inputHint") final com.commercetools.models.product_type.TextInputHint inputHint, @JsonProperty("isSearchable") final java.lang.Boolean isSearchable, @JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("type") final com.commercetools.models.product_type.AttributeType type, @JsonProperty("inputTip") final com.commercetools.models.common.LocalizedString inputTip) {
+   AttributeDefinitionImpl(@JsonProperty("isRequired") final Boolean isRequired, @JsonProperty("attributeConstraint") final com.commercetools.models.product_type.AttributeConstraintEnum attributeConstraint, @JsonProperty("name") final String name, @JsonProperty("inputHint") final com.commercetools.models.product_type.TextInputHint inputHint, @JsonProperty("isSearchable") final Boolean isSearchable, @JsonProperty("label") final com.commercetools.models.common.LocalizedString label, @JsonProperty("type") final com.commercetools.models.product_type.AttributeType type, @JsonProperty("inputTip") final com.commercetools.models.common.LocalizedString inputTip) {
       this.isRequired = isRequired;
       this.attributeConstraint = attributeConstraint;
       this.name = name;
@@ -59,7 +57,7 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
    }
    
    
-   public java.lang.Boolean getIsRequired(){
+   public Boolean getIsRequired(){
       return this.isRequired;
    }
    
@@ -69,7 +67,7 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
@@ -79,7 +77,7 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
    }
    
    
-   public java.lang.Boolean getIsSearchable(){
+   public Boolean getIsSearchable(){
       return this.isSearchable;
    }
    
@@ -98,7 +96,7 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
       return this.inputTip;
    }
 
-   public void setIsRequired(final java.lang.Boolean isRequired){
+   public void setIsRequired(final Boolean isRequired){
       this.isRequired = isRequired;
    }
    
@@ -106,7 +104,7 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
       this.attributeConstraint = attributeConstraint;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
@@ -114,7 +112,7 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
       this.inputHint = inputHint;
    }
    
-   public void setIsSearchable(final java.lang.Boolean isSearchable){
+   public void setIsSearchable(final Boolean isSearchable){
       this.isSearchable = isSearchable;
    }
    

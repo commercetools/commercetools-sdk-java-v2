@@ -4,8 +4,6 @@ import com.commercetools.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.me.MyCartRemoveLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,13 +13,13 @@ import java.time.ZonedDateTime;
 public final class MyCartRemoveLineItemActionBuilder {
    
    @Nullable
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    @Nullable
    private com.commercetools.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
@@ -29,7 +27,7 @@ public final class MyCartRemoveLineItemActionBuilder {
    @Nullable
    private com.commercetools.models.common.Money externalPrice;
    
-   public MyCartRemoveLineItemActionBuilder quantity(@Nullable final java.lang.Integer quantity) {
+   public MyCartRemoveLineItemActionBuilder quantity(@Nullable final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -39,7 +37,7 @@ public final class MyCartRemoveLineItemActionBuilder {
       return this;
    }
    
-   public MyCartRemoveLineItemActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public MyCartRemoveLineItemActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -55,7 +53,7 @@ public final class MyCartRemoveLineItemActionBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -65,7 +63,7 @@ public final class MyCartRemoveLineItemActionBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    

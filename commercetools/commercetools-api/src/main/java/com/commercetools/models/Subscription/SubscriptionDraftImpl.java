@@ -4,7 +4,6 @@ import com.commercetools.models.subscription.ChangeSubscription;
 import com.commercetools.models.subscription.DeliveryFormat;
 import com.commercetools.models.subscription.Destination;
 import com.commercetools.models.subscription.MessageSubscription;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -34,10 +33,10 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
    
    private java.util.List<com.commercetools.models.subscription.MessageSubscription> messages;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   SubscriptionDraftImpl(@JsonProperty("format") final com.commercetools.models.subscription.DeliveryFormat format, @JsonProperty("destination") final com.commercetools.models.subscription.Destination destination, @JsonProperty("changes") final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes, @JsonProperty("messages") final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages, @JsonProperty("key") final java.lang.String key) {
+   SubscriptionDraftImpl(@JsonProperty("format") final com.commercetools.models.subscription.DeliveryFormat format, @JsonProperty("destination") final com.commercetools.models.subscription.Destination destination, @JsonProperty("changes") final java.util.List<com.commercetools.models.subscription.ChangeSubscription> changes, @JsonProperty("messages") final java.util.List<com.commercetools.models.subscription.MessageSubscription> messages, @JsonProperty("key") final String key) {
       this.format = format;
       this.destination = destination;
       this.changes = changes;
@@ -69,7 +68,7 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -89,7 +88,7 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
       this.messages = messages;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

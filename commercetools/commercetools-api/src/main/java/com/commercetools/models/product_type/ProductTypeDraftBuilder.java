@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeDefinitionDraft;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,23 +10,23 @@ import java.time.ZonedDateTime;
 public final class ProductTypeDraftBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
    
-   private java.lang.String description;
+   private String description;
    
    @Nullable
    private java.util.List<com.commercetools.models.product_type.AttributeDefinitionDraft> attributes;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public ProductTypeDraftBuilder name( final java.lang.String name) {
+   public ProductTypeDraftBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public ProductTypeDraftBuilder description( final java.lang.String description) {
+   public ProductTypeDraftBuilder description( final String description) {
       this.description = description;
       return this;
    }
@@ -37,18 +36,18 @@ public final class ProductTypeDraftBuilder {
       return this;
    }
    
-   public ProductTypeDraftBuilder key(@Nullable final java.lang.String key) {
+   public ProductTypeDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
@@ -58,7 +57,7 @@ public final class ProductTypeDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

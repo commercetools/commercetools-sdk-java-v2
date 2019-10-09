@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetCustomerEmailAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class OrderSetCustomerEmailActionBuilder {
    
    @Nullable
-   private java.lang.String email;
+   private String email;
    
-   public OrderSetCustomerEmailActionBuilder email(@Nullable final java.lang.String email) {
+   public OrderSetCustomerEmailActionBuilder email(@Nullable final String email) {
       this.email = email;
       return this;
    }
    
    @Nullable
-   public java.lang.String getEmail(){
+   public String getEmail(){
       return this.email;
    }
 

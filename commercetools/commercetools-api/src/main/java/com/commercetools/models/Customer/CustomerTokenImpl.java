@@ -1,6 +1,5 @@
 package com.commercetools.models.customer;
 
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,16 +26,16 @@ public final class CustomerTokenImpl implements CustomerToken {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String customerId;
+   private String customerId;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.String value;
+   private String value;
    
    private java.time.ZonedDateTime expiresAt;
 
    @JsonCreator
-   CustomerTokenImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("customerId") final java.lang.String customerId, @JsonProperty("id") final java.lang.String id, @JsonProperty("value") final java.lang.String value, @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
+   CustomerTokenImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("customerId") final String customerId, @JsonProperty("id") final String id, @JsonProperty("value") final String value, @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.customerId = customerId;
@@ -59,17 +58,17 @@ public final class CustomerTokenImpl implements CustomerToken {
    }
    
    
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.String getValue(){
+   public String getValue(){
       return this.value;
    }
    
@@ -86,15 +85,15 @@ public final class CustomerTokenImpl implements CustomerToken {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setCustomerId(final java.lang.String customerId){
+   public void setCustomerId(final String customerId){
       this.customerId = customerId;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setValue(final java.lang.String value){
+   public void setValue(final String value){
       this.value = value;
    }
    

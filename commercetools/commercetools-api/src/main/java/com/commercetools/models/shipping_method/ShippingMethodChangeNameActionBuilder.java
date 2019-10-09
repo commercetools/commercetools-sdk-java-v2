@@ -1,7 +1,6 @@
 package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ShippingMethodUpdateAction;
-import java.lang.String;
 import com.commercetools.models.shipping_method.ShippingMethodChangeNameAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ShippingMethodChangeNameActionBuilder {
    
    
-   private java.lang.String name;
+   private String name;
    
-   public ShippingMethodChangeNameActionBuilder name( final java.lang.String name) {
+   public ShippingMethodChangeNameActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
 

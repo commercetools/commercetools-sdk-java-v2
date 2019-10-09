@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import com.commercetools.models.subscription.GoogleCloudPubSubDestination;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class GoogleCloudPubSubDestinationBuilder {
    
    
-   private java.lang.String topic;
+   private String topic;
    
    
-   private java.lang.String projectId;
+   private String projectId;
    
-   public GoogleCloudPubSubDestinationBuilder topic( final java.lang.String topic) {
+   public GoogleCloudPubSubDestinationBuilder topic( final String topic) {
       this.topic = topic;
       return this;
    }
    
-   public GoogleCloudPubSubDestinationBuilder projectId( final java.lang.String projectId) {
+   public GoogleCloudPubSubDestinationBuilder projectId( final String projectId) {
       this.projectId = projectId;
       return this;
    }
    
    
-   public java.lang.String getTopic(){
+   public String getTopic(){
       return this.topic;
    }
    
    
-   public java.lang.String getProjectId(){
+   public String getProjectId(){
       return this.projectId;
    }
 

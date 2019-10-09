@@ -3,8 +3,6 @@ package com.commercetools.models.cart_discount;
 import com.commercetools.models.cart_discount.CartDiscountValue;
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.product.ProductReference;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountValueGiftLineItemImpl;
 
 import com.fasterxml.jackson.annotation.*;

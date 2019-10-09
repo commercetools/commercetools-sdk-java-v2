@@ -3,8 +3,6 @@ package com.commercetools.models.order_edit;
 import com.commercetools.models.order.OrderReference;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,20 +24,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditDraftImpl implements OrderEditDraft {
 
-   private java.lang.Boolean dryRun;
+   private Boolean dryRun;
    
    private com.commercetools.models.order.OrderReference resource;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
-   private java.lang.String comment;
+   private String comment;
    
    private java.util.List<com.commercetools.models.order.StagedOrderUpdateAction> stagedActions;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   OrderEditDraftImpl(@JsonProperty("dryRun") final java.lang.Boolean dryRun, @JsonProperty("resource") final com.commercetools.models.order.OrderReference resource, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("comment") final java.lang.String comment, @JsonProperty("stagedActions") final java.util.List<com.commercetools.models.order.StagedOrderUpdateAction> stagedActions, @JsonProperty("key") final java.lang.String key) {
+   OrderEditDraftImpl(@JsonProperty("dryRun") final Boolean dryRun, @JsonProperty("resource") final com.commercetools.models.order.OrderReference resource, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("comment") final String comment, @JsonProperty("stagedActions") final java.util.List<com.commercetools.models.order.StagedOrderUpdateAction> stagedActions, @JsonProperty("key") final String key) {
       this.dryRun = dryRun;
       this.resource = resource;
       this.custom = custom;
@@ -52,7 +50,7 @@ public final class OrderEditDraftImpl implements OrderEditDraft {
    }
    
    
-   public java.lang.Boolean getDryRun(){
+   public Boolean getDryRun(){
       return this.dryRun;
    }
    
@@ -67,7 +65,7 @@ public final class OrderEditDraftImpl implements OrderEditDraft {
    }
    
    
-   public java.lang.String getComment(){
+   public String getComment(){
       return this.comment;
    }
    
@@ -77,11 +75,11 @@ public final class OrderEditDraftImpl implements OrderEditDraft {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
-   public void setDryRun(final java.lang.Boolean dryRun){
+   public void setDryRun(final Boolean dryRun){
       this.dryRun = dryRun;
    }
    
@@ -93,7 +91,7 @@ public final class OrderEditDraftImpl implements OrderEditDraft {
       this.custom = custom;
    }
    
-   public void setComment(final java.lang.String comment){
+   public void setComment(final String comment){
       this.comment = comment;
    }
    
@@ -101,7 +99,7 @@ public final class OrderEditDraftImpl implements OrderEditDraft {
       this.stagedActions = stagedActions;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

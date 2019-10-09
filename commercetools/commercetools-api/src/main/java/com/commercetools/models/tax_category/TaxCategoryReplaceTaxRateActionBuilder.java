@@ -2,7 +2,6 @@ package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategoryUpdateAction;
 import com.commercetools.models.tax_category.TaxRateDraft;
-import java.lang.String;
 import com.commercetools.models.tax_category.TaxCategoryReplaceTaxRateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class TaxCategoryReplaceTaxRateActionBuilder {
    private com.commercetools.models.tax_category.TaxRateDraft taxRate;
    
    
-   private java.lang.String taxRateId;
+   private String taxRateId;
    
    public TaxCategoryReplaceTaxRateActionBuilder taxRate( final com.commercetools.models.tax_category.TaxRateDraft taxRate) {
       this.taxRate = taxRate;
       return this;
    }
    
-   public TaxCategoryReplaceTaxRateActionBuilder taxRateId( final java.lang.String taxRateId) {
+   public TaxCategoryReplaceTaxRateActionBuilder taxRateId( final String taxRateId) {
       this.taxRateId = taxRateId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class TaxCategoryReplaceTaxRateActionBuilder {
    }
    
    
-   public java.lang.String getTaxRateId(){
+   public String getTaxRateId(){
       return this.taxRateId;
    }
 

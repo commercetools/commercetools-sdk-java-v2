@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderAddDiscountCodeAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class StagedOrderAddDiscountCodeActionBuilder {
    
    
-   private java.lang.String code;
+   private String code;
    
-   public StagedOrderAddDiscountCodeActionBuilder code( final java.lang.String code) {
+   public StagedOrderAddDiscountCodeActionBuilder code( final String code) {
       this.code = code;
       return this;
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
 

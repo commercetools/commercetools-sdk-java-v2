@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import com.commercetools.models.message.UserProvidedIdentifiers;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,39 +10,39 @@ import java.time.ZonedDateTime;
 public final class UserProvidedIdentifiersBuilder {
    
    @Nullable
-   private java.lang.String orderNumber;
+   private String orderNumber;
    
    @Nullable
-   private java.lang.String externalId;
+   private String externalId;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    @Nullable
-   private java.lang.String customerNumber;
+   private String customerNumber;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString slug;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
-   public UserProvidedIdentifiersBuilder orderNumber(@Nullable final java.lang.String orderNumber) {
+   public UserProvidedIdentifiersBuilder orderNumber(@Nullable final String orderNumber) {
       this.orderNumber = orderNumber;
       return this;
    }
    
-   public UserProvidedIdentifiersBuilder externalId(@Nullable final java.lang.String externalId) {
+   public UserProvidedIdentifiersBuilder externalId(@Nullable final String externalId) {
       this.externalId = externalId;
       return this;
    }
    
-   public UserProvidedIdentifiersBuilder sku(@Nullable final java.lang.String sku) {
+   public UserProvidedIdentifiersBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
-   public UserProvidedIdentifiersBuilder customerNumber(@Nullable final java.lang.String customerNumber) {
+   public UserProvidedIdentifiersBuilder customerNumber(@Nullable final String customerNumber) {
       this.customerNumber = customerNumber;
       return this;
    }
@@ -53,28 +52,28 @@ public final class UserProvidedIdentifiersBuilder {
       return this;
    }
    
-   public UserProvidedIdentifiersBuilder key(@Nullable final java.lang.String key) {
+   public UserProvidedIdentifiersBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
    
    @Nullable
-   public java.lang.String getOrderNumber(){
+   public String getOrderNumber(){
       return this.orderNumber;
    }
    
    @Nullable
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    @Nullable
-   public java.lang.String getCustomerNumber(){
+   public String getCustomerNumber(){
       return this.customerNumber;
    }
    
@@ -84,7 +83,7 @@ public final class UserProvidedIdentifiersBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

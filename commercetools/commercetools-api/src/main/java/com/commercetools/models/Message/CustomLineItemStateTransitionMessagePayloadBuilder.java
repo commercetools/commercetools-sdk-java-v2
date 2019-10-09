@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.state.StateReference;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.message.CustomLineItemStateTransitionMessagePayload;
 import javax.annotation.Nullable;
@@ -20,10 +18,10 @@ public final class CustomLineItemStateTransitionMessagePayloadBuilder {
    private com.commercetools.models.state.StateReference fromState;
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
    
    private java.time.ZonedDateTime transitionDate;
@@ -38,12 +36,12 @@ public final class CustomLineItemStateTransitionMessagePayloadBuilder {
       return this;
    }
    
-   public CustomLineItemStateTransitionMessagePayloadBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public CustomLineItemStateTransitionMessagePayloadBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public CustomLineItemStateTransitionMessagePayloadBuilder quantity( final java.lang.Long quantity) {
+   public CustomLineItemStateTransitionMessagePayloadBuilder quantity( final Long quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -64,12 +62,12 @@ public final class CustomLineItemStateTransitionMessagePayloadBuilder {
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    

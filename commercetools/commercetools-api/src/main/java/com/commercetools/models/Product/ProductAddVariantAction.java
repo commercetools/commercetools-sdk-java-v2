@@ -5,8 +5,6 @@ import com.commercetools.models.common.Image;
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.Attribute;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductAddVariantActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

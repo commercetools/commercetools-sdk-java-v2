@@ -1,6 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Object;
+
 import com.commercetools.models.product.FacetResultsImpl;
 
 import com.fasterxml.jackson.annotation.*;

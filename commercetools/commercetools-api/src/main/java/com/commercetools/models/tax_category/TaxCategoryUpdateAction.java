@@ -6,7 +6,6 @@ import com.commercetools.models.tax_category.TaxCategoryRemoveTaxRateAction;
 import com.commercetools.models.tax_category.TaxCategoryReplaceTaxRateAction;
 import com.commercetools.models.tax_category.TaxCategorySetDescriptionAction;
 import com.commercetools.models.tax_category.TaxCategorySetKeyAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

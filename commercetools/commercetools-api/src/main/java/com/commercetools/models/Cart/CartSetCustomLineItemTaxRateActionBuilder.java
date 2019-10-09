@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ExternalTaxRateDraft;
-import java.lang.String;
 import com.commercetools.models.cart.CartSetCustomLineItemTaxRateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class CartSetCustomLineItemTaxRateActionBuilder {
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    @Nullable
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
-   public CartSetCustomLineItemTaxRateActionBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public CartSetCustomLineItemTaxRateActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class CartSetCustomLineItemTaxRateActionBuilder {
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    

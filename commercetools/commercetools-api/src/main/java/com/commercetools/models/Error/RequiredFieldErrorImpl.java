@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class RequiredFieldErrorImpl implements RequiredFieldError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
-   private java.lang.String field;
+   private String field;
 
    @JsonCreator
-   RequiredFieldErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("field") final java.lang.String field) {
+   RequiredFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field) {
       this.message = message;
       this.field = field;
       this.code = "RequiredField";
@@ -40,25 +39,25 @@ public final class RequiredFieldErrorImpl implements RequiredFieldError {
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.lang.String getField(){
+   public String getField(){
       return this.field;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setField(final java.lang.String field){
+   public void setField(final String field){
       this.field = field;
    }
 

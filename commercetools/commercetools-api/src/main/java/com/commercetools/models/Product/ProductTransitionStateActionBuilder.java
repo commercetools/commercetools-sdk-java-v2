@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductTransitionStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ProductTransitionStateActionBuilder {
    
    @Nullable
-   private java.lang.Boolean force;
+   private Boolean force;
    
    @Nullable
    private com.commercetools.models.state.StateResourceIdentifier state;
    
-   public ProductTransitionStateActionBuilder force(@Nullable final java.lang.Boolean force) {
+   public ProductTransitionStateActionBuilder force(@Nullable final Boolean force) {
       this.force = force;
       return this;
    }
@@ -29,7 +27,7 @@ public final class ProductTransitionStateActionBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    

@@ -1,7 +1,6 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.type.FieldType;
-import java.lang.String;
 import com.commercetools.models.type.CustomFieldDateTimeTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;

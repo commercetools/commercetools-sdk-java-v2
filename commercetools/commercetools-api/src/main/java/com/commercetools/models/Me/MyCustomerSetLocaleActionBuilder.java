@@ -1,7 +1,6 @@
 package com.commercetools.models.me;
 
 import com.commercetools.models.me.MyCustomerUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCustomerSetLocaleAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class MyCustomerSetLocaleActionBuilder {
    
    @Nullable
-   private java.lang.String locale;
+   private String locale;
    
-   public MyCustomerSetLocaleActionBuilder locale(@Nullable final java.lang.String locale) {
+   public MyCustomerSetLocaleActionBuilder locale(@Nullable final String locale) {
       this.locale = locale;
       return this;
    }
    
    @Nullable
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
 

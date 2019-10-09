@@ -1,7 +1,6 @@
 package com.commercetools.models.api_client;
 
-import java.lang.Long;
-import java.lang.String;
+
 import com.commercetools.models.api_client.ApiClientDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

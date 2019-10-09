@@ -1,7 +1,6 @@
 package com.commercetools.models.type;
 
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.type.TypeRemoveFieldDefinitionAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class TypeRemoveFieldDefinitionActionBuilder {
    
    
-   private java.lang.String fieldName;
+   private String fieldName;
    
-   public TypeRemoveFieldDefinitionActionBuilder fieldName( final java.lang.String fieldName) {
+   public TypeRemoveFieldDefinitionActionBuilder fieldName( final String fieldName) {
       this.fieldName = fieldName;
       return this;
    }
    
    
-   public java.lang.String getFieldName(){
+   public String getFieldName(){
       return this.fieldName;
    }
 

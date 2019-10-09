@@ -1,6 +1,6 @@
 package com.commercetools.models.common;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LocalizedStringImpl implements LocalizedString {
 
-   private Map<String, java.lang.String> values;
+   private Map<String, String> values;
 
    @JsonCreator
-   LocalizedStringImpl(@JsonProperty("values") final Map<String, java.lang.String> values) {
+   LocalizedStringImpl(@JsonProperty("values") final Map<String, String> values) {
       this.values = values;
    }
    public LocalizedStringImpl() {
@@ -33,11 +33,11 @@ public final class LocalizedStringImpl implements LocalizedString {
    }
    
    
-   public Map<String,java.lang.String> values() {
+   public Map<String,String> values() {
        return values;
    }
 
-   public void setValue(String key, java.lang.String value) {
+   public void setValue(String key, String value) {
        if (values == null) {
            values = new HashMap<>();
        }

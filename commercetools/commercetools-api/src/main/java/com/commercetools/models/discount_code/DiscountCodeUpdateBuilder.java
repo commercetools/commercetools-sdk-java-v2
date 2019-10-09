@@ -1,7 +1,6 @@
 package com.commercetools.models.discount_code;
 
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.discount_code.DiscountCodeUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class DiscountCodeUpdateBuilder {
    private java.util.List<com.commercetools.models.discount_code.DiscountCodeUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public DiscountCodeUpdateBuilder actions( final java.util.List<com.commercetools.models.discount_code.DiscountCodeUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public DiscountCodeUpdateBuilder version( final java.lang.Long version) {
+   public DiscountCodeUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class DiscountCodeUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

@@ -3,8 +3,6 @@ package com.commercetools.models.me;
 import com.commercetools.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.me.MyCartChangeLineItemQuantityAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,18 +12,18 @@ import java.time.ZonedDateTime;
 public final class MyCartChangeLineItemQuantityActionBuilder {
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
    @Nullable
    private com.commercetools.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    @Nullable
    private com.commercetools.models.common.Money externalPrice;
    
-   public MyCartChangeLineItemQuantityActionBuilder quantity( final java.lang.Integer quantity) {
+   public MyCartChangeLineItemQuantityActionBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -35,7 +33,7 @@ public final class MyCartChangeLineItemQuantityActionBuilder {
       return this;
    }
    
-   public MyCartChangeLineItemQuantityActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public MyCartChangeLineItemQuantityActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -46,7 +44,7 @@ public final class MyCartChangeLineItemQuantityActionBuilder {
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
    
@@ -56,7 +54,7 @@ public final class MyCartChangeLineItemQuantityActionBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    

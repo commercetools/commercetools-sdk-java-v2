@@ -8,7 +8,6 @@ import com.commercetools.models.project.ProjectChangeMessagesEnabledAction;
 import com.commercetools.models.project.ProjectChangeNameAction;
 import com.commercetools.models.project.ProjectSetExternalOAuthAction;
 import com.commercetools.models.project.ProjectSetShippingRateInputTypeAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,9 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.SubRate;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.tax_category.TaxRate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,52 +10,52 @@ import java.time.ZonedDateTime;
 public final class TaxRateBuilder {
    
    
-   private java.lang.String country;
+   private String country;
    
    
-   private java.lang.Integer amount;
+   private Integer amount;
    
    
-   private java.lang.Boolean includedInPrice;
+   private Boolean includedInPrice;
    
    
-   private java.lang.String name;
-   
-   @Nullable
-   private java.lang.String state;
+   private String name;
    
    @Nullable
-   private java.lang.String id;
+   private String state;
+   
+   @Nullable
+   private String id;
    
    @Nullable
    private java.util.List<com.commercetools.models.tax_category.SubRate> subRates;
    
-   public TaxRateBuilder country( final java.lang.String country) {
+   public TaxRateBuilder country( final String country) {
       this.country = country;
       return this;
    }
    
-   public TaxRateBuilder amount( final java.lang.Integer amount) {
+   public TaxRateBuilder amount( final Integer amount) {
       this.amount = amount;
       return this;
    }
    
-   public TaxRateBuilder includedInPrice( final java.lang.Boolean includedInPrice) {
+   public TaxRateBuilder includedInPrice( final Boolean includedInPrice) {
       this.includedInPrice = includedInPrice;
       return this;
    }
    
-   public TaxRateBuilder name( final java.lang.String name) {
+   public TaxRateBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public TaxRateBuilder state(@Nullable final java.lang.String state) {
+   public TaxRateBuilder state(@Nullable final String state) {
       this.state = state;
       return this;
    }
    
-   public TaxRateBuilder id(@Nullable final java.lang.String id) {
+   public TaxRateBuilder id(@Nullable final String id) {
       this.id = id;
       return this;
    }
@@ -69,32 +66,32 @@ public final class TaxRateBuilder {
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    
-   public java.lang.Integer getAmount(){
+   public Integer getAmount(){
       return this.amount;
    }
    
    
-   public java.lang.Boolean getIncludedInPrice(){
+   public Boolean getIncludedInPrice(){
       return this.includedInPrice;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.String getState(){
+   public String getState(){
       return this.state;
    }
    
    @Nullable
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

@@ -26,12 +26,12 @@ public final class CustomObjectReferenceImpl implements CustomObjectReference {
 
    private com.commercetools.models.common.ReferenceTypeId typeId;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.custom_object.CustomObject obj;
 
    @JsonCreator
-   CustomObjectReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.custom_object.CustomObject obj) {
+   CustomObjectReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.models.custom_object.CustomObject obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("key-value-document").get();
@@ -46,7 +46,7 @@ public final class CustomObjectReferenceImpl implements CustomObjectReference {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -55,7 +55,7 @@ public final class CustomObjectReferenceImpl implements CustomObjectReference {
       return this.obj;
    }
 
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

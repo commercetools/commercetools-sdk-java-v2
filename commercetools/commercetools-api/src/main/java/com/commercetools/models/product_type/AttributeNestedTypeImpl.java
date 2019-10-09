@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeType;
 import com.commercetools.models.product_type.ProductTypeReference;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeNestedTypeImpl implements AttributeNestedType {
 
-   private java.lang.String name;
+   private String name;
    
    private com.commercetools.models.product_type.ProductTypeReference typeReference;
 
@@ -38,7 +37,7 @@ public final class AttributeNestedTypeImpl implements AttributeNestedType {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    

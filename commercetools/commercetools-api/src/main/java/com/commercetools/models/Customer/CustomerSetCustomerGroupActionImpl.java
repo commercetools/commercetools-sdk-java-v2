@@ -2,7 +2,6 @@ package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.CustomerUpdateAction;
 import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGroupAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
@@ -38,7 +37,7 @@ public final class CustomerSetCustomerGroupActionImpl implements CustomerSetCust
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

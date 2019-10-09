@@ -1,7 +1,6 @@
 package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.shopping_list.ShoppingListUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

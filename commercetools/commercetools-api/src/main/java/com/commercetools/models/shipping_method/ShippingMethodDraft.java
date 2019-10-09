@@ -2,8 +2,6 @@ package com.commercetools.models.shipping_method;
 
 import com.commercetools.models.shipping_method.ZoneRateDraft;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.shipping_method.ShippingMethodDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

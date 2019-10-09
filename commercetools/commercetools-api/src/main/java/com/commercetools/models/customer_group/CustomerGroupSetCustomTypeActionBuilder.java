@@ -3,7 +3,6 @@ package com.commercetools.models.customer_group;
 import com.commercetools.models.customer_group.CustomerGroupUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.customer_group.CustomerGroupSetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;

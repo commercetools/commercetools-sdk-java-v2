@@ -2,7 +2,6 @@ package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDescriptionAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String assetId;
+   private String assetId;
    
    private com.commercetools.models.common.LocalizedString description;
    
-   private java.lang.String assetKey;
+   private String assetKey;
 
    @JsonCreator
-   CategorySetAssetDescriptionActionImpl(@JsonProperty("assetId") final java.lang.String assetId, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("assetKey") final java.lang.String assetKey) {
+   CategorySetAssetDescriptionActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description, @JsonProperty("assetKey") final String assetKey) {
       this.assetId = assetId;
       this.description = description;
       this.assetKey = assetKey;
@@ -44,12 +43,12 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
@@ -59,11 +58,11 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
    }
    
    
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
 
-   public void setAssetId(final java.lang.String assetId){
+   public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
    
@@ -71,7 +70,7 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
       this.description = description;
    }
    
-   public void setAssetKey(final java.lang.String assetKey){
+   public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
    }
 

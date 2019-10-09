@@ -4,7 +4,6 @@ import com.commercetools.models.cart.ExternalTaxRateDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.shipping_method.ShippingRateDraft;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetCustomShippingMethodAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,7 +19,7 @@ public final class StagedOrderSetCustomShippingMethodActionBuilder {
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    
-   private java.lang.String shippingMethodName;
+   private String shippingMethodName;
    
    @Nullable
    private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
@@ -35,7 +34,7 @@ public final class StagedOrderSetCustomShippingMethodActionBuilder {
       return this;
    }
    
-   public StagedOrderSetCustomShippingMethodActionBuilder shippingMethodName( final java.lang.String shippingMethodName) {
+   public StagedOrderSetCustomShippingMethodActionBuilder shippingMethodName( final String shippingMethodName) {
       this.shippingMethodName = shippingMethodName;
       return this;
    }
@@ -56,7 +55,7 @@ public final class StagedOrderSetCustomShippingMethodActionBuilder {
    }
    
    
-   public java.lang.String getShippingMethodName(){
+   public String getShippingMethodName(){
       return this.shippingMethodName;
    }
    

@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.product_type.AttributeDefinition;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;

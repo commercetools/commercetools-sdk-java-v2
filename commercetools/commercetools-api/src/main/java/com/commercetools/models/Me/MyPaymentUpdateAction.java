@@ -6,7 +6,6 @@ import com.commercetools.models.me.MyPaymentSetCustomFieldAction;
 import com.commercetools.models.me.MyPaymentSetMethodInfoInterfaceAction;
 import com.commercetools.models.me.MyPaymentSetMethodInfoMethodAction;
 import com.commercetools.models.me.MyPaymentSetMethodInfoNameAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

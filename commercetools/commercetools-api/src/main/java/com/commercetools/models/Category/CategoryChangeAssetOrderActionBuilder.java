@@ -1,7 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.String;
 import com.commercetools.models.category.CategoryChangeAssetOrderAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CategoryChangeAssetOrderActionBuilder {
    
    
-   private java.util.List<java.lang.String> assetOrder;
+   private java.util.List<String> assetOrder;
    
-   public CategoryChangeAssetOrderActionBuilder assetOrder( final java.util.List<java.lang.String> assetOrder) {
+   public CategoryChangeAssetOrderActionBuilder assetOrder( final java.util.List<String> assetOrder) {
       this.assetOrder = assetOrder;
       return this;
    }
    
    
-   public java.util.List<java.lang.String> getAssetOrder(){
+   public java.util.List<String> getAssetOrder(){
       return this.assetOrder;
    }
 

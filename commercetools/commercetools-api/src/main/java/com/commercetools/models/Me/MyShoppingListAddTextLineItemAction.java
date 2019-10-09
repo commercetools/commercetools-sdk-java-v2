@@ -3,8 +3,6 @@ package com.commercetools.models.me;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.me.MyShoppingListUpdateAction;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.me.MyShoppingListAddTextLineItemActionImpl;
 

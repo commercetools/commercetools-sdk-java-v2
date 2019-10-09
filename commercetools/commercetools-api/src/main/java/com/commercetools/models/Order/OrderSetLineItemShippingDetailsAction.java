@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetLineItemShippingDetailsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order.DeliveryItem;
-import java.lang.String;
 import com.commercetools.models.message.DeliveryItemsUpdatedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,7 +11,7 @@ import java.time.ZonedDateTime;
 public final class DeliveryItemsUpdatedMessagePayloadBuilder {
    
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> oldItems;
@@ -20,7 +19,7 @@ public final class DeliveryItemsUpdatedMessagePayloadBuilder {
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
-   public DeliveryItemsUpdatedMessagePayloadBuilder deliveryId( final java.lang.String deliveryId) {
+   public DeliveryItemsUpdatedMessagePayloadBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -36,7 +35,7 @@ public final class DeliveryItemsUpdatedMessagePayloadBuilder {
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    

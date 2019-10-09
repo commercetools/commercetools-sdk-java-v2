@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.SuggestTokenizer;
-import java.lang.String;
 import com.commercetools.models.product.CustomTokenizer;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class CustomTokenizerBuilder {
    
    
-   private java.util.List<java.lang.String> inputs;
+   private java.util.List<String> inputs;
    
-   public CustomTokenizerBuilder inputs( final java.util.List<java.lang.String> inputs) {
+   public CustomTokenizerBuilder inputs( final java.util.List<String> inputs) {
       this.inputs = inputs;
       return this;
    }
    
    
-   public java.util.List<java.lang.String> getInputs(){
+   public java.util.List<String> getInputs(){
       return this.inputs;
    }
 

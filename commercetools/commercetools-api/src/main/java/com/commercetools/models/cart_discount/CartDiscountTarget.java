@@ -5,7 +5,6 @@ import com.commercetools.models.cart_discount.CartDiscountLineItemsTarget;
 import com.commercetools.models.cart_discount.CartDiscountShippingCostTarget;
 import com.commercetools.models.cart_discount.MultiBuyCustomLineItemsTarget;
 import com.commercetools.models.cart_discount.MultiBuyLineItemsTarget;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

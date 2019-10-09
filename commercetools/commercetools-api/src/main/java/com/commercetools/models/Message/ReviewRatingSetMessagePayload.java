@@ -2,9 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.message.ReviewRatingSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;

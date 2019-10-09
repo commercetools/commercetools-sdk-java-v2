@@ -2,7 +2,6 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.common.MoneyType;
 import com.commercetools.models.common.TypedMoneyDraft;
-import java.lang.Long;
 import com.commercetools.models.common.HighPrecisionMoneyDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,41 +11,41 @@ import java.time.ZonedDateTime;
 public final class HighPrecisionMoneyDraftBuilder {
    
    
-   private java.lang.Long centAmount;
+   private Long centAmount;
    
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
    
    
-   private java.lang.Long preciseAmount;
+   private Long preciseAmount;
    
-   public HighPrecisionMoneyDraftBuilder centAmount( final java.lang.Long centAmount) {
+   public HighPrecisionMoneyDraftBuilder centAmount( final Long centAmount) {
       this.centAmount = centAmount;
       return this;
    }
    
-   public HighPrecisionMoneyDraftBuilder currencyCode( final java.lang.String currencyCode) {
+   public HighPrecisionMoneyDraftBuilder currencyCode( final String currencyCode) {
       this.currencyCode = currencyCode;
       return this;
    }
    
-   public HighPrecisionMoneyDraftBuilder preciseAmount( final java.lang.Long preciseAmount) {
+   public HighPrecisionMoneyDraftBuilder preciseAmount( final Long preciseAmount) {
       this.preciseAmount = preciseAmount;
       return this;
    }
    
    
-   public java.lang.Long getCentAmount(){
+   public Long getCentAmount(){
       return this.centAmount;
    }
    
    
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
    
    
-   public java.lang.Long getPreciseAmount(){
+   public Long getPreciseAmount(){
       return this.preciseAmount;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.SuggestTokenizer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class WhitespaceTokenizerImpl implements WhitespaceTokenizer {
 
-   private java.lang.String type;
+   private String type;
 
    @JsonCreator
    WhitespaceTokenizerImpl() {
@@ -32,7 +31,7 @@ public final class WhitespaceTokenizerImpl implements WhitespaceTokenizer {
    
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
 

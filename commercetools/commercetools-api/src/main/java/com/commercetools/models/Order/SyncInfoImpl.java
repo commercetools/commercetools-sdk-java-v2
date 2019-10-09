@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.channel.ChannelReference;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -26,12 +25,12 @@ public final class SyncInfoImpl implements SyncInfo {
 
    private com.commercetools.models.channel.ChannelReference channel;
    
-   private java.lang.String externalId;
+   private String externalId;
    
    private java.time.ZonedDateTime syncedAt;
 
    @JsonCreator
-   SyncInfoImpl(@JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("syncedAt") final java.time.ZonedDateTime syncedAt) {
+   SyncInfoImpl(@JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("externalId") final String externalId, @JsonProperty("syncedAt") final java.time.ZonedDateTime syncedAt) {
       this.channel = channel;
       this.externalId = externalId;
       this.syncedAt = syncedAt;
@@ -46,7 +45,7 @@ public final class SyncInfoImpl implements SyncInfo {
    }
    
    
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
@@ -59,7 +58,7 @@ public final class SyncInfoImpl implements SyncInfo {
       this.channel = channel;
    }
    
-   public void setExternalId(final java.lang.String externalId){
+   public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
    

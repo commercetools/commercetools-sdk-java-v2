@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
 import com.commercetools.models.product.ProductVariant;
-import java.lang.Object;
 import com.commercetools.models.message.ProductVariantDeletedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,13 +17,19 @@ public final class ProductVariantDeletedMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -33,13 +38,10 @@ public final class ProductVariantDeletedMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
    
-   private java.lang.String type;
-   
-   
-   private java.util.List<java.lang.Object> removedImageUrls;
+   private java.util.List<Object> removedImageUrls;
    
    
    private com.commercetools.models.product.ProductVariant variant;
@@ -54,17 +56,27 @@ public final class ProductVariantDeletedMessageBuilder {
       return this;
    }
    
-   public ProductVariantDeletedMessageBuilder id( final java.lang.String id) {
+   public ProductVariantDeletedMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ProductVariantDeletedMessageBuilder version( final java.lang.Long version) {
+   public ProductVariantDeletedMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public ProductVariantDeletedMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public ProductVariantDeletedMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public ProductVariantDeletedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public ProductVariantDeletedMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -79,17 +91,12 @@ public final class ProductVariantDeletedMessageBuilder {
       return this;
    }
    
-   public ProductVariantDeletedMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public ProductVariantDeletedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public ProductVariantDeletedMessageBuilder type( final java.lang.String type) {
-      this.type = type;
-      return this;
-   }
-   
-   public ProductVariantDeletedMessageBuilder removedImageUrls( final java.util.List<java.lang.Object> removedImageUrls) {
+   public ProductVariantDeletedMessageBuilder removedImageUrls( final java.util.List<Object> removedImageUrls) {
       this.removedImageUrls = removedImageUrls;
       return this;
    }
@@ -110,17 +117,27 @@ public final class ProductVariantDeletedMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -135,17 +152,12 @@ public final class ProductVariantDeletedMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<java.lang.Object> getRemovedImageUrls(){
+   public java.util.List<Object> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
    
@@ -155,7 +167,7 @@ public final class ProductVariantDeletedMessageBuilder {
    }
 
    public ProductVariantDeletedMessage build() {
-       return new ProductVariantDeletedMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, removedImageUrls, variant);
+       return new ProductVariantDeletedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, removedImageUrls, variant);
    }
    
    public static ProductVariantDeletedMessageBuilder of() {
@@ -168,11 +180,12 @@ public final class ProductVariantDeletedMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.removedImageUrls = template.getRemovedImageUrls();
       builder.variant = template.getVariant();
       return builder;

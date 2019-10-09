@@ -1,8 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.error.ErrorResponse;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,31 +10,31 @@ import java.time.ZonedDateTime;
 public final class ErrorResponseBuilder {
    
    @Nullable
-   private java.lang.String error_description;
+   private String error_description;
    
    @Nullable
-   private java.lang.String error;
+   private String error;
    
    
-   private java.lang.String message;
+   private String message;
    
    @Nullable
    private java.util.List<com.commercetools.models.error.ErrorObject> errors;
    
    
-   private java.lang.Integer statusCode;
+   private Integer statusCode;
    
-   public ErrorResponseBuilder error_description(@Nullable final java.lang.String error_description) {
+   public ErrorResponseBuilder error_description(@Nullable final String error_description) {
       this.error_description = error_description;
       return this;
    }
    
-   public ErrorResponseBuilder error(@Nullable final java.lang.String error) {
+   public ErrorResponseBuilder error(@Nullable final String error) {
       this.error = error;
       return this;
    }
    
-   public ErrorResponseBuilder message( final java.lang.String message) {
+   public ErrorResponseBuilder message( final String message) {
       this.message = message;
       return this;
    }
@@ -46,23 +44,23 @@ public final class ErrorResponseBuilder {
       return this;
    }
    
-   public ErrorResponseBuilder statusCode( final java.lang.Integer statusCode) {
+   public ErrorResponseBuilder statusCode( final Integer statusCode) {
       this.statusCode = statusCode;
       return this;
    }
    
    @Nullable
-   public java.lang.String getError_description(){
+   public String getError_description(){
       return this.error_description;
    }
    
    @Nullable
-   public java.lang.String getError(){
+   public String getError(){
       return this.error;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
@@ -72,7 +70,7 @@ public final class ErrorResponseBuilder {
    }
    
    
-   public java.lang.Integer getStatusCode(){
+   public Integer getStatusCode(){
       return this.statusCode;
    }
 

@@ -7,8 +7,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Boolean;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.cart_discount.CartDiscount;
 import javax.annotation.Nullable;
@@ -25,10 +23,10 @@ public final class CartDiscountBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -37,13 +35,13 @@ public final class CartDiscountBuilder {
    private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Boolean requiresDiscountCode;
+   private Boolean requiresDiscountCode;
    
    
    private java.util.List<com.commercetools.models.common.Reference> references;
    
    
-   private java.lang.String cartPredicate;
+   private String cartPredicate;
    
    @Nullable
    private com.commercetools.models.type.CustomFields custom;
@@ -55,7 +53,7 @@ public final class CartDiscountBuilder {
    private java.time.ZonedDateTime validFrom;
    
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
    
    @Nullable
    private com.commercetools.models.cart_discount.CartDiscountTarget target;
@@ -64,7 +62,7 @@ public final class CartDiscountBuilder {
    private com.commercetools.models.cart_discount.StackingMode stackingMode;
    
    
-   private java.lang.String sortOrder;
+   private String sortOrder;
    
    
    private com.commercetools.models.common.LocalizedString name;
@@ -76,7 +74,7 @@ public final class CartDiscountBuilder {
    private com.commercetools.models.cart_discount.CartDiscountValue value;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public CartDiscountBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -88,12 +86,12 @@ public final class CartDiscountBuilder {
       return this;
    }
    
-   public CartDiscountBuilder id( final java.lang.String id) {
+   public CartDiscountBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public CartDiscountBuilder version( final java.lang.Long version) {
+   public CartDiscountBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -108,7 +106,7 @@ public final class CartDiscountBuilder {
       return this;
    }
    
-   public CartDiscountBuilder requiresDiscountCode( final java.lang.Boolean requiresDiscountCode) {
+   public CartDiscountBuilder requiresDiscountCode( final Boolean requiresDiscountCode) {
       this.requiresDiscountCode = requiresDiscountCode;
       return this;
    }
@@ -118,7 +116,7 @@ public final class CartDiscountBuilder {
       return this;
    }
    
-   public CartDiscountBuilder cartPredicate( final java.lang.String cartPredicate) {
+   public CartDiscountBuilder cartPredicate( final String cartPredicate) {
       this.cartPredicate = cartPredicate;
       return this;
    }
@@ -138,7 +136,7 @@ public final class CartDiscountBuilder {
       return this;
    }
    
-   public CartDiscountBuilder isActive( final java.lang.Boolean isActive) {
+   public CartDiscountBuilder isActive( final Boolean isActive) {
       this.isActive = isActive;
       return this;
    }
@@ -153,7 +151,7 @@ public final class CartDiscountBuilder {
       return this;
    }
    
-   public CartDiscountBuilder sortOrder( final java.lang.String sortOrder) {
+   public CartDiscountBuilder sortOrder( final String sortOrder) {
       this.sortOrder = sortOrder;
       return this;
    }
@@ -173,7 +171,7 @@ public final class CartDiscountBuilder {
       return this;
    }
    
-   public CartDiscountBuilder key(@Nullable final java.lang.String key) {
+   public CartDiscountBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -189,12 +187,12 @@ public final class CartDiscountBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -209,7 +207,7 @@ public final class CartDiscountBuilder {
    }
    
    
-   public java.lang.Boolean getRequiresDiscountCode(){
+   public Boolean getRequiresDiscountCode(){
       return this.requiresDiscountCode;
    }
    
@@ -219,7 +217,7 @@ public final class CartDiscountBuilder {
    }
    
    
-   public java.lang.String getCartPredicate(){
+   public String getCartPredicate(){
       return this.cartPredicate;
    }
    
@@ -239,7 +237,7 @@ public final class CartDiscountBuilder {
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
    
@@ -254,7 +252,7 @@ public final class CartDiscountBuilder {
    }
    
    
-   public java.lang.String getSortOrder(){
+   public String getSortOrder(){
       return this.sortOrder;
    }
    
@@ -274,7 +272,7 @@ public final class CartDiscountBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderRemoveDeliveryAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class StagedOrderRemoveDeliveryActionBuilder {
    
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
-   public StagedOrderRemoveDeliveryActionBuilder deliveryId( final java.lang.String deliveryId) {
+   public StagedOrderRemoveDeliveryActionBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
 

@@ -3,8 +3,6 @@ package com.commercetools.models.me;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.me.MyShoppingListUpdateAction;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -27,11 +25,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAddTextLineItemAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.time.ZonedDateTime addedAt;
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
@@ -40,7 +38,7 @@ public final class MyShoppingListAddTextLineItemActionImpl implements MyShopping
    private com.commercetools.models.common.LocalizedString description;
 
    @JsonCreator
-   MyShoppingListAddTextLineItemActionImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description) {
+   MyShoppingListAddTextLineItemActionImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final Long quantity, @JsonProperty("custom") final com.commercetools.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.models.common.LocalizedString description) {
       this.addedAt = addedAt;
       this.quantity = quantity;
       this.custom = custom;
@@ -53,7 +51,7 @@ public final class MyShoppingListAddTextLineItemActionImpl implements MyShopping
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -63,7 +61,7 @@ public final class MyShoppingListAddTextLineItemActionImpl implements MyShopping
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
@@ -86,7 +84,7 @@ public final class MyShoppingListAddTextLineItemActionImpl implements MyShopping
       this.addedAt = addedAt;
    }
    
-   public void setQuantity(final java.lang.Long quantity){
+   public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
    

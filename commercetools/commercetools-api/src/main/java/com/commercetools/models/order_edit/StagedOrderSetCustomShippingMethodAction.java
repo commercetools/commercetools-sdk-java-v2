@@ -4,7 +4,6 @@ import com.commercetools.models.cart.ExternalTaxRateDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.shipping_method.ShippingRateDraft;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetCustomShippingMethodActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

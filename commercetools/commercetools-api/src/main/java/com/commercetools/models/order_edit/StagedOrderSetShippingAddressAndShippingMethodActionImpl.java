@@ -4,7 +4,6 @@ import com.commercetools.models.cart.ExternalTaxRateDraft;
 import com.commercetools.models.common.Address;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl implements StagedOrderSetShippingAddressAndShippingMethodAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate;
    
@@ -46,7 +45,7 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl impl
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

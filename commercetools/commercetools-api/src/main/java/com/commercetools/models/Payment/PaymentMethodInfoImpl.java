@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
 
-   private java.lang.String method;
+   private String method;
    
    private com.commercetools.models.common.LocalizedString name;
    
-   private java.lang.String paymentInterface;
+   private String paymentInterface;
 
    @JsonCreator
-   PaymentMethodInfoImpl(@JsonProperty("method") final java.lang.String method, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("paymentInterface") final java.lang.String paymentInterface) {
+   PaymentMethodInfoImpl(@JsonProperty("method") final String method, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("paymentInterface") final String paymentInterface) {
       this.method = method;
       this.name = name;
       this.paymentInterface = paymentInterface;
@@ -40,7 +39,7 @@ public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
    }
    
    
-   public java.lang.String getMethod(){
+   public String getMethod(){
       return this.method;
    }
    
@@ -50,11 +49,11 @@ public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
    }
    
    
-   public java.lang.String getPaymentInterface(){
+   public String getPaymentInterface(){
       return this.paymentInterface;
    }
 
-   public void setMethod(final java.lang.String method){
+   public void setMethod(final String method){
       this.method = method;
    }
    
@@ -62,7 +61,7 @@ public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
       this.name = name;
    }
    
-   public void setPaymentInterface(final java.lang.String paymentInterface){
+   public void setPaymentInterface(final String paymentInterface){
       this.paymentInterface = paymentInterface;
    }
 

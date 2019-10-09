@@ -2,7 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.cart.ProductPublishScope;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductPublishActionImpl implements ProductPublishAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.cart.ProductPublishScope scope;
 
@@ -38,7 +37,7 @@ public final class ProductPublishActionImpl implements ProductPublishAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

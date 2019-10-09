@@ -1,7 +1,6 @@
 package com.commercetools.models.customer_group;
 
 import com.commercetools.models.customer_group.CustomerGroupUpdateAction;
-import java.lang.String;
 import com.commercetools.models.customer_group.CustomerGroupSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

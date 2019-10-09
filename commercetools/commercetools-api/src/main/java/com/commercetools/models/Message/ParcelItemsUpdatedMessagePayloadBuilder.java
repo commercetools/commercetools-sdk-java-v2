@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order.DeliveryItem;
-import java.lang.String;
 import com.commercetools.models.message.ParcelItemsUpdatedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,7 +11,7 @@ import java.time.ZonedDateTime;
 public final class ParcelItemsUpdatedMessagePayloadBuilder {
    
    @Nullable
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> oldItems;
@@ -21,9 +20,9 @@ public final class ParcelItemsUpdatedMessagePayloadBuilder {
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
    
-   private java.lang.String parcelId;
+   private String parcelId;
    
-   public ParcelItemsUpdatedMessagePayloadBuilder deliveryId(@Nullable final java.lang.String deliveryId) {
+   public ParcelItemsUpdatedMessagePayloadBuilder deliveryId(@Nullable final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -38,13 +37,13 @@ public final class ParcelItemsUpdatedMessagePayloadBuilder {
       return this;
    }
    
-   public ParcelItemsUpdatedMessagePayloadBuilder parcelId( final java.lang.String parcelId) {
+   public ParcelItemsUpdatedMessagePayloadBuilder parcelId( final String parcelId) {
       this.parcelId = parcelId;
       return this;
    }
    
    @Nullable
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    
@@ -59,7 +58,7 @@ public final class ParcelItemsUpdatedMessagePayloadBuilder {
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 

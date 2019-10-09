@@ -3,7 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.message.Message;
 import com.commercetools.models.state.StateReference;
-import java.lang.Boolean;
 import com.commercetools.models.message.ReviewStateTransitionMessage;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -19,13 +18,19 @@ public final class ReviewStateTransitionMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -34,22 +39,19 @@ public final class ReviewStateTransitionMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
+   private Long resourceVersion;
    
    
-   private java.lang.String type;
-   
-   
-   private java.lang.Boolean newIncludedInStatistics;
+   private Boolean newIncludedInStatistics;
    
    
    private com.commercetools.models.state.StateReference oldState;
    
    
-   private java.lang.Boolean force;
+   private Boolean force;
    
    
-   private java.lang.Boolean oldIncludedInStatistics;
+   private Boolean oldIncludedInStatistics;
    
    
    private com.commercetools.models.state.StateReference newState;
@@ -67,17 +69,27 @@ public final class ReviewStateTransitionMessageBuilder {
       return this;
    }
    
-   public ReviewStateTransitionMessageBuilder id( final java.lang.String id) {
+   public ReviewStateTransitionMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ReviewStateTransitionMessageBuilder version( final java.lang.Long version) {
+   public ReviewStateTransitionMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public ReviewStateTransitionMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public ReviewStateTransitionMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public ReviewStateTransitionMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public ReviewStateTransitionMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -92,17 +104,12 @@ public final class ReviewStateTransitionMessageBuilder {
       return this;
    }
    
-   public ReviewStateTransitionMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public ReviewStateTransitionMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public ReviewStateTransitionMessageBuilder type( final java.lang.String type) {
-      this.type = type;
-      return this;
-   }
-   
-   public ReviewStateTransitionMessageBuilder newIncludedInStatistics( final java.lang.Boolean newIncludedInStatistics) {
+   public ReviewStateTransitionMessageBuilder newIncludedInStatistics( final Boolean newIncludedInStatistics) {
       this.newIncludedInStatistics = newIncludedInStatistics;
       return this;
    }
@@ -112,12 +119,12 @@ public final class ReviewStateTransitionMessageBuilder {
       return this;
    }
    
-   public ReviewStateTransitionMessageBuilder force( final java.lang.Boolean force) {
+   public ReviewStateTransitionMessageBuilder force( final Boolean force) {
       this.force = force;
       return this;
    }
    
-   public ReviewStateTransitionMessageBuilder oldIncludedInStatistics( final java.lang.Boolean oldIncludedInStatistics) {
+   public ReviewStateTransitionMessageBuilder oldIncludedInStatistics( final Boolean oldIncludedInStatistics) {
       this.oldIncludedInStatistics = oldIncludedInStatistics;
       return this;
    }
@@ -143,17 +150,27 @@ public final class ReviewStateTransitionMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -168,17 +185,12 @@ public final class ReviewStateTransitionMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    
-   public java.lang.String getType(){
-      return this.type;
-   }
-   
-   
-   public java.lang.Boolean getNewIncludedInStatistics(){
+   public Boolean getNewIncludedInStatistics(){
       return this.newIncludedInStatistics;
    }
    
@@ -188,12 +200,12 @@ public final class ReviewStateTransitionMessageBuilder {
    }
    
    
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    
    
-   public java.lang.Boolean getOldIncludedInStatistics(){
+   public Boolean getOldIncludedInStatistics(){
       return this.oldIncludedInStatistics;
    }
    
@@ -208,7 +220,7 @@ public final class ReviewStateTransitionMessageBuilder {
    }
 
    public ReviewStateTransitionMessage build() {
-       return new ReviewStateTransitionMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, newIncludedInStatistics, oldState, force, oldIncludedInStatistics, newState, target);
+       return new ReviewStateTransitionMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, newIncludedInStatistics, oldState, force, oldIncludedInStatistics, newState, target);
    }
    
    public static ReviewStateTransitionMessageBuilder of() {
@@ -221,11 +233,12 @@ public final class ReviewStateTransitionMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.newIncludedInStatistics = template.getNewIncludedInStatistics();
       builder.oldState = template.getOldState();
       builder.force = template.getForce();

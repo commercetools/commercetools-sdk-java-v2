@@ -3,7 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.customer.CustomerReference;
 import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.OrderCustomerSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;

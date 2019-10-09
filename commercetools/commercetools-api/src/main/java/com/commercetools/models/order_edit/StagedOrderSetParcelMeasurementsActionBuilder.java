@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.ParcelMeasurements;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetParcelMeasurementsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class StagedOrderSetParcelMeasurementsActionBuilder {
    private com.commercetools.models.order.ParcelMeasurements measurements;
    
    
-   private java.lang.String parcelId;
+   private String parcelId;
    
    public StagedOrderSetParcelMeasurementsActionBuilder measurements(@Nullable final com.commercetools.models.order.ParcelMeasurements measurements) {
       this.measurements = measurements;
       return this;
    }
    
-   public StagedOrderSetParcelMeasurementsActionBuilder parcelId( final java.lang.String parcelId) {
+   public StagedOrderSetParcelMeasurementsActionBuilder parcelId( final String parcelId) {
       this.parcelId = parcelId;
       return this;
    }
@@ -33,7 +32,7 @@ public final class StagedOrderSetParcelMeasurementsActionBuilder {
    }
    
    
-   public java.lang.String getParcelId(){
+   public String getParcelId(){
       return this.parcelId;
    }
 

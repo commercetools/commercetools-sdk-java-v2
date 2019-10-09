@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributeType;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeDateTypeImpl implements AttributeDateType {
 
-   private java.lang.String name;
+   private String name;
 
    @JsonCreator
    AttributeDateTypeImpl() {
@@ -32,7 +31,7 @@ public final class AttributeDateTypeImpl implements AttributeDateType {
    
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
 

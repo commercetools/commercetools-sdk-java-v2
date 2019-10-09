@@ -1,7 +1,6 @@
 package com.commercetools.models.review;
 
-import java.lang.Integer;
-import java.lang.Object;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics {
 
-   private java.lang.Integer highestRating;
+   private Integer highestRating;
    
-   private java.lang.Integer averageRating;
+   private Integer averageRating;
    
-   private java.lang.Integer count;
+   private Integer count;
    
-   private java.lang.Object ratingsDistribution;
+   private Object ratingsDistribution;
    
-   private java.lang.Integer lowestRating;
+   private Integer lowestRating;
 
    @JsonCreator
-   ReviewRatingStatisticsImpl(@JsonProperty("highestRating") final java.lang.Integer highestRating, @JsonProperty("averageRating") final java.lang.Integer averageRating, @JsonProperty("count") final java.lang.Integer count, @JsonProperty("ratingsDistribution") final java.lang.Object ratingsDistribution, @JsonProperty("lowestRating") final java.lang.Integer lowestRating) {
+   ReviewRatingStatisticsImpl(@JsonProperty("highestRating") final Integer highestRating, @JsonProperty("averageRating") final Integer averageRating, @JsonProperty("count") final Integer count, @JsonProperty("ratingsDistribution") final Object ratingsDistribution, @JsonProperty("lowestRating") final Integer lowestRating) {
       this.highestRating = highestRating;
       this.averageRating = averageRating;
       this.count = count;
@@ -46,47 +45,47 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
    }
    
    
-   public java.lang.Integer getHighestRating(){
+   public Integer getHighestRating(){
       return this.highestRating;
    }
    
    
-   public java.lang.Integer getAverageRating(){
+   public Integer getAverageRating(){
       return this.averageRating;
    }
    
    
-   public java.lang.Integer getCount(){
+   public Integer getCount(){
       return this.count;
    }
    
    
-   public java.lang.Object getRatingsDistribution(){
+   public Object getRatingsDistribution(){
       return this.ratingsDistribution;
    }
    
    
-   public java.lang.Integer getLowestRating(){
+   public Integer getLowestRating(){
       return this.lowestRating;
    }
 
-   public void setHighestRating(final java.lang.Integer highestRating){
+   public void setHighestRating(final Integer highestRating){
       this.highestRating = highestRating;
    }
    
-   public void setAverageRating(final java.lang.Integer averageRating){
+   public void setAverageRating(final Integer averageRating){
       this.averageRating = averageRating;
    }
    
-   public void setCount(final java.lang.Integer count){
+   public void setCount(final Integer count){
       this.count = count;
    }
    
-   public void setRatingsDistribution(final java.lang.Object ratingsDistribution){
+   public void setRatingsDistribution(final Object ratingsDistribution){
       this.ratingsDistribution = ratingsDistribution;
    }
    
-   public void setLowestRating(final java.lang.Integer lowestRating){
+   public void setLowestRating(final Integer lowestRating){
       this.lowestRating = lowestRating;
    }
 

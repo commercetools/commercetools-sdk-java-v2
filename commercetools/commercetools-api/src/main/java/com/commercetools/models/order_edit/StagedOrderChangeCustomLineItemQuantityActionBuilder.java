@@ -1,8 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderChangeCustomLineItemQuantityAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class StagedOrderChangeCustomLineItemQuantityActionBuilder {
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    
-   private java.lang.Integer quantity;
+   private Integer quantity;
    
-   public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public StagedOrderChangeCustomLineItemQuantityActionBuilder quantity( final java.lang.Integer quantity) {
+   public StagedOrderChangeCustomLineItemQuantityActionBuilder quantity( final Integer quantity) {
       this.quantity = quantity;
       return this;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
    
-   public java.lang.Integer getQuantity(){
+   public Integer getQuantity(){
       return this.quantity;
    }
 

@@ -1,8 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.category.CategorySetAssetCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,54 +10,54 @@ import java.time.ZonedDateTime;
 public final class CategorySetAssetCustomFieldActionBuilder {
    
    @Nullable
-   private java.lang.String assetId;
+   private String assetId;
    
    
-   private java.lang.String name;
-   
-   @Nullable
-   private java.lang.Object value;
+   private String name;
    
    @Nullable
-   private java.lang.String assetKey;
+   private Object value;
    
-   public CategorySetAssetCustomFieldActionBuilder assetId(@Nullable final java.lang.String assetId) {
+   @Nullable
+   private String assetKey;
+   
+   public CategorySetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
       this.assetId = assetId;
       return this;
    }
    
-   public CategorySetAssetCustomFieldActionBuilder name( final java.lang.String name) {
+   public CategorySetAssetCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public CategorySetAssetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
+   public CategorySetAssetCustomFieldActionBuilder value(@Nullable final Object value) {
       this.value = value;
       return this;
    }
    
-   public CategorySetAssetCustomFieldActionBuilder assetKey(@Nullable final java.lang.String assetKey) {
+   public CategorySetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {
       this.assetKey = assetKey;
       return this;
    }
    
    @Nullable
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
    
    @Nullable
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
 

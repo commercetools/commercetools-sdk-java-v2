@@ -1,8 +1,6 @@
 package com.commercetools.models.discount_code;
 
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.discount_code.DiscountCodeSetMaxApplicationsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class DiscountCodeSetMaxApplicationsActionBuilder {
    
    @Nullable
-   private java.lang.Long maxApplications;
+   private Long maxApplications;
    
-   public DiscountCodeSetMaxApplicationsActionBuilder maxApplications(@Nullable final java.lang.Long maxApplications) {
+   public DiscountCodeSetMaxApplicationsActionBuilder maxApplications(@Nullable final Long maxApplications) {
       this.maxApplications = maxApplications;
       return this;
    }
    
    @Nullable
-   public java.lang.Long getMaxApplications(){
+   public Long getMaxApplications(){
       return this.maxApplications;
    }
 

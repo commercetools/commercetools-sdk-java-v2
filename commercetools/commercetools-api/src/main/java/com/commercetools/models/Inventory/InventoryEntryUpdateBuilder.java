@@ -1,7 +1,6 @@
 package com.commercetools.models.inventory;
 
 import com.commercetools.models.inventory.InventoryEntryUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.inventory.InventoryEntryUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class InventoryEntryUpdateBuilder {
    private java.util.List<com.commercetools.models.inventory.InventoryEntryUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public InventoryEntryUpdateBuilder actions( final java.util.List<com.commercetools.models.inventory.InventoryEntryUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public InventoryEntryUpdateBuilder version( final java.lang.Long version) {
+   public InventoryEntryUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class InventoryEntryUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

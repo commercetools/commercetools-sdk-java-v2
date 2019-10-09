@@ -1,8 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.error.ConcurrentModificationErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;

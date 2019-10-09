@@ -3,7 +3,6 @@ package com.commercetools.models.order;
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderSetCustomTypeActionImpl implements OrderSetCustomTypeAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.type.FieldContainer fields;
    
@@ -42,7 +41,7 @@ public final class OrderSetCustomTypeActionImpl implements OrderSetCustomTypeAct
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

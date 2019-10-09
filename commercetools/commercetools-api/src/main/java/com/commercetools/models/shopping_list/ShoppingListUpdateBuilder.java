@@ -1,7 +1,6 @@
 package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.shopping_list.ShoppingListUpdate;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,14 +13,14 @@ public final class ShoppingListUpdateBuilder {
    private java.util.List<com.commercetools.models.shopping_list.ShoppingListUpdateAction> actions;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    public ShoppingListUpdateBuilder actions( final java.util.List<com.commercetools.models.shopping_list.ShoppingListUpdateAction> actions) {
       this.actions = actions;
       return this;
    }
    
-   public ShoppingListUpdateBuilder version( final java.lang.Long version) {
+   public ShoppingListUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -32,7 +31,7 @@ public final class ShoppingListUpdateBuilder {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 

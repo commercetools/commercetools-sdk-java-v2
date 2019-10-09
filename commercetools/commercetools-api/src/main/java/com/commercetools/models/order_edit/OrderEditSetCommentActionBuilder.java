@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.OrderEditSetCommentAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class OrderEditSetCommentActionBuilder {
    
    @Nullable
-   private java.lang.String comment;
+   private String comment;
    
-   public OrderEditSetCommentActionBuilder comment(@Nullable final java.lang.String comment) {
+   public OrderEditSetCommentActionBuilder comment(@Nullable final String comment) {
       this.comment = comment;
       return this;
    }
    
    @Nullable
-   public java.lang.String getComment(){
+   public String getComment(){
       return this.comment;
    }
 

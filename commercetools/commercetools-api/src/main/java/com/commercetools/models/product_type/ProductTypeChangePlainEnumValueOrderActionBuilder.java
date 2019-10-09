@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.AttributePlainEnumValue;
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeChangePlainEnumValueOrderAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +14,14 @@ public final class ProductTypeChangePlainEnumValueOrderActionBuilder {
    private java.util.List<com.commercetools.models.product_type.AttributePlainEnumValue> values;
    
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
    public ProductTypeChangePlainEnumValueOrderActionBuilder values( final java.util.List<com.commercetools.models.product_type.AttributePlainEnumValue> values) {
       this.values = values;
       return this;
    }
    
-   public ProductTypeChangePlainEnumValueOrderActionBuilder attributeName( final java.lang.String attributeName) {
+   public ProductTypeChangePlainEnumValueOrderActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
@@ -33,7 +32,7 @@ public final class ProductTypeChangePlainEnumValueOrderActionBuilder {
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
 

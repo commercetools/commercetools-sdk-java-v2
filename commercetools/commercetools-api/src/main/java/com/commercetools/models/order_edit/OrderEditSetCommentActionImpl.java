@@ -1,7 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditSetCommentActionImpl implements OrderEditSetCommentAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String comment;
+   private String comment;
 
    @JsonCreator
-   OrderEditSetCommentActionImpl(@JsonProperty("comment") final java.lang.String comment) {
+   OrderEditSetCommentActionImpl(@JsonProperty("comment") final String comment) {
       this.comment = comment;
       this.action = "setComment";
    }
@@ -37,16 +36,16 @@ public final class OrderEditSetCommentActionImpl implements OrderEditSetCommentA
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getComment(){
+   public String getComment(){
       return this.comment;
    }
 
-   public void setComment(final java.lang.String comment){
+   public void setComment(final String comment){
       this.comment = comment;
    }
 

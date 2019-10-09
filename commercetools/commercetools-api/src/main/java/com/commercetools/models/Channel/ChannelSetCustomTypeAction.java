@@ -3,7 +3,6 @@ package com.commercetools.models.channel;
 import com.commercetools.models.channel.ChannelUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.channel.ChannelSetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

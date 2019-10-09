@@ -3,7 +3,6 @@ package com.commercetools.models.me;
 import com.commercetools.models.me.MyShoppingListUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.me.MyShoppingListSetTextLineItemCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -19,7 +18,7 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder {
    private com.commercetools.models.type.TypeResourceIdentifier type;
    
    
-   private java.lang.String textLineItemId;
+   private String textLineItemId;
    
    public MyShoppingListSetTextLineItemCustomTypeActionBuilder fields(@Nullable final com.commercetools.models.type.FieldContainer fields) {
       this.fields = fields;
@@ -31,7 +30,7 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder {
       return this;
    }
    
-   public MyShoppingListSetTextLineItemCustomTypeActionBuilder textLineItemId( final java.lang.String textLineItemId) {
+   public MyShoppingListSetTextLineItemCustomTypeActionBuilder textLineItemId( final String textLineItemId) {
       this.textLineItemId = textLineItemId;
       return this;
    }
@@ -47,7 +46,7 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder {
    }
    
    
-   public java.lang.String getTextLineItemId(){
+   public String getTextLineItemId(){
       return this.textLineItemId;
    }
 

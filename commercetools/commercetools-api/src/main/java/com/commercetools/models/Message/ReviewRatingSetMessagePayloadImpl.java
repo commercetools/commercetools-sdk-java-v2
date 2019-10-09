@@ -2,9 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.Integer oldRating;
+   private Integer oldRating;
    
-   private java.lang.Boolean includedInStatistics;
+   private Boolean includedInStatistics;
    
-   private java.lang.Integer newRating;
+   private Integer newRating;
    
    private com.commercetools.models.common.Reference target;
 
    @JsonCreator
-   ReviewRatingSetMessagePayloadImpl(@JsonProperty("oldRating") final java.lang.Integer oldRating, @JsonProperty("includedInStatistics") final java.lang.Boolean includedInStatistics, @JsonProperty("newRating") final java.lang.Integer newRating, @JsonProperty("target") final com.commercetools.models.common.Reference target) {
+   ReviewRatingSetMessagePayloadImpl(@JsonProperty("oldRating") final Integer oldRating, @JsonProperty("includedInStatistics") final Boolean includedInStatistics, @JsonProperty("newRating") final Integer newRating, @JsonProperty("target") final com.commercetools.models.common.Reference target) {
       this.oldRating = oldRating;
       this.includedInStatistics = includedInStatistics;
       this.newRating = newRating;
@@ -49,22 +46,22 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.Integer getOldRating(){
+   public Integer getOldRating(){
       return this.oldRating;
    }
    
    
-   public java.lang.Boolean getIncludedInStatistics(){
+   public Boolean getIncludedInStatistics(){
       return this.includedInStatistics;
    }
    
    
-   public java.lang.Integer getNewRating(){
+   public Integer getNewRating(){
       return this.newRating;
    }
    
@@ -73,15 +70,15 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
       return this.target;
    }
 
-   public void setOldRating(final java.lang.Integer oldRating){
+   public void setOldRating(final Integer oldRating){
       this.oldRating = oldRating;
    }
    
-   public void setIncludedInStatistics(final java.lang.Boolean includedInStatistics){
+   public void setIncludedInStatistics(final Boolean includedInStatistics){
       this.includedInStatistics = includedInStatistics;
    }
    
-   public void setNewRating(final java.lang.Integer newRating){
+   public void setNewRating(final Integer newRating){
       this.newRating = newRating;
    }
    

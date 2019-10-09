@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeChangeEnumKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class ProductTypeChangeEnumKeyActionBuilder {
    
    
-   private java.lang.String newKey;
+   private String newKey;
    
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
    
-   private java.lang.String key;
+   private String key;
    
-   public ProductTypeChangeEnumKeyActionBuilder newKey( final java.lang.String newKey) {
+   public ProductTypeChangeEnumKeyActionBuilder newKey( final String newKey) {
       this.newKey = newKey;
       return this;
    }
    
-   public ProductTypeChangeEnumKeyActionBuilder attributeName( final java.lang.String attributeName) {
+   public ProductTypeChangeEnumKeyActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
    
-   public ProductTypeChangeEnumKeyActionBuilder key( final java.lang.String key) {
+   public ProductTypeChangeEnumKeyActionBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getNewKey(){
+   public String getNewKey(){
       return this.newKey;
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

@@ -1,8 +1,7 @@
 package com.commercetools.models.store;
 
-import com.commercetools.models.common.BaseResource;
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
+import com.commercetools.models.common.LoggedResource;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -28,20 +27,26 @@ public final class StoreImpl implements Store {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
+   
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    private com.commercetools.models.common.LocalizedString name;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   StoreImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("key") final java.lang.String key) {
+   StoreImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
       this.version = version;
+      this.createdBy = createdBy;
+      this.lastModifiedBy = lastModifiedBy;
       this.name = name;
       this.key = key;
    }
@@ -60,13 +65,23 @@ public final class StoreImpl implements Store {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
+   }
+   
+   
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
    }
    
    
@@ -75,7 +90,7 @@ public final class StoreImpl implements Store {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -87,19 +102,27 @@ public final class StoreImpl implements Store {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setCreatedBy(final com.commercetools.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
+   public void setLastModifiedBy(final com.commercetools.models.common.LastModifiedBy lastModifiedBy){
+      this.lastModifiedBy = lastModifiedBy;
    }
    
    public void setName(final com.commercetools.models.common.LocalizedString name){
       this.name = name;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentSetMethodInfoMethodActionImpl implements PaymentSetMethodInfoMethodAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String method;
+   private String method;
 
    @JsonCreator
-   PaymentSetMethodInfoMethodActionImpl(@JsonProperty("method") final java.lang.String method) {
+   PaymentSetMethodInfoMethodActionImpl(@JsonProperty("method") final String method) {
       this.method = method;
       this.action = "setMethodInfoMethod";
    }
@@ -37,16 +36,16 @@ public final class PaymentSetMethodInfoMethodActionImpl implements PaymentSetMet
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getMethod(){
+   public String getMethod(){
       return this.method;
    }
 
-   public void setMethod(final java.lang.String method){
+   public void setMethod(final String method){
       this.method = method;
    }
 

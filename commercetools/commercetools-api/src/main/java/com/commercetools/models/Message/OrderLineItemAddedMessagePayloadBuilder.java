@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.cart.LineItem;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.message.OrderLineItemAddedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,14 +14,14 @@ public final class OrderLineItemAddedMessagePayloadBuilder {
    private com.commercetools.models.cart.LineItem lineItem;
    
    
-   private java.lang.Long addedQuantity;
+   private Long addedQuantity;
    
    public OrderLineItemAddedMessagePayloadBuilder lineItem( final com.commercetools.models.cart.LineItem lineItem) {
       this.lineItem = lineItem;
       return this;
    }
    
-   public OrderLineItemAddedMessagePayloadBuilder addedQuantity( final java.lang.Long addedQuantity) {
+   public OrderLineItemAddedMessagePayloadBuilder addedQuantity( final Long addedQuantity) {
       this.addedQuantity = addedQuantity;
       return this;
    }
@@ -34,7 +32,7 @@ public final class OrderLineItemAddedMessagePayloadBuilder {
    }
    
    
-   public java.lang.Long getAddedQuantity(){
+   public Long getAddedQuantity(){
       return this.addedQuantity;
    }
 

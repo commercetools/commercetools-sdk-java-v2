@@ -2,8 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.Message;
 import com.commercetools.models.state.StateReference;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.message.CustomLineItemStateTransitionMessage;
 import javax.annotation.Nullable;
@@ -20,13 +18,19 @@ public final class CustomLineItemStateTransitionMessageBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
+   
+   @Nullable
+   private com.commercetools.models.common.CreatedBy createdBy;
+   
+   @Nullable
+   private com.commercetools.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private java.lang.Long sequenceNumber;
+   private Long sequenceNumber;
    
    
    private com.commercetools.models.common.Reference resource;
@@ -35,10 +39,7 @@ public final class CustomLineItemStateTransitionMessageBuilder {
    private com.commercetools.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private java.lang.Long resourceVersion;
-   
-   
-   private java.lang.String type;
+   private Long resourceVersion;
    
    
    private com.commercetools.models.state.StateReference toState;
@@ -47,10 +48,10 @@ public final class CustomLineItemStateTransitionMessageBuilder {
    private com.commercetools.models.state.StateReference fromState;
    
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
    
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
    
    private java.time.ZonedDateTime transitionDate;
@@ -65,17 +66,27 @@ public final class CustomLineItemStateTransitionMessageBuilder {
       return this;
    }
    
-   public CustomLineItemStateTransitionMessageBuilder id( final java.lang.String id) {
+   public CustomLineItemStateTransitionMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public CustomLineItemStateTransitionMessageBuilder version( final java.lang.Long version) {
+   public CustomLineItemStateTransitionMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
    
-   public CustomLineItemStateTransitionMessageBuilder sequenceNumber( final java.lang.Long sequenceNumber) {
+   public CustomLineItemStateTransitionMessageBuilder createdBy(@Nullable final com.commercetools.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
+   public CustomLineItemStateTransitionMessageBuilder lastModifiedBy(@Nullable final com.commercetools.models.common.LastModifiedBy lastModifiedBy) {
+      this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public CustomLineItemStateTransitionMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
@@ -90,13 +101,8 @@ public final class CustomLineItemStateTransitionMessageBuilder {
       return this;
    }
    
-   public CustomLineItemStateTransitionMessageBuilder resourceVersion( final java.lang.Long resourceVersion) {
+   public CustomLineItemStateTransitionMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
-      return this;
-   }
-   
-   public CustomLineItemStateTransitionMessageBuilder type( final java.lang.String type) {
-      this.type = type;
       return this;
    }
    
@@ -110,12 +116,12 @@ public final class CustomLineItemStateTransitionMessageBuilder {
       return this;
    }
    
-   public CustomLineItemStateTransitionMessageBuilder customLineItemId( final java.lang.String customLineItemId) {
+   public CustomLineItemStateTransitionMessageBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public CustomLineItemStateTransitionMessageBuilder quantity( final java.lang.Long quantity) {
+   public CustomLineItemStateTransitionMessageBuilder quantity( final Long quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -136,17 +142,27 @@ public final class CustomLineItemStateTransitionMessageBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
+   @Nullable
+   public com.commercetools.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
    
-   public java.lang.Long getSequenceNumber(){
+   @Nullable
+   public com.commercetools.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
+   
+   public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
    
@@ -161,13 +177,8 @@ public final class CustomLineItemStateTransitionMessageBuilder {
    }
    
    
-   public java.lang.Long getResourceVersion(){
+   public Long getResourceVersion(){
       return this.resourceVersion;
-   }
-   
-   
-   public java.lang.String getType(){
-      return this.type;
    }
    
    
@@ -181,12 +192,12 @@ public final class CustomLineItemStateTransitionMessageBuilder {
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
@@ -196,7 +207,7 @@ public final class CustomLineItemStateTransitionMessageBuilder {
    }
 
    public CustomLineItemStateTransitionMessage build() {
-       return new CustomLineItemStateTransitionMessageImpl(createdAt, lastModifiedAt, id, version, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, type, toState, fromState, customLineItemId, quantity, transitionDate);
+       return new CustomLineItemStateTransitionMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, toState, fromState, customLineItemId, quantity, transitionDate);
    }
    
    public static CustomLineItemStateTransitionMessageBuilder of() {
@@ -209,11 +220,12 @@ public final class CustomLineItemStateTransitionMessageBuilder {
       builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
+      builder.createdBy = template.getCreatedBy();
+      builder.lastModifiedBy = template.getLastModifiedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
       builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.type = template.getType();
       builder.toState = template.getToState();
       builder.fromState = template.getFromState();
       builder.customLineItemId = template.getCustomLineItemId();

@@ -2,7 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetTaxCategoryAction;
 import javax.annotation.Nullable;
 import java.util.List;

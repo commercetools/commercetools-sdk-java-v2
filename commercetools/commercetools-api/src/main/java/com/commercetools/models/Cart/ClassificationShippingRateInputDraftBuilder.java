@@ -1,7 +1,6 @@
 package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.ShippingRateInputDraft;
-import java.lang.String;
 import com.commercetools.models.cart.ClassificationShippingRateInputDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ClassificationShippingRateInputDraftBuilder {
    
    
-   private java.lang.String key;
+   private String key;
    
-   public ClassificationShippingRateInputDraftBuilder key( final java.lang.String key) {
+   public ClassificationShippingRateInputDraftBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

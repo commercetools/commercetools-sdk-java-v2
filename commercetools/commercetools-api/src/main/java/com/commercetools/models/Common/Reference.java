@@ -24,7 +24,6 @@ import com.commercetools.models.store.StoreReference;
 import com.commercetools.models.tax_category.TaxCategoryReference;
 import com.commercetools.models.type.TypeReference;
 import com.commercetools.models.zone.ZoneReference;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.review.Review;
-import java.lang.String;
 import com.commercetools.models.message.ReviewCreatedMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;

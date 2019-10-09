@@ -15,7 +15,6 @@ import com.commercetools.models.type.TypeChangeLocalizedEnumValueOrderAction;
 import com.commercetools.models.type.TypeChangeNameAction;
 import com.commercetools.models.type.TypeRemoveFieldDefinitionAction;
 import com.commercetools.models.type.TypeSetDescriptionAction;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

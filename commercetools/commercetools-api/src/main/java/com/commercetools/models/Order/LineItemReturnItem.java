@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.ReturnItem;
-import java.lang.String;
 import com.commercetools.models.order.LineItemReturnItemImpl;
 
 import com.fasterxml.jackson.annotation.*;

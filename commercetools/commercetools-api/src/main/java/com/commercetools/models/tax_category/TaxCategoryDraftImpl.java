@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxRateDraft;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +24,14 @@ public final class TaxCategoryDraftImpl implements TaxCategoryDraft {
 
    private java.util.List<com.commercetools.models.tax_category.TaxRateDraft> rates;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.String description;
+   private String description;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   TaxCategoryDraftImpl(@JsonProperty("rates") final java.util.List<com.commercetools.models.tax_category.TaxRateDraft> rates, @JsonProperty("name") final java.lang.String name, @JsonProperty("description") final java.lang.String description, @JsonProperty("key") final java.lang.String key) {
+   TaxCategoryDraftImpl(@JsonProperty("rates") final java.util.List<com.commercetools.models.tax_category.TaxRateDraft> rates, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("key") final String key) {
       this.rates = rates;
       this.name = name;
       this.description = description;
@@ -48,17 +47,17 @@ public final class TaxCategoryDraftImpl implements TaxCategoryDraft {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -66,15 +65,15 @@ public final class TaxCategoryDraftImpl implements TaxCategoryDraft {
       this.rates = rates;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setDescription(final java.lang.String description){
+   public void setDescription(final String description){
       this.description = description;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

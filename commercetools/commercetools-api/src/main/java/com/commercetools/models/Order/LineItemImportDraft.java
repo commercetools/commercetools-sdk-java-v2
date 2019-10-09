@@ -8,8 +8,6 @@ import com.commercetools.models.order.ItemState;
 import com.commercetools.models.order.ProductVariantImportDraft;
 import com.commercetools.models.tax_category.TaxRate;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.order.LineItemImportDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

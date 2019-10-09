@@ -2,9 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.common.DiscountedPrice;
 import com.commercetools.models.message.Message;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.message.ProductPriceExternalDiscountSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +70,12 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
       instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
       instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setType(template.getType());
       instance.setDiscounted(template.getDiscounted());
       instance.setStaged(template.getStaged());
       instance.setVariantId(template.getVariantId());

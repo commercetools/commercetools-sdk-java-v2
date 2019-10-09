@@ -4,8 +4,6 @@ import com.commercetools.models.channel.ChannelRoleEnum;
 import com.commercetools.models.common.Address;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.channel.ChannelDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,7 +16,7 @@ public final class ChannelDraftBuilder {
    private com.commercetools.models.common.Address address;
    
    @Nullable
-   private java.lang.Object geoLocation;
+   private Object geoLocation;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
@@ -33,14 +31,14 @@ public final class ChannelDraftBuilder {
    private com.commercetools.models.common.LocalizedString description;
    
    
-   private java.lang.String key;
+   private String key;
    
    public ChannelDraftBuilder address(@Nullable final com.commercetools.models.common.Address address) {
       this.address = address;
       return this;
    }
    
-   public ChannelDraftBuilder geoLocation(@Nullable final java.lang.Object geoLocation) {
+   public ChannelDraftBuilder geoLocation(@Nullable final Object geoLocation) {
       this.geoLocation = geoLocation;
       return this;
    }
@@ -65,7 +63,7 @@ public final class ChannelDraftBuilder {
       return this;
    }
    
-   public ChannelDraftBuilder key( final java.lang.String key) {
+   public ChannelDraftBuilder key( final String key) {
       this.key = key;
       return this;
    }
@@ -76,7 +74,7 @@ public final class ChannelDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Object getGeoLocation(){
+   public Object getGeoLocation(){
       return this.geoLocation;
    }
    
@@ -101,7 +99,7 @@ public final class ChannelDraftBuilder {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

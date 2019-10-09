@@ -3,7 +3,6 @@ package com.commercetools.models.common;
 import com.commercetools.models.common.AssetSource;
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import com.commercetools.models.common.AssetImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -2,7 +2,6 @@ package com.commercetools.models.me;
 
 import com.commercetools.models.cart.TaxMode;
 import com.commercetools.models.me.MyCartUpdateAction;
-import java.lang.String;
 import com.commercetools.models.me.MyCartChangeTaxModeAction;
 import javax.annotation.Nullable;
 import java.util.List;

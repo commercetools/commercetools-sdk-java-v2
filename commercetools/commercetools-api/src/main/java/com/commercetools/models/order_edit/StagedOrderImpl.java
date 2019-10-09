@@ -26,9 +26,9 @@ public final class StagedOrderImpl implements StagedOrder {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
@@ -36,11 +36,11 @@ public final class StagedOrderImpl implements StagedOrder {
    
    private com.commercetools.models.order.ShipmentState shipmentState;
    
-   private java.lang.String country;
+   private String country;
    
-   private java.lang.String orderNumber;
+   private String orderNumber;
    
-   private com.commercetools.models.common.Money totalPrice;
+   private com.commercetools.models.common.TypedMoney totalPrice;
    
    private com.commercetools.models.cart.ShippingRateInput shippingRateInput;
    
@@ -50,7 +50,9 @@ public final class StagedOrderImpl implements StagedOrder {
    
    private com.commercetools.models.cart.ShippingInfo shippingInfo;
    
-   private java.lang.String locale;
+   private java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> refusedGifts;
+   
+   private String locale;
    
    private com.commercetools.models.cart.CartReference cart;
    
@@ -66,15 +68,15 @@ public final class StagedOrderImpl implements StagedOrder {
    
    private java.util.List<com.commercetools.models.common.Address> itemShippingAddresses;
    
-   private java.lang.String customerEmail;
+   private String customerEmail;
    
-   private java.lang.String customerId;
+   private String customerId;
    
    private com.commercetools.models.state.StateReference state;
    
    private com.commercetools.models.order.PaymentState paymentState;
    
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    private java.util.List<com.commercetools.models.cart.DiscountCodeInfo> discountCodes;
    
@@ -88,7 +90,7 @@ public final class StagedOrderImpl implements StagedOrder {
    
    private com.commercetools.models.store.StoreKeyReference store;
    
-   private java.lang.Long lastMessageSequenceNumber;
+   private Long lastMessageSequenceNumber;
    
    private java.util.List<com.commercetools.models.order.SyncInfo> syncInfo;
    
@@ -103,7 +105,7 @@ public final class StagedOrderImpl implements StagedOrder {
    private com.commercetools.models.order.PaymentInfo paymentInfo;
 
    @JsonCreator
-   StagedOrderImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("shipmentState") final com.commercetools.models.order.ShipmentState shipmentState, @JsonProperty("country") final java.lang.String country, @JsonProperty("orderNumber") final java.lang.String orderNumber, @JsonProperty("totalPrice") final com.commercetools.models.common.Money totalPrice, @JsonProperty("shippingRateInput") final com.commercetools.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedPrice taxedPrice, @JsonProperty("origin") final com.commercetools.models.cart.CartOrigin origin, @JsonProperty("shippingInfo") final com.commercetools.models.cart.ShippingInfo shippingInfo, @JsonProperty("locale") final java.lang.String locale, @JsonProperty("cart") final com.commercetools.models.cart.CartReference cart, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode, @JsonProperty("orderState") final com.commercetools.models.order.OrderState orderState, @JsonProperty("returnInfo") final java.util.List<com.commercetools.models.order.ReturnInfo> returnInfo, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.cart.LineItem> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.models.cart.CustomLineItem> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("customerEmail") final java.lang.String customerEmail, @JsonProperty("customerId") final java.lang.String customerId, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("paymentState") final com.commercetools.models.order.PaymentState paymentState, @JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("discountCodes") final java.util.List<com.commercetools.models.cart.DiscountCodeInfo> discountCodes, @JsonProperty("completedAt") final java.time.ZonedDateTime completedAt, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("taxCalculationMode") final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("store") final com.commercetools.models.store.StoreKeyReference store, @JsonProperty("lastMessageSequenceNumber") final java.lang.Long lastMessageSequenceNumber, @JsonProperty("syncInfo") final java.util.List<com.commercetools.models.order.SyncInfo> syncInfo, @JsonProperty("taxRoundingMode") final com.commercetools.models.cart.RoundingMode taxRoundingMode, @JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress, @JsonProperty("paymentInfo") final com.commercetools.models.order.PaymentInfo paymentInfo) {
+   StagedOrderImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("shipmentState") final com.commercetools.models.order.ShipmentState shipmentState, @JsonProperty("country") final String country, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("totalPrice") final com.commercetools.models.common.TypedMoney totalPrice, @JsonProperty("shippingRateInput") final com.commercetools.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedPrice taxedPrice, @JsonProperty("origin") final com.commercetools.models.cart.CartOrigin origin, @JsonProperty("shippingInfo") final com.commercetools.models.cart.ShippingInfo shippingInfo, @JsonProperty("refusedGifts") final java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> refusedGifts, @JsonProperty("locale") final String locale, @JsonProperty("cart") final com.commercetools.models.cart.CartReference cart, @JsonProperty("inventoryMode") final com.commercetools.models.cart.InventoryMode inventoryMode, @JsonProperty("orderState") final com.commercetools.models.order.OrderState orderState, @JsonProperty("returnInfo") final java.util.List<com.commercetools.models.order.ReturnInfo> returnInfo, @JsonProperty("lineItems") final java.util.List<com.commercetools.models.cart.LineItem> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.models.cart.CustomLineItem> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.models.common.Address> itemShippingAddresses, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("customerId") final String customerId, @JsonProperty("state") final com.commercetools.models.state.StateReference state, @JsonProperty("paymentState") final com.commercetools.models.order.PaymentState paymentState, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("discountCodes") final java.util.List<com.commercetools.models.cart.DiscountCodeInfo> discountCodes, @JsonProperty("completedAt") final java.time.ZonedDateTime completedAt, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("taxCalculationMode") final com.commercetools.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("store") final com.commercetools.models.store.StoreKeyReference store, @JsonProperty("lastMessageSequenceNumber") final Long lastMessageSequenceNumber, @JsonProperty("syncInfo") final java.util.List<com.commercetools.models.order.SyncInfo> syncInfo, @JsonProperty("taxRoundingMode") final com.commercetools.models.cart.RoundingMode taxRoundingMode, @JsonProperty("taxMode") final com.commercetools.models.cart.TaxMode taxMode, @JsonProperty("shippingAddress") final com.commercetools.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.models.common.Address billingAddress, @JsonProperty("paymentInfo") final com.commercetools.models.order.PaymentInfo paymentInfo) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -118,6 +120,7 @@ public final class StagedOrderImpl implements StagedOrder {
       this.taxedPrice = taxedPrice;
       this.origin = origin;
       this.shippingInfo = shippingInfo;
+      this.refusedGifts = refusedGifts;
       this.locale = locale;
       this.cart = cart;
       this.inventoryMode = inventoryMode;
@@ -160,12 +163,12 @@ public final class StagedOrderImpl implements StagedOrder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -185,17 +188,17 @@ public final class StagedOrderImpl implements StagedOrder {
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    
-   public java.lang.String getOrderNumber(){
+   public String getOrderNumber(){
       return this.orderNumber;
    }
    
    
-   public com.commercetools.models.common.Money getTotalPrice(){
+   public com.commercetools.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
    
@@ -220,7 +223,12 @@ public final class StagedOrderImpl implements StagedOrder {
    }
    
    
-   public java.lang.String getLocale(){
+   public java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> getRefusedGifts(){
+      return this.refusedGifts;
+   }
+   
+   
+   public String getLocale(){
       return this.locale;
    }
    
@@ -260,12 +268,12 @@ public final class StagedOrderImpl implements StagedOrder {
    }
    
    
-   public java.lang.String getCustomerEmail(){
+   public String getCustomerEmail(){
       return this.customerEmail;
    }
    
    
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
    
@@ -280,7 +288,7 @@ public final class StagedOrderImpl implements StagedOrder {
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -315,7 +323,7 @@ public final class StagedOrderImpl implements StagedOrder {
    }
    
    
-   public java.lang.Long getLastMessageSequenceNumber(){
+   public Long getLastMessageSequenceNumber(){
       return this.lastMessageSequenceNumber;
    }
    
@@ -357,11 +365,11 @@ public final class StagedOrderImpl implements StagedOrder {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -377,15 +385,15 @@ public final class StagedOrderImpl implements StagedOrder {
       this.shipmentState = shipmentState;
    }
    
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
-   public void setOrderNumber(final java.lang.String orderNumber){
+   public void setOrderNumber(final String orderNumber){
       this.orderNumber = orderNumber;
    }
    
-   public void setTotalPrice(final com.commercetools.models.common.Money totalPrice){
+   public void setTotalPrice(final com.commercetools.models.common.TypedMoney totalPrice){
       this.totalPrice = totalPrice;
    }
    
@@ -405,7 +413,11 @@ public final class StagedOrderImpl implements StagedOrder {
       this.shippingInfo = shippingInfo;
    }
    
-   public void setLocale(final java.lang.String locale){
+   public void setRefusedGifts(final java.util.List<com.commercetools.models.cart_discount.CartDiscountReference> refusedGifts){
+      this.refusedGifts = refusedGifts;
+   }
+   
+   public void setLocale(final String locale){
       this.locale = locale;
    }
    
@@ -437,11 +449,11 @@ public final class StagedOrderImpl implements StagedOrder {
       this.itemShippingAddresses = itemShippingAddresses;
    }
    
-   public void setCustomerEmail(final java.lang.String customerEmail){
+   public void setCustomerEmail(final String customerEmail){
       this.customerEmail = customerEmail;
    }
    
-   public void setCustomerId(final java.lang.String customerId){
+   public void setCustomerId(final String customerId){
       this.customerId = customerId;
    }
    
@@ -453,7 +465,7 @@ public final class StagedOrderImpl implements StagedOrder {
       this.paymentState = paymentState;
    }
    
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
    
@@ -481,7 +493,7 @@ public final class StagedOrderImpl implements StagedOrder {
       this.store = store;
    }
    
-   public void setLastMessageSequenceNumber(final java.lang.Long lastMessageSequenceNumber){
+   public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber){
       this.lastMessageSequenceNumber = lastMessageSequenceNumber;
    }
    

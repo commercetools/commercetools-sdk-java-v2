@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.AnonymousCartSignInMode;
-import java.lang.String;
 import com.commercetools.models.customer.CustomerSigninImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -42,6 +41,10 @@ public interface CustomerSignin  {
    
    @JsonProperty("anonymousId")
    public String getAnonymousId();
+   
+   
+   @JsonProperty("updateProductData")
+   public Boolean getUpdateProductData();
 
    public void setEmail(final String email);
    
@@ -53,6 +56,8 @@ public interface CustomerSignin  {
    
    public void setAnonymousId(final String anonymousId);
    
+   public void setUpdateProductData(final Boolean updateProductData);
+   
    public static CustomerSigninImpl of(){
       return new CustomerSigninImpl();
    }
@@ -60,6 +65,7 @@ public interface CustomerSignin  {
 
    public static CustomerSigninImpl of(final CustomerSignin template) {
       CustomerSigninImpl instance = new CustomerSigninImpl();
+      instance.setUpdateProductData(template.getUpdateProductData());
       instance.setAnonymousId(template.getAnonymousId());
       instance.setPassword(template.getPassword());
       instance.setAnonymousCartSignInMode(template.getAnonymousCartSignInMode());

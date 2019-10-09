@@ -2,8 +2,6 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.common.BaseResource;
 import com.commercetools.models.product.FacetResults;
-import java.lang.Long;
-import java.lang.Object;
 import com.commercetools.models.common.PagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,16 +11,19 @@ import java.time.ZonedDateTime;
 public final class PagedQueryResponseBuilder {
    
    @Nullable
-   private java.lang.Long total;
+   private Long total;
    
    
-   private java.lang.Long offset;
+   private Long offset;
    
    @Nullable
-   private java.lang.Object meta;
+   private Object meta;
    
    
-   private java.lang.Long count;
+   private Long count;
+   
+   
+   private Long limit;
    
    
    private java.util.List<com.commercetools.models.common.BaseResource> results;
@@ -30,23 +31,28 @@ public final class PagedQueryResponseBuilder {
    @Nullable
    private com.commercetools.models.product.FacetResults facets;
    
-   public PagedQueryResponseBuilder total(@Nullable final java.lang.Long total) {
+   public PagedQueryResponseBuilder total(@Nullable final Long total) {
       this.total = total;
       return this;
    }
    
-   public PagedQueryResponseBuilder offset( final java.lang.Long offset) {
+   public PagedQueryResponseBuilder offset( final Long offset) {
       this.offset = offset;
       return this;
    }
    
-   public PagedQueryResponseBuilder meta(@Nullable final java.lang.Object meta) {
+   public PagedQueryResponseBuilder meta(@Nullable final Object meta) {
       this.meta = meta;
       return this;
    }
    
-   public PagedQueryResponseBuilder count( final java.lang.Long count) {
+   public PagedQueryResponseBuilder count( final Long count) {
       this.count = count;
+      return this;
+   }
+   
+   public PagedQueryResponseBuilder limit( final Long limit) {
+      this.limit = limit;
       return this;
    }
    
@@ -61,23 +67,28 @@ public final class PagedQueryResponseBuilder {
    }
    
    @Nullable
-   public java.lang.Long getTotal(){
+   public Long getTotal(){
       return this.total;
    }
    
    
-   public java.lang.Long getOffset(){
+   public Long getOffset(){
       return this.offset;
    }
    
    @Nullable
-   public java.lang.Object getMeta(){
+   public Object getMeta(){
       return this.meta;
    }
    
    
-   public java.lang.Long getCount(){
+   public Long getCount(){
       return this.count;
+   }
+   
+   
+   public Long getLimit(){
+      return this.limit;
    }
    
    
@@ -91,7 +102,7 @@ public final class PagedQueryResponseBuilder {
    }
 
    public PagedQueryResponse build() {
-       return new PagedQueryResponseImpl(total, offset, meta, count, results, facets);
+       return new PagedQueryResponseImpl(total, offset, meta, count, limit, results, facets);
    }
    
    public static PagedQueryResponseBuilder of() {
@@ -104,6 +115,7 @@ public final class PagedQueryResponseBuilder {
       builder.offset = template.getOffset();
       builder.meta = template.getMeta();
       builder.count = template.getCount();
+      builder.limit = template.getLimit();
       builder.results = template.getResults();
       builder.facets = template.getFacets();
       return builder;

@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
-import java.lang.Boolean;
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TrackingDataImpl implements TrackingData {
 
-   private java.lang.Boolean isReturn;
+   private Boolean isReturn;
    
-   private java.lang.String carrier;
+   private String carrier;
    
-   private java.lang.String providerTransaction;
+   private String providerTransaction;
    
-   private java.lang.String provider;
+   private String provider;
    
-   private java.lang.String trackingId;
+   private String trackingId;
 
    @JsonCreator
-   TrackingDataImpl(@JsonProperty("isReturn") final java.lang.Boolean isReturn, @JsonProperty("carrier") final java.lang.String carrier, @JsonProperty("providerTransaction") final java.lang.String providerTransaction, @JsonProperty("provider") final java.lang.String provider, @JsonProperty("trackingId") final java.lang.String trackingId) {
+   TrackingDataImpl(@JsonProperty("isReturn") final Boolean isReturn, @JsonProperty("carrier") final String carrier, @JsonProperty("providerTransaction") final String providerTransaction, @JsonProperty("provider") final String provider, @JsonProperty("trackingId") final String trackingId) {
       this.isReturn = isReturn;
       this.carrier = carrier;
       this.providerTransaction = providerTransaction;
@@ -46,47 +45,47 @@ public final class TrackingDataImpl implements TrackingData {
    }
    
    
-   public java.lang.Boolean getIsReturn(){
+   public Boolean getIsReturn(){
       return this.isReturn;
    }
    
    
-   public java.lang.String getCarrier(){
+   public String getCarrier(){
       return this.carrier;
    }
    
    
-   public java.lang.String getProviderTransaction(){
+   public String getProviderTransaction(){
       return this.providerTransaction;
    }
    
    
-   public java.lang.String getProvider(){
+   public String getProvider(){
       return this.provider;
    }
    
    
-   public java.lang.String getTrackingId(){
+   public String getTrackingId(){
       return this.trackingId;
    }
 
-   public void setIsReturn(final java.lang.Boolean isReturn){
+   public void setIsReturn(final Boolean isReturn){
       this.isReturn = isReturn;
    }
    
-   public void setCarrier(final java.lang.String carrier){
+   public void setCarrier(final String carrier){
       this.carrier = carrier;
    }
    
-   public void setProviderTransaction(final java.lang.String providerTransaction){
+   public void setProviderTransaction(final String providerTransaction){
       this.providerTransaction = providerTransaction;
    }
    
-   public void setProvider(final java.lang.String provider){
+   public void setProvider(final String provider){
       this.provider = provider;
    }
    
-   public void setTrackingId(final java.lang.String trackingId){
+   public void setTrackingId(final String trackingId){
       this.trackingId = trackingId;
    }
 

@@ -1,8 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetLineItemCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class OrderSetLineItemCustomFieldActionBuilder {
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.Object value;
+   private Object value;
    
-   public OrderSetLineItemCustomFieldActionBuilder lineItemId( final java.lang.String lineItemId) {
+   public OrderSetLineItemCustomFieldActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
    
-   public OrderSetLineItemCustomFieldActionBuilder name( final java.lang.String name) {
+   public OrderSetLineItemCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public OrderSetLineItemCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
+   public OrderSetLineItemCustomFieldActionBuilder value(@Nullable final Object value) {
       this.value = value;
       return this;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 

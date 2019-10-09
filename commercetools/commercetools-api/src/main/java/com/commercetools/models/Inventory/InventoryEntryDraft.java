@@ -2,8 +2,6 @@ package com.commercetools.models.inventory;
 
 import com.commercetools.models.channel.ChannelResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.inventory.InventoryEntryDraftImpl;
 

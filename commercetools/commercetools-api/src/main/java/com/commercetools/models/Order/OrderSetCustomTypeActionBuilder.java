@@ -3,7 +3,6 @@ package com.commercetools.models.order;
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;

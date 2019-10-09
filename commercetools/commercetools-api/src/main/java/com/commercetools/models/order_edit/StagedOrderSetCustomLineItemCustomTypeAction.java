@@ -3,7 +3,6 @@ package com.commercetools.models.order_edit;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.type.FieldContainer;
 import com.commercetools.models.type.TypeResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetCustomLineItemCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

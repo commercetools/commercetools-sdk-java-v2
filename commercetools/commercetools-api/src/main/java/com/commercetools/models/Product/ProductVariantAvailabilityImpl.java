@@ -1,8 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductVariantChannelAvailabilityMap;
-import java.lang.Boolean;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantAvailabilityImpl implements ProductVariantAvailability {
 
-   private java.lang.Long availableQuantity;
+   private Long availableQuantity;
    
    private com.commercetools.models.product.ProductVariantChannelAvailabilityMap channels;
    
-   private java.lang.Long restockableInDays;
+   private Long restockableInDays;
    
-   private java.lang.Boolean isOnStock;
+   private Boolean isOnStock;
 
    @JsonCreator
-   ProductVariantAvailabilityImpl(@JsonProperty("availableQuantity") final java.lang.Long availableQuantity, @JsonProperty("channels") final com.commercetools.models.product.ProductVariantChannelAvailabilityMap channels, @JsonProperty("restockableInDays") final java.lang.Long restockableInDays, @JsonProperty("isOnStock") final java.lang.Boolean isOnStock) {
+   ProductVariantAvailabilityImpl(@JsonProperty("availableQuantity") final Long availableQuantity, @JsonProperty("channels") final com.commercetools.models.product.ProductVariantChannelAvailabilityMap channels, @JsonProperty("restockableInDays") final Long restockableInDays, @JsonProperty("isOnStock") final Boolean isOnStock) {
       this.availableQuantity = availableQuantity;
       this.channels = channels;
       this.restockableInDays = restockableInDays;
@@ -44,7 +42,7 @@ public final class ProductVariantAvailabilityImpl implements ProductVariantAvail
    }
    
    
-   public java.lang.Long getAvailableQuantity(){
+   public Long getAvailableQuantity(){
       return this.availableQuantity;
    }
    
@@ -54,16 +52,16 @@ public final class ProductVariantAvailabilityImpl implements ProductVariantAvail
    }
    
    
-   public java.lang.Long getRestockableInDays(){
+   public Long getRestockableInDays(){
       return this.restockableInDays;
    }
    
    
-   public java.lang.Boolean getIsOnStock(){
+   public Boolean getIsOnStock(){
       return this.isOnStock;
    }
 
-   public void setAvailableQuantity(final java.lang.Long availableQuantity){
+   public void setAvailableQuantity(final Long availableQuantity){
       this.availableQuantity = availableQuantity;
    }
    
@@ -71,11 +69,11 @@ public final class ProductVariantAvailabilityImpl implements ProductVariantAvail
       this.channels = channels;
    }
    
-   public void setRestockableInDays(final java.lang.Long restockableInDays){
+   public void setRestockableInDays(final Long restockableInDays){
       this.restockableInDays = restockableInDays;
    }
    
-   public void setIsOnStock(final java.lang.Boolean isOnStock){
+   public void setIsOnStock(final Boolean isOnStock){
       this.isOnStock = isOnStock;
    }
 

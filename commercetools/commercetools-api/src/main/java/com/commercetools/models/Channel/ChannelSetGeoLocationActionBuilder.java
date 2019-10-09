@@ -1,8 +1,6 @@
 package com.commercetools.models.channel;
 
 import com.commercetools.models.channel.ChannelUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.channel.ChannelSetGeoLocationAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ChannelSetGeoLocationActionBuilder {
    
    @Nullable
-   private java.lang.Object geoLocation;
+   private Object geoLocation;
    
-   public ChannelSetGeoLocationActionBuilder geoLocation(@Nullable final java.lang.Object geoLocation) {
+   public ChannelSetGeoLocationActionBuilder geoLocation(@Nullable final Object geoLocation) {
       this.geoLocation = geoLocation;
       return this;
    }
    
    @Nullable
-   public java.lang.Object getGeoLocation(){
+   public Object getGeoLocation(){
       return this.geoLocation;
    }
 

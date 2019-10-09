@@ -8,8 +8,6 @@ import com.commercetools.models.product.SearchKeywords;
 import com.commercetools.models.product_type.ProductTypeResourceIdentifier;
 import com.commercetools.models.state.StateResourceIdentifier;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -40,7 +38,7 @@ public final class ProductDraftBuilder {
    private com.commercetools.models.product.CategoryOrderHints categoryOrderHints;
    
    @Nullable
-   private java.lang.Boolean publish;
+   private Boolean publish;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString metaTitle;
@@ -58,7 +56,7 @@ public final class ProductDraftBuilder {
    private java.util.List<com.commercetools.models.category.CategoryResourceIdentifier> categories;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    
    private com.commercetools.models.common.LocalizedString slug;
@@ -101,7 +99,7 @@ public final class ProductDraftBuilder {
       return this;
    }
    
-   public ProductDraftBuilder publish(@Nullable final java.lang.Boolean publish) {
+   public ProductDraftBuilder publish(@Nullable final Boolean publish) {
       this.publish = publish;
       return this;
    }
@@ -131,7 +129,7 @@ public final class ProductDraftBuilder {
       return this;
    }
    
-   public ProductDraftBuilder key(@Nullable final java.lang.String key) {
+   public ProductDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -182,7 +180,7 @@ public final class ProductDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getPublish(){
+   public Boolean getPublish(){
       return this.publish;
    }
    
@@ -212,7 +210,7 @@ public final class ProductDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    

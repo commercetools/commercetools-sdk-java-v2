@@ -5,7 +5,6 @@ import com.commercetools.models.common.Address;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.shipping_method.ShippingRateDraft;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -27,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl implements StagedOrderSetShippingAddressAndCustomShippingMethodAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.shipping_method.ShippingRateDraft shippingRate;
    
@@ -35,12 +34,12 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionImp
    
    private com.commercetools.models.common.Address address;
    
-   private java.lang.String shippingMethodName;
+   private String shippingMethodName;
    
    private com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
    @JsonCreator
-   StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(@JsonProperty("shippingRate") final com.commercetools.models.shipping_method.ShippingRateDraft shippingRate, @JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("shippingMethodName") final java.lang.String shippingMethodName, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
+   StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(@JsonProperty("shippingRate") final com.commercetools.models.shipping_method.ShippingRateDraft shippingRate, @JsonProperty("externalTaxRate") final com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("address") final com.commercetools.models.common.Address address, @JsonProperty("shippingMethodName") final String shippingMethodName, @JsonProperty("taxCategory") final com.commercetools.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
       this.shippingRate = shippingRate;
       this.externalTaxRate = externalTaxRate;
       this.address = address;
@@ -53,7 +52,7 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionImp
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
@@ -73,7 +72,7 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionImp
    }
    
    
-   public java.lang.String getShippingMethodName(){
+   public String getShippingMethodName(){
       return this.shippingMethodName;
    }
    
@@ -94,7 +93,7 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionImp
       this.address = address;
    }
    
-   public void setShippingMethodName(final java.lang.String shippingMethodName){
+   public void setShippingMethodName(final String shippingMethodName){
       this.shippingMethodName = shippingMethodName;
    }
    

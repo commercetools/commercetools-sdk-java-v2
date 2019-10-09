@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCountryError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
-   private java.lang.String country;
+   private String country;
    
-   private java.lang.String state;
+   private String state;
    
-   private java.lang.String taxCategoryId;
+   private String taxCategoryId;
 
    @JsonCreator
-   MissingTaxRateForCountryErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("country") final java.lang.String country, @JsonProperty("state") final java.lang.String state, @JsonProperty("taxCategoryId") final java.lang.String taxCategoryId) {
+   MissingTaxRateForCountryErrorImpl(@JsonProperty("message") final String message, @JsonProperty("country") final String country, @JsonProperty("state") final String state, @JsonProperty("taxCategoryId") final String taxCategoryId) {
       this.message = message;
       this.country = country;
       this.state = state;
@@ -46,43 +45,43 @@ public final class MissingTaxRateForCountryErrorImpl implements MissingTaxRateFo
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    
-   public java.lang.String getState(){
+   public String getState(){
       return this.state;
    }
    
    
-   public java.lang.String getTaxCategoryId(){
+   public String getTaxCategoryId(){
       return this.taxCategoryId;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
-   public void setState(final java.lang.String state){
+   public void setState(final String state){
       this.state = state;
    }
    
-   public void setTaxCategoryId(final java.lang.String taxCategoryId){
+   public void setTaxCategoryId(final String taxCategoryId){
       this.taxCategoryId = taxCategoryId;
    }
 

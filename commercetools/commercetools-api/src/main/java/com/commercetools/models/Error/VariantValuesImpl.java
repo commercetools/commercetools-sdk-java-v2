@@ -2,7 +2,6 @@ package com.commercetools.models.error;
 
 import com.commercetools.models.common.PriceDraft;
 import com.commercetools.models.product.Attribute;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -28,10 +27,10 @@ public final class VariantValuesImpl implements VariantValues {
    
    private java.util.List<com.commercetools.models.common.PriceDraft> prices;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   VariantValuesImpl(@JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.PriceDraft> prices, @JsonProperty("sku") final java.lang.String sku) {
+   VariantValuesImpl(@JsonProperty("attributes") final java.util.List<com.commercetools.models.product.Attribute> attributes, @JsonProperty("prices") final java.util.List<com.commercetools.models.common.PriceDraft> prices, @JsonProperty("sku") final String sku) {
       this.attributes = attributes;
       this.prices = prices;
       this.sku = sku;
@@ -51,7 +50,7 @@ public final class VariantValuesImpl implements VariantValues {
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
@@ -63,7 +62,7 @@ public final class VariantValuesImpl implements VariantValues {
       this.prices = prices;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

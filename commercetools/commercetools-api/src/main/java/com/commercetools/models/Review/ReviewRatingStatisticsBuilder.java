@@ -1,7 +1,6 @@
 package com.commercetools.models.review;
 
-import java.lang.Integer;
-import java.lang.Object;
+
 import com.commercetools.models.review.ReviewRatingStatistics;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,67 +10,67 @@ import java.time.ZonedDateTime;
 public final class ReviewRatingStatisticsBuilder {
    
    
-   private java.lang.Integer highestRating;
+   private Integer highestRating;
    
    
-   private java.lang.Integer averageRating;
+   private Integer averageRating;
    
    
-   private java.lang.Integer count;
+   private Integer count;
    
    
-   private java.lang.Object ratingsDistribution;
+   private Object ratingsDistribution;
    
    
-   private java.lang.Integer lowestRating;
+   private Integer lowestRating;
    
-   public ReviewRatingStatisticsBuilder highestRating( final java.lang.Integer highestRating) {
+   public ReviewRatingStatisticsBuilder highestRating( final Integer highestRating) {
       this.highestRating = highestRating;
       return this;
    }
    
-   public ReviewRatingStatisticsBuilder averageRating( final java.lang.Integer averageRating) {
+   public ReviewRatingStatisticsBuilder averageRating( final Integer averageRating) {
       this.averageRating = averageRating;
       return this;
    }
    
-   public ReviewRatingStatisticsBuilder count( final java.lang.Integer count) {
+   public ReviewRatingStatisticsBuilder count( final Integer count) {
       this.count = count;
       return this;
    }
    
-   public ReviewRatingStatisticsBuilder ratingsDistribution( final java.lang.Object ratingsDistribution) {
+   public ReviewRatingStatisticsBuilder ratingsDistribution( final Object ratingsDistribution) {
       this.ratingsDistribution = ratingsDistribution;
       return this;
    }
    
-   public ReviewRatingStatisticsBuilder lowestRating( final java.lang.Integer lowestRating) {
+   public ReviewRatingStatisticsBuilder lowestRating( final Integer lowestRating) {
       this.lowestRating = lowestRating;
       return this;
    }
    
    
-   public java.lang.Integer getHighestRating(){
+   public Integer getHighestRating(){
       return this.highestRating;
    }
    
    
-   public java.lang.Integer getAverageRating(){
+   public Integer getAverageRating(){
       return this.averageRating;
    }
    
    
-   public java.lang.Integer getCount(){
+   public Integer getCount(){
       return this.count;
    }
    
    
-   public java.lang.Object getRatingsDistribution(){
+   public Object getRatingsDistribution(){
       return this.ratingsDistribution;
    }
    
    
-   public java.lang.Integer getLowestRating(){
+   public Integer getLowestRating(){
       return this.lowestRating;
    }
 

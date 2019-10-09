@@ -2,7 +2,6 @@ package com.commercetools.models.customer_group;
 
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -28,9 +27,9 @@ public final class CustomerGroupImpl implements CustomerGroup {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
@@ -38,12 +37,12 @@ public final class CustomerGroupImpl implements CustomerGroup {
    
    private com.commercetools.models.type.CustomFields custom;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.String key;
+   private String key;
 
    @JsonCreator
-   CustomerGroupImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final java.lang.String name, @JsonProperty("key") final java.lang.String key) {
+   CustomerGroupImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("name") final String name, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -69,12 +68,12 @@ public final class CustomerGroupImpl implements CustomerGroup {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -94,12 +93,12 @@ public final class CustomerGroupImpl implements CustomerGroup {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 
@@ -111,11 +110,11 @@ public final class CustomerGroupImpl implements CustomerGroup {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -131,11 +130,11 @@ public final class CustomerGroupImpl implements CustomerGroup {
       this.custom = custom;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
 

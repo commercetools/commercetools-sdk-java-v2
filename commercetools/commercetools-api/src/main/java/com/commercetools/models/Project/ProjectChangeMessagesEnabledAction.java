@@ -1,8 +1,6 @@
 package com.commercetools.models.project;
 
 import com.commercetools.models.project.ProjectUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.project.ProjectChangeMessagesEnabledActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

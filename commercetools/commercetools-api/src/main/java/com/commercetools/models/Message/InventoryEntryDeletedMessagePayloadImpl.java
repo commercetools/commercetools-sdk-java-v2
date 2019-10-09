@@ -2,7 +2,6 @@ package com.commercetools.models.message;
 
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDeletedMessagePayload {
 
-   private java.lang.String type;
+   private String type;
    
    private com.commercetools.models.channel.ChannelReference supplyChannel;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   InventoryEntryDeletedMessagePayloadImpl(@JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelReference supplyChannel, @JsonProperty("sku") final java.lang.String sku) {
+   InventoryEntryDeletedMessagePayloadImpl(@JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelReference supplyChannel, @JsonProperty("sku") final String sku) {
       this.supplyChannel = supplyChannel;
       this.sku = sku;
       this.type = "InventoryEntryDeleted";
@@ -41,7 +40,7 @@ public final class InventoryEntryDeletedMessagePayloadImpl implements InventoryE
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
@@ -51,7 +50,7 @@ public final class InventoryEntryDeletedMessagePayloadImpl implements InventoryE
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
@@ -59,7 +58,7 @@ public final class InventoryEntryDeletedMessagePayloadImpl implements InventoryE
       this.supplyChannel = supplyChannel;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

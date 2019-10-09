@@ -3,8 +3,6 @@ package com.commercetools.models.message;
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.state.StateReference;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.message.ReviewStateTransitionMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,16 +12,16 @@ import java.time.ZonedDateTime;
 public final class ReviewStateTransitionMessagePayloadBuilder {
    
    
-   private java.lang.Boolean newIncludedInStatistics;
+   private Boolean newIncludedInStatistics;
    
    
    private com.commercetools.models.state.StateReference oldState;
    
    
-   private java.lang.Boolean force;
+   private Boolean force;
    
    
-   private java.lang.Boolean oldIncludedInStatistics;
+   private Boolean oldIncludedInStatistics;
    
    
    private com.commercetools.models.state.StateReference newState;
@@ -31,7 +29,7 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
    
    private com.commercetools.models.common.Reference target;
    
-   public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics( final java.lang.Boolean newIncludedInStatistics) {
+   public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics( final Boolean newIncludedInStatistics) {
       this.newIncludedInStatistics = newIncludedInStatistics;
       return this;
    }
@@ -41,12 +39,12 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
       return this;
    }
    
-   public ReviewStateTransitionMessagePayloadBuilder force( final java.lang.Boolean force) {
+   public ReviewStateTransitionMessagePayloadBuilder force( final Boolean force) {
       this.force = force;
       return this;
    }
    
-   public ReviewStateTransitionMessagePayloadBuilder oldIncludedInStatistics( final java.lang.Boolean oldIncludedInStatistics) {
+   public ReviewStateTransitionMessagePayloadBuilder oldIncludedInStatistics( final Boolean oldIncludedInStatistics) {
       this.oldIncludedInStatistics = oldIncludedInStatistics;
       return this;
    }
@@ -62,7 +60,7 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
    }
    
    
-   public java.lang.Boolean getNewIncludedInStatistics(){
+   public Boolean getNewIncludedInStatistics(){
       return this.newIncludedInStatistics;
    }
    
@@ -72,12 +70,12 @@ public final class ReviewStateTransitionMessagePayloadBuilder {
    }
    
    
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    
    
-   public java.lang.Boolean getOldIncludedInStatistics(){
+   public Boolean getOldIncludedInStatistics(){
       return this.oldIncludedInStatistics;
    }
    

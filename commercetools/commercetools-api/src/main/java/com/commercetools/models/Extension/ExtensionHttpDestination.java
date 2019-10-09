@@ -2,7 +2,6 @@ package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionDestination;
 import com.commercetools.models.extension.ExtensionHttpDestinationAuthentication;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionHttpDestinationImpl;
 
 import com.fasterxml.jackson.annotation.*;

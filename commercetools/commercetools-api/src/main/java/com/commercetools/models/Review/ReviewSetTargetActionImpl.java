@@ -1,8 +1,6 @@
 package com.commercetools.models.review;
 
 import com.commercetools.models.review.ReviewUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Object target;
+   private Object target;
 
    @JsonCreator
-   ReviewSetTargetActionImpl(@JsonProperty("target") final java.lang.Object target) {
+   ReviewSetTargetActionImpl(@JsonProperty("target") final Object target) {
       this.target = target;
       this.action = "setTarget";
    }
@@ -38,16 +36,16 @@ public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Object getTarget(){
+   public Object getTarget(){
       return this.target;
    }
 
-   public void setTarget(final java.lang.Object target){
+   public void setTarget(final Object target){
       this.target = target;
    }
 

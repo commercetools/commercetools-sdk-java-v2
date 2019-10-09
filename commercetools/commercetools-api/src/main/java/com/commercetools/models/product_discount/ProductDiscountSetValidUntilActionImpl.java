@@ -1,7 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountUpdateAction;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import javax.annotation.Generated;
 import javax.validation.Valid;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountSetValidUntilActionImpl implements ProductDiscountSetValidUntilAction {
 
-   private java.lang.String action;
+   private String action;
    
    private java.time.ZonedDateTime validUntil;
 
@@ -38,7 +37,7 @@ public final class ProductDiscountSetValidUntilActionImpl implements ProductDisc
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

@@ -7,7 +7,6 @@ import com.commercetools.models.payment.PaymentMethodInfo;
 import com.commercetools.models.payment.PaymentStatus;
 import com.commercetools.models.payment.Transaction;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -33,9 +32,9 @@ public final class PaymentImpl implements Payment {
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.String id;
+   private String id;
    
-   private java.lang.Long version;
+   private Long version;
    
    private com.commercetools.models.common.CreatedBy createdBy;
    
@@ -43,15 +42,15 @@ public final class PaymentImpl implements Payment {
    
    private com.commercetools.models.common.TypedMoney amountAuthorized;
    
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    private com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo;
    
    private com.commercetools.models.type.CustomFields custom;
    
-   private java.lang.String authorizedUntil;
+   private String authorizedUntil;
    
-   private java.lang.String externalId;
+   private String externalId;
    
    private java.util.List<com.commercetools.models.payment.Transaction> transactions;
    
@@ -63,16 +62,16 @@ public final class PaymentImpl implements Payment {
    
    private java.util.List<com.commercetools.models.type.CustomFields> interfaceInteractions;
    
-   private java.lang.String interfaceId;
+   private String interfaceId;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.payment.PaymentStatus paymentStatus;
    
    private com.commercetools.models.customer.CustomerReference customer;
 
    @JsonCreator
-   PaymentImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final java.lang.String id, @JsonProperty("version") final java.lang.Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("amountAuthorized") final com.commercetools.models.common.TypedMoney amountAuthorized, @JsonProperty("anonymousId") final java.lang.String anonymousId, @JsonProperty("paymentMethodInfo") final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("authorizedUntil") final java.lang.String authorizedUntil, @JsonProperty("externalId") final java.lang.String externalId, @JsonProperty("transactions") final java.util.List<com.commercetools.models.payment.Transaction> transactions, @JsonProperty("amountPaid") final com.commercetools.models.common.TypedMoney amountPaid, @JsonProperty("amountRefunded") final com.commercetools.models.common.TypedMoney amountRefunded, @JsonProperty("amountPlanned") final com.commercetools.models.common.TypedMoney amountPlanned, @JsonProperty("interfaceInteractions") final java.util.List<com.commercetools.models.type.CustomFields> interfaceInteractions, @JsonProperty("interfaceId") final java.lang.String interfaceId, @JsonProperty("key") final java.lang.String key, @JsonProperty("paymentStatus") final com.commercetools.models.payment.PaymentStatus paymentStatus, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
+   PaymentImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("amountAuthorized") final com.commercetools.models.common.TypedMoney amountAuthorized, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("paymentMethodInfo") final com.commercetools.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("authorizedUntil") final String authorizedUntil, @JsonProperty("externalId") final String externalId, @JsonProperty("transactions") final java.util.List<com.commercetools.models.payment.Transaction> transactions, @JsonProperty("amountPaid") final com.commercetools.models.common.TypedMoney amountPaid, @JsonProperty("amountRefunded") final com.commercetools.models.common.TypedMoney amountRefunded, @JsonProperty("amountPlanned") final com.commercetools.models.common.TypedMoney amountPlanned, @JsonProperty("interfaceInteractions") final java.util.List<com.commercetools.models.type.CustomFields> interfaceInteractions, @JsonProperty("interfaceId") final String interfaceId, @JsonProperty("key") final String key, @JsonProperty("paymentStatus") final com.commercetools.models.payment.PaymentStatus paymentStatus, @JsonProperty("customer") final com.commercetools.models.customer.CustomerReference customer) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -110,12 +109,12 @@ public final class PaymentImpl implements Payment {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -135,7 +134,7 @@ public final class PaymentImpl implements Payment {
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -150,12 +149,12 @@ public final class PaymentImpl implements Payment {
    }
    
    
-   public java.lang.String getAuthorizedUntil(){
+   public String getAuthorizedUntil(){
       return this.authorizedUntil;
    }
    
    
-   public java.lang.String getExternalId(){
+   public String getExternalId(){
       return this.externalId;
    }
    
@@ -185,12 +184,12 @@ public final class PaymentImpl implements Payment {
    }
    
    
-   public java.lang.String getInterfaceId(){
+   public String getInterfaceId(){
       return this.interfaceId;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -212,11 +211,11 @@ public final class PaymentImpl implements Payment {
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
    
@@ -232,7 +231,7 @@ public final class PaymentImpl implements Payment {
       this.amountAuthorized = amountAuthorized;
    }
    
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
    
@@ -244,11 +243,11 @@ public final class PaymentImpl implements Payment {
       this.custom = custom;
    }
    
-   public void setAuthorizedUntil(final java.lang.String authorizedUntil){
+   public void setAuthorizedUntil(final String authorizedUntil){
       this.authorizedUntil = authorizedUntil;
    }
    
-   public void setExternalId(final java.lang.String externalId){
+   public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
    
@@ -272,11 +271,11 @@ public final class PaymentImpl implements Payment {
       this.interfaceInteractions = interfaceInteractions;
    }
    
-   public void setInterfaceId(final java.lang.String interfaceId){
+   public void setInterfaceId(final String interfaceId){
       this.interfaceId = interfaceId;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

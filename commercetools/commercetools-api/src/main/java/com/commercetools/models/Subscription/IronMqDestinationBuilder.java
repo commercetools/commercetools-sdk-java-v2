@@ -1,7 +1,6 @@
 package com.commercetools.models.subscription;
 
 import com.commercetools.models.subscription.Destination;
-import java.lang.String;
 import com.commercetools.models.subscription.IronMqDestination;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class IronMqDestinationBuilder {
    
    
-   private java.lang.String uri;
+   private String uri;
    
-   public IronMqDestinationBuilder uri( final java.lang.String uri) {
+   public IronMqDestinationBuilder uri( final String uri) {
       this.uri = uri;
       return this;
    }
    
    
-   public java.lang.String getUri(){
+   public String getUri(){
       return this.uri;
    }
 

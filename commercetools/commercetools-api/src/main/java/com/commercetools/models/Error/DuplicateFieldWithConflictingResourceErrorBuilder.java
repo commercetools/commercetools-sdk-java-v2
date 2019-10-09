@@ -2,8 +2,6 @@ package com.commercetools.models.error;
 
 import com.commercetools.models.common.Reference;
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.error.DuplicateFieldWithConflictingResourceError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,18 +11,18 @@ import java.time.ZonedDateTime;
 public final class DuplicateFieldWithConflictingResourceErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    
    private com.commercetools.models.common.Reference conflictingResource;
    
    
-   private java.lang.Object duplicateValue;
+   private Object duplicateValue;
    
    
-   private java.lang.String field;
+   private String field;
    
-   public DuplicateFieldWithConflictingResourceErrorBuilder message( final java.lang.String message) {
+   public DuplicateFieldWithConflictingResourceErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
@@ -34,18 +32,18 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
       return this;
    }
    
-   public DuplicateFieldWithConflictingResourceErrorBuilder duplicateValue( final java.lang.Object duplicateValue) {
+   public DuplicateFieldWithConflictingResourceErrorBuilder duplicateValue( final Object duplicateValue) {
       this.duplicateValue = duplicateValue;
       return this;
    }
    
-   public DuplicateFieldWithConflictingResourceErrorBuilder field( final java.lang.String field) {
+   public DuplicateFieldWithConflictingResourceErrorBuilder field( final String field) {
       this.field = field;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
@@ -55,12 +53,12 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
    }
    
    
-   public java.lang.Object getDuplicateValue(){
+   public Object getDuplicateValue(){
       return this.duplicateValue;
    }
    
    
-   public java.lang.String getField(){
+   public String getField(){
       return this.field;
    }
 

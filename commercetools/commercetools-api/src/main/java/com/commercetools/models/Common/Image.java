@@ -1,7 +1,6 @@
 package com.commercetools.models.common;
 
 import com.commercetools.models.common.ImageDimensions;
-import java.lang.String;
 import com.commercetools.models.common.ImageImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,7 +1,6 @@
 package com.commercetools.models.product_type;
 
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeChangeDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ProductTypeChangeDescriptionActionBuilder {
    
    
-   private java.lang.String description;
+   private String description;
    
-   public ProductTypeChangeDescriptionActionBuilder description( final java.lang.String description) {
+   public ProductTypeChangeDescriptionActionBuilder description( final String description) {
       this.description = description;
       return this;
    }
    
    
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
 

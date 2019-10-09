@@ -1,9 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAttributeInAllVariantsAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.Object value;
+   private Object value;
 
    @JsonCreator
-   ProductSetAttributeInAllVariantsActionImpl(@JsonProperty("name") final java.lang.String name, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("value") final java.lang.Object value) {
+   ProductSetAttributeInAllVariantsActionImpl(@JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("value") final Object value) {
       this.name = name;
       this.staged = staged;
       this.value = value;
@@ -45,34 +42,34 @@ public final class ProductSetAttributeInAllVariantsActionImpl implements Product
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setValue(final java.lang.Object value){
+   public void setValue(final Object value){
       this.value = value;
    }
 

@@ -3,7 +3,6 @@ package com.commercetools.models.order_edit;
 import com.commercetools.models.message.MessagePayload;
 import com.commercetools.models.order_edit.OrderEditResult;
 import com.commercetools.models.order_edit.StagedOrder;
-import java.lang.String;
 import com.commercetools.models.order_edit.OrderEditPreviewSuccess;
 import javax.annotation.Nullable;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryOrderHintsImpl implements CategoryOrderHints {
 
-   private Map<String, java.lang.String> values;
+   private Map<String, String> values;
 
    @JsonCreator
-   CategoryOrderHintsImpl(@JsonProperty("values") final Map<String, java.lang.String> values) {
+   CategoryOrderHintsImpl(@JsonProperty("values") final Map<String, String> values) {
       this.values = values;
    }
    public CategoryOrderHintsImpl() {
@@ -33,11 +33,11 @@ public final class CategoryOrderHintsImpl implements CategoryOrderHints {
    }
    
    
-   public Map<String,java.lang.String> values() {
+   public Map<String,String> values() {
        return values;
    }
 
-   public void setValue(String key, java.lang.String value) {
+   public void setValue(String key, String value) {
        if (values == null) {
            values = new HashMap<>();
        }

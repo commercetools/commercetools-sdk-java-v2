@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class StateReferenceBuilder {
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private com.commercetools.models.state.State obj;
    
-   public StateReferenceBuilder id( final java.lang.String id) {
+   public StateReferenceBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -28,7 +28,7 @@ public final class StateReferenceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

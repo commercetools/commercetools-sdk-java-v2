@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderRemoveItemShippingAddressActionImpl implements OrderRemoveItemShippingAddressAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String addressKey;
+   private String addressKey;
 
    @JsonCreator
-   OrderRemoveItemShippingAddressActionImpl(@JsonProperty("addressKey") final java.lang.String addressKey) {
+   OrderRemoveItemShippingAddressActionImpl(@JsonProperty("addressKey") final String addressKey) {
       this.addressKey = addressKey;
       this.action = "removeItemShippingAddress";
    }
@@ -37,16 +36,16 @@ public final class OrderRemoveItemShippingAddressActionImpl implements OrderRemo
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAddressKey(){
+   public String getAddressKey(){
       return this.addressKey;
    }
 
-   public void setAddressKey(final java.lang.String addressKey){
+   public void setAddressKey(final String addressKey){
       this.addressKey = addressKey;
    }
 

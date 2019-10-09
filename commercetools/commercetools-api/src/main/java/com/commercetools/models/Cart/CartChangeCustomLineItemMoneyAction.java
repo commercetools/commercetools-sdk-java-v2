@@ -2,7 +2,6 @@ package com.commercetools.models.cart;
 
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.common.Money;
-import java.lang.String;
 import com.commercetools.models.cart.CartChangeCustomLineItemMoneyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

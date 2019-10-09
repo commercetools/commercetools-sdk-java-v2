@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.common.ReferenceTypeId;
 import com.commercetools.models.product_type.AttributeType;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeReferenceTypeImpl implements AttributeReferenceType {
 
-   private java.lang.String name;
+   private String name;
    
    private com.commercetools.models.common.ReferenceTypeId referenceTypeId;
 
@@ -38,7 +37,7 @@ public final class AttributeReferenceTypeImpl implements AttributeReferenceType 
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    

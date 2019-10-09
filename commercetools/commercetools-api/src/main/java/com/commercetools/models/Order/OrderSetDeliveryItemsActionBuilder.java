@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.DeliveryItem;
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetDeliveryItemsAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class OrderSetDeliveryItemsActionBuilder {
    
    
-   private java.lang.String deliveryId;
+   private String deliveryId;
    
    
    private java.util.List<com.commercetools.models.order.DeliveryItem> items;
    
-   public OrderSetDeliveryItemsActionBuilder deliveryId( final java.lang.String deliveryId) {
+   public OrderSetDeliveryItemsActionBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
@@ -28,7 +27,7 @@ public final class OrderSetDeliveryItemsActionBuilder {
    }
    
    
-   public java.lang.String getDeliveryId(){
+   public String getDeliveryId(){
       return this.deliveryId;
    }
    

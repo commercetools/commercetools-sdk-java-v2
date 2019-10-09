@@ -1,8 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetLineItemCustomFieldActionImpl implements StagedOrderSetLineItemCustomFieldAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
-   private java.lang.String name;
+   private String name;
    
-   private java.lang.Object value;
+   private Object value;
 
    @JsonCreator
-   StagedOrderSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final java.lang.String lineItemId, @JsonProperty("name") final java.lang.String name, @JsonProperty("value") final java.lang.Object value) {
+   StagedOrderSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("name") final String name, @JsonProperty("value") final Object value) {
       this.lineItemId = lineItemId;
       this.name = name;
       this.value = value;
@@ -44,34 +42,34 @@ public final class StagedOrderSetLineItemCustomFieldActionImpl implements Staged
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    
-   public java.lang.Object getValue(){
+   public Object getValue(){
       return this.value;
    }
 
-   public void setLineItemId(final java.lang.String lineItemId){
+   public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
    
-   public void setName(final java.lang.String name){
+   public void setName(final String name){
       this.name = name;
    }
    
-   public void setValue(final java.lang.Object value){
+   public void setValue(final Object value){
       this.value = value;
    }
 

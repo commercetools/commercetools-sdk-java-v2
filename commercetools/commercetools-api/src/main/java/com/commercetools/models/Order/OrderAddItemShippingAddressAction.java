@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.common.Address;
 import com.commercetools.models.order.OrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order.OrderAddItemShippingAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

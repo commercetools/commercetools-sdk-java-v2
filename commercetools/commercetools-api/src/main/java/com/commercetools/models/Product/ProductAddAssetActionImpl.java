@@ -2,10 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.AssetDraft;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -27,20 +23,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Integer position;
+   private Integer position;
    
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
-   private java.lang.Long variantId;
+   private Long variantId;
    
    private com.commercetools.models.common.AssetDraft asset;
    
-   private java.lang.String sku;
+   private String sku;
 
    @JsonCreator
-   ProductAddAssetActionImpl(@JsonProperty("position") final java.lang.Integer position, @JsonProperty("staged") final java.lang.Boolean staged, @JsonProperty("variantId") final java.lang.Long variantId, @JsonProperty("asset") final com.commercetools.models.common.AssetDraft asset, @JsonProperty("sku") final java.lang.String sku) {
+   ProductAddAssetActionImpl(@JsonProperty("position") final Integer position, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("asset") final com.commercetools.models.common.AssetDraft asset, @JsonProperty("sku") final String sku) {
       this.position = position;
       this.staged = staged;
       this.variantId = variantId;
@@ -53,22 +49,22 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Integer getPosition(){
+   public Integer getPosition(){
       return this.position;
    }
    
    
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
@@ -78,19 +74,19 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
    }
    
    
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
 
-   public void setPosition(final java.lang.Integer position){
+   public void setPosition(final Integer position){
       this.position = position;
    }
    
-   public void setStaged(final java.lang.Boolean staged){
+   public void setStaged(final Boolean staged){
       this.staged = staged;
    }
    
-   public void setVariantId(final java.lang.Long variantId){
+   public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    
@@ -98,7 +94,7 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
       this.asset = asset;
    }
    
-   public void setSku(final java.lang.String sku){
+   public void setSku(final String sku){
       this.sku = sku;
    }
 

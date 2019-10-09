@@ -26,12 +26,12 @@ public final class CustomerReferenceImpl implements CustomerReference {
 
    private com.commercetools.models.common.ReferenceTypeId typeId;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.customer.Customer obj;
 
    @JsonCreator
-   CustomerReferenceImpl(@JsonProperty("id") final java.lang.String id, @JsonProperty("obj") final com.commercetools.models.customer.Customer obj) {
+   CustomerReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.models.customer.Customer obj) {
       this.id = id;
       this.obj = obj;
       this.typeId = ReferenceTypeId.findEnumViaJsonName("customer").get();
@@ -46,7 +46,7 @@ public final class CustomerReferenceImpl implements CustomerReference {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -55,7 +55,7 @@ public final class CustomerReferenceImpl implements CustomerReference {
       return this.obj;
    }
 
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

@@ -3,8 +3,6 @@ package com.commercetools.models.cart;
 import com.commercetools.models.cart.CartUpdateAction;
 import com.commercetools.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.models.common.Money;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart.CartChangeLineItemQuantityActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

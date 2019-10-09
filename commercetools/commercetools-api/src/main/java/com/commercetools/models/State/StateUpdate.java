@@ -1,7 +1,6 @@
 package com.commercetools.models.state;
 
 import com.commercetools.models.state.StateUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.state.StateUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

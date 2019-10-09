@@ -1,5 +1,6 @@
 package com.commercetools.models.order;
 
+import com.commercetools.models.cart.CartOrigin;
 import com.commercetools.models.cart.CustomLineItemDraft;
 import com.commercetools.models.cart.InventoryMode;
 import com.commercetools.models.cart.RoundingMode;
@@ -12,8 +13,8 @@ import com.commercetools.models.order.OrderState;
 import com.commercetools.models.order.PaymentState;
 import com.commercetools.models.order.ShipmentState;
 import com.commercetools.models.order.ShippingInfoImportDraft;
+import com.commercetools.models.store.StoreKeyReference;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.order.OrderImportDraftImpl;
 
@@ -116,6 +117,14 @@ public interface OrderImportDraft  {
    @Valid
    @JsonProperty("itemShippingAddresses")
    public List<Address> getItemShippingAddresses();
+   
+   @Valid
+   @JsonProperty("store")
+   public StoreKeyReference getStore();
+   
+   
+   @JsonProperty("origin")
+   public CartOrigin getOrigin();
 
    public void setOrderNumber(final String orderNumber);
    
@@ -157,6 +166,10 @@ public interface OrderImportDraft  {
    
    public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
    
+   public void setStore(final StoreKeyReference store);
+   
+   public void setOrigin(final CartOrigin origin);
+   
    public static OrderImportDraftImpl of(){
       return new OrderImportDraftImpl();
    }
@@ -171,8 +184,10 @@ public interface OrderImportDraft  {
       instance.setTotalPrice(template.getTotalPrice());
       instance.setCustomerGroup(template.getCustomerGroup());
       instance.setTaxedPrice(template.getTaxedPrice());
+      instance.setOrigin(template.getOrigin());
       instance.setCustom(template.getCustom());
       instance.setShippingInfo(template.getShippingInfo());
+      instance.setStore(template.getStore());
       instance.setInventoryMode(template.getInventoryMode());
       instance.setOrderState(template.getOrderState());
       instance.setTaxRoundingMode(template.getTaxRoundingMode());

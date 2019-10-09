@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxCategoryUpdateAction;
-import java.lang.Long;
 import com.commercetools.models.tax_category.TaxCategoryUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

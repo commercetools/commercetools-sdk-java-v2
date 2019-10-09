@@ -1,7 +1,6 @@
 package com.commercetools.models.customer;
 
 import com.commercetools.models.customer.Customer;
-import java.lang.Object;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSignInResultImpl implements CustomerSignInResult {
 
-   private java.lang.Object cart;
+   private Object cart;
    
    private com.commercetools.models.customer.Customer customer;
 
    @JsonCreator
-   CustomerSignInResultImpl(@JsonProperty("cart") final java.lang.Object cart, @JsonProperty("customer") final com.commercetools.models.customer.Customer customer) {
+   CustomerSignInResultImpl(@JsonProperty("cart") final Object cart, @JsonProperty("customer") final com.commercetools.models.customer.Customer customer) {
       this.cart = cart;
       this.customer = customer;
    }
@@ -37,7 +36,7 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
    }
    
    
-   public java.lang.Object getCart(){
+   public Object getCart(){
       return this.cart;
    }
    
@@ -46,7 +45,7 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
       return this.customer;
    }
 
-   public void setCart(final java.lang.Object cart){
+   public void setCart(final Object cart){
       this.cart = cart;
    }
    

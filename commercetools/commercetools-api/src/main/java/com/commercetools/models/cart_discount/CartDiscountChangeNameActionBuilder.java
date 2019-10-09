@@ -2,7 +2,6 @@ package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountUpdateAction;
 import com.commercetools.models.common.LocalizedString;
-import java.lang.String;
 import com.commercetools.models.cart_discount.CartDiscountChangeNameAction;
 import javax.annotation.Nullable;
 import java.util.List;

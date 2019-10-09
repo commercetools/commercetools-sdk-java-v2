@@ -8,7 +8,6 @@ import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier
 import com.commercetools.models.shipping_method.ShippingRateDraft;
 import com.commercetools.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.models.tax_category.TaxRate;
-import java.lang.String;
 import com.commercetools.models.order.ShippingInfoImportDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

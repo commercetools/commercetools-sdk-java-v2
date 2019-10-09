@@ -5,7 +5,6 @@ import com.commercetools.models.common.DiscountedPrice;
 import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import java.time.ZonedDateTime;
 import com.commercetools.models.common.ScopedPriceImpl;
 

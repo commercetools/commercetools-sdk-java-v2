@@ -2,10 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.AssetDraft;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductAddAssetActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

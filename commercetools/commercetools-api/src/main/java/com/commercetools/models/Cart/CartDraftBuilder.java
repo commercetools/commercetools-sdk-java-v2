@@ -14,8 +14,6 @@ import com.commercetools.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.models.store.StoreResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.cart.CartDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -25,10 +23,10 @@ import java.time.ZonedDateTime;
 public final class CartDraftBuilder {
    
    @Nullable
-   private java.lang.String country;
+   private String country;
    
    @Nullable
-   private java.lang.String anonymousId;
+   private String anonymousId;
    
    @Nullable
    private com.commercetools.models.cart.ShippingRateInputDraft shippingRateInput;
@@ -40,7 +38,7 @@ public final class CartDraftBuilder {
    private com.commercetools.models.cart.CartOrigin origin;
    
    @Nullable
-   private java.lang.Long deleteDaysAfterLastModification;
+   private Long deleteDaysAfterLastModification;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
@@ -55,7 +53,7 @@ public final class CartDraftBuilder {
    private com.commercetools.models.store.StoreResourceIdentifier store;
    
    @Nullable
-   private java.lang.String locale;
+   private String locale;
    
    @Nullable
    private com.commercetools.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod;
@@ -79,26 +77,26 @@ public final class CartDraftBuilder {
    private com.commercetools.models.cart.TaxMode taxMode;
    
    @Nullable
-   private java.lang.String customerEmail;
+   private String customerEmail;
    
    @Nullable
-   private java.lang.String customerId;
+   private String customerId;
    
    @Nullable
    private com.commercetools.models.common.Address shippingAddress;
    
    
-   private java.lang.String currency;
+   private String currency;
    
    @Nullable
    private com.commercetools.models.common.Address billingAddress;
    
-   public CartDraftBuilder country(@Nullable final java.lang.String country) {
+   public CartDraftBuilder country(@Nullable final String country) {
       this.country = country;
       return this;
    }
    
-   public CartDraftBuilder anonymousId(@Nullable final java.lang.String anonymousId) {
+   public CartDraftBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
@@ -118,7 +116,7 @@ public final class CartDraftBuilder {
       return this;
    }
    
-   public CartDraftBuilder deleteDaysAfterLastModification(@Nullable final java.lang.Long deleteDaysAfterLastModification) {
+   public CartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
       return this;
    }
@@ -143,7 +141,7 @@ public final class CartDraftBuilder {
       return this;
    }
    
-   public CartDraftBuilder locale(@Nullable final java.lang.String locale) {
+   public CartDraftBuilder locale(@Nullable final String locale) {
       this.locale = locale;
       return this;
    }
@@ -183,12 +181,12 @@ public final class CartDraftBuilder {
       return this;
    }
    
-   public CartDraftBuilder customerEmail(@Nullable final java.lang.String customerEmail) {
+   public CartDraftBuilder customerEmail(@Nullable final String customerEmail) {
       this.customerEmail = customerEmail;
       return this;
    }
    
-   public CartDraftBuilder customerId(@Nullable final java.lang.String customerId) {
+   public CartDraftBuilder customerId(@Nullable final String customerId) {
       this.customerId = customerId;
       return this;
    }
@@ -198,7 +196,7 @@ public final class CartDraftBuilder {
       return this;
    }
    
-   public CartDraftBuilder currency( final java.lang.String currency) {
+   public CartDraftBuilder currency( final String currency) {
       this.currency = currency;
       return this;
    }
@@ -209,12 +207,12 @@ public final class CartDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    @Nullable
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
    
@@ -234,7 +232,7 @@ public final class CartDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Long getDeleteDaysAfterLastModification(){
+   public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
@@ -259,7 +257,7 @@ public final class CartDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
@@ -299,12 +297,12 @@ public final class CartDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getCustomerEmail(){
+   public String getCustomerEmail(){
       return this.customerEmail;
    }
    
    @Nullable
-   public java.lang.String getCustomerId(){
+   public String getCustomerId(){
       return this.customerId;
    }
    
@@ -314,7 +312,7 @@ public final class CartDraftBuilder {
    }
    
    
-   public java.lang.String getCurrency(){
+   public String getCurrency(){
       return this.currency;
    }
    

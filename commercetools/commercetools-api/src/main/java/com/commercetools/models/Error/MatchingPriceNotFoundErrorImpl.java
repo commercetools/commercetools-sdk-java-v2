@@ -3,8 +3,6 @@ package com.commercetools.models.error;
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.customer_group.CustomerGroupReference;
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Integer;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -26,24 +24,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundError {
 
-   private java.lang.String code;
+   private String code;
    
-   private java.lang.String message;
+   private String message;
    
-   private java.lang.String country;
+   private String country;
    
-   private java.lang.String productId;
+   private String productId;
    
    private com.commercetools.models.customer_group.CustomerGroupReference customerGroup;
    
    private com.commercetools.models.channel.ChannelReference channel;
    
-   private java.lang.String currency;
+   private String currency;
    
-   private java.lang.Integer variantId;
+   private Integer variantId;
 
    @JsonCreator
-   MatchingPriceNotFoundErrorImpl(@JsonProperty("message") final java.lang.String message, @JsonProperty("country") final java.lang.String country, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("currency") final java.lang.String currency, @JsonProperty("variantId") final java.lang.Integer variantId) {
+   MatchingPriceNotFoundErrorImpl(@JsonProperty("message") final String message, @JsonProperty("country") final String country, @JsonProperty("productId") final String productId, @JsonProperty("customerGroup") final com.commercetools.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("channel") final com.commercetools.models.channel.ChannelReference channel, @JsonProperty("currency") final String currency, @JsonProperty("variantId") final Integer variantId) {
       this.message = message;
       this.country = country;
       this.productId = productId;
@@ -58,22 +56,22 @@ public final class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFou
    }
    
    
-   public java.lang.String getCode(){
+   public String getCode(){
       return this.code;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.lang.String getCountry(){
+   public String getCountry(){
       return this.country;
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
@@ -88,24 +86,24 @@ public final class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFou
    }
    
    
-   public java.lang.String getCurrency(){
+   public String getCurrency(){
       return this.currency;
    }
    
    
-   public java.lang.Integer getVariantId(){
+   public Integer getVariantId(){
       return this.variantId;
    }
 
-   public void setMessage(final java.lang.String message){
+   public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setCountry(final java.lang.String country){
+   public void setCountry(final String country){
       this.country = country;
    }
    
-   public void setProductId(final java.lang.String productId){
+   public void setProductId(final String productId){
       this.productId = productId;
    }
    
@@ -117,11 +115,11 @@ public final class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFou
       this.channel = channel;
    }
    
-   public void setCurrency(final java.lang.String currency){
+   public void setCurrency(final String currency){
       this.currency = currency;
    }
    
-   public void setVariantId(final java.lang.Integer variantId){
+   public void setVariantId(final Integer variantId){
       this.variantId = variantId;
    }
 

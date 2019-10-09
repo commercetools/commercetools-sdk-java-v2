@@ -2,8 +2,6 @@ package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountTarget;
 import com.commercetools.models.cart_discount.SelectionMode;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.cart_discount.MultiBuyLineItemsTarget;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,36 +11,36 @@ import java.time.ZonedDateTime;
 public final class MultiBuyLineItemsTargetBuilder {
    
    
-   private java.lang.String predicate;
+   private String predicate;
    
    
-   private java.lang.Integer triggerQuantity;
+   private Integer triggerQuantity;
    
    
-   private java.lang.Integer discountedQuantity;
+   private Integer discountedQuantity;
    
    @Nullable
-   private java.lang.Integer maxOccurrence;
+   private Integer maxOccurrence;
    
    
    private com.commercetools.models.cart_discount.SelectionMode selectionMode;
    
-   public MultiBuyLineItemsTargetBuilder predicate( final java.lang.String predicate) {
+   public MultiBuyLineItemsTargetBuilder predicate( final String predicate) {
       this.predicate = predicate;
       return this;
    }
    
-   public MultiBuyLineItemsTargetBuilder triggerQuantity( final java.lang.Integer triggerQuantity) {
+   public MultiBuyLineItemsTargetBuilder triggerQuantity( final Integer triggerQuantity) {
       this.triggerQuantity = triggerQuantity;
       return this;
    }
    
-   public MultiBuyLineItemsTargetBuilder discountedQuantity( final java.lang.Integer discountedQuantity) {
+   public MultiBuyLineItemsTargetBuilder discountedQuantity( final Integer discountedQuantity) {
       this.discountedQuantity = discountedQuantity;
       return this;
    }
    
-   public MultiBuyLineItemsTargetBuilder maxOccurrence(@Nullable final java.lang.Integer maxOccurrence) {
+   public MultiBuyLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {
       this.maxOccurrence = maxOccurrence;
       return this;
    }
@@ -53,22 +51,22 @@ public final class MultiBuyLineItemsTargetBuilder {
    }
    
    
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
    
    
-   public java.lang.Integer getTriggerQuantity(){
+   public Integer getTriggerQuantity(){
       return this.triggerQuantity;
    }
    
    
-   public java.lang.Integer getDiscountedQuantity(){
+   public Integer getDiscountedQuantity(){
       return this.discountedQuantity;
    }
    
    @Nullable
-   public java.lang.Integer getMaxOccurrence(){
+   public Integer getMaxOccurrence(){
       return this.maxOccurrence;
    }
    

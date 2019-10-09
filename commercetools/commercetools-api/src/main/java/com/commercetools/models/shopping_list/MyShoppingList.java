@@ -6,8 +6,6 @@ import com.commercetools.models.customer.CustomerReference;
 import com.commercetools.models.shopping_list.ShoppingListLineItem;
 import com.commercetools.models.shopping_list.TextLineItem;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.shopping_list.MyShoppingListImpl;
 
 import com.fasterxml.jackson.annotation.*;

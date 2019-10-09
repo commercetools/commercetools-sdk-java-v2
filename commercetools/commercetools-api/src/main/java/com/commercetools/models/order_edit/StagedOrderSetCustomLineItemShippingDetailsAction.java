@@ -2,7 +2,6 @@ package com.commercetools.models.order_edit;
 
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetCustomLineItemShippingDetailsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

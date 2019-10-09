@@ -1,8 +1,6 @@
 package com.commercetools.models.category;
 
 import com.commercetools.models.category.CategoryUpdateAction;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.category.CategorySetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

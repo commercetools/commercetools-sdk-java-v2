@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductUnpublishActionImpl implements ProductUnpublishAction {
 
-   private java.lang.String action;
+   private String action;
 
    @JsonCreator
    ProductUnpublishActionImpl() {
@@ -32,7 +31,7 @@ public final class ProductUnpublishActionImpl implements ProductUnpublishAction 
    
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
 

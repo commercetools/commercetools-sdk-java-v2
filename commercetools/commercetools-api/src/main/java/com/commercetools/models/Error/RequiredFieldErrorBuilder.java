@@ -1,7 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.String;
 import com.commercetools.models.error.RequiredFieldError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class RequiredFieldErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    
-   private java.lang.String field;
+   private String field;
    
-   public RequiredFieldErrorBuilder message( final java.lang.String message) {
+   public RequiredFieldErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public RequiredFieldErrorBuilder field( final java.lang.String field) {
+   public RequiredFieldErrorBuilder field( final String field) {
       this.field = field;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    
-   public java.lang.String getField(){
+   public String getField(){
       return this.field;
    }
 

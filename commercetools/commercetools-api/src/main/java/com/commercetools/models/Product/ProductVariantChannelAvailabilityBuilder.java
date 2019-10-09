@@ -1,7 +1,6 @@
 package com.commercetools.models.product;
 
-import java.lang.Boolean;
-import java.lang.Long;
+
 import com.commercetools.models.product.ProductVariantChannelAvailability;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,41 +10,41 @@ import java.time.ZonedDateTime;
 public final class ProductVariantChannelAvailabilityBuilder {
    
    @Nullable
-   private java.lang.Long availableQuantity;
+   private Long availableQuantity;
    
    @Nullable
-   private java.lang.Long restockableInDays;
+   private Long restockableInDays;
    
    @Nullable
-   private java.lang.Boolean isOnStock;
+   private Boolean isOnStock;
    
-   public ProductVariantChannelAvailabilityBuilder availableQuantity(@Nullable final java.lang.Long availableQuantity) {
+   public ProductVariantChannelAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
       this.availableQuantity = availableQuantity;
       return this;
    }
    
-   public ProductVariantChannelAvailabilityBuilder restockableInDays(@Nullable final java.lang.Long restockableInDays) {
+   public ProductVariantChannelAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
       this.restockableInDays = restockableInDays;
       return this;
    }
    
-   public ProductVariantChannelAvailabilityBuilder isOnStock(@Nullable final java.lang.Boolean isOnStock) {
+   public ProductVariantChannelAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
       this.isOnStock = isOnStock;
       return this;
    }
    
    @Nullable
-   public java.lang.Long getAvailableQuantity(){
+   public Long getAvailableQuantity(){
       return this.availableQuantity;
    }
    
    @Nullable
-   public java.lang.Long getRestockableInDays(){
+   public Long getRestockableInDays(){
       return this.restockableInDays;
    }
    
    @Nullable
-   public java.lang.Boolean getIsOnStock(){
+   public Boolean getIsOnStock(){
       return this.isOnStock;
    }
 

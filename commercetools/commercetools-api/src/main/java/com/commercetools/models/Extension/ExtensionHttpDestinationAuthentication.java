@@ -2,7 +2,6 @@ package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionAuthorizationHeaderAuthentication;
 import com.commercetools.models.extension.ExtensionAzureFunctionsAuthentication;
-import java.lang.String;
 
 
 import com.fasterxml.jackson.annotation.*;

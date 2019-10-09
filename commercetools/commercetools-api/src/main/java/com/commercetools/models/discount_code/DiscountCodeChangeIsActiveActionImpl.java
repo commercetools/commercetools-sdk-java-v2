@@ -1,8 +1,6 @@
 package com.commercetools.models.discount_code;
 
 import com.commercetools.models.discount_code.DiscountCodeUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeChangeIsActiveActionImpl implements DiscountCodeChangeIsActiveAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.Boolean isActive;
+   private Boolean isActive;
 
    @JsonCreator
-   DiscountCodeChangeIsActiveActionImpl(@JsonProperty("isActive") final java.lang.Boolean isActive) {
+   DiscountCodeChangeIsActiveActionImpl(@JsonProperty("isActive") final Boolean isActive) {
       this.isActive = isActive;
       this.action = "changeIsActive";
    }
@@ -38,16 +36,16 @@ public final class DiscountCodeChangeIsActiveActionImpl implements DiscountCodeC
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.Boolean getIsActive(){
+   public Boolean getIsActive(){
       return this.isActive;
    }
 
-   public void setIsActive(final java.lang.Boolean isActive){
+   public void setIsActive(final Boolean isActive){
       this.isActive = isActive;
    }
 

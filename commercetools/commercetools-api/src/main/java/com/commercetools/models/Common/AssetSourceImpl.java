@@ -1,7 +1,6 @@
 package com.commercetools.models.common;
 
 import com.commercetools.models.common.AssetDimensions;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,16 +22,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AssetSourceImpl implements AssetSource {
 
-   private java.lang.String contentType;
+   private String contentType;
    
-   private java.lang.String uri;
+   private String uri;
    
-   private java.lang.String key;
+   private String key;
    
    private com.commercetools.models.common.AssetDimensions dimensions;
 
    @JsonCreator
-   AssetSourceImpl(@JsonProperty("contentType") final java.lang.String contentType, @JsonProperty("uri") final java.lang.String uri, @JsonProperty("key") final java.lang.String key, @JsonProperty("dimensions") final com.commercetools.models.common.AssetDimensions dimensions) {
+   AssetSourceImpl(@JsonProperty("contentType") final String contentType, @JsonProperty("uri") final String uri, @JsonProperty("key") final String key, @JsonProperty("dimensions") final com.commercetools.models.common.AssetDimensions dimensions) {
       this.contentType = contentType;
       this.uri = uri;
       this.key = key;
@@ -43,17 +42,17 @@ public final class AssetSourceImpl implements AssetSource {
    }
    
    
-   public java.lang.String getContentType(){
+   public String getContentType(){
       return this.contentType;
    }
    
    
-   public java.lang.String getUri(){
+   public String getUri(){
       return this.uri;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -62,15 +61,15 @@ public final class AssetSourceImpl implements AssetSource {
       return this.dimensions;
    }
 
-   public void setContentType(final java.lang.String contentType){
+   public void setContentType(final String contentType){
       this.contentType = contentType;
    }
    
-   public void setUri(final java.lang.String uri){
+   public void setUri(final String uri){
       this.uri = uri;
    }
    
-   public void setKey(final java.lang.String key){
+   public void setKey(final String key){
       this.key = key;
    }
    

@@ -1,8 +1,6 @@
 package com.commercetools.models.order_edit;
 
 import com.commercetools.models.order_edit.OrderEditUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
 import com.commercetools.models.order_edit.OrderEditUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;

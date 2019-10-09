@@ -2,7 +2,6 @@ package com.commercetools.models.order;
 
 import com.commercetools.models.order.OrderUpdateAction;
 import com.commercetools.models.order.TrackingData;
-import java.lang.String;
 import com.commercetools.models.order.OrderSetParcelTrackingDataActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,7 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountChangePredicateActionImpl implements ProductDiscountChangePredicateAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String predicate;
+   private String predicate;
 
    @JsonCreator
-   ProductDiscountChangePredicateActionImpl(@JsonProperty("predicate") final java.lang.String predicate) {
+   ProductDiscountChangePredicateActionImpl(@JsonProperty("predicate") final String predicate) {
       this.predicate = predicate;
       this.action = "changePredicate";
    }
@@ -37,16 +36,16 @@ public final class ProductDiscountChangePredicateActionImpl implements ProductDi
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getPredicate(){
+   public String getPredicate(){
       return this.predicate;
    }
 
-   public void setPredicate(final java.lang.String predicate){
+   public void setPredicate(final String predicate){
       this.predicate = predicate;
    }
 

@@ -1,7 +1,6 @@
 package com.commercetools.models.customer_group;
 
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import com.commercetools.models.customer_group.CustomerGroupDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

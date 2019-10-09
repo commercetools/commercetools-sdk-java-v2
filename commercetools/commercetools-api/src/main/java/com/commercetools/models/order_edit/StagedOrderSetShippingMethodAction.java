@@ -3,7 +3,6 @@ package com.commercetools.models.order_edit;
 import com.commercetools.models.cart.ExternalTaxRateDraft;
 import com.commercetools.models.order.StagedOrderUpdateAction;
 import com.commercetools.models.shipping_method.ShippingMethodResourceIdentifier;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderSetShippingMethodActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

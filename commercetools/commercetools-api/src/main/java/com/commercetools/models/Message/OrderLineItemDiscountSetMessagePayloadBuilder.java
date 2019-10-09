@@ -4,7 +4,6 @@ import com.commercetools.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.models.cart.TaxedItemPrice;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.message.MessagePayload;
-import java.lang.String;
 import com.commercetools.models.message.OrderLineItemDiscountSetMessagePayload;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -17,7 +16,7 @@ public final class OrderLineItemDiscountSetMessagePayloadBuilder {
    private com.commercetools.models.common.Money totalPrice;
    
    
-   private java.lang.String lineItemId;
+   private String lineItemId;
    
    @Nullable
    private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
@@ -30,7 +29,7 @@ public final class OrderLineItemDiscountSetMessagePayloadBuilder {
       return this;
    }
    
-   public OrderLineItemDiscountSetMessagePayloadBuilder lineItemId( final java.lang.String lineItemId) {
+   public OrderLineItemDiscountSetMessagePayloadBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
@@ -51,7 +50,7 @@ public final class OrderLineItemDiscountSetMessagePayloadBuilder {
    }
    
    
-   public java.lang.String getLineItemId(){
+   public String getLineItemId(){
       return this.lineItemId;
    }
    

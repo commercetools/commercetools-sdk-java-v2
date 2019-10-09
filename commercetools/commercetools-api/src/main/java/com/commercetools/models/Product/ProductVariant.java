@@ -6,9 +6,6 @@ import com.commercetools.models.common.Price;
 import com.commercetools.models.common.ScopedPrice;
 import com.commercetools.models.product.Attribute;
 import com.commercetools.models.product.ProductVariantAvailability;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductVariantImpl;
 
 import com.fasterxml.jackson.annotation.*;

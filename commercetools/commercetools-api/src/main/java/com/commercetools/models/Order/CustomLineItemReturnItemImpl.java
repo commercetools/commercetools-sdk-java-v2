@@ -1,7 +1,6 @@
 package com.commercetools.models.order;
 
 import com.commercetools.models.order.ReturnItem;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -29,20 +28,20 @@ public final class CustomLineItemReturnItemImpl implements CustomLineItemReturnI
    
    private java.time.ZonedDateTime lastModifiedAt;
    
-   private java.lang.Long quantity;
+   private Long quantity;
    
-   private java.lang.String comment;
+   private String comment;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.order.ReturnPaymentState paymentState;
    
-   private java.lang.String type;
+   private String type;
    
-   private java.lang.String customLineItemId;
+   private String customLineItemId;
 
    @JsonCreator
-   CustomLineItemReturnItemImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ReturnShipmentState shipmentState, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("comment") final java.lang.String comment, @JsonProperty("id") final java.lang.String id, @JsonProperty("paymentState") final com.commercetools.models.order.ReturnPaymentState paymentState, @JsonProperty("customLineItemId") final java.lang.String customLineItemId) {
+   CustomLineItemReturnItemImpl(@JsonProperty("shipmentState") final com.commercetools.models.order.ReturnShipmentState shipmentState, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("quantity") final Long quantity, @JsonProperty("comment") final String comment, @JsonProperty("id") final String id, @JsonProperty("paymentState") final com.commercetools.models.order.ReturnPaymentState paymentState, @JsonProperty("customLineItemId") final String customLineItemId) {
       this.shipmentState = shipmentState;
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
@@ -73,17 +72,17 @@ public final class CustomLineItemReturnItemImpl implements CustomLineItemReturnI
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
    
-   public java.lang.String getComment(){
+   public String getComment(){
       return this.comment;
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -93,12 +92,12 @@ public final class CustomLineItemReturnItemImpl implements CustomLineItemReturnI
    }
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
    
    
-   public java.lang.String getCustomLineItemId(){
+   public String getCustomLineItemId(){
       return this.customLineItemId;
    }
 
@@ -114,15 +113,15 @@ public final class CustomLineItemReturnItemImpl implements CustomLineItemReturnI
       this.lastModifiedAt = lastModifiedAt;
    }
    
-   public void setQuantity(final java.lang.Long quantity){
+   public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
    
-   public void setComment(final java.lang.String comment){
+   public void setComment(final String comment){
       this.comment = comment;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    
@@ -130,7 +129,7 @@ public final class CustomLineItemReturnItemImpl implements CustomLineItemReturnI
       this.paymentState = paymentState;
    }
    
-   public void setCustomLineItemId(final java.lang.String customLineItemId){
+   public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
 

@@ -6,8 +6,6 @@ import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.common.LoggedResource;
 import com.commercetools.models.review.ReviewRatingStatistics;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.channel.Channel;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -23,10 +21,10 @@ public final class ChannelBuilder {
    private java.time.ZonedDateTime lastModifiedAt;
    
    
-   private java.lang.String id;
+   private String id;
    
    
-   private java.lang.Long version;
+   private Long version;
    
    @Nullable
    private com.commercetools.models.common.CreatedBy createdBy;
@@ -38,7 +36,7 @@ public final class ChannelBuilder {
    private com.commercetools.models.common.Address address;
    
    @Nullable
-   private java.lang.Object geoLocation;
+   private Object geoLocation;
    
    @Nullable
    private com.commercetools.models.type.CustomFields custom;
@@ -56,7 +54,7 @@ public final class ChannelBuilder {
    private com.commercetools.models.review.ReviewRatingStatistics reviewRatingStatistics;
    
    
-   private java.lang.String key;
+   private String key;
    
    public ChannelBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -68,12 +66,12 @@ public final class ChannelBuilder {
       return this;
    }
    
-   public ChannelBuilder id( final java.lang.String id) {
+   public ChannelBuilder id( final String id) {
       this.id = id;
       return this;
    }
    
-   public ChannelBuilder version( final java.lang.Long version) {
+   public ChannelBuilder version( final Long version) {
       this.version = version;
       return this;
    }
@@ -93,7 +91,7 @@ public final class ChannelBuilder {
       return this;
    }
    
-   public ChannelBuilder geoLocation(@Nullable final java.lang.Object geoLocation) {
+   public ChannelBuilder geoLocation(@Nullable final Object geoLocation) {
       this.geoLocation = geoLocation;
       return this;
    }
@@ -123,7 +121,7 @@ public final class ChannelBuilder {
       return this;
    }
    
-   public ChannelBuilder key( final java.lang.String key) {
+   public ChannelBuilder key( final String key) {
       this.key = key;
       return this;
    }
@@ -139,12 +137,12 @@ public final class ChannelBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
    
@@ -164,7 +162,7 @@ public final class ChannelBuilder {
    }
    
    @Nullable
-   public java.lang.Object getGeoLocation(){
+   public Object getGeoLocation(){
       return this.geoLocation;
    }
    
@@ -194,7 +192,7 @@ public final class ChannelBuilder {
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

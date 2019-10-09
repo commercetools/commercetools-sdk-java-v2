@@ -12,12 +12,12 @@ import java.time.ZonedDateTime;
 public final class ZoneReferenceBuilder {
    
    
-   private java.lang.String id;
+   private String id;
    
    @Nullable
    private com.commercetools.models.zone.Zone obj;
    
-   public ZoneReferenceBuilder id( final java.lang.String id) {
+   public ZoneReferenceBuilder id( final String id) {
       this.id = id;
       return this;
    }
@@ -28,7 +28,7 @@ public final class ZoneReferenceBuilder {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    

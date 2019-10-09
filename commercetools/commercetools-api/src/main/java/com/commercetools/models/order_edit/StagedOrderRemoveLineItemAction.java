@@ -4,8 +4,6 @@ import com.commercetools.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.Integer;
-import java.lang.String;
 import com.commercetools.models.order_edit.StagedOrderRemoveLineItemActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,8 +1,6 @@
 package com.commercetools.models.cart;
 
-import com.commercetools.models.common.Money;
-import java.lang.Integer;
-import java.lang.String;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.cart.TaxPortionImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -35,13 +33,13 @@ public interface TaxPortion  {
    @NotNull
    @Valid
    @JsonProperty("amount")
-   public Money getAmount();
+   public TypedMoney getAmount();
 
    public void setName(final String name);
    
    public void setRate(final Integer rate);
    
-   public void setAmount(final Money amount);
+   public void setAmount(final TypedMoney amount);
    
    public static TaxPortionImpl of(){
       return new TaxPortionImpl();

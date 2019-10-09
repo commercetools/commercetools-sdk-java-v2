@@ -2,8 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetDescriptionAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,14 +14,14 @@ public final class ProductSetDescriptionActionBuilder {
    private com.commercetools.models.common.LocalizedString description;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    public ProductSetDescriptionActionBuilder description(@Nullable final com.commercetools.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
    
-   public ProductSetDescriptionActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetDescriptionActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
@@ -34,7 +32,7 @@ public final class ProductSetDescriptionActionBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
 

@@ -3,8 +3,6 @@ package com.commercetools.models.shipping_method;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.models.shipping_method.ShippingRateTierType;
-import java.lang.Boolean;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -28,14 +26,14 @@ public final class CartValueTierImpl implements CartValueTier {
 
    private com.commercetools.models.shipping_method.ShippingRateTierType type;
    
-   private java.lang.Long minimumCentAmount;
+   private Long minimumCentAmount;
    
    private com.commercetools.models.common.Money price;
    
-   private java.lang.Boolean isMatching;
+   private Boolean isMatching;
 
    @JsonCreator
-   CartValueTierImpl(@JsonProperty("minimumCentAmount") final java.lang.Long minimumCentAmount, @JsonProperty("price") final com.commercetools.models.common.Money price, @JsonProperty("isMatching") final java.lang.Boolean isMatching) {
+   CartValueTierImpl(@JsonProperty("minimumCentAmount") final Long minimumCentAmount, @JsonProperty("price") final com.commercetools.models.common.Money price, @JsonProperty("isMatching") final Boolean isMatching) {
       this.minimumCentAmount = minimumCentAmount;
       this.price = price;
       this.isMatching = isMatching;
@@ -51,7 +49,7 @@ public final class CartValueTierImpl implements CartValueTier {
    }
    
    
-   public java.lang.Long getMinimumCentAmount(){
+   public Long getMinimumCentAmount(){
       return this.minimumCentAmount;
    }
    
@@ -61,11 +59,11 @@ public final class CartValueTierImpl implements CartValueTier {
    }
    
    
-   public java.lang.Boolean getIsMatching(){
+   public Boolean getIsMatching(){
       return this.isMatching;
    }
 
-   public void setMinimumCentAmount(final java.lang.Long minimumCentAmount){
+   public void setMinimumCentAmount(final Long minimumCentAmount){
       this.minimumCentAmount = minimumCentAmount;
    }
    
@@ -73,7 +71,7 @@ public final class CartValueTierImpl implements CartValueTier {
       this.price = price;
    }
    
-   public void setIsMatching(final java.lang.Boolean isMatching){
+   public void setIsMatching(final Boolean isMatching){
       this.isMatching = isMatching;
    }
 

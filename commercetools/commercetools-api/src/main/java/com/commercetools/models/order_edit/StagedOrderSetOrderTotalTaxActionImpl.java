@@ -1,9 +1,8 @@
 package com.commercetools.models.order_edit;
 
-import com.commercetools.models.cart.TaxPortion;
+import com.commercetools.models.cart.TaxPortionDraft;
 import com.commercetools.models.common.Money;
 import com.commercetools.models.order.StagedOrderUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +24,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderSetOrderTotalTaxAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.util.List<com.commercetools.models.cart.TaxPortion> externalTaxPortions;
+   private java.util.List<com.commercetools.models.cart.TaxPortionDraft> externalTaxPortions;
    
    private com.commercetools.models.common.Money externalTotalGross;
 
    @JsonCreator
-   StagedOrderSetOrderTotalTaxActionImpl(@JsonProperty("externalTaxPortions") final java.util.List<com.commercetools.models.cart.TaxPortion> externalTaxPortions, @JsonProperty("externalTotalGross") final com.commercetools.models.common.Money externalTotalGross) {
+   StagedOrderSetOrderTotalTaxActionImpl(@JsonProperty("externalTaxPortions") final java.util.List<com.commercetools.models.cart.TaxPortionDraft> externalTaxPortions, @JsonProperty("externalTotalGross") final com.commercetools.models.common.Money externalTotalGross) {
       this.externalTaxPortions = externalTaxPortions;
       this.externalTotalGross = externalTotalGross;
       this.action = "setOrderTotalTax";
@@ -42,12 +41,12 @@ public final class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderS
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.util.List<com.commercetools.models.cart.TaxPortion> getExternalTaxPortions(){
+   public java.util.List<com.commercetools.models.cart.TaxPortionDraft> getExternalTaxPortions(){
       return this.externalTaxPortions;
    }
    
@@ -56,7 +55,7 @@ public final class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderS
       return this.externalTotalGross;
    }
 
-   public void setExternalTaxPortions(final java.util.List<com.commercetools.models.cart.TaxPortion> externalTaxPortions){
+   public void setExternalTaxPortions(final java.util.List<com.commercetools.models.cart.TaxPortionDraft> externalTaxPortions){
       this.externalTaxPortions = externalTaxPortions;
    }
    

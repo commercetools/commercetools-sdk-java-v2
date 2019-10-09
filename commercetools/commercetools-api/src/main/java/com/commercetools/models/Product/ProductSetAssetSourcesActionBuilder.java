@@ -2,9 +2,6 @@ package com.commercetools.models.product;
 
 import com.commercetools.models.common.AssetSource;
 import com.commercetools.models.product.ProductUpdateAction;
-import java.lang.Boolean;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.product.ProductSetAssetSourcesAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -17,46 +14,46 @@ public final class ProductSetAssetSourcesActionBuilder {
    private java.util.List<com.commercetools.models.common.AssetSource> sources;
    
    @Nullable
-   private java.lang.String assetId;
+   private String assetId;
    
    @Nullable
-   private java.lang.Boolean staged;
+   private Boolean staged;
    
    @Nullable
-   private java.lang.Long variantId;
+   private Long variantId;
    
    @Nullable
-   private java.lang.String sku;
+   private String sku;
    
    @Nullable
-   private java.lang.String assetKey;
+   private String assetKey;
    
    public ProductSetAssetSourcesActionBuilder sources( final java.util.List<com.commercetools.models.common.AssetSource> sources) {
       this.sources = sources;
       return this;
    }
    
-   public ProductSetAssetSourcesActionBuilder assetId(@Nullable final java.lang.String assetId) {
+   public ProductSetAssetSourcesActionBuilder assetId(@Nullable final String assetId) {
       this.assetId = assetId;
       return this;
    }
    
-   public ProductSetAssetSourcesActionBuilder staged(@Nullable final java.lang.Boolean staged) {
+   public ProductSetAssetSourcesActionBuilder staged(@Nullable final Boolean staged) {
       this.staged = staged;
       return this;
    }
    
-   public ProductSetAssetSourcesActionBuilder variantId(@Nullable final java.lang.Long variantId) {
+   public ProductSetAssetSourcesActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ProductSetAssetSourcesActionBuilder sku(@Nullable final java.lang.String sku) {
+   public ProductSetAssetSourcesActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
    
-   public ProductSetAssetSourcesActionBuilder assetKey(@Nullable final java.lang.String assetKey) {
+   public ProductSetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
       this.assetKey = assetKey;
       return this;
    }
@@ -67,27 +64,27 @@ public final class ProductSetAssetSourcesActionBuilder {
    }
    
    @Nullable
-   public java.lang.String getAssetId(){
+   public String getAssetId(){
       return this.assetId;
    }
    
    @Nullable
-   public java.lang.Boolean getStaged(){
+   public Boolean getStaged(){
       return this.staged;
    }
    
    @Nullable
-   public java.lang.Long getVariantId(){
+   public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public java.lang.String getSku(){
+   public String getSku(){
       return this.sku;
    }
    
    @Nullable
-   public java.lang.String getAssetKey(){
+   public String getAssetKey(){
       return this.assetKey;
    }
 

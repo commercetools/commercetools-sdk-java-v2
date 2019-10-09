@@ -1,8 +1,6 @@
 package com.commercetools.models.error;
 
 import com.commercetools.models.error.ErrorObject;
-import java.lang.Long;
-import java.lang.String;
 import com.commercetools.models.error.ConcurrentModificationError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class ConcurrentModificationErrorBuilder {
    
    
-   private java.lang.String message;
+   private String message;
    
    @Nullable
-   private java.lang.Long currentVersion;
+   private Long currentVersion;
    
-   public ConcurrentModificationErrorBuilder message( final java.lang.String message) {
+   public ConcurrentModificationErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public ConcurrentModificationErrorBuilder currentVersion(@Nullable final java.lang.Long currentVersion) {
+   public ConcurrentModificationErrorBuilder currentVersion(@Nullable final Long currentVersion) {
       this.currentVersion = currentVersion;
       return this;
    }
    
    
-   public java.lang.String getMessage(){
+   public String getMessage(){
       return this.message;
    }
    
    @Nullable
-   public java.lang.Long getCurrentVersion(){
+   public Long getCurrentVersion(){
       return this.currentVersion;
    }
 

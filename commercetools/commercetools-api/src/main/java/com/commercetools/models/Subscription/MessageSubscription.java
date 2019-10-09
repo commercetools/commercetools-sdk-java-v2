@@ -1,6 +1,6 @@
 package com.commercetools.models.subscription;
 
-import java.lang.String;
+
 import com.commercetools.models.subscription.MessageSubscriptionImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,7 +1,6 @@
 package com.commercetools.models.shopping_list;
 
 import com.commercetools.models.shopping_list.ShoppingListUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListSetAnonymousIdActionImpl implements ShoppingListSetAnonymousIdAction {
 
-   private java.lang.String action;
+   private String action;
    
-   private java.lang.String anonymousId;
+   private String anonymousId;
 
    @JsonCreator
-   ShoppingListSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final java.lang.String anonymousId) {
+   ShoppingListSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
       this.anonymousId = anonymousId;
       this.action = "setAnonymousId";
    }
@@ -37,16 +36,16 @@ public final class ShoppingListSetAnonymousIdActionImpl implements ShoppingListS
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    
    
-   public java.lang.String getAnonymousId(){
+   public String getAnonymousId(){
       return this.anonymousId;
    }
 
-   public void setAnonymousId(final java.lang.String anonymousId){
+   public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
 

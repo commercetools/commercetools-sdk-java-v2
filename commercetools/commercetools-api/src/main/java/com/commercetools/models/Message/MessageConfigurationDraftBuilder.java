@@ -1,7 +1,6 @@
 package com.commercetools.models.message;
 
-import java.lang.Boolean;
-import java.lang.Integer;
+
 import com.commercetools.models.message.MessageConfigurationDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,28 +10,28 @@ import java.time.ZonedDateTime;
 public final class MessageConfigurationDraftBuilder {
    
    
-   private java.lang.Integer deleteDaysAfterCreation;
+   private Integer deleteDaysAfterCreation;
    
    
-   private java.lang.Boolean enabled;
+   private Boolean enabled;
    
-   public MessageConfigurationDraftBuilder deleteDaysAfterCreation( final java.lang.Integer deleteDaysAfterCreation) {
+   public MessageConfigurationDraftBuilder deleteDaysAfterCreation( final Integer deleteDaysAfterCreation) {
       this.deleteDaysAfterCreation = deleteDaysAfterCreation;
       return this;
    }
    
-   public MessageConfigurationDraftBuilder enabled( final java.lang.Boolean enabled) {
+   public MessageConfigurationDraftBuilder enabled( final Boolean enabled) {
       this.enabled = enabled;
       return this;
    }
    
    
-   public java.lang.Integer getDeleteDaysAfterCreation(){
+   public Integer getDeleteDaysAfterCreation(){
       return this.deleteDaysAfterCreation;
    }
    
    
-   public java.lang.Boolean getEnabled(){
+   public Boolean getEnabled(){
       return this.enabled;
    }
 

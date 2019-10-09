@@ -7,15 +7,13 @@ import com.commercetools.models.cart.LineItemPriceMode;
 import com.commercetools.models.cart.TaxedItemPrice;
 import com.commercetools.models.channel.ChannelReference;
 import com.commercetools.models.common.LocalizedString;
-import com.commercetools.models.common.Money;
 import com.commercetools.models.common.Price;
+import com.commercetools.models.common.TypedMoney;
 import com.commercetools.models.order.ItemState;
 import com.commercetools.models.product.ProductVariant;
 import com.commercetools.models.product_type.ProductTypeReference;
 import com.commercetools.models.tax_category.TaxRate;
 import com.commercetools.models.type.CustomFields;
-import java.lang.Long;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -37,13 +35,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LineItemImpl implements LineItem {
 
-   private java.lang.Long quantity;
+   private Long quantity;
    
    private com.commercetools.models.cart.LineItemPriceMode priceMode;
    
-   private java.lang.String productId;
+   private String productId;
    
-   private com.commercetools.models.common.Money totalPrice;
+   private com.commercetools.models.common.TypedMoney totalPrice;
    
    private com.commercetools.models.cart.TaxedItemPrice taxedPrice;
    
@@ -67,7 +65,7 @@ public final class LineItemImpl implements LineItem {
    
    private java.util.List<com.commercetools.models.order.ItemState> state;
    
-   private java.lang.String id;
+   private String id;
    
    private com.commercetools.models.channel.ChannelReference distributionChannel;
    
@@ -76,7 +74,7 @@ public final class LineItemImpl implements LineItem {
    private com.commercetools.models.product_type.ProductTypeReference productType;
 
    @JsonCreator
-   LineItemImpl(@JsonProperty("quantity") final java.lang.Long quantity, @JsonProperty("priceMode") final com.commercetools.models.cart.LineItemPriceMode priceMode, @JsonProperty("productId") final java.lang.String productId, @JsonProperty("totalPrice") final com.commercetools.models.common.Money totalPrice, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("productSlug") final com.commercetools.models.common.LocalizedString productSlug, @JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRate taxRate, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetails shippingDetails, @JsonProperty("price") final com.commercetools.models.common.Price price, @JsonProperty("variant") final com.commercetools.models.product.ProductVariant variant, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelReference supplyChannel, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state, @JsonProperty("id") final java.lang.String id, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelReference distributionChannel, @JsonProperty("lineItemMode") final com.commercetools.models.cart.LineItemMode lineItemMode, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeReference productType) {
+   LineItemImpl(@JsonProperty("quantity") final Long quantity, @JsonProperty("priceMode") final com.commercetools.models.cart.LineItemPriceMode priceMode, @JsonProperty("productId") final String productId, @JsonProperty("totalPrice") final com.commercetools.models.common.TypedMoney totalPrice, @JsonProperty("taxedPrice") final com.commercetools.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("custom") final com.commercetools.models.type.CustomFields custom, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("productSlug") final com.commercetools.models.common.LocalizedString productSlug, @JsonProperty("taxRate") final com.commercetools.models.tax_category.TaxRate taxRate, @JsonProperty("shippingDetails") final com.commercetools.models.cart.ItemShippingDetails shippingDetails, @JsonProperty("price") final com.commercetools.models.common.Price price, @JsonProperty("variant") final com.commercetools.models.product.ProductVariant variant, @JsonProperty("name") final com.commercetools.models.common.LocalizedString name, @JsonProperty("supplyChannel") final com.commercetools.models.channel.ChannelReference supplyChannel, @JsonProperty("state") final java.util.List<com.commercetools.models.order.ItemState> state, @JsonProperty("id") final String id, @JsonProperty("distributionChannel") final com.commercetools.models.channel.ChannelReference distributionChannel, @JsonProperty("lineItemMode") final com.commercetools.models.cart.LineItemMode lineItemMode, @JsonProperty("productType") final com.commercetools.models.product_type.ProductTypeReference productType) {
       this.quantity = quantity;
       this.priceMode = priceMode;
       this.productId = productId;
@@ -102,7 +100,7 @@ public final class LineItemImpl implements LineItem {
    }
    
    
-   public java.lang.Long getQuantity(){
+   public Long getQuantity(){
       return this.quantity;
    }
    
@@ -112,12 +110,12 @@ public final class LineItemImpl implements LineItem {
    }
    
    
-   public java.lang.String getProductId(){
+   public String getProductId(){
       return this.productId;
    }
    
    
-   public com.commercetools.models.common.Money getTotalPrice(){
+   public com.commercetools.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
    
@@ -177,7 +175,7 @@ public final class LineItemImpl implements LineItem {
    }
    
    
-   public java.lang.String getId(){
+   public String getId(){
       return this.id;
    }
    
@@ -196,7 +194,7 @@ public final class LineItemImpl implements LineItem {
       return this.productType;
    }
 
-   public void setQuantity(final java.lang.Long quantity){
+   public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
    
@@ -204,11 +202,11 @@ public final class LineItemImpl implements LineItem {
       this.priceMode = priceMode;
    }
    
-   public void setProductId(final java.lang.String productId){
+   public void setProductId(final String productId){
       this.productId = productId;
    }
    
-   public void setTotalPrice(final com.commercetools.models.common.Money totalPrice){
+   public void setTotalPrice(final com.commercetools.models.common.TypedMoney totalPrice){
       this.totalPrice = totalPrice;
    }
    
@@ -256,7 +254,7 @@ public final class LineItemImpl implements LineItem {
       this.state = state;
    }
    
-   public void setId(final java.lang.String id){
+   public void setId(final String id){
       this.id = id;
    }
    

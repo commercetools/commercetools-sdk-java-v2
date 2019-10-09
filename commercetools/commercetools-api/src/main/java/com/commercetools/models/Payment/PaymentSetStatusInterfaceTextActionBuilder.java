@@ -1,7 +1,6 @@
 package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentSetStatusInterfaceTextAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class PaymentSetStatusInterfaceTextActionBuilder {
    
    
-   private java.lang.String interfaceText;
+   private String interfaceText;
    
-   public PaymentSetStatusInterfaceTextActionBuilder interfaceText( final java.lang.String interfaceText) {
+   public PaymentSetStatusInterfaceTextActionBuilder interfaceText( final String interfaceText) {
       this.interfaceText = interfaceText;
       return this;
    }
    
    
-   public java.lang.String getInterfaceText(){
+   public String getInterfaceText(){
       return this.interfaceText;
    }
 

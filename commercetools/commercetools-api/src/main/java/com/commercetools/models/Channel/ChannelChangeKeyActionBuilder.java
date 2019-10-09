@@ -1,7 +1,6 @@
 package com.commercetools.models.channel;
 
 import com.commercetools.models.channel.ChannelUpdateAction;
-import java.lang.String;
 import com.commercetools.models.channel.ChannelChangeKeyAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -11,15 +10,15 @@ import java.time.ZonedDateTime;
 public final class ChannelChangeKeyActionBuilder {
    
    
-   private java.lang.String key;
+   private String key;
    
-   public ChannelChangeKeyActionBuilder key( final java.lang.String key) {
+   public ChannelChangeKeyActionBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

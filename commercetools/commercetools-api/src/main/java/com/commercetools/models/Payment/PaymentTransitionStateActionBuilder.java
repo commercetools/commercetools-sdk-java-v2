@@ -2,8 +2,6 @@ package com.commercetools.models.payment;
 
 import com.commercetools.models.payment.PaymentUpdateAction;
 import com.commercetools.models.state.StateResourceIdentifier;
-import java.lang.Boolean;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentTransitionStateAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -13,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class PaymentTransitionStateActionBuilder {
    
    @Nullable
-   private java.lang.Boolean force;
+   private Boolean force;
    
    
    private com.commercetools.models.state.StateResourceIdentifier state;
    
-   public PaymentTransitionStateActionBuilder force(@Nullable final java.lang.Boolean force) {
+   public PaymentTransitionStateActionBuilder force(@Nullable final Boolean force) {
       this.force = force;
       return this;
    }
@@ -29,7 +27,7 @@ public final class PaymentTransitionStateActionBuilder {
    }
    
    @Nullable
-   public java.lang.Boolean getForce(){
+   public Boolean getForce(){
       return this.force;
    }
    

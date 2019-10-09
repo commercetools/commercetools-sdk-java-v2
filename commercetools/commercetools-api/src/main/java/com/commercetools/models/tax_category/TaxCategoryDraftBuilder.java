@@ -1,7 +1,6 @@
 package com.commercetools.models.tax_category;
 
 import com.commercetools.models.tax_category.TaxRateDraft;
-import java.lang.String;
 import com.commercetools.models.tax_category.TaxCategoryDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,30 +13,30 @@ public final class TaxCategoryDraftBuilder {
    private java.util.List<com.commercetools.models.tax_category.TaxRateDraft> rates;
    
    
-   private java.lang.String name;
+   private String name;
    
    @Nullable
-   private java.lang.String description;
+   private String description;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    public TaxCategoryDraftBuilder rates( final java.util.List<com.commercetools.models.tax_category.TaxRateDraft> rates) {
       this.rates = rates;
       return this;
    }
    
-   public TaxCategoryDraftBuilder name( final java.lang.String name) {
+   public TaxCategoryDraftBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public TaxCategoryDraftBuilder description(@Nullable final java.lang.String description) {
+   public TaxCategoryDraftBuilder description(@Nullable final String description) {
       this.description = description;
       return this;
    }
    
-   public TaxCategoryDraftBuilder key(@Nullable final java.lang.String key) {
+   public TaxCategoryDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -48,17 +47,17 @@ public final class TaxCategoryDraftBuilder {
    }
    
    
-   public java.lang.String getName(){
+   public String getName(){
       return this.name;
    }
    
    @Nullable
-   public java.lang.String getDescription(){
+   public String getDescription(){
       return this.description;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

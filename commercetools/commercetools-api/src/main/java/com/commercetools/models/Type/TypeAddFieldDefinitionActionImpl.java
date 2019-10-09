@@ -2,7 +2,6 @@ package com.commercetools.models.type;
 
 import com.commercetools.models.type.FieldDefinition;
 import com.commercetools.models.type.TypeUpdateAction;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionAction {
 
-   private java.lang.String action;
+   private String action;
    
    private com.commercetools.models.type.FieldDefinition fieldDefinition;
 
@@ -38,7 +37,7 @@ public final class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefin
    }
    
    
-   public java.lang.String getAction(){
+   public String getAction(){
       return this.action;
    }
    

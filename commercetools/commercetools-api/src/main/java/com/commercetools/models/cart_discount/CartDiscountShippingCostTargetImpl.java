@@ -1,7 +1,6 @@
 package com.commercetools.models.cart_discount;
 
 import com.commercetools.models.cart_discount.CartDiscountTarget;
-import java.lang.String;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountShippingCostTargetImpl implements CartDiscountShippingCostTarget {
 
-   private java.lang.String type;
+   private String type;
 
    @JsonCreator
    CartDiscountShippingCostTargetImpl() {
@@ -32,7 +31,7 @@ public final class CartDiscountShippingCostTargetImpl implements CartDiscountShi
    
    
    
-   public java.lang.String getType(){
+   public String getType(){
       return this.type;
    }
 

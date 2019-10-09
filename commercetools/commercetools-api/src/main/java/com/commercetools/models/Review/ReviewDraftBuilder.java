@@ -3,9 +3,6 @@ package com.commercetools.models.review;
 import com.commercetools.models.customer.CustomerResourceIdentifier;
 import com.commercetools.models.state.StateResourceIdentifier;
 import com.commercetools.models.type.CustomFieldsDraft;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
 import com.commercetools.models.review.ReviewDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,44 +12,44 @@ import java.time.ZonedDateTime;
 public final class ReviewDraftBuilder {
    
    @Nullable
-   private java.lang.String uniquenessValue;
+   private String uniquenessValue;
    
    @Nullable
-   private java.lang.String authorName;
+   private String authorName;
    
    @Nullable
    private com.commercetools.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private java.lang.Integer rating;
+   private Integer rating;
    
    @Nullable
    private com.commercetools.models.state.StateResourceIdentifier state;
    
    @Nullable
-   private java.lang.String text;
+   private String text;
    
    @Nullable
-   private java.lang.String title;
+   private String title;
    
    @Nullable
-   private java.lang.String locale;
+   private String locale;
    
    @Nullable
-   private java.lang.String key;
+   private String key;
    
    @Nullable
    private com.commercetools.models.customer.CustomerResourceIdentifier customer;
    
    @Nullable
-   private java.lang.Object target;
+   private Object target;
    
-   public ReviewDraftBuilder uniquenessValue(@Nullable final java.lang.String uniquenessValue) {
+   public ReviewDraftBuilder uniquenessValue(@Nullable final String uniquenessValue) {
       this.uniquenessValue = uniquenessValue;
       return this;
    }
    
-   public ReviewDraftBuilder authorName(@Nullable final java.lang.String authorName) {
+   public ReviewDraftBuilder authorName(@Nullable final String authorName) {
       this.authorName = authorName;
       return this;
    }
@@ -62,7 +59,7 @@ public final class ReviewDraftBuilder {
       return this;
    }
    
-   public ReviewDraftBuilder rating(@Nullable final java.lang.Integer rating) {
+   public ReviewDraftBuilder rating(@Nullable final Integer rating) {
       this.rating = rating;
       return this;
    }
@@ -72,22 +69,22 @@ public final class ReviewDraftBuilder {
       return this;
    }
    
-   public ReviewDraftBuilder text(@Nullable final java.lang.String text) {
+   public ReviewDraftBuilder text(@Nullable final String text) {
       this.text = text;
       return this;
    }
    
-   public ReviewDraftBuilder title(@Nullable final java.lang.String title) {
+   public ReviewDraftBuilder title(@Nullable final String title) {
       this.title = title;
       return this;
    }
    
-   public ReviewDraftBuilder locale(@Nullable final java.lang.String locale) {
+   public ReviewDraftBuilder locale(@Nullable final String locale) {
       this.locale = locale;
       return this;
    }
    
-   public ReviewDraftBuilder key(@Nullable final java.lang.String key) {
+   public ReviewDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
@@ -97,18 +94,18 @@ public final class ReviewDraftBuilder {
       return this;
    }
    
-   public ReviewDraftBuilder target(@Nullable final java.lang.Object target) {
+   public ReviewDraftBuilder target(@Nullable final Object target) {
       this.target = target;
       return this;
    }
    
    @Nullable
-   public java.lang.String getUniquenessValue(){
+   public String getUniquenessValue(){
       return this.uniquenessValue;
    }
    
    @Nullable
-   public java.lang.String getAuthorName(){
+   public String getAuthorName(){
       return this.authorName;
    }
    
@@ -118,7 +115,7 @@ public final class ReviewDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Integer getRating(){
+   public Integer getRating(){
       return this.rating;
    }
    
@@ -128,22 +125,22 @@ public final class ReviewDraftBuilder {
    }
    
    @Nullable
-   public java.lang.String getText(){
+   public String getText(){
       return this.text;
    }
    
    @Nullable
-   public java.lang.String getTitle(){
+   public String getTitle(){
       return this.title;
    }
    
    @Nullable
-   public java.lang.String getLocale(){
+   public String getLocale(){
       return this.locale;
    }
    
    @Nullable
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
    
@@ -153,7 +150,7 @@ public final class ReviewDraftBuilder {
    }
    
    @Nullable
-   public java.lang.Object getTarget(){
+   public Object getTarget(){
       return this.target;
    }
 

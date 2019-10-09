@@ -1,7 +1,6 @@
 package com.commercetools.models.product_discount;
 
 import com.commercetools.models.product_discount.ProductDiscountUpdateAction;
-import java.lang.Long;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,10 +24,10 @@ public final class ProductDiscountUpdateImpl implements ProductDiscountUpdate {
 
    private java.util.List<com.commercetools.models.product_discount.ProductDiscountUpdateAction> actions;
    
-   private java.lang.Long version;
+   private Long version;
 
    @JsonCreator
-   ProductDiscountUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.product_discount.ProductDiscountUpdateAction> actions, @JsonProperty("version") final java.lang.Long version) {
+   ProductDiscountUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.models.product_discount.ProductDiscountUpdateAction> actions, @JsonProperty("version") final Long version) {
       this.actions = actions;
       this.version = version;
    }
@@ -42,7 +41,7 @@ public final class ProductDiscountUpdateImpl implements ProductDiscountUpdate {
    }
    
    
-   public java.lang.Long getVersion(){
+   public Long getVersion(){
       return this.version;
    }
 
@@ -50,7 +49,7 @@ public final class ProductDiscountUpdateImpl implements ProductDiscountUpdate {
       this.actions = actions;
    }
    
-   public void setVersion(final java.lang.Long version){
+   public void setVersion(final Long version){
       this.version = version;
    }
 

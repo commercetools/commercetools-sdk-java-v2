@@ -1,6 +1,6 @@
 package com.commercetools.models.cart;
 
-import java.lang.Object;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
 
-   private java.lang.Object reference;
+   private Object reference;
 
    @JsonCreator
-   ReplicaCartDraftImpl(@JsonProperty("reference") final java.lang.Object reference) {
+   ReplicaCartDraftImpl(@JsonProperty("reference") final Object reference) {
       this.reference = reference;
    }
    public ReplicaCartDraftImpl() {
@@ -33,11 +33,11 @@ public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
    }
    
    
-   public java.lang.Object getReference(){
+   public Object getReference(){
       return this.reference;
    }
 
-   public void setReference(final java.lang.Object reference){
+   public void setReference(final Object reference){
       this.reference = reference;
    }
 

@@ -2,7 +2,6 @@ package com.commercetools.models.product_type;
 
 import com.commercetools.models.common.LocalizedString;
 import com.commercetools.models.product_type.ProductTypeUpdateAction;
-import java.lang.String;
 import com.commercetools.models.product_type.ProductTypeSetInputTipAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -12,12 +11,12 @@ import java.time.ZonedDateTime;
 public final class ProductTypeSetInputTipActionBuilder {
    
    
-   private java.lang.String attributeName;
+   private String attributeName;
    
    @Nullable
    private com.commercetools.models.common.LocalizedString inputTip;
    
-   public ProductTypeSetInputTipActionBuilder attributeName( final java.lang.String attributeName) {
+   public ProductTypeSetInputTipActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
@@ -28,7 +27,7 @@ public final class ProductTypeSetInputTipActionBuilder {
    }
    
    
-   public java.lang.String getAttributeName(){
+   public String getAttributeName(){
       return this.attributeName;
    }
    

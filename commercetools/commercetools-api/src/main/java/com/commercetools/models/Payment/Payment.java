@@ -7,7 +7,6 @@ import com.commercetools.models.payment.PaymentMethodInfo;
 import com.commercetools.models.payment.PaymentStatus;
 import com.commercetools.models.payment.Transaction;
 import com.commercetools.models.type.CustomFields;
-import java.lang.String;
 import com.commercetools.models.payment.PaymentImpl;
 
 import com.fasterxml.jackson.annotation.*;

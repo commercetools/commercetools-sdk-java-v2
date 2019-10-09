@@ -1,6 +1,6 @@
 package com.commercetools.models.shipping_method;
 
-import java.lang.String;
+
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PriceFunctionImpl implements PriceFunction {
 
-   private java.lang.String function;
+   private String function;
    
-   private java.lang.String currencyCode;
+   private String currencyCode;
 
    @JsonCreator
-   PriceFunctionImpl(@JsonProperty("function") final java.lang.String function, @JsonProperty("currencyCode") final java.lang.String currencyCode) {
+   PriceFunctionImpl(@JsonProperty("function") final String function, @JsonProperty("currencyCode") final String currencyCode) {
       this.function = function;
       this.currencyCode = currencyCode;
    }
@@ -36,22 +36,22 @@ public final class PriceFunctionImpl implements PriceFunction {
    }
    
    
-   public java.lang.String getFunction(){
+   public String getFunction(){
       return this.function;
    }
    
    /**
    	<p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
    */
-   public java.lang.String getCurrencyCode(){
+   public String getCurrencyCode(){
       return this.currencyCode;
    }
 
-   public void setFunction(final java.lang.String function){
+   public void setFunction(final String function){
       this.function = function;
    }
    
-   public void setCurrencyCode(final java.lang.String currencyCode){
+   public void setCurrencyCode(final String currencyCode){
       this.currencyCode = currencyCode;
    }
 

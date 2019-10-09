@@ -2,7 +2,6 @@ package com.commercetools.models.common;
 
 import com.commercetools.models.common.MoneyType;
 import com.commercetools.models.common.TypedMoneyDraft;
-import java.lang.Long;
 import com.commercetools.models.common.HighPrecisionMoneyDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;

@@ -11,15 +11,15 @@ import java.time.ZonedDateTime;
 public final class StoreKeyReferenceBuilder {
    
    
-   private java.lang.String key;
+   private String key;
    
-   public StoreKeyReferenceBuilder key( final java.lang.String key) {
+   public StoreKeyReferenceBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
    
-   public java.lang.String getKey(){
+   public String getKey(){
       return this.key;
    }
 

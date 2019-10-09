@@ -1,7 +1,6 @@
 package com.commercetools.models.extension;
 
 import com.commercetools.models.extension.ExtensionUpdateAction;
-import java.lang.String;
 import com.commercetools.models.extension.ExtensionSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;

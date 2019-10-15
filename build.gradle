@@ -109,6 +109,11 @@ subprojects { project ->
             links "https://docs.oracle.com/javase/8/docs/api/"
         }
     }
+    
+    ext {
+        buildInfoPath = "build/generated/src/main/java/io/vrap/rmf/base/client/"
+        buildInfoPackage = "io.vrap.rmf.base.client"
+    }
 
     sourceCompatibility = 1.8
 }

@@ -2,7 +2,7 @@ language: java
 jdk:
   - openjdk8
 script: >
-  ./gradlew clean build
+  ./gradlew clean build --info
 deploy:
   provider: script
   script: ./gradlew clean build bintrayUpload --info -Dpublish=true

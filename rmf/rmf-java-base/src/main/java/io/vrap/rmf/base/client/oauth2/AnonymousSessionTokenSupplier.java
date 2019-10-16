@@ -44,14 +44,15 @@ public class AnonymousSessionTokenSupplier implements TokenSupplier {
     ) {
         String auth = Base64.getEncoder().encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
         final ApiHttpRequest apiHttpRequest = new ApiHttpRequest();
+        apiHttpRequest.setBaseUrl(tokenEndpoint);
         if (scope == null || scope.isEmpty()) {
-            apiHttpRequest.setBaseUrl(tokenEndpoint + "?grant_type=client_credentials");
-
+            apiHttpRequest.setBody("grant_type=client_credentials");
         } else {
-            apiHttpRequest.setBaseUrl(tokenEndpoint + "?grant_type=client_credentials&scope=" + scope);
+            apiHttpRequest.setBody("grant_type=client_credentials&scope=" + scope);
         }
         final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders();
         apiHttpHeaders.addHeader("Authorization", "Basic " + auth);
+        apiHttpHeaders.addHeader("Content-Type", "application/x-www-form-urlencoded");
         apiHttpRequest.setHeaders(apiHttpHeaders);
         apiHttpRequest.setMethod(ApiHttpMethod.POST);
         return apiHttpRequest;

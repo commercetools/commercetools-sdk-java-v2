@@ -16,6 +16,9 @@ public class AuthenticationToken {
     @JsonProperty("scope")
     private String scope;
 
+    @JsonProperty("refresh_token")
+    private String refresherToken;
+    
     public AuthenticationToken() {
         
     }
@@ -50,5 +53,13 @@ public class AuthenticationToken {
 
     public void setScope(String scope) {
         this.scope = scope;
+    }
+
+    public String getRefresherToken() {
+        return refresherToken;
+    }
+
+    public void setRefresherToken(String refresherToken) {
+        this.refresherToken = refresherToken;
     }
 }

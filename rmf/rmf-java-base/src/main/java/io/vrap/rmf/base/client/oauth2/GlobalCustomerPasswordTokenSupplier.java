@@ -7,7 +7,6 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionException;
 
 public class GlobalCustomerPasswordTokenSupplier implements TokenSupplier {
 
@@ -38,13 +37,15 @@ public class GlobalCustomerPasswordTokenSupplier implements TokenSupplier {
                                                           final String tokenEndpoint) {
         String auth = Base64.getEncoder().encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
         ApiHttpRequest apiHttpRequest = new ApiHttpRequest();
+        apiHttpRequest.setBaseUrl(tokenEndpoint);
         if (scope == null || scope.isEmpty()) {
-            apiHttpRequest.setBaseUrl(tokenEndpoint + "?grant_type=password&username=" + email + "&password=" + password);
+            apiHttpRequest.setBody("grant_type=password&username=" + email + "&password=" + password);
         } else {
-            apiHttpRequest.setBaseUrl(tokenEndpoint + "?grant_type=password&username=" + email + "&password=" + password + "&scope=" + scope);
+            apiHttpRequest.setBody("grant_type=password&username=" + email + "&password=" + password + "&scope=" + scope);
         }
         ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders();
         apiHttpHeaders.addHeader("Authorization", "Basic " + auth);
+        apiHttpHeaders.addHeader("Content-Type", "application/x-www-form-urlencoded");
         apiHttpRequest.setHeaders(apiHttpHeaders);
         apiHttpRequest.setMethod(ApiHttpMethod.POST);
         return apiHttpRequest;

@@ -23,6 +23,7 @@ public class VrapOkhttpClient implements VrapHttpClient {
             .readTimeout(120, TimeUnit.SECONDS)
             .build();
     
+    private static final String CONTENT_TYPE =  "Content-Type";
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
     private static final byte[] emptyBody = new byte[0];
 
@@ -58,7 +59,13 @@ public class VrapOkhttpClient implements VrapHttpClient {
         if(apiHttpRequest.getMethod() == null){
             throw new IllegalStateException("apiHttpRequest method should be non null");
         }
-
+        
+        //default media type is JSON, if other media type is set as a header, use it
+        MediaType mediaType = JSON;
+        if(apiHttpRequest.getHeaders().getHeaders().keySet().stream().anyMatch(s -> s.equalsIgnoreCase(CONTENT_TYPE))){
+            mediaType = MediaType.get(apiHttpRequest.getHeaders().getHeaderValue(ApiHttpHeaders.CONTENT_TYPE));
+        }
+        
         //set method and body
         switch (apiHttpRequest.getMethod()) {
             case GET:
@@ -68,10 +75,10 @@ public class VrapOkhttpClient implements VrapHttpClient {
                 httpRequestBuilder = httpRequestBuilder.delete();
                 break;
             case POST:
-                httpRequestBuilder = httpRequestBuilder.post(RequestBody.create(Optional.ofNullable(apiHttpRequest.getBody()).orElse(emptyBody), JSON));
+                httpRequestBuilder = httpRequestBuilder.post(RequestBody.create(Optional.ofNullable(apiHttpRequest.getBody()).orElse(emptyBody), mediaType));
                 break;
             case PUT:
-                httpRequestBuilder = httpRequestBuilder.put(RequestBody.create(Optional.ofNullable(apiHttpRequest.getBody()).orElse(emptyBody), JSON));
+                httpRequestBuilder = httpRequestBuilder.put(RequestBody.create(Optional.ofNullable(apiHttpRequest.getBody()).orElse(emptyBody), mediaType));
                 break;
             default:
                 throw new RuntimeException("Non supported HTTP Method : " + apiHttpRequest.getMethod().toString());

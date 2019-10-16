@@ -5,6 +5,6 @@ script: >
   ./gradlew clean build
 deploy:
   provider: script
-  script: ./gradlew clean build bintrayUpload --info && cd ../.. && ./gradlew clean build bintrayUpload --info  -Dpublish=true
+  script: ./gradlew clean build bintrayUpload --info -Dpublish=true
   on:
     branch: master

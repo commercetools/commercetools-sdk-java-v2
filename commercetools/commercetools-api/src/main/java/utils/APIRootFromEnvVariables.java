@@ -9,7 +9,7 @@ import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
 
 import java.util.Arrays;
 
-public class DefaultApiRoot {
+public class APIRootFromEnvVariables {
 
     private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
     private static final ApiRoot apiRoot = ApiRoot.fromMiddlewares(

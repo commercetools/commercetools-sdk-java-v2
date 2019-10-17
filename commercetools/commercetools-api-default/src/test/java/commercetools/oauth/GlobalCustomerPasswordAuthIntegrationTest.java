@@ -11,6 +11,8 @@ import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.concurrent.ExecutionException;
+
 import static commercetools.utils.CommercetoolsTestUtils.*;
 
 public class GlobalCustomerPasswordAuthIntegrationTest {
@@ -55,5 +57,20 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
         }finally {
             CustomerFixtures.deleteCustomer(customer.getId(), customer.getVersion());
         }
+    }
+    
+    @Test(expected = ExecutionException.class)
+    public void throwExceptionWrongCredentials() throws Exception {
+        GlobalCustomerPasswordTokenSupplier globalCustomerPasswordTokenSupplier = new GlobalCustomerPasswordTokenSupplier(
+                getClientId(),
+                getClientSecret(),
+                "wront-email@test.com",
+                "wrong-password",
+                "",
+                "https://auth.sphere.io/oauth/" + getProjectKey() + "/customers/token",
+                vrapHttpClient
+        );
+        
+        globalCustomerPasswordTokenSupplier.getToken().get();
     }
 }

@@ -6,6 +6,8 @@ import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.concurrent.ExecutionException;
+
 import static commercetools.utils.CommercetoolsTestUtils.*;
 
 public class AnonymousSessionAuthIntegrationTest {
@@ -29,6 +31,19 @@ public class AnonymousSessionAuthIntegrationTest {
         }catch (Exception e){
             Assert.fail("Failed to obtain anonymous session token");
         }
+    }
+
+    @Test(expected = ExecutionException.class)
+    public void throwExceptionWrongCredentials() throws Exception {
+        AnonymousSessionTokenSupplier anonymousSessionTokenSupplier = new AnonymousSessionTokenSupplier(
+                "wrong-client-id",
+                getClientSecret(),
+                "",
+                "https://auth.sphere.io/oauth/" + getProjectKey() + "/anonymous/token",
+                vrapHttpClient
+        );
+
+        anonymousSessionTokenSupplier.getToken().get();
     }
     
 }

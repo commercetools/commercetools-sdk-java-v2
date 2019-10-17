@@ -10,6 +10,29 @@ This project is currently in the internal alpha phase.
 
 This repository contains the commercetools java sdks generated from our api reference.
 
+## Configuration
+
+Creating http requests starts from the ApiRoot which  holds information specific to the project. Easiest way to configure it is to use the following method:
+
+```
+//ApiRoot config for Europe projects
+ApiRoot apiRoot = DefaultApiRoot.create(
+            "your-client-id",
+            "your-client-secret",
+            "your-scopes",
+            "https://auth.sphere.io/oauth/token",
+            "https://api.sphere.io");
+            
+//ApiRoot config for United States projects
+ApiRoot apiRoot = DefaultApiRoot.create(
+            "your-client-id",
+            "your-client-secret",
+            "your-scopes",
+            "https://auth.commercetools.co//oauth/token",
+            "https://auth.commercetools.co/");
+            
+```
+
 ## Using the generated commercetools-api SDK in your project
 
 The latest unstable SDK release can be retrieved from [jcenter](https://bintray.com/commercetools/maven/commercetools-java-sdks/)  with:

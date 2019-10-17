@@ -95,6 +95,6 @@ public class HttpMiddleware implements Middleware {
         String osName =  System.getenv("os.name");
         String osArch = System.getenv("os.arch");
         String sdkVersion = BuildInfo.VERSION;
-        return "commercetools-jvm-sdks/" + sdkVersion + " " + "Java/" + runtimeVersion + "(" + osName + "; " + osArch + ")";
+        return "commercetools-jvm-sdks/" + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";
     }
 }

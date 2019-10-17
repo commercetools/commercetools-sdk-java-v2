@@ -7,6 +7,7 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 
 public class AnonymousSessionTokenSupplier implements TokenSupplier {
 
@@ -28,6 +29,12 @@ public class AnonymousSessionTokenSupplier implements TokenSupplier {
     public CompletableFuture<AuthenticationToken> getToken() {
         return vrapHttpClient
                 .execute(apiHttpRequest)
+                .thenApply(apiHttpResponse -> {
+                    if(apiHttpResponse.getStatusCode() < 200 || apiHttpResponse.getStatusCode() > 299) {
+                        throw new CompletionException(new Throwable(new String(apiHttpResponse.getBody())));
+                    }
+                    return apiHttpResponse;
+                })
                 .thenApply(
                         Utils.wrapToCompletionException(
                                 (ApiHttpResponse<byte[]> response) -> VrapJsonUtils.fromJsonByteArray(response.getBody(), AuthenticationToken.class)

@@ -39,6 +39,6 @@ public class BuildInfo {
     }
 }
 
-build{
+compileJava{
     dependsOn versionTxt
 }

@@ -1,0 +1,53 @@
+package com.commercetools.api.generated.models.message;
+
+import com.commercetools.api.generated.models.message.MessagePayload;
+import com.commercetools.api.generated.models.payment.Transaction;
+import javax.annotation.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.List;
+import java.util.Map;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public final class PaymentTransactionAddedMessagePayloadImpl implements PaymentTransactionAddedMessagePayload {
+
+   private String type;
+   
+   private com.commercetools.api.generated.models.payment.Transaction transaction;
+
+   @JsonCreator
+   PaymentTransactionAddedMessagePayloadImpl(@JsonProperty("transaction") final com.commercetools.api.generated.models.payment.Transaction transaction) {
+      this.transaction = transaction;
+      this.type = "PaymentTransactionAdded";
+   }
+   public PaymentTransactionAddedMessagePayloadImpl() {
+      
+   }
+   
+   
+   public String getType(){
+      return this.type;
+   }
+   
+   
+   public com.commercetools.api.generated.models.payment.Transaction getTransaction(){
+      return this.transaction;
+   }
+
+   public void setTransaction(final com.commercetools.api.generated.models.payment.Transaction transaction){
+      this.transaction = transaction;
+   }
+
+}

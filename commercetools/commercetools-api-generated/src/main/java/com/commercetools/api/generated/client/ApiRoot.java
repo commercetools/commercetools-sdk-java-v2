@@ -3,9 +3,13 @@ package com.commercetools.api.generated.client;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.middlewares.Middleware;
 
-import java.util.List;
+import javax.annotation.Generated;
 import java.util.Arrays;
 
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public class ApiRoot {
    
    private final ApiHttpClient apiHttpClient;

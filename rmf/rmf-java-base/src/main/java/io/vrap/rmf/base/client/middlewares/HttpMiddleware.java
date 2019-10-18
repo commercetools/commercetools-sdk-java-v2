@@ -1,9 +1,6 @@
 package io.vrap.rmf.base.client.middlewares;
 
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.AuthenticationToken;
-import io.vrap.rmf.base.client.VrapHttpClient;
+import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 import io.vrap.rmf.base.client.utils.Utils;
 
@@ -12,6 +9,8 @@ import java.util.concurrent.CompletionException;
 
 public class HttpMiddleware implements Middleware {
 
+    private static final String USER_AGENT = "User-Agent";
+    
     private final TokenSupplier tokenSupplier;
     private final String apiBaseUrl;
     private CompletableFuture<AuthenticationToken> authenticationToken;
@@ -33,6 +32,7 @@ public class HttpMiddleware implements Middleware {
             return arg.getNext().next(arg);
         }
         ApiHttpRequest request = arg.getRequest();
+        request.addHeader(USER_AGENT, getUserAgent());
         request.setBaseUrl(apiBaseUrl);
         return execute(request, null, 0)
                 .thenApply(response ->
@@ -90,4 +90,11 @@ public class HttpMiddleware implements Middleware {
         return url;
     }
 
+    private String getUserAgent() {
+        String runtimeVersion = System.getenv("java.runtime.version");
+        String osName =  System.getenv("os.name");
+        String osArch = System.getenv("os.arch");
+        String sdkVersion = BuildInfo.VERSION;
+        return "commercetools-jvm-sdks/" + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";
+    }
 }

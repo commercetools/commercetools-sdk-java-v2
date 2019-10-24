@@ -3,7 +3,7 @@ package com.commercetools.api.generated.models.order;
 import com.commercetools.api.generated.models.order.OrderUpdateAction;
 import com.commercetools.api.generated.models.order.ReturnItemDraft;
 import java.time.ZonedDateTime;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

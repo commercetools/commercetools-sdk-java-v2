@@ -7,7 +7,7 @@ import com.commercetools.api.generated.models.payment.PaymentMethodInfo;
 import com.commercetools.api.generated.models.payment.PaymentStatus;
 import com.commercetools.api.generated.models.payment.Transaction;
 import com.commercetools.api.generated.models.type.CustomFields;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

@@ -8,7 +8,7 @@ import com.commercetools.api.generated.models.shipping_method.ShippingMethodReso
 import com.commercetools.api.generated.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.generated.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.generated.models.tax_category.TaxRate;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

@@ -4,7 +4,7 @@ import com.commercetools.api.generated.models.order.DeliveryItem;
 import com.commercetools.api.generated.models.order.OrderUpdateAction;
 import com.commercetools.api.generated.models.order.ParcelMeasurements;
 import com.commercetools.api.generated.models.order.TrackingData;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

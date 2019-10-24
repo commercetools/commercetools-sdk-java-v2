@@ -1,7 +1,7 @@
 package com.commercetools.api.generated.models.shopping_list;
 
 import com.commercetools.api.generated.models.shopping_list.ShoppingList;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

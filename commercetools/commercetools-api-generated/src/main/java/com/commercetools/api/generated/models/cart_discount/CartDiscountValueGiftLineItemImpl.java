@@ -3,7 +3,7 @@ package com.commercetools.api.generated.models.cart_discount;
 import com.commercetools.api.generated.models.cart_discount.CartDiscountValue;
 import com.commercetools.api.generated.models.channel.ChannelReference;
 import com.commercetools.api.generated.models.product.ProductReference;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

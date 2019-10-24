@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
 import java.time.ZonedDateTime;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

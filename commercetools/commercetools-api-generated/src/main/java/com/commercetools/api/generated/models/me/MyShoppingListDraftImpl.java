@@ -4,7 +4,7 @@ import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.shopping_list.ShoppingListLineItemDraft;
 import com.commercetools.api.generated.models.shopping_list.TextLineItemDraft;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

@@ -4,7 +4,7 @@ import com.commercetools.api.generated.models.common.Money;
 import com.commercetools.api.generated.models.shipping_method.PriceFunction;
 import com.commercetools.api.generated.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.api.generated.models.shipping_method.ShippingRateTierType;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

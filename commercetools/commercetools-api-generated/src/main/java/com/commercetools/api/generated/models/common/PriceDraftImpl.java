@@ -7,7 +7,7 @@ import com.commercetools.api.generated.models.common.PriceTierDraft;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
 import java.time.ZonedDateTime;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

@@ -2,7 +2,7 @@ package com.commercetools.api.generated.models.extension;
 
 import com.commercetools.api.generated.models.extension.ExtensionTrigger;
 import com.commercetools.api.generated.models.extension.ExtensionUpdateAction;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

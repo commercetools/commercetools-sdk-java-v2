@@ -2,7 +2,7 @@ package com.commercetools.api.generated.models.cart;
 
 import com.commercetools.api.generated.models.cart.CartUpdateAction;
 import com.commercetools.api.generated.models.cart.ExternalLineItemTotalPrice;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

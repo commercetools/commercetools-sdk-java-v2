@@ -2,8 +2,8 @@ package com.commercetools.api.generated.client;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.middlewares.Middleware;
+import io.vrap.rmf.base.client.utils.Generated;
 
-import javax.annotation.Generated;
 import java.util.Arrays;
 
 @Generated(

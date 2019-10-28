@@ -3,7 +3,7 @@ package com.commercetools.api.generated.models.review;
 import com.commercetools.api.generated.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.generated.models.state.StateResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

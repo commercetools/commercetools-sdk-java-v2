@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 
 
 @Generated(

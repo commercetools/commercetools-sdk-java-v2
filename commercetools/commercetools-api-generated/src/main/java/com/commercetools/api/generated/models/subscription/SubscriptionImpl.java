@@ -6,7 +6,7 @@ import com.commercetools.api.generated.models.subscription.DeliveryFormat;
 import com.commercetools.api.generated.models.subscription.Destination;
 import com.commercetools.api.generated.models.subscription.MessageSubscription;
 import com.commercetools.api.generated.models.subscription.SubscriptionHealthStatus;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

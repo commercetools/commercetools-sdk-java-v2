@@ -6,7 +6,7 @@ import com.commercetools.api.generated.models.customer_group.CustomerGroupRefere
 import com.commercetools.api.generated.models.store.StoreKeyReference;
 import com.commercetools.api.generated.models.type.CustomFields;
 import java.time.LocalDate;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

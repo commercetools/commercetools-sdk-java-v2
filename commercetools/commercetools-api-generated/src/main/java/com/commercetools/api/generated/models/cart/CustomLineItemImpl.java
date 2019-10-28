@@ -9,7 +9,7 @@ import com.commercetools.api.generated.models.order.ItemState;
 import com.commercetools.api.generated.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.generated.models.tax_category.TaxRate;
 import com.commercetools.api.generated.models.type.CustomFields;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

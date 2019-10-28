@@ -6,7 +6,7 @@ import com.commercetools.api.generated.models.customer.CustomerReference;
 import com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem;
 import com.commercetools.api.generated.models.shopping_list.TextLineItem;
 import com.commercetools.api.generated.models.type.CustomFields;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

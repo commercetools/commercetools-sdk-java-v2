@@ -2,7 +2,7 @@ package com.commercetools.api.generated.models.shipping_method;
 
 import com.commercetools.api.generated.models.shipping_method.ShippingMethodUpdateAction;
 import com.commercetools.api.generated.models.zone.ZoneResourceIdentifier;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

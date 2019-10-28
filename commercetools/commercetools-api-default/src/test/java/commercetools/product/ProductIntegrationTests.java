@@ -2,7 +2,6 @@ package commercetools.product;
 
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.product.*;
-import commercetools.product_type.ProductTypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,13 +13,11 @@ public class ProductIntegrationTests {
     
     @Test
     public void createAndDeleteById() {
-        ProductTypeFixtures.withProductType(productType -> {
-            Product product = ProductFixtures.createProduct(productType);
-            Assert.assertNotNull(product);
+        Product product = ProductFixtures.createProduct();
+        Assert.assertNotNull(product);
 
-            Product deletedProduct = ProductFixtures.deleteProductById(product.getId(), product.getVersion());
-            Assert.assertNotNull(deletedProduct);
-        });
+        Product deletedProduct = ProductFixtures.deleteProductById(product.getId(), product.getVersion());
+        Assert.assertNotNull(deletedProduct);
     }
     
     @Test

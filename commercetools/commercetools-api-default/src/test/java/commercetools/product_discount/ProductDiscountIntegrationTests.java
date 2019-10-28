@@ -2,6 +2,7 @@ package commercetools.product_discount;
 
 import com.commercetools.api.generated.models.product_discount.*;
 import commercetools.utils.CommercetoolsTestUtils;
+import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ import java.util.List;
 public class ProductDiscountIntegrationTests {
     
     @Test
-    public void createAndDelete() {
+    public void createAndDelete() throws Exception{
         ProductDiscountDraft productDiscountDraft =  ProductDiscountDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomLocalizedString())
                 .key(CommercetoolsTestUtils.randomKey())
@@ -25,6 +26,8 @@ public class ProductDiscountIntegrationTests {
                 .productDiscounts()
                 .post(productDiscountDraft)
                 .executeBlocking().getBody();
+
+        System.out.println("ASDF: " + VrapJsonUtils.toJsonString(productDiscount));
 
         Assert.assertNotNull(productDiscount);
         Assert.assertEquals(productDiscount.getKey(), productDiscountDraft.getKey());

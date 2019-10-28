@@ -1,10 +1,9 @@
 package commercetools.message;
 
-import com.commercetools.api.generated.models.product.Product;
 import com.commercetools.api.generated.models.message.Message;
 import com.commercetools.api.generated.models.message.MessagePagedQueryResponse;
+import com.commercetools.api.generated.models.product.Product;
 import commercetools.product.ProductFixtures;
-import commercetools.product_type.ProductTypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,7 +12,7 @@ public class MessageIntegrationTests {
     
     @Test
     public void query(){
-        Product product = ProductFixtures.createProduct(ProductTypeFixtures.createProductType());
+        Product product = ProductFixtures.createProduct();
         ProductFixtures.deleteProductById(product.getId(), product.getVersion());
         
         MessagePagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
@@ -27,7 +26,7 @@ public class MessageIntegrationTests {
     
     @Test
     public void getById() {
-        Product product = ProductFixtures.createProduct(ProductTypeFixtures.createProductType());
+        Product product = ProductFixtures.createProduct();
         ProductFixtures.deleteProductById(product.getId(), product.getVersion());
 
         MessagePagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

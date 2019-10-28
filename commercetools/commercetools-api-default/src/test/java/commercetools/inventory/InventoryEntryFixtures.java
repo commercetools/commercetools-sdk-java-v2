@@ -24,7 +24,7 @@ public class InventoryEntryFixtures {
     }
     
     public static InventoryEntry create() {
-        InventoryEntryDraft inventoryEntryDraft = InventoryEntryDraftBuilder.of()
+        InventoryEntryDraft inventoryEntryDraft = InventoryEntryDraftBuilder.of()   
                 .sku(CommercetoolsTestUtils.randomString())
                 .quantityOnStock(10L)
                 .build();

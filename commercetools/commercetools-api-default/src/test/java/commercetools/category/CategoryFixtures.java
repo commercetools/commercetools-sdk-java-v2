@@ -9,7 +9,6 @@ import com.commercetools.api.generated.models.common.AssetSource;
 import com.commercetools.api.generated.models.common.AssetSourceBuilder;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.type.*;
-import commercetools.type.TypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import java.util.Arrays;
@@ -90,31 +89,11 @@ public class CategoryFixtures {
     
     public static Category deleteCategory(final String id, final Long version){
         
-        Category category = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
-                .categories()
-                .withId(id)
-                .get()
-                .executeBlocking()
-                .getBody();
-
-        String typeId = category.getCustom().getType().getId();
-        
-        Type type = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
-                .types()
-                .withId(typeId)
-                .get()
-                .executeBlocking()
-                .getBody();
-        
-        Category deletedCategory =  CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        return CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .categories()
                 .withId(id)
                 .delete()
                 .addVersion(version)
                 .executeBlocking().getBody();
-        
-        TypeFixtures.deleteType(type.getId(), type.getVersion());
-        
-        return deletedCategory;
     }
 }

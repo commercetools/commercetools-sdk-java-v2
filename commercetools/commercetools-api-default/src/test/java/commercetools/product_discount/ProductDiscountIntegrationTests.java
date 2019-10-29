@@ -2,33 +2,35 @@ package commercetools.product_discount;
 
 import com.commercetools.api.generated.models.product_discount.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDiscountIntegrationTests {
     
     @Test
-    public void createAndDelete() throws Exception{
+    public void createAndDelete() { 
         ProductDiscountDraft productDiscountDraft =  ProductDiscountDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomLocalizedString())
                 .key(CommercetoolsTestUtils.randomKey())
-                .sortOrder("0.4")
-                .predicate("product.key=\"random-key\"")
+                .description(CommercetoolsTestUtils.randomLocalizedString())
                 .value(ProductDiscountValueRelativeDraftBuilder.of().permyriad(1000L).build())
+                .predicate("product.key=\"random-key\"")
+                .sortOrder("0.4")
                 .isActive(false)
+                .validFrom(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
+                .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
                 .build();
 
         ProductDiscount productDiscount = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .productDiscounts()
                 .post(productDiscountDraft)
                 .executeBlocking().getBody();
-
-        System.out.println("ASDF: " + VrapJsonUtils.toJsonString(productDiscount));
-
+        
         Assert.assertNotNull(productDiscount);
         Assert.assertEquals(productDiscount.getKey(), productDiscountDraft.getKey());
 

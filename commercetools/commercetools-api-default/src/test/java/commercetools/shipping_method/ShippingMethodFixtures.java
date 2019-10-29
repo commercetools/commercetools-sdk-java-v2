@@ -28,9 +28,11 @@ public class ShippingMethodFixtures {
     
     public static ShippingMethod createShippingMethod() {
         TaxCategory taxCategory = TaxCategoryFixtures.createTaxCategory();
+        
         ShippingMethodDraft shippingMethodDraft = ShippingMethodDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomString())
                 .key(CommercetoolsTestUtils.randomKey())
+                .description(CommercetoolsTestUtils.randomString())
                 .taxCategory(TaxCategoryResourceIdentifierBuilder.of()
                     .id(taxCategory.getId())
                     .build())

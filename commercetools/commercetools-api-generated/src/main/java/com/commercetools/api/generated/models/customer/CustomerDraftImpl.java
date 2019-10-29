@@ -2,7 +2,7 @@ package com.commercetools.api.generated.models.customer;
 
 import com.commercetools.api.generated.models.common.Address;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier;
-import com.commercetools.api.generated.models.store.StoreKeyReference;
+import com.commercetools.api.generated.models.store.StoreResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
 import java.time.LocalDate;
 import javax.annotation.Generated;
@@ -34,7 +34,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
    
    private Long defaultShippingAddress;
    
-   private java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> stores;
+   private java.util.List<com.commercetools.api.generated.models.store.StoreResourceIdentifier> stores;
    
    private com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
@@ -77,7 +77,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
    private java.util.List<Integer> shippingAddresses;
 
    @JsonCreator
-   CustomerDraftImpl(@JsonProperty("anonymousId") final String anonymousId, @JsonProperty("lastName") final String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.api.generated.models.common.Address> addresses, @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress, @JsonProperty("stores") final java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> stores, @JsonProperty("customerGroup") final com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId, @JsonProperty("externalId") final String externalId, @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final String locale, @JsonProperty("title") final String title, @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("isEmailVerified") final Boolean isEmailVerified, @JsonProperty("firstName") final String firstName, @JsonProperty("password") final String password, @JsonProperty("middleName") final String middleName, @JsonProperty("salutation") final String salutation, @JsonProperty("anonymousCartId") final String anonymousCartId, @JsonProperty("key") final String key, @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress, @JsonProperty("email") final String email, @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses) {
+   CustomerDraftImpl(@JsonProperty("anonymousId") final String anonymousId, @JsonProperty("lastName") final String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.api.generated.models.common.Address> addresses, @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress, @JsonProperty("stores") final java.util.List<com.commercetools.api.generated.models.store.StoreResourceIdentifier> stores, @JsonProperty("customerGroup") final com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId, @JsonProperty("externalId") final String externalId, @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final String locale, @JsonProperty("title") final String title, @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("isEmailVerified") final Boolean isEmailVerified, @JsonProperty("firstName") final String firstName, @JsonProperty("password") final String password, @JsonProperty("middleName") final String middleName, @JsonProperty("salutation") final String salutation, @JsonProperty("anonymousCartId") final String anonymousCartId, @JsonProperty("key") final String key, @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress, @JsonProperty("email") final String email, @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses) {
       this.anonymousId = anonymousId;
       this.lastName = lastName;
       this.addresses = addresses;
@@ -129,7 +129,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
    }
    
    
-   public java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> getStores(){
+   public java.util.List<com.commercetools.api.generated.models.store.StoreResourceIdentifier> getStores(){
       return this.stores;
    }
    
@@ -249,7 +249,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
       this.defaultShippingAddress = defaultShippingAddress;
    }
    
-   public void setStores(final java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> stores){
+   public void setStores(final java.util.List<com.commercetools.api.generated.models.store.StoreResourceIdentifier> stores){
       this.stores = stores;
    }
    

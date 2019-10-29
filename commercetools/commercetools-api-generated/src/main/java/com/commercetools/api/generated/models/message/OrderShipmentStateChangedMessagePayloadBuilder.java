@@ -13,7 +13,7 @@ public final class OrderShipmentStateChangedMessagePayloadBuilder {
    
    private com.commercetools.api.generated.models.order.ShipmentState shipmentState;
    
-   
+   @Nullable
    private com.commercetools.api.generated.models.order.ShipmentState oldShipmentState;
    
    public OrderShipmentStateChangedMessagePayloadBuilder shipmentState( final com.commercetools.api.generated.models.order.ShipmentState shipmentState) {
@@ -21,7 +21,7 @@ public final class OrderShipmentStateChangedMessagePayloadBuilder {
       return this;
    }
    
-   public OrderShipmentStateChangedMessagePayloadBuilder oldShipmentState( final com.commercetools.api.generated.models.order.ShipmentState oldShipmentState) {
+   public OrderShipmentStateChangedMessagePayloadBuilder oldShipmentState(@Nullable final com.commercetools.api.generated.models.order.ShipmentState oldShipmentState) {
       this.oldShipmentState = oldShipmentState;
       return this;
    }
@@ -31,7 +31,7 @@ public final class OrderShipmentStateChangedMessagePayloadBuilder {
       return this.shipmentState;
    }
    
-   
+   @Nullable
    public com.commercetools.api.generated.models.order.ShipmentState getOldShipmentState(){
       return this.oldShipmentState;
    }

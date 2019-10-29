@@ -4,7 +4,7 @@ import com.commercetools.api.generated.models.cart.CartOrigin;
 import com.commercetools.api.generated.models.cart.CustomLineItemDraft;
 import com.commercetools.api.generated.models.cart.InventoryMode;
 import com.commercetools.api.generated.models.cart.RoundingMode;
-import com.commercetools.api.generated.models.cart.TaxedPrice;
+import com.commercetools.api.generated.models.cart.TaxedPriceDraft;
 import com.commercetools.api.generated.models.common.Address;
 import com.commercetools.api.generated.models.common.Money;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier;
@@ -13,7 +13,7 @@ import com.commercetools.api.generated.models.order.OrderState;
 import com.commercetools.api.generated.models.order.PaymentState;
 import com.commercetools.api.generated.models.order.ShipmentState;
 import com.commercetools.api.generated.models.order.ShippingInfoImportDraft;
-import com.commercetools.api.generated.models.store.StoreKeyReference;
+import com.commercetools.api.generated.models.store.StoreResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
 import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.order.OrderImportDraftImpl;
@@ -64,7 +64,7 @@ public interface OrderImportDraft  {
    
    @Valid
    @JsonProperty("taxedPrice")
-   public TaxedPrice getTaxedPrice();
+   public TaxedPriceDraft getTaxedPrice();
    
    @Valid
    @JsonProperty("shippingAddress")
@@ -120,7 +120,7 @@ public interface OrderImportDraft  {
    
    @Valid
    @JsonProperty("store")
-   public StoreKeyReference getStore();
+   public StoreResourceIdentifier getStore();
    
    
    @JsonProperty("origin")
@@ -138,7 +138,7 @@ public interface OrderImportDraft  {
    
    public void setTotalPrice(final Money totalPrice);
    
-   public void setTaxedPrice(final TaxedPrice taxedPrice);
+   public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
    
    public void setShippingAddress(final Address shippingAddress);
    
@@ -166,7 +166,7 @@ public interface OrderImportDraft  {
    
    public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
    
-   public void setStore(final StoreKeyReference store);
+   public void setStore(final StoreResourceIdentifier store);
    
    public void setOrigin(final CartOrigin origin);
    

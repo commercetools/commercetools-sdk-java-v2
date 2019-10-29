@@ -1,23 +1,20 @@
 package com.commercetools.api.generated.models.category;
 
-import com.commercetools.api.generated.models.category.CategoryReference;
 import com.commercetools.api.generated.models.common.Asset;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.type.CustomFields;
-import com.commercetools.api.generated.models.category.CategoryImpl;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
-import java.util.Map;
-import java.time.*;
 
-import java.io.IOException;
-
+/**
+	<p>Categories allow to organize products into hierarchical structures. They enable creating multiple classifications of products for shop navigation and other purposes.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
@@ -30,7 +27,9 @@ public interface Category extends LoggedResource {
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   
+   /**
+   	<p>Must match the pattern [-a-zA-Z0-9_]{2,256}</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("slug")
@@ -39,16 +38,22 @@ public interface Category extends LoggedResource {
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   
+   /**
+   	<p>Contains the parent path towards the root category.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("ancestors")
    public List<CategoryReference> getAncestors();
-   
+   /**
+   	<p>Reference to a Category. A category that is the parent of this category in the category tree.</p>
+   */
    @Valid
    @JsonProperty("parent")
    public CategoryReference getParent();
-   
+   /**
+   	<p>An attribute as base for a custom category order in one level.</p>
+   */
    @NotNull
    @JsonProperty("orderHint")
    public String getOrderHint();
@@ -72,11 +77,15 @@ public interface Category extends LoggedResource {
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
-   
+   /**
+   	<p>An attribute as base for a custom category order in one level.</p>
+   */
    @Valid
    @JsonProperty("assets")
    public List<Asset> getAssets();
-   
+   /**
+   	<p>User-specific unique identifier for the category.</p>
+   */
    
    @JsonProperty("key")
    public String getKey();

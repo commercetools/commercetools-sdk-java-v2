@@ -31,7 +31,7 @@ public interface OrderEditUpdate  {
    @JsonProperty("actions")
    public List<OrderEditUpdateAction> getActions();
    
-   @NotNull
+   
    @JsonProperty("dryRun")
    public Boolean getDryRun();
 

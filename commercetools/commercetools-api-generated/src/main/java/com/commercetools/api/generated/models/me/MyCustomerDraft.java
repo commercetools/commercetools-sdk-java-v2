@@ -1,7 +1,7 @@
 package com.commercetools.api.generated.models.me;
 
 import com.commercetools.api.generated.models.common.Address;
-import com.commercetools.api.generated.models.store.StoreKeyReference;
+import com.commercetools.api.generated.models.store.StoreResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFields;
 import java.time.LocalDate;
 import com.commercetools.api.generated.models.me.MyCustomerDraftImpl;
@@ -83,7 +83,7 @@ public interface MyCustomerDraft  {
    
    @Valid
    @JsonProperty("stores")
-   public List<StoreKeyReference> getStores();
+   public List<StoreResourceIdentifier> getStores();
 
    public void setEmail(final String email);
    
@@ -113,7 +113,7 @@ public interface MyCustomerDraft  {
    
    public void setLocale(final String locale);
    
-   public void setStores(final List<StoreKeyReference> stores);
+   public void setStores(final List<StoreResourceIdentifier> stores);
    
    public static MyCustomerDraftImpl of(){
       return new MyCustomerDraftImpl();

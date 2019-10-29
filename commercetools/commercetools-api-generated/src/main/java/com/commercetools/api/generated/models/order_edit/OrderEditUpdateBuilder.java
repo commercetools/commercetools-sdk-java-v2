@@ -9,7 +9,7 @@ import java.time.ZonedDateTime;
 
 public final class OrderEditUpdateBuilder {
    
-   
+   @Nullable
    private Boolean dryRun;
    
    
@@ -18,7 +18,7 @@ public final class OrderEditUpdateBuilder {
    
    private Long version;
    
-   public OrderEditUpdateBuilder dryRun( final Boolean dryRun) {
+   public OrderEditUpdateBuilder dryRun(@Nullable final Boolean dryRun) {
       this.dryRun = dryRun;
       return this;
    }
@@ -33,7 +33,7 @@ public final class OrderEditUpdateBuilder {
       return this;
    }
    
-   
+   @Nullable
    public Boolean getDryRun(){
       return this.dryRun;
    }

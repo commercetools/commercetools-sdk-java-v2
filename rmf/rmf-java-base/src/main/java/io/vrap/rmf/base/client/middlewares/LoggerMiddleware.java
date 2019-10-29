@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public final class LoggerMiddleware implements Middleware {
@@ -21,6 +20,9 @@ public final class LoggerMiddleware implements Middleware {
             loggerMessage.setUrl(arg.getRequest().getBaseUrl() + arg.getRequest().getRelativeUrl());
             loggerMessage.setMethod(arg.getRequest().getMethod().name());
             loggerMessage.setRequestHeaders(arg.getRequest().getHeaders());
+            if(arg.getRequest().getBody() != null){
+                loggerMessage.setRequestBody(new String(arg.getRequest().getBody()));
+            }
             loggerMessage.setResponseStatusCode(arg.getResponse().getStatusCode());
             loggerMessage.setResponseHeaders(arg.getResponse().getHeaders());
             loggerMessage.setResponseBody(new String(arg.getResponse().getBody()));

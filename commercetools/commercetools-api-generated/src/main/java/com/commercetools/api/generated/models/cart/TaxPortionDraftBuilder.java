@@ -1,6 +1,6 @@
 package com.commercetools.api.generated.models.cart;
 
-import com.commercetools.api.generated.models.common.TypedMoney;
+import com.commercetools.api.generated.models.common.TypedMoneyDraft;
 import com.commercetools.api.generated.models.cart.TaxPortionDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.time.ZonedDateTime;
 public final class TaxPortionDraftBuilder {
    
    
-   private com.commercetools.api.generated.models.common.TypedMoney amount;
+   private com.commercetools.api.generated.models.common.TypedMoneyDraft amount;
    
    
    private Integer rate;
@@ -18,7 +18,7 @@ public final class TaxPortionDraftBuilder {
    @Nullable
    private String name;
    
-   public TaxPortionDraftBuilder amount( final com.commercetools.api.generated.models.common.TypedMoney amount) {
+   public TaxPortionDraftBuilder amount( final com.commercetools.api.generated.models.common.TypedMoneyDraft amount) {
       this.amount = amount;
       return this;
    }
@@ -34,7 +34,7 @@ public final class TaxPortionDraftBuilder {
    }
    
    
-   public com.commercetools.api.generated.models.common.TypedMoney getAmount(){
+   public com.commercetools.api.generated.models.common.TypedMoneyDraft getAmount(){
       return this.amount;
    }
    

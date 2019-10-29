@@ -27,7 +27,7 @@ public interface OrderPaymentStateChangedMessage extends Message {
    @JsonProperty("paymentState")
    public PaymentState getPaymentState();
    
-   @NotNull
+   
    @JsonProperty("oldPaymentState")
    public PaymentState getOldPaymentState();
 

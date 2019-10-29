@@ -1,6 +1,6 @@
 package com.commercetools.api.generated.models.cart;
 
-import com.commercetools.api.generated.models.common.TypedMoney;
+import com.commercetools.api.generated.models.common.TypedMoneyDraft;
 import com.commercetools.api.generated.models.cart.TaxPortionDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -33,13 +33,13 @@ public interface TaxPortionDraft  {
    @NotNull
    @Valid
    @JsonProperty("amount")
-   public TypedMoney getAmount();
+   public TypedMoneyDraft getAmount();
 
    public void setName(final String name);
    
    public void setRate(final Integer rate);
    
-   public void setAmount(final TypedMoney amount);
+   public void setAmount(final TypedMoneyDraft amount);
    
    public static TaxPortionDraftImpl of(){
       return new TaxPortionDraftImpl();

@@ -1,5 +1,6 @@
 package com.commercetools.api.generated.models.review;
 
+import com.commercetools.api.generated.models.common.ResourceIdentifier;
 import com.commercetools.api.generated.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.generated.models.state.StateResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
@@ -42,7 +43,7 @@ public final class ReviewDraftBuilder {
    private com.commercetools.api.generated.models.customer.CustomerResourceIdentifier customer;
    
    @Nullable
-   private Object target;
+   private com.commercetools.api.generated.models.common.ResourceIdentifier target;
    
    public ReviewDraftBuilder uniquenessValue(@Nullable final String uniquenessValue) {
       this.uniquenessValue = uniquenessValue;
@@ -94,7 +95,7 @@ public final class ReviewDraftBuilder {
       return this;
    }
    
-   public ReviewDraftBuilder target(@Nullable final Object target) {
+   public ReviewDraftBuilder target(@Nullable final com.commercetools.api.generated.models.common.ResourceIdentifier target) {
       this.target = target;
       return this;
    }
@@ -150,7 +151,7 @@ public final class ReviewDraftBuilder {
    }
    
    @Nullable
-   public Object getTarget(){
+   public com.commercetools.api.generated.models.common.ResourceIdentifier getTarget(){
       return this.target;
    }
 

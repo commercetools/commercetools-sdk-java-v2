@@ -10,6 +10,8 @@ import com.commercetools.api.generated.models.customer_group.CustomerGroupResour
 import com.commercetools.api.generated.models.product.*;
 import com.commercetools.api.generated.models.product_discount.*;
 import com.commercetools.api.generated.models.product_type.ProductType;
+import com.commercetools.api.generated.models.product_type.ProductTypeDraft;
+import com.commercetools.api.generated.models.product_type.ProductTypeDraftBuilder;
 import com.commercetools.api.generated.models.product_type.ProductTypeResourceIdentifierBuilder;
 import com.commercetools.api.generated.models.state.*;
 import com.commercetools.api.generated.models.tax_category.TaxCategory;
@@ -17,14 +19,16 @@ import com.commercetools.api.generated.models.tax_category.TaxCategoryResourceId
 import commercetools.category.CategoryFixtures;
 import commercetools.channel.ChannelFixtures;
 import commercetools.customer_group.CustomerGroupFixtures;
-import commercetools.product_type.ProductTypeFixtures;
 import commercetools.tax_category.TaxCategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -45,7 +49,18 @@ public class ProductFixtures {
     
     public static Product createProduct() {
         String randomKey = CommercetoolsTestUtils.randomKey();
-        ProductType productType = ProductTypeFixtures.createProductType();
+
+        ProductTypeDraft productTypeDraft = ProductTypeDraftBuilder.of()
+                .key(CommercetoolsTestUtils.randomKey())
+                .name(CommercetoolsTestUtils.randomString())
+                .description(CommercetoolsTestUtils.randomString())
+                .build();
+
+        ProductType productType = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+                .productTypes()
+                .post(productTypeDraft)
+                .executeBlocking().getBody();
+        
         Category category = CategoryFixtures.createCategory();
         
         Map<String, String> orderHint = new HashMap<>();

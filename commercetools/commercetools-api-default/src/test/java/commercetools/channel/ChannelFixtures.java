@@ -3,9 +3,12 @@ package commercetools.channel;
 import com.commercetools.api.generated.models.channel.Channel;
 import com.commercetools.api.generated.models.channel.ChannelDraft;
 import com.commercetools.api.generated.models.channel.ChannelDraftBuilder;
+import com.commercetools.api.generated.models.channel.ChannelRoleEnum;
+import com.commercetools.api.generated.models.common.GeoJsonPointBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
+import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -26,6 +29,8 @@ public class ChannelFixtures {
     public static Channel createChannel() {
         ChannelDraft channelDraft = ChannelDraftBuilder.of()
                 .key(CommercetoolsTestUtils.randomKey())
+                .roles(Arrays.asList(ChannelRoleEnum.INVENTORY_SUPPLY))
+                .geoLocation(GeoJsonPointBuilder.of().coordinates(Arrays.asList(1,2,3)).build())
                 .build();
         
         Channel channel = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

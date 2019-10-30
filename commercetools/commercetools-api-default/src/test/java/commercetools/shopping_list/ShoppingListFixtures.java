@@ -46,6 +46,7 @@ public class ShoppingListFixtures {
                         .name(CommercetoolsTestUtils.randomLocalizedString())
                         .quantity(10)
                         .build()))
+                .deleteDaysAfterLastModification(2L)
                 .build();
 
         ShoppingList shoppingList = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

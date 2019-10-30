@@ -1,11 +1,19 @@
 package commercetools.customer;
 
+import com.commercetools.api.generated.models.common.AddressBuilder;
 import com.commercetools.api.generated.models.customer.Customer;
 import com.commercetools.api.generated.models.customer.CustomerDraft;
 import com.commercetools.api.generated.models.customer.CustomerDraftBuilder;
+import com.commercetools.api.generated.models.customer_group.CustomerGroup;
+import com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifierBuilder;
+import com.commercetools.api.generated.models.store.Store;
+import com.commercetools.api.generated.models.store.StoreResourceIdentifierBuilder;
+import commercetools.customer_group.CustomerGroupFixtures;
+import commercetools.store.StoreFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
+import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -24,10 +32,16 @@ public class CustomerFixtures {
     }
     
     public static Customer createCustomer() {
+        
+        Store store = StoreFixtures.createStore();
+        CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
         CustomerDraft customerDraft = CustomerDraftBuilder.of()
                 .email("test-email-" + CommercetoolsTestUtils.randomString() + "@test.com")
                 .key(CommercetoolsTestUtils.randomKey())
                 .password(CommercetoolsTestUtils.randomString())
+                .stores(Arrays.asList(StoreResourceIdentifierBuilder.of().id(store.getId()).build()))
+                .customerGroup(CustomerGroupResourceIdentifierBuilder.of().id(customerGroup.getId()).build())
+                .addresses(Arrays.asList(AddressBuilder.of().country("DEU").build()))
                 .build();
         
         Customer customer = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

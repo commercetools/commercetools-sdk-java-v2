@@ -1,9 +1,6 @@
 package commercetools.type;
 
-import com.commercetools.api.generated.models.type.ResourceTypeId;
-import com.commercetools.api.generated.models.type.Type;
-import com.commercetools.api.generated.models.type.TypeDraft;
-import com.commercetools.api.generated.models.type.TypeDraftBuilder;
+import com.commercetools.api.generated.models.type.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
@@ -30,6 +27,14 @@ public class TypeFixtures {
                 .key(CommercetoolsTestUtils.randomKey())
                 .name(CommercetoolsTestUtils.randomLocalizedString())
                 .resourceTypeIds(Arrays.asList(ResourceTypeId.ASSET))
+                .fieldDefinitions(Arrays.asList(FieldDefinitionBuilder.of()
+                        .type(CustomFieldStringTypeBuilder.of()
+                                .build())
+                        .name(CommercetoolsTestUtils.randomString())
+                        .label(CommercetoolsTestUtils.randomLocalizedString())
+                        .required(false)
+                        .inputHint(TypeTextInputHint.SINGLE_LINE)
+                        .build()))
                 .build();
         
         Type type = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

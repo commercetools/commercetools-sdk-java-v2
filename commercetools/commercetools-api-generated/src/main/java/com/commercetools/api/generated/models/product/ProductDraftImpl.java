@@ -8,7 +8,7 @@ import com.commercetools.api.generated.models.product.SearchKeywords;
 import com.commercetools.api.generated.models.product_type.ProductTypeResourceIdentifier;
 import com.commercetools.api.generated.models.state.StateResourceIdentifier;
 import com.commercetools.api.generated.models.tax_category.TaxCategoryResourceIdentifier;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

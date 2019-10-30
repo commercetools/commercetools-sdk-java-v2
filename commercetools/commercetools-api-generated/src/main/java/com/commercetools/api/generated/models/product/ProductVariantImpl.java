@@ -6,7 +6,7 @@ import com.commercetools.api.generated.models.common.Price;
 import com.commercetools.api.generated.models.common.ScopedPrice;
 import com.commercetools.api.generated.models.product.Attribute;
 import com.commercetools.api.generated.models.product.ProductVariantAvailability;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

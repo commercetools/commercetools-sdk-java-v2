@@ -2,7 +2,7 @@ package com.commercetools.api.generated.models.message;
 
 import com.commercetools.api.generated.models.common.Image;
 import com.commercetools.api.generated.models.message.MessagePayload;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

@@ -2,7 +2,7 @@ package com.commercetools.api.generated.models.product_discount;
 
 import com.commercetools.api.generated.models.product_discount.ProductDiscountUpdateAction;
 import com.commercetools.api.generated.models.product_discount.ProductDiscountValueDraft;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

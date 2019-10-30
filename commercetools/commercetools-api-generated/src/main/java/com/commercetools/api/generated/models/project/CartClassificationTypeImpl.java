@@ -3,7 +3,7 @@ package com.commercetools.api.generated.models.project;
 import com.commercetools.api.generated.models.project.ShippingRateInputType;
 import com.commercetools.api.generated.models.shipping_method.ShippingRateTierType;
 import com.commercetools.api.generated.models.type.CustomFieldLocalizedEnumValue;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

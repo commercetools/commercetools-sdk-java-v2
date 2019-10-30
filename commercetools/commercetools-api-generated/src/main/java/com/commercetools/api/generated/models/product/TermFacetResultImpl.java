@@ -4,7 +4,7 @@ import com.commercetools.api.generated.models.product.FacetResult;
 import com.commercetools.api.generated.models.product.FacetResultTerm;
 import com.commercetools.api.generated.models.product.FacetTypes;
 import com.commercetools.api.generated.models.product.TermFacetResultType;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

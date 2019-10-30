@@ -3,7 +3,7 @@ package com.commercetools.api.generated.models.extension;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.extension.ExtensionDestination;
 import com.commercetools.api.generated.models.extension.ExtensionTrigger;
-import javax.annotation.Generated;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;

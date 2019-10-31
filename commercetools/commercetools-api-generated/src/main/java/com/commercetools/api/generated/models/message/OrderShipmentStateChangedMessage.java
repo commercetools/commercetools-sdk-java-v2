@@ -27,7 +27,7 @@ public interface OrderShipmentStateChangedMessage extends Message {
    @JsonProperty("shipmentState")
    public ShipmentState getShipmentState();
    
-   @NotNull
+   
    @JsonProperty("oldShipmentState")
    public ShipmentState getOldShipmentState();
 

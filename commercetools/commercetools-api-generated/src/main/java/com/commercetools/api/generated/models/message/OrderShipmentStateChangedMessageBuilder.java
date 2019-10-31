@@ -48,7 +48,7 @@ public final class OrderShipmentStateChangedMessageBuilder {
    
    private com.commercetools.api.generated.models.order.ShipmentState shipmentState;
    
-   
+   @Nullable
    private com.commercetools.api.generated.models.order.ShipmentState oldShipmentState;
    
    public OrderShipmentStateChangedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
@@ -106,7 +106,7 @@ public final class OrderShipmentStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderShipmentStateChangedMessageBuilder oldShipmentState( final com.commercetools.api.generated.models.order.ShipmentState oldShipmentState) {
+   public OrderShipmentStateChangedMessageBuilder oldShipmentState(@Nullable final com.commercetools.api.generated.models.order.ShipmentState oldShipmentState) {
       this.oldShipmentState = oldShipmentState;
       return this;
    }
@@ -166,7 +166,7 @@ public final class OrderShipmentStateChangedMessageBuilder {
       return this.shipmentState;
    }
    
-   
+   @Nullable
    public com.commercetools.api.generated.models.order.ShipmentState getOldShipmentState(){
       return this.oldShipmentState;
    }

@@ -27,6 +27,7 @@ public class ZoneFixtures {
         ZoneDraft zoneDraft = ZoneDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomString())
                 .key(CommercetoolsTestUtils.randomKey())
+                .description(CommercetoolsTestUtils.randomString())
                 .build();
         
         Zone zone = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

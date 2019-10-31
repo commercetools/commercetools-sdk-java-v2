@@ -4,7 +4,7 @@ import com.commercetools.api.generated.models.cart.CartOrigin;
 import com.commercetools.api.generated.models.cart.CustomLineItemDraft;
 import com.commercetools.api.generated.models.cart.InventoryMode;
 import com.commercetools.api.generated.models.cart.RoundingMode;
-import com.commercetools.api.generated.models.cart.TaxedPrice;
+import com.commercetools.api.generated.models.cart.TaxedPriceDraft;
 import com.commercetools.api.generated.models.common.Address;
 import com.commercetools.api.generated.models.common.Money;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier;
@@ -13,7 +13,7 @@ import com.commercetools.api.generated.models.order.OrderState;
 import com.commercetools.api.generated.models.order.PaymentState;
 import com.commercetools.api.generated.models.order.ShipmentState;
 import com.commercetools.api.generated.models.order.ShippingInfoImportDraft;
-import com.commercetools.api.generated.models.store.StoreKeyReference;
+import com.commercetools.api.generated.models.store.StoreResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
 import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.order.OrderImportDraft;
@@ -48,7 +48,7 @@ public final class OrderImportDraftBuilder {
    private com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
    @Nullable
-   private com.commercetools.api.generated.models.cart.TaxedPrice taxedPrice;
+   private com.commercetools.api.generated.models.cart.TaxedPriceDraft taxedPrice;
    
    @Nullable
    private com.commercetools.api.generated.models.cart.CartOrigin origin;
@@ -60,7 +60,7 @@ public final class OrderImportDraftBuilder {
    private com.commercetools.api.generated.models.order.ShippingInfoImportDraft shippingInfo;
    
    @Nullable
-   private com.commercetools.api.generated.models.store.StoreKeyReference store;
+   private com.commercetools.api.generated.models.store.StoreResourceIdentifier store;
    
    @Nullable
    private com.commercetools.api.generated.models.cart.InventoryMode inventoryMode;
@@ -125,7 +125,7 @@ public final class OrderImportDraftBuilder {
       return this;
    }
    
-   public OrderImportDraftBuilder taxedPrice(@Nullable final com.commercetools.api.generated.models.cart.TaxedPrice taxedPrice) {
+   public OrderImportDraftBuilder taxedPrice(@Nullable final com.commercetools.api.generated.models.cart.TaxedPriceDraft taxedPrice) {
       this.taxedPrice = taxedPrice;
       return this;
    }
@@ -145,7 +145,7 @@ public final class OrderImportDraftBuilder {
       return this;
    }
    
-   public OrderImportDraftBuilder store(@Nullable final com.commercetools.api.generated.models.store.StoreKeyReference store) {
+   public OrderImportDraftBuilder store(@Nullable final com.commercetools.api.generated.models.store.StoreResourceIdentifier store) {
       this.store = store;
       return this;
    }
@@ -236,7 +236,7 @@ public final class OrderImportDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.generated.models.cart.TaxedPrice getTaxedPrice(){
+   public com.commercetools.api.generated.models.cart.TaxedPriceDraft getTaxedPrice(){
       return this.taxedPrice;
    }
    
@@ -256,7 +256,7 @@ public final class OrderImportDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.generated.models.store.StoreKeyReference getStore(){
+   public com.commercetools.api.generated.models.store.StoreResourceIdentifier getStore(){
       return this.store;
    }
    

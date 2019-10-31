@@ -1,5 +1,6 @@
 package com.commercetools.api.generated.models.review;
 
+import com.commercetools.api.generated.models.common.ResourceIdentifier;
 import com.commercetools.api.generated.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.generated.models.state.StateResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
@@ -44,10 +45,10 @@ public final class ReviewDraftImpl implements ReviewDraft {
    
    private com.commercetools.api.generated.models.customer.CustomerResourceIdentifier customer;
    
-   private Object target;
+   private com.commercetools.api.generated.models.common.ResourceIdentifier target;
 
    @JsonCreator
-   ReviewDraftImpl(@JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("authorName") final String authorName, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("rating") final Integer rating, @JsonProperty("state") final com.commercetools.api.generated.models.state.StateResourceIdentifier state, @JsonProperty("text") final String text, @JsonProperty("title") final String title, @JsonProperty("locale") final String locale, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.api.generated.models.customer.CustomerResourceIdentifier customer, @JsonProperty("target") final Object target) {
+   ReviewDraftImpl(@JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("authorName") final String authorName, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("rating") final Integer rating, @JsonProperty("state") final com.commercetools.api.generated.models.state.StateResourceIdentifier state, @JsonProperty("text") final String text, @JsonProperty("title") final String title, @JsonProperty("locale") final String locale, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.api.generated.models.customer.CustomerResourceIdentifier customer, @JsonProperty("target") final com.commercetools.api.generated.models.common.ResourceIdentifier target) {
       this.uniquenessValue = uniquenessValue;
       this.authorName = authorName;
       this.custom = custom;
@@ -115,7 +116,7 @@ public final class ReviewDraftImpl implements ReviewDraft {
    }
    
    
-   public Object getTarget(){
+   public com.commercetools.api.generated.models.common.ResourceIdentifier getTarget(){
       return this.target;
    }
 
@@ -159,7 +160,7 @@ public final class ReviewDraftImpl implements ReviewDraft {
       this.customer = customer;
    }
    
-   public void setTarget(final Object target){
+   public void setTarget(final com.commercetools.api.generated.models.common.ResourceIdentifier target){
       this.target = target;
    }
 

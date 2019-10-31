@@ -10,6 +10,8 @@ import commercetools.cart_discount.CartDiscountFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
+import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -36,8 +38,16 @@ public class DiscountCodeFixtures {
         
         DiscountCodeDraft discountCodeDraft = DiscountCodeDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomLocalizedString())
+                .description(CommercetoolsTestUtils.randomLocalizedString())
                 .code(CommercetoolsTestUtils.randomString())
                 .cartDiscounts(Arrays.asList(cartDiscountReference))
+                .cartPredicate("country=\"DE\"")
+                .groups(Arrays.asList("group-one"))
+                .isActive(false)
+                .validFrom(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
+                .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
+                .maxApplications(2L)
+                .maxApplicationsPerCustomer(1L)
                 .build();
 
         DiscountCode discountCode = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

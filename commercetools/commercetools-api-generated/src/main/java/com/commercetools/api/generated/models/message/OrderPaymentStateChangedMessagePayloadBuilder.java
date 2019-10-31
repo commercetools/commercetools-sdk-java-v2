@@ -15,13 +15,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class OrderPaymentStateChangedMessagePayloadBuilder {
    
-   
+   @Nullable
    private com.commercetools.api.generated.models.order.PaymentState oldPaymentState;
    
    
    private com.commercetools.api.generated.models.order.PaymentState paymentState;
    
-   public OrderPaymentStateChangedMessagePayloadBuilder oldPaymentState( final com.commercetools.api.generated.models.order.PaymentState oldPaymentState) {
+   public OrderPaymentStateChangedMessagePayloadBuilder oldPaymentState(@Nullable final com.commercetools.api.generated.models.order.PaymentState oldPaymentState) {
       this.oldPaymentState = oldPaymentState;
       return this;
    }
@@ -31,7 +31,7 @@ public final class OrderPaymentStateChangedMessagePayloadBuilder {
       return this;
    }
    
-   
+   @Nullable
    public com.commercetools.api.generated.models.order.PaymentState getOldPaymentState(){
       return this.oldPaymentState;
    }

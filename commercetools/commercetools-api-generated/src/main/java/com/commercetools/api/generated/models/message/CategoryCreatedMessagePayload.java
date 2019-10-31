@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryCreatedMessagePayloadImpl.class)
 public interface CategoryCreatedMessagePayload extends MessagePayload {
 
-   
+   /**
+   	<p>Categories allow to organize products into hierarchical structures. They enable creating multiple classifications of products for shop navigation and other purposes.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("category")

@@ -1,7 +1,7 @@
 package com.commercetools.api.generated.models.cart;
 
-import com.commercetools.api.generated.models.common.TypedMoney;
-import io.vrap.rmf.base.client.utils.Generated;
+import com.commercetools.api.generated.models.common.TypedMoneyDraft;
+import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
@@ -22,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxPortionDraftImpl implements TaxPortionDraft {
 
-   private com.commercetools.api.generated.models.common.TypedMoney amount;
+   private com.commercetools.api.generated.models.common.TypedMoneyDraft amount;
    
    private Integer rate;
    
    private String name;
 
    @JsonCreator
-   TaxPortionDraftImpl(@JsonProperty("amount") final com.commercetools.api.generated.models.common.TypedMoney amount, @JsonProperty("rate") final Integer rate, @JsonProperty("name") final String name) {
+   TaxPortionDraftImpl(@JsonProperty("amount") final com.commercetools.api.generated.models.common.TypedMoneyDraft amount, @JsonProperty("rate") final Integer rate, @JsonProperty("name") final String name) {
       this.amount = amount;
       this.rate = rate;
       this.name = name;
@@ -39,7 +39,7 @@ public final class TaxPortionDraftImpl implements TaxPortionDraft {
    }
    
    
-   public com.commercetools.api.generated.models.common.TypedMoney getAmount(){
+   public com.commercetools.api.generated.models.common.TypedMoneyDraft getAmount(){
       return this.amount;
    }
    
@@ -53,7 +53,7 @@ public final class TaxPortionDraftImpl implements TaxPortionDraft {
       return this.name;
    }
 
-   public void setAmount(final com.commercetools.api.generated.models.common.TypedMoney amount){
+   public void setAmount(final com.commercetools.api.generated.models.common.TypedMoneyDraft amount){
       this.amount = amount;
    }
    

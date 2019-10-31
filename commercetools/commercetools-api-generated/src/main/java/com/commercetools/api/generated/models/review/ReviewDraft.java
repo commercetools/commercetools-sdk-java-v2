@@ -1,5 +1,6 @@
 package com.commercetools.api.generated.models.review;
 
+import com.commercetools.api.generated.models.common.ResourceIdentifier;
 import com.commercetools.api.generated.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.generated.models.state.StateResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
@@ -48,9 +49,9 @@ public interface ReviewDraft  {
    @JsonProperty("text")
    public String getText();
    
-   
+   @Valid
    @JsonProperty("target")
-   public Object getTarget();
+   public ResourceIdentifier getTarget();
    
    @Valid
    @JsonProperty("state")
@@ -80,7 +81,7 @@ public interface ReviewDraft  {
    
    public void setText(final String text);
    
-   public void setTarget(final Object target);
+   public void setTarget(final ResourceIdentifier target);
    
    public void setState(final StateResourceIdentifier state);
    

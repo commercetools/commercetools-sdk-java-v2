@@ -4,7 +4,7 @@ import com.commercetools.api.generated.models.cart.CartOrigin;
 import com.commercetools.api.generated.models.cart.CustomLineItemDraft;
 import com.commercetools.api.generated.models.cart.InventoryMode;
 import com.commercetools.api.generated.models.cart.RoundingMode;
-import com.commercetools.api.generated.models.cart.TaxedPrice;
+import com.commercetools.api.generated.models.cart.TaxedPriceDraft;
 import com.commercetools.api.generated.models.common.Address;
 import com.commercetools.api.generated.models.common.Money;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier;
@@ -13,7 +13,7 @@ import com.commercetools.api.generated.models.order.OrderState;
 import com.commercetools.api.generated.models.order.PaymentState;
 import com.commercetools.api.generated.models.order.ShipmentState;
 import com.commercetools.api.generated.models.order.ShippingInfoImportDraft;
-import com.commercetools.api.generated.models.store.StoreKeyReference;
+import com.commercetools.api.generated.models.store.StoreResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -49,7 +49,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    
    private com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
    
-   private com.commercetools.api.generated.models.cart.TaxedPrice taxedPrice;
+   private com.commercetools.api.generated.models.cart.TaxedPriceDraft taxedPrice;
    
    private com.commercetools.api.generated.models.cart.CartOrigin origin;
    
@@ -57,7 +57,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    
    private com.commercetools.api.generated.models.order.ShippingInfoImportDraft shippingInfo;
    
-   private com.commercetools.api.generated.models.store.StoreKeyReference store;
+   private com.commercetools.api.generated.models.store.StoreResourceIdentifier store;
    
    private com.commercetools.api.generated.models.cart.InventoryMode inventoryMode;
    
@@ -82,7 +82,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    private com.commercetools.api.generated.models.order.PaymentState paymentState;
 
    @JsonCreator
-   OrderImportDraftImpl(@JsonProperty("shipmentState") final com.commercetools.api.generated.models.order.ShipmentState shipmentState, @JsonProperty("country") final String country, @JsonProperty("completedAt") final java.time.ZonedDateTime completedAt, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("totalPrice") final com.commercetools.api.generated.models.common.Money totalPrice, @JsonProperty("customerGroup") final com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("taxedPrice") final com.commercetools.api.generated.models.cart.TaxedPrice taxedPrice, @JsonProperty("origin") final com.commercetools.api.generated.models.cart.CartOrigin origin, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("shippingInfo") final com.commercetools.api.generated.models.order.ShippingInfoImportDraft shippingInfo, @JsonProperty("store") final com.commercetools.api.generated.models.store.StoreKeyReference store, @JsonProperty("inventoryMode") final com.commercetools.api.generated.models.cart.InventoryMode inventoryMode, @JsonProperty("orderState") final com.commercetools.api.generated.models.order.OrderState orderState, @JsonProperty("taxRoundingMode") final com.commercetools.api.generated.models.cart.RoundingMode taxRoundingMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.generated.models.order.LineItemImportDraft> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.generated.models.cart.CustomLineItemDraft> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.generated.models.common.Address> itemShippingAddresses, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("customerId") final String customerId, @JsonProperty("shippingAddress") final com.commercetools.api.generated.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.api.generated.models.common.Address billingAddress, @JsonProperty("paymentState") final com.commercetools.api.generated.models.order.PaymentState paymentState) {
+   OrderImportDraftImpl(@JsonProperty("shipmentState") final com.commercetools.api.generated.models.order.ShipmentState shipmentState, @JsonProperty("country") final String country, @JsonProperty("completedAt") final java.time.ZonedDateTime completedAt, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("totalPrice") final com.commercetools.api.generated.models.common.Money totalPrice, @JsonProperty("customerGroup") final com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("taxedPrice") final com.commercetools.api.generated.models.cart.TaxedPriceDraft taxedPrice, @JsonProperty("origin") final com.commercetools.api.generated.models.cart.CartOrigin origin, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("shippingInfo") final com.commercetools.api.generated.models.order.ShippingInfoImportDraft shippingInfo, @JsonProperty("store") final com.commercetools.api.generated.models.store.StoreResourceIdentifier store, @JsonProperty("inventoryMode") final com.commercetools.api.generated.models.cart.InventoryMode inventoryMode, @JsonProperty("orderState") final com.commercetools.api.generated.models.order.OrderState orderState, @JsonProperty("taxRoundingMode") final com.commercetools.api.generated.models.cart.RoundingMode taxRoundingMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.generated.models.order.LineItemImportDraft> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.generated.models.cart.CustomLineItemDraft> customLineItems, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.generated.models.common.Address> itemShippingAddresses, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("customerId") final String customerId, @JsonProperty("shippingAddress") final com.commercetools.api.generated.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.api.generated.models.common.Address billingAddress, @JsonProperty("paymentState") final com.commercetools.api.generated.models.order.PaymentState paymentState) {
       this.shipmentState = shipmentState;
       this.country = country;
       this.completedAt = completedAt;
@@ -141,7 +141,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    }
    
    
-   public com.commercetools.api.generated.models.cart.TaxedPrice getTaxedPrice(){
+   public com.commercetools.api.generated.models.cart.TaxedPriceDraft getTaxedPrice(){
       return this.taxedPrice;
    }
    
@@ -161,7 +161,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
    }
    
    
-   public com.commercetools.api.generated.models.store.StoreKeyReference getStore(){
+   public com.commercetools.api.generated.models.store.StoreResourceIdentifier getStore(){
       return this.store;
    }
    
@@ -244,7 +244,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
       this.customerGroup = customerGroup;
    }
    
-   public void setTaxedPrice(final com.commercetools.api.generated.models.cart.TaxedPrice taxedPrice){
+   public void setTaxedPrice(final com.commercetools.api.generated.models.cart.TaxedPriceDraft taxedPrice){
       this.taxedPrice = taxedPrice;
    }
    
@@ -260,7 +260,7 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
       this.shippingInfo = shippingInfo;
    }
    
-   public void setStore(final com.commercetools.api.generated.models.store.StoreKeyReference store){
+   public void setStore(final com.commercetools.api.generated.models.store.StoreResourceIdentifier store){
       this.store = store;
    }
    

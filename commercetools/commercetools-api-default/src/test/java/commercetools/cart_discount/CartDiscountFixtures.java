@@ -4,6 +4,8 @@ import com.commercetools.api.generated.models.cart_discount.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
+import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -29,11 +31,16 @@ public class CartDiscountFixtures {
         CartDiscountDraft cartDiscountDraft = CartDiscountDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomLocalizedString())
                 .key(CommercetoolsTestUtils.randomKey())
+                .description(CommercetoolsTestUtils.randomLocalizedString())
                 .value(cartDiscountValueDraft)
                 .cartPredicate("country=\"DE\"")
                 .target(CartDiscountShippingCostTargetBuilder.of().build())
                 .sortOrder("0.41")
+                .isActive(false)
+                .validFrom(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
+                .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
                 .requiresDiscountCode(true)
+                .stackingMode(StackingMode.STACKING)
                 .build();
 
         CartDiscount cartDiscount = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

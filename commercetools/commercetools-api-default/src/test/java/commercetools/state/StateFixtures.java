@@ -1,12 +1,10 @@
 package commercetools.state;
 
-import com.commercetools.api.generated.models.state.State;
-import com.commercetools.api.generated.models.state.StateDraft;
-import com.commercetools.api.generated.models.state.StateDraftBuilder;
-import com.commercetools.api.generated.models.state.StateTypeEnum;
+import com.commercetools.api.generated.models.state.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
+import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -28,6 +26,7 @@ public class StateFixtures {
         StateDraft stateDraft = StateDraftBuilder.of()
                 .type(StateTypeEnum.LINE_ITEM_STATE)
                 .key(CommercetoolsTestUtils.randomKey())
+                .roles(Arrays.asList(StateRoleEnum.RETURN))
                 .build();
 
         State state = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

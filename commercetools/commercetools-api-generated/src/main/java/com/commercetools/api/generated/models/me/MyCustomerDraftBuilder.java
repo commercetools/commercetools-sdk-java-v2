@@ -1,7 +1,7 @@
 package com.commercetools.api.generated.models.me;
 
 import com.commercetools.api.generated.models.common.Address;
-import com.commercetools.api.generated.models.store.StoreKeyReference;
+import com.commercetools.api.generated.models.store.StoreResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFields;
 import java.time.LocalDate;
 import com.commercetools.api.generated.models.me.MyCustomerDraft;
@@ -27,7 +27,7 @@ public final class MyCustomerDraftBuilder {
    private Long defaultShippingAddress;
    
    @Nullable
-   private java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> stores;
+   private java.util.List<com.commercetools.api.generated.models.store.StoreResourceIdentifier> stores;
    
    @Nullable
    private com.commercetools.api.generated.models.type.CustomFields custom;
@@ -77,7 +77,7 @@ public final class MyCustomerDraftBuilder {
       return this;
    }
    
-   public MyCustomerDraftBuilder stores(@Nullable final java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> stores) {
+   public MyCustomerDraftBuilder stores(@Nullable final java.util.List<com.commercetools.api.generated.models.store.StoreResourceIdentifier> stores) {
       this.stores = stores;
       return this;
    }
@@ -153,7 +153,7 @@ public final class MyCustomerDraftBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> getStores(){
+   public java.util.List<com.commercetools.api.generated.models.store.StoreResourceIdentifier> getStores(){
       return this.stores;
    }
    

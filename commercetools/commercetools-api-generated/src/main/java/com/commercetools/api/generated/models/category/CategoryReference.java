@@ -23,7 +23,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryReferenceImpl.class)
 public interface CategoryReference extends Reference {
 
-   
+   /**
+   	<p>Categories allow to organize products into hierarchical structures. They enable creating multiple classifications of products for shop navigation and other purposes.</p>
+   */
    @Valid
    @JsonProperty("obj")
    public Category getObj();

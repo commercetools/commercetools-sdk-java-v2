@@ -45,7 +45,7 @@ public final class OrderPaymentStateChangedMessageBuilder {
    
    private Long resourceVersion;
    
-   
+   @Nullable
    private com.commercetools.api.generated.models.order.PaymentState oldPaymentState;
    
    
@@ -101,7 +101,7 @@ public final class OrderPaymentStateChangedMessageBuilder {
       return this;
    }
    
-   public OrderPaymentStateChangedMessageBuilder oldPaymentState( final com.commercetools.api.generated.models.order.PaymentState oldPaymentState) {
+   public OrderPaymentStateChangedMessageBuilder oldPaymentState(@Nullable final com.commercetools.api.generated.models.order.PaymentState oldPaymentState) {
       this.oldPaymentState = oldPaymentState;
       return this;
    }
@@ -161,7 +161,7 @@ public final class OrderPaymentStateChangedMessageBuilder {
       return this.resourceVersion;
    }
    
-   
+   @Nullable
    public com.commercetools.api.generated.models.order.PaymentState getOldPaymentState(){
       return this.oldPaymentState;
    }

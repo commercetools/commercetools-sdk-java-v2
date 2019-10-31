@@ -1,11 +1,10 @@
 package commercetools.product_type;
 
-import com.commercetools.api.generated.models.product_type.ProductType;
-import com.commercetools.api.generated.models.product_type.ProductTypeDraft;
-import com.commercetools.api.generated.models.product_type.ProductTypeDraftBuilder;
+import com.commercetools.api.generated.models.product_type.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
+import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -24,10 +23,23 @@ public class ProductTypeFixtures {
     }
     
     public static ProductType createProductType() {
+
+        AttributeDefinitionDraft attributeDefinitionDraft = AttributeDefinitionDraftBuilder.of()
+                .type(AttributeTextTypeBuilder.of().build())
+                .name(CommercetoolsTestUtils.randomString())
+                .label(CommercetoolsTestUtils.randomLocalizedString())
+                .isRequired(true)
+                .attributeConstraint(AttributeConstraintEnum.NONE)
+                .inputTip(CommercetoolsTestUtils.randomLocalizedString())
+                .inputHint(TextInputHint.SINGLE_LINE)
+                .isSearchable(true)
+                .build();
+                
         ProductTypeDraft productTypeDraft = ProductTypeDraftBuilder.of()
                 .key(CommercetoolsTestUtils.randomKey())
                 .name(CommercetoolsTestUtils.randomString())
                 .description(CommercetoolsTestUtils.randomString())
+                .attributes(Arrays.asList(attributeDefinitionDraft))
                 .build();
 
         ProductType productType = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

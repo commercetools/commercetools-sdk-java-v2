@@ -20,6 +20,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
+/**
+	<p>Categories allow to organize products into hierarchical structures. They enable creating multiple classifications of products for shop navigation and other purposes.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
@@ -120,12 +123,16 @@ public final class CategoryImpl implements Category {
       return this.lastModifiedBy;
    }
    
-   
+   /**
+   	<p>Reference to a Category. A category that is the parent of this category in the category tree.</p>
+   */
    public com.commercetools.api.generated.models.category.CategoryReference getParent(){
       return this.parent;
    }
    
-   
+   /**
+   	<p>An attribute as base for a custom category order in one level.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.common.Asset> getAssets(){
       return this.assets;
    }
@@ -135,7 +142,9 @@ public final class CategoryImpl implements Category {
       return this.metaKeywords;
    }
    
-   
+   /**
+   	<p>An attribute as base for a custom category order in one level.</p>
+   */
    public String getOrderHint(){
       return this.orderHint;
    }
@@ -165,7 +174,9 @@ public final class CategoryImpl implements Category {
       return this.description;
    }
    
-   
+   /**
+   	<p>Contains the parent path towards the root category.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.category.CategoryReference> getAncestors(){
       return this.ancestors;
    }
@@ -175,12 +186,16 @@ public final class CategoryImpl implements Category {
       return this.metaDescription;
    }
    
-   
+   /**
+   	<p>User-specific unique identifier for the category.</p>
+   */
    public String getKey(){
       return this.key;
    }
    
-   
+   /**
+   	<p>Must match the pattern [-a-zA-Z0-9_]{2,256}</p>
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getSlug(){
       return this.slug;
    }

@@ -1,11 +1,10 @@
 package commercetools.tax_category;
 
-import com.commercetools.api.generated.models.tax_category.TaxCategory;
-import com.commercetools.api.generated.models.tax_category.TaxCategoryDraft;
-import com.commercetools.api.generated.models.tax_category.TaxCategoryDraftBuilder;
+import com.commercetools.api.generated.models.tax_category.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 
+import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -27,6 +26,19 @@ public class TaxCategoryFixtures {
         TaxCategoryDraft taxCategoryDraft = TaxCategoryDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomString())
                 .key(CommercetoolsTestUtils.randomKey())
+                .description(CommercetoolsTestUtils.randomString())
+                .rates(Arrays.asList(TaxRateDraftBuilder.of()
+                        .name(CommercetoolsTestUtils.randomString())
+                        .amount(0)
+                        .includedInPrice(true)
+                        .country("DEU")
+                        .state("Berlin")
+                        .subRates(Arrays.asList(SubRateBuilder.of()
+                                .name(CommercetoolsTestUtils.randomString())
+                                .amount(0)
+                                .build()))
+                        .build()
+                ))
                 .build();
 
         TaxCategory taxCategory = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

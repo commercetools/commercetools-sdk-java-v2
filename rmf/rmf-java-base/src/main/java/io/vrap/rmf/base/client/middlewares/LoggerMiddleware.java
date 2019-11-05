@@ -27,7 +27,7 @@ public final class LoggerMiddleware implements Middleware {
             loggerMessage.setResponseHeaders(arg.getResponse().getHeaders());
             loggerMessage.setResponseBody(new String(arg.getResponse().getBody()));
             
-            String loggerMessageString = VrapJsonUtils.getConfiguredObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(loggerMessage);
+            String loggerMessageString = VrapJsonUtils.getConfiguredObjectMapper().writeValueAsString(loggerMessage);
             LOGGER.info(loggerMessageString);
         }catch (JsonProcessingException error){
             MiddlewareArg args = MiddlewareArg.from(arg.getRequest(), arg.getResponse(), error, arg.getNext());

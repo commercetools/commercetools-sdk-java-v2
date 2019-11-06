@@ -122,7 +122,7 @@ Category deletedCategory = apiRoot.withProjectKey("project-key")
 ## Using the generated commercetools-api SDK in your project
 
 The latest unstable SDK release can be retrieved from
-[jcenter](https://bintray.com/commercetools/maven/commercetools-java-sdks)
+[sdk link](https://bintray.com/commercetools/maven/commercetools-java-sdks)
 
 ```gradle
 ext {

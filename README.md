@@ -117,12 +117,11 @@ Category deletedCategory = apiRoot.withProjectKey("project-key")
                 .addVersion(category.getVersion())
                 .executeBlocking().getBody();
                 
-
+```
                 
 ## Using the generated commercetools-api SDK in your project
 
-The latest unstable SDK release can be retrieved from
-[sdk link](https://bintray.com/commercetools/maven/commercetools-java-sdks)
+The latest unstable SDK release can be retrieved from (https://bintray.com/commercetools/maven/commercetools-java-sdks)
 
 ```gradle
 ext {

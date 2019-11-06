@@ -4,12 +4,27 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public final class LoggerMiddleware implements Middleware {
+    
+    private final Logger logger;
 
-    private final static Logger LOGGER = Logger.getLogger(LoggerMiddleware.class.getName());
-
+    public LoggerMiddleware(final LogLevel logLevel) {
+        logger = Logger.getLogger(LoggerMiddleware.class.getName());
+        switch (logLevel){
+            case NONE:{
+                logger.setLevel(Level.OFF);
+                break;
+            }
+            case INFO:{
+                logger.setLevel(Level.INFO);
+                break;
+            }
+        }
+    }
+    
     @Override
     public CompletableFuture<MiddlewareArg> next(MiddlewareArg arg) {
         try{
@@ -28,11 +43,17 @@ public final class LoggerMiddleware implements Middleware {
             loggerMessage.setResponseBody(new String(arg.getResponse().getBody()));
             
             String loggerMessageString = VrapJsonUtils.getConfiguredObjectMapper().writeValueAsString(loggerMessage);
-            LOGGER.info(loggerMessageString);
+            logger.log(Level.INFO, loggerMessageString);
+            
         }catch (JsonProcessingException error){
             MiddlewareArg args = MiddlewareArg.from(arg.getRequest(), arg.getResponse(), error, arg.getNext());
             return arg.getNext().next(args);
         }
         return arg.getNext().next(arg);
+    }
+    
+    public enum LogLevel {
+        NONE,
+        INFO
     }
 }

@@ -5,6 +5,7 @@ import com.commercetools.api.generated.client.ApiRoot;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LocalizedStringImpl;
 import io.vrap.rmf.base.client.VrapHttpClient;
+import io.vrap.rmf.base.client.middlewares.LoggerMiddleware;
 import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
 
 import java.util.UUID;
@@ -12,12 +13,26 @@ import java.util.UUID;
 public class CommercetoolsTestUtils {
 
     private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
-    private static final ApiRoot apiRoot = DefaultApiRoot.create(
-            getClientId(),
-            getClientSecret(),
-            getScopes(),
-            "https://auth.sphere.io/oauth/token",
-            "https://api.sphere.io");
+    private static final ApiRoot apiRoot;
+    static{
+        String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
+        if("OFF".equals(logLevel)){
+            apiRoot = DefaultApiRoot.create(
+                    getClientId(),
+                    getClientSecret(),
+                    getScopes(),
+                    "https://auth.sphere.io/oauth/token",
+                    "https://api.sphere.io");
+        }else{
+            apiRoot = DefaultApiRoot.create(
+                    getClientId(),
+                    getClientSecret(),
+                    getScopes(),
+                    "https://auth.sphere.io/oauth/token",
+                    "https://api.sphere.io",
+                    LoggerMiddleware.LogLevel.INFO);
+        }
+    }
 
     public static String randomString() {
         return "random-string-" + UUID.randomUUID().toString();

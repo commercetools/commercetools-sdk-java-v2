@@ -124,7 +124,7 @@ Category deletedCategory = apiRoot.withProjectKey("project-key")
 The latest unstable SDK release can be retrieved from [jcenter](https://bintray.com/commercetools/maven/commercetools-java-sdks/)  with:
 ```gradle
 ext {
-    sdkVersion = "1.0.0-20190919113231"
+    sdkVersion = "chosen-version"
 }
 
 sourceCompatibility = 1.8

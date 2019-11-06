@@ -20,7 +20,8 @@ public class DefaultApiRoot {
             final String clientSecret,
             final String scopes,
             final String tokenEndpoint,
-            final String apiEndpoint
+            final String apiEndpoint,
+            final LoggerMiddleware.LogLevel logLevel
     ) {
         List<Middleware> middlewares = new ArrayList<>();
         middlewares.add(new HttpMiddleware(
@@ -34,10 +35,17 @@ public class DefaultApiRoot {
                         , vrapHttpClient
                 )
         ));
-        String runningOnTravis = System.getenv("RUNNING_ON_TRAVIS");
-        if(runningOnTravis == null){
-            middlewares.add(new LoggerMiddleware());
-        }
+        middlewares.add(new LoggerMiddleware(logLevel));
         return ApiRoot.fromMiddlewares(middlewares);
+    }
+
+    public static ApiRoot create(
+            final String clientId,
+            final String clientSecret,
+            final String scopes,
+            final String tokenEndpoint,
+            final String apiEndpoint
+    ) {
+        return create(clientId,clientSecret,scopes,tokenEndpoint,apiEndpoint, LoggerMiddleware.LogLevel.NONE);
     }
 }

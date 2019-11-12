@@ -165,6 +165,6 @@ to upload the artifacts to the `commercetools-java-sdks` repository in the comme
 
 [](definitions for the top badges)
 
-[travis]:https://travis-ci.com/commercetools/commercetools-java-sdks
+[travis]:https://travis-ci.com/commercetools/commercetools-java-sdks?branch=master
 [travis img]:https://travis-ci.com/commercetools/commercetools-java-sdks.svg?branch=master
 

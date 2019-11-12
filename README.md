@@ -162,3 +162,9 @@ Run gradle with
 ```
 to upload the artifacts to the `commercetools-java-sdks` repository in the commercetools bintray project.
 
+
+[](definitions for the top badges)
+
+[travis]:https://travis-ci.com/commercetools/commercetools-java-sdks
+[travis img]:https://travis-ci.com/commercetools/commercetools-java-sdks.svg?branch=master
+

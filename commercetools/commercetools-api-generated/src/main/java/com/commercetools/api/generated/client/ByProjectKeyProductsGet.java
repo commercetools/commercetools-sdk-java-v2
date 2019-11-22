@@ -19,6 +19,11 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>You can use the query endpoint to get the full representations of products.
+	REMARK: We suggest to use the performance optimized search endpoint which has a bunch functionalities,
+	the query API lacks like sorting on custom attributes, etc.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

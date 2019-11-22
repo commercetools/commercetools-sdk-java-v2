@@ -19,6 +19,11 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>Updates a customer in the store specified by {storeKey}. The {storeKey} path parameter maps to a Store’s key.
+	If the customer exists in the commercetools project but the stores field references a different store,
+	this method returns a ResourceNotFound error.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

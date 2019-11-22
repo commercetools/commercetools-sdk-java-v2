@@ -1,15 +1,25 @@
 package com.commercetools.api.generated.models.category;
 
-import com.commercetools.api.generated.models.common.*;
+import com.commercetools.api.generated.models.category.CategoryReference;
+import com.commercetools.api.generated.models.common.Asset;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
+import com.commercetools.api.generated.models.common.LocalizedString;
+import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.type.CustomFields;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.ZonedDateTime;
+import com.commercetools.api.generated.models.category.CategoryImpl;
 
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.time.ZonedDateTime;
 import java.util.List;
+import java.util.Map;
+import java.time.*;
+
+import java.io.IOException;
 
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

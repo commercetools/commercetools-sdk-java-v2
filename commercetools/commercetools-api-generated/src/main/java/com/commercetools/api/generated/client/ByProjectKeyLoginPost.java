@@ -19,6 +19,15 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>Authenticate Customer (Sign In). Retrieves the authenticated
+	customer (a customer that matches the given email/password pair).
+	If used with an access token for Anonymous Sessions,
+	all orders and carts belonging to the anonymousId will be assigned to the newly created customer.
+	If a cart is is returned as part of the CustomerSignInResult,
+	it has been recalculated (It will have up-to-date prices, taxes and discounts,
+	and invalid line items have been removed.).</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

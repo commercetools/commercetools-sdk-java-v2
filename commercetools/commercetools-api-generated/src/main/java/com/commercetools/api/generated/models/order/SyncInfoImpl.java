@@ -39,17 +39,23 @@ public final class SyncInfoImpl implements SyncInfo {
       
    }
    
-   
+   /**
+   	<p>Connection to a particular synchronization destination.</p>
+   */
    public com.commercetools.api.generated.models.channel.ChannelReference getChannel(){
       return this.channel;
    }
    
-   
+   /**
+   	<p>Can be used to reference an external order instance, file etc.</p>
+   */
    public String getExternalId(){
       return this.externalId;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getSyncedAt(){
       return this.syncedAt;
    }

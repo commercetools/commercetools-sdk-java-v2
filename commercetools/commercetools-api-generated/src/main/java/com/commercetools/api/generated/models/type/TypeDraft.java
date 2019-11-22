@@ -23,24 +23,34 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeDraftImpl.class)
 public interface TypeDraft  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("key")
    public String getKey();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   
+   /**
+   	<p>The IDs of the resources that can be customized with this type.</p>
+   */
    @NotNull
    @JsonProperty("resourceTypeIds")
    public List<ResourceTypeId> getResourceTypeIds();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("fieldDefinitions")
    public List<FieldDefinition> getFieldDefinitions();

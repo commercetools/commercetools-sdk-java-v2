@@ -19,6 +19,11 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>Creates an order from a Cart.
+	The cart must have a shipping address set before creating an order.
+	When using the Platform TaxMode, the shipping address is used for tax calculation.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

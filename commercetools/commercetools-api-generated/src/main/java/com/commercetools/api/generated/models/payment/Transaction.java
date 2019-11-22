@@ -24,28 +24,41 @@ import java.io.IOException;
 @JsonDeserialize(as = TransactionImpl.class)
 public interface Transaction  {
 
-   
+   /**
+   	<p>The unique ID of this object.</p>
+   */
    @NotNull
    @JsonProperty("id")
    public String getId();
-   
+   /**
+   	<p>The time at which the transaction took place.</p>
+   */
    
    @JsonProperty("timestamp")
    public ZonedDateTime getTimestamp();
-   
+   /**
+   	<p>The type of this transaction.</p>
+   */
    @NotNull
    @JsonProperty("type")
    public TransactionType getType();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("amount")
    public TypedMoney getAmount();
-   
+   /**
+   	<p>The identifier that is used by the interface that managed the transaction (usually the PSP).
+   	If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+   */
    
    @JsonProperty("interactionId")
    public String getInteractionId();
-   
+   /**
+   	<p>The state of this transaction.</p>
+   */
    
    @JsonProperty("state")
    public TransactionState getState();

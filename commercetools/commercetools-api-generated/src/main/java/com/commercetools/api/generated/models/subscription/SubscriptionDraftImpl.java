@@ -47,27 +47,37 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
       
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.subscription.DeliveryFormat getFormat(){
       return this.format;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.subscription.Destination getDestination(){
       return this.destination;
    }
    
-   
+   /**
+   	
+   */
    public java.util.List<com.commercetools.api.generated.models.subscription.ChangeSubscription> getChanges(){
       return this.changes;
    }
    
-   
+   /**
+   	
+   */
    public java.util.List<com.commercetools.api.generated.models.subscription.MessageSubscription> getMessages(){
       return this.messages;
    }
    
-   
+   /**
+   	
+   */
    public String getKey(){
       return this.key;
    }

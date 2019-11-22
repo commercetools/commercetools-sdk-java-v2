@@ -1,6 +1,8 @@
 package com.commercetools.api.generated.models.discount_code;
 
 import com.commercetools.api.generated.models.cart_discount.CartDiscountReference;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.Reference;
@@ -52,12 +54,6 @@ public final class DiscountCodeBuilder {
    @Nullable
    private com.commercetools.api.generated.models.type.CustomFields custom;
    
-   @Nullable
-   private com.commercetools.api.generated.models.common.LocalizedString name;
-   
-   @Nullable
-   private java.time.ZonedDateTime validUntil;
-   
    
    private java.util.List<String> groups;
    
@@ -67,14 +63,20 @@ public final class DiscountCodeBuilder {
    @Nullable
    private java.time.ZonedDateTime validFrom;
    
-   @Nullable
-   private Long maxApplicationsPerCustomer;
-   
    
    private Boolean isActive;
    
    @Nullable
    private Long maxApplications;
+   
+   @Nullable
+   private com.commercetools.api.generated.models.common.LocalizedString name;
+   
+   @Nullable
+   private java.time.ZonedDateTime validUntil;
+   
+   @Nullable
+   private Long maxApplicationsPerCustomer;
    
    public DiscountCodeBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -131,16 +133,6 @@ public final class DiscountCodeBuilder {
       return this;
    }
    
-   public DiscountCodeBuilder name(@Nullable final com.commercetools.api.generated.models.common.LocalizedString name) {
-      this.name = name;
-      return this;
-   }
-   
-   public DiscountCodeBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
-      this.validUntil = validUntil;
-      return this;
-   }
-   
    public DiscountCodeBuilder groups( final java.util.List<String> groups) {
       this.groups = groups;
       return this;
@@ -156,11 +148,6 @@ public final class DiscountCodeBuilder {
       return this;
    }
    
-   public DiscountCodeBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
-      this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
-      return this;
-   }
-   
    public DiscountCodeBuilder isActive( final Boolean isActive) {
       this.isActive = isActive;
       return this;
@@ -168,6 +155,21 @@ public final class DiscountCodeBuilder {
    
    public DiscountCodeBuilder maxApplications(@Nullable final Long maxApplications) {
       this.maxApplications = maxApplications;
+      return this;
+   }
+   
+   public DiscountCodeBuilder name(@Nullable final com.commercetools.api.generated.models.common.LocalizedString name) {
+      this.name = name;
+      return this;
+   }
+   
+   public DiscountCodeBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
+      this.validUntil = validUntil;
+      return this;
+   }
+   
+   public DiscountCodeBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
+      this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
       return this;
    }
    
@@ -226,16 +228,6 @@ public final class DiscountCodeBuilder {
       return this.custom;
    }
    
-   @Nullable
-   public com.commercetools.api.generated.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
-   @Nullable
-   public java.time.ZonedDateTime getValidUntil(){
-      return this.validUntil;
-   }
-   
    
    public java.util.List<String> getGroups(){
       return this.groups;
@@ -251,11 +243,6 @@ public final class DiscountCodeBuilder {
       return this.validFrom;
    }
    
-   @Nullable
-   public Long getMaxApplicationsPerCustomer(){
-      return this.maxApplicationsPerCustomer;
-   }
-   
    
    public Boolean getIsActive(){
       return this.isActive;
@@ -265,9 +252,24 @@ public final class DiscountCodeBuilder {
    public Long getMaxApplications(){
       return this.maxApplications;
    }
+   
+   @Nullable
+   public com.commercetools.api.generated.models.common.LocalizedString getName(){
+      return this.name;
+   }
+   
+   @Nullable
+   public java.time.ZonedDateTime getValidUntil(){
+      return this.validUntil;
+   }
+   
+   @Nullable
+   public Long getMaxApplicationsPerCustomer(){
+      return this.maxApplicationsPerCustomer;
+   }
 
    public DiscountCode build() {
-       return new DiscountCodeImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, cartDiscounts, code, references, cartPredicate, custom, name, validUntil, groups, description, validFrom, maxApplicationsPerCustomer, isActive, maxApplications);
+       return new DiscountCodeImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, cartDiscounts, code, references, cartPredicate, custom, groups, description, validFrom, isActive, maxApplications, name, validUntil, maxApplicationsPerCustomer);
    }
    
    public static DiscountCodeBuilder of() {
@@ -287,14 +289,14 @@ public final class DiscountCodeBuilder {
       builder.references = template.getReferences();
       builder.cartPredicate = template.getCartPredicate();
       builder.custom = template.getCustom();
-      builder.name = template.getName();
-      builder.validUntil = template.getValidUntil();
       builder.groups = template.getGroups();
       builder.description = template.getDescription();
       builder.validFrom = template.getValidFrom();
-      builder.maxApplicationsPerCustomer = template.getMaxApplicationsPerCustomer();
       builder.isActive = template.getIsActive();
       builder.maxApplications = template.getMaxApplications();
+      builder.name = template.getName();
+      builder.validUntil = template.getValidUntil();
+      builder.maxApplicationsPerCustomer = template.getMaxApplicationsPerCustomer();
       return builder;
    }
    

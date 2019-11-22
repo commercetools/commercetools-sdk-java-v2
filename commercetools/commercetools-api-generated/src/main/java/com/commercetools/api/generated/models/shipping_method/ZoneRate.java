@@ -22,12 +22,16 @@ import java.io.IOException;
 @JsonDeserialize(as = ZoneRateImpl.class)
 public interface ZoneRate  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("zone")
    public ZoneReference getZone();
-   
+   /**
+   	<p>The array does not contain two shipping rates with the same currency.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("shippingRates")

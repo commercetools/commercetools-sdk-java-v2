@@ -1,5 +1,7 @@
 package com.commercetools.api.generated.models.order_edit;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.order.OrderReference;
 import com.commercetools.api.generated.models.order.StagedOrderUpdateAction;
@@ -26,45 +28,95 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditImpl.class)
 public interface OrderEdit extends LoggedResource {
 
-   
+   /**
+   	<p>The unique ID of the OrderEdit.</p>
+   */
+   @NotNull
+   @JsonProperty("id")
+   public String getId();
+   /**
+   	<p>The current version of the OrderEdit.</p>
+   */
+   @NotNull
+   @JsonProperty("version")
+   public Long getVersion();
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
-   
+   /**
+   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
+   @Valid
+   @JsonProperty("lastModifiedBy")
+   public LastModifiedBy getLastModifiedBy();
+   /**
+   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
+   @Valid
+   @JsonProperty("createdBy")
+   public CreatedBy getCreatedBy();
+   /**
+   	<p>Unique identifier for this edit.</p>
+   */
    
    @JsonProperty("key")
    public String getKey();
-   
+   /**
+   	<p>The order to be updated with this edit.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("resource")
    public OrderReference getResource();
-   
+   /**
+   	<p>The actions to apply to the Order.
+   	Cannot be updated after the edit has been applied.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("stagedActions")
    public List<StagedOrderUpdateAction> getStagedActions();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
-   
+   /**
+   	<p>Contains a preview of the changes in case of unapplied edit.
+   	For applied edits, it contains the summary of the changes.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("result")
    public OrderEditResult getResult();
-   
+   /**
+   	<p>This field can be used to add textual information regarding the edit.</p>
+   */
    
    @JsonProperty("comment")
    public String getComment();
 
+   public void setId(final String id);
+   
+   public void setVersion(final Long version);
+   
    public void setCreatedAt(final ZonedDateTime createdAt);
    
    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+   
+   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+   
+   public void setCreatedBy(final CreatedBy createdBy);
    
    public void setKey(final String key);
    

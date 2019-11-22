@@ -51,12 +51,14 @@ import com.commercetools.api.generated.models.message.PaymentStatusInterfaceCode
 import com.commercetools.api.generated.models.message.PaymentStatusStateTransitionMessagePayload;
 import com.commercetools.api.generated.models.message.PaymentTransactionAddedMessagePayload;
 import com.commercetools.api.generated.models.message.PaymentTransactionStateChangedMessagePayload;
+import com.commercetools.api.generated.models.message.ProductAddedToCategoryMessagePayload;
 import com.commercetools.api.generated.models.message.ProductCreatedMessagePayload;
 import com.commercetools.api.generated.models.message.ProductDeletedMessagePayload;
 import com.commercetools.api.generated.models.message.ProductImageAddedMessagePayload;
 import com.commercetools.api.generated.models.message.ProductPriceDiscountsSetMessagePayload;
 import com.commercetools.api.generated.models.message.ProductPriceExternalDiscountSetMessagePayload;
 import com.commercetools.api.generated.models.message.ProductPublishedMessagePayload;
+import com.commercetools.api.generated.models.message.ProductRemovedFromCategoryMessagePayload;
 import com.commercetools.api.generated.models.message.ProductRevertedStagedChangesMessagePayload;
 import com.commercetools.api.generated.models.message.ProductSlugChangedMessagePayload;
 import com.commercetools.api.generated.models.message.ProductStateTransitionMessagePayload;
@@ -112,12 +114,14 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.PaymentStatusStateTransitionMessagePayloadImpl.class, name = "PaymentStatusStateTransition"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.PaymentTransactionAddedMessagePayloadImpl.class, name = "PaymentTransactionAdded"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.PaymentTransactionStateChangedMessagePayloadImpl.class, name = "PaymentTransactionStateChanged"),
+   @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductAddedToCategoryMessagePayloadImpl.class, name = "ProductAddedToCategory"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductCreatedMessagePayloadImpl.class, name = "ProductCreated"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductDeletedMessagePayloadImpl.class, name = "ProductDeleted"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductImageAddedMessagePayloadImpl.class, name = "ProductImageAdded"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductPriceDiscountsSetMessagePayloadImpl.class, name = "ProductPriceDiscountsSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductPriceExternalDiscountSetMessagePayloadImpl.class, name = "ProductPriceExternalDiscountSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductPublishedMessagePayloadImpl.class, name = "ProductPublished"),
+   @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductRemovedFromCategoryMessagePayloadImpl.class, name = "ProductRemovedFromCategory"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductRevertedStagedChangesMessagePayloadImpl.class, name = "ProductRevertedStagedChanges"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductSlugChangedMessagePayloadImpl.class, name = "ProductSlugChanged"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductStateTransitionMessagePayloadImpl.class, name = "ProductStateTransition"),

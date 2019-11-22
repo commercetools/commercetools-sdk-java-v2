@@ -27,7 +27,9 @@ public interface Location  {
    @NotNull
    @JsonProperty("country")
    public String getCountry();
-   
+   /**
+   	
+   */
    
    @JsonProperty("state")
    public String getState();

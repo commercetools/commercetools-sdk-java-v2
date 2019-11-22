@@ -1,8 +1,11 @@
 package com.commercetools.api.generated.models.shipping_method;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.shipping_method.ZoneRate;
 import com.commercetools.api.generated.models.tax_category.TaxCategoryReference;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -70,22 +73,30 @@ public final class ShippingMethodImpl implements ShippingMethod {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	<p>The unique ID of the shipping method.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	<p>The current version of the shipping method.</p>
+   */
    public Long getVersion(){
       return this.version;
    }
@@ -100,37 +111,51 @@ public final class ShippingMethodImpl implements ShippingMethod {
       return this.lastModifiedBy;
    }
    
-   
+   /**
+   	
+   */
    public java.util.List<com.commercetools.api.generated.models.shipping_method.ZoneRate> getZoneRates(){
       return this.zoneRates;
    }
    
-   
+   /**
+   	<p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+   */
    public String getPredicate(){
       return this.predicate;
    }
    
-   
+   /**
+   	<p>One shipping method in a project can be default.</p>
+   */
    public Boolean getIsDefault(){
       return this.isDefault;
    }
    
-   
+   /**
+   	
+   */
    public String getName(){
       return this.name;
    }
    
-   
+   /**
+   	
+   */
    public String getDescription(){
       return this.description;
    }
    
-   
+   /**
+   	<p>User-specific unique identifier for the shipping method.</p>
+   */
    public String getKey(){
       return this.key;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.tax_category.TaxCategoryReference getTaxCategory(){
       return this.taxCategory;
    }

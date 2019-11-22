@@ -22,16 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = SyncInfoImpl.class)
 public interface SyncInfo  {
 
-   
+   /**
+   	<p>Connection to a particular synchronization destination.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("channel")
    public ChannelReference getChannel();
-   
+   /**
+   	<p>Can be used to reference an external order instance, file etc.</p>
+   */
    
    @JsonProperty("externalId")
    public String getExternalId();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("syncedAt")
    public ZonedDateTime getSyncedAt();

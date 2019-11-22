@@ -44,22 +44,32 @@ public final class MyPaymentDraftImpl implements MyPaymentDraft {
       
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
       return this.paymentMethodInfo;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	<p>How much money this payment intends to receive from the customer.
+   	The value usually matches the cart or order gross total.</p>
+   */
    public com.commercetools.api.generated.models.common.Money getAmountPlanned(){
       return this.amountPlanned;
    }
    
-   
+   /**
+   	<p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code>
+   	<a href="http-api-projects-payments.html#transactiontype">TransactionTypes</a>.</p>
+   */
    public com.commercetools.api.generated.models.me.MyTransactionDraft getTransaction(){
       return this.transaction;
    }

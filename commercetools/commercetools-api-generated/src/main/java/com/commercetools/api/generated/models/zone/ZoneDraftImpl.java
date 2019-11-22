@@ -41,22 +41,32 @@ public final class ZoneDraftImpl implements ZoneDraft {
       
    }
    
-   
+   /**
+   	
+   */
    public String getName(){
       return this.name;
    }
    
-   
+   /**
+   	
+   */
    public String getDescription(){
       return this.description;
    }
    
-   
+   /**
+   	
+   */
    public java.util.List<com.commercetools.api.generated.models.zone.Location> getLocations(){
       return this.locations;
    }
    
-   
+   /**
+   	<p>User-specific unique identifier for a zone.
+   	Must be unique across a project.
+   	The field can be reset using the Set Key UpdateAction.</p>
+   */
    public String getKey(){
       return this.key;
    }

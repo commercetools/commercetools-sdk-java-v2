@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = SuggestionImpl.class)
 public interface Suggestion  {
 
-   
+   /**
+   	<p>The suggested text.</p>
+   */
    @NotNull
    @JsonProperty("text")
    public String getText();

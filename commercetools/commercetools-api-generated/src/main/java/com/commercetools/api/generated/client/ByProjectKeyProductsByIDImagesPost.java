@@ -19,6 +19,9 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>Uploads a binary image file to a given product variant. The supported image formats are JPEG, PNG and GIF.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

@@ -108,127 +108,190 @@ public final class CustomerDraftImpl implements CustomerDraft {
       
    }
    
-   
+   /**
+   	<p>Identifies carts and orders belonging to an anonymous session that will be assigned to the new customer account.</p>
+   */
    public String getAnonymousId(){
       return this.anonymousId;
    }
    
-   
+   /**
+   	
+   */
    public String getLastName(){
       return this.lastName;
    }
    
-   
+   /**
+   	<p>Sets the ID of each address to be unique in the addresses list.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.common.Address> getAddresses(){
       return this.addresses;
    }
    
-   
+   /**
+   	<p>The index of the address in the addresses array.
+   	The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+   */
    public Long getDefaultShippingAddress(){
       return this.defaultShippingAddress;
    }
    
-   
+   /**
+   	<p>References to the stores the customer account is associated with.
+   	If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers.
+   	If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.store.StoreResourceIdentifier> getStores(){
       return this.stores;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
       return this.customerGroup;
    }
    
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	
+   */
    public String getCompanyName(){
       return this.companyName;
    }
    
-   
+   /**
+   	
+   */
    public String getVatId(){
       return this.vatId;
    }
    
-   
+   /**
+   	
+   */
    public String getExternalId(){
       return this.externalId;
    }
    
-   
+   /**
+   	<p>The indices of the billing addresses in the addresses array.
+   	The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+   */
    public java.util.List<Integer> getBillingAddresses(){
       return this.billingAddresses;
    }
    
-   
+   /**
+   	
+   */
    public java.time.LocalDate getDateOfBirth(){
       return this.dateOfBirth;
    }
    
-   
+   /**
+   	<p>Must be one of the languages supported for this project</p>
+   */
    public String getLocale(){
       return this.locale;
    }
    
-   
+   /**
+   	
+   */
    public String getTitle(){
       return this.title;
    }
    
-   
+   /**
+   	<p>String that uniquely identifies a customer.
+   	It can be used to create more human-readable (in contrast to ID) identifier for the customer.
+   	It should be <strong>unique</strong> across a project.
+   	Once it's set it cannot be changed.</p>
+   */
    public String getCustomerNumber(){
       return this.customerNumber;
    }
    
-   
+   /**
+   	
+   */
    public Boolean getIsEmailVerified(){
       return this.isEmailVerified;
    }
    
-   
+   /**
+   	
+   */
    public String getFirstName(){
       return this.firstName;
    }
    
-   
+   /**
+   	
+   */
    public String getPassword(){
       return this.password;
    }
    
-   
+   /**
+   	
+   */
    public String getMiddleName(){
       return this.middleName;
    }
    
-   
+   /**
+   	
+   */
    public String getSalutation(){
       return this.salutation;
    }
    
-   
+   /**
+   	<p>Identifies a single cart that will be assigned to the new customer account.</p>
+   */
    public String getAnonymousCartId(){
       return this.anonymousCartId;
    }
    
-   
+   /**
+   	<p>User-specific unique identifier for a customer.
+   	Must be unique across a project.
+   	The field can be reset using the Set Key UpdateAction</p>
+   */
    public String getKey(){
       return this.key;
    }
    
-   
+   /**
+   	<p>The index of the address in the addresses array.
+   	The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+   */
    public Long getDefaultBillingAddress(){
       return this.defaultBillingAddress;
    }
    
-   
+   /**
+   	<p>The customer's email address and the main identifier of uniqueness for a customer account.
+   	Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project, and are case insensitive.
+   	For more information, see Email uniquenes.</p>
+   */
    public String getEmail(){
       return this.email;
    }
    
-   
+   /**
+   	<p>The indices of the shipping addresses in the addresses array.
+   	The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>
+   */
    public java.util.List<Integer> getShippingAddresses(){
       return this.shippingAddresses;
    }

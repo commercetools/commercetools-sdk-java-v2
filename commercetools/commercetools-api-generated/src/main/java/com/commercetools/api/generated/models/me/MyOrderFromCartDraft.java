@@ -21,11 +21,15 @@ import java.io.IOException;
 @JsonDeserialize(as = MyOrderFromCartDraftImpl.class)
 public interface MyOrderFromCartDraft  {
 
-   
+   /**
+   	<p>The unique ID of the cart from which an order is created.</p>
+   */
    @NotNull
    @JsonProperty("id")
    public String getId();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();

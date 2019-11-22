@@ -14,6 +14,8 @@ import com.commercetools.api.generated.models.cart.TaxMode;
 import com.commercetools.api.generated.models.cart.TaxedPrice;
 import com.commercetools.api.generated.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.TypedMoney;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupReference;

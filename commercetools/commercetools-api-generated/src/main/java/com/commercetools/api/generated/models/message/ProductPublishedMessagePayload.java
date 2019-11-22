@@ -26,7 +26,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
    
    @NotNull
    @JsonProperty("removedImageUrls")
-   public List<Object> getRemovedImageUrls();
+   public List<String> getRemovedImageUrls();
    
    @NotNull
    @Valid
@@ -37,7 +37,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
    @JsonProperty("scope")
    public ProductPublishScope getScope();
 
-   public void setRemovedImageUrls(final List<Object> removedImageUrls);
+   public void setRemovedImageUrls(final List<String> removedImageUrls);
    
    public void setProductProjection(final ProductProjection productProjection);
    

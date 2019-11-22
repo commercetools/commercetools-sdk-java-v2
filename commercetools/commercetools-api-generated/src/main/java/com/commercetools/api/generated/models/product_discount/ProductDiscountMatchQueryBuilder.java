@@ -1,6 +1,6 @@
 package com.commercetools.api.generated.models.product_discount;
 
-import com.commercetools.api.generated.models.common.Price;
+import com.commercetools.api.generated.models.common.QueryPrice;
 import com.commercetools.api.generated.models.product_discount.ProductDiscountMatchQuery;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class ProductDiscountMatchQueryBuilder {
    private String productId;
    
    
-   private com.commercetools.api.generated.models.common.Price price;
+   private com.commercetools.api.generated.models.common.QueryPrice price;
    
    
    private Boolean staged;
@@ -31,7 +31,7 @@ public final class ProductDiscountMatchQueryBuilder {
       return this;
    }
    
-   public ProductDiscountMatchQueryBuilder price( final com.commercetools.api.generated.models.common.Price price) {
+   public ProductDiscountMatchQueryBuilder price( final com.commercetools.api.generated.models.common.QueryPrice price) {
       this.price = price;
       return this;
    }
@@ -52,7 +52,7 @@ public final class ProductDiscountMatchQueryBuilder {
    }
    
    
-   public com.commercetools.api.generated.models.common.Price getPrice(){
+   public com.commercetools.api.generated.models.common.QueryPrice getPrice(){
       return this.price;
    }
    

@@ -26,14 +26,14 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
 
    private String type;
    
-   private java.util.List<Object> removedImageUrls;
+   private java.util.List<String> removedImageUrls;
    
    private com.commercetools.api.generated.models.product.ProductProjection productProjection;
    
    private com.commercetools.api.generated.models.cart.ProductPublishScope scope;
 
    @JsonCreator
-   ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<Object> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.api.generated.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.api.generated.models.cart.ProductPublishScope scope) {
+   ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.api.generated.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.api.generated.models.cart.ProductPublishScope scope) {
       this.removedImageUrls = removedImageUrls;
       this.productProjection = productProjection;
       this.scope = scope;
@@ -49,7 +49,7 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
    }
    
    
-   public java.util.List<Object> getRemovedImageUrls(){
+   public java.util.List<String> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
    
@@ -63,7 +63,7 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
       return this.scope;
    }
 
-   public void setRemovedImageUrls(final java.util.List<Object> removedImageUrls){
+   public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
       this.removedImageUrls = removedImageUrls;
    }
    

@@ -1,8 +1,11 @@
 package com.commercetools.api.generated.models.extension;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.extension.ExtensionDestination;
 import com.commercetools.api.generated.models.extension.ExtensionTrigger;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -61,52 +64,73 @@ public final class ExtensionImpl implements Extension {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
-   
+   /**
+   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
-   
+   /**
+   	<p>The maximum time the commercetools platform waits for a response from the extension.
+   	If not present, <code>2000</code> (2 seconds) is used.</p>
+   */
    public Integer getTimeoutInMs(){
       return this.timeoutInMs;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.extension.ExtensionDestination getDestination(){
       return this.destination;
    }
    
-   
+   /**
+   	
+   */
    public java.util.List<com.commercetools.api.generated.models.extension.ExtensionTrigger> getTriggers(){
       return this.triggers;
    }
    
-   
+   /**
+   	
+   */
    public String getKey(){
       return this.key;
    }

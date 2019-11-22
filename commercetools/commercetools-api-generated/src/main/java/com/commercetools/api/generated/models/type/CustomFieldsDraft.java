@@ -22,12 +22,16 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomFieldsDraftImpl.class)
 public interface CustomFieldsDraft  {
 
-   
+   /**
+   	<p>The <code>id</code> or the <code>key</code> of the type to use.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("type")
    public TypeResourceIdentifier getType();
-   
+   /**
+   	<p>A valid JSON object, based on the FieldDefinitions of the Type.</p>
+   */
    @Valid
    @JsonProperty("fields")
    public FieldContainer getFields();

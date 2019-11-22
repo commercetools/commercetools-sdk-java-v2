@@ -1,6 +1,9 @@
 package com.commercetools.api.generated.models.custom_object;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.custom_object.CustomObject;
 import javax.annotation.Nullable;
 import java.util.List;

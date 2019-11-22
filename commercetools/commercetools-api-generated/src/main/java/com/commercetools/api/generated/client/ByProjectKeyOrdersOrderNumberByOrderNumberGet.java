@@ -19,6 +19,10 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>In case the orderNumber does not match the regular expression [a-zA-Z0-9_-]+,
+	it should be provided in URL-encoded format.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

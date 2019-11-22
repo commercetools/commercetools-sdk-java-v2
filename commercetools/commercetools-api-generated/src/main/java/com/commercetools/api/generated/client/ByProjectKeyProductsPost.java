@@ -19,6 +19,11 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>To create a new product, send a representation that is going to become the initial staged representation
+	of the new product in the master catalog. If price selection query parameters are provided,
+	the selected prices will be added to the response.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

@@ -22,12 +22,16 @@ import java.io.IOException;
 @JsonDeserialize(as = ExternalTaxAmountDraftImpl.class)
 public interface ExternalTaxAmountDraft  {
 
-   
+   /**
+   	<p>The total gross amount of the item (totalNet + taxes).</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("totalGross")
    public Money getTotalGross();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("taxRate")

@@ -76,67 +76,101 @@ public final class CustomLineItemImpl implements CustomLineItem {
       
    }
    
-   
+   /**
+   	<p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set.
+   	For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+   */
    public com.commercetools.api.generated.models.tax_category.TaxRate getTaxRate(){
       return this.taxRate;
    }
    
-   
+   /**
+   	<p>The amount of a CustomLineItem in the cart.
+   	Must be a positive integer.</p>
+   */
    public Integer getQuantity(){
       return this.quantity;
    }
    
-   
+   /**
+   	<p>Container for custom line item specific address(es).
+   	CustomLineItem fields that can be used in query predicates: <code>slug</code>, <code>name</code>, <code>quantity</code>,
+   	<code>money</code>, <code>state</code>, <code>discountedPricePerQuantity</code>.</p>
+   */
    public com.commercetools.api.generated.models.cart.ItemShippingDetails getShippingDetails(){
       return this.shippingDetails;
    }
    
-   
+   /**
+   	<p>The cost to add to the cart.
+   	The amount can be negative.</p>
+   */
    public com.commercetools.api.generated.models.common.TypedMoney getMoney(){
       return this.money;
    }
    
-   
+   /**
+   	<p>The total price of this custom line item.
+   	If custom line item is discounted, then the <code>totalPrice</code> would be the discounted custom line item price multiplied by <code>quantity</code>.
+   	Otherwise a total price is just a <code>money</code> multiplied by the <code>quantity</code>.
+   	<code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
+   */
    public com.commercetools.api.generated.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
    
-   
+   /**
+   	<p>Set once the <code>taxRate</code> is set.</p>
+   */
    public com.commercetools.api.generated.models.cart.TaxedItemPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	<p>The name of this CustomLineItem.</p>
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   
+   /**
+   	
+   */
    public java.util.List<com.commercetools.api.generated.models.order.ItemState> getState(){
       return this.state;
    }
    
-   
+   /**
+   	<p>The unique ID of this CustomLineItem.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	
+   */
    public java.util.List<com.commercetools.api.generated.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
       return this.discountedPricePerQuantity;
    }
    
-   
+   /**
+   	<p>A unique String in the cart to identify this CustomLineItem.</p>
+   */
    public String getSlug(){
       return this.slug;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.tax_category.TaxCategoryReference getTaxCategory(){
       return this.taxCategory;
    }

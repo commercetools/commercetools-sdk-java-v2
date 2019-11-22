@@ -1,7 +1,10 @@
 package com.commercetools.api.generated.models.store;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -54,22 +57,30 @@ public final class StoreImpl implements Store {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	
+   */
    public Long getVersion(){
       return this.version;
    }
@@ -84,12 +95,18 @@ public final class StoreImpl implements Store {
       return this.lastModifiedBy;
    }
    
-   
+   /**
+   	<p>The name of the store</p>
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   
+   /**
+   	<p>User-specific unique identifier for the store.
+   	The <code>key</code> is mandatory and immutable.
+   	It is used to reference the store.</p>
+   */
    public String getKey(){
       return this.key;
    }

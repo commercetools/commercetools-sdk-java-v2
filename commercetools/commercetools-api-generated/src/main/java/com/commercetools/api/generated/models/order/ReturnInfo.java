@@ -22,16 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ReturnInfoImpl.class)
 public interface ReturnInfo  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("items")
    public List<ReturnItem> getItems();
-   
+   /**
+   	<p>Identifies, which return tracking ID is connected to this particular return.</p>
+   */
    
    @JsonProperty("returnTrackingId")
    public String getReturnTrackingId();
-   
+   /**
+   	
+   */
    
    @JsonProperty("returnDate")
    public ZonedDateTime getReturnDate();

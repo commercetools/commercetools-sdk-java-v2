@@ -22,12 +22,16 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountedLineItemPortionImpl.class)
 public interface DiscountedLineItemPortion  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("discount")
    public CartDiscountReference getDiscount();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("discountedAmount")

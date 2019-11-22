@@ -38,17 +38,23 @@ public final class PaymentStatusImpl implements PaymentStatus {
       
    }
    
-   
+   /**
+   	<p>A text describing the current status returned by the interface that processes the payment.</p>
+   */
    public String getInterfaceText(){
       return this.interfaceText;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.state.StateReference getState(){
       return this.state;
    }
    
-   
+   /**
+   	<p>A code describing the current status returned by the interface that processes the payment.</p>
+   */
    public String getInterfaceCode(){
       return this.interfaceCode;
    }

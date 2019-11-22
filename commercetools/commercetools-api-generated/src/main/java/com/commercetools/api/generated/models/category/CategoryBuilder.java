@@ -2,9 +2,12 @@ package com.commercetools.api.generated.models.category;
 
 import com.commercetools.api.generated.models.category.CategoryReference;
 import com.commercetools.api.generated.models.common.Asset;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.category.Category;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -40,6 +43,18 @@ public final class CategoryBuilder {
    private com.commercetools.api.generated.models.category.CategoryReference parent;
    
    @Nullable
+   private com.commercetools.api.generated.models.type.CustomFields custom;
+   
+   @Nullable
+   private String externalId;
+   
+   @Nullable
+   private com.commercetools.api.generated.models.common.LocalizedString description;
+   
+   @Nullable
+   private com.commercetools.api.generated.models.common.LocalizedString metaDescription;
+   
+   @Nullable
    private java.util.List<com.commercetools.api.generated.models.common.Asset> assets;
    
    @Nullable
@@ -49,25 +64,13 @@ public final class CategoryBuilder {
    private String orderHint;
    
    @Nullable
-   private com.commercetools.api.generated.models.type.CustomFields custom;
-   
-   @Nullable
    private com.commercetools.api.generated.models.common.LocalizedString metaTitle;
    
    
    private com.commercetools.api.generated.models.common.LocalizedString name;
    
-   @Nullable
-   private String externalId;
-   
-   @Nullable
-   private com.commercetools.api.generated.models.common.LocalizedString description;
-   
    
    private java.util.List<com.commercetools.api.generated.models.category.CategoryReference> ancestors;
-   
-   @Nullable
-   private com.commercetools.api.generated.models.common.LocalizedString metaDescription;
    
    @Nullable
    private String key;
@@ -110,6 +113,26 @@ public final class CategoryBuilder {
       return this;
    }
    
+   public CategoryBuilder custom(@Nullable final com.commercetools.api.generated.models.type.CustomFields custom) {
+      this.custom = custom;
+      return this;
+   }
+   
+   public CategoryBuilder externalId(@Nullable final String externalId) {
+      this.externalId = externalId;
+      return this;
+   }
+   
+   public CategoryBuilder description(@Nullable final com.commercetools.api.generated.models.common.LocalizedString description) {
+      this.description = description;
+      return this;
+   }
+   
+   public CategoryBuilder metaDescription(@Nullable final com.commercetools.api.generated.models.common.LocalizedString metaDescription) {
+      this.metaDescription = metaDescription;
+      return this;
+   }
+   
    public CategoryBuilder assets(@Nullable final java.util.List<com.commercetools.api.generated.models.common.Asset> assets) {
       this.assets = assets;
       return this;
@@ -125,11 +148,6 @@ public final class CategoryBuilder {
       return this;
    }
    
-   public CategoryBuilder custom(@Nullable final com.commercetools.api.generated.models.type.CustomFields custom) {
-      this.custom = custom;
-      return this;
-   }
-   
    public CategoryBuilder metaTitle(@Nullable final com.commercetools.api.generated.models.common.LocalizedString metaTitle) {
       this.metaTitle = metaTitle;
       return this;
@@ -140,23 +158,8 @@ public final class CategoryBuilder {
       return this;
    }
    
-   public CategoryBuilder externalId(@Nullable final String externalId) {
-      this.externalId = externalId;
-      return this;
-   }
-   
-   public CategoryBuilder description(@Nullable final com.commercetools.api.generated.models.common.LocalizedString description) {
-      this.description = description;
-      return this;
-   }
-   
    public CategoryBuilder ancestors( final java.util.List<com.commercetools.api.generated.models.category.CategoryReference> ancestors) {
       this.ancestors = ancestors;
-      return this;
-   }
-   
-   public CategoryBuilder metaDescription(@Nullable final com.commercetools.api.generated.models.common.LocalizedString metaDescription) {
-      this.metaDescription = metaDescription;
       return this;
    }
    
@@ -206,6 +209,26 @@ public final class CategoryBuilder {
    }
    
    @Nullable
+   public com.commercetools.api.generated.models.type.CustomFields getCustom(){
+      return this.custom;
+   }
+   
+   @Nullable
+   public String getExternalId(){
+      return this.externalId;
+   }
+   
+   @Nullable
+   public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
+      return this.description;
+   }
+   
+   @Nullable
+   public com.commercetools.api.generated.models.common.LocalizedString getMetaDescription(){
+      return this.metaDescription;
+   }
+   
+   @Nullable
    public java.util.List<com.commercetools.api.generated.models.common.Asset> getAssets(){
       return this.assets;
    }
@@ -221,11 +244,6 @@ public final class CategoryBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.generated.models.type.CustomFields getCustom(){
-      return this.custom;
-   }
-   
-   @Nullable
    public com.commercetools.api.generated.models.common.LocalizedString getMetaTitle(){
       return this.metaTitle;
    }
@@ -235,24 +253,9 @@ public final class CategoryBuilder {
       return this.name;
    }
    
-   @Nullable
-   public String getExternalId(){
-      return this.externalId;
-   }
-   
-   @Nullable
-   public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
-   
    
    public java.util.List<com.commercetools.api.generated.models.category.CategoryReference> getAncestors(){
       return this.ancestors;
-   }
-   
-   @Nullable
-   public com.commercetools.api.generated.models.common.LocalizedString getMetaDescription(){
-      return this.metaDescription;
    }
    
    @Nullable
@@ -266,7 +269,7 @@ public final class CategoryBuilder {
    }
 
    public Category build() {
-       return new CategoryImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, parent, assets, metaKeywords, orderHint, custom, metaTitle, name, externalId, description, ancestors, metaDescription, key, slug);
+       return new CategoryImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, parent, custom, externalId, description, metaDescription, assets, metaKeywords, orderHint, metaTitle, name, ancestors, key, slug);
    }
    
    public static CategoryBuilder of() {
@@ -282,16 +285,16 @@ public final class CategoryBuilder {
       builder.createdBy = template.getCreatedBy();
       builder.lastModifiedBy = template.getLastModifiedBy();
       builder.parent = template.getParent();
+      builder.custom = template.getCustom();
+      builder.externalId = template.getExternalId();
+      builder.description = template.getDescription();
+      builder.metaDescription = template.getMetaDescription();
       builder.assets = template.getAssets();
       builder.metaKeywords = template.getMetaKeywords();
       builder.orderHint = template.getOrderHint();
-      builder.custom = template.getCustom();
       builder.metaTitle = template.getMetaTitle();
       builder.name = template.getName();
-      builder.externalId = template.getExternalId();
-      builder.description = template.getDescription();
       builder.ancestors = template.getAncestors();
-      builder.metaDescription = template.getMetaDescription();
       builder.key = template.getKey();
       builder.slug = template.getSlug();
       return builder;

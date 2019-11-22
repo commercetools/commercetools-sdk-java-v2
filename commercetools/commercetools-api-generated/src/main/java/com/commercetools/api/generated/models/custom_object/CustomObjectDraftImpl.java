@@ -41,22 +41,30 @@ public final class CustomObjectDraftImpl implements CustomObjectDraft {
       
    }
    
-   
+   /**
+   	<p>A namespace to group custom objects.</p>
+   */
    public String getContainer(){
       return this.container;
    }
    
-   
+   /**
+   	
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	
+   */
    public Object getValue(){
       return this.value;
    }
    
-   
+   /**
+   	<p>A user-defined key that is unique within the given container.</p>
+   */
    public String getKey(){
       return this.key;
    }

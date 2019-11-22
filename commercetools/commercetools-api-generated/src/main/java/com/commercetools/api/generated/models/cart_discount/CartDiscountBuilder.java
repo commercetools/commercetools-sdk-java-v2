@@ -3,6 +3,8 @@ package com.commercetools.api.generated.models.cart_discount;
 import com.commercetools.api.generated.models.cart_discount.CartDiscountTarget;
 import com.commercetools.api.generated.models.cart_discount.CartDiscountValue;
 import com.commercetools.api.generated.models.cart_discount.StackingMode;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.Reference;

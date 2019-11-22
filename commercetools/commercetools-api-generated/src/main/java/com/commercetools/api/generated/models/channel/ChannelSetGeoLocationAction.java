@@ -1,6 +1,7 @@
 package com.commercetools.api.generated.models.channel;
 
 import com.commercetools.api.generated.models.channel.ChannelUpdateAction;
+import com.commercetools.api.generated.models.common.GeoJson;
 import com.commercetools.api.generated.models.channel.ChannelSetGeoLocationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -22,11 +23,11 @@ import java.io.IOException;
 public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
 
    
-   
+   @Valid
    @JsonProperty("geoLocation")
-   public Object getGeoLocation();
+   public GeoJson getGeoLocation();
 
-   public void setGeoLocation(final Object geoLocation);
+   public void setGeoLocation(final GeoJson geoLocation);
    
    public static ChannelSetGeoLocationActionImpl of(){
       return new ChannelSetGeoLocationActionImpl();

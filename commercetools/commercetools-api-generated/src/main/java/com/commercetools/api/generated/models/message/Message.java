@@ -1,5 +1,7 @@
 package com.commercetools.api.generated.models.message;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.Reference;
 import com.commercetools.api.generated.models.message.CategoryCreatedMessage;
@@ -53,12 +55,14 @@ import com.commercetools.api.generated.models.message.PaymentStatusInterfaceCode
 import com.commercetools.api.generated.models.message.PaymentStatusStateTransitionMessage;
 import com.commercetools.api.generated.models.message.PaymentTransactionAddedMessage;
 import com.commercetools.api.generated.models.message.PaymentTransactionStateChangedMessage;
+import com.commercetools.api.generated.models.message.ProductAddedToCategoryMessage;
 import com.commercetools.api.generated.models.message.ProductCreatedMessage;
 import com.commercetools.api.generated.models.message.ProductDeletedMessage;
 import com.commercetools.api.generated.models.message.ProductImageAddedMessage;
 import com.commercetools.api.generated.models.message.ProductPriceDiscountsSetMessage;
 import com.commercetools.api.generated.models.message.ProductPriceExternalDiscountSetMessage;
 import com.commercetools.api.generated.models.message.ProductPublishedMessage;
+import com.commercetools.api.generated.models.message.ProductRemovedFromCategoryMessage;
 import com.commercetools.api.generated.models.message.ProductRevertedStagedChangesMessage;
 import com.commercetools.api.generated.models.message.ProductSlugChangedMessage;
 import com.commercetools.api.generated.models.message.ProductStateTransitionMessage;
@@ -68,6 +72,7 @@ import com.commercetools.api.generated.models.message.ReviewCreatedMessage;
 import com.commercetools.api.generated.models.message.ReviewRatingSetMessage;
 import com.commercetools.api.generated.models.message.ReviewStateTransitionMessage;
 import com.commercetools.api.generated.models.message.UserProvidedIdentifiers;
+import java.time.ZonedDateTime;
 
 
 import com.fasterxml.jackson.annotation.*;
@@ -115,12 +120,14 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.PaymentStatusStateTransitionMessageImpl.class, name = "PaymentStatusStateTransition"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.PaymentTransactionAddedMessageImpl.class, name = "PaymentTransactionAdded"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.PaymentTransactionStateChangedMessageImpl.class, name = "PaymentTransactionStateChanged"),
+   @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductAddedToCategoryMessageImpl.class, name = "ProductAddedToCategory"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductCreatedMessageImpl.class, name = "ProductCreated"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductDeletedMessageImpl.class, name = "ProductDeleted"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductImageAddedMessageImpl.class, name = "ProductImageAdded"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductPriceDiscountsSetMessageImpl.class, name = "ProductPriceDiscountsSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductPriceExternalDiscountSetMessageImpl.class, name = "ProductPriceExternalDiscountSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductPublishedMessageImpl.class, name = "ProductPublished"),
+   @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductRemovedFromCategoryMessageImpl.class, name = "ProductRemovedFromCategory"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductRevertedStagedChangesMessageImpl.class, name = "ProductRevertedStagedChanges"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductSlugChangedMessageImpl.class, name = "ProductSlugChanged"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.ProductStateTransitionMessageImpl.class, name = "ProductStateTransition"),
@@ -161,6 +168,30 @@ public interface Message extends LoggedResource {
 
    
    @NotNull
+   @JsonProperty("id")
+   public String getId();
+   
+   @NotNull
+   @JsonProperty("version")
+   public Long getVersion();
+   
+   @NotNull
+   @JsonProperty("createdAt")
+   public ZonedDateTime getCreatedAt();
+   
+   @NotNull
+   @JsonProperty("lastModifiedAt")
+   public ZonedDateTime getLastModifiedAt();
+   
+   @Valid
+   @JsonProperty("lastModifiedBy")
+   public LastModifiedBy getLastModifiedBy();
+   
+   @Valid
+   @JsonProperty("createdBy")
+   public CreatedBy getCreatedBy();
+   
+   @NotNull
    @JsonProperty("sequenceNumber")
    public Long getSequenceNumber();
    
@@ -177,6 +208,18 @@ public interface Message extends LoggedResource {
    @JsonProperty("resourceUserProvidedIdentifiers")
    public UserProvidedIdentifiers getResourceUserProvidedIdentifiers();
 
+   public void setId(final String id);
+   
+   public void setVersion(final Long version);
+   
+   public void setCreatedAt(final ZonedDateTime createdAt);
+   
+   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+   
+   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+   
+   public void setCreatedBy(final CreatedBy createdBy);
+   
    public void setSequenceNumber(final Long sequenceNumber);
    
    public void setResource(final Reference resource);

@@ -45,7 +45,7 @@ public final class ProductRevertedStagedChangesMessageBuilder {
    private Long resourceVersion;
    
    
-   private java.util.List<Object> removedImageUrls;
+   private java.util.List<String> removedImageUrls;
    
    public ProductRevertedStagedChangesMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -97,7 +97,7 @@ public final class ProductRevertedStagedChangesMessageBuilder {
       return this;
    }
    
-   public ProductRevertedStagedChangesMessageBuilder removedImageUrls( final java.util.List<Object> removedImageUrls) {
+   public ProductRevertedStagedChangesMessageBuilder removedImageUrls( final java.util.List<String> removedImageUrls) {
       this.removedImageUrls = removedImageUrls;
       return this;
    }
@@ -153,7 +153,7 @@ public final class ProductRevertedStagedChangesMessageBuilder {
    }
    
    
-   public java.util.List<Object> getRemovedImageUrls(){
+   public java.util.List<String> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
 

@@ -31,26 +31,43 @@ public interface MyLineItemDraft  {
    @NotNull
    @JsonProperty("variantId")
    public Long getVariantId();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("quantity")
    public Integer getQuantity();
-   
+   /**
+   	<p>By providing supply channel information, you can unique identify
+   	inventory entries that should be reserved.
+   	The provided channel should have the InventorySupply role.</p>
+   */
    @Valid
    @JsonProperty("supplyChannel")
    public ChannelResourceIdentifier getSupplyChannel();
-   
+   /**
+   	<p>The channel is used to select a ProductPrice.
+   	The provided channel should have the ProductDistribution role.</p>
+   */
    @Valid
    @JsonProperty("distributionChannel")
    public ChannelResourceIdentifier getDistributionChannel();
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   
+   /**
+   	<p>Container for line item specific address(es).</p>
+   */
    @Valid
    @JsonProperty("shippingDetails")
    public ItemShippingDetailsDraft getShippingDetails();
+   
+   
+   @JsonProperty("sku")
+   public String getSku();
 
    public void setProductId(final String productId);
    
@@ -66,6 +83,8 @@ public interface MyLineItemDraft  {
    
    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
    
+   public void setSku(final String sku);
+   
    public static MyLineItemDraftImpl of(){
       return new MyLineItemDraftImpl();
    }
@@ -79,6 +98,7 @@ public interface MyLineItemDraft  {
       instance.setCustom(template.getCustom());
       instance.setSupplyChannel(template.getSupplyChannel());
       instance.setVariantId(template.getVariantId());
+      instance.setSku(template.getSku());
       instance.setDistributionChannel(template.getDistributionChannel());
       return instance;
    }

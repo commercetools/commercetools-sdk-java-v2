@@ -45,12 +45,12 @@ public final class ProductVariantDeletedMessageImpl implements ProductVariantDel
    
    private String type;
    
-   private java.util.List<Object> removedImageUrls;
+   private java.util.List<String> removedImageUrls;
    
    private com.commercetools.api.generated.models.product.ProductVariant variant;
 
    @JsonCreator
-   ProductVariantDeletedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.generated.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.generated.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("removedImageUrls") final java.util.List<Object> removedImageUrls, @JsonProperty("variant") final com.commercetools.api.generated.models.product.ProductVariant variant) {
+   ProductVariantDeletedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.generated.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.generated.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls, @JsonProperty("variant") final com.commercetools.api.generated.models.product.ProductVariant variant) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -125,7 +125,7 @@ public final class ProductVariantDeletedMessageImpl implements ProductVariantDel
    }
    
    
-   public java.util.List<Object> getRemovedImageUrls(){
+   public java.util.List<String> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
    
@@ -174,7 +174,7 @@ public final class ProductVariantDeletedMessageImpl implements ProductVariantDel
       this.resourceVersion = resourceVersion;
    }
    
-   public void setRemovedImageUrls(final java.util.List<Object> removedImageUrls){
+   public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
       this.removedImageUrls = removedImageUrls;
    }
    

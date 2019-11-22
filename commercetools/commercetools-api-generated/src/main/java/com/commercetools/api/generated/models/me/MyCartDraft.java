@@ -27,56 +27,82 @@ import java.io.IOException;
 public interface MyCartDraft  {
 
    /**
-   	<p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+   	<p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
    @NotNull
    @JsonProperty("currency")
    public String getCurrency();
-   
+   /**
+   	
+   */
    
    @JsonProperty("customerEmail")
    public String getCustomerEmail();
-   
+   /**
+   	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+   */
    
    @JsonProperty("country")
    public String getCountry();
-   
+   /**
+   	<p>Default inventory mode is <code>None</code>.</p>
+   */
    
    @JsonProperty("inventoryMode")
    public InventoryMode getInventoryMode();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("lineItems")
    public List<MyLineItemDraft> getLineItems();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("shippingAddress")
    public Address getShippingAddress();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("billingAddress")
    public Address getBillingAddress();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("shippingMethod")
    public ShippingMethodResourceIdentifier getShippingMethod();
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   
+   /**
+   	
+   */
    
    @JsonProperty("locale")
    public String getLocale();
-   
+   /**
+   	<p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>
+   */
    
    @JsonProperty("taxMode")
    public TaxMode getTaxMode();
-   
+   /**
+   	<p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.
+   	If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+   */
    
    @JsonProperty("deleteDaysAfterLastModification")
    public Long getDeleteDaysAfterLastModification();
-   
+   /**
+   	<p>Contains addresses for orders with multiple shipping addresses.
+   	Each address must contain a key which is unique in this cart.</p>
+   */
    @Valid
    @JsonProperty("itemShippingAddresses")
    public List<Address> getItemShippingAddresses();

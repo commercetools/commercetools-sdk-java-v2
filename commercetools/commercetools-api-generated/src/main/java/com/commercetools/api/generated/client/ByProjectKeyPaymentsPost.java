@@ -19,6 +19,9 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>To create a payment object a payment draft object has to be given with the request.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

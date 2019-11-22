@@ -2,9 +2,12 @@ package com.commercetools.api.generated.models.category;
 
 import com.commercetools.api.generated.models.category.CategoryReference;
 import com.commercetools.api.generated.models.common.Asset;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -20,9 +23,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-/**
-	<p>Categories allow to organize products into hierarchical structures. They enable creating multiple classifications of products for shop navigation and other purposes.</p>
-*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
@@ -43,32 +43,32 @@ public final class CategoryImpl implements Category {
    
    private com.commercetools.api.generated.models.category.CategoryReference parent;
    
+   private com.commercetools.api.generated.models.type.CustomFields custom;
+   
+   private String externalId;
+   
+   private com.commercetools.api.generated.models.common.LocalizedString description;
+   
+   private com.commercetools.api.generated.models.common.LocalizedString metaDescription;
+   
    private java.util.List<com.commercetools.api.generated.models.common.Asset> assets;
    
    private com.commercetools.api.generated.models.common.LocalizedString metaKeywords;
    
    private String orderHint;
    
-   private com.commercetools.api.generated.models.type.CustomFields custom;
-   
    private com.commercetools.api.generated.models.common.LocalizedString metaTitle;
    
    private com.commercetools.api.generated.models.common.LocalizedString name;
    
-   private String externalId;
-   
-   private com.commercetools.api.generated.models.common.LocalizedString description;
-   
    private java.util.List<com.commercetools.api.generated.models.category.CategoryReference> ancestors;
-   
-   private com.commercetools.api.generated.models.common.LocalizedString metaDescription;
    
    private String key;
    
    private com.commercetools.api.generated.models.common.LocalizedString slug;
 
    @JsonCreator
-   CategoryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("parent") final com.commercetools.api.generated.models.category.CategoryReference parent, @JsonProperty("assets") final java.util.List<com.commercetools.api.generated.models.common.Asset> assets, @JsonProperty("metaKeywords") final com.commercetools.api.generated.models.common.LocalizedString metaKeywords, @JsonProperty("orderHint") final String orderHint, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFields custom, @JsonProperty("metaTitle") final com.commercetools.api.generated.models.common.LocalizedString metaTitle, @JsonProperty("name") final com.commercetools.api.generated.models.common.LocalizedString name, @JsonProperty("externalId") final String externalId, @JsonProperty("description") final com.commercetools.api.generated.models.common.LocalizedString description, @JsonProperty("ancestors") final java.util.List<com.commercetools.api.generated.models.category.CategoryReference> ancestors, @JsonProperty("metaDescription") final com.commercetools.api.generated.models.common.LocalizedString metaDescription, @JsonProperty("key") final String key, @JsonProperty("slug") final com.commercetools.api.generated.models.common.LocalizedString slug) {
+   CategoryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("parent") final com.commercetools.api.generated.models.category.CategoryReference parent, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFields custom, @JsonProperty("externalId") final String externalId, @JsonProperty("description") final com.commercetools.api.generated.models.common.LocalizedString description, @JsonProperty("metaDescription") final com.commercetools.api.generated.models.common.LocalizedString metaDescription, @JsonProperty("assets") final java.util.List<com.commercetools.api.generated.models.common.Asset> assets, @JsonProperty("metaKeywords") final com.commercetools.api.generated.models.common.LocalizedString metaKeywords, @JsonProperty("orderHint") final String orderHint, @JsonProperty("metaTitle") final com.commercetools.api.generated.models.common.LocalizedString metaTitle, @JsonProperty("name") final com.commercetools.api.generated.models.common.LocalizedString name, @JsonProperty("ancestors") final java.util.List<com.commercetools.api.generated.models.category.CategoryReference> ancestors, @JsonProperty("key") final String key, @JsonProperty("slug") final com.commercetools.api.generated.models.common.LocalizedString slug) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -76,16 +76,16 @@ public final class CategoryImpl implements Category {
       this.createdBy = createdBy;
       this.lastModifiedBy = lastModifiedBy;
       this.parent = parent;
+      this.custom = custom;
+      this.externalId = externalId;
+      this.description = description;
+      this.metaDescription = metaDescription;
       this.assets = assets;
       this.metaKeywords = metaKeywords;
       this.orderHint = orderHint;
-      this.custom = custom;
       this.metaTitle = metaTitle;
       this.name = name;
-      this.externalId = externalId;
-      this.description = description;
       this.ancestors = ancestors;
-      this.metaDescription = metaDescription;
       this.key = key;
       this.slug = slug;
    }
@@ -93,51 +93,93 @@ public final class CategoryImpl implements Category {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	<p>The unique ID of the category.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	<p>The current version of the category.</p>
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
-   
+   /**
+   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    /**
-   	<p>Reference to a Category. A category that is the parent of this category in the category tree.</p>
+   	<p>A category that is the parent of this category in the category tree.</p>
    */
    public com.commercetools.api.generated.models.category.CategoryReference getParent(){
       return this.parent;
    }
    
    /**
-   	<p>An attribute as base for a custom category order in one level.</p>
+   	
+   */
+   public com.commercetools.api.generated.models.type.CustomFields getCustom(){
+      return this.custom;
+   }
+   
+   /**
+   	
+   */
+   public String getExternalId(){
+      return this.externalId;
+   }
+   
+   /**
+   	
+   */
+   public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
+      return this.description;
+   }
+   
+   /**
+   	
+   */
+   public com.commercetools.api.generated.models.common.LocalizedString getMetaDescription(){
+      return this.metaDescription;
+   }
+   
+   /**
+   	<p>Can be used to store images, icons or movies related to this category.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.common.Asset> getAssets(){
       return this.assets;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getMetaKeywords(){
       return this.metaKeywords;
    }
@@ -149,29 +191,18 @@ public final class CategoryImpl implements Category {
       return this.orderHint;
    }
    
-   
-   public com.commercetools.api.generated.models.type.CustomFields getCustom(){
-      return this.custom;
-   }
-   
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getMetaTitle(){
       return this.metaTitle;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
-   }
-   
-   
-   public String getExternalId(){
-      return this.externalId;
-   }
-   
-   
-   public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
-      return this.description;
    }
    
    /**
@@ -179,11 +210,6 @@ public final class CategoryImpl implements Category {
    */
    public java.util.List<com.commercetools.api.generated.models.category.CategoryReference> getAncestors(){
       return this.ancestors;
-   }
-   
-   
-   public com.commercetools.api.generated.models.common.LocalizedString getMetaDescription(){
-      return this.metaDescription;
    }
    
    /**
@@ -194,7 +220,8 @@ public final class CategoryImpl implements Category {
    }
    
    /**
-   	<p>Must match the pattern [-a-zA-Z0-9_]{2,256}</p>
+   	<p>human-readable identifiers usually used as deep-link URL to the related category.
+   	Each slug is unique across a project, but a category can have the same slug for different languages.</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getSlug(){
       return this.slug;
@@ -228,6 +255,22 @@ public final class CategoryImpl implements Category {
       this.parent = parent;
    }
    
+   public void setCustom(final com.commercetools.api.generated.models.type.CustomFields custom){
+      this.custom = custom;
+   }
+   
+   public void setExternalId(final String externalId){
+      this.externalId = externalId;
+   }
+   
+   public void setDescription(final com.commercetools.api.generated.models.common.LocalizedString description){
+      this.description = description;
+   }
+   
+   public void setMetaDescription(final com.commercetools.api.generated.models.common.LocalizedString metaDescription){
+      this.metaDescription = metaDescription;
+   }
+   
    public void setAssets(final java.util.List<com.commercetools.api.generated.models.common.Asset> assets){
       this.assets = assets;
    }
@@ -240,10 +283,6 @@ public final class CategoryImpl implements Category {
       this.orderHint = orderHint;
    }
    
-   public void setCustom(final com.commercetools.api.generated.models.type.CustomFields custom){
-      this.custom = custom;
-   }
-   
    public void setMetaTitle(final com.commercetools.api.generated.models.common.LocalizedString metaTitle){
       this.metaTitle = metaTitle;
    }
@@ -252,20 +291,8 @@ public final class CategoryImpl implements Category {
       this.name = name;
    }
    
-   public void setExternalId(final String externalId){
-      this.externalId = externalId;
-   }
-   
-   public void setDescription(final com.commercetools.api.generated.models.common.LocalizedString description){
-      this.description = description;
-   }
-   
    public void setAncestors(final java.util.List<com.commercetools.api.generated.models.category.CategoryReference> ancestors){
       this.ancestors = ancestors;
-   }
-   
-   public void setMetaDescription(final com.commercetools.api.generated.models.common.LocalizedString metaDescription){
-      this.metaDescription = metaDescription;
    }
    
    public void setKey(final String key){

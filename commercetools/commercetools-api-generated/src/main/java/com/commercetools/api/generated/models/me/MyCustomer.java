@@ -1,11 +1,14 @@
 package com.commercetools.api.generated.models.me;
 
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.generated.models.store.StoreKeyReference;
 import com.commercetools.api.generated.models.type.CustomFields;
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.me.MyCustomerImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -26,6 +29,30 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCustomerImpl.class)
 public interface MyCustomer extends LoggedResource {
 
+   
+   @NotNull
+   @JsonProperty("id")
+   public String getId();
+   
+   @NotNull
+   @JsonProperty("version")
+   public Long getVersion();
+   
+   @NotNull
+   @JsonProperty("createdAt")
+   public ZonedDateTime getCreatedAt();
+   
+   @NotNull
+   @JsonProperty("lastModifiedAt")
+   public ZonedDateTime getLastModifiedAt();
+   
+   @Valid
+   @JsonProperty("lastModifiedBy")
+   public LastModifiedBy getLastModifiedBy();
+   
+   @Valid
+   @JsonProperty("createdBy")
+   public CreatedBy getCreatedBy();
    
    
    @JsonProperty("customerNumber")
@@ -120,6 +147,18 @@ public interface MyCustomer extends LoggedResource {
    @JsonProperty("stores")
    public List<StoreKeyReference> getStores();
 
+   public void setId(final String id);
+   
+   public void setVersion(final Long version);
+   
+   public void setCreatedAt(final ZonedDateTime createdAt);
+   
+   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+   
+   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+   
+   public void setCreatedBy(final CreatedBy createdBy);
+   
    public void setCustomerNumber(final String customerNumber);
    
    public void setEmail(final String email);
@@ -181,27 +220,27 @@ public interface MyCustomer extends LoggedResource {
       instance.setLastModifiedBy(template.getLastModifiedBy());
       instance.setLastName(template.getLastName());
       instance.setAddresses(template.getAddresses());
+      instance.setCompanyName(template.getCompanyName());
+      instance.setVatId(template.getVatId());
+      instance.setLocale(template.getLocale());
+      instance.setTitle(template.getTitle());
+      instance.setIsEmailVerified(template.getIsEmailVerified());
+      instance.setShippingAddressIds(template.getShippingAddressIds());
+      instance.setPassword(template.getPassword());
+      instance.setKey(template.getKey());
+      instance.setEmail(template.getEmail());
       instance.setStores(template.getStores());
       instance.setCustomerGroup(template.getCustomerGroup());
       instance.setCustom(template.getCustom());
-      instance.setCompanyName(template.getCompanyName());
-      instance.setVatId(template.getVatId());
       instance.setExternalId(template.getExternalId());
       instance.setDateOfBirth(template.getDateOfBirth());
-      instance.setLocale(template.getLocale());
       instance.setBillingAddressIds(template.getBillingAddressIds());
       instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());
-      instance.setTitle(template.getTitle());
       instance.setCustomerNumber(template.getCustomerNumber());
-      instance.setIsEmailVerified(template.getIsEmailVerified());
       instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());
-      instance.setShippingAddressIds(template.getShippingAddressIds());
       instance.setFirstName(template.getFirstName());
-      instance.setPassword(template.getPassword());
       instance.setMiddleName(template.getMiddleName());
       instance.setSalutation(template.getSalutation());
-      instance.setKey(template.getKey());
-      instance.setEmail(template.getEmail());
       return instance;
    }
 

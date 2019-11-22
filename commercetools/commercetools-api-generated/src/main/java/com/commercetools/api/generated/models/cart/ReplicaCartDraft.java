@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ReplicaCartDraftImpl.class)
 public interface ReplicaCartDraft  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("reference")
    public Object getReference();

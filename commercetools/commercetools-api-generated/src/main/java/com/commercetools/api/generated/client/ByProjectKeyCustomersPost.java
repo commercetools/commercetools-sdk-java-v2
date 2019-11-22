@@ -19,6 +19,11 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>Creates a customer. If an anonymous cart is passed in,
+	then the cart is assigned to the created customer and the version number of the Cart will increase.
+	If the ID of an anonymous session is given, all carts and orders will be assigned to the created customer.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

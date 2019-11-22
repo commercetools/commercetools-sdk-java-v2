@@ -57,32 +57,49 @@ public final class TaxRateImpl implements TaxRate {
       return this.country;
    }
    
-   
+   /**
+   	<p>Percentage in the range of [0..1].
+   	The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+   */
    public Integer getAmount(){
       return this.amount;
    }
    
-   
+   /**
+   	
+   */
    public Boolean getIncludedInPrice(){
       return this.includedInPrice;
    }
    
-   
+   /**
+   	
+   */
    public String getName(){
       return this.name;
    }
    
-   
+   /**
+   	<p>The state in the country</p>
+   */
    public String getState(){
       return this.state;
    }
    
-   
+   /**
+   	<p>The ID is always set if the tax rate is part of a TaxCategory.
+   	The external tax rates in a
+   	Cart do not contain an <code>id</code>.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	<p>For countries (e.g.
+   	the US) where the total tax is a combination of multiple taxes (e.g.
+   	state and local taxes).</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.tax_category.SubRate> getSubRates(){
       return this.subRates;
    }

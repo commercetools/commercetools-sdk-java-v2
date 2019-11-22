@@ -2,10 +2,14 @@ package com.commercetools.api.generated.models.channel;
 
 import com.commercetools.api.generated.models.channel.ChannelRoleEnum;
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.GeoJson;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.review.ReviewRatingStatistics;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -41,22 +45,22 @@ public final class ChannelImpl implements Channel {
    
    private com.commercetools.api.generated.models.common.Address address;
    
-   private Object geoLocation;
-   
    private com.commercetools.api.generated.models.type.CustomFields custom;
    
    private java.util.List<com.commercetools.api.generated.models.channel.ChannelRoleEnum> roles;
    
-   private com.commercetools.api.generated.models.common.LocalizedString name;
-   
    private com.commercetools.api.generated.models.common.LocalizedString description;
+   
+   private com.commercetools.api.generated.models.common.GeoJson geoLocation;
+   
+   private com.commercetools.api.generated.models.common.LocalizedString name;
    
    private com.commercetools.api.generated.models.review.ReviewRatingStatistics reviewRatingStatistics;
    
    private String key;
 
    @JsonCreator
-   ChannelImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("address") final com.commercetools.api.generated.models.common.Address address, @JsonProperty("geoLocation") final Object geoLocation, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFields custom, @JsonProperty("roles") final java.util.List<com.commercetools.api.generated.models.channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.api.generated.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.generated.models.common.LocalizedString description, @JsonProperty("reviewRatingStatistics") final com.commercetools.api.generated.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("key") final String key) {
+   ChannelImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("address") final com.commercetools.api.generated.models.common.Address address, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFields custom, @JsonProperty("roles") final java.util.List<com.commercetools.api.generated.models.channel.ChannelRoleEnum> roles, @JsonProperty("description") final com.commercetools.api.generated.models.common.LocalizedString description, @JsonProperty("geoLocation") final com.commercetools.api.generated.models.common.GeoJson geoLocation, @JsonProperty("name") final com.commercetools.api.generated.models.common.LocalizedString name, @JsonProperty("reviewRatingStatistics") final com.commercetools.api.generated.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -64,11 +68,11 @@ public final class ChannelImpl implements Channel {
       this.createdBy = createdBy;
       this.lastModifiedBy = lastModifiedBy;
       this.address = address;
-      this.geoLocation = geoLocation;
       this.custom = custom;
       this.roles = roles;
-      this.name = name;
       this.description = description;
+      this.geoLocation = geoLocation;
+      this.name = name;
       this.reviewRatingStatistics = reviewRatingStatistics;
       this.key = key;
    }
@@ -76,72 +80,102 @@ public final class ChannelImpl implements Channel {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	<p>The unique ID of the channel.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
-   
+   /**
+   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
-   
+   /**
+   	<p>The address where this channel is located (e.g.
+   	if the channel is a physical store).</p>
+   */
    public com.commercetools.api.generated.models.common.Address getAddress(){
       return this.address;
    }
    
-   
-   public Object getGeoLocation(){
-      return this.geoLocation;
-   }
-   
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	<p>The roles of this channel.
+   	Each channel must have at least one role.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
    
-   
-   public com.commercetools.api.generated.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
-   
+   /**
+   	<p>A human-readable description of the channel.</p>
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
+   /**
+   	<p>A GeoJSON geometry object encoding the geo location of the channel.</p>
+   */
+   public com.commercetools.api.generated.models.common.GeoJson getGeoLocation(){
+      return this.geoLocation;
+   }
    
+   /**
+   	<p>A human-readable name of the channel.</p>
+   */
+   public com.commercetools.api.generated.models.common.LocalizedString getName(){
+      return this.name;
+   }
+   
+   /**
+   	<p>Statistics about the review ratings taken into account for this channel.</p>
+   */
    public com.commercetools.api.generated.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
       return this.reviewRatingStatistics;
    }
    
-   
+   /**
+   	<p>Any arbitrary string key that uniquely identifies this channel within the project.</p>
+   */
    public String getKey(){
       return this.key;
    }
@@ -174,10 +208,6 @@ public final class ChannelImpl implements Channel {
       this.address = address;
    }
    
-   public void setGeoLocation(final Object geoLocation){
-      this.geoLocation = geoLocation;
-   }
-   
    public void setCustom(final com.commercetools.api.generated.models.type.CustomFields custom){
       this.custom = custom;
    }
@@ -186,12 +216,16 @@ public final class ChannelImpl implements Channel {
       this.roles = roles;
    }
    
-   public void setName(final com.commercetools.api.generated.models.common.LocalizedString name){
-      this.name = name;
-   }
-   
    public void setDescription(final com.commercetools.api.generated.models.common.LocalizedString description){
       this.description = description;
+   }
+   
+   public void setGeoLocation(final com.commercetools.api.generated.models.common.GeoJson geoLocation){
+      this.geoLocation = geoLocation;
+   }
+   
+   public void setName(final com.commercetools.api.generated.models.common.LocalizedString name){
+      this.name = name;
    }
    
    public void setReviewRatingStatistics(final com.commercetools.api.generated.models.review.ReviewRatingStatistics reviewRatingStatistics){

@@ -21,12 +21,16 @@ import java.io.IOException;
 @JsonDeserialize(as = ExternalLineItemTotalPriceImpl.class)
 public interface ExternalLineItemTotalPrice  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("price")
    public Money getPrice();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("totalPrice")

@@ -1,6 +1,5 @@
 package com.commercetools.api.generated.models.review;
 
-import com.commercetools.api.generated.models.common.ResourceIdentifier;
 import com.commercetools.api.generated.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.generated.models.state.StateResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
@@ -24,47 +23,74 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewDraftImpl.class)
 public interface ReviewDraft  {
 
-   
+   /**
+   	<p>User-specific unique identifier for the review.</p>
+   */
    
    @JsonProperty("key")
    public String getKey();
-   
+   /**
+   	<p>If set, this value must be unique among reviews.
+   	For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> + <code>product's id</code>.</p>
+   */
    
    @JsonProperty("uniquenessValue")
    public String getUniquenessValue();
-   
+   /**
+   	
+   */
    
    @JsonProperty("locale")
    public String getLocale();
-   
+   /**
+   	
+   */
    
    @JsonProperty("authorName")
    public String getAuthorName();
-   
+   /**
+   	
+   */
    
    @JsonProperty("title")
    public String getTitle();
-   
+   /**
+   	
+   */
    
    @JsonProperty("text")
    public String getText();
+   /**
+   	<p>Identifies the target of the review.
+   	Can be a Product or a Channel</p>
+   */
    
-   @Valid
    @JsonProperty("target")
-   public ResourceIdentifier getTarget();
-   
+   public Object getTarget();
+   /**
+   	
+   */
    @Valid
    @JsonProperty("state")
    public StateResourceIdentifier getState();
-   
+   /**
+   	<p>Number between -100 and 100 included.
+   	Rating of the targeted object, like a product.
+   	This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1)
+   	A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the <a href="http-api-projects-states.html#staterole">role</a> <code>ReviewIncludedInStatistics</code>.</p>
+   */
    
    @JsonProperty("rating")
    public Integer getRating();
-   
+   /**
+   	<p>The customer who created the review.</p>
+   */
    @Valid
    @JsonProperty("customer")
    public CustomerResourceIdentifier getCustomer();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
@@ -81,7 +107,7 @@ public interface ReviewDraft  {
    
    public void setText(final String text);
    
-   public void setTarget(final ResourceIdentifier target);
+   public void setTarget(final Object target);
    
    public void setState(final StateResourceIdentifier state);
    

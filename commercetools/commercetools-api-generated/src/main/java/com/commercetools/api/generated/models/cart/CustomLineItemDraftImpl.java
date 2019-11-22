@@ -58,42 +58,59 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
       
    }
    
-   
+   /**
+   	<p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+   */
    public com.commercetools.api.generated.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
    
-   
+   /**
+   	<p>The amount of a CustomLineItemin the cart.
+   	Must be a positive integer.</p>
+   */
    public Integer getQuantity(){
       return this.quantity;
    }
    
-   
+   /**
+   	<p>Container for custom line item specific address(es).</p>
+   */
    public com.commercetools.api.generated.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.Money getMoney(){
       return this.money;
    }
    
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   
+   /**
+   	
+   */
    public String getSlug(){
       return this.slug;
    }
    
-   
+   /**
+   	<p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
+   */
    public com.commercetools.api.generated.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }

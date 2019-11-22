@@ -22,12 +22,16 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeInfoImpl.class)
 public interface DiscountCodeInfo  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("discountCode")
    public DiscountCodeReference getDiscountCode();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("state")
    public DiscountCodeState getState();

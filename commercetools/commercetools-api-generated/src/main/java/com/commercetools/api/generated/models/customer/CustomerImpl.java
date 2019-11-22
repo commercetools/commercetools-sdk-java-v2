@@ -1,11 +1,14 @@
 package com.commercetools.api.generated.models.customer;
 
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.generated.models.store.StoreKeyReference;
 import com.commercetools.api.generated.models.type.CustomFields;
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -43,50 +46,50 @@ public final class CustomerImpl implements Customer {
    
    private java.util.List<com.commercetools.api.generated.models.common.Address> addresses;
    
+   private String companyName;
+   
+   private String vatId;
+   
+   private String locale;
+   
+   private String title;
+   
+   private Boolean isEmailVerified;
+   
+   private java.util.List<String> shippingAddressIds;
+   
+   private String password;
+   
+   private String key;
+   
+   private String email;
+   
    private java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> stores;
    
    private com.commercetools.api.generated.models.customer_group.CustomerGroupReference customerGroup;
    
    private com.commercetools.api.generated.models.type.CustomFields custom;
    
-   private String companyName;
-   
-   private String vatId;
-   
    private String externalId;
    
    private java.time.LocalDate dateOfBirth;
-   
-   private String locale;
    
    private java.util.List<String> billingAddressIds;
    
    private String defaultShippingAddressId;
    
-   private String title;
-   
    private String customerNumber;
-   
-   private Boolean isEmailVerified;
    
    private String defaultBillingAddressId;
    
-   private java.util.List<String> shippingAddressIds;
-   
    private String firstName;
-   
-   private String password;
    
    private String middleName;
    
    private String salutation;
-   
-   private String key;
-   
-   private String email;
 
    @JsonCreator
-   CustomerImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("lastName") final String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.api.generated.models.common.Address> addresses, @JsonProperty("stores") final java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> stores, @JsonProperty("customerGroup") final com.commercetools.api.generated.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFields custom, @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId, @JsonProperty("externalId") final String externalId, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("locale") final String locale, @JsonProperty("billingAddressIds") final java.util.List<String> billingAddressIds, @JsonProperty("defaultShippingAddressId") final String defaultShippingAddressId, @JsonProperty("title") final String title, @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("isEmailVerified") final Boolean isEmailVerified, @JsonProperty("defaultBillingAddressId") final String defaultBillingAddressId, @JsonProperty("shippingAddressIds") final java.util.List<String> shippingAddressIds, @JsonProperty("firstName") final String firstName, @JsonProperty("password") final String password, @JsonProperty("middleName") final String middleName, @JsonProperty("salutation") final String salutation, @JsonProperty("key") final String key, @JsonProperty("email") final String email) {
+   CustomerImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("lastName") final String lastName, @JsonProperty("addresses") final java.util.List<com.commercetools.api.generated.models.common.Address> addresses, @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId, @JsonProperty("locale") final String locale, @JsonProperty("title") final String title, @JsonProperty("isEmailVerified") final Boolean isEmailVerified, @JsonProperty("shippingAddressIds") final java.util.List<String> shippingAddressIds, @JsonProperty("password") final String password, @JsonProperty("key") final String key, @JsonProperty("email") final String email, @JsonProperty("stores") final java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> stores, @JsonProperty("customerGroup") final com.commercetools.api.generated.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFields custom, @JsonProperty("externalId") final String externalId, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("billingAddressIds") final java.util.List<String> billingAddressIds, @JsonProperty("defaultShippingAddressId") final String defaultShippingAddressId, @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("defaultBillingAddressId") final String defaultBillingAddressId, @JsonProperty("firstName") final String firstName, @JsonProperty("middleName") final String middleName, @JsonProperty("salutation") final String salutation) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -95,175 +98,241 @@ public final class CustomerImpl implements Customer {
       this.lastModifiedBy = lastModifiedBy;
       this.lastName = lastName;
       this.addresses = addresses;
+      this.companyName = companyName;
+      this.vatId = vatId;
+      this.locale = locale;
+      this.title = title;
+      this.isEmailVerified = isEmailVerified;
+      this.shippingAddressIds = shippingAddressIds;
+      this.password = password;
+      this.key = key;
+      this.email = email;
       this.stores = stores;
       this.customerGroup = customerGroup;
       this.custom = custom;
-      this.companyName = companyName;
-      this.vatId = vatId;
       this.externalId = externalId;
       this.dateOfBirth = dateOfBirth;
-      this.locale = locale;
       this.billingAddressIds = billingAddressIds;
       this.defaultShippingAddressId = defaultShippingAddressId;
-      this.title = title;
       this.customerNumber = customerNumber;
-      this.isEmailVerified = isEmailVerified;
       this.defaultBillingAddressId = defaultBillingAddressId;
-      this.shippingAddressIds = shippingAddressIds;
       this.firstName = firstName;
-      this.password = password;
       this.middleName = middleName;
       this.salutation = salutation;
-      this.key = key;
-      this.email = email;
    }
    public CustomerImpl() {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	<p>The unique ID of the customer.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	<p>The current version of the customer.</p>
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
-   
+   /**
+   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
-   
+   /**
+   	
+   */
    public String getLastName(){
       return this.lastName;
    }
    
-   
+   /**
+   	<p>The addresses have unique IDs in the addresses list</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.common.Address> getAddresses(){
       return this.addresses;
    }
    
-   
-   public java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> getStores(){
-      return this.stores;
-   }
-   
-   
-   public com.commercetools.api.generated.models.customer_group.CustomerGroupReference getCustomerGroup(){
-      return this.customerGroup;
-   }
-   
-   
-   public com.commercetools.api.generated.models.type.CustomFields getCustom(){
-      return this.custom;
-   }
-   
-   
+   /**
+   	
+   */
    public String getCompanyName(){
       return this.companyName;
    }
    
-   
+   /**
+   	
+   */
    public String getVatId(){
       return this.vatId;
    }
    
-   
-   public String getExternalId(){
-      return this.externalId;
-   }
-   
-   
-   public java.time.LocalDate getDateOfBirth(){
-      return this.dateOfBirth;
-   }
-   
-   
+   /**
+   	
+   */
    public String getLocale(){
       return this.locale;
    }
    
-   
-   public java.util.List<String> getBillingAddressIds(){
-      return this.billingAddressIds;
-   }
-   
-   
-   public String getDefaultShippingAddressId(){
-      return this.defaultShippingAddressId;
-   }
-   
-   
+   /**
+   	
+   */
    public String getTitle(){
       return this.title;
    }
    
-   
-   public String getCustomerNumber(){
-      return this.customerNumber;
-   }
-   
-   
+   /**
+   	
+   */
    public Boolean getIsEmailVerified(){
       return this.isEmailVerified;
    }
    
-   
-   public String getDefaultBillingAddressId(){
-      return this.defaultBillingAddressId;
-   }
-   
-   
+   /**
+   	<p>The IDs from the addresses list which are used as shipping addresses</p>
+   */
    public java.util.List<String> getShippingAddressIds(){
       return this.shippingAddressIds;
    }
    
-   
-   public String getFirstName(){
-      return this.firstName;
-   }
-   
-   
+   /**
+   	
+   */
    public String getPassword(){
       return this.password;
    }
    
-   
-   public String getMiddleName(){
-      return this.middleName;
-   }
-   
-   
-   public String getSalutation(){
-      return this.salutation;
-   }
-   
-   
+   /**
+   	<p>User-specific unique identifier for a customer.
+   	Must be unique across a project.
+   	The field can be reset using the Set Key UpdateAction</p>
+   */
    public String getKey(){
       return this.key;
    }
    
-   
+   /**
+   	<p>The customer's email address and the main identifier of uniqueness for a customer account.
+   	Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project.
+   	For more information, see Email uniquenes.</p>
+   */
    public String getEmail(){
       return this.email;
+   }
+   
+   /**
+   	<p>References to the stores the customer account is associated with.
+   	If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers.
+   	If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+   */
+   public java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> getStores(){
+      return this.stores;
+   }
+   
+   /**
+   	
+   */
+   public com.commercetools.api.generated.models.customer_group.CustomerGroupReference getCustomerGroup(){
+      return this.customerGroup;
+   }
+   
+   /**
+   	
+   */
+   public com.commercetools.api.generated.models.type.CustomFields getCustom(){
+      return this.custom;
+   }
+   
+   /**
+   	
+   */
+   public String getExternalId(){
+      return this.externalId;
+   }
+   
+   /**
+   	
+   */
+   public java.time.LocalDate getDateOfBirth(){
+      return this.dateOfBirth;
+   }
+   
+   /**
+   	<p>The IDs from the addresses list which are used as billing addresses</p>
+   */
+   public java.util.List<String> getBillingAddressIds(){
+      return this.billingAddressIds;
+   }
+   
+   /**
+   	<p>The address ID in the addresses list</p>
+   */
+   public String getDefaultShippingAddressId(){
+      return this.defaultShippingAddressId;
+   }
+   
+   /**
+   	<p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer.
+   	It should be unique across a project.
+   	Once the field was set it cannot be changed anymore.</p>
+   */
+   public String getCustomerNumber(){
+      return this.customerNumber;
+   }
+   
+   /**
+   	<p>The address ID in the addresses list</p>
+   */
+   public String getDefaultBillingAddressId(){
+      return this.defaultBillingAddressId;
+   }
+   
+   /**
+   	
+   */
+   public String getFirstName(){
+      return this.firstName;
+   }
+   
+   /**
+   	
+   */
+   public String getMiddleName(){
+      return this.middleName;
+   }
+   
+   /**
+   	
+   */
+   public String getSalutation(){
+      return this.salutation;
    }
 
    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
@@ -298,6 +367,42 @@ public final class CustomerImpl implements Customer {
       this.addresses = addresses;
    }
    
+   public void setCompanyName(final String companyName){
+      this.companyName = companyName;
+   }
+   
+   public void setVatId(final String vatId){
+      this.vatId = vatId;
+   }
+   
+   public void setLocale(final String locale){
+      this.locale = locale;
+   }
+   
+   public void setTitle(final String title){
+      this.title = title;
+   }
+   
+   public void setIsEmailVerified(final Boolean isEmailVerified){
+      this.isEmailVerified = isEmailVerified;
+   }
+   
+   public void setShippingAddressIds(final java.util.List<String> shippingAddressIds){
+      this.shippingAddressIds = shippingAddressIds;
+   }
+   
+   public void setPassword(final String password){
+      this.password = password;
+   }
+   
+   public void setKey(final String key){
+      this.key = key;
+   }
+   
+   public void setEmail(final String email){
+      this.email = email;
+   }
+   
    public void setStores(final java.util.List<com.commercetools.api.generated.models.store.StoreKeyReference> stores){
       this.stores = stores;
    }
@@ -310,24 +415,12 @@ public final class CustomerImpl implements Customer {
       this.custom = custom;
    }
    
-   public void setCompanyName(final String companyName){
-      this.companyName = companyName;
-   }
-   
-   public void setVatId(final String vatId){
-      this.vatId = vatId;
-   }
-   
    public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
    
    public void setDateOfBirth(final java.time.LocalDate dateOfBirth){
       this.dateOfBirth = dateOfBirth;
-   }
-   
-   public void setLocale(final String locale){
-      this.locale = locale;
    }
    
    public void setBillingAddressIds(final java.util.List<String> billingAddressIds){
@@ -338,32 +431,16 @@ public final class CustomerImpl implements Customer {
       this.defaultShippingAddressId = defaultShippingAddressId;
    }
    
-   public void setTitle(final String title){
-      this.title = title;
-   }
-   
    public void setCustomerNumber(final String customerNumber){
       this.customerNumber = customerNumber;
-   }
-   
-   public void setIsEmailVerified(final Boolean isEmailVerified){
-      this.isEmailVerified = isEmailVerified;
    }
    
    public void setDefaultBillingAddressId(final String defaultBillingAddressId){
       this.defaultBillingAddressId = defaultBillingAddressId;
    }
    
-   public void setShippingAddressIds(final java.util.List<String> shippingAddressIds){
-      this.shippingAddressIds = shippingAddressIds;
-   }
-   
    public void setFirstName(final String firstName){
       this.firstName = firstName;
-   }
-   
-   public void setPassword(final String password){
-      this.password = password;
    }
    
    public void setMiddleName(final String middleName){
@@ -372,14 +449,6 @@ public final class CustomerImpl implements Customer {
    
    public void setSalutation(final String salutation){
       this.salutation = salutation;
-   }
-   
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setEmail(final String email){
-      this.email = email;
    }
 
 }

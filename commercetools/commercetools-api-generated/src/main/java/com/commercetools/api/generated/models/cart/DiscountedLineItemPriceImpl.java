@@ -36,12 +36,16 @@ public final class DiscountedLineItemPriceImpl implements DiscountedLineItemPric
       
    }
    
-   
+   /**
+   	
+   */
    public java.util.List<com.commercetools.api.generated.models.cart.DiscountedLineItemPortion> getIncludedDiscounts(){
       return this.includedDiscounts;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.TypedMoney getValue(){
       return this.value;
    }

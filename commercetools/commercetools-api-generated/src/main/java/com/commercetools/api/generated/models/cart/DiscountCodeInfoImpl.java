@@ -36,12 +36,16 @@ public final class DiscountCodeInfoImpl implements DiscountCodeInfo {
       
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.discount_code.DiscountCodeReference getDiscountCode(){
       return this.discountCode;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.cart.DiscountCodeState getState(){
       return this.state;
    }

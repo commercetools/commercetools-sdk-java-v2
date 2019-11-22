@@ -32,7 +32,9 @@ public final class SuggestionImpl implements Suggestion {
       
    }
    
-   
+   /**
+   	<p>The suggested text.</p>
+   */
    public String getText(){
       return this.text;
    }

@@ -42,7 +42,9 @@ public final class LocationImpl implements Location {
       return this.country;
    }
    
-   
+   /**
+   	
+   */
    public String getState(){
       return this.state;
    }

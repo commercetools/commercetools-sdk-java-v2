@@ -2,10 +2,14 @@ package com.commercetools.api.generated.models.channel;
 
 import com.commercetools.api.generated.models.channel.ChannelRoleEnum;
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.GeoJson;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.review.ReviewRatingStatistics;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.channel.Channel;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -41,19 +45,19 @@ public final class ChannelBuilder {
    private com.commercetools.api.generated.models.common.Address address;
    
    @Nullable
-   private Object geoLocation;
-   
-   @Nullable
    private com.commercetools.api.generated.models.type.CustomFields custom;
    
    
    private java.util.List<com.commercetools.api.generated.models.channel.ChannelRoleEnum> roles;
    
    @Nullable
-   private com.commercetools.api.generated.models.common.LocalizedString name;
+   private com.commercetools.api.generated.models.common.LocalizedString description;
    
    @Nullable
-   private com.commercetools.api.generated.models.common.LocalizedString description;
+   private com.commercetools.api.generated.models.common.GeoJson geoLocation;
+   
+   @Nullable
+   private com.commercetools.api.generated.models.common.LocalizedString name;
    
    @Nullable
    private com.commercetools.api.generated.models.review.ReviewRatingStatistics reviewRatingStatistics;
@@ -96,11 +100,6 @@ public final class ChannelBuilder {
       return this;
    }
    
-   public ChannelBuilder geoLocation(@Nullable final Object geoLocation) {
-      this.geoLocation = geoLocation;
-      return this;
-   }
-   
    public ChannelBuilder custom(@Nullable final com.commercetools.api.generated.models.type.CustomFields custom) {
       this.custom = custom;
       return this;
@@ -111,13 +110,18 @@ public final class ChannelBuilder {
       return this;
    }
    
-   public ChannelBuilder name(@Nullable final com.commercetools.api.generated.models.common.LocalizedString name) {
-      this.name = name;
+   public ChannelBuilder description(@Nullable final com.commercetools.api.generated.models.common.LocalizedString description) {
+      this.description = description;
       return this;
    }
    
-   public ChannelBuilder description(@Nullable final com.commercetools.api.generated.models.common.LocalizedString description) {
-      this.description = description;
+   public ChannelBuilder geoLocation(@Nullable final com.commercetools.api.generated.models.common.GeoJson geoLocation) {
+      this.geoLocation = geoLocation;
+      return this;
+   }
+   
+   public ChannelBuilder name(@Nullable final com.commercetools.api.generated.models.common.LocalizedString name) {
+      this.name = name;
       return this;
    }
    
@@ -167,11 +171,6 @@ public final class ChannelBuilder {
    }
    
    @Nullable
-   public Object getGeoLocation(){
-      return this.geoLocation;
-   }
-   
-   @Nullable
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
@@ -182,13 +181,18 @@ public final class ChannelBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.generated.models.common.LocalizedString getName(){
-      return this.name;
+   public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
+      return this.description;
    }
    
    @Nullable
-   public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
-      return this.description;
+   public com.commercetools.api.generated.models.common.GeoJson getGeoLocation(){
+      return this.geoLocation;
+   }
+   
+   @Nullable
+   public com.commercetools.api.generated.models.common.LocalizedString getName(){
+      return this.name;
    }
    
    @Nullable
@@ -202,7 +206,7 @@ public final class ChannelBuilder {
    }
 
    public Channel build() {
-       return new ChannelImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, address, geoLocation, custom, roles, name, description, reviewRatingStatistics, key);
+       return new ChannelImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, address, custom, roles, description, geoLocation, name, reviewRatingStatistics, key);
    }
    
    public static ChannelBuilder of() {
@@ -218,11 +222,11 @@ public final class ChannelBuilder {
       builder.createdBy = template.getCreatedBy();
       builder.lastModifiedBy = template.getLastModifiedBy();
       builder.address = template.getAddress();
-      builder.geoLocation = template.getGeoLocation();
       builder.custom = template.getCustom();
       builder.roles = template.getRoles();
-      builder.name = template.getName();
       builder.description = template.getDescription();
+      builder.geoLocation = template.getGeoLocation();
+      builder.name = template.getName();
       builder.reviewRatingStatistics = template.getReviewRatingStatistics();
       builder.key = template.getKey();
       return builder;

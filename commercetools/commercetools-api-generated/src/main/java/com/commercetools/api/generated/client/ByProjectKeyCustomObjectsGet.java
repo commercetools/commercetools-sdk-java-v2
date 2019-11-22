@@ -19,6 +19,11 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>The query endpoint allows to retrieve custom objects in a specific container or all custom objects.
+	For performance reasons, it is highly advisable to query only for custom objects in a container by using
+	the container field in the where predicate.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

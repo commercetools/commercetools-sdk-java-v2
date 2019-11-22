@@ -114,102 +114,142 @@ public final class ProductProjectionImpl implements ProductProjection {
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	<p>The unique ID of the Product.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	<p>The current version of the Product.</p>
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.product.SearchKeywords getSearchKeywords(){
       return this.searchKeywords;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
-   
+   /**
+   	
+   */
    public java.util.List<com.commercetools.api.generated.models.product.ProductVariant> getVariants(){
       return this.variants;
    }
    
-   
+   /**
+   	
+   */
    public Boolean getPublished(){
       return this.published;
    }
    
-   
+   /**
+   	
+   */
    public Boolean getHasStagedChanges(){
       return this.hasStagedChanges;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getMetaDescription(){
       return this.metaDescription;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.tax_category.TaxCategoryReference getTaxCategory(){
       return this.taxCategory;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getMetaKeywords(){
       return this.metaKeywords;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.product.CategoryOrderHints getCategoryOrderHints(){
       return this.categoryOrderHints;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getMetaTitle(){
       return this.metaTitle;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.state.StateReference getState(){
       return this.state;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.product.ProductVariant getMasterVariant(){
       return this.masterVariant;
    }
    
-   
+   /**
+   	<p>References to categories the product is in.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.category.CategoryReference> getCategories(){
       return this.categories;
    }
    
-   
+   /**
+   	<p>Statistics about the review ratings taken into account for this product.</p>
+   */
    public com.commercetools.api.generated.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
       return this.reviewRatingStatistics;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getSlug(){
       return this.slug;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.product_type.ProductTypeReference getProductType(){
       return this.productType;
    }
    
-   
+   /**
+   	<p>User-specific unique identifier of the Product.</p>
+   */
    public String getKey(){
       return this.key;
    }

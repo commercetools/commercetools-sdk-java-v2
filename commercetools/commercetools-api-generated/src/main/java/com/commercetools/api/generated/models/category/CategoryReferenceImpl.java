@@ -50,9 +50,7 @@ public final class CategoryReferenceImpl implements CategoryReference {
       return this.id;
    }
    
-   /**
-   	<p>Categories allow to organize products into hierarchical structures. They enable creating multiple classifications of products for shop navigation and other purposes.</p>
-   */
+   
    public com.commercetools.api.generated.models.category.Category getObj(){
       return this.obj;
    }

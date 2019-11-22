@@ -23,41 +23,64 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountDraftImpl.class)
 public interface ProductDiscountDraft  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   
+   /**
+   	<p>User-specific unique identifier for a product discount.
+   	Must be unique across a project.
+   	The field can be reset using the Set Key UpdateAction</p>
+   */
    
    @JsonProperty("key")
    public String getKey();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("value")
    public ProductDiscountValueDraft getValue();
-   
+   /**
+   	<p>A valid <a href="http-api-projects-predicates#productdiscount-predicates">ProductDiscount Predicate</a>.</p>
+   */
    @NotNull
    @JsonProperty("predicate")
    public String getPredicate();
-   
+   /**
+   	<p>The string must contain a decimal number between 0 and 1.
+   	A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>
+   */
    @NotNull
    @JsonProperty("sortOrder")
    public String getSortOrder();
-   
+   /**
+   	<p>If set to <code>true</code> the discount will be applied to product prices.</p>
+   */
    @NotNull
    @JsonProperty("isActive")
    public Boolean getIsActive();
-   
+   /**
+   	<p>The time from which the discount should be effective.
+   	Please take Eventual Consistency into account for calculated product discount values.</p>
+   */
    
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
-   
+   /**
+   	<p>The time from which the discount should be effective.
+   	Please take Eventual Consistency into account for calculated undiscounted values.</p>
+   */
    
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();

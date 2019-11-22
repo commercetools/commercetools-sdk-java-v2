@@ -1,7 +1,10 @@
 package com.commercetools.api.generated.models.tax_category;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.tax_category.TaxRate;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.tax_category.TaxCategory;
 import javax.annotation.Nullable;
 import java.util.List;

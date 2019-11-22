@@ -28,50 +28,78 @@ import java.io.IOException;
 @JsonDeserialize(as = LineItemImportDraftImpl.class)
 public interface LineItemImportDraft  {
 
-   
+   /**
+   	<p>ID of the existing product.
+   	You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
+   */
    
    @JsonProperty("productId")
    public String getProductId();
-   
+   /**
+   	<p>The product name.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("variant")
    public ProductVariantImportDraft getVariant();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("price")
    public PriceDraft getPrice();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("quantity")
    public Integer getQuantity();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("state")
    public List<ItemState> getState();
-   
+   /**
+   	<p>Optional connection to a particular supplier.
+   	By providing supply channel information, you can uniquely identify
+   	inventory entries that should be reserved.
+   	The provided channel should have the
+   	InventorySupply role.</p>
+   */
    @Valid
    @JsonProperty("supplyChannel")
    public ChannelResourceIdentifier getSupplyChannel();
-   
+   /**
+   	<p>The channel is used to select a ProductPrice.
+   	The provided channel should have the ProductDistribution role.</p>
+   */
    @Valid
    @JsonProperty("distributionChannel")
    public ChannelResourceIdentifier getDistributionChannel();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("taxRate")
    public TaxRate getTaxRate();
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("shippingDetails")
    public ItemShippingDetailsDraft getShippingDetails();

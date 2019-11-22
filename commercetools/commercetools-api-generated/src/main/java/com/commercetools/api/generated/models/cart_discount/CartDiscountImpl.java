@@ -3,6 +3,8 @@ package com.commercetools.api.generated.models.cart_discount;
 import com.commercetools.api.generated.models.cart_discount.CartDiscountTarget;
 import com.commercetools.api.generated.models.cart_discount.CartDiscountValue;
 import com.commercetools.api.generated.models.cart_discount.StackingMode;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.Reference;
@@ -96,72 +98,101 @@ public final class CartDiscountImpl implements CartDiscount {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	<p>The unique ID of the cart discount.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	<p>The current version of the cart discount.</p>
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
-   
+   /**
+   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
-   
+   /**
+   	<p>States whether the discount can only be used in a connection with a DiscountCode.</p>
+   */
    public Boolean getRequiresDiscountCode(){
       return this.requiresDiscountCode;
    }
    
-   
+   /**
+   	<p>The platform will generate this array from the predicate.
+   	It contains the references of all the resources that are addressed in the predicate.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.common.Reference> getReferences(){
       return this.references;
    }
    
-   
+   /**
+   	<p>A valid Cart predicate.</p>
+   */
    public String getCartPredicate(){
       return this.cartPredicate;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }
    
-   
+   /**
+   	<p>Only active discount can be applied to the cart.</p>
+   */
    public Boolean getIsActive(){
       return this.isActive;
    }
    
-   
+   /**
+   	<p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
+   */
    public com.commercetools.api.generated.models.cart_discount.CartDiscountTarget getTarget(){
       return this.target;
    }
@@ -174,27 +205,41 @@ public final class CartDiscountImpl implements CartDiscount {
       return this.stackingMode;
    }
    
-   
+   /**
+   	<p>The string must contain a number between 0 and 1.
+   	All matching cart discounts are applied to a cart in the order defined by this field.
+   	A discount with greater sort order is prioritized higher than a discount with lower sort order.
+   	The sort order is unambiguous among all cart discounts.</p>
+   */
    public String getSortOrder(){
       return this.sortOrder;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.cart_discount.CartDiscountValue getValue(){
       return this.value;
    }
    
-   
+   /**
+   	<p>User-specific unique identifier for a cart discount.
+   	Must be unique across a project.</p>
+   */
    public String getKey(){
       return this.key;
    }

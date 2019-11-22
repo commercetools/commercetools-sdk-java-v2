@@ -1,8 +1,11 @@
 package com.commercetools.api.generated.models.extension;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.extension.ExtensionDestination;
 import com.commercetools.api.generated.models.extension.ExtensionTrigger;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.extension.Extension;
 import javax.annotation.Nullable;
 import java.util.List;

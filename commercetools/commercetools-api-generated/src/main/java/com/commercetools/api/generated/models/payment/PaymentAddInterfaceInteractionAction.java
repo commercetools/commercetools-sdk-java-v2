@@ -1,13 +1,20 @@
 package com.commercetools.api.generated.models.payment;
 
+import com.commercetools.api.generated.models.payment.PaymentUpdateAction;
 import com.commercetools.api.generated.models.type.FieldContainer;
 import com.commercetools.api.generated.models.type.TypeResourceIdentifier;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import io.vrap.rmf.base.client.utils.Generated;
+import com.commercetools.api.generated.models.payment.PaymentAddInterfaceInteractionActionImpl;
 
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Map;
+import java.time.*;
+
+import java.io.IOException;
 
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

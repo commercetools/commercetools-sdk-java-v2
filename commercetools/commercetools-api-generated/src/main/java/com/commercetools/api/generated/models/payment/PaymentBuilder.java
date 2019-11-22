@@ -1,5 +1,7 @@
 package com.commercetools.api.generated.models.payment;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.TypedMoney;
 import com.commercetools.api.generated.models.customer.CustomerReference;
@@ -7,6 +9,7 @@ import com.commercetools.api.generated.models.payment.PaymentMethodInfo;
 import com.commercetools.api.generated.models.payment.PaymentStatus;
 import com.commercetools.api.generated.models.payment.Transaction;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.payment.Payment;
 import javax.annotation.Nullable;
 import java.util.List;

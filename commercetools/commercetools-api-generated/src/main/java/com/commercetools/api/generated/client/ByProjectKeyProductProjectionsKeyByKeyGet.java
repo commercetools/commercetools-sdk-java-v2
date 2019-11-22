@@ -19,6 +19,11 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+	<p>Gets the current or staged representation of a product found by Key.
+	When used with an API client that has the view_published_products:{projectKey} scope,
+	this endpoint only returns published (current) product projections.</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"

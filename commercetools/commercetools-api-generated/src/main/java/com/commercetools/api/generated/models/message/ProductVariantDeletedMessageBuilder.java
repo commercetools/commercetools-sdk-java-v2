@@ -46,7 +46,7 @@ public final class ProductVariantDeletedMessageBuilder {
    private Long resourceVersion;
    
    
-   private java.util.List<Object> removedImageUrls;
+   private java.util.List<String> removedImageUrls;
    
    
    private com.commercetools.api.generated.models.product.ProductVariant variant;
@@ -101,7 +101,7 @@ public final class ProductVariantDeletedMessageBuilder {
       return this;
    }
    
-   public ProductVariantDeletedMessageBuilder removedImageUrls( final java.util.List<Object> removedImageUrls) {
+   public ProductVariantDeletedMessageBuilder removedImageUrls( final java.util.List<String> removedImageUrls) {
       this.removedImageUrls = removedImageUrls;
       return this;
    }
@@ -162,7 +162,7 @@ public final class ProductVariantDeletedMessageBuilder {
    }
    
    
-   public java.util.List<Object> getRemovedImageUrls(){
+   public java.util.List<String> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
    

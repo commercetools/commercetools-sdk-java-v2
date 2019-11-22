@@ -21,19 +21,27 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelMeasurementsImpl.class)
 public interface ParcelMeasurements  {
 
-   
+   /**
+   	
+   */
    
    @JsonProperty("heightInMillimeter")
    public Integer getHeightInMillimeter();
-   
+   /**
+   	
+   */
    
    @JsonProperty("lengthInMillimeter")
    public Integer getLengthInMillimeter();
-   
+   /**
+   	
+   */
    
    @JsonProperty("widthInMillimeter")
    public Integer getWidthInMillimeter();
-   
+   /**
+   	
+   */
    
    @JsonProperty("weightInGram")
    public Integer getWeightInGram();

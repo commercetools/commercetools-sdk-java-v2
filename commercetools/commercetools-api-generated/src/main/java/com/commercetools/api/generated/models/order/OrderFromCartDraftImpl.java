@@ -53,37 +53,55 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
       
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.order.ShipmentState getShipmentState(){
       return this.shipmentState;
    }
    
-   
+   /**
+   	<p>String that uniquely identifies an order.
+   	It can be used to create more human-readable (in contrast to ID) identifier for the order.
+   	It should be unique across a project.
+   	Once it's set it cannot be changed.
+   	For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+   */
    public String getOrderNumber(){
       return this.orderNumber;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
    
-   
+   /**
+   	<p>The unique id of the cart from which an order is created.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
    
-   
+   /**
+   	
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	<p>Order will be created with <code>Open</code> status by default.</p>
+   */
    public com.commercetools.api.generated.models.order.OrderState getOrderState(){
       return this.orderState;
    }

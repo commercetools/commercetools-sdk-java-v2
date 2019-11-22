@@ -15,15 +15,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProductRevertedStagedChangesMessagePayloadBuilder {
    
    
-   private java.util.List<Object> removedImageUrls;
+   private java.util.List<String> removedImageUrls;
    
-   public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls( final java.util.List<Object> removedImageUrls) {
+   public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls( final java.util.List<String> removedImageUrls) {
       this.removedImageUrls = removedImageUrls;
       return this;
    }
    
    
-   public java.util.List<Object> getRemovedImageUrls(){
+   public java.util.List<String> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
 

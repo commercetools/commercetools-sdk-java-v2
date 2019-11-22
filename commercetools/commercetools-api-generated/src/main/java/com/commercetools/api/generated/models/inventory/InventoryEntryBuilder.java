@@ -1,6 +1,8 @@
 package com.commercetools.api.generated.models.inventory;
 
 import com.commercetools.api.generated.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.type.CustomFields;
 import java.time.ZonedDateTime;

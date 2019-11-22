@@ -35,12 +35,16 @@ public final class ItemStateImpl implements ItemState {
       
    }
    
-   
+   /**
+   	
+   */
    public Integer getQuantity(){
       return this.quantity;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.state.StateReference getState(){
       return this.state;
    }

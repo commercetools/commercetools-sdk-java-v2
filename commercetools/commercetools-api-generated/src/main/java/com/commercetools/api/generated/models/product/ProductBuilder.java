@@ -1,11 +1,14 @@
 package com.commercetools.api.generated.models.product;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.product.ProductCatalogData;
 import com.commercetools.api.generated.models.product_type.ProductTypeReference;
 import com.commercetools.api.generated.models.review.ReviewRatingStatistics;
 import com.commercetools.api.generated.models.state.StateReference;
 import com.commercetools.api.generated.models.tax_category.TaxCategoryReference;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.product.Product;
 import javax.annotation.Nullable;
 import java.util.List;

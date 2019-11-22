@@ -38,35 +38,56 @@ public interface LineItemDraft  {
    
    @JsonProperty("sku")
    public String getSku();
-   
+   /**
+   	<p>The amount of a <code>LineItem</code>in the cart.
+   	Must be a positive integer.</p>
+   */
    
    @JsonProperty("quantity")
    public Long getQuantity();
-   
+   /**
+   	<p>By providing supply channel information, you can unique identify
+   	inventory entries that should be reserved.
+   	The provided channel should have
+   	the InventorySupply role.</p>
+   */
    @Valid
    @JsonProperty("supplyChannel")
    public ChannelResourceIdentifier getSupplyChannel();
-   
+   /**
+   	<p>The channel is used to select a ProductPrice.
+   	The provided channel should have the ProductDistribution role.</p>
+   */
    @Valid
    @JsonProperty("distributionChannel")
    public ChannelResourceIdentifier getDistributionChannel();
-   
+   /**
+   	<p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+   */
    @Valid
    @JsonProperty("externalTaxRate")
    public ExternalTaxRateDraft getExternalTaxRate();
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   
+   /**
+   	<p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+   */
    @Valid
    @JsonProperty("externalPrice")
    public Money getExternalPrice();
-   
+   /**
+   	<p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+   */
    @Valid
    @JsonProperty("externalTotalPrice")
    public ExternalLineItemTotalPrice getExternalTotalPrice();
-   
+   /**
+   	<p>Container for line item specific address(es).</p>
+   */
    @Valid
    @JsonProperty("shippingDetails")
    public ItemShippingDetailsDraft getShippingDetails();

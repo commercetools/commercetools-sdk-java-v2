@@ -14,6 +14,8 @@ import com.commercetools.api.generated.models.cart.TaxMode;
 import com.commercetools.api.generated.models.cart.TaxedPrice;
 import com.commercetools.api.generated.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.TypedMoney;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupReference;
@@ -47,6 +49,30 @@ import java.io.IOException;
 @JsonDeserialize(as = MyOrderImpl.class)
 public interface MyOrder extends LoggedResource {
 
+   
+   @NotNull
+   @JsonProperty("id")
+   public String getId();
+   
+   @NotNull
+   @JsonProperty("version")
+   public Long getVersion();
+   
+   @NotNull
+   @JsonProperty("createdAt")
+   public ZonedDateTime getCreatedAt();
+   
+   @NotNull
+   @JsonProperty("lastModifiedAt")
+   public ZonedDateTime getLastModifiedAt();
+   
+   @Valid
+   @JsonProperty("lastModifiedBy")
+   public LastModifiedBy getLastModifiedBy();
+   
+   @Valid
+   @JsonProperty("createdBy")
+   public CreatedBy getCreatedBy();
    
    
    @JsonProperty("completedAt")
@@ -193,6 +219,18 @@ public interface MyOrder extends LoggedResource {
    @JsonProperty("refusedGifts")
    public List<CartDiscountReference> getRefusedGifts();
 
+   public void setId(final String id);
+   
+   public void setVersion(final Long version);
+   
+   public void setCreatedAt(final ZonedDateTime createdAt);
+   
+   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+   
+   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+   
+   public void setCreatedBy(final CreatedBy createdBy);
+   
    public void setCompletedAt(final ZonedDateTime completedAt);
    
    public void setOrderNumber(final String orderNumber);

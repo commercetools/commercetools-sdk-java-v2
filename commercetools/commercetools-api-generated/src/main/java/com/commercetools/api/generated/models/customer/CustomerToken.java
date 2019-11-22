@@ -21,27 +21,39 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerTokenImpl.class)
 public interface CustomerToken  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("id")
    public String getId();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   
+   /**
+   	
+   */
    
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("customerId")
    public String getCustomerId();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("expiresAt")
    public ZonedDateTime getExpiresAt();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("value")
    public String getValue();

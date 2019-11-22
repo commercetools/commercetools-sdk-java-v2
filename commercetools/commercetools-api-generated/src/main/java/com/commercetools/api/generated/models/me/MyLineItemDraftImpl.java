@@ -36,28 +36,35 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
    
    private Long variantId;
    
+   private String sku;
+   
    private com.commercetools.api.generated.models.channel.ChannelResourceIdentifier distributionChannel;
 
    @JsonCreator
-   MyLineItemDraftImpl(@JsonProperty("quantity") final Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.api.generated.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final String productId, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("supplyChannel") final com.commercetools.api.generated.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("variantId") final Long variantId, @JsonProperty("distributionChannel") final com.commercetools.api.generated.models.channel.ChannelResourceIdentifier distributionChannel) {
+   MyLineItemDraftImpl(@JsonProperty("quantity") final Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.api.generated.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final String productId, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("supplyChannel") final com.commercetools.api.generated.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("distributionChannel") final com.commercetools.api.generated.models.channel.ChannelResourceIdentifier distributionChannel) {
       this.quantity = quantity;
       this.shippingDetails = shippingDetails;
       this.productId = productId;
       this.custom = custom;
       this.supplyChannel = supplyChannel;
       this.variantId = variantId;
+      this.sku = sku;
       this.distributionChannel = distributionChannel;
    }
    public MyLineItemDraftImpl() {
       
    }
    
-   
+   /**
+   	
+   */
    public Integer getQuantity(){
       return this.quantity;
    }
    
-   
+   /**
+   	<p>Container for line item specific address(es).</p>
+   */
    public com.commercetools.api.generated.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
@@ -67,12 +74,18 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
       return this.productId;
    }
    
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	<p>By providing supply channel information, you can unique identify
+   	inventory entries that should be reserved.
+   	The provided channel should have the InventorySupply role.</p>
+   */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
@@ -83,6 +96,14 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
    }
    
    
+   public String getSku(){
+      return this.sku;
+   }
+   
+   /**
+   	<p>The channel is used to select a ProductPrice.
+   	The provided channel should have the ProductDistribution role.</p>
+   */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
    }
@@ -109,6 +130,10 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
    
    public void setVariantId(final Long variantId){
       this.variantId = variantId;
+   }
+   
+   public void setSku(final String sku){
+      this.sku = sku;
    }
    
    public void setDistributionChannel(final com.commercetools.api.generated.models.channel.ChannelResourceIdentifier distributionChannel){

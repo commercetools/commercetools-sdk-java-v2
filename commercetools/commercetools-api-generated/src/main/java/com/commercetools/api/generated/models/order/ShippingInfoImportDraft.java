@@ -28,41 +28,59 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingInfoImportDraftImpl.class)
 public interface ShippingInfoImportDraft  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("shippingMethodName")
    public String getShippingMethodName();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("price")
    public Money getPrice();
-   
+   /**
+   	<p>The shipping rate used to determine the price.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("shippingRate")
    public ShippingRateDraft getShippingRate();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("taxRate")
    public TaxRate getTaxRate();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryResourceIdentifier getTaxCategory();
-   
+   /**
+   	<p>Not set if custom shipping method is used.</p>
+   */
    @Valid
    @JsonProperty("shippingMethod")
    public ShippingMethodResourceIdentifier getShippingMethod();
-   
+   /**
+   	<p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+   */
    @Valid
    @JsonProperty("deliveries")
    public List<Delivery> getDeliveries();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("discountedPrice")
    public DiscountedLineItemPriceDraft getDiscountedPrice();
-   
+   /**
+   	<p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+   */
    
    @JsonProperty("shippingMethodState")
    public ShippingMethodState getShippingMethodState();

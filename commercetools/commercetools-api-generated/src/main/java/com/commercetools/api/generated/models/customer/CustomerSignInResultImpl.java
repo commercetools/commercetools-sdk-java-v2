@@ -35,12 +35,17 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
       
    }
    
-   
+   /**
+   	<p>A cart that is associated to the customer.
+   	Empty if the customer does not have a cart yet.</p>
+   */
    public Object getCart(){
       return this.cart;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.customer.Customer getCustomer(){
       return this.customer;
    }

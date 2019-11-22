@@ -21,11 +21,15 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeImpl.class)
 public interface Attribute  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("name")
    public String getName();
-   
+   /**
+   	<p>A valid JSON value, based on an AttributeDefinition.</p>
+   */
    @NotNull
    @JsonProperty("value")
    public Object getValue();

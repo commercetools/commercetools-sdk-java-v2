@@ -24,9 +24,9 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
    
    @NotNull
    @JsonProperty("removedImageUrls")
-   public List<Object> getRemovedImageUrls();
+   public List<String> getRemovedImageUrls();
 
-   public void setRemovedImageUrls(final List<Object> removedImageUrls);
+   public void setRemovedImageUrls(final List<String> removedImageUrls);
    
    public static ProductRevertedStagedChangesMessagePayloadImpl of(){
       return new ProductRevertedStagedChangesMessagePayloadImpl();

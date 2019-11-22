@@ -21,19 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxRateImpl.class)
 public interface TaxRate  {
 
-   
+   /**
+   	<p>The ID is always set if the tax rate is part of a TaxCategory.
+   	The external tax rates in a
+   	Cart do not contain an <code>id</code>.</p>
+   */
    
    @JsonProperty("id")
    public String getId();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("name")
    public String getName();
-   
+   /**
+   	<p>Percentage in the range of [0..1].
+   	The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+   */
    @NotNull
    @JsonProperty("amount")
    public Integer getAmount();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("includedInPrice")
    public Boolean getIncludedInPrice();
@@ -43,11 +54,17 @@ public interface TaxRate  {
    @NotNull
    @JsonProperty("country")
    public String getCountry();
-   
+   /**
+   	<p>The state in the country</p>
+   */
    
    @JsonProperty("state")
    public String getState();
-   
+   /**
+   	<p>For countries (e.g.
+   	the US) where the total tax is a combination of multiple taxes (e.g.
+   	state and local taxes).</p>
+   */
    @Valid
    @JsonProperty("subRates")
    public List<SubRate> getSubRates();

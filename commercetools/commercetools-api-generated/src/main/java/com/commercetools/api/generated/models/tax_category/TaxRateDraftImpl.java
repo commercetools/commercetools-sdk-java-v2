@@ -54,27 +54,42 @@ public final class TaxRateDraftImpl implements TaxRateDraft {
       return this.country;
    }
    
-   
+   /**
+   	<p>Percentage in the range of [0..1].
+   	Must be supplied if no <code>subRates</code> are specified.
+   	If <code>subRates</code> are specified
+   	then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
+   */
    public Integer getAmount(){
       return this.amount;
    }
    
-   
+   /**
+   	
+   */
    public Boolean getIncludedInPrice(){
       return this.includedInPrice;
    }
    
-   
+   /**
+   	
+   */
    public String getName(){
       return this.name;
    }
    
-   
+   /**
+   	<p>The state in the country</p>
+   */
    public String getState(){
       return this.state;
    }
    
-   
+   /**
+   	<p>For countries (e.g.
+   	the US) where the total tax is a combination of multiple taxes (e.g.
+   	state and local taxes).</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.tax_category.SubRate> getSubRates(){
       return this.subRates;
    }

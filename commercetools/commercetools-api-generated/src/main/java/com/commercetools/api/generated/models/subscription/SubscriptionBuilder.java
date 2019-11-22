@@ -1,11 +1,14 @@
 package com.commercetools.api.generated.models.subscription;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.subscription.ChangeSubscription;
 import com.commercetools.api.generated.models.subscription.DeliveryFormat;
 import com.commercetools.api.generated.models.subscription.Destination;
 import com.commercetools.api.generated.models.subscription.MessageSubscription;
 import com.commercetools.api.generated.models.subscription.SubscriptionHealthStatus;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.subscription.Subscription;
 import javax.annotation.Nullable;
 import java.util.List;

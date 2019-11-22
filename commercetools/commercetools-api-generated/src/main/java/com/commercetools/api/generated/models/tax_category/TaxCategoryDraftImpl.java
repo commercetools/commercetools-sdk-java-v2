@@ -41,22 +41,30 @@ public final class TaxCategoryDraftImpl implements TaxCategoryDraft {
       
    }
    
-   
+   /**
+   	
+   */
    public java.util.List<com.commercetools.api.generated.models.tax_category.TaxRateDraft> getRates(){
       return this.rates;
    }
    
-   
+   /**
+   	
+   */
    public String getName(){
       return this.name;
    }
    
-   
+   /**
+   	
+   */
    public String getDescription(){
       return this.description;
    }
    
-   
+   /**
+   	
+   */
    public String getKey(){
       return this.key;
    }

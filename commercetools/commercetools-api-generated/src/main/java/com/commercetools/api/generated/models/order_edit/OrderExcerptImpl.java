@@ -39,17 +39,23 @@ public final class OrderExcerptImpl implements OrderExcerpt {
       
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.cart.TaxedPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
-   
+   /**
+   	
+   */
    public Integer getVersion(){
       return this.version;
    }

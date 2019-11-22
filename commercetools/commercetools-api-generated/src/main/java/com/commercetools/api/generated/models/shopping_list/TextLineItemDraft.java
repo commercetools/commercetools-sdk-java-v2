@@ -23,24 +23,34 @@ import java.io.IOException;
 @JsonDeserialize(as = TextLineItemDraftImpl.class)
 public interface TextLineItemDraft  {
 
-   
+   /**
+   	<p>Defaults to the current date and time.</p>
+   */
    
    @JsonProperty("addedAt")
    public ZonedDateTime getAddedAt();
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   
+   /**
+   	<p>Defaults to <code>1</code>.</p>
+   */
    
    @JsonProperty("quantity")
    public Integer getQuantity();

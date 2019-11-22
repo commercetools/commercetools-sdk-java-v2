@@ -41,22 +41,30 @@ public final class ParcelMeasurementsImpl implements ParcelMeasurements {
       
    }
    
-   
+   /**
+   	
+   */
    public Integer getWeightInGram(){
       return this.weightInGram;
    }
    
-   
+   /**
+   	
+   */
    public Integer getLengthInMillimeter(){
       return this.lengthInMillimeter;
    }
    
-   
+   /**
+   	
+   */
    public Integer getHeightInMillimeter(){
       return this.heightInMillimeter;
    }
    
-   
+   /**
+   	
+   */
    public Integer getWidthInMillimeter(){
       return this.widthInMillimeter;
    }

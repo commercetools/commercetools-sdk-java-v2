@@ -1,6 +1,9 @@
 package com.commercetools.api.generated.models.custom_object;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.custom_object.CustomObjectImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -21,19 +24,69 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomObjectImpl.class)
 public interface CustomObject extends LoggedResource {
 
+   /**
+   	
+   */
+   @NotNull
+   @JsonProperty("id")
+   public String getId();
+   /**
+   	
+   */
+   @NotNull
+   @JsonProperty("version")
+   public Long getVersion();
+   /**
+   	
+   */
+   @NotNull
+   @JsonProperty("createdAt")
+   public ZonedDateTime getCreatedAt();
+   /**
+   	
+   */
+   @NotNull
+   @JsonProperty("lastModifiedAt")
+   public ZonedDateTime getLastModifiedAt();
    
+   @Valid
+   @JsonProperty("lastModifiedBy")
+   public LastModifiedBy getLastModifiedBy();
+   
+   @Valid
+   @JsonProperty("createdBy")
+   public CreatedBy getCreatedBy();
+   /**
+   	<p>A namespace to group custom objects.</p>
+   */
    @NotNull
    @JsonProperty("container")
    public String getContainer();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("key")
    public String getKey();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("value")
    public Object getValue();
 
+   public void setId(final String id);
+   
+   public void setVersion(final Long version);
+   
+   public void setCreatedAt(final ZonedDateTime createdAt);
+   
+   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+   
+   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+   
+   public void setCreatedBy(final CreatedBy createdBy);
+   
    public void setContainer(final String container);
    
    public void setKey(final String key);

@@ -24,20 +24,30 @@ import java.io.IOException;
 @JsonDeserialize(as = MyPaymentDraftImpl.class)
 public interface MyPaymentDraft  {
 
-   
+   /**
+   	<p>How much money this payment intends to receive from the customer.
+   	The value usually matches the cart or order gross total.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("amountPlanned")
    public Money getAmountPlanned();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("paymentMethodInfo")
    public PaymentMethodInfo getPaymentMethodInfo();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   
+   /**
+   	<p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code>
+   	<a href="http-api-projects-payments.html#transactiontype">TransactionTypes</a>.</p>
+   */
    @Valid
    @JsonProperty("transaction")
    public MyTransactionDraft getTransaction();

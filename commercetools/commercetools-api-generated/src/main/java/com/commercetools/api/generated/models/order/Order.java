@@ -14,6 +14,8 @@ import com.commercetools.api.generated.models.cart.TaxMode;
 import com.commercetools.api.generated.models.cart.TaxedPrice;
 import com.commercetools.api.generated.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.TypedMoney;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupReference;
@@ -48,152 +50,277 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderImpl.class)
 public interface Order extends LoggedResource {
 
-   
+   /**
+   	<p>The unique ID of the order.</p>
+   */
+   @NotNull
+   @JsonProperty("id")
+   public String getId();
+   /**
+   	<p>The current version of the order.</p>
+   */
+   @NotNull
+   @JsonProperty("version")
+   public Long getVersion();
+   /**
+   	
+   */
+   @NotNull
+   @JsonProperty("createdAt")
+   public ZonedDateTime getCreatedAt();
+   /**
+   	
+   */
+   @NotNull
+   @JsonProperty("lastModifiedAt")
+   public ZonedDateTime getLastModifiedAt();
+   /**
+   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
+   @Valid
+   @JsonProperty("lastModifiedBy")
+   public LastModifiedBy getLastModifiedBy();
+   /**
+   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
+   @Valid
+   @JsonProperty("createdBy")
+   public CreatedBy getCreatedBy();
+   /**
+   	<p>This field will only be present if it was set for Order Import</p>
+   */
    
    @JsonProperty("completedAt")
    public ZonedDateTime getCompletedAt();
-   
+   /**
+   	<p>String that uniquely identifies an order.
+   	It can be used to create more human-readable (in contrast to ID) identifier for the order.
+   	It should be unique across a project.
+   	Once it's set it cannot be changed.</p>
+   */
    
    @JsonProperty("orderNumber")
    public String getOrderNumber();
-   
+   /**
+   	
+   */
    
    @JsonProperty("customerId")
    public String getCustomerId();
-   
+   /**
+   	
+   */
    
    @JsonProperty("customerEmail")
    public String getCustomerEmail();
-   
+   /**
+   	<p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+   */
    
    @JsonProperty("anonymousId")
    public String getAnonymousId();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("store")
    public StoreKeyReference getStore();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("lineItems")
    public List<LineItem> getLineItems();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("customLineItems")
    public List<CustomLineItem> getCustomLineItems();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("totalPrice")
    public TypedMoney getTotalPrice();
-   
+   /**
+   	<p>The taxes are calculated based on the shipping address.</p>
+   */
    @Valid
    @JsonProperty("taxedPrice")
    public TaxedPrice getTaxedPrice();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("shippingAddress")
    public Address getShippingAddress();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("billingAddress")
    public Address getBillingAddress();
-   
+   /**
+   	
+   */
    
    @JsonProperty("taxMode")
    public TaxMode getTaxMode();
-   
+   /**
+   	<p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
+   */
    
    @JsonProperty("taxRoundingMode")
    public RoundingMode getTaxRoundingMode();
-   
+   /**
+   	<p>Set when the customer is set and the customer is a member of a customer group.
+   	Used for product variant price selection.</p>
+   */
    @Valid
    @JsonProperty("customerGroup")
    public CustomerGroupReference getCustomerGroup();
-   
+   /**
+   	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.
+   	Used for product variant price selection.</p>
+   */
    
    @JsonProperty("country")
    public String getCountry();
-   
+   /**
+   	<p>One of the four predefined OrderStates.</p>
+   */
    @NotNull
    @JsonProperty("orderState")
    public OrderState getOrderState();
-   
+   /**
+   	<p>This reference can point to a state in a custom workflow.</p>
+   */
    @Valid
    @JsonProperty("state")
    public StateReference getState();
-   
+   /**
+   	
+   */
    
    @JsonProperty("shipmentState")
    public ShipmentState getShipmentState();
-   
+   /**
+   	
+   */
    
    @JsonProperty("paymentState")
    public PaymentState getPaymentState();
-   
+   /**
+   	<p>Set if the ShippingMethod is set.</p>
+   */
    @Valid
    @JsonProperty("shippingInfo")
    public ShippingInfo getShippingInfo();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("syncInfo")
    public List<SyncInfo> getSyncInfo();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("returnInfo")
    public List<ReturnInfo> getReturnInfo();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("discountCodes")
    public List<DiscountCodeInfo> getDiscountCodes();
-   
+   /**
+   	<p>The sequence number of the last order message produced by changes to this order.
+   	<code>0</code> means, that no messages were created yet.</p>
+   */
    @NotNull
    @JsonProperty("lastMessageSequenceNumber")
    public Long getLastMessageSequenceNumber();
-   
+   /**
+   	<p>Set when this order was created from a cart.
+   	The cart will have the state <code>Ordered</code>.</p>
+   */
    @Valid
    @JsonProperty("cart")
    public CartReference getCart();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("paymentInfo")
    public PaymentInfo getPaymentInfo();
-   
+   /**
+   	
+   */
    
    @JsonProperty("locale")
    public String getLocale();
-   
+   /**
+   	
+   */
    
    @JsonProperty("inventoryMode")
    public InventoryMode getInventoryMode();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("origin")
    public CartOrigin getOrigin();
-   
+   /**
+   	<p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
+   */
    
    @JsonProperty("taxCalculationMode")
    public TaxCalculationMode getTaxCalculationMode();
-   
+   /**
+   	<p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+   */
    @Valid
    @JsonProperty("shippingRateInput")
    public ShippingRateInput getShippingRateInput();
-   
+   /**
+   	<p>Contains addresses for orders with multiple shipping addresses.</p>
+   */
    @Valid
    @JsonProperty("itemShippingAddresses")
    public List<Address> getItemShippingAddresses();
-   
+   /**
+   	<p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("refusedGifts")
    public List<CartDiscountReference> getRefusedGifts();
 
+   public void setId(final String id);
+   
+   public void setVersion(final Long version);
+   
+   public void setCreatedAt(final ZonedDateTime createdAt);
+   
+   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+   
+   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+   
+   public void setCreatedBy(final CreatedBy createdBy);
+   
    public void setCompletedAt(final ZonedDateTime completedAt);
    
    public void setOrderNumber(final String orderNumber);

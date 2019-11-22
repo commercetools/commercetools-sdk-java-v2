@@ -1,11 +1,14 @@
 package com.commercetools.api.generated.models.shopping_list;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.customer.CustomerReference;
 import com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem;
 import com.commercetools.api.generated.models.shopping_list.TextLineItem;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.shopping_list.MyShoppingListImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -26,6 +29,30 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListImpl.class)
 public interface MyShoppingList extends LoggedResource {
 
+   
+   @NotNull
+   @JsonProperty("id")
+   public String getId();
+   
+   @NotNull
+   @JsonProperty("version")
+   public Long getVersion();
+   
+   @NotNull
+   @JsonProperty("createdAt")
+   public ZonedDateTime getCreatedAt();
+   
+   @NotNull
+   @JsonProperty("lastModifiedAt")
+   public ZonedDateTime getLastModifiedAt();
+   
+   @Valid
+   @JsonProperty("lastModifiedBy")
+   public LastModifiedBy getLastModifiedBy();
+   
+   @Valid
+   @JsonProperty("createdBy")
+   public CreatedBy getCreatedBy();
    
    @Valid
    @JsonProperty("custom")
@@ -68,6 +95,18 @@ public interface MyShoppingList extends LoggedResource {
    @JsonProperty("anonymousId")
    public String getAnonymousId();
 
+   public void setId(final String id);
+   
+   public void setVersion(final Long version);
+   
+   public void setCreatedAt(final ZonedDateTime createdAt);
+   
+   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+   
+   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+   
+   public void setCreatedBy(final CreatedBy createdBy);
+   
    public void setCustom(final CustomFields custom);
    
    public void setCustomer(final CustomerReference customer);
@@ -101,13 +140,13 @@ public interface MyShoppingList extends LoggedResource {
       instance.setVersion(template.getVersion());
       instance.setCreatedBy(template.getCreatedBy());
       instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setLineItems(template.getLineItems());
       instance.setAnonymousId(template.getAnonymousId());
       instance.setTextLineItems(template.getTextLineItems());
       instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
       instance.setCustom(template.getCustom());
-      instance.setName(template.getName());
       instance.setDescription(template.getDescription());
+      instance.setLineItems(template.getLineItems());
+      instance.setName(template.getName());
       instance.setSlug(template.getSlug());
       instance.setKey(template.getKey());
       instance.setCustomer(template.getCustomer());

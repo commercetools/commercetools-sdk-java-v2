@@ -44,27 +44,37 @@ public final class TrackingDataImpl implements TrackingData {
       
    }
    
-   
+   /**
+   	<p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+   */
    public Boolean getIsReturn(){
       return this.isReturn;
    }
    
-   
+   /**
+   	<p>The carrier that delivers the parcel.</p>
+   */
    public String getCarrier(){
       return this.carrier;
    }
    
-   
+   /**
+   	
+   */
    public String getProviderTransaction(){
       return this.providerTransaction;
    }
    
-   
+   /**
+   	
+   */
    public String getProvider(){
       return this.provider;
    }
    
-   
+   /**
+   	<p>The ID to track one parcel.</p>
+   */
    public String getTrackingId(){
       return this.trackingId;
    }

@@ -35,12 +35,16 @@ public final class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft {
       
    }
    
-   
+   /**
+   	<p>The unique ID of the cart from which an order is created.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	
+   */
    public Long getVersion(){
       return this.version;
    }

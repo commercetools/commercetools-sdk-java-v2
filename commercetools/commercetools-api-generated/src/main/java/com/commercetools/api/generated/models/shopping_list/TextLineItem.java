@@ -23,28 +23,40 @@ import java.io.IOException;
 @JsonDeserialize(as = TextLineItemImpl.class)
 public interface TextLineItem  {
 
-   
+   /**
+   	<p>When the text line item was added to the shopping list.</p>
+   */
    @NotNull
    @JsonProperty("addedAt")
    public ZonedDateTime getAddedAt();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   
+   /**
+   	<p>The unique ID of this TextLineItem.</p>
+   */
    @NotNull
    @JsonProperty("id")
    public String getId();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("quantity")
    public Integer getQuantity();

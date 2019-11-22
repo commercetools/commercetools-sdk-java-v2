@@ -23,15 +23,21 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelDraftImpl.class)
 public interface ParcelDraft  {
 
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("measurements")
    public ParcelMeasurements getMeasurements();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("trackingData")
    public TrackingData getTrackingData();
-   
+   /**
+   	<p>The delivery items contained in this parcel.</p>
+   */
    @Valid
    @JsonProperty("items")
    public List<DeliveryItem> getItems();

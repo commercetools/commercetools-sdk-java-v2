@@ -21,15 +21,21 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxPortionImpl.class)
 public interface TaxPortion  {
 
-   
+   /**
+   	
+   */
    
    @JsonProperty("name")
    public String getName();
-   
+   /**
+   	<p>A number in the range [0..1]</p>
+   */
    @NotNull
    @JsonProperty("rate")
    public Integer getRate();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("amount")

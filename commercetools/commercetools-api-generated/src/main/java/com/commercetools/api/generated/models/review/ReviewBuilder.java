@@ -1,9 +1,12 @@
 package com.commercetools.api.generated.models.review;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.customer.CustomerReference;
 import com.commercetools.api.generated.models.state.StateReference;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.review.Review;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -35,14 +38,8 @@ public final class ReviewBuilder {
    @Nullable
    private com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy;
    
-   
-   private Boolean includedInStatistics;
-   
    @Nullable
    private String uniquenessValue;
-   
-   @Nullable
-   private String authorName;
    
    @Nullable
    private com.commercetools.api.generated.models.type.CustomFields custom;
@@ -51,25 +48,31 @@ public final class ReviewBuilder {
    private Integer rating;
    
    @Nullable
-   private com.commercetools.api.generated.models.state.StateReference state;
-   
-   @Nullable
-   private String text;
-   
-   @Nullable
    private String title;
    
    @Nullable
    private String locale;
    
    @Nullable
+   private Object target;
+   
+   
+   private Boolean includedInStatistics;
+   
+   @Nullable
+   private String authorName;
+   
+   @Nullable
+   private com.commercetools.api.generated.models.state.StateReference state;
+   
+   @Nullable
+   private String text;
+   
+   @Nullable
    private String key;
    
    @Nullable
    private com.commercetools.api.generated.models.customer.CustomerReference customer;
-   
-   @Nullable
-   private Object target;
    
    public ReviewBuilder createdAt( final java.time.ZonedDateTime createdAt) {
       this.createdAt = createdAt;
@@ -101,18 +104,8 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder includedInStatistics( final Boolean includedInStatistics) {
-      this.includedInStatistics = includedInStatistics;
-      return this;
-   }
-   
    public ReviewBuilder uniquenessValue(@Nullable final String uniquenessValue) {
       this.uniquenessValue = uniquenessValue;
-      return this;
-   }
-   
-   public ReviewBuilder authorName(@Nullable final String authorName) {
-      this.authorName = authorName;
       return this;
    }
    
@@ -126,16 +119,6 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder state(@Nullable final com.commercetools.api.generated.models.state.StateReference state) {
-      this.state = state;
-      return this;
-   }
-   
-   public ReviewBuilder text(@Nullable final String text) {
-      this.text = text;
-      return this;
-   }
-   
    public ReviewBuilder title(@Nullable final String title) {
       this.title = title;
       return this;
@@ -146,6 +129,31 @@ public final class ReviewBuilder {
       return this;
    }
    
+   public ReviewBuilder target(@Nullable final Object target) {
+      this.target = target;
+      return this;
+   }
+   
+   public ReviewBuilder includedInStatistics( final Boolean includedInStatistics) {
+      this.includedInStatistics = includedInStatistics;
+      return this;
+   }
+   
+   public ReviewBuilder authorName(@Nullable final String authorName) {
+      this.authorName = authorName;
+      return this;
+   }
+   
+   public ReviewBuilder state(@Nullable final com.commercetools.api.generated.models.state.StateReference state) {
+      this.state = state;
+      return this;
+   }
+   
+   public ReviewBuilder text(@Nullable final String text) {
+      this.text = text;
+      return this;
+   }
+   
    public ReviewBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
@@ -153,11 +161,6 @@ public final class ReviewBuilder {
    
    public ReviewBuilder customer(@Nullable final com.commercetools.api.generated.models.customer.CustomerReference customer) {
       this.customer = customer;
-      return this;
-   }
-   
-   public ReviewBuilder target(@Nullable final Object target) {
-      this.target = target;
       return this;
    }
    
@@ -191,19 +194,9 @@ public final class ReviewBuilder {
       return this.lastModifiedBy;
    }
    
-   
-   public Boolean getIncludedInStatistics(){
-      return this.includedInStatistics;
-   }
-   
    @Nullable
    public String getUniquenessValue(){
       return this.uniquenessValue;
-   }
-   
-   @Nullable
-   public String getAuthorName(){
-      return this.authorName;
    }
    
    @Nullable
@@ -217,16 +210,6 @@ public final class ReviewBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.generated.models.state.StateReference getState(){
-      return this.state;
-   }
-   
-   @Nullable
-   public String getText(){
-      return this.text;
-   }
-   
-   @Nullable
    public String getTitle(){
       return this.title;
    }
@@ -234,6 +217,31 @@ public final class ReviewBuilder {
    @Nullable
    public String getLocale(){
       return this.locale;
+   }
+   
+   @Nullable
+   public Object getTarget(){
+      return this.target;
+   }
+   
+   
+   public Boolean getIncludedInStatistics(){
+      return this.includedInStatistics;
+   }
+   
+   @Nullable
+   public String getAuthorName(){
+      return this.authorName;
+   }
+   
+   @Nullable
+   public com.commercetools.api.generated.models.state.StateReference getState(){
+      return this.state;
+   }
+   
+   @Nullable
+   public String getText(){
+      return this.text;
    }
    
    @Nullable
@@ -245,14 +253,9 @@ public final class ReviewBuilder {
    public com.commercetools.api.generated.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }
-   
-   @Nullable
-   public Object getTarget(){
-      return this.target;
-   }
 
    public Review build() {
-       return new ReviewImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, includedInStatistics, uniquenessValue, authorName, custom, rating, state, text, title, locale, key, customer, target);
+       return new ReviewImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, uniquenessValue, custom, rating, title, locale, target, includedInStatistics, authorName, state, text, key, customer);
    }
    
    public static ReviewBuilder of() {
@@ -267,18 +270,18 @@ public final class ReviewBuilder {
       builder.version = template.getVersion();
       builder.createdBy = template.getCreatedBy();
       builder.lastModifiedBy = template.getLastModifiedBy();
-      builder.includedInStatistics = template.getIncludedInStatistics();
       builder.uniquenessValue = template.getUniquenessValue();
-      builder.authorName = template.getAuthorName();
       builder.custom = template.getCustom();
       builder.rating = template.getRating();
-      builder.state = template.getState();
-      builder.text = template.getText();
       builder.title = template.getTitle();
       builder.locale = template.getLocale();
+      builder.target = template.getTarget();
+      builder.includedInStatistics = template.getIncludedInStatistics();
+      builder.authorName = template.getAuthorName();
+      builder.state = template.getState();
+      builder.text = template.getText();
       builder.key = template.getKey();
       builder.customer = template.getCustomer();
-      builder.target = template.getTarget();
       return builder;
    }
    

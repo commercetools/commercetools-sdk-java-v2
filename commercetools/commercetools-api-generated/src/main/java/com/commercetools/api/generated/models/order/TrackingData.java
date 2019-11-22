@@ -21,23 +21,33 @@ import java.io.IOException;
 @JsonDeserialize(as = TrackingDataImpl.class)
 public interface TrackingData  {
 
-   
+   /**
+   	<p>The ID to track one parcel.</p>
+   */
    
    @JsonProperty("trackingId")
    public String getTrackingId();
-   
+   /**
+   	<p>The carrier that delivers the parcel.</p>
+   */
    
    @JsonProperty("carrier")
    public String getCarrier();
-   
+   /**
+   	
+   */
    
    @JsonProperty("provider")
    public String getProvider();
-   
+   /**
+   	
+   */
    
    @JsonProperty("providerTransaction")
    public String getProviderTransaction();
-   
+   /**
+   	<p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+   */
    
    @JsonProperty("isReturn")
    public Boolean getIsReturn();

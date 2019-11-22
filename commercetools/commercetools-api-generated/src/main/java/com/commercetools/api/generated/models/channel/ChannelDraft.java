@@ -2,6 +2,7 @@ package com.commercetools.api.generated.models.channel;
 
 import com.commercetools.api.generated.models.channel.ChannelRoleEnum;
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.GeoJson;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
 import com.commercetools.api.generated.models.channel.ChannelDraftImpl;
@@ -24,34 +25,48 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelDraftImpl.class)
 public interface ChannelDraft  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("key")
    public String getKey();
-   
+   /**
+   	<p>If not specified, then channel will get InventorySupply role by default</p>
+   */
    
    @JsonProperty("roles")
    public List<ChannelRoleEnum> getRoles();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("address")
    public Address getAddress();
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   
-   
+   /**
+   	
+   */
+   @Valid
    @JsonProperty("geoLocation")
-   public Object getGeoLocation();
+   public GeoJson getGeoLocation();
 
    public void setKey(final String key);
    
@@ -65,7 +80,7 @@ public interface ChannelDraft  {
    
    public void setCustom(final CustomFieldsDraft custom);
    
-   public void setGeoLocation(final Object geoLocation);
+   public void setGeoLocation(final GeoJson geoLocation);
    
    public static ChannelDraftImpl of(){
       return new ChannelDraftImpl();

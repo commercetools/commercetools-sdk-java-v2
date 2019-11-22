@@ -1,8 +1,11 @@
 package com.commercetools.api.generated.models.shipping_method;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.shipping_method.ZoneRate;
 import com.commercetools.api.generated.models.tax_category.TaxCategoryReference;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.shipping_method.ShippingMethod;
 import javax.annotation.Nullable;
 import java.util.List;

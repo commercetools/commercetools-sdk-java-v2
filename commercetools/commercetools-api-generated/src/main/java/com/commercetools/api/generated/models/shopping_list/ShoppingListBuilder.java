@@ -1,11 +1,14 @@
 package com.commercetools.api.generated.models.shopping_list;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.customer.CustomerReference;
 import com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem;
 import com.commercetools.api.generated.models.shopping_list.TextLineItem;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.shopping_list.ShoppingList;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -38,9 +41,6 @@ public final class ShoppingListBuilder {
    private com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
-   private java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> lineItems;
-   
-   @Nullable
    private String anonymousId;
    
    @Nullable
@@ -52,11 +52,14 @@ public final class ShoppingListBuilder {
    @Nullable
    private com.commercetools.api.generated.models.type.CustomFields custom;
    
-   
-   private com.commercetools.api.generated.models.common.LocalizedString name;
-   
    @Nullable
    private com.commercetools.api.generated.models.common.LocalizedString description;
+   
+   @Nullable
+   private java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> lineItems;
+   
+   
+   private com.commercetools.api.generated.models.common.LocalizedString name;
    
    @Nullable
    private com.commercetools.api.generated.models.common.LocalizedString slug;
@@ -97,11 +100,6 @@ public final class ShoppingListBuilder {
       return this;
    }
    
-   public ShoppingListBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> lineItems) {
-      this.lineItems = lineItems;
-      return this;
-   }
-   
    public ShoppingListBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
@@ -122,13 +120,18 @@ public final class ShoppingListBuilder {
       return this;
    }
    
-   public ShoppingListBuilder name( final com.commercetools.api.generated.models.common.LocalizedString name) {
-      this.name = name;
+   public ShoppingListBuilder description(@Nullable final com.commercetools.api.generated.models.common.LocalizedString description) {
+      this.description = description;
       return this;
    }
    
-   public ShoppingListBuilder description(@Nullable final com.commercetools.api.generated.models.common.LocalizedString description) {
-      this.description = description;
+   public ShoppingListBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> lineItems) {
+      this.lineItems = lineItems;
+      return this;
+   }
+   
+   public ShoppingListBuilder name( final com.commercetools.api.generated.models.common.LocalizedString name) {
+      this.name = name;
       return this;
    }
    
@@ -178,11 +181,6 @@ public final class ShoppingListBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> getLineItems(){
-      return this.lineItems;
-   }
-   
-   @Nullable
    public String getAnonymousId(){
       return this.anonymousId;
    }
@@ -202,14 +200,19 @@ public final class ShoppingListBuilder {
       return this.custom;
    }
    
-   
-   public com.commercetools.api.generated.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
    @Nullable
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
+   }
+   
+   @Nullable
+   public java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> getLineItems(){
+      return this.lineItems;
+   }
+   
+   
+   public com.commercetools.api.generated.models.common.LocalizedString getName(){
+      return this.name;
    }
    
    @Nullable
@@ -228,7 +231,7 @@ public final class ShoppingListBuilder {
    }
 
    public ShoppingList build() {
-       return new ShoppingListImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, lineItems, anonymousId, textLineItems, deleteDaysAfterLastModification, custom, name, description, slug, key, customer);
+       return new ShoppingListImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, anonymousId, textLineItems, deleteDaysAfterLastModification, custom, description, lineItems, name, slug, key, customer);
    }
    
    public static ShoppingListBuilder of() {
@@ -243,13 +246,13 @@ public final class ShoppingListBuilder {
       builder.version = template.getVersion();
       builder.createdBy = template.getCreatedBy();
       builder.lastModifiedBy = template.getLastModifiedBy();
-      builder.lineItems = template.getLineItems();
       builder.anonymousId = template.getAnonymousId();
       builder.textLineItems = template.getTextLineItems();
       builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
       builder.custom = template.getCustom();
-      builder.name = template.getName();
       builder.description = template.getDescription();
+      builder.lineItems = template.getLineItems();
+      builder.name = template.getName();
       builder.slug = template.getSlug();
       builder.key = template.getKey();
       builder.customer = template.getCustomer();

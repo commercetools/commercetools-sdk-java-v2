@@ -24,10 +24,10 @@ public final class ProductRevertedStagedChangesMessagePayloadImpl implements Pro
 
    private String type;
    
-   private java.util.List<Object> removedImageUrls;
+   private java.util.List<String> removedImageUrls;
 
    @JsonCreator
-   ProductRevertedStagedChangesMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<Object> removedImageUrls) {
+   ProductRevertedStagedChangesMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
       this.removedImageUrls = removedImageUrls;
       this.type = "ProductRevertedStagedChanges";
    }
@@ -41,11 +41,11 @@ public final class ProductRevertedStagedChangesMessagePayloadImpl implements Pro
    }
    
    
-   public java.util.List<Object> getRemovedImageUrls(){
+   public java.util.List<String> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
 
-   public void setRemovedImageUrls(final java.util.List<Object> removedImageUrls){
+   public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
       this.removedImageUrls = removedImageUrls;
    }
 

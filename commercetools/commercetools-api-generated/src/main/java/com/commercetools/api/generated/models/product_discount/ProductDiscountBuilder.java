@@ -1,5 +1,7 @@
 package com.commercetools.api.generated.models.product_discount;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.Reference;
@@ -37,19 +39,7 @@ public final class ProductDiscountBuilder {
    private com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy;
    
    
-   private String predicate;
-   
-   
    private java.util.List<com.commercetools.api.generated.models.common.Reference> references;
-   
-   
-   private String sortOrder;
-   
-   
-   private com.commercetools.api.generated.models.common.LocalizedString name;
-   
-   @Nullable
-   private java.time.ZonedDateTime validUntil;
    
    @Nullable
    private com.commercetools.api.generated.models.common.LocalizedString description;
@@ -59,6 +49,18 @@ public final class ProductDiscountBuilder {
    
    
    private Boolean isActive;
+   
+   
+   private String predicate;
+   
+   
+   private String sortOrder;
+   
+   
+   private com.commercetools.api.generated.models.common.LocalizedString name;
+   
+   @Nullable
+   private java.time.ZonedDateTime validUntil;
    
    
    private com.commercetools.api.generated.models.product_discount.ProductDiscountValue value;
@@ -96,28 +98,8 @@ public final class ProductDiscountBuilder {
       return this;
    }
    
-   public ProductDiscountBuilder predicate( final String predicate) {
-      this.predicate = predicate;
-      return this;
-   }
-   
    public ProductDiscountBuilder references( final java.util.List<com.commercetools.api.generated.models.common.Reference> references) {
       this.references = references;
-      return this;
-   }
-   
-   public ProductDiscountBuilder sortOrder( final String sortOrder) {
-      this.sortOrder = sortOrder;
-      return this;
-   }
-   
-   public ProductDiscountBuilder name( final com.commercetools.api.generated.models.common.LocalizedString name) {
-      this.name = name;
-      return this;
-   }
-   
-   public ProductDiscountBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
-      this.validUntil = validUntil;
       return this;
    }
    
@@ -133,6 +115,26 @@ public final class ProductDiscountBuilder {
    
    public ProductDiscountBuilder isActive( final Boolean isActive) {
       this.isActive = isActive;
+      return this;
+   }
+   
+   public ProductDiscountBuilder predicate( final String predicate) {
+      this.predicate = predicate;
+      return this;
+   }
+   
+   public ProductDiscountBuilder sortOrder( final String sortOrder) {
+      this.sortOrder = sortOrder;
+      return this;
+   }
+   
+   public ProductDiscountBuilder name( final com.commercetools.api.generated.models.common.LocalizedString name) {
+      this.name = name;
+      return this;
+   }
+   
+   public ProductDiscountBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
+      this.validUntil = validUntil;
       return this;
    }
    
@@ -177,28 +179,8 @@ public final class ProductDiscountBuilder {
    }
    
    
-   public String getPredicate(){
-      return this.predicate;
-   }
-   
-   
    public java.util.List<com.commercetools.api.generated.models.common.Reference> getReferences(){
       return this.references;
-   }
-   
-   
-   public String getSortOrder(){
-      return this.sortOrder;
-   }
-   
-   
-   public com.commercetools.api.generated.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
-   @Nullable
-   public java.time.ZonedDateTime getValidUntil(){
-      return this.validUntil;
    }
    
    @Nullable
@@ -217,6 +199,26 @@ public final class ProductDiscountBuilder {
    }
    
    
+   public String getPredicate(){
+      return this.predicate;
+   }
+   
+   
+   public String getSortOrder(){
+      return this.sortOrder;
+   }
+   
+   
+   public com.commercetools.api.generated.models.common.LocalizedString getName(){
+      return this.name;
+   }
+   
+   @Nullable
+   public java.time.ZonedDateTime getValidUntil(){
+      return this.validUntil;
+   }
+   
+   
    public com.commercetools.api.generated.models.product_discount.ProductDiscountValue getValue(){
       return this.value;
    }
@@ -227,7 +229,7 @@ public final class ProductDiscountBuilder {
    }
 
    public ProductDiscount build() {
-       return new ProductDiscountImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, predicate, references, sortOrder, name, validUntil, description, validFrom, isActive, value, key);
+       return new ProductDiscountImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, references, description, validFrom, isActive, predicate, sortOrder, name, validUntil, value, key);
    }
    
    public static ProductDiscountBuilder of() {
@@ -242,14 +244,14 @@ public final class ProductDiscountBuilder {
       builder.version = template.getVersion();
       builder.createdBy = template.getCreatedBy();
       builder.lastModifiedBy = template.getLastModifiedBy();
-      builder.predicate = template.getPredicate();
       builder.references = template.getReferences();
-      builder.sortOrder = template.getSortOrder();
-      builder.name = template.getName();
-      builder.validUntil = template.getValidUntil();
       builder.description = template.getDescription();
       builder.validFrom = template.getValidFrom();
       builder.isActive = template.getIsActive();
+      builder.predicate = template.getPredicate();
+      builder.sortOrder = template.getSortOrder();
+      builder.name = template.getName();
+      builder.validUntil = template.getValidUntil();
       builder.value = template.getValue();
       builder.key = template.getKey();
       return builder;

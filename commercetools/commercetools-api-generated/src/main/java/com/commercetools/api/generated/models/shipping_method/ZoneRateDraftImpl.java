@@ -36,12 +36,16 @@ public final class ZoneRateDraftImpl implements ZoneRateDraft {
       
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.zone.ZoneResourceIdentifier getZone(){
       return this.zone;
    }
    
-   
+   /**
+   	<p>The array must not contain two shipping rates with the same currency.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.shipping_method.ShippingRateDraft> getShippingRates(){
       return this.shippingRates;
    }

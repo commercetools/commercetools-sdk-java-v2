@@ -1,6 +1,7 @@
 package com.commercetools.api.generated.models.channel;
 
 import com.commercetools.api.generated.models.channel.ChannelUpdateAction;
+import com.commercetools.api.generated.models.common.GeoJson;
 import com.commercetools.api.generated.models.channel.ChannelSetGeoLocationAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,15 +16,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ChannelSetGeoLocationActionBuilder {
    
    @Nullable
-   private Object geoLocation;
+   private com.commercetools.api.generated.models.common.GeoJson geoLocation;
    
-   public ChannelSetGeoLocationActionBuilder geoLocation(@Nullable final Object geoLocation) {
+   public ChannelSetGeoLocationActionBuilder geoLocation(@Nullable final com.commercetools.api.generated.models.common.GeoJson geoLocation) {
       this.geoLocation = geoLocation;
       return this;
    }
    
    @Nullable
-   public Object getGeoLocation(){
+   public com.commercetools.api.generated.models.common.GeoJson getGeoLocation(){
       return this.geoLocation;
    }
 

@@ -1,5 +1,7 @@
 package com.commercetools.api.generated.models.order_edit;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.order.OrderReference;
 import com.commercetools.api.generated.models.order.StagedOrderUpdateAction;

@@ -68,62 +68,91 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
       
    }
    
-   
+   /**
+   	<p>The referenced matching cart discounts can be applied to the cart once the discount code is added.
+   	The number of cart discounts in a discount code is limited to <strong>{{ site.data.api-limits.cartDiscountsPerDiscountCodeCount }}</strong>.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts(){
       return this.cartDiscounts;
    }
    
-   
+   /**
+   	<p>Unique identifier of this discount code.
+   	This value is added to the cart
+   	to enable the related cart discounts in the cart.</p>
+   */
    public String getCode(){
       return this.code;
    }
    
-   
+   /**
+   	<p>The discount code can only be applied to carts that match this predicate.</p>
+   */
    public String getCartPredicate(){
       return this.cartPredicate;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   
+   /**
+   	<p>The time until the discount can be applied on a cart.
+   	After that time the code is invalid.</p>
+   */
    public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }
    
-   
+   /**
+   	<p>The groups to which this discount code shall belong to.</p>
+   */
    public java.util.List<String> getGroups(){
       return this.groups;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
-   
+   /**
+   	<p>The time from which the discount can be applied on a cart.
+   	Before that time the code is invalid.</p>
+   */
    public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }
    
-   
+   /**
+   	
+   */
    public Long getMaxApplicationsPerCustomer(){
       return this.maxApplicationsPerCustomer;
    }
    
-   
+   /**
+   	
+   */
    public Boolean getIsActive(){
       return this.isActive;
    }
    
-   
+   /**
+   	
+   */
    public Long getMaxApplications(){
       return this.maxApplications;
    }

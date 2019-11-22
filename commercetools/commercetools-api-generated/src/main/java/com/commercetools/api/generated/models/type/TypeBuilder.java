@@ -1,9 +1,12 @@
 package com.commercetools.api.generated.models.type;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.type.FieldDefinition;
 import com.commercetools.api.generated.models.type.ResourceTypeId;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.type.Type;
 import javax.annotation.Nullable;
 import java.util.List;

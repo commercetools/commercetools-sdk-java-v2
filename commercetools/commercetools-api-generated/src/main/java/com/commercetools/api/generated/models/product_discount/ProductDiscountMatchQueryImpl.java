@@ -1,6 +1,6 @@
 package com.commercetools.api.generated.models.product_discount;
 
-import com.commercetools.api.generated.models.common.Price;
+import com.commercetools.api.generated.models.common.QueryPrice;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,14 +24,14 @@ public final class ProductDiscountMatchQueryImpl implements ProductDiscountMatch
 
    private String productId;
    
-   private com.commercetools.api.generated.models.common.Price price;
+   private com.commercetools.api.generated.models.common.QueryPrice price;
    
    private Boolean staged;
    
    private Integer variantId;
 
    @JsonCreator
-   ProductDiscountMatchQueryImpl(@JsonProperty("productId") final String productId, @JsonProperty("price") final com.commercetools.api.generated.models.common.Price price, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Integer variantId) {
+   ProductDiscountMatchQueryImpl(@JsonProperty("productId") final String productId, @JsonProperty("price") final com.commercetools.api.generated.models.common.QueryPrice price, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Integer variantId) {
       this.productId = productId;
       this.price = price;
       this.staged = staged;
@@ -47,7 +47,7 @@ public final class ProductDiscountMatchQueryImpl implements ProductDiscountMatch
    }
    
    
-   public com.commercetools.api.generated.models.common.Price getPrice(){
+   public com.commercetools.api.generated.models.common.QueryPrice getPrice(){
       return this.price;
    }
    
@@ -65,7 +65,7 @@ public final class ProductDiscountMatchQueryImpl implements ProductDiscountMatch
       this.productId = productId;
    }
    
-   public void setPrice(final com.commercetools.api.generated.models.common.Price price){
+   public void setPrice(final com.commercetools.api.generated.models.common.QueryPrice price){
       this.price = price;
    }
    

@@ -1,5 +1,7 @@
 package com.commercetools.api.generated.models.payment;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.TypedMoney;
 import com.commercetools.api.generated.models.customer.CustomerReference;
@@ -7,6 +9,7 @@ import com.commercetools.api.generated.models.payment.PaymentMethodInfo;
 import com.commercetools.api.generated.models.payment.PaymentStatus;
 import com.commercetools.api.generated.models.payment.Transaction;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -98,32 +101,44 @@ public final class PaymentImpl implements Payment {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
-   
+   /**
+   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
@@ -133,17 +148,23 @@ public final class PaymentImpl implements Payment {
       return this.amountAuthorized;
    }
    
-   
+   /**
+   	<p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+   */
    public String getAnonymousId(){
       return this.anonymousId;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
       return this.paymentMethodInfo;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
@@ -158,7 +179,9 @@ public final class PaymentImpl implements Payment {
       return this.externalId;
    }
    
-   
+   /**
+   	<p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.payment.Transaction> getTransactions(){
       return this.transactions;
    }
@@ -173,32 +196,51 @@ public final class PaymentImpl implements Payment {
       return this.amountRefunded;
    }
    
-   
+   /**
+   	<p>How much money this payment intends to receive from the customer.
+   	The value usually matches the cart or order gross total.</p>
+   */
    public com.commercetools.api.generated.models.common.TypedMoney getAmountPlanned(){
       return this.amountPlanned;
    }
    
-   
+   /**
+   	<p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP.
+   	Some interactions may result in a transaction.
+   	If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction.
+   	Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.type.CustomFields> getInterfaceInteractions(){
       return this.interfaceInteractions;
    }
    
-   
+   /**
+   	<p>The identifier that is used by the interface that manages the payment (usually the PSP).
+   	Cannot be changed once it has been set.
+   	The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+   */
    public String getInterfaceId(){
       return this.interfaceId;
    }
    
-   
+   /**
+   	<p>User-specific unique identifier for the payment (max.
+   	256 characters).</p>
+   */
    public String getKey(){
       return this.key;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.payment.PaymentStatus getPaymentStatus(){
       return this.paymentStatus;
    }
    
-   
+   /**
+   	<p>A reference to the customer this payment belongs to.</p>
+   */
    public com.commercetools.api.generated.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }

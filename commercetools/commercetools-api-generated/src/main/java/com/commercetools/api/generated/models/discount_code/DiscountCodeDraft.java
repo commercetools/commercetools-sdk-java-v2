@@ -24,52 +24,81 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeDraftImpl.class)
 public interface DiscountCodeDraft  {
 
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   
+   /**
+   	<p>Unique identifier of this discount code.
+   	This value is added to the cart
+   	to enable the related cart discounts in the cart.</p>
+   */
    @NotNull
    @JsonProperty("code")
    public String getCode();
-   
+   /**
+   	<p>The referenced matching cart discounts can be applied to the cart once the discount code is added.
+   	The number of cart discounts in a discount code is limited to <strong>{{ site.data.api-limits.cartDiscountsPerDiscountCodeCount }}</strong>.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("cartDiscounts")
    public List<CartDiscountResourceIdentifier> getCartDiscounts();
-   
+   /**
+   	<p>The discount code can only be applied to carts that match this predicate.</p>
+   */
    
    @JsonProperty("cartPredicate")
    public String getCartPredicate();
-   
+   /**
+   	
+   */
    
    @JsonProperty("isActive")
    public Boolean getIsActive();
-   
+   /**
+   	
+   */
    
    @JsonProperty("maxApplications")
    public Long getMaxApplications();
-   
+   /**
+   	
+   */
    
    @JsonProperty("maxApplicationsPerCustomer")
    public Long getMaxApplicationsPerCustomer();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   
+   /**
+   	<p>The groups to which this discount code shall belong to.</p>
+   */
    
    @JsonProperty("groups")
    public List<String> getGroups();
-   
+   /**
+   	<p>The time from which the discount can be applied on a cart.
+   	Before that time the code is invalid.</p>
+   */
    
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
-   
+   /**
+   	<p>The time until the discount can be applied on a cart.
+   	After that time the code is invalid.</p>
+   */
    
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();

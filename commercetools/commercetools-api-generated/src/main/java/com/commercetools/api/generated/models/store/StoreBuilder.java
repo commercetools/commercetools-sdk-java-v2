@@ -1,7 +1,10 @@
 package com.commercetools.api.generated.models.store;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.store.Store;
 import javax.annotation.Nullable;
 import java.util.List;

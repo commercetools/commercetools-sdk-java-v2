@@ -35,12 +35,16 @@ public final class DeliveryItemImpl implements DeliveryItem {
       
    }
    
-   
+   /**
+   	
+   */
    public Integer getQuantity(){
       return this.quantity;
    }
    
-   
+   /**
+   	
+   */
    public String getId(){
       return this.id;
    }

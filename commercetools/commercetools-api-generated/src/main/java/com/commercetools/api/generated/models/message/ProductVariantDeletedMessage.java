@@ -24,17 +24,17 @@ public interface ProductVariantDeletedMessage extends Message {
 
    
    @NotNull
-   @JsonProperty("removedImageUrls")
-   public List<Object> getRemovedImageUrls();
-   
-   @NotNull
    @Valid
    @JsonProperty("variant")
    public ProductVariant getVariant();
-
-   public void setRemovedImageUrls(final List<Object> removedImageUrls);
    
+   @NotNull
+   @JsonProperty("removedImageUrls")
+   public List<String> getRemovedImageUrls();
+
    public void setVariant(final ProductVariant variant);
+   
+   public void setRemovedImageUrls(final List<String> removedImageUrls);
    
    public static ProductVariantDeletedMessageImpl of(){
       return new ProductVariantDeletedMessageImpl();

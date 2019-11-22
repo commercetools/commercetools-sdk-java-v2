@@ -22,31 +22,48 @@ import java.io.IOException;
 @JsonDeserialize(as = ApiClientImpl.class)
 public interface ApiClient  {
 
-   
+   /**
+   	<p>The unique ID of the API client.
+   	This is the OAuth2 <code>client_id</code> and can be used to obtain a token.</p>
+   */
    @NotNull
    @JsonProperty("id")
    public String getId();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("name")
    public String getName();
-   
+   /**
+   	<p>A whitespace separated list of the OAuth scopes.
+   	This is the OAuth2 <code>scope</code> and can be used to obtain a token.</p>
+   */
    @NotNull
    @JsonProperty("scope")
    public String getScope();
-   
+   /**
+   	
+   */
    
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   
+   /**
+   	<p>The last day this API Client was used to obtain a token.</p>
+   */
    
    @JsonProperty("lastUsedAt")
    public LocalDate getLastUsedAt();
-   
+   /**
+   	<p>If set, the client will be deleted on (or shortly after) this point in time.</p>
+   */
    
    @JsonProperty("deleteAt")
    public ZonedDateTime getDeleteAt();
-   
+   /**
+   	<p>The secret is only shown once in the response of creating the API Client.
+   	This is the OAuth2 <code>client_secret</code> and can be used to obtain a token.</p>
+   */
    
    @JsonProperty("secret")
    public String getSecret();

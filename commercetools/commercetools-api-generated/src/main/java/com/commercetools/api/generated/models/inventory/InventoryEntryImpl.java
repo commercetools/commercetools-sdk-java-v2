@@ -1,6 +1,8 @@
 package com.commercetools.api.generated.models.inventory;
 
 import com.commercetools.api.generated.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.type.CustomFields;
 import java.time.ZonedDateTime;
@@ -71,67 +73,95 @@ public final class InventoryEntryImpl implements InventoryEntry {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	<p>The unique ID of the inventory entry.</p>
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
-   
+   /**
+   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
-   
+   /**
+   	<p>Available amount of stock.
+   	(available means: <code>quantityOnStock</code> - reserved quantity)</p>
+   */
    public Long getAvailableQuantity(){
       return this.availableQuantity;
    }
    
-   
+   /**
+   	<p>The date and time of the next restock.</p>
+   */
    public java.time.ZonedDateTime getExpectedDelivery(){
       return this.expectedDelivery;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	<p>Overall amount of stock.
+   	(available + reserved)</p>
+   */
    public Long getQuantityOnStock(){
       return this.quantityOnStock;
    }
    
-   
+   /**
+   	<p>Optional connection to a particular supplier.</p>
+   */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
-   
+   /**
+   	<p>The time period in days, that tells how often this inventory entry is restocked.</p>
+   */
    public Long getRestockableInDays(){
       return this.restockableInDays;
    }
    
-   
+   /**
+   	
+   */
    public String getSku(){
       return this.sku;
    }

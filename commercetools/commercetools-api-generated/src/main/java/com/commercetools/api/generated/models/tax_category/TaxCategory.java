@@ -1,7 +1,10 @@
 package com.commercetools.api.generated.models.tax_category;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.tax_category.TaxRate;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.tax_category.TaxCategoryImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -22,24 +25,80 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxCategoryImpl.class)
 public interface TaxCategory extends LoggedResource {
 
-   
+   /**
+   	<p>The unique ID of the category.</p>
+   */
+   @NotNull
+   @JsonProperty("id")
+   public String getId();
+   /**
+   	<p>The current version of the category.</p>
+   */
+   @NotNull
+   @JsonProperty("version")
+   public Long getVersion();
+   /**
+   	
+   */
+   @NotNull
+   @JsonProperty("createdAt")
+   public ZonedDateTime getCreatedAt();
+   /**
+   	
+   */
+   @NotNull
+   @JsonProperty("lastModifiedAt")
+   public ZonedDateTime getLastModifiedAt();
+   /**
+   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
+   @Valid
+   @JsonProperty("lastModifiedBy")
+   public LastModifiedBy getLastModifiedBy();
+   /**
+   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
+   @Valid
+   @JsonProperty("createdBy")
+   public CreatedBy getCreatedBy();
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("name")
    public String getName();
-   
+   /**
+   	
+   */
    
    @JsonProperty("description")
    public String getDescription();
-   
+   /**
+   	<p>The tax rates have unique IDs in the rates list</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("rates")
    public List<TaxRate> getRates();
-   
+   /**
+   	<p>User-specific unique identifier for the category.</p>
+   */
    
    @JsonProperty("key")
    public String getKey();
 
+   public void setId(final String id);
+   
+   public void setVersion(final Long version);
+   
+   public void setCreatedAt(final ZonedDateTime createdAt);
+   
+   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+   
+   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+   
+   public void setCreatedBy(final CreatedBy createdBy);
+   
    public void setName(final String name);
    
    public void setDescription(final String description);

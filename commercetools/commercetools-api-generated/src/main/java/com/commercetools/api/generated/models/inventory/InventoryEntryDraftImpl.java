@@ -49,32 +49,44 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getExpectedDelivery(){
       return this.expectedDelivery;
    }
    
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	
+   */
    public Long getQuantityOnStock(){
       return this.quantityOnStock;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
-   
+   /**
+   	
+   */
    public Long getRestockableInDays(){
       return this.restockableInDays;
    }
    
-   
+   /**
+   	
+   */
    public String getSku(){
       return this.sku;
    }

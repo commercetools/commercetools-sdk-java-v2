@@ -14,12 +14,15 @@ import com.commercetools.api.generated.models.cart.TaxMode;
 import com.commercetools.api.generated.models.cart.TaxedPrice;
 import com.commercetools.api.generated.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.common.TypedMoney;
 import com.commercetools.api.generated.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.generated.models.order.PaymentInfo;
 import com.commercetools.api.generated.models.store.StoreKeyReference;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.me.MyCartImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -40,6 +43,30 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartImpl.class)
 public interface MyCart extends LoggedResource {
 
+   
+   @NotNull
+   @JsonProperty("id")
+   public String getId();
+   
+   @NotNull
+   @JsonProperty("version")
+   public Long getVersion();
+   
+   @NotNull
+   @JsonProperty("createdAt")
+   public ZonedDateTime getCreatedAt();
+   
+   @NotNull
+   @JsonProperty("lastModifiedAt")
+   public ZonedDateTime getLastModifiedAt();
+   
+   @Valid
+   @JsonProperty("lastModifiedBy")
+   public LastModifiedBy getLastModifiedBy();
+   
+   @Valid
+   @JsonProperty("createdBy")
+   public CreatedBy getCreatedBy();
    
    
    @JsonProperty("customerId")
@@ -155,6 +182,18 @@ public interface MyCart extends LoggedResource {
    @JsonProperty("itemShippingAddresses")
    public List<Address> getItemShippingAddresses();
 
+   public void setId(final String id);
+   
+   public void setVersion(final Long version);
+   
+   public void setCreatedAt(final ZonedDateTime createdAt);
+   
+   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+   
+   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+   
+   public void setCreatedBy(final CreatedBy createdBy);
+   
    public void setCustomerId(final String customerId);
    
    public void setCustomerEmail(final String customerEmail);

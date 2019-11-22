@@ -1,7 +1,10 @@
 package com.commercetools.api.generated.models.zone;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.zone.Location;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.zone.Zone;
 import javax.annotation.Nullable;
 import java.util.List;

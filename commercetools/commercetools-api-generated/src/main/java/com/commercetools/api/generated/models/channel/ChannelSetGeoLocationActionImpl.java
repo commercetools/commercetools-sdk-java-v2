@@ -1,6 +1,7 @@
 package com.commercetools.api.generated.models.channel;
 
 import com.commercetools.api.generated.models.channel.ChannelUpdateAction;
+import com.commercetools.api.generated.models.common.GeoJson;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -24,10 +25,10 @@ public final class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocat
 
    private String action;
    
-   private Object geoLocation;
+   private com.commercetools.api.generated.models.common.GeoJson geoLocation;
 
    @JsonCreator
-   ChannelSetGeoLocationActionImpl(@JsonProperty("geoLocation") final Object geoLocation) {
+   ChannelSetGeoLocationActionImpl(@JsonProperty("geoLocation") final com.commercetools.api.generated.models.common.GeoJson geoLocation) {
       this.geoLocation = geoLocation;
       this.action = "setGeoLocation";
    }
@@ -41,11 +42,11 @@ public final class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocat
    }
    
    
-   public Object getGeoLocation(){
+   public com.commercetools.api.generated.models.common.GeoJson getGeoLocation(){
       return this.geoLocation;
    }
 
-   public void setGeoLocation(final Object geoLocation){
+   public void setGeoLocation(final com.commercetools.api.generated.models.common.GeoJson geoLocation){
       this.geoLocation = geoLocation;
    }
 

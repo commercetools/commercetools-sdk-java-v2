@@ -21,23 +21,36 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewRatingStatisticsImpl.class)
 public interface ReviewRatingStatistics  {
 
-   
+   /**
+   	<p>Average rating of one target
+   	This number is rounded with 5 decimals.</p>
+   */
    @NotNull
    @JsonProperty("averageRating")
    public Integer getAverageRating();
-   
+   /**
+   	<p>Highest rating of one target</p>
+   */
    @NotNull
    @JsonProperty("highestRating")
    public Integer getHighestRating();
-   
+   /**
+   	<p>Lowest rating of one target</p>
+   */
    @NotNull
    @JsonProperty("lowestRating")
    public Integer getLowestRating();
-   
+   /**
+   	<p>Number of ratings taken into account</p>
+   */
    @NotNull
    @JsonProperty("count")
    public Integer getCount();
-   
+   /**
+   	<p>The full distribution of the ratings.
+   	The keys are the different ratings and the values are the count of reviews having this rating.
+   	Only the used ratings appear in this object.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("ratingsDistribution")

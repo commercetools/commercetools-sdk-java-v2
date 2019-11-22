@@ -24,28 +24,40 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListDraftImpl.class)
 public interface MyShoppingListDraft  {
 
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("lineItems")
    public List<ShoppingListLineItemDraft> getLineItems();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("textLineItems")
    public List<TextLineItemDraft> getTextLineItems();
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   
+   /**
+   	<p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+   */
    
    @JsonProperty("deleteDaysAfterLastModification")
    public Long getDeleteDaysAfterLastModification();

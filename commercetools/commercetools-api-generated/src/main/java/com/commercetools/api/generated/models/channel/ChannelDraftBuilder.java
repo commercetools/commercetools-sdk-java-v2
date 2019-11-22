@@ -2,6 +2,7 @@ package com.commercetools.api.generated.models.channel;
 
 import com.commercetools.api.generated.models.channel.ChannelRoleEnum;
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.GeoJson;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
 import com.commercetools.api.generated.models.channel.ChannelDraft;
@@ -21,7 +22,7 @@ public final class ChannelDraftBuilder {
    private com.commercetools.api.generated.models.common.Address address;
    
    @Nullable
-   private Object geoLocation;
+   private com.commercetools.api.generated.models.common.GeoJson geoLocation;
    
    @Nullable
    private com.commercetools.api.generated.models.type.CustomFieldsDraft custom;
@@ -43,7 +44,7 @@ public final class ChannelDraftBuilder {
       return this;
    }
    
-   public ChannelDraftBuilder geoLocation(@Nullable final Object geoLocation) {
+   public ChannelDraftBuilder geoLocation(@Nullable final com.commercetools.api.generated.models.common.GeoJson geoLocation) {
       this.geoLocation = geoLocation;
       return this;
    }
@@ -79,7 +80,7 @@ public final class ChannelDraftBuilder {
    }
    
    @Nullable
-   public Object getGeoLocation(){
+   public com.commercetools.api.generated.models.common.GeoJson getGeoLocation(){
       return this.geoLocation;
    }
    

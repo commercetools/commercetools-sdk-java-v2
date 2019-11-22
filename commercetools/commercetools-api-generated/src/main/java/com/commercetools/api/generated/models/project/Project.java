@@ -24,48 +24,70 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectImpl.class)
 public interface Project  {
 
-   
+   /**
+   	<p>The current version of the project.</p>
+   */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   
+   /**
+   	<p>The unique key of the project.</p>
+   */
    @NotNull
    @JsonProperty("key")
    public String getKey();
-   
+   /**
+   	<p>The name of the project.</p>
+   */
    @NotNull
    @JsonProperty("name")
    public String getName();
-   
+   /**
+   	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+   */
    @NotNull
    @JsonProperty("countries")
    public List<String> getCountries();
-   
+   /**
+   	<p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+   */
    @NotNull
    @JsonProperty("currencies")
    public List<String> getCurrencies();
-   
+   /**
+   	<p>.</p>
+   */
    @NotNull
    @JsonProperty("languages")
    public List<String> getLanguages();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   
+   /**
+   	<p>The time is in the format Year-Month <code>YYYY-MM</code>.</p>
+   */
    
    @JsonProperty("trialUntil")
    public String getTrialUntil();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("messages")
    public MessageConfiguration getMessages();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("shippingRateInputType")
    public ShippingRateInputType getShippingRateInputType();
-   
+   /**
+   	
+   */
    @Valid
    @JsonProperty("externalOAuth")
    public ExternalOAuth getExternalOAuth();

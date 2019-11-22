@@ -65,57 +65,79 @@ public final class ProjectImpl implements Project {
       
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.project.ExternalOAuth getExternalOAuth(){
       return this.externalOAuth;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.project.ShippingRateInputType getShippingRateInputType(){
       return this.shippingRateInputType;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	<p>.</p>
+   */
    public java.util.List<String> getLanguages(){
       return this.languages;
    }
    
-   
+   /**
+   	<p>The name of the project.</p>
+   */
    public String getName(){
       return this.name;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.message.MessageConfiguration getMessages(){
       return this.messages;
    }
    
-   
+   /**
+   	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+   */
    public java.util.List<String> getCountries(){
       return this.countries;
    }
    
-   
+   /**
+   	<p>The time is in the format Year-Month <code>YYYY-MM</code>.</p>
+   */
    public String getTrialUntil(){
       return this.trialUntil;
    }
    
-   
+   /**
+   	<p>The current version of the project.</p>
+   */
    public Long getVersion(){
       return this.version;
    }
    
-   
+   /**
+   	<p>The unique key of the project.</p>
+   */
    public String getKey(){
       return this.key;
    }
    
-   
+   /**
+   	<p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+   */
    public java.util.List<String> getCurrencies(){
       return this.currencies;
    }

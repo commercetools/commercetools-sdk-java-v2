@@ -25,14 +25,14 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
    
    @NotNull
    @JsonProperty("removedImageUrls")
-   public List<Object> getRemovedImageUrls();
+   public List<String> getRemovedImageUrls();
    
    @NotNull
    @Valid
    @JsonProperty("variant")
    public ProductVariant getVariant();
 
-   public void setRemovedImageUrls(final List<Object> removedImageUrls);
+   public void setRemovedImageUrls(final List<String> removedImageUrls);
    
    public void setVariant(final ProductVariant variant);
    

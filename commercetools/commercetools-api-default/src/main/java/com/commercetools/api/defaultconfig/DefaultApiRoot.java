@@ -4,12 +4,8 @@ import com.commercetools.api.generated.client.ApiRoot;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.middlewares.HttpMiddleware;
 import io.vrap.rmf.base.client.middlewares.LoggerMiddleware;
-import io.vrap.rmf.base.client.middlewares.Middleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class DefaultApiRoot {
 
@@ -23,8 +19,7 @@ public class DefaultApiRoot {
             final String apiEndpoint,
             final LoggerMiddleware.LogLevel logLevel
     ) {
-        List<Middleware> middlewares = new ArrayList<>();
-        middlewares.add(new HttpMiddleware(
+        return ApiRoot.fromMiddlewares(new HttpMiddleware(
                 apiEndpoint,
                 vrapHttpClient,
                 new ClientCredentialsTokenSupplier(
@@ -34,9 +29,7 @@ public class DefaultApiRoot {
                         tokenEndpoint
                         , vrapHttpClient
                 )
-        ));
-        middlewares.add(new LoggerMiddleware(logLevel));
-        return ApiRoot.fromMiddlewares(middlewares);
+        ), new LoggerMiddleware(logLevel));
     }
 
     public static ApiRoot create(

@@ -1,6 +1,9 @@
 package com.commercetools.api.generated.models.custom_object;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -56,22 +59,30 @@ public final class CustomObjectImpl implements CustomObject {
       
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   
+   /**
+   	
+   */
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   
+   /**
+   	
+   */
    public String getId(){
       return this.id;
    }
    
-   
+   /**
+   	
+   */
    public Long getVersion(){
       return this.version;
    }
@@ -86,17 +97,23 @@ public final class CustomObjectImpl implements CustomObject {
       return this.lastModifiedBy;
    }
    
-   
+   /**
+   	<p>A namespace to group custom objects.</p>
+   */
    public String getContainer(){
       return this.container;
    }
    
-   
+   /**
+   	
+   */
    public Object getValue(){
       return this.value;
    }
    
-   
+   /**
+   	
+   */
    public String getKey(){
       return this.key;
    }

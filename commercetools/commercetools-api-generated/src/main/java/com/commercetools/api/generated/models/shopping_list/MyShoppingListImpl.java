@@ -1,11 +1,14 @@
 package com.commercetools.api.generated.models.shopping_list;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.customer.CustomerReference;
 import com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem;
 import com.commercetools.api.generated.models.shopping_list.TextLineItem;
 import com.commercetools.api.generated.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -39,8 +42,6 @@ public final class MyShoppingListImpl implements MyShoppingList {
    
    private com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy;
    
-   private java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> lineItems;
-   
    private String anonymousId;
    
    private java.util.List<com.commercetools.api.generated.models.shopping_list.TextLineItem> textLineItems;
@@ -49,9 +50,11 @@ public final class MyShoppingListImpl implements MyShoppingList {
    
    private com.commercetools.api.generated.models.type.CustomFields custom;
    
-   private com.commercetools.api.generated.models.common.LocalizedString name;
-   
    private com.commercetools.api.generated.models.common.LocalizedString description;
+   
+   private java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> lineItems;
+   
+   private com.commercetools.api.generated.models.common.LocalizedString name;
    
    private com.commercetools.api.generated.models.common.LocalizedString slug;
    
@@ -60,20 +63,20 @@ public final class MyShoppingListImpl implements MyShoppingList {
    private com.commercetools.api.generated.models.customer.CustomerReference customer;
 
    @JsonCreator
-   MyShoppingListImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> lineItems, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.generated.models.shopping_list.TextLineItem> textLineItems, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.api.generated.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.generated.models.common.LocalizedString description, @JsonProperty("slug") final com.commercetools.api.generated.models.common.LocalizedString slug, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.api.generated.models.customer.CustomerReference customer) {
+   MyShoppingListImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.generated.models.shopping_list.TextLineItem> textLineItems, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFields custom, @JsonProperty("description") final com.commercetools.api.generated.models.common.LocalizedString description, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> lineItems, @JsonProperty("name") final com.commercetools.api.generated.models.common.LocalizedString name, @JsonProperty("slug") final com.commercetools.api.generated.models.common.LocalizedString slug, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.api.generated.models.customer.CustomerReference customer) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
       this.version = version;
       this.createdBy = createdBy;
       this.lastModifiedBy = lastModifiedBy;
-      this.lineItems = lineItems;
       this.anonymousId = anonymousId;
       this.textLineItems = textLineItems;
       this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
       this.custom = custom;
-      this.name = name;
       this.description = description;
+      this.lineItems = lineItems;
+      this.name = name;
       this.slug = slug;
       this.key = key;
       this.customer = customer;
@@ -113,11 +116,6 @@ public final class MyShoppingListImpl implements MyShoppingList {
    }
    
    
-   public java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> getLineItems(){
-      return this.lineItems;
-   }
-   
-   
    public String getAnonymousId(){
       return this.anonymousId;
    }
@@ -138,13 +136,18 @@ public final class MyShoppingListImpl implements MyShoppingList {
    }
    
    
-   public com.commercetools.api.generated.models.common.LocalizedString getName(){
-      return this.name;
+   public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
+      return this.description;
    }
    
    
-   public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
-      return this.description;
+   public java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> getLineItems(){
+      return this.lineItems;
+   }
+   
+   
+   public com.commercetools.api.generated.models.common.LocalizedString getName(){
+      return this.name;
    }
    
    
@@ -186,10 +189,6 @@ public final class MyShoppingListImpl implements MyShoppingList {
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setLineItems(final java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> lineItems){
-      this.lineItems = lineItems;
-   }
-   
    public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
@@ -206,12 +205,16 @@ public final class MyShoppingListImpl implements MyShoppingList {
       this.custom = custom;
    }
    
-   public void setName(final com.commercetools.api.generated.models.common.LocalizedString name){
-      this.name = name;
-   }
-   
    public void setDescription(final com.commercetools.api.generated.models.common.LocalizedString description){
       this.description = description;
+   }
+   
+   public void setLineItems(final java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> lineItems){
+      this.lineItems = lineItems;
+   }
+   
+   public void setName(final com.commercetools.api.generated.models.common.LocalizedString name){
+      this.name = name;
    }
    
    public void setSlug(final com.commercetools.api.generated.models.common.LocalizedString slug){

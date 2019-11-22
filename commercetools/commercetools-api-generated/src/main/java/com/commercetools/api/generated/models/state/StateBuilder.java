@@ -1,10 +1,13 @@
 package com.commercetools.api.generated.models.state;
 
+import com.commercetools.api.generated.models.common.CreatedBy;
+import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.state.StateReference;
 import com.commercetools.api.generated.models.state.StateRoleEnum;
 import com.commercetools.api.generated.models.state.StateTypeEnum;
+import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.state.State;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -46,9 +49,6 @@ public final class StateBuilder {
    private Boolean builtIn;
    
    @Nullable
-   private com.commercetools.api.generated.models.common.LocalizedString name;
-   
-   @Nullable
    private com.commercetools.api.generated.models.common.LocalizedString description;
    
    @Nullable
@@ -56,6 +56,9 @@ public final class StateBuilder {
    
    
    private com.commercetools.api.generated.models.state.StateTypeEnum type;
+   
+   @Nullable
+   private com.commercetools.api.generated.models.common.LocalizedString name;
    
    
    private String key;
@@ -105,11 +108,6 @@ public final class StateBuilder {
       return this;
    }
    
-   public StateBuilder name(@Nullable final com.commercetools.api.generated.models.common.LocalizedString name) {
-      this.name = name;
-      return this;
-   }
-   
    public StateBuilder description(@Nullable final com.commercetools.api.generated.models.common.LocalizedString description) {
       this.description = description;
       return this;
@@ -122,6 +120,11 @@ public final class StateBuilder {
    
    public StateBuilder type( final com.commercetools.api.generated.models.state.StateTypeEnum type) {
       this.type = type;
+      return this;
+   }
+   
+   public StateBuilder name(@Nullable final com.commercetools.api.generated.models.common.LocalizedString name) {
+      this.name = name;
       return this;
    }
    
@@ -176,11 +179,6 @@ public final class StateBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.generated.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
-   @Nullable
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
@@ -195,13 +193,18 @@ public final class StateBuilder {
       return this.type;
    }
    
+   @Nullable
+   public com.commercetools.api.generated.models.common.LocalizedString getName(){
+      return this.name;
+   }
+   
    
    public String getKey(){
       return this.key;
    }
 
    public State build() {
-       return new StateImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, initial, roles, builtIn, name, description, transitions, type, key);
+       return new StateImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, initial, roles, builtIn, description, transitions, type, name, key);
    }
    
    public static StateBuilder of() {
@@ -219,10 +222,10 @@ public final class StateBuilder {
       builder.initial = template.getInitial();
       builder.roles = template.getRoles();
       builder.builtIn = template.getBuiltIn();
-      builder.name = template.getName();
       builder.description = template.getDescription();
       builder.transitions = template.getTransitions();
       builder.type = template.getType();
+      builder.name = template.getName();
       builder.key = template.getKey();
       return builder;
    }

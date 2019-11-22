@@ -22,33 +22,47 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodDraftImpl.class)
 public interface ShippingMethodDraft  {
 
-   
+   /**
+   	
+   */
    
    @JsonProperty("key")
    public String getKey();
-   
+   /**
+   	
+   */
    @NotNull
    @JsonProperty("name")
    public String getName();
-   
+   /**
+   	
+   */
    
    @JsonProperty("description")
    public String getDescription();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryResourceIdentifier getTaxCategory();
-   
+   /**
+   	
+   */
    @NotNull
    @Valid
    @JsonProperty("zoneRates")
    public List<ZoneRateDraft> getZoneRates();
-   
+   /**
+   	<p>If <code>true</code> the shipping method will be the default one in a project.</p>
+   */
    @NotNull
    @JsonProperty("isDefault")
    public Boolean getIsDefault();
-   
+   /**
+   	<p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+   */
    
    @JsonProperty("predicate")
    public String getPredicate();

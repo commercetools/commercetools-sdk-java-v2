@@ -35,6 +35,9 @@ public final class MyLineItemDraftBuilder {
    private Long variantId;
    
    @Nullable
+   private String sku;
+   
+   @Nullable
    private com.commercetools.api.generated.models.channel.ChannelResourceIdentifier distributionChannel;
    
    public MyLineItemDraftBuilder quantity( final Integer quantity) {
@@ -64,6 +67,11 @@ public final class MyLineItemDraftBuilder {
    
    public MyLineItemDraftBuilder variantId( final Long variantId) {
       this.variantId = variantId;
+      return this;
+   }
+   
+   public MyLineItemDraftBuilder sku(@Nullable final String sku) {
+      this.sku = sku;
       return this;
    }
    
@@ -103,12 +111,17 @@ public final class MyLineItemDraftBuilder {
    }
    
    @Nullable
+   public String getSku(){
+      return this.sku;
+   }
+   
+   @Nullable
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
    }
 
    public MyLineItemDraft build() {
-       return new MyLineItemDraftImpl(quantity, shippingDetails, productId, custom, supplyChannel, variantId, distributionChannel);
+       return new MyLineItemDraftImpl(quantity, shippingDetails, productId, custom, supplyChannel, variantId, sku, distributionChannel);
    }
    
    public static MyLineItemDraftBuilder of() {
@@ -123,6 +136,7 @@ public final class MyLineItemDraftBuilder {
       builder.custom = template.getCustom();
       builder.supplyChannel = template.getSupplyChannel();
       builder.variantId = template.getVariantId();
+      builder.sku = template.getSku();
       builder.distributionChannel = template.getDistributionChannel();
       return builder;
    }

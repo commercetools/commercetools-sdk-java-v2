@@ -24,9 +24,9 @@ public interface ProductRevertedStagedChangesMessage extends Message {
    
    @NotNull
    @JsonProperty("removedImageUrls")
-   public List<Object> getRemovedImageUrls();
+   public List<String> getRemovedImageUrls();
 
-   public void setRemovedImageUrls(final List<Object> removedImageUrls);
+   public void setRemovedImageUrls(final List<String> removedImageUrls);
    
    public static ProductRevertedStagedChangesMessageImpl of(){
       return new ProductRevertedStagedChangesMessageImpl();

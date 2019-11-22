@@ -121,9 +121,7 @@ public final class CategoryCreatedMessageImpl implements CategoryCreatedMessage 
       return this.type;
    }
    
-   /**
-   	<p>Categories allow to organize products into hierarchical structures. They enable creating multiple classifications of products for shop navigation and other purposes.</p>
-   */
+   
    public com.commercetools.api.generated.models.category.Category getCategory(){
       return this.category;
    }

@@ -2,6 +2,7 @@ package com.commercetools.api.generated.models.channel;
 
 import com.commercetools.api.generated.models.channel.ChannelRoleEnum;
 import com.commercetools.api.generated.models.common.Address;
+import com.commercetools.api.generated.models.common.GeoJson;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,7 +28,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
 
    private com.commercetools.api.generated.models.common.Address address;
    
-   private Object geoLocation;
+   private com.commercetools.api.generated.models.common.GeoJson geoLocation;
    
    private com.commercetools.api.generated.models.type.CustomFieldsDraft custom;
    
@@ -40,7 +41,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
    private String key;
 
    @JsonCreator
-   ChannelDraftImpl(@JsonProperty("address") final com.commercetools.api.generated.models.common.Address address, @JsonProperty("geoLocation") final Object geoLocation, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("roles") final java.util.List<com.commercetools.api.generated.models.channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.api.generated.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.generated.models.common.LocalizedString description, @JsonProperty("key") final String key) {
+   ChannelDraftImpl(@JsonProperty("address") final com.commercetools.api.generated.models.common.Address address, @JsonProperty("geoLocation") final com.commercetools.api.generated.models.common.GeoJson geoLocation, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("roles") final java.util.List<com.commercetools.api.generated.models.channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.api.generated.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.generated.models.common.LocalizedString description, @JsonProperty("key") final String key) {
       this.address = address;
       this.geoLocation = geoLocation;
       this.custom = custom;
@@ -53,37 +54,51 @@ public final class ChannelDraftImpl implements ChannelDraft {
       
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.Address getAddress(){
       return this.address;
    }
    
-   
-   public Object getGeoLocation(){
+   /**
+   	
+   */
+   public com.commercetools.api.generated.models.common.GeoJson getGeoLocation(){
       return this.geoLocation;
    }
    
-   
+   /**
+   	<p>The custom fields.</p>
+   */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   
+   /**
+   	<p>If not specified, then channel will get InventorySupply role by default</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   
+   /**
+   	
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
-   
+   /**
+   	
+   */
    public String getKey(){
       return this.key;
    }
@@ -92,7 +107,7 @@ public final class ChannelDraftImpl implements ChannelDraft {
       this.address = address;
    }
    
-   public void setGeoLocation(final Object geoLocation){
+   public void setGeoLocation(final com.commercetools.api.generated.models.common.GeoJson geoLocation){
       this.geoLocation = geoLocation;
    }
    

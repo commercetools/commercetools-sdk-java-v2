@@ -1,6 +1,6 @@
 package com.commercetools.api.generated.models.product_discount;
 
-import com.commercetools.api.generated.models.common.Price;
+import com.commercetools.api.generated.models.common.QueryPrice;
 import com.commercetools.api.generated.models.product_discount.ProductDiscountMatchQueryImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -37,7 +37,7 @@ public interface ProductDiscountMatchQuery  {
    @NotNull
    @Valid
    @JsonProperty("price")
-   public Price getPrice();
+   public QueryPrice getPrice();
 
    public void setProductId(final String productId);
    
@@ -45,7 +45,7 @@ public interface ProductDiscountMatchQuery  {
    
    public void setStaged(final Boolean staged);
    
-   public void setPrice(final Price price);
+   public void setPrice(final QueryPrice price);
    
    public static ProductDiscountMatchQueryImpl of(){
       return new ProductDiscountMatchQueryImpl();

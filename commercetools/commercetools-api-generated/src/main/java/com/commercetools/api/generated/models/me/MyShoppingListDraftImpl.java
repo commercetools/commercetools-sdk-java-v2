@@ -50,44 +50,36 @@ public final class MyShoppingListDraftImpl implements MyShoppingListDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItemDraft> getLineItems(){
       return this.lineItems;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.shopping_list.TextLineItemDraft> getTextLineItems(){
       return this.textLineItems;
    }
    
    /**
-   	<p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+   *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
    */
    public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }

@@ -24,27 +24,19 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomObjectImpl.class)
 public interface CustomObject extends LoggedResource {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -57,20 +49,16 @@ public interface CustomObject extends LoggedResource {
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
    /**
-   	<p>A namespace to group custom objects.</p>
+   *  <p>A namespace to group custom objects.</p>
    */
    @NotNull
    @JsonProperty("container")
    public String getContainer();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("value")
    public Object getValue();

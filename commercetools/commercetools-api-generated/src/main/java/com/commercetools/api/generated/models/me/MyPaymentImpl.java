@@ -58,58 +58,50 @@ public final class MyPaymentImpl implements MyPayment {
    }
    
    /**
-   	<p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+   *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
    public String getAnonymousId(){
       return this.anonymousId;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
       return this.paymentMethodInfo;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>How much money this payment intends to receive from the customer.
-   	The value usually matches the cart or order gross total.</p>
+   *  <p>How much money this payment intends to receive from the customer.
+   *  The value usually matches the cart or order gross total.</p>
    */
    public com.commercetools.api.generated.models.common.TypedMoney getAmountPlanned(){
       return this.amountPlanned;
    }
    
-   /**
-   	
-   */
+   
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>A list of financial transactions of different <a href="http-api-projects-payments.html#transactiontype">TransactionTypes</a>
-   	with different <a href="http-api-projects-payments.html#transactionstate">TransactionStates</a>.</p>
+   *  <p>A list of financial transactions of different TransactionTypes
+   *  with different TransactionStates.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.payment.Transaction> getTransactions(){
       return this.transactions;
    }
    
-   /**
-   	
-   */
+   
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>A reference to the customer this payment belongs to.</p>
+   *  <p>A reference to the customer this payment belongs to.</p>
    */
    public com.commercetools.api.generated.models.customer.CustomerReference getCustomer(){
       return this.customer;

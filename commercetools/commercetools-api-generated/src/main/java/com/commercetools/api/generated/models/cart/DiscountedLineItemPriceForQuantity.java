@@ -21,15 +21,11 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountedLineItemPriceForQuantityImpl.class)
 public interface DiscountedLineItemPriceForQuantity  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("quantity")
    public Integer getQuantity();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("discountedPrice")

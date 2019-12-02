@@ -57,30 +57,22 @@ public final class StoreImpl implements Store {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   /**
-   	
-   */
+   
    public String getId(){
       return this.id;
    }
    
-   /**
-   	
-   */
+   
    public Long getVersion(){
       return this.version;
    }
@@ -96,16 +88,16 @@ public final class StoreImpl implements Store {
    }
    
    /**
-   	<p>The name of the store</p>
+   *  <p>The name of the store</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
    /**
-   	<p>User-specific unique identifier for the store.
-   	The <code>key</code> is mandatory and immutable.
-   	It is used to reference the store.</p>
+   *  <p>User-specific unique identifier for the store.
+   *  The <code>key</code> is mandatory and immutable.
+   *  It is used to reference the store.</p>
    */
    public String getKey(){
       return this.key;

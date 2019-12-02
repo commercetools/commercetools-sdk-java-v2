@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Creating a category produces the CategoryCreated message.</p>
+*  <p>Creating a category produces the CategoryCreated message.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

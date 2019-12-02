@@ -36,16 +36,16 @@ public final class StoreDraftImpl implements StoreDraft {
    }
    
    /**
-   	<p>The name of the store</p>
+   *  <p>The name of the store</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
    /**
-   	<p>User-specific unique identifier for the store.
-   	The <code>key</code> is mandatory and immutable.
-   	It is used to reference the store.</p>
+   *  <p>User-specific unique identifier for the store.
+   *  The <code>key</code> is mandatory and immutable.
+   *  It is used to reference the store.</p>
    */
    public String getKey(){
       return this.key;

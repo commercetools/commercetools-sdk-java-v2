@@ -38,22 +38,18 @@ public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public String getGroupName(){
       return this.groupName;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>User-specific unique identifier for the customer group.</p>
+   *  <p>User-specific unique identifier for the customer group.</p>
    */
    public String getKey(){
       return this.key;

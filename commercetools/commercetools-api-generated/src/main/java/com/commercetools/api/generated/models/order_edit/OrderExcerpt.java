@@ -22,22 +22,16 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderExcerptImpl.class)
 public interface OrderExcerpt  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("totalPrice")
    public TypedMoney getTotalPrice();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("taxedPrice")
    public TaxedPrice getTaxedPrice();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("version")
    public Integer getVersion();

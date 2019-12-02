@@ -51,51 +51,41 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.shipping_method.ZoneRateDraft> getZoneRates(){
       return this.zoneRates;
    }
    
    /**
-   	<p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+   *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
    */
    public String getPredicate(){
       return this.predicate;
    }
    
    /**
-   	<p>If <code>true</code> the shipping method will be the default one in a project.</p>
+   *  <p>If <code>true</code> the shipping method will be the default one in a project.</p>
    */
    public Boolean getIsDefault(){
       return this.isDefault;
    }
    
-   /**
-   	
-   */
+   
    public String getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public String getDescription(){
       return this.description;
    }
    
-   /**
-   	
-   */
+   
    public String getKey(){
       return this.key;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }

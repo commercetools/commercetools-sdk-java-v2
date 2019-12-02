@@ -93,139 +93,125 @@ public final class DiscountCodeImpl implements DiscountCode {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the discount code.</p>
+   *  <p>The unique ID of the discount code.</p>
    */
    public String getId(){
       return this.id;
    }
    
-   /**
-   	
-   */
+   
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    /**
-   	<p>The referenced matching cart discounts can be applied to the cart once the DiscountCode is added.</p>
+   *  <p>The referenced matching cart discounts can be applied to the cart once the DiscountCode is added.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.cart_discount.CartDiscountReference> getCartDiscounts(){
       return this.cartDiscounts;
    }
    
    /**
-   	<p>Unique identifier of this discount code.
-   	This value is added to the cart
-   	to enable the related cart discounts in the cart.</p>
+   *  <p>Unique identifier of this discount code.
+   *  This value is added to the cart
+   *  to enable the related cart discounts in the cart.</p>
    */
    public String getCode(){
       return this.code;
    }
    
    /**
-   	<p>The platform will generate this array from the cart predicate.
-   	It contains the references of all the resources that are addressed in the predicate.</p>
+   *  <p>The platform will generate this array from the cart predicate.
+   *  It contains the references of all the resources that are addressed in the predicate.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.common.Reference> getReferences(){
       return this.references;
    }
    
    /**
-   	<p>The discount code can only be applied to carts that match this predicate.</p>
+   *  <p>The discount code can only be applied to carts that match this predicate.</p>
    */
    public String getCartPredicate(){
       return this.cartPredicate;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>The groups to which this discount code belong.</p>
+   *  <p>The groups to which this discount code belong.</p>
    */
    public java.util.List<String> getGroups(){
       return this.groups;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    /**
-   	<p>The time from which the discount can be applied on a cart.
-   	Before that time the code is invalid.</p>
+   *  <p>The time from which the discount can be applied on a cart.
+   *  Before that time the code is invalid.</p>
    */
    public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }
    
-   /**
-   	
-   */
+   
    public Boolean getIsActive(){
       return this.isActive;
    }
    
    /**
-   	<p>The discount code can only be applied <code>maxApplications</code> times.</p>
+   *  <p>The discount code can only be applied <code>maxApplications</code> times.</p>
    */
    public Long getMaxApplications(){
       return this.maxApplications;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
    /**
-   	<p>The time until the discount can be applied on a cart.
-   	After that time the code is invalid.</p>
+   *  <p>The time until the discount can be applied on a cart.
+   *  After that time the code is invalid.</p>
    */
    public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }
    
    /**
-   	<p>The discount code can only be applied <code>maxApplicationsPerCustomer</code> times per customer.</p>
+   *  <p>The discount code can only be applied <code>maxApplicationsPerCustomer</code> times per customer.</p>
    */
    public Long getMaxApplicationsPerCustomer(){
       return this.maxApplicationsPerCustomer;

@@ -39,23 +39,19 @@ public final class ReturnInfoImpl implements ReturnInfo {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getReturnDate(){
       return this.returnDate;
    }
    
    /**
-   	<p>Identifies, which return tracking ID is connected to this particular return.</p>
+   *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
    */
    public String getReturnTrackingId(){
       return this.returnTrackingId;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.order.ReturnItem> getItems(){
       return this.items;
    }

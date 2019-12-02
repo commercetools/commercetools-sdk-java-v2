@@ -27,82 +27,72 @@ import java.io.IOException;
 public interface InventoryEntry extends LoggedResource {
 
    /**
-   	<p>The unique ID of the inventory entry.</p>
+   *  <p>The unique ID of the inventory entry.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("sku")
    public String getSku();
    /**
-   	<p>Optional connection to a particular supplier.</p>
+   *  <p>Optional connection to a particular supplier.</p>
    */
    @Valid
    @JsonProperty("supplyChannel")
    public ChannelResourceIdentifier getSupplyChannel();
    /**
-   	<p>Overall amount of stock.
-   	(available + reserved)</p>
+   *  <p>Overall amount of stock.
+   *  (available + reserved)</p>
    */
    @NotNull
    @JsonProperty("quantityOnStock")
    public Long getQuantityOnStock();
    /**
-   	<p>Available amount of stock.
-   	(available means: <code>quantityOnStock</code> - reserved quantity)</p>
+   *  <p>Available amount of stock.
+   *  (available means: <code>quantityOnStock</code> - reserved quantity)</p>
    */
    @NotNull
    @JsonProperty("availableQuantity")
    public Long getAvailableQuantity();
    /**
-   	<p>The time period in days, that tells how often this inventory entry is restocked.</p>
+   *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
    */
    
    @JsonProperty("restockableInDays")
    public Long getRestockableInDays();
    /**
-   	<p>The date and time of the next restock.</p>
+   *  <p>The date and time of the next restock.</p>
    */
    
    @JsonProperty("expectedDelivery")
    public ZonedDateTime getExpectedDelivery();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();

@@ -20,8 +20,8 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Creating a cart can fail with an InvalidOperation if the referenced shipping method in the
-	CartDraft has a predicate which does not match the cart.</p>
+*  <p>Creating a cart can fail with an InvalidOperation if the referenced shipping method in the
+*  CartDraft has a predicate which does not match the cart.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

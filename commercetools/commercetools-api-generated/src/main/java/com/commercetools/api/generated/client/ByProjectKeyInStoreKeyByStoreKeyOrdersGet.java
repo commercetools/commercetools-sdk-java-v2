@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Queries orders in a specific Store. The {storeKey} path parameter maps to a Store’s key.</p>
+*  <p>Queries orders in a specific Store. The {storeKey} path parameter maps to a Store’s key.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

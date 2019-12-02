@@ -20,13 +20,13 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Creates a new custom object or updates an existing custom object.
-	If an object with the given container/key exists,
-	the object will be replaced with the new value and the version is incremented.
-	If the request contains a version and an object with the given container/key exists then the version
-	must match the version of the existing object. Concurrent updates for the same custom object still can result
-	in a Conflict (409) even if the version is not provided.
-	Fields with null values will not be saved.</p>
+*  <p>Creates a new custom object or updates an existing custom object.
+*  If an object with the given container/key exists,
+*  the object will be replaced with the new value and the version is incremented.
+*  If the request contains a version and an object with the given container/key exists then the version
+*  must match the version of the existing object. Concurrent updates for the same custom object still can result
+*  in a Conflict (409) even if the version is not provided.
+*  Fields with null values will not be saved.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

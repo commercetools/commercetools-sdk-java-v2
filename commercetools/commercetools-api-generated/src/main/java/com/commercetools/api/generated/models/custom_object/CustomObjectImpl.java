@@ -59,30 +59,22 @@ public final class CustomObjectImpl implements CustomObject {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   /**
-   	
-   */
+   
    public String getId(){
       return this.id;
    }
    
-   /**
-   	
-   */
+   
    public Long getVersion(){
       return this.version;
    }
@@ -98,22 +90,18 @@ public final class CustomObjectImpl implements CustomObject {
    }
    
    /**
-   	<p>A namespace to group custom objects.</p>
+   *  <p>A namespace to group custom objects.</p>
    */
    public String getContainer(){
       return this.container;
    }
    
-   /**
-   	
-   */
+   
    public Object getValue(){
       return this.value;
    }
    
-   /**
-   	
-   */
+   
    public String getKey(){
       return this.key;
    }

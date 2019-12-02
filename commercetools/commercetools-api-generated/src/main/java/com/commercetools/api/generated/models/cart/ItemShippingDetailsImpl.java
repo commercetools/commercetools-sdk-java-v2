@@ -36,17 +36,17 @@ public final class ItemShippingDetailsImpl implements ItemShippingDetails {
    }
    
    /**
-   	<p><code>true</code> if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise.
-   	A cart cannot be ordered when the value is <code>false</code>.
-   	The error InvalidItemShippingDetails will be triggered.</p>
+   *  <p><code>true</code> if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise.
+   *  A cart cannot be ordered when the value is <code>false</code>.
+   *  The error InvalidItemShippingDetails will be triggered.</p>
    */
    public Boolean getValid(){
       return this.valid;
    }
    
    /**
-   	<p>Used to map what sub-quantity should be shipped to which address.
-   	Duplicate address keys are not allowed.</p>
+   *  <p>Used to map what sub-quantity should be shipped to which address.
+   *  Duplicate address keys are not allowed.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.cart.ItemShippingTarget> getTargets(){
       return this.targets;

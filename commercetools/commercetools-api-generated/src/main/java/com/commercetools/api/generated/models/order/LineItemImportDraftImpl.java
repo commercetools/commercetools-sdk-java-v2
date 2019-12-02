@@ -69,84 +69,72 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.tax_category.TaxRate getTaxRate(){
       return this.taxRate;
    }
    
-   /**
-   	
-   */
+   
    public Integer getQuantity(){
       return this.quantity;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
    
    /**
-   	<p>ID of the existing product.
-   	You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
+   *  <p>ID of the existing product.
+   *  You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
    */
    public String getProductId(){
       return this.productId;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.PriceDraft getPrice(){
       return this.price;
    }
    
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.order.ProductVariantImportDraft getVariant(){
       return this.variant;
    }
    
    /**
-   	<p>The product name.</p>
+   *  <p>The product name.</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
    /**
-   	<p>Optional connection to a particular supplier.
-   	By providing supply channel information, you can uniquely identify
-   	inventory entries that should be reserved.
-   	The provided channel should have the
-   	InventorySupply role.</p>
+   *  <p>Optional connection to a particular supplier.
+   *  By providing supply channel information, you can uniquely identify
+   *  inventory entries that should be reserved.
+   *  The provided channel should have the
+   *  InventorySupply role.</p>
    */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.order.ItemState> getState(){
       return this.state;
    }
    
    /**
-   	<p>The channel is used to select a ProductPrice.
-   	The provided channel should have the ProductDistribution role.</p>
+   *  <p>The channel is used to select a ProductPrice.
+   *  The provided channel should have the ProductDistribution role.</p>
    */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;

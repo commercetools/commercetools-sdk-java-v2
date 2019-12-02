@@ -22,20 +22,16 @@ import java.io.IOException;
 public interface CustomerGroupDraft  {
 
    /**
-   	<p>User-specific unique identifier for the customer group.</p>
+   *  <p>User-specific unique identifier for the customer group.</p>
    */
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("groupName")
    public String getGroupName();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();

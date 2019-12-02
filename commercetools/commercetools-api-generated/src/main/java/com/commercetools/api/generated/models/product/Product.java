@@ -30,76 +30,66 @@ import java.io.IOException;
 public interface Product extends LoggedResource {
 
    /**
-   	<p>The unique ID of the product.</p>
+   *  <p>The unique ID of the product.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
    /**
-   	<p>The current version of the product.</p>
+   *  <p>The current version of the product.</p>
    */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
    /**
-   	<p>User-specific unique identifier for the product.
-   	<em>Product keys are different from product variant keys.</em></p>
+   *  <p>User-specific unique identifier for the product.
+   *  <em>Product keys are different from product variant keys.</em></p>
    */
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("productType")
    public ProductTypeReference getProductType();
    /**
-   	<p>The product data in the master catalog.</p>
+   *  <p>The product data in the master catalog.</p>
    */
    @NotNull
    @Valid
    @JsonProperty("masterData")
    public ProductCatalogData getMasterData();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryReference getTaxCategory();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("state")
    public StateReference getState();
    /**
-   	<p>Statistics about the review ratings taken into account for this product.</p>
+   *  <p>Statistics about the review ratings taken into account for this product.</p>
    */
    @Valid
    @JsonProperty("reviewRatingStatistics")

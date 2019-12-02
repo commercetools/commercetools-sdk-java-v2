@@ -35,16 +35,12 @@ public final class DiscountedLineItemPriceForQuantityImpl implements DiscountedL
       
    }
    
-   /**
-   	
-   */
+   
    public Integer getQuantity(){
       return this.quantity;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart.DiscountedLineItemPrice getDiscountedPrice(){
       return this.discountedPrice;
    }

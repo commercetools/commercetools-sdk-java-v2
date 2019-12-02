@@ -22,22 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxedPriceImpl.class)
 public interface TaxedPrice  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("totalNet")
    public TypedMoney getTotalNet();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("totalGross")
    public TypedMoney getTotalGross();
    /**
-   	<p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+   *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
    */
    @NotNull
    @Valid

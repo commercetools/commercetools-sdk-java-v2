@@ -72,87 +72,81 @@ public final class OrderEditImpl implements OrderEdit {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the OrderEdit.</p>
+   *  <p>The unique ID of the OrderEdit.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the OrderEdit.</p>
+   *  <p>The current version of the OrderEdit.</p>
    */
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    /**
-   	<p>Contains a preview of the changes in case of unapplied edit.
-   	For applied edits, it contains the summary of the changes.</p>
+   *  <p>Contains a preview of the changes in case of unapplied edit.
+   *  For applied edits, it contains the summary of the changes.</p>
    */
    public com.commercetools.api.generated.models.order_edit.OrderEditResult getResult(){
       return this.result;
    }
    
    /**
-   	<p>The order to be updated with this edit.</p>
+   *  <p>The order to be updated with this edit.</p>
    */
    public com.commercetools.api.generated.models.order.OrderReference getResource(){
       return this.resource;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>This field can be used to add textual information regarding the edit.</p>
+   *  <p>This field can be used to add textual information regarding the edit.</p>
    */
    public String getComment(){
       return this.comment;
    }
    
    /**
-   	<p>The actions to apply to the Order.
-   	Cannot be updated after the edit has been applied.</p>
+   *  <p>The actions to apply to the Order.
+   *  Cannot be updated after the edit has been applied.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.order.StagedOrderUpdateAction> getStagedActions(){
       return this.stagedActions;
    }
    
    /**
-   	<p>Unique identifier for this edit.</p>
+   *  <p>Unique identifier for this edit.</p>
    */
    public String getKey(){
       return this.key;

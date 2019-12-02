@@ -85,116 +85,100 @@ public final class ShoppingListImpl implements ShoppingList {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the shopping list.</p>
+   *  <p>The unique ID of the shopping list.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the shopping list.</p>
+   *  <p>The current version of the shopping list.</p>
    */
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    /**
-   	<p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
+   *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
    public String getAnonymousId(){
       return this.anonymousId;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.shopping_list.TextLineItem> getTextLineItems(){
       return this.textLineItems;
    }
    
    /**
-   	<p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+   *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
    */
    public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItem> getLineItems(){
       return this.lineItems;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
    /**
-   	<p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
-   	Each slug is unique across a project, but a shopping list can have the same slug for different languages.
-   	The slug must match the pattern {{ site.data.api-limits.slugPattern }}.</p>
+   *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
+   *  Each slug is unique across a project, but a shopping list can have the same slug for different languages.
+   *  The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getSlug(){
       return this.slug;
    }
    
    /**
-   	<p>User-specific unique identifier for the shopping list.</p>
+   *  <p>User-specific unique identifier for the shopping list.</p>
    */
    public String getKey(){
       return this.key;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.customer.CustomerReference getCustomer(){
       return this.customer;
    }

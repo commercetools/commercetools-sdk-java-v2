@@ -22,28 +22,22 @@ import java.io.IOException;
 public interface ZoneDraft  {
 
    /**
-   	<p>User-specific unique identifier for a zone.
-   	Must be unique across a project.
-   	The field can be reset using the Set Key UpdateAction.</p>
+   *  <p>User-specific unique identifier for a zone.
+   *  Must be unique across a project.
+   *  The field can be reset using the Set Key UpdateAction.</p>
    */
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-   /**
-   	
-   */
+   
    
    @JsonProperty("description")
    public String getDescription();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("locations")

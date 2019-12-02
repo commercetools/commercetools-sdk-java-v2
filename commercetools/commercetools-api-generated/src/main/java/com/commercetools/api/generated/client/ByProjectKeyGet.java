@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>The Endpoint is responding a limited set of information about settings and configuration of the project.</p>
+*  <p>The Endpoint is responding a limited set of information about settings and configuration of the project.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

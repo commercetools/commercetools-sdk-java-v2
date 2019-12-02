@@ -53,51 +53,37 @@ public final class StateDraftImpl implements StateDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public Boolean getInitial(){
       return this.initial;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.state.StateRoleEnum> getRoles(){
       return this.roles;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.state.StateResourceIdentifier> getTransitions(){
       return this.transitions;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.state.StateTypeEnum getType(){
       return this.type;
    }
    
-   /**
-   	
-   */
+   
    public String getKey(){
       return this.key;
    }

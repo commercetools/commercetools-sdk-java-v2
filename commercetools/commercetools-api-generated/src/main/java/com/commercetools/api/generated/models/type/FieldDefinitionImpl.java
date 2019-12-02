@@ -47,39 +47,39 @@ public final class FieldDefinitionImpl implements FieldDefinition {
    }
    
    /**
-   	<p>The name of the field.
-   	The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>).
-   	The name must be unique for a given resource type ID.
-   	In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+   *  <p>The name of the field.
+   *  The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>).
+   *  The name must be unique for a given resource type ID.
+   *  In case there is a field with the same name in another type it has to have the same FieldType also.</p>
    */
    public String getName(){
       return this.name;
    }
    
    /**
-   	<p>Provides a visual representation type for this field.
-   	It is only relevant for string-based field types like StringType and LocalizedStringType.</p>
+   *  <p>Provides a visual representation type for this field.
+   *  It is only relevant for string-based field types like StringType and LocalizedStringType.</p>
    */
    public com.commercetools.api.generated.models.type.TypeTextInputHint getInputHint(){
       return this.inputHint;
    }
    
    /**
-   	<p>A human-readable label for the field.</p>
+   *  <p>A human-readable label for the field.</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getLabel(){
       return this.label;
    }
    
    /**
-   	<p>Describes the type of the field.</p>
+   *  <p>Describes the type of the field.</p>
    */
    public com.commercetools.api.generated.models.type.FieldType getType(){
       return this.type;
    }
    
    /**
-   	<p>Whether the field is required to have a value.</p>
+   *  <p>Whether the field is required to have a value.</p>
    */
    public Boolean getRequired(){
       return this.required;

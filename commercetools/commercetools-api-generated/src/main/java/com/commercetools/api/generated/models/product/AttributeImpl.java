@@ -35,15 +35,13 @@ public final class AttributeImpl implements Attribute {
       
    }
    
-   /**
-   	
-   */
+   
    public String getName(){
       return this.name;
    }
    
    /**
-   	<p>A valid JSON value, based on an AttributeDefinition.</p>
+   *  <p>A valid JSON value, based on an AttributeDefinition.</p>
    */
    public Object getValue(){
       return this.value;

@@ -37,15 +37,13 @@ public final class CustomFieldsImpl implements CustomFields {
    }
    
    /**
-   	<p>A valid JSON object, based on FieldDefinition.</p>
+   *  <p>A valid JSON object, based on FieldDefinition.</p>
    */
    public com.commercetools.api.generated.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.TypeReference getType(){
       return this.type;
    }

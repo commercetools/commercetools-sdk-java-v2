@@ -31,87 +31,79 @@ import java.io.IOException;
 public interface Channel extends LoggedResource {
 
    /**
-   	<p>The unique ID of the channel.</p>
+   *  <p>The unique ID of the channel.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
    /**
-   	<p>Any arbitrary string key that uniquely identifies this channel within the project.</p>
+   *  <p>Any arbitrary string key that uniquely identifies this channel within the project.</p>
    */
    @NotNull
    @JsonProperty("key")
    public String getKey();
    /**
-   	<p>The roles of this channel.
-   	Each channel must have at least one role.</p>
+   *  <p>The roles of this channel.
+   *  Each channel must have at least one role.</p>
    */
    @NotNull
    @JsonProperty("roles")
    public List<ChannelRoleEnum> getRoles();
    /**
-   	<p>A human-readable name of the channel.</p>
+   *  <p>A human-readable name of the channel.</p>
    */
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
    /**
-   	<p>A human-readable description of the channel.</p>
+   *  <p>A human-readable description of the channel.</p>
    */
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
    /**
-   	<p>The address where this channel is located (e.g.
-   	if the channel is a physical store).</p>
+   *  <p>The address where this channel is located (e.g.
+   *  if the channel is a physical store).</p>
    */
    @Valid
    @JsonProperty("address")
    public Address getAddress();
    /**
-   	<p>Statistics about the review ratings taken into account for this channel.</p>
+   *  <p>Statistics about the review ratings taken into account for this channel.</p>
    */
    @Valid
    @JsonProperty("reviewRatingStatistics")
    public ReviewRatingStatistics getReviewRatingStatistics();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
    /**
-   	<p>A GeoJSON geometry object encoding the geo location of the channel.</p>
+   *  <p>A GeoJSON geometry object encoding the geo location of the channel.</p>
    */
    @Valid
    @JsonProperty("geoLocation")

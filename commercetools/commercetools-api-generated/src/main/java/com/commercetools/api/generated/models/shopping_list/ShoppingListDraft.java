@@ -26,64 +26,54 @@ import java.io.IOException;
 public interface ShoppingListDraft  {
 
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("customer")
    public CustomerResourceIdentifier getCustomer();
    /**
-   	<p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+   *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
    */
    
    @JsonProperty("deleteDaysAfterLastModification")
    public Long getDeleteDaysAfterLastModification();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
    /**
-   	<p>User-specific unique identifier for the shopping list.</p>
+   *  <p>User-specific unique identifier for the shopping list.</p>
    */
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("lineItems")
    public List<ShoppingListLineItemDraft> getLineItems();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
    /**
-   	<p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
-   	Each slug is unique across a project, but a shopping list can have the same slug for different languages.
-   	The slug must match the pattern {{ site.data.api-limits.slugPattern }}.</p>
+   *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
+   *  Each slug is unique across a project, but a shopping list can have the same slug for different languages.
+   *  The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
    */
    @Valid
    @JsonProperty("slug")
    public LocalizedString getSlug();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("textLineItems")
    public List<TextLineItemDraft> getTextLineItems();
    /**
-   	<p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
+   *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
    
    @JsonProperty("anonymousId")

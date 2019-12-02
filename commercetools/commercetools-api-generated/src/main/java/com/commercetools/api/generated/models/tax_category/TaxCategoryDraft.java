@@ -21,28 +21,20 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxCategoryDraftImpl.class)
 public interface TaxCategoryDraft  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-   /**
-   	
-   */
+   
    
    @JsonProperty("description")
    public String getDescription();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("rates")
    public List<TaxRateDraft> getRates();
-   /**
-   	
-   */
+   
    
    @JsonProperty("key")
    public String getKey();

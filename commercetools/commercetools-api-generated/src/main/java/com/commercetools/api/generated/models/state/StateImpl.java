@@ -78,104 +78,92 @@ public final class StateImpl implements State {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   /**
-   	
-   */
+   
    public String getId(){
       return this.id;
    }
    
-   /**
-   	
-   */
+   
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    /**
-   	<p>A state can be declared as an initial state for any state machine.
-   	When a workflow starts, this first state must be an <code>initial</code> state.</p>
+   *  <p>A state can be declared as an initial state for any state machine.
+   *  When a workflow starts, this first state must be an <code>initial</code> state.</p>
    */
    public Boolean getInitial(){
       return this.initial;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.state.StateRoleEnum> getRoles(){
       return this.roles;
    }
    
    /**
-   	<p>Builtin states are integral parts of the project that cannot be deleted nor the key can be changed.</p>
+   *  <p>Builtin states are integral parts of the project that cannot be deleted nor the key can be changed.</p>
    */
    public Boolean getBuiltIn(){
       return this.builtIn;
    }
    
    /**
-   	<p>A human-readable description of the state.</p>
+   *  <p>A human-readable description of the state.</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    /**
-   	<p>Transitions are a way to describe possible transformations of the current state to other states of the same <code>type</code> (e.g.: <em>Initial</em> -&gt; <em>Shipped</em>).
-   	When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced state must have a transition to the new state.
-   	If <code>transitions</code> is an empty list, it means the current state is a final state and no further transitions are allowed.
-   	If <code>transitions</code> is not set, the validation is turned off.
-   	When performing a <code>transitionState</code> update action, any other state of the same <code>type</code> can be transitioned to.</p>
+   *  <p>Transitions are a way to describe possible transformations of the current state to other states of the same <code>type</code> (e.g.: <em>Initial</em> -&gt; <em>Shipped</em>).
+   *  When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced state must have a transition to the new state.
+   *  If <code>transitions</code> is an empty list, it means the current state is a final state and no further transitions are allowed.
+   *  If <code>transitions</code> is not set, the validation is turned off.
+   *  When performing a <code>transitionState</code> update action, any other state of the same <code>type</code> can be transitioned to.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.state.StateReference> getTransitions(){
       return this.transitions;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.state.StateTypeEnum getType(){
       return this.type;
    }
    
    /**
-   	<p>A human-readable name of the state.</p>
+   *  <p>A human-readable name of the state.</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
    /**
-   	<p>A unique identifier for the state.</p>
+   *  <p>A unique identifier for the state.</p>
    */
    public String getKey(){
       return this.key;

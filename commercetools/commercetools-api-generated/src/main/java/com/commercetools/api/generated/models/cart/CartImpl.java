@@ -150,243 +150,213 @@ public final class CartImpl implements Cart {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the cart.</p>
+   *  <p>The unique ID of the cart.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the cart.</p>
+   *  <p>The current version of the cart.</p>
    */
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    /**
-   	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.
-   	Used for product variant price selection.</p>
+   *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.
+   *  Used for product variant price selection.</p>
    */
    public String getCountry(){
       return this.country;
    }
    
    /**
-   	<p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists).
-   	<code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+   *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists).
+   *  <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
    */
    public com.commercetools.api.generated.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
    
    /**
-   	<p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+   *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
    */
    public com.commercetools.api.generated.models.cart.ShippingRateInput getShippingRateInput(){
       return this.shippingRateInput;
    }
    
    /**
-   	<p>Not set until the shipping address is set.
-   	Will be set automatically in the <code>Platform</code> TaxMode.
-   	For the <code>External</code> tax mode it will be set  as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+   *  <p>Not set until the shipping address is set.
+   *  Will be set automatically in the <code>Platform</code> TaxMode.
+   *  For the <code>External</code> tax mode it will be set  as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
    */
    public com.commercetools.api.generated.models.cart.TaxedPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
    /**
-   	<p>The origin field indicates how this cart was created.
-   	The value <code>Customer</code> indicates, that the cart was created by the customer.</p>
+   *  <p>The origin field indicates how this cart was created.
+   *  The value <code>Customer</code> indicates, that the cart was created by the customer.</p>
    */
    public com.commercetools.api.generated.models.cart.CartOrigin getOrigin(){
       return this.origin;
    }
    
    /**
-   	<p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.</p>
+   *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.</p>
    */
    public Integer getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
    /**
-   	<p>Set automatically once the ShippingMethod is set.</p>
+   *  <p>Set automatically once the ShippingMethod is set.</p>
    */
    public com.commercetools.api.generated.models.cart.ShippingInfo getShippingInfo(){
       return this.shippingInfo;
    }
    
    /**
-   	<p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from the cart.</p>
+   *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from the cart.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.cart_discount.CartDiscountReference> getRefusedGifts(){
       return this.refusedGifts;
    }
    
-   /**
-   	
-   */
+   
    public String getLocale(){
       return this.locale;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart.InventoryMode getInventoryMode(){
       return this.inventoryMode;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.cart.LineItem> getLineItems(){
       return this.lineItems;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.cart.CustomLineItem> getCustomLineItems(){
       return this.customLineItems;
    }
    
    /**
-   	<p>Contains addresses for carts with multiple shipping addresses.
-   	Line items reference these addresses under their <code>shippingDetails</code>.
-   	The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate.
-   	Only the cart's <code>shippingAddress</code> is used for this.</p>
+   *  <p>Contains addresses for carts with multiple shipping addresses.
+   *  Line items reference these addresses under their <code>shippingDetails</code>.
+   *  The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate.
+   *  Only the cart's <code>shippingAddress</code> is used for this.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.common.Address> getItemShippingAddresses(){
       return this.itemShippingAddresses;
    }
    
-   /**
-   	
-   */
+   
    public String getCustomerEmail(){
       return this.customerEmail;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart.CartState getCartState(){
       return this.cartState;
    }
    
-   /**
-   	
-   */
+   
    public String getCustomerId(){
       return this.customerId;
    }
    
    /**
-   	<p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+   *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
    public String getAnonymousId(){
       return this.anonymousId;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.cart.DiscountCodeInfo> getDiscountCodes(){
       return this.discountCodes;
    }
    
    /**
-   	<p>Set automatically when the customer is set and the customer is a member of a customer group.
-   	Used for product variant
-   	price selection.</p>
+   *  <p>Set automatically when the customer is set and the customer is a member of a customer group.
+   *  Used for product variant
+   *  price selection.</p>
    */
    public com.commercetools.api.generated.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>
+   *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>
    */
    public com.commercetools.api.generated.models.cart.TaxCalculationMode getTaxCalculationMode(){
       return this.taxCalculationMode;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.store.StoreKeyReference getStore(){
       return this.store;
    }
    
    /**
-   	<p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
+   *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
    */
    public com.commercetools.api.generated.models.cart.RoundingMode getTaxRoundingMode(){
       return this.taxRoundingMode;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart.TaxMode getTaxMode(){
       return this.taxMode;
    }
    
    /**
-   	<p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
+   *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
    */
    public com.commercetools.api.generated.models.common.Address getShippingAddress(){
       return this.shippingAddress;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Address getBillingAddress(){
       return this.billingAddress;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.order.PaymentInfo getPaymentInfo(){
       return this.paymentInfo;
    }

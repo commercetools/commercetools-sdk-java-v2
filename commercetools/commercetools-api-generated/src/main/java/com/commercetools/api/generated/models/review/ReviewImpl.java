@@ -89,130 +89,112 @@ public final class ReviewImpl implements Review {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the review.</p>
+   *  <p>The unique ID of the review.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the review.</p>
+   *  <p>The current version of the review.</p>
    */
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
-   /**
-   	
-   */
+   
    public String getUniquenessValue(){
       return this.uniquenessValue;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>Number between -100 and 100 included.</p>
+   *  <p>Number between -100 and 100 included.</p>
    */
    public Integer getRating(){
       return this.rating;
    }
    
-   /**
-   	
-   */
+   
    public String getTitle(){
       return this.title;
    }
    
-   /**
-   	
-   */
+   
    public String getLocale(){
       return this.locale;
    }
    
    /**
-   	<p>Identifies the target of the review.
-   	Can be a Product or a Channel</p>
+   *  <p>Identifies the target of the review.
+   *  Can be a Product or a Channel</p>
    */
    public Object getTarget(){
       return this.target;
    }
    
    /**
-   	<p>Indicates if this review is taken into account in the ratings statistics of the target.
-   	A review is per default used in the statistics, unless the review is in a state that does not have the <a href="http-api-projects-states.html#staterole">role</a> <code>ReviewIncludedInStatistics</code>.
-   	If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+   *  <p>Indicates if this review is taken into account in the ratings statistics of the target.
+   *  A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.
+   *  If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
    */
    public Boolean getIncludedInStatistics(){
       return this.includedInStatistics;
    }
    
-   /**
-   	
-   */
+   
    public String getAuthorName(){
       return this.authorName;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.state.StateReference getState(){
       return this.state;
    }
    
-   /**
-   	
-   */
+   
    public String getText(){
       return this.text;
    }
    
    /**
-   	<p>User-specific unique identifier for the review.</p>
+   *  <p>User-specific unique identifier for the review.</p>
    */
    public String getKey(){
       return this.key;
    }
    
    /**
-   	<p>The customer who created the review.</p>
+   *  <p>The customer who created the review.</p>
    */
    public com.commercetools.api.generated.models.customer.CustomerReference getCustomer(){
       return this.customer;

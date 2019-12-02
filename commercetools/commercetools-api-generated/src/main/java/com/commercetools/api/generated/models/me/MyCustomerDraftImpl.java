@@ -77,23 +77,21 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public String getLastName(){
       return this.lastName;
    }
    
    /**
-   	<p>Sets the ID of each address to be unique in the addresses list.</p>
+   *  <p>Sets the ID of each address to be unique in the addresses list.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.common.Address> getAddresses(){
       return this.addresses;
    }
    
    /**
-   	<p>The index of the address in the addresses array.
-   	The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+   *  <p>The index of the address in the addresses array.
+   *  The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
    */
    public Long getDefaultShippingAddress(){
       return this.defaultShippingAddress;
@@ -105,79 +103,61 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
    }
    
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
-   /**
-   	
-   */
+   
    public String getCompanyName(){
       return this.companyName;
    }
    
-   /**
-   	
-   */
+   
    public String getVatId(){
       return this.vatId;
    }
    
-   /**
-   	
-   */
+   
    public java.time.LocalDate getDateOfBirth(){
       return this.dateOfBirth;
    }
    
-   /**
-   	
-   */
+   
    public String getLocale(){
       return this.locale;
    }
    
-   /**
-   	
-   */
+   
    public String getTitle(){
       return this.title;
    }
    
-   /**
-   	
-   */
+   
    public String getFirstName(){
       return this.firstName;
    }
    
-   /**
-   	
-   */
+   
    public String getPassword(){
       return this.password;
    }
    
-   /**
-   	
-   */
+   
    public String getMiddleName(){
       return this.middleName;
    }
    
    /**
-   	<p>The index of the address in the addresses array.
-   	The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+   *  <p>The index of the address in the addresses array.
+   *  The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
    */
    public Long getDefaultBillingAddress(){
       return this.defaultBillingAddress;
    }
    
-   /**
-   	
-   */
+   
    public String getEmail(){
       return this.email;
    }

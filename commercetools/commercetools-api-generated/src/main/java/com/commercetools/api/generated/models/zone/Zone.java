@@ -26,26 +26,22 @@ import java.io.IOException;
 public interface Zone extends LoggedResource {
 
    /**
-   	<p>The unique ID of the zone.</p>
+   *  <p>The unique ID of the zone.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
    /**
-   	<p>The current version of the zone.</p>
+   *  <p>The current version of the zone.</p>
    */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -58,28 +54,22 @@ public interface Zone extends LoggedResource {
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
    /**
-   	<p>User-specific unique identifier for a zone.
-   	Must be unique across a project.
-   	The field can be reset using the Set Key UpdateAction.</p>
+   *  <p>User-specific unique identifier for a zone.
+   *  Must be unique across a project.
+   *  The field can be reset using the Set Key UpdateAction.</p>
    */
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-   /**
-   	
-   */
+   
    
    @JsonProperty("description")
    public String getDescription();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("locations")

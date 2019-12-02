@@ -63,74 +63,64 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.shopping_list.ShoppingListLineItemDraft> getLineItems(){
       return this.lineItems;
    }
    
    /**
-   	<p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
+   *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
    public String getAnonymousId(){
       return this.anonymousId;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.shopping_list.TextLineItemDraft> getTextLineItems(){
       return this.textLineItems;
    }
    
    /**
-   	<p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+   *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
    */
    public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    /**
-   	<p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
-   	Each slug is unique across a project, but a shopping list can have the same slug for different languages.
-   	The slug must match the pattern {{ site.data.api-limits.slugPattern }}.</p>
+   *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
+   *  Each slug is unique across a project, but a shopping list can have the same slug for different languages.
+   *  The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getSlug(){
       return this.slug;
    }
    
    /**
-   	<p>User-specific unique identifier for the shopping list.</p>
+   *  <p>User-specific unique identifier for the shopping list.</p>
    */
    public String getKey(){
       return this.key;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.customer.CustomerResourceIdentifier getCustomer(){
       return this.customer;
    }

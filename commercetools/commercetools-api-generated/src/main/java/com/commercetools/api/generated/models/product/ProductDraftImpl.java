@@ -84,118 +84,100 @@ public final class ProductDraftImpl implements ProductDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.product.SearchKeywords getSearchKeywords(){
       return this.searchKeywords;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    /**
-   	<p>An array of related product variants.</p>
+   *  <p>An array of related product variants.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.product.ProductVariantDraft> getVariants(){
       return this.variants;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getMetaDescription(){
       return this.metaDescription;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getMetaKeywords(){
       return this.metaKeywords;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.product.CategoryOrderHints getCategoryOrderHints(){
       return this.categoryOrderHints;
    }
    
    /**
-   	<p>If <code>true</code>, the product is published immediately.</p>
+   *  <p>If <code>true</code>, the product is published immediately.</p>
    */
    public Boolean getPublish(){
       return this.publish;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getMetaTitle(){
       return this.metaTitle;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
    
    /**
-   	<p>The master product variant.
-   	Required if the <code>variants</code> array has product variants.</p>
+   *  <p>The master product variant.
+   *  Required if the <code>variants</code> array has product variants.</p>
    */
    public com.commercetools.api.generated.models.product.ProductVariantDraft getMasterVariant(){
       return this.masterVariant;
    }
    
    /**
-   	<p>Categories assigned to the product.</p>
+   *  <p>Categories assigned to the product.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.category.CategoryResourceIdentifier> getCategories(){
       return this.categories;
    }
    
    /**
-   	<p>User-specific unique identifier for the product.</p>
+   *  <p>User-specific unique identifier for the product.</p>
    */
    public String getKey(){
       return this.key;
    }
    
    /**
-   	<p>Human-readable identifiers usually used as deep-link URLs for the product.
-   	A slug must be unique across a project, but a product can have the same slug for different languages.
-   	Slugs have a maximum size of {{ site.data.api-limits.slugLength }}.
-   	Valid characters are: alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>
+   *  <p>Human-readable identifiers usually used as deep-link URLs for the product.
+   *  A slug must be unique across a project, but a product can have the same slug for different languages.
+   *  Slugs have a maximum size of 256.
+   *  Valid characters are: alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getSlug(){
       return this.slug;
    }
    
    /**
-   	<p>A predefined product type assigned to the product.
-   	All products must have a product type.</p>
+   *  <p>A predefined product type assigned to the product.
+   *  All products must have a product type.</p>
    */
    public com.commercetools.api.generated.models.product_type.ProductTypeResourceIdentifier getProductType(){
       return this.productType;

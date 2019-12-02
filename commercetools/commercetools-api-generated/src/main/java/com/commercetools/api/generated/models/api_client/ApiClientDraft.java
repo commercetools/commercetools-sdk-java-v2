@@ -21,20 +21,16 @@ import java.io.IOException;
 @JsonDeserialize(as = ApiClientDraftImpl.class)
 public interface ApiClientDraft  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("scope")
    public String getScope();
    /**
-   	<p>If set, the client will be deleted after the specified amount of days.</p>
+   *  <p>If set, the client will be deleted after the specified amount of days.</p>
    */
    
    @JsonProperty("deleteDaysAfterCreation")

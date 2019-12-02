@@ -36,15 +36,13 @@ public final class ZoneRateImpl implements ZoneRate {
       
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.zone.ZoneReference getZone(){
       return this.zone;
    }
    
    /**
-   	<p>The array does not contain two shipping rates with the same currency.</p>
+   *  <p>The array does not contain two shipping rates with the same currency.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.shipping_method.ShippingRate> getShippingRates(){
       return this.shippingRates;

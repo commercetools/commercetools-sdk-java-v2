@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 
 /**
-	<p>Delete ApiClient by ID</p>
+*  <p>Delete ApiClient by ID</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

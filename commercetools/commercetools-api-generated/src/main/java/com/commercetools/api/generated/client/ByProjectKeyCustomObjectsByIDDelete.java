@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>The version control is optional. If the query contains a version, then it must match the version of the object.</p>
+*  <p>The version control is optional. If the query contains a version, then it must match the version of the object.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

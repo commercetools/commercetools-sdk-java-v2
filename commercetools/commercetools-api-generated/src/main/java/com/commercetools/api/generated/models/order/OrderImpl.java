@@ -181,296 +181,254 @@ public final class OrderImpl implements Order {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the order.</p>
+   *  <p>The unique ID of the order.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the order.</p>
+   *  <p>The current version of the order.</p>
    */
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.order.ShipmentState getShipmentState(){
       return this.shipmentState;
    }
    
    /**
-   	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.
-   	Used for product variant price selection.</p>
+   *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.
+   *  Used for product variant price selection.</p>
    */
    public String getCountry(){
       return this.country;
    }
    
    /**
-   	<p>String that uniquely identifies an order.
-   	It can be used to create more human-readable (in contrast to ID) identifier for the order.
-   	It should be unique across a project.
-   	Once it's set it cannot be changed.</p>
+   *  <p>String that uniquely identifies an order.
+   *  It can be used to create more human-readable (in contrast to ID) identifier for the order.
+   *  It should be unique across a project.
+   *  Once it's set it cannot be changed.</p>
    */
    public String getOrderNumber(){
       return this.orderNumber;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
    
    /**
-   	<p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+   *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
    */
    public com.commercetools.api.generated.models.cart.ShippingRateInput getShippingRateInput(){
       return this.shippingRateInput;
    }
    
    /**
-   	<p>The taxes are calculated based on the shipping address.</p>
+   *  <p>The taxes are calculated based on the shipping address.</p>
    */
    public com.commercetools.api.generated.models.cart.TaxedPrice getTaxedPrice(){
       return this.taxedPrice;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart.CartOrigin getOrigin(){
       return this.origin;
    }
    
    /**
-   	<p>Set if the ShippingMethod is set.</p>
+   *  <p>Set if the ShippingMethod is set.</p>
    */
    public com.commercetools.api.generated.models.cart.ShippingInfo getShippingInfo(){
       return this.shippingInfo;
    }
    
    /**
-   	<p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+   *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.cart_discount.CartDiscountReference> getRefusedGifts(){
       return this.refusedGifts;
    }
    
-   /**
-   	
-   */
+   
    public String getLocale(){
       return this.locale;
    }
    
    /**
-   	<p>Set when this order was created from a cart.
-   	The cart will have the state <code>Ordered</code>.</p>
+   *  <p>Set when this order was created from a cart.
+   *  The cart will have the state <code>Ordered</code>.</p>
    */
    public com.commercetools.api.generated.models.cart.CartReference getCart(){
       return this.cart;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart.InventoryMode getInventoryMode(){
       return this.inventoryMode;
    }
    
    /**
-   	<p>One of the four predefined OrderStates.</p>
+   *  <p>One of the four predefined OrderStates.</p>
    */
    public com.commercetools.api.generated.models.order.OrderState getOrderState(){
       return this.orderState;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.order.ReturnInfo> getReturnInfo(){
       return this.returnInfo;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.cart.LineItem> getLineItems(){
       return this.lineItems;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.cart.CustomLineItem> getCustomLineItems(){
       return this.customLineItems;
    }
    
    /**
-   	<p>Contains addresses for orders with multiple shipping addresses.</p>
+   *  <p>Contains addresses for orders with multiple shipping addresses.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.common.Address> getItemShippingAddresses(){
       return this.itemShippingAddresses;
    }
    
-   /**
-   	
-   */
+   
    public String getCustomerEmail(){
       return this.customerEmail;
    }
    
-   /**
-   	
-   */
+   
    public String getCustomerId(){
       return this.customerId;
    }
    
    /**
-   	<p>This reference can point to a state in a custom workflow.</p>
+   *  <p>This reference can point to a state in a custom workflow.</p>
    */
    public com.commercetools.api.generated.models.state.StateReference getState(){
       return this.state;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
    
    /**
-   	<p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+   *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
    public String getAnonymousId(){
       return this.anonymousId;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.cart.DiscountCodeInfo> getDiscountCodes(){
       return this.discountCodes;
    }
    
    /**
-   	<p>This field will only be present if it was set for Order Import</p>
+   *  <p>This field will only be present if it was set for Order Import</p>
    */
    public java.time.ZonedDateTime getCompletedAt(){
       return this.completedAt;
    }
    
    /**
-   	<p>Set when the customer is set and the customer is a member of a customer group.
-   	Used for product variant price selection.</p>
+   *  <p>Set when the customer is set and the customer is a member of a customer group.
+   *  Used for product variant price selection.</p>
    */
    public com.commercetools.api.generated.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
+   *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
    */
    public com.commercetools.api.generated.models.cart.TaxCalculationMode getTaxCalculationMode(){
       return this.taxCalculationMode;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.store.StoreKeyReference getStore(){
       return this.store;
    }
    
    /**
-   	<p>The sequence number of the last order message produced by changes to this order.
-   	<code>0</code> means, that no messages were created yet.</p>
+   *  <p>The sequence number of the last order message produced by changes to this order.
+   *  <code>0</code> means, that no messages were created yet.</p>
    */
    public Long getLastMessageSequenceNumber(){
       return this.lastMessageSequenceNumber;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.order.SyncInfo> getSyncInfo(){
       return this.syncInfo;
    }
    
    /**
-   	<p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
+   *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
    */
    public com.commercetools.api.generated.models.cart.RoundingMode getTaxRoundingMode(){
       return this.taxRoundingMode;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart.TaxMode getTaxMode(){
       return this.taxMode;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Address getShippingAddress(){
       return this.shippingAddress;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Address getBillingAddress(){
       return this.billingAddress;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.order.PaymentInfo getPaymentInfo(){
       return this.paymentInfo;
    }

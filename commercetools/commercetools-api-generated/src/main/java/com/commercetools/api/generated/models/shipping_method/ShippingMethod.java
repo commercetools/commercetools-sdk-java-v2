@@ -27,26 +27,22 @@ import java.io.IOException;
 public interface ShippingMethod extends LoggedResource {
 
    /**
-   	<p>The unique ID of the shipping method.</p>
+   *  <p>The unique ID of the shipping method.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
    /**
-   	<p>The current version of the shipping method.</p>
+   *  <p>The current version of the shipping method.</p>
    */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -59,45 +55,37 @@ public interface ShippingMethod extends LoggedResource {
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
    /**
-   	<p>User-specific unique identifier for the shipping method.</p>
+   *  <p>User-specific unique identifier for the shipping method.</p>
    */
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-   /**
-   	
-   */
+   
    
    @JsonProperty("description")
    public String getDescription();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryReference getTaxCategory();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("zoneRates")
    public List<ZoneRate> getZoneRates();
    /**
-   	<p>One shipping method in a project can be default.</p>
+   *  <p>One shipping method in a project can be default.</p>
    */
    @NotNull
    @JsonProperty("isDefault")
    public Boolean getIsDefault();
    /**
-   	<p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+   *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
    */
    
    @JsonProperty("predicate")

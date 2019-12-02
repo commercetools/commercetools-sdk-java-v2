@@ -47,38 +47,30 @@ public final class DeliveryImpl implements Delivery {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Address getAddress(){
       return this.address;
    }
    
-   /**
-   	
-   */
+   
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>Items which are shipped in this delivery regardless their distribution over several parcels.
-   	Can also be specified individually for each Parcel.</p>
+   *  <p>Items which are shipped in this delivery regardless their distribution over several parcels.
+   *  Can also be specified individually for each Parcel.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.order.Parcel> getParcels(){
       return this.parcels;
    }

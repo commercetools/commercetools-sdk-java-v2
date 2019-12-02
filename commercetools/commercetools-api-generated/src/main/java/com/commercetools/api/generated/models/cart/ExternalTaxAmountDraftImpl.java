@@ -36,15 +36,13 @@ public final class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft 
       
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart.ExternalTaxRateDraft getTaxRate(){
       return this.taxRate;
    }
    
    /**
-   	<p>The total gross amount of the item (totalNet + taxes).</p>
+   *  <p>The total gross amount of the item (totalNet + taxes).</p>
    */
    public com.commercetools.api.generated.models.common.Money getTotalGross(){
       return this.totalGross;

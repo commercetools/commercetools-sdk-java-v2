@@ -43,31 +43,31 @@ public final class ExtensionDraftImpl implements ExtensionDraft {
    }
    
    /**
-   	<p>The maximum time the commercetools platform waits for a response from the extension.
-   	The maximum value is 2000 ms (2 seconds).
-   	This limit can be increased per project after we review the performance impact.
-   	Please contact Support via the <a href="https://support.commercetools.com">Support Portal</a> and provide the region, project key and use case.</p>
+   *  <p>The maximum time the commercetools platform waits for a response from the extension.
+   *  The maximum value is 2000 ms (2 seconds).
+   *  This limit can be increased per project after we review the performance impact.
+   *  Please contact Support via the <a href="https://support.commercetools.com">Support Portal</a> and provide the region, project key and use case.</p>
    */
    public Integer getTimeoutInMs(){
       return this.timeoutInMs;
    }
    
    /**
-   	<p>Details where the extension can be reached</p>
+   *  <p>Details where the extension can be reached</p>
    */
    public com.commercetools.api.generated.models.extension.ExtensionDestination getDestination(){
       return this.destination;
    }
    
    /**
-   	<p>Describes what triggers the extension</p>
+   *  <p>Describes what triggers the extension</p>
    */
    public java.util.List<com.commercetools.api.generated.models.extension.ExtensionTrigger> getTriggers(){
       return this.triggers;
    }
    
    /**
-   	<p>User-specific unique identifier for the extension</p>
+   *  <p>User-specific unique identifier for the extension</p>
    */
    public String getKey(){
       return this.key;

@@ -40,22 +40,18 @@ public final class TaxedPriceImpl implements TaxedPrice {
    }
    
    /**
-   	<p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+   *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.cart.TaxPortion> getTaxPortions(){
       return this.taxPortions;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.TypedMoney getTotalGross(){
       return this.totalGross;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.TypedMoney getTotalNet(){
       return this.totalNet;
    }

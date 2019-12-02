@@ -63,65 +63,55 @@ public final class ShippingInfoImportDraftImpl implements ShippingInfoImportDraf
       
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.tax_category.TaxRate getTaxRate(){
       return this.taxRate;
    }
    
    /**
-   	<p>The shipping rate used to determine the price.</p>
+   *  <p>The shipping rate used to determine the price.</p>
    */
    public com.commercetools.api.generated.models.shipping_method.ShippingRateDraft getShippingRate(){
       return this.shippingRate;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.order.DiscountedLineItemPriceDraft getDiscountedPrice(){
       return this.discountedPrice;
    }
    
    /**
-   	<p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+   *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
    */
    public com.commercetools.api.generated.models.cart.ShippingMethodState getShippingMethodState(){
       return this.shippingMethodState;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Money getPrice(){
       return this.price;
    }
    
    /**
-   	<p>Not set if custom shipping method is used.</p>
+   *  <p>Not set if custom shipping method is used.</p>
    */
    public com.commercetools.api.generated.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
       return this.shippingMethod;
    }
    
-   /**
-   	
-   */
+   
    public String getShippingMethodName(){
       return this.shippingMethodName;
    }
    
    /**
-   	<p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+   *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.order.Delivery> getDeliveries(){
       return this.deliveries;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }

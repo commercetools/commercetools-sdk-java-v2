@@ -21,16 +21,14 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSignInResultImpl.class)
 public interface CustomerSignInResult  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("customer")
    public Customer getCustomer();
    /**
-   	<p>A cart that is associated to the customer.
-   	Empty if the customer does not have a cart yet.</p>
+   *  <p>A cart that is associated to the customer.
+   *  Empty if the customer does not have a cart yet.</p>
    */
    @Valid
    @JsonProperty("cart")

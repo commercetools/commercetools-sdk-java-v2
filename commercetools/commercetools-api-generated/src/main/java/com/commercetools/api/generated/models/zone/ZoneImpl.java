@@ -63,29 +63,25 @@ public final class ZoneImpl implements Zone {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the zone.</p>
+   *  <p>The unique ID of the zone.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the zone.</p>
+   *  <p>The current version of the zone.</p>
    */
    public Long getVersion(){
       return this.version;
@@ -101,31 +97,25 @@ public final class ZoneImpl implements Zone {
       return this.lastModifiedBy;
    }
    
-   /**
-   	
-   */
+   
    public String getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public String getDescription(){
       return this.description;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.zone.Location> getLocations(){
       return this.locations;
    }
    
    /**
-   	<p>User-specific unique identifier for a zone.
-   	Must be unique across a project.
-   	The field can be reset using the Set Key UpdateAction.</p>
+   *  <p>User-specific unique identifier for a zone.
+   *  Must be unique across a project.
+   *  The field can be reset using the Set Key UpdateAction.</p>
    */
    public String getKey(){
       return this.key;

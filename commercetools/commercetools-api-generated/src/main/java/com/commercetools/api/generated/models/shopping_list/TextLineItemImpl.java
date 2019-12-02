@@ -50,42 +50,34 @@ public final class TextLineItemImpl implements TextLineItem {
    }
    
    /**
-   	<p>When the text line item was added to the shopping list.</p>
+   *  <p>When the text line item was added to the shopping list.</p>
    */
    public java.time.ZonedDateTime getAddedAt(){
       return this.addedAt;
    }
    
-   /**
-   	
-   */
+   
    public Integer getQuantity(){
       return this.quantity;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    /**
-   	<p>The unique ID of this TextLineItem.</p>
+   *  <p>The unique ID of this TextLineItem.</p>
    */
    public String getId(){
       return this.id;

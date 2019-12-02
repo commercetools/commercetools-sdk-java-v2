@@ -44,33 +44,31 @@ public final class MyTransactionDraftImpl implements MyTransactionDraft {
    }
    
    /**
-   	<p>The identifier that is used by the interface that managed the transaction (usually the PSP).
-   	If a matching interaction was logged in the interfaceInteractions array,
-   	the corresponding interaction should be findable with this ID.
-   	The <code>state</code> is set to the <code>Initial</code> <a href="http-api-projects-payments.html#transactionstate">TransactionState</a>.</p>
+   *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
+   *  If a matching interaction was logged in the interfaceInteractions array,
+   *  the corresponding interaction should be findable with this ID.
+   *  The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
    */
    public String getInteractionId(){
       return this.interactionId;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Money getAmount(){
       return this.amount;
    }
    
    /**
-   	<p>The type of this transaction.
-   	Only the <code>Authorization</code> or <code>Charge</code>
-   	<a href="http-api-projects-payments.html#transactiontype">TransactionTypes</a> are allowed here.</p>
+   *  <p>The type of this transaction.
+   *  Only the <code>Authorization</code> or <code>Charge</code>
+   *  TransactionTypes are allowed here.</p>
    */
    public com.commercetools.api.generated.models.payment.TransactionType getType(){
       return this.type;
    }
    
    /**
-   	<p>The time at which the transaction took place.</p>
+   *  <p>The time at which the transaction took place.</p>
    */
    public java.time.ZonedDateTime getTimestamp(){
       return this.timestamp;

@@ -73,86 +73,66 @@ public final class SubscriptionImpl implements Subscription {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   /**
-   	
-   */
+   
    public String getId(){
       return this.id;
    }
    
-   /**
-   	
-   */
+   
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.subscription.DeliveryFormat getFormat(){
       return this.format;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.subscription.Destination getDestination(){
       return this.destination;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.subscription.ChangeSubscription> getChanges(){
       return this.changes;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.subscription.MessageSubscription> getMessages(){
       return this.messages;
    }
    
-   /**
-   	
-   */
+   
    public String getKey(){
       return this.key;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.subscription.SubscriptionHealthStatus getStatus(){
       return this.status;
    }

@@ -25,56 +25,48 @@ import java.io.IOException;
 @JsonDeserialize(as = MyPaymentImpl.class)
 public interface MyPayment  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
    /**
-   	<p>A reference to the customer this payment belongs to.</p>
+   *  <p>A reference to the customer this payment belongs to.</p>
    */
    @Valid
    @JsonProperty("customer")
    public CustomerReference getCustomer();
    /**
-   	<p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+   *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
    
    @JsonProperty("anonymousId")
    public String getAnonymousId();
    /**
-   	<p>How much money this payment intends to receive from the customer.
-   	The value usually matches the cart or order gross total.</p>
+   *  <p>How much money this payment intends to receive from the customer.
+   *  The value usually matches the cart or order gross total.</p>
    */
    @NotNull
    @Valid
    @JsonProperty("amountPlanned")
    public TypedMoney getAmountPlanned();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("paymentMethodInfo")
    public PaymentMethodInfo getPaymentMethodInfo();
    /**
-   	<p>A list of financial transactions of different <a href="http-api-projects-payments.html#transactiontype">TransactionTypes</a>
-   	with different <a href="http-api-projects-payments.html#transactionstate">TransactionStates</a>.</p>
+   *  <p>A list of financial transactions of different TransactionTypes
+   *  with different TransactionStates.</p>
    */
    @NotNull
    @Valid
    @JsonProperty("transactions")
    public List<Transaction> getTransactions();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();

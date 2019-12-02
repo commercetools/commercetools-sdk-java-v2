@@ -5,4 +5,5 @@ include 'rmf:okhttp-client'
 include 'commercetools:commercetools-api-generated'
 include 'commercetools:commercetools-api-default'
 include 'okhttp-client'
+include 'commercetools:import-api-generated'
 

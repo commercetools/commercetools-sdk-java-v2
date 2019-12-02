@@ -21,15 +21,11 @@ import java.io.IOException;
 @JsonDeserialize(as = DeliveryItemImpl.class)
 public interface DeliveryItem  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("quantity")
    public Integer getQuantity();

@@ -74,98 +74,86 @@ public final class CartDiscountDraftImpl implements CartDiscountDraft {
    }
    
    /**
-   	<p>States whether the discount can only be used in a connection with a DiscountCode.
-   	Defaults to <code>false</code>.</p>
+   *  <p>States whether the discount can only be used in a connection with a DiscountCode.
+   *  Defaults to <code>false</code>.</p>
    */
    public Boolean getRequiresDiscountCode(){
       return this.requiresDiscountCode;
    }
    
    /**
-   	<p>A valid Cart predicate.</p>
+   *  <p>A valid Cart predicate.</p>
    */
    public String getCartPredicate(){
       return this.cartPredicate;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>Specifies whether the application of this discount causes the following discounts to be ignored.
-   	Defaults to Stacking.</p>
+   *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.
+   *  Defaults to Stacking.</p>
    */
    public com.commercetools.api.generated.models.cart_discount.StackingMode getStackingMode(){
       return this.stackingMode;
    }
    
    /**
-   	<p>The string must contain a number between 0 and 1.
-   	A discount with greater sort order is prioritized higher than a discount with lower sort order.
-   	The sort order must be unambiguous among all cart discounts.</p>
+   *  <p>The string must contain a number between 0 and 1.
+   *  A discount with greater sort order is prioritized higher than a discount with lower sort order.
+   *  The sort order must be unambiguous among all cart discounts.</p>
    */
    public String getSortOrder(){
       return this.sortOrder;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }
    
    /**
-   	<p>Only active discount can be applied to the cart.
-   	Defaults to <code>true</code>.</p>
+   *  <p>Only active discount can be applied to the cart.
+   *  Defaults to <code>true</code>.</p>
    */
    public Boolean getIsActive(){
       return this.isActive;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart_discount.CartDiscountValueDraft getValue(){
       return this.value;
    }
    
    /**
-   	<p>User-specific unique identifier for a cart discount.
-   	Must be unique across a project.
-   	The field can be reset using the Set Key UpdateAction.</p>
+   *  <p>User-specific unique identifier for a cart discount.
+   *  Must be unique across a project.
+   *  The field can be reset using the Set Key UpdateAction.</p>
    */
    public String getKey(){
       return this.key;
    }
    
    /**
-   	<p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+   *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
    */
    public com.commercetools.api.generated.models.cart_discount.CartDiscountTarget getTarget(){
       return this.target;

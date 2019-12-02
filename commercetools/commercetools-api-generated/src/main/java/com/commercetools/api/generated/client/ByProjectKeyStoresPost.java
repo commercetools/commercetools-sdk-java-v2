@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Create Store</p>
+*  <p>Create Store</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

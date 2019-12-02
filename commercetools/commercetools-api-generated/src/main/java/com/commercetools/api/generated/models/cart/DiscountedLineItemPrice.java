@@ -22,16 +22,12 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountedLineItemPriceImpl.class)
 public interface DiscountedLineItemPrice  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("value")
    public TypedMoney getValue();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("includedDiscounts")

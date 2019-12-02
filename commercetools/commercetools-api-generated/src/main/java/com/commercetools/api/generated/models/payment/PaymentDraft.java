@@ -27,13 +27,13 @@ import java.io.IOException;
 public interface PaymentDraft  {
 
    /**
-   	<p>A reference to the customer this payment belongs to.</p>
+   *  <p>A reference to the customer this payment belongs to.</p>
    */
    @Valid
    @JsonProperty("customer")
    public CustomerResourceIdentifier getCustomer();
    /**
-   	<p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+   *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
    
    @JsonProperty("anonymousId")
@@ -43,16 +43,16 @@ public interface PaymentDraft  {
    @JsonProperty("externalId")
    public String getExternalId();
    /**
-   	<p>The identifier that is used by the interface that manages the payment (usually the PSP).
-   	Cannot be changed once it has been set.
-   	The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+   *  <p>The identifier that is used by the interface that manages the payment (usually the PSP).
+   *  Cannot be changed once it has been set.
+   *  The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
    */
    
    @JsonProperty("interfaceId")
    public String getInterfaceId();
    /**
-   	<p>How much money this payment intends to receive from the customer.
-   	The value usually matches the cart or order gross total.</p>
+   *  <p>How much money this payment intends to receive from the customer.
+   *  The value usually matches the cart or order gross total.</p>
    */
    @NotNull
    @Valid
@@ -74,42 +74,36 @@ public interface PaymentDraft  {
    @Valid
    @JsonProperty("amountRefunded")
    public Money getAmountRefunded();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("paymentMethodInfo")
    public PaymentMethodInfo getPaymentMethodInfo();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("paymentStatus")
    public PaymentStatusDraft getPaymentStatus();
    /**
-   	<p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+   *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
    */
    @Valid
    @JsonProperty("transactions")
    public List<TransactionDraft> getTransactions();
    /**
-   	<p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP.
-   	Some interactions may result in a transaction.
-   	If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction.
-   	Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+   *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP.
+   *  Some interactions may result in a transaction.
+   *  If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction.
+   *  Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
    */
    @Valid
    @JsonProperty("interfaceInteractions")
    public List<CustomFieldsDraft> getInterfaceInteractions();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
    /**
-   	<p>User-specific unique identifier for the payment (max.
-   	256 characters).</p>
+   *  <p>User-specific unique identifier for the payment (max.
+   *  256 characters).</p>
    */
    
    @JsonProperty("key")

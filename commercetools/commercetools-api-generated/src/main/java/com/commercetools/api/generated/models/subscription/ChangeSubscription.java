@@ -21,9 +21,7 @@ import java.io.IOException;
 @JsonDeserialize(as = ChangeSubscriptionImpl.class)
 public interface ChangeSubscription  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("resourceTypeId")
    public String getResourceTypeId();

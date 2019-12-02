@@ -22,15 +22,13 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomFieldsImpl.class)
 public interface CustomFields  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("type")
    public TypeReference getType();
    /**
-   	<p>A valid JSON object, based on FieldDefinition.</p>
+   *  <p>A valid JSON object, based on FieldDefinition.</p>
    */
    @NotNull
    @Valid

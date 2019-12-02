@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Query payments</p>
+*  <p>Query payments</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

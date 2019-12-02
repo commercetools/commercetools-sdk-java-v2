@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Update ShippingMethod by ID</p>
+*  <p>Update ShippingMethod by ID</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

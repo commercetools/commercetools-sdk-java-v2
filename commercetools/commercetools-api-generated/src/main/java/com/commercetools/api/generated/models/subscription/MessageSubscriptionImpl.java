@@ -35,16 +35,12 @@ public final class MessageSubscriptionImpl implements MessageSubscription {
       
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<String> getTypes(){
       return this.types;
    }
    
-   /**
-   	
-   */
+   
    public String getResourceTypeId(){
       return this.resourceTypeId;
    }

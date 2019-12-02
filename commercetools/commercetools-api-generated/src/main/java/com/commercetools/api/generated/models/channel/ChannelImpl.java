@@ -80,101 +80,93 @@ public final class ChannelImpl implements Channel {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the channel.</p>
+   *  <p>The unique ID of the channel.</p>
    */
    public String getId(){
       return this.id;
    }
    
-   /**
-   	
-   */
+   
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    /**
-   	<p>The address where this channel is located (e.g.
-   	if the channel is a physical store).</p>
+   *  <p>The address where this channel is located (e.g.
+   *  if the channel is a physical store).</p>
    */
    public com.commercetools.api.generated.models.common.Address getAddress(){
       return this.address;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>The roles of this channel.
-   	Each channel must have at least one role.</p>
+   *  <p>The roles of this channel.
+   *  Each channel must have at least one role.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
    
    /**
-   	<p>A human-readable description of the channel.</p>
+   *  <p>A human-readable description of the channel.</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    /**
-   	<p>A GeoJSON geometry object encoding the geo location of the channel.</p>
+   *  <p>A GeoJSON geometry object encoding the geo location of the channel.</p>
    */
    public com.commercetools.api.generated.models.common.GeoJson getGeoLocation(){
       return this.geoLocation;
    }
    
    /**
-   	<p>A human-readable name of the channel.</p>
+   *  <p>A human-readable name of the channel.</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
    /**
-   	<p>Statistics about the review ratings taken into account for this channel.</p>
+   *  <p>Statistics about the review ratings taken into account for this channel.</p>
    */
    public com.commercetools.api.generated.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
       return this.reviewRatingStatistics;
    }
    
    /**
-   	<p>Any arbitrary string key that uniquely identifies this channel within the project.</p>
+   *  <p>Any arbitrary string key that uniquely identifies this channel within the project.</p>
    */
    public String getKey(){
       return this.key;

@@ -55,15 +55,13 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public Integer getQuantity(){
       return this.quantity;
    }
    
    /**
-   	<p>Container for line item specific address(es).</p>
+   *  <p>Container for line item specific address(es).</p>
    */
    public com.commercetools.api.generated.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
@@ -75,16 +73,16 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
    }
    
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>By providing supply channel information, you can unique identify
-   	inventory entries that should be reserved.
-   	The provided channel should have the InventorySupply role.</p>
+   *  <p>By providing supply channel information, you can unique identify
+   *  inventory entries that should be reserved.
+   *  The provided channel should have the InventorySupply role.</p>
    */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
@@ -101,8 +99,8 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
    }
    
    /**
-   	<p>The channel is used to select a ProductPrice.
-   	The provided channel should have the ProductDistribution role.</p>
+   *  <p>The channel is used to select a ProductPrice.
+   *  The provided channel should have the ProductDistribution role.</p>
    */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;

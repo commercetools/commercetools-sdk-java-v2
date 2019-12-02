@@ -73,87 +73,77 @@ public final class ProductImpl implements Product {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the product.</p>
+   *  <p>The unique ID of the product.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the product.</p>
+   *  <p>The current version of the product.</p>
    */
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    /**
-   	<p>The product data in the master catalog.</p>
+   *  <p>The product data in the master catalog.</p>
    */
    public com.commercetools.api.generated.models.product.ProductCatalogData getMasterData(){
       return this.masterData;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.state.StateReference getState(){
       return this.state;
    }
    
    /**
-   	<p>Statistics about the review ratings taken into account for this product.</p>
+   *  <p>Statistics about the review ratings taken into account for this product.</p>
    */
    public com.commercetools.api.generated.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
       return this.reviewRatingStatistics;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.product_type.ProductTypeReference getProductType(){
       return this.productType;
    }
    
    /**
-   	<p>User-specific unique identifier for the product.
-   	<em>Product keys are different from product variant keys.</em></p>
+   *  <p>User-specific unique identifier for the product.
+   *  <em>Product keys are different from product variant keys.</em></p>
    */
    public String getKey(){
       return this.key;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.tax_category.TaxCategoryReference getTaxCategory(){
       return this.taxCategory;
    }

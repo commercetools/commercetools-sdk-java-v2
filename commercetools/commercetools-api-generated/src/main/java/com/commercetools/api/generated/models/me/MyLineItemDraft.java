@@ -31,35 +31,33 @@ public interface MyLineItemDraft  {
    @NotNull
    @JsonProperty("variantId")
    public Long getVariantId();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("quantity")
    public Integer getQuantity();
    /**
-   	<p>By providing supply channel information, you can unique identify
-   	inventory entries that should be reserved.
-   	The provided channel should have the InventorySupply role.</p>
+   *  <p>By providing supply channel information, you can unique identify
+   *  inventory entries that should be reserved.
+   *  The provided channel should have the InventorySupply role.</p>
    */
    @Valid
    @JsonProperty("supplyChannel")
    public ChannelResourceIdentifier getSupplyChannel();
    /**
-   	<p>The channel is used to select a ProductPrice.
-   	The provided channel should have the ProductDistribution role.</p>
+   *  <p>The channel is used to select a ProductPrice.
+   *  The provided channel should have the ProductDistribution role.</p>
    */
    @Valid
    @JsonProperty("distributionChannel")
    public ChannelResourceIdentifier getDistributionChannel();
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
    /**
-   	<p>Container for line item specific address(es).</p>
+   *  <p>Container for line item specific address(es).</p>
    */
    @Valid
    @JsonProperty("shippingDetails")

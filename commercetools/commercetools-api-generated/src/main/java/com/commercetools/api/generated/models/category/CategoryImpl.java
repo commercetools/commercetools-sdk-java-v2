@@ -93,135 +93,117 @@ public final class CategoryImpl implements Category {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the category.</p>
+   *  <p>The unique ID of the category.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the category.</p>
+   *  <p>The current version of the category.</p>
    */
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    /**
-   	<p>A category that is the parent of this category in the category tree.</p>
+   *  <p>A category that is the parent of this category in the category tree.</p>
    */
    public com.commercetools.api.generated.models.category.CategoryReference getParent(){
       return this.parent;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
-   /**
-   	
-   */
+   
    public String getExternalId(){
       return this.externalId;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getMetaDescription(){
       return this.metaDescription;
    }
    
    /**
-   	<p>Can be used to store images, icons or movies related to this category.</p>
+   *  <p>Can be used to store images, icons or movies related to this category.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.common.Asset> getAssets(){
       return this.assets;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getMetaKeywords(){
       return this.metaKeywords;
    }
    
    /**
-   	<p>An attribute as base for a custom category order in one level.</p>
+   *  <p>An attribute as base for a custom category order in one level.</p>
    */
    public String getOrderHint(){
       return this.orderHint;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getMetaTitle(){
       return this.metaTitle;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
    /**
-   	<p>Contains the parent path towards the root category.</p>
+   *  <p>Contains the parent path towards the root category.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.category.CategoryReference> getAncestors(){
       return this.ancestors;
    }
    
    /**
-   	<p>User-specific unique identifier for the category.</p>
+   *  <p>User-specific unique identifier for the category.</p>
    */
    public String getKey(){
       return this.key;
    }
    
    /**
-   	<p>human-readable identifiers usually used as deep-link URL to the related category.
-   	Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+   *  <p>human-readable identifiers usually used as deep-link URL to the related category.
+   *  Each slug is unique across a project, but a category can have the same slug for different languages.</p>
    */
    public com.commercetools.api.generated.models.common.LocalizedString getSlug(){
       return this.slug;

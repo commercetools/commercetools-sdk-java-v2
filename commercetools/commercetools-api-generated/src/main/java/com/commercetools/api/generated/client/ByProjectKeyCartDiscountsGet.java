@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Query cart-discounts</p>
+*  <p>Query cart-discounts</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

@@ -32,9 +32,7 @@ public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public Object getReference(){
       return this.reference;
    }

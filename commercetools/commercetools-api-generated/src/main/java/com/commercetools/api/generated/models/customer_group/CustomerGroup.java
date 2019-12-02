@@ -26,56 +26,48 @@ import java.io.IOException;
 public interface CustomerGroup extends LoggedResource {
 
    /**
-   	<p>The unique ID of the customer group.</p>
+   *  <p>The unique ID of the customer group.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
    /**
-   	<p>The current version of the customer group.</p>
+   *  <p>The current version of the customer group.</p>
    */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
    /**
-   	<p>User-specific unique identifier for the customer group.</p>
+   *  <p>User-specific unique identifier for the customer group.</p>
    */
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();

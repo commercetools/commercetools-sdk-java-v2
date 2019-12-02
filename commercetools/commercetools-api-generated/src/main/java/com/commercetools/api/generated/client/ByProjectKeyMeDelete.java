@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Delete a Customer</p>
+*  <p>Delete a Customer</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

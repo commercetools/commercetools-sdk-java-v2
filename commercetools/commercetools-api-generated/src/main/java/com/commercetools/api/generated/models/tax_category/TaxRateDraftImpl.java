@@ -48,47 +48,43 @@ public final class TaxRateDraftImpl implements TaxRateDraft {
    }
    
    /**
-   	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+   *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
    public String getCountry(){
       return this.country;
    }
    
    /**
-   	<p>Percentage in the range of [0..1].
-   	Must be supplied if no <code>subRates</code> are specified.
-   	If <code>subRates</code> are specified
-   	then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
+   *  <p>Percentage in the range of [0..1].
+   *  Must be supplied if no <code>subRates</code> are specified.
+   *  If <code>subRates</code> are specified
+   *  then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
    */
    public Integer getAmount(){
       return this.amount;
    }
    
-   /**
-   	
-   */
+   
    public Boolean getIncludedInPrice(){
       return this.includedInPrice;
    }
    
-   /**
-   	
-   */
+   
    public String getName(){
       return this.name;
    }
    
    /**
-   	<p>The state in the country</p>
+   *  <p>The state in the country</p>
    */
    public String getState(){
       return this.state;
    }
    
    /**
-   	<p>For countries (e.g.
-   	the US) where the total tax is a combination of multiple taxes (e.g.
-   	state and local taxes).</p>
+   *  <p>For countries (e.g.
+   *  the US) where the total tax is a combination of multiple taxes (e.g.
+   *  state and local taxes).</p>
    */
    public java.util.List<com.commercetools.api.generated.models.tax_category.SubRate> getSubRates(){
       return this.subRates;

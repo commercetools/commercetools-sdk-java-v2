@@ -32,9 +32,7 @@ public final class PaymentInfoImpl implements PaymentInfo {
       
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.payment.PaymentReference> getPayments(){
       return this.payments;
    }

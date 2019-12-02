@@ -63,71 +63,63 @@ public final class TaxCategoryImpl implements TaxCategory {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the category.</p>
+   *  <p>The unique ID of the category.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the category.</p>
+   *  <p>The current version of the category.</p>
    */
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
    /**
-   	<p>The tax rates have unique IDs in the rates list</p>
+   *  <p>The tax rates have unique IDs in the rates list</p>
    */
    public java.util.List<com.commercetools.api.generated.models.tax_category.TaxRate> getRates(){
       return this.rates;
    }
    
-   /**
-   	
-   */
+   
    public String getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public String getDescription(){
       return this.description;
    }
    
    /**
-   	<p>User-specific unique identifier for the category.</p>
+   *  <p>User-specific unique identifier for the category.</p>
    */
    public String getKey(){
       return this.key;

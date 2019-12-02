@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Retrieves the representation of a subscription by its key.</p>
+*  <p>Retrieves the representation of a subscription by its key.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

@@ -26,6 +26,7 @@ import com.commercetools.api.generated.models.message.OrderBillingAddressSetMess
 import com.commercetools.api.generated.models.message.OrderCreatedMessage;
 import com.commercetools.api.generated.models.message.OrderCustomLineItemDiscountSetMessage;
 import com.commercetools.api.generated.models.message.OrderCustomerEmailSetMessage;
+import com.commercetools.api.generated.models.message.OrderCustomerGroupSetMessage;
 import com.commercetools.api.generated.models.message.OrderCustomerSetMessage;
 import com.commercetools.api.generated.models.message.OrderDeletedMessage;
 import com.commercetools.api.generated.models.message.OrderDiscountCodeAddedMessage;
@@ -91,6 +92,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.OrderCreatedMessageImpl.class, name = "OrderCreated"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.OrderCustomLineItemDiscountSetMessageImpl.class, name = "OrderCustomLineItemDiscountSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.OrderCustomerEmailSetMessageImpl.class, name = "OrderCustomerEmailSet"),
+   @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.OrderCustomerGroupSetMessageImpl.class, name = "OrderCustomerGroupSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.OrderCustomerSetMessageImpl.class, name = "OrderCustomerSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.OrderDeletedMessageImpl.class, name = "OrderDeleted"),
    @JsonSubTypes.Type(value = com.commercetools.api.generated.models.message.OrderDiscountCodeAddedMessageImpl.class, name = "OrderDiscountCodeAdded"),

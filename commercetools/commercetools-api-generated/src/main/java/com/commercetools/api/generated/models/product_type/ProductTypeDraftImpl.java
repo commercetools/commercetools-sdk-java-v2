@@ -41,31 +41,25 @@ public final class ProductTypeDraftImpl implements ProductTypeDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public String getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public String getDescription(){
       return this.description;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.product_type.AttributeDefinitionDraft> getAttributes(){
       return this.attributes;
    }
    
    /**
-   	<p>User-specific unique identifier for the product type (min.
-   	2 and max.
-   	256 characters).</p>
+   *  <p>User-specific unique identifier for the product type (min.
+   *  2 and max.
+   *  256 characters).</p>
    */
    public String getKey(){
       return this.key;

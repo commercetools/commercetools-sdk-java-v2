@@ -26,65 +26,51 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionImpl.class)
 public interface Extension extends LoggedResource {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-   /**
-   	
-   */
+   
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("destination")
    public ExtensionDestination getDestination();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("triggers")
    public List<ExtensionTrigger> getTriggers();
    /**
-   	<p>The maximum time the commercetools platform waits for a response from the extension.
-   	If not present, <code>2000</code> (2 seconds) is used.</p>
+   *  <p>The maximum time the commercetools platform waits for a response from the extension.
+   *  If not present, <code>2000</code> (2 seconds) is used.</p>
    */
    
    @JsonProperty("timeoutInMs")

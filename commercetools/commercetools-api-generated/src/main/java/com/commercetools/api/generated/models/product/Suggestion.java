@@ -22,7 +22,7 @@ import java.io.IOException;
 public interface Suggestion  {
 
    /**
-   	<p>The suggested text.</p>
+   *  <p>The suggested text.</p>
    */
    @NotNull
    @JsonProperty("text")

@@ -50,42 +50,42 @@ public final class OrderEditDraftImpl implements OrderEditDraft {
    }
    
    /**
-   	<p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
+   *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
    */
    public Boolean getDryRun(){
       return this.dryRun;
    }
    
    /**
-   	<p>The order to be updated with this edit.</p>
+   *  <p>The order to be updated with this edit.</p>
    */
    public com.commercetools.api.generated.models.order.OrderReference getResource(){
       return this.resource;
    }
    
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>This field can be used to add additional textual information regarding the edit.</p>
+   *  <p>This field can be used to add additional textual information regarding the edit.</p>
    */
    public String getComment(){
       return this.comment;
    }
    
    /**
-   	<p>The actions to apply to <code>resource</code>.</p>
+   *  <p>The actions to apply to <code>resource</code>.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.order.StagedOrderUpdateAction> getStagedActions(){
       return this.stagedActions;
    }
    
    /**
-   	<p>Unique identifier for this edit.</p>
+   *  <p>Unique identifier for this edit.</p>
    */
    public String getKey(){
       return this.key;

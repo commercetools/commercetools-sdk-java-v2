@@ -23,14 +23,14 @@ import java.io.IOException;
 public interface CustomFieldsDraft  {
 
    /**
-   	<p>The <code>id</code> or the <code>key</code> of the type to use.</p>
+   *  <p>The <code>id</code> or the <code>key</code> of the type to use.</p>
    */
    @NotNull
    @Valid
    @JsonProperty("type")
    public TypeResourceIdentifier getType();
    /**
-   	<p>A valid JSON object, based on the FieldDefinitions of the Type.</p>
+   *  <p>A valid JSON object, based on the FieldDefinitions of the Type.</p>
    */
    @Valid
    @JsonProperty("fields")

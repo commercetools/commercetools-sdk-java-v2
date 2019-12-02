@@ -36,16 +36,12 @@ public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPo
       
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.TypedMoney getDiscountedAmount(){
       return this.discountedAmount;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.cart_discount.CartDiscountReference getDiscount(){
       return this.discount;
    }

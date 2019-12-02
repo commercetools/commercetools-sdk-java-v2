@@ -30,184 +30,152 @@ import java.io.IOException;
 public interface Customer extends LoggedResource {
 
    /**
-   	<p>The unique ID of the customer.</p>
+   *  <p>The unique ID of the customer.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
    /**
-   	<p>The current version of the customer.</p>
+   *  <p>The current version of the customer.</p>
    */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
    /**
-   	<p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer.
-   	It should be unique across a project.
-   	Once the field was set it cannot be changed anymore.</p>
+   *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer.
+   *  It should be unique across a project.
+   *  Once the field was set it cannot be changed anymore.</p>
    */
    
    @JsonProperty("customerNumber")
    public String getCustomerNumber();
    /**
-   	<p>The customer's email address and the main identifier of uniqueness for a customer account.
-   	Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project.
-   	For more information, see Email uniquenes.</p>
+   *  <p>The customer's email address and the main identifier of uniqueness for a customer account.
+   *  Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project.
+   *  For more information, see Email uniquenes.</p>
    */
    @NotNull
    @JsonProperty("email")
    public String getEmail();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("password")
    public String getPassword();
-   /**
-   	
-   */
+   
    
    @JsonProperty("firstName")
    public String getFirstName();
-   /**
-   	
-   */
+   
    
    @JsonProperty("lastName")
    public String getLastName();
-   /**
-   	
-   */
+   
    
    @JsonProperty("middleName")
    public String getMiddleName();
-   /**
-   	
-   */
+   
    
    @JsonProperty("title")
    public String getTitle();
-   /**
-   	
-   */
+   
    
    @JsonProperty("dateOfBirth")
    public LocalDate getDateOfBirth();
-   /**
-   	
-   */
+   
    
    @JsonProperty("companyName")
    public String getCompanyName();
-   /**
-   	
-   */
+   
    
    @JsonProperty("vatId")
    public String getVatId();
    /**
-   	<p>The addresses have unique IDs in the addresses list</p>
+   *  <p>The addresses have unique IDs in the addresses list</p>
    */
    @NotNull
    @Valid
    @JsonProperty("addresses")
    public List<Address> getAddresses();
    /**
-   	<p>The address ID in the addresses list</p>
+   *  <p>The address ID in the addresses list</p>
    */
    
    @JsonProperty("defaultShippingAddressId")
    public String getDefaultShippingAddressId();
    /**
-   	<p>The IDs from the addresses list which are used as shipping addresses</p>
+   *  <p>The IDs from the addresses list which are used as shipping addresses</p>
    */
    
    @JsonProperty("shippingAddressIds")
    public List<String> getShippingAddressIds();
    /**
-   	<p>The address ID in the addresses list</p>
+   *  <p>The address ID in the addresses list</p>
    */
    
    @JsonProperty("defaultBillingAddressId")
    public String getDefaultBillingAddressId();
    /**
-   	<p>The IDs from the addresses list which are used as billing addresses</p>
+   *  <p>The IDs from the addresses list which are used as billing addresses</p>
    */
    
    @JsonProperty("billingAddressIds")
    public List<String> getBillingAddressIds();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("isEmailVerified")
    public Boolean getIsEmailVerified();
-   /**
-   	
-   */
+   
    
    @JsonProperty("externalId")
    public String getExternalId();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("customerGroup")
    public CustomerGroupReference getCustomerGroup();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
-   /**
-   	
-   */
+   
    
    @JsonProperty("locale")
    public String getLocale();
-   /**
-   	
-   */
+   
    
    @JsonProperty("salutation")
    public String getSalutation();
    /**
-   	<p>User-specific unique identifier for a customer.
-   	Must be unique across a project.
-   	The field can be reset using the Set Key UpdateAction</p>
+   *  <p>User-specific unique identifier for a customer.
+   *  Must be unique across a project.
+   *  The field can be reset using the Set Key UpdateAction</p>
    */
    
    @JsonProperty("key")
    public String getKey();
    /**
-   	<p>References to the stores the customer account is associated with.
-   	If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers.
-   	If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+   *  <p>References to the stores the customer account is associated with.
+   *  If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers.
+   *  If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
    */
    @Valid
    @JsonProperty("stores")

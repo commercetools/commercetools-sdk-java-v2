@@ -28,70 +28,60 @@ import java.io.IOException;
 public interface Type extends LoggedResource {
 
    /**
-   	<p>The unique ID of the type.</p>
+   *  <p>The unique ID of the type.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
    /**
-   	<p>The current version of the type.</p>
+   *  <p>The current version of the type.</p>
    */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
    /**
-   	<p>Identifier for the type (max.
-   	256 characters).</p>
+   *  <p>Identifier for the type (max.
+   *  256 characters).</p>
    */
    @NotNull
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
    /**
-   	<p>Defines for which resource(s) the type is valid.</p>
+   *  <p>Defines for which resource(s) the type is valid.</p>
    */
    @NotNull
    @JsonProperty("resourceTypeIds")
    public List<ResourceTypeId> getResourceTypeIds();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("fieldDefinitions")

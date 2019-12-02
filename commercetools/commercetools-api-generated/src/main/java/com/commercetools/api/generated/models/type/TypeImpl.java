@@ -68,79 +68,69 @@ public final class TypeImpl implements Type {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the type.</p>
+   *  <p>The unique ID of the type.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the type.</p>
+   *  <p>The current version of the type.</p>
    */
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.type.FieldDefinition> getFieldDefinitions(){
       return this.fieldDefinitions;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    /**
-   	<p>Identifier for the type (max.
-   	256 characters).</p>
+   *  <p>Identifier for the type (max.
+   *  256 characters).</p>
    */
    public String getKey(){
       return this.key;
    }
    
    /**
-   	<p>Defines for which resource(s) the type is valid.</p>
+   *  <p>Defines for which resource(s) the type is valid.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.type.ResourceTypeId> getResourceTypeIds(){
       return this.resourceTypeIds;

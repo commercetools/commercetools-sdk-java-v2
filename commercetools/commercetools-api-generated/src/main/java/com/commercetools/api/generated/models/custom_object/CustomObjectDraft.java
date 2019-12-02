@@ -22,26 +22,22 @@ import java.io.IOException;
 public interface CustomObjectDraft  {
 
    /**
-   	<p>A namespace to group custom objects.</p>
+   *  <p>A namespace to group custom objects.</p>
    */
    @NotNull
    @JsonProperty("container")
    public String getContainer();
    /**
-   	<p>A user-defined key that is unique within the given container.</p>
+   *  <p>A user-defined key that is unique within the given container.</p>
    */
    @NotNull
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("value")
    public Object getValue();
-   /**
-   	
-   */
+   
    
    @JsonProperty("version")
    public Long getVersion();

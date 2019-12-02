@@ -26,62 +26,54 @@ import java.io.IOException;
 public interface TaxCategory extends LoggedResource {
 
    /**
-   	<p>The unique ID of the category.</p>
+   *  <p>The unique ID of the category.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
    /**
-   	<p>The current version of the category.</p>
+   *  <p>The current version of the category.</p>
    */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-   /**
-   	
-   */
+   
    
    @JsonProperty("description")
    public String getDescription();
    /**
-   	<p>The tax rates have unique IDs in the rates list</p>
+   *  <p>The tax rates have unique IDs in the rates list</p>
    */
    @NotNull
    @Valid
    @JsonProperty("rates")
    public List<TaxRate> getRates();
    /**
-   	<p>User-specific unique identifier for the category.</p>
+   *  <p>User-specific unique identifier for the category.</p>
    */
    
    @JsonProperty("key")

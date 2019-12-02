@@ -28,106 +28,96 @@ import java.io.IOException;
 public interface ProductDiscount extends LoggedResource {
 
    /**
-   	<p>The unique ID of the product discount</p>
+   *  <p>The unique ID of the product discount</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
    /**
-   	<p>The current version of the product discount.</p>
+   *  <p>The current version of the product discount.</p>
    */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
    /**
-   	<p>User-specific unique identifier for a product discount.
-   	Must be unique across a project.</p>
+   *  <p>User-specific unique identifier for a product discount.
+   *  Must be unique across a project.</p>
    */
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("value")
    public ProductDiscountValue getValue();
    /**
-   	<p>A valid <a href="http-api-projects-predicates#productdiscount-predicates">ProductDiscount Predicate</a>.</p>
+   *  <p>A valid ProductDiscount Predicate.</p>
    */
    @NotNull
    @JsonProperty("predicate")
    public String getPredicate();
    /**
-   	<p>The string contains a number between 0 and 1.
-   	A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.
-   	A sortOrder must be unambiguous.</p>
+   *  <p>The string contains a number between 0 and 1.
+   *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.
+   *  A sortOrder must be unambiguous.</p>
    */
    @NotNull
    @JsonProperty("sortOrder")
    public String getSortOrder();
    /**
-   	<p>Only active discount will be applied to product prices.</p>
+   *  <p>Only active discount will be applied to product prices.</p>
    */
    @NotNull
    @JsonProperty("isActive")
    public Boolean getIsActive();
    /**
-   	<p>The platform will generate this array from the predicate.
-   	It contains the references of all the resources that are addressed in the predicate.</p>
+   *  <p>The platform will generate this array from the predicate.
+   *  It contains the references of all the resources that are addressed in the predicate.</p>
    */
    @NotNull
    @Valid
    @JsonProperty("references")
    public List<Reference> getReferences();
    /**
-   	<p>The time from which the discount should be effective.
-   	Please take Eventual Consistency into account for calculated product discount values.</p>
+   *  <p>The time from which the discount should be effective.
+   *  Please take Eventual Consistency into account for calculated product discount values.</p>
    */
    
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
    /**
-   	<p>The time from which the discount should be ineffective.
-   	Please take Eventual Consistency into account for calculated undiscounted values.</p>
+   *  <p>The time from which the discount should be ineffective.
+   *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
    */
    
    @JsonProperty("validUntil")

@@ -54,51 +54,41 @@ public final class ChannelDraftImpl implements ChannelDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Address getAddress(){
       return this.address;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.GeoJson getGeoLocation(){
       return this.geoLocation;
    }
    
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>If not specified, then channel will get InventorySupply role by default</p>
+   *  <p>If not specified, then channel will get InventorySupply role by default</p>
    */
    public java.util.List<com.commercetools.api.generated.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
-   /**
-   	
-   */
+   
    public String getKey(){
       return this.key;
    }

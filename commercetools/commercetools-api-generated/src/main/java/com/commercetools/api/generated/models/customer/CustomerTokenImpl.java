@@ -47,44 +47,32 @@ public final class CustomerTokenImpl implements CustomerToken {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
-   /**
-   	
-   */
+   
    public String getCustomerId(){
       return this.customerId;
    }
    
-   /**
-   	
-   */
+   
    public String getId(){
       return this.id;
    }
    
-   /**
-   	
-   */
+   
    public String getValue(){
       return this.value;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getExpiresAt(){
       return this.expiresAt;
    }

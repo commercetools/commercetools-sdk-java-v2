@@ -38,23 +38,19 @@ public final class TaxPortionImpl implements TaxPortion {
       
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.TypedMoney getAmount(){
       return this.amount;
    }
    
    /**
-   	<p>A number in the range [0..1]</p>
+   *  <p>A number in the range [0..1]</p>
    */
    public Integer getRate(){
       return this.rate;
    }
    
-   /**
-   	
-   */
+   
    public String getName(){
       return this.name;
    }

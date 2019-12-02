@@ -31,131 +31,115 @@ import java.io.IOException;
 public interface CartDiscount extends LoggedResource {
 
    /**
-   	<p>The unique ID of the cart discount.</p>
+   *  <p>The unique ID of the cart discount.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
    /**
-   	<p>The current version of the cart discount.</p>
+   *  <p>The current version of the cart discount.</p>
    */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
    /**
-   	<p>User-specific unique identifier for a cart discount.
-   	Must be unique across a project.</p>
+   *  <p>User-specific unique identifier for a cart discount.
+   *  Must be unique across a project.</p>
    */
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("value")
    public CartDiscountValue getValue();
    /**
-   	<p>A valid Cart predicate.</p>
+   *  <p>A valid Cart predicate.</p>
    */
    @NotNull
    @JsonProperty("cartPredicate")
    public String getCartPredicate();
    /**
-   	<p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
+   *  <p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
    */
    @Valid
    @JsonProperty("target")
    public CartDiscountTarget getTarget();
    /**
-   	<p>The string must contain a number between 0 and 1.
-   	All matching cart discounts are applied to a cart in the order defined by this field.
-   	A discount with greater sort order is prioritized higher than a discount with lower sort order.
-   	The sort order is unambiguous among all cart discounts.</p>
+   *  <p>The string must contain a number between 0 and 1.
+   *  All matching cart discounts are applied to a cart in the order defined by this field.
+   *  A discount with greater sort order is prioritized higher than a discount with lower sort order.
+   *  The sort order is unambiguous among all cart discounts.</p>
    */
    @NotNull
    @JsonProperty("sortOrder")
    public String getSortOrder();
    /**
-   	<p>Only active discount can be applied to the cart.</p>
+   *  <p>Only active discount can be applied to the cart.</p>
    */
    @NotNull
    @JsonProperty("isActive")
    public Boolean getIsActive();
-   /**
-   	
-   */
+   
    
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
-   /**
-   	
-   */
+   
    
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();
    /**
-   	<p>States whether the discount can only be used in a connection with a DiscountCode.</p>
+   *  <p>States whether the discount can only be used in a connection with a DiscountCode.</p>
    */
    @NotNull
    @JsonProperty("requiresDiscountCode")
    public Boolean getRequiresDiscountCode();
    /**
-   	<p>The platform will generate this array from the predicate.
-   	It contains the references of all the resources that are addressed in the predicate.</p>
+   *  <p>The platform will generate this array from the predicate.
+   *  It contains the references of all the resources that are addressed in the predicate.</p>
    */
    @NotNull
    @Valid
    @JsonProperty("references")
    public List<Reference> getReferences();
    /**
-   	<p>Specifies whether the application of this discount causes the following discounts to be ignored.
-   	Defaults to Stacking.</p>
+   *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.
+   *  Defaults to Stacking.</p>
    */
    @NotNull
    @JsonProperty("stackingMode")
    public StackingMode getStackingMode();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();

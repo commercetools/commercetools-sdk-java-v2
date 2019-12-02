@@ -32,9 +32,7 @@ public final class ChangeSubscriptionImpl implements ChangeSubscription {
       
    }
    
-   /**
-   	
-   */
+   
    public String getResourceTypeId(){
       return this.resourceTypeId;
    }

@@ -54,29 +54,29 @@ public final class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLi
    }
    
    /**
-   	<p>A valid custom line item target predicate. The discount will be applied to custom line items that are
-   	matched by the predicate.</p>
+   *  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are
+   *  matched by the predicate.</p>
    */
    public String getPredicate(){
       return this.predicate;
    }
    
    /**
-   	<p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+   *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
    */
    public Integer getTriggerQuantity(){
       return this.triggerQuantity;
    }
    
    /**
-   	<p>Quantity of line items that are discounted per application of this discount.</p>
+   *  <p>Quantity of line items that are discounted per application of this discount.</p>
    */
    public Integer getDiscountedQuantity(){
       return this.discountedQuantity;
    }
    
    /**
-   	<p>Maximum number of applications of this discount.</p>
+   *  <p>Maximum number of applications of this discount.</p>
    */
    public Integer getMaxOccurrence(){
       return this.maxOccurrence;

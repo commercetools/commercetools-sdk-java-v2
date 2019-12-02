@@ -47,36 +47,32 @@ public final class TextLineItemDraftImpl implements TextLineItemDraft {
    }
    
    /**
-   	<p>Defaults to the current date and time.</p>
+   *  <p>Defaults to the current date and time.</p>
    */
    public java.time.ZonedDateTime getAddedAt(){
       return this.addedAt;
    }
    
    /**
-   	<p>Defaults to <code>1</code>.</p>
+   *  <p>Defaults to <code>1</code>.</p>
    */
    public Integer getQuantity(){
       return this.quantity;
    }
    
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }

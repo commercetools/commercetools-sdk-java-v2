@@ -73,94 +73,82 @@ public final class MyCartDraftImpl implements MyCartDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.me.MyLineItemDraft> getLineItems(){
       return this.lineItems;
    }
    
    /**
-   	<p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+   *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
    public String getCountry(){
       return this.country;
    }
    
    /**
-   	<p>Contains addresses for orders with multiple shipping addresses.
-   	Each address must contain a key which is unique in this cart.</p>
+   *  <p>Contains addresses for orders with multiple shipping addresses.
+   *  Each address must contain a key which is unique in this cart.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.common.Address> getItemShippingAddresses(){
       return this.itemShippingAddresses;
    }
    
    /**
-   	<p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>
+   *  <p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>
    */
    public com.commercetools.api.generated.models.cart.TaxMode getTaxMode(){
       return this.taxMode;
    }
    
    /**
-   	<p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.
-   	If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+   *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.
+   *  If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
    */
    public Long getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }
    
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
       return this.shippingMethod;
    }
    
-   /**
-   	
-   */
+   
    public String getCustomerEmail(){
       return this.customerEmail;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Address getShippingAddress(){
       return this.shippingAddress;
    }
    
    /**
-   	<p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+   *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
    public String getCurrency(){
       return this.currency;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Address getBillingAddress(){
       return this.billingAddress;
    }
    
-   /**
-   	
-   */
+   
    public String getLocale(){
       return this.locale;
    }
    
    /**
-   	<p>Default inventory mode is <code>None</code>.</p>
+   *  <p>Default inventory mode is <code>None</code>.</p>
    */
    public com.commercetools.api.generated.models.cart.InventoryMode getInventoryMode(){
       return this.inventoryMode;

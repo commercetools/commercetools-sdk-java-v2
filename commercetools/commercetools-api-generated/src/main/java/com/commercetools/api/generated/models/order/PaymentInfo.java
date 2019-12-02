@@ -21,9 +21,7 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentInfoImpl.class)
 public interface PaymentInfo  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("payments")

@@ -65,82 +65,70 @@ public final class ReviewDraftImpl implements ReviewDraft {
    }
    
    /**
-   	<p>If set, this value must be unique among reviews.
-   	For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> + <code>product's id</code>.</p>
+   *  <p>If set, this value must be unique among reviews.
+   *  For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> + <code>product's id</code>.</p>
    */
    public String getUniquenessValue(){
       return this.uniquenessValue;
    }
    
-   /**
-   	
-   */
+   
    public String getAuthorName(){
       return this.authorName;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>Number between -100 and 100 included.
-   	Rating of the targeted object, like a product.
-   	This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1)
-   	A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the <a href="http-api-projects-states.html#staterole">role</a> <code>ReviewIncludedInStatistics</code>.</p>
+   *  <p>Number between -100 and 100 included.
+   *  Rating of the targeted object, like a product.
+   *  This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1)
+   *  A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
    */
    public Integer getRating(){
       return this.rating;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
    
-   /**
-   	
-   */
+   
    public String getText(){
       return this.text;
    }
    
-   /**
-   	
-   */
+   
    public String getTitle(){
       return this.title;
    }
    
-   /**
-   	
-   */
+   
    public String getLocale(){
       return this.locale;
    }
    
    /**
-   	<p>User-specific unique identifier for the review.</p>
+   *  <p>User-specific unique identifier for the review.</p>
    */
    public String getKey(){
       return this.key;
    }
    
    /**
-   	<p>The customer who created the review.</p>
+   *  <p>The customer who created the review.</p>
    */
    public com.commercetools.api.generated.models.customer.CustomerResourceIdentifier getCustomer(){
       return this.customer;
    }
    
    /**
-   	<p>Identifies the target of the review.
-   	Can be a Product or a Channel</p>
+   *  <p>Identifies the target of the review.
+   *  Can be a Product or a Channel</p>
    */
    public Object getTarget(){
       return this.target;

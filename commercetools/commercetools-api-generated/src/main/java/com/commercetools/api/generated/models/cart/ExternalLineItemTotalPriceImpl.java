@@ -35,16 +35,12 @@ public final class ExternalLineItemTotalPriceImpl implements ExternalLineItemTot
       
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Money getTotalPrice(){
       return this.totalPrice;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.Money getPrice(){
       return this.price;
    }

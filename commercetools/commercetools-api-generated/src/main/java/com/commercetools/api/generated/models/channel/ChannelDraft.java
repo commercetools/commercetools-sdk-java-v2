@@ -25,45 +25,35 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelDraftImpl.class)
 public interface ChannelDraft  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
    /**
-   	<p>If not specified, then channel will get InventorySupply role by default</p>
+   *  <p>If not specified, then channel will get InventorySupply role by default</p>
    */
    
    @JsonProperty("roles")
    public List<ChannelRoleEnum> getRoles();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("address")
    public Address getAddress();
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("geoLocation")
    public GeoJson getGeoLocation();

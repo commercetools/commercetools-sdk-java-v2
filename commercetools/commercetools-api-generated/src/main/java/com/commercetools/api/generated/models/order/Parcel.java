@@ -24,32 +24,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelImpl.class)
 public interface Parcel  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("measurements")
    public ParcelMeasurements getMeasurements();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("trackingData")
    public TrackingData getTrackingData();
    /**
-   	<p>The delivery items contained in this parcel.</p>
+   *  <p>The delivery items contained in this parcel.</p>
    */
    @Valid
    @JsonProperty("items")

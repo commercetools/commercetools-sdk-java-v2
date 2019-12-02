@@ -29,79 +29,59 @@ import java.io.IOException;
 @JsonDeserialize(as = SubscriptionImpl.class)
 public interface Subscription extends LoggedResource {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("changes")
    public List<ChangeSubscription> getChanges();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("destination")
    public Destination getDestination();
-   /**
-   	
-   */
+   
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("messages")
    public List<MessageSubscription> getMessages();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("format")
    public DeliveryFormat getFormat();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("status")
    public SubscriptionHealthStatus getStatus();

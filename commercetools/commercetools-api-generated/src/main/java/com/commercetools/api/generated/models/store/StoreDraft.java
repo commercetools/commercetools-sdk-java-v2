@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface StoreDraft  {
 
    /**
-   	<p>User-specific unique identifier for the store.
-   	The <code>key</code> is mandatory and immutable.
-   	It is used to reference the store.</p>
+   *  <p>User-specific unique identifier for the store.
+   *  The <code>key</code> is mandatory and immutable.
+   *  It is used to reference the store.</p>
    */
    @NotNull
    @JsonProperty("key")
    public String getKey();
    /**
-   	<p>The name of the store</p>
+   *  <p>The name of the store</p>
    */
    @NotNull
    @Valid

@@ -68,22 +68,22 @@ public final class LineItemDraftImpl implements LineItemDraft {
    }
    
    /**
-   	<p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+   *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
    */
    public com.commercetools.api.generated.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
    
    /**
-   	<p>The amount of a <code>LineItem</code>in the cart.
-   	Must be a positive integer.</p>
+   *  <p>The amount of a <code>LineItem</code>in the cart.
+   *  Must be a positive integer.</p>
    */
    public Long getQuantity(){
       return this.quantity;
    }
    
    /**
-   	<p>Container for line item specific address(es).</p>
+   *  <p>Container for line item specific address(es).</p>
    */
    public com.commercetools.api.generated.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
@@ -95,24 +95,24 @@ public final class LineItemDraftImpl implements LineItemDraft {
    }
    
    /**
-   	<p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+   *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
    */
    public com.commercetools.api.generated.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
       return this.externalTotalPrice;
    }
    
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    public com.commercetools.api.generated.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
    
    /**
-   	<p>By providing supply channel information, you can unique identify
-   	inventory entries that should be reserved.
-   	The provided channel should have
-   	the InventorySupply role.</p>
+   *  <p>By providing supply channel information, you can unique identify
+   *  inventory entries that should be reserved.
+   *  The provided channel should have
+   *  the InventorySupply role.</p>
    */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
@@ -124,8 +124,8 @@ public final class LineItemDraftImpl implements LineItemDraft {
    }
    
    /**
-   	<p>The channel is used to select a ProductPrice.
-   	The provided channel should have the ProductDistribution role.</p>
+   *  <p>The channel is used to select a ProductPrice.
+   *  The provided channel should have the ProductDistribution role.</p>
    */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
@@ -137,7 +137,7 @@ public final class LineItemDraftImpl implements LineItemDraft {
    }
    
    /**
-   	<p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+   *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
    */
    public com.commercetools.api.generated.models.common.Money getExternalPrice(){
       return this.externalPrice;

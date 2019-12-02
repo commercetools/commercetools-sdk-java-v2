@@ -22,28 +22,22 @@ import java.io.IOException;
 public interface ProductTypeDraft  {
 
    /**
-   	<p>User-specific unique identifier for the product type (min.
-   	2 and max.
-   	256 characters).</p>
+   *  <p>User-specific unique identifier for the product type (min.
+   *  2 and max.
+   *  256 characters).</p>
    */
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("description")
    public String getDescription();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("attributes")
    public List<AttributeDefinitionDraft> getAttributes();

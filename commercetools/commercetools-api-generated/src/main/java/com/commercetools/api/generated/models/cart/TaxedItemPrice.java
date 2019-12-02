@@ -21,15 +21,13 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxedItemPriceImpl.class)
 public interface TaxedItemPrice  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("totalNet")
    public TypedMoney getTotalNet();
    /**
-   	<p>TaxedItemPrice fields can not be used in query predicates.</p>
+   *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
    */
    @NotNull
    @Valid

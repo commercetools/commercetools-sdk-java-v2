@@ -36,15 +36,13 @@ public final class TaxedItemPriceImpl implements TaxedItemPrice {
    }
    
    /**
-   	<p>TaxedItemPrice fields can not be used in query predicates.</p>
+   *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
    */
    public com.commercetools.api.generated.models.common.TypedMoney getTotalGross(){
       return this.totalGross;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.TypedMoney getTotalNet(){
       return this.totalNet;
    }

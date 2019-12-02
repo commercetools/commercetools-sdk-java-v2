@@ -24,45 +24,31 @@ import java.io.IOException;
 @JsonDeserialize(as = StateDraftImpl.class)
 public interface StateDraft  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("type")
    public StateTypeEnum getType();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-   /**
-   	
-   */
+   
    
    @JsonProperty("initial")
    public Boolean getInitial();
-   /**
-   	
-   */
+   
    
    @JsonProperty("roles")
    public List<StateRoleEnum> getRoles();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("transitions")
    public List<StateResourceIdentifier> getTransitions();

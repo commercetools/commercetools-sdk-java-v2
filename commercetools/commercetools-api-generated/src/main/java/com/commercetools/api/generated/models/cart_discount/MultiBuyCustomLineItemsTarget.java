@@ -23,26 +23,26 @@ import java.io.IOException;
 public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
 
    /**
-   	<p>A valid custom line item target predicate. The discount will be applied to custom line items that are
-   	matched by the predicate.</p>
+   *  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are
+   *  matched by the predicate.</p>
    */
    @NotNull
    @JsonProperty("predicate")
    public String getPredicate();
    /**
-   	<p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+   *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
    */
    @NotNull
    @JsonProperty("triggerQuantity")
    public Integer getTriggerQuantity();
    /**
-   	<p>Quantity of line items that are discounted per application of this discount.</p>
+   *  <p>Quantity of line items that are discounted per application of this discount.</p>
    */
    @NotNull
    @JsonProperty("discountedQuantity")
    public Integer getDiscountedQuantity();
    /**
-   	<p>Maximum number of applications of this discount.</p>
+   *  <p>Maximum number of applications of this discount.</p>
    */
    
    @JsonProperty("maxOccurrence")

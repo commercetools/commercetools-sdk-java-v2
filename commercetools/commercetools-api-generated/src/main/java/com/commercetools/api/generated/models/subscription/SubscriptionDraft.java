@@ -24,34 +24,24 @@ import java.io.IOException;
 @JsonDeserialize(as = SubscriptionDraftImpl.class)
 public interface SubscriptionDraft  {
 
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("changes")
    public List<ChangeSubscription> getChanges();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("destination")
    public Destination getDestination();
-   /**
-   	
-   */
+   
    
    @JsonProperty("key")
    public String getKey();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("messages")
    public List<MessageSubscription> getMessages();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("format")
    public DeliveryFormat getFormat();

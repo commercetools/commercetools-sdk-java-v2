@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>Currently, a maximum of 25 extensions can be created per project.</p>
+*  <p>Currently, a maximum of 25 extensions can be created per project.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

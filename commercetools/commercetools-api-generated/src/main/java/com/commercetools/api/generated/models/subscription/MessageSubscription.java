@@ -21,15 +21,11 @@ import java.io.IOException;
 @JsonDeserialize(as = MessageSubscriptionImpl.class)
 public interface MessageSubscription  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("resourceTypeId")
    public String getResourceTypeId();
-   /**
-   	
-   */
+   
    
    @JsonProperty("types")
    public List<String> getTypes();

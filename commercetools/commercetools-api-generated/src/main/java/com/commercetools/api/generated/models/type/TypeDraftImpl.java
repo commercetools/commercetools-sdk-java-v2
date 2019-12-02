@@ -46,36 +46,28 @@ public final class TypeDraftImpl implements TypeDraft {
       
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
-   /**
-   	
-   */
+   
    public java.util.List<com.commercetools.api.generated.models.type.FieldDefinition> getFieldDefinitions(){
       return this.fieldDefinitions;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
-   /**
-   	
-   */
+   
    public String getKey(){
       return this.key;
    }
    
    /**
-   	<p>The IDs of the resources that can be customized with this type.</p>
+   *  <p>The IDs of the resources that can be customized with this type.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.type.ResourceTypeId> getResourceTypeIds(){
       return this.resourceTypeIds;

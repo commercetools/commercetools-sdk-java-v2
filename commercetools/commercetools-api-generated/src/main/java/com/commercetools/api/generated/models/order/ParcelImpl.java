@@ -47,37 +47,29 @@ public final class ParcelImpl implements Parcel {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The delivery items contained in this parcel.</p>
+   *  <p>The delivery items contained in this parcel.</p>
    */
    public java.util.List<com.commercetools.api.generated.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.order.TrackingData getTrackingData(){
       return this.trackingData;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.order.ParcelMeasurements getMeasurements(){
       return this.measurements;
    }

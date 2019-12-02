@@ -37,14 +37,14 @@ public final class CustomFieldsDraftImpl implements CustomFieldsDraft {
    }
    
    /**
-   	<p>A valid JSON object, based on the FieldDefinitions of the Type.</p>
+   *  <p>A valid JSON object, based on the FieldDefinitions of the Type.</p>
    */
    public com.commercetools.api.generated.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
    /**
-   	<p>The <code>id</code> or the <code>key</code> of the type to use.</p>
+   *  <p>The <code>id</code> or the <code>key</code> of the type to use.</p>
    */
    public com.commercetools.api.generated.models.type.TypeResourceIdentifier getType(){
       return this.type;

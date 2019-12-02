@@ -51,53 +51,49 @@ public final class ApiClientImpl implements ApiClient {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
    /**
-   	<p>If set, the client will be deleted on (or shortly after) this point in time.</p>
+   *  <p>If set, the client will be deleted on (or shortly after) this point in time.</p>
    */
    public java.time.ZonedDateTime getDeleteAt(){
       return this.deleteAt;
    }
    
    /**
-   	<p>The last day this API Client was used to obtain a token.</p>
+   *  <p>The last day this API Client was used to obtain a token.</p>
    */
    public java.time.LocalDate getLastUsedAt(){
       return this.lastUsedAt;
    }
    
    /**
-   	<p>A whitespace separated list of the OAuth scopes.
-   	This is the OAuth2 <code>scope</code> and can be used to obtain a token.</p>
+   *  <p>A whitespace separated list of the OAuth scopes.
+   *  This is the OAuth2 <code>scope</code> and can be used to obtain a token.</p>
    */
    public String getScope(){
       return this.scope;
    }
    
-   /**
-   	
-   */
+   
    public String getName(){
       return this.name;
    }
    
    /**
-   	<p>The secret is only shown once in the response of creating the API Client.
-   	This is the OAuth2 <code>client_secret</code> and can be used to obtain a token.</p>
+   *  <p>The secret is only shown once in the response of creating the API Client.
+   *  This is the OAuth2 <code>client_secret</code> and can be used to obtain a token.</p>
    */
    public String getSecret(){
       return this.secret;
    }
    
    /**
-   	<p>The unique ID of the API client.
-   	This is the OAuth2 <code>client_id</code> and can be used to obtain a token.</p>
+   *  <p>The unique ID of the API client.
+   *  This is the OAuth2 <code>client_id</code> and can be used to obtain a token.</p>
    */
    public String getId(){
       return this.id;

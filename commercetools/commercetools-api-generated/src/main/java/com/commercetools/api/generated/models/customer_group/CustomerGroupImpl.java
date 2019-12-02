@@ -60,64 +60,56 @@ public final class CustomerGroupImpl implements CustomerGroup {
       
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getCreatedAt(){
       return this.createdAt;
    }
    
-   /**
-   	
-   */
+   
    public java.time.ZonedDateTime getLastModifiedAt(){
       return this.lastModifiedAt;
    }
    
    /**
-   	<p>The unique ID of the customer group.</p>
+   *  <p>The unique ID of the customer group.</p>
    */
    public String getId(){
       return this.id;
    }
    
    /**
-   	<p>The current version of the customer group.</p>
+   *  <p>The current version of the customer group.</p>
    */
    public Long getVersion(){
       return this.version;
    }
    
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.CreatedBy getCreatedBy(){
       return this.createdBy;
    }
    
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.generated.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
    
-   /**
-   	
-   */
+   
    public com.commercetools.api.generated.models.type.CustomFields getCustom(){
       return this.custom;
    }
    
-   /**
-   	
-   */
+   
    public String getName(){
       return this.name;
    }
    
    /**
-   	<p>User-specific unique identifier for the customer group.</p>
+   *  <p>User-specific unique identifier for the customer group.</p>
    */
    public String getKey(){
       return this.key;

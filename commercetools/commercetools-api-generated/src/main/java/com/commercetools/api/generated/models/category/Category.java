@@ -29,119 +29,101 @@ import java.io.IOException;
 public interface Category extends LoggedResource {
 
    /**
-   	<p>The unique ID of the category.</p>
+   *  <p>The unique ID of the category.</p>
    */
    @NotNull
    @JsonProperty("id")
    public String getId();
    /**
-   	<p>The current version of the category.</p>
+   *  <p>The current version of the category.</p>
    */
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
    /**
-   	<p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("lastModifiedBy")
    public LastModifiedBy getLastModifiedBy();
    /**
-   	<p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-   /**
-   	
-   */
+   
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
    /**
-   	<p>human-readable identifiers usually used as deep-link URL to the related category.
-   	Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+   *  <p>human-readable identifiers usually used as deep-link URL to the related category.
+   *  Each slug is unique across a project, but a category can have the same slug for different languages.</p>
    */
    @NotNull
    @Valid
    @JsonProperty("slug")
    public LocalizedString getSlug();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
    /**
-   	<p>Contains the parent path towards the root category.</p>
+   *  <p>Contains the parent path towards the root category.</p>
    */
    @NotNull
    @Valid
    @JsonProperty("ancestors")
    public List<CategoryReference> getAncestors();
    /**
-   	<p>A category that is the parent of this category in the category tree.</p>
+   *  <p>A category that is the parent of this category in the category tree.</p>
    */
    @Valid
    @JsonProperty("parent")
    public CategoryReference getParent();
    /**
-   	<p>An attribute as base for a custom category order in one level.</p>
+   *  <p>An attribute as base for a custom category order in one level.</p>
    */
    @NotNull
    @JsonProperty("orderHint")
    public String getOrderHint();
-   /**
-   	
-   */
+   
    
    @JsonProperty("externalId")
    public String getExternalId();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("metaTitle")
    public LocalizedString getMetaTitle();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("metaDescription")
    public LocalizedString getMetaDescription();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("metaKeywords")
    public LocalizedString getMetaKeywords();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
    /**
-   	<p>Can be used to store images, icons or movies related to this category.</p>
+   *  <p>Can be used to store images, icons or movies related to this category.</p>
    */
    @Valid
    @JsonProperty("assets")
    public List<Asset> getAssets();
    /**
-   	<p>User-specific unique identifier for the category.</p>
+   *  <p>User-specific unique identifier for the category.</p>
    */
    
    @JsonProperty("key")

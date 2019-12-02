@@ -23,38 +23,28 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntryDraftImpl.class)
 public interface InventoryEntryDraft  {
 
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("sku")
    public String getSku();
-   /**
-   	
-   */
+   
    @Valid
    @JsonProperty("supplyChannel")
    public ChannelResourceIdentifier getSupplyChannel();
-   /**
-   	
-   */
+   
    @NotNull
    @JsonProperty("quantityOnStock")
    public Long getQuantityOnStock();
-   /**
-   	
-   */
+   
    
    @JsonProperty("restockableInDays")
    public Long getRestockableInDays();
-   /**
-   	
-   */
+   
    
    @JsonProperty("expectedDelivery")
    public ZonedDateTime getExpectedDelivery();
    /**
-   	<p>The custom fields.</p>
+   *  <p>The custom fields.</p>
    */
    @Valid
    @JsonProperty("custom")

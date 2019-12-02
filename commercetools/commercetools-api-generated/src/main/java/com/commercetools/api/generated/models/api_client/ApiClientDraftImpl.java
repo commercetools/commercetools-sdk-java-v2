@@ -39,22 +39,18 @@ public final class ApiClientDraftImpl implements ApiClientDraft {
    }
    
    /**
-   	<p>If set, the client will be deleted after the specified amount of days.</p>
+   *  <p>If set, the client will be deleted after the specified amount of days.</p>
    */
    public Long getDeleteDaysAfterCreation(){
       return this.deleteDaysAfterCreation;
    }
    
-   /**
-   	
-   */
+   
    public String getScope(){
       return this.scope;
    }
    
-   /**
-   	
-   */
+   
    public String getName(){
       return this.name;
    }

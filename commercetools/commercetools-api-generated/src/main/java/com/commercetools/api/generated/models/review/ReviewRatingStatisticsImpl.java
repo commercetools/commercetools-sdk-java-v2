@@ -45,38 +45,38 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
    }
    
    /**
-   	<p>Highest rating of one target</p>
+   *  <p>Highest rating of one target</p>
    */
    public Integer getHighestRating(){
       return this.highestRating;
    }
    
    /**
-   	<p>Average rating of one target
-   	This number is rounded with 5 decimals.</p>
+   *  <p>Average rating of one target
+   *  This number is rounded with 5 decimals.</p>
    */
    public Integer getAverageRating(){
       return this.averageRating;
    }
    
    /**
-   	<p>Number of ratings taken into account</p>
+   *  <p>Number of ratings taken into account</p>
    */
    public Integer getCount(){
       return this.count;
    }
    
    /**
-   	<p>The full distribution of the ratings.
-   	The keys are the different ratings and the values are the count of reviews having this rating.
-   	Only the used ratings appear in this object.</p>
+   *  <p>The full distribution of the ratings.
+   *  The keys are the different ratings and the values are the count of reviews having this rating.
+   *  Only the used ratings appear in this object.</p>
    */
    public Object getRatingsDistribution(){
       return this.ratingsDistribution;
    }
    
    /**
-   	<p>Lowest rating of one target</p>
+   *  <p>Lowest rating of one target</p>
    */
    public Integer getLowestRating(){
       return this.lowestRating;

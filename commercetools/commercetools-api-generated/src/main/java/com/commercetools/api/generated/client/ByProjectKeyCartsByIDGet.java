@@ -20,8 +20,8 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>The cart may not contain up-to-date prices, discounts etc.
-	If you want to ensure they’re up-to-date, send an Update request with the Recalculate update action instead.</p>
+*  <p>The cart may not contain up-to-date prices, discounts etc.
+*  If you want to ensure they’re up-to-date, send an Update request with the Recalculate update action instead.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

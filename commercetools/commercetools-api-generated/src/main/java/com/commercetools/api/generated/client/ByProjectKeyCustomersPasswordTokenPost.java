@@ -20,8 +20,8 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-	<p>The token value is used to reset the password of the customer with the given email. The token is
-	valid only for 10 minutes.</p>
+*  <p>The token value is used to reset the password of the customer with the given email. The token is
+*  valid only for 10 minutes.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

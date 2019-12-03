@@ -1,0 +1,49 @@
+package com.commercetools.importer.models.products;
+
+import com.commercetools.importer.models.products.SuggestTokenizer;
+import com.commercetools.importer.models.products.SearchKeywordImpl;
+
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+import io.vrap.rmf.base.client.utils.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Map;
+import java.time.*;
+
+import java.io.IOException;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+@JsonDeserialize(as = SearchKeywordImpl.class)
+public interface SearchKeyword  {
+
+   
+   @NotNull
+   @JsonProperty("text")
+   public String getText();
+   
+   @Valid
+   @JsonProperty("suggestTokenizer")
+   public SuggestTokenizer getSuggestTokenizer();
+
+   public void setText(final String text);
+   
+   public void setSuggestTokenizer(final SuggestTokenizer suggestTokenizer);
+   
+   public static SearchKeywordImpl of(){
+      return new SearchKeywordImpl();
+   }
+   
+
+   public static SearchKeywordImpl of(final SearchKeyword template) {
+      SearchKeywordImpl instance = new SearchKeywordImpl();
+      instance.setSuggestTokenizer(template.getSuggestTokenizer());
+      instance.setText(template.getText());
+      return instance;
+   }
+
+}

@@ -1,9 +1,9 @@
 package com.commerctools.importer.defaultconfig;
 
 import com.commercetools.importer.client.ApiRoot;
+import com.commercetools.importer.defaultconfig.ImportApiFactory;
 import com.commercetools.importer.models.common.LocalizedString;
 import com.commercetools.importer.models.common.LocalizedStringImpl;
-import com.commerctools.importer.defaultconfig.unsecureclient.TestImportApiFactory;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.middlewares.LoggerMiddleware;
 import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
@@ -18,19 +18,19 @@ public class ImportApiTestUtils {
     static{
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if("OFF".equals(logLevel)){
-            apiRoot = TestImportApiFactory.create(
+            apiRoot = ImportApiFactory.create(
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
                     "https://auth.sphere.io/oauth/token",
-                    "https://import.commercetools.com");
+                    "https://import-eu.europe-west1.gcp.commercetools.com");
         }else{
-            apiRoot = TestImportApiFactory.create(
+            apiRoot = ImportApiFactory.create(
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
                     "https://auth.sphere.io/oauth/token",
-                    "https://import.commercetools.com",
+                    "https://import-eu.europe-west1.gcp.commercetools.com",
                     LoggerMiddleware.LogLevel.INFO);
         }
     }

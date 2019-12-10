@@ -40,7 +40,9 @@ public final class DiscountCodeSetCartPredicateActionImpl implements DiscountCod
       return this.action;
    }
    
-   
+   /**
+   *  <p>If the <code>cartPredicate</code> parameter is not included, the field will be emptied.</p>
+   */
    public String getCartPredicate(){
       return this.cartPredicate;
    }

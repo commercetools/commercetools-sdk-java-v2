@@ -29,11 +29,16 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
    
    @JsonProperty("variantId")
    public Long getVariantId();
-   
+   /**
+   *  <p>The URL of the image.</p>
+   */
    @NotNull
    @JsonProperty("imageUrl")
    public String getImageUrl();
-   
+   /**
+   *  <p>The new image label.
+   *  If left blank or set to null, the label is removed.</p>
+   */
    
    @JsonProperty("label")
    public String getLabel();

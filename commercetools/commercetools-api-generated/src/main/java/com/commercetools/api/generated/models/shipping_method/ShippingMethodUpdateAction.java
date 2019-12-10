@@ -38,7 +38,8 @@ import java.io.IOException;
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,
    include = JsonTypeInfo.As.PROPERTY,
-   property = "action"
+   property = "action",
+   defaultImpl = ShippingMethodUpdateActionImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

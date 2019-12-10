@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerGroupSetKeyActionImpl.class)
 public interface CustomerGroupSetKeyAction extends CustomerGroupUpdateAction {
 
-   
+   /**
+   *  <p>User-specific unique identifier for the customer group.</p>
+   */
    
    @JsonProperty("key")
    public String getKey();

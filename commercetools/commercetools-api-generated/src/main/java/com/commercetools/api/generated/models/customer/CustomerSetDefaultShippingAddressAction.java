@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetDefaultShippingAddressActionImpl.class)
 public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateAction {
 
-   
+   /**
+   *  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>
+   */
    
    @JsonProperty("addressId")
    public String getAddressId();

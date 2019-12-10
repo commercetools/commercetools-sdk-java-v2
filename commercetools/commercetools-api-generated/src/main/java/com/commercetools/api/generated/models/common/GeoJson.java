@@ -20,7 +20,8 @@ import java.io.IOException;
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,
    include = JsonTypeInfo.As.PROPERTY,
-   property = "type"
+   property = "type",
+   defaultImpl = GeoJsonImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

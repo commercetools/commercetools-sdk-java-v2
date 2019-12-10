@@ -41,7 +41,9 @@ public final class DiscountCodeSetValidFromActionImpl implements DiscountCodeSet
       return this.action;
    }
    
-   
+   /**
+   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+   */
    public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }

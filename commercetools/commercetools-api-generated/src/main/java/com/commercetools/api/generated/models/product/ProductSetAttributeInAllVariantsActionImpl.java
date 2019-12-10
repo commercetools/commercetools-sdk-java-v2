@@ -56,7 +56,9 @@ public final class ProductSetAttributeInAllVariantsActionImpl implements Product
       return this.staged;
    }
    
-   
+   /**
+   *  <p>The same update behavior as for Set Attribute applies.</p>
+   */
    public Object getValue(){
       return this.value;
    }

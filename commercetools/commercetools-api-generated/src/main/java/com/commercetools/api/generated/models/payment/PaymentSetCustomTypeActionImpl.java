@@ -45,12 +45,17 @@ public final class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTyp
       return this.action;
    }
    
-   
+   /**
+   *  <p>Sets the custom fields to this value.</p>
+   */
    public com.commercetools.api.generated.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
-   
+   /**
+   *  <p>If set, the custom type is set to this new value.
+   *  If absent, the custom type and any existing custom fields are removed.</p>
+   */
    public com.commercetools.api.generated.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }

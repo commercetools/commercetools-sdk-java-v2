@@ -40,7 +40,9 @@ public final class ProjectChangeCountriesActionImpl implements ProjectChangeCoun
       return this.action;
    }
    
-   
+   /**
+   *  <p>A two-digit country code as per country code.</p>
+   */
    public java.util.List<String> getCountries(){
       return this.countries;
    }

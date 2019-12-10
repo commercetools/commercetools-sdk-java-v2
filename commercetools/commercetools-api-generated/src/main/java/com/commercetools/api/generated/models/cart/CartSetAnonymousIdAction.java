@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetAnonymousIdActionImpl.class)
 public interface CartSetAnonymousIdAction extends CartUpdateAction {
 
-   
+   /**
+   *  <p>If not set, any existing anonymous ID will be removed.</p>
+   */
    
    @JsonProperty("anonymousId")
    public String getAnonymousId();

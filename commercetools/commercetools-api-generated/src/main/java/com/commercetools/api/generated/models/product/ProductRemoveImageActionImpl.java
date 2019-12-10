@@ -49,7 +49,9 @@ public final class ProductRemoveImageActionImpl implements ProductRemoveImageAct
       return this.action;
    }
    
-   
+   /**
+   *  <p>The URL of the image.</p>
+   */
    public String getImageUrl(){
       return this.imageUrl;
    }

@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = StoreSetNameActionImpl.class)
 public interface StoreSetNameAction extends StoreUpdateAction {
 
-   
+   /**
+   *  <p>The updated name of the store</p>
+   */
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();

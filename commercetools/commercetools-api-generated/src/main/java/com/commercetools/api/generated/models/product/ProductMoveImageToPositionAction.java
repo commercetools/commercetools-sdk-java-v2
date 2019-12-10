@@ -29,7 +29,9 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
    
    @JsonProperty("sku")
    public String getSku();
-   
+   /**
+   *  <p>The URL of the image</p>
+   */
    @NotNull
    @JsonProperty("imageUrl")
    public String getImageUrl();

@@ -22,11 +22,15 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeSetValidFromAndUntilActionImpl.class)
 public interface DiscountCodeSetValidFromAndUntilAction extends DiscountCodeUpdateAction {
 
-   
+   /**
+   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+   */
    
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
-   
+   /**
+   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+   */
    
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();

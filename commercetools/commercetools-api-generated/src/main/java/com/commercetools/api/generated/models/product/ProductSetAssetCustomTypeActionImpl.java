@@ -74,12 +74,17 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
       return this.variantId;
    }
    
-   
+   /**
+   *  <p>If set, the custom fields are set to this new value.</p>
+   */
    public Object getFields(){
       return this.fields;
    }
    
-   
+   /**
+   *  <p>If set, the custom type is set to this new value.
+   *  If absent, the custom type and any existing custom fields are removed.</p>
+   */
    public com.commercetools.api.generated.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }

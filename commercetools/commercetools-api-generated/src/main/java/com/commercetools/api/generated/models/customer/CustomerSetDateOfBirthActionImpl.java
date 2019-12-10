@@ -41,7 +41,9 @@ public final class CustomerSetDateOfBirthActionImpl implements CustomerSetDateOf
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not defined, the date of birth is unset.</p>
+   */
    public java.time.LocalDate getDateOfBirth(){
       return this.dateOfBirth;
    }

@@ -21,7 +21,11 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetKeyActionImpl.class)
 public interface PaymentSetKeyAction extends PaymentUpdateAction {
 
-   
+   /**
+   *  <p>User-specific unique identifier for the payment (max.
+   *  256 characters).
+   *  If not provided an existing key will be removed.</p>
+   */
    
    @JsonProperty("key")
    public String getKey();

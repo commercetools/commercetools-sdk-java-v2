@@ -22,7 +22,12 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetShippingRateInputActionImpl.class)
 public interface CartSetShippingRateInputAction extends CartUpdateAction {
 
-   
+   /**
+   *  <p>Based on the definition of ShippingRateInputType.
+   *  If CartClassification is defined, it must be ClassificationShippingRateInput.
+   *  If CartScore is defined, it must be ScoreShippingRateInput.
+   *  Otherwise it can not bet set.</p>
+   */
    @Valid
    @JsonProperty("shippingRateInput")
    public ShippingRateInputDraft getShippingRateInput();

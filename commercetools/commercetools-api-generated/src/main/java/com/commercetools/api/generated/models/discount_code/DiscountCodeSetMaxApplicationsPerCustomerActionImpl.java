@@ -40,7 +40,9 @@ public final class DiscountCodeSetMaxApplicationsPerCustomerActionImpl implement
       return this.action;
    }
    
-   
+   /**
+   *  <p>If the <code>maxApplicationsPerCustomer</code> parameter is not included, the field will be emptied.</p>
+   */
    public Long getMaxApplicationsPerCustomer(){
       return this.maxApplicationsPerCustomer;
    }

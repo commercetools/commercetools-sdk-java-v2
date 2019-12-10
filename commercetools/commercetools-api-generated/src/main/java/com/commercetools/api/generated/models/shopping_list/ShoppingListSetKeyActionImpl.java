@@ -40,7 +40,9 @@ public final class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAct
       return this.action;
    }
    
-   
+   /**
+   *  <p>User-specific unique identifier for the shopping list.</p>
+   */
    public String getKey(){
       return this.key;
    }

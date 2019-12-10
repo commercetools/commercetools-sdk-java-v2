@@ -40,7 +40,9 @@ public final class CustomerSetVatIdActionImpl implements CustomerSetVatIdAction 
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not defined, the vat Id is unset.</p>
+   */
    public String getVatId(){
       return this.vatId;
    }

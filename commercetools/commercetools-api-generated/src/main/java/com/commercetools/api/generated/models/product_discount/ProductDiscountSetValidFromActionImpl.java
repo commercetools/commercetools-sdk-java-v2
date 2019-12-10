@@ -41,7 +41,10 @@ public final class ProductDiscountSetValidFromActionImpl implements ProductDisco
       return this.action;
    }
    
-   
+   /**
+   *  <p>The time from which the discount should be effective.
+   *  Please take Eventual Consistency into account for calculated product discount values.</p>
+   */
    public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }

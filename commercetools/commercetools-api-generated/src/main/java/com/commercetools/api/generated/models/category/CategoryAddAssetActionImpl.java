@@ -44,7 +44,9 @@ public final class CategoryAddAssetActionImpl implements CategoryAddAssetAction 
       return this.action;
    }
    
-   
+   /**
+   *  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>
+   */
    public Integer getPosition(){
       return this.position;
    }

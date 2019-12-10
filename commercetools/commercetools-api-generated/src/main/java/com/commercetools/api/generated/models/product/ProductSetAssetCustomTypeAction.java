@@ -42,11 +42,16 @@ public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
    
    @JsonProperty("assetKey")
    public String getAssetKey();
-   
+   /**
+   *  <p>If set, the custom type is set to this new value.
+   *  If absent, the custom type and any existing custom fields are removed.</p>
+   */
    @Valid
    @JsonProperty("type")
    public TypeResourceIdentifier getType();
-   
+   /**
+   *  <p>If set, the custom fields are set to this new value.</p>
+   */
    @Valid
    @JsonProperty("fields")
    public Object getFields();

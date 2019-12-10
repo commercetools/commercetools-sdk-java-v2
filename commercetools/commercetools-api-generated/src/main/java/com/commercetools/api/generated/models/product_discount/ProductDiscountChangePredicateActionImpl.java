@@ -40,7 +40,9 @@ public final class ProductDiscountChangePredicateActionImpl implements ProductDi
       return this.action;
    }
    
-   
+   /**
+   *  <p>A valid ProductDiscount Predicate.</p>
+   */
    public String getPredicate(){
       return this.predicate;
    }

@@ -44,12 +44,16 @@ public final class CartDiscountSetValidFromAndUntilActionImpl implements CartDis
       return this.action;
    }
    
-   
+   /**
+   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+   */
    public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }
    
-   
+   /**
+   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+   */
    public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }

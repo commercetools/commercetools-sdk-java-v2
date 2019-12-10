@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectSetShippingRateInputTypeActionImpl.class)
 public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateAction {
 
-   
+   /**
+   *  <p>If not set, removes existing shippingRateInputType.</p>
+   */
    @Valid
    @JsonProperty("shippingRateInputType")
    public ShippingRateInputType getShippingRateInputType();

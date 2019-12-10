@@ -41,7 +41,12 @@ public final class CartSetShippingRateInputActionImpl implements CartSetShipping
       return this.action;
    }
    
-   
+   /**
+   *  <p>Based on the definition of ShippingRateInputType.
+   *  If CartClassification is defined, it must be ClassificationShippingRateInput.
+   *  If CartScore is defined, it must be ScoreShippingRateInput.
+   *  Otherwise it can not bet set.</p>
+   */
    public com.commercetools.api.generated.models.cart.ShippingRateInputDraft getShippingRateInput(){
       return this.shippingRateInput;
    }

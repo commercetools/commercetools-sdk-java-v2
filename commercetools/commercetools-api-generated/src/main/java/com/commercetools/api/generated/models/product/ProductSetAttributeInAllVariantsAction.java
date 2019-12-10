@@ -25,7 +25,9 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
    @NotNull
    @JsonProperty("name")
    public String getName();
-   
+   /**
+   *  <p>The same update behavior as for Set Attribute applies.</p>
+   */
    
    @JsonProperty("value")
    public Object getValue();

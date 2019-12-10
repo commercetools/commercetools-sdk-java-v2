@@ -41,7 +41,9 @@ public final class PaymentSetCustomerActionImpl implements PaymentSetCustomerAct
       return this.action;
    }
    
-   
+   /**
+   *  <p>A reference to the customer this payment belongs to.</p>
+   */
    public com.commercetools.api.generated.models.customer.CustomerResourceIdentifier getCustomer(){
       return this.customer;
    }

@@ -41,7 +41,9 @@ public final class ProductSetTaxCategoryActionImpl implements ProductSetTaxCateg
       return this.action;
    }
    
-   
+   /**
+   *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+   */
    public com.commercetools.api.generated.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }

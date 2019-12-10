@@ -40,7 +40,10 @@ public final class ShippingMethodSetPredicateActionImpl implements ShippingMetho
       return this.action;
    }
    
-   
+   /**
+   *  <p>A valid Cart predicate.
+   *  If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+   */
    public String getPredicate(){
       return this.predicate;
    }

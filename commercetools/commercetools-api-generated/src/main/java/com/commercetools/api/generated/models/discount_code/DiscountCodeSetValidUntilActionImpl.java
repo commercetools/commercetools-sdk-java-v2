@@ -41,7 +41,9 @@ public final class DiscountCodeSetValidUntilActionImpl implements DiscountCodeSe
       return this.action;
    }
    
-   
+   /**
+   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+   */
    public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }

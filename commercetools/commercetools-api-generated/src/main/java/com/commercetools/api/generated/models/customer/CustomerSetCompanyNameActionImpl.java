@@ -40,7 +40,9 @@ public final class CustomerSetCompanyNameActionImpl implements CustomerSetCompan
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not defined, the company name is unset.</p>
+   */
    public String getCompanyName(){
       return this.companyName;
    }

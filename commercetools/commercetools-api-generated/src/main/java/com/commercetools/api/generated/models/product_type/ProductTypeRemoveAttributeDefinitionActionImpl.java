@@ -40,7 +40,9 @@ public final class ProductTypeRemoveAttributeDefinitionActionImpl implements Pro
       return this.action;
    }
    
-   
+   /**
+   *  <p>The name of the attribute to remove.</p>
+   */
    public String getName(){
       return this.name;
    }

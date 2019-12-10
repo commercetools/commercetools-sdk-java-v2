@@ -40,7 +40,9 @@ public final class ShippingMethodChangeIsDefaultActionImpl implements ShippingMe
       return this.action;
    }
    
-   
+   /**
+   *  <p>Only one ShippingMethod in a project can be default.</p>
+   */
    public Boolean getIsDefault(){
       return this.isDefault;
    }

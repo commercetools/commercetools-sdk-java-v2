@@ -22,7 +22,10 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryChangeSlugActionImpl.class)
 public interface CategoryChangeSlugAction extends CategoryUpdateAction {
 
-   
+   /**
+   *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.
+   *  Maximum size is {{ site.data.api-limits.slugLength }}.</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("slug")

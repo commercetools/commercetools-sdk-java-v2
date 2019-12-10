@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectChangeLanguagesActionImpl.class)
 public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
 
-   
+   /**
+   *  <p>.</p>
+   */
    @NotNull
    @JsonProperty("languages")
    public List<String> getLanguages();

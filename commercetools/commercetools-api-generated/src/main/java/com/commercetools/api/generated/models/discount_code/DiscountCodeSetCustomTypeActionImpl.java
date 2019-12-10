@@ -45,12 +45,17 @@ public final class DiscountCodeSetCustomTypeActionImpl implements DiscountCodeSe
       return this.action;
    }
    
-   
+   /**
+   *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
+   *  Sets the custom fields to this value.</p>
+   */
    public com.commercetools.api.generated.models.type.FieldContainer getFields(){
       return this.fields;
    }
    
-   
+   /**
+   *  <p>If absent, the custom type and any existing CustomFields are removed.</p>
+   */
    public com.commercetools.api.generated.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }

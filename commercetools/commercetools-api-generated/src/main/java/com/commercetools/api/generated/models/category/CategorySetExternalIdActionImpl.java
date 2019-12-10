@@ -40,7 +40,9 @@ public final class CategorySetExternalIdActionImpl implements CategorySetExterna
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not defined, the external ID is unset.</p>
+   */
    public String getExternalId(){
       return this.externalId;
    }

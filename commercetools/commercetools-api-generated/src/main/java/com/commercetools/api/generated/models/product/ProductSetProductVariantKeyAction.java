@@ -29,7 +29,9 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
    
    @JsonProperty("sku")
    public String getSku();
-   
+   /**
+   *  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>
+   */
    
    @JsonProperty("key")
    public String getKey();

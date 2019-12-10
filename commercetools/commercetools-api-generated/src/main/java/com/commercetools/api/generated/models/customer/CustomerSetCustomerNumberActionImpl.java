@@ -40,7 +40,10 @@ public final class CustomerSetCustomerNumberActionImpl implements CustomerSetCus
       return this.action;
    }
    
-   
+   /**
+   *  <p>It should be <strong>unique</strong> across a project.
+   *  Once it's set, it cannot be changed.</p>
+   */
    public String getCustomerNumber(){
       return this.customerNumber;
    }

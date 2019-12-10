@@ -41,7 +41,9 @@ public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectS
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not set, removes existing shippingRateInputType.</p>
+   */
    public com.commercetools.api.generated.models.project.ShippingRateInputType getShippingRateInputType(){
       return this.shippingRateInputType;
    }

@@ -53,7 +53,9 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
       return this.action;
    }
    
-   
+   /**
+   *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
+   */
    public Integer getPosition(){
       return this.position;
    }

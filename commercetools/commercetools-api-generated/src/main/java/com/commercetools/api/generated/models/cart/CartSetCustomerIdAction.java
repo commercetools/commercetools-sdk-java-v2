@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetCustomerIdActionImpl.class)
 public interface CartSetCustomerIdAction extends CartUpdateAction {
 
-   
+   /**
+   *  <p>If set, a customer with the given ID must exist in the project.</p>
+   */
    
    @JsonProperty("customerId")
    public String getCustomerId();

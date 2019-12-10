@@ -40,7 +40,9 @@ public final class ProjectChangeCurrenciesActionImpl implements ProjectChangeCur
       return this.action;
    }
    
-   
+   /**
+   *  <p>A three-digit currency code as per currency code.</p>
+   */
    public java.util.List<String> getCurrencies(){
       return this.currencies;
    }

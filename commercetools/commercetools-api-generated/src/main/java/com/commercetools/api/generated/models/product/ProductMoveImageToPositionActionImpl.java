@@ -52,7 +52,9 @@ public final class ProductMoveImageToPositionActionImpl implements ProductMoveIm
       return this.action;
    }
    
-   
+   /**
+   *  <p>The URL of the image</p>
+   */
    public String getImageUrl(){
       return this.imageUrl;
    }

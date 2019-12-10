@@ -40,7 +40,9 @@ public final class CustomerSetExternalIdActionImpl implements CustomerSetExterna
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not defined, the external ID is unset.</p>
+   */
    public String getExternalId(){
       return this.externalId;
    }

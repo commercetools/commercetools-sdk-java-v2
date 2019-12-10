@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetTaxCategoryActionImpl.class)
 public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
 
-   
+   /**
+   *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+   */
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryResourceIdentifier getTaxCategory();

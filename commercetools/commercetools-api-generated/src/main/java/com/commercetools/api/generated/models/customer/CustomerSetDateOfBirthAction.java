@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetDateOfBirthActionImpl.class)
 public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
 
-   
+   /**
+   *  <p>If not defined, the date of birth is unset.</p>
+   */
    
    @JsonProperty("dateOfBirth")
    public LocalDate getDateOfBirth();

@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewSetAuthorNameActionImpl.class)
 public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
 
-   
+   /**
+   *  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+   */
    
    @JsonProperty("authorName")
    public String getAuthorName();

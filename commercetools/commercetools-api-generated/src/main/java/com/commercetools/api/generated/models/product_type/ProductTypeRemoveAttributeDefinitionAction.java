@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeRemoveAttributeDefinitionActionImpl.class)
 public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeUpdateAction {
 
-   
+   /**
+   *  <p>The name of the attribute to remove.</p>
+   */
    @NotNull
    @JsonProperty("name")
    public String getName();

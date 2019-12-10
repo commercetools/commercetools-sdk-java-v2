@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountSetValidFromActionImpl.class)
 public interface CartDiscountSetValidFromAction extends CartDiscountUpdateAction {
 
-   
+   /**
+   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+   */
    
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();

@@ -40,7 +40,9 @@ public final class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAct
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not set, any existing anonymous ID will be removed.</p>
+   */
    public String getAnonymousId(){
       return this.anonymousId;
    }

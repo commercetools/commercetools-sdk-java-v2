@@ -22,7 +22,10 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntrySetSupplyChannelActionImpl.class)
 public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpdateAction {
 
-   
+   /**
+   *  <p>If absent, the supply channel is removed.
+   *  This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+   */
    @Valid
    @JsonProperty("supplyChannel")
    public ChannelResourceIdentifier getSupplyChannel();

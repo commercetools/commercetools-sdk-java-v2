@@ -63,7 +63,8 @@ import java.io.IOException;
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,
    include = JsonTypeInfo.As.PROPERTY,
-   property = "typeId"
+   property = "typeId",
+   defaultImpl = ResourceIdentifierImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

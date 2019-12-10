@@ -26,7 +26,8 @@ import java.io.IOException;
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,
    include = JsonTypeInfo.As.PROPERTY,
-   property = "type"
+   property = "type",
+   defaultImpl = OrderEditResultImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

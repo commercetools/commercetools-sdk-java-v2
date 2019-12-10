@@ -21,7 +21,10 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountChangeSortOrderActionImpl.class)
 public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpdateAction {
 
-   
+   /**
+   *  <p>The string must contain a number between 0 and 1.
+   *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>
+   */
    @NotNull
    @JsonProperty("sortOrder")
    public String getSortOrder();

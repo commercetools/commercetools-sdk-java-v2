@@ -40,7 +40,9 @@ public final class DiscountCodeSetMaxApplicationsActionImpl implements DiscountC
       return this.action;
    }
    
-   
+   /**
+   *  <p>If the <code>maxApplications</code> parameter is not included, the field will be emptied.</p>
+   */
    public Long getMaxApplications(){
       return this.maxApplications;
    }

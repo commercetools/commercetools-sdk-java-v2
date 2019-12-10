@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeSetMaxApplicationsPerCustomerActionImpl.class)
 public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends DiscountCodeUpdateAction {
 
-   
+   /**
+   *  <p>If the <code>maxApplicationsPerCustomer</code> parameter is not included, the field will be emptied.</p>
+   */
    
    @JsonProperty("maxApplicationsPerCustomer")
    public Long getMaxApplicationsPerCustomer();

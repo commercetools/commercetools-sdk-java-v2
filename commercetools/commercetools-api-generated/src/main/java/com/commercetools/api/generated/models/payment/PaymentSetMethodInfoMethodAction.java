@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetMethodInfoMethodActionImpl.class)
 public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
 
-   
+   /**
+   *  <p>If not provided, the method is unset.</p>
+   */
    
    @JsonProperty("method")
    public String getMethod();

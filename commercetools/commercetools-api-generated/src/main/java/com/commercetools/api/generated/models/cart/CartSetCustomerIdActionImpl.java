@@ -40,7 +40,9 @@ public final class CartSetCustomerIdActionImpl implements CartSetCustomerIdActio
       return this.action;
    }
    
-   
+   /**
+   *  <p>If set, a customer with the given ID must exist in the project.</p>
+   */
    public String getCustomerId(){
       return this.customerId;
    }

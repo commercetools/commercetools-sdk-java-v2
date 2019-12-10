@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountChangePredicateActionImpl.class)
 public interface ProductDiscountChangePredicateAction extends ProductDiscountUpdateAction {
 
-   
+   /**
+   *  <p>A valid ProductDiscount Predicate.</p>
+   */
    @NotNull
    @JsonProperty("predicate")
    public String getPredicate();

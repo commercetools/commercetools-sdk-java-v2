@@ -41,7 +41,9 @@ public final class StoreSetNameActionImpl implements StoreSetNameAction {
       return this.action;
    }
    
-   
+   /**
+   *  <p>The updated name of the store</p>
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }

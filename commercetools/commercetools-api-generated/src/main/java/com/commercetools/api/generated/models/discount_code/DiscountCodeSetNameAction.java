@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeSetNameActionImpl.class)
 public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
 
-   
+   /**
+   *  <p>If the <code>name</code> parameter is not included, the field will be emptied.</p>
+   */
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();

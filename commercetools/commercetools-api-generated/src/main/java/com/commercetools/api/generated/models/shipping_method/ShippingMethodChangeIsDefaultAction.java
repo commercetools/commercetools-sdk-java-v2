@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodChangeIsDefaultActionImpl.class)
 public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdateAction {
 
-   
+   /**
+   *  <p>Only one ShippingMethod in a project can be default.</p>
+   */
    @NotNull
    @JsonProperty("isDefault")
    public Boolean getIsDefault();

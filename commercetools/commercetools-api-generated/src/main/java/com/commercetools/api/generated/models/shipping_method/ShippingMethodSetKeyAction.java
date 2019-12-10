@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodSetKeyActionImpl.class)
 public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
 
-   
+   /**
+   *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
+   */
    
    @JsonProperty("key")
    public String getKey();

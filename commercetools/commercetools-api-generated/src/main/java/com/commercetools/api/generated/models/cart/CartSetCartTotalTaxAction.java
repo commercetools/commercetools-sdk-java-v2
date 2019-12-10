@@ -23,7 +23,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetCartTotalTaxActionImpl.class)
 public interface CartSetCartTotalTaxAction extends CartUpdateAction {
 
-   
+   /**
+   *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+   */
    @NotNull
    @Valid
    @JsonProperty("externalTotalGross")

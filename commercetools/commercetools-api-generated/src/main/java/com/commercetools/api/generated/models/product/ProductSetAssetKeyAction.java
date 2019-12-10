@@ -37,7 +37,10 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
    @NotNull
    @JsonProperty("assetId")
    public String getAssetId();
-   
+   /**
+   *  <p>User-defined identifier for the asset.
+   *  If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+   */
    
    @JsonProperty("assetKey")
    public String getAssetKey();

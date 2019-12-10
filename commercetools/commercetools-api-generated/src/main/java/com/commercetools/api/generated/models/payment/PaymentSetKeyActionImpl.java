@@ -40,7 +40,11 @@ public final class PaymentSetKeyActionImpl implements PaymentSetKeyAction {
       return this.action;
    }
    
-   
+   /**
+   *  <p>User-specific unique identifier for the payment (max.
+   *  256 characters).
+   *  If not provided an existing key will be removed.</p>
+   */
    public String getKey(){
       return this.key;
    }

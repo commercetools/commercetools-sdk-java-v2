@@ -41,7 +41,9 @@ public final class OrderEditSetStagedActionsActionImpl implements OrderEditSetSt
       return this.action;
    }
    
-   
+   /**
+   *  <p>The actions to edit the <code>resource</code>.</p>
+   */
    public java.util.List<com.commercetools.api.generated.models.order.StagedOrderUpdateAction> getStagedActions(){
       return this.stagedActions;
    }

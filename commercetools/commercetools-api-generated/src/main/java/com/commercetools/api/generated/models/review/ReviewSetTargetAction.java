@@ -21,7 +21,11 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewSetTargetActionImpl.class)
 public interface ReviewSetTargetAction extends ReviewUpdateAction {
 
-   
+   /**
+   *  <p>Identifies the target of the review.
+   *  Can be a Product or a Channel.
+   *  If <code>target</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+   */
    @NotNull
    @JsonProperty("target")
    public Object getTarget();

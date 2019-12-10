@@ -41,7 +41,10 @@ public final class CategoryChangeSlugActionImpl implements CategoryChangeSlugAct
       return this.action;
    }
    
-   
+   /**
+   *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.
+   *  Maximum size is {{ site.data.api-limits.slugLength }}.</p>
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getSlug(){
       return this.slug;
    }

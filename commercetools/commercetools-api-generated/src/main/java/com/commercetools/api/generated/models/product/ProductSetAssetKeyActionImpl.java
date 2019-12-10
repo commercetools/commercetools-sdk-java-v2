@@ -72,7 +72,10 @@ public final class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAct
       return this.sku;
    }
    
-   
+   /**
+   *  <p>User-defined identifier for the asset.
+   *  If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+   */
    public String getAssetKey(){
       return this.assetKey;
    }

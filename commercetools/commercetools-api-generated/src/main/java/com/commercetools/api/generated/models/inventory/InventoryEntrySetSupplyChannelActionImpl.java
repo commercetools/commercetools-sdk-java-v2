@@ -41,7 +41,10 @@ public final class InventoryEntrySetSupplyChannelActionImpl implements Inventory
       return this.action;
    }
    
-   
+   /**
+   *  <p>If absent, the supply channel is removed.
+   *  This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+   */
    public com.commercetools.api.generated.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }

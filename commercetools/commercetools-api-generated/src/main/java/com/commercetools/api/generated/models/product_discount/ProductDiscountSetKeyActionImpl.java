@@ -40,7 +40,10 @@ public final class ProductDiscountSetKeyActionImpl implements ProductDiscountSet
       return this.action;
    }
    
-   
+   /**
+   *  <p>The key to set.
+   *  If you provide a <code>null</code> value or do not set this field at all, the existing <code>key</code> field is removed.</p>
+   */
    public String getKey(){
       return this.key;
    }

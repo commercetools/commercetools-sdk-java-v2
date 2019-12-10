@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountChangeCartPredicateActionImpl.class)
 public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdateAction {
 
-   
+   /**
+   *  <p>A valid Cart predicate.</p>
+   */
    @NotNull
    @JsonProperty("cartPredicate")
    public String getCartPredicate();

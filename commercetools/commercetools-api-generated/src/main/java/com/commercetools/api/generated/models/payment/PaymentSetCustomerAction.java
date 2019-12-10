@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetCustomerActionImpl.class)
 public interface PaymentSetCustomerAction extends PaymentUpdateAction {
 
-   
+   /**
+   *  <p>A reference to the customer this payment belongs to.</p>
+   */
    @Valid
    @JsonProperty("customer")
    public CustomerResourceIdentifier getCustomer();

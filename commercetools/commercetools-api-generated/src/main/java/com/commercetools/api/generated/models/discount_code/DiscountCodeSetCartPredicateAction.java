@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeSetCartPredicateActionImpl.class)
 public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAction {
 
-   
+   /**
+   *  <p>If the <code>cartPredicate</code> parameter is not included, the field will be emptied.</p>
+   */
    
    @JsonProperty("cartPredicate")
    public String getCartPredicate();

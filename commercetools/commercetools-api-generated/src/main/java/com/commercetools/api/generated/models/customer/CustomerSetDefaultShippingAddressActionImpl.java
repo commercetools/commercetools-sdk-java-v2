@@ -40,7 +40,9 @@ public final class CustomerSetDefaultShippingAddressActionImpl implements Custom
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>
+   */
    public String getAddressId(){
       return this.addressId;
    }

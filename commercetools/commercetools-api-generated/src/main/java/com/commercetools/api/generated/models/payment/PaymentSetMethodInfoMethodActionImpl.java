@@ -40,7 +40,9 @@ public final class PaymentSetMethodInfoMethodActionImpl implements PaymentSetMet
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not provided, the method is unset.</p>
+   */
    public String getMethod(){
       return this.method;
    }

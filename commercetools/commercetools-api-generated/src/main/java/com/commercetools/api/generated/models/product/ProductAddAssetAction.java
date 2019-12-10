@@ -39,7 +39,9 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
    @Valid
    @JsonProperty("asset")
    public AssetDraft getAsset();
-   
+   /**
+   *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
+   */
    
    @JsonProperty("position")
    public Integer getPosition();

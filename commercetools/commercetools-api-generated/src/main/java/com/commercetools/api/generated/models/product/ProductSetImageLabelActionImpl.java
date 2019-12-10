@@ -52,7 +52,9 @@ public final class ProductSetImageLabelActionImpl implements ProductSetImageLabe
       return this.action;
    }
    
-   
+   /**
+   *  <p>The URL of the image.</p>
+   */
    public String getImageUrl(){
       return this.imageUrl;
    }
@@ -62,7 +64,10 @@ public final class ProductSetImageLabelActionImpl implements ProductSetImageLabe
       return this.staged;
    }
    
-   
+   /**
+   *  <p>The new image label.
+   *  If left blank or set to null, the label is removed.</p>
+   */
    public String getLabel(){
       return this.label;
    }

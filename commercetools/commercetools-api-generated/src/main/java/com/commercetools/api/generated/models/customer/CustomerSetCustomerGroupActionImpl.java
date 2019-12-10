@@ -41,7 +41,9 @@ public final class CustomerSetCustomerGroupActionImpl implements CustomerSetCust
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not defined, the customer group is unset.</p>
+   */
    public com.commercetools.api.generated.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
       return this.customerGroup;
    }

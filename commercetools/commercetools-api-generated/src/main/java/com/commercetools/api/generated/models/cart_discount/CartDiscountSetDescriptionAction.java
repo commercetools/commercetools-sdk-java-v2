@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountSetDescriptionActionImpl.class)
 public interface CartDiscountSetDescriptionAction extends CartDiscountUpdateAction {
 
-   
+   /**
+   *  <p>If the <code>description</code> parameter is not included, the field will be emptied.</p>
+   */
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();

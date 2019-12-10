@@ -40,7 +40,9 @@ public final class ProjectChangeLanguagesActionImpl implements ProjectChangeLang
       return this.action;
    }
    
-   
+   /**
+   *  <p>.</p>
+   */
    public java.util.List<String> getLanguages(){
       return this.languages;
    }

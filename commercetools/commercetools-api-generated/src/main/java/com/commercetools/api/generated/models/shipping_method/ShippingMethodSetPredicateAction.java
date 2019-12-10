@@ -21,7 +21,10 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodSetPredicateActionImpl.class)
 public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAction {
 
-   
+   /**
+   *  <p>A valid Cart predicate.
+   *  If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+   */
    
    @JsonProperty("predicate")
    public String getPredicate();

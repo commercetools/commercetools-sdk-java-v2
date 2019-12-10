@@ -23,11 +23,16 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetCustomTypeActionImpl.class)
 public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
 
-   
+   /**
+   *  <p>If set, the custom type is set to this new value.
+   *  If absent, the custom type and any existing custom fields are removed.</p>
+   */
    @Valid
    @JsonProperty("type")
    public TypeResourceIdentifier getType();
-   
+   /**
+   *  <p>Sets the custom fields to this value.</p>
+   */
    @Valid
    @JsonProperty("fields")
    public FieldContainer getFields();

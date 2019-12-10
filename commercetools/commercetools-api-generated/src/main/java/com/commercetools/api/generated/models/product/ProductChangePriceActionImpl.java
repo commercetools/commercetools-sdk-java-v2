@@ -57,7 +57,9 @@ public final class ProductChangePriceActionImpl implements ProductChangePriceAct
       return this.staged;
    }
    
-   
+   /**
+   *  <p>ID of the <a href="#price">Price</a></p>
+   */
    public String getPriceId(){
       return this.priceId;
    }

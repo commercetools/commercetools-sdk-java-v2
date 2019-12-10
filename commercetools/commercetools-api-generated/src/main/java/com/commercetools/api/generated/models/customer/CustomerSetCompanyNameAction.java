@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetCompanyNameActionImpl.class)
 public interface CustomerSetCompanyNameAction extends CustomerUpdateAction {
 
-   
+   /**
+   *  <p>If not defined, the company name is unset.</p>
+   */
    
    @JsonProperty("companyName")
    public String getCompanyName();

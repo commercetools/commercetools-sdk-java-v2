@@ -22,7 +22,10 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountSetValidUntilActionImpl.class)
 public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdateAction {
 
-   
+   /**
+   *  <p>The time from which the discount should be ineffective.
+   *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
+   */
    
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();

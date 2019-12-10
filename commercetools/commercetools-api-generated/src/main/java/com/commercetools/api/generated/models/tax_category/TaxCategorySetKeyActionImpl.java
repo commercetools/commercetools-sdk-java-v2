@@ -40,7 +40,9 @@ public final class TaxCategorySetKeyActionImpl implements TaxCategorySetKeyActio
       return this.action;
    }
    
-   
+   /**
+   *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
+   */
    public String getKey(){
       return this.key;
    }

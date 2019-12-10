@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductChangePriceActionImpl.class)
 public interface ProductChangePriceAction extends ProductUpdateAction {
 
-   
+   /**
+   *  <p>ID of the <a href="#price">Price</a></p>
+   */
    @NotNull
    @JsonProperty("priceId")
    public String getPriceId();

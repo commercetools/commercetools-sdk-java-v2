@@ -22,7 +22,9 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetMethodInfoNameActionImpl.class)
 public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
 
-   
+   /**
+   *  <p>If not provided, the name is unset.</p>
+   */
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();

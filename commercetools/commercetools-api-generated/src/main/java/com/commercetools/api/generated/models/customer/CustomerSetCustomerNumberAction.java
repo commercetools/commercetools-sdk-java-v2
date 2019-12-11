@@ -21,7 +21,10 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetCustomerNumberActionImpl.class)
 public interface CustomerSetCustomerNumberAction extends CustomerUpdateAction {
 
-   
+   /**
+   *  <p>It should be <strong>unique</strong> across a project.
+   *  Once it's set, it cannot be changed.</p>
+   */
    
    @JsonProperty("customerNumber")
    public String getCustomerNumber();

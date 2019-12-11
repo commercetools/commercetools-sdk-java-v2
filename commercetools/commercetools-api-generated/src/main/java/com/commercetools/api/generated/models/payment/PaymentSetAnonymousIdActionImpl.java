@@ -40,7 +40,10 @@ public final class PaymentSetAnonymousIdActionImpl implements PaymentSetAnonymou
       return this.action;
    }
    
-   
+   /**
+   *  <p>Anonymous ID of the anonymous customer that this payment belongs to.
+   *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
+   */
    public String getAnonymousId(){
       return this.anonymousId;
    }

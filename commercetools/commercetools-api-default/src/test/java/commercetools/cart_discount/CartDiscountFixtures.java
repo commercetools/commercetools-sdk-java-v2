@@ -6,6 +6,7 @@ import org.junit.Assert;
 
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -28,6 +29,18 @@ public class CartDiscountFixtures {
                 .permyriad(10L)
                 .build();
 
+        List<CartDiscount> cartDiscounts = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+                .cartDiscounts()
+                .get()
+                .addWhere("sortOrder=\"0.41\"")
+                .executeBlocking()
+                .getBody()
+                .getResults();
+        
+        if(!cartDiscounts.isEmpty() && cartDiscounts.get(0) != null) {
+            deleteCartDiscount(cartDiscounts.get(0).getId(), cartDiscounts.get(0).getVersion());
+        }
+        
         CartDiscountDraft cartDiscountDraft = CartDiscountDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomLocalizedString())
                 .key(CommercetoolsTestUtils.randomKey())

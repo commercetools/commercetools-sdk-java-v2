@@ -26,7 +26,10 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
    
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
-   
+   /**
+   *  <p>The timeframe for which the discount should be effective.
+   *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
+   */
    
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();

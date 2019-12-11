@@ -40,7 +40,9 @@ public final class ExtensionSetKeyActionImpl implements ExtensionSetKeyAction {
       return this.action;
    }
    
-   
+   /**
+   *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+   */
    public String getKey(){
       return this.key;
    }

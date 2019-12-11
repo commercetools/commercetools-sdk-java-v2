@@ -41,7 +41,10 @@ public final class ProductDiscountSetValidUntilActionImpl implements ProductDisc
       return this.action;
    }
    
-   
+   /**
+   *  <p>The time from which the discount should be ineffective.
+   *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
+   */
    public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }

@@ -21,7 +21,10 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeChangeGroupsActionImpl.class)
 public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction {
 
-   
+   /**
+   *  <p>The groups to which this discount code shall belong to.
+   *  Use empty array to remove the code from all groups.</p>
+   */
    @NotNull
    @JsonProperty("groups")
    public List<String> getGroups();

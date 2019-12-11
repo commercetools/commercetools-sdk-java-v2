@@ -41,7 +41,9 @@ public final class PaymentSetMethodInfoNameActionImpl implements PaymentSetMetho
       return this.action;
    }
    
-   
+   /**
+   *  <p>If not provided, the name is unset.</p>
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }

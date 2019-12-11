@@ -23,11 +23,15 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySetCustomTypeActionImpl.class)
 public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
 
-   
+   /**
+   *  <p>If absent, the custom type and any existing CustomFields are removed.</p>
+   */
    @Valid
    @JsonProperty("type")
    public TypeResourceIdentifier getType();
-   
+   /**
+   *  <p>A valid JSON object, based on the FieldDefinitions of the Type. Sets the custom fields to this value.</p>
+   */
    @Valid
    @JsonProperty("fields")
    public FieldContainer getFields();

@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetVatIdActionImpl.class)
 public interface CustomerSetVatIdAction extends CustomerUpdateAction {
 
-   
+   /**
+   *  <p>If not defined, the vat Id is unset.</p>
+   */
    
    @JsonProperty("vatId")
    public String getVatId();

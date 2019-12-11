@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeSetKeyActionImpl.class)
 public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
 
-   
+   /**
+   *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+   */
    
    @JsonProperty("key")
    public String getKey();

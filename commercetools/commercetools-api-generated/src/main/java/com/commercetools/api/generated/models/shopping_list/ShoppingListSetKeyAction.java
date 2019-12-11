@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListSetKeyActionImpl.class)
 public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
 
-   
+   /**
+   *  <p>User-specific unique identifier for the shopping list.</p>
+   */
    
    @JsonProperty("key")
    public String getKey();

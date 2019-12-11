@@ -40,7 +40,9 @@ public final class CartDiscountChangeCartPredicateActionImpl implements CartDisc
       return this.action;
    }
    
-   
+   /**
+   *  <p>A valid Cart predicate.</p>
+   */
    public String getCartPredicate(){
       return this.cartPredicate;
    }

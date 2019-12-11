@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectChangeCountriesActionImpl.class)
 public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
 
-   
+   /**
+   *  <p>A two-digit country code as per country code.</p>
+   */
    @NotNull
    @JsonProperty("countries")
    public List<String> getCountries();

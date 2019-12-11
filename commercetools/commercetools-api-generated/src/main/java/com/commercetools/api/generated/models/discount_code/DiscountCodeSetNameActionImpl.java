@@ -41,7 +41,9 @@ public final class DiscountCodeSetNameActionImpl implements DiscountCodeSetNameA
       return this.action;
    }
    
-   
+   /**
+   *  <p>If the <code>name</code> parameter is not included, the field will be emptied.</p>
+   */
    public com.commercetools.api.generated.models.common.LocalizedString getName(){
       return this.name;
    }

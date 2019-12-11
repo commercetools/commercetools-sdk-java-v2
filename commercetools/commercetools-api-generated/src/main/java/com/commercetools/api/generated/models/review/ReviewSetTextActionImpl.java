@@ -40,7 +40,9 @@ public final class ReviewSetTextActionImpl implements ReviewSetTextAction {
       return this.action;
    }
    
-   
+   /**
+   *  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+   */
    public String getText(){
       return this.text;
    }

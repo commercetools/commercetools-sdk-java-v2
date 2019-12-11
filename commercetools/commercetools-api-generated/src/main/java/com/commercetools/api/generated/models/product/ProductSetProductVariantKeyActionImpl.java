@@ -64,7 +64,9 @@ public final class ProductSetProductVariantKeyActionImpl implements ProductSetPr
       return this.sku;
    }
    
-   
+   /**
+   *  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>
+   */
    public String getKey(){
       return this.key;
    }

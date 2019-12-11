@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectChangeCurrenciesActionImpl.class)
 public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
 
-   
+   /**
+   *  <p>A three-digit currency code as per currency code.</p>
+   */
    @NotNull
    @JsonProperty("currencies")
    public List<String> getCurrencies();

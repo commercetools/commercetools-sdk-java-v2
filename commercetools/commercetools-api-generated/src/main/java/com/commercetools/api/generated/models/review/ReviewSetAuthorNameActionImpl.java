@@ -40,7 +40,9 @@ public final class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameA
       return this.action;
    }
    
-   
+   /**
+   *  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+   */
    public String getAuthorName(){
       return this.authorName;
    }

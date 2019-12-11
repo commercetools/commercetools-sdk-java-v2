@@ -40,7 +40,9 @@ public final class ReviewSetTitleActionImpl implements ReviewSetTitleAction {
       return this.action;
    }
    
-   
+   /**
+   *  <p>If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+   */
    public String getTitle(){
       return this.title;
    }

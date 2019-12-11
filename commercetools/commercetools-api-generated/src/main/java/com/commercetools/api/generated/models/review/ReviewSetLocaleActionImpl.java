@@ -40,7 +40,9 @@ public final class ReviewSetLocaleActionImpl implements ReviewSetLocaleAction {
       return this.action;
    }
    
-   
+   /**
+   *  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+   */
    public String getLocale(){
       return this.locale;
    }

@@ -21,7 +21,9 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySetExternalIdActionImpl.class)
 public interface CategorySetExternalIdAction extends CategoryUpdateAction {
 
-   
+   /**
+   *  <p>If not defined, the external ID is unset.</p>
+   */
    
    @JsonProperty("externalId")
    public String getExternalId();

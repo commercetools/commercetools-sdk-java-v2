@@ -50,7 +50,9 @@ public final class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxA
       return this.externalTaxPortions;
    }
    
-   
+   /**
+   *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+   */
    public com.commercetools.api.generated.models.common.Money getExternalTotalGross(){
       return this.externalTotalGross;
    }

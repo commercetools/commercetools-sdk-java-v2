@@ -93,7 +93,7 @@ public class CartDiscountIntegrationTests {
             Assert.assertEquals(response.getResults().get(0).getId(), cartDiscount.getId());
         });
     }
-
+    
     @Test
     public void updateById() {
         CartDiscountFixtures.withUpdateableCartDiscount(cartDiscount -> {

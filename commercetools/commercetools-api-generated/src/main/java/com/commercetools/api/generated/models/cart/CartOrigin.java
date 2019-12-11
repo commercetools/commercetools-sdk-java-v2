@@ -1,10 +1,10 @@
 package com.commercetools.api.generated.models.cart;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.lang.String;
+import io.vrap.rmf.base.client.utils.Generated;
+
 import java.util.Arrays;
 import java.util.Optional;
-import io.vrap.rmf.base.client.utils.Generated;
 
 
 @Generated(
@@ -19,7 +19,10 @@ public enum CartOrigin {
   
   
   @JsonProperty("Merchant")
-  MERCHANT("Merchant");
+  MERCHANT("Merchant"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -32,6 +35,11 @@ public enum CartOrigin {
   }
 
   public static Optional<CartOrigin> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<CartOrigin> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

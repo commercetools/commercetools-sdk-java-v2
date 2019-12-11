@@ -23,7 +23,10 @@ public enum FacetTypes {
   
   
   @JsonProperty("filter")
-  FILTER("filter");
+  FILTER("filter"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -36,6 +39,11 @@ public enum FacetTypes {
   }
 
   public static Optional<FacetTypes> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<FacetTypes> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

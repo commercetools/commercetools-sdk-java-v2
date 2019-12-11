@@ -27,7 +27,10 @@ public enum ReturnPaymentState {
   
   
   @JsonProperty("NotRefunded")
-  NOT_REFUNDED("NotRefunded");
+  NOT_REFUNDED("NotRefunded"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -40,6 +43,11 @@ public enum ReturnPaymentState {
   }
 
   public static Optional<ReturnPaymentState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<ReturnPaymentState> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

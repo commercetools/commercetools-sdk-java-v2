@@ -19,7 +19,10 @@ public enum TaxCalculationMode {
   
   
   @JsonProperty("UnitPriceLevel")
-  UNIT_PRICE_LEVEL("UnitPriceLevel");
+  UNIT_PRICE_LEVEL("UnitPriceLevel"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -32,6 +35,11 @@ public enum TaxCalculationMode {
   }
 
   public static Optional<TaxCalculationMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<TaxCalculationMode> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

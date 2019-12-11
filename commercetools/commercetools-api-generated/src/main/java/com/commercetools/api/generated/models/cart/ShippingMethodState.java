@@ -19,7 +19,10 @@ public enum ShippingMethodState {
   
   
   @JsonProperty("MatchesCart")
-  MATCHES_CART("MatchesCart");
+  MATCHES_CART("MatchesCart"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -32,6 +35,11 @@ public enum ShippingMethodState {
   }
 
   public static Optional<ShippingMethodState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<ShippingMethodState> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

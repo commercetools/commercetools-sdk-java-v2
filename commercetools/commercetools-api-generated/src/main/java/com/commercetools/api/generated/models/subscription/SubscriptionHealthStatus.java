@@ -27,7 +27,10 @@ public enum SubscriptionHealthStatus {
   
   
   @JsonProperty("TemporaryError")
-  TEMPORARY_ERROR("TemporaryError");
+  TEMPORARY_ERROR("TemporaryError"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -40,6 +43,11 @@ public enum SubscriptionHealthStatus {
   }
 
   public static Optional<SubscriptionHealthStatus> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<SubscriptionHealthStatus> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

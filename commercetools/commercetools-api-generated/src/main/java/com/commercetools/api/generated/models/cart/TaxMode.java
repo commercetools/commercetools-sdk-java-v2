@@ -27,7 +27,10 @@ public enum TaxMode {
   
   
   @JsonProperty("Disabled")
-  DISABLED("Disabled");
+  DISABLED("Disabled"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -40,6 +43,11 @@ public enum TaxMode {
   }
 
   public static Optional<TaxMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<TaxMode> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

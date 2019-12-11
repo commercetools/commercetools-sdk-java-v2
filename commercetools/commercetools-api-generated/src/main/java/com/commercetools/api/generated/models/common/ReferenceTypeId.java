@@ -103,7 +103,10 @@ public enum ReferenceTypeId {
   
   
   @JsonProperty("order-edit")
-  ORDER_EDIT("order-edit");
+  ORDER_EDIT("order-edit"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -116,6 +119,11 @@ public enum ReferenceTypeId {
   }
 
   public static Optional<ReferenceTypeId> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<ReferenceTypeId> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

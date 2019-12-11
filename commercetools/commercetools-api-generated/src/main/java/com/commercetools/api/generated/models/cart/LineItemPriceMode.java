@@ -23,7 +23,10 @@ public enum LineItemPriceMode {
   
   
   @JsonProperty("ExternalPrice")
-  EXTERNAL_PRICE("ExternalPrice");
+  EXTERNAL_PRICE("ExternalPrice"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -36,6 +39,11 @@ public enum LineItemPriceMode {
   }
 
   public static Optional<LineItemPriceMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<LineItemPriceMode> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

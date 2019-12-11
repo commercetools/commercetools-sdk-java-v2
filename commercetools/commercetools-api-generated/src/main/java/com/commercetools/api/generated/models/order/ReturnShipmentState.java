@@ -27,7 +27,10 @@ public enum ReturnShipmentState {
   
   
   @JsonProperty("Unusable")
-  UNUSABLE("Unusable");
+  UNUSABLE("Unusable"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -40,6 +43,11 @@ public enum ReturnShipmentState {
   }
 
   public static Optional<ReturnShipmentState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<ReturnShipmentState> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

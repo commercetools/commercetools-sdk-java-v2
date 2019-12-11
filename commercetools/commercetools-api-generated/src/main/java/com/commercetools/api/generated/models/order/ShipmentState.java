@@ -35,7 +35,10 @@ public enum ShipmentState {
   
   
   @JsonProperty("Backorder")
-  BACKORDER("Backorder");
+  BACKORDER("Backorder"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -48,6 +51,11 @@ public enum ShipmentState {
   }
 
   public static Optional<ShipmentState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<ShipmentState> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

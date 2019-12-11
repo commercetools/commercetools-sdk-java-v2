@@ -19,7 +19,10 @@ public enum MoneyType {
   
   
   @JsonProperty("highPrecision")
-  HIGH_PRECISION("highPrecision");
+  HIGH_PRECISION("highPrecision"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -32,6 +35,11 @@ public enum MoneyType {
   }
 
   public static Optional<MoneyType> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<MoneyType> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

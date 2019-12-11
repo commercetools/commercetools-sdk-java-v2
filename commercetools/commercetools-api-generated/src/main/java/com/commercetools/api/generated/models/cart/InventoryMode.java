@@ -23,7 +23,10 @@ public enum InventoryMode {
   
   
   @JsonProperty("None")
-  NONE("None");
+  NONE("None"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -36,6 +39,11 @@ public enum InventoryMode {
   }
 
   public static Optional<InventoryMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<InventoryMode> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

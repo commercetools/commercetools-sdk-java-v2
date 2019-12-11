@@ -1,10 +1,10 @@
 package com.commercetools.api.generated.models.type;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.lang.String;
+import io.vrap.rmf.base.client.utils.Generated;
+
 import java.util.Arrays;
 import java.util.Optional;
-import io.vrap.rmf.base.client.utils.Generated;
 
 
 @Generated(
@@ -19,7 +19,10 @@ public enum TypeTextInputHint {
   
   
   @JsonProperty("MultiLine")
-  MULTI_LINE("MultiLine");
+  MULTI_LINE("MultiLine"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -32,6 +35,11 @@ public enum TypeTextInputHint {
   }
 
   public static Optional<TypeTextInputHint> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<TypeTextInputHint> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

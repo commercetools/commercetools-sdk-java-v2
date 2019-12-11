@@ -19,7 +19,10 @@ public enum StackingMode {
   
   
   @JsonProperty("StopAfterThisDiscount")
-  STOP_AFTER_THIS_DISCOUNT("StopAfterThisDiscount");
+  STOP_AFTER_THIS_DISCOUNT("StopAfterThisDiscount"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -32,6 +35,11 @@ public enum StackingMode {
   }
 
   public static Optional<StackingMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<StackingMode> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

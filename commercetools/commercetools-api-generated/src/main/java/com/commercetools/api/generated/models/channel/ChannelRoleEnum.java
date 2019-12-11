@@ -31,7 +31,10 @@ public enum ChannelRoleEnum {
   
   
   @JsonProperty("Primary")
-  PRIMARY("Primary");
+  PRIMARY("Primary"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -44,6 +47,11 @@ public enum ChannelRoleEnum {
   }
 
   public static Optional<ChannelRoleEnum> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<ChannelRoleEnum> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

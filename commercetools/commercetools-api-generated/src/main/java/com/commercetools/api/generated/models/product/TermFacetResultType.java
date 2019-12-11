@@ -35,7 +35,10 @@ public enum TermFacetResultType {
   
   
   @JsonProperty("number")
-  NUMBER("number");
+  NUMBER("number"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -48,6 +51,11 @@ public enum TermFacetResultType {
   }
 
   public static Optional<TermFacetResultType> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<TermFacetResultType> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

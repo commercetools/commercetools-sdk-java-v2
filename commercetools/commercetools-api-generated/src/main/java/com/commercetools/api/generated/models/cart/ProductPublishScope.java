@@ -19,7 +19,10 @@ public enum ProductPublishScope {
   
   
   @JsonProperty("Prices")
-  PRICES("Prices");
+  PRICES("Prices"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -32,6 +35,11 @@ public enum ProductPublishScope {
   }
 
   public static Optional<ProductPublishScope> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<ProductPublishScope> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

@@ -23,7 +23,10 @@ public enum RoundingMode {
   
   
   @JsonProperty("HalfDown")
-  HALF_DOWN("HalfDown");
+  HALF_DOWN("HalfDown"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -36,6 +39,11 @@ public enum RoundingMode {
   }
 
   public static Optional<RoundingMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<RoundingMode> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

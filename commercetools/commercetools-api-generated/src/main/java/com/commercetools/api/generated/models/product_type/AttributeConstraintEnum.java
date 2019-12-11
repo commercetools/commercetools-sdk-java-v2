@@ -27,7 +27,10 @@ public enum AttributeConstraintEnum {
   
   
   @JsonProperty("SameForAll")
-  SAME_FOR_ALL("SameForAll");
+  SAME_FOR_ALL("SameForAll"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -40,6 +43,11 @@ public enum AttributeConstraintEnum {
   }
 
   public static Optional<AttributeConstraintEnum> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<AttributeConstraintEnum> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

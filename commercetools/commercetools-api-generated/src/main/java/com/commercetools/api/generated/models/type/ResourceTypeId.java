@@ -83,7 +83,10 @@ public enum ResourceTypeId {
   
   
   @JsonProperty("customer-group")
-  CUSTOMER_GROUP("customer-group");
+  CUSTOMER_GROUP("customer-group"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -96,6 +99,11 @@ public enum ResourceTypeId {
   }
 
   public static Optional<ResourceTypeId> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<ResourceTypeId> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

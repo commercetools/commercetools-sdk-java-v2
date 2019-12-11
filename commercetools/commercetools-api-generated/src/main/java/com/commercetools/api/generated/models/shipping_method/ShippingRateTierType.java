@@ -23,7 +23,10 @@ public enum ShippingRateTierType {
   
   
   @JsonProperty("CartScore")
-  CART_SCORE("CartScore");
+  CART_SCORE("CartScore"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -36,6 +39,11 @@ public enum ShippingRateTierType {
   }
 
   public static Optional<ShippingRateTierType> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<ShippingRateTierType> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

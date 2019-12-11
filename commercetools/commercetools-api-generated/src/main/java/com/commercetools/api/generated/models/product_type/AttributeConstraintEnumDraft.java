@@ -15,7 +15,10 @@ public enum AttributeConstraintEnumDraft {
 
   
   @JsonProperty("None")
-  NONE("None");
+  NONE("None"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -28,6 +31,11 @@ public enum AttributeConstraintEnumDraft {
   }
 
   public static Optional<AttributeConstraintEnumDraft> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<AttributeConstraintEnumDraft> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

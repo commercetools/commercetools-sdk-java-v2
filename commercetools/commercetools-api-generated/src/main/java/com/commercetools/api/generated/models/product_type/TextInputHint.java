@@ -19,7 +19,10 @@ public enum TextInputHint {
   
   
   @JsonProperty("MultiLine")
-  MULTI_LINE("MultiLine");
+  MULTI_LINE("MultiLine"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -32,6 +35,11 @@ public enum TextInputHint {
   }
 
   public static Optional<TextInputHint> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<TextInputHint> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

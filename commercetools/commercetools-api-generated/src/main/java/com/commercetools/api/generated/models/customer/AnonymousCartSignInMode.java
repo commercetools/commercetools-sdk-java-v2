@@ -19,7 +19,10 @@ public enum AnonymousCartSignInMode {
   
   
   @JsonProperty("UseAsNewActiveCustomerCart")
-  USE_AS_NEW_ACTIVE_CUSTOMER_CART("UseAsNewActiveCustomerCart");
+  USE_AS_NEW_ACTIVE_CUSTOMER_CART("UseAsNewActiveCustomerCart"),
+  
+  @JsonProperty("unknown")
+  UNKNOWN("unknown");
 
   private final String jsonName;
 
@@ -32,6 +35,11 @@ public enum AnonymousCartSignInMode {
   }
 
   public static Optional<AnonymousCartSignInMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    Optional<AnonymousCartSignInMode> optional = Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    if(!optional.isPresent()) {
+      return Optional.of(UNKNOWN);
+    }else {
+      return optional;
+    }
   }
 }

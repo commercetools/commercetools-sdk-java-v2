@@ -4,6 +4,7 @@ import com.commercetools.api.generated.models.review.ReviewUpdateAction;
 import com.commercetools.api.generated.models.review.ReviewSetTargetActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -28,9 +29,9 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
    */
    @NotNull
    @JsonProperty("target")
-   public Object getTarget();
+   public JsonNode getTarget();
 
-   public void setTarget(final Object target);
+   public void setTarget(final JsonNode target);
    
    public static ReviewSetTargetActionImpl of(){
       return new ReviewSetTargetActionImpl();

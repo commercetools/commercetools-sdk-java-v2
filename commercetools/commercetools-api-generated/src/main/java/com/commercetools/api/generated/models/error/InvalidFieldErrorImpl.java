@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -26,14 +27,14 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
    
    private String message;
    
-   private java.util.List<Object> allowedValues;
+   private java.util.List<JsonNode> allowedValues;
    
    private String field;
    
-   private Object invalidValue;
+   private JsonNode invalidValue;
 
    @JsonCreator
-   InvalidFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("allowedValues") final java.util.List<Object> allowedValues, @JsonProperty("field") final String field, @JsonProperty("invalidValue") final Object invalidValue) {
+   InvalidFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("allowedValues") final java.util.List<JsonNode> allowedValues, @JsonProperty("field") final String field, @JsonProperty("invalidValue") final JsonNode invalidValue) {
       this.message = message;
       this.allowedValues = allowedValues;
       this.field = field;
@@ -55,7 +56,7 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
    }
    
    
-   public java.util.List<Object> getAllowedValues(){
+   public java.util.List<JsonNode> getAllowedValues(){
       return this.allowedValues;
    }
    
@@ -65,7 +66,7 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
    }
    
    
-   public Object getInvalidValue(){
+   public JsonNode getInvalidValue(){
       return this.invalidValue;
    }
 
@@ -73,7 +74,7 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
       this.message = message;
    }
    
-   public void setAllowedValues(final java.util.List<Object> allowedValues){
+   public void setAllowedValues(final java.util.List<JsonNode> allowedValues){
       this.allowedValues = allowedValues;
    }
    
@@ -81,7 +82,7 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
       this.field = field;
    }
    
-   public void setInvalidValue(final Object invalidValue){
+   public void setInvalidValue(final JsonNode invalidValue){
       this.invalidValue = invalidValue;
    }
 

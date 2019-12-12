@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.category.*;
 import com.commercetools.api.generated.models.common.*;
 import com.commercetools.api.generated.models.type.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -30,8 +31,8 @@ public class ModelSerializationTest {
         String id = "test-id";
         String testString = "test-string";
         
-        Map<String, Object> fieldContainerValues = new HashMap<>();
-        fieldContainerValues.put(key, testString);
+        Map<String, JsonNode> fieldContainerValues = new HashMap<>();
+        fieldContainerValues.put(key, VrapJsonUtils.getConfiguredObjectMapper().createObjectNode().put("val", testString));
         FieldContainer fieldContainer = FieldContainerBuilder.of().values(fieldContainerValues).build();
         
         AssetDraft assetDraft = AssetDraftBuilder.of()
@@ -39,7 +40,7 @@ public class ModelSerializationTest {
                 .key(key)
                 .name(localizedString)
                 .custom(CustomFieldsDraftBuilder.of()
-                        .fields(fieldContainer)
+                       .fields(fieldContainer)
                         .type(TypeResourceIdentifierBuilder.of().key("string type").build())
                         .build())
                 .sources(Arrays.asList(AssetSourceBuilder.of().contentType("application/json").dimensions(AssetDimensionsBuilder.of().h(10).w(5).build()).build()))
@@ -49,7 +50,12 @@ public class ModelSerializationTest {
         CategoryDraft categoryDraft = CategoryDraftBuilder.of()
                 .parent(CategoryResourceIdentifierBuilder.of().id(id).key(key).build())
                 .assets(Arrays.asList(assetDraft))
-                .custom(CustomFieldsDraftBuilder.of().type(TypeResourceIdentifierBuilder.of().key("string type").build()).fields(fieldContainer).build())
+                .custom(CustomFieldsDraftBuilder.of()
+                        .type(TypeResourceIdentifierBuilder.of()
+                                .key("string type")
+                                .build())
+                        .fields(fieldContainer)
+                        .build())
                 .description(localizedString)
                 .externalId(id)
                 .key(key)
@@ -67,6 +73,8 @@ public class ModelSerializationTest {
         }catch (JsonProcessingException e){
             e.printStackTrace();
         }
+
+        System.out.println(categoryDraftJson);
         
         try{
             final URL url = Thread.currentThread().getContextClassLoader().getResource("json_examples/category-draft-example.json");
@@ -91,15 +99,14 @@ public class ModelSerializationTest {
         String id = "test-id";
         String testString = "test-string";
 
-        Map<String, Object> fieldContainerValues = new HashMap<>();
-        fieldContainerValues.put(key, testString);
+        Map<String, JsonNode> fieldContainerValues = new HashMap<>();
+        fieldContainerValues.put(key, VrapJsonUtils.getConfiguredObjectMapper().createObjectNode().put("val", testString));
         FieldContainer fieldContainer = FieldContainerBuilder.of().values(fieldContainerValues).build();
 
         CustomFields customFields = CustomFieldsBuilder.of()
                 .fields(fieldContainer)
                 .type(TypeReferenceBuilder.of().id(id).obj(Type.of()).build())
                 .build();
-
         
         Asset asset = AssetBuilder.of()
                 .custom(customFields)

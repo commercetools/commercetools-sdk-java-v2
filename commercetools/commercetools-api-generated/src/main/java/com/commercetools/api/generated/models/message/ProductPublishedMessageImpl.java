@@ -12,7 +12,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -46,14 +47,14 @@ public final class ProductPublishedMessageImpl implements ProductPublishedMessag
    
    private String type;
    
-   private java.util.List<Object> removedImageUrls;
+   private java.util.List<JsonNode> removedImageUrls;
    
    private com.commercetools.api.generated.models.product.ProductProjection productProjection;
    
    private com.commercetools.api.generated.models.cart.ProductPublishScope scope;
 
    @JsonCreator
-   ProductPublishedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.generated.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.generated.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("removedImageUrls") final java.util.List<Object> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.api.generated.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.api.generated.models.cart.ProductPublishScope scope) {
+   ProductPublishedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.generated.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.generated.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("removedImageUrls") final java.util.List<JsonNode> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.api.generated.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.api.generated.models.cart.ProductPublishScope scope) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -129,7 +130,7 @@ public final class ProductPublishedMessageImpl implements ProductPublishedMessag
    }
    
    
-   public java.util.List<Object> getRemovedImageUrls(){
+   public java.util.List<JsonNode> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
    
@@ -183,7 +184,7 @@ public final class ProductPublishedMessageImpl implements ProductPublishedMessag
       this.resourceVersion = resourceVersion;
    }
    
-   public void setRemovedImageUrls(final java.util.List<Object> removedImageUrls){
+   public void setRemovedImageUrls(final java.util.List<JsonNode> removedImageUrls){
       this.removedImageUrls = removedImageUrls;
    }
    

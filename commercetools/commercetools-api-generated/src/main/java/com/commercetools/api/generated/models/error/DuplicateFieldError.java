@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.error.ErrorObject;
 import com.commercetools.api.generated.models.error.DuplicateFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -29,7 +30,7 @@ public interface DuplicateFieldError extends ErrorObject {
    
    
    @JsonProperty("duplicateValue")
-   public Object getDuplicateValue();
+   public JsonNode getDuplicateValue();
    
    @Valid
    @JsonProperty("conflictingResource")
@@ -37,7 +38,7 @@ public interface DuplicateFieldError extends ErrorObject {
 
    public void setField(final String field);
    
-   public void setDuplicateValue(final Object duplicateValue);
+   public void setDuplicateValue(final JsonNode duplicateValue);
    
    public void setConflictingResource(final Reference conflictingResource);
    

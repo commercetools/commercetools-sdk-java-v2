@@ -8,6 +8,7 @@ import com.commercetools.api.generated.models.custom_object.CustomObject;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -39,7 +40,7 @@ public final class CustomObjectBuilder {
    private String container;
    
    
-   private Object value;
+   private JsonNode value;
    
    
    private String key;
@@ -79,7 +80,7 @@ public final class CustomObjectBuilder {
       return this;
    }
    
-   public CustomObjectBuilder value( final Object value) {
+   public CustomObjectBuilder value( final JsonNode value) {
       this.value = value;
       return this;
    }
@@ -125,7 +126,7 @@ public final class CustomObjectBuilder {
    }
    
    
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
    

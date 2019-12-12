@@ -17,6 +17,7 @@ import com.commercetools.api.generated.models.type.CustomFields;
 import com.commercetools.api.generated.models.cart.LineItemImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

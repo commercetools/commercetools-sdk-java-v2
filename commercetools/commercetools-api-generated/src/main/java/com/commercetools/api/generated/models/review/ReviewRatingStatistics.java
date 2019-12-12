@@ -4,6 +4,7 @@ package com.commercetools.api.generated.models.review;
 import com.commercetools.api.generated.models.review.ReviewRatingStatisticsImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -54,7 +55,7 @@ public interface ReviewRatingStatistics  {
    @NotNull
    @Valid
    @JsonProperty("ratingsDistribution")
-   public Object getRatingsDistribution();
+   public JsonNode getRatingsDistribution();
 
    public void setAverageRating(final Integer averageRating);
    
@@ -64,7 +65,7 @@ public interface ReviewRatingStatistics  {
    
    public void setCount(final Integer count);
    
-   public void setRatingsDistribution(final Object ratingsDistribution);
+   public void setRatingsDistribution(final JsonNode ratingsDistribution);
    
    public static ReviewRatingStatisticsImpl of(){
       return new ReviewRatingStatisticsImpl();

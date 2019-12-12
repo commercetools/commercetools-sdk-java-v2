@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.product.ProductSetProductPriceCust
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,7 +25,7 @@ public final class ProductSetProductPriceCustomFieldActionBuilder {
    private String priceId;
    
    @Nullable
-   private Object value;
+   private JsonNode value;
    
    public ProductSetProductPriceCustomFieldActionBuilder name( final String name) {
       this.name = name;
@@ -41,7 +42,7 @@ public final class ProductSetProductPriceCustomFieldActionBuilder {
       return this;
    }
    
-   public ProductSetProductPriceCustomFieldActionBuilder value(@Nullable final Object value) {
+   public ProductSetProductPriceCustomFieldActionBuilder value(@Nullable final JsonNode value) {
       this.value = value;
       return this;
    }
@@ -62,7 +63,7 @@ public final class ProductSetProductPriceCustomFieldActionBuilder {
    }
    
    @Nullable
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
 

@@ -6,6 +6,7 @@ import com.commercetools.api.generated.models.product.ProductReference;
 import com.commercetools.api.generated.models.cart_discount.CartDiscountValueGiftLineItemImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

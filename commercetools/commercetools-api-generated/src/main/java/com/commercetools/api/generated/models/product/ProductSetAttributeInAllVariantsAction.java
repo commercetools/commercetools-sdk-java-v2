@@ -4,6 +4,7 @@ import com.commercetools.api.generated.models.product.ProductUpdateAction;
 import com.commercetools.api.generated.models.product.ProductSetAttributeInAllVariantsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -30,7 +31,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
    */
    
    @JsonProperty("value")
-   public Object getValue();
+   public JsonNode getValue();
    
    
    @JsonProperty("staged")
@@ -38,7 +39,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
 
    public void setName(final String name);
    
-   public void setValue(final Object value);
+   public void setValue(final JsonNode value);
    
    public void setStaged(final Boolean staged);
    

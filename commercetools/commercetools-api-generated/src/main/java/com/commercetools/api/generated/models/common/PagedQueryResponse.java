@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.product.FacetResults;
 import com.commercetools.api.generated.models.common.PagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -50,7 +51,7 @@ public interface PagedQueryResponse  {
    
    @Valid
    @JsonProperty("meta")
-   public Object getMeta();
+   public JsonNode getMeta();
 
    public void setLimit(final Long limit);
    
@@ -64,7 +65,7 @@ public interface PagedQueryResponse  {
    
    public void setFacets(final FacetResults facets);
    
-   public void setMeta(final Object meta);
+   public void setMeta(final JsonNode meta);
    
    public static PagedQueryResponseImpl of(){
       return new PagedQueryResponseImpl();

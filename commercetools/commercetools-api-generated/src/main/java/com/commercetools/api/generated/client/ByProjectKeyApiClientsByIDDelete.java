@@ -1,17 +1,22 @@
 package com.commercetools.api.generated.client;
 
-import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.utils.Utils;
+import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
+
+import java.io.InputStream;
+import java.io.IOException;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.stream.Collectors;
+import java.util.concurrent.CompletableFuture;
+import io.vrap.rmf.base.client.utils.Generated;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.CompletableFuture;
-import java.util.stream.Collectors;
+import io.vrap.rmf.base.client.*;
 
 
 /**

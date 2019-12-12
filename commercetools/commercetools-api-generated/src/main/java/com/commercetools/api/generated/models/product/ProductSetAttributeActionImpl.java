@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -32,10 +33,10 @@ public final class ProductSetAttributeActionImpl implements ProductSetAttributeA
    
    private String sku;
    
-   private Object value;
+   private JsonNode value;
 
    @JsonCreator
-   ProductSetAttributeActionImpl(@JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("value") final Object value) {
+   ProductSetAttributeActionImpl(@JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("value") final JsonNode value) {
       this.name = name;
       this.staged = staged;
       this.variantId = variantId;
@@ -77,7 +78,7 @@ public final class ProductSetAttributeActionImpl implements ProductSetAttributeA
    *  If the attribute exists and a value is provided, the new value is applied.
    *  If the attribute does not exist and a value is provided, it is added as a new attribute.</p>
    */
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
 
@@ -97,7 +98,7 @@ public final class ProductSetAttributeActionImpl implements ProductSetAttributeA
       this.sku = sku;
    }
    
-   public void setValue(final Object value){
+   public void setValue(final JsonNode value){
       this.value = value;
    }
 

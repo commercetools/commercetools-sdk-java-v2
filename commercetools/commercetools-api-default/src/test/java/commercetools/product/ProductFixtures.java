@@ -156,12 +156,6 @@ public class ProductFixtures {
                 .build();
 
         TaxCategory taxCategory = TaxCategoryFixtures.createTaxCategory();
-        Map<String, List<SearchKeyword>> searchKeywords = new HashMap<>();
-        searchKeywords.put("asdf", Arrays.asList(SearchKeywordBuilder.of()
-                .text("asdf")
-                .suggestTokenizer(WhitespaceTokenizerBuilder.of()
-                        .build())
-                .build()));
 
         StateDraft stateDraft = StateDraftBuilder.of()
                 .type(StateTypeEnum.PRODUCT_STATE)
@@ -192,9 +186,9 @@ public class ProductFixtures {
                 .metaKeywords(CommercetoolsTestUtils.randomLocalizedString())
                 .variants(Arrays.asList(productVariantDraft))
                 .taxCategory(TaxCategoryResourceIdentifierBuilder.of().id(taxCategory.getId()).build())
-                .searchKeywords(SearchKeywordsBuilder.of()
-                        .values(searchKeywords)
-                        .build())
+//                .searchKeywords(SearchKeywordsBuilder.of()
+//                        .values(searchKeywords)
+//                        .build())
                 .state(StateResourceIdentifierBuilder.of()
                         .id(state.getId())
                         .build())

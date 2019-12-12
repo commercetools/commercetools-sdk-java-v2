@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.order_edit.StagedOrderSetLineItemC
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,7 +22,7 @@ public final class StagedOrderSetLineItemCustomFieldActionBuilder {
    private String name;
    
    @Nullable
-   private Object value;
+   private JsonNode value;
    
    public StagedOrderSetLineItemCustomFieldActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
@@ -33,7 +34,7 @@ public final class StagedOrderSetLineItemCustomFieldActionBuilder {
       return this;
    }
    
-   public StagedOrderSetLineItemCustomFieldActionBuilder value(@Nullable final Object value) {
+   public StagedOrderSetLineItemCustomFieldActionBuilder value(@Nullable final JsonNode value) {
       this.value = value;
       return this;
    }
@@ -49,7 +50,7 @@ public final class StagedOrderSetLineItemCustomFieldActionBuilder {
    }
    
    @Nullable
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
 

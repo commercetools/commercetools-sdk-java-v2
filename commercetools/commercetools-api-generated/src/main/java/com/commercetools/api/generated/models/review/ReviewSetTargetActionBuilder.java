@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.review.ReviewSetTargetAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,15 +16,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ReviewSetTargetActionBuilder {
    
    
-   private Object target;
+   private JsonNode target;
    
-   public ReviewSetTargetActionBuilder target( final Object target) {
+   public ReviewSetTargetActionBuilder target( final JsonNode target) {
       this.target = target;
       return this;
    }
    
    
-   public Object getTarget(){
+   public JsonNode getTarget(){
       return this.target;
    }
 

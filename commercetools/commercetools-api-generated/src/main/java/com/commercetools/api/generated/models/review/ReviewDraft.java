@@ -6,6 +6,7 @@ import com.commercetools.api.generated.models.type.CustomFieldsDraft;
 import com.commercetools.api.generated.models.review.ReviewDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -58,7 +59,7 @@ public interface ReviewDraft  {
    */
    
    @JsonProperty("target")
-   public Object getTarget();
+   public JsonNode getTarget();
    
    @Valid
    @JsonProperty("state")
@@ -95,7 +96,7 @@ public interface ReviewDraft  {
    
    public void setText(final String text);
    
-   public void setTarget(final Object target);
+   public void setTarget(final JsonNode target);
    
    public void setState(final StateResourceIdentifier state);
    

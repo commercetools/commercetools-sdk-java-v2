@@ -12,7 +12,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -30,12 +31,12 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
    
    private com.commercetools.api.generated.models.common.LocalizedString localizedMessage;
    
-   private Object extensionExtraInfo;
+   private JsonNode extensionExtraInfo;
    
    private com.commercetools.api.generated.models.error.ErrorByExtension errorByExtension;
 
    @JsonCreator
-   ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message, @JsonProperty("localizedMessage") final com.commercetools.api.generated.models.common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final Object extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.api.generated.models.error.ErrorByExtension errorByExtension) {
+   ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message, @JsonProperty("localizedMessage") final com.commercetools.api.generated.models.common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final JsonNode extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.api.generated.models.error.ErrorByExtension errorByExtension) {
       this.message = message;
       this.localizedMessage = localizedMessage;
       this.extensionExtraInfo = extensionExtraInfo;
@@ -62,7 +63,7 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
    }
    
    
-   public Object getExtensionExtraInfo(){
+   public JsonNode getExtensionExtraInfo(){
       return this.extensionExtraInfo;
    }
    
@@ -79,7 +80,7 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
       this.localizedMessage = localizedMessage;
    }
    
-   public void setExtensionExtraInfo(final Object extensionExtraInfo){
+   public void setExtensionExtraInfo(final JsonNode extensionExtraInfo){
       this.extensionExtraInfo = extensionExtraInfo;
    }
    

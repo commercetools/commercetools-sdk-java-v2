@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.category.CategorySetAssetCustomFie
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,7 +22,7 @@ public final class CategorySetAssetCustomFieldActionBuilder {
    private String name;
    
    @Nullable
-   private Object value;
+   private JsonNode value;
    
    @Nullable
    private String assetKey;
@@ -36,7 +37,7 @@ public final class CategorySetAssetCustomFieldActionBuilder {
       return this;
    }
    
-   public CategorySetAssetCustomFieldActionBuilder value(@Nullable final Object value) {
+   public CategorySetAssetCustomFieldActionBuilder value(@Nullable final JsonNode value) {
       this.value = value;
       return this;
    }
@@ -57,7 +58,7 @@ public final class CategorySetAssetCustomFieldActionBuilder {
    }
    
    @Nullable
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
    

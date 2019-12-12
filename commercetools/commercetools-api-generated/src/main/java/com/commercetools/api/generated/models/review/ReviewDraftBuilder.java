@@ -7,6 +7,7 @@ import com.commercetools.api.generated.models.review.ReviewDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -47,7 +48,7 @@ public final class ReviewDraftBuilder {
    private com.commercetools.api.generated.models.customer.CustomerResourceIdentifier customer;
    
    @Nullable
-   private Object target;
+   private JsonNode target;
    
    public ReviewDraftBuilder uniquenessValue(@Nullable final String uniquenessValue) {
       this.uniquenessValue = uniquenessValue;
@@ -99,7 +100,7 @@ public final class ReviewDraftBuilder {
       return this;
    }
    
-   public ReviewDraftBuilder target(@Nullable final Object target) {
+   public ReviewDraftBuilder target(@Nullable final JsonNode target) {
       this.target = target;
       return this;
    }
@@ -155,7 +156,7 @@ public final class ReviewDraftBuilder {
    }
    
    @Nullable
-   public Object getTarget(){
+   public JsonNode getTarget(){
       return this.target;
    }
 

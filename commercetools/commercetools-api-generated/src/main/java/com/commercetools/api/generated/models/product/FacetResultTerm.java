@@ -4,6 +4,7 @@ package com.commercetools.api.generated.models.product;
 import com.commercetools.api.generated.models.product.FacetResultTermImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -24,7 +25,7 @@ public interface FacetResultTerm  {
    
    @NotNull
    @JsonProperty("term")
-   public Object getTerm();
+   public JsonNode getTerm();
    
    @NotNull
    @JsonProperty("count")
@@ -34,7 +35,7 @@ public interface FacetResultTerm  {
    @JsonProperty("productCount")
    public Long getProductCount();
 
-   public void setTerm(final Object term);
+   public void setTerm(final JsonNode term);
    
    public void setCount(final Long count);
    

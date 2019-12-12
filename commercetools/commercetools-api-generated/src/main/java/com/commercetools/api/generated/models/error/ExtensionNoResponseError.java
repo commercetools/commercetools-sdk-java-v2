@@ -6,6 +6,7 @@ import com.commercetools.api.generated.models.error.ErrorObject;
 import com.commercetools.api.generated.models.error.ExtensionNoResponseErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -30,7 +31,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
    
    @Valid
    @JsonProperty("extensionExtraInfo")
-   public Object getExtensionExtraInfo();
+   public JsonNode getExtensionExtraInfo();
    
    @NotNull
    @Valid
@@ -39,7 +40,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
 
    public void setLocalizedMessage(final LocalizedString localizedMessage);
    
-   public void setExtensionExtraInfo(final Object extensionExtraInfo);
+   public void setExtensionExtraInfo(final JsonNode extensionExtraInfo);
    
    public void setErrorByExtension(final ErrorByExtension errorByExtension);
    

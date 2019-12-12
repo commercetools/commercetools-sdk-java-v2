@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -22,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SearchKeywordImpl implements SearchKeyword {
 
-   private Object suggestTokenizer;
+   private JsonNode suggestTokenizer;
    
    private String text;
 
    @JsonCreator
-   SearchKeywordImpl(@JsonProperty("suggestTokenizer") final Object suggestTokenizer, @JsonProperty("text") final String text) {
+   SearchKeywordImpl(@JsonProperty("suggestTokenizer") final JsonNode suggestTokenizer, @JsonProperty("text") final String text) {
       this.suggestTokenizer = suggestTokenizer;
       this.text = text;
    }
@@ -36,7 +37,7 @@ public final class SearchKeywordImpl implements SearchKeyword {
    }
    
    
-   public Object getSuggestTokenizer(){
+   public JsonNode getSuggestTokenizer(){
       return this.suggestTokenizer;
    }
    
@@ -45,7 +46,7 @@ public final class SearchKeywordImpl implements SearchKeyword {
       return this.text;
    }
 
-   public void setSuggestTokenizer(final Object suggestTokenizer){
+   public void setSuggestTokenizer(final JsonNode suggestTokenizer){
       this.suggestTokenizer = suggestTokenizer;
    }
    

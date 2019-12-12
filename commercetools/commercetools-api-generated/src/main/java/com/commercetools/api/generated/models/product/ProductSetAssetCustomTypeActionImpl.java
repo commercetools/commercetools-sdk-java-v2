@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -31,7 +32,7 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
    
    private Long variantId;
    
-   private Object fields;
+   private JsonNode fields;
    
    private com.commercetools.api.generated.models.type.TypeResourceIdentifier type;
    
@@ -40,7 +41,7 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
    private String assetKey;
 
    @JsonCreator
-   ProductSetAssetCustomTypeActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("fields") final Object fields, @JsonProperty("type") final com.commercetools.api.generated.models.type.TypeResourceIdentifier type, @JsonProperty("sku") final String sku, @JsonProperty("assetKey") final String assetKey) {
+   ProductSetAssetCustomTypeActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("fields") final JsonNode fields, @JsonProperty("type") final com.commercetools.api.generated.models.type.TypeResourceIdentifier type, @JsonProperty("sku") final String sku, @JsonProperty("assetKey") final String assetKey) {
       this.assetId = assetId;
       this.staged = staged;
       this.variantId = variantId;
@@ -77,7 +78,7 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
    /**
    *  <p>If set, the custom fields are set to this new value.</p>
    */
-   public Object getFields(){
+   public JsonNode getFields(){
       return this.fields;
    }
    
@@ -111,7 +112,7 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
       this.variantId = variantId;
    }
    
-   public void setFields(final Object fields){
+   public void setFields(final JsonNode fields){
       this.fields = fields;
    }
    

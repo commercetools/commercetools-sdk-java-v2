@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -22,10 +23,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
 
-   private Object reference;
+   private JsonNode reference;
 
    @JsonCreator
-   ReplicaCartDraftImpl(@JsonProperty("reference") final Object reference) {
+   ReplicaCartDraftImpl(@JsonProperty("reference") final JsonNode reference) {
       this.reference = reference;
    }
    public ReplicaCartDraftImpl() {
@@ -33,11 +34,11 @@ public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
    }
    
    
-   public Object getReference(){
+   public JsonNode getReference(){
       return this.reference;
    }
 
-   public void setReference(final Object reference){
+   public void setReference(final JsonNode reference){
       this.reference = reference;
    }
 

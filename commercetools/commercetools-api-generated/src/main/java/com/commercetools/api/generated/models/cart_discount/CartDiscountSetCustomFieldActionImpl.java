@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -26,10 +27,10 @@ public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountS
    
    private String name;
    
-   private Object value;
+   private JsonNode value;
 
    @JsonCreator
-   CartDiscountSetCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Object value) {
+   CartDiscountSetCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final JsonNode value) {
       this.name = name;
       this.value = value;
       this.action = "setCustomField";
@@ -53,7 +54,7 @@ public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountS
    *  If <code>value</code> is provided, set the <code>value</code> of the field defined by the <code>name</code>.
    *  The FieldDefinition determines the format for the <code>value</code> to be provided.</p>
    */
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
 
@@ -61,7 +62,7 @@ public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountS
       this.name = name;
    }
    
-   public void setValue(final Object value){
+   public void setValue(final JsonNode value){
       this.value = value;
    }
 

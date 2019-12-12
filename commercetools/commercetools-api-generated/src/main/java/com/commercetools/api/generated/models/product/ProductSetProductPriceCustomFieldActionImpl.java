@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -30,10 +31,10 @@ public final class ProductSetProductPriceCustomFieldActionImpl implements Produc
    
    private String priceId;
    
-   private Object value;
+   private JsonNode value;
 
    @JsonCreator
-   ProductSetProductPriceCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("priceId") final String priceId, @JsonProperty("value") final Object value) {
+   ProductSetProductPriceCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("priceId") final String priceId, @JsonProperty("value") final JsonNode value) {
       this.name = name;
       this.staged = staged;
       this.priceId = priceId;
@@ -65,7 +66,7 @@ public final class ProductSetProductPriceCustomFieldActionImpl implements Produc
    }
    
    
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
 
@@ -81,7 +82,7 @@ public final class ProductSetProductPriceCustomFieldActionImpl implements Produc
       this.priceId = priceId;
    }
    
-   public void setValue(final Object value){
+   public void setValue(final JsonNode value){
       this.value = value;
    }
 

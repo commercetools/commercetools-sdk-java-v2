@@ -4,6 +4,7 @@ import com.commercetools.api.generated.models.product.ProductUpdateAction;
 import com.commercetools.api.generated.models.product.ProductSetProductPriceCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -36,7 +37,7 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
    
    
    @JsonProperty("value")
-   public Object getValue();
+   public JsonNode getValue();
 
    public void setPriceId(final String priceId);
    
@@ -44,7 +45,7 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
    
    public void setName(final String name);
    
-   public void setValue(final Object value);
+   public void setValue(final JsonNode value);
    
    public static ProductSetProductPriceCustomFieldActionImpl of(){
       return new ProductSetProductPriceCustomFieldActionImpl();

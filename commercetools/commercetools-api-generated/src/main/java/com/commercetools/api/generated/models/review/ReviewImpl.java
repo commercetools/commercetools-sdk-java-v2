@@ -16,7 +16,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -50,7 +51,7 @@ public final class ReviewImpl implements Review {
    
    private String locale;
    
-   private Object target;
+   private JsonNode target;
    
    private Boolean includedInStatistics;
    
@@ -65,7 +66,7 @@ public final class ReviewImpl implements Review {
    private com.commercetools.api.generated.models.customer.CustomerReference customer;
 
    @JsonCreator
-   ReviewImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFields custom, @JsonProperty("rating") final Integer rating, @JsonProperty("title") final String title, @JsonProperty("locale") final String locale, @JsonProperty("target") final Object target, @JsonProperty("includedInStatistics") final Boolean includedInStatistics, @JsonProperty("authorName") final String authorName, @JsonProperty("state") final com.commercetools.api.generated.models.state.StateReference state, @JsonProperty("text") final String text, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.api.generated.models.customer.CustomerReference customer) {
+   ReviewImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFields custom, @JsonProperty("rating") final Integer rating, @JsonProperty("title") final String title, @JsonProperty("locale") final String locale, @JsonProperty("target") final JsonNode target, @JsonProperty("includedInStatistics") final Boolean includedInStatistics, @JsonProperty("authorName") final String authorName, @JsonProperty("state") final com.commercetools.api.generated.models.state.StateReference state, @JsonProperty("text") final String text, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.api.generated.models.customer.CustomerReference customer) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -158,7 +159,7 @@ public final class ReviewImpl implements Review {
    *  <p>Identifies the target of the review.
    *  Can be a Product or a Channel</p>
    */
-   public Object getTarget(){
+   public JsonNode getTarget(){
       return this.target;
    }
    
@@ -244,7 +245,7 @@ public final class ReviewImpl implements Review {
       this.locale = locale;
    }
    
-   public void setTarget(final Object target){
+   public void setTarget(final JsonNode target){
       this.target = target;
    }
    

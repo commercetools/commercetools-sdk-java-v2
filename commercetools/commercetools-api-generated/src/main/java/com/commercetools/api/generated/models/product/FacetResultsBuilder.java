@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.product.FacetResults;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,15 +16,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class FacetResultsBuilder {
    
    
-   private Map<String, Object> values;
+   private Map<String, JsonNode> values;
    
-   public FacetResultsBuilder values( final Map<String, Object> values){
+   public FacetResultsBuilder values( final Map<String, JsonNode> values){
       this.values = values;
       return this;
    }
    
    
-   public Map<String, Object> getValues(){
+   public Map<String, JsonNode> getValues(){
       return this.values;
    }
 

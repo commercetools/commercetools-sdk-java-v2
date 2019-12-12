@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -25,12 +26,12 @@ public final class OrderEditSetCustomTypeActionImpl implements OrderEditSetCusto
 
    private String action;
    
-   private Object fields;
+   private JsonNode fields;
    
    private com.commercetools.api.generated.models.type.TypeResourceIdentifier type;
 
    @JsonCreator
-   OrderEditSetCustomTypeActionImpl(@JsonProperty("fields") final Object fields, @JsonProperty("type") final com.commercetools.api.generated.models.type.TypeResourceIdentifier type) {
+   OrderEditSetCustomTypeActionImpl(@JsonProperty("fields") final JsonNode fields, @JsonProperty("type") final com.commercetools.api.generated.models.type.TypeResourceIdentifier type) {
       this.fields = fields;
       this.type = type;
       this.action = "setCustomType";
@@ -47,7 +48,7 @@ public final class OrderEditSetCustomTypeActionImpl implements OrderEditSetCusto
    /**
    *  <p>If set, the custom fields are set to this new value.</p>
    */
-   public Object getFields(){
+   public JsonNode getFields(){
       return this.fields;
    }
    
@@ -59,7 +60,7 @@ public final class OrderEditSetCustomTypeActionImpl implements OrderEditSetCusto
       return this.type;
    }
 
-   public void setFields(final Object fields){
+   public void setFields(final JsonNode fields){
       this.fields = fields;
    }
    

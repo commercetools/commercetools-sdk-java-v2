@@ -4,6 +4,7 @@ import com.commercetools.api.generated.models.customer.Customer;
 import com.commercetools.api.generated.models.customer.CustomerSignInResultImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -32,11 +33,11 @@ public interface CustomerSignInResult  {
    */
    @Valid
    @JsonProperty("cart")
-   public Object getCart();
+   public JsonNode getCart();
 
    public void setCustomer(final Customer customer);
    
-   public void setCart(final Object cart);
+   public void setCart(final JsonNode cart);
    
    public static CustomerSignInResultImpl of(){
       return new CustomerSignInResultImpl();

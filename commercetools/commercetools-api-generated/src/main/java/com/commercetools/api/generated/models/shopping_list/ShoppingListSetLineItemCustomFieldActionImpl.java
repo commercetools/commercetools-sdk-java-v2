@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -28,10 +29,10 @@ public final class ShoppingListSetLineItemCustomFieldActionImpl implements Shopp
    
    private String name;
    
-   private Object value;
+   private JsonNode value;
 
    @JsonCreator
-   ShoppingListSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("name") final String name, @JsonProperty("value") final Object value) {
+   ShoppingListSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("name") final String name, @JsonProperty("value") final JsonNode value) {
       this.lineItemId = lineItemId;
       this.name = name;
       this.value = value;
@@ -57,7 +58,7 @@ public final class ShoppingListSetLineItemCustomFieldActionImpl implements Shopp
    }
    
    
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
 
@@ -69,7 +70,7 @@ public final class ShoppingListSetLineItemCustomFieldActionImpl implements Shopp
       this.name = name;
    }
    
-   public void setValue(final Object value){
+   public void setValue(final JsonNode value){
       this.value = value;
    }
 

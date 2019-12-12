@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.category.CategorySetCustomFieldAct
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,14 +19,14 @@ public final class CategorySetCustomFieldActionBuilder {
    private String name;
    
    @Nullable
-   private Object value;
+   private JsonNode value;
    
    public CategorySetCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public CategorySetCustomFieldActionBuilder value(@Nullable final Object value) {
+   public CategorySetCustomFieldActionBuilder value(@Nullable final JsonNode value) {
       this.value = value;
       return this;
    }
@@ -36,7 +37,7 @@ public final class CategorySetCustomFieldActionBuilder {
    }
    
    @Nullable
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
 

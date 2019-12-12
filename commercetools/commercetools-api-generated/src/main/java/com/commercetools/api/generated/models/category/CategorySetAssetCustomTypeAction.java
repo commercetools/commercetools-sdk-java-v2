@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.type.TypeResourceIdentifier;
 import com.commercetools.api.generated.models.category.CategorySetAssetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -42,7 +43,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
    */
    @Valid
    @JsonProperty("fields")
-   public Object getFields();
+   public JsonNode getFields();
 
    public void setAssetId(final String assetId);
    
@@ -50,7 +51,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
    
    public void setType(final TypeResourceIdentifier type);
    
-   public void setFields(final Object fields);
+   public void setFields(final JsonNode fields);
    
    public static CategorySetAssetCustomTypeActionImpl of(){
       return new CategorySetAssetCustomTypeActionImpl();

@@ -4,6 +4,7 @@ import com.commercetools.api.generated.models.category.CategoryUpdateAction;
 import com.commercetools.api.generated.models.category.CategorySetAssetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -36,7 +37,7 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
    
    
    @JsonProperty("value")
-   public Object getValue();
+   public JsonNode getValue();
 
    public void setAssetId(final String assetId);
    
@@ -44,7 +45,7 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
    
    public void setName(final String name);
    
-   public void setValue(final Object value);
+   public void setValue(final JsonNode value);
    
    public static CategorySetAssetCustomFieldActionImpl of(){
       return new CategorySetAssetCustomFieldActionImpl();

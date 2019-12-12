@@ -9,6 +9,7 @@ import com.commercetools.api.generated.models.product.ProductVariantAvailability
 import com.commercetools.api.generated.models.product.ProductVariantImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

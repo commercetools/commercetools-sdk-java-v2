@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.discount_code.DiscountCodeUpdateAc
 import com.commercetools.api.generated.models.discount_code.DiscountCodeSetNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

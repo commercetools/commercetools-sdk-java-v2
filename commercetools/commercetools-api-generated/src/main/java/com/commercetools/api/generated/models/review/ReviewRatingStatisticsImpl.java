@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -28,12 +29,12 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
    
    private Integer count;
    
-   private Object ratingsDistribution;
+   private JsonNode ratingsDistribution;
    
    private Integer lowestRating;
 
    @JsonCreator
-   ReviewRatingStatisticsImpl(@JsonProperty("highestRating") final Integer highestRating, @JsonProperty("averageRating") final Integer averageRating, @JsonProperty("count") final Integer count, @JsonProperty("ratingsDistribution") final Object ratingsDistribution, @JsonProperty("lowestRating") final Integer lowestRating) {
+   ReviewRatingStatisticsImpl(@JsonProperty("highestRating") final Integer highestRating, @JsonProperty("averageRating") final Integer averageRating, @JsonProperty("count") final Integer count, @JsonProperty("ratingsDistribution") final JsonNode ratingsDistribution, @JsonProperty("lowestRating") final Integer lowestRating) {
       this.highestRating = highestRating;
       this.averageRating = averageRating;
       this.count = count;
@@ -71,7 +72,7 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
    *  The keys are the different ratings and the values are the count of reviews having this rating.
    *  Only the used ratings appear in this object.</p>
    */
-   public Object getRatingsDistribution(){
+   public JsonNode getRatingsDistribution(){
       return this.ratingsDistribution;
    }
    
@@ -94,7 +95,7 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
       this.count = count;
    }
    
-   public void setRatingsDistribution(final Object ratingsDistribution){
+   public void setRatingsDistribution(final JsonNode ratingsDistribution){
       this.ratingsDistribution = ratingsDistribution;
    }
    

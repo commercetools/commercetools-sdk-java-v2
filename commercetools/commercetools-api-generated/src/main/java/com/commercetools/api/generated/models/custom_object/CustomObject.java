@@ -7,6 +7,7 @@ import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.custom_object.CustomObjectImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -61,7 +62,7 @@ public interface CustomObject extends LoggedResource {
    
    @NotNull
    @JsonProperty("value")
-   public Object getValue();
+   public JsonNode getValue();
 
    public void setId(final String id);
    
@@ -79,7 +80,7 @@ public interface CustomObject extends LoggedResource {
    
    public void setKey(final String key);
    
-   public void setValue(final Object value);
+   public void setValue(final JsonNode value);
    
    public static CustomObjectImpl of(){
       return new CustomObjectImpl();

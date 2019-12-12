@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.product.FacetResultTerm;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,7 +19,7 @@ public final class FacetResultTermBuilder {
    private Long count;
    
    
-   private Object term;
+   private JsonNode term;
    
    @Nullable
    private Long productCount;
@@ -28,7 +29,7 @@ public final class FacetResultTermBuilder {
       return this;
    }
    
-   public FacetResultTermBuilder term( final Object term) {
+   public FacetResultTermBuilder term( final JsonNode term) {
       this.term = term;
       return this;
    }
@@ -44,7 +45,7 @@ public final class FacetResultTermBuilder {
    }
    
    
-   public Object getTerm(){
+   public JsonNode getTerm(){
       return this.term;
    }
    

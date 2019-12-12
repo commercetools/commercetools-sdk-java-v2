@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -24,12 +25,12 @@ public final class FacetResultTermImpl implements FacetResultTerm {
 
    private Long count;
    
-   private Object term;
+   private JsonNode term;
    
    private Long productCount;
 
    @JsonCreator
-   FacetResultTermImpl(@JsonProperty("count") final Long count, @JsonProperty("term") final Object term, @JsonProperty("productCount") final Long productCount) {
+   FacetResultTermImpl(@JsonProperty("count") final Long count, @JsonProperty("term") final JsonNode term, @JsonProperty("productCount") final Long productCount) {
       this.count = count;
       this.term = term;
       this.productCount = productCount;
@@ -44,7 +45,7 @@ public final class FacetResultTermImpl implements FacetResultTerm {
    }
    
    
-   public Object getTerm(){
+   public JsonNode getTerm(){
       return this.term;
    }
    
@@ -57,7 +58,7 @@ public final class FacetResultTermImpl implements FacetResultTerm {
       this.count = count;
    }
    
-   public void setTerm(final Object term){
+   public void setTerm(final JsonNode term){
       this.term = term;
    }
    

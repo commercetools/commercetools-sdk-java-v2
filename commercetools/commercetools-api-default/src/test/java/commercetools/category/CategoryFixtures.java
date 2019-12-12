@@ -10,6 +10,7 @@ import com.commercetools.api.generated.models.common.AssetSourceBuilder;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.type.*;
 import commercetools.utils.CommercetoolsTestUtils;
+import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
@@ -49,10 +50,7 @@ public class CategoryFixtures {
                         .inputHint(TypeTextInputHint.SINGLE_LINE)
                         .build()))
                 .build();
-
-        FieldContainer fieldContainer = FieldContainer.of();
-        fieldContainer.setValue(value, value);
-
+        
         Type type = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .types()
                 .post(typeDraft)
@@ -72,7 +70,6 @@ public class CategoryFixtures {
                         .type(TypeResourceIdentifierBuilder.of()
                                 .id(type.getId())
                                 .build())
-                        .fields(fieldContainer)
                         .build())
                 .assets(Arrays.asList(AssetDraftBuilder.of()
                         .key(CommercetoolsTestUtils.getProjectKey())

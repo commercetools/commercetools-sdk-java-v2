@@ -6,6 +6,7 @@ import com.commercetools.api.generated.models.cart_discount.CartDiscountSetCusto
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,12 +17,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class CartDiscountSetCustomTypeActionBuilder {
    
    @Nullable
-   private Object fields;
+   private JsonNode fields;
    
    @Nullable
    private com.commercetools.api.generated.models.type.TypeResourceIdentifier type;
    
-   public CartDiscountSetCustomTypeActionBuilder fields(@Nullable final Object fields) {
+   public CartDiscountSetCustomTypeActionBuilder fields(@Nullable final JsonNode fields) {
       this.fields = fields;
       return this;
    }
@@ -32,7 +33,7 @@ public final class CartDiscountSetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public Object getFields(){
+   public JsonNode getFields(){
       return this.fields;
    }
    

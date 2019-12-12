@@ -12,7 +12,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -44,10 +45,10 @@ public final class ReviewDraftImpl implements ReviewDraft {
    
    private com.commercetools.api.generated.models.customer.CustomerResourceIdentifier customer;
    
-   private Object target;
+   private JsonNode target;
 
    @JsonCreator
-   ReviewDraftImpl(@JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("authorName") final String authorName, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("rating") final Integer rating, @JsonProperty("state") final com.commercetools.api.generated.models.state.StateResourceIdentifier state, @JsonProperty("text") final String text, @JsonProperty("title") final String title, @JsonProperty("locale") final String locale, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.api.generated.models.customer.CustomerResourceIdentifier customer, @JsonProperty("target") final Object target) {
+   ReviewDraftImpl(@JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("authorName") final String authorName, @JsonProperty("custom") final com.commercetools.api.generated.models.type.CustomFieldsDraft custom, @JsonProperty("rating") final Integer rating, @JsonProperty("state") final com.commercetools.api.generated.models.state.StateResourceIdentifier state, @JsonProperty("text") final String text, @JsonProperty("title") final String title, @JsonProperty("locale") final String locale, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.api.generated.models.customer.CustomerResourceIdentifier customer, @JsonProperty("target") final JsonNode target) {
       this.uniquenessValue = uniquenessValue;
       this.authorName = authorName;
       this.custom = custom;
@@ -130,7 +131,7 @@ public final class ReviewDraftImpl implements ReviewDraft {
    *  <p>Identifies the target of the review.
    *  Can be a Product or a Channel</p>
    */
-   public Object getTarget(){
+   public JsonNode getTarget(){
       return this.target;
    }
 
@@ -174,7 +175,7 @@ public final class ReviewDraftImpl implements ReviewDraft {
       this.customer = customer;
    }
    
-   public void setTarget(final Object target){
+   public void setTarget(final JsonNode target){
       this.target = target;
    }
 

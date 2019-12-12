@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -24,10 +25,10 @@ public final class AttributeImpl implements Attribute {
 
    private String name;
    
-   private Object value;
+   private JsonNode value;
 
    @JsonCreator
-   AttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Object value) {
+   AttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final JsonNode value) {
       this.name = name;
       this.value = value;
    }
@@ -43,7 +44,7 @@ public final class AttributeImpl implements Attribute {
    /**
    *  <p>A valid JSON value, based on an AttributeDefinition.</p>
    */
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
 
@@ -51,7 +52,7 @@ public final class AttributeImpl implements Attribute {
       this.name = name;
    }
    
-   public void setValue(final Object value){
+   public void setValue(final JsonNode value){
       this.value = value;
    }
 

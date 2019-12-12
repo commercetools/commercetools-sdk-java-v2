@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.product.ProductSetAttributeInAllVa
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,7 +22,7 @@ public final class ProductSetAttributeInAllVariantsActionBuilder {
    private Boolean staged;
    
    @Nullable
-   private Object value;
+   private JsonNode value;
    
    public ProductSetAttributeInAllVariantsActionBuilder name( final String name) {
       this.name = name;
@@ -33,7 +34,7 @@ public final class ProductSetAttributeInAllVariantsActionBuilder {
       return this;
    }
    
-   public ProductSetAttributeInAllVariantsActionBuilder value(@Nullable final Object value) {
+   public ProductSetAttributeInAllVariantsActionBuilder value(@Nullable final JsonNode value) {
       this.value = value;
       return this;
    }
@@ -49,7 +50,7 @@ public final class ProductSetAttributeInAllVariantsActionBuilder {
    }
    
    @Nullable
-   public Object getValue(){
+   public JsonNode getValue(){
       return this.value;
    }
 

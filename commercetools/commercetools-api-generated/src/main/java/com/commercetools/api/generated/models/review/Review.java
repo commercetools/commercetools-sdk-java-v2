@@ -10,6 +10,7 @@ import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.review.ReviewImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -91,7 +92,7 @@ public interface Review extends LoggedResource {
    */
    
    @JsonProperty("target")
-   public Object getTarget();
+   public JsonNode getTarget();
    /**
    *  <p>Indicates if this review is taken into account in the ratings statistics of the target.
    *  A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.
@@ -145,7 +146,7 @@ public interface Review extends LoggedResource {
    
    public void setText(final String text);
    
-   public void setTarget(final Object target);
+   public void setTarget(final JsonNode target);
    
    public void setIncludedInStatistics(final Boolean includedInStatistics);
    

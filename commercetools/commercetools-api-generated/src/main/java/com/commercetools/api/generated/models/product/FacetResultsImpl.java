@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -22,10 +23,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FacetResultsImpl implements FacetResults {
 
-   private Map<String, Object> values;
+   private Map<String, JsonNode> values;
 
    @JsonCreator
-   FacetResultsImpl(@JsonProperty("values") final Map<String, Object> values) {
+   FacetResultsImpl(@JsonProperty("values") final Map<String, JsonNode> values) {
       this.values = values;
    }
    public FacetResultsImpl() {
@@ -33,11 +34,11 @@ public final class FacetResultsImpl implements FacetResults {
    }
    
    
-   public Map<String,Object> values() {
+   public Map<String,JsonNode> values() {
        return values;
    }
 
-   public void setValue(String key, Object value) {
+   public void setValue(String key, JsonNode value) {
        if (values == null) {
            values = new HashMap<>();
        }

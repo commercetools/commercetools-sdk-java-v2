@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.zone.ZoneResourceIdentifier;
 import com.commercetools.api.generated.models.shipping_method.ZoneRateDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

@@ -6,6 +6,7 @@ import com.commercetools.api.generated.models.product.ProductProjection;
 import com.commercetools.api.generated.models.message.ProductPublishedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -26,7 +27,7 @@ public interface ProductPublishedMessage extends Message {
    
    @NotNull
    @JsonProperty("removedImageUrls")
-   public List<Object> getRemovedImageUrls();
+   public List<JsonNode> getRemovedImageUrls();
    
    @NotNull
    @Valid
@@ -37,7 +38,7 @@ public interface ProductPublishedMessage extends Message {
    @JsonProperty("scope")
    public ProductPublishScope getScope();
 
-   public void setRemovedImageUrls(final List<Object> removedImageUrls);
+   public void setRemovedImageUrls(final List<JsonNode> removedImageUrls);
    
    public void setProductProjection(final ProductProjection productProjection);
    

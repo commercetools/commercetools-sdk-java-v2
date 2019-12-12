@@ -6,6 +6,7 @@ import com.commercetools.api.generated.models.common.PagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,7 +23,7 @@ public final class PagedQueryResponseBuilder {
    private Long offset;
    
    @Nullable
-   private Object meta;
+   private JsonNode meta;
    
    
    private Long count;
@@ -46,7 +47,7 @@ public final class PagedQueryResponseBuilder {
       return this;
    }
    
-   public PagedQueryResponseBuilder meta(@Nullable final Object meta) {
+   public PagedQueryResponseBuilder meta(@Nullable final JsonNode meta) {
       this.meta = meta;
       return this;
    }
@@ -82,7 +83,7 @@ public final class PagedQueryResponseBuilder {
    }
    
    @Nullable
-   public Object getMeta(){
+   public JsonNode getMeta(){
       return this.meta;
    }
    

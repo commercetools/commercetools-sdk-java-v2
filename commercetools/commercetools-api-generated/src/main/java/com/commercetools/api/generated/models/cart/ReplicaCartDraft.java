@@ -4,6 +4,7 @@ package com.commercetools.api.generated.models.cart;
 import com.commercetools.api.generated.models.cart.ReplicaCartDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -24,9 +25,9 @@ public interface ReplicaCartDraft  {
    
    @NotNull
    @JsonProperty("reference")
-   public Object getReference();
+   public JsonNode getReference();
 
-   public void setReference(final Object reference);
+   public void setReference(final JsonNode reference);
    
    public static ReplicaCartDraftImpl of(){
       return new ReplicaCartDraftImpl();

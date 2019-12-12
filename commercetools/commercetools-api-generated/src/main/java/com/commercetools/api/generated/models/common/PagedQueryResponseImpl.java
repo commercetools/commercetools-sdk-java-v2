@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -27,7 +28,7 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
    
    private Long offset;
    
-   private Object meta;
+   private JsonNode meta;
    
    private Long count;
    
@@ -38,7 +39,7 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
    private com.commercetools.api.generated.models.product.FacetResults facets;
 
    @JsonCreator
-   PagedQueryResponseImpl(@JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("meta") final Object meta, @JsonProperty("count") final Long count, @JsonProperty("limit") final Long limit, @JsonProperty("results") final java.util.List<com.commercetools.api.generated.models.common.BaseResource> results, @JsonProperty("facets") final com.commercetools.api.generated.models.product.FacetResults facets) {
+   PagedQueryResponseImpl(@JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("meta") final JsonNode meta, @JsonProperty("count") final Long count, @JsonProperty("limit") final Long limit, @JsonProperty("results") final java.util.List<com.commercetools.api.generated.models.common.BaseResource> results, @JsonProperty("facets") final com.commercetools.api.generated.models.product.FacetResults facets) {
       this.total = total;
       this.offset = offset;
       this.meta = meta;
@@ -62,7 +63,7 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
    }
    
    
-   public Object getMeta(){
+   public JsonNode getMeta(){
       return this.meta;
    }
    
@@ -94,7 +95,7 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
       this.offset = offset;
    }
    
-   public void setMeta(final Object meta){
+   public void setMeta(final JsonNode meta){
       this.meta = meta;
    }
    

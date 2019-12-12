@@ -4,6 +4,7 @@ import com.commercetools.api.generated.models.cart_discount.CartDiscountUpdateAc
 import com.commercetools.api.generated.models.cart_discount.CartDiscountSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -32,11 +33,11 @@ public interface CartDiscountSetCustomFieldAction extends CartDiscountUpdateActi
    */
    
    @JsonProperty("value")
-   public Object getValue();
+   public JsonNode getValue();
 
    public void setName(final String name);
    
-   public void setValue(final Object value);
+   public void setValue(final JsonNode value);
    
    public static CartDiscountSetCustomFieldActionImpl of(){
       return new CartDiscountSetCustomFieldActionImpl();

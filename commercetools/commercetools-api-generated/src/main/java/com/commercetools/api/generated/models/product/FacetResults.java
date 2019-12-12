@@ -4,6 +4,7 @@ package com.commercetools.api.generated.models.product;
 import com.commercetools.api.generated.models.product.FacetResultsImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -24,10 +25,10 @@ public interface FacetResults  {
    
    @NotNull
    @JsonAnyGetter
-   public Map<String, Object> values();
+   public Map<String, JsonNode> values();
 
    @JsonAnySetter
-   public void setValue(String key, Object value);
+   public void setValue(String key, JsonNode value);
    
    public static FacetResultsImpl of(){
       return new FacetResultsImpl();

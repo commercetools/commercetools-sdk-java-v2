@@ -4,6 +4,7 @@ import com.commercetools.api.generated.models.error.ErrorObject;
 import com.commercetools.api.generated.models.error.InvalidFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -28,17 +29,17 @@ public interface InvalidFieldError extends ErrorObject {
    
    @NotNull
    @JsonProperty("invalidValue")
-   public Object getInvalidValue();
+   public JsonNode getInvalidValue();
    
    
    @JsonProperty("allowedValues")
-   public List<Object> getAllowedValues();
+   public List<JsonNode> getAllowedValues();
 
    public void setField(final String field);
    
-   public void setInvalidValue(final Object invalidValue);
+   public void setInvalidValue(final JsonNode invalidValue);
    
-   public void setAllowedValues(final List<Object> allowedValues);
+   public void setAllowedValues(final List<JsonNode> allowedValues);
    
    public static InvalidFieldErrorImpl of(){
       return new InvalidFieldErrorImpl();

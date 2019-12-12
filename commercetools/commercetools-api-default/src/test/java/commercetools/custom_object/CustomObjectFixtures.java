@@ -3,7 +3,9 @@ package commercetools.custom_object;
 import com.commercetools.api.generated.models.custom_object.CustomObject;
 import com.commercetools.api.generated.models.custom_object.CustomObjectDraft;
 import com.commercetools.api.generated.models.custom_object.CustomObjectDraftBuilder;
+import com.fasterxml.jackson.databind.util.RawValue;
 import commercetools.utils.CommercetoolsTestUtils;
+import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import org.junit.Assert;
 
 import java.util.function.Consumer;
@@ -27,7 +29,7 @@ public class CustomObjectFixtures {
         CustomObjectDraft customObjectDraft = CustomObjectDraftBuilder.of()
                 .container("a")
                 .key(CommercetoolsTestUtils.randomKey())
-                .value(CommercetoolsTestUtils.randomString())
+                .value(VrapJsonUtils.getConfiguredObjectMapper().createObjectNode().put("value", "val"))
                 .build();
         
         CustomObject customObject = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

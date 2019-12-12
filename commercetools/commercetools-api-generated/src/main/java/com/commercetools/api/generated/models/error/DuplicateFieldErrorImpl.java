@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -29,12 +30,12 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
    
    private com.commercetools.api.generated.models.common.Reference conflictingResource;
    
-   private Object duplicateValue;
+   private JsonNode duplicateValue;
    
    private String field;
 
    @JsonCreator
-   DuplicateFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("conflictingResource") final com.commercetools.api.generated.models.common.Reference conflictingResource, @JsonProperty("duplicateValue") final Object duplicateValue, @JsonProperty("field") final String field) {
+   DuplicateFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("conflictingResource") final com.commercetools.api.generated.models.common.Reference conflictingResource, @JsonProperty("duplicateValue") final JsonNode duplicateValue, @JsonProperty("field") final String field) {
       this.message = message;
       this.conflictingResource = conflictingResource;
       this.duplicateValue = duplicateValue;
@@ -61,7 +62,7 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
    }
    
    
-   public Object getDuplicateValue(){
+   public JsonNode getDuplicateValue(){
       return this.duplicateValue;
    }
    
@@ -78,7 +79,7 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
       this.conflictingResource = conflictingResource;
    }
    
-   public void setDuplicateValue(final Object duplicateValue){
+   public void setDuplicateValue(final JsonNode duplicateValue){
       this.duplicateValue = duplicateValue;
    }
    

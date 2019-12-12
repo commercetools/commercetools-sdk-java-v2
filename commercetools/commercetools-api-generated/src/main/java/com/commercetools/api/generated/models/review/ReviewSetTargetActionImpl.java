@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -24,10 +25,10 @@ public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
 
    private String action;
    
-   private Object target;
+   private JsonNode target;
 
    @JsonCreator
-   ReviewSetTargetActionImpl(@JsonProperty("target") final Object target) {
+   ReviewSetTargetActionImpl(@JsonProperty("target") final JsonNode target) {
       this.target = target;
       this.action = "setTarget";
    }
@@ -45,11 +46,11 @@ public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
    *  Can be a Product or a Channel.
    *  If <code>target</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */
-   public Object getTarget(){
+   public JsonNode getTarget(){
       return this.target;
    }
 
-   public void setTarget(final Object target){
+   public void setTarget(final JsonNode target){
       this.target = target;
    }
 

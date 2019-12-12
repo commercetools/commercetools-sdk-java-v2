@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.cart.ReplicaCartDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,15 +16,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ReplicaCartDraftBuilder {
    
    
-   private Object reference;
+   private JsonNode reference;
    
-   public ReplicaCartDraftBuilder reference( final Object reference) {
+   public ReplicaCartDraftBuilder reference( final JsonNode reference) {
       this.reference = reference;
       return this;
    }
    
    
-   public Object getReference(){
+   public JsonNode getReference(){
       return this.reference;
    }
 

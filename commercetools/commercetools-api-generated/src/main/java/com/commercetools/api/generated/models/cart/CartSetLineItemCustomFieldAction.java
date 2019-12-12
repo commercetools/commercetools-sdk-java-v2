@@ -4,6 +4,7 @@ import com.commercetools.api.generated.models.cart.CartUpdateAction;
 import com.commercetools.api.generated.models.cart.CartSetLineItemCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -32,13 +33,13 @@ public interface CartSetLineItemCustomFieldAction extends CartUpdateAction {
    
    
    @JsonProperty("value")
-   public Object getValue();
+   public JsonNode getValue();
 
    public void setLineItemId(final String lineItemId);
    
    public void setName(final String name);
    
-   public void setValue(final Object value);
+   public void setValue(final JsonNode value);
    
    public static CartSetLineItemCustomFieldActionImpl of(){
       return new CartSetLineItemCustomFieldActionImpl();

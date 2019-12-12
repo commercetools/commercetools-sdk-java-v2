@@ -11,6 +11,7 @@ import com.commercetools.api.generated.models.review.Review;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -54,7 +55,7 @@ public final class ReviewBuilder {
    private String locale;
    
    @Nullable
-   private Object target;
+   private JsonNode target;
    
    
    private Boolean includedInStatistics;
@@ -129,7 +130,7 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder target(@Nullable final Object target) {
+   public ReviewBuilder target(@Nullable final JsonNode target) {
       this.target = target;
       return this;
    }
@@ -220,7 +221,7 @@ public final class ReviewBuilder {
    }
    
    @Nullable
-   public Object getTarget(){
+   public JsonNode getTarget(){
       return this.target;
    }
    

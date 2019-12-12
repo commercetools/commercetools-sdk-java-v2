@@ -5,6 +5,7 @@ import com.commercetools.api.generated.models.review.ReviewRatingStatistics;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,7 +25,7 @@ public final class ReviewRatingStatisticsBuilder {
    private Integer count;
    
    
-   private Object ratingsDistribution;
+   private JsonNode ratingsDistribution;
    
    
    private Integer lowestRating;
@@ -44,7 +45,7 @@ public final class ReviewRatingStatisticsBuilder {
       return this;
    }
    
-   public ReviewRatingStatisticsBuilder ratingsDistribution( final Object ratingsDistribution) {
+   public ReviewRatingStatisticsBuilder ratingsDistribution( final JsonNode ratingsDistribution) {
       this.ratingsDistribution = ratingsDistribution;
       return this;
    }
@@ -70,7 +71,7 @@ public final class ReviewRatingStatisticsBuilder {
    }
    
    
-   public Object getRatingsDistribution(){
+   public JsonNode getRatingsDistribution(){
       return this.ratingsDistribution;
    }
    

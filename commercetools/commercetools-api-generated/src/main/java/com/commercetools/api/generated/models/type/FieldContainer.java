@@ -4,6 +4,7 @@ package com.commercetools.api.generated.models.type;
 import com.commercetools.api.generated.models.type.FieldContainerImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -24,10 +25,10 @@ public interface FieldContainer  {
    
    @NotNull
    @JsonAnyGetter
-   public Map<String, Object> values();
+   public Map<String, JsonNode> values();
 
    @JsonAnySetter
-   public void setValue(String key, Object value);
+   public void setValue(String key, JsonNode value);
    
    public static FieldContainerImpl of(){
       return new FieldContainerImpl();

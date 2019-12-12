@@ -4,6 +4,7 @@ import com.commercetools.api.generated.models.me.MyShoppingListUpdateAction;
 import com.commercetools.api.generated.models.me.MyShoppingListSetTextLineItemCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -32,13 +33,13 @@ public interface MyShoppingListSetTextLineItemCustomFieldAction extends MyShoppi
    
    
    @JsonProperty("value")
-   public Object getValue();
+   public JsonNode getValue();
 
    public void setTextLineItemId(final String textLineItemId);
    
    public void setName(final String name);
    
-   public void setValue(final Object value);
+   public void setValue(final JsonNode value);
    
    public static MyShoppingListSetTextLineItemCustomFieldActionImpl of(){
       return new MyShoppingListSetTextLineItemCustomFieldActionImpl();

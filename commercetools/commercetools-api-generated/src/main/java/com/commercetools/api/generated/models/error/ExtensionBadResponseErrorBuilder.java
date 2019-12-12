@@ -7,6 +7,7 @@ import com.commercetools.api.generated.models.error.ExtensionBadResponseError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,7 +24,7 @@ public final class ExtensionBadResponseErrorBuilder {
    private com.commercetools.api.generated.models.common.LocalizedString localizedMessage;
    
    @Nullable
-   private Object extensionExtraInfo;
+   private JsonNode extensionExtraInfo;
    
    
    private com.commercetools.api.generated.models.error.ErrorByExtension errorByExtension;
@@ -38,7 +39,7 @@ public final class ExtensionBadResponseErrorBuilder {
       return this;
    }
    
-   public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final Object extensionExtraInfo) {
+   public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final JsonNode extensionExtraInfo) {
       this.extensionExtraInfo = extensionExtraInfo;
       return this;
    }
@@ -59,7 +60,7 @@ public final class ExtensionBadResponseErrorBuilder {
    }
    
    @Nullable
-   public Object getExtensionExtraInfo(){
+   public JsonNode getExtensionExtraInfo(){
       return this.extensionExtraInfo;
    }
    

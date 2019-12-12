@@ -6,6 +6,7 @@ import com.commercetools.api.generated.models.product.ProductSetAssetCustomTypeA
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -25,7 +26,7 @@ public final class ProductSetAssetCustomTypeActionBuilder {
    private Long variantId;
    
    @Nullable
-   private Object fields;
+   private JsonNode fields;
    
    @Nullable
    private com.commercetools.api.generated.models.type.TypeResourceIdentifier type;
@@ -51,7 +52,7 @@ public final class ProductSetAssetCustomTypeActionBuilder {
       return this;
    }
    
-   public ProductSetAssetCustomTypeActionBuilder fields(@Nullable final Object fields) {
+   public ProductSetAssetCustomTypeActionBuilder fields(@Nullable final JsonNode fields) {
       this.fields = fields;
       return this;
    }
@@ -87,7 +88,7 @@ public final class ProductSetAssetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public Object getFields(){
+   public JsonNode getFields(){
       return this.fields;
    }
    

@@ -4,6 +4,7 @@ import com.commercetools.api.generated.models.order.OrderUpdateAction;
 import com.commercetools.api.generated.models.order.OrderSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -28,11 +29,11 @@ public interface OrderSetCustomFieldAction extends OrderUpdateAction {
    
    
    @JsonProperty("value")
-   public Object getValue();
+   public JsonNode getValue();
 
    public void setName(final String name);
    
-   public void setValue(final Object value);
+   public void setValue(final JsonNode value);
    
    public static OrderSetCustomFieldActionImpl of(){
       return new OrderSetCustomFieldActionImpl();

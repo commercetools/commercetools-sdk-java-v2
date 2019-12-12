@@ -4,6 +4,7 @@ package com.commercetools.api.generated.models.product;
 import com.commercetools.api.generated.models.product.AttributeImpl;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -30,11 +31,11 @@ public interface Attribute  {
    */
    @NotNull
    @JsonProperty("value")
-   public Object getValue();
+   public JsonNode getValue();
 
    public void setName(final String name);
    
-   public void setValue(final Object value);
+   public void setValue(final JsonNode value);
    
    public static AttributeImpl of(){
       return new AttributeImpl();

@@ -2,11 +2,11 @@ package com.commercetools.api.generated.models.order_edit;
 
 import com.commercetools.api.generated.models.order_edit.OrderEditUpdateAction;
 import com.commercetools.api.generated.models.type.TypeResourceIdentifier;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.order_edit.OrderEditSetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,12 +17,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OrderEditSetCustomTypeActionBuilder {
    
    @Nullable
-   private JsonNode fields;
+   private com.fasterxml.jackson.databind.JsonNode fields;
    
    @Nullable
    private com.commercetools.api.generated.models.type.TypeResourceIdentifier type;
    
-   public OrderEditSetCustomTypeActionBuilder fields(@Nullable final JsonNode fields) {
+   public OrderEditSetCustomTypeActionBuilder fields(@Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
       this.fields = fields;
       return this;
    }
@@ -33,7 +33,7 @@ public final class OrderEditSetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public JsonNode getFields(){
+   public com.fasterxml.jackson.databind.JsonNode getFields(){
       return this.fields;
    }
    

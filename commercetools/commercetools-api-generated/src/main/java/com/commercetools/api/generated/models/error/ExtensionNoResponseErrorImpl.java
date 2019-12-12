@@ -3,6 +3,7 @@ package com.commercetools.api.generated.models.error;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.error.ErrorByExtension;
 import com.commercetools.api.generated.models.error.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -12,7 +13,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -31,12 +31,12 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
    
    private com.commercetools.api.generated.models.common.LocalizedString localizedMessage;
    
-   private JsonNode extensionExtraInfo;
+   private com.fasterxml.jackson.databind.JsonNode extensionExtraInfo;
    
    private com.commercetools.api.generated.models.error.ErrorByExtension errorByExtension;
 
    @JsonCreator
-   ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message, @JsonProperty("localizedMessage") final com.commercetools.api.generated.models.common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final JsonNode extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.api.generated.models.error.ErrorByExtension errorByExtension) {
+   ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message, @JsonProperty("localizedMessage") final com.commercetools.api.generated.models.common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.api.generated.models.error.ErrorByExtension errorByExtension) {
       this.message = message;
       this.localizedMessage = localizedMessage;
       this.extensionExtraInfo = extensionExtraInfo;
@@ -63,7 +63,7 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
    }
    
    
-   public JsonNode getExtensionExtraInfo(){
+   public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo(){
       return this.extensionExtraInfo;
    }
    
@@ -80,7 +80,7 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
       this.localizedMessage = localizedMessage;
    }
    
-   public void setExtensionExtraInfo(final JsonNode extensionExtraInfo){
+   public void setExtensionExtraInfo(final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo){
       this.extensionExtraInfo = extensionExtraInfo;
    }
    

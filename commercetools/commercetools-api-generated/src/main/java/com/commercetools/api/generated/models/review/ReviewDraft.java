@@ -3,10 +3,10 @@ package com.commercetools.api.generated.models.review;
 import com.commercetools.api.generated.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.generated.models.state.StateResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.review.ReviewDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

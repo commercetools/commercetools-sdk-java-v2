@@ -2,6 +2,7 @@ package com.commercetools.api.generated.models.category;
 
 import com.commercetools.api.generated.models.category.CategoryUpdateAction;
 import com.commercetools.api.generated.models.type.TypeResourceIdentifier;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -11,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -28,14 +28,14 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
    
    private String assetId;
    
-   private JsonNode fields;
+   private com.fasterxml.jackson.databind.JsonNode fields;
    
    private com.commercetools.api.generated.models.type.TypeResourceIdentifier type;
    
    private String assetKey;
 
    @JsonCreator
-   CategorySetAssetCustomTypeActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("fields") final JsonNode fields, @JsonProperty("type") final com.commercetools.api.generated.models.type.TypeResourceIdentifier type, @JsonProperty("assetKey") final String assetKey) {
+   CategorySetAssetCustomTypeActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("fields") final com.fasterxml.jackson.databind.JsonNode fields, @JsonProperty("type") final com.commercetools.api.generated.models.type.TypeResourceIdentifier type, @JsonProperty("assetKey") final String assetKey) {
       this.assetId = assetId;
       this.fields = fields;
       this.type = type;
@@ -59,7 +59,7 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
    /**
    *  <p>If set, the custom fields are set to this new value.</p>
    */
-   public JsonNode getFields(){
+   public com.fasterxml.jackson.databind.JsonNode getFields(){
       return this.fields;
    }
    
@@ -80,7 +80,7 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
       this.assetId = assetId;
    }
    
-   public void setFields(final JsonNode fields){
+   public void setFields(final com.fasterxml.jackson.databind.JsonNode fields){
       this.fields = fields;
    }
    

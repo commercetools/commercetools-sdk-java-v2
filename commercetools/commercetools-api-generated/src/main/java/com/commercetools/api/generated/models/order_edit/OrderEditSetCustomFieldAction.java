@@ -1,10 +1,10 @@
 package com.commercetools.api.generated.models.order_edit;
 
 import com.commercetools.api.generated.models.order_edit.OrderEditUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.order_edit.OrderEditSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

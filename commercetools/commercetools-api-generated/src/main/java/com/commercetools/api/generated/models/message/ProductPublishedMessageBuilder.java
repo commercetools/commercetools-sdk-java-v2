@@ -3,11 +3,11 @@ package com.commercetools.api.generated.models.message;
 import com.commercetools.api.generated.models.cart.ProductPublishScope;
 import com.commercetools.api.generated.models.message.Message;
 import com.commercetools.api.generated.models.product.ProductProjection;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.message.ProductPublishedMessage;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -48,7 +48,7 @@ public final class ProductPublishedMessageBuilder {
    private Long resourceVersion;
    
    
-   private java.util.List<JsonNode> removedImageUrls;
+   private java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls;
    
    
    private com.commercetools.api.generated.models.product.ProductProjection productProjection;
@@ -106,7 +106,7 @@ public final class ProductPublishedMessageBuilder {
       return this;
    }
    
-   public ProductPublishedMessageBuilder removedImageUrls( final java.util.List<JsonNode> removedImageUrls) {
+   public ProductPublishedMessageBuilder removedImageUrls( final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls) {
       this.removedImageUrls = removedImageUrls;
       return this;
    }
@@ -172,7 +172,7 @@ public final class ProductPublishedMessageBuilder {
    }
    
    
-   public java.util.List<JsonNode> getRemovedImageUrls(){
+   public java.util.List<com.fasterxml.jackson.databind.JsonNode> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
    

@@ -2,10 +2,10 @@ package com.commercetools.api.generated.models.category;
 
 import com.commercetools.api.generated.models.category.CategoryUpdateAction;
 import com.commercetools.api.generated.models.type.TypeResourceIdentifier;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.category.CategorySetAssetCustomTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

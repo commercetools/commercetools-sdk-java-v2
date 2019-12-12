@@ -1,6 +1,7 @@
 package com.commercetools.api.generated.models.category;
 
 import com.commercetools.api.generated.models.category.CategoryUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -29,12 +29,12 @@ public final class CategorySetAssetCustomFieldActionImpl implements CategorySetA
    
    private String name;
    
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
    
    private String assetKey;
 
    @JsonCreator
-   CategorySetAssetCustomFieldActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("name") final String name, @JsonProperty("value") final JsonNode value, @JsonProperty("assetKey") final String assetKey) {
+   CategorySetAssetCustomFieldActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value, @JsonProperty("assetKey") final String assetKey) {
       this.assetId = assetId;
       this.name = name;
       this.value = value;
@@ -61,7 +61,7 @@ public final class CategorySetAssetCustomFieldActionImpl implements CategorySetA
    }
    
    
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
    
@@ -78,7 +78,7 @@ public final class CategorySetAssetCustomFieldActionImpl implements CategorySetA
       this.name = name;
    }
    
-   public void setValue(final JsonNode value){
+   public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }
    

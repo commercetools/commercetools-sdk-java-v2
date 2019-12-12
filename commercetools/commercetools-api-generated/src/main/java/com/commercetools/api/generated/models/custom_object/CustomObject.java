@@ -3,11 +3,11 @@ package com.commercetools.api.generated.models.custom_object;
 import com.commercetools.api.generated.models.common.CreatedBy;
 import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
+import com.fasterxml.jackson.databind.JsonNode;
 import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.custom_object.CustomObjectImpl;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

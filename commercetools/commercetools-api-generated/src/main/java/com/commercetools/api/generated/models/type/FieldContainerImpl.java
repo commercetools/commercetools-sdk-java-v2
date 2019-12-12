@@ -1,6 +1,6 @@
 package com.commercetools.api.generated.models.type;
 
-
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -23,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FieldContainerImpl implements FieldContainer {
 
-   private Map<String, JsonNode> values;
+   private Map<String, com.fasterxml.jackson.databind.JsonNode> values;
 
    @JsonCreator
-   FieldContainerImpl(@JsonProperty("values") final Map<String, JsonNode> values) {
+   FieldContainerImpl(@JsonProperty("values") final Map<String, com.fasterxml.jackson.databind.JsonNode> values) {
       this.values = values;
    }
    public FieldContainerImpl() {
@@ -34,11 +33,11 @@ public final class FieldContainerImpl implements FieldContainer {
    }
    
    
-   public Map<String,JsonNode> values() {
+   public Map<String,com.fasterxml.jackson.databind.JsonNode> values() {
        return values;
    }
 
-   public void setValue(String key, JsonNode value) {
+   public void setValue(String key, com.fasterxml.jackson.databind.JsonNode value) {
        if (values == null) {
            values = new HashMap<>();
        }

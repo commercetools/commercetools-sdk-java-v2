@@ -1,11 +1,11 @@
 package com.commercetools.api.generated.models.shopping_list;
 
 import com.commercetools.api.generated.models.shopping_list.ShoppingListUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.shopping_list.ShoppingListSetLineItemCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,7 +22,7 @@ public final class ShoppingListSetLineItemCustomFieldActionBuilder {
    private String name;
    
    @Nullable
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
    
    public ShoppingListSetLineItemCustomFieldActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
@@ -34,7 +34,7 @@ public final class ShoppingListSetLineItemCustomFieldActionBuilder {
       return this;
    }
    
-   public ShoppingListSetLineItemCustomFieldActionBuilder value(@Nullable final JsonNode value) {
+   public ShoppingListSetLineItemCustomFieldActionBuilder value(@Nullable final com.fasterxml.jackson.databind.JsonNode value) {
       this.value = value;
       return this;
    }
@@ -50,7 +50,7 @@ public final class ShoppingListSetLineItemCustomFieldActionBuilder {
    }
    
    @Nullable
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
 

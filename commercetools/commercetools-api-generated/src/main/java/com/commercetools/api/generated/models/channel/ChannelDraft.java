@@ -8,7 +8,6 @@ import com.commercetools.api.generated.models.type.CustomFieldsDraft;
 import com.commercetools.api.generated.models.channel.ChannelDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

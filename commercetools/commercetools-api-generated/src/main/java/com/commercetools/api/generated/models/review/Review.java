@@ -6,11 +6,11 @@ import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.customer.CustomerReference;
 import com.commercetools.api.generated.models.state.StateReference;
 import com.commercetools.api.generated.models.type.CustomFields;
+import com.fasterxml.jackson.databind.JsonNode;
 import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.review.ReviewImpl;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

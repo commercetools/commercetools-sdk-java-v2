@@ -2,6 +2,7 @@ package com.commercetools.api.generated.models.error;
 
 import com.commercetools.api.generated.models.common.Reference;
 import com.commercetools.api.generated.models.error.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -11,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -30,12 +30,12 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
    
    private com.commercetools.api.generated.models.common.Reference conflictingResource;
    
-   private JsonNode duplicateValue;
+   private com.fasterxml.jackson.databind.JsonNode duplicateValue;
    
    private String field;
 
    @JsonCreator
-   DuplicateFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("conflictingResource") final com.commercetools.api.generated.models.common.Reference conflictingResource, @JsonProperty("duplicateValue") final JsonNode duplicateValue, @JsonProperty("field") final String field) {
+   DuplicateFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("conflictingResource") final com.commercetools.api.generated.models.common.Reference conflictingResource, @JsonProperty("duplicateValue") final com.fasterxml.jackson.databind.JsonNode duplicateValue, @JsonProperty("field") final String field) {
       this.message = message;
       this.conflictingResource = conflictingResource;
       this.duplicateValue = duplicateValue;
@@ -62,7 +62,7 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
    }
    
    
-   public JsonNode getDuplicateValue(){
+   public com.fasterxml.jackson.databind.JsonNode getDuplicateValue(){
       return this.duplicateValue;
    }
    
@@ -79,7 +79,7 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
       this.conflictingResource = conflictingResource;
    }
    
-   public void setDuplicateValue(final JsonNode duplicateValue){
+   public void setDuplicateValue(final com.fasterxml.jackson.databind.JsonNode duplicateValue){
       this.duplicateValue = duplicateValue;
    }
    

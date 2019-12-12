@@ -1,6 +1,7 @@
 package com.commercetools.api.generated.models.me;
 
 import com.commercetools.api.generated.models.me.MyShoppingListUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -27,10 +27,10 @@ public final class MyShoppingListSetCustomFieldActionImpl implements MyShoppingL
    
    private String name;
    
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
 
    @JsonCreator
-   MyShoppingListSetCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final JsonNode value) {
+   MyShoppingListSetCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
       this.name = name;
       this.value = value;
       this.action = "setCustomField";
@@ -50,7 +50,7 @@ public final class MyShoppingListSetCustomFieldActionImpl implements MyShoppingL
    }
    
    
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
 
@@ -58,7 +58,7 @@ public final class MyShoppingListSetCustomFieldActionImpl implements MyShoppingL
       this.name = name;
    }
    
-   public void setValue(final JsonNode value){
+   public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }
 

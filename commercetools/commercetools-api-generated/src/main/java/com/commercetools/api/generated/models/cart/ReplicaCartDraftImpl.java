@@ -1,6 +1,6 @@
 package com.commercetools.api.generated.models.cart;
 
-
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -23,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
 
-   private JsonNode reference;
+   private com.fasterxml.jackson.databind.JsonNode reference;
 
    @JsonCreator
-   ReplicaCartDraftImpl(@JsonProperty("reference") final JsonNode reference) {
+   ReplicaCartDraftImpl(@JsonProperty("reference") final com.fasterxml.jackson.databind.JsonNode reference) {
       this.reference = reference;
    }
    public ReplicaCartDraftImpl() {
@@ -34,11 +33,11 @@ public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
    }
    
    
-   public JsonNode getReference(){
+   public com.fasterxml.jackson.databind.JsonNode getReference(){
       return this.reference;
    }
 
-   public void setReference(final JsonNode reference){
+   public void setReference(final com.fasterxml.jackson.databind.JsonNode reference){
       this.reference = reference;
    }
 

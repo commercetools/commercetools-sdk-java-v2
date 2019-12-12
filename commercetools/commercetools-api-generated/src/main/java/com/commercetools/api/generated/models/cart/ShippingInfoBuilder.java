@@ -13,7 +13,6 @@ import com.commercetools.api.generated.models.cart.ShippingInfo;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

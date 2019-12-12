@@ -2,11 +2,11 @@ package com.commercetools.api.generated.models.common;
 
 import com.commercetools.api.generated.models.common.BaseResource;
 import com.commercetools.api.generated.models.product.FacetResults;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.common.PagedQueryResponse;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,7 +23,7 @@ public final class PagedQueryResponseBuilder {
    private Long offset;
    
    @Nullable
-   private JsonNode meta;
+   private com.fasterxml.jackson.databind.JsonNode meta;
    
    
    private Long count;
@@ -47,7 +47,7 @@ public final class PagedQueryResponseBuilder {
       return this;
    }
    
-   public PagedQueryResponseBuilder meta(@Nullable final JsonNode meta) {
+   public PagedQueryResponseBuilder meta(@Nullable final com.fasterxml.jackson.databind.JsonNode meta) {
       this.meta = meta;
       return this;
    }
@@ -83,7 +83,7 @@ public final class PagedQueryResponseBuilder {
    }
    
    @Nullable
-   public JsonNode getMeta(){
+   public com.fasterxml.jackson.databind.JsonNode getMeta(){
       return this.meta;
    }
    

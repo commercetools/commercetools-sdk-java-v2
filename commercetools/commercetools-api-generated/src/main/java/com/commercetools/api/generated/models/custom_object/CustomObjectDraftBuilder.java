@@ -1,11 +1,10 @@
 package com.commercetools.api.generated.models.custom_object;
 
-
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.custom_object.CustomObjectDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,7 +21,7 @@ public final class CustomObjectDraftBuilder {
    private Long version;
    
    
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
    
    
    private String key;
@@ -37,7 +36,7 @@ public final class CustomObjectDraftBuilder {
       return this;
    }
    
-   public CustomObjectDraftBuilder value( final JsonNode value) {
+   public CustomObjectDraftBuilder value( final com.fasterxml.jackson.databind.JsonNode value) {
       this.value = value;
       return this;
    }
@@ -58,7 +57,7 @@ public final class CustomObjectDraftBuilder {
    }
    
    
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
    

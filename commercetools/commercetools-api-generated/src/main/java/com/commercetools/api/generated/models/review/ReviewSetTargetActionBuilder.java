@@ -1,11 +1,11 @@
 package com.commercetools.api.generated.models.review;
 
 import com.commercetools.api.generated.models.review.ReviewUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.review.ReviewSetTargetAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,15 +16,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ReviewSetTargetActionBuilder {
    
    
-   private JsonNode target;
+   private com.fasterxml.jackson.databind.JsonNode target;
    
-   public ReviewSetTargetActionBuilder target( final JsonNode target) {
+   public ReviewSetTargetActionBuilder target( final com.fasterxml.jackson.databind.JsonNode target) {
       this.target = target;
       return this;
    }
    
    
-   public JsonNode getTarget(){
+   public com.fasterxml.jackson.databind.JsonNode getTarget(){
       return this.target;
    }
 

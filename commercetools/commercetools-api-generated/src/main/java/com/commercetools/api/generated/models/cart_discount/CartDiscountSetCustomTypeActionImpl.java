@@ -2,6 +2,7 @@ package com.commercetools.api.generated.models.cart_discount;
 
 import com.commercetools.api.generated.models.cart_discount.CartDiscountUpdateAction;
 import com.commercetools.api.generated.models.type.TypeResourceIdentifier;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -11,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -26,12 +26,12 @@ public final class CartDiscountSetCustomTypeActionImpl implements CartDiscountSe
 
    private String action;
    
-   private JsonNode fields;
+   private com.fasterxml.jackson.databind.JsonNode fields;
    
    private com.commercetools.api.generated.models.type.TypeResourceIdentifier type;
 
    @JsonCreator
-   CartDiscountSetCustomTypeActionImpl(@JsonProperty("fields") final JsonNode fields, @JsonProperty("type") final com.commercetools.api.generated.models.type.TypeResourceIdentifier type) {
+   CartDiscountSetCustomTypeActionImpl(@JsonProperty("fields") final com.fasterxml.jackson.databind.JsonNode fields, @JsonProperty("type") final com.commercetools.api.generated.models.type.TypeResourceIdentifier type) {
       this.fields = fields;
       this.type = type;
       this.action = "setCustomType";
@@ -49,7 +49,7 @@ public final class CartDiscountSetCustomTypeActionImpl implements CartDiscountSe
    *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
    *  Sets the custom fields to this value.</p>
    */
-   public JsonNode getFields(){
+   public com.fasterxml.jackson.databind.JsonNode getFields(){
       return this.fields;
    }
    
@@ -60,7 +60,7 @@ public final class CartDiscountSetCustomTypeActionImpl implements CartDiscountSe
       return this.type;
    }
 
-   public void setFields(final JsonNode fields){
+   public void setFields(final com.fasterxml.jackson.databind.JsonNode fields){
       this.fields = fields;
    }
    

@@ -1,11 +1,10 @@
 package com.commercetools.api.generated.models.product;
 
-
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.product.FacetResultTerm;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,7 +18,7 @@ public final class FacetResultTermBuilder {
    private Long count;
    
    
-   private JsonNode term;
+   private com.fasterxml.jackson.databind.JsonNode term;
    
    @Nullable
    private Long productCount;
@@ -29,7 +28,7 @@ public final class FacetResultTermBuilder {
       return this;
    }
    
-   public FacetResultTermBuilder term( final JsonNode term) {
+   public FacetResultTermBuilder term( final com.fasterxml.jackson.databind.JsonNode term) {
       this.term = term;
       return this;
    }
@@ -45,7 +44,7 @@ public final class FacetResultTermBuilder {
    }
    
    
-   public JsonNode getTerm(){
+   public com.fasterxml.jackson.databind.JsonNode getTerm(){
       return this.term;
    }
    

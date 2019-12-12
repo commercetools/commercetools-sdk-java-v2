@@ -3,6 +3,7 @@ package com.commercetools.api.generated.models.custom_object;
 import com.commercetools.api.generated.models.common.CreatedBy;
 import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
+import com.fasterxml.jackson.databind.JsonNode;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -13,7 +14,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -40,12 +40,12 @@ public final class CustomObjectImpl implements CustomObject {
    
    private String container;
    
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
    
    private String key;
 
    @JsonCreator
-   CustomObjectImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("container") final String container, @JsonProperty("value") final JsonNode value, @JsonProperty("key") final String key) {
+   CustomObjectImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.generated.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.generated.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("container") final String container, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value, @JsonProperty("key") final String key) {
       this.createdAt = createdAt;
       this.lastModifiedAt = lastModifiedAt;
       this.id = id;
@@ -98,7 +98,7 @@ public final class CustomObjectImpl implements CustomObject {
    }
    
    
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
    
@@ -135,7 +135,7 @@ public final class CustomObjectImpl implements CustomObject {
       this.container = container;
    }
    
-   public void setValue(final JsonNode value){
+   public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }
    

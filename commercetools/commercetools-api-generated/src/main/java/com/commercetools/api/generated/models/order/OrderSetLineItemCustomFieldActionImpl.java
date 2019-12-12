@@ -1,6 +1,7 @@
 package com.commercetools.api.generated.models.order;
 
 import com.commercetools.api.generated.models.order.OrderUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -29,10 +29,10 @@ public final class OrderSetLineItemCustomFieldActionImpl implements OrderSetLine
    
    private String name;
    
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
 
    @JsonCreator
-   OrderSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("name") final String name, @JsonProperty("value") final JsonNode value) {
+   OrderSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
       this.lineItemId = lineItemId;
       this.name = name;
       this.value = value;
@@ -58,7 +58,7 @@ public final class OrderSetLineItemCustomFieldActionImpl implements OrderSetLine
    }
    
    
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
 
@@ -70,7 +70,7 @@ public final class OrderSetLineItemCustomFieldActionImpl implements OrderSetLine
       this.name = name;
    }
    
-   public void setValue(final JsonNode value){
+   public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }
 

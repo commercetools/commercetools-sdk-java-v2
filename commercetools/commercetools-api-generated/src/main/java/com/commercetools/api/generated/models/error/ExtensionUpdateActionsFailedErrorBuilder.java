@@ -3,11 +3,11 @@ package com.commercetools.api.generated.models.error;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.error.ErrorByExtension;
 import com.commercetools.api.generated.models.error.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.error.ExtensionUpdateActionsFailedError;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,7 +24,7 @@ public final class ExtensionUpdateActionsFailedErrorBuilder {
    private com.commercetools.api.generated.models.common.LocalizedString localizedMessage;
    
    @Nullable
-   private JsonNode extensionExtraInfo;
+   private com.fasterxml.jackson.databind.JsonNode extensionExtraInfo;
    
    
    private com.commercetools.api.generated.models.error.ErrorByExtension errorByExtension;
@@ -39,7 +39,7 @@ public final class ExtensionUpdateActionsFailedErrorBuilder {
       return this;
    }
    
-   public ExtensionUpdateActionsFailedErrorBuilder extensionExtraInfo(@Nullable final JsonNode extensionExtraInfo) {
+   public ExtensionUpdateActionsFailedErrorBuilder extensionExtraInfo(@Nullable final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo) {
       this.extensionExtraInfo = extensionExtraInfo;
       return this;
    }
@@ -60,7 +60,7 @@ public final class ExtensionUpdateActionsFailedErrorBuilder {
    }
    
    @Nullable
-   public JsonNode getExtensionExtraInfo(){
+   public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo(){
       return this.extensionExtraInfo;
    }
    

@@ -1,11 +1,11 @@
 package com.commercetools.api.generated.models.product;
 
 import com.commercetools.api.generated.models.product.ProductUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.product.ProductSetProductPriceCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -25,7 +25,7 @@ public final class ProductSetProductPriceCustomFieldActionBuilder {
    private String priceId;
    
    @Nullable
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
    
    public ProductSetProductPriceCustomFieldActionBuilder name( final String name) {
       this.name = name;
@@ -42,7 +42,7 @@ public final class ProductSetProductPriceCustomFieldActionBuilder {
       return this;
    }
    
-   public ProductSetProductPriceCustomFieldActionBuilder value(@Nullable final JsonNode value) {
+   public ProductSetProductPriceCustomFieldActionBuilder value(@Nullable final com.fasterxml.jackson.databind.JsonNode value) {
       this.value = value;
       return this;
    }
@@ -63,7 +63,7 @@ public final class ProductSetProductPriceCustomFieldActionBuilder {
    }
    
    @Nullable
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
 

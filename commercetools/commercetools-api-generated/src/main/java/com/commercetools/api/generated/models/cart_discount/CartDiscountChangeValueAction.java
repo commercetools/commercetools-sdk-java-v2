@@ -5,7 +5,6 @@ import com.commercetools.api.generated.models.cart_discount.CartDiscountValueDra
 import com.commercetools.api.generated.models.cart_discount.CartDiscountChangeValueActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

@@ -3,11 +3,11 @@ package com.commercetools.api.generated.models.review;
 import com.commercetools.api.generated.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.generated.models.state.StateResourceIdentifier;
 import com.commercetools.api.generated.models.type.CustomFieldsDraft;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.review.ReviewDraft;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -48,7 +48,7 @@ public final class ReviewDraftBuilder {
    private com.commercetools.api.generated.models.customer.CustomerResourceIdentifier customer;
    
    @Nullable
-   private JsonNode target;
+   private com.fasterxml.jackson.databind.JsonNode target;
    
    public ReviewDraftBuilder uniquenessValue(@Nullable final String uniquenessValue) {
       this.uniquenessValue = uniquenessValue;
@@ -100,7 +100,7 @@ public final class ReviewDraftBuilder {
       return this;
    }
    
-   public ReviewDraftBuilder target(@Nullable final JsonNode target) {
+   public ReviewDraftBuilder target(@Nullable final com.fasterxml.jackson.databind.JsonNode target) {
       this.target = target;
       return this;
    }
@@ -156,7 +156,7 @@ public final class ReviewDraftBuilder {
    }
    
    @Nullable
-   public JsonNode getTarget(){
+   public com.fasterxml.jackson.databind.JsonNode getTarget(){
       return this.target;
    }
 

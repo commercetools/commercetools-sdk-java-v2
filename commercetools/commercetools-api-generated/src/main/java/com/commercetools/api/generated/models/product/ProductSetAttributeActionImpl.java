@@ -1,6 +1,7 @@
 package com.commercetools.api.generated.models.product;
 
 import com.commercetools.api.generated.models.product.ProductUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -33,10 +33,10 @@ public final class ProductSetAttributeActionImpl implements ProductSetAttributeA
    
    private String sku;
    
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
 
    @JsonCreator
-   ProductSetAttributeActionImpl(@JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("value") final JsonNode value) {
+   ProductSetAttributeActionImpl(@JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
       this.name = name;
       this.staged = staged;
       this.variantId = variantId;
@@ -78,7 +78,7 @@ public final class ProductSetAttributeActionImpl implements ProductSetAttributeA
    *  If the attribute exists and a value is provided, the new value is applied.
    *  If the attribute does not exist and a value is provided, it is added as a new attribute.</p>
    */
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
 
@@ -98,7 +98,7 @@ public final class ProductSetAttributeActionImpl implements ProductSetAttributeA
       this.sku = sku;
    }
    
-   public void setValue(final JsonNode value){
+   public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }
 

@@ -3,12 +3,12 @@ package com.commercetools.api.generated.models.custom_object;
 import com.commercetools.api.generated.models.common.CreatedBy;
 import com.commercetools.api.generated.models.common.LastModifiedBy;
 import com.commercetools.api.generated.models.common.LoggedResource;
+import com.fasterxml.jackson.databind.JsonNode;
 import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.custom_object.CustomObject;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -40,7 +40,7 @@ public final class CustomObjectBuilder {
    private String container;
    
    
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
    
    
    private String key;
@@ -80,7 +80,7 @@ public final class CustomObjectBuilder {
       return this;
    }
    
-   public CustomObjectBuilder value( final JsonNode value) {
+   public CustomObjectBuilder value( final com.fasterxml.jackson.databind.JsonNode value) {
       this.value = value;
       return this;
    }
@@ -126,7 +126,7 @@ public final class CustomObjectBuilder {
    }
    
    
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
    

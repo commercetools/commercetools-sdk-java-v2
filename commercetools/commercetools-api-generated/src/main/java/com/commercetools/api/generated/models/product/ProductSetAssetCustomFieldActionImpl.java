@@ -1,6 +1,7 @@
 package com.commercetools.api.generated.models.product;
 
 import com.commercetools.api.generated.models.product.ProductUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -35,12 +35,12 @@ public final class ProductSetAssetCustomFieldActionImpl implements ProductSetAss
    
    private String sku;
    
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
    
    private String assetKey;
 
    @JsonCreator
-   ProductSetAssetCustomFieldActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("value") final JsonNode value, @JsonProperty("assetKey") final String assetKey) {
+   ProductSetAssetCustomFieldActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value, @JsonProperty("assetKey") final String assetKey) {
       this.assetId = assetId;
       this.name = name;
       this.staged = staged;
@@ -85,7 +85,7 @@ public final class ProductSetAssetCustomFieldActionImpl implements ProductSetAss
    }
    
    
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
    
@@ -114,7 +114,7 @@ public final class ProductSetAssetCustomFieldActionImpl implements ProductSetAss
       this.sku = sku;
    }
    
-   public void setValue(final JsonNode value){
+   public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }
    

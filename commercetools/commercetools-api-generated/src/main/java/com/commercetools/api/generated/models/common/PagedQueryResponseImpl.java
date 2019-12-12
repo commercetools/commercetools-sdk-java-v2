@@ -2,6 +2,7 @@ package com.commercetools.api.generated.models.common;
 
 import com.commercetools.api.generated.models.common.BaseResource;
 import com.commercetools.api.generated.models.product.FacetResults;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -11,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -28,7 +28,7 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
    
    private Long offset;
    
-   private JsonNode meta;
+   private com.fasterxml.jackson.databind.JsonNode meta;
    
    private Long count;
    
@@ -39,7 +39,7 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
    private com.commercetools.api.generated.models.product.FacetResults facets;
 
    @JsonCreator
-   PagedQueryResponseImpl(@JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("meta") final JsonNode meta, @JsonProperty("count") final Long count, @JsonProperty("limit") final Long limit, @JsonProperty("results") final java.util.List<com.commercetools.api.generated.models.common.BaseResource> results, @JsonProperty("facets") final com.commercetools.api.generated.models.product.FacetResults facets) {
+   PagedQueryResponseImpl(@JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("meta") final com.fasterxml.jackson.databind.JsonNode meta, @JsonProperty("count") final Long count, @JsonProperty("limit") final Long limit, @JsonProperty("results") final java.util.List<com.commercetools.api.generated.models.common.BaseResource> results, @JsonProperty("facets") final com.commercetools.api.generated.models.product.FacetResults facets) {
       this.total = total;
       this.offset = offset;
       this.meta = meta;
@@ -63,7 +63,7 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
    }
    
    
-   public JsonNode getMeta(){
+   public com.fasterxml.jackson.databind.JsonNode getMeta(){
       return this.meta;
    }
    
@@ -95,7 +95,7 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
       this.offset = offset;
    }
    
-   public void setMeta(final JsonNode meta){
+   public void setMeta(final com.fasterxml.jackson.databind.JsonNode meta){
       this.meta = meta;
    }
    

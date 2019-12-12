@@ -2,11 +2,11 @@ package com.commercetools.api.generated.models.category;
 
 import com.commercetools.api.generated.models.category.CategoryUpdateAction;
 import com.commercetools.api.generated.models.type.TypeResourceIdentifier;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.category.CategorySetAssetCustomTypeAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,7 +20,7 @@ public final class CategorySetAssetCustomTypeActionBuilder {
    private String assetId;
    
    @Nullable
-   private JsonNode fields;
+   private com.fasterxml.jackson.databind.JsonNode fields;
    
    @Nullable
    private com.commercetools.api.generated.models.type.TypeResourceIdentifier type;
@@ -33,7 +33,7 @@ public final class CategorySetAssetCustomTypeActionBuilder {
       return this;
    }
    
-   public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final JsonNode fields) {
+   public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
       this.fields = fields;
       return this;
    }
@@ -54,7 +54,7 @@ public final class CategorySetAssetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public JsonNode getFields(){
+   public com.fasterxml.jackson.databind.JsonNode getFields(){
       return this.fields;
    }
    

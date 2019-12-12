@@ -6,12 +6,12 @@ import com.commercetools.api.generated.models.common.LoggedResource;
 import com.commercetools.api.generated.models.customer.CustomerReference;
 import com.commercetools.api.generated.models.state.StateReference;
 import com.commercetools.api.generated.models.type.CustomFields;
+import com.fasterxml.jackson.databind.JsonNode;
 import java.time.ZonedDateTime;
 import com.commercetools.api.generated.models.review.Review;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -55,7 +55,7 @@ public final class ReviewBuilder {
    private String locale;
    
    @Nullable
-   private JsonNode target;
+   private com.fasterxml.jackson.databind.JsonNode target;
    
    
    private Boolean includedInStatistics;
@@ -130,7 +130,7 @@ public final class ReviewBuilder {
       return this;
    }
    
-   public ReviewBuilder target(@Nullable final JsonNode target) {
+   public ReviewBuilder target(@Nullable final com.fasterxml.jackson.databind.JsonNode target) {
       this.target = target;
       return this;
    }
@@ -221,7 +221,7 @@ public final class ReviewBuilder {
    }
    
    @Nullable
-   public JsonNode getTarget(){
+   public com.fasterxml.jackson.databind.JsonNode getTarget(){
       return this.target;
    }
    

@@ -1,10 +1,10 @@
 package com.commercetools.api.generated.models.channel;
 
 import com.commercetools.api.generated.models.channel.ChannelUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.channel.ChannelSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

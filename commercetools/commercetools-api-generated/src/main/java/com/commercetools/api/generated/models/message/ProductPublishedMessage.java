@@ -3,10 +3,10 @@ package com.commercetools.api.generated.models.message;
 import com.commercetools.api.generated.models.cart.ProductPublishScope;
 import com.commercetools.api.generated.models.message.Message;
 import com.commercetools.api.generated.models.product.ProductProjection;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.message.ProductPublishedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

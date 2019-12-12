@@ -1,6 +1,7 @@
 package com.commercetools.api.generated.models.customer;
 
 import com.commercetools.api.generated.models.customer.Customer;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSignInResultImpl implements CustomerSignInResult {
 
-   private JsonNode cart;
+   private com.fasterxml.jackson.databind.JsonNode cart;
    
    private com.commercetools.api.generated.models.customer.Customer customer;
 
    @JsonCreator
-   CustomerSignInResultImpl(@JsonProperty("cart") final JsonNode cart, @JsonProperty("customer") final com.commercetools.api.generated.models.customer.Customer customer) {
+   CustomerSignInResultImpl(@JsonProperty("cart") final com.fasterxml.jackson.databind.JsonNode cart, @JsonProperty("customer") final com.commercetools.api.generated.models.customer.Customer customer) {
       this.cart = cart;
       this.customer = customer;
    }
@@ -40,7 +40,7 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
    *  <p>A cart that is associated to the customer.
    *  Empty if the customer does not have a cart yet.</p>
    */
-   public JsonNode getCart(){
+   public com.fasterxml.jackson.databind.JsonNode getCart(){
       return this.cart;
    }
    
@@ -49,7 +49,7 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
       return this.customer;
    }
 
-   public void setCart(final JsonNode cart){
+   public void setCart(final com.fasterxml.jackson.databind.JsonNode cart){
       this.cart = cart;
    }
    

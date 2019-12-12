@@ -3,10 +3,10 @@ package com.commercetools.api.generated.models.error;
 import com.commercetools.api.generated.models.common.LocalizedString;
 import com.commercetools.api.generated.models.error.ErrorByExtension;
 import com.commercetools.api.generated.models.error.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.error.ExtensionBadResponseErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;

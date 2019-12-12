@@ -1,6 +1,6 @@
 package com.commercetools.api.generated.models.product;
 
-
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -25,12 +24,12 @@ public final class FacetResultTermImpl implements FacetResultTerm {
 
    private Long count;
    
-   private JsonNode term;
+   private com.fasterxml.jackson.databind.JsonNode term;
    
    private Long productCount;
 
    @JsonCreator
-   FacetResultTermImpl(@JsonProperty("count") final Long count, @JsonProperty("term") final JsonNode term, @JsonProperty("productCount") final Long productCount) {
+   FacetResultTermImpl(@JsonProperty("count") final Long count, @JsonProperty("term") final com.fasterxml.jackson.databind.JsonNode term, @JsonProperty("productCount") final Long productCount) {
       this.count = count;
       this.term = term;
       this.productCount = productCount;
@@ -45,7 +44,7 @@ public final class FacetResultTermImpl implements FacetResultTerm {
    }
    
    
-   public JsonNode getTerm(){
+   public com.fasterxml.jackson.databind.JsonNode getTerm(){
       return this.term;
    }
    
@@ -58,7 +57,7 @@ public final class FacetResultTermImpl implements FacetResultTerm {
       this.count = count;
    }
    
-   public void setTerm(final JsonNode term){
+   public void setTerm(final com.fasterxml.jackson.databind.JsonNode term){
       this.term = term;
    }
    

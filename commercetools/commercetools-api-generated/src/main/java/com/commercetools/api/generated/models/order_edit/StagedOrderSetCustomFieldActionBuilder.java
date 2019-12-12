@@ -1,11 +1,11 @@
 package com.commercetools.api.generated.models.order_edit;
 
 import com.commercetools.api.generated.models.order.StagedOrderUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.order_edit.StagedOrderSetCustomFieldAction;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,14 +19,14 @@ public final class StagedOrderSetCustomFieldActionBuilder {
    private String name;
    
    @Nullable
-   private JsonNode value;
+   private com.fasterxml.jackson.databind.JsonNode value;
    
    public StagedOrderSetCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
    
-   public StagedOrderSetCustomFieldActionBuilder value(@Nullable final JsonNode value) {
+   public StagedOrderSetCustomFieldActionBuilder value(@Nullable final com.fasterxml.jackson.databind.JsonNode value) {
       this.value = value;
       return this;
    }
@@ -37,7 +37,7 @@ public final class StagedOrderSetCustomFieldActionBuilder {
    }
    
    @Nullable
-   public JsonNode getValue(){
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
 

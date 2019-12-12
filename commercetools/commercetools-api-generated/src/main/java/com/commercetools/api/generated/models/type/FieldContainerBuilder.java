@@ -1,11 +1,10 @@
 package com.commercetools.api.generated.models.type;
 
-
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.generated.models.type.FieldContainer;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,15 +15,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class FieldContainerBuilder {
    
    
-   private Map<String, JsonNode> values;
+   private Map<String, com.fasterxml.jackson.databind.JsonNode> values;
    
-   public FieldContainerBuilder values( final Map<String, JsonNode> values){
+   public FieldContainerBuilder values( final Map<String, com.fasterxml.jackson.databind.JsonNode> values){
       this.values = values;
       return this;
    }
    
    
-   public Map<String, JsonNode> getValues(){
+   public Map<String, com.fasterxml.jackson.databind.JsonNode> getValues(){
       return this.values;
    }
 

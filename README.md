@@ -31,6 +31,15 @@ ApiRoot apiRoot = DefaultApiRoot.create(
             "https://auth.commercetools.co//oauth/token",
             "https://auth.commercetools.co/");
             
+//ApiRoot config for ImportAPI
+ApiRoot apiRoot = ImportApiFactory.create(
+                    getClientId(),
+                    getClientSecret(),
+                    getScopes(),
+                    "https://auth.sphere.io/oauth/token",
+                    "https://import-eu.europe-west1.gcp.commercetools.com",
+                    LoggerMiddleware.LogLevel.INFO);
+
 ```
 
 ## Using SDK

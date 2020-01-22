@@ -8,7 +8,7 @@ This project is currently in the internal alpha phase.
 
 ## Introduction
 
-This repository contains the commercetools platform and import api java sdks generated from our api reference.
+This repository contains the commercetools platform and import-api java sdks generated from our api reference.
 
 ## Configuration
 

@@ -41,8 +41,8 @@ public interface EnumValue  {
 
    public static EnumValueImpl of(final EnumValue template) {
       EnumValueImpl instance = new EnumValueImpl();
-      instance.setLabel(template.getLabel());
       instance.setKey(template.getKey());
+      instance.setLabel(template.getLabel());
       return instance;
    }
 

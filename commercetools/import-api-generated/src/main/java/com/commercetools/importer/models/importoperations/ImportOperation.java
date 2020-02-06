@@ -1,6 +1,5 @@
 package com.commercetools.importer.models.importoperations;
 
-import com.commercetools.importer.models.common.KeyReference;
 import com.commercetools.importer.models.common.ProcessingState;
 import com.commercetools.importer.models.errors.ErrorObject;
 import java.time.ZonedDateTime;
@@ -70,13 +69,6 @@ public interface ImportOperation  {
    @JsonProperty("retryCount")
    public Integer getRetryCount();
    /**
-   *  <p>If an import resource has unresolved references, the state is set to <code>Unresolved</code>
-   *  and this property contains the unresolved references.</p>
-   */
-   @Valid
-   @JsonProperty("unresolvedReferences")
-   public List<KeyReference> getUnresolvedReferences();
-   /**
    *  <p>If an import resource does not import correctly, the state is set to <code>Rejected</code> or <code>ValidationFailed</code>
    *  and this property contains the errors.</p>
    */
@@ -116,8 +108,6 @@ public interface ImportOperation  {
    
    public void setRetryCount(final Integer retryCount);
    
-   public void setUnresolvedReferences(final List<KeyReference> unresolvedReferences);
-   
    public void setErrors(final List<ErrorObject> errors);
    
    public void setCreatedAt(final ZonedDateTime createdAt);
@@ -133,18 +123,17 @@ public interface ImportOperation  {
 
    public static ImportOperationImpl of(final ImportOperation template) {
       ImportOperationImpl instance = new ImportOperationImpl();
+      instance.setVersion(template.getVersion());
+      instance.setImportSinkKey(template.getImportSinkKey());
+      instance.setResourceKey(template.getResourceKey());
+      instance.setId(template.getId());
+      instance.setState(template.getState());
+      instance.setResourceVersion(template.getResourceVersion());
+      instance.setRetryCount(template.getRetryCount());
+      instance.setErrors(template.getErrors());
       instance.setCreatedAt(template.getCreatedAt());
       instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setResourceKey(template.getResourceKey());
-      instance.setRetryCount(template.getRetryCount());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setUnresolvedReferences(template.getUnresolvedReferences());
-      instance.setState(template.getState());
-      instance.setId(template.getId());
-      instance.setImportSinkKey(template.getImportSinkKey());
-      instance.setVersion(template.getVersion());
       instance.setExpiresAt(template.getExpiresAt());
-      instance.setErrors(template.getErrors());
       return instance;
    }
 

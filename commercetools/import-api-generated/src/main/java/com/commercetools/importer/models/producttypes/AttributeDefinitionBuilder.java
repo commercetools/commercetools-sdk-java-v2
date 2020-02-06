@@ -18,13 +18,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class AttributeDefinitionBuilder {
    
    
+   private com.commercetools.importer.models.producttypes.AttributeType type;
+   
+   
+   private String name;
+   
+   
+   private com.commercetools.importer.models.common.LocalizedString label;
+   
+   
    private Boolean isRequired;
    
    @Nullable
    private com.commercetools.importer.models.producttypes.AttributeConstraintEnum attributeConstraint;
    
-   
-   private String name;
+   @Nullable
+   private com.commercetools.importer.models.common.LocalizedString inputTip;
    
    @Nullable
    private com.commercetools.importer.models.producttypes.TextInputHint inputHint;
@@ -32,14 +41,20 @@ public final class AttributeDefinitionBuilder {
    @Nullable
    private Boolean isSearchable;
    
+   public AttributeDefinitionBuilder type( final com.commercetools.importer.models.producttypes.AttributeType type) {
+      this.type = type;
+      return this;
+   }
    
-   private com.commercetools.importer.models.common.LocalizedString label;
+   public AttributeDefinitionBuilder name( final String name) {
+      this.name = name;
+      return this;
+   }
    
-   
-   private com.commercetools.importer.models.producttypes.AttributeType type;
-   
-   @Nullable
-   private com.commercetools.importer.models.common.LocalizedString inputTip;
+   public AttributeDefinitionBuilder label( final com.commercetools.importer.models.common.LocalizedString label) {
+      this.label = label;
+      return this;
+   }
    
    public AttributeDefinitionBuilder isRequired( final Boolean isRequired) {
       this.isRequired = isRequired;
@@ -51,8 +66,8 @@ public final class AttributeDefinitionBuilder {
       return this;
    }
    
-   public AttributeDefinitionBuilder name( final String name) {
-      this.name = name;
+   public AttributeDefinitionBuilder inputTip(@Nullable final com.commercetools.importer.models.common.LocalizedString inputTip) {
+      this.inputTip = inputTip;
       return this;
    }
    
@@ -66,19 +81,19 @@ public final class AttributeDefinitionBuilder {
       return this;
    }
    
-   public AttributeDefinitionBuilder label( final com.commercetools.importer.models.common.LocalizedString label) {
-      this.label = label;
-      return this;
+   
+   public com.commercetools.importer.models.producttypes.AttributeType getType(){
+      return this.type;
    }
    
-   public AttributeDefinitionBuilder type( final com.commercetools.importer.models.producttypes.AttributeType type) {
-      this.type = type;
-      return this;
+   
+   public String getName(){
+      return this.name;
    }
    
-   public AttributeDefinitionBuilder inputTip(@Nullable final com.commercetools.importer.models.common.LocalizedString inputTip) {
-      this.inputTip = inputTip;
-      return this;
+   
+   public com.commercetools.importer.models.common.LocalizedString getLabel(){
+      return this.label;
    }
    
    
@@ -91,9 +106,9 @@ public final class AttributeDefinitionBuilder {
       return this.attributeConstraint;
    }
    
-   
-   public String getName(){
-      return this.name;
+   @Nullable
+   public com.commercetools.importer.models.common.LocalizedString getInputTip(){
+      return this.inputTip;
    }
    
    @Nullable
@@ -105,24 +120,9 @@ public final class AttributeDefinitionBuilder {
    public Boolean getIsSearchable(){
       return this.isSearchable;
    }
-   
-   
-   public com.commercetools.importer.models.common.LocalizedString getLabel(){
-      return this.label;
-   }
-   
-   
-   public com.commercetools.importer.models.producttypes.AttributeType getType(){
-      return this.type;
-   }
-   
-   @Nullable
-   public com.commercetools.importer.models.common.LocalizedString getInputTip(){
-      return this.inputTip;
-   }
 
    public AttributeDefinition build() {
-       return new AttributeDefinitionImpl(isRequired, attributeConstraint, name, inputHint, isSearchable, label, type, inputTip);
+       return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint, isSearchable);
    }
    
    public static AttributeDefinitionBuilder of() {
@@ -131,14 +131,14 @@ public final class AttributeDefinitionBuilder {
    
    public static AttributeDefinitionBuilder of(final AttributeDefinition template) {
       AttributeDefinitionBuilder builder = new AttributeDefinitionBuilder();
+      builder.type = template.getType();
+      builder.name = template.getName();
+      builder.label = template.getLabel();
       builder.isRequired = template.getIsRequired();
       builder.attributeConstraint = template.getAttributeConstraint();
-      builder.name = template.getName();
+      builder.inputTip = template.getInputTip();
       builder.inputHint = template.getInputHint();
       builder.isSearchable = template.getIsSearchable();
-      builder.label = template.getLabel();
-      builder.type = template.getType();
-      builder.inputTip = template.getInputTip();
       return builder;
    }
    

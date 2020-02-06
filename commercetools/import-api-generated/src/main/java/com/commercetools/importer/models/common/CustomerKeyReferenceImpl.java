@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -26,9 +26,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerKeyReferenceImpl implements CustomerKeyReference {
 
-   private com.commercetools.importer.models.common.ReferenceType typeId;
-   
    private String key;
+   
+   private com.commercetools.importer.models.common.ReferenceType typeId;
 
    @JsonCreator
    CustomerKeyReferenceImpl(@JsonProperty("key") final String key) {
@@ -39,16 +39,16 @@ public final class CustomerKeyReferenceImpl implements CustomerKeyReference {
       
    }
    
+   
+   public String getKey(){
+      return this.key;
+   }
+   
    /**
    *  <p>The type of the referenced resource.</p>
    */
    public com.commercetools.importer.models.common.ReferenceType getTypeId(){
       return this.typeId;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
    }
 
    public void setKey(final String key){

@@ -17,21 +17,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProductVariantPatchBuilder {
    
    
-   private com.commercetools.importer.models.common.ProductKeyReference product;
-   
-   
    private com.commercetools.importer.models.common.ProductVariantKeyReference productVariant;
+   
+   
+   private com.commercetools.importer.models.common.ProductKeyReference product;
    
    @Nullable
    private com.commercetools.importer.models.productvariants.Attributes attributes;
    
-   public ProductVariantPatchBuilder product( final com.commercetools.importer.models.common.ProductKeyReference product) {
-      this.product = product;
+   public ProductVariantPatchBuilder productVariant( final com.commercetools.importer.models.common.ProductVariantKeyReference productVariant) {
+      this.productVariant = productVariant;
       return this;
    }
    
-   public ProductVariantPatchBuilder productVariant( final com.commercetools.importer.models.common.ProductVariantKeyReference productVariant) {
-      this.productVariant = productVariant;
+   public ProductVariantPatchBuilder product( final com.commercetools.importer.models.common.ProductKeyReference product) {
+      this.product = product;
       return this;
    }
    
@@ -41,13 +41,13 @@ public final class ProductVariantPatchBuilder {
    }
    
    
-   public com.commercetools.importer.models.common.ProductKeyReference getProduct(){
-      return this.product;
+   public com.commercetools.importer.models.common.ProductVariantKeyReference getProductVariant(){
+      return this.productVariant;
    }
    
    
-   public com.commercetools.importer.models.common.ProductVariantKeyReference getProductVariant(){
-      return this.productVariant;
+   public com.commercetools.importer.models.common.ProductKeyReference getProduct(){
+      return this.product;
    }
    
    @Nullable
@@ -56,7 +56,7 @@ public final class ProductVariantPatchBuilder {
    }
 
    public ProductVariantPatch build() {
-       return new ProductVariantPatchImpl(product, productVariant, attributes);
+       return new ProductVariantPatchImpl(productVariant, product, attributes);
    }
    
    public static ProductVariantPatchBuilder of() {
@@ -65,8 +65,8 @@ public final class ProductVariantPatchBuilder {
    
    public static ProductVariantPatchBuilder of(final ProductVariantPatch template) {
       ProductVariantPatchBuilder builder = new ProductVariantPatchBuilder();
-      builder.product = template.getProduct();
       builder.productVariant = template.getProductVariant();
+      builder.product = template.getProduct();
       builder.attributes = template.getAttributes();
       return builder;
    }

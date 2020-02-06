@@ -77,11 +77,11 @@ public interface ImportSink  {
 
    public static ImportSinkImpl of(final ImportSink template) {
       ImportSinkImpl instance = new ImportSinkImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setVersion(template.getVersion());
       instance.setKey(template.getKey());
       instance.setResourceType(template.getResourceType());
+      instance.setVersion(template.getVersion());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       return instance;
    }
 

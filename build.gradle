@@ -2,6 +2,12 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        maven {
+            url "https://dl.bintray.com/vrapio/vrapio"
+        }
+    }
+    dependencies {
+        classpath "io.vrap.rmf.codegen:codegen-gradle-plugin:1.0.0-20200206130325"
     }
 }
 
@@ -17,6 +23,21 @@ plugins {
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
     id 'com.jfrog.bintray' version '1.8.3'
+}
+
+apply plugin: io.vrap.rmf.codegen.plugin.RamlCodegenPlugin
+
+RamlGenerator {
+    apiSpec {
+        uri = file('../commercetools-importer/api-spec/api.raml')
+        targets {
+            importModels {
+                path = file('commercetools/import-api-generated/src/main/java')
+                base_package = 'com/commercetools/importer'
+                target = 'javaComplete'
+            }
+        }
+    }
 }
 
 import java.text.SimpleDateFormat

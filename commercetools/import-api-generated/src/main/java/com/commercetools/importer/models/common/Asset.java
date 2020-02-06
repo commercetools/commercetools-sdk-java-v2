@@ -65,10 +65,10 @@ public interface Asset  {
 
    public static AssetImpl of(final Asset template) {
       AssetImpl instance = new AssetImpl();
+      instance.setKey(template.getKey());
       instance.setSources(template.getSources());
       instance.setName(template.getName());
       instance.setDescription(template.getDescription());
-      instance.setKey(template.getKey());
       instance.setTags(template.getTags());
       return instance;
    }

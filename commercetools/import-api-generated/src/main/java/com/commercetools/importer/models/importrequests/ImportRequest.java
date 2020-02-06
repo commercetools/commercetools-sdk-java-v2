@@ -3,6 +3,7 @@ package com.commercetools.importer.models.importrequests;
 import com.commercetools.importer.models.common.ImportResourceType;
 import com.commercetools.importer.models.importrequests.CategoryImportRequest;
 import com.commercetools.importer.models.importrequests.PriceImportRequest;
+import com.commercetools.importer.models.importrequests.ProductDraftImportRequest;
 import com.commercetools.importer.models.importrequests.ProductImportRequest;
 import com.commercetools.importer.models.importrequests.ProductTypeImportRequest;
 import com.commercetools.importer.models.importrequests.ProductVariantImportRequest;
@@ -26,6 +27,7 @@ import java.io.IOException;
 @JsonSubTypes({
    @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.CategoryImportRequestImpl.class, name = "category"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.ProductImportRequestImpl.class, name = "product"),
+   @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.ProductDraftImportRequestImpl.class, name = "product-draft"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.ProductTypeImportRequestImpl.class, name = "product-type"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.ProductVariantImportRequestImpl.class, name = "product-variant"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.PriceImportRequestImpl.class, name = "price"),
@@ -34,7 +36,8 @@ import java.io.IOException;
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,
    include = JsonTypeInfo.As.PROPERTY,
-   property = "type"
+   property = "type",
+   defaultImpl = ImportRequestImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

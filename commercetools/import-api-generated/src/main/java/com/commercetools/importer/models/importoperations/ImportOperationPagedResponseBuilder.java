@@ -15,16 +15,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ImportOperationPagedResponseBuilder {
    
    
+   private Integer limit;
+   
+   
    private Integer offset;
    
    
    private Integer count;
    
    
-   private Integer limit;
-   
-   
    private java.util.List<com.commercetools.importer.models.importoperations.ImportOperation> results;
+   
+   public ImportOperationPagedResponseBuilder limit( final Integer limit) {
+      this.limit = limit;
+      return this;
+   }
    
    public ImportOperationPagedResponseBuilder offset( final Integer offset) {
       this.offset = offset;
@@ -36,14 +41,14 @@ public final class ImportOperationPagedResponseBuilder {
       return this;
    }
    
-   public ImportOperationPagedResponseBuilder limit( final Integer limit) {
-      this.limit = limit;
-      return this;
-   }
-   
    public ImportOperationPagedResponseBuilder results( final java.util.List<com.commercetools.importer.models.importoperations.ImportOperation> results) {
       this.results = results;
       return this;
+   }
+   
+   
+   public Integer getLimit(){
+      return this.limit;
    }
    
    
@@ -57,17 +62,12 @@ public final class ImportOperationPagedResponseBuilder {
    }
    
    
-   public Integer getLimit(){
-      return this.limit;
-   }
-   
-   
    public java.util.List<com.commercetools.importer.models.importoperations.ImportOperation> getResults(){
       return this.results;
    }
 
    public ImportOperationPagedResponse build() {
-       return new ImportOperationPagedResponseImpl(offset, count, limit, results);
+       return new ImportOperationPagedResponseImpl(limit, offset, count, results);
    }
    
    public static ImportOperationPagedResponseBuilder of() {
@@ -76,9 +76,9 @@ public final class ImportOperationPagedResponseBuilder {
    
    public static ImportOperationPagedResponseBuilder of(final ImportOperationPagedResponse template) {
       ImportOperationPagedResponseBuilder builder = new ImportOperationPagedResponseBuilder();
+      builder.limit = template.getLimit();
       builder.offset = template.getOffset();
       builder.count = template.getCount();
-      builder.limit = template.getLimit();
       builder.results = template.getResults();
       return builder;
    }

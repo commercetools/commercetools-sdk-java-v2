@@ -15,33 +15,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ImportSummaryBuilder {
    
    
-   private Integer total;
-   
-   
    private com.commercetools.importer.models.importsummaries.OperationStates states;
    
-   public ImportSummaryBuilder total( final Integer total) {
-      this.total = total;
-      return this;
-   }
+   
+   private Integer total;
    
    public ImportSummaryBuilder states( final com.commercetools.importer.models.importsummaries.OperationStates states) {
       this.states = states;
       return this;
    }
    
-   
-   public Integer getTotal(){
-      return this.total;
+   public ImportSummaryBuilder total( final Integer total) {
+      this.total = total;
+      return this;
    }
    
    
    public com.commercetools.importer.models.importsummaries.OperationStates getStates(){
       return this.states;
    }
+   
+   
+   public Integer getTotal(){
+      return this.total;
+   }
 
    public ImportSummary build() {
-       return new ImportSummaryImpl(total, states);
+       return new ImportSummaryImpl(states, total);
    }
    
    public static ImportSummaryBuilder of() {
@@ -50,8 +50,8 @@ public final class ImportSummaryBuilder {
    
    public static ImportSummaryBuilder of(final ImportSummary template) {
       ImportSummaryBuilder builder = new ImportSummaryBuilder();
-      builder.total = template.getTotal();
       builder.states = template.getStates();
+      builder.total = template.getTotal();
       return builder;
    }
    

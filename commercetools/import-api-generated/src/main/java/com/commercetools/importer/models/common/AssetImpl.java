@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -23,26 +23,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AssetImpl implements Asset {
 
+   private String key;
+   
    private java.util.List<com.commercetools.importer.models.common.AssetSource> sources;
    
    private com.commercetools.importer.models.common.LocalizedString name;
    
    private com.commercetools.importer.models.common.LocalizedString description;
    
-   private String key;
-   
    private java.util.List<String> tags;
 
    @JsonCreator
-   AssetImpl(@JsonProperty("sources") final java.util.List<com.commercetools.importer.models.common.AssetSource> sources, @JsonProperty("name") final com.commercetools.importer.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.importer.models.common.LocalizedString description, @JsonProperty("key") final String key, @JsonProperty("tags") final java.util.List<String> tags) {
+   AssetImpl(@JsonProperty("key") final String key, @JsonProperty("sources") final java.util.List<com.commercetools.importer.models.common.AssetSource> sources, @JsonProperty("name") final com.commercetools.importer.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.importer.models.common.LocalizedString description, @JsonProperty("tags") final java.util.List<String> tags) {
+      this.key = key;
       this.sources = sources;
       this.name = name;
       this.description = description;
-      this.key = key;
       this.tags = tags;
    }
    public AssetImpl() {
       
+   }
+   
+   /**
+   *  <p>User-defined identifier for the asset.
+   *  Asset keys are unique inside their container (a product variant or a category).</p>
+   */
+   public String getKey(){
+      return this.key;
    }
    
    
@@ -60,19 +68,15 @@ public final class AssetImpl implements Asset {
       return this.description;
    }
    
-   /**
-   *  <p>User-defined identifier for the asset.
-   *  Asset keys are unique inside their container (a product variant or a category).</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
-   
    
    public java.util.List<String> getTags(){
       return this.tags;
    }
 
+   public void setKey(final String key){
+      this.key = key;
+   }
+   
    public void setSources(final java.util.List<com.commercetools.importer.models.common.AssetSource> sources){
       this.sources = sources;
    }
@@ -83,10 +87,6 @@ public final class AssetImpl implements Asset {
    
    public void setDescription(final com.commercetools.importer.models.common.LocalizedString description){
       this.description = description;
-   }
-   
-   public void setKey(final String key){
-      this.key = key;
    }
    
    public void setTags(final java.util.List<String> tags){

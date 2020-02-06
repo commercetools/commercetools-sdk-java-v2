@@ -181,31 +181,31 @@ public interface Address  {
 
    public static AddressImpl of(final Address template) {
       AddressImpl instance = new AddressImpl();
-      instance.setCountry(template.getCountry());
-      instance.setLastName(template.getLastName());
-      instance.setPOBox(template.getPOBox());
-      instance.setCity(template.getCity());
-      instance.setStreetNumber(template.getStreetNumber());
-      instance.setPostalCode(template.getPostalCode());
-      instance.setMobile(template.getMobile());
-      instance.setExternalId(template.getExternalId());
-      instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
-      instance.setTitle(template.getTitle());
-      instance.setBuilding(template.getBuilding());
-      instance.setFirstName(template.getFirstName());
-      instance.setStreetName(template.getStreetName());
-      instance.setPhone(template.getPhone());
-      instance.setAdditionalStreetInfo(template.getAdditionalStreetInfo());
-      instance.setCompany(template.getCompany());
-      instance.setState(template.getState());
-      instance.setSalutation(template.getSalutation());
       instance.setId(template.getId());
-      instance.setFax(template.getFax());
-      instance.setDepartment(template.getDepartment());
-      instance.setRegion(template.getRegion());
-      instance.setEmail(template.getEmail());
-      instance.setApartment(template.getApartment());
       instance.setKey(template.getKey());
+      instance.setTitle(template.getTitle());
+      instance.setSalutation(template.getSalutation());
+      instance.setFirstName(template.getFirstName());
+      instance.setLastName(template.getLastName());
+      instance.setStreetName(template.getStreetName());
+      instance.setStreetNumber(template.getStreetNumber());
+      instance.setAdditionalStreetInfo(template.getAdditionalStreetInfo());
+      instance.setPostalCode(template.getPostalCode());
+      instance.setCity(template.getCity());
+      instance.setRegion(template.getRegion());
+      instance.setState(template.getState());
+      instance.setCountry(template.getCountry());
+      instance.setCompany(template.getCompany());
+      instance.setDepartment(template.getDepartment());
+      instance.setBuilding(template.getBuilding());
+      instance.setApartment(template.getApartment());
+      instance.setPOBox(template.getPOBox());
+      instance.setPhone(template.getPhone());
+      instance.setMobile(template.getMobile());
+      instance.setEmail(template.getEmail());
+      instance.setFax(template.getFax());
+      instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
+      instance.setExternalId(template.getExternalId());
       return instance;
    }
 

@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.errors;
 
 import com.commercetools.importer.models.errors.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -26,10 +27,10 @@ public final class ResourceUpdateErrorImpl implements ResourceUpdateError {
    
    private String message;
    
-   private Object resource;
+   private com.fasterxml.jackson.databind.JsonNode resource;
 
    @JsonCreator
-   ResourceUpdateErrorImpl(@JsonProperty("message") final String message, @JsonProperty("resource") final Object resource) {
+   ResourceUpdateErrorImpl(@JsonProperty("message") final String message, @JsonProperty("resource") final com.fasterxml.jackson.databind.JsonNode resource) {
       this.message = message;
       this.resource = resource;
       this.code = "ResourceUpdate";
@@ -51,7 +52,7 @@ public final class ResourceUpdateErrorImpl implements ResourceUpdateError {
    }
    
    
-   public Object getResource(){
+   public com.fasterxml.jackson.databind.JsonNode getResource(){
       return this.resource;
    }
 
@@ -59,7 +60,7 @@ public final class ResourceUpdateErrorImpl implements ResourceUpdateError {
       this.message = message;
    }
    
-   public void setResource(final Object resource){
+   public void setResource(final com.fasterxml.jackson.databind.JsonNode resource){
       this.resource = resource;
    }
 

@@ -15,33 +15,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class AttributePlainEnumValueBuilder {
    
    
-   private String label;
-   
-   
    private String key;
    
-   public AttributePlainEnumValueBuilder label( final String label) {
-      this.label = label;
-      return this;
-   }
+   
+   private String label;
    
    public AttributePlainEnumValueBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
-   
-   public String getLabel(){
-      return this.label;
+   public AttributePlainEnumValueBuilder label( final String label) {
+      this.label = label;
+      return this;
    }
    
    
    public String getKey(){
       return this.key;
    }
+   
+   
+   public String getLabel(){
+      return this.label;
+   }
 
    public AttributePlainEnumValue build() {
-       return new AttributePlainEnumValueImpl(label, key);
+       return new AttributePlainEnumValueImpl(key, label);
    }
    
    public static AttributePlainEnumValueBuilder of() {
@@ -50,8 +50,8 @@ public final class AttributePlainEnumValueBuilder {
    
    public static AttributePlainEnumValueBuilder of(final AttributePlainEnumValue template) {
       AttributePlainEnumValueBuilder builder = new AttributePlainEnumValueBuilder();
-      builder.label = template.getLabel();
       builder.key = template.getKey();
+      builder.label = template.getLabel();
       return builder;
    }
    

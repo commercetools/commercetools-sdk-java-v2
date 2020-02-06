@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.errors;
 
 import com.commercetools.importer.models.errors.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.importer.models.errors.ConcurrentModificationErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -43,13 +44,13 @@ public interface ConcurrentModificationError extends ErrorObject {
    */
    @NotNull
    @JsonProperty("conflictedResource")
-   public Object getConflictedResource();
+   public JsonNode getConflictedResource();
 
    public void setSpecifiedVersion(final Long specifiedVersion);
    
    public void setCurrentVersion(final Long currentVersion);
    
-   public void setConflictedResource(final Object conflictedResource);
+   public void setConflictedResource(final JsonNode conflictedResource);
    
    public static ConcurrentModificationErrorImpl of(){
       return new ConcurrentModificationErrorImpl();
@@ -59,9 +60,9 @@ public interface ConcurrentModificationError extends ErrorObject {
    public static ConcurrentModificationErrorImpl of(final ConcurrentModificationError template) {
       ConcurrentModificationErrorImpl instance = new ConcurrentModificationErrorImpl();
       instance.setMessage(template.getMessage());
-      instance.setConflictedResource(template.getConflictedResource());
       instance.setSpecifiedVersion(template.getSpecifiedVersion());
       instance.setCurrentVersion(template.getCurrentVersion());
+      instance.setConflictedResource(template.getConflictedResource());
       return instance;
    }
 

@@ -16,34 +16,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ImportSinkBuilder {
    
    
-   private java.time.ZonedDateTime createdAt;
-   
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   
-   private Long version;
-   
-   
    private String key;
    
    
    private com.commercetools.importer.models.common.ImportResourceType resourceType;
    
-   public ImportSinkBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
    
-   public ImportSinkBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
+   private Long version;
    
-   public ImportSinkBuilder version( final Long version) {
-      this.version = version;
-      return this;
-   }
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    public ImportSinkBuilder key( final String key) {
       this.key = key;
@@ -55,19 +40,19 @@ public final class ImportSinkBuilder {
       return this;
    }
    
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
+   public ImportSinkBuilder version( final Long version) {
+      this.version = version;
+      return this;
    }
    
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
+   public ImportSinkBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
+      return this;
    }
    
-   
-   public Long getVersion(){
-      return this.version;
+   public ImportSinkBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
+      return this;
    }
    
    
@@ -79,9 +64,24 @@ public final class ImportSinkBuilder {
    public com.commercetools.importer.models.common.ImportResourceType getResourceType(){
       return this.resourceType;
    }
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
 
    public ImportSink build() {
-       return new ImportSinkImpl(createdAt, lastModifiedAt, version, key, resourceType);
+       return new ImportSinkImpl(key, resourceType, version, createdAt, lastModifiedAt);
    }
    
    public static ImportSinkBuilder of() {
@@ -90,11 +90,11 @@ public final class ImportSinkBuilder {
    
    public static ImportSinkBuilder of(final ImportSink template) {
       ImportSinkBuilder builder = new ImportSinkBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
-      builder.version = template.getVersion();
       builder.key = template.getKey();
       builder.resourceType = template.getResourceType();
+      builder.version = template.getVersion();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       return builder;
    }
    

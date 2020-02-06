@@ -48,9 +48,9 @@ public interface Image  {
 
    public static ImageImpl of(final Image template) {
       ImageImpl instance = new ImageImpl();
-      instance.setLabel(template.getLabel());
       instance.setUrl(template.getUrl());
       instance.setDimensions(template.getDimensions());
+      instance.setLabel(template.getLabel());
       return instance;
    }
 

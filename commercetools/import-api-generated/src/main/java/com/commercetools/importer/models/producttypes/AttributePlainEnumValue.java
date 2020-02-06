@@ -41,8 +41,8 @@ public interface AttributePlainEnumValue  {
 
    public static AttributePlainEnumValueImpl of(final AttributePlainEnumValue template) {
       AttributePlainEnumValueImpl instance = new AttributePlainEnumValueImpl();
-      instance.setLabel(template.getLabel());
       instance.setKey(template.getKey());
+      instance.setLabel(template.getLabel());
       return instance;
    }
 

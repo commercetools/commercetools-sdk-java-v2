@@ -16,6 +16,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class AssetBuilder {
    
    
+   private String key;
+   
+   
    private java.util.List<com.commercetools.importer.models.common.AssetSource> sources;
    
    
@@ -24,11 +27,13 @@ public final class AssetBuilder {
    @Nullable
    private com.commercetools.importer.models.common.LocalizedString description;
    
-   
-   private String key;
-   
    @Nullable
    private java.util.List<String> tags;
+   
+   public AssetBuilder key( final String key) {
+      this.key = key;
+      return this;
+   }
    
    public AssetBuilder sources( final java.util.List<com.commercetools.importer.models.common.AssetSource> sources) {
       this.sources = sources;
@@ -45,14 +50,14 @@ public final class AssetBuilder {
       return this;
    }
    
-   public AssetBuilder key( final String key) {
-      this.key = key;
-      return this;
-   }
-   
    public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
       this.tags = tags;
       return this;
+   }
+   
+   
+   public String getKey(){
+      return this.key;
    }
    
    
@@ -70,18 +75,13 @@ public final class AssetBuilder {
       return this.description;
    }
    
-   
-   public String getKey(){
-      return this.key;
-   }
-   
    @Nullable
    public java.util.List<String> getTags(){
       return this.tags;
    }
 
    public Asset build() {
-       return new AssetImpl(sources, name, description, key, tags);
+       return new AssetImpl(key, sources, name, description, tags);
    }
    
    public static AssetBuilder of() {
@@ -90,10 +90,10 @@ public final class AssetBuilder {
    
    public static AssetBuilder of(final Asset template) {
       AssetBuilder builder = new AssetBuilder();
+      builder.key = template.getKey();
       builder.sources = template.getSources();
       builder.name = template.getName();
       builder.description = template.getDescription();
-      builder.key = template.getKey();
       builder.tags = template.getTags();
       return builder;
    }

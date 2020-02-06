@@ -13,6 +13,7 @@ import com.commercetools.importer.models.common.ReferenceType;
 import com.commercetools.importer.models.common.ShippingMethodKeyReference;
 import com.commercetools.importer.models.common.StateKeyReference;
 import com.commercetools.importer.models.common.TaxCategoryKeyReference;
+import com.commercetools.importer.models.common.TypeKeyReference;
 
 
 import com.fasterxml.jackson.annotation.*;
@@ -41,12 +42,14 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.importer.models.common.ProductVariantKeyReferenceImpl.class, name = "product-variant"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.common.ShippingMethodKeyReferenceImpl.class, name = "shipping-method"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.common.StateKeyReferenceImpl.class, name = "state"),
-   @JsonSubTypes.Type(value = com.commercetools.importer.models.common.TaxCategoryKeyReferenceImpl.class, name = "tax-category")
+   @JsonSubTypes.Type(value = com.commercetools.importer.models.common.TaxCategoryKeyReferenceImpl.class, name = "tax-category"),
+   @JsonSubTypes.Type(value = com.commercetools.importer.models.common.TypeKeyReferenceImpl.class, name = "type")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,
    include = JsonTypeInfo.As.PROPERTY,
-   property = "typeId"
+   property = "typeId",
+   defaultImpl = KeyReferenceImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

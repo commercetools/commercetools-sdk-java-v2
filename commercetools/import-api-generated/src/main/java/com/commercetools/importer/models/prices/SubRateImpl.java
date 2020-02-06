@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubRateImpl implements SubRate {
 
-   private Integer amount;
-   
    private String name;
+   
+   private Integer amount;
 
    @JsonCreator
-   SubRateImpl(@JsonProperty("amount") final Integer amount, @JsonProperty("name") final String name) {
-      this.amount = amount;
+   SubRateImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Integer amount) {
       this.name = name;
+      this.amount = amount;
    }
    public SubRateImpl() {
       
    }
    
    
-   public Integer getAmount(){
-      return this.amount;
-   }
-   
-   
    public String getName(){
       return this.name;
    }
-
-   public void setAmount(final Integer amount){
-      this.amount = amount;
-   }
    
+   
+   public Integer getAmount(){
+      return this.amount;
+   }
+
    public void setName(final String name){
       this.name = name;
+   }
+   
+   public void setAmount(final Integer amount){
+      this.amount = amount;
    }
 
 }

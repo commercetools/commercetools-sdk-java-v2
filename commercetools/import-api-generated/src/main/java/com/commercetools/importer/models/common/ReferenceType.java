@@ -97,7 +97,14 @@ public enum ReferenceType {
   	
   */
   @JsonProperty("tax-category")
-  TAX_CATEGORY("tax-category");
+  TAX_CATEGORY("tax-category"),
+  
+  /**
+  	<p>References a type.</p>
+  	
+  */
+  @JsonProperty("type")
+  TYPE("type");
 
   private final String jsonName;
 

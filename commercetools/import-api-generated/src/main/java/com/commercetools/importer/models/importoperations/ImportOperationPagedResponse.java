@@ -65,9 +65,9 @@ public interface ImportOperationPagedResponse  {
 
    public static ImportOperationPagedResponseImpl of(final ImportOperationPagedResponse template) {
       ImportOperationPagedResponseImpl instance = new ImportOperationPagedResponseImpl();
+      instance.setLimit(template.getLimit());
       instance.setOffset(template.getOffset());
       instance.setCount(template.getCount());
-      instance.setLimit(template.getLimit());
       instance.setResults(template.getResults());
       return instance;
    }

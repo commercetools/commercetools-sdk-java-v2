@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -22,28 +22,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AssetSourceImpl implements AssetSource {
 
-   private String contentType;
-   
    private String uri;
    
    private String key;
    
    private com.commercetools.importer.models.common.AssetDimensions dimensions;
+   
+   private String contentType;
 
    @JsonCreator
-   AssetSourceImpl(@JsonProperty("contentType") final String contentType, @JsonProperty("uri") final String uri, @JsonProperty("key") final String key, @JsonProperty("dimensions") final com.commercetools.importer.models.common.AssetDimensions dimensions) {
-      this.contentType = contentType;
+   AssetSourceImpl(@JsonProperty("uri") final String uri, @JsonProperty("key") final String key, @JsonProperty("dimensions") final com.commercetools.importer.models.common.AssetDimensions dimensions, @JsonProperty("contentType") final String contentType) {
       this.uri = uri;
       this.key = key;
       this.dimensions = dimensions;
+      this.contentType = contentType;
    }
    public AssetSourceImpl() {
       
-   }
-   
-   
-   public String getContentType(){
-      return this.contentType;
    }
    
    
@@ -60,11 +55,12 @@ public final class AssetSourceImpl implements AssetSource {
    public com.commercetools.importer.models.common.AssetDimensions getDimensions(){
       return this.dimensions;
    }
-
-   public void setContentType(final String contentType){
-      this.contentType = contentType;
-   }
    
+   
+   public String getContentType(){
+      return this.contentType;
+   }
+
    public void setUri(final String uri){
       this.uri = uri;
    }
@@ -75,6 +71,10 @@ public final class AssetSourceImpl implements AssetSource {
    
    public void setDimensions(final com.commercetools.importer.models.common.AssetDimensions dimensions){
       this.dimensions = dimensions;
+   }
+   
+   public void setContentType(final String contentType){
+      this.contentType = contentType;
    }
 
 }

@@ -41,8 +41,8 @@ public interface SearchKeyword  {
 
    public static SearchKeywordImpl of(final SearchKeyword template) {
       SearchKeywordImpl instance = new SearchKeywordImpl();
-      instance.setSuggestTokenizer(template.getSuggestTokenizer());
       instance.setText(template.getText());
+      instance.setSuggestTokenizer(template.getSuggestTokenizer());
       return instance;
    }
 

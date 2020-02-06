@@ -14,19 +14,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ImageBuilder {
    
-   @Nullable
-   private String label;
-   
    
    private String url;
    
    
    private com.commercetools.importer.models.common.AssetDimensions dimensions;
    
-   public ImageBuilder label(@Nullable final String label) {
-      this.label = label;
-      return this;
-   }
+   @Nullable
+   private String label;
    
    public ImageBuilder url( final String url) {
       this.url = url;
@@ -38,9 +33,9 @@ public final class ImageBuilder {
       return this;
    }
    
-   @Nullable
-   public String getLabel(){
-      return this.label;
+   public ImageBuilder label(@Nullable final String label) {
+      this.label = label;
+      return this;
    }
    
    
@@ -52,9 +47,14 @@ public final class ImageBuilder {
    public com.commercetools.importer.models.common.AssetDimensions getDimensions(){
       return this.dimensions;
    }
+   
+   @Nullable
+   public String getLabel(){
+      return this.label;
+   }
 
    public Image build() {
-       return new ImageImpl(label, url, dimensions);
+       return new ImageImpl(url, dimensions, label);
    }
    
    public static ImageBuilder of() {
@@ -63,9 +63,9 @@ public final class ImageBuilder {
    
    public static ImageBuilder of(final Image template) {
       ImageBuilder builder = new ImageBuilder();
-      builder.label = template.getLabel();
       builder.url = template.getUrl();
       builder.dimensions = template.getDimensions();
+      builder.label = template.getLabel();
       return builder;
    }
    

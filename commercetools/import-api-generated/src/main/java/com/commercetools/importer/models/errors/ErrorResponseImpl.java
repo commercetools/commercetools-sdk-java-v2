@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -25,26 +25,48 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ErrorResponseImpl implements ErrorResponse {
 
-   private String errorDescription;
-   
-   private String error;
+   private Integer statusCode;
    
    private String message;
    
-   private java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors;
+   private String error;
    
-   private Integer statusCode;
+   private String errorDescription;
+   
+   private java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors;
 
    @JsonCreator
-   ErrorResponseImpl(@JsonProperty("error_description") final String errorDescription, @JsonProperty("error") final String error, @JsonProperty("message") final String message, @JsonProperty("errors") final java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors, @JsonProperty("statusCode") final Integer statusCode) {
-      this.errorDescription = errorDescription;
-      this.error = error;
-      this.message = message;
-      this.errors = errors;
+   ErrorResponseImpl(@JsonProperty("statusCode") final Integer statusCode, @JsonProperty("message") final String message, @JsonProperty("error") final String error, @JsonProperty("error_description") final String errorDescription, @JsonProperty("errors") final java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors) {
       this.statusCode = statusCode;
+      this.message = message;
+      this.error = error;
+      this.errorDescription = errorDescription;
+      this.errors = errors;
    }
    public ErrorResponseImpl() {
       
+   }
+   
+   /**
+   *  <p>The http status code of the response.</p>
+   */
+   public Integer getStatusCode(){
+      return this.statusCode;
+   }
+   
+   /**
+   *  <p>Describes the error.</p>
+   */
+   public String getMessage(){
+      return this.message;
+   }
+   
+   /**
+   *  <p>This property is only used for OAuth2 errors.
+   *  Contains the error code.</p>
+   */
+   public String getError(){
+      return this.error;
    }
    
    /**
@@ -57,52 +79,30 @@ public final class ErrorResponseImpl implements ErrorResponse {
    }
    
    /**
-   *  <p>This property is only used for OAuth2 errors.
-   *  Contains the error code.</p>
-   */
-   public String getError(){
-      return this.error;
-   }
-   
-   /**
-   *  <p>Describes the error.</p>
-   */
-   public String getMessage(){
-      return this.message;
-   }
-   
-   /**
    *  <p>The errors that caused this error response.</p>
    */
    public java.util.List<com.commercetools.importer.models.errors.ErrorObject> getErrors(){
       return this.errors;
    }
-   
-   /**
-   *  <p>The http status code of the response.</p>
-   */
-   public Integer getStatusCode(){
-      return this.statusCode;
-   }
 
-   public void setErrorDescription(final String errorDescription){
-      this.errorDescription = errorDescription;
-   }
-   
-   public void setError(final String error){
-      this.error = error;
+   public void setStatusCode(final Integer statusCode){
+      this.statusCode = statusCode;
    }
    
    public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setErrors(final java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors){
-      this.errors = errors;
+   public void setError(final String error){
+      this.error = error;
    }
    
-   public void setStatusCode(final Integer statusCode){
-      this.statusCode = statusCode;
+   public void setErrorDescription(final String errorDescription){
+      this.errorDescription = errorDescription;
+   }
+   
+   public void setErrors(final java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors){
+      this.errors = errors;
    }
 
 }

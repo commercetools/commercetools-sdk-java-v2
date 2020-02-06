@@ -23,14 +23,17 @@ public final class PriceImportBuilder {
    
    private String key;
    
+   
+   private com.commercetools.importer.models.common.Money value;
+   
    @Nullable
    private String country;
    
+   @Nullable
+   private java.time.ZonedDateTime validFrom;
    
-   private com.commercetools.importer.models.common.ProductKeyReference product;
-   
-   
-   private com.commercetools.importer.models.common.ProductVariantKeyReference productVariant;
+   @Nullable
+   private java.time.ZonedDateTime validUntil;
    
    @Nullable
    private com.commercetools.importer.models.common.CustomerGroupKeyReference customerGroup;
@@ -38,17 +41,19 @@ public final class PriceImportBuilder {
    @Nullable
    private com.commercetools.importer.models.common.ChannelKeyReference channel;
    
-   @Nullable
-   private java.time.ZonedDateTime validUntil;
    
-   @Nullable
-   private java.time.ZonedDateTime validFrom;
+   private com.commercetools.importer.models.common.ProductVariantKeyReference productVariant;
    
    
-   private com.commercetools.importer.models.common.Money value;
+   private com.commercetools.importer.models.common.ProductKeyReference product;
    
    public PriceImportBuilder key( final String key) {
       this.key = key;
+      return this;
+   }
+   
+   public PriceImportBuilder value( final com.commercetools.importer.models.common.Money value) {
+      this.value = value;
       return this;
    }
    
@@ -57,13 +62,13 @@ public final class PriceImportBuilder {
       return this;
    }
    
-   public PriceImportBuilder product( final com.commercetools.importer.models.common.ProductKeyReference product) {
-      this.product = product;
+   public PriceImportBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
+      this.validFrom = validFrom;
       return this;
    }
    
-   public PriceImportBuilder productVariant( final com.commercetools.importer.models.common.ProductVariantKeyReference productVariant) {
-      this.productVariant = productVariant;
+   public PriceImportBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
+      this.validUntil = validUntil;
       return this;
    }
    
@@ -77,18 +82,13 @@ public final class PriceImportBuilder {
       return this;
    }
    
-   public PriceImportBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
-      this.validUntil = validUntil;
+   public PriceImportBuilder productVariant( final com.commercetools.importer.models.common.ProductVariantKeyReference productVariant) {
+      this.productVariant = productVariant;
       return this;
    }
    
-   public PriceImportBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
-      this.validFrom = validFrom;
-      return this;
-   }
-   
-   public PriceImportBuilder value( final com.commercetools.importer.models.common.Money value) {
-      this.value = value;
+   public PriceImportBuilder product( final com.commercetools.importer.models.common.ProductKeyReference product) {
+      this.product = product;
       return this;
    }
    
@@ -97,19 +97,24 @@ public final class PriceImportBuilder {
       return this.key;
    }
    
+   
+   public com.commercetools.importer.models.common.Money getValue(){
+      return this.value;
+   }
+   
    @Nullable
    public String getCountry(){
       return this.country;
    }
    
-   
-   public com.commercetools.importer.models.common.ProductKeyReference getProduct(){
-      return this.product;
+   @Nullable
+   public java.time.ZonedDateTime getValidFrom(){
+      return this.validFrom;
    }
    
-   
-   public com.commercetools.importer.models.common.ProductVariantKeyReference getProductVariant(){
-      return this.productVariant;
+   @Nullable
+   public java.time.ZonedDateTime getValidUntil(){
+      return this.validUntil;
    }
    
    @Nullable
@@ -122,23 +127,18 @@ public final class PriceImportBuilder {
       return this.channel;
    }
    
-   @Nullable
-   public java.time.ZonedDateTime getValidUntil(){
-      return this.validUntil;
-   }
    
-   @Nullable
-   public java.time.ZonedDateTime getValidFrom(){
-      return this.validFrom;
+   public com.commercetools.importer.models.common.ProductVariantKeyReference getProductVariant(){
+      return this.productVariant;
    }
    
    
-   public com.commercetools.importer.models.common.Money getValue(){
-      return this.value;
+   public com.commercetools.importer.models.common.ProductKeyReference getProduct(){
+      return this.product;
    }
 
    public PriceImport build() {
-       return new PriceImportImpl(key, country, product, productVariant, customerGroup, channel, validUntil, validFrom, value);
+       return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, productVariant, product);
    }
    
    public static PriceImportBuilder of() {
@@ -148,14 +148,14 @@ public final class PriceImportBuilder {
    public static PriceImportBuilder of(final PriceImport template) {
       PriceImportBuilder builder = new PriceImportBuilder();
       builder.key = template.getKey();
+      builder.value = template.getValue();
       builder.country = template.getCountry();
-      builder.product = template.getProduct();
-      builder.productVariant = template.getProductVariant();
+      builder.validFrom = template.getValidFrom();
+      builder.validUntil = template.getValidUntil();
       builder.customerGroup = template.getCustomerGroup();
       builder.channel = template.getChannel();
-      builder.validUntil = template.getValidUntil();
-      builder.validFrom = template.getValidFrom();
-      builder.value = template.getValue();
+      builder.productVariant = template.getProductVariant();
+      builder.product = template.getProduct();
       return builder;
    }
    

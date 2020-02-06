@@ -50,8 +50,8 @@ public interface ImportSummary  {
 
    public static ImportSummaryImpl of(final ImportSummary template) {
       ImportSummaryImpl instance = new ImportSummaryImpl();
-      instance.setTotal(template.getTotal());
       instance.setStates(template.getStates());
+      instance.setTotal(template.getTotal());
       return instance;
    }
 

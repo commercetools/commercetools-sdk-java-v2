@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -26,24 +26,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ImportSummaryImpl implements ImportSummary {
 
-   private Integer total;
-   
    private com.commercetools.importer.models.importsummaries.OperationStates states;
+   
+   private Integer total;
 
    @JsonCreator
-   ImportSummaryImpl(@JsonProperty("total") final Integer total, @JsonProperty("states") final com.commercetools.importer.models.importsummaries.OperationStates states) {
-      this.total = total;
+   ImportSummaryImpl(@JsonProperty("states") final com.commercetools.importer.models.importsummaries.OperationStates states, @JsonProperty("total") final Integer total) {
       this.states = states;
+      this.total = total;
    }
    public ImportSummaryImpl() {
       
-   }
-   
-   /**
-   *  <p>The total number of import operations received for this import group.</p>
-   */
-   public Integer getTotal(){
-      return this.total;
    }
    
    /**
@@ -52,13 +45,20 @@ public final class ImportSummaryImpl implements ImportSummary {
    public com.commercetools.importer.models.importsummaries.OperationStates getStates(){
       return this.states;
    }
-
-   public void setTotal(final Integer total){
-      this.total = total;
-   }
    
+   /**
+   *  <p>The total number of import operations received for this import group.</p>
+   */
+   public Integer getTotal(){
+      return this.total;
+   }
+
    public void setStates(final com.commercetools.importer.models.importsummaries.OperationStates states){
       this.states = states;
+   }
+   
+   public void setTotal(final Integer total){
+      this.total = total;
    }
 
 }

@@ -109,16 +109,16 @@ public interface OperationStates  {
 
    public static OperationStatesImpl of(final OperationStates template) {
       OperationStatesImpl instance = new OperationStatesImpl();
-      instance.setUnresolved(template.getUnresolved());
-      instance.setWaitForMasterVariant(template.getWaitForMasterVariant());
-      instance.setValidationFailed(template.getValidationFailed());
-      instance.setSkipped(template.getSkipped());
-      instance.setImported(template.getImported());
-      instance.setExpired(template.getExpired());
-      instance.setResolved(template.getResolved());
-      instance.setRejected(template.getRejected());
-      instance.setDeleted(template.getDeleted());
       instance.setAccepted(template.getAccepted());
+      instance.setValidationFailed(template.getValidationFailed());
+      instance.setUnresolved(template.getUnresolved());
+      instance.setResolved(template.getResolved());
+      instance.setWaitForMasterVariant(template.getWaitForMasterVariant());
+      instance.setImported(template.getImported());
+      instance.setDeleted(template.getDeleted());
+      instance.setRejected(template.getRejected());
+      instance.setSkipped(template.getSkipped());
+      instance.setExpired(template.getExpired());
       return instance;
    }
 

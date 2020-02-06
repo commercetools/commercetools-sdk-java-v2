@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.errors;
 
 import com.commercetools.importer.models.errors.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.importer.models.errors.ConcurrentModificationError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,21 +19,16 @@ public final class ConcurrentModificationErrorBuilder {
    private String message;
    
    
-   private Object conflictedResource;
-   
-   
    private Long specifiedVersion;
    
    
    private Long currentVersion;
    
+   
+   private com.fasterxml.jackson.databind.JsonNode conflictedResource;
+   
    public ConcurrentModificationErrorBuilder message( final String message) {
       this.message = message;
-      return this;
-   }
-   
-   public ConcurrentModificationErrorBuilder conflictedResource( final Object conflictedResource) {
-      this.conflictedResource = conflictedResource;
       return this;
    }
    
@@ -46,14 +42,14 @@ public final class ConcurrentModificationErrorBuilder {
       return this;
    }
    
-   
-   public String getMessage(){
-      return this.message;
+   public ConcurrentModificationErrorBuilder conflictedResource( final com.fasterxml.jackson.databind.JsonNode conflictedResource) {
+      this.conflictedResource = conflictedResource;
+      return this;
    }
    
    
-   public Object getConflictedResource(){
-      return this.conflictedResource;
+   public String getMessage(){
+      return this.message;
    }
    
    
@@ -65,9 +61,14 @@ public final class ConcurrentModificationErrorBuilder {
    public Long getCurrentVersion(){
       return this.currentVersion;
    }
+   
+   
+   public com.fasterxml.jackson.databind.JsonNode getConflictedResource(){
+      return this.conflictedResource;
+   }
 
    public ConcurrentModificationError build() {
-       return new ConcurrentModificationErrorImpl(message, conflictedResource, specifiedVersion, currentVersion);
+       return new ConcurrentModificationErrorImpl(message, specifiedVersion, currentVersion, conflictedResource);
    }
    
    public static ConcurrentModificationErrorBuilder of() {
@@ -77,9 +78,9 @@ public final class ConcurrentModificationErrorBuilder {
    public static ConcurrentModificationErrorBuilder of(final ConcurrentModificationError template) {
       ConcurrentModificationErrorBuilder builder = new ConcurrentModificationErrorBuilder();
       builder.message = template.getMessage();
-      builder.conflictedResource = template.getConflictedResource();
       builder.specifiedVersion = template.getSpecifiedVersion();
       builder.currentVersion = template.getCurrentVersion();
+      builder.conflictedResource = template.getConflictedResource();
       return builder;
    }
    

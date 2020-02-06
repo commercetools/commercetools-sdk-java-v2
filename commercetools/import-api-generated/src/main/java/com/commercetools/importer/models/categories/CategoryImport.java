@@ -4,6 +4,7 @@ import com.commercetools.importer.models.common.Asset;
 import com.commercetools.importer.models.common.CategoryKeyReference;
 import com.commercetools.importer.models.common.ImportResource;
 import com.commercetools.importer.models.common.LocalizedString;
+import com.commercetools.importer.models.customfields.Custom;
 import com.commercetools.importer.models.categories.CategoryImportImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -91,6 +92,12 @@ public interface CategoryImport extends ImportResource {
    @Valid
    @JsonProperty("assets")
    public List<Asset> getAssets();
+   /**
+   *  <p>The custom fields for this category.</p>
+   */
+   @Valid
+   @JsonProperty("custom")
+   public Custom getCustom();
 
    public void setName(final LocalizedString name);
    
@@ -112,6 +119,8 @@ public interface CategoryImport extends ImportResource {
    
    public void setAssets(final List<Asset> assets);
    
+   public void setCustom(final Custom custom);
+   
    public static CategoryImportImpl of(){
       return new CategoryImportImpl();
    }
@@ -120,16 +129,17 @@ public interface CategoryImport extends ImportResource {
    public static CategoryImportImpl of(final CategoryImport template) {
       CategoryImportImpl instance = new CategoryImportImpl();
       instance.setKey(template.getKey());
-      instance.setParent(template.getParent());
-      instance.setAssets(template.getAssets());
-      instance.setMetaKeywords(template.getMetaKeywords());
-      instance.setOrderHint(template.getOrderHint());
-      instance.setMetaTitle(template.getMetaTitle());
       instance.setName(template.getName());
-      instance.setExternalId(template.getExternalId());
-      instance.setDescription(template.getDescription());
-      instance.setMetaDescription(template.getMetaDescription());
       instance.setSlug(template.getSlug());
+      instance.setDescription(template.getDescription());
+      instance.setParent(template.getParent());
+      instance.setOrderHint(template.getOrderHint());
+      instance.setExternalId(template.getExternalId());
+      instance.setMetaTitle(template.getMetaTitle());
+      instance.setMetaDescription(template.getMetaDescription());
+      instance.setMetaKeywords(template.getMetaKeywords());
+      instance.setAssets(template.getAssets());
+      instance.setCustom(template.getCustom());
       return instance;
    }
 

@@ -53,10 +53,10 @@ public interface AssetSource  {
 
    public static AssetSourceImpl of(final AssetSource template) {
       AssetSourceImpl instance = new AssetSourceImpl();
-      instance.setContentType(template.getContentType());
       instance.setUri(template.getUri());
       instance.setKey(template.getKey());
       instance.setDimensions(template.getDimensions());
+      instance.setContentType(template.getContentType());
       return instance;
    }
 

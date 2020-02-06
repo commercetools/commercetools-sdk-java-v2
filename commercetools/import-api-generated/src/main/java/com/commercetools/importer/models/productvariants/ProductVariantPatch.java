@@ -70,8 +70,8 @@ public interface ProductVariantPatch  {
 
    public static ProductVariantPatchImpl of(final ProductVariantPatch template) {
       ProductVariantPatchImpl instance = new ProductVariantPatchImpl();
-      instance.setProduct(template.getProduct());
       instance.setProductVariant(template.getProductVariant());
+      instance.setProduct(template.getProduct());
       instance.setAttributes(template.getAttributes());
       return instance;
    }

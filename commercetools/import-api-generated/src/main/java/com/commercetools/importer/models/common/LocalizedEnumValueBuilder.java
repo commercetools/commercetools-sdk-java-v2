@@ -15,33 +15,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class LocalizedEnumValueBuilder {
    
    
-   private com.commercetools.importer.models.common.LocalizedString label;
-   
-   
    private String key;
    
-   public LocalizedEnumValueBuilder label( final com.commercetools.importer.models.common.LocalizedString label) {
-      this.label = label;
-      return this;
-   }
+   
+   private com.commercetools.importer.models.common.LocalizedString label;
    
    public LocalizedEnumValueBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
-   
-   public com.commercetools.importer.models.common.LocalizedString getLabel(){
-      return this.label;
+   public LocalizedEnumValueBuilder label( final com.commercetools.importer.models.common.LocalizedString label) {
+      this.label = label;
+      return this;
    }
    
    
    public String getKey(){
       return this.key;
    }
+   
+   
+   public com.commercetools.importer.models.common.LocalizedString getLabel(){
+      return this.label;
+   }
 
    public LocalizedEnumValue build() {
-       return new LocalizedEnumValueImpl(label, key);
+       return new LocalizedEnumValueImpl(key, label);
    }
    
    public static LocalizedEnumValueBuilder of() {
@@ -50,8 +50,8 @@ public final class LocalizedEnumValueBuilder {
    
    public static LocalizedEnumValueBuilder of(final LocalizedEnumValue template) {
       LocalizedEnumValueBuilder builder = new LocalizedEnumValueBuilder();
-      builder.label = template.getLabel();
       builder.key = template.getKey();
+      builder.label = template.getLabel();
       return builder;
    }
    

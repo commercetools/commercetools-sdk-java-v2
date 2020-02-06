@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.errors;
 
 import com.commercetools.importer.models.errors.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.importer.models.errors.DuplicateFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -35,11 +36,11 @@ public interface DuplicateFieldError extends ErrorObject {
    */
    
    @JsonProperty("duplicateValue")
-   public Object getDuplicateValue();
+   public JsonNode getDuplicateValue();
 
    public void setField(final String field);
    
-   public void setDuplicateValue(final Object duplicateValue);
+   public void setDuplicateValue(final JsonNode duplicateValue);
    
    public static DuplicateFieldErrorImpl of(){
       return new DuplicateFieldErrorImpl();
@@ -49,8 +50,8 @@ public interface DuplicateFieldError extends ErrorObject {
    public static DuplicateFieldErrorImpl of(final DuplicateFieldError template) {
       DuplicateFieldErrorImpl instance = new DuplicateFieldErrorImpl();
       instance.setMessage(template.getMessage());
-      instance.setDuplicateValue(template.getDuplicateValue());
       instance.setField(template.getField());
+      instance.setDuplicateValue(template.getDuplicateValue());
       return instance;
    }
 

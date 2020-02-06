@@ -50,9 +50,9 @@ public interface VariantValues  {
 
    public static VariantValuesImpl of(final VariantValues template) {
       VariantValuesImpl instance = new VariantValuesImpl();
-      instance.setAttributes(template.getAttributes());
-      instance.setPrices(template.getPrices());
       instance.setSku(template.getSku());
+      instance.setPrices(template.getPrices());
+      instance.setAttributes(template.getAttributes());
       return instance;
    }
 

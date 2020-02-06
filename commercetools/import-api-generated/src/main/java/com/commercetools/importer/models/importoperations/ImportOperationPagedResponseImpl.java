@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -25,23 +25,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ImportOperationPagedResponseImpl implements ImportOperationPagedResponse {
 
+   private Integer limit;
+   
    private Integer offset;
    
    private Integer count;
    
-   private Integer limit;
-   
    private java.util.List<com.commercetools.importer.models.importoperations.ImportOperation> results;
 
    @JsonCreator
-   ImportOperationPagedResponseImpl(@JsonProperty("offset") final Integer offset, @JsonProperty("count") final Integer count, @JsonProperty("limit") final Integer limit, @JsonProperty("results") final java.util.List<com.commercetools.importer.models.importoperations.ImportOperation> results) {
+   ImportOperationPagedResponseImpl(@JsonProperty("limit") final Integer limit, @JsonProperty("offset") final Integer offset, @JsonProperty("count") final Integer count, @JsonProperty("results") final java.util.List<com.commercetools.importer.models.importoperations.ImportOperation> results) {
+      this.limit = limit;
       this.offset = offset;
       this.count = count;
-      this.limit = limit;
       this.results = results;
    }
    public ImportOperationPagedResponseImpl() {
       
+   }
+   
+   /**
+   *  <p>The maximum number of import operations returned for a page.</p>
+   */
+   public Integer getLimit(){
+      return this.limit;
    }
    
    /**
@@ -59,29 +66,22 @@ public final class ImportOperationPagedResponseImpl implements ImportOperationPa
    }
    
    /**
-   *  <p>The maximum number of import operations returned for a page.</p>
-   */
-   public Integer getLimit(){
-      return this.limit;
-   }
-   
-   /**
    *  <p>The results for this paged response.</p>
    */
    public java.util.List<com.commercetools.importer.models.importoperations.ImportOperation> getResults(){
       return this.results;
    }
 
+   public void setLimit(final Integer limit){
+      this.limit = limit;
+   }
+   
    public void setOffset(final Integer offset){
       this.offset = offset;
    }
    
    public void setCount(final Integer count){
       this.count = count;
-   }
-   
-   public void setLimit(final Integer limit){
-      this.limit = limit;
    }
    
    public void setResults(final java.util.List<com.commercetools.importer.models.importoperations.ImportOperation> results){

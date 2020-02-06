@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.errors;
 
 import com.commercetools.importer.models.errors.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -31,18 +32,18 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
    
    private String message;
    
-   private Object conflictedResource;
-   
    private Long specifiedVersion;
    
    private Long currentVersion;
+   
+   private com.fasterxml.jackson.databind.JsonNode conflictedResource;
 
    @JsonCreator
-   ConcurrentModificationErrorImpl(@JsonProperty("message") final String message, @JsonProperty("conflictedResource") final Object conflictedResource, @JsonProperty("specifiedVersion") final Long specifiedVersion, @JsonProperty("currentVersion") final Long currentVersion) {
+   ConcurrentModificationErrorImpl(@JsonProperty("message") final String message, @JsonProperty("specifiedVersion") final Long specifiedVersion, @JsonProperty("currentVersion") final Long currentVersion, @JsonProperty("conflictedResource") final com.fasterxml.jackson.databind.JsonNode conflictedResource) {
       this.message = message;
-      this.conflictedResource = conflictedResource;
       this.specifiedVersion = specifiedVersion;
       this.currentVersion = currentVersion;
+      this.conflictedResource = conflictedResource;
       this.code = "ConcurrentModification";
    }
    public ConcurrentModificationErrorImpl() {
@@ -62,13 +63,6 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
    }
    
    /**
-   *  <p>The conflicted resource.</p>
-   */
-   public Object getConflictedResource(){
-      return this.conflictedResource;
-   }
-   
-   /**
    *  <p>The version specified in the failed request.</p>
    */
    public Long getSpecifiedVersion(){
@@ -81,13 +75,16 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
    public Long getCurrentVersion(){
       return this.currentVersion;
    }
+   
+   /**
+   *  <p>The conflicted resource.</p>
+   */
+   public com.fasterxml.jackson.databind.JsonNode getConflictedResource(){
+      return this.conflictedResource;
+   }
 
    public void setMessage(final String message){
       this.message = message;
-   }
-   
-   public void setConflictedResource(final Object conflictedResource){
-      this.conflictedResource = conflictedResource;
    }
    
    public void setSpecifiedVersion(final Long specifiedVersion){
@@ -96,6 +93,10 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
    
    public void setCurrentVersion(final Long currentVersion){
       this.currentVersion = currentVersion;
+   }
+   
+   public void setConflictedResource(final com.fasterxml.jackson.databind.JsonNode conflictedResource){
+      this.conflictedResource = conflictedResource;
    }
 
 }

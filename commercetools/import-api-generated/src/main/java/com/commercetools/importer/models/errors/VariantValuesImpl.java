@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -23,25 +23,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class VariantValuesImpl implements VariantValues {
 
-   private java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes;
+   private String sku;
    
    private java.util.List<com.commercetools.importer.models.prices.PriceImport> prices;
    
-   private String sku;
+   private java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes;
 
    @JsonCreator
-   VariantValuesImpl(@JsonProperty("attributes") final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes, @JsonProperty("prices") final java.util.List<com.commercetools.importer.models.prices.PriceImport> prices, @JsonProperty("sku") final String sku) {
-      this.attributes = attributes;
-      this.prices = prices;
+   VariantValuesImpl(@JsonProperty("sku") final String sku, @JsonProperty("prices") final java.util.List<com.commercetools.importer.models.prices.PriceImport> prices, @JsonProperty("attributes") final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes) {
       this.sku = sku;
+      this.prices = prices;
+      this.attributes = attributes;
    }
    public VariantValuesImpl() {
       
    }
    
    
-   public java.util.List<com.commercetools.importer.models.productvariants.Attribute> getAttributes(){
-      return this.attributes;
+   public String getSku(){
+      return this.sku;
    }
    
    
@@ -50,20 +50,20 @@ public final class VariantValuesImpl implements VariantValues {
    }
    
    
-   public String getSku(){
-      return this.sku;
+   public java.util.List<com.commercetools.importer.models.productvariants.Attribute> getAttributes(){
+      return this.attributes;
    }
 
-   public void setAttributes(final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes){
-      this.attributes = attributes;
+   public void setSku(final String sku){
+      this.sku = sku;
    }
    
    public void setPrices(final java.util.List<com.commercetools.importer.models.prices.PriceImport> prices){
       this.prices = prices;
    }
    
-   public void setSku(final String sku){
-      this.sku = sku;
+   public void setAttributes(final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes){
+      this.attributes = attributes;
    }
 
 }

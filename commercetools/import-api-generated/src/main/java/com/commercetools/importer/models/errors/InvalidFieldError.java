@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.errors;
 
 import com.commercetools.importer.models.errors.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.importer.models.errors.InvalidFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -35,19 +36,19 @@ public interface InvalidFieldError extends ErrorObject {
    */
    @NotNull
    @JsonProperty("invalidValue")
-   public Object getInvalidValue();
+   public JsonNode getInvalidValue();
    /**
    *  <p>A fixed set of allowed values for the field, if any.</p>
    */
    
    @JsonProperty("allowedValues")
-   public List<Object> getAllowedValues();
+   public List<JsonNode> getAllowedValues();
 
    public void setField(final String field);
    
-   public void setInvalidValue(final Object invalidValue);
+   public void setInvalidValue(final JsonNode invalidValue);
    
-   public void setAllowedValues(final List<Object> allowedValues);
+   public void setAllowedValues(final List<JsonNode> allowedValues);
    
    public static InvalidFieldErrorImpl of(){
       return new InvalidFieldErrorImpl();
@@ -57,9 +58,9 @@ public interface InvalidFieldError extends ErrorObject {
    public static InvalidFieldErrorImpl of(final InvalidFieldError template) {
       InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();
       instance.setMessage(template.getMessage());
-      instance.setAllowedValues(template.getAllowedValues());
       instance.setField(template.getField());
       instance.setInvalidValue(template.getInvalidValue());
+      instance.setAllowedValues(template.getAllowedValues());
       return instance;
    }
 

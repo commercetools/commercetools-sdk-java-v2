@@ -73,12 +73,12 @@ public interface TaxRate  {
 
    public static TaxRateImpl of(final TaxRate template) {
       TaxRateImpl instance = new TaxRateImpl();
-      instance.setCountry(template.getCountry());
+      instance.setId(template.getId());
+      instance.setName(template.getName());
       instance.setAmount(template.getAmount());
       instance.setIncludedInPrice(template.getIncludedInPrice());
-      instance.setName(template.getName());
+      instance.setCountry(template.getCountry());
       instance.setState(template.getState());
-      instance.setId(template.getId());
       instance.setSubRates(template.getSubRates());
       return instance;
    }

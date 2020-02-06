@@ -14,8 +14,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class TaxRateBuilder {
    
+   @Nullable
+   private String id;
    
-   private String country;
+   
+   private String name;
    
    
    private Integer amount;
@@ -24,19 +27,21 @@ public final class TaxRateBuilder {
    private Boolean includedInPrice;
    
    
-   private String name;
+   private String country;
    
    @Nullable
    private String state;
    
    @Nullable
-   private String id;
-   
-   @Nullable
    private java.util.List<com.commercetools.importer.models.prices.SubRate> subRates;
    
-   public TaxRateBuilder country( final String country) {
-      this.country = country;
+   public TaxRateBuilder id(@Nullable final String id) {
+      this.id = id;
+      return this;
+   }
+   
+   public TaxRateBuilder name( final String name) {
+      this.name = name;
       return this;
    }
    
@@ -50,8 +55,8 @@ public final class TaxRateBuilder {
       return this;
    }
    
-   public TaxRateBuilder name( final String name) {
-      this.name = name;
+   public TaxRateBuilder country( final String country) {
+      this.country = country;
       return this;
    }
    
@@ -60,19 +65,19 @@ public final class TaxRateBuilder {
       return this;
    }
    
-   public TaxRateBuilder id(@Nullable final String id) {
-      this.id = id;
-      return this;
-   }
-   
    public TaxRateBuilder subRates(@Nullable final java.util.List<com.commercetools.importer.models.prices.SubRate> subRates) {
       this.subRates = subRates;
       return this;
    }
    
+   @Nullable
+   public String getId(){
+      return this.id;
+   }
    
-   public String getCountry(){
-      return this.country;
+   
+   public String getName(){
+      return this.name;
    }
    
    
@@ -86,8 +91,8 @@ public final class TaxRateBuilder {
    }
    
    
-   public String getName(){
-      return this.name;
+   public String getCountry(){
+      return this.country;
    }
    
    @Nullable
@@ -96,17 +101,12 @@ public final class TaxRateBuilder {
    }
    
    @Nullable
-   public String getId(){
-      return this.id;
-   }
-   
-   @Nullable
    public java.util.List<com.commercetools.importer.models.prices.SubRate> getSubRates(){
       return this.subRates;
    }
 
    public TaxRate build() {
-       return new TaxRateImpl(country, amount, includedInPrice, name, state, id, subRates);
+       return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);
    }
    
    public static TaxRateBuilder of() {
@@ -115,12 +115,12 @@ public final class TaxRateBuilder {
    
    public static TaxRateBuilder of(final TaxRate template) {
       TaxRateBuilder builder = new TaxRateBuilder();
-      builder.country = template.getCountry();
+      builder.id = template.getId();
+      builder.name = template.getName();
       builder.amount = template.getAmount();
       builder.includedInPrice = template.getIncludedInPrice();
-      builder.name = template.getName();
+      builder.country = template.getCountry();
       builder.state = template.getState();
-      builder.id = template.getId();
       builder.subRates = template.getSubRates();
       return builder;
    }

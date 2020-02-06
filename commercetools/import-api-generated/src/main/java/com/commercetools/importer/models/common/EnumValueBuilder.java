@@ -15,33 +15,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class EnumValueBuilder {
    
    
-   private String label;
-   
-   
    private String key;
    
-   public EnumValueBuilder label( final String label) {
-      this.label = label;
-      return this;
-   }
+   
+   private String label;
    
    public EnumValueBuilder key( final String key) {
       this.key = key;
       return this;
    }
    
-   
-   public String getLabel(){
-      return this.label;
+   public EnumValueBuilder label( final String label) {
+      this.label = label;
+      return this;
    }
    
    
    public String getKey(){
       return this.key;
    }
+   
+   
+   public String getLabel(){
+      return this.label;
+   }
 
    public EnumValue build() {
-       return new EnumValueImpl(label, key);
+       return new EnumValueImpl(key, label);
    }
    
    public static EnumValueBuilder of() {
@@ -50,8 +50,8 @@ public final class EnumValueBuilder {
    
    public static EnumValueBuilder of(final EnumValue template) {
       EnumValueBuilder builder = new EnumValueBuilder();
-      builder.label = template.getLabel();
       builder.key = template.getKey();
+      builder.label = template.getLabel();
       return builder;
    }
    

@@ -93,12 +93,12 @@ public interface ProductVariantImport extends ImportResource {
    public static ProductVariantImportImpl of(final ProductVariantImport template) {
       ProductVariantImportImpl instance = new ProductVariantImportImpl();
       instance.setKey(template.getKey());
-      instance.setProduct(template.getProduct());
-      instance.setImages(template.getImages());
-      instance.setAssets(template.getAssets());
-      instance.setAttributes(template.getAttributes());
       instance.setSku(template.getSku());
       instance.setIsMasterVariant(template.getIsMasterVariant());
+      instance.setAttributes(template.getAttributes());
+      instance.setImages(template.getImages());
+      instance.setAssets(template.getAssets());
+      instance.setProduct(template.getProduct());
       return instance;
    }
 

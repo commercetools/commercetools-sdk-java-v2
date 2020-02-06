@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.errors;
 
 import com.commercetools.importer.models.errors.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.importer.models.errors.ResourceCreationErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -24,9 +25,9 @@ public interface ResourceCreationError extends ErrorObject {
    
    
    @JsonProperty("resource")
-   public Object getResource();
+   public JsonNode getResource();
 
-   public void setResource(final Object resource);
+   public void setResource(final JsonNode resource);
    
    public static ResourceCreationErrorImpl of(){
       return new ResourceCreationErrorImpl();

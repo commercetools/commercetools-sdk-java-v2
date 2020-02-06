@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-*  <p>Retrieves all import operations of an import sink key.</p>
+*  <p>Retrieves all import sinks of a project key.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

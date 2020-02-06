@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.errors;
 
 import com.commercetools.importer.models.errors.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.importer.models.errors.ResourceDeletionError;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,14 +19,14 @@ public final class ResourceDeletionErrorBuilder {
    private String message;
    
    @Nullable
-   private Object resource;
+   private com.fasterxml.jackson.databind.JsonNode resource;
    
    public ResourceDeletionErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public ResourceDeletionErrorBuilder resource(@Nullable final Object resource) {
+   public ResourceDeletionErrorBuilder resource(@Nullable final com.fasterxml.jackson.databind.JsonNode resource) {
       this.resource = resource;
       return this;
    }
@@ -36,7 +37,7 @@ public final class ResourceDeletionErrorBuilder {
    }
    
    @Nullable
-   public Object getResource(){
+   public com.fasterxml.jackson.databind.JsonNode getResource(){
       return this.resource;
    }
 

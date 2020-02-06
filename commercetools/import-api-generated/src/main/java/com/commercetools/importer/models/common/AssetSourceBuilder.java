@@ -14,9 +14,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AssetSourceBuilder {
    
-   @Nullable
-   private String contentType;
-   
    
    private String uri;
    
@@ -26,10 +23,8 @@ public final class AssetSourceBuilder {
    @Nullable
    private com.commercetools.importer.models.common.AssetDimensions dimensions;
    
-   public AssetSourceBuilder contentType(@Nullable final String contentType) {
-      this.contentType = contentType;
-      return this;
-   }
+   @Nullable
+   private String contentType;
    
    public AssetSourceBuilder uri( final String uri) {
       this.uri = uri;
@@ -46,9 +41,9 @@ public final class AssetSourceBuilder {
       return this;
    }
    
-   @Nullable
-   public String getContentType(){
-      return this.contentType;
+   public AssetSourceBuilder contentType(@Nullable final String contentType) {
+      this.contentType = contentType;
+      return this;
    }
    
    
@@ -65,9 +60,14 @@ public final class AssetSourceBuilder {
    public com.commercetools.importer.models.common.AssetDimensions getDimensions(){
       return this.dimensions;
    }
+   
+   @Nullable
+   public String getContentType(){
+      return this.contentType;
+   }
 
    public AssetSource build() {
-       return new AssetSourceImpl(contentType, uri, key, dimensions);
+       return new AssetSourceImpl(uri, key, dimensions, contentType);
    }
    
    public static AssetSourceBuilder of() {
@@ -76,10 +76,10 @@ public final class AssetSourceBuilder {
    
    public static AssetSourceBuilder of(final AssetSource template) {
       AssetSourceBuilder builder = new AssetSourceBuilder();
-      builder.contentType = template.getContentType();
       builder.uri = template.getUri();
       builder.key = template.getKey();
       builder.dimensions = template.getDimensions();
+      builder.contentType = template.getContentType();
       return builder;
    }
    

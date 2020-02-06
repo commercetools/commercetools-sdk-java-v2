@@ -42,8 +42,8 @@ public interface AttributeLocalizedEnumValue  {
 
    public static AttributeLocalizedEnumValueImpl of(final AttributeLocalizedEnumValue template) {
       AttributeLocalizedEnumValueImpl instance = new AttributeLocalizedEnumValueImpl();
-      instance.setLabel(template.getLabel());
       instance.setKey(template.getKey());
+      instance.setLabel(template.getLabel());
       return instance;
    }
 

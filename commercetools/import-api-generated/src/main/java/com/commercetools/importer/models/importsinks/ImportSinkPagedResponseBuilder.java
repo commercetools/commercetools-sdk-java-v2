@@ -15,16 +15,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ImportSinkPagedResponseBuilder {
    
    
+   private Integer limit;
+   
+   
    private Integer offset;
    
    
    private Integer count;
    
    
-   private Integer limit;
-   
-   
    private java.util.List<com.commercetools.importer.models.importsinks.ImportSink> results;
+   
+   public ImportSinkPagedResponseBuilder limit( final Integer limit) {
+      this.limit = limit;
+      return this;
+   }
    
    public ImportSinkPagedResponseBuilder offset( final Integer offset) {
       this.offset = offset;
@@ -36,14 +41,14 @@ public final class ImportSinkPagedResponseBuilder {
       return this;
    }
    
-   public ImportSinkPagedResponseBuilder limit( final Integer limit) {
-      this.limit = limit;
-      return this;
-   }
-   
    public ImportSinkPagedResponseBuilder results( final java.util.List<com.commercetools.importer.models.importsinks.ImportSink> results) {
       this.results = results;
       return this;
+   }
+   
+   
+   public Integer getLimit(){
+      return this.limit;
    }
    
    
@@ -57,17 +62,12 @@ public final class ImportSinkPagedResponseBuilder {
    }
    
    
-   public Integer getLimit(){
-      return this.limit;
-   }
-   
-   
    public java.util.List<com.commercetools.importer.models.importsinks.ImportSink> getResults(){
       return this.results;
    }
 
    public ImportSinkPagedResponse build() {
-       return new ImportSinkPagedResponseImpl(offset, count, limit, results);
+       return new ImportSinkPagedResponseImpl(limit, offset, count, results);
    }
    
    public static ImportSinkPagedResponseBuilder of() {
@@ -76,9 +76,9 @@ public final class ImportSinkPagedResponseBuilder {
    
    public static ImportSinkPagedResponseBuilder of(final ImportSinkPagedResponse template) {
       ImportSinkPagedResponseBuilder builder = new ImportSinkPagedResponseBuilder();
+      builder.limit = template.getLimit();
       builder.offset = template.getOffset();
       builder.count = template.getCount();
-      builder.limit = template.getLimit();
       builder.results = template.getResults();
       return builder;
    }

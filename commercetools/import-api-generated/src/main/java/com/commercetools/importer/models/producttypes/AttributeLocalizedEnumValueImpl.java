@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumValue {
 
-   private com.commercetools.importer.models.common.LocalizedString label;
-   
    private String key;
+   
+   private com.commercetools.importer.models.common.LocalizedString label;
 
    @JsonCreator
-   AttributeLocalizedEnumValueImpl(@JsonProperty("label") final com.commercetools.importer.models.common.LocalizedString label, @JsonProperty("key") final String key) {
-      this.label = label;
+   AttributeLocalizedEnumValueImpl(@JsonProperty("key") final String key, @JsonProperty("label") final com.commercetools.importer.models.common.LocalizedString label) {
       this.key = key;
+      this.label = label;
    }
    public AttributeLocalizedEnumValueImpl() {
       
    }
    
    
-   public com.commercetools.importer.models.common.LocalizedString getLabel(){
-      return this.label;
-   }
-   
-   
    public String getKey(){
       return this.key;
    }
-
-   public void setLabel(final com.commercetools.importer.models.common.LocalizedString label){
-      this.label = label;
-   }
    
+   
+   public com.commercetools.importer.models.common.LocalizedString getLabel(){
+      return this.label;
+   }
+
    public void setKey(final String key){
       this.key = key;
+   }
+   
+   public void setLabel(final com.commercetools.importer.models.common.LocalizedString label){
+      this.label = label;
    }
 
 }

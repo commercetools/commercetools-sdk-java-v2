@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.*;
 import com.commercetools.importer.models.common.ProcessingState;
 
 /**
-*  <p>Retrieves all import operations of an import sink key.</p>
+*  <p>Retrieves all product-variant import operations of an import sink key.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

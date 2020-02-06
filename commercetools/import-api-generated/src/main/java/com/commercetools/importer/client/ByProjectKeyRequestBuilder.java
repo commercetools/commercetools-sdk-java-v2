@@ -33,6 +33,9 @@ public class ByProjectKeyRequestBuilder {
    public ByProjectKeyProductsRequestBuilder products() {
       return new ByProjectKeyProductsRequestBuilder(apiHttpClient, projectKey);
    }
+   public ByProjectKeyProductDraftsRequestBuilder productDrafts() {
+      return new ByProjectKeyProductDraftsRequestBuilder(apiHttpClient, projectKey);
+   }
    public ByProjectKeyProductTypesRequestBuilder productTypes() {
       return new ByProjectKeyProductTypesRequestBuilder(apiHttpClient, projectKey);
    }

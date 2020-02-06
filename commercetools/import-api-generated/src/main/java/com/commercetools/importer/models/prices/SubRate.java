@@ -41,8 +41,8 @@ public interface SubRate  {
 
    public static SubRateImpl of(final SubRate template) {
       SubRateImpl instance = new SubRateImpl();
-      instance.setAmount(template.getAmount());
       instance.setName(template.getName());
+      instance.setAmount(template.getAmount());
       return instance;
    }
 

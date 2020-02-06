@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.errors;
 
 import com.commercetools.importer.models.errors.ErrorObject;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -29,18 +30,18 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
    
    private String message;
    
-   private java.util.List<Object> allowedValues;
-   
    private String field;
    
-   private Object invalidValue;
+   private com.fasterxml.jackson.databind.JsonNode invalidValue;
+   
+   private java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues;
 
    @JsonCreator
-   InvalidFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("allowedValues") final java.util.List<Object> allowedValues, @JsonProperty("field") final String field, @JsonProperty("invalidValue") final Object invalidValue) {
+   InvalidFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field, @JsonProperty("invalidValue") final com.fasterxml.jackson.databind.JsonNode invalidValue, @JsonProperty("allowedValues") final java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues) {
       this.message = message;
-      this.allowedValues = allowedValues;
       this.field = field;
       this.invalidValue = invalidValue;
+      this.allowedValues = allowedValues;
       this.code = "InvalidField";
    }
    public InvalidFieldErrorImpl() {
@@ -60,13 +61,6 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
    }
    
    /**
-   *  <p>A fixed set of allowed values for the field, if any.</p>
-   */
-   public java.util.List<Object> getAllowedValues(){
-      return this.allowedValues;
-   }
-   
-   /**
    *  <p>The name of the field.</p>
    */
    public String getField(){
@@ -76,24 +70,31 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
    /**
    *  <p>The invalid value.</p>
    */
-   public Object getInvalidValue(){
+   public com.fasterxml.jackson.databind.JsonNode getInvalidValue(){
       return this.invalidValue;
+   }
+   
+   /**
+   *  <p>A fixed set of allowed values for the field, if any.</p>
+   */
+   public java.util.List<com.fasterxml.jackson.databind.JsonNode> getAllowedValues(){
+      return this.allowedValues;
    }
 
    public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setAllowedValues(final java.util.List<Object> allowedValues){
-      this.allowedValues = allowedValues;
-   }
-   
    public void setField(final String field){
       this.field = field;
    }
    
-   public void setInvalidValue(final Object invalidValue){
+   public void setInvalidValue(final com.fasterxml.jackson.databind.JsonNode invalidValue){
       this.invalidValue = invalidValue;
+   }
+   
+   public void setAllowedValues(final java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues){
+      this.allowedValues = allowedValues;
    }
 
 }

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -29,47 +29,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ImportSinkImpl implements ImportSink {
 
-   private java.time.ZonedDateTime createdAt;
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   private Long version;
-   
    private String key;
    
    private com.commercetools.importer.models.common.ImportResourceType resourceType;
+   
+   private Long version;
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
 
    @JsonCreator
-   ImportSinkImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("version") final Long version, @JsonProperty("key") final String key, @JsonProperty("resourceType") final com.commercetools.importer.models.common.ImportResourceType resourceType) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
-      this.version = version;
+   ImportSinkImpl(@JsonProperty("key") final String key, @JsonProperty("resourceType") final com.commercetools.importer.models.common.ImportResourceType resourceType, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
       this.key = key;
       this.resourceType = resourceType;
+      this.version = version;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
    }
    public ImportSinkImpl() {
       
-   }
-   
-   /**
-   *  <p>When the import sink was created.</p>
-   */
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   /**
-   *  <p>When the import sink was modified.</p>
-   */
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-   
-   /**
-   *  <p>The version of this resource.</p>
-   */
-   public Long getVersion(){
-      return this.version;
    }
    
    /**
@@ -86,25 +65,46 @@ public final class ImportSinkImpl implements ImportSink {
    public com.commercetools.importer.models.common.ImportResourceType getResourceType(){
       return this.resourceType;
    }
+   
+   /**
+   *  <p>The version of this resource.</p>
+   */
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   /**
+   *  <p>When the import sink was created.</p>
+   */
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   /**
+   *  <p>When the import sink was modified.</p>
+   */
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
 
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-   
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
-   
-   public void setVersion(final Long version){
-      this.version = version;
-   }
-   
    public void setKey(final String key){
       this.key = key;
    }
    
    public void setResourceType(final com.commercetools.importer.models.common.ImportResourceType resourceType){
       this.resourceType = resourceType;
+   }
+   
+   public void setVersion(final Long version){
+      this.version = version;
+   }
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
+   }
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
    }
 
 }

@@ -21,8 +21,14 @@ public final class ProductVariantImportBuilder {
    
    private String key;
    
+   @Nullable
+   private String sku;
    
-   private com.commercetools.importer.models.common.ProductKeyReference product;
+   
+   private Boolean isMasterVariant;
+   
+   @Nullable
+   private java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes;
    
    @Nullable
    private java.util.List<com.commercetools.importer.models.common.Image> images;
@@ -30,37 +36,11 @@ public final class ProductVariantImportBuilder {
    @Nullable
    private java.util.List<com.commercetools.importer.models.common.Asset> assets;
    
-   @Nullable
-   private java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes;
    
-   @Nullable
-   private String sku;
-   
-   
-   private Boolean isMasterVariant;
+   private com.commercetools.importer.models.common.ProductKeyReference product;
    
    public ProductVariantImportBuilder key( final String key) {
       this.key = key;
-      return this;
-   }
-   
-   public ProductVariantImportBuilder product( final com.commercetools.importer.models.common.ProductKeyReference product) {
-      this.product = product;
-      return this;
-   }
-   
-   public ProductVariantImportBuilder images(@Nullable final java.util.List<com.commercetools.importer.models.common.Image> images) {
-      this.images = images;
-      return this;
-   }
-   
-   public ProductVariantImportBuilder assets(@Nullable final java.util.List<com.commercetools.importer.models.common.Asset> assets) {
-      this.assets = assets;
-      return this;
-   }
-   
-   public ProductVariantImportBuilder attributes(@Nullable final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes) {
-      this.attributes = attributes;
       return this;
    }
    
@@ -74,14 +54,44 @@ public final class ProductVariantImportBuilder {
       return this;
    }
    
+   public ProductVariantImportBuilder attributes(@Nullable final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes) {
+      this.attributes = attributes;
+      return this;
+   }
+   
+   public ProductVariantImportBuilder images(@Nullable final java.util.List<com.commercetools.importer.models.common.Image> images) {
+      this.images = images;
+      return this;
+   }
+   
+   public ProductVariantImportBuilder assets(@Nullable final java.util.List<com.commercetools.importer.models.common.Asset> assets) {
+      this.assets = assets;
+      return this;
+   }
+   
+   public ProductVariantImportBuilder product( final com.commercetools.importer.models.common.ProductKeyReference product) {
+      this.product = product;
+      return this;
+   }
+   
    
    public String getKey(){
       return this.key;
    }
    
+   @Nullable
+   public String getSku(){
+      return this.sku;
+   }
    
-   public com.commercetools.importer.models.common.ProductKeyReference getProduct(){
-      return this.product;
+   
+   public Boolean getIsMasterVariant(){
+      return this.isMasterVariant;
+   }
+   
+   @Nullable
+   public java.util.List<com.commercetools.importer.models.productvariants.Attribute> getAttributes(){
+      return this.attributes;
    }
    
    @Nullable
@@ -94,23 +104,13 @@ public final class ProductVariantImportBuilder {
       return this.assets;
    }
    
-   @Nullable
-   public java.util.List<com.commercetools.importer.models.productvariants.Attribute> getAttributes(){
-      return this.attributes;
-   }
    
-   @Nullable
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public Boolean getIsMasterVariant(){
-      return this.isMasterVariant;
+   public com.commercetools.importer.models.common.ProductKeyReference getProduct(){
+      return this.product;
    }
 
    public ProductVariantImport build() {
-       return new ProductVariantImportImpl(key, product, images, assets, attributes, sku, isMasterVariant);
+       return new ProductVariantImportImpl(key, sku, isMasterVariant, attributes, images, assets, product);
    }
    
    public static ProductVariantImportBuilder of() {
@@ -120,12 +120,12 @@ public final class ProductVariantImportBuilder {
    public static ProductVariantImportBuilder of(final ProductVariantImport template) {
       ProductVariantImportBuilder builder = new ProductVariantImportBuilder();
       builder.key = template.getKey();
-      builder.product = template.getProduct();
-      builder.images = template.getImages();
-      builder.assets = template.getAssets();
-      builder.attributes = template.getAttributes();
       builder.sku = template.getSku();
       builder.isMasterVariant = template.getIsMasterVariant();
+      builder.attributes = template.getAttributes();
+      builder.images = template.getImages();
+      builder.assets = template.getAssets();
+      builder.product = template.getProduct();
       return builder;
    }
    

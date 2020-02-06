@@ -14,28 +14,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ErrorResponseBuilder {
    
-   @Nullable
-   private String error_description;
    
-   @Nullable
-   private String error;
+   private Integer statusCode;
    
    
    private String message;
    
    @Nullable
+   private String error;
+   
+   @Nullable
+   private String error_description;
+   
+   @Nullable
    private java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors;
    
-   
-   private Integer statusCode;
-   
-   public ErrorResponseBuilder error_description(@Nullable final String error_description) {
-      this.error_description = error_description;
-      return this;
-   }
-   
-   public ErrorResponseBuilder error(@Nullable final String error) {
-      this.error = error;
+   public ErrorResponseBuilder statusCode( final Integer statusCode) {
+      this.statusCode = statusCode;
       return this;
    }
    
@@ -44,24 +39,24 @@ public final class ErrorResponseBuilder {
       return this;
    }
    
+   public ErrorResponseBuilder error(@Nullable final String error) {
+      this.error = error;
+      return this;
+   }
+   
+   public ErrorResponseBuilder error_description(@Nullable final String error_description) {
+      this.error_description = error_description;
+      return this;
+   }
+   
    public ErrorResponseBuilder errors(@Nullable final java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors) {
       this.errors = errors;
       return this;
    }
    
-   public ErrorResponseBuilder statusCode( final Integer statusCode) {
-      this.statusCode = statusCode;
-      return this;
-   }
    
-   @Nullable
-   public String getError_description(){
-      return this.error_description;
-   }
-   
-   @Nullable
-   public String getError(){
-      return this.error;
+   public Integer getStatusCode(){
+      return this.statusCode;
    }
    
    
@@ -70,17 +65,22 @@ public final class ErrorResponseBuilder {
    }
    
    @Nullable
+   public String getError(){
+      return this.error;
+   }
+   
+   @Nullable
+   public String getError_description(){
+      return this.error_description;
+   }
+   
+   @Nullable
    public java.util.List<com.commercetools.importer.models.errors.ErrorObject> getErrors(){
       return this.errors;
    }
-   
-   
-   public Integer getStatusCode(){
-      return this.statusCode;
-   }
 
    public ErrorResponse build() {
-       return new ErrorResponseImpl(error_description, error, message, errors, statusCode);
+       return new ErrorResponseImpl(statusCode, message, error, error_description, errors);
    }
    
    public static ErrorResponseBuilder of() {
@@ -89,11 +89,11 @@ public final class ErrorResponseBuilder {
    
    public static ErrorResponseBuilder of(final ErrorResponse template) {
       ErrorResponseBuilder builder = new ErrorResponseBuilder();
-      builder.error_description = template.getErrorDescription();
-      builder.error = template.getError();
-      builder.message = template.getMessage();
-      builder.errors = template.getErrors();
       builder.statusCode = template.getStatusCode();
+      builder.message = template.getMessage();
+      builder.error = template.getError();
+      builder.error_description = template.getErrorDescription();
+      builder.errors = template.getErrors();
       return builder;
    }
    

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -32,27 +32,27 @@ public final class ProductVariantImportImpl implements ProductVariantImport {
 
    private String key;
    
-   private com.commercetools.importer.models.common.ProductKeyReference product;
+   private String sku;
+   
+   private Boolean isMasterVariant;
+   
+   private java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes;
    
    private java.util.List<com.commercetools.importer.models.common.Image> images;
    
    private java.util.List<com.commercetools.importer.models.common.Asset> assets;
    
-   private java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes;
-   
-   private String sku;
-   
-   private Boolean isMasterVariant;
+   private com.commercetools.importer.models.common.ProductKeyReference product;
 
    @JsonCreator
-   ProductVariantImportImpl(@JsonProperty("key") final String key, @JsonProperty("product") final com.commercetools.importer.models.common.ProductKeyReference product, @JsonProperty("images") final java.util.List<com.commercetools.importer.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.importer.models.common.Asset> assets, @JsonProperty("attributes") final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes, @JsonProperty("sku") final String sku, @JsonProperty("isMasterVariant") final Boolean isMasterVariant) {
+   ProductVariantImportImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku, @JsonProperty("isMasterVariant") final Boolean isMasterVariant, @JsonProperty("attributes") final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes, @JsonProperty("images") final java.util.List<com.commercetools.importer.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.importer.models.common.Asset> assets, @JsonProperty("product") final com.commercetools.importer.models.common.ProductKeyReference product) {
       this.key = key;
-      this.product = product;
-      this.images = images;
-      this.assets = assets;
-      this.attributes = attributes;
       this.sku = sku;
       this.isMasterVariant = isMasterVariant;
+      this.attributes = attributes;
+      this.images = images;
+      this.assets = assets;
+      this.product = product;
    }
    public ProductVariantImportImpl() {
       
@@ -64,13 +64,27 @@ public final class ProductVariantImportImpl implements ProductVariantImport {
    }
    
    /**
-   *  <p>The product in which this product variant is contained. Maps to <code>ProductVariant.product</code>.</p>
-   *  <p>The product referenced
-   *  must already exist in the commercetools project, or the
-   *  import operation state is set to <code>Unresolved</code>.</p>
+   *  <p>Maps to <code>ProductVariant.sku</code>.</p>
    */
-   public com.commercetools.importer.models.common.ProductKeyReference getProduct(){
-      return this.product;
+   public String getSku(){
+      return this.sku;
+   }
+   
+   /**
+   *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
+   */
+   public Boolean getIsMasterVariant(){
+      return this.isMasterVariant;
+   }
+   
+   /**
+   *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
+   *  <p>Each attribute referenced must be defined
+   *  in an already existing product type in the commercetools project, or the import
+   *  operation state is set to <code>Unresolved</code>.</p>
+   */
+   public java.util.List<com.commercetools.importer.models.productvariants.Attribute> getAttributes(){
+      return this.attributes;
    }
    
    /**
@@ -88,35 +102,29 @@ public final class ProductVariantImportImpl implements ProductVariantImport {
    }
    
    /**
-   *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
-   *  <p>Each attribute referenced must be defined
-   *  in an already existing product type in the commercetools project, or the import
-   *  operation state is set to <code>Unresolved</code>.</p>
+   *  <p>The product in which this product variant is contained. Maps to <code>ProductVariant.product</code>.</p>
+   *  <p>The product referenced
+   *  must already exist in the commercetools project, or the
+   *  import operation state is set to <code>Unresolved</code>.</p>
    */
-   public java.util.List<com.commercetools.importer.models.productvariants.Attribute> getAttributes(){
-      return this.attributes;
-   }
-   
-   /**
-   *  <p>Maps to <code>ProductVariant.sku</code>.</p>
-   */
-   public String getSku(){
-      return this.sku;
-   }
-   
-   /**
-   *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
-   */
-   public Boolean getIsMasterVariant(){
-      return this.isMasterVariant;
+   public com.commercetools.importer.models.common.ProductKeyReference getProduct(){
+      return this.product;
    }
 
    public void setKey(final String key){
       this.key = key;
    }
    
-   public void setProduct(final com.commercetools.importer.models.common.ProductKeyReference product){
-      this.product = product;
+   public void setSku(final String sku){
+      this.sku = sku;
+   }
+   
+   public void setIsMasterVariant(final Boolean isMasterVariant){
+      this.isMasterVariant = isMasterVariant;
+   }
+   
+   public void setAttributes(final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes){
+      this.attributes = attributes;
    }
    
    public void setImages(final java.util.List<com.commercetools.importer.models.common.Image> images){
@@ -127,16 +135,8 @@ public final class ProductVariantImportImpl implements ProductVariantImport {
       this.assets = assets;
    }
    
-   public void setAttributes(final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes){
-      this.attributes = attributes;
-   }
-   
-   public void setSku(final String sku){
-      this.sku = sku;
-   }
-   
-   public void setIsMasterVariant(final Boolean isMasterVariant){
-      this.isMasterVariant = isMasterVariant;
+   public void setProduct(final com.commercetools.importer.models.common.ProductKeyReference product){
+      this.product = product;
    }
 
 }

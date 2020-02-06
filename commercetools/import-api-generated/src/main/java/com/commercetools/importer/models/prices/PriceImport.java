@@ -119,14 +119,14 @@ public interface PriceImport extends ImportResource {
    public static PriceImportImpl of(final PriceImport template) {
       PriceImportImpl instance = new PriceImportImpl();
       instance.setKey(template.getKey());
+      instance.setValue(template.getValue());
       instance.setCountry(template.getCountry());
-      instance.setProduct(template.getProduct());
-      instance.setProductVariant(template.getProductVariant());
+      instance.setValidFrom(template.getValidFrom());
+      instance.setValidUntil(template.getValidUntil());
       instance.setCustomerGroup(template.getCustomerGroup());
       instance.setChannel(template.getChannel());
-      instance.setValidUntil(template.getValidUntil());
-      instance.setValidFrom(template.getValidFrom());
-      instance.setValue(template.getValue());
+      instance.setProductVariant(template.getProductVariant());
+      instance.setProduct(template.getProduct());
       return instance;
    }
 

@@ -137,17 +137,17 @@ public interface ProductImport extends ImportResource {
    public static ProductImportImpl of(final ProductImport template) {
       ProductImportImpl instance = new ProductImportImpl();
       instance.setKey(template.getKey());
-      instance.setMetaKeywords(template.getMetaKeywords());
-      instance.setSearchKeywords(template.getSearchKeywords());
-      instance.setMetaTitle(template.getMetaTitle());
       instance.setName(template.getName());
-      instance.setDescription(template.getDescription());
-      instance.setState(template.getState());
-      instance.setCategories(template.getCategories());
-      instance.setMetaDescription(template.getMetaDescription());
-      instance.setSlug(template.getSlug());
       instance.setProductType(template.getProductType());
+      instance.setSlug(template.getSlug());
+      instance.setDescription(template.getDescription());
+      instance.setCategories(template.getCategories());
+      instance.setMetaTitle(template.getMetaTitle());
+      instance.setMetaDescription(template.getMetaDescription());
+      instance.setMetaKeywords(template.getMetaKeywords());
       instance.setTaxCategory(template.getTaxCategory());
+      instance.setSearchKeywords(template.getSearchKeywords());
+      instance.setState(template.getState());
       return instance;
    }
 

@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -25,35 +25,50 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeDefinitionImpl implements AttributeDefinition {
 
+   private com.commercetools.importer.models.producttypes.AttributeType type;
+   
+   private String name;
+   
+   private com.commercetools.importer.models.common.LocalizedString label;
+   
    private Boolean isRequired;
    
    private com.commercetools.importer.models.producttypes.AttributeConstraintEnum attributeConstraint;
    
-   private String name;
+   private com.commercetools.importer.models.common.LocalizedString inputTip;
    
    private com.commercetools.importer.models.producttypes.TextInputHint inputHint;
    
    private Boolean isSearchable;
-   
-   private com.commercetools.importer.models.common.LocalizedString label;
-   
-   private com.commercetools.importer.models.producttypes.AttributeType type;
-   
-   private com.commercetools.importer.models.common.LocalizedString inputTip;
 
    @JsonCreator
-   AttributeDefinitionImpl(@JsonProperty("isRequired") final Boolean isRequired, @JsonProperty("attributeConstraint") final com.commercetools.importer.models.producttypes.AttributeConstraintEnum attributeConstraint, @JsonProperty("name") final String name, @JsonProperty("inputHint") final com.commercetools.importer.models.producttypes.TextInputHint inputHint, @JsonProperty("isSearchable") final Boolean isSearchable, @JsonProperty("label") final com.commercetools.importer.models.common.LocalizedString label, @JsonProperty("type") final com.commercetools.importer.models.producttypes.AttributeType type, @JsonProperty("inputTip") final com.commercetools.importer.models.common.LocalizedString inputTip) {
+   AttributeDefinitionImpl(@JsonProperty("type") final com.commercetools.importer.models.producttypes.AttributeType type, @JsonProperty("name") final String name, @JsonProperty("label") final com.commercetools.importer.models.common.LocalizedString label, @JsonProperty("isRequired") final Boolean isRequired, @JsonProperty("attributeConstraint") final com.commercetools.importer.models.producttypes.AttributeConstraintEnum attributeConstraint, @JsonProperty("inputTip") final com.commercetools.importer.models.common.LocalizedString inputTip, @JsonProperty("inputHint") final com.commercetools.importer.models.producttypes.TextInputHint inputHint, @JsonProperty("isSearchable") final Boolean isSearchable) {
+      this.type = type;
+      this.name = name;
+      this.label = label;
       this.isRequired = isRequired;
       this.attributeConstraint = attributeConstraint;
-      this.name = name;
+      this.inputTip = inputTip;
       this.inputHint = inputHint;
       this.isSearchable = isSearchable;
-      this.label = label;
-      this.type = type;
-      this.inputTip = inputTip;
    }
    public AttributeDefinitionImpl() {
       
+   }
+   
+   
+   public com.commercetools.importer.models.producttypes.AttributeType getType(){
+      return this.type;
+   }
+   
+   
+   public String getName(){
+      return this.name;
+   }
+   
+   
+   public com.commercetools.importer.models.common.LocalizedString getLabel(){
+      return this.label;
    }
    
    
@@ -67,8 +82,8 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
    }
    
    
-   public String getName(){
-      return this.name;
+   public com.commercetools.importer.models.common.LocalizedString getInputTip(){
+      return this.inputTip;
    }
    
    
@@ -80,22 +95,19 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
    public Boolean getIsSearchable(){
       return this.isSearchable;
    }
-   
-   
-   public com.commercetools.importer.models.common.LocalizedString getLabel(){
-      return this.label;
-   }
-   
-   
-   public com.commercetools.importer.models.producttypes.AttributeType getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.importer.models.common.LocalizedString getInputTip(){
-      return this.inputTip;
-   }
 
+   public void setType(final com.commercetools.importer.models.producttypes.AttributeType type){
+      this.type = type;
+   }
+   
+   public void setName(final String name){
+      this.name = name;
+   }
+   
+   public void setLabel(final com.commercetools.importer.models.common.LocalizedString label){
+      this.label = label;
+   }
+   
    public void setIsRequired(final Boolean isRequired){
       this.isRequired = isRequired;
    }
@@ -104,8 +116,8 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
       this.attributeConstraint = attributeConstraint;
    }
    
-   public void setName(final String name){
-      this.name = name;
+   public void setInputTip(final com.commercetools.importer.models.common.LocalizedString inputTip){
+      this.inputTip = inputTip;
    }
    
    public void setInputHint(final com.commercetools.importer.models.producttypes.TextInputHint inputHint){
@@ -114,18 +126,6 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
    
    public void setIsSearchable(final Boolean isSearchable){
       this.isSearchable = isSearchable;
-   }
-   
-   public void setLabel(final com.commercetools.importer.models.common.LocalizedString label){
-      this.label = label;
-   }
-   
-   public void setType(final com.commercetools.importer.models.producttypes.AttributeType type){
-      this.type = type;
-   }
-   
-   public void setInputTip(final com.commercetools.importer.models.common.LocalizedString inputTip){
-      this.inputTip = inputTip;
    }
 
 }

@@ -23,6 +23,13 @@ public enum ImportResourceType {
   CATEGORY("category"),
   
   /**
+  	<p>The order import resource type.</p>
+  	
+  */
+  @JsonProperty("order")
+  ORDER("order"),
+  
+  /**
   	<p>The price import resource type.</p>
   	
   */
@@ -35,6 +42,10 @@ public enum ImportResourceType {
   */
   @JsonProperty("product")
   PRODUCT("product"),
+  
+  
+  @JsonProperty("product-draft")
+  PRODUCT_DRAFT("product-draft"),
   
   /**
   	<p>The product type import resource type.</p>

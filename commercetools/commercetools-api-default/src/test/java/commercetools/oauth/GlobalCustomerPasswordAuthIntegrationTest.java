@@ -44,7 +44,7 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
                 email,
                 password,
                 "",
-                "https://auth.sphere.io/oauth/" + getProjectKey() + "/customers/token",
+                "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/customers/token",
                 vrapHttpClient
         );
         
@@ -67,7 +67,7 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
                 "wront-email@test.com",
                 "wrong-password",
                 "",
-                "https://auth.sphere.io/oauth/" + getProjectKey() + "/customers/token",
+                "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/customers/token",
                 vrapHttpClient
         );
         

@@ -22,14 +22,14 @@ public class ImportApiTestUtils {
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
-                    "https://auth.sphere.io/oauth/token",
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                     "https://import-eu.europe-west1.gcp.commercetools.com");
         }else{
             apiRoot = ImportApiFactory.create(
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
-                    "https://auth.sphere.io/oauth/token",
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                     "https://import-eu.europe-west1.gcp.commercetools.com",
                     LoggerMiddleware.LogLevel.INFO);
         }

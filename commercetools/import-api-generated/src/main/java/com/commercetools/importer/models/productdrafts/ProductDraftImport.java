@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.productdrafts;
 
 import com.commercetools.importer.models.common.CategoryKeyReference;
+import com.commercetools.importer.models.common.ImportResource;
 import com.commercetools.importer.models.common.LocalizedString;
 import com.commercetools.importer.models.common.ProductTypeKeyReference;
 import com.commercetools.importer.models.common.StateKeyReference;
@@ -25,11 +26,13 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ProductDraftImportImpl.class)
-public interface ProductDraftImport  {
+public interface ProductDraftImport extends ImportResource {
 
    /**
-   *  <p>A predefined product type assigned to the product.
-   *  All products must have a product type.</p>
+   *  <p>The product's product type. Maps to <code>Product.productType</code>.</p>
+   *  <p>The product type referenced
+   *  must already exist in the commercetools project, or the
+   *  import operation state is set to <code>Unresolved</code>.</p>
    */
    @NotNull
    @Valid
@@ -41,27 +44,24 @@ public interface ProductDraftImport  {
    @JsonProperty("name")
    public LocalizedString getName();
    /**
-   *  <p>Human-readable identifiers usually used as deep-link URLs for the product.
-   *  A slug must be unique across a project, but a product can have the same slug for different languages.
-   *  Slugs have a maximum size of 256.
-   *  Valid characters are alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>
+   *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project,
+   *  but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
    */
    @NotNull
    @Valid
    @JsonProperty("slug")
    public LocalizedString getSlug();
    /**
-   *  <p>User-specific unique identifier for the product.</p>
+   *  <p>Maps to <code>Product.description</code>.</p>
    */
-   
-   @JsonProperty("key")
-   public String getKey();
-   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
    /**
-   *  <p>Categories assigned to the product.</p>
+   *  <p>An array of references to categories by their keys. Maps to <code>Product.categories</code>.</p>
+   *  <p>The categories referenced
+   *  must already exist in the commercetools project, or the
+   *  import operation state is set to <code>Unresolved</code>.</p>
    */
    @Valid
    @JsonProperty("categories")
@@ -91,7 +91,12 @@ public interface ProductDraftImport  {
    @Valid
    @JsonProperty("variants")
    public List<ProductVariantDraftImport> getVariants();
-   
+   /**
+   *  <p>References a tax category by its key.</p>
+   *  <p>The tax category referenced must already exist
+   *  in the commercetools project, or the
+   *  import operation state is set to <code>Unresolved</code>.</p>
+   */
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryKeyReference getTaxCategory();
@@ -99,24 +104,21 @@ public interface ProductDraftImport  {
    @Valid
    @JsonProperty("searchKeywords")
    public SearchKeywords getSearchKeywords();
-   
+   /**
+   *  <p>References a state by its key.</p>
+   *  <p>The tax category referenced must already exist
+   *  in the commercetools project, or the
+   *  import operation state is set to <code>Unresolved</code>.</p>
+   */
    @Valid
    @JsonProperty("state")
    public StateKeyReference getState();
-   /**
-   *  <p>If <code>true</code>, the product is published immediately.</p>
-   */
-   
-   @JsonProperty("publish")
-   public Boolean getPublish();
 
    public void setProductType(final ProductTypeKeyReference productType);
    
    public void setName(final LocalizedString name);
    
    public void setSlug(final LocalizedString slug);
-   
-   public void setKey(final String key);
    
    public void setDescription(final LocalizedString description);
    
@@ -138,8 +140,6 @@ public interface ProductDraftImport  {
    
    public void setState(final StateKeyReference state);
    
-   public void setPublish(final Boolean publish);
-   
    public static ProductDraftImportImpl of(){
       return new ProductDraftImportImpl();
    }
@@ -147,10 +147,10 @@ public interface ProductDraftImport  {
 
    public static ProductDraftImportImpl of(final ProductDraftImport template) {
       ProductDraftImportImpl instance = new ProductDraftImportImpl();
+      instance.setKey(template.getKey());
       instance.setProductType(template.getProductType());
       instance.setName(template.getName());
       instance.setSlug(template.getSlug());
-      instance.setKey(template.getKey());
       instance.setDescription(template.getDescription());
       instance.setCategories(template.getCategories());
       instance.setMetaTitle(template.getMetaTitle());
@@ -161,7 +161,6 @@ public interface ProductDraftImport  {
       instance.setTaxCategory(template.getTaxCategory());
       instance.setSearchKeywords(template.getSearchKeywords());
       instance.setState(template.getState());
-      instance.setPublish(template.getPublish());
       return instance;
    }
 

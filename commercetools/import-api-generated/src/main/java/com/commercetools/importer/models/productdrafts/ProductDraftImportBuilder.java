@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.productdrafts;
 
 import com.commercetools.importer.models.common.CategoryKeyReference;
+import com.commercetools.importer.models.common.ImportResource;
 import com.commercetools.importer.models.common.LocalizedString;
 import com.commercetools.importer.models.common.ProductTypeKeyReference;
 import com.commercetools.importer.models.common.StateKeyReference;
@@ -21,6 +22,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProductDraftImportBuilder {
    
    
+   private String key;
+   
+   
    private com.commercetools.importer.models.common.ProductTypeKeyReference productType;
    
    
@@ -28,9 +32,6 @@ public final class ProductDraftImportBuilder {
    
    
    private com.commercetools.importer.models.common.LocalizedString slug;
-   
-   @Nullable
-   private String key;
    
    @Nullable
    private com.commercetools.importer.models.common.LocalizedString description;
@@ -62,8 +63,10 @@ public final class ProductDraftImportBuilder {
    @Nullable
    private com.commercetools.importer.models.common.StateKeyReference state;
    
-   @Nullable
-   private Boolean publish;
+   public ProductDraftImportBuilder key( final String key) {
+      this.key = key;
+      return this;
+   }
    
    public ProductDraftImportBuilder productType( final com.commercetools.importer.models.common.ProductTypeKeyReference productType) {
       this.productType = productType;
@@ -77,11 +80,6 @@ public final class ProductDraftImportBuilder {
    
    public ProductDraftImportBuilder slug( final com.commercetools.importer.models.common.LocalizedString slug) {
       this.slug = slug;
-      return this;
-   }
-   
-   public ProductDraftImportBuilder key(@Nullable final String key) {
-      this.key = key;
       return this;
    }
    
@@ -135,9 +133,9 @@ public final class ProductDraftImportBuilder {
       return this;
    }
    
-   public ProductDraftImportBuilder publish(@Nullable final Boolean publish) {
-      this.publish = publish;
-      return this;
+   
+   public String getKey(){
+      return this.key;
    }
    
    
@@ -153,11 +151,6 @@ public final class ProductDraftImportBuilder {
    
    public com.commercetools.importer.models.common.LocalizedString getSlug(){
       return this.slug;
-   }
-   
-   @Nullable
-   public String getKey(){
-      return this.key;
    }
    
    @Nullable
@@ -209,14 +202,9 @@ public final class ProductDraftImportBuilder {
    public com.commercetools.importer.models.common.StateKeyReference getState(){
       return this.state;
    }
-   
-   @Nullable
-   public Boolean getPublish(){
-      return this.publish;
-   }
 
    public ProductDraftImport build() {
-       return new ProductDraftImportImpl(productType, name, slug, key, description, categories, metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state, publish);
+       return new ProductDraftImportImpl(key, productType, name, slug, description, categories, metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state);
    }
    
    public static ProductDraftImportBuilder of() {
@@ -225,10 +213,10 @@ public final class ProductDraftImportBuilder {
    
    public static ProductDraftImportBuilder of(final ProductDraftImport template) {
       ProductDraftImportBuilder builder = new ProductDraftImportBuilder();
+      builder.key = template.getKey();
       builder.productType = template.getProductType();
       builder.name = template.getName();
       builder.slug = template.getSlug();
-      builder.key = template.getKey();
       builder.description = template.getDescription();
       builder.categories = template.getCategories();
       builder.metaTitle = template.getMetaTitle();
@@ -239,7 +227,6 @@ public final class ProductDraftImportBuilder {
       builder.taxCategory = template.getTaxCategory();
       builder.searchKeywords = template.getSearchKeywords();
       builder.state = template.getState();
-      builder.publish = template.getPublish();
       return builder;
    }
    

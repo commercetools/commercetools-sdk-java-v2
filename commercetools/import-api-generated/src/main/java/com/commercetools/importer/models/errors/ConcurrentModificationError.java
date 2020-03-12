@@ -30,7 +30,7 @@ public interface ConcurrentModificationError extends ErrorObject {
    /**
    *  <p>The version specified in the failed request.</p>
    */
-   @NotNull
+   
    @JsonProperty("specifiedVersion")
    public Long getSpecifiedVersion();
    /**
@@ -42,7 +42,7 @@ public interface ConcurrentModificationError extends ErrorObject {
    /**
    *  <p>The conflicted resource.</p>
    */
-   @NotNull
+   
    @JsonProperty("conflictedResource")
    public JsonNode getConflictedResource();
 

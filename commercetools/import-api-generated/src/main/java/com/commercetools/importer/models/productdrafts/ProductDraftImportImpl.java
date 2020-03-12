@@ -1,6 +1,7 @@
 package com.commercetools.importer.models.productdrafts;
 
 import com.commercetools.importer.models.common.CategoryKeyReference;
+import com.commercetools.importer.models.common.ImportResource;
 import com.commercetools.importer.models.common.LocalizedString;
 import com.commercetools.importer.models.common.ProductTypeKeyReference;
 import com.commercetools.importer.models.common.StateKeyReference;
@@ -28,13 +29,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDraftImportImpl implements ProductDraftImport {
 
+   private String key;
+   
    private com.commercetools.importer.models.common.ProductTypeKeyReference productType;
    
    private com.commercetools.importer.models.common.LocalizedString name;
    
    private com.commercetools.importer.models.common.LocalizedString slug;
-   
-   private String key;
    
    private com.commercetools.importer.models.common.LocalizedString description;
    
@@ -55,15 +56,13 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
    private com.commercetools.importer.models.products.SearchKeywords searchKeywords;
    
    private com.commercetools.importer.models.common.StateKeyReference state;
-   
-   private Boolean publish;
 
    @JsonCreator
-   ProductDraftImportImpl(@JsonProperty("productType") final com.commercetools.importer.models.common.ProductTypeKeyReference productType, @JsonProperty("name") final com.commercetools.importer.models.common.LocalizedString name, @JsonProperty("slug") final com.commercetools.importer.models.common.LocalizedString slug, @JsonProperty("key") final String key, @JsonProperty("description") final com.commercetools.importer.models.common.LocalizedString description, @JsonProperty("categories") final java.util.List<com.commercetools.importer.models.common.CategoryKeyReference> categories, @JsonProperty("metaTitle") final com.commercetools.importer.models.common.LocalizedString metaTitle, @JsonProperty("metaDescription") final com.commercetools.importer.models.common.LocalizedString metaDescription, @JsonProperty("metaKeywords") final com.commercetools.importer.models.common.LocalizedString metaKeywords, @JsonProperty("masterVariant") final com.commercetools.importer.models.productdrafts.ProductVariantDraftImport masterVariant, @JsonProperty("variants") final java.util.List<com.commercetools.importer.models.productdrafts.ProductVariantDraftImport> variants, @JsonProperty("taxCategory") final com.commercetools.importer.models.common.TaxCategoryKeyReference taxCategory, @JsonProperty("searchKeywords") final com.commercetools.importer.models.products.SearchKeywords searchKeywords, @JsonProperty("state") final com.commercetools.importer.models.common.StateKeyReference state, @JsonProperty("publish") final Boolean publish) {
+   ProductDraftImportImpl(@JsonProperty("key") final String key, @JsonProperty("productType") final com.commercetools.importer.models.common.ProductTypeKeyReference productType, @JsonProperty("name") final com.commercetools.importer.models.common.LocalizedString name, @JsonProperty("slug") final com.commercetools.importer.models.common.LocalizedString slug, @JsonProperty("description") final com.commercetools.importer.models.common.LocalizedString description, @JsonProperty("categories") final java.util.List<com.commercetools.importer.models.common.CategoryKeyReference> categories, @JsonProperty("metaTitle") final com.commercetools.importer.models.common.LocalizedString metaTitle, @JsonProperty("metaDescription") final com.commercetools.importer.models.common.LocalizedString metaDescription, @JsonProperty("metaKeywords") final com.commercetools.importer.models.common.LocalizedString metaKeywords, @JsonProperty("masterVariant") final com.commercetools.importer.models.productdrafts.ProductVariantDraftImport masterVariant, @JsonProperty("variants") final java.util.List<com.commercetools.importer.models.productdrafts.ProductVariantDraftImport> variants, @JsonProperty("taxCategory") final com.commercetools.importer.models.common.TaxCategoryKeyReference taxCategory, @JsonProperty("searchKeywords") final com.commercetools.importer.models.products.SearchKeywords searchKeywords, @JsonProperty("state") final com.commercetools.importer.models.common.StateKeyReference state) {
+      this.key = key;
       this.productType = productType;
       this.name = name;
       this.slug = slug;
-      this.key = key;
       this.description = description;
       this.categories = categories;
       this.metaTitle = metaTitle;
@@ -74,15 +73,21 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
       this.taxCategory = taxCategory;
       this.searchKeywords = searchKeywords;
       this.state = state;
-      this.publish = publish;
    }
    public ProductDraftImportImpl() {
       
    }
    
+   
+   public String getKey(){
+      return this.key;
+   }
+   
    /**
-   *  <p>A predefined product type assigned to the product.
-   *  All products must have a product type.</p>
+   *  <p>The product's product type. Maps to <code>Product.productType</code>.</p>
+   *  <p>The product type referenced
+   *  must already exist in the commercetools project, or the
+   *  import operation state is set to <code>Unresolved</code>.</p>
    */
    public com.commercetools.importer.models.common.ProductTypeKeyReference getProductType(){
       return this.productType;
@@ -94,29 +99,25 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
    }
    
    /**
-   *  <p>Human-readable identifiers usually used as deep-link URLs for the product.
-   *  A slug must be unique across a project, but a product can have the same slug for different languages.
-   *  Slugs have a maximum size of 256.
-   *  Valid characters are alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>
+   *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project,
+   *  but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
    */
    public com.commercetools.importer.models.common.LocalizedString getSlug(){
       return this.slug;
    }
    
    /**
-   *  <p>User-specific unique identifier for the product.</p>
+   *  <p>Maps to <code>Product.description</code>.</p>
    */
-   public String getKey(){
-      return this.key;
-   }
-   
-   
    public com.commercetools.importer.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    /**
-   *  <p>Categories assigned to the product.</p>
+   *  <p>An array of references to categories by their keys. Maps to <code>Product.categories</code>.</p>
+   *  <p>The categories referenced
+   *  must already exist in the commercetools project, or the
+   *  import operation state is set to <code>Unresolved</code>.</p>
    */
    public java.util.List<com.commercetools.importer.models.common.CategoryKeyReference> getCategories(){
       return this.categories;
@@ -152,7 +153,12 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
       return this.variants;
    }
    
-   
+   /**
+   *  <p>References a tax category by its key.</p>
+   *  <p>The tax category referenced must already exist
+   *  in the commercetools project, or the
+   *  import operation state is set to <code>Unresolved</code>.</p>
+   */
    public com.commercetools.importer.models.common.TaxCategoryKeyReference getTaxCategory(){
       return this.taxCategory;
    }
@@ -162,18 +168,20 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
       return this.searchKeywords;
    }
    
-   
+   /**
+   *  <p>References a state by its key.</p>
+   *  <p>The tax category referenced must already exist
+   *  in the commercetools project, or the
+   *  import operation state is set to <code>Unresolved</code>.</p>
+   */
    public com.commercetools.importer.models.common.StateKeyReference getState(){
       return this.state;
    }
-   
-   /**
-   *  <p>If <code>true</code>, the product is published immediately.</p>
-   */
-   public Boolean getPublish(){
-      return this.publish;
-   }
 
+   public void setKey(final String key){
+      this.key = key;
+   }
+   
    public void setProductType(final com.commercetools.importer.models.common.ProductTypeKeyReference productType){
       this.productType = productType;
    }
@@ -184,10 +192,6 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
    
    public void setSlug(final com.commercetools.importer.models.common.LocalizedString slug){
       this.slug = slug;
-   }
-   
-   public void setKey(final String key){
-      this.key = key;
    }
    
    public void setDescription(final com.commercetools.importer.models.common.LocalizedString description){
@@ -228,10 +232,6 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
    
    public void setState(final com.commercetools.importer.models.common.StateKeyReference state){
       this.state = state;
-   }
-   
-   public void setPublish(final Boolean publish){
-      this.publish = publish;
    }
 
 }

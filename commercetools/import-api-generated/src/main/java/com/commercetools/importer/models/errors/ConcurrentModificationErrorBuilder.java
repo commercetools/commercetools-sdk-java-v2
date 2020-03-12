@@ -18,13 +18,13 @@ public final class ConcurrentModificationErrorBuilder {
    
    private String message;
    
-   
+   @Nullable
    private Long specifiedVersion;
    
    
    private Long currentVersion;
    
-   
+   @Nullable
    private com.fasterxml.jackson.databind.JsonNode conflictedResource;
    
    public ConcurrentModificationErrorBuilder message( final String message) {
@@ -32,7 +32,7 @@ public final class ConcurrentModificationErrorBuilder {
       return this;
    }
    
-   public ConcurrentModificationErrorBuilder specifiedVersion( final Long specifiedVersion) {
+   public ConcurrentModificationErrorBuilder specifiedVersion(@Nullable final Long specifiedVersion) {
       this.specifiedVersion = specifiedVersion;
       return this;
    }
@@ -42,7 +42,7 @@ public final class ConcurrentModificationErrorBuilder {
       return this;
    }
    
-   public ConcurrentModificationErrorBuilder conflictedResource( final com.fasterxml.jackson.databind.JsonNode conflictedResource) {
+   public ConcurrentModificationErrorBuilder conflictedResource(@Nullable final com.fasterxml.jackson.databind.JsonNode conflictedResource) {
       this.conflictedResource = conflictedResource;
       return this;
    }
@@ -52,7 +52,7 @@ public final class ConcurrentModificationErrorBuilder {
       return this.message;
    }
    
-   
+   @Nullable
    public Long getSpecifiedVersion(){
       return this.specifiedVersion;
    }
@@ -62,7 +62,7 @@ public final class ConcurrentModificationErrorBuilder {
       return this.currentVersion;
    }
    
-   
+   @Nullable
    public com.fasterxml.jackson.databind.JsonNode getConflictedResource(){
       return this.conflictedResource;
    }

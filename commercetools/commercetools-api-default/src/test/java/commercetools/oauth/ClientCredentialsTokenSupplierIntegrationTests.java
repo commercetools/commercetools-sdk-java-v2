@@ -17,7 +17,7 @@ public class ClientCredentialsTokenSupplierIntegrationTests {
                 "wrong-client-id",
                 "wrong-client-secret",
                 "",
-                "https://auth.sphere.io/oauth/token"
+                "https://auth.europe-west1.gcp.commercetools.com/oauth/token"
                 , vrapHttpClient
         );
 

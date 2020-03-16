@@ -23,13 +23,13 @@ public class UserAgentHeaderTest {
         VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
         
         new HttpMiddleware(
-                "https://api.sphere.io",
+                "https://api.europe-west1.gcp.commercetools.com",
                 vrapHttpClient,
                 new ClientCredentialsTokenSupplier(
                         getClientId(),
                         getClientSecret(),
                         getScopes(),
-                        "https://auth.sphere.io/oauth/token"
+                        "https://auth.europe-west1.gcp.commercetools.com/oauth/token"
                         , vrapHttpClient
                 )
         )

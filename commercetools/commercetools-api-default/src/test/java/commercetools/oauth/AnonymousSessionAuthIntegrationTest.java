@@ -20,7 +20,7 @@ public class AnonymousSessionAuthIntegrationTest {
                 getClientId(),
                 getClientSecret(),
                 "",
-                "https://auth.sphere.io/oauth/" + getProjectKey() + "/anonymous/token",
+                "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/anonymous/token",
                 vrapHttpClient
         );
         
@@ -39,7 +39,7 @@ public class AnonymousSessionAuthIntegrationTest {
                 "wrong-client-id",
                 getClientSecret(),
                 "",
-                "https://auth.sphere.io/oauth/" + getProjectKey() + "/anonymous/token",
+                "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/anonymous/token",
                 vrapHttpClient
         );
 

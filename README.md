@@ -20,23 +20,23 @@ ApiRoot apiRoot = DefaultApiRoot.create(
             "your-client-id",
             "your-client-secret",
             "your-scopes",
-            "https://auth.sphere.io/oauth/token",
-            "https://api.sphere.io");
+            "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
+            "https://api.europe-west1.gcp.commercetools.com");
             
 // ApiRoot config for United States projects
 ApiRoot apiRoot = DefaultApiRoot.create(
             "your-client-id",
             "your-client-secret",
             "your-scopes",
-            "https://auth.commercetools.co//oauth/token",
-            "https://auth.commercetools.co/");
+            "https://auth.us-central1.gcp.commercetools.com/oauth/token",
+            "https://api.us-central1.gcp.commercetools.com");
             
 //ApiRoot config for ImportAPI
 ApiRoot apiRoot = ImportApiFactory.create(
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
-                    "https://auth.sphere.io/oauth/token",
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                     "https://import-eu.europe-west1.gcp.commercetools.com",
                     LoggerMiddleware.LogLevel.INFO);
 

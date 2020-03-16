@@ -21,15 +21,15 @@ public class CommercetoolsTestUtils {
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
-                    "https://auth.sphere.io/oauth/token",
-                    "https://api.sphere.io");
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
+                    "https://api.europe-west1.gcp.commercetools.com");
         }else{
             apiRoot = DefaultApiRoot.create(
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
-                    "https://auth.sphere.io/oauth/token",
-                    "https://api.sphere.io",
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
+                    "https://api.europe-west1.gcp.commercetools.com",
                     LoggerMiddleware.LogLevel.INFO);
         }
     }

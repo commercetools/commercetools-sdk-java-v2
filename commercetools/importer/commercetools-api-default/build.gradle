@@ -10,7 +10,7 @@ publishing {
 }
 
 dependencies {
-    compile project(':commercetools:commercetools-api-generated')
+    compile project(':commercetools:importer:commercetools-api-generated')
     compile project(':rmf:okhttp-client')
     compile 'com.google.code.findbugs:jsr305:3.0.2'
     compile 'javax.validation:validation-api:2.0.1.Final'

@@ -1,0 +1,72 @@
+package com.commercetools.api.ml.generated.models.similar_products;
+
+import com.commercetools.api.ml.generated.models.common.LocalizedString;
+import com.commercetools.api.ml.generated.models.common.Money;
+import com.commercetools.api.ml.generated.models.similar_products.SimilarProductMetaImpl;
+
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+import io.vrap.rmf.base.client.utils.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Map;
+import java.time.*;
+
+import java.io.IOException;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+@JsonDeserialize(as = SimilarProductMetaImpl.class)
+public interface SimilarProductMeta  {
+
+   /**
+   *  <p>Localized product name used for similarity estimation.</p>
+   */
+   @Valid
+   @JsonProperty("name")
+   public LocalizedString getName();
+   /**
+   *  <p>Localized product description used for similarity estimation.</p>
+   */
+   @Valid
+   @JsonProperty("description")
+   public LocalizedString getDescription();
+   /**
+   *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+   */
+   @Valid
+   @JsonProperty("price")
+   public Money getPrice();
+   /**
+   *  <p>Total number of variants associated with the product.</p>
+   */
+   
+   @JsonProperty("variantCount")
+   public Long getVariantCount();
+
+   public void setName(final LocalizedString name);
+   
+   public void setDescription(final LocalizedString description);
+   
+   public void setPrice(final Money price);
+   
+   public void setVariantCount(final Long variantCount);
+   
+   public static SimilarProductMetaImpl of(){
+      return new SimilarProductMetaImpl();
+   }
+   
+
+   public static SimilarProductMetaImpl of(final SimilarProductMeta template) {
+      SimilarProductMetaImpl instance = new SimilarProductMetaImpl();
+      instance.setName(template.getName());
+      instance.setDescription(template.getDescription());
+      instance.setPrice(template.getPrice());
+      instance.setVariantCount(template.getVariantCount());
+      return instance;
+   }
+
+}

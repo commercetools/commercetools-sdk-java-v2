@@ -7,4 +7,4 @@ include 'commercetools:importer:commercetools-api-default'
 include 'okhttp-client'
 include 'commercetools:importer:import-api-generated'
 include 'commercetools:importer:import-api-default'
-
+include 'commercetools:machine-learning:commercetools-ml-api'

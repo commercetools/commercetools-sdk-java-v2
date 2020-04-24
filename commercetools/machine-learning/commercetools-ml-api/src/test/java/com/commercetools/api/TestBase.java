@@ -11,7 +11,7 @@ public class TestBase {
     public final String clientId = requireEnvVar("CTP_CLIENT_ID");
     public final String clientSecret = requireEnvVar("CTP_CLIENT_SECRET");
     public final String tokenUrl = requireEnvVar("CTP_AUTH_URL") + "oauth/token";
-    public final String ml_host = requireEnvVar("CTP_ML_API_URL") ;
+    public final String ml_host = requireEnvVar("CTP_ML_API_URL");
 
     public final ByProjectKeyRequestBuilder apiBuilder = MLApiRootFactory.create(clientId,
             clientSecret,
@@ -21,7 +21,7 @@ public class TestBase {
             .withProjectKey(projectKey);
 
     public static String requireEnvVar(String varName) {
-        return Optional.ofNullable(System.getenv(varName)).orElseThrow(() -> new RuntimeException("Cannot find environment variable"));
+        return Optional.ofNullable(System.getenv(varName)).orElseThrow(() -> new RuntimeException("Cannot find environment variable '" + varName + "'"));
     }
 
 }

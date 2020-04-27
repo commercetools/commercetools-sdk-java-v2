@@ -21,7 +21,7 @@ public final class ProjectCategoryRecommendationMetaBuilder {
    private String productImageUrl;
    
    
-   private List<String> generalCategoryNames;
+   private java.util.List<String> generalCategoryNames;
    
    public ProjectCategoryRecommendationMetaBuilder productName(@Nullable final String productName) {
       this.productName = productName;
@@ -33,7 +33,7 @@ public final class ProjectCategoryRecommendationMetaBuilder {
       return this;
    }
    
-   public ProjectCategoryRecommendationMetaBuilder generalCategoryNames( final List<String> generalCategoryNames) {
+   public ProjectCategoryRecommendationMetaBuilder generalCategoryNames( final java.util.List<String> generalCategoryNames) {
       this.generalCategoryNames = generalCategoryNames;
       return this;
    }
@@ -49,7 +49,7 @@ public final class ProjectCategoryRecommendationMetaBuilder {
    }
    
    
-   public List<String> getGeneralCategoryNames(){
+   public java.util.List<String> getGeneralCategoryNames(){
       return this.generalCategoryNames;
    }
 

@@ -42,10 +42,10 @@ public final class MissingAttributesSearchRequestBuilder {
    private Boolean showMissingAttributeNames;
    
    @Nullable
-   private List<String> productIds;
+   private java.util.List<String> productIds;
    
    @Nullable
-   private List<String> productTypeIds;
+   private java.util.List<String> productTypeIds;
    
    @Nullable
    private String attributeName;
@@ -95,12 +95,12 @@ public final class MissingAttributesSearchRequestBuilder {
       return this;
    }
    
-   public MissingAttributesSearchRequestBuilder productIds(@Nullable final List<String> productIds) {
+   public MissingAttributesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
       this.productIds = productIds;
       return this;
    }
    
-   public MissingAttributesSearchRequestBuilder productTypeIds(@Nullable final List<String> productTypeIds) {
+   public MissingAttributesSearchRequestBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
       this.productTypeIds = productTypeIds;
       return this;
    }
@@ -156,12 +156,12 @@ public final class MissingAttributesSearchRequestBuilder {
    }
    
    @Nullable
-   public List<String> getProductIds(){
+   public java.util.List<String> getProductIds(){
       return this.productIds;
    }
    
    @Nullable
-   public List<String> getProductTypeIds(){
+   public java.util.List<String> getProductTypeIds(){
       return this.productTypeIds;
    }
    

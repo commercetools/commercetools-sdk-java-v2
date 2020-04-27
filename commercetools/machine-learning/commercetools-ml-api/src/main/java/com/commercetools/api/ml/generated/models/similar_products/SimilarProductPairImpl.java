@@ -27,10 +27,10 @@ public final class SimilarProductPairImpl implements SimilarProductPair {
 
    private Integer confidence;
    
-   private List<SimilarProduct> products;
+   private java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProduct> products;
 
    @JsonCreator
-   SimilarProductPairImpl(@JsonProperty("confidence") final Integer confidence, @JsonProperty("products") final List<SimilarProduct> products) {
+   SimilarProductPairImpl(@JsonProperty("confidence") final Integer confidence, @JsonProperty("products") final java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProduct> products) {
       this.confidence = confidence;
       this.products = products;
    }
@@ -46,7 +46,7 @@ public final class SimilarProductPairImpl implements SimilarProductPair {
    }
    
    
-   public List<SimilarProduct> getProducts(){
+   public java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProduct> getProducts(){
       return this.products;
    }
 
@@ -54,7 +54,7 @@ public final class SimilarProductPairImpl implements SimilarProductPair {
       this.confidence = confidence;
    }
    
-   public void setProducts(final List<SimilarProduct> products){
+   public void setProducts(final java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProduct> products){
       this.products = products;
    }
 

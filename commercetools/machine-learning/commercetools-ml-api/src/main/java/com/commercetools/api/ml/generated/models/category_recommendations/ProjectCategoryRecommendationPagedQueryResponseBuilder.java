@@ -25,10 +25,10 @@ public final class ProjectCategoryRecommendationPagedQueryResponseBuilder {
    private Long offset;
    
    
-   private List<ProjectCategoryRecommendation> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendation> results;
    
    
-   private ProjectCategoryRecommendationMeta meta;
+   private com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendationMeta meta;
    
    public ProjectCategoryRecommendationPagedQueryResponseBuilder count( final Long count) {
       this.count = count;
@@ -45,12 +45,12 @@ public final class ProjectCategoryRecommendationPagedQueryResponseBuilder {
       return this;
    }
    
-   public ProjectCategoryRecommendationPagedQueryResponseBuilder results( final List<ProjectCategoryRecommendation> results) {
+   public ProjectCategoryRecommendationPagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendation> results) {
       this.results = results;
       return this;
    }
    
-   public ProjectCategoryRecommendationPagedQueryResponseBuilder meta( final ProjectCategoryRecommendationMeta meta) {
+   public ProjectCategoryRecommendationPagedQueryResponseBuilder meta( final com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendationMeta meta) {
       this.meta = meta;
       return this;
    }
@@ -71,12 +71,12 @@ public final class ProjectCategoryRecommendationPagedQueryResponseBuilder {
    }
    
    
-   public List<ProjectCategoryRecommendation> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendation> getResults(){
       return this.results;
    }
    
    
-   public ProjectCategoryRecommendationMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendationMeta getMeta(){
       return this.meta;
    }
 

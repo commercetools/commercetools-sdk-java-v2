@@ -23,16 +23,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SimilarProductMetaImpl implements SimilarProductMeta {
 
-   private LocalizedString name;
+   private com.commercetools.api.ml.generated.models.common.LocalizedString name;
    
-   private LocalizedString description;
+   private com.commercetools.api.ml.generated.models.common.LocalizedString description;
    
-   private Money price;
+   private com.commercetools.api.ml.generated.models.common.Money price;
    
    private Long variantCount;
 
    @JsonCreator
-   SimilarProductMetaImpl(@JsonProperty("name") final LocalizedString name, @JsonProperty("description") final LocalizedString description, @JsonProperty("price") final Money price, @JsonProperty("variantCount") final Long variantCount) {
+   SimilarProductMetaImpl(@JsonProperty("name") final com.commercetools.api.ml.generated.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.ml.generated.models.common.LocalizedString description, @JsonProperty("price") final com.commercetools.api.ml.generated.models.common.Money price, @JsonProperty("variantCount") final Long variantCount) {
       this.name = name;
       this.description = description;
       this.price = price;
@@ -45,21 +45,21 @@ public final class SimilarProductMetaImpl implements SimilarProductMeta {
    /**
    *  <p>Localized product name used for similarity estimation.</p>
    */
-   public LocalizedString getName(){
+   public com.commercetools.api.ml.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
    /**
    *  <p>Localized product description used for similarity estimation.</p>
    */
-   public LocalizedString getDescription(){
+   public com.commercetools.api.ml.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    /**
    *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
    */
-   public Money getPrice(){
+   public com.commercetools.api.ml.generated.models.common.Money getPrice(){
       return this.price;
    }
    
@@ -70,15 +70,15 @@ public final class SimilarProductMetaImpl implements SimilarProductMeta {
       return this.variantCount;
    }
 
-   public void setName(final LocalizedString name){
+   public void setName(final com.commercetools.api.ml.generated.models.common.LocalizedString name){
       this.name = name;
    }
    
-   public void setDescription(final LocalizedString description){
+   public void setDescription(final com.commercetools.api.ml.generated.models.common.LocalizedString description){
       this.description = description;
    }
    
-   public void setPrice(final Money price){
+   public void setPrice(final com.commercetools.api.ml.generated.models.common.Money price){
       this.price = price;
    }
    

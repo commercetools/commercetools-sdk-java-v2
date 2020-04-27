@@ -28,10 +28,10 @@ public final class SimilarProductSearchRequestBuilder {
    private String currencyCode;
    
    @Nullable
-   private SimilarityMeasures similarityMeasures;
+   private com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures similarityMeasures;
    
    @Nullable
-   private List<ProductSetSelector> productSetSelectors;
+   private java.util.List<com.commercetools.api.ml.generated.models.similar_products.ProductSetSelector> productSetSelectors;
    
    @Nullable
    private Integer confidenceMin;
@@ -59,12 +59,12 @@ public final class SimilarProductSearchRequestBuilder {
       return this;
    }
    
-   public SimilarProductSearchRequestBuilder similarityMeasures(@Nullable final SimilarityMeasures similarityMeasures) {
+   public SimilarProductSearchRequestBuilder similarityMeasures(@Nullable final com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures similarityMeasures) {
       this.similarityMeasures = similarityMeasures;
       return this;
    }
    
-   public SimilarProductSearchRequestBuilder productSetSelectors(@Nullable final List<ProductSetSelector> productSetSelectors) {
+   public SimilarProductSearchRequestBuilder productSetSelectors(@Nullable final java.util.List<com.commercetools.api.ml.generated.models.similar_products.ProductSetSelector> productSetSelectors) {
       this.productSetSelectors = productSetSelectors;
       return this;
    }
@@ -100,12 +100,12 @@ public final class SimilarProductSearchRequestBuilder {
    }
    
    @Nullable
-   public SimilarityMeasures getSimilarityMeasures(){
+   public com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures getSimilarityMeasures(){
       return this.similarityMeasures;
    }
    
    @Nullable
-   public List<ProductSetSelector> getProductSetSelectors(){
+   public java.util.List<com.commercetools.api.ml.generated.models.similar_products.ProductSetSelector> getProductSetSelectors(){
       return this.productSetSelectors;
    }
    

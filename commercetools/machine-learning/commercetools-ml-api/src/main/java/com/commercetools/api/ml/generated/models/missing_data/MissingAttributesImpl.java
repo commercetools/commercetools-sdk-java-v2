@@ -25,22 +25,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingAttributesImpl implements MissingAttributes {
 
-   private ProductReference product;
+   private com.commercetools.api.ml.generated.models.common.ProductReference product;
    
-   private ProductTypeReference productType;
+   private com.commercetools.api.ml.generated.models.common.ProductTypeReference productType;
    
    private Integer variantId;
    
-   private List<String> missingAttributeValues;
+   private java.util.List<String> missingAttributeValues;
    
-   private List<String> missingAttributeNames;
+   private java.util.List<String> missingAttributeNames;
    
-   private AttributeCount attributeCount;
+   private com.commercetools.api.ml.generated.models.missing_data.AttributeCount attributeCount;
    
-   private AttributeCoverage attributeCoverage;
+   private com.commercetools.api.ml.generated.models.missing_data.AttributeCoverage attributeCoverage;
 
    @JsonCreator
-   MissingAttributesImpl(@JsonProperty("product") final ProductReference product, @JsonProperty("productType") final ProductTypeReference productType, @JsonProperty("variantId") final Integer variantId, @JsonProperty("missingAttributeValues") final List<String> missingAttributeValues, @JsonProperty("missingAttributeNames") final List<String> missingAttributeNames, @JsonProperty("attributeCount") final AttributeCount attributeCount, @JsonProperty("attributeCoverage") final AttributeCoverage attributeCoverage) {
+   MissingAttributesImpl(@JsonProperty("product") final com.commercetools.api.ml.generated.models.common.ProductReference product, @JsonProperty("productType") final com.commercetools.api.ml.generated.models.common.ProductTypeReference productType, @JsonProperty("variantId") final Integer variantId, @JsonProperty("missingAttributeValues") final java.util.List<String> missingAttributeValues, @JsonProperty("missingAttributeNames") final java.util.List<String> missingAttributeNames, @JsonProperty("attributeCount") final com.commercetools.api.ml.generated.models.missing_data.AttributeCount attributeCount, @JsonProperty("attributeCoverage") final com.commercetools.api.ml.generated.models.missing_data.AttributeCoverage attributeCoverage) {
       this.product = product;
       this.productType = productType;
       this.variantId = variantId;
@@ -54,12 +54,12 @@ public final class MissingAttributesImpl implements MissingAttributes {
    }
    
    
-   public ProductReference getProduct(){
+   public com.commercetools.api.ml.generated.models.common.ProductReference getProduct(){
       return this.product;
    }
    
    
-   public ProductTypeReference getProductType(){
+   public com.commercetools.api.ml.generated.models.common.ProductTypeReference getProductType(){
       return this.productType;
    }
    
@@ -73,32 +73,32 @@ public final class MissingAttributesImpl implements MissingAttributes {
    /**
    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
    */
-   public List<String> getMissingAttributeValues(){
+   public java.util.List<String> getMissingAttributeValues(){
       return this.missingAttributeValues;
    }
    
    /**
    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
    */
-   public List<String> getMissingAttributeNames(){
+   public java.util.List<String> getMissingAttributeNames(){
       return this.missingAttributeNames;
    }
    
    
-   public AttributeCount getAttributeCount(){
+   public com.commercetools.api.ml.generated.models.missing_data.AttributeCount getAttributeCount(){
       return this.attributeCount;
    }
    
    
-   public AttributeCoverage getAttributeCoverage(){
+   public com.commercetools.api.ml.generated.models.missing_data.AttributeCoverage getAttributeCoverage(){
       return this.attributeCoverage;
    }
 
-   public void setProduct(final ProductReference product){
+   public void setProduct(final com.commercetools.api.ml.generated.models.common.ProductReference product){
       this.product = product;
    }
    
-   public void setProductType(final ProductTypeReference productType){
+   public void setProductType(final com.commercetools.api.ml.generated.models.common.ProductTypeReference productType){
       this.productType = productType;
    }
    
@@ -106,19 +106,19 @@ public final class MissingAttributesImpl implements MissingAttributes {
       this.variantId = variantId;
    }
    
-   public void setMissingAttributeValues(final List<String> missingAttributeValues){
+   public void setMissingAttributeValues(final java.util.List<String> missingAttributeValues){
       this.missingAttributeValues = missingAttributeValues;
    }
    
-   public void setMissingAttributeNames(final List<String> missingAttributeNames){
+   public void setMissingAttributeNames(final java.util.List<String> missingAttributeNames){
       this.missingAttributeNames = missingAttributeNames;
    }
    
-   public void setAttributeCount(final AttributeCount attributeCount){
+   public void setAttributeCount(final com.commercetools.api.ml.generated.models.missing_data.AttributeCount attributeCount){
       this.attributeCount = attributeCount;
    }
    
-   public void setAttributeCoverage(final AttributeCoverage attributeCoverage){
+   public void setAttributeCoverage(final com.commercetools.api.ml.generated.models.missing_data.AttributeCoverage attributeCoverage){
       this.attributeCoverage = attributeCoverage;
    }
 

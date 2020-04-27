@@ -27,14 +27,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingDataTaskStatusImpl implements MissingDataTaskStatus {
 
-   private TaskStatusEnum state;
+   private com.commercetools.api.ml.generated.models.common.TaskStatusEnum state;
    
-   private ZonedDateTime expires;
+   private java.time.ZonedDateTime expires;
    
    private com.commercetools.api.ml.generated.models.missing_data.MissingAttributesPagedQueryResult result;
 
    @JsonCreator
-   MissingDataTaskStatusImpl(@JsonProperty("state") final TaskStatusEnum state, @JsonProperty("expires") final ZonedDateTime expires, @JsonProperty("result") final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesPagedQueryResult result) {
+   MissingDataTaskStatusImpl(@JsonProperty("state") final com.commercetools.api.ml.generated.models.common.TaskStatusEnum state, @JsonProperty("expires") final java.time.ZonedDateTime expires, @JsonProperty("result") final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesPagedQueryResult result) {
       this.state = state;
       this.expires = expires;
       this.result = result;
@@ -44,14 +44,14 @@ public final class MissingDataTaskStatusImpl implements MissingDataTaskStatus {
    }
    
    
-   public TaskStatusEnum getState(){
+   public com.commercetools.api.ml.generated.models.common.TaskStatusEnum getState(){
       return this.state;
    }
    
    /**
    *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
    */
-   public ZonedDateTime getExpires(){
+   public java.time.ZonedDateTime getExpires(){
       return this.expires;
    }
    
@@ -62,11 +62,11 @@ public final class MissingDataTaskStatusImpl implements MissingDataTaskStatus {
       return this.result;
    }
 
-   public void setState(final TaskStatusEnum state){
+   public void setState(final com.commercetools.api.ml.generated.models.common.TaskStatusEnum state){
       this.state = state;
    }
    
-   public void setExpires(final ZonedDateTime expires){
+   public void setExpires(final java.time.ZonedDateTime expires){
       this.expires = expires;
    }
    

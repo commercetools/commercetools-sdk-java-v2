@@ -25,10 +25,10 @@ public final class MissingPricesPagedQueryResultBuilder {
    private Long offset;
    
    
-   private List<MissingPrices> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingPrices> results;
    
    
-   private MissingPricesMeta meta;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingPricesMeta meta;
    
    public MissingPricesPagedQueryResultBuilder count( final Long count) {
       this.count = count;
@@ -45,12 +45,12 @@ public final class MissingPricesPagedQueryResultBuilder {
       return this;
    }
    
-   public MissingPricesPagedQueryResultBuilder results( final List<MissingPrices> results) {
+   public MissingPricesPagedQueryResultBuilder results( final java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingPrices> results) {
       this.results = results;
       return this;
    }
    
-   public MissingPricesPagedQueryResultBuilder meta( final MissingPricesMeta meta) {
+   public MissingPricesPagedQueryResultBuilder meta( final com.commercetools.api.ml.generated.models.missing_data.MissingPricesMeta meta) {
       this.meta = meta;
       return this;
    }
@@ -71,12 +71,12 @@ public final class MissingPricesPagedQueryResultBuilder {
    }
    
    
-   public List<MissingPrices> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingPrices> getResults(){
       return this.results;
    }
    
    
-   public MissingPricesMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingPricesMeta getMeta(){
       return this.meta;
    }
 

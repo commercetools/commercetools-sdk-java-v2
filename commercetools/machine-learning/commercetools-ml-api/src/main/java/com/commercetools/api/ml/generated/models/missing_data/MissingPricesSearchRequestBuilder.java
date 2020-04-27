@@ -36,16 +36,16 @@ public final class MissingPricesSearchRequestBuilder {
    private Boolean checkDate;
    
    @Nullable
-   private ZonedDateTime validFrom;
+   private java.time.ZonedDateTime validFrom;
    
    @Nullable
-   private ZonedDateTime validUntil;
+   private java.time.ZonedDateTime validUntil;
    
    @Nullable
-   private List<String> productIds;
+   private java.util.List<String> productIds;
    
    @Nullable
-   private List<String> productTypeIds;
+   private java.util.List<String> productTypeIds;
    
    public MissingPricesSearchRequestBuilder limit(@Nullable final Long limit) {
       this.limit = limit;
@@ -82,22 +82,22 @@ public final class MissingPricesSearchRequestBuilder {
       return this;
    }
    
-   public MissingPricesSearchRequestBuilder validFrom(@Nullable final ZonedDateTime validFrom) {
+   public MissingPricesSearchRequestBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
       this.validFrom = validFrom;
       return this;
    }
    
-   public MissingPricesSearchRequestBuilder validUntil(@Nullable final ZonedDateTime validUntil) {
+   public MissingPricesSearchRequestBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
       this.validUntil = validUntil;
       return this;
    }
    
-   public MissingPricesSearchRequestBuilder productIds(@Nullable final List<String> productIds) {
+   public MissingPricesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
       this.productIds = productIds;
       return this;
    }
    
-   public MissingPricesSearchRequestBuilder productTypeIds(@Nullable final List<String> productTypeIds) {
+   public MissingPricesSearchRequestBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
       this.productTypeIds = productTypeIds;
       return this;
    }
@@ -138,22 +138,22 @@ public final class MissingPricesSearchRequestBuilder {
    }
    
    @Nullable
-   public ZonedDateTime getValidFrom(){
+   public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }
    
    @Nullable
-   public ZonedDateTime getValidUntil(){
+   public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }
    
    @Nullable
-   public List<String> getProductIds(){
+   public java.util.List<String> getProductIds(){
       return this.productIds;
    }
    
    @Nullable
-   public List<String> getProductTypeIds(){
+   public java.util.List<String> getProductTypeIds(){
       return this.productTypeIds;
    }
 

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class MissingImagesBuilder {
    
    
-   private ProductReference product;
+   private com.commercetools.api.ml.generated.models.common.ProductReference product;
    
    
    private Long variantId;
@@ -23,7 +23,7 @@ public final class MissingImagesBuilder {
    
    private Long imageCount;
    
-   public MissingImagesBuilder product( final ProductReference product) {
+   public MissingImagesBuilder product( final com.commercetools.api.ml.generated.models.common.ProductReference product) {
       this.product = product;
       return this;
    }
@@ -39,7 +39,7 @@ public final class MissingImagesBuilder {
    }
    
    
-   public ProductReference getProduct(){
+   public com.commercetools.api.ml.generated.models.common.ProductReference getProduct(){
       return this.product;
    }
    

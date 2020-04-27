@@ -31,16 +31,16 @@ public final class SimilarProductSearchRequestImpl implements SimilarProductSear
    
    private String currencyCode;
    
-   private SimilarityMeasures similarityMeasures;
+   private com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures similarityMeasures;
    
-   private List<ProductSetSelector> productSetSelectors;
+   private java.util.List<com.commercetools.api.ml.generated.models.similar_products.ProductSetSelector> productSetSelectors;
    
    private Integer confidenceMin;
    
    private Integer confidenceMax;
 
    @JsonCreator
-   SimilarProductSearchRequestImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset, @JsonProperty("language") final String language, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("similarityMeasures") final SimilarityMeasures similarityMeasures, @JsonProperty("productSetSelectors") final List<ProductSetSelector> productSetSelectors, @JsonProperty("confidenceMin") final Integer confidenceMin, @JsonProperty("confidenceMax") final Integer confidenceMax) {
+   SimilarProductSearchRequestImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset, @JsonProperty("language") final String language, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("similarityMeasures") final com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures similarityMeasures, @JsonProperty("productSetSelectors") final java.util.List<com.commercetools.api.ml.generated.models.similar_products.ProductSetSelector> productSetSelectors, @JsonProperty("confidenceMin") final Integer confidenceMin, @JsonProperty("confidenceMax") final Integer confidenceMax) {
       this.limit = limit;
       this.offset = offset;
       this.language = language;
@@ -81,14 +81,14 @@ public final class SimilarProductSearchRequestImpl implements SimilarProductSear
    /**
    *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
    */
-   public SimilarityMeasures getSimilarityMeasures(){
+   public com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures getSimilarityMeasures(){
       return this.similarityMeasures;
    }
    
    /**
    *  <p>Array of length 2 of ProductSetSelector</p>
    */
-   public List<ProductSetSelector> getProductSetSelectors(){
+   public java.util.List<com.commercetools.api.ml.generated.models.similar_products.ProductSetSelector> getProductSetSelectors(){
       return this.productSetSelectors;
    }
    
@@ -118,11 +118,11 @@ public final class SimilarProductSearchRequestImpl implements SimilarProductSear
       this.currencyCode = currencyCode;
    }
    
-   public void setSimilarityMeasures(final SimilarityMeasures similarityMeasures){
+   public void setSimilarityMeasures(final com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures similarityMeasures){
       this.similarityMeasures = similarityMeasures;
    }
    
-   public void setProductSetSelectors(final List<ProductSetSelector> productSetSelectors){
+   public void setProductSetSelectors(final java.util.List<com.commercetools.api.ml.generated.models.similar_products.ProductSetSelector> productSetSelectors){
       this.productSetSelectors = productSetSelectors;
    }
    

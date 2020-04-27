@@ -15,12 +15,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class MissingPricesBuilder {
    
    
-   private ProductReference product;
+   private com.commercetools.api.ml.generated.models.common.ProductReference product;
    
    
    private Long variantId;
    
-   public MissingPricesBuilder product( final ProductReference product) {
+   public MissingPricesBuilder product( final com.commercetools.api.ml.generated.models.common.ProductReference product) {
       this.product = product;
       return this;
    }
@@ -31,7 +31,7 @@ public final class MissingPricesBuilder {
    }
    
    
-   public ProductReference getProduct(){
+   public com.commercetools.api.ml.generated.models.common.ProductReference getProduct(){
       return this.product;
    }
    

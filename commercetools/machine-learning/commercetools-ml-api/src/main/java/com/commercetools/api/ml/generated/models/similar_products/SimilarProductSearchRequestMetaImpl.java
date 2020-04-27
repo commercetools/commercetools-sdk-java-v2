@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SimilarProductSearchRequestMetaImpl implements SimilarProductSearchRequestMeta {
 
-   private SimilarityMeasures similarityMeasures;
+   private com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures similarityMeasures;
 
    @JsonCreator
-   SimilarProductSearchRequestMetaImpl(@JsonProperty("similarityMeasures") final SimilarityMeasures similarityMeasures) {
+   SimilarProductSearchRequestMetaImpl(@JsonProperty("similarityMeasures") final com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures similarityMeasures) {
       this.similarityMeasures = similarityMeasures;
    }
    public SimilarProductSearchRequestMetaImpl() {
@@ -35,11 +35,11 @@ public final class SimilarProductSearchRequestMetaImpl implements SimilarProduct
    /**
    *  <p>The SimilarityMeasures used in this search.</p>
    */
-   public SimilarityMeasures getSimilarityMeasures(){
+   public com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures getSimilarityMeasures(){
       return this.similarityMeasures;
    }
 
-   public void setSimilarityMeasures(final SimilarityMeasures similarityMeasures){
+   public void setSimilarityMeasures(final com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures similarityMeasures){
       this.similarityMeasures = similarityMeasures;
    }
 

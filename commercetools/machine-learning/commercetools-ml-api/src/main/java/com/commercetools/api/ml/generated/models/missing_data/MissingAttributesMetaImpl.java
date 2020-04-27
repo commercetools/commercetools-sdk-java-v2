@@ -22,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingAttributesMetaImpl implements MissingAttributesMeta {
 
-   private MissingAttributesDetails productLevel;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails productLevel;
    
-   private MissingAttributesDetails variantLevel;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails variantLevel;
    
-   private List<String> productTypeIds;
+   private java.util.List<String> productTypeIds;
 
    @JsonCreator
-   MissingAttributesMetaImpl(@JsonProperty("productLevel") final MissingAttributesDetails productLevel, @JsonProperty("variantLevel") final MissingAttributesDetails variantLevel, @JsonProperty("productTypeIds") final List<String> productTypeIds) {
+   MissingAttributesMetaImpl(@JsonProperty("productLevel") final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails productLevel, @JsonProperty("variantLevel") final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails variantLevel, @JsonProperty("productTypeIds") final java.util.List<String> productTypeIds) {
       this.productLevel = productLevel;
       this.variantLevel = variantLevel;
       this.productTypeIds = productTypeIds;
@@ -39,31 +39,31 @@ public final class MissingAttributesMetaImpl implements MissingAttributesMeta {
    }
    
    
-   public MissingAttributesDetails getProductLevel(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails getProductLevel(){
       return this.productLevel;
    }
    
    
-   public MissingAttributesDetails getVariantLevel(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails getVariantLevel(){
       return this.variantLevel;
    }
    
    /**
    *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
    */
-   public List<String> getProductTypeIds(){
+   public java.util.List<String> getProductTypeIds(){
       return this.productTypeIds;
    }
 
-   public void setProductLevel(final MissingAttributesDetails productLevel){
+   public void setProductLevel(final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails productLevel){
       this.productLevel = productLevel;
    }
    
-   public void setVariantLevel(final MissingAttributesDetails variantLevel){
+   public void setVariantLevel(final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails variantLevel){
       this.variantLevel = variantLevel;
    }
    
-   public void setProductTypeIds(final List<String> productTypeIds){
+   public void setProductTypeIds(final java.util.List<String> productTypeIds){
       this.productTypeIds = productTypeIds;
    }
 

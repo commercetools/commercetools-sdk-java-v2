@@ -24,7 +24,7 @@ public final class ImageSearchResponseBuilder {
    private Integer total;
    
    
-   private List<ResultItem> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.image_search.ResultItem> results;
    
    public ImageSearchResponseBuilder count( final Integer count) {
       this.count = count;
@@ -41,7 +41,7 @@ public final class ImageSearchResponseBuilder {
       return this;
    }
    
-   public ImageSearchResponseBuilder results( final List<ResultItem> results) {
+   public ImageSearchResponseBuilder results( final java.util.List<com.commercetools.api.ml.generated.models.image_search.ResultItem> results) {
       this.results = results;
       return this;
    }
@@ -62,7 +62,7 @@ public final class ImageSearchResponseBuilder {
    }
    
    
-   public List<ResultItem> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.image_search.ResultItem> getResults(){
       return this.results;
    }
 

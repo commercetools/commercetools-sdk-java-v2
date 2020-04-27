@@ -22,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectCategoryRecommendationImpl implements ProjectCategoryRecommendation {
 
-   private CategoryReference category;
+   private com.commercetools.api.ml.generated.models.common.CategoryReference category;
    
    private Integer confidence;
    
    private String path;
 
    @JsonCreator
-   ProjectCategoryRecommendationImpl(@JsonProperty("category") final CategoryReference category, @JsonProperty("confidence") final Integer confidence, @JsonProperty("path") final String path) {
+   ProjectCategoryRecommendationImpl(@JsonProperty("category") final com.commercetools.api.ml.generated.models.common.CategoryReference category, @JsonProperty("confidence") final Integer confidence, @JsonProperty("path") final String path) {
       this.category = category;
       this.confidence = confidence;
       this.path = path;
@@ -41,7 +41,7 @@ public final class ProjectCategoryRecommendationImpl implements ProjectCategoryR
    /**
    *  <p>A category that is recommended for a product.</p>
    */
-   public CategoryReference getCategory(){
+   public com.commercetools.api.ml.generated.models.common.CategoryReference getCategory(){
       return this.category;
    }
    
@@ -59,7 +59,7 @@ public final class ProjectCategoryRecommendationImpl implements ProjectCategoryR
       return this.path;
    }
 
-   public void setCategory(final CategoryReference category){
+   public void setCategory(final com.commercetools.api.ml.generated.models.common.CategoryReference category){
       this.category = category;
    }
    

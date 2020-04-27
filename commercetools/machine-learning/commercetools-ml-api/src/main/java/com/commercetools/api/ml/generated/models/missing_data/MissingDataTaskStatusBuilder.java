@@ -17,20 +17,20 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class MissingDataTaskStatusBuilder {
    
    
-   private TaskStatusEnum state;
+   private com.commercetools.api.ml.generated.models.common.TaskStatusEnum state;
    
    
-   private ZonedDateTime expires;
+   private java.time.ZonedDateTime expires;
    
    
    private com.commercetools.api.ml.generated.models.missing_data.MissingAttributesPagedQueryResult result;
    
-   public MissingDataTaskStatusBuilder state( final TaskStatusEnum state) {
+   public MissingDataTaskStatusBuilder state( final com.commercetools.api.ml.generated.models.common.TaskStatusEnum state) {
       this.state = state;
       return this;
    }
    
-   public MissingDataTaskStatusBuilder expires( final ZonedDateTime expires) {
+   public MissingDataTaskStatusBuilder expires( final java.time.ZonedDateTime expires) {
       this.expires = expires;
       return this;
    }
@@ -41,12 +41,12 @@ public final class MissingDataTaskStatusBuilder {
    }
    
    
-   public TaskStatusEnum getState(){
+   public com.commercetools.api.ml.generated.models.common.TaskStatusEnum getState(){
       return this.state;
    }
    
    
-   public ZonedDateTime getExpires(){
+   public java.time.ZonedDateTime getExpires(){
       return this.expires;
    }
    

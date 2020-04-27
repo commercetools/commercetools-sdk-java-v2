@@ -29,12 +29,12 @@ public final class MissingAttributesPagedQueryResultImpl implements MissingAttri
    
    private Long offset;
    
-   private List<MissingAttributes> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingAttributes> results;
    
-   private MissingAttributesMeta meta;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingAttributesMeta meta;
 
    @JsonCreator
-   MissingAttributesPagedQueryResultImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final List<MissingAttributes> results, @JsonProperty("meta") final MissingAttributesMeta meta) {
+   MissingAttributesPagedQueryResultImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingAttributes> results, @JsonProperty("meta") final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesMeta meta) {
       this.count = count;
       this.total = total;
       this.offset = offset;
@@ -61,12 +61,12 @@ public final class MissingAttributesPagedQueryResultImpl implements MissingAttri
    }
    
    
-   public List<MissingAttributes> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingAttributes> getResults(){
       return this.results;
    }
    
    
-   public MissingAttributesMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingAttributesMeta getMeta(){
       return this.meta;
    }
 
@@ -82,11 +82,11 @@ public final class MissingAttributesPagedQueryResultImpl implements MissingAttri
       this.offset = offset;
    }
    
-   public void setResults(final List<MissingAttributes> results){
+   public void setResults(final java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingAttributes> results){
       this.results = results;
    }
    
-   public void setMeta(final MissingAttributesMeta meta){
+   public void setMeta(final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesMeta meta){
       this.meta = meta;
    }
 

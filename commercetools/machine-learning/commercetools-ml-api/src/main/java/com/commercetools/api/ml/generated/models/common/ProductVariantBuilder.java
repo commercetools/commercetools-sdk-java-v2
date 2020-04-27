@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProductVariantBuilder {
    
    
-   private ProductReference product;
+   private com.commercetools.api.ml.generated.models.common.ProductReference product;
    
    
    private Boolean staged;
@@ -23,7 +23,7 @@ public final class ProductVariantBuilder {
    
    private Integer variantId;
    
-   public ProductVariantBuilder product( final ProductReference product) {
+   public ProductVariantBuilder product( final com.commercetools.api.ml.generated.models.common.ProductReference product) {
       this.product = product;
       return this;
    }
@@ -39,7 +39,7 @@ public final class ProductVariantBuilder {
    }
    
    
-   public ProductReference getProduct(){
+   public com.commercetools.api.ml.generated.models.common.ProductReference getProduct(){
       return this.product;
    }
    

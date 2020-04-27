@@ -16,15 +16,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class SimilarProductBuilder {
    
    @Nullable
-   private ProductReference product;
+   private com.commercetools.api.ml.generated.models.common.ProductReference product;
    
    @Nullable
    private Long variantId;
    
    @Nullable
-   private SimilarProductMeta meta;
+   private com.commercetools.api.ml.generated.models.similar_products.SimilarProductMeta meta;
    
-   public SimilarProductBuilder product(@Nullable final ProductReference product) {
+   public SimilarProductBuilder product(@Nullable final com.commercetools.api.ml.generated.models.common.ProductReference product) {
       this.product = product;
       return this;
    }
@@ -34,13 +34,13 @@ public final class SimilarProductBuilder {
       return this;
    }
    
-   public SimilarProductBuilder meta(@Nullable final SimilarProductMeta meta) {
+   public SimilarProductBuilder meta(@Nullable final com.commercetools.api.ml.generated.models.similar_products.SimilarProductMeta meta) {
       this.meta = meta;
       return this;
    }
    
    @Nullable
-   public ProductReference getProduct(){
+   public com.commercetools.api.ml.generated.models.common.ProductReference getProduct(){
       return this.product;
    }
    
@@ -50,7 +50,7 @@ public final class SimilarProductBuilder {
    }
    
    @Nullable
-   public SimilarProductMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.similar_products.SimilarProductMeta getMeta(){
       return this.meta;
    }
 

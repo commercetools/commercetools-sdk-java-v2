@@ -13,7 +13,7 @@ public class TestBase {
     public final String tokenUrl = requireEnvVar("CTP_AUTH_URL") + "oauth/token";
     public final String ml_host = requireEnvVar("CTP_ML_API_URL");
 
-    public final ByProjectKeyRequestBuilder apiBuilder = MLApiRootFactory.create(clientId,
+    public final ByProjectKeyRequestBuilder mlApiBuilder = MLApiRootFactory.create(clientId,
             clientSecret,
             "",
             tokenUrl,

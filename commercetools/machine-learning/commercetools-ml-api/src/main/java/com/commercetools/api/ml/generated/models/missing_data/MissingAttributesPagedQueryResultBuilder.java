@@ -25,10 +25,10 @@ public final class MissingAttributesPagedQueryResultBuilder {
    private Long offset;
    
    
-   private List<MissingAttributes> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingAttributes> results;
    
    
-   private MissingAttributesMeta meta;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingAttributesMeta meta;
    
    public MissingAttributesPagedQueryResultBuilder count( final Long count) {
       this.count = count;
@@ -45,12 +45,12 @@ public final class MissingAttributesPagedQueryResultBuilder {
       return this;
    }
    
-   public MissingAttributesPagedQueryResultBuilder results( final List<MissingAttributes> results) {
+   public MissingAttributesPagedQueryResultBuilder results( final java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingAttributes> results) {
       this.results = results;
       return this;
    }
    
-   public MissingAttributesPagedQueryResultBuilder meta( final MissingAttributesMeta meta) {
+   public MissingAttributesPagedQueryResultBuilder meta( final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesMeta meta) {
       this.meta = meta;
       return this;
    }
@@ -71,12 +71,12 @@ public final class MissingAttributesPagedQueryResultBuilder {
    }
    
    
-   public List<MissingAttributes> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingAttributes> getResults(){
       return this.results;
    }
    
    
-   public MissingAttributesMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingAttributesMeta getMeta(){
       return this.meta;
    }
 

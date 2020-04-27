@@ -18,32 +18,32 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class MissingAttributesBuilder {
    
    
-   private ProductReference product;
+   private com.commercetools.api.ml.generated.models.common.ProductReference product;
    
    
-   private ProductTypeReference productType;
+   private com.commercetools.api.ml.generated.models.common.ProductTypeReference productType;
    
    
    private Integer variantId;
    
    
-   private List<String> missingAttributeValues;
+   private java.util.List<String> missingAttributeValues;
    
    @Nullable
-   private List<String> missingAttributeNames;
+   private java.util.List<String> missingAttributeNames;
    
    @Nullable
-   private AttributeCount attributeCount;
+   private com.commercetools.api.ml.generated.models.missing_data.AttributeCount attributeCount;
    
    @Nullable
-   private AttributeCoverage attributeCoverage;
+   private com.commercetools.api.ml.generated.models.missing_data.AttributeCoverage attributeCoverage;
    
-   public MissingAttributesBuilder product( final ProductReference product) {
+   public MissingAttributesBuilder product( final com.commercetools.api.ml.generated.models.common.ProductReference product) {
       this.product = product;
       return this;
    }
    
-   public MissingAttributesBuilder productType( final ProductTypeReference productType) {
+   public MissingAttributesBuilder productType( final com.commercetools.api.ml.generated.models.common.ProductTypeReference productType) {
       this.productType = productType;
       return this;
    }
@@ -53,33 +53,33 @@ public final class MissingAttributesBuilder {
       return this;
    }
    
-   public MissingAttributesBuilder missingAttributeValues( final List<String> missingAttributeValues) {
+   public MissingAttributesBuilder missingAttributeValues( final java.util.List<String> missingAttributeValues) {
       this.missingAttributeValues = missingAttributeValues;
       return this;
    }
    
-   public MissingAttributesBuilder missingAttributeNames(@Nullable final List<String> missingAttributeNames) {
+   public MissingAttributesBuilder missingAttributeNames(@Nullable final java.util.List<String> missingAttributeNames) {
       this.missingAttributeNames = missingAttributeNames;
       return this;
    }
    
-   public MissingAttributesBuilder attributeCount(@Nullable final AttributeCount attributeCount) {
+   public MissingAttributesBuilder attributeCount(@Nullable final com.commercetools.api.ml.generated.models.missing_data.AttributeCount attributeCount) {
       this.attributeCount = attributeCount;
       return this;
    }
    
-   public MissingAttributesBuilder attributeCoverage(@Nullable final AttributeCoverage attributeCoverage) {
+   public MissingAttributesBuilder attributeCoverage(@Nullable final com.commercetools.api.ml.generated.models.missing_data.AttributeCoverage attributeCoverage) {
       this.attributeCoverage = attributeCoverage;
       return this;
    }
    
    
-   public ProductReference getProduct(){
+   public com.commercetools.api.ml.generated.models.common.ProductReference getProduct(){
       return this.product;
    }
    
    
-   public ProductTypeReference getProductType(){
+   public com.commercetools.api.ml.generated.models.common.ProductTypeReference getProductType(){
       return this.productType;
    }
    
@@ -89,22 +89,22 @@ public final class MissingAttributesBuilder {
    }
    
    
-   public List<String> getMissingAttributeValues(){
+   public java.util.List<String> getMissingAttributeValues(){
       return this.missingAttributeValues;
    }
    
    @Nullable
-   public List<String> getMissingAttributeNames(){
+   public java.util.List<String> getMissingAttributeNames(){
       return this.missingAttributeNames;
    }
    
    @Nullable
-   public AttributeCount getAttributeCount(){
+   public com.commercetools.api.ml.generated.models.missing_data.AttributeCount getAttributeCount(){
       return this.attributeCount;
    }
    
    @Nullable
-   public AttributeCoverage getAttributeCoverage(){
+   public com.commercetools.api.ml.generated.models.missing_data.AttributeCoverage getAttributeCoverage(){
       return this.attributeCoverage;
    }
 

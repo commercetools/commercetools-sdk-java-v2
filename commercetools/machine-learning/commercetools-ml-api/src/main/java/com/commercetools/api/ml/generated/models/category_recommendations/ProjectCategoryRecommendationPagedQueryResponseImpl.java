@@ -29,12 +29,12 @@ public final class ProjectCategoryRecommendationPagedQueryResponseImpl implement
    
    private Long offset;
    
-   private List<ProjectCategoryRecommendation> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendation> results;
    
-   private ProjectCategoryRecommendationMeta meta;
+   private com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendationMeta meta;
 
    @JsonCreator
-   ProjectCategoryRecommendationPagedQueryResponseImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final List<ProjectCategoryRecommendation> results, @JsonProperty("meta") final ProjectCategoryRecommendationMeta meta) {
+   ProjectCategoryRecommendationPagedQueryResponseImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendation> results, @JsonProperty("meta") final com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendationMeta meta) {
       this.count = count;
       this.total = total;
       this.offset = offset;
@@ -61,12 +61,12 @@ public final class ProjectCategoryRecommendationPagedQueryResponseImpl implement
    }
    
    
-   public List<ProjectCategoryRecommendation> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendation> getResults(){
       return this.results;
    }
    
    
-   public ProjectCategoryRecommendationMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendationMeta getMeta(){
       return this.meta;
    }
 
@@ -82,11 +82,11 @@ public final class ProjectCategoryRecommendationPagedQueryResponseImpl implement
       this.offset = offset;
    }
    
-   public void setResults(final List<ProjectCategoryRecommendation> results){
+   public void setResults(final java.util.List<com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendation> results){
       this.results = results;
    }
    
-   public void setMeta(final ProjectCategoryRecommendationMeta meta){
+   public void setMeta(final com.commercetools.api.ml.generated.models.category_recommendations.ProjectCategoryRecommendationMeta meta){
       this.meta = meta;
    }
 

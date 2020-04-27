@@ -18,10 +18,10 @@ public final class ProductSetSelectorBuilder {
    private String projectKey;
    
    @Nullable
-   private List<String> productIds;
+   private java.util.List<String> productIds;
    
    @Nullable
-   private List<String> productTypeIds;
+   private java.util.List<String> productTypeIds;
    
    @Nullable
    private Boolean staged;
@@ -37,12 +37,12 @@ public final class ProductSetSelectorBuilder {
       return this;
    }
    
-   public ProductSetSelectorBuilder productIds(@Nullable final List<String> productIds) {
+   public ProductSetSelectorBuilder productIds(@Nullable final java.util.List<String> productIds) {
       this.productIds = productIds;
       return this;
    }
    
-   public ProductSetSelectorBuilder productTypeIds(@Nullable final List<String> productTypeIds) {
+   public ProductSetSelectorBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
       this.productTypeIds = productTypeIds;
       return this;
    }
@@ -68,12 +68,12 @@ public final class ProductSetSelectorBuilder {
    }
    
    @Nullable
-   public List<String> getProductIds(){
+   public java.util.List<String> getProductIds(){
       return this.productIds;
    }
    
    @Nullable
-   public List<String> getProductTypeIds(){
+   public java.util.List<String> getProductTypeIds(){
       return this.productTypeIds;
    }
    

@@ -29,12 +29,12 @@ public final class MissingImagesPagedQueryResultImpl implements MissingImagesPag
    
    private Long offset;
    
-   private List<MissingImages> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingImages> results;
    
-   private MissingImagesMeta meta;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingImagesMeta meta;
 
    @JsonCreator
-   MissingImagesPagedQueryResultImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final List<MissingImages> results, @JsonProperty("meta") final MissingImagesMeta meta) {
+   MissingImagesPagedQueryResultImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingImages> results, @JsonProperty("meta") final com.commercetools.api.ml.generated.models.missing_data.MissingImagesMeta meta) {
       this.count = count;
       this.total = total;
       this.offset = offset;
@@ -61,12 +61,12 @@ public final class MissingImagesPagedQueryResultImpl implements MissingImagesPag
    }
    
    
-   public List<MissingImages> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingImages> getResults(){
       return this.results;
    }
    
    
-   public MissingImagesMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingImagesMeta getMeta(){
       return this.meta;
    }
 
@@ -82,11 +82,11 @@ public final class MissingImagesPagedQueryResultImpl implements MissingImagesPag
       this.offset = offset;
    }
    
-   public void setResults(final List<MissingImages> results){
+   public void setResults(final java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingImages> results){
       this.results = results;
    }
    
-   public void setMeta(final MissingImagesMeta meta){
+   public void setMeta(final com.commercetools.api.ml.generated.models.missing_data.MissingImagesMeta meta){
       this.meta = meta;
    }
 

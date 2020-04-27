@@ -31,10 +31,10 @@ public final class ImageSearchResponseImpl implements ImageSearchResponse {
    
    private Integer total;
    
-   private List<ResultItem> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.image_search.ResultItem> results;
 
    @JsonCreator
-   ImageSearchResponseImpl(@JsonProperty("count") final Integer count, @JsonProperty("offset") final Integer offset, @JsonProperty("total") final Integer total, @JsonProperty("results") final List<ResultItem> results) {
+   ImageSearchResponseImpl(@JsonProperty("count") final Integer count, @JsonProperty("offset") final Integer offset, @JsonProperty("total") final Integer total, @JsonProperty("results") final java.util.List<com.commercetools.api.ml.generated.models.image_search.ResultItem> results) {
       this.count = count;
       this.offset = offset;
       this.total = total;
@@ -68,7 +68,7 @@ public final class ImageSearchResponseImpl implements ImageSearchResponse {
    /**
    *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
    */
-   public List<ResultItem> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.image_search.ResultItem> getResults(){
       return this.results;
    }
 
@@ -84,7 +84,7 @@ public final class ImageSearchResponseImpl implements ImageSearchResponse {
       this.total = total;
    }
    
-   public void setResults(final List<ResultItem> results){
+   public void setResults(final java.util.List<com.commercetools.api.ml.generated.models.image_search.ResultItem> results){
       this.results = results;
    }
 

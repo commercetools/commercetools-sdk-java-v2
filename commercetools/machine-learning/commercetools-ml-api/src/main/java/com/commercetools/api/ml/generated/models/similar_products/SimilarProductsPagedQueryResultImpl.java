@@ -29,12 +29,12 @@ public final class SimilarProductsPagedQueryResultImpl implements SimilarProduct
    
    private Long offset;
    
-   private List<SimilarProductPair> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProductPair> results;
    
-   private SimilarProductSearchRequestMeta meta;
+   private com.commercetools.api.ml.generated.models.similar_products.SimilarProductSearchRequestMeta meta;
 
    @JsonCreator
-   SimilarProductsPagedQueryResultImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final List<SimilarProductPair> results, @JsonProperty("meta") final SimilarProductSearchRequestMeta meta) {
+   SimilarProductsPagedQueryResultImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProductPair> results, @JsonProperty("meta") final com.commercetools.api.ml.generated.models.similar_products.SimilarProductSearchRequestMeta meta) {
       this.count = count;
       this.total = total;
       this.offset = offset;
@@ -61,12 +61,12 @@ public final class SimilarProductsPagedQueryResultImpl implements SimilarProduct
    }
    
    
-   public List<SimilarProductPair> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProductPair> getResults(){
       return this.results;
    }
    
    
-   public SimilarProductSearchRequestMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.similar_products.SimilarProductSearchRequestMeta getMeta(){
       return this.meta;
    }
 
@@ -82,11 +82,11 @@ public final class SimilarProductsPagedQueryResultImpl implements SimilarProduct
       this.offset = offset;
    }
    
-   public void setResults(final List<SimilarProductPair> results){
+   public void setResults(final java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProductPair> results){
       this.results = results;
    }
    
-   public void setMeta(final SimilarProductSearchRequestMeta meta){
+   public void setMeta(final com.commercetools.api.ml.generated.models.similar_products.SimilarProductSearchRequestMeta meta){
       this.meta = meta;
    }
 

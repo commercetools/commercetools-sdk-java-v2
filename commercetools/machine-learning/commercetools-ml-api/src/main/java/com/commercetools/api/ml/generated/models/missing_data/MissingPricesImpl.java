@@ -22,12 +22,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingPricesImpl implements MissingPrices {
 
-   private ProductReference product;
+   private com.commercetools.api.ml.generated.models.common.ProductReference product;
    
    private Long variantId;
 
    @JsonCreator
-   MissingPricesImpl(@JsonProperty("product") final ProductReference product, @JsonProperty("variantId") final Long variantId) {
+   MissingPricesImpl(@JsonProperty("product") final com.commercetools.api.ml.generated.models.common.ProductReference product, @JsonProperty("variantId") final Long variantId) {
       this.product = product;
       this.variantId = variantId;
    }
@@ -36,7 +36,7 @@ public final class MissingPricesImpl implements MissingPrices {
    }
    
    
-   public ProductReference getProduct(){
+   public com.commercetools.api.ml.generated.models.common.ProductReference getProduct(){
       return this.product;
    }
    
@@ -47,7 +47,7 @@ public final class MissingPricesImpl implements MissingPrices {
       return this.variantId;
    }
 
-   public void setProduct(final ProductReference product){
+   public void setProduct(final com.commercetools.api.ml.generated.models.common.ProductReference product){
       this.product = product;
    }
    

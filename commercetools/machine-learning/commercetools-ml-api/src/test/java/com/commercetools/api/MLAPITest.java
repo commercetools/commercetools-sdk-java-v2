@@ -18,7 +18,7 @@ public class MLAPITest extends TestBase {
     @Test
     public void generalRecommendationsTest() {
 
-        ApiHttpResponse<GeneralCategoryRecommendationPagedQueryResponse> response = apiBuilder
+        ApiHttpResponse<GeneralCategoryRecommendationPagedQueryResponse> response = mlApiBuilder
                 .recommendations()
                 .generalCategories()
                 .get()
@@ -29,7 +29,7 @@ public class MLAPITest extends TestBase {
 
     @Test
     public void similaritiesTest() {
-        ApiHttpResponse<TaskToken> tokenApiHttpResponse = apiBuilder
+        ApiHttpResponse<TaskToken> tokenApiHttpResponse = mlApiBuilder
                 .similarities()
                 .products()
                 .post(
@@ -48,7 +48,7 @@ public class MLAPITest extends TestBase {
     }
 
     public ApiHttpResponse<SimilarProductsTaskStatus> getSimilarProducts(final String taskId) {
-        return apiBuilder
+        return mlApiBuilder
                 .similarities()
                 .products()
                 .status()

@@ -81,9 +81,6 @@ public class DeleteEverythingIntegrationTest {
                 deleteAllDiscountCodes();
             }catch (Exception e){}
             try{
-                deleteAllApiClients();
-            }catch (Exception e){}
-            try{
                 deleteAllChannels();
             }catch (Exception e){}
             try{
@@ -271,23 +268,6 @@ public class DeleteEverythingIntegrationTest {
                 ChannelFixtures.deleteChannel(channel.getId(), channel.getVersion());
             });
         } while (response.getResults().size() != 0);
-    }
-    
-    private void deleteAllApiClients() {
-        ApiClientPagedQueryResponse response;
-
-        do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
-                    .apiClients()
-                    .get()
-                    .executeBlocking().getBody();
-            response.getResults().forEach(apiClient -> {
-                //do not delete "main" ApiClient, otherwise we don't have a client to send integration test requests with
-                if(!apiClient.getName().equals("main")){
-                    ApiClientFixtures.deleteApiClient(apiClient.getId());
-                }
-            });
-        } while (response.getResults().size() > 1);
     }
     
     private void deleteAllCategories() {

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeReferenceImpl implements ProductTypeReference {
 
-   private ReferenceTypeId typeId;
+   private com.commercetools.api.ml.generated.models.common.ReferenceTypeId typeId;
    
    private String id;
 
@@ -37,7 +37,7 @@ public final class ProductTypeReferenceImpl implements ProductTypeReference {
    }
    
    
-   public ReferenceTypeId getTypeId(){
+   public com.commercetools.api.ml.generated.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
    

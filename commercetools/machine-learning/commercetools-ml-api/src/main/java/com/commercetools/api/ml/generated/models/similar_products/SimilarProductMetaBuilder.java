@@ -16,28 +16,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class SimilarProductMetaBuilder {
    
    @Nullable
-   private LocalizedString name;
+   private com.commercetools.api.ml.generated.models.common.LocalizedString name;
    
    @Nullable
-   private LocalizedString description;
+   private com.commercetools.api.ml.generated.models.common.LocalizedString description;
    
    @Nullable
-   private Money price;
+   private com.commercetools.api.ml.generated.models.common.Money price;
    
    @Nullable
    private Long variantCount;
    
-   public SimilarProductMetaBuilder name(@Nullable final LocalizedString name) {
+   public SimilarProductMetaBuilder name(@Nullable final com.commercetools.api.ml.generated.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public SimilarProductMetaBuilder description(@Nullable final LocalizedString description) {
+   public SimilarProductMetaBuilder description(@Nullable final com.commercetools.api.ml.generated.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
    
-   public SimilarProductMetaBuilder price(@Nullable final Money price) {
+   public SimilarProductMetaBuilder price(@Nullable final com.commercetools.api.ml.generated.models.common.Money price) {
       this.price = price;
       return this;
    }
@@ -48,17 +48,17 @@ public final class SimilarProductMetaBuilder {
    }
    
    @Nullable
-   public LocalizedString getName(){
+   public com.commercetools.api.ml.generated.models.common.LocalizedString getName(){
       return this.name;
    }
    
    @Nullable
-   public LocalizedString getDescription(){
+   public com.commercetools.api.ml.generated.models.common.LocalizedString getDescription(){
       return this.description;
    }
    
    @Nullable
-   public Money getPrice(){
+   public com.commercetools.api.ml.generated.models.common.Money getPrice(){
       return this.price;
    }
    

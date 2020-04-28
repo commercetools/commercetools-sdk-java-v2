@@ -22,14 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingImagesImpl implements MissingImages {
 
-   private ProductReference product;
+   private com.commercetools.api.ml.generated.models.common.ProductReference product;
    
    private Long variantId;
    
    private Long imageCount;
 
    @JsonCreator
-   MissingImagesImpl(@JsonProperty("product") final ProductReference product, @JsonProperty("variantId") final Long variantId, @JsonProperty("imageCount") final Long imageCount) {
+   MissingImagesImpl(@JsonProperty("product") final com.commercetools.api.ml.generated.models.common.ProductReference product, @JsonProperty("variantId") final Long variantId, @JsonProperty("imageCount") final Long imageCount) {
       this.product = product;
       this.variantId = variantId;
       this.imageCount = imageCount;
@@ -39,7 +39,7 @@ public final class MissingImagesImpl implements MissingImages {
    }
    
    
-   public ProductReference getProduct(){
+   public com.commercetools.api.ml.generated.models.common.ProductReference getProduct(){
       return this.product;
    }
    
@@ -57,7 +57,7 @@ public final class MissingImagesImpl implements MissingImages {
       return this.imageCount;
    }
 
-   public void setProduct(final ProductReference product){
+   public void setProduct(final com.commercetools.api.ml.generated.models.common.ProductReference product){
       this.product = product;
    }
    

@@ -29,12 +29,12 @@ public final class MissingPricesPagedQueryResultImpl implements MissingPricesPag
    
    private Long offset;
    
-   private List<MissingPrices> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingPrices> results;
    
-   private MissingPricesMeta meta;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingPricesMeta meta;
 
    @JsonCreator
-   MissingPricesPagedQueryResultImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final List<MissingPrices> results, @JsonProperty("meta") final MissingPricesMeta meta) {
+   MissingPricesPagedQueryResultImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingPrices> results, @JsonProperty("meta") final com.commercetools.api.ml.generated.models.missing_data.MissingPricesMeta meta) {
       this.count = count;
       this.total = total;
       this.offset = offset;
@@ -61,12 +61,12 @@ public final class MissingPricesPagedQueryResultImpl implements MissingPricesPag
    }
    
    
-   public List<MissingPrices> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingPrices> getResults(){
       return this.results;
    }
    
    
-   public MissingPricesMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingPricesMeta getMeta(){
       return this.meta;
    }
 
@@ -82,11 +82,11 @@ public final class MissingPricesPagedQueryResultImpl implements MissingPricesPag
       this.offset = offset;
    }
    
-   public void setResults(final List<MissingPrices> results){
+   public void setResults(final java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingPrices> results){
       this.results = results;
    }
    
-   public void setMeta(final MissingPricesMeta meta){
+   public void setMeta(final com.commercetools.api.ml.generated.models.missing_data.MissingPricesMeta meta){
       this.meta = meta;
    }
 

@@ -36,10 +36,10 @@ public final class MissingImagesSearchRequestBuilder {
    private Long threshold;
    
    @Nullable
-   private List<String> productIds;
+   private java.util.List<String> productIds;
    
    @Nullable
-   private List<String> productTypeIds;
+   private java.util.List<String> productTypeIds;
    
    public MissingImagesSearchRequestBuilder limit(@Nullable final Long limit) {
       this.limit = limit;
@@ -76,12 +76,12 @@ public final class MissingImagesSearchRequestBuilder {
       return this;
    }
    
-   public MissingImagesSearchRequestBuilder productIds(@Nullable final List<String> productIds) {
+   public MissingImagesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
       this.productIds = productIds;
       return this;
    }
    
-   public MissingImagesSearchRequestBuilder productTypeIds(@Nullable final List<String> productTypeIds) {
+   public MissingImagesSearchRequestBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
       this.productTypeIds = productTypeIds;
       return this;
    }
@@ -122,12 +122,12 @@ public final class MissingImagesSearchRequestBuilder {
    }
    
    @Nullable
-   public List<String> getProductIds(){
+   public java.util.List<String> getProductIds(){
       return this.productIds;
    }
    
    @Nullable
-   public List<String> getProductTypeIds(){
+   public java.util.List<String> getProductTypeIds(){
       return this.productTypeIds;
    }
 

@@ -40,14 +40,14 @@ public final class MissingAttributesSearchRequestImpl implements MissingAttribut
    
    private Boolean showMissingAttributeNames;
    
-   private List<String> productIds;
+   private java.util.List<String> productIds;
    
-   private List<String> productTypeIds;
+   private java.util.List<String> productTypeIds;
    
    private String attributeName;
 
    @JsonCreator
-   MissingAttributesSearchRequestImpl(@JsonProperty("limit") final Integer limit, @JsonProperty("offset") final Integer offset, @JsonProperty("staged") final Boolean staged, @JsonProperty("productSetLimit") final Integer productSetLimit, @JsonProperty("includeVariants") final Boolean includeVariants, @JsonProperty("coverageMin") final Integer coverageMin, @JsonProperty("coverageMax") final Integer coverageMax, @JsonProperty("sortBy") final String sortBy, @JsonProperty("showMissingAttributeNames") final Boolean showMissingAttributeNames, @JsonProperty("productIds") final List<String> productIds, @JsonProperty("productTypeIds") final List<String> productTypeIds, @JsonProperty("attributeName") final String attributeName) {
+   MissingAttributesSearchRequestImpl(@JsonProperty("limit") final Integer limit, @JsonProperty("offset") final Integer offset, @JsonProperty("staged") final Boolean staged, @JsonProperty("productSetLimit") final Integer productSetLimit, @JsonProperty("includeVariants") final Boolean includeVariants, @JsonProperty("coverageMin") final Integer coverageMin, @JsonProperty("coverageMax") final Integer coverageMax, @JsonProperty("sortBy") final String sortBy, @JsonProperty("showMissingAttributeNames") final Boolean showMissingAttributeNames, @JsonProperty("productIds") final java.util.List<String> productIds, @JsonProperty("productTypeIds") final java.util.List<String> productTypeIds, @JsonProperty("attributeName") final String attributeName) {
       this.limit = limit;
       this.offset = offset;
       this.staged = staged;
@@ -129,7 +129,7 @@ public final class MissingAttributesSearchRequestImpl implements MissingAttribut
    *  <p>Filters results by the provided Product IDs.
    *  Cannot be applied in combination with any other filter.</p>
    */
-   public List<String> getProductIds(){
+   public java.util.List<String> getProductIds(){
       return this.productIds;
    }
    
@@ -137,7 +137,7 @@ public final class MissingAttributesSearchRequestImpl implements MissingAttribut
    *  <p>Filters results by the provided product type IDs.
    *  Cannot be applied in combination with any other filter.</p>
    */
-   public List<String> getProductTypeIds(){
+   public java.util.List<String> getProductTypeIds(){
       return this.productTypeIds;
    }
    
@@ -185,11 +185,11 @@ public final class MissingAttributesSearchRequestImpl implements MissingAttribut
       this.showMissingAttributeNames = showMissingAttributeNames;
    }
    
-   public void setProductIds(final List<String> productIds){
+   public void setProductIds(final java.util.List<String> productIds){
       this.productIds = productIds;
    }
    
-   public void setProductTypeIds(final List<String> productTypeIds){
+   public void setProductTypeIds(final java.util.List<String> productTypeIds){
       this.productTypeIds = productTypeIds;
    }
    

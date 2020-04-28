@@ -25,14 +25,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantImpl implements ProductVariant {
 
-   private ProductReference product;
+   private com.commercetools.api.ml.generated.models.common.ProductReference product;
    
    private Boolean staged;
    
    private Integer variantId;
 
    @JsonCreator
-   ProductVariantImpl(@JsonProperty("product") final ProductReference product, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Integer variantId) {
+   ProductVariantImpl(@JsonProperty("product") final com.commercetools.api.ml.generated.models.common.ProductReference product, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Integer variantId) {
       this.product = product;
       this.staged = staged;
       this.variantId = variantId;
@@ -44,7 +44,7 @@ public final class ProductVariantImpl implements ProductVariant {
    /**
    *  <p>The product that contains this variant.</p>
    */
-   public ProductReference getProduct(){
+   public com.commercetools.api.ml.generated.models.common.ProductReference getProduct(){
       return this.product;
    }
    
@@ -62,7 +62,7 @@ public final class ProductVariantImpl implements ProductVariant {
       return this.variantId;
    }
 
-   public void setProduct(final ProductReference product){
+   public void setProduct(final com.commercetools.api.ml.generated.models.common.ProductReference product){
       this.product = product;
    }
    

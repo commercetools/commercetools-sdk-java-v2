@@ -18,14 +18,14 @@ public final class SimilarProductPairBuilder {
    private Integer confidence;
    
    
-   private List<SimilarProduct> products;
+   private java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProduct> products;
    
    public SimilarProductPairBuilder confidence( final Integer confidence) {
       this.confidence = confidence;
       return this;
    }
    
-   public SimilarProductPairBuilder products( final List<SimilarProduct> products) {
+   public SimilarProductPairBuilder products( final java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProduct> products) {
       this.products = products;
       return this;
    }
@@ -36,7 +36,7 @@ public final class SimilarProductPairBuilder {
    }
    
    
-   public List<SimilarProduct> getProducts(){
+   public java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProduct> getProducts(){
       return this.products;
    }
 

@@ -17,41 +17,41 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class MissingPricesTaskStatusBuilder {
    
    
-   private TaskStatusEnum state;
+   private com.commercetools.api.ml.generated.models.common.TaskStatusEnum state;
    
    
-   private ZonedDateTime expires;
+   private java.time.ZonedDateTime expires;
    
    
-   private MissingPricesPagedQueryResult result;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingPricesPagedQueryResult result;
    
-   public MissingPricesTaskStatusBuilder state( final TaskStatusEnum state) {
+   public MissingPricesTaskStatusBuilder state( final com.commercetools.api.ml.generated.models.common.TaskStatusEnum state) {
       this.state = state;
       return this;
    }
    
-   public MissingPricesTaskStatusBuilder expires( final ZonedDateTime expires) {
+   public MissingPricesTaskStatusBuilder expires( final java.time.ZonedDateTime expires) {
       this.expires = expires;
       return this;
    }
    
-   public MissingPricesTaskStatusBuilder result( final MissingPricesPagedQueryResult result) {
+   public MissingPricesTaskStatusBuilder result( final com.commercetools.api.ml.generated.models.missing_data.MissingPricesPagedQueryResult result) {
       this.result = result;
       return this;
    }
    
    
-   public TaskStatusEnum getState(){
+   public com.commercetools.api.ml.generated.models.common.TaskStatusEnum getState(){
       return this.state;
    }
    
    
-   public ZonedDateTime getExpires(){
+   public java.time.ZonedDateTime getExpires(){
       return this.expires;
    }
    
    
-   public MissingPricesPagedQueryResult getResult(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingPricesPagedQueryResult getResult(){
       return this.result;
    }
 

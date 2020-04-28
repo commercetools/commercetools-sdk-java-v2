@@ -25,10 +25,10 @@ public final class SimilarProductsPagedQueryResultBuilder {
    private Long offset;
    
    
-   private List<SimilarProductPair> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProductPair> results;
    
    
-   private SimilarProductSearchRequestMeta meta;
+   private com.commercetools.api.ml.generated.models.similar_products.SimilarProductSearchRequestMeta meta;
    
    public SimilarProductsPagedQueryResultBuilder count( final Long count) {
       this.count = count;
@@ -45,12 +45,12 @@ public final class SimilarProductsPagedQueryResultBuilder {
       return this;
    }
    
-   public SimilarProductsPagedQueryResultBuilder results( final List<SimilarProductPair> results) {
+   public SimilarProductsPagedQueryResultBuilder results( final java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProductPair> results) {
       this.results = results;
       return this;
    }
    
-   public SimilarProductsPagedQueryResultBuilder meta( final SimilarProductSearchRequestMeta meta) {
+   public SimilarProductsPagedQueryResultBuilder meta( final com.commercetools.api.ml.generated.models.similar_products.SimilarProductSearchRequestMeta meta) {
       this.meta = meta;
       return this;
    }
@@ -71,12 +71,12 @@ public final class SimilarProductsPagedQueryResultBuilder {
    }
    
    
-   public List<SimilarProductPair> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.similar_products.SimilarProductPair> getResults(){
       return this.results;
    }
    
    
-   public SimilarProductSearchRequestMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.similar_products.SimilarProductSearchRequestMeta getMeta(){
       return this.meta;
    }
 

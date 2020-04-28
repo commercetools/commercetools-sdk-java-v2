@@ -28,10 +28,10 @@ public final class GeneralCategoryRecommendationPagedQueryResponseImpl implement
    
    private Long offset;
    
-   private List<GeneralCategoryRecommendation> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.general_category_recommendations.GeneralCategoryRecommendation> results;
 
    @JsonCreator
-   GeneralCategoryRecommendationPagedQueryResponseImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final List<GeneralCategoryRecommendation> results) {
+   GeneralCategoryRecommendationPagedQueryResponseImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.api.ml.generated.models.general_category_recommendations.GeneralCategoryRecommendation> results) {
       this.count = count;
       this.total = total;
       this.offset = offset;
@@ -57,7 +57,7 @@ public final class GeneralCategoryRecommendationPagedQueryResponseImpl implement
    }
    
    
-   public List<GeneralCategoryRecommendation> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.general_category_recommendations.GeneralCategoryRecommendation> getResults(){
       return this.results;
    }
 
@@ -73,7 +73,7 @@ public final class GeneralCategoryRecommendationPagedQueryResponseImpl implement
       this.offset = offset;
    }
    
-   public void setResults(final List<GeneralCategoryRecommendation> results){
+   public void setResults(final java.util.List<com.commercetools.api.ml.generated.models.general_category_recommendations.GeneralCategoryRecommendation> results){
       this.results = results;
    }
 

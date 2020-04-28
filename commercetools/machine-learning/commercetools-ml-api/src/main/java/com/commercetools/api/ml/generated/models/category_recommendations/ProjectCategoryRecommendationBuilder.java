@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProjectCategoryRecommendationBuilder {
    
    
-   private CategoryReference category;
+   private com.commercetools.api.ml.generated.models.common.CategoryReference category;
    
    
    private Integer confidence;
@@ -23,7 +23,7 @@ public final class ProjectCategoryRecommendationBuilder {
    
    private String path;
    
-   public ProjectCategoryRecommendationBuilder category( final CategoryReference category) {
+   public ProjectCategoryRecommendationBuilder category( final com.commercetools.api.ml.generated.models.common.CategoryReference category) {
       this.category = category;
       return this;
    }
@@ -39,7 +39,7 @@ public final class ProjectCategoryRecommendationBuilder {
    }
    
    
-   public CategoryReference getCategory(){
+   public com.commercetools.api.ml.generated.models.common.CategoryReference getCategory(){
       return this.category;
    }
    

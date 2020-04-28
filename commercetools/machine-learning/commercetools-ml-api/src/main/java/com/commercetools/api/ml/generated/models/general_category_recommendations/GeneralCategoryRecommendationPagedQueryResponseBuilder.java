@@ -24,7 +24,7 @@ public final class GeneralCategoryRecommendationPagedQueryResponseBuilder {
    private Long offset;
    
    
-   private List<GeneralCategoryRecommendation> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.general_category_recommendations.GeneralCategoryRecommendation> results;
    
    public GeneralCategoryRecommendationPagedQueryResponseBuilder count( final Long count) {
       this.count = count;
@@ -41,7 +41,7 @@ public final class GeneralCategoryRecommendationPagedQueryResponseBuilder {
       return this;
    }
    
-   public GeneralCategoryRecommendationPagedQueryResponseBuilder results( final List<GeneralCategoryRecommendation> results) {
+   public GeneralCategoryRecommendationPagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.ml.generated.models.general_category_recommendations.GeneralCategoryRecommendation> results) {
       this.results = results;
       return this;
    }
@@ -62,7 +62,7 @@ public final class GeneralCategoryRecommendationPagedQueryResponseBuilder {
    }
    
    
-   public List<GeneralCategoryRecommendation> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.general_category_recommendations.GeneralCategoryRecommendation> getResults(){
       return this.results;
    }
 

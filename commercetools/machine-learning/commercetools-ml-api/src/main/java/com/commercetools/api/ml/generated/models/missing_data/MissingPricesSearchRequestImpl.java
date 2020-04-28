@@ -36,16 +36,16 @@ public final class MissingPricesSearchRequestImpl implements MissingPricesSearch
    
    private Boolean checkDate;
    
-   private ZonedDateTime validFrom;
+   private java.time.ZonedDateTime validFrom;
    
-   private ZonedDateTime validUntil;
+   private java.time.ZonedDateTime validUntil;
    
-   private List<String> productIds;
+   private java.util.List<String> productIds;
    
-   private List<String> productTypeIds;
+   private java.util.List<String> productTypeIds;
 
    @JsonCreator
-   MissingPricesSearchRequestImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset, @JsonProperty("staged") final Boolean staged, @JsonProperty("productSetLimit") final Long productSetLimit, @JsonProperty("includeVariants") final Boolean includeVariants, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("checkDate") final Boolean checkDate, @JsonProperty("validFrom") final ZonedDateTime validFrom, @JsonProperty("validUntil") final ZonedDateTime validUntil, @JsonProperty("productIds") final List<String> productIds, @JsonProperty("productTypeIds") final List<String> productTypeIds) {
+   MissingPricesSearchRequestImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset, @JsonProperty("staged") final Boolean staged, @JsonProperty("productSetLimit") final Long productSetLimit, @JsonProperty("includeVariants") final Boolean includeVariants, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("checkDate") final Boolean checkDate, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("productIds") final java.util.List<String> productIds, @JsonProperty("productTypeIds") final java.util.List<String> productTypeIds) {
       this.limit = limit;
       this.offset = offset;
       this.staged = staged;
@@ -110,28 +110,28 @@ public final class MissingPricesSearchRequestImpl implements MissingPricesSearch
    /**
    *  <p>Starting date of the range to check. If no value is given, checks prices valid at the time the search is initiated.</p>
    */
-   public ZonedDateTime getValidFrom(){
+   public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }
    
    /**
    *  <p>Ending date of the range to check. If no value is given, it is equal to <code>validFrom</code>.</p>
    */
-   public ZonedDateTime getValidUntil(){
+   public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }
    
    /**
    *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
    */
-   public List<String> getProductIds(){
+   public java.util.List<String> getProductIds(){
       return this.productIds;
    }
    
    /**
    *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
    */
-   public List<String> getProductTypeIds(){
+   public java.util.List<String> getProductTypeIds(){
       return this.productTypeIds;
    }
 
@@ -163,19 +163,19 @@ public final class MissingPricesSearchRequestImpl implements MissingPricesSearch
       this.checkDate = checkDate;
    }
    
-   public void setValidFrom(final ZonedDateTime validFrom){
+   public void setValidFrom(final java.time.ZonedDateTime validFrom){
       this.validFrom = validFrom;
    }
    
-   public void setValidUntil(final ZonedDateTime validUntil){
+   public void setValidUntil(final java.time.ZonedDateTime validUntil){
       this.validUntil = validUntil;
    }
    
-   public void setProductIds(final List<String> productIds){
+   public void setProductIds(final java.util.List<String> productIds){
       this.productIds = productIds;
    }
    
-   public void setProductTypeIds(final List<String> productTypeIds){
+   public void setProductTypeIds(final java.util.List<String> productTypeIds){
       this.productTypeIds = productTypeIds;
    }
 

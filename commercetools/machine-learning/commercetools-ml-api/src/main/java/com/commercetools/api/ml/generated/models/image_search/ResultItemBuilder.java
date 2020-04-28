@@ -18,14 +18,14 @@ public final class ResultItemBuilder {
    private String imageUrl;
    
    
-   private List<ProductVariant> productVariants;
+   private java.util.List<com.commercetools.api.ml.generated.models.common.ProductVariant> productVariants;
    
    public ResultItemBuilder imageUrl( final String imageUrl) {
       this.imageUrl = imageUrl;
       return this;
    }
    
-   public ResultItemBuilder productVariants( final List<ProductVariant> productVariants) {
+   public ResultItemBuilder productVariants( final java.util.List<com.commercetools.api.ml.generated.models.common.ProductVariant> productVariants) {
       this.productVariants = productVariants;
       return this;
    }
@@ -36,7 +36,7 @@ public final class ResultItemBuilder {
    }
    
    
-   public List<ProductVariant> getProductVariants(){
+   public java.util.List<com.commercetools.api.ml.generated.models.common.ProductVariant> getProductVariants(){
       return this.productVariants;
    }
 

@@ -25,10 +25,10 @@ public final class MissingImagesPagedQueryResultBuilder {
    private Long offset;
    
    
-   private List<MissingImages> results;
+   private java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingImages> results;
    
    
-   private MissingImagesMeta meta;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingImagesMeta meta;
    
    public MissingImagesPagedQueryResultBuilder count( final Long count) {
       this.count = count;
@@ -45,12 +45,12 @@ public final class MissingImagesPagedQueryResultBuilder {
       return this;
    }
    
-   public MissingImagesPagedQueryResultBuilder results( final List<MissingImages> results) {
+   public MissingImagesPagedQueryResultBuilder results( final java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingImages> results) {
       this.results = results;
       return this;
    }
    
-   public MissingImagesPagedQueryResultBuilder meta( final MissingImagesMeta meta) {
+   public MissingImagesPagedQueryResultBuilder meta( final com.commercetools.api.ml.generated.models.missing_data.MissingImagesMeta meta) {
       this.meta = meta;
       return this;
    }
@@ -71,12 +71,12 @@ public final class MissingImagesPagedQueryResultBuilder {
    }
    
    
-   public List<MissingImages> getResults(){
+   public java.util.List<com.commercetools.api.ml.generated.models.missing_data.MissingImages> getResults(){
       return this.results;
    }
    
    
-   public MissingImagesMeta getMeta(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingImagesMeta getMeta(){
       return this.meta;
    }
 

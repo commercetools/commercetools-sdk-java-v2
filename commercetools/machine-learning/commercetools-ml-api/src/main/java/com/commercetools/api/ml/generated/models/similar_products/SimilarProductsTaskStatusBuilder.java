@@ -17,41 +17,41 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class SimilarProductsTaskStatusBuilder {
    
    
-   private TaskStatusEnum state;
+   private com.commercetools.api.ml.generated.models.common.TaskStatusEnum state;
    
    @Nullable
-   private ZonedDateTime expires;
+   private java.time.ZonedDateTime expires;
    
    
-   private SimilarProductsPagedQueryResult result;
+   private com.commercetools.api.ml.generated.models.similar_products.SimilarProductsPagedQueryResult result;
    
-   public SimilarProductsTaskStatusBuilder state( final TaskStatusEnum state) {
+   public SimilarProductsTaskStatusBuilder state( final com.commercetools.api.ml.generated.models.common.TaskStatusEnum state) {
       this.state = state;
       return this;
    }
    
-   public SimilarProductsTaskStatusBuilder expires(@Nullable final ZonedDateTime expires) {
+   public SimilarProductsTaskStatusBuilder expires(@Nullable final java.time.ZonedDateTime expires) {
       this.expires = expires;
       return this;
    }
    
-   public SimilarProductsTaskStatusBuilder result( final SimilarProductsPagedQueryResult result) {
+   public SimilarProductsTaskStatusBuilder result( final com.commercetools.api.ml.generated.models.similar_products.SimilarProductsPagedQueryResult result) {
       this.result = result;
       return this;
    }
    
    
-   public TaskStatusEnum getState(){
+   public com.commercetools.api.ml.generated.models.common.TaskStatusEnum getState(){
       return this.state;
    }
    
    @Nullable
-   public ZonedDateTime getExpires(){
+   public java.time.ZonedDateTime getExpires(){
       return this.expires;
    }
    
    
-   public SimilarProductsPagedQueryResult getResult(){
+   public com.commercetools.api.ml.generated.models.similar_products.SimilarProductsPagedQueryResult getResult(){
       return this.result;
    }
 

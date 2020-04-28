@@ -26,10 +26,10 @@ public final class ProjectCategoryRecommendationMetaImpl implements ProjectCateg
    
    private String productImageUrl;
    
-   private List<String> generalCategoryNames;
+   private java.util.List<String> generalCategoryNames;
 
    @JsonCreator
-   ProjectCategoryRecommendationMetaImpl(@JsonProperty("productName") final String productName, @JsonProperty("productImageUrl") final String productImageUrl, @JsonProperty("generalCategoryNames") final List<String> generalCategoryNames) {
+   ProjectCategoryRecommendationMetaImpl(@JsonProperty("productName") final String productName, @JsonProperty("productImageUrl") final String productImageUrl, @JsonProperty("generalCategoryNames") final java.util.List<String> generalCategoryNames) {
       this.productName = productName;
       this.productImageUrl = productImageUrl;
       this.generalCategoryNames = generalCategoryNames;
@@ -55,7 +55,7 @@ public final class ProjectCategoryRecommendationMetaImpl implements ProjectCateg
    /**
    *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
    */
-   public List<String> getGeneralCategoryNames(){
+   public java.util.List<String> getGeneralCategoryNames(){
       return this.generalCategoryNames;
    }
 
@@ -67,7 +67,7 @@ public final class ProjectCategoryRecommendationMetaImpl implements ProjectCateg
       this.productImageUrl = productImageUrl;
    }
    
-   public void setGeneralCategoryNames(final List<String> generalCategoryNames){
+   public void setGeneralCategoryNames(final java.util.List<String> generalCategoryNames){
       this.generalCategoryNames = generalCategoryNames;
    }
 

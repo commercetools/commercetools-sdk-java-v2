@@ -17,41 +17,41 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class MissingImagesTaskStatusBuilder {
    
    
-   private TaskStatusEnum state;
+   private com.commercetools.api.ml.generated.models.common.TaskStatusEnum state;
    
    
-   private ZonedDateTime expires;
+   private java.time.ZonedDateTime expires;
    
    
-   private MissingImagesPagedQueryResult result;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingImagesPagedQueryResult result;
    
-   public MissingImagesTaskStatusBuilder state( final TaskStatusEnum state) {
+   public MissingImagesTaskStatusBuilder state( final com.commercetools.api.ml.generated.models.common.TaskStatusEnum state) {
       this.state = state;
       return this;
    }
    
-   public MissingImagesTaskStatusBuilder expires( final ZonedDateTime expires) {
+   public MissingImagesTaskStatusBuilder expires( final java.time.ZonedDateTime expires) {
       this.expires = expires;
       return this;
    }
    
-   public MissingImagesTaskStatusBuilder result( final MissingImagesPagedQueryResult result) {
+   public MissingImagesTaskStatusBuilder result( final com.commercetools.api.ml.generated.models.missing_data.MissingImagesPagedQueryResult result) {
       this.result = result;
       return this;
    }
    
    
-   public TaskStatusEnum getState(){
+   public com.commercetools.api.ml.generated.models.common.TaskStatusEnum getState(){
       return this.state;
    }
    
    
-   public ZonedDateTime getExpires(){
+   public java.time.ZonedDateTime getExpires(){
       return this.expires;
    }
    
    
-   public MissingImagesPagedQueryResult getResult(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingImagesPagedQueryResult getResult(){
       return this.result;
    }
 

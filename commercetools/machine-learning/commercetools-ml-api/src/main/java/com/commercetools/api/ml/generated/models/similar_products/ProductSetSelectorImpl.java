@@ -27,9 +27,9 @@ public final class ProductSetSelectorImpl implements ProductSetSelector {
 
    private String projectKey;
    
-   private List<String> productIds;
+   private java.util.List<String> productIds;
    
-   private List<String> productTypeIds;
+   private java.util.List<String> productTypeIds;
    
    private Boolean staged;
    
@@ -38,7 +38,7 @@ public final class ProductSetSelectorImpl implements ProductSetSelector {
    private Long productSetLimit;
 
    @JsonCreator
-   ProductSetSelectorImpl(@JsonProperty("projectKey") final String projectKey, @JsonProperty("productIds") final List<String> productIds, @JsonProperty("productTypeIds") final List<String> productTypeIds, @JsonProperty("staged") final Boolean staged, @JsonProperty("includeVariants") final Boolean includeVariants, @JsonProperty("productSetLimit") final Long productSetLimit) {
+   ProductSetSelectorImpl(@JsonProperty("projectKey") final String projectKey, @JsonProperty("productIds") final java.util.List<String> productIds, @JsonProperty("productTypeIds") final java.util.List<String> productTypeIds, @JsonProperty("staged") final Boolean staged, @JsonProperty("includeVariants") final Boolean includeVariants, @JsonProperty("productSetLimit") final Long productSetLimit) {
       this.projectKey = projectKey;
       this.productIds = productIds;
       this.productTypeIds = productTypeIds;
@@ -60,14 +60,14 @@ public final class ProductSetSelectorImpl implements ProductSetSelector {
    /**
    *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
    */
-   public List<String> getProductIds(){
+   public java.util.List<String> getProductIds(){
       return this.productIds;
    }
    
    /**
    *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
    */
-   public List<String> getProductTypeIds(){
+   public java.util.List<String> getProductTypeIds(){
       return this.productTypeIds;
    }
    
@@ -96,11 +96,11 @@ public final class ProductSetSelectorImpl implements ProductSetSelector {
       this.projectKey = projectKey;
    }
    
-   public void setProductIds(final List<String> productIds){
+   public void setProductIds(final java.util.List<String> productIds){
       this.productIds = productIds;
    }
    
-   public void setProductTypeIds(final List<String> productTypeIds){
+   public void setProductTypeIds(final java.util.List<String> productTypeIds){
       this.productTypeIds = productTypeIds;
    }
    

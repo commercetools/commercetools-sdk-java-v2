@@ -36,12 +36,12 @@ public final class MissingImagesSearchRequestImpl implements MissingImagesSearch
    
    private Long threshold;
    
-   private List<String> productIds;
+   private java.util.List<String> productIds;
    
-   private List<String> productTypeIds;
+   private java.util.List<String> productTypeIds;
 
    @JsonCreator
-   MissingImagesSearchRequestImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset, @JsonProperty("staged") final Boolean staged, @JsonProperty("productSetLimit") final Long productSetLimit, @JsonProperty("includeVariants") final Boolean includeVariants, @JsonProperty("autoThreshold") final Boolean autoThreshold, @JsonProperty("threshold") final Long threshold, @JsonProperty("productIds") final List<String> productIds, @JsonProperty("productTypeIds") final List<String> productTypeIds) {
+   MissingImagesSearchRequestImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset, @JsonProperty("staged") final Boolean staged, @JsonProperty("productSetLimit") final Long productSetLimit, @JsonProperty("includeVariants") final Boolean includeVariants, @JsonProperty("autoThreshold") final Boolean autoThreshold, @JsonProperty("threshold") final Long threshold, @JsonProperty("productIds") final java.util.List<String> productIds, @JsonProperty("productTypeIds") final java.util.List<String> productTypeIds) {
       this.limit = limit;
       this.offset = offset;
       this.staged = staged;
@@ -104,14 +104,14 @@ public final class MissingImagesSearchRequestImpl implements MissingImagesSearch
    /**
    *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
    */
-   public List<String> getProductIds(){
+   public java.util.List<String> getProductIds(){
       return this.productIds;
    }
    
    /**
    *  <p>Filters results by the provided product type IDs. It cannot be applied in combination with any other filter.</p>
    */
-   public List<String> getProductTypeIds(){
+   public java.util.List<String> getProductTypeIds(){
       return this.productTypeIds;
    }
 
@@ -143,11 +143,11 @@ public final class MissingImagesSearchRequestImpl implements MissingImagesSearch
       this.threshold = threshold;
    }
    
-   public void setProductIds(final List<String> productIds){
+   public void setProductIds(final java.util.List<String> productIds){
       this.productIds = productIds;
    }
    
-   public void setProductTypeIds(final List<String> productTypeIds){
+   public void setProductTypeIds(final java.util.List<String> productTypeIds){
       this.productTypeIds = productTypeIds;
    }
 

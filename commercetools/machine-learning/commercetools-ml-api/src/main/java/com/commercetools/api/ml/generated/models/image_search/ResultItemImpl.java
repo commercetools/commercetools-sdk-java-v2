@@ -27,10 +27,10 @@ public final class ResultItemImpl implements ResultItem {
 
    private String imageUrl;
    
-   private List<ProductVariant> productVariants;
+   private java.util.List<com.commercetools.api.ml.generated.models.common.ProductVariant> productVariants;
 
    @JsonCreator
-   ResultItemImpl(@JsonProperty("imageUrl") final String imageUrl, @JsonProperty("productVariants") final List<ProductVariant> productVariants) {
+   ResultItemImpl(@JsonProperty("imageUrl") final String imageUrl, @JsonProperty("productVariants") final java.util.List<com.commercetools.api.ml.generated.models.common.ProductVariant> productVariants) {
       this.imageUrl = imageUrl;
       this.productVariants = productVariants;
    }
@@ -48,7 +48,7 @@ public final class ResultItemImpl implements ResultItem {
    /**
    *  <p>An array of product variants containing the image URL.</p>
    */
-   public List<ProductVariant> getProductVariants(){
+   public java.util.List<com.commercetools.api.ml.generated.models.common.ProductVariant> getProductVariants(){
       return this.productVariants;
    }
 
@@ -56,7 +56,7 @@ public final class ResultItemImpl implements ResultItem {
       this.imageUrl = imageUrl;
    }
    
-   public void setProductVariants(final List<ProductVariant> productVariants){
+   public void setProductVariants(final java.util.List<com.commercetools.api.ml.generated.models.common.ProductVariant> productVariants){
       this.productVariants = productVariants;
    }
 

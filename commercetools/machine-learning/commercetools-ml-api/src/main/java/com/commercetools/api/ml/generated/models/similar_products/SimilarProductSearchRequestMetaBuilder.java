@@ -15,15 +15,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class SimilarProductSearchRequestMetaBuilder {
    
    
-   private SimilarityMeasures similarityMeasures;
+   private com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures similarityMeasures;
    
-   public SimilarProductSearchRequestMetaBuilder similarityMeasures( final SimilarityMeasures similarityMeasures) {
+   public SimilarProductSearchRequestMetaBuilder similarityMeasures( final com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures similarityMeasures) {
       this.similarityMeasures = similarityMeasures;
       return this;
    }
    
    
-   public SimilarityMeasures getSimilarityMeasures(){
+   public com.commercetools.api.ml.generated.models.similar_products.SimilarityMeasures getSimilarityMeasures(){
       return this.similarityMeasures;
    }
 

@@ -15,41 +15,41 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class MissingAttributesMetaBuilder {
    
    
-   private MissingAttributesDetails productLevel;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails productLevel;
    
    
-   private MissingAttributesDetails variantLevel;
+   private com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails variantLevel;
    
    @Nullable
-   private List<String> productTypeIds;
+   private java.util.List<String> productTypeIds;
    
-   public MissingAttributesMetaBuilder productLevel( final MissingAttributesDetails productLevel) {
+   public MissingAttributesMetaBuilder productLevel( final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails productLevel) {
       this.productLevel = productLevel;
       return this;
    }
    
-   public MissingAttributesMetaBuilder variantLevel( final MissingAttributesDetails variantLevel) {
+   public MissingAttributesMetaBuilder variantLevel( final com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails variantLevel) {
       this.variantLevel = variantLevel;
       return this;
    }
    
-   public MissingAttributesMetaBuilder productTypeIds(@Nullable final List<String> productTypeIds) {
+   public MissingAttributesMetaBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
       this.productTypeIds = productTypeIds;
       return this;
    }
    
    
-   public MissingAttributesDetails getProductLevel(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails getProductLevel(){
       return this.productLevel;
    }
    
    
-   public MissingAttributesDetails getVariantLevel(){
+   public com.commercetools.api.ml.generated.models.missing_data.MissingAttributesDetails getVariantLevel(){
       return this.variantLevel;
    }
    
    @Nullable
-   public List<String> getProductTypeIds(){
+   public java.util.List<String> getProductTypeIds(){
       return this.productTypeIds;
    }
 

@@ -26,14 +26,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SimilarProductImpl implements SimilarProduct {
 
-   private ProductReference product;
+   private com.commercetools.api.ml.generated.models.common.ProductReference product;
    
    private Long variantId;
    
    private com.commercetools.api.ml.generated.models.similar_products.SimilarProductMeta meta;
 
    @JsonCreator
-   SimilarProductImpl(@JsonProperty("product") final ProductReference product, @JsonProperty("variantId") final Long variantId, @JsonProperty("meta") final com.commercetools.api.ml.generated.models.similar_products.SimilarProductMeta meta) {
+   SimilarProductImpl(@JsonProperty("product") final com.commercetools.api.ml.generated.models.common.ProductReference product, @JsonProperty("variantId") final Long variantId, @JsonProperty("meta") final com.commercetools.api.ml.generated.models.similar_products.SimilarProductMeta meta) {
       this.product = product;
       this.variantId = variantId;
       this.meta = meta;
@@ -45,7 +45,7 @@ public final class SimilarProductImpl implements SimilarProduct {
    /**
    *  <p>Reference to Product</p>
    */
-   public ProductReference getProduct(){
+   public com.commercetools.api.ml.generated.models.common.ProductReference getProduct(){
       return this.product;
    }
    
@@ -63,7 +63,7 @@ public final class SimilarProductImpl implements SimilarProduct {
       return this.meta;
    }
 
-   public void setProduct(final ProductReference product){
+   public void setProduct(final com.commercetools.api.ml.generated.models.common.ProductReference product){
       this.product = product;
    }
    

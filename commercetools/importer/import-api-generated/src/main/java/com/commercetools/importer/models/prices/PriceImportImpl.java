@@ -2,6 +2,7 @@ package com.commercetools.importer.models.prices;
 
 import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
+import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.ImportResource;
 import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.ProductKeyReference;
@@ -45,12 +46,14 @@ public final class PriceImportImpl implements PriceImport {
    
    private com.commercetools.importer.models.common.ChannelKeyReference channel;
    
+   private com.commercetools.importer.models.common.DiscountedPrice discounted;
+   
    private com.commercetools.importer.models.common.ProductVariantKeyReference productVariant;
    
    private com.commercetools.importer.models.common.ProductKeyReference product;
 
    @JsonCreator
-   PriceImportImpl(@JsonProperty("key") final String key, @JsonProperty("value") final com.commercetools.importer.models.common.Money value, @JsonProperty("country") final String country, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("customerGroup") final com.commercetools.importer.models.common.CustomerGroupKeyReference customerGroup, @JsonProperty("channel") final com.commercetools.importer.models.common.ChannelKeyReference channel, @JsonProperty("productVariant") final com.commercetools.importer.models.common.ProductVariantKeyReference productVariant, @JsonProperty("product") final com.commercetools.importer.models.common.ProductKeyReference product) {
+   PriceImportImpl(@JsonProperty("key") final String key, @JsonProperty("value") final com.commercetools.importer.models.common.Money value, @JsonProperty("country") final String country, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("customerGroup") final com.commercetools.importer.models.common.CustomerGroupKeyReference customerGroup, @JsonProperty("channel") final com.commercetools.importer.models.common.ChannelKeyReference channel, @JsonProperty("discounted") final com.commercetools.importer.models.common.DiscountedPrice discounted, @JsonProperty("productVariant") final com.commercetools.importer.models.common.ProductVariantKeyReference productVariant, @JsonProperty("product") final com.commercetools.importer.models.common.ProductKeyReference product) {
       this.key = key;
       this.value = value;
       this.country = country;
@@ -58,6 +61,7 @@ public final class PriceImportImpl implements PriceImport {
       this.validUntil = validUntil;
       this.customerGroup = customerGroup;
       this.channel = channel;
+      this.discounted = discounted;
       this.productVariant = productVariant;
       this.product = product;
    }
@@ -120,6 +124,13 @@ public final class PriceImportImpl implements PriceImport {
    }
    
    /**
+   *  <p>Sets a discounted price from an external service.</p>
+   */
+   public com.commercetools.importer.models.common.DiscountedPrice getDiscounted(){
+      return this.discounted;
+   }
+   
+   /**
    *  <p>The product variant in which this price is contained.</p>
    *  <p>The product variant referenced
    *  must already exist in the commercetools project, or the
@@ -165,6 +176,10 @@ public final class PriceImportImpl implements PriceImport {
    
    public void setChannel(final com.commercetools.importer.models.common.ChannelKeyReference channel){
       this.channel = channel;
+   }
+   
+   public void setDiscounted(final com.commercetools.importer.models.common.DiscountedPrice discounted){
+      this.discounted = discounted;
    }
    
    public void setProductVariant(final com.commercetools.importer.models.common.ProductVariantKeyReference productVariant){

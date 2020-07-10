@@ -62,7 +62,7 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyResourceKeyByResour
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.importer.models.importoperations.ImportOperationStatus> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -70,13 +70,13 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyResourceKeyByResour
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.importer.models.importoperations.ImportOperationStatus>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
               .thenApply(response -> {
                   if(response.getStatusCode() >= 400){
                       throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
                   }
-                  return Utils.convertResponse(response,com.fasterxml.jackson.databind.JsonNode.class);
+                  return Utils.convertResponse(response,com.commercetools.importer.models.importoperations.ImportOperationStatus.class);
               });
    }
    

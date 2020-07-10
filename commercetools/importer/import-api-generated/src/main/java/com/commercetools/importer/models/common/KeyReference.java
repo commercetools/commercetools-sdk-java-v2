@@ -6,6 +6,7 @@ import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.CustomerKeyReference;
 import com.commercetools.importer.models.common.PriceKeyReference;
+import com.commercetools.importer.models.common.ProductDiscountKeyReference;
 import com.commercetools.importer.models.common.ProductKeyReference;
 import com.commercetools.importer.models.common.ProductTypeKeyReference;
 import com.commercetools.importer.models.common.ProductVariantKeyReference;
@@ -38,6 +39,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.importer.models.common.CustomerGroupKeyReferenceImpl.class, name = "customer-group"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.common.PriceKeyReferenceImpl.class, name = "price"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.common.ProductKeyReferenceImpl.class, name = "product"),
+   @JsonSubTypes.Type(value = com.commercetools.importer.models.common.ProductDiscountKeyReferenceImpl.class, name = "product-discount"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.common.ProductTypeKeyReferenceImpl.class, name = "product-type"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.common.ProductVariantKeyReferenceImpl.class, name = "product-variant"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.common.ShippingMethodKeyReferenceImpl.class, name = "shipping-method"),

@@ -2,7 +2,9 @@ package com.commercetools.importer.models.productdrafts;
 
 import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
+import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.customfields.Custom;
 import java.time.ZonedDateTime;
 import com.commercetools.importer.models.productdrafts.PriceDraftImportImpl;
 
@@ -55,6 +57,18 @@ public interface PriceDraftImport  {
    
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();
+   /**
+   *  <p>The custom fields for this category.</p>
+   */
+   @Valid
+   @JsonProperty("custom")
+   public Custom getCustom();
+   /**
+   *  <p>Sets a discounted price from an external service.</p>
+   */
+   @Valid
+   @JsonProperty("discounted")
+   public DiscountedPrice getDiscounted();
 
    public void setValue(final Money value);
    
@@ -67,6 +81,10 @@ public interface PriceDraftImport  {
    public void setValidFrom(final ZonedDateTime validFrom);
    
    public void setValidUntil(final ZonedDateTime validUntil);
+   
+   public void setCustom(final Custom custom);
+   
+   public void setDiscounted(final DiscountedPrice discounted);
    
    public static PriceDraftImportImpl of(){
       return new PriceDraftImportImpl();
@@ -81,6 +99,8 @@ public interface PriceDraftImport  {
       instance.setChannel(template.getChannel());
       instance.setValidFrom(template.getValidFrom());
       instance.setValidUntil(template.getValidUntil());
+      instance.setCustom(template.getCustom());
+      instance.setDiscounted(template.getDiscounted());
       return instance;
    }
 

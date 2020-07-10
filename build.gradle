@@ -32,7 +32,7 @@ RamlGenerator {
         uri = file('../commercetools-importer/api-spec/api.raml')
         targets {
             importModels {
-                path = file('commercetools/import-api-generated/src/main/java')
+                path = file('commercetools/importer/import-api-generated/src/main/java')
                 base_package = 'com/commercetools/importer'
                 target = 'javaComplete'
             }

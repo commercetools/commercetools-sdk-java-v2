@@ -6,6 +6,7 @@ import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.CustomerKeyReference;
 import com.commercetools.importer.models.common.PriceKeyReference;
+import com.commercetools.importer.models.common.ProductDiscountKeyReference;
 import com.commercetools.importer.models.common.ProductKeyReference;
 import com.commercetools.importer.models.common.ProductTypeKeyReference;
 import com.commercetools.importer.models.common.ProductVariantKeyReference;

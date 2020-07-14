@@ -2,6 +2,7 @@ package com.commercetools.importer.models.prices;
 
 import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
+import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.ImportResource;
 import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.ProductKeyReference;
@@ -75,6 +76,12 @@ public interface PriceImport extends ImportResource {
    @JsonProperty("channel")
    public ChannelKeyReference getChannel();
    /**
+   *  <p>Sets a discounted price from an external service.</p>
+   */
+   @Valid
+   @JsonProperty("discounted")
+   public DiscountedPrice getDiscounted();
+   /**
    *  <p>The product variant in which this price is contained.</p>
    *  <p>The product variant referenced
    *  must already exist in the commercetools project, or the
@@ -107,6 +114,8 @@ public interface PriceImport extends ImportResource {
    
    public void setChannel(final ChannelKeyReference channel);
    
+   public void setDiscounted(final DiscountedPrice discounted);
+   
    public void setProductVariant(final ProductVariantKeyReference productVariant);
    
    public void setProduct(final ProductKeyReference product);
@@ -125,6 +134,7 @@ public interface PriceImport extends ImportResource {
       instance.setValidUntil(template.getValidUntil());
       instance.setCustomerGroup(template.getCustomerGroup());
       instance.setChannel(template.getChannel());
+      instance.setDiscounted(template.getDiscounted());
       instance.setProductVariant(template.getProductVariant());
       instance.setProduct(template.getProduct());
       return instance;

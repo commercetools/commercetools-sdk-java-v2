@@ -25,7 +25,4 @@ public class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyResourceKeyB
       return new ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete(apiHttpClient, projectKey, importSinkKey, resourceKey);
    }
    
-   public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyImportOperationRequestBuilder importOperation() {
-      return new ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyImportOperationRequestBuilder(apiHttpClient, projectKey, importSinkKey, resourceKey);
-   }
 }

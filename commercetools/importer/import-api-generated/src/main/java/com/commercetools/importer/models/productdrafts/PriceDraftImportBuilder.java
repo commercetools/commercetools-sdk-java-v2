@@ -2,7 +2,9 @@ package com.commercetools.importer.models.productdrafts;
 
 import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
+import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.customfields.Custom;
 import java.time.ZonedDateTime;
 import com.commercetools.importer.models.productdrafts.PriceDraftImport;
 import javax.annotation.Nullable;
@@ -35,6 +37,12 @@ public final class PriceDraftImportBuilder {
    @Nullable
    private java.time.ZonedDateTime validUntil;
    
+   @Nullable
+   private com.commercetools.importer.models.customfields.Custom custom;
+   
+   @Nullable
+   private com.commercetools.importer.models.common.DiscountedPrice discounted;
+   
    public PriceDraftImportBuilder value( final com.commercetools.importer.models.common.Money value) {
       this.value = value;
       return this;
@@ -62,6 +70,16 @@ public final class PriceDraftImportBuilder {
    
    public PriceDraftImportBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
       this.validUntil = validUntil;
+      return this;
+   }
+   
+   public PriceDraftImportBuilder custom(@Nullable final com.commercetools.importer.models.customfields.Custom custom) {
+      this.custom = custom;
+      return this;
+   }
+   
+   public PriceDraftImportBuilder discounted(@Nullable final com.commercetools.importer.models.common.DiscountedPrice discounted) {
+      this.discounted = discounted;
       return this;
    }
    
@@ -94,9 +112,19 @@ public final class PriceDraftImportBuilder {
    public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }
+   
+   @Nullable
+   public com.commercetools.importer.models.customfields.Custom getCustom(){
+      return this.custom;
+   }
+   
+   @Nullable
+   public com.commercetools.importer.models.common.DiscountedPrice getDiscounted(){
+      return this.discounted;
+   }
 
    public PriceDraftImport build() {
-       return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil);
+       return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom, discounted);
    }
    
    public static PriceDraftImportBuilder of() {
@@ -111,6 +139,8 @@ public final class PriceDraftImportBuilder {
       builder.channel = template.getChannel();
       builder.validFrom = template.getValidFrom();
       builder.validUntil = template.getValidUntil();
+      builder.custom = template.getCustom();
+      builder.discounted = template.getDiscounted();
       return builder;
    }
    

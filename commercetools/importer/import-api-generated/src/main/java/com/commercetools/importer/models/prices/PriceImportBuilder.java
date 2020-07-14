@@ -2,6 +2,7 @@ package com.commercetools.importer.models.prices;
 
 import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
+import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.ImportResource;
 import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.ProductKeyReference;
@@ -41,6 +42,9 @@ public final class PriceImportBuilder {
    @Nullable
    private com.commercetools.importer.models.common.ChannelKeyReference channel;
    
+   @Nullable
+   private com.commercetools.importer.models.common.DiscountedPrice discounted;
+   
    
    private com.commercetools.importer.models.common.ProductVariantKeyReference productVariant;
    
@@ -79,6 +83,11 @@ public final class PriceImportBuilder {
    
    public PriceImportBuilder channel(@Nullable final com.commercetools.importer.models.common.ChannelKeyReference channel) {
       this.channel = channel;
+      return this;
+   }
+   
+   public PriceImportBuilder discounted(@Nullable final com.commercetools.importer.models.common.DiscountedPrice discounted) {
+      this.discounted = discounted;
       return this;
    }
    
@@ -127,6 +136,11 @@ public final class PriceImportBuilder {
       return this.channel;
    }
    
+   @Nullable
+   public com.commercetools.importer.models.common.DiscountedPrice getDiscounted(){
+      return this.discounted;
+   }
+   
    
    public com.commercetools.importer.models.common.ProductVariantKeyReference getProductVariant(){
       return this.productVariant;
@@ -138,7 +152,7 @@ public final class PriceImportBuilder {
    }
 
    public PriceImport build() {
-       return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, productVariant, product);
+       return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted, productVariant, product);
    }
    
    public static PriceImportBuilder of() {
@@ -154,6 +168,7 @@ public final class PriceImportBuilder {
       builder.validUntil = template.getValidUntil();
       builder.customerGroup = template.getCustomerGroup();
       builder.channel = template.getChannel();
+      builder.discounted = template.getDiscounted();
       builder.productVariant = template.getProductVariant();
       builder.product = template.getProduct();
       return builder;

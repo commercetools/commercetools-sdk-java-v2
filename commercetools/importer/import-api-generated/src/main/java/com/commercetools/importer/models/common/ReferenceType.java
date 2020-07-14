@@ -64,6 +64,10 @@ public enum ReferenceType {
   @JsonProperty("product")
   PRODUCT("product"),
   
+  
+  @JsonProperty("product-discount")
+  PRODUCT_DISCOUNT("product-discount"),
+  
   /**
   	<p>References a product type.</p>
   	

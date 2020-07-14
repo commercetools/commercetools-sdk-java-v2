@@ -23,9 +23,6 @@ public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyReques
       return new ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost(apiHttpClient, projectKey, importSinkKey, productVariantPatchRequest);
    }
    
-   public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder resourceKeyWithResourceKeyValue(String resourceKey) {
-      return new ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder(apiHttpClient, projectKey, importSinkKey, resourceKey);
-   }
    public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder importOperations() {
       return new ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder(apiHttpClient, projectKey, importSinkKey);
    }

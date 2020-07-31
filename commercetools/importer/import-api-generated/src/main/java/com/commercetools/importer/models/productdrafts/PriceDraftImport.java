@@ -4,6 +4,7 @@ import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.PriceTier;
 import com.commercetools.importer.models.customfields.Custom;
 import java.time.ZonedDateTime;
 import com.commercetools.importer.models.productdrafts.PriceDraftImportImpl;
@@ -69,6 +70,12 @@ public interface PriceDraftImport  {
    @Valid
    @JsonProperty("discounted")
    public DiscountedPrice getDiscounted();
+   /**
+   *  <p>The tiered prices for this price.</p>
+   */
+   @Valid
+   @JsonProperty("tiers")
+   public List<PriceTier> getTiers();
 
    public void setValue(final Money value);
    
@@ -86,6 +93,8 @@ public interface PriceDraftImport  {
    
    public void setDiscounted(final DiscountedPrice discounted);
    
+   public void setTiers(final List<PriceTier> tiers);
+   
    public static PriceDraftImportImpl of(){
       return new PriceDraftImportImpl();
    }
@@ -101,6 +110,7 @@ public interface PriceDraftImport  {
       instance.setValidUntil(template.getValidUntil());
       instance.setCustom(template.getCustom());
       instance.setDiscounted(template.getDiscounted());
+      instance.setTiers(template.getTiers());
       return instance;
    }
 

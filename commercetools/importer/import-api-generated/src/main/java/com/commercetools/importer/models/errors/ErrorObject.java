@@ -13,6 +13,7 @@ import com.commercetools.importer.models.errors.InvalidCredentialsError;
 import com.commercetools.importer.models.errors.InvalidFieldError;
 import com.commercetools.importer.models.errors.InvalidInput;
 import com.commercetools.importer.models.errors.InvalidJsonInput;
+import com.commercetools.importer.models.errors.InvalidOperation;
 import com.commercetools.importer.models.errors.InvalidScopeError;
 import com.commercetools.importer.models.errors.InvalidStateTransitionError;
 import com.commercetools.importer.models.errors.InvalidTokenError;
@@ -40,6 +41,7 @@ import java.io.IOException;
 @JsonSubTypes({
    @JsonSubTypes.Type(value = com.commercetools.importer.models.errors.AccessDeniedErrorImpl.class, name = "access_denied"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.errors.InvalidScopeErrorImpl.class, name = "invalid_scope"),
+   @JsonSubTypes.Type(value = com.commercetools.importer.models.errors.InvalidOperationImpl.class, name = "InvalidOperation"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.errors.DuplicateAttributeValueErrorImpl.class, name = "DuplicateAttributeValue"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.errors.DuplicateAttributeValuesErrorImpl.class, name = "DuplicateAttributeValues"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.errors.DuplicateFieldErrorImpl.class, name = "DuplicateField"),

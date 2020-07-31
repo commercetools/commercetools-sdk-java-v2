@@ -5,6 +5,7 @@ import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.ImportResource;
 import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.PriceTier;
 import com.commercetools.importer.models.common.ProductKeyReference;
 import com.commercetools.importer.models.common.ProductVariantKeyReference;
 import java.time.ZonedDateTime;
@@ -82,6 +83,12 @@ public interface PriceImport extends ImportResource {
    @JsonProperty("discounted")
    public DiscountedPrice getDiscounted();
    /**
+   *  <p>The tiered prices for this price.</p>
+   */
+   @Valid
+   @JsonProperty("tiers")
+   public List<PriceTier> getTiers();
+   /**
    *  <p>The product variant in which this price is contained.</p>
    *  <p>The product variant referenced
    *  must already exist in the commercetools project, or the
@@ -116,6 +123,8 @@ public interface PriceImport extends ImportResource {
    
    public void setDiscounted(final DiscountedPrice discounted);
    
+   public void setTiers(final List<PriceTier> tiers);
+   
    public void setProductVariant(final ProductVariantKeyReference productVariant);
    
    public void setProduct(final ProductKeyReference product);
@@ -135,6 +144,7 @@ public interface PriceImport extends ImportResource {
       instance.setCustomerGroup(template.getCustomerGroup());
       instance.setChannel(template.getChannel());
       instance.setDiscounted(template.getDiscounted());
+      instance.setTiers(template.getTiers());
       instance.setProductVariant(template.getProductVariant());
       instance.setProduct(template.getProduct());
       return instance;

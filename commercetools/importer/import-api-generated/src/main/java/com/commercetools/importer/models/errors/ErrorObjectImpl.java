@@ -13,6 +13,7 @@ import com.commercetools.importer.models.errors.InvalidCredentialsError;
 import com.commercetools.importer.models.errors.InvalidFieldError;
 import com.commercetools.importer.models.errors.InvalidInput;
 import com.commercetools.importer.models.errors.InvalidJsonInput;
+import com.commercetools.importer.models.errors.InvalidOperation;
 import com.commercetools.importer.models.errors.InvalidScopeError;
 import com.commercetools.importer.models.errors.InvalidStateTransitionError;
 import com.commercetools.importer.models.errors.InvalidTokenError;

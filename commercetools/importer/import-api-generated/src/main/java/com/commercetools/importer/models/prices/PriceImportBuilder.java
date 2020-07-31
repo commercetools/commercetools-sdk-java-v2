@@ -5,6 +5,7 @@ import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.ImportResource;
 import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.PriceTier;
 import com.commercetools.importer.models.common.ProductKeyReference;
 import com.commercetools.importer.models.common.ProductVariantKeyReference;
 import java.time.ZonedDateTime;
@@ -44,6 +45,9 @@ public final class PriceImportBuilder {
    
    @Nullable
    private com.commercetools.importer.models.common.DiscountedPrice discounted;
+   
+   @Nullable
+   private java.util.List<com.commercetools.importer.models.common.PriceTier> tiers;
    
    
    private com.commercetools.importer.models.common.ProductVariantKeyReference productVariant;
@@ -88,6 +92,11 @@ public final class PriceImportBuilder {
    
    public PriceImportBuilder discounted(@Nullable final com.commercetools.importer.models.common.DiscountedPrice discounted) {
       this.discounted = discounted;
+      return this;
+   }
+   
+   public PriceImportBuilder tiers(@Nullable final java.util.List<com.commercetools.importer.models.common.PriceTier> tiers) {
+      this.tiers = tiers;
       return this;
    }
    
@@ -141,6 +150,11 @@ public final class PriceImportBuilder {
       return this.discounted;
    }
    
+   @Nullable
+   public java.util.List<com.commercetools.importer.models.common.PriceTier> getTiers(){
+      return this.tiers;
+   }
+   
    
    public com.commercetools.importer.models.common.ProductVariantKeyReference getProductVariant(){
       return this.productVariant;
@@ -152,7 +166,7 @@ public final class PriceImportBuilder {
    }
 
    public PriceImport build() {
-       return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted, productVariant, product);
+       return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted, tiers, productVariant, product);
    }
    
    public static PriceImportBuilder of() {
@@ -169,6 +183,7 @@ public final class PriceImportBuilder {
       builder.customerGroup = template.getCustomerGroup();
       builder.channel = template.getChannel();
       builder.discounted = template.getDiscounted();
+      builder.tiers = template.getTiers();
       builder.productVariant = template.getProductVariant();
       builder.product = template.getProduct();
       return builder;

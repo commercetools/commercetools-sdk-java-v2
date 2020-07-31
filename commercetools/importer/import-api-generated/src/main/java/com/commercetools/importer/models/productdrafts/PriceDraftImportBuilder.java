@@ -4,6 +4,7 @@ import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.PriceTier;
 import com.commercetools.importer.models.customfields.Custom;
 import java.time.ZonedDateTime;
 import com.commercetools.importer.models.productdrafts.PriceDraftImport;
@@ -43,6 +44,9 @@ public final class PriceDraftImportBuilder {
    @Nullable
    private com.commercetools.importer.models.common.DiscountedPrice discounted;
    
+   @Nullable
+   private java.util.List<com.commercetools.importer.models.common.PriceTier> tiers;
+   
    public PriceDraftImportBuilder value( final com.commercetools.importer.models.common.Money value) {
       this.value = value;
       return this;
@@ -80,6 +84,11 @@ public final class PriceDraftImportBuilder {
    
    public PriceDraftImportBuilder discounted(@Nullable final com.commercetools.importer.models.common.DiscountedPrice discounted) {
       this.discounted = discounted;
+      return this;
+   }
+   
+   public PriceDraftImportBuilder tiers(@Nullable final java.util.List<com.commercetools.importer.models.common.PriceTier> tiers) {
+      this.tiers = tiers;
       return this;
    }
    
@@ -122,9 +131,14 @@ public final class PriceDraftImportBuilder {
    public com.commercetools.importer.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
+   
+   @Nullable
+   public java.util.List<com.commercetools.importer.models.common.PriceTier> getTiers(){
+      return this.tiers;
+   }
 
    public PriceDraftImport build() {
-       return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom, discounted);
+       return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom, discounted, tiers);
    }
    
    public static PriceDraftImportBuilder of() {
@@ -141,6 +155,7 @@ public final class PriceDraftImportBuilder {
       builder.validUntil = template.getValidUntil();
       builder.custom = template.getCustom();
       builder.discounted = template.getDiscounted();
+      builder.tiers = template.getTiers();
       return builder;
    }
    

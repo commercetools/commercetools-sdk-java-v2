@@ -1,0 +1,69 @@
+package com.commercetools.api.models.message;
+
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.order.DeliveryItem;
+import com.commercetools.api.models.message.DeliveryItemsUpdatedMessageImpl;
+
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+import io.vrap.rmf.base.client.utils.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Map;
+import java.time.*;
+
+import java.io.IOException;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+@JsonDeserialize(as = DeliveryItemsUpdatedMessageImpl.class)
+public interface DeliveryItemsUpdatedMessage extends Message {
+
+
+   @NotNull
+   @JsonProperty("deliveryId")
+   public String getDeliveryId();
+
+   @NotNull
+   @Valid
+   @JsonProperty("items")
+   public List<DeliveryItem> getItems();
+
+   @NotNull
+   @Valid
+   @JsonProperty("oldItems")
+   public List<DeliveryItem> getOldItems();
+
+   public void setDeliveryId(final String deliveryId);
+
+   public void setItems(final List<DeliveryItem> items);
+
+   public void setOldItems(final List<DeliveryItem> oldItems);
+
+   public static DeliveryItemsUpdatedMessageImpl of(){
+      return new DeliveryItemsUpdatedMessageImpl();
+   }
+
+
+   public static DeliveryItemsUpdatedMessageImpl of(final DeliveryItemsUpdatedMessage template) {
+      DeliveryItemsUpdatedMessageImpl instance = new DeliveryItemsUpdatedMessageImpl();
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
+      instance.setId(template.getId());
+      instance.setVersion(template.getVersion());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setSequenceNumber(template.getSequenceNumber());
+      instance.setResource(template.getResource());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+      instance.setResourceVersion(template.getResourceVersion());
+      instance.setDeliveryId(template.getDeliveryId());
+      instance.setOldItems(template.getOldItems());
+      instance.setItems(template.getItems());
+      return instance;
+   }
+
+}

@@ -6,9 +6,9 @@ buildscript {
             url "https://dl.bintray.com/vrapio/vrapio"
         }
     }
-    dependencies {
-        classpath "io.vrap.rmf.codegen:codegen-gradle-plugin:1.0.0-20200206130325"
-    }
+//    dependencies {
+//        classpath "io.vrap.rmf.codegen:codegen-gradle-plugin:1.0.0-20200206130325"
+//    }
 }
 
 plugins {
@@ -25,20 +25,20 @@ plugins {
     id 'com.jfrog.bintray' version '1.8.3'
 }
 
-apply plugin: io.vrap.rmf.codegen.plugin.RamlCodegenPlugin
-
-RamlGenerator {
-    apiSpec {
-        uri = file('../commercetools-importer/api-spec/api.raml')
-        targets {
-            importModels {
-                path = file('commercetools/importer/import-api-generated/src/main/java')
-                base_package = 'com/commercetools/importer'
-                target = 'javaComplete'
-            }
-        }
-    }
-}
+//apply plugin: io.vrap.rmf.codegen.plugin.RamlCodegenPlugin
+//
+//RamlGenerator {
+//    apiSpec {
+//        uri = file('../commercetools-importer/api-spec/api.raml')
+//        targets {
+//            importModels {
+//                path = file('commercetools/importer/import-api-generated/src/main/java')
+//                base_package = 'com/commercetools/importer'
+//                target = 'javaComplete'
+//            }
+//        }
+//    }
+//}
 
 import java.text.SimpleDateFormat
 
@@ -108,7 +108,7 @@ subprojects { project ->
             vcsUrl = 'https://github.com/commercetools/commercetools-java-sdks'
         }
     }
-    
+
     task sourcesJar(type: Jar) {
         archiveClassifier = 'sources'
         from sourceSets.main.allJava
@@ -118,7 +118,7 @@ subprojects { project ->
         archiveClassifier = 'javadoc'
         from javadoc.destinationDir
     }
-    
+
     javadoc {
         source = sourceSets.main.allJava
         classpath = configurations.compileClasspath
@@ -130,7 +130,7 @@ subprojects { project ->
             links "https://docs.oracle.com/javase/8/docs/api/"
         }
     }
-    
+
     ext {
         buildInfoPath = "build/generated/src/main/java/io/vrap/rmf/base/client/"
         buildInfoPackage = "io.vrap.rmf.base.client"

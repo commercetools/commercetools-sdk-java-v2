@@ -17,7 +17,7 @@ gen_import_sdk: generate_import
 gen_ml_sdk: generate_ml
 
 verify:
-	./gradlew clean build -x test
+	./gradlew clean build
 
 codegen_install:
 	curl -o- -s https://raw.githubusercontent.com/vrapio/rmf-codegen/master/scripts/install.sh | bash

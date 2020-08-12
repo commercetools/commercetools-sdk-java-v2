@@ -30,7 +30,7 @@ public class ChannelFixtures {
         ChannelDraft channelDraft = ChannelDraftBuilder.of()
                 .key(CommercetoolsTestUtils.randomKey())
                 .roles(Arrays.asList(ChannelRoleEnum.INVENTORY_SUPPLY))
-                .geoLocation(GeoJsonPointBuilder.of().coordinates(Arrays.asList(1,2,3)).build())
+                .geoLocation(GeoJsonPointBuilder.of().coordinates(Arrays.asList(13.0, 51.0)).build())
                 .build();
 
         Channel channel = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())

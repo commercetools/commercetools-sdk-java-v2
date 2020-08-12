@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCategoryAction {
 
    private String action;
-
+   
+   private com.commercetools.api.models.category.CategoryResourceIdentifier category;
+   
    private Boolean staged;
 
-   private com.commercetools.api.models.category.CategoryResourceIdentifier category;
-
    @JsonCreator
-   ProductRemoveFromCategoryActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("category") final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
-      this.staged = staged;
+   ProductRemoveFromCategoryActionImpl(@JsonProperty("category") final com.commercetools.api.models.category.CategoryResourceIdentifier category, @JsonProperty("staged") final Boolean staged) {
       this.category = category;
+      this.staged = staged;
       this.action = "removeFromCategory";
    }
    public ProductRemoveFromCategoryActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
+      return this.category;
+   }
+   
+   
    public Boolean getStaged(){
       return this.staged;
    }
 
-
-   public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
-      return this.category;
-   }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
-
    public void setCategory(final com.commercetools.api.models.category.CategoryResourceIdentifier category){
       this.category = category;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
    }
 
 }

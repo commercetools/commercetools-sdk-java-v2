@@ -19,10 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProductAddVariantActionBuilder {
    
    @Nullable
-   private java.util.List<com.commercetools.api.models.common.Image> images;
+   private String sku;
    
    @Nullable
-   private java.util.List<com.commercetools.api.models.common.Asset> assets;
+   private String key;
+   
+   @Nullable
+   private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
+   
+   @Nullable
+   private java.util.List<com.commercetools.api.models.common.Image> images;
    
    @Nullable
    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
@@ -31,21 +37,25 @@ public final class ProductAddVariantActionBuilder {
    private Boolean staged;
    
    @Nullable
-   private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
+   private java.util.List<com.commercetools.api.models.common.Asset> assets;
    
-   @Nullable
-   private String sku;
-   
-   @Nullable
-   private String key;
-   
-   public ProductAddVariantActionBuilder images(@Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
-      this.images = images;
+   public ProductAddVariantActionBuilder sku(@Nullable final String sku) {
+      this.sku = sku;
       return this;
    }
    
-   public ProductAddVariantActionBuilder assets(@Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
-      this.assets = assets;
+   public ProductAddVariantActionBuilder key(@Nullable final String key) {
+      this.key = key;
+      return this;
+   }
+   
+   public ProductAddVariantActionBuilder prices(@Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+      this.prices = prices;
+      return this;
+   }
+   
+   public ProductAddVariantActionBuilder images(@Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
+      this.images = images;
       return this;
    }
    
@@ -59,29 +69,29 @@ public final class ProductAddVariantActionBuilder {
       return this;
    }
    
-   public ProductAddVariantActionBuilder prices(@Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
-      this.prices = prices;
+   public ProductAddVariantActionBuilder assets(@Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
+      this.assets = assets;
       return this;
    }
    
-   public ProductAddVariantActionBuilder sku(@Nullable final String sku) {
-      this.sku = sku;
-      return this;
+   @Nullable
+   public String getSku(){
+      return this.sku;
    }
    
-   public ProductAddVariantActionBuilder key(@Nullable final String key) {
-      this.key = key;
-      return this;
+   @Nullable
+   public String getKey(){
+      return this.key;
+   }
+   
+   @Nullable
+   public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices(){
+      return this.prices;
    }
    
    @Nullable
    public java.util.List<com.commercetools.api.models.common.Image> getImages(){
       return this.images;
-   }
-   
-   @Nullable
-   public java.util.List<com.commercetools.api.models.common.Asset> getAssets(){
-      return this.assets;
    }
    
    @Nullable
@@ -95,22 +105,12 @@ public final class ProductAddVariantActionBuilder {
    }
    
    @Nullable
-   public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices(){
-      return this.prices;
-   }
-   
-   @Nullable
-   public String getSku(){
-      return this.sku;
-   }
-   
-   @Nullable
-   public String getKey(){
-      return this.key;
+   public java.util.List<com.commercetools.api.models.common.Asset> getAssets(){
+      return this.assets;
    }
 
    public ProductAddVariantAction build() {
-       return new ProductAddVariantActionImpl(images, assets, attributes, staged, prices, sku, key);
+       return new ProductAddVariantActionImpl(sku, key, prices, images, attributes, staged, assets);
    }
    
    public static ProductAddVariantActionBuilder of() {
@@ -119,13 +119,13 @@ public final class ProductAddVariantActionBuilder {
    
    public static ProductAddVariantActionBuilder of(final ProductAddVariantAction template) {
       ProductAddVariantActionBuilder builder = new ProductAddVariantActionBuilder();
-      builder.images = template.getImages();
-      builder.assets = template.getAssets();
-      builder.attributes = template.getAttributes();
-      builder.staged = template.getStaged();
-      builder.prices = template.getPrices();
       builder.sku = template.getSku();
       builder.key = template.getKey();
+      builder.prices = template.getPrices();
+      builder.images = template.getImages();
+      builder.attributes = template.getAttributes();
+      builder.staged = template.getStaged();
+      builder.assets = template.getAssets();
       return builder;
    }
    

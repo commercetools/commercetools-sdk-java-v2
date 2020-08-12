@@ -14,34 +14,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CustomerEmailVerifyBuilder {
    
-   
-   private String tokenValue;
-   
    @Nullable
    private Long version;
    
-   public CustomerEmailVerifyBuilder tokenValue( final String tokenValue) {
-      this.tokenValue = tokenValue;
-      return this;
-   }
+   
+   private String tokenValue;
    
    public CustomerEmailVerifyBuilder version(@Nullable final Long version) {
       this.version = version;
       return this;
    }
    
-   
-   public String getTokenValue(){
-      return this.tokenValue;
+   public CustomerEmailVerifyBuilder tokenValue( final String tokenValue) {
+      this.tokenValue = tokenValue;
+      return this;
    }
    
    @Nullable
    public Long getVersion(){
       return this.version;
    }
+   
+   
+   public String getTokenValue(){
+      return this.tokenValue;
+   }
 
    public CustomerEmailVerify build() {
-       return new CustomerEmailVerifyImpl(tokenValue, version);
+       return new CustomerEmailVerifyImpl(version, tokenValue);
    }
    
    public static CustomerEmailVerifyBuilder of() {
@@ -50,8 +50,8 @@ public final class CustomerEmailVerifyBuilder {
    
    public static CustomerEmailVerifyBuilder of(final CustomerEmailVerify template) {
       CustomerEmailVerifyBuilder builder = new CustomerEmailVerifyBuilder();
-      builder.tokenValue = template.getTokenValue();
       builder.version = template.getVersion();
+      builder.tokenValue = template.getTokenValue();
       return builder;
    }
    

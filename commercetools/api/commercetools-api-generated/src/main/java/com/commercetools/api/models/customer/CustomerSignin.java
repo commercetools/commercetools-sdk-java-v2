@@ -21,56 +21,56 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSigninImpl.class)
 public interface CustomerSignin  {
 
-
+   
    @NotNull
    @JsonProperty("email")
    public String getEmail();
-
+   
    @NotNull
    @JsonProperty("password")
    public String getPassword();
-
-
+   
+   
    @JsonProperty("anonymousCartId")
    public String getAnonymousCartId();
-
-
+   
+   
    @JsonProperty("anonymousCartSignInMode")
    public AnonymousCartSignInMode getAnonymousCartSignInMode();
-
-
+   
+   
    @JsonProperty("anonymousId")
    public String getAnonymousId();
-
-
+   
+   
    @JsonProperty("updateProductData")
    public Boolean getUpdateProductData();
 
    public void setEmail(final String email);
-
+   
    public void setPassword(final String password);
-
+   
    public void setAnonymousCartId(final String anonymousCartId);
-
+   
    public void setAnonymousCartSignInMode(final AnonymousCartSignInMode anonymousCartSignInMode);
-
+   
    public void setAnonymousId(final String anonymousId);
-
+   
    public void setUpdateProductData(final Boolean updateProductData);
-
+   
    public static CustomerSigninImpl of(){
       return new CustomerSigninImpl();
    }
-
+   
 
    public static CustomerSigninImpl of(final CustomerSignin template) {
       CustomerSigninImpl instance = new CustomerSigninImpl();
-      instance.setUpdateProductData(template.getUpdateProductData());
-      instance.setAnonymousId(template.getAnonymousId());
-      instance.setPassword(template.getPassword());
-      instance.setAnonymousCartSignInMode(template.getAnonymousCartSignInMode());
-      instance.setAnonymousCartId(template.getAnonymousCartId());
       instance.setEmail(template.getEmail());
+      instance.setPassword(template.getPassword());
+      instance.setAnonymousCartId(template.getAnonymousCartId());
+      instance.setAnonymousCartSignInMode(template.getAnonymousCartSignInMode());
+      instance.setAnonymousId(template.getAnonymousId());
+      instance.setUpdateProductData(template.getUpdateProductData());
       return instance;
    }
 

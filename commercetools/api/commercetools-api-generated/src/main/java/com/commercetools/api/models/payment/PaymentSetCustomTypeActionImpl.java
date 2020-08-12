@@ -26,14 +26,14 @@ public final class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTyp
 
    private String action;
    
-   private com.commercetools.api.models.type.FieldContainer fields;
-   
    private com.commercetools.api.models.type.TypeResourceIdentifier type;
+   
+   private com.commercetools.api.models.type.FieldContainer fields;
 
    @JsonCreator
-   PaymentSetCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type) {
-      this.fields = fields;
+   PaymentSetCustomTypeActionImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
       this.type = type;
+      this.fields = fields;
       this.action = "setCustomType";
    }
    public PaymentSetCustomTypeActionImpl() {
@@ -46,26 +46,26 @@ public final class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTyp
    }
    
    /**
-   *  <p>Sets the custom fields to this value.</p>
-   */
-   public com.commercetools.api.models.type.FieldContainer getFields(){
-      return this.fields;
-   }
-   
-   /**
    *  <p>If set, the custom type is set to this new value.
    *  If absent, the custom type and any existing custom fields are removed.</p>
    */
    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
-
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
    
+   /**
+   *  <p>Sets the custom fields to this value.</p>
+   */
+   public com.commercetools.api.models.type.FieldContainer getFields(){
+      return this.fields;
+   }
+
    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
       this.type = type;
+   }
+   
+   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+      this.fields = fields;
    }
 
 }

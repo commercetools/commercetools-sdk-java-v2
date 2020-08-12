@@ -15,29 +15,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProductRemoveAssetActionBuilder {
    
    @Nullable
-   private String assetId;
-   
-   @Nullable
-   private Boolean staged;
-   
-   @Nullable
    private Long variantId;
    
    @Nullable
    private String sku;
    
    @Nullable
+   private Boolean staged;
+   
+   @Nullable
+   private String assetId;
+   
+   @Nullable
    private String assetKey;
-   
-   public ProductRemoveAssetActionBuilder assetId(@Nullable final String assetId) {
-      this.assetId = assetId;
-      return this;
-   }
-   
-   public ProductRemoveAssetActionBuilder staged(@Nullable final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
    
    public ProductRemoveAssetActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
@@ -49,19 +39,19 @@ public final class ProductRemoveAssetActionBuilder {
       return this;
    }
    
-   public ProductRemoveAssetActionBuilder assetKey(@Nullable final String assetKey) {
-      this.assetKey = assetKey;
+   public ProductRemoveAssetActionBuilder staged(@Nullable final Boolean staged) {
+      this.staged = staged;
       return this;
    }
    
-   @Nullable
-   public String getAssetId(){
-      return this.assetId;
+   public ProductRemoveAssetActionBuilder assetId(@Nullable final String assetId) {
+      this.assetId = assetId;
+      return this;
    }
    
-   @Nullable
-   public Boolean getStaged(){
-      return this.staged;
+   public ProductRemoveAssetActionBuilder assetKey(@Nullable final String assetKey) {
+      this.assetKey = assetKey;
+      return this;
    }
    
    @Nullable
@@ -75,12 +65,22 @@ public final class ProductRemoveAssetActionBuilder {
    }
    
    @Nullable
+   public Boolean getStaged(){
+      return this.staged;
+   }
+   
+   @Nullable
+   public String getAssetId(){
+      return this.assetId;
+   }
+   
+   @Nullable
    public String getAssetKey(){
       return this.assetKey;
    }
 
    public ProductRemoveAssetAction build() {
-       return new ProductRemoveAssetActionImpl(assetId, staged, variantId, sku, assetKey);
+       return new ProductRemoveAssetActionImpl(variantId, sku, staged, assetId, assetKey);
    }
    
    public static ProductRemoveAssetActionBuilder of() {
@@ -89,10 +89,10 @@ public final class ProductRemoveAssetActionBuilder {
    
    public static ProductRemoveAssetActionBuilder of(final ProductRemoveAssetAction template) {
       ProductRemoveAssetActionBuilder builder = new ProductRemoveAssetActionBuilder();
-      builder.assetId = template.getAssetId();
-      builder.staged = template.getStaged();
       builder.variantId = template.getVariantId();
       builder.sku = template.getSku();
+      builder.staged = template.getStaged();
+      builder.assetId = template.getAssetId();
       builder.assetKey = template.getAssetKey();
       return builder;
    }

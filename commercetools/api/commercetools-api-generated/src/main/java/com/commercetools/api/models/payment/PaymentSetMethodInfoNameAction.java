@@ -30,11 +30,11 @@ public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
    public LocalizedString getName();
 
    public void setName(final LocalizedString name);
-
+   
    public static PaymentSetMethodInfoNameActionImpl of(){
       return new PaymentSetMethodInfoNameActionImpl();
    }
-
+   
 
    public static PaymentSetMethodInfoNameActionImpl of(final PaymentSetMethodInfoNameAction template) {
       PaymentSetMethodInfoNameActionImpl instance = new PaymentSetMethodInfoNameActionImpl();

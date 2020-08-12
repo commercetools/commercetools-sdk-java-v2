@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class SuggestionResultBuilder {
-
-
+   
+   
    private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values;
-
+   
    public SuggestionResultBuilder values( final Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values){
       this.values = values;
       return this;
    }
-
-
+   
+   
    public Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> getValues(){
       return this.values;
    }
@@ -30,15 +30,15 @@ public final class SuggestionResultBuilder {
    public SuggestionResult build() {
        return new SuggestionResultImpl(values);
    }
-
+   
    public static SuggestionResultBuilder of() {
       return new SuggestionResultBuilder();
    }
-
+   
    public static SuggestionResultBuilder of(final SuggestionResult template) {
       SuggestionResultBuilder builder = new SuggestionResultBuilder();
       builder.values = template.values();
       return builder;
    }
-
+   
 }

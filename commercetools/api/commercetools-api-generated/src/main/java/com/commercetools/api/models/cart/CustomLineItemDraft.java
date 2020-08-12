@@ -37,7 +37,7 @@ public interface CustomLineItemDraft  {
    */
    @NotNull
    @JsonProperty("quantity")
-   public Integer getQuantity();
+   public Double getQuantity();
    
    @NotNull
    @Valid
@@ -74,7 +74,7 @@ public interface CustomLineItemDraft  {
 
    public void setName(final LocalizedString name);
    
-   public void setQuantity(final Integer quantity);
+   public void setQuantity(final Double quantity);
    
    public void setMoney(final Money money);
    
@@ -95,14 +95,14 @@ public interface CustomLineItemDraft  {
 
    public static CustomLineItemDraftImpl of(final CustomLineItemDraft template) {
       CustomLineItemDraftImpl instance = new CustomLineItemDraftImpl();
-      instance.setExternalTaxRate(template.getExternalTaxRate());
-      instance.setQuantity(template.getQuantity());
-      instance.setShippingDetails(template.getShippingDetails());
-      instance.setMoney(template.getMoney());
-      instance.setCustom(template.getCustom());
       instance.setName(template.getName());
+      instance.setQuantity(template.getQuantity());
+      instance.setMoney(template.getMoney());
       instance.setSlug(template.getSlug());
       instance.setTaxCategory(template.getTaxCategory());
+      instance.setExternalTaxRate(template.getExternalTaxRate());
+      instance.setCustom(template.getCustom());
+      instance.setShippingDetails(template.getShippingDetails());
       return instance;
    }
 

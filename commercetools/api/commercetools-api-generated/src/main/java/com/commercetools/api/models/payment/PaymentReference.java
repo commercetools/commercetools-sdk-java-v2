@@ -23,17 +23,17 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentReferenceImpl.class)
 public interface PaymentReference extends Reference {
 
-
+   
    @Valid
    @JsonProperty("obj")
    public Payment getObj();
 
    public void setObj(final Payment obj);
-
+   
    public static PaymentReferenceImpl of(){
       return new PaymentReferenceImpl();
    }
-
+   
 
    public static PaymentReferenceImpl of(final PaymentReference template) {
       PaymentReferenceImpl instance = new PaymentReferenceImpl();

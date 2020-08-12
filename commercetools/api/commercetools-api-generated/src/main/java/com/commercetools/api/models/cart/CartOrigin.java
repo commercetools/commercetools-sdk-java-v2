@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum CartOrigin {
 
-
+  
   @JsonProperty("Customer")
   CUSTOMER("Customer"),
-
-
+  
+  
   @JsonProperty("Merchant")
   MERCHANT("Merchant");
 

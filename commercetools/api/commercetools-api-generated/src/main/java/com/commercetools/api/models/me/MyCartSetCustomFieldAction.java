@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartSetCustomFieldActionImpl.class)
 public interface MyCartSetCustomFieldAction extends MyCartUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-
-
+   
+   
    @JsonProperty("value")
    public JsonNode getValue();
 
    public void setName(final String name);
-
+   
    public void setValue(final JsonNode value);
-
+   
    public static MyCartSetCustomFieldActionImpl of(){
       return new MyCartSetCustomFieldActionImpl();
    }
-
+   
 
    public static MyCartSetCustomFieldActionImpl of(final MyCartSetCustomFieldAction template) {
       MyCartSetCustomFieldActionImpl instance = new MyCartSetCustomFieldActionImpl();

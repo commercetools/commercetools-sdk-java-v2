@@ -3,11 +3,13 @@ package com.commercetools.api.models.customer;
 import com.commercetools.api.models.customer.CustomerAddAddressAction;
 import com.commercetools.api.models.customer.CustomerAddBillingAddressIdAction;
 import com.commercetools.api.models.customer.CustomerAddShippingAddressIdAction;
+import com.commercetools.api.models.customer.CustomerAddStoreAction;
 import com.commercetools.api.models.customer.CustomerChangeAddressAction;
 import com.commercetools.api.models.customer.CustomerChangeEmailAction;
 import com.commercetools.api.models.customer.CustomerRemoveAddressAction;
 import com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdAction;
 import com.commercetools.api.models.customer.CustomerRemoveShippingAddressIdAction;
+import com.commercetools.api.models.customer.CustomerRemoveStoreAction;
 import com.commercetools.api.models.customer.CustomerSetCompanyNameAction;
 import com.commercetools.api.models.customer.CustomerSetCustomFieldAction;
 import com.commercetools.api.models.customer.CustomerSetCustomTypeAction;
@@ -23,6 +25,7 @@ import com.commercetools.api.models.customer.CustomerSetLastNameAction;
 import com.commercetools.api.models.customer.CustomerSetLocaleAction;
 import com.commercetools.api.models.customer.CustomerSetMiddleNameAction;
 import com.commercetools.api.models.customer.CustomerSetSalutationAction;
+import com.commercetools.api.models.customer.CustomerSetStoresAction;
 import com.commercetools.api.models.customer.CustomerSetTitleAction;
 import com.commercetools.api.models.customer.CustomerSetVatIdAction;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -52,9 +55,9 @@ public final class CustomerUpdateActionImpl implements CustomerUpdateAction {
    CustomerUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

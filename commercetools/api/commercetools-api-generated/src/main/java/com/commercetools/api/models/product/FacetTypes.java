@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum FacetTypes {
 
-
+  
   @JsonProperty("terms")
   TERMS("terms"),
-
-
+  
+  
   @JsonProperty("range")
   RANGE("range"),
-
-
+  
+  
   @JsonProperty("filter")
   FILTER("filter");
 

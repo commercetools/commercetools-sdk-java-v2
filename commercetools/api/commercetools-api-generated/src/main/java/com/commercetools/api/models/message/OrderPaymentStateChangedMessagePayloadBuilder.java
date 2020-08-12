@@ -15,34 +15,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class OrderPaymentStateChangedMessagePayloadBuilder {
    
-   @Nullable
-   private com.commercetools.api.models.order.PaymentState oldPaymentState;
-   
    
    private com.commercetools.api.models.order.PaymentState paymentState;
    
-   public OrderPaymentStateChangedMessagePayloadBuilder oldPaymentState(@Nullable final com.commercetools.api.models.order.PaymentState oldPaymentState) {
-      this.oldPaymentState = oldPaymentState;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.order.PaymentState oldPaymentState;
    
    public OrderPaymentStateChangedMessagePayloadBuilder paymentState( final com.commercetools.api.models.order.PaymentState paymentState) {
       this.paymentState = paymentState;
       return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.order.PaymentState getOldPaymentState(){
-      return this.oldPaymentState;
+   public OrderPaymentStateChangedMessagePayloadBuilder oldPaymentState(@Nullable final com.commercetools.api.models.order.PaymentState oldPaymentState) {
+      this.oldPaymentState = oldPaymentState;
+      return this;
    }
    
    
    public com.commercetools.api.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.order.PaymentState getOldPaymentState(){
+      return this.oldPaymentState;
+   }
 
    public OrderPaymentStateChangedMessagePayload build() {
-       return new OrderPaymentStateChangedMessagePayloadImpl(oldPaymentState, paymentState);
+       return new OrderPaymentStateChangedMessagePayloadImpl(paymentState, oldPaymentState);
    }
    
    public static OrderPaymentStateChangedMessagePayloadBuilder of() {
@@ -51,8 +51,8 @@ public final class OrderPaymentStateChangedMessagePayloadBuilder {
    
    public static OrderPaymentStateChangedMessagePayloadBuilder of(final OrderPaymentStateChangedMessagePayload template) {
       OrderPaymentStateChangedMessagePayloadBuilder builder = new OrderPaymentStateChangedMessagePayloadBuilder();
-      builder.oldPaymentState = template.getOldPaymentState();
       builder.paymentState = template.getPaymentState();
+      builder.oldPaymentState = template.getOldPaymentState();
       return builder;
    }
    

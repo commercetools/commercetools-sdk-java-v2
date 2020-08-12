@@ -1,8 +1,9 @@
 package com.commercetools.api.models.shipping_method;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
+import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.shipping_method.ZoneRate;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import java.time.ZonedDateTime;
@@ -20,31 +21,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ShippingMethodBuilder {
    
    
-   private java.time.ZonedDateTime createdAt;
-   
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   
    private String id;
    
    
    private Long version;
    
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
    
-   
-   private java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates;
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    @Nullable
-   private String predicate;
-   
-   
-   private Boolean isDefault;
+   private String key;
    
    
    private String name;
@@ -53,20 +48,19 @@ public final class ShippingMethodBuilder {
    private String description;
    
    @Nullable
-   private String key;
+   private com.commercetools.api.models.common.LocalizedString localizedDescription;
    
    
    private com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory;
    
-   public ShippingMethodBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
    
-   public ShippingMethodBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
+   private java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates;
+   
+   
+   private Boolean isDefault;
+   
+   @Nullable
+   private String predicate;
    
    public ShippingMethodBuilder id( final String id) {
       this.id = id;
@@ -78,8 +72,13 @@ public final class ShippingMethodBuilder {
       return this;
    }
    
-   public ShippingMethodBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   public ShippingMethodBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
+      return this;
+   }
+   
+   public ShippingMethodBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
       return this;
    }
    
@@ -88,18 +87,13 @@ public final class ShippingMethodBuilder {
       return this;
    }
    
-   public ShippingMethodBuilder zoneRates( final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates) {
-      this.zoneRates = zoneRates;
+   public ShippingMethodBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
       return this;
    }
    
-   public ShippingMethodBuilder predicate(@Nullable final String predicate) {
-      this.predicate = predicate;
-      return this;
-   }
-   
-   public ShippingMethodBuilder isDefault( final Boolean isDefault) {
-      this.isDefault = isDefault;
+   public ShippingMethodBuilder key(@Nullable final String key) {
+      this.key = key;
       return this;
    }
    
@@ -113,8 +107,8 @@ public final class ShippingMethodBuilder {
       return this;
    }
    
-   public ShippingMethodBuilder key(@Nullable final String key) {
-      this.key = key;
+   public ShippingMethodBuilder localizedDescription(@Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {
+      this.localizedDescription = localizedDescription;
       return this;
    }
    
@@ -123,14 +117,19 @@ public final class ShippingMethodBuilder {
       return this;
    }
    
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
+   public ShippingMethodBuilder zoneRates( final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates) {
+      this.zoneRates = zoneRates;
+      return this;
    }
    
+   public ShippingMethodBuilder isDefault( final Boolean isDefault) {
+      this.isDefault = isDefault;
+      return this;
+   }
    
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
+   public ShippingMethodBuilder predicate(@Nullable final String predicate) {
+      this.predicate = predicate;
+      return this;
    }
    
    
@@ -143,9 +142,14 @@ public final class ShippingMethodBuilder {
       return this.version;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    @Nullable
@@ -153,19 +157,14 @@ public final class ShippingMethodBuilder {
       return this.lastModifiedBy;
    }
    
-   
-   public java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> getZoneRates(){
-      return this.zoneRates;
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    @Nullable
-   public String getPredicate(){
-      return this.predicate;
-   }
-   
-   
-   public Boolean getIsDefault(){
-      return this.isDefault;
+   public String getKey(){
+      return this.key;
    }
    
    
@@ -179,17 +178,32 @@ public final class ShippingMethodBuilder {
    }
    
    @Nullable
-   public String getKey(){
-      return this.key;
+   public com.commercetools.api.models.common.LocalizedString getLocalizedDescription(){
+      return this.localizedDescription;
    }
    
    
    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory(){
       return this.taxCategory;
    }
+   
+   
+   public java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> getZoneRates(){
+      return this.zoneRates;
+   }
+   
+   
+   public Boolean getIsDefault(){
+      return this.isDefault;
+   }
+   
+   @Nullable
+   public String getPredicate(){
+      return this.predicate;
+   }
 
    public ShippingMethod build() {
-       return new ShippingMethodImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, zoneRates, predicate, isDefault, name, description, key, taxCategory);
+       return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description, localizedDescription, taxCategory, zoneRates, isDefault, predicate);
    }
    
    public static ShippingMethodBuilder of() {
@@ -198,19 +212,20 @@ public final class ShippingMethodBuilder {
    
    public static ShippingMethodBuilder of(final ShippingMethod template) {
       ShippingMethodBuilder builder = new ShippingMethodBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
-      builder.zoneRates = template.getZoneRates();
-      builder.predicate = template.getPredicate();
-      builder.isDefault = template.getIsDefault();
+      builder.createdBy = template.getCreatedBy();
+      builder.key = template.getKey();
       builder.name = template.getName();
       builder.description = template.getDescription();
-      builder.key = template.getKey();
+      builder.localizedDescription = template.getLocalizedDescription();
       builder.taxCategory = template.getTaxCategory();
+      builder.zoneRates = template.getZoneRates();
+      builder.isDefault = template.getIsDefault();
+      builder.predicate = template.getPredicate();
       return builder;
    }
    

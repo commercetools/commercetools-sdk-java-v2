@@ -24,16 +24,16 @@ public interface ReviewSetTextAction extends ReviewUpdateAction {
    /**
    *  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */
-
+   
    @JsonProperty("text")
    public String getText();
 
    public void setText(final String text);
-
+   
    public static ReviewSetTextActionImpl of(){
       return new ReviewSetTextActionImpl();
    }
-
+   
 
    public static ReviewSetTextActionImpl of(final ReviewSetTextAction template) {
       ReviewSetTextActionImpl instance = new ReviewSetTextActionImpl();

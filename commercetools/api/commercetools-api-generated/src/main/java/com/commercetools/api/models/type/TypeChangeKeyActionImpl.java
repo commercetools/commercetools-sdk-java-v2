@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TypeChangeKeyActionImpl implements TypeChangeKeyAction {
 
    private String action;
-
+   
    private String key;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class TypeChangeKeyActionImpl implements TypeChangeKeyAction {
       this.action = "changeKey";
    }
    public TypeChangeKeyActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getKey(){
       return this.key;
    }

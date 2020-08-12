@@ -26,14 +26,14 @@ public final class MyShoppingListSetCustomTypeActionImpl implements MyShoppingLi
 
    private String action;
    
-   private com.commercetools.api.models.type.FieldContainer fields;
-   
    private com.commercetools.api.models.type.TypeResourceIdentifier type;
+   
+   private com.commercetools.api.models.type.FieldContainer fields;
 
    @JsonCreator
-   MyShoppingListSetCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type) {
-      this.fields = fields;
+   MyShoppingListSetCustomTypeActionImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
       this.type = type;
+      this.fields = fields;
       this.action = "setCustomType";
    }
    public MyShoppingListSetCustomTypeActionImpl() {
@@ -46,21 +46,21 @@ public final class MyShoppingListSetCustomTypeActionImpl implements MyShoppingLi
    }
    
    
-   public com.commercetools.api.models.type.FieldContainer getFields(){
-      return this.fields;
-   }
-   
-   
    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
-
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
    
+   
+   public com.commercetools.api.models.type.FieldContainer getFields(){
+      return this.fields;
+   }
+
    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
       this.type = type;
+   }
+   
+   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+      this.fields = fields;
    }
 
 }

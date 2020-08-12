@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class StateChangeKeyActionBuilder {
-
-
+   
+   
    private String key;
-
+   
    public StateChangeKeyActionBuilder key( final String key) {
       this.key = key;
       return this;
    }
-
-
+   
+   
    public String getKey(){
       return this.key;
    }
@@ -30,15 +30,15 @@ public final class StateChangeKeyActionBuilder {
    public StateChangeKeyAction build() {
        return new StateChangeKeyActionImpl(key);
    }
-
+   
    public static StateChangeKeyActionBuilder of() {
       return new StateChangeKeyActionBuilder();
    }
-
+   
    public static StateChangeKeyActionBuilder of(final StateChangeKeyAction template) {
       StateChangeKeyActionBuilder builder = new StateChangeKeyActionBuilder();
       builder.key = template.getKey();
       return builder;
    }
-
+   
 }

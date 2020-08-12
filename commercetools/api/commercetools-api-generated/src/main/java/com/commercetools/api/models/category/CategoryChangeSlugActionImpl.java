@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.LocalizedString slug;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class CategoryChangeSlugActionImpl implements CategoryChangeSlugAct
       this.action = "changeSlug";
    }
    public CategoryChangeSlugActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.
    *  Maximum size is {{ site.data.api-limits.slugLength }}.</p>

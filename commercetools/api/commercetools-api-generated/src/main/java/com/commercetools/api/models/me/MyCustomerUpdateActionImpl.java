@@ -48,9 +48,9 @@ public final class MyCustomerUpdateActionImpl implements MyCustomerUpdateAction 
    MyCustomerUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

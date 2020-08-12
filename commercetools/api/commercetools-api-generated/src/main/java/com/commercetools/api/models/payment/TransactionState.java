@@ -13,19 +13,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TransactionState {
 
-
+  
   @JsonProperty("Initial")
   INITIAL("Initial"),
-
-
+  
+  
   @JsonProperty("Pending")
   PENDING("Pending"),
-
-
+  
+  
   @JsonProperty("Success")
   SUCCESS("Success"),
-
-
+  
+  
   @JsonProperty("Failure")
   FAILURE("Failure");
 

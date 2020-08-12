@@ -16,22 +16,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ParcelItemsUpdatedMessageBuilder {
    
    
-   private java.time.ZonedDateTime createdAt;
-   
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   
    private String id;
    
    
    private Long version;
    
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+   
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    
    private Long sequenceNumber;
@@ -39,33 +39,23 @@ public final class ParcelItemsUpdatedMessageBuilder {
    
    private com.commercetools.api.models.common.Reference resource;
    
+   
+   private Long resourceVersion;
+   
    @Nullable
    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private Long resourceVersion;
+   private String parcelId;
    
    @Nullable
    private String deliveryId;
    
    
-   private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
-   
-   
    private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
    
    
-   private String parcelId;
-   
-   public ParcelItemsUpdatedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-   
-   public ParcelItemsUpdatedMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
+   private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
    
    public ParcelItemsUpdatedMessageBuilder id( final String id) {
       this.id = id;
@@ -77,13 +67,23 @@ public final class ParcelItemsUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelItemsUpdatedMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   public ParcelItemsUpdatedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
+      return this;
+   }
+   
+   public ParcelItemsUpdatedMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
       return this;
    }
    
    public ParcelItemsUpdatedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public ParcelItemsUpdatedMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
       return this;
    }
    
@@ -97,28 +97,13 @@ public final class ParcelItemsUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-      return this;
-   }
-   
    public ParcelItemsUpdatedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public ParcelItemsUpdatedMessageBuilder deliveryId(@Nullable final String deliveryId) {
-      this.deliveryId = deliveryId;
-      return this;
-   }
-   
-   public ParcelItemsUpdatedMessageBuilder oldItems( final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
-      this.oldItems = oldItems;
-      return this;
-   }
-   
-   public ParcelItemsUpdatedMessageBuilder items( final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
-      this.items = items;
+   public ParcelItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
    
@@ -127,14 +112,19 @@ public final class ParcelItemsUpdatedMessageBuilder {
       return this;
    }
    
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
+   public ParcelItemsUpdatedMessageBuilder deliveryId(@Nullable final String deliveryId) {
+      this.deliveryId = deliveryId;
+      return this;
    }
    
+   public ParcelItemsUpdatedMessageBuilder items( final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+      this.items = items;
+      return this;
+   }
    
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
+   public ParcelItemsUpdatedMessageBuilder oldItems( final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
+      this.oldItems = oldItems;
+      return this;
    }
    
    
@@ -147,14 +137,24 @@ public final class ParcelItemsUpdatedMessageBuilder {
       return this.version;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    @Nullable
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    
@@ -167,14 +167,19 @@ public final class ParcelItemsUpdatedMessageBuilder {
       return this.resource;
    }
    
+   
+   public Long getResourceVersion(){
+      return this.resourceVersion;
+   }
+   
    @Nullable
    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
    
    
-   public Long getResourceVersion(){
-      return this.resourceVersion;
+   public String getParcelId(){
+      return this.parcelId;
    }
    
    @Nullable
@@ -183,22 +188,17 @@ public final class ParcelItemsUpdatedMessageBuilder {
    }
    
    
-   public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems(){
-      return this.oldItems;
-   }
-   
-   
    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
       return this.items;
    }
    
    
-   public String getParcelId(){
-      return this.parcelId;
+   public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems(){
+      return this.oldItems;
    }
 
    public ParcelItemsUpdatedMessage build() {
-       return new ParcelItemsUpdatedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, deliveryId, oldItems, items, parcelId);
+       return new ParcelItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, parcelId, deliveryId, items, oldItems);
    }
    
    public static ParcelItemsUpdatedMessageBuilder of() {
@@ -207,20 +207,20 @@ public final class ParcelItemsUpdatedMessageBuilder {
    
    public static ParcelItemsUpdatedMessageBuilder of(final ParcelItemsUpdatedMessage template) {
       ParcelItemsUpdatedMessageBuilder builder = new ParcelItemsUpdatedMessageBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
+      builder.createdBy = template.getCreatedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
-      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.deliveryId = template.getDeliveryId();
-      builder.oldItems = template.getOldItems();
-      builder.items = template.getItems();
+      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.parcelId = template.getParcelId();
+      builder.deliveryId = template.getDeliveryId();
+      builder.items = template.getItems();
+      builder.oldItems = template.getOldItems();
       return builder;
    }
    

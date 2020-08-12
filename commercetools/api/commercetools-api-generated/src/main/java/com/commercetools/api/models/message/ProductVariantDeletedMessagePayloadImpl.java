@@ -25,14 +25,14 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
 
    private String type;
    
-   private java.util.List<String> removedImageUrls;
-   
    private com.commercetools.api.models.product.ProductVariant variant;
+   
+   private java.util.List<String> removedImageUrls;
 
    @JsonCreator
-   ProductVariantDeletedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls, @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant) {
-      this.removedImageUrls = removedImageUrls;
+   ProductVariantDeletedMessagePayloadImpl(@JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant, @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
       this.variant = variant;
+      this.removedImageUrls = removedImageUrls;
       this.type = "ProductVariantDeleted";
    }
    public ProductVariantDeletedMessagePayloadImpl() {
@@ -45,21 +45,21 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
    }
    
    
-   public java.util.List<String> getRemovedImageUrls(){
-      return this.removedImageUrls;
-   }
-   
-   
    public com.commercetools.api.models.product.ProductVariant getVariant(){
       return this.variant;
    }
-
-   public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
-      this.removedImageUrls = removedImageUrls;
-   }
    
+   
+   public java.util.List<String> getRemovedImageUrls(){
+      return this.removedImageUrls;
+   }
+
    public void setVariant(final com.commercetools.api.models.product.ProductVariant variant){
       this.variant = variant;
+   }
+   
+   public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
+      this.removedImageUrls = removedImageUrls;
    }
 
 }

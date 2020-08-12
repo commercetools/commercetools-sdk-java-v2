@@ -25,7 +25,7 @@ public interface ExtensionDraft  {
    /**
    *  <p>User-specific unique identifier for the extension</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
    /**
@@ -48,29 +48,29 @@ public interface ExtensionDraft  {
    *  This limit can be increased per project after we review the performance impact.
    *  Please contact Support via the <a href="https://support.commercetools.com">Support Portal</a> and provide the region, project key and use case.</p>
    */
-
+   
    @JsonProperty("timeoutInMs")
    public Integer getTimeoutInMs();
 
    public void setKey(final String key);
-
+   
    public void setDestination(final ExtensionDestination destination);
-
+   
    public void setTriggers(final List<ExtensionTrigger> triggers);
-
+   
    public void setTimeoutInMs(final Integer timeoutInMs);
-
+   
    public static ExtensionDraftImpl of(){
       return new ExtensionDraftImpl();
    }
-
+   
 
    public static ExtensionDraftImpl of(final ExtensionDraft template) {
       ExtensionDraftImpl instance = new ExtensionDraftImpl();
-      instance.setTimeoutInMs(template.getTimeoutInMs());
+      instance.setKey(template.getKey());
       instance.setDestination(template.getDestination());
       instance.setTriggers(template.getTriggers());
-      instance.setKey(template.getKey());
+      instance.setTimeoutInMs(template.getTimeoutInMs());
       return instance;
    }
 

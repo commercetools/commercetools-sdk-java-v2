@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDiscountCodeAction {
 
    private String action;
-
+   
    private String code;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAd
       this.action = "addDiscountCode";
    }
    public StagedOrderAddDiscountCodeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }

@@ -39,7 +39,7 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
    
    @NotNull
    @JsonProperty("quantity")
-   public Integer getQuantity();
+   public Double getQuantity();
    
    @NotNull
    @JsonProperty("slug")
@@ -61,7 +61,7 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
    
    public void setName(final LocalizedString name);
    
-   public void setQuantity(final Integer quantity);
+   public void setQuantity(final Double quantity);
    
    public void setSlug(final String slug);
    
@@ -78,13 +78,13 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
 
    public static CartAddCustomLineItemActionImpl of(final CartAddCustomLineItemAction template) {
       CartAddCustomLineItemActionImpl instance = new CartAddCustomLineItemActionImpl();
-      instance.setExternalTaxRate(template.getExternalTaxRate());
-      instance.setQuantity(template.getQuantity());
       instance.setMoney(template.getMoney());
-      instance.setCustom(template.getCustom());
       instance.setName(template.getName());
+      instance.setQuantity(template.getQuantity());
       instance.setSlug(template.getSlug());
       instance.setTaxCategory(template.getTaxCategory());
+      instance.setCustom(template.getCustom());
+      instance.setExternalTaxRate(template.getExternalTaxRate());
       return instance;
    }
 

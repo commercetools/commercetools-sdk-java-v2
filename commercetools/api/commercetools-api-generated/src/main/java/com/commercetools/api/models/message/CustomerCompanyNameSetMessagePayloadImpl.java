@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompanyNameSetMessagePayload {
 
    private String type;
-
+   
    private String companyName;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class CustomerCompanyNameSetMessagePayloadImpl implements CustomerC
       this.type = "CustomerCompanyNameSet";
    }
    public CustomerCompanyNameSetMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public String getCompanyName(){
       return this.companyName;
    }

@@ -23,54 +23,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductRemoveVariantActionImpl implements ProductRemoveVariantAction {
 
    private String action;
-
+   
+   private Long id;
+   
+   private String sku;
+   
    private Boolean staged;
 
-   private Long id;
-
-   private String sku;
-
    @JsonCreator
-   ProductRemoveVariantActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("id") final Long id, @JsonProperty("sku") final String sku) {
-      this.staged = staged;
+   ProductRemoveVariantActionImpl(@JsonProperty("id") final Long id, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged) {
       this.id = id;
       this.sku = sku;
+      this.staged = staged;
       this.action = "removeVariant";
    }
    public ProductRemoveVariantActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
-   public Boolean getStaged(){
-      return this.staged;
-   }
-
-
+   
+   
    public Long getId(){
       return this.id;
    }
-
-
+   
+   
    public String getSku(){
       return this.sku;
    }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
    }
 
    public void setId(final Long id){
       this.id = id;
    }
-
+   
    public void setSku(final String sku){
       this.sku = sku;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
    }
 
 }

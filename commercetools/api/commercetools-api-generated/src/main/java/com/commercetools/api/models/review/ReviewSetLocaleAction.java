@@ -24,16 +24,16 @@ public interface ReviewSetLocaleAction extends ReviewUpdateAction {
    /**
    *  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */
-
+   
    @JsonProperty("locale")
    public String getLocale();
 
    public void setLocale(final String locale);
-
+   
    public static ReviewSetLocaleActionImpl of(){
       return new ReviewSetLocaleActionImpl();
    }
-
+   
 
    public static ReviewSetLocaleActionImpl of(final ReviewSetLocaleAction template) {
       ReviewSetLocaleActionImpl instance = new ReviewSetLocaleActionImpl();

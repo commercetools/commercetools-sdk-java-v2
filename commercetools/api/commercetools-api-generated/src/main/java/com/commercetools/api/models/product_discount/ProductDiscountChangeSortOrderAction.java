@@ -30,11 +30,11 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
    public String getSortOrder();
 
    public void setSortOrder(final String sortOrder);
-
+   
    public static ProductDiscountChangeSortOrderActionImpl of(){
       return new ProductDiscountChangeSortOrderActionImpl();
    }
-
+   
 
    public static ProductDiscountChangeSortOrderActionImpl of(final ProductDiscountChangeSortOrderAction template) {
       ProductDiscountChangeSortOrderActionImpl instance = new ProductDiscountChangeSortOrderActionImpl();

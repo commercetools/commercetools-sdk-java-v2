@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -36,13 +38,13 @@ public class ByProjectKeyMePaymentsByIDPost {
    private String projectKey;
    private String ID;
    
-   private com.commercetools.api.models.common.Update update;
+   private com.commercetools.api.models.me.MyPaymentUpdate myPaymentUpdate;
    
-   public ByProjectKeyMePaymentsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.common.Update update){
+   public ByProjectKeyMePaymentsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.me.MyPaymentUpdate myPaymentUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
-      this.update = update;
+      this.myPaymentUpdate = myPaymentUpdate;
    }
    
    public ApiHttpRequest createHttpRequest() {
@@ -58,7 +60,7 @@ public class ByProjectKeyMePaymentsByIDPost {
       httpRequest.setRelativeUrl(httpRequestPath); 
       httpRequest.setMethod(ApiHttpMethod.POST);
       httpRequest.setHeaders(headers);
-      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(update));}catch(Exception e){e.printStackTrace();}
+      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(myPaymentUpdate));}catch(Exception e){e.printStackTrace();}
       return httpRequest;
    }
    

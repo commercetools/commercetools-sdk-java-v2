@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentSetMethodInfoNameActionImpl implements PaymentSetMethodInfoNameAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.LocalizedString name;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class PaymentSetMethodInfoNameActionImpl implements PaymentSetMetho
       this.action = "setMethodInfoName";
    }
    public PaymentSetMethodInfoNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If not provided, the name is unset.</p>
    */

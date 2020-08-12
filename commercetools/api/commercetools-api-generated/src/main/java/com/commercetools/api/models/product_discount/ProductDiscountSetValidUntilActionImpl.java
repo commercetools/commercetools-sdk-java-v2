@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductDiscountSetValidUntilActionImpl implements ProductDiscountSetValidUntilAction {
 
    private String action;
-
+   
    private java.time.ZonedDateTime validUntil;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class ProductDiscountSetValidUntilActionImpl implements ProductDisc
       this.action = "setValidUntil";
    }
    public ProductDiscountSetValidUntilActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>The time from which the discount should be ineffective.
    *  Please take Eventual Consistency into account for calculated undiscounted values.</p>

@@ -21,28 +21,28 @@ import java.io.IOException;
 @JsonDeserialize(as = GoogleCloudPubSubDestinationImpl.class)
 public interface GoogleCloudPubSubDestination extends Destination {
 
-
+   
    @NotNull
    @JsonProperty("projectId")
    public String getProjectId();
-
+   
    @NotNull
    @JsonProperty("topic")
    public String getTopic();
 
    public void setProjectId(final String projectId);
-
+   
    public void setTopic(final String topic);
-
+   
    public static GoogleCloudPubSubDestinationImpl of(){
       return new GoogleCloudPubSubDestinationImpl();
    }
-
+   
 
    public static GoogleCloudPubSubDestinationImpl of(final GoogleCloudPubSubDestination template) {
       GoogleCloudPubSubDestinationImpl instance = new GoogleCloudPubSubDestinationImpl();
-      instance.setTopic(template.getTopic());
       instance.setProjectId(template.getProjectId());
+      instance.setTopic(template.getTopic());
       return instance;
    }
 

@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +22,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-*  <p>Returns an order by its ID from a specific Store. The {storeKey} path parameter maps to a Store’s key.
+*  <p>Returns an order by its ID from a specific Store. The {storeKey} path parameter maps to a Store's key.
 *  If the order exists in the commercetools project but does not have the store field,
 *  or the store field references a different store, this method returns a ResourceNotFound error.</p>
 */

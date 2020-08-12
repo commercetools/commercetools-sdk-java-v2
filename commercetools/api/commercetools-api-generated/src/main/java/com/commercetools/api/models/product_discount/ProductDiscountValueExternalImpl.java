@@ -28,9 +28,9 @@ public final class ProductDiscountValueExternalImpl implements ProductDiscountVa
    ProductDiscountValueExternalImpl() {
       this.type = "external";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

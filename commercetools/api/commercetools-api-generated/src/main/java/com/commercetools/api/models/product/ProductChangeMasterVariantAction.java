@@ -47,9 +47,9 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
 
    public static ProductChangeMasterVariantActionImpl of(final ProductChangeMasterVariantAction template) {
       ProductChangeMasterVariantActionImpl instance = new ProductChangeMasterVariantActionImpl();
-      instance.setStaged(template.getStaged());
       instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
+      instance.setStaged(template.getStaged());
       return instance;
    }
 

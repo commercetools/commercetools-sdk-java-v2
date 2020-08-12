@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class DiscountCodeChangeGroupsActionBuilder {
-
-
+   
+   
    private java.util.List<String> groups;
-
+   
    public DiscountCodeChangeGroupsActionBuilder groups( final java.util.List<String> groups) {
       this.groups = groups;
       return this;
    }
-
-
+   
+   
    public java.util.List<String> getGroups(){
       return this.groups;
    }
@@ -30,15 +30,15 @@ public final class DiscountCodeChangeGroupsActionBuilder {
    public DiscountCodeChangeGroupsAction build() {
        return new DiscountCodeChangeGroupsActionImpl(groups);
    }
-
+   
    public static DiscountCodeChangeGroupsActionBuilder of() {
       return new DiscountCodeChangeGroupsActionBuilder();
    }
-
+   
    public static DiscountCodeChangeGroupsActionBuilder of(final DiscountCodeChangeGroupsAction template) {
       DiscountCodeChangeGroupsActionBuilder builder = new DiscountCodeChangeGroupsActionBuilder();
       builder.groups = template.getGroups();
       return builder;
    }
-
+   
 }

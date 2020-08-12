@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AttributeEnumTypeImpl implements AttributeEnumType {
 
    private String name;
-
+   
    private java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class AttributeEnumTypeImpl implements AttributeEnumType {
       this.name = "enum";
    }
    public AttributeEnumTypeImpl() {
-
+      
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues(){
       return this.values;
    }

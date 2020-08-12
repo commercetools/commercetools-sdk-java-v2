@@ -33,11 +33,11 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
    public ShippingRateInputDraft getShippingRateInput();
 
    public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
-
+   
    public static CartSetShippingRateInputActionImpl of(){
       return new CartSetShippingRateInputActionImpl();
    }
-
+   
 
    public static CartSetShippingRateInputActionImpl of(final CartSetShippingRateInputAction template) {
       CartSetShippingRateInputActionImpl instance = new CartSetShippingRateInputActionImpl();

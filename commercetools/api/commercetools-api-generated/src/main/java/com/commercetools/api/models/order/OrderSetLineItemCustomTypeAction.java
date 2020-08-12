@@ -23,35 +23,35 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderSetLineItemCustomTypeActionImpl.class)
 public interface OrderSetLineItemCustomTypeAction extends OrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("lineItemId")
    public String getLineItemId();
-
+   
    @Valid
    @JsonProperty("type")
    public TypeResourceIdentifier getType();
-
+   
    @Valid
    @JsonProperty("fields")
    public FieldContainer getFields();
 
    public void setLineItemId(final String lineItemId);
-
+   
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final FieldContainer fields);
-
+   
    public static OrderSetLineItemCustomTypeActionImpl of(){
       return new OrderSetLineItemCustomTypeActionImpl();
    }
-
+   
 
    public static OrderSetLineItemCustomTypeActionImpl of(final OrderSetLineItemCustomTypeAction template) {
       OrderSetLineItemCustomTypeActionImpl instance = new OrderSetLineItemCustomTypeActionImpl();
       instance.setLineItemId(template.getLineItemId());
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

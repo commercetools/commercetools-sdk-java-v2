@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntrySetSupplyChannelAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class InventoryEntrySetSupplyChannelActionImpl implements Inventory
       this.action = "setSupplyChannel";
    }
    public InventoryEntrySetSupplyChannelActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If absent, the supply channel is removed.
    *  This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>

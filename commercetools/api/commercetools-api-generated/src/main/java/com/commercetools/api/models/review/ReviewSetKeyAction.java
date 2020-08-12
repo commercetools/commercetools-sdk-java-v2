@@ -24,16 +24,16 @@ public interface ReviewSetKeyAction extends ReviewUpdateAction {
    /**
    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static ReviewSetKeyActionImpl of(){
       return new ReviewSetKeyActionImpl();
    }
-
+   
 
    public static ReviewSetKeyActionImpl of(final ReviewSetKeyAction template) {
       ReviewSetKeyActionImpl instance = new ReviewSetKeyActionImpl();

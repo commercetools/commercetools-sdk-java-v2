@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderEditReferenceImpl implements OrderEditReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.order_edit.OrderEdit obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class OrderEditReferenceImpl implements OrderEditReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("order-edit").get();
    }
    public OrderEditReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.order_edit.OrderEdit getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class OrderEditReferenceImpl implements OrderEditReference {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.order_edit.OrderEdit obj){
       this.obj = obj;
    }

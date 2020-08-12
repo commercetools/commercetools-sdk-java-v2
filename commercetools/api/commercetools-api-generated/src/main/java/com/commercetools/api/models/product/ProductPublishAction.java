@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductPublishActionImpl.class)
 public interface ProductPublishAction extends ProductUpdateAction {
 
-
-
+   
+   
    @JsonProperty("scope")
    public ProductPublishScope getScope();
 
    public void setScope(final ProductPublishScope scope);
-
+   
    public static ProductPublishActionImpl of(){
       return new ProductPublishActionImpl();
    }
-
+   
 
    public static ProductPublishActionImpl of(final ProductPublishAction template) {
       ProductPublishActionImpl instance = new ProductPublishActionImpl();

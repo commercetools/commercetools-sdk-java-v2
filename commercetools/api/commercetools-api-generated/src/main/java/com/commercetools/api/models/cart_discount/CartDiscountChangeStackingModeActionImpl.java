@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountChangeStackingModeActionImpl implements CartDiscountChangeStackingModeAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.cart_discount.StackingMode stackingMode;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CartDiscountChangeStackingModeActionImpl implements CartDisco
       this.action = "changeStackingMode";
    }
    public CartDiscountChangeStackingModeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart_discount.StackingMode getStackingMode(){
       return this.stackingMode;
    }

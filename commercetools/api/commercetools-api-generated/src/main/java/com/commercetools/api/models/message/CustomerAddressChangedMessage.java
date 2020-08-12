@@ -22,31 +22,31 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerAddressChangedMessageImpl.class)
 public interface CustomerAddressChangedMessage extends Message {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("address")
    public Address getAddress();
 
    public void setAddress(final Address address);
-
+   
    public static CustomerAddressChangedMessageImpl of(){
       return new CustomerAddressChangedMessageImpl();
    }
-
+   
 
    public static CustomerAddressChangedMessageImpl of(final CustomerAddressChangedMessage template) {
       CustomerAddressChangedMessageImpl instance = new CustomerAddressChangedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setAddress(template.getAddress());
       return instance;
    }

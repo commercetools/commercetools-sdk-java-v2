@@ -28,9 +28,9 @@ public final class CustomFieldNumberTypeImpl implements CustomFieldNumberType {
    CustomFieldNumberTypeImpl() {
       this.name = "Number";
    }
-
-
-
+   
+   
+   
    public String getName(){
       return this.name;
    }

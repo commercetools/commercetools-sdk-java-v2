@@ -14,15 +14,15 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartDiscountSetValidUntilActionBuilder {
-
+   
    @Nullable
    private java.time.ZonedDateTime validUntil;
-
+   
    public CartDiscountSetValidUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
       this.validUntil = validUntil;
       return this;
    }
-
+   
    @Nullable
    public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
@@ -31,15 +31,15 @@ public final class CartDiscountSetValidUntilActionBuilder {
    public CartDiscountSetValidUntilAction build() {
        return new CartDiscountSetValidUntilActionImpl(validUntil);
    }
-
+   
    public static CartDiscountSetValidUntilActionBuilder of() {
       return new CartDiscountSetValidUntilActionBuilder();
    }
-
+   
    public static CartDiscountSetValidUntilActionBuilder of(final CartDiscountSetValidUntilAction template) {
       CartDiscountSetValidUntilActionBuilder builder = new CartDiscountSetValidUntilActionBuilder();
       builder.validUntil = template.getValidUntil();
       return builder;
    }
-
+   
 }

@@ -15,10 +15,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ReviewRatingStatisticsBuilder {
    
    
-   private Integer highestRating;
+   private Double averageRating;
    
    
-   private Integer averageRating;
+   private Double highestRating;
+   
+   
+   private Double lowestRating;
    
    
    private Integer count;
@@ -26,16 +29,18 @@ public final class ReviewRatingStatisticsBuilder {
    
    private com.fasterxml.jackson.databind.JsonNode ratingsDistribution;
    
+   public ReviewRatingStatisticsBuilder averageRating( final Double averageRating) {
+      this.averageRating = averageRating;
+      return this;
+   }
    
-   private Integer lowestRating;
-   
-   public ReviewRatingStatisticsBuilder highestRating( final Integer highestRating) {
+   public ReviewRatingStatisticsBuilder highestRating( final Double highestRating) {
       this.highestRating = highestRating;
       return this;
    }
    
-   public ReviewRatingStatisticsBuilder averageRating( final Integer averageRating) {
-      this.averageRating = averageRating;
+   public ReviewRatingStatisticsBuilder lowestRating( final Double lowestRating) {
+      this.lowestRating = lowestRating;
       return this;
    }
    
@@ -49,19 +54,19 @@ public final class ReviewRatingStatisticsBuilder {
       return this;
    }
    
-   public ReviewRatingStatisticsBuilder lowestRating( final Integer lowestRating) {
-      this.lowestRating = lowestRating;
-      return this;
+   
+   public Double getAverageRating(){
+      return this.averageRating;
    }
    
    
-   public Integer getHighestRating(){
+   public Double getHighestRating(){
       return this.highestRating;
    }
    
    
-   public Integer getAverageRating(){
-      return this.averageRating;
+   public Double getLowestRating(){
+      return this.lowestRating;
    }
    
    
@@ -73,14 +78,9 @@ public final class ReviewRatingStatisticsBuilder {
    public com.fasterxml.jackson.databind.JsonNode getRatingsDistribution(){
       return this.ratingsDistribution;
    }
-   
-   
-   public Integer getLowestRating(){
-      return this.lowestRating;
-   }
 
    public ReviewRatingStatistics build() {
-       return new ReviewRatingStatisticsImpl(highestRating, averageRating, count, ratingsDistribution, lowestRating);
+       return new ReviewRatingStatisticsImpl(averageRating, highestRating, lowestRating, count, ratingsDistribution);
    }
    
    public static ReviewRatingStatisticsBuilder of() {
@@ -89,11 +89,11 @@ public final class ReviewRatingStatisticsBuilder {
    
    public static ReviewRatingStatisticsBuilder of(final ReviewRatingStatistics template) {
       ReviewRatingStatisticsBuilder builder = new ReviewRatingStatisticsBuilder();
-      builder.highestRating = template.getHighestRating();
       builder.averageRating = template.getAverageRating();
+      builder.highestRating = template.getHighestRating();
+      builder.lowestRating = template.getLowestRating();
       builder.count = template.getCount();
       builder.ratingsDistribution = template.getRatingsDistribution();
-      builder.lowestRating = template.getLowestRating();
       return builder;
    }
    

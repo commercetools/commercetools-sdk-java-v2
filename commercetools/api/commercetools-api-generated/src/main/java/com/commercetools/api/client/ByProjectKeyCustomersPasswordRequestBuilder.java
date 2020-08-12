@@ -21,7 +21,4 @@ public class ByProjectKeyCustomersPasswordRequestBuilder {
       return new ByProjectKeyCustomersPasswordPost(apiHttpClient, projectKey, customerChangePassword);
    }
    
-   public ByProjectKeyCustomersPasswordResetRequestBuilder reset() {
-      return new ByProjectKeyCustomersPasswordResetRequestBuilder(apiHttpClient, projectKey);
-   }
 }

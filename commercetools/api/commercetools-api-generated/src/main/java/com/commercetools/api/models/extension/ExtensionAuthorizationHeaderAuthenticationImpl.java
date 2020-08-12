@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ExtensionAuthorizationHeaderAuthenticationImpl implements ExtensionAuthorizationHeaderAuthentication {
 
    private String type;
-
+   
    private String headerValue;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ExtensionAuthorizationHeaderAuthenticationImpl implements Ext
       this.type = "AuthorizationHeader";
    }
    public ExtensionAuthorizationHeaderAuthenticationImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public String getHeaderValue(){
       return this.headerValue;
    }

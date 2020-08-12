@@ -22,41 +22,41 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetProductPriceCustomFieldActionImpl.class)
 public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("priceId")
    public String getPriceId();
-
-
+   
+   
    @JsonProperty("staged")
    public Boolean getStaged();
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-
-
+   
+   
    @JsonProperty("value")
    public JsonNode getValue();
 
    public void setPriceId(final String priceId);
-
+   
    public void setStaged(final Boolean staged);
-
+   
    public void setName(final String name);
-
+   
    public void setValue(final JsonNode value);
-
+   
    public static ProductSetProductPriceCustomFieldActionImpl of(){
       return new ProductSetProductPriceCustomFieldActionImpl();
    }
-
+   
 
    public static ProductSetProductPriceCustomFieldActionImpl of(final ProductSetProductPriceCustomFieldAction template) {
       ProductSetProductPriceCustomFieldActionImpl instance = new ProductSetProductPriceCustomFieldActionImpl();
-      instance.setName(template.getName());
-      instance.setStaged(template.getStaged());
       instance.setPriceId(template.getPriceId());
+      instance.setStaged(template.getStaged());
+      instance.setName(template.getName());
       instance.setValue(template.getValue());
       return instance;
    }

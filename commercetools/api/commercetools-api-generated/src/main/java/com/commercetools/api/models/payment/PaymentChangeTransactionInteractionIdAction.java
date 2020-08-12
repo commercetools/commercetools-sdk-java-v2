@@ -41,8 +41,8 @@ public interface PaymentChangeTransactionInteractionIdAction extends PaymentUpda
 
    public static PaymentChangeTransactionInteractionIdActionImpl of(final PaymentChangeTransactionInteractionIdAction template) {
       PaymentChangeTransactionInteractionIdActionImpl instance = new PaymentChangeTransactionInteractionIdActionImpl();
-      instance.setInteractionId(template.getInteractionId());
       instance.setTransactionId(template.getTransactionId());
+      instance.setInteractionId(template.getInteractionId());
       return instance;
    }
 

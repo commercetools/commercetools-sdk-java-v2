@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface CartResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static CartResourceIdentifierImpl of(){
       return new CartResourceIdentifierImpl();
    }
-
+   
 
    public static CartResourceIdentifierImpl of(final CartResourceIdentifier template) {
       CartResourceIdentifierImpl instance = new CartResourceIdentifierImpl();

@@ -38,9 +38,9 @@ public final class ReviewUpdateActionImpl implements ReviewUpdateAction {
    ReviewUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

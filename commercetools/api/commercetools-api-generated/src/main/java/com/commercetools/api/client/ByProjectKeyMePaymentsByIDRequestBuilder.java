@@ -23,8 +23,8 @@ public class ByProjectKeyMePaymentsByIDRequestBuilder {
       return new ByProjectKeyMePaymentsByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyMePaymentsByIDPost post(com.commercetools.api.models.common.Update update) {
-      return new ByProjectKeyMePaymentsByIDPost(apiHttpClient, projectKey, ID, update);
+   public ByProjectKeyMePaymentsByIDPost post(com.commercetools.api.models.me.MyPaymentUpdate myPaymentUpdate) {
+      return new ByProjectKeyMePaymentsByIDPost(apiHttpClient, projectKey, ID, myPaymentUpdate);
    }
    
    public ByProjectKeyMePaymentsByIDDelete delete() {

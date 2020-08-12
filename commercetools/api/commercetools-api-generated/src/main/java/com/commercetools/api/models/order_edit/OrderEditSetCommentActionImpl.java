@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderEditSetCommentActionImpl implements OrderEditSetCommentAction {
 
    private String action;
-
+   
    private String comment;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class OrderEditSetCommentActionImpl implements OrderEditSetCommentA
       this.action = "setComment";
    }
    public OrderEditSetCommentActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getComment(){
       return this.comment;
    }

@@ -22,40 +22,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneDraftImpl implements ZoneDraft {
 
+   private String key;
+   
    private String name;
-
+   
    private String description;
-
+   
    private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
-   private String key;
-
    @JsonCreator
-   ZoneDraftImpl(@JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("locations") final java.util.List<com.commercetools.api.models.zone.Location> locations, @JsonProperty("key") final String key) {
+   ZoneDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("locations") final java.util.List<com.commercetools.api.models.zone.Location> locations) {
+      this.key = key;
       this.name = name;
       this.description = description;
       this.locations = locations;
-      this.key = key;
    }
    public ZoneDraftImpl() {
-
+      
    }
-
-
-   public String getName(){
-      return this.name;
-   }
-
-
-   public String getDescription(){
-      return this.description;
-   }
-
-
-   public java.util.List<com.commercetools.api.models.zone.Location> getLocations(){
-      return this.locations;
-   }
-
+   
    /**
    *  <p>User-specific unique identifier for a zone.
    *  Must be unique across a project.
@@ -64,21 +49,36 @@ public final class ZoneDraftImpl implements ZoneDraft {
    public String getKey(){
       return this.key;
    }
-
-   public void setName(final String name){
-      this.name = name;
+   
+   
+   public String getName(){
+      return this.name;
    }
-
-   public void setDescription(final String description){
-      this.description = description;
+   
+   
+   public String getDescription(){
+      return this.description;
    }
-
-   public void setLocations(final java.util.List<com.commercetools.api.models.zone.Location> locations){
-      this.locations = locations;
+   
+   
+   public java.util.List<com.commercetools.api.models.zone.Location> getLocations(){
+      return this.locations;
    }
 
    public void setKey(final String key){
       this.key = key;
+   }
+   
+   public void setName(final String name){
+      this.name = name;
+   }
+   
+   public void setDescription(final String description){
+      this.description = description;
+   }
+   
+   public void setLocations(final java.util.List<com.commercetools.api.models.zone.Location> locations){
+      this.locations = locations;
    }
 
 }

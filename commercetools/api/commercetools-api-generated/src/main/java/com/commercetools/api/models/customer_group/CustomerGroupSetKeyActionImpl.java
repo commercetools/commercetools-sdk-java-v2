@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerGroupSetKeyActionImpl implements CustomerGroupSetKeyAction {
 
    private String action;
-
+   
    private String key;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class CustomerGroupSetKeyActionImpl implements CustomerGroupSetKeyA
       this.action = "setKey";
    }
    public CustomerGroupSetKeyActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>User-specific unique identifier for the customer group.</p>
    */

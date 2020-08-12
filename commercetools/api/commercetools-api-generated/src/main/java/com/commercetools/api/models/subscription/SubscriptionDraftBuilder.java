@@ -16,88 +16,88 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class SubscriptionDraftBuilder {
-
-   @Nullable
-   private com.commercetools.api.models.subscription.DeliveryFormat format;
-
-
-   private com.commercetools.api.models.subscription.Destination destination;
-
+   
    @Nullable
    private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
-
-   @Nullable
-   private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
-
+   
+   
+   private com.commercetools.api.models.subscription.Destination destination;
+   
    @Nullable
    private String key;
-
-   public SubscriptionDraftBuilder format(@Nullable final com.commercetools.api.models.subscription.DeliveryFormat format) {
-      this.format = format;
-      return this;
-   }
-
-   public SubscriptionDraftBuilder destination( final com.commercetools.api.models.subscription.Destination destination) {
-      this.destination = destination;
-      return this;
-   }
-
+   
+   @Nullable
+   private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
+   
+   @Nullable
+   private com.commercetools.api.models.subscription.DeliveryFormat format;
+   
    public SubscriptionDraftBuilder changes(@Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
       this.changes = changes;
       return this;
    }
-
-   public SubscriptionDraftBuilder messages(@Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
-      this.messages = messages;
+   
+   public SubscriptionDraftBuilder destination( final com.commercetools.api.models.subscription.Destination destination) {
+      this.destination = destination;
       return this;
    }
-
+   
    public SubscriptionDraftBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
-
+   
+   public SubscriptionDraftBuilder messages(@Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
+      this.messages = messages;
+      return this;
+   }
+   
+   public SubscriptionDraftBuilder format(@Nullable final com.commercetools.api.models.subscription.DeliveryFormat format) {
+      this.format = format;
+      return this;
+   }
+   
+   @Nullable
+   public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges(){
+      return this.changes;
+   }
+   
+   
+   public com.commercetools.api.models.subscription.Destination getDestination(){
+      return this.destination;
+   }
+   
+   @Nullable
+   public String getKey(){
+      return this.key;
+   }
+   
+   @Nullable
+   public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
+      return this.messages;
+   }
+   
    @Nullable
    public com.commercetools.api.models.subscription.DeliveryFormat getFormat(){
       return this.format;
    }
 
-
-   public com.commercetools.api.models.subscription.Destination getDestination(){
-      return this.destination;
-   }
-
-   @Nullable
-   public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges(){
-      return this.changes;
-   }
-
-   @Nullable
-   public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
-      return this.messages;
-   }
-
-   @Nullable
-   public String getKey(){
-      return this.key;
-   }
-
    public SubscriptionDraft build() {
-       return new SubscriptionDraftImpl(format, destination, changes, messages, key);
+       return new SubscriptionDraftImpl(changes, destination, key, messages, format);
    }
-
+   
    public static SubscriptionDraftBuilder of() {
       return new SubscriptionDraftBuilder();
    }
-
+   
    public static SubscriptionDraftBuilder of(final SubscriptionDraft template) {
       SubscriptionDraftBuilder builder = new SubscriptionDraftBuilder();
-      builder.format = template.getFormat();
-      builder.destination = template.getDestination();
       builder.changes = template.getChanges();
-      builder.messages = template.getMessages();
+      builder.destination = template.getDestination();
       builder.key = template.getKey();
+      builder.messages = template.getMessages();
+      builder.format = template.getFormat();
       return builder;
    }
-
+   
 }

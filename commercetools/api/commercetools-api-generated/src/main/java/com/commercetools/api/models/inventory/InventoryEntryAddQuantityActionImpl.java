@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InventoryEntryAddQuantityActionImpl implements InventoryEntryAddQuantityAction {
 
    private String action;
-
+   
    private Long quantity;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class InventoryEntryAddQuantityActionImpl implements InventoryEntry
       this.action = "addQuantity";
    }
    public InventoryEntryAddQuantityActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public Long getQuantity(){
       return this.quantity;
    }

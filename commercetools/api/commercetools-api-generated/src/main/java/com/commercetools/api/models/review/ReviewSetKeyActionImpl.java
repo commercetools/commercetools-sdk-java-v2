@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReviewSetKeyActionImpl implements ReviewSetKeyAction {
 
    private String action;
-
+   
    private String key;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ReviewSetKeyActionImpl implements ReviewSetKeyAction {
       this.action = "setKey";
    }
    public ReviewSetKeyActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */

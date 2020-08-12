@@ -31,24 +31,24 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
    @Valid
    @JsonProperty("slug")
    public LocalizedString getSlug();
-
-
+   
+   
    @JsonProperty("staged")
    public Boolean getStaged();
 
    public void setSlug(final LocalizedString slug);
-
+   
    public void setStaged(final Boolean staged);
-
+   
    public static ProductChangeSlugActionImpl of(){
       return new ProductChangeSlugActionImpl();
    }
-
+   
 
    public static ProductChangeSlugActionImpl of(final ProductChangeSlugAction template) {
       ProductChangeSlugActionImpl instance = new ProductChangeSlugActionImpl();
-      instance.setStaged(template.getStaged());
       instance.setSlug(template.getSlug());
+      instance.setStaged(template.getStaged());
       return instance;
    }
 

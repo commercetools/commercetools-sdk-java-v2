@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentSetAuthorizationActionImpl implements PaymentSetAuthorizationAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.Money amount;
-
+   
    private java.time.ZonedDateTime until;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class PaymentSetAuthorizationActionImpl implements PaymentSetAuthor
       this.action = "setAuthorization";
    }
    public PaymentSetAuthorizationActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Money getAmount(){
       return this.amount;
    }
-
-
+   
+   
    public java.time.ZonedDateTime getUntil(){
       return this.until;
    }
@@ -58,7 +58,7 @@ public final class PaymentSetAuthorizationActionImpl implements PaymentSetAuthor
    public void setAmount(final com.commercetools.api.models.common.Money amount){
       this.amount = amount;
    }
-
+   
    public void setUntil(final java.time.ZonedDateTime until){
       this.until = until;
    }

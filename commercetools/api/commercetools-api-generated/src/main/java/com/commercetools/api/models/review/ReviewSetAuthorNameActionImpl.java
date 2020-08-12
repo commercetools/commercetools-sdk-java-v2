@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameAction {
 
    private String action;
-
+   
    private String authorName;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameA
       this.action = "setAuthorName";
    }
    public ReviewSetAuthorNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */

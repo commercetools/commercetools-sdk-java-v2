@@ -23,9 +23,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class RequiredFieldErrorImpl implements RequiredFieldError {
 
    private String code;
-
+   
    private String message;
-
+   
    private String field;
 
    @JsonCreator
@@ -35,20 +35,20 @@ public final class RequiredFieldErrorImpl implements RequiredFieldError {
       this.code = "RequiredField";
    }
    public RequiredFieldErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
-
-
+   
+   
    public String getField(){
       return this.field;
    }
@@ -56,7 +56,7 @@ public final class RequiredFieldErrorImpl implements RequiredFieldError {
    public void setMessage(final String message){
       this.message = message;
    }
-
+   
    public void setField(final String field){
       this.field = field;
    }

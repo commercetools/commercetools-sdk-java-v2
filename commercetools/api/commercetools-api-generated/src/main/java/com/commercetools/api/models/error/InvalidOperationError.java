@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface InvalidOperationError extends ErrorObject {
 
 
-
+   
    public static InvalidOperationErrorImpl of(){
       return new InvalidOperationErrorImpl();
    }
-
+   
 
    public static InvalidOperationErrorImpl of(final InvalidOperationError template) {
       InvalidOperationErrorImpl instance = new InvalidOperationErrorImpl();

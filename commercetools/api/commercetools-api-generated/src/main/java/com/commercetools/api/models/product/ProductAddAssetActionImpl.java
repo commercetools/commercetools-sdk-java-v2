@@ -24,35 +24,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
 
    private String action;
-
+   
+   private Long variantId;
+   
+   private String sku;
+   
+   private Boolean staged;
+   
+   private com.commercetools.api.models.common.AssetDraft asset;
+   
    private Integer position;
 
-   private Boolean staged;
-
-   private Long variantId;
-
-   private com.commercetools.api.models.common.AssetDraft asset;
-
-   private String sku;
-
    @JsonCreator
-   ProductAddAssetActionImpl(@JsonProperty("position") final Integer position, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("asset") final com.commercetools.api.models.common.AssetDraft asset, @JsonProperty("sku") final String sku) {
-      this.position = position;
-      this.staged = staged;
+   ProductAddAssetActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged, @JsonProperty("asset") final com.commercetools.api.models.common.AssetDraft asset, @JsonProperty("position") final Integer position) {
       this.variantId = variantId;
-      this.asset = asset;
       this.sku = sku;
+      this.staged = staged;
+      this.asset = asset;
+      this.position = position;
       this.action = "addAsset";
    }
    public ProductAddAssetActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
+   
+   public Long getVariantId(){
+      return this.variantId;
+   }
+   
+   
+   public String getSku(){
+      return this.sku;
+   }
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
+   }
+   
+   
+   public com.commercetools.api.models.common.AssetDraft getAsset(){
+      return this.asset;
+   }
+   
    /**
    *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
    */
@@ -60,44 +80,24 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
       return this.position;
    }
 
-
-   public Boolean getStaged(){
-      return this.staged;
-   }
-
-
-   public Long getVariantId(){
-      return this.variantId;
-   }
-
-
-   public com.commercetools.api.models.common.AssetDraft getAsset(){
-      return this.asset;
-   }
-
-
-   public String getSku(){
-      return this.sku;
-   }
-
-   public void setPosition(final Integer position){
-      this.position = position;
-   }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
-
    public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
-
+   
+   public void setSku(final String sku){
+      this.sku = sku;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
+   }
+   
    public void setAsset(final com.commercetools.api.models.common.AssetDraft asset){
       this.asset = asset;
    }
-
-   public void setSku(final String sku){
-      this.sku = sku;
+   
+   public void setPosition(final Integer position){
+      this.position = position;
    }
 
 }

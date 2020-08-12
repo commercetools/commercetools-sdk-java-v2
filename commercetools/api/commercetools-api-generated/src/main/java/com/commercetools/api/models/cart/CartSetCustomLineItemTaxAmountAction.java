@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetCustomLineItemTaxAmountActionImpl.class)
 public interface CartSetCustomLineItemTaxAmountAction extends CartUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("customLineItemId")
    public String getCustomLineItemId();
-
+   
    @Valid
    @JsonProperty("externalTaxAmount")
    public ExternalTaxAmountDraft getExternalTaxAmount();
 
    public void setCustomLineItemId(final String customLineItemId);
-
+   
    public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
-
+   
    public static CartSetCustomLineItemTaxAmountActionImpl of(){
       return new CartSetCustomLineItemTaxAmountActionImpl();
    }
-
+   
 
    public static CartSetCustomLineItemTaxAmountActionImpl of(final CartSetCustomLineItemTaxAmountAction template) {
       CartSetCustomLineItemTaxAmountActionImpl instance = new CartSetCustomLineItemTaxAmountActionImpl();

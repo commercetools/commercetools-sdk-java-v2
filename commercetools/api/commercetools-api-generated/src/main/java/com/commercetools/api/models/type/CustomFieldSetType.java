@@ -21,18 +21,18 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomFieldSetTypeImpl.class)
 public interface CustomFieldSetType extends FieldType {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("elementType")
    public FieldType getElementType();
 
    public void setElementType(final FieldType elementType);
-
+   
    public static CustomFieldSetTypeImpl of(){
       return new CustomFieldSetTypeImpl();
    }
-
+   
 
    public static CustomFieldSetTypeImpl of(final CustomFieldSetType template) {
       CustomFieldSetTypeImpl instance = new CustomFieldSetTypeImpl();

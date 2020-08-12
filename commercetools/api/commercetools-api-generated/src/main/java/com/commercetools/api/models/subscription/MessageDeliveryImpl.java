@@ -26,38 +26,38 @@ public final class MessageDeliveryImpl implements MessageDelivery {
 
    private String projectKey;
    
+   private String notificationType;
+   
    private com.commercetools.api.models.common.Reference resource;
    
    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
-   private String notificationType;
+   private String id;
    
-   private Long sequenceNumber;
+   private Long version;
    
    private java.time.ZonedDateTime createdAt;
    
    private java.time.ZonedDateTime lastModifiedAt;
    
+   private Long sequenceNumber;
+   
    private Long resourceVersion;
    
    private com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded;
-   
-   private String id;
-   
-   private Long version;
 
    @JsonCreator
-   MessageDeliveryImpl(@JsonProperty("projectKey") final String projectKey, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("payloadNotIncluded") final com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded, @JsonProperty("id") final String id, @JsonProperty("version") final Long version) {
+   MessageDeliveryImpl(@JsonProperty("projectKey") final String projectKey, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("payloadNotIncluded") final com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded) {
       this.projectKey = projectKey;
       this.resource = resource;
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-      this.sequenceNumber = sequenceNumber;
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
-      this.resourceVersion = resourceVersion;
-      this.payloadNotIncluded = payloadNotIncluded;
       this.id = id;
       this.version = version;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
+      this.sequenceNumber = sequenceNumber;
+      this.resourceVersion = resourceVersion;
+      this.payloadNotIncluded = payloadNotIncluded;
       this.notificationType = "Message";
    }
    public MessageDeliveryImpl() {
@@ -67,6 +67,11 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    
    public String getProjectKey(){
       return this.projectKey;
+   }
+   
+   
+   public String getNotificationType(){
+      return this.notificationType;
    }
    
    
@@ -80,13 +85,13 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    }
    
    
-   public String getNotificationType(){
-      return this.notificationType;
+   public String getId(){
+      return this.id;
    }
    
    
-   public Long getSequenceNumber(){
-      return this.sequenceNumber;
+   public Long getVersion(){
+      return this.version;
    }
    
    
@@ -100,6 +105,11 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    }
    
    
+   public Long getSequenceNumber(){
+      return this.sequenceNumber;
+   }
+   
+   
    public Long getResourceVersion(){
       return this.resourceVersion;
    }
@@ -107,16 +117,6 @@ public final class MessageDeliveryImpl implements MessageDelivery {
    
    public com.commercetools.api.models.subscription.PayloadNotIncluded getPayloadNotIncluded(){
       return this.payloadNotIncluded;
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
    }
 
    public void setProjectKey(final String projectKey){
@@ -131,8 +131,12 @@ public final class MessageDeliveryImpl implements MessageDelivery {
       this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
-   public void setSequenceNumber(final Long sequenceNumber){
-      this.sequenceNumber = sequenceNumber;
+   public void setId(final String id){
+      this.id = id;
+   }
+   
+   public void setVersion(final Long version){
+      this.version = version;
    }
    
    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
@@ -143,20 +147,16 @@ public final class MessageDeliveryImpl implements MessageDelivery {
       this.lastModifiedAt = lastModifiedAt;
    }
    
+   public void setSequenceNumber(final Long sequenceNumber){
+      this.sequenceNumber = sequenceNumber;
+   }
+   
    public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
    }
    
    public void setPayloadNotIncluded(final com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded){
       this.payloadNotIncluded = payloadNotIncluded;
-   }
-   
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setVersion(final Long version){
-      this.version = version;
    }
 
 }

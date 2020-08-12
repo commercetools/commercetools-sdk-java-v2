@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartDiscountValueRelativeDraftBuilder {
-
-
+   
+   
    private Long permyriad;
-
+   
    public CartDiscountValueRelativeDraftBuilder permyriad( final Long permyriad) {
       this.permyriad = permyriad;
       return this;
    }
-
-
+   
+   
    public Long getPermyriad(){
       return this.permyriad;
    }
@@ -30,15 +30,15 @@ public final class CartDiscountValueRelativeDraftBuilder {
    public CartDiscountValueRelativeDraft build() {
        return new CartDiscountValueRelativeDraftImpl(permyriad);
    }
-
+   
    public static CartDiscountValueRelativeDraftBuilder of() {
       return new CartDiscountValueRelativeDraftBuilder();
    }
-
+   
    public static CartDiscountValueRelativeDraftBuilder of(final CartDiscountValueRelativeDraft template) {
       CartDiscountValueRelativeDraftBuilder builder = new CartDiscountValueRelativeDraftBuilder();
       builder.permyriad = template.getPermyriad();
       return builder;
    }
-
+   
 }

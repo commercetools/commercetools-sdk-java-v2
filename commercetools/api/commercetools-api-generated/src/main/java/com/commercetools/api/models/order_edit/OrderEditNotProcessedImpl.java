@@ -28,9 +28,9 @@ public final class OrderEditNotProcessedImpl implements OrderEditNotProcessed {
    OrderEditNotProcessedImpl() {
       this.type = "NotProcessed";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

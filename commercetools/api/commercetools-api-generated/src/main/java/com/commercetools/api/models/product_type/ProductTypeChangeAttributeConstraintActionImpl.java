@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeChangeAttributeConstraintActionImpl implements ProductTypeChangeAttributeConstraintAction {
 
    private String action;
-
+   
+   private String attributeName;
+   
    private com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue;
 
-   private String attributeName;
-
    @JsonCreator
-   ProductTypeChangeAttributeConstraintActionImpl(@JsonProperty("newValue") final com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue, @JsonProperty("attributeName") final String attributeName) {
-      this.newValue = newValue;
+   ProductTypeChangeAttributeConstraintActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("newValue") final com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue) {
       this.attributeName = attributeName;
+      this.newValue = newValue;
       this.action = "changeAttributeConstraint";
    }
    public ProductTypeChangeAttributeConstraintActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getAttributeName(){
+      return this.attributeName;
+   }
+   
+   
    public com.commercetools.api.models.product_type.AttributeConstraintEnumDraft getNewValue(){
       return this.newValue;
    }
 
-
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-
-   public void setNewValue(final com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue){
-      this.newValue = newValue;
-   }
-
    public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
+   }
+   
+   public void setNewValue(final com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue){
+      this.newValue = newValue;
    }
 
 }

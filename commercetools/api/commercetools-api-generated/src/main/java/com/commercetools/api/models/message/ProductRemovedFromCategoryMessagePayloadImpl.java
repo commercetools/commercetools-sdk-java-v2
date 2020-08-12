@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductRemovedFromCategoryMessagePayloadImpl implements ProductRemovedFromCategoryMessagePayload {
 
    private String type;
-
+   
+   private com.commercetools.api.models.category.CategoryReference category;
+   
    private Boolean staged;
 
-   private com.commercetools.api.models.category.CategoryReference category;
-
    @JsonCreator
-   ProductRemovedFromCategoryMessagePayloadImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("category") final com.commercetools.api.models.category.CategoryReference category) {
-      this.staged = staged;
+   ProductRemovedFromCategoryMessagePayloadImpl(@JsonProperty("category") final com.commercetools.api.models.category.CategoryReference category, @JsonProperty("staged") final Boolean staged) {
       this.category = category;
+      this.staged = staged;
       this.type = "ProductRemovedFromCategory";
    }
    public ProductRemovedFromCategoryMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
+   public com.commercetools.api.models.category.CategoryReference getCategory(){
+      return this.category;
+   }
+   
+   
    public Boolean getStaged(){
       return this.staged;
    }
 
-
-   public com.commercetools.api.models.category.CategoryReference getCategory(){
-      return this.category;
-   }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
-
    public void setCategory(final com.commercetools.api.models.category.CategoryReference category){
       this.category = category;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
    }
 
 }

@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface AttributeDateType extends AttributeType {
 
 
-
+   
    public static AttributeDateTypeImpl of(){
       return new AttributeDateTypeImpl();
    }
-
+   
 
    public static AttributeDateTypeImpl of(final AttributeDateType template) {
       AttributeDateTypeImpl instance = new AttributeDateTypeImpl();

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductDiscountValueAbsoluteDraftImpl implements ProductDiscountValueAbsoluteDraft {
 
    private String type;
-
+   
    private java.util.List<com.commercetools.api.models.common.Money> money;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ProductDiscountValueAbsoluteDraftImpl implements ProductDisco
       this.type = "absolute";
    }
    public ProductDiscountValueAbsoluteDraftImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.common.Money> getMoney(){
       return this.money;
    }

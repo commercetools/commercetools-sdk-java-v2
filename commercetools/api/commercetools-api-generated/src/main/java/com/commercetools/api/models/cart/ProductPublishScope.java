@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ProductPublishScope {
 
-
+  
   @JsonProperty("All")
   ALL("All"),
-
-
+  
+  
   @JsonProperty("Prices")
   PRICES("Prices");
 

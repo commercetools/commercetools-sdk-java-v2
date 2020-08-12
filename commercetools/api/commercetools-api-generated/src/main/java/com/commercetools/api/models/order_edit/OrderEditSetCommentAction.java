@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditSetCommentActionImpl.class)
 public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
 
-
-
+   
+   
    @JsonProperty("comment")
    public String getComment();
 
    public void setComment(final String comment);
-
+   
    public static OrderEditSetCommentActionImpl of(){
       return new OrderEditSetCommentActionImpl();
    }
-
+   
 
    public static OrderEditSetCommentActionImpl of(final OrderEditSetCommentAction template) {
       OrderEditSetCommentActionImpl instance = new OrderEditSetCommentActionImpl();

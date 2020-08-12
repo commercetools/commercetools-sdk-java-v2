@@ -23,42 +23,42 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountValueGiftLineItemDraftImpl.class)
 public interface CartDiscountValueGiftLineItemDraft extends CartDiscountValueDraft {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("product")
    public ProductReference getProduct();
-
+   
    @NotNull
    @JsonProperty("variantId")
    public Long getVariantId();
-
+   
    @Valid
    @JsonProperty("supplyChannel")
    public ChannelReference getSupplyChannel();
-
+   
    @Valid
    @JsonProperty("distributionChannel")
    public ChannelReference getDistributionChannel();
 
    public void setProduct(final ProductReference product);
-
+   
    public void setVariantId(final Long variantId);
-
+   
    public void setSupplyChannel(final ChannelReference supplyChannel);
-
+   
    public void setDistributionChannel(final ChannelReference distributionChannel);
-
+   
    public static CartDiscountValueGiftLineItemDraftImpl of(){
       return new CartDiscountValueGiftLineItemDraftImpl();
    }
-
+   
 
    public static CartDiscountValueGiftLineItemDraftImpl of(final CartDiscountValueGiftLineItemDraft template) {
       CartDiscountValueGiftLineItemDraftImpl instance = new CartDiscountValueGiftLineItemDraftImpl();
       instance.setProduct(template.getProduct());
-      instance.setSupplyChannel(template.getSupplyChannel());
       instance.setVariantId(template.getVariantId());
+      instance.setSupplyChannel(template.getSupplyChannel());
       instance.setDistributionChannel(template.getDistributionChannel());
       return instance;
    }

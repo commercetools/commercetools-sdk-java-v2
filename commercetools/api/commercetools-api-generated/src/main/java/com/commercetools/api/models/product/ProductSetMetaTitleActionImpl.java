@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.LocalizedString metaTitle;
-
+   
    private Boolean staged;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleA
       this.action = "setMetaTitle";
    }
    public ProductSetMetaTitleActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
       return this.metaTitle;
    }
-
-
+   
+   
    public Boolean getStaged(){
       return this.staged;
    }
@@ -57,7 +57,7 @@ public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleA
    public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle){
       this.metaTitle = metaTitle;
    }
-
+   
    public void setStaged(final Boolean staged){
       this.staged = staged;
    }

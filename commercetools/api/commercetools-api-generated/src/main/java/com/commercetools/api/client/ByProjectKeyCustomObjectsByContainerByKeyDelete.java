@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +22,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-*  <p>Delete CustomObject by key</p>
+*  <p>Delete CustomObject by container and key</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

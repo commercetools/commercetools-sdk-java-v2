@@ -22,49 +22,49 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxPortionImpl implements TaxPortion {
 
-   private com.commercetools.api.models.common.TypedMoney amount;
-   
-   private Integer rate;
-   
    private String name;
+   
+   private Double rate;
+   
+   private com.commercetools.api.models.common.TypedMoney amount;
 
    @JsonCreator
-   TaxPortionImpl(@JsonProperty("amount") final com.commercetools.api.models.common.TypedMoney amount, @JsonProperty("rate") final Integer rate, @JsonProperty("name") final String name) {
-      this.amount = amount;
-      this.rate = rate;
+   TaxPortionImpl(@JsonProperty("name") final String name, @JsonProperty("rate") final Double rate, @JsonProperty("amount") final com.commercetools.api.models.common.TypedMoney amount) {
       this.name = name;
+      this.rate = rate;
+      this.amount = amount;
    }
    public TaxPortionImpl() {
       
    }
    
    
-   public com.commercetools.api.models.common.TypedMoney getAmount(){
-      return this.amount;
+   public String getName(){
+      return this.name;
    }
    
    /**
    *  <p>A number in the range [0..1]</p>
    */
-   public Integer getRate(){
+   public Double getRate(){
       return this.rate;
    }
    
    
-   public String getName(){
-      return this.name;
+   public com.commercetools.api.models.common.TypedMoney getAmount(){
+      return this.amount;
    }
 
-   public void setAmount(final com.commercetools.api.models.common.TypedMoney amount){
-      this.amount = amount;
+   public void setName(final String name){
+      this.name = name;
    }
    
-   public void setRate(final Integer rate){
+   public void setRate(final Double rate){
       this.rate = rate;
    }
    
-   public void setName(final String name){
-      this.name = name;
+   public void setAmount(final com.commercetools.api.models.common.TypedMoney amount){
+      this.amount = amount;
    }
 
 }

@@ -31,9 +31,9 @@ public final class OrderEditResultImpl implements OrderEditResult {
    OrderEditResultImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

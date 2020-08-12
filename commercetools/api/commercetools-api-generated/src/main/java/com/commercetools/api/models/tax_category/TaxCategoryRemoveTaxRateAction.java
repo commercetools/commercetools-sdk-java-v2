@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxCategoryRemoveTaxRateActionImpl.class)
 public interface TaxCategoryRemoveTaxRateAction extends TaxCategoryUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("taxRateId")
    public String getTaxRateId();
 
    public void setTaxRateId(final String taxRateId);
-
+   
    public static TaxCategoryRemoveTaxRateActionImpl of(){
       return new TaxCategoryRemoveTaxRateActionImpl();
    }
-
+   
 
    public static TaxCategoryRemoveTaxRateActionImpl of(final TaxCategoryRemoveTaxRateAction template) {
       TaxCategoryRemoveTaxRateActionImpl instance = new TaxCategoryRemoveTaxRateActionImpl();

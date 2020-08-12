@@ -15,19 +15,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ShippingRateDraftBuilder {
    
-   @Nullable
-   private java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers;
-   
    
    private com.commercetools.api.models.common.Money price;
    
    @Nullable
    private com.commercetools.api.models.common.Money freeAbove;
    
-   public ShippingRateDraftBuilder tiers(@Nullable final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
-      this.tiers = tiers;
-      return this;
-   }
+   @Nullable
+   private java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers;
    
    public ShippingRateDraftBuilder price( final com.commercetools.api.models.common.Money price) {
       this.price = price;
@@ -39,9 +34,9 @@ public final class ShippingRateDraftBuilder {
       return this;
    }
    
-   @Nullable
-   public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers(){
-      return this.tiers;
+   public ShippingRateDraftBuilder tiers(@Nullable final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
+      this.tiers = tiers;
+      return this;
    }
    
    
@@ -53,9 +48,14 @@ public final class ShippingRateDraftBuilder {
    public com.commercetools.api.models.common.Money getFreeAbove(){
       return this.freeAbove;
    }
+   
+   @Nullable
+   public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers(){
+      return this.tiers;
+   }
 
    public ShippingRateDraft build() {
-       return new ShippingRateDraftImpl(tiers, price, freeAbove);
+       return new ShippingRateDraftImpl(price, freeAbove, tiers);
    }
    
    public static ShippingRateDraftBuilder of() {
@@ -64,9 +64,9 @@ public final class ShippingRateDraftBuilder {
    
    public static ShippingRateDraftBuilder of(final ShippingRateDraft template) {
       ShippingRateDraftBuilder builder = new ShippingRateDraftBuilder();
-      builder.tiers = template.getTiers();
       builder.price = template.getPrice();
       builder.freeAbove = template.getFreeAbove();
+      builder.tiers = template.getTiers();
       return builder;
    }
    

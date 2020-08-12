@@ -67,12 +67,12 @@ public interface ProductSetAssetSourcesAction extends ProductUpdateAction {
 
    public static ProductSetAssetSourcesActionImpl of(final ProductSetAssetSourcesAction template) {
       ProductSetAssetSourcesActionImpl instance = new ProductSetAssetSourcesActionImpl();
-      instance.setSources(template.getSources());
-      instance.setAssetId(template.getAssetId());
-      instance.setStaged(template.getStaged());
       instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
+      instance.setStaged(template.getStaged());
+      instance.setAssetId(template.getAssetId());
       instance.setAssetKey(template.getAssetKey());
+      instance.setSources(template.getSources());
       return instance;
    }
 

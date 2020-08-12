@@ -23,19 +23,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldsDraftImpl implements CustomFieldsDraft {
 
+   private com.commercetools.api.models.type.TypeResourceIdentifier type;
+   
    private com.commercetools.api.models.type.FieldContainer fields;
 
-   private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
    @JsonCreator
-   CustomFieldsDraftImpl(@JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type) {
-      this.fields = fields;
+   CustomFieldsDraftImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
       this.type = type;
+      this.fields = fields;
    }
    public CustomFieldsDraftImpl() {
-
+      
    }
-
+   
+   /**
+   *  <p>The <code>id</code> or the <code>key</code> of the type to use.</p>
+   */
+   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+      return this.type;
+   }
+   
    /**
    *  <p>A valid JSON object, based on the FieldDefinitions of the Type.</p>
    */
@@ -43,19 +50,12 @@ public final class CustomFieldsDraftImpl implements CustomFieldsDraft {
       return this.fields;
    }
 
-   /**
-   *  <p>The <code>id</code> or the <code>key</code> of the type to use.</p>
-   */
-   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
-      return this.type;
-   }
-
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
-
    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
       this.type = type;
+   }
+   
+   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+      this.fields = fields;
    }
 
 }

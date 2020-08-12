@@ -103,14 +103,14 @@ public interface AttributeDefinitionDraft  {
 
    public static AttributeDefinitionDraftImpl of(final AttributeDefinitionDraft template) {
       AttributeDefinitionDraftImpl instance = new AttributeDefinitionDraftImpl();
+      instance.setType(template.getType());
+      instance.setName(template.getName());
+      instance.setLabel(template.getLabel());
       instance.setIsRequired(template.getIsRequired());
       instance.setAttributeConstraint(template.getAttributeConstraint());
-      instance.setName(template.getName());
+      instance.setInputTip(template.getInputTip());
       instance.setInputHint(template.getInputHint());
       instance.setIsSearchable(template.getIsSearchable());
-      instance.setLabel(template.getLabel());
-      instance.setType(template.getType());
-      instance.setInputTip(template.getInputTip());
       return instance;
    }
 

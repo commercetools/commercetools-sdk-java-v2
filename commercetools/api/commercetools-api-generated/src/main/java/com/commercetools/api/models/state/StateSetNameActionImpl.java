@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StateSetNameActionImpl implements StateSetNameAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.LocalizedString name;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class StateSetNameActionImpl implements StateSetNameAction {
       this.action = "setName";
    }
    public StateSetNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getName(){
       return this.name;
    }

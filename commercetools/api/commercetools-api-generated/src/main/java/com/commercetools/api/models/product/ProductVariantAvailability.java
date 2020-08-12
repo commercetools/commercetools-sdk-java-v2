@@ -53,10 +53,10 @@ public interface ProductVariantAvailability  {
 
    public static ProductVariantAvailabilityImpl of(final ProductVariantAvailability template) {
       ProductVariantAvailabilityImpl instance = new ProductVariantAvailabilityImpl();
+      instance.setIsOnStock(template.getIsOnStock());
+      instance.setRestockableInDays(template.getRestockableInDays());
       instance.setAvailableQuantity(template.getAvailableQuantity());
       instance.setChannels(template.getChannels());
-      instance.setRestockableInDays(template.getRestockableInDays());
-      instance.setIsOnStock(template.getIsOnStock());
       return instance;
    }
 

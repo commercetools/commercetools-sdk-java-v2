@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.zone.Location location;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAct
       this.action = "removeLocation";
    }
    public ZoneRemoveLocationActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.zone.Location getLocation(){
       return this.location;
    }

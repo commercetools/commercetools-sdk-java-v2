@@ -14,17 +14,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ApiClientDraftBuilder {
    
-   @Nullable
-   private Long deleteDaysAfterCreation;
+   
+   private String name;
    
    
    private String scope;
    
+   @Nullable
+   private Long deleteDaysAfterCreation;
    
-   private String name;
-   
-   public ApiClientDraftBuilder deleteDaysAfterCreation(@Nullable final Long deleteDaysAfterCreation) {
-      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
+   public ApiClientDraftBuilder name( final String name) {
+      this.name = name;
       return this;
    }
    
@@ -33,14 +33,14 @@ public final class ApiClientDraftBuilder {
       return this;
    }
    
-   public ApiClientDraftBuilder name( final String name) {
-      this.name = name;
+   public ApiClientDraftBuilder deleteDaysAfterCreation(@Nullable final Long deleteDaysAfterCreation) {
+      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
       return this;
    }
    
-   @Nullable
-   public Long getDeleteDaysAfterCreation(){
-      return this.deleteDaysAfterCreation;
+   
+   public String getName(){
+      return this.name;
    }
    
    
@@ -48,13 +48,13 @@ public final class ApiClientDraftBuilder {
       return this.scope;
    }
    
-   
-   public String getName(){
-      return this.name;
+   @Nullable
+   public Long getDeleteDaysAfterCreation(){
+      return this.deleteDaysAfterCreation;
    }
 
    public ApiClientDraft build() {
-       return new ApiClientDraftImpl(deleteDaysAfterCreation, scope, name);
+       return new ApiClientDraftImpl(name, scope, deleteDaysAfterCreation);
    }
    
    public static ApiClientDraftBuilder of() {
@@ -63,9 +63,9 @@ public final class ApiClientDraftBuilder {
    
    public static ApiClientDraftBuilder of(final ApiClientDraft template) {
       ApiClientDraftBuilder builder = new ApiClientDraftBuilder();
-      builder.deleteDaysAfterCreation = template.getDeleteDaysAfterCreation();
-      builder.scope = template.getScope();
       builder.name = template.getName();
+      builder.scope = template.getScope();
+      builder.deleteDaysAfterCreation = template.getDeleteDaysAfterCreation();
       return builder;
    }
    

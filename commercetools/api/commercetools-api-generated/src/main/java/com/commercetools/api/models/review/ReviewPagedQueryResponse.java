@@ -60,10 +60,10 @@ public interface ReviewPagedQueryResponse  {
 
    public static ReviewPagedQueryResponseImpl of(final ReviewPagedQueryResponse template) {
       ReviewPagedQueryResponseImpl instance = new ReviewPagedQueryResponseImpl();
+      instance.setLimit(template.getLimit());
+      instance.setCount(template.getCount());
       instance.setTotal(template.getTotal());
       instance.setOffset(template.getOffset());
-      instance.setCount(template.getCount());
-      instance.setLimit(template.getLimit());
       instance.setResults(template.getResults());
       return instance;
    }

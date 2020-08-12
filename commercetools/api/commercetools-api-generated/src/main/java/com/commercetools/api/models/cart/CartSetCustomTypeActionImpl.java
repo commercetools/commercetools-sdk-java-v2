@@ -25,42 +25,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartSetCustomTypeActionImpl implements CartSetCustomTypeAction {
 
    private String action;
-
+   
+   private com.commercetools.api.models.type.TypeResourceIdentifier type;
+   
    private com.commercetools.api.models.type.FieldContainer fields;
 
-   private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
    @JsonCreator
-   CartSetCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type) {
-      this.fields = fields;
+   CartSetCustomTypeActionImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
       this.type = type;
+      this.fields = fields;
       this.action = "setCustomType";
    }
    public CartSetCustomTypeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+      return this.type;
+   }
+   
+   
    public com.commercetools.api.models.type.FieldContainer getFields(){
       return this.fields;
    }
 
-
-   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
-      return this.type;
-   }
-
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
-
    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
       this.type = type;
+   }
+   
+   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+      this.fields = fields;
    }
 
 }

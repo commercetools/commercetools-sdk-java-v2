@@ -28,9 +28,9 @@ public final class CartDiscountShippingCostTargetImpl implements CartDiscountShi
    CartDiscountShippingCostTargetImpl() {
       this.type = "shipping";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

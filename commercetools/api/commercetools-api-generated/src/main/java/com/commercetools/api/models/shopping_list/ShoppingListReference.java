@@ -23,17 +23,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListReferenceImpl.class)
 public interface ShoppingListReference extends Reference {
 
-
+   
    @Valid
    @JsonProperty("obj")
    public ShoppingList getObj();
 
    public void setObj(final ShoppingList obj);
-
+   
    public static ShoppingListReferenceImpl of(){
       return new ShoppingListReferenceImpl();
    }
-
+   
 
    public static ShoppingListReferenceImpl of(final ShoppingListReference template) {
       ShoppingListReferenceImpl instance = new ShoppingListReferenceImpl();

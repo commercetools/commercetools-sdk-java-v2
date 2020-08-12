@@ -15,21 +15,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class TaxCategoryDraftBuilder {
    
    
-   private java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates;
-   
-   
    private String name;
    
    @Nullable
    private String description;
    
+   
+   private java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates;
+   
    @Nullable
    private String key;
-   
-   public TaxCategoryDraftBuilder rates( final java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates) {
-      this.rates = rates;
-      return this;
-   }
    
    public TaxCategoryDraftBuilder name( final String name) {
       this.name = name;
@@ -41,14 +36,14 @@ public final class TaxCategoryDraftBuilder {
       return this;
    }
    
-   public TaxCategoryDraftBuilder key(@Nullable final String key) {
-      this.key = key;
+   public TaxCategoryDraftBuilder rates( final java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates) {
+      this.rates = rates;
       return this;
    }
    
-   
-   public java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> getRates(){
-      return this.rates;
+   public TaxCategoryDraftBuilder key(@Nullable final String key) {
+      this.key = key;
+      return this;
    }
    
    
@@ -61,13 +56,18 @@ public final class TaxCategoryDraftBuilder {
       return this.description;
    }
    
+   
+   public java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> getRates(){
+      return this.rates;
+   }
+   
    @Nullable
    public String getKey(){
       return this.key;
    }
 
    public TaxCategoryDraft build() {
-       return new TaxCategoryDraftImpl(rates, name, description, key);
+       return new TaxCategoryDraftImpl(name, description, rates, key);
    }
    
    public static TaxCategoryDraftBuilder of() {
@@ -76,9 +76,9 @@ public final class TaxCategoryDraftBuilder {
    
    public static TaxCategoryDraftBuilder of(final TaxCategoryDraft template) {
       TaxCategoryDraftBuilder builder = new TaxCategoryDraftBuilder();
-      builder.rates = template.getRates();
       builder.name = template.getName();
       builder.description = template.getDescription();
+      builder.rates = template.getRates();
       builder.key = template.getKey();
       return builder;
    }

@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class TaxCategorySetDescriptionActionBuilder {
-
+   
    @Nullable
    private String description;
-
+   
    public TaxCategorySetDescriptionActionBuilder description(@Nullable final String description) {
       this.description = description;
       return this;
    }
-
+   
    @Nullable
    public String getDescription(){
       return this.description;
@@ -30,15 +30,15 @@ public final class TaxCategorySetDescriptionActionBuilder {
    public TaxCategorySetDescriptionAction build() {
        return new TaxCategorySetDescriptionActionImpl(description);
    }
-
+   
    public static TaxCategorySetDescriptionActionBuilder of() {
       return new TaxCategorySetDescriptionActionBuilder();
    }
-
+   
    public static TaxCategorySetDescriptionActionBuilder of(final TaxCategorySetDescriptionAction template) {
       TaxCategorySetDescriptionActionBuilder builder = new TaxCategorySetDescriptionActionBuilder();
       builder.description = template.getDescription();
       return builder;
    }
-
+   
 }

@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class PriceFunctionBuilder {
-
-
-   private String function;
-
-
+   
+   
    private String currencyCode;
-
-   public PriceFunctionBuilder function( final String function) {
-      this.function = function;
-      return this;
-   }
-
+   
+   
+   private String function;
+   
    public PriceFunctionBuilder currencyCode( final String currencyCode) {
       this.currencyCode = currencyCode;
       return this;
    }
-
-
+   
+   public PriceFunctionBuilder function( final String function) {
+      this.function = function;
+      return this;
+   }
+   
+   
+   public String getCurrencyCode(){
+      return this.currencyCode;
+   }
+   
+   
    public String getFunction(){
       return this.function;
    }
 
-
-   public String getCurrencyCode(){
-      return this.currencyCode;
-   }
-
    public PriceFunction build() {
-       return new PriceFunctionImpl(function, currencyCode);
+       return new PriceFunctionImpl(currencyCode, function);
    }
-
+   
    public static PriceFunctionBuilder of() {
       return new PriceFunctionBuilder();
    }
-
+   
    public static PriceFunctionBuilder of(final PriceFunction template) {
       PriceFunctionBuilder builder = new PriceFunctionBuilder();
-      builder.function = template.getFunction();
       builder.currencyCode = template.getCurrencyCode();
+      builder.function = template.getFunction();
       return builder;
    }
-
+   
 }

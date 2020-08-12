@@ -25,14 +25,14 @@ public final class MyShoppingListSetTextLineItemDescriptionActionImpl implements
 
    private String action;
    
-   private com.commercetools.api.models.common.LocalizedString description;
-   
    private String textLineItemId;
+   
+   private com.commercetools.api.models.common.LocalizedString description;
 
    @JsonCreator
-   MyShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("textLineItemId") final String textLineItemId) {
-      this.description = description;
+   MyShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
       this.textLineItemId = textLineItemId;
+      this.description = description;
       this.action = "setTextLineItemDescription";
    }
    public MyShoppingListSetTextLineItemDescriptionActionImpl() {
@@ -45,21 +45,21 @@ public final class MyShoppingListSetTextLineItemDescriptionActionImpl implements
    }
    
    
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
-   
-   
    public String getTextLineItemId(){
       return this.textLineItemId;
    }
-
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
-   }
    
+   
+   public com.commercetools.api.models.common.LocalizedString getDescription(){
+      return this.description;
+   }
+
    public void setTextLineItemId(final String textLineItemId){
       this.textLineItemId = textLineItemId;
+   }
+   
+   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+      this.description = description;
    }
 
 }

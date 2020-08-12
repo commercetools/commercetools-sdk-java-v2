@@ -63,11 +63,11 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
 
    public static ProductAddAssetActionImpl of(final ProductAddAssetAction template) {
       ProductAddAssetActionImpl instance = new ProductAddAssetActionImpl();
-      instance.setPosition(template.getPosition());
-      instance.setStaged(template.getStaged());
       instance.setVariantId(template.getVariantId());
-      instance.setAsset(template.getAsset());
       instance.setSku(template.getSku());
+      instance.setStaged(template.getStaged());
+      instance.setAsset(template.getAsset());
+      instance.setPosition(template.getPosition());
       return instance;
    }
 

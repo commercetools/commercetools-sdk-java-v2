@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryChangeParentActionImpl.class)
 public interface CategoryChangeParentAction extends CategoryUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("parent")
    public CategoryResourceIdentifier getParent();
 
    public void setParent(final CategoryResourceIdentifier parent);
-
+   
    public static CategoryChangeParentActionImpl of(){
       return new CategoryChangeParentActionImpl();
    }
-
+   
 
    public static CategoryChangeParentActionImpl of(final CategoryChangeParentAction template) {
       CategoryChangeParentActionImpl instance = new CategoryChangeParentActionImpl();

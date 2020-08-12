@@ -23,28 +23,28 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetShippingMethodActionImpl.class)
 public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAction {
 
-
+   
    @Valid
    @JsonProperty("shippingMethod")
    public ShippingMethodResourceIdentifier getShippingMethod();
-
+   
    @Valid
    @JsonProperty("externalTaxRate")
    public ExternalTaxRateDraft getExternalTaxRate();
 
    public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
-
+   
    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-
+   
    public static StagedOrderSetShippingMethodActionImpl of(){
       return new StagedOrderSetShippingMethodActionImpl();
    }
-
+   
 
    public static StagedOrderSetShippingMethodActionImpl of(final StagedOrderSetShippingMethodAction template) {
       StagedOrderSetShippingMethodActionImpl instance = new StagedOrderSetShippingMethodActionImpl();
-      instance.setExternalTaxRate(template.getExternalTaxRate());
       instance.setShippingMethod(template.getShippingMethod());
+      instance.setExternalTaxRate(template.getExternalTaxRate());
       return instance;
    }
 

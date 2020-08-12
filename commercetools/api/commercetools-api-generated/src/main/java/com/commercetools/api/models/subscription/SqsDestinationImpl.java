@@ -26,18 +26,18 @@ public final class SqsDestinationImpl implements SqsDestination {
    
    private String accessKey;
    
+   private String accessSecret;
+   
    private String queueUrl;
    
    private String region;
-   
-   private String accessSecret;
 
    @JsonCreator
-   SqsDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("queueUrl") final String queueUrl, @JsonProperty("region") final String region, @JsonProperty("accessSecret") final String accessSecret) {
+   SqsDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("accessSecret") final String accessSecret, @JsonProperty("queueUrl") final String queueUrl, @JsonProperty("region") final String region) {
       this.accessKey = accessKey;
+      this.accessSecret = accessSecret;
       this.queueUrl = queueUrl;
       this.region = region;
-      this.accessSecret = accessSecret;
       this.type = "SQS";
    }
    public SqsDestinationImpl() {
@@ -55,6 +55,11 @@ public final class SqsDestinationImpl implements SqsDestination {
    }
    
    
+   public String getAccessSecret(){
+      return this.accessSecret;
+   }
+   
+   
    public String getQueueUrl(){
       return this.queueUrl;
    }
@@ -63,14 +68,13 @@ public final class SqsDestinationImpl implements SqsDestination {
    public String getRegion(){
       return this.region;
    }
-   
-   
-   public String getAccessSecret(){
-      return this.accessSecret;
-   }
 
    public void setAccessKey(final String accessKey){
       this.accessKey = accessKey;
+   }
+   
+   public void setAccessSecret(final String accessSecret){
+      this.accessSecret = accessSecret;
    }
    
    public void setQueueUrl(final String queueUrl){
@@ -79,10 +83,6 @@ public final class SqsDestinationImpl implements SqsDestination {
    
    public void setRegion(final String region){
       this.region = region;
-   }
-   
-   public void setAccessSecret(final String accessSecret){
-      this.accessSecret = accessSecret;
    }
 
 }

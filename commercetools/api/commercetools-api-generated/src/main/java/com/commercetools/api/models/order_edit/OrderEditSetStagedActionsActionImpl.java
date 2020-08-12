@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedActionsAction {
 
    private String action;
-
+   
    private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class OrderEditSetStagedActionsActionImpl implements OrderEditSetSt
       this.action = "setStagedActions";
    }
    public OrderEditSetStagedActionsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>The actions to edit the <code>resource</code>.</p>
    */

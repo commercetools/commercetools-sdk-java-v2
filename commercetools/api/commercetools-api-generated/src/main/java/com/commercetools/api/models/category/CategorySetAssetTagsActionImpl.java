@@ -23,11 +23,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsAction {
 
    private String action;
-
+   
    private String assetId;
-
+   
    private String assetKey;
-
+   
    private java.util.List<String> tags;
 
    @JsonCreator
@@ -38,25 +38,25 @@ public final class CategorySetAssetTagsActionImpl implements CategorySetAssetTag
       this.action = "setAssetTags";
    }
    public CategorySetAssetTagsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAssetId(){
       return this.assetId;
    }
-
-
+   
+   
    public String getAssetKey(){
       return this.assetKey;
    }
-
-
+   
+   
    public java.util.List<String> getTags(){
       return this.tags;
    }
@@ -64,11 +64,11 @@ public final class CategorySetAssetTagsActionImpl implements CategorySetAssetTag
    public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
-
+   
    public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
    }
-
+   
    public void setTags(final java.util.List<String> tags){
       this.tags = tags;
    }

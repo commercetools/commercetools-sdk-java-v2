@@ -67,10 +67,10 @@ public interface MyTransactionDraft  {
 
    public static MyTransactionDraftImpl of(final MyTransactionDraft template) {
       MyTransactionDraftImpl instance = new MyTransactionDraftImpl();
-      instance.setInteractionId(template.getInteractionId());
-      instance.setAmount(template.getAmount());
-      instance.setType(template.getType());
       instance.setTimestamp(template.getTimestamp());
+      instance.setType(template.getType());
+      instance.setAmount(template.getAmount());
+      instance.setInteractionId(template.getInteractionId());
       return instance;
    }
 

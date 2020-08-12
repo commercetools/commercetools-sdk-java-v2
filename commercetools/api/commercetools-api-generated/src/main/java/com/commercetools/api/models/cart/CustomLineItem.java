@@ -78,13 +78,13 @@ public interface CustomLineItem  {
    */
    @NotNull
    @JsonProperty("quantity")
-   public Integer getQuantity();
-
+   public Double getQuantity();
+   
    @NotNull
    @Valid
    @JsonProperty("state")
    public List<ItemState> getState();
-
+   
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryReference getTaxCategory();
@@ -95,12 +95,12 @@ public interface CustomLineItem  {
    @Valid
    @JsonProperty("taxRate")
    public TaxRate getTaxRate();
-
+   
    @NotNull
    @Valid
    @JsonProperty("discountedPricePerQuantity")
    public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
@@ -114,51 +114,51 @@ public interface CustomLineItem  {
    public ItemShippingDetails getShippingDetails();
 
    public void setId(final String id);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public void setMoney(final TypedMoney money);
-
+   
    public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-
+   
    public void setTotalPrice(final TypedMoney totalPrice);
-
+   
    public void setSlug(final String slug);
-
-   public void setQuantity(final Integer quantity);
-
+   
+   public void setQuantity(final Double quantity);
+   
    public void setState(final List<ItemState> state);
-
+   
    public void setTaxCategory(final TaxCategoryReference taxCategory);
-
+   
    public void setTaxRate(final TaxRate taxRate);
-
+   
    public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
-
+   
    public void setCustom(final CustomFields custom);
-
+   
    public void setShippingDetails(final ItemShippingDetails shippingDetails);
-
+   
    public static CustomLineItemImpl of(){
       return new CustomLineItemImpl();
    }
-
+   
 
    public static CustomLineItemImpl of(final CustomLineItem template) {
       CustomLineItemImpl instance = new CustomLineItemImpl();
-      instance.setTaxRate(template.getTaxRate());
-      instance.setQuantity(template.getQuantity());
-      instance.setShippingDetails(template.getShippingDetails());
-      instance.setMoney(template.getMoney());
-      instance.setTotalPrice(template.getTotalPrice());
-      instance.setTaxedPrice(template.getTaxedPrice());
-      instance.setCustom(template.getCustom());
-      instance.setName(template.getName());
-      instance.setState(template.getState());
       instance.setId(template.getId());
-      instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
+      instance.setName(template.getName());
+      instance.setMoney(template.getMoney());
+      instance.setTaxedPrice(template.getTaxedPrice());
+      instance.setTotalPrice(template.getTotalPrice());
       instance.setSlug(template.getSlug());
+      instance.setQuantity(template.getQuantity());
+      instance.setState(template.getState());
       instance.setTaxCategory(template.getTaxCategory());
+      instance.setTaxRate(template.getTaxRate());
+      instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
+      instance.setCustom(template.getCustom());
+      instance.setShippingDetails(template.getShippingDetails());
       return instance;
    }
 

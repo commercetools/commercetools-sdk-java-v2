@@ -25,20 +25,20 @@ public final class ProductAddExternalImageActionImpl implements ProductAddExtern
 
    private String action;
    
-   private com.commercetools.api.models.common.Image image;
-   
-   private Boolean staged;
-   
    private Long variantId;
    
    private String sku;
+   
+   private com.commercetools.api.models.common.Image image;
+   
+   private Boolean staged;
 
    @JsonCreator
-   ProductAddExternalImageActionImpl(@JsonProperty("image") final com.commercetools.api.models.common.Image image, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku) {
-      this.image = image;
-      this.staged = staged;
+   ProductAddExternalImageActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("image") final com.commercetools.api.models.common.Image image, @JsonProperty("staged") final Boolean staged) {
       this.variantId = variantId;
       this.sku = sku;
+      this.image = image;
+      this.staged = staged;
       this.action = "addExternalImage";
    }
    public ProductAddExternalImageActionImpl() {
@@ -51,16 +51,6 @@ public final class ProductAddExternalImageActionImpl implements ProductAddExtern
    }
    
    
-   public com.commercetools.api.models.common.Image getImage(){
-      return this.image;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
-   
-   
    public Long getVariantId(){
       return this.variantId;
    }
@@ -69,21 +59,31 @@ public final class ProductAddExternalImageActionImpl implements ProductAddExtern
    public String getSku(){
       return this.sku;
    }
+   
+   
+   public com.commercetools.api.models.common.Image getImage(){
+      return this.image;
+   }
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
+   }
 
-   public void setImage(final com.commercetools.api.models.common.Image image){
-      this.image = image;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
-   
    public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    
    public void setSku(final String sku){
       this.sku = sku;
+   }
+   
+   public void setImage(final com.commercetools.api.models.common.Image image){
+      this.image = image;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
    }
 
 }

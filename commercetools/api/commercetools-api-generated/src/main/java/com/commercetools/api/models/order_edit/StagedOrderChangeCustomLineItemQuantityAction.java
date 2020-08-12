@@ -21,23 +21,23 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderChangeCustomLineItemQuantityActionImpl.class)
 public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("customLineItemId")
    public String getCustomLineItemId();
-
+   
    @NotNull
    @JsonProperty("quantity")
-   public Integer getQuantity();
+   public Double getQuantity();
 
    public void setCustomLineItemId(final String customLineItemId);
-
-   public void setQuantity(final Integer quantity);
-
+   
+   public void setQuantity(final Double quantity);
+   
    public static StagedOrderChangeCustomLineItemQuantityActionImpl of(){
       return new StagedOrderChangeCustomLineItemQuantityActionImpl();
    }
-
+   
 
    public static StagedOrderChangeCustomLineItemQuantityActionImpl of(final StagedOrderChangeCustomLineItemQuantityAction template) {
       StagedOrderChangeCustomLineItemQuantityActionImpl instance = new StagedOrderChangeCustomLineItemQuantityActionImpl();

@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeInputHintAction {
 
    private String action;
-
+   
+   private String attributeName;
+   
    private com.commercetools.api.models.product_type.TextInputHint newValue;
 
-   private String attributeName;
-
    @JsonCreator
-   ProductTypeChangeInputHintActionImpl(@JsonProperty("newValue") final com.commercetools.api.models.product_type.TextInputHint newValue, @JsonProperty("attributeName") final String attributeName) {
-      this.newValue = newValue;
+   ProductTypeChangeInputHintActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("newValue") final com.commercetools.api.models.product_type.TextInputHint newValue) {
       this.attributeName = attributeName;
+      this.newValue = newValue;
       this.action = "changeInputHint";
    }
    public ProductTypeChangeInputHintActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getAttributeName(){
+      return this.attributeName;
+   }
+   
+   
    public com.commercetools.api.models.product_type.TextInputHint getNewValue(){
       return this.newValue;
    }
 
-
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-
-   public void setNewValue(final com.commercetools.api.models.product_type.TextInputHint newValue){
-      this.newValue = newValue;
-   }
-
    public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
+   }
+   
+   public void setNewValue(final com.commercetools.api.models.product_type.TextInputHint newValue){
+      this.newValue = newValue;
    }
 
 }

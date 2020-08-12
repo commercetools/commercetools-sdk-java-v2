@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface ShippingMethodResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static ShippingMethodResourceIdentifierImpl of(){
       return new ShippingMethodResourceIdentifierImpl();
    }
-
+   
 
    public static ShippingMethodResourceIdentifierImpl of(final ShippingMethodResourceIdentifier template) {
       ShippingMethodResourceIdentifierImpl instance = new ShippingMethodResourceIdentifierImpl();

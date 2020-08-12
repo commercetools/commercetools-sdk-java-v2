@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = DuplicateAttributeValuesErrorImpl.class)
 public interface DuplicateAttributeValuesError extends ErrorObject {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("attributes")
    public List<Attribute> getAttributes();
 
    public void setAttributes(final List<Attribute> attributes);
-
+   
    public static DuplicateAttributeValuesErrorImpl of(){
       return new DuplicateAttributeValuesErrorImpl();
    }
-
+   
 
    public static DuplicateAttributeValuesErrorImpl of(final DuplicateAttributeValuesError template) {
       DuplicateAttributeValuesErrorImpl instance = new DuplicateAttributeValuesErrorImpl();

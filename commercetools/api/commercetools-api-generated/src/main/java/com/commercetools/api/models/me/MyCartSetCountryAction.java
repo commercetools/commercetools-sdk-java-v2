@@ -24,16 +24,16 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
    /**
    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
-
+   
    @JsonProperty("country")
    public String getCountry();
 
    public void setCountry(final String country);
-
+   
    public static MyCartSetCountryActionImpl of(){
       return new MyCartSetCountryActionImpl();
    }
-
+   
 
    public static MyCartSetCountryActionImpl of(final MyCartSetCountryAction template) {
       MyCartSetCountryActionImpl instance = new MyCartSetCountryActionImpl();

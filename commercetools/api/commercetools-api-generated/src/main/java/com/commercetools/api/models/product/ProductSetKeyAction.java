@@ -25,16 +25,16 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
    *  <p>User-specific unique identifier for the product.
    *  If left blank or set to <code>null</code>, the product key is unset/removed.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static ProductSetKeyActionImpl of(){
       return new ProductSetKeyActionImpl();
    }
-
+   
 
    public static ProductSetKeyActionImpl of(final ProductSetKeyAction template) {
       ProductSetKeyActionImpl instance = new ProductSetKeyActionImpl();

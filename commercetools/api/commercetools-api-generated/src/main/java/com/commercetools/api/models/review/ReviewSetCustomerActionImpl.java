@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReviewSetCustomerActionImpl implements ReviewSetCustomerAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class ReviewSetCustomerActionImpl implements ReviewSetCustomerActio
       this.action = "setCustomer";
    }
    public ReviewSetCustomerActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>The customer who created the review.
    *  If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>

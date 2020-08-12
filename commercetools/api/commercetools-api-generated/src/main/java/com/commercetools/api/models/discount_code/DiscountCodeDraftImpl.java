@@ -25,57 +25,59 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
 
-   private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
-
-   private String code;
-
-   private String cartPredicate;
-
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
    private com.commercetools.api.models.common.LocalizedString name;
-
+   
+   private com.commercetools.api.models.common.LocalizedString description;
+   
+   private String code;
+   
+   private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
+   
+   private String cartPredicate;
+   
+   private Boolean isActive;
+   
+   private Long maxApplications;
+   
+   private Long maxApplicationsPerCustomer;
+   
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   
+   private java.util.List<String> groups;
+   
+   private java.time.ZonedDateTime validFrom;
+   
    private java.time.ZonedDateTime validUntil;
 
-   private java.util.List<String> groups;
-
-   private com.commercetools.api.models.common.LocalizedString description;
-
-   private java.time.ZonedDateTime validFrom;
-
-   private Long maxApplicationsPerCustomer;
-
-   private Boolean isActive;
-
-   private Long maxApplications;
-
    @JsonCreator
-   DiscountCodeDraftImpl(@JsonProperty("cartDiscounts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts, @JsonProperty("code") final String code, @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("groups") final java.util.List<String> groups, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("maxApplicationsPerCustomer") final Long maxApplicationsPerCustomer, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("maxApplications") final Long maxApplications) {
-      this.cartDiscounts = cartDiscounts;
-      this.code = code;
-      this.cartPredicate = cartPredicate;
-      this.custom = custom;
+   DiscountCodeDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("code") final String code, @JsonProperty("cartDiscounts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts, @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("maxApplications") final Long maxApplications, @JsonProperty("maxApplicationsPerCustomer") final Long maxApplicationsPerCustomer, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("groups") final java.util.List<String> groups, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
       this.name = name;
-      this.validUntil = validUntil;
-      this.groups = groups;
       this.description = description;
-      this.validFrom = validFrom;
-      this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+      this.code = code;
+      this.cartDiscounts = cartDiscounts;
+      this.cartPredicate = cartPredicate;
       this.isActive = isActive;
       this.maxApplications = maxApplications;
+      this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+      this.custom = custom;
+      this.groups = groups;
+      this.validFrom = validFrom;
+      this.validUntil = validUntil;
    }
    public DiscountCodeDraftImpl() {
-
+      
    }
-
-   /**
-   *  <p>The referenced matching cart discounts can be applied to the cart once the discount code is added.
-   *  The number of cart discounts in a discount code is limited to <strong>10</strong>.</p>
-   */
-   public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts(){
-      return this.cartDiscounts;
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
    }
-
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getDescription(){
+      return this.description;
+   }
+   
    /**
    *  <p>Unique identifier of this discount code.
    *  This value is added to the cart
@@ -84,24 +86,57 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
    public String getCode(){
       return this.code;
    }
-
+   
+   /**
+   *  <p>The referenced matching cart discounts can be applied to the cart once the discount code is added.
+   *  The number of cart discounts in a discount code is limited to <strong>10</strong>.</p>
+   */
+   public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts(){
+      return this.cartDiscounts;
+   }
+   
    /**
    *  <p>The discount code can only be applied to carts that match this predicate.</p>
    */
    public String getCartPredicate(){
       return this.cartPredicate;
    }
-
-
+   
+   
+   public Boolean getIsActive(){
+      return this.isActive;
+   }
+   
+   
+   public Long getMaxApplications(){
+      return this.maxApplications;
+   }
+   
+   
+   public Long getMaxApplicationsPerCustomer(){
+      return this.maxApplicationsPerCustomer;
+   }
+   
+   
    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
-
-
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
+   
+   /**
+   *  <p>The groups to which this discount code shall belong to.</p>
+   */
+   public java.util.List<String> getGroups(){
+      return this.groups;
    }
-
+   
+   /**
+   *  <p>The time from which the discount can be applied on a cart.
+   *  Before that time the code is invalid.</p>
+   */
+   public java.time.ZonedDateTime getValidFrom(){
+      return this.validFrom;
+   }
+   
    /**
    *  <p>The time until the discount can be applied on a cart.
    *  After that time the code is invalid.</p>
@@ -110,87 +145,52 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
       return this.validUntil;
    }
 
-   /**
-   *  <p>The groups to which this discount code shall belong to.</p>
-   */
-   public java.util.List<String> getGroups(){
-      return this.groups;
-   }
-
-
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
-
-   /**
-   *  <p>The time from which the discount can be applied on a cart.
-   *  Before that time the code is invalid.</p>
-   */
-   public java.time.ZonedDateTime getValidFrom(){
-      return this.validFrom;
-   }
-
-
-   public Long getMaxApplicationsPerCustomer(){
-      return this.maxApplicationsPerCustomer;
-   }
-
-
-   public Boolean getIsActive(){
-      return this.isActive;
-   }
-
-
-   public Long getMaxApplications(){
-      return this.maxApplications;
-   }
-
-   public void setCartDiscounts(final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts){
-      this.cartDiscounts = cartDiscounts;
-   }
-
-   public void setCode(final String code){
-      this.code = code;
-   }
-
-   public void setCartPredicate(final String cartPredicate){
-      this.cartPredicate = cartPredicate;
-   }
-
-   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
-      this.custom = custom;
-   }
-
    public void setName(final com.commercetools.api.models.common.LocalizedString name){
       this.name = name;
    }
-
-   public void setValidUntil(final java.time.ZonedDateTime validUntil){
-      this.validUntil = validUntil;
-   }
-
-   public void setGroups(final java.util.List<String> groups){
-      this.groups = groups;
-   }
-
+   
    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
       this.description = description;
    }
-
-   public void setValidFrom(final java.time.ZonedDateTime validFrom){
-      this.validFrom = validFrom;
+   
+   public void setCode(final String code){
+      this.code = code;
    }
-
-   public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer){
-      this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+   
+   public void setCartDiscounts(final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts){
+      this.cartDiscounts = cartDiscounts;
    }
-
+   
+   public void setCartPredicate(final String cartPredicate){
+      this.cartPredicate = cartPredicate;
+   }
+   
    public void setIsActive(final Boolean isActive){
       this.isActive = isActive;
    }
-
+   
    public void setMaxApplications(final Long maxApplications){
       this.maxApplications = maxApplications;
+   }
+   
+   public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer){
+      this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+   }
+   
+   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
+      this.custom = custom;
+   }
+   
+   public void setGroups(final java.util.List<String> groups){
+      this.groups = groups;
+   }
+   
+   public void setValidFrom(final java.time.ZonedDateTime validFrom){
+      this.validFrom = validFrom;
+   }
+   
+   public void setValidUntil(final java.time.ZonedDateTime validUntil){
+      this.validUntil = validUntil;
    }
 
 }

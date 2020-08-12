@@ -24,17 +24,17 @@ public final class ProductSetSkuActionImpl implements ProductSetSkuAction {
 
    private String action;
    
-   private Boolean staged;
-   
    private Long variantId;
    
    private String sku;
+   
+   private Boolean staged;
 
    @JsonCreator
-   ProductSetSkuActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku) {
-      this.staged = staged;
+   ProductSetSkuActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged) {
       this.variantId = variantId;
       this.sku = sku;
+      this.staged = staged;
       this.action = "setSku";
    }
    public ProductSetSkuActionImpl() {
@@ -44,11 +44,6 @@ public final class ProductSetSkuActionImpl implements ProductSetSkuAction {
    
    public String getAction(){
       return this.action;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
    }
    
    
@@ -63,17 +58,22 @@ public final class ProductSetSkuActionImpl implements ProductSetSkuAction {
    public String getSku(){
       return this.sku;
    }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
    
+   
+   public Boolean getStaged(){
+      return this.staged;
+   }
+
    public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    
    public void setSku(final String sku){
       this.sku = sku;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
    }
 
 }

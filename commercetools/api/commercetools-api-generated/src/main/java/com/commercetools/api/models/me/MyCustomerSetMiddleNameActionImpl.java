@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyCustomerSetMiddleNameActionImpl implements MyCustomerSetMiddleNameAction {
 
    private String action;
-
+   
    private String middleName;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class MyCustomerSetMiddleNameActionImpl implements MyCustomerSetMid
       this.action = "setMiddleName";
    }
    public MyCustomerSetMiddleNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getMiddleName(){
       return this.middleName;
    }

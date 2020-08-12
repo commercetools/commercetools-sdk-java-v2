@@ -24,26 +24,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountSetValidFromAndUntilActionImpl implements CartDiscountSetValidFromAndUntilAction {
 
    private String action;
-
+   
+   private java.time.ZonedDateTime validFrom;
+   
    private java.time.ZonedDateTime validUntil;
 
-   private java.time.ZonedDateTime validFrom;
-
    @JsonCreator
-   CartDiscountSetValidFromAndUntilActionImpl(@JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom) {
-      this.validUntil = validUntil;
+   CartDiscountSetValidFromAndUntilActionImpl(@JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
       this.validFrom = validFrom;
+      this.validUntil = validUntil;
       this.action = "setValidFromAndUntil";
    }
    public CartDiscountSetValidFromAndUntilActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
+   /**
+   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+   */
+   public java.time.ZonedDateTime getValidFrom(){
+      return this.validFrom;
+   }
+   
    /**
    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
    */
@@ -51,19 +58,12 @@ public final class CartDiscountSetValidFromAndUntilActionImpl implements CartDis
       return this.validUntil;
    }
 
-   /**
-   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
-   */
-   public java.time.ZonedDateTime getValidFrom(){
-      return this.validFrom;
-   }
-
-   public void setValidUntil(final java.time.ZonedDateTime validUntil){
-      this.validUntil = validUntil;
-   }
-
    public void setValidFrom(final java.time.ZonedDateTime validFrom){
       this.validFrom = validFrom;
+   }
+   
+   public void setValidUntil(final java.time.ZonedDateTime validUntil){
+      this.validUntil = validUntil;
    }
 
 }

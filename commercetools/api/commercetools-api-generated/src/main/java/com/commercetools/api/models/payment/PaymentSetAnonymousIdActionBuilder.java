@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class PaymentSetAnonymousIdActionBuilder {
-
+   
    @Nullable
    private String anonymousId;
-
+   
    public PaymentSetAnonymousIdActionBuilder anonymousId(@Nullable final String anonymousId) {
       this.anonymousId = anonymousId;
       return this;
    }
-
+   
    @Nullable
    public String getAnonymousId(){
       return this.anonymousId;
@@ -30,15 +30,15 @@ public final class PaymentSetAnonymousIdActionBuilder {
    public PaymentSetAnonymousIdAction build() {
        return new PaymentSetAnonymousIdActionImpl(anonymousId);
    }
-
+   
    public static PaymentSetAnonymousIdActionBuilder of() {
       return new PaymentSetAnonymousIdActionBuilder();
    }
-
+   
    public static PaymentSetAnonymousIdActionBuilder of(final PaymentSetAnonymousIdAction template) {
       PaymentSetAnonymousIdActionBuilder builder = new PaymentSetAnonymousIdActionBuilder();
       builder.anonymousId = template.getAnonymousId();
       return builder;
    }
-
+   
 }

@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ZoneSetKeyActionBuilder {
-
+   
    @Nullable
    private String key;
-
+   
    public ZoneSetKeyActionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
-
+   
    @Nullable
    public String getKey(){
       return this.key;
@@ -30,15 +30,15 @@ public final class ZoneSetKeyActionBuilder {
    public ZoneSetKeyAction build() {
        return new ZoneSetKeyActionImpl(key);
    }
-
+   
    public static ZoneSetKeyActionBuilder of() {
       return new ZoneSetKeyActionBuilder();
    }
-
+   
    public static ZoneSetKeyActionBuilder of(final ZoneSetKeyAction template) {
       ZoneSetKeyActionBuilder builder = new ZoneSetKeyActionBuilder();
       builder.key = template.getKey();
       return builder;
    }
-
+   
 }

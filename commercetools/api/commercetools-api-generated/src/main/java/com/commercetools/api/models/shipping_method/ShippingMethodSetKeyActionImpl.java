@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShippingMethodSetKeyActionImpl implements ShippingMethodSetKeyAction {
 
    private String action;
-
+   
    private String key;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ShippingMethodSetKeyActionImpl implements ShippingMethodSetKe
       this.action = "setKey";
    }
    public ShippingMethodSetKeyActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
    */

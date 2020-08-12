@@ -35,11 +35,11 @@ public interface PaymentDraft  {
    /**
    *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
-
+   
    @JsonProperty("anonymousId")
    public String getAnonymousId();
-
-
+   
+   
    @JsonProperty("externalId")
    public String getExternalId();
    /**
@@ -47,7 +47,7 @@ public interface PaymentDraft  {
    *  Cannot be changed once it has been set.
    *  The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
    */
-
+   
    @JsonProperty("interfaceId")
    public String getInterfaceId();
    /**
@@ -58,27 +58,27 @@ public interface PaymentDraft  {
    @Valid
    @JsonProperty("amountPlanned")
    public Money getAmountPlanned();
-
+   
    @Valid
    @JsonProperty("amountAuthorized")
    public Money getAmountAuthorized();
-
-
+   
+   
    @JsonProperty("authorizedUntil")
    public String getAuthorizedUntil();
-
+   
    @Valid
    @JsonProperty("amountPaid")
    public Money getAmountPaid();
-
+   
    @Valid
    @JsonProperty("amountRefunded")
    public Money getAmountRefunded();
-
+   
    @Valid
    @JsonProperty("paymentMethodInfo")
    public PaymentMethodInfo getPaymentMethodInfo();
-
+   
    @Valid
    @JsonProperty("paymentStatus")
    public PaymentStatusDraft getPaymentStatus();
@@ -97,7 +97,7 @@ public interface PaymentDraft  {
    @Valid
    @JsonProperty("interfaceInteractions")
    public List<CustomFieldsDraft> getInterfaceInteractions();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
@@ -105,62 +105,62 @@ public interface PaymentDraft  {
    *  <p>User-specific unique identifier for the payment (max.
    *  256 characters).</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setCustomer(final CustomerResourceIdentifier customer);
-
+   
    public void setAnonymousId(final String anonymousId);
-
+   
    public void setExternalId(final String externalId);
-
+   
    public void setInterfaceId(final String interfaceId);
-
+   
    public void setAmountPlanned(final Money amountPlanned);
-
+   
    public void setAmountAuthorized(final Money amountAuthorized);
-
+   
    public void setAuthorizedUntil(final String authorizedUntil);
-
+   
    public void setAmountPaid(final Money amountPaid);
-
+   
    public void setAmountRefunded(final Money amountRefunded);
-
+   
    public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
-
+   
    public void setPaymentStatus(final PaymentStatusDraft paymentStatus);
-
+   
    public void setTransactions(final List<TransactionDraft> transactions);
-
+   
    public void setInterfaceInteractions(final List<CustomFieldsDraft> interfaceInteractions);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public void setKey(final String key);
-
+   
    public static PaymentDraftImpl of(){
       return new PaymentDraftImpl();
    }
-
+   
 
    public static PaymentDraftImpl of(final PaymentDraft template) {
       PaymentDraftImpl instance = new PaymentDraftImpl();
-      instance.setAmountAuthorized(template.getAmountAuthorized());
+      instance.setCustomer(template.getCustomer());
       instance.setAnonymousId(template.getAnonymousId());
-      instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
-      instance.setCustom(template.getCustom());
-      instance.setAuthorizedUntil(template.getAuthorizedUntil());
       instance.setExternalId(template.getExternalId());
-      instance.setTransactions(template.getTransactions());
+      instance.setInterfaceId(template.getInterfaceId());
+      instance.setAmountPlanned(template.getAmountPlanned());
+      instance.setAmountAuthorized(template.getAmountAuthorized());
+      instance.setAuthorizedUntil(template.getAuthorizedUntil());
       instance.setAmountPaid(template.getAmountPaid());
       instance.setAmountRefunded(template.getAmountRefunded());
-      instance.setAmountPlanned(template.getAmountPlanned());
-      instance.setInterfaceInteractions(template.getInterfaceInteractions());
-      instance.setInterfaceId(template.getInterfaceId());
-      instance.setKey(template.getKey());
+      instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
       instance.setPaymentStatus(template.getPaymentStatus());
-      instance.setCustomer(template.getCustomer());
+      instance.setTransactions(template.getTransactions());
+      instance.setInterfaceInteractions(template.getInterfaceInteractions());
+      instance.setCustom(template.getCustom());
+      instance.setKey(template.getKey());
       return instance;
    }
 

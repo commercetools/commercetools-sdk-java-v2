@@ -23,60 +23,50 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMessage {
 
-   private java.time.ZonedDateTime createdAt;
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
    private String id;
    
    private Long version;
    
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    private Long sequenceNumber;
    
    private com.commercetools.api.models.common.Reference resource;
    
-   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-   
    private Long resourceVersion;
    
    private String type;
    
-   private java.util.List<String> removedImageUrls;
+   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    private com.commercetools.api.models.product.ProductVariant variant;
+   
+   private java.util.List<String> removedImageUrls;
 
    @JsonCreator
-   ProductVariantDeletedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls, @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   ProductVariantDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant, @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
+      this.createdBy = createdBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
-      this.removedImageUrls = removedImageUrls;
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.variant = variant;
+      this.removedImageUrls = removedImageUrls;
       this.type = "ProductVariantDeleted";
    }
    public ProductVariantDeletedMessageImpl() {
       
-   }
-   
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
    }
    
    
@@ -90,13 +80,23 @@ public final class ProductVariantDeletedMessageImpl implements ProductVariantDel
    }
    
    
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
+   }
+   
+   
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    
@@ -110,11 +110,6 @@ public final class ProductVariantDeletedMessageImpl implements ProductVariantDel
    }
    
    
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-   
-   
    public Long getResourceVersion(){
       return this.resourceVersion;
    }
@@ -125,23 +120,20 @@ public final class ProductVariantDeletedMessageImpl implements ProductVariantDel
    }
    
    
-   public java.util.List<String> getRemovedImageUrls(){
-      return this.removedImageUrls;
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
    }
    
    
    public com.commercetools.api.models.product.ProductVariant getVariant(){
       return this.variant;
    }
+   
+   
+   public java.util.List<String> getRemovedImageUrls(){
+      return this.removedImageUrls;
+   }
 
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-   
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
-   
    public void setId(final String id){
       this.id = id;
    }
@@ -150,12 +142,20 @@ public final class ProductVariantDeletedMessageImpl implements ProductVariantDel
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
+   }
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
    }
    
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
+   }
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
    }
    
    public void setSequenceNumber(final Long sequenceNumber){
@@ -166,20 +166,20 @@ public final class ProductVariantDeletedMessageImpl implements ProductVariantDel
       this.resource = resource;
    }
    
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-   }
-   
    public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
    }
    
-   public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
-      this.removedImageUrls = removedImageUrls;
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
    public void setVariant(final com.commercetools.api.models.product.ProductVariant variant){
       this.variant = variant;
+   }
+   
+   public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
+      this.removedImageUrls = removedImageUrls;
    }
 
 }

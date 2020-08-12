@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class UpdateActionBuilder {
-
-
+   
+   
    private String action;
-
+   
    public UpdateActionBuilder action( final String action) {
       this.action = action;
       return this;
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
@@ -30,15 +30,15 @@ public final class UpdateActionBuilder {
    public UpdateAction build() {
        return new UpdateActionImpl(action);
    }
-
+   
    public static UpdateActionBuilder of() {
       return new UpdateActionBuilder();
    }
-
+   
    public static UpdateActionBuilder of(final UpdateAction template) {
       UpdateActionBuilder builder = new UpdateActionBuilder();
       builder.action = template.getAction();
       return builder;
    }
-
+   
 }

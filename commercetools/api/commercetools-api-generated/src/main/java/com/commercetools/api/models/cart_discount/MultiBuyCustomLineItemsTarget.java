@@ -44,28 +44,28 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
    /**
    *  <p>Maximum number of applications of this discount.</p>
    */
-
+   
    @JsonProperty("maxOccurrence")
    public Integer getMaxOccurrence();
-
+   
    @NotNull
    @JsonProperty("selectionMode")
    public SelectionMode getSelectionMode();
 
    public void setPredicate(final String predicate);
-
+   
    public void setTriggerQuantity(final Integer triggerQuantity);
-
+   
    public void setDiscountedQuantity(final Integer discountedQuantity);
-
+   
    public void setMaxOccurrence(final Integer maxOccurrence);
-
+   
    public void setSelectionMode(final SelectionMode selectionMode);
-
+   
    public static MultiBuyCustomLineItemsTargetImpl of(){
       return new MultiBuyCustomLineItemsTargetImpl();
    }
-
+   
 
    public static MultiBuyCustomLineItemsTargetImpl of(final MultiBuyCustomLineItemsTarget template) {
       MultiBuyCustomLineItemsTargetImpl instance = new MultiBuyCustomLineItemsTargetImpl();

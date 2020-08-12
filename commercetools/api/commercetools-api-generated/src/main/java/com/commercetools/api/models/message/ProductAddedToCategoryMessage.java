@@ -22,39 +22,39 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductAddedToCategoryMessageImpl.class)
 public interface ProductAddedToCategoryMessage extends Message {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("category")
    public CategoryReference getCategory();
-
+   
    @NotNull
    @JsonProperty("staged")
    public Boolean getStaged();
 
    public void setCategory(final CategoryReference category);
-
+   
    public void setStaged(final Boolean staged);
-
+   
    public static ProductAddedToCategoryMessageImpl of(){
       return new ProductAddedToCategoryMessageImpl();
    }
-
+   
 
    public static ProductAddedToCategoryMessageImpl of(final ProductAddedToCategoryMessage template) {
       ProductAddedToCategoryMessageImpl instance = new ProductAddedToCategoryMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setStaged(template.getStaged());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setCategory(template.getCategory());
+      instance.setStaged(template.getStaged());
       return instance;
    }
 

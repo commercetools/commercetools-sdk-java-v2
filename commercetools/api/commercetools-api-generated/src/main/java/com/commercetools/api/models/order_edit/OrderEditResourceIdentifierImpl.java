@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentifier {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private String key;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class OrderEditResourceIdentifierImpl implements OrderEditResourceI
       this.typeId = ReferenceTypeId.findEnumViaJsonName("order-edit").get();
    }
    public OrderEditResourceIdentifierImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public String getKey(){
       return this.key;
    }
@@ -57,7 +57,7 @@ public final class OrderEditResourceIdentifierImpl implements OrderEditResourceI
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setKey(final String key){
       this.key = key;
    }

@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +23,7 @@ import io.vrap.rmf.base.client.*;
 
 /**
 *  <p>Returns an order by its order number from a specific Store.
-*  The {storeKey} path parameter maps to a Store’s key.
+*  The {storeKey} path parameter maps to a Store's key.
 *  If the order exists in the commercetools project but does not have the store field,
 *  or the store field references a different store, this method returns a ResourceNotFound error.
 *  In case the orderNumber does not match the regular expression [a-zA-Z0-9_-]+,
@@ -32,24 +34,24 @@ import io.vrap.rmf.base.client.*;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet {
-
-
+   
+   
    private ApiHttpHeaders headers = new ApiHttpHeaders();
    private Map<String, String> additionalQueryParams = new HashMap<>();
-   private final ApiHttpClient apiHttpClient;
+   private final ApiHttpClient apiHttpClient; 
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    private String storeKey;
    private String orderNumber;
-
-
+   
+   
    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String orderNumber){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.storeKey = storeKey;
       this.orderNumber = orderNumber;
    }
-
+   
    public ApiHttpRequest createHttpRequest() {
       ApiHttpRequest httpRequest = new ApiHttpRequest();
       List<String> params = new ArrayList<>();
@@ -60,13 +62,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet {
       if(!params.isEmpty()){
          httpRequestPath += "?" + String.join("&", params);
       }
-      httpRequest.setRelativeUrl(httpRequestPath);
+      httpRequest.setRelativeUrl(httpRequestPath); 
       httpRequest.setMethod(ApiHttpMethod.GET);
       httpRequest.setHeaders(headers);
-
+      
       return httpRequest;
    }
-
+   
    public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(){
       try {
           return execute().get();
@@ -74,7 +76,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet {
           throw new RuntimeException(e);
       }
    }
-
+   
    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
               .thenApply(response -> {
@@ -84,63 +86,63 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet {
                   return Utils.convertResponse(response,com.commercetools.api.models.order.Order.class);
               });
    }
-
+   
    public String getProjectKey() {return this.projectKey;}
    public String getStoreKey() {return this.storeKey;}
    public String getOrderNumber() {return this.orderNumber;}
-
+   
    public List<String> getExpand() {
       return this.expand;
    }
-
+   
    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
-
+   
    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
-
+   
    public void setOrderNumber(final String orderNumber) {this.orderNumber = orderNumber;}
-
+   
    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet addExpand(final String expand){
       this.expand.add(expand);
       return this;
    }
-
+   
    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet withExpand(final List<String> expand){
       this.expand = expand;
       return this;
    }
-
+   
    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet addHeader(final String key, final String value) {
       this.headers.addHeader(key, value);
       return this;
    }
-
+   
    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet withHeaders(final ApiHttpHeaders headers) {
       this.headers = headers;
       return this;
    }
-
+   
    public String getHeaderValue(final String key) {
       return this.headers.getHeaderValue(key);
    }
-
+   
    public ApiHttpHeaders getHeaders() {
       return this.headers;
    }
-
+   
    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
       this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
       return this;
    }
-
+   
    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
       this.additionalQueryParams = additionalQueryParams;
       return this;
    }
-
+   
    public Map<String, String> getAdditionalQueryParams() {
       return this.additionalQueryParams;
    }
-
+   
    private String urlEncode(final String s){
       try{
            return URLEncoder.encode(s, "UTF-8");

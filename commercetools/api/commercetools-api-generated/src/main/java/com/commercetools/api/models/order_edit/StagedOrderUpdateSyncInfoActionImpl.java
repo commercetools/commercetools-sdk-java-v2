@@ -25,11 +25,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpdateSyncInfoAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
-
+   
    private String externalId;
-
+   
    private java.time.ZonedDateTime syncedAt;
 
    @JsonCreator
@@ -40,25 +40,25 @@ public final class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpd
       this.action = "updateSyncInfo";
    }
    public StagedOrderUpdateSyncInfoActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel(){
       return this.channel;
    }
-
-
+   
+   
    public String getExternalId(){
       return this.externalId;
    }
-
-
+   
+   
    public java.time.ZonedDateTime getSyncedAt(){
       return this.syncedAt;
    }
@@ -66,11 +66,11 @@ public final class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpd
    public void setChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier channel){
       this.channel = channel;
    }
-
+   
    public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
-
+   
    public void setSyncedAt(final java.time.ZonedDateTime syncedAt){
       this.syncedAt = syncedAt;
    }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType {
 
    private String name;
-
+   
    private com.commercetools.api.models.common.ReferenceTypeId referenceTypeId;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CustomFieldReferenceTypeImpl implements CustomFieldReferenceT
       this.name = "Reference";
    }
    public CustomFieldReferenceTypeImpl() {
-
+      
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getReferenceTypeId(){
       return this.referenceTypeId;
    }

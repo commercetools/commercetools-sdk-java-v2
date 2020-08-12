@@ -33,11 +33,11 @@ public interface ItemShippingDetailsDraft  {
    public List<ItemShippingTarget> getTargets();
 
    public void setTargets(final List<ItemShippingTarget> targets);
-
+   
    public static ItemShippingDetailsDraftImpl of(){
       return new ItemShippingDetailsDraftImpl();
    }
-
+   
 
    public static ItemShippingDetailsDraftImpl of(final ItemShippingDetailsDraft template) {
       ItemShippingDetailsDraftImpl instance = new ItemShippingDetailsDraftImpl();

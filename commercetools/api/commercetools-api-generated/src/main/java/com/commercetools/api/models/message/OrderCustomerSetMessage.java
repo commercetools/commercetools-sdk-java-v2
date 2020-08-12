@@ -23,52 +23,52 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderCustomerSetMessageImpl.class)
 public interface OrderCustomerSetMessage extends Message {
 
-
+   
    @Valid
    @JsonProperty("customer")
    public CustomerReference getCustomer();
-
+   
    @Valid
    @JsonProperty("customerGroup")
    public CustomerGroupReference getCustomerGroup();
-
+   
    @Valid
    @JsonProperty("oldCustomer")
    public CustomerReference getOldCustomer();
-
+   
    @Valid
    @JsonProperty("oldCustomerGroup")
    public CustomerGroupReference getOldCustomerGroup();
 
    public void setCustomer(final CustomerReference customer);
-
+   
    public void setCustomerGroup(final CustomerGroupReference customerGroup);
-
+   
    public void setOldCustomer(final CustomerReference oldCustomer);
-
+   
    public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
-
+   
    public static OrderCustomerSetMessageImpl of(){
       return new OrderCustomerSetMessageImpl();
    }
-
+   
 
    public static OrderCustomerSetMessageImpl of(final OrderCustomerSetMessage template) {
       OrderCustomerSetMessageImpl instance = new OrderCustomerSetMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setOldCustomerGroup(template.getOldCustomerGroup());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+      instance.setCustomer(template.getCustomer());
       instance.setCustomerGroup(template.getCustomerGroup());
       instance.setOldCustomer(template.getOldCustomer());
-      instance.setCustomer(template.getCustomer());
+      instance.setOldCustomerGroup(template.getOldCustomerGroup());
       return instance;
    }
 

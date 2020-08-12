@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySetDescriptionActionImpl.class)
 public interface CategorySetDescriptionAction extends CategoryUpdateAction {
 
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
 
    public void setDescription(final LocalizedString description);
-
+   
    public static CategorySetDescriptionActionImpl of(){
       return new CategorySetDescriptionActionImpl();
    }
-
+   
 
    public static CategorySetDescriptionActionImpl of(final CategorySetDescriptionAction template) {
       CategorySetDescriptionActionImpl instance = new CategorySetDescriptionActionImpl();

@@ -20,24 +20,19 @@ public final class TextLineItemDraftBuilder {
    private java.time.ZonedDateTime addedAt;
    
    @Nullable
-   private Integer quantity;
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   private com.commercetools.api.models.common.LocalizedString description;
    
    
    private com.commercetools.api.models.common.LocalizedString name;
    
    @Nullable
-   private com.commercetools.api.models.common.LocalizedString description;
+   private Integer quantity;
    
    public TextLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
       this.addedAt = addedAt;
-      return this;
-   }
-   
-   public TextLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
-      this.quantity = quantity;
       return this;
    }
    
@@ -46,13 +41,18 @@ public final class TextLineItemDraftBuilder {
       return this;
    }
    
+   public TextLineItemDraftBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+      this.description = description;
+      return this;
+   }
+   
    public TextLineItemDraftBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
    
-   public TextLineItemDraftBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
-      this.description = description;
+   public TextLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
+      this.quantity = quantity;
       return this;
    }
    
@@ -62,13 +62,13 @@ public final class TextLineItemDraftBuilder {
    }
    
    @Nullable
-   public Integer getQuantity(){
-      return this.quantity;
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
    }
    
    @Nullable
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
+   public com.commercetools.api.models.common.LocalizedString getDescription(){
+      return this.description;
    }
    
    
@@ -77,12 +77,12 @@ public final class TextLineItemDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
+   public Integer getQuantity(){
+      return this.quantity;
    }
 
    public TextLineItemDraft build() {
-       return new TextLineItemDraftImpl(addedAt, quantity, custom, name, description);
+       return new TextLineItemDraftImpl(addedAt, custom, description, name, quantity);
    }
    
    public static TextLineItemDraftBuilder of() {
@@ -92,10 +92,10 @@ public final class TextLineItemDraftBuilder {
    public static TextLineItemDraftBuilder of(final TextLineItemDraft template) {
       TextLineItemDraftBuilder builder = new TextLineItemDraftBuilder();
       builder.addedAt = template.getAddedAt();
-      builder.quantity = template.getQuantity();
       builder.custom = template.getCustom();
-      builder.name = template.getName();
       builder.description = template.getDescription();
+      builder.name = template.getName();
+      builder.quantity = template.getQuantity();
       return builder;
    }
    

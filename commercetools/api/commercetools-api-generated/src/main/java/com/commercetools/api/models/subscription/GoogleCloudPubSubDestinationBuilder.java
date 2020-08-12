@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class GoogleCloudPubSubDestinationBuilder {
-
-
-   private String topic;
-
-
+   
+   
    private String projectId;
-
-   public GoogleCloudPubSubDestinationBuilder topic( final String topic) {
-      this.topic = topic;
-      return this;
-   }
-
+   
+   
+   private String topic;
+   
    public GoogleCloudPubSubDestinationBuilder projectId( final String projectId) {
       this.projectId = projectId;
       return this;
    }
-
-
+   
+   public GoogleCloudPubSubDestinationBuilder topic( final String topic) {
+      this.topic = topic;
+      return this;
+   }
+   
+   
+   public String getProjectId(){
+      return this.projectId;
+   }
+   
+   
    public String getTopic(){
       return this.topic;
    }
 
-
-   public String getProjectId(){
-      return this.projectId;
-   }
-
    public GoogleCloudPubSubDestination build() {
-       return new GoogleCloudPubSubDestinationImpl(topic, projectId);
+       return new GoogleCloudPubSubDestinationImpl(projectId, topic);
    }
-
+   
    public static GoogleCloudPubSubDestinationBuilder of() {
       return new GoogleCloudPubSubDestinationBuilder();
    }
-
+   
    public static GoogleCloudPubSubDestinationBuilder of(final GoogleCloudPubSubDestination template) {
       GoogleCloudPubSubDestinationBuilder builder = new GoogleCloudPubSubDestinationBuilder();
-      builder.topic = template.getTopic();
       builder.projectId = template.getProjectId();
+      builder.topic = template.getTopic();
       return builder;
    }
-
+   
 }

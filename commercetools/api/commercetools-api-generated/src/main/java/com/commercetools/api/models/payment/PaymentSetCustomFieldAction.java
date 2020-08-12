@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetCustomFieldActionImpl.class)
 public interface PaymentSetCustomFieldAction extends PaymentUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-
-
+   
+   
    @JsonProperty("value")
    public JsonNode getValue();
 
    public void setName(final String name);
-
+   
    public void setValue(final JsonNode value);
-
+   
    public static PaymentSetCustomFieldActionImpl of(){
       return new PaymentSetCustomFieldActionImpl();
    }
-
+   
 
    public static PaymentSetCustomFieldActionImpl of(final PaymentSetCustomFieldAction template) {
       PaymentSetCustomFieldActionImpl instance = new PaymentSetCustomFieldActionImpl();

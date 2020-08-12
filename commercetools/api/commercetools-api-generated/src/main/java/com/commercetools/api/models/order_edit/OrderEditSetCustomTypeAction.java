@@ -48,8 +48,8 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
 
    public static OrderEditSetCustomTypeActionImpl of(final OrderEditSetCustomTypeAction template) {
       OrderEditSetCustomTypeActionImpl instance = new OrderEditSetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

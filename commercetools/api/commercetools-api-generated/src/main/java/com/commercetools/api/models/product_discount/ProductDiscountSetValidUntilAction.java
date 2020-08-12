@@ -26,16 +26,16 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
    *  <p>The time from which the discount should be ineffective.
    *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
    */
-
+   
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();
 
    public void setValidUntil(final ZonedDateTime validUntil);
-
+   
    public static ProductDiscountSetValidUntilActionImpl of(){
       return new ProductDiscountSetValidUntilActionImpl();
    }
-
+   
 
    public static ProductDiscountSetValidUntilActionImpl of(final ProductDiscountSetValidUntilAction template) {
       ProductDiscountSetValidUntilActionImpl instance = new ProductDiscountSetValidUntilActionImpl();

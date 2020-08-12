@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddressAction {
 
    private String action;
-
+   
+   private String addressId;
+   
    private com.commercetools.api.models.common.Address address;
 
-   private String addressId;
-
    @JsonCreator
-   MyCustomerChangeAddressActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("addressId") final String addressId) {
-      this.address = address;
+   MyCustomerChangeAddressActionImpl(@JsonProperty("addressId") final String addressId, @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
       this.addressId = addressId;
+      this.address = address;
       this.action = "changeAddress";
    }
    public MyCustomerChangeAddressActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getAddressId(){
+      return this.addressId;
+   }
+   
+   
    public com.commercetools.api.models.common.Address getAddress(){
       return this.address;
    }
 
-
-   public String getAddressId(){
-      return this.addressId;
-   }
-
-   public void setAddress(final com.commercetools.api.models.common.Address address){
-      this.address = address;
-   }
-
    public void setAddressId(final String addressId){
       this.addressId = addressId;
+   }
+   
+   public void setAddress(final com.commercetools.api.models.common.Address address){
+      this.address = address;
    }
 
 }

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReviewSetLocaleActionImpl implements ReviewSetLocaleAction {
 
    private String action;
-
+   
    private String locale;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ReviewSetLocaleActionImpl implements ReviewSetLocaleAction {
       this.action = "setLocale";
    }
    public ReviewSetLocaleActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */

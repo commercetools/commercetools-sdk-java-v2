@@ -51,9 +51,9 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
 
    public static ProductChangePriceActionImpl of(final ProductChangePriceAction template) {
       ProductChangePriceActionImpl instance = new ProductChangePriceActionImpl();
+      instance.setPriceId(template.getPriceId());
       instance.setPrice(template.getPrice());
       instance.setStaged(template.getStaged());
-      instance.setPriceId(template.getPriceId());
       return instance;
    }
 

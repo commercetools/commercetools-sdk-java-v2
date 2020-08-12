@@ -22,7 +22,7 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingRateDraftImpl.class)
 public interface ShippingRateDraft  {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("price")
@@ -43,21 +43,21 @@ public interface ShippingRateDraft  {
    public List<ShippingRatePriceTier> getTiers();
 
    public void setPrice(final Money price);
-
+   
    public void setFreeAbove(final Money freeAbove);
-
+   
    public void setTiers(final List<ShippingRatePriceTier> tiers);
-
+   
    public static ShippingRateDraftImpl of(){
       return new ShippingRateDraftImpl();
    }
-
+   
 
    public static ShippingRateDraftImpl of(final ShippingRateDraft template) {
       ShippingRateDraftImpl instance = new ShippingRateDraftImpl();
-      instance.setTiers(template.getTiers());
       instance.setPrice(template.getPrice());
       instance.setFreeAbove(template.getFreeAbove());
+      instance.setTiers(template.getTiers());
       return instance;
    }
 

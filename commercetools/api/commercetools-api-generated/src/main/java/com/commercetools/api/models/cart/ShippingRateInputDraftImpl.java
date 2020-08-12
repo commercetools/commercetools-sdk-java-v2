@@ -29,9 +29,9 @@ public final class ShippingRateInputDraftImpl implements ShippingRateInputDraft 
    ShippingRateInputDraftImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

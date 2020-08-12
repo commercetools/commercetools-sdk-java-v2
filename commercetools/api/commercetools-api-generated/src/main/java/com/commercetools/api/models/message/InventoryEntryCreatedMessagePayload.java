@@ -1,0 +1,44 @@
+package com.commercetools.api.models.message;
+
+import com.commercetools.api.models.inventory.InventoryEntry;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.InventoryEntryCreatedMessagePayloadImpl;
+
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+import io.vrap.rmf.base.client.utils.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Map;
+import java.time.*;
+
+import java.io.IOException;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+@JsonDeserialize(as = InventoryEntryCreatedMessagePayloadImpl.class)
+public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
+
+   
+   @NotNull
+   @Valid
+   @JsonProperty("inventoryEntry")
+   public InventoryEntry getInventoryEntry();
+
+   public void setInventoryEntry(final InventoryEntry inventoryEntry);
+   
+   public static InventoryEntryCreatedMessagePayloadImpl of(){
+      return new InventoryEntryCreatedMessagePayloadImpl();
+   }
+   
+
+   public static InventoryEntryCreatedMessagePayloadImpl of(final InventoryEntryCreatedMessagePayload template) {
+      InventoryEntryCreatedMessagePayloadImpl instance = new InventoryEntryCreatedMessagePayloadImpl();
+      instance.setInventoryEntry(template.getInventoryEntry());
+      return instance;
+   }
+
+}

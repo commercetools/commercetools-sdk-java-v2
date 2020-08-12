@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSetMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSe
       this.type = "CustomerGroupSet";
    }
    public CustomerGroupSetMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
       return this.customerGroup;
    }

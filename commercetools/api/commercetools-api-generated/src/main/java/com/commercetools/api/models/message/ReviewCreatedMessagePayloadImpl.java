@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.review.Review review;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessa
       this.type = "ReviewCreated";
    }
    public ReviewCreatedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.review.Review getReview(){
       return this.review;
    }

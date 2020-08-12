@@ -28,9 +28,9 @@ public final class AttributeBooleanTypeImpl implements AttributeBooleanType {
    AttributeBooleanTypeImpl() {
       this.name = "boolean";
    }
-
-
-
+   
+   
+   
    public String getName(){
       return this.name;
    }

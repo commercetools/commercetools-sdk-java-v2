@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelChangeKeyActionImpl.class)
 public interface ChannelChangeKeyAction extends ChannelUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static ChannelChangeKeyActionImpl of(){
       return new ChannelChangeKeyActionImpl();
    }
-
+   
 
    public static ChannelChangeKeyActionImpl of(final ChannelChangeKeyAction template) {
       ChannelChangeKeyActionImpl instance = new ChannelChangeKeyActionImpl();

@@ -227,29 +227,29 @@ public interface CartDraft  {
 
    public static CartDraftImpl of(final CartDraft template) {
       CartDraftImpl instance = new CartDraftImpl();
-      instance.setCountry(template.getCountry());
-      instance.setAnonymousId(template.getAnonymousId());
-      instance.setShippingRateInput(template.getShippingRateInput());
-      instance.setCustomerGroup(template.getCustomerGroup());
-      instance.setOrigin(template.getOrigin());
-      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
-      instance.setCustom(template.getCustom());
-      instance.setShippingMethod(template.getShippingMethod());
-      instance.setTaxCalculationMode(template.getTaxCalculationMode());
-      instance.setStore(template.getStore());
-      instance.setLocale(template.getLocale());
-      instance.setExternalTaxRateForShippingMethod(template.getExternalTaxRateForShippingMethod());
-      instance.setInventoryMode(template.getInventoryMode());
-      instance.setLineItems(template.getLineItems());
-      instance.setTaxRoundingMode(template.getTaxRoundingMode());
-      instance.setCustomLineItems(template.getCustomLineItems());
-      instance.setItemShippingAddresses(template.getItemShippingAddresses());
-      instance.setTaxMode(template.getTaxMode());
-      instance.setCustomerEmail(template.getCustomerEmail());
-      instance.setCustomerId(template.getCustomerId());
-      instance.setShippingAddress(template.getShippingAddress());
       instance.setCurrency(template.getCurrency());
+      instance.setCustomerId(template.getCustomerId());
+      instance.setCustomerEmail(template.getCustomerEmail());
+      instance.setCustomerGroup(template.getCustomerGroup());
+      instance.setAnonymousId(template.getAnonymousId());
+      instance.setStore(template.getStore());
+      instance.setCountry(template.getCountry());
+      instance.setInventoryMode(template.getInventoryMode());
+      instance.setTaxMode(template.getTaxMode());
+      instance.setTaxRoundingMode(template.getTaxRoundingMode());
+      instance.setTaxCalculationMode(template.getTaxCalculationMode());
+      instance.setLineItems(template.getLineItems());
+      instance.setCustomLineItems(template.getCustomLineItems());
+      instance.setShippingAddress(template.getShippingAddress());
       instance.setBillingAddress(template.getBillingAddress());
+      instance.setShippingMethod(template.getShippingMethod());
+      instance.setExternalTaxRateForShippingMethod(template.getExternalTaxRateForShippingMethod());
+      instance.setCustom(template.getCustom());
+      instance.setLocale(template.getLocale());
+      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+      instance.setOrigin(template.getOrigin());
+      instance.setShippingRateInput(template.getShippingRateInput());
+      instance.setItemShippingAddresses(template.getItemShippingAddresses());
       return instance;
    }
 

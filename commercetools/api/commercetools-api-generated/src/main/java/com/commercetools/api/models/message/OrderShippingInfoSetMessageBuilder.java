@@ -16,22 +16,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OrderShippingInfoSetMessageBuilder {
    
    
-   private java.time.ZonedDateTime createdAt;
-   
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   
    private String id;
    
    
    private Long version;
    
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+   
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    
    private Long sequenceNumber;
@@ -39,27 +39,17 @@ public final class OrderShippingInfoSetMessageBuilder {
    
    private com.commercetools.api.models.common.Reference resource;
    
-   @Nullable
-   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-   
    
    private Long resourceVersion;
+   
+   @Nullable
+   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    @Nullable
    private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
    
    @Nullable
    private com.commercetools.api.models.cart.ShippingInfo oldShippingInfo;
-   
-   public OrderShippingInfoSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-   
-   public OrderShippingInfoSetMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
    
    public OrderShippingInfoSetMessageBuilder id( final String id) {
       this.id = id;
@@ -71,13 +61,23 @@ public final class OrderShippingInfoSetMessageBuilder {
       return this;
    }
    
-   public OrderShippingInfoSetMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   public OrderShippingInfoSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
+      return this;
+   }
+   
+   public OrderShippingInfoSetMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
       return this;
    }
    
    public OrderShippingInfoSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public OrderShippingInfoSetMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
       return this;
    }
    
@@ -91,13 +91,13 @@ public final class OrderShippingInfoSetMessageBuilder {
       return this;
    }
    
-   public OrderShippingInfoSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+   public OrderShippingInfoSetMessageBuilder resourceVersion( final Long resourceVersion) {
+      this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public OrderShippingInfoSetMessageBuilder resourceVersion( final Long resourceVersion) {
-      this.resourceVersion = resourceVersion;
+   public OrderShippingInfoSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
    
@@ -112,16 +112,6 @@ public final class OrderShippingInfoSetMessageBuilder {
    }
    
    
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-   
-   
    public String getId(){
       return this.id;
    }
@@ -131,14 +121,24 @@ public final class OrderShippingInfoSetMessageBuilder {
       return this.version;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    @Nullable
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    
@@ -151,14 +151,14 @@ public final class OrderShippingInfoSetMessageBuilder {
       return this.resource;
    }
    
-   @Nullable
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-   
    
    public Long getResourceVersion(){
       return this.resourceVersion;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
    }
    
    @Nullable
@@ -172,7 +172,7 @@ public final class OrderShippingInfoSetMessageBuilder {
    }
 
    public OrderShippingInfoSetMessage build() {
-       return new OrderShippingInfoSetMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, shippingInfo, oldShippingInfo);
+       return new OrderShippingInfoSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shippingInfo, oldShippingInfo);
    }
    
    public static OrderShippingInfoSetMessageBuilder of() {
@@ -181,16 +181,16 @@ public final class OrderShippingInfoSetMessageBuilder {
    
    public static OrderShippingInfoSetMessageBuilder of(final OrderShippingInfoSetMessage template) {
       OrderShippingInfoSetMessageBuilder builder = new OrderShippingInfoSetMessageBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
+      builder.createdBy = template.getCreatedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
-      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
+      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.shippingInfo = template.getShippingInfo();
       builder.oldShippingInfo = template.getOldShippingInfo();
       return builder;

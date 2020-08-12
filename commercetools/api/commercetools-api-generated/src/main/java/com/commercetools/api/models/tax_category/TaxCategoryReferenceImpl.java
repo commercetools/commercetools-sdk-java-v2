@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TaxCategoryReferenceImpl implements TaxCategoryReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.tax_category.TaxCategory obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class TaxCategoryReferenceImpl implements TaxCategoryReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("tax-category").get();
    }
    public TaxCategoryReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.tax_category.TaxCategory getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class TaxCategoryReferenceImpl implements TaxCategoryReference {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.tax_category.TaxCategory obj){
       this.obj = obj;
    }

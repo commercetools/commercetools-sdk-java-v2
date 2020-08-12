@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StoreKeyReferenceImpl implements StoreKeyReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String key;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class StoreKeyReferenceImpl implements StoreKeyReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("store").get();
    }
    public StoreKeyReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getKey(){
       return this.key;
    }

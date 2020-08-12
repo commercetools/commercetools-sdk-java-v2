@@ -31,9 +31,9 @@ public final class CustomerGroupUpdateActionImpl implements CustomerGroupUpdateA
    CustomerGroupUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

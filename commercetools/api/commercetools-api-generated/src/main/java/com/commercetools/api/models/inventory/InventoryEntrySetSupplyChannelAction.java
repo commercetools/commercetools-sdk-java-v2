@@ -31,11 +31,11 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
    public ChannelResourceIdentifier getSupplyChannel();
 
    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
+   
    public static InventoryEntrySetSupplyChannelActionImpl of(){
       return new InventoryEntrySetSupplyChannelActionImpl();
    }
-
+   
 
    public static InventoryEntrySetSupplyChannelActionImpl of(final InventoryEntrySetSupplyChannelAction template) {
       InventoryEntrySetSupplyChannelActionImpl instance = new InventoryEntrySetSupplyChannelActionImpl();

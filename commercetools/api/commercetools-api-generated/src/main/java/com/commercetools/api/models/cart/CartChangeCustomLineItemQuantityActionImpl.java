@@ -26,10 +26,10 @@ public final class CartChangeCustomLineItemQuantityActionImpl implements CartCha
    
    private String customLineItemId;
    
-   private Integer quantity;
+   private Double quantity;
 
    @JsonCreator
-   CartChangeCustomLineItemQuantityActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("quantity") final Integer quantity) {
+   CartChangeCustomLineItemQuantityActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("quantity") final Double quantity) {
       this.customLineItemId = customLineItemId;
       this.quantity = quantity;
       this.action = "changeCustomLineItemQuantity";
@@ -49,7 +49,7 @@ public final class CartChangeCustomLineItemQuantityActionImpl implements CartCha
    }
    
    
-   public Integer getQuantity(){
+   public Double getQuantity(){
       return this.quantity;
    }
 
@@ -57,7 +57,7 @@ public final class CartChangeCustomLineItemQuantityActionImpl implements CartCha
       this.customLineItemId = customLineItemId;
    }
    
-   public void setQuantity(final Integer quantity){
+   public void setQuantity(final Double quantity){
       this.quantity = quantity;
    }
 

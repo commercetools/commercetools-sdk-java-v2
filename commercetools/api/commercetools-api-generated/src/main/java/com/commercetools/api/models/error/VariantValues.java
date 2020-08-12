@@ -22,37 +22,37 @@ import java.io.IOException;
 @JsonDeserialize(as = VariantValuesImpl.class)
 public interface VariantValues  {
 
-
-
+   
+   
    @JsonProperty("sku")
    public String getSku();
-
+   
    @NotNull
    @Valid
    @JsonProperty("prices")
    public List<PriceDraft> getPrices();
-
+   
    @NotNull
    @Valid
    @JsonProperty("attributes")
    public List<Attribute> getAttributes();
 
    public void setSku(final String sku);
-
+   
    public void setPrices(final List<PriceDraft> prices);
-
+   
    public void setAttributes(final List<Attribute> attributes);
-
+   
    public static VariantValuesImpl of(){
       return new VariantValuesImpl();
    }
-
+   
 
    public static VariantValuesImpl of(final VariantValues template) {
       VariantValuesImpl instance = new VariantValuesImpl();
-      instance.setAttributes(template.getAttributes());
-      instance.setPrices(template.getPrices());
       instance.setSku(template.getSku());
+      instance.setPrices(template.getPrices());
+      instance.setAttributes(template.getAttributes());
       return instance;
    }
 

@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ChannelUpdateBuilder {
-
-
-   private java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions;
-
-
+   
+   
    private Long version;
-
-   public ChannelUpdateBuilder actions( final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions) {
-      this.actions = actions;
-      return this;
-   }
-
+   
+   
+   private java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions;
+   
    public ChannelUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
-
-
+   
+   public ChannelUpdateBuilder actions( final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions) {
+      this.actions = actions;
+      return this;
+   }
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
    public ChannelUpdate build() {
-       return new ChannelUpdateImpl(actions, version);
+       return new ChannelUpdateImpl(version, actions);
    }
-
+   
    public static ChannelUpdateBuilder of() {
       return new ChannelUpdateBuilder();
    }
-
+   
    public static ChannelUpdateBuilder of(final ChannelUpdate template) {
       ChannelUpdateBuilder builder = new ChannelUpdateBuilder();
-      builder.actions = template.getActions();
       builder.version = template.getVersion();
+      builder.actions = template.getActions();
       return builder;
    }
-
+   
 }

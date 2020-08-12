@@ -22,37 +22,37 @@ import java.io.IOException;
 @JsonDeserialize(as = DeliveryItemsUpdatedMessagePayloadImpl.class)
 public interface DeliveryItemsUpdatedMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @JsonProperty("deliveryId")
    public String getDeliveryId();
-
+   
    @NotNull
    @Valid
    @JsonProperty("items")
    public List<DeliveryItem> getItems();
-
+   
    @NotNull
    @Valid
    @JsonProperty("oldItems")
    public List<DeliveryItem> getOldItems();
 
    public void setDeliveryId(final String deliveryId);
-
+   
    public void setItems(final List<DeliveryItem> items);
-
+   
    public void setOldItems(final List<DeliveryItem> oldItems);
-
+   
    public static DeliveryItemsUpdatedMessagePayloadImpl of(){
       return new DeliveryItemsUpdatedMessagePayloadImpl();
    }
-
+   
 
    public static DeliveryItemsUpdatedMessagePayloadImpl of(final DeliveryItemsUpdatedMessagePayload template) {
       DeliveryItemsUpdatedMessagePayloadImpl instance = new DeliveryItemsUpdatedMessagePayloadImpl();
       instance.setDeliveryId(template.getDeliveryId());
-      instance.setOldItems(template.getOldItems());
       instance.setItems(template.getItems());
+      instance.setOldItems(template.getOldItems());
       return instance;
    }
 

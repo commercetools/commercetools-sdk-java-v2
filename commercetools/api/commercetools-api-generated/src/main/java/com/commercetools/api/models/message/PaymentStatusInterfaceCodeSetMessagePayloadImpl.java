@@ -23,9 +23,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentStatusInterfaceCodeSetMessagePayloadImpl implements PaymentStatusInterfaceCodeSetMessagePayload {
 
    private String type;
-
+   
    private String paymentId;
-
+   
    private String interfaceCode;
 
    @JsonCreator
@@ -35,20 +35,20 @@ public final class PaymentStatusInterfaceCodeSetMessagePayloadImpl implements Pa
       this.type = "PaymentStatusInterfaceCodeSet";
    }
    public PaymentStatusInterfaceCodeSetMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public String getPaymentId(){
       return this.paymentId;
    }
-
-
+   
+   
    public String getInterfaceCode(){
       return this.interfaceCode;
    }
@@ -56,7 +56,7 @@ public final class PaymentStatusInterfaceCodeSetMessagePayloadImpl implements Pa
    public void setPaymentId(final String paymentId){
       this.paymentId = paymentId;
    }
-
+   
    public void setInterfaceCode(final String interfaceCode){
       this.interfaceCode = interfaceCode;
    }

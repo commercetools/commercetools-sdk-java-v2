@@ -24,11 +24,11 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeDraftImpl.class)
 public interface DiscountCodeDraft  {
 
-
+   
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
@@ -51,89 +51,89 @@ public interface DiscountCodeDraft  {
    /**
    *  <p>The discount code can only be applied to carts that match this predicate.</p>
    */
-
+   
    @JsonProperty("cartPredicate")
    public String getCartPredicate();
-
-
+   
+   
    @JsonProperty("isActive")
    public Boolean getIsActive();
-
-
+   
+   
    @JsonProperty("maxApplications")
    public Long getMaxApplications();
-
-
+   
+   
    @JsonProperty("maxApplicationsPerCustomer")
    public Long getMaxApplicationsPerCustomer();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
    /**
    *  <p>The groups to which this discount code shall belong to.</p>
    */
-
+   
    @JsonProperty("groups")
    public List<String> getGroups();
    /**
    *  <p>The time from which the discount can be applied on a cart.
    *  Before that time the code is invalid.</p>
    */
-
+   
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
    /**
    *  <p>The time until the discount can be applied on a cart.
    *  After that time the code is invalid.</p>
    */
-
+   
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();
 
    public void setName(final LocalizedString name);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public void setCode(final String code);
-
+   
    public void setCartDiscounts(final List<CartDiscountResourceIdentifier> cartDiscounts);
-
+   
    public void setCartPredicate(final String cartPredicate);
-
+   
    public void setIsActive(final Boolean isActive);
-
+   
    public void setMaxApplications(final Long maxApplications);
-
+   
    public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public void setGroups(final List<String> groups);
-
+   
    public void setValidFrom(final ZonedDateTime validFrom);
-
+   
    public void setValidUntil(final ZonedDateTime validUntil);
-
+   
    public static DiscountCodeDraftImpl of(){
       return new DiscountCodeDraftImpl();
    }
-
+   
 
    public static DiscountCodeDraftImpl of(final DiscountCodeDraft template) {
       DiscountCodeDraftImpl instance = new DiscountCodeDraftImpl();
-      instance.setCartDiscounts(template.getCartDiscounts());
-      instance.setCode(template.getCode());
-      instance.setCartPredicate(template.getCartPredicate());
-      instance.setCustom(template.getCustom());
       instance.setName(template.getName());
-      instance.setValidUntil(template.getValidUntil());
-      instance.setGroups(template.getGroups());
       instance.setDescription(template.getDescription());
-      instance.setValidFrom(template.getValidFrom());
-      instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
+      instance.setCode(template.getCode());
+      instance.setCartDiscounts(template.getCartDiscounts());
+      instance.setCartPredicate(template.getCartPredicate());
       instance.setIsActive(template.getIsActive());
       instance.setMaxApplications(template.getMaxApplications());
+      instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
+      instance.setCustom(template.getCustom());
+      instance.setGroups(template.getGroups());
+      instance.setValidFrom(template.getValidFrom());
+      instance.setValidUntil(template.getValidUntil());
       return instance;
    }
 

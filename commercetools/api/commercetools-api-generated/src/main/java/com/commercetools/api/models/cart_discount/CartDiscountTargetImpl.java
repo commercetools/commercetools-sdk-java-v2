@@ -32,9 +32,9 @@ public final class CartDiscountTargetImpl implements CartDiscountTarget {
    CartDiscountTargetImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

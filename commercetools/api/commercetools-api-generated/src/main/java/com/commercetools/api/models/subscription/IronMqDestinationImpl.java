@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class IronMqDestinationImpl implements IronMqDestination {
 
    private String type;
-
+   
    private String uri;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class IronMqDestinationImpl implements IronMqDestination {
       this.type = "IronMQ";
    }
    public IronMqDestinationImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public String getUri(){
       return this.uri;
    }

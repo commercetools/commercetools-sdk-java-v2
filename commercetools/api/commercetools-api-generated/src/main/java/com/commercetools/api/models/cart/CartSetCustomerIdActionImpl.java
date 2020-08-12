@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction {
 
    private String action;
-
+   
    private String customerId;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class CartSetCustomerIdActionImpl implements CartSetCustomerIdActio
       this.action = "setCustomerId";
    }
    public CartSetCustomerIdActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If set, a customer with the given ID must exist in the project.</p>
    */

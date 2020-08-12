@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum StackingMode {
 
-
+  
   @JsonProperty("Stacking")
   STACKING("Stacking"),
-
-
+  
+  
   @JsonProperty("StopAfterThisDiscount")
   STOP_AFTER_THIS_DISCOUNT("StopAfterThisDiscount");
 

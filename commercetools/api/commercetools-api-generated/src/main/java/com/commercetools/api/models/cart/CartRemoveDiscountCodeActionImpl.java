@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartRemoveDiscountCodeActionImpl implements CartRemoveDiscountCodeAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CartRemoveDiscountCodeActionImpl implements CartRemoveDiscoun
       this.action = "removeDiscountCode";
    }
    public CartRemoveDiscountCodeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
       return this.discountCode;
    }

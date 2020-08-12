@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,9 +22,9 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-*  <p>Creates a customer in a specific Store. The {storeKey} path parameter maps to a Store’s key.
+*  <p>Creates a customer in a specific Store. The {storeKey} path parameter maps to a Store's key.
 *  When using this endpoint, if omitted,
-*  the customer’s stores field is set to the store specified in the path parameter.
+*  the customer's stores field is set to the store specified in the path parameter.
 *  If an anonymous cart is passed in as when using this method,
 *  then the cart is assigned to the created customer and the version number of the Cart increases.
 *  If the ID of an anonymous session is given, all carts and orders will be assigned to the created customer and

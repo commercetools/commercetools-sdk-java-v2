@@ -15,60 +15,60 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyShoppingListSetLineItemCustomTypeActionBuilder {
-
-
+   
+   
    private String lineItemId;
-
-   @Nullable
-   private com.commercetools.api.models.type.FieldContainer fields;
-
+   
    @Nullable
    private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
+   
+   @Nullable
+   private com.commercetools.api.models.type.FieldContainer fields;
+   
    public MyShoppingListSetLineItemCustomTypeActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
-
-   public MyShoppingListSetLineItemCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
-      this.fields = fields;
-      return this;
-   }
-
+   
    public MyShoppingListSetLineItemCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
-
-
+   
+   public MyShoppingListSetLineItemCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+      this.fields = fields;
+      return this;
+   }
+   
+   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
+   
+   @Nullable
+   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+      return this.type;
+   }
+   
    @Nullable
    public com.commercetools.api.models.type.FieldContainer getFields(){
       return this.fields;
    }
 
-   @Nullable
-   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
-      return this.type;
-   }
-
    public MyShoppingListSetLineItemCustomTypeAction build() {
-       return new MyShoppingListSetLineItemCustomTypeActionImpl(lineItemId, fields, type);
+       return new MyShoppingListSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
    }
-
+   
    public static MyShoppingListSetLineItemCustomTypeActionBuilder of() {
       return new MyShoppingListSetLineItemCustomTypeActionBuilder();
    }
-
+   
    public static MyShoppingListSetLineItemCustomTypeActionBuilder of(final MyShoppingListSetLineItemCustomTypeAction template) {
       MyShoppingListSetLineItemCustomTypeActionBuilder builder = new MyShoppingListSetLineItemCustomTypeActionBuilder();
       builder.lineItemId = template.getLineItemId();
-      builder.fields = template.getFields();
       builder.type = template.getType();
+      builder.fields = template.getFields();
       return builder;
    }
-
+   
 }

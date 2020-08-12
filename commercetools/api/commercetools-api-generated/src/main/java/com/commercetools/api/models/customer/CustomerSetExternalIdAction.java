@@ -24,16 +24,16 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
    /**
    *  <p>If not defined, the external ID is unset.</p>
    */
-
+   
    @JsonProperty("externalId")
    public String getExternalId();
 
    public void setExternalId(final String externalId);
-
+   
    public static CustomerSetExternalIdActionImpl of(){
       return new CustomerSetExternalIdActionImpl();
    }
-
+   
 
    public static CustomerSetExternalIdActionImpl of(final CustomerSetExternalIdAction template) {
       CustomerSetExternalIdActionImpl instance = new CustomerSetExternalIdActionImpl();

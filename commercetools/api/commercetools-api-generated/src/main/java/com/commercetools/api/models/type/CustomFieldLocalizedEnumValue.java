@@ -42,8 +42,8 @@ public interface CustomFieldLocalizedEnumValue  {
 
    public static CustomFieldLocalizedEnumValueImpl of(final CustomFieldLocalizedEnumValue template) {
       CustomFieldLocalizedEnumValueImpl instance = new CustomFieldLocalizedEnumValueImpl();
-      instance.setLabel(template.getLabel());
       instance.setKey(template.getKey());
+      instance.setLabel(template.getLabel());
       return instance;
    }
 

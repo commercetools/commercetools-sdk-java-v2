@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountChangeNameActionImpl implements CartDiscountChangeNameAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.LocalizedString name;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CartDiscountChangeNameActionImpl implements CartDiscountChang
       this.action = "changeName";
    }
    public CartDiscountChangeNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getName(){
       return this.name;
    }

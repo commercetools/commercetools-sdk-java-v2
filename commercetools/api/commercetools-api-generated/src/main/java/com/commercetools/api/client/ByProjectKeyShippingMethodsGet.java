@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -32,16 +34,12 @@ public class ByProjectKeyShippingMethodsGet {
    private ApiHttpHeaders headers = new ApiHttpHeaders();
    private Map<String, String> additionalQueryParams = new HashMap<>();
    private final ApiHttpClient apiHttpClient; 
-   private List<String> shippingMethodId = new ArrayList<>();
-   private List<String> country = new ArrayList<>();
-   private List<String> state = new ArrayList<>();
-   private List<String> currency = new ArrayList<>();
    private List<String> expand = new ArrayList<>();
-   private List<String> where = new ArrayList<>();
    private List<String> sort = new ArrayList<>();
-   private List<Integer> limit = new ArrayList<>();
-   private List<Integer> offset = new ArrayList<>();
+   private List<Double> limit = new ArrayList<>();
+   private List<Double> offset = new ArrayList<>();
    private List<Boolean> withTotal = new ArrayList<>();
+   private List<String> where = new ArrayList<>();
    private String projectKey;
    
    
@@ -53,16 +51,12 @@ public class ByProjectKeyShippingMethodsGet {
    public ApiHttpRequest createHttpRequest() {
       ApiHttpRequest httpRequest = new ApiHttpRequest();
       List<String> params = new ArrayList<>();
-      params.add(this.shippingMethodId.stream().map(s -> "shipping-methodId=" + urlEncode(s)).collect(Collectors.joining("&")));
-      params.add(this.country.stream().map(s -> "country=" + urlEncode(s)).collect(Collectors.joining("&")));
-      params.add(this.state.stream().map(s -> "state=" + urlEncode(s)).collect(Collectors.joining("&")));
-      params.add(this.currency.stream().map(s -> "currency=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.expand.stream().map(s -> "expand=" + urlEncode(s)).collect(Collectors.joining("&")));
-      params.add(this.where.stream().map(s -> "where=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.sort.stream().map(s -> "sort=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.limit.stream().map(s -> "limit=" + s).collect(Collectors.joining("&")));
       params.add(this.offset.stream().map(s -> "offset=" + s).collect(Collectors.joining("&")));
       params.add(this.withTotal.stream().map(s -> "withTotal=" + s).collect(Collectors.joining("&")));
+      params.add(this.where.stream().map(s -> "where=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
       params.removeIf(String::isEmpty);
       String httpRequestPath = String.format("/%s/shipping-methods", this.projectKey);
@@ -96,39 +90,19 @@ public class ByProjectKeyShippingMethodsGet {
    
    public String getProjectKey() {return this.projectKey;}
    
-   public List<String> getShippingMethodId() {
-      return this.shippingMethodId;
-   }
-   
-   public List<String> getCountry() {
-      return this.country;
-   }
-   
-   public List<String> getState() {
-      return this.state;
-   }
-   
-   public List<String> getCurrency() {
-      return this.currency;
-   }
-   
    public List<String> getExpand() {
       return this.expand;
-   }
-   
-   public List<String> getWhere() {
-      return this.where;
    }
    
    public List<String> getSort() {
       return this.sort;
    }
    
-   public List<Integer> getLimit() {
+   public List<Double> getLimit() {
       return this.limit;
    }
    
-   public List<Integer> getOffset() {
+   public List<Double> getOffset() {
       return this.offset;
    }
    
@@ -136,47 +110,11 @@ public class ByProjectKeyShippingMethodsGet {
       return this.withTotal;
    }
    
+   public List<String> getWhere() {
+      return this.where;
+   }
+   
    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
-   
-   public ByProjectKeyShippingMethodsGet addShippingMethodId(final String shippingMethodId){
-      this.shippingMethodId.add(shippingMethodId);
-      return this;
-   }
-   
-   public ByProjectKeyShippingMethodsGet withShippingMethodId(final List<String> shippingMethodId){
-      this.shippingMethodId = shippingMethodId;
-      return this;
-   }
-   
-   public ByProjectKeyShippingMethodsGet addCountry(final String country){
-      this.country.add(country);
-      return this;
-   }
-   
-   public ByProjectKeyShippingMethodsGet withCountry(final List<String> country){
-      this.country = country;
-      return this;
-   }
-   
-   public ByProjectKeyShippingMethodsGet addState(final String state){
-      this.state.add(state);
-      return this;
-   }
-   
-   public ByProjectKeyShippingMethodsGet withState(final List<String> state){
-      this.state = state;
-      return this;
-   }
-   
-   public ByProjectKeyShippingMethodsGet addCurrency(final String currency){
-      this.currency.add(currency);
-      return this;
-   }
-   
-   public ByProjectKeyShippingMethodsGet withCurrency(final List<String> currency){
-      this.currency = currency;
-      return this;
-   }
    
    public ByProjectKeyShippingMethodsGet addExpand(final String expand){
       this.expand.add(expand);
@@ -185,16 +123,6 @@ public class ByProjectKeyShippingMethodsGet {
    
    public ByProjectKeyShippingMethodsGet withExpand(final List<String> expand){
       this.expand = expand;
-      return this;
-   }
-   
-   public ByProjectKeyShippingMethodsGet addWhere(final String where){
-      this.where.add(where);
-      return this;
-   }
-   
-   public ByProjectKeyShippingMethodsGet withWhere(final List<String> where){
-      this.where = where;
       return this;
    }
    
@@ -208,22 +136,22 @@ public class ByProjectKeyShippingMethodsGet {
       return this;
    }
    
-   public ByProjectKeyShippingMethodsGet addLimit(final Integer limit){
+   public ByProjectKeyShippingMethodsGet addLimit(final Double limit){
       this.limit.add(limit);
       return this;
    }
    
-   public ByProjectKeyShippingMethodsGet withLimit(final List<Integer> limit){
+   public ByProjectKeyShippingMethodsGet withLimit(final List<Double> limit){
       this.limit = limit;
       return this;
    }
    
-   public ByProjectKeyShippingMethodsGet addOffset(final Integer offset){
+   public ByProjectKeyShippingMethodsGet addOffset(final Double offset){
       this.offset.add(offset);
       return this;
    }
    
-   public ByProjectKeyShippingMethodsGet withOffset(final List<Integer> offset){
+   public ByProjectKeyShippingMethodsGet withOffset(final List<Double> offset){
       this.offset = offset;
       return this;
    }
@@ -235,6 +163,16 @@ public class ByProjectKeyShippingMethodsGet {
    
    public ByProjectKeyShippingMethodsGet withWithTotal(final List<Boolean> withTotal){
       this.withTotal = withTotal;
+      return this;
+   }
+   
+   public ByProjectKeyShippingMethodsGet addWhere(final String where){
+      this.where.add(where);
+      return this;
+   }
+   
+   public ByProjectKeyShippingMethodsGet withWhere(final List<String> where){
+      this.where = where;
       return this;
    }
    

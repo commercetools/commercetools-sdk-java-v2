@@ -14,60 +14,60 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CategorySetAssetDescriptionActionBuilder {
-
+   
    @Nullable
    private String assetId;
-
-   @Nullable
-   private com.commercetools.api.models.common.LocalizedString description;
-
+   
    @Nullable
    private String assetKey;
-
+   
+   @Nullable
+   private com.commercetools.api.models.common.LocalizedString description;
+   
    public CategorySetAssetDescriptionActionBuilder assetId(@Nullable final String assetId) {
       this.assetId = assetId;
       return this;
    }
-
-   public CategorySetAssetDescriptionActionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
-      this.description = description;
-      return this;
-   }
-
+   
    public CategorySetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
       this.assetKey = assetKey;
       return this;
    }
-
+   
+   public CategorySetAssetDescriptionActionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+      this.description = description;
+      return this;
+   }
+   
    @Nullable
    public String getAssetId(){
       return this.assetId;
    }
-
+   
+   @Nullable
+   public String getAssetKey(){
+      return this.assetKey;
+   }
+   
    @Nullable
    public com.commercetools.api.models.common.LocalizedString getDescription(){
       return this.description;
    }
 
-   @Nullable
-   public String getAssetKey(){
-      return this.assetKey;
-   }
-
    public CategorySetAssetDescriptionAction build() {
-       return new CategorySetAssetDescriptionActionImpl(assetId, description, assetKey);
+       return new CategorySetAssetDescriptionActionImpl(assetId, assetKey, description);
    }
-
+   
    public static CategorySetAssetDescriptionActionBuilder of() {
       return new CategorySetAssetDescriptionActionBuilder();
    }
-
+   
    public static CategorySetAssetDescriptionActionBuilder of(final CategorySetAssetDescriptionAction template) {
       CategorySetAssetDescriptionActionBuilder builder = new CategorySetAssetDescriptionActionBuilder();
       builder.assetId = template.getAssetId();
-      builder.description = template.getDescription();
       builder.assetKey = template.getAssetKey();
+      builder.description = template.getDescription();
       return builder;
    }
-
+   
 }

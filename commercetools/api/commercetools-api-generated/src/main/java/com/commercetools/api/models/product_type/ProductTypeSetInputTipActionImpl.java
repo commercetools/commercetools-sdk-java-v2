@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeSetInputTipActionImpl implements ProductTypeSetInputTipAction {
 
    private String action;
-
+   
    private String attributeName;
-
+   
    private com.commercetools.api.models.common.LocalizedString inputTip;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class ProductTypeSetInputTipActionImpl implements ProductTypeSetInp
       this.action = "setInputTip";
    }
    public ProductTypeSetInputTipActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAttributeName(){
       return this.attributeName;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getInputTip(){
       return this.inputTip;
    }
@@ -57,7 +57,7 @@ public final class ProductTypeSetInputTipActionImpl implements ProductTypeSetInp
    public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
    }
-
+   
    public void setInputTip(final com.commercetools.api.models.common.LocalizedString inputTip){
       this.inputTip = inputTip;
    }

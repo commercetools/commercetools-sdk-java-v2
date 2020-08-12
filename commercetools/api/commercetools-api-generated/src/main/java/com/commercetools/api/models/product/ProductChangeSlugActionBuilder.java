@@ -15,34 +15,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ProductChangeSlugActionBuilder {
    
-   @Nullable
-   private Boolean staged;
-   
    
    private com.commercetools.api.models.common.LocalizedString slug;
    
-   public ProductChangeSlugActionBuilder staged(@Nullable final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
+   @Nullable
+   private Boolean staged;
    
    public ProductChangeSlugActionBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
       this.slug = slug;
       return this;
    }
    
-   @Nullable
-   public Boolean getStaged(){
-      return this.staged;
+   public ProductChangeSlugActionBuilder staged(@Nullable final Boolean staged) {
+      this.staged = staged;
+      return this;
    }
    
    
    public com.commercetools.api.models.common.LocalizedString getSlug(){
       return this.slug;
    }
+   
+   @Nullable
+   public Boolean getStaged(){
+      return this.staged;
+   }
 
    public ProductChangeSlugAction build() {
-       return new ProductChangeSlugActionImpl(staged, slug);
+       return new ProductChangeSlugActionImpl(slug, staged);
    }
    
    public static ProductChangeSlugActionBuilder of() {
@@ -51,8 +51,8 @@ public final class ProductChangeSlugActionBuilder {
    
    public static ProductChangeSlugActionBuilder of(final ProductChangeSlugAction template) {
       ProductChangeSlugActionBuilder builder = new ProductChangeSlugActionBuilder();
-      builder.staged = template.getStaged();
       builder.slug = template.getSlug();
+      builder.staged = template.getStaged();
       return builder;
    }
    

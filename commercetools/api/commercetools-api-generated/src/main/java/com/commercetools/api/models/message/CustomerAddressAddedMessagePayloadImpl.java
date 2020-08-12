@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerAddressAddedMessagePayloadImpl implements CustomerAddressAddedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.common.Address address;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CustomerAddressAddedMessagePayloadImpl implements CustomerAdd
       this.type = "CustomerAddressAdded";
    }
    public CustomerAddressAddedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Address getAddress(){
       return this.address;
    }

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductDiscountSetKeyActionImpl implements ProductDiscountSetKeyAction {
 
    private String action;
-
+   
    private String key;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ProductDiscountSetKeyActionImpl implements ProductDiscountSet
       this.action = "setKey";
    }
    public ProductDiscountSetKeyActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>The key to set.
    *  If you provide a <code>null</code> value or do not set this field at all, the existing <code>key</code> field is removed.</p>

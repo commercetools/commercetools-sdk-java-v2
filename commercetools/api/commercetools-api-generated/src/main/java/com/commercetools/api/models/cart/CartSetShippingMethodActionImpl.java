@@ -25,42 +25,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartSetShippingMethodActionImpl implements CartSetShippingMethodAction {
 
    private String action;
-
+   
+   private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
+   
    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-   private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
-
    @JsonCreator
-   CartSetShippingMethodActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
-      this.externalTaxRate = externalTaxRate;
+   CartSetShippingMethodActionImpl(@JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.shippingMethod = shippingMethod;
+      this.externalTaxRate = externalTaxRate;
       this.action = "setShippingMethod";
    }
    public CartSetShippingMethodActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
+      return this.shippingMethod;
+   }
+   
+   
    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
 
-
-   public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
-      return this.shippingMethod;
-   }
-
-   public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
-      this.externalTaxRate = externalTaxRate;
-   }
-
    public void setShippingMethod(final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod){
       this.shippingMethod = shippingMethod;
+   }
+   
+   public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
+      this.externalTaxRate = externalTaxRate;
    }
 
 }

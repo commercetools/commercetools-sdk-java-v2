@@ -50,9 +50,9 @@ public final class ShoppingListUpdateActionImpl implements ShoppingListUpdateAct
    ShoppingListUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

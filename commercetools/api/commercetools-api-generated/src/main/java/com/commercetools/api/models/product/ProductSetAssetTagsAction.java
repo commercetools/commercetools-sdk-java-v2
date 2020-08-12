@@ -65,10 +65,10 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
 
    public static ProductSetAssetTagsActionImpl of(final ProductSetAssetTagsAction template) {
       ProductSetAssetTagsActionImpl instance = new ProductSetAssetTagsActionImpl();
-      instance.setAssetId(template.getAssetId());
-      instance.setStaged(template.getStaged());
       instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
+      instance.setStaged(template.getStaged());
+      instance.setAssetId(template.getAssetId());
       instance.setAssetKey(template.getAssetKey());
       instance.setTags(template.getTags());
       return instance;

@@ -22,40 +22,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeDraftImpl implements ProductTypeDraft {
 
+   private String key;
+   
    private String name;
-
+   
    private String description;
-
+   
    private java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes;
 
-   private String key;
-
    @JsonCreator
-   ProductTypeDraftImpl(@JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes, @JsonProperty("key") final String key) {
+   ProductTypeDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes) {
+      this.key = key;
       this.name = name;
       this.description = description;
       this.attributes = attributes;
-      this.key = key;
    }
    public ProductTypeDraftImpl() {
-
+      
    }
-
-
-   public String getName(){
-      return this.name;
-   }
-
-
-   public String getDescription(){
-      return this.description;
-   }
-
-
-   public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes(){
-      return this.attributes;
-   }
-
+   
    /**
    *  <p>User-specific unique identifier for the product type (min.
    *  2 and max.
@@ -64,21 +49,36 @@ public final class ProductTypeDraftImpl implements ProductTypeDraft {
    public String getKey(){
       return this.key;
    }
-
-   public void setName(final String name){
-      this.name = name;
+   
+   
+   public String getName(){
+      return this.name;
    }
-
-   public void setDescription(final String description){
-      this.description = description;
+   
+   
+   public String getDescription(){
+      return this.description;
    }
-
-   public void setAttributes(final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes){
-      this.attributes = attributes;
+   
+   
+   public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes(){
+      return this.attributes;
    }
 
    public void setKey(final String key){
       this.key = key;
+   }
+   
+   public void setName(final String name){
+      this.name = name;
+   }
+   
+   public void setDescription(final String description){
+      this.description = description;
+   }
+   
+   public void setAttributes(final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes){
+      this.attributes = attributes;
    }
 
 }

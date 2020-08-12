@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetCustomerGroupActionImpl.class)
 public interface CartSetCustomerGroupAction extends CartUpdateAction {
 
-
+   
    @Valid
    @JsonProperty("customerGroup")
    public CustomerGroupResourceIdentifier getCustomerGroup();
 
    public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
-
+   
    public static CartSetCustomerGroupActionImpl of(){
       return new CartSetCustomerGroupActionImpl();
    }
-
+   
 
    public static CartSetCustomerGroupActionImpl of(final CartSetCustomerGroupAction template) {
       CartSetCustomerGroupActionImpl instance = new CartSetCustomerGroupActionImpl();

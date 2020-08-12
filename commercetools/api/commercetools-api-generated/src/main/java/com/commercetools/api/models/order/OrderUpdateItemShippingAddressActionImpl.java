@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderUpdateItemShippingAddressActionImpl implements OrderUpdateItemShippingAddressAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.Address address;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class OrderUpdateItemShippingAddressActionImpl implements OrderUpda
       this.action = "updateItemShippingAddress";
    }
    public OrderUpdateItemShippingAddressActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Address getAddress(){
       return this.address;
    }

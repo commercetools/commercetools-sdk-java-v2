@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TaxCategorySetDescriptionActionImpl implements TaxCategorySetDescriptionAction {
 
    private String action;
-
+   
    private String description;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class TaxCategorySetDescriptionActionImpl implements TaxCategorySet
       this.action = "setDescription";
    }
    public TaxCategorySetDescriptionActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getDescription(){
       return this.description;
    }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderCreatedMessagePayloadImpl implements OrderCreatedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.order.Order order;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class OrderCreatedMessagePayloadImpl implements OrderCreatedMessage
       this.type = "OrderCreated";
    }
    public OrderCreatedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.Order getOrder(){
       return this.order;
    }

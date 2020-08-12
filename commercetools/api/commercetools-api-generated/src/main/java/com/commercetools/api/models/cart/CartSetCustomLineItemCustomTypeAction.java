@@ -23,35 +23,35 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetCustomLineItemCustomTypeActionImpl.class)
 public interface CartSetCustomLineItemCustomTypeAction extends CartUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("customLineItemId")
    public String getCustomLineItemId();
-
+   
    @Valid
    @JsonProperty("type")
    public TypeResourceIdentifier getType();
-
+   
    @Valid
    @JsonProperty("fields")
    public FieldContainer getFields();
 
    public void setCustomLineItemId(final String customLineItemId);
-
+   
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final FieldContainer fields);
-
+   
    public static CartSetCustomLineItemCustomTypeActionImpl of(){
       return new CartSetCustomLineItemCustomTypeActionImpl();
    }
-
+   
 
    public static CartSetCustomLineItemCustomTypeActionImpl of(final CartSetCustomLineItemCustomTypeAction template) {
       CartSetCustomLineItemCustomTypeActionImpl instance = new CartSetCustomLineItemCustomTypeActionImpl();
       instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

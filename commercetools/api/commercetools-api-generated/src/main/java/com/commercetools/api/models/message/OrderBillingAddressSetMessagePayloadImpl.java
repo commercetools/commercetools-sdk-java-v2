@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAddressSetMessagePayload {
 
    private String type;
-
+   
+   private com.commercetools.api.models.common.Address address;
+   
    private com.commercetools.api.models.common.Address oldAddress;
 
-   private com.commercetools.api.models.common.Address address;
-
    @JsonCreator
-   OrderBillingAddressSetMessagePayloadImpl(@JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress, @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
-      this.oldAddress = oldAddress;
+   OrderBillingAddressSetMessagePayloadImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress) {
       this.address = address;
+      this.oldAddress = oldAddress;
       this.type = "OrderBillingAddressSet";
    }
    public OrderBillingAddressSetMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
+   public com.commercetools.api.models.common.Address getAddress(){
+      return this.address;
+   }
+   
+   
    public com.commercetools.api.models.common.Address getOldAddress(){
       return this.oldAddress;
    }
 
-
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
-   }
-
-   public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress){
-      this.oldAddress = oldAddress;
-   }
-
    public void setAddress(final com.commercetools.api.models.common.Address address){
       this.address = address;
+   }
+   
+   public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress){
+      this.oldAddress = oldAddress;
    }
 
 }

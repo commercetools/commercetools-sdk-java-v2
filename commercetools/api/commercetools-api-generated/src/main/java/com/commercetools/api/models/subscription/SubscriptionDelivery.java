@@ -20,9 +20,9 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.MessageDeliveryImpl.class, name = "Message"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceCreatedDeliveryImpl.class, name = "ResourceCreated"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceDeletedDeliveryImpl.class, name = "ResourceDeleted"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceCreatedDeliveryImpl.class, name = "ResourceCreated"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.MessageDeliveryImpl.class, name = "Message"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceUpdatedDeliveryImpl.class, name = "ResourceUpdated")
 })
 @JsonTypeInfo(
@@ -37,26 +37,26 @@ import java.io.IOException;
 )
 public interface SubscriptionDelivery  {
 
-
+   
    @NotNull
    @JsonProperty("projectKey")
    public String getProjectKey();
-
+   
    @NotNull
    @Valid
    @JsonProperty("resource")
    public Reference getResource();
-
+   
    @Valid
    @JsonProperty("resourceUserProvidedIdentifiers")
    public UserProvidedIdentifiers getResourceUserProvidedIdentifiers();
 
    public void setProjectKey(final String projectKey);
-
+   
    public void setResource(final Reference resource);
-
+   
    public void setResourceUserProvidedIdentifiers(final UserProvidedIdentifiers resourceUserProvidedIdentifiers);
-
+   
 
 
 }

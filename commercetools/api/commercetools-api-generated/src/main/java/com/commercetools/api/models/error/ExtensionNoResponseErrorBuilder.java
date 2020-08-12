@@ -16,55 +16,55 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ExtensionNoResponseErrorBuilder {
-
-
+   
+   
    private String message;
-
+   
    @Nullable
    private com.commercetools.api.models.common.LocalizedString localizedMessage;
-
+   
    @Nullable
    private com.fasterxml.jackson.databind.JsonNode extensionExtraInfo;
-
-
+   
+   
    private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
-
+   
    public ExtensionNoResponseErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
-
+   
    public ExtensionNoResponseErrorBuilder localizedMessage(@Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {
       this.localizedMessage = localizedMessage;
       return this;
    }
-
+   
    public ExtensionNoResponseErrorBuilder extensionExtraInfo(@Nullable final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo) {
       this.extensionExtraInfo = extensionExtraInfo;
       return this;
    }
-
+   
    public ExtensionNoResponseErrorBuilder errorByExtension( final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
       this.errorByExtension = errorByExtension;
       return this;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
-
+   
    @Nullable
    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage(){
       return this.localizedMessage;
    }
-
+   
    @Nullable
    public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo(){
       return this.extensionExtraInfo;
    }
-
-
+   
+   
    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension(){
       return this.errorByExtension;
    }
@@ -72,11 +72,11 @@ public final class ExtensionNoResponseErrorBuilder {
    public ExtensionNoResponseError build() {
        return new ExtensionNoResponseErrorImpl(message, localizedMessage, extensionExtraInfo, errorByExtension);
    }
-
+   
    public static ExtensionNoResponseErrorBuilder of() {
       return new ExtensionNoResponseErrorBuilder();
    }
-
+   
    public static ExtensionNoResponseErrorBuilder of(final ExtensionNoResponseError template) {
       ExtensionNoResponseErrorBuilder builder = new ExtensionNoResponseErrorBuilder();
       builder.message = template.getMessage();
@@ -85,5 +85,5 @@ public final class ExtensionNoResponseErrorBuilder {
       builder.errorByExtension = template.getErrorByExtension();
       return builder;
    }
-
+   
 }

@@ -23,42 +23,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShoppingListRemoveLineItemActionImpl implements ShoppingListRemoveLineItemAction {
 
    private String action;
-
+   
+   private String lineItemId;
+   
    private Long quantity;
 
-   private String lineItemId;
-
    @JsonCreator
-   ShoppingListRemoveLineItemActionImpl(@JsonProperty("quantity") final Long quantity, @JsonProperty("lineItemId") final String lineItemId) {
-      this.quantity = quantity;
+   ShoppingListRemoveLineItemActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Long quantity) {
       this.lineItemId = lineItemId;
+      this.quantity = quantity;
       this.action = "removeLineItem";
    }
    public ShoppingListRemoveLineItemActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getLineItemId(){
+      return this.lineItemId;
+   }
+   
+   
    public Long getQuantity(){
       return this.quantity;
    }
 
-
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-
-   public void setQuantity(final Long quantity){
-      this.quantity = quantity;
-   }
-
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
+   }
+   
+   public void setQuantity(final Long quantity){
+      this.quantity = quantity;
    }
 
 }

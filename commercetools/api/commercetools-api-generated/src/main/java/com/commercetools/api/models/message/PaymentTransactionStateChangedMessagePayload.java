@@ -42,8 +42,8 @@ public interface PaymentTransactionStateChangedMessagePayload extends MessagePay
 
    public static PaymentTransactionStateChangedMessagePayloadImpl of(final PaymentTransactionStateChangedMessagePayload template) {
       PaymentTransactionStateChangedMessagePayloadImpl instance = new PaymentTransactionStateChangedMessagePayloadImpl();
-      instance.setState(template.getState());
       instance.setTransactionId(template.getTransactionId());
+      instance.setState(template.getState());
       return instance;
    }
 

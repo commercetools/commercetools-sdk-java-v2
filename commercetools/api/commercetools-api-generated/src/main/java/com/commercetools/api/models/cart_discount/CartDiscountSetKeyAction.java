@@ -24,16 +24,16 @@ public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
    /**
    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static CartDiscountSetKeyActionImpl of(){
       return new CartDiscountSetKeyActionImpl();
    }
-
+   
 
    public static CartDiscountSetKeyActionImpl of(final CartDiscountSetKeyAction template) {
       CartDiscountSetKeyActionImpl instance = new CartDiscountSetKeyActionImpl();

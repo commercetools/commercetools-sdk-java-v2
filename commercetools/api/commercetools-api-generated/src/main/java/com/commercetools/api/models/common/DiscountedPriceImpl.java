@@ -23,35 +23,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountedPriceImpl implements DiscountedPrice {
 
+   private com.commercetools.api.models.common.Money value;
+   
    private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
-   private com.commercetools.api.models.common.Money value;
-
    @JsonCreator
-   DiscountedPriceImpl(@JsonProperty("discount") final com.commercetools.api.models.product_discount.ProductDiscountReference discount, @JsonProperty("value") final com.commercetools.api.models.common.Money value) {
-      this.discount = discount;
+   DiscountedPriceImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value, @JsonProperty("discount") final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {
       this.value = value;
+      this.discount = discount;
    }
    public DiscountedPriceImpl() {
-
+      
    }
-
-
+   
+   
+   public com.commercetools.api.models.common.Money getValue(){
+      return this.value;
+   }
+   
+   
    public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount(){
       return this.discount;
    }
 
-
-   public com.commercetools.api.models.common.Money getValue(){
-      return this.value;
-   }
-
-   public void setDiscount(final com.commercetools.api.models.product_discount.ProductDiscountReference discount){
-      this.discount = discount;
-   }
-
    public void setValue(final com.commercetools.api.models.common.Money value){
       this.value = value;
+   }
+   
+   public void setDiscount(final com.commercetools.api.models.product_discount.ProductDiscountReference discount){
+      this.discount = discount;
    }
 
 }

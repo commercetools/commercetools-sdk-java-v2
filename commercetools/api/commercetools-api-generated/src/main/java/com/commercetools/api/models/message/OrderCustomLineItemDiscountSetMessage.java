@@ -50,19 +50,19 @@ public interface OrderCustomLineItemDiscountSetMessage extends Message {
 
    public static OrderCustomLineItemDiscountSetMessageImpl of(final OrderCustomLineItemDiscountSetMessage template) {
       OrderCustomLineItemDiscountSetMessageImpl instance = new OrderCustomLineItemDiscountSetMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setTaxedPrice(template.getTaxedPrice());
       instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
+      instance.setTaxedPrice(template.getTaxedPrice());
       return instance;
    }
 

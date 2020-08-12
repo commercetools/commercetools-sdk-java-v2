@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DiscountCodeSetCartPredicateActionImpl implements DiscountCodeSetCartPredicateAction {
 
    private String action;
-
+   
    private String cartPredicate;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class DiscountCodeSetCartPredicateActionImpl implements DiscountCod
       this.action = "setCartPredicate";
    }
    public DiscountCodeSetCartPredicateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If the <code>cartPredicate</code> parameter is not included, the field will be emptied.</p>
    */

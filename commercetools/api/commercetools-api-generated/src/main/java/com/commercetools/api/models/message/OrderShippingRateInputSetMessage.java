@@ -22,36 +22,36 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderShippingRateInputSetMessageImpl.class)
 public interface OrderShippingRateInputSetMessage extends Message {
 
-
+   
    @Valid
    @JsonProperty("shippingRateInput")
    public ShippingRateInput getShippingRateInput();
-
+   
    @Valid
    @JsonProperty("oldShippingRateInput")
    public ShippingRateInput getOldShippingRateInput();
 
    public void setShippingRateInput(final ShippingRateInput shippingRateInput);
-
+   
    public void setOldShippingRateInput(final ShippingRateInput oldShippingRateInput);
-
+   
    public static OrderShippingRateInputSetMessageImpl of(){
       return new OrderShippingRateInputSetMessageImpl();
    }
-
+   
 
    public static OrderShippingRateInputSetMessageImpl of(final OrderShippingRateInputSetMessage template) {
       OrderShippingRateInputSetMessageImpl instance = new OrderShippingRateInputSetMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setShippingRateInput(template.getShippingRateInput());
       instance.setOldShippingRateInput(template.getOldShippingRateInput());
       return instance;

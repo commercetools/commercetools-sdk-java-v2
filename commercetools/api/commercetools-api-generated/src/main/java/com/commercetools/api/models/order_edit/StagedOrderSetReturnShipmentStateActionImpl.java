@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderSetReturnShipmentStateActionImpl implements StagedOrderSetReturnShipmentStateAction {
 
    private String action;
-
+   
+   private String returnItemId;
+   
    private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
-   private String returnItemId;
-
    @JsonCreator
-   StagedOrderSetReturnShipmentStateActionImpl(@JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState, @JsonProperty("returnItemId") final String returnItemId) {
-      this.shipmentState = shipmentState;
+   StagedOrderSetReturnShipmentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
       this.returnItemId = returnItemId;
+      this.shipmentState = shipmentState;
       this.action = "setReturnShipmentState";
    }
    public StagedOrderSetReturnShipmentStateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getReturnItemId(){
+      return this.returnItemId;
+   }
+   
+   
    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
       return this.shipmentState;
    }
 
-
-   public String getReturnItemId(){
-      return this.returnItemId;
-   }
-
-   public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
-      this.shipmentState = shipmentState;
-   }
-
    public void setReturnItemId(final String returnItemId){
       this.returnItemId = returnItemId;
+   }
+   
+   public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
+      this.shipmentState = shipmentState;
    }
 
 }

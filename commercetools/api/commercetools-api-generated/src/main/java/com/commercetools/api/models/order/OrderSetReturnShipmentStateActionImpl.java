@@ -25,14 +25,14 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
 
    private String action;
    
-   private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
-   
    private String returnItemId;
+   
+   private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
    @JsonCreator
-   OrderSetReturnShipmentStateActionImpl(@JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState, @JsonProperty("returnItemId") final String returnItemId) {
-      this.shipmentState = shipmentState;
+   OrderSetReturnShipmentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
       this.returnItemId = returnItemId;
+      this.shipmentState = shipmentState;
       this.action = "setReturnShipmentState";
    }
    public OrderSetReturnShipmentStateActionImpl() {
@@ -45,21 +45,21 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
    }
    
    
-   public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
-      return this.shipmentState;
-   }
-   
-   
    public String getReturnItemId(){
       return this.returnItemId;
    }
-
-   public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
-      this.shipmentState = shipmentState;
-   }
    
+   
+   public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
+      return this.shipmentState;
+   }
+
    public void setReturnItemId(final String returnItemId){
       this.returnItemId = returnItemId;
+   }
+   
+   public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
+      this.shipmentState = shipmentState;
    }
 
 }

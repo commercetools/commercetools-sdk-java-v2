@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentSetExternalIdActionImpl implements PaymentSetExternalIdAction {
 
    private String action;
-
+   
    private String externalId;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class PaymentSetExternalIdActionImpl implements PaymentSetExternalI
       this.action = "setExternalId";
    }
    public PaymentSetExternalIdActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getExternalId(){
       return this.externalId;
    }

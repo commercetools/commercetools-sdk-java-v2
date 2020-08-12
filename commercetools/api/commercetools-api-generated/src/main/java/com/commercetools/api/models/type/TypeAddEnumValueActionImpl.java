@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction {
 
    private String action;
-
+   
    private String fieldName;
-
+   
    private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction 
       this.action = "addEnumValue";
    }
    public TypeAddEnumValueActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getFieldName(){
       return this.fieldName;
    }
-
-
+   
+   
    public com.commercetools.api.models.type.CustomFieldEnumValue getValue(){
       return this.value;
    }
@@ -57,7 +57,7 @@ public final class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction 
    public void setFieldName(final String fieldName){
       this.fieldName = fieldName;
    }
-
+   
    public void setValue(final com.commercetools.api.models.type.CustomFieldEnumValue value){
       this.value = value;
    }

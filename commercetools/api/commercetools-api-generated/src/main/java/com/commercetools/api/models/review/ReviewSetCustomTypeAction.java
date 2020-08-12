@@ -38,18 +38,18 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
    public FieldContainer getFields();
 
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final FieldContainer fields);
-
+   
    public static ReviewSetCustomTypeActionImpl of(){
       return new ReviewSetCustomTypeActionImpl();
    }
-
+   
 
    public static ReviewSetCustomTypeActionImpl of(final ReviewSetCustomTypeAction template) {
       ReviewSetCustomTypeActionImpl instance = new ReviewSetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

@@ -65,12 +65,12 @@ public interface ProductPriceDiscountsSetUpdatedPrice  {
 
    public static ProductPriceDiscountsSetUpdatedPriceImpl of(final ProductPriceDiscountsSetUpdatedPrice template) {
       ProductPriceDiscountsSetUpdatedPriceImpl instance = new ProductPriceDiscountsSetUpdatedPriceImpl();
+      instance.setVariantId(template.getVariantId());
+      instance.setVariantKey(template.getVariantKey());
+      instance.setSku(template.getSku());
+      instance.setPriceId(template.getPriceId());
       instance.setDiscounted(template.getDiscounted());
       instance.setStaged(template.getStaged());
-      instance.setVariantId(template.getVariantId());
-      instance.setPriceId(template.getPriceId());
-      instance.setSku(template.getSku());
-      instance.setVariantKey(template.getVariantKey());
       return instance;
    }
 

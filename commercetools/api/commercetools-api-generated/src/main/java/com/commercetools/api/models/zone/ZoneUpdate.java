@@ -42,8 +42,8 @@ public interface ZoneUpdate  {
 
    public static ZoneUpdateImpl of(final ZoneUpdate template) {
       ZoneUpdateImpl instance = new ZoneUpdateImpl();
-      instance.setActions(template.getActions());
       instance.setVersion(template.getVersion());
+      instance.setActions(template.getActions());
       return instance;
    }
 

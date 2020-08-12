@@ -135,19 +135,19 @@ public interface CartDiscountDraft  {
 
    public static CartDiscountDraftImpl of(final CartDiscountDraft template) {
       CartDiscountDraftImpl instance = new CartDiscountDraftImpl();
-      instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
-      instance.setCartPredicate(template.getCartPredicate());
-      instance.setCustom(template.getCustom());
-      instance.setStackingMode(template.getStackingMode());
-      instance.setSortOrder(template.getSortOrder());
       instance.setName(template.getName());
-      instance.setValidUntil(template.getValidUntil());
-      instance.setDescription(template.getDescription());
-      instance.setValidFrom(template.getValidFrom());
-      instance.setIsActive(template.getIsActive());
-      instance.setValue(template.getValue());
       instance.setKey(template.getKey());
+      instance.setDescription(template.getDescription());
+      instance.setValue(template.getValue());
+      instance.setCartPredicate(template.getCartPredicate());
       instance.setTarget(template.getTarget());
+      instance.setSortOrder(template.getSortOrder());
+      instance.setIsActive(template.getIsActive());
+      instance.setValidFrom(template.getValidFrom());
+      instance.setValidUntil(template.getValidUntil());
+      instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
+      instance.setStackingMode(template.getStackingMode());
+      instance.setCustom(template.getCustom());
       return instance;
    }
 

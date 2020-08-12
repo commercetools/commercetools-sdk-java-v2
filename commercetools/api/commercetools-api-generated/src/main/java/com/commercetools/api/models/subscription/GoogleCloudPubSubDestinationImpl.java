@@ -24,14 +24,14 @@ public final class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSub
 
    private String type;
    
-   private String topic;
-   
    private String projectId;
+   
+   private String topic;
 
    @JsonCreator
-   GoogleCloudPubSubDestinationImpl(@JsonProperty("topic") final String topic, @JsonProperty("projectId") final String projectId) {
-      this.topic = topic;
+   GoogleCloudPubSubDestinationImpl(@JsonProperty("projectId") final String projectId, @JsonProperty("topic") final String topic) {
       this.projectId = projectId;
+      this.topic = topic;
       this.type = "GoogleCloudPubSub";
    }
    public GoogleCloudPubSubDestinationImpl() {
@@ -44,21 +44,21 @@ public final class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSub
    }
    
    
-   public String getTopic(){
-      return this.topic;
-   }
-   
-   
    public String getProjectId(){
       return this.projectId;
    }
-
-   public void setTopic(final String topic){
-      this.topic = topic;
-   }
    
+   
+   public String getTopic(){
+      return this.topic;
+   }
+
    public void setProjectId(final String projectId){
       this.projectId = projectId;
+   }
+   
+   public void setTopic(final String topic){
+      this.topic = topic;
    }
 
 }

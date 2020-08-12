@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartChangeTaxModeActionImpl implements CartChangeTaxModeAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.cart.TaxMode taxMode;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CartChangeTaxModeActionImpl implements CartChangeTaxModeActio
       this.action = "changeTaxMode";
    }
    public CartChangeTaxModeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.TaxMode getTaxMode(){
       return this.taxMode;
    }

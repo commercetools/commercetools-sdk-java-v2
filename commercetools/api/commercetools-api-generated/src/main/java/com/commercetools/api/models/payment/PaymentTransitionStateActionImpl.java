@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentTransitionStateActionImpl implements PaymentTransitionStateAction {
 
    private String action;
-
+   
+   private com.commercetools.api.models.state.StateResourceIdentifier state;
+   
    private Boolean force;
 
-   private com.commercetools.api.models.state.StateResourceIdentifier state;
-
    @JsonCreator
-   PaymentTransitionStateActionImpl(@JsonProperty("force") final Boolean force, @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state) {
-      this.force = force;
+   PaymentTransitionStateActionImpl(@JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state, @JsonProperty("force") final Boolean force) {
       this.state = state;
+      this.force = force;
       this.action = "transitionState";
    }
    public PaymentTransitionStateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public com.commercetools.api.models.state.StateResourceIdentifier getState(){
+      return this.state;
+   }
+   
+   
    public Boolean getForce(){
       return this.force;
    }
 
-
-   public com.commercetools.api.models.state.StateResourceIdentifier getState(){
-      return this.state;
-   }
-
-   public void setForce(final Boolean force){
-      this.force = force;
-   }
-
    public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
       this.state = state;
+   }
+   
+   public void setForce(final Boolean force){
+      this.force = force;
    }
 
 }

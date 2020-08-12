@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountReferenceImpl implements CartDiscountReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.cart_discount.CartDiscount obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class CartDiscountReferenceImpl implements CartDiscountReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("cart-discount").get();
    }
    public CartDiscountReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart_discount.CartDiscount getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class CartDiscountReferenceImpl implements CartDiscountReference {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.cart_discount.CartDiscount obj){
       this.obj = obj;
    }

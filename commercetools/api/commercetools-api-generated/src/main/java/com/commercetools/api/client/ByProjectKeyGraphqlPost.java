@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -35,12 +37,12 @@ public class ByProjectKeyGraphqlPost {
    
    private String projectKey;
    
-   private com.fasterxml.jackson.databind.JsonNode jsonNode;
+   private com.commercetools.api.models.graph_ql.GraphQLRequest graphQLRequest;
    
-   public ByProjectKeyGraphqlPost(final ApiHttpClient apiHttpClient, String projectKey, com.fasterxml.jackson.databind.JsonNode jsonNode){
+   public ByProjectKeyGraphqlPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.graph_ql.GraphQLRequest graphQLRequest){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
-      this.jsonNode = jsonNode;
+      this.graphQLRequest = graphQLRequest;
    }
    
    public ApiHttpRequest createHttpRequest() {
@@ -56,11 +58,11 @@ public class ByProjectKeyGraphqlPost {
       httpRequest.setRelativeUrl(httpRequestPath); 
       httpRequest.setMethod(ApiHttpMethod.POST);
       httpRequest.setHeaders(headers);
-      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(jsonNode));}catch(Exception e){e.printStackTrace();}
+      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(graphQLRequest));}catch(Exception e){e.printStackTrace();}
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.api.models.graph_ql.GraphQLResponse> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -68,13 +70,13 @@ public class ByProjectKeyGraphqlPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.graph_ql.GraphQLResponse>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
               .thenApply(response -> {
                   if(response.getStatusCode() >= 400){
                       throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
                   }
-                  return Utils.convertResponse(response,com.fasterxml.jackson.databind.JsonNode.class);
+                  return Utils.convertResponse(response,com.commercetools.api.models.graph_ql.GraphQLResponse.class);
               });
    }
    

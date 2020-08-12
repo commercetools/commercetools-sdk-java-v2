@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TypeChangeFieldDefinitionOrderActionImpl implements TypeChangeFieldDefinitionOrderAction {
 
    private String action;
-
+   
    private java.util.List<String> fieldNames;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class TypeChangeFieldDefinitionOrderActionImpl implements TypeChang
       this.action = "changeFieldDefinitionOrder";
    }
    public TypeChangeFieldDefinitionOrderActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.util.List<String> getFieldNames(){
       return this.fieldNames;
    }

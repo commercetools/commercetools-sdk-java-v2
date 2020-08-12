@@ -25,42 +25,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShippingMethodAddShippingRateActionImpl implements ShippingMethodAddShippingRateAction {
 
    private String action;
-
+   
+   private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
+   
    private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
 
-   private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
-
    @JsonCreator
-   ShippingMethodAddShippingRateActionImpl(@JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate, @JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
-      this.shippingRate = shippingRate;
+   ShippingMethodAddShippingRateActionImpl(@JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone, @JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
       this.zone = zone;
+      this.shippingRate = shippingRate;
       this.action = "addShippingRate";
    }
    public ShippingMethodAddShippingRateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone(){
+      return this.zone;
+   }
+   
+   
    public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate(){
       return this.shippingRate;
    }
 
-
-   public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone(){
-      return this.zone;
-   }
-
-   public void setShippingRate(final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate){
-      this.shippingRate = shippingRate;
-   }
-
    public void setZone(final com.commercetools.api.models.zone.ZoneResourceIdentifier zone){
       this.zone = zone;
+   }
+   
+   public void setShippingRate(final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate){
+      this.shippingRate = shippingRate;
    }
 
 }

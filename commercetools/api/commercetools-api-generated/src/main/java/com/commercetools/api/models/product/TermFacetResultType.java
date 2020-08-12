@@ -13,27 +13,27 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TermFacetResultType {
 
-
+  
   @JsonProperty("text")
   TEXT("text"),
-
-
+  
+  
   @JsonProperty("date")
   DATE("date"),
-
-
+  
+  
   @JsonProperty("time")
   TIME("time"),
-
-
+  
+  
   @JsonProperty("datetime")
   DATETIME("datetime"),
-
-
+  
+  
   @JsonProperty("boolean")
   BOOLEAN("boolean"),
-
-
+  
+  
   @JsonProperty("number")
   NUMBER("number");
 

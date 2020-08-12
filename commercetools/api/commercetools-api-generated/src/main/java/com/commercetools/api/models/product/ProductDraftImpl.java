@@ -29,142 +29,74 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDraftImpl implements ProductDraft {
 
-   private com.commercetools.api.models.product.SearchKeywords searchKeywords;
-
+   private com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType;
+   
+   private com.commercetools.api.models.common.LocalizedString name;
+   
+   private com.commercetools.api.models.common.LocalizedString slug;
+   
+   private String key;
+   
    private com.commercetools.api.models.common.LocalizedString description;
-
-   private java.util.List<com.commercetools.api.models.product.ProductVariantDraft> variants;
-
-   private com.commercetools.api.models.common.LocalizedString metaDescription;
-
-   private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
-
-   private com.commercetools.api.models.common.LocalizedString metaKeywords;
-
+   
+   private java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> categories;
+   
    private com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints;
-
+   
+   private com.commercetools.api.models.common.LocalizedString metaTitle;
+   
+   private com.commercetools.api.models.common.LocalizedString metaDescription;
+   
+   private com.commercetools.api.models.common.LocalizedString metaKeywords;
+   
+   private com.commercetools.api.models.product.ProductVariantDraft masterVariant;
+   
+   private java.util.List<com.commercetools.api.models.product.ProductVariantDraft> variants;
+   
+   private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
+   
+   private com.commercetools.api.models.product.SearchKeywords searchKeywords;
+   
+   private com.commercetools.api.models.state.StateResourceIdentifier state;
+   
    private Boolean publish;
 
-   private com.commercetools.api.models.common.LocalizedString metaTitle;
-
-   private com.commercetools.api.models.common.LocalizedString name;
-
-   private com.commercetools.api.models.state.StateResourceIdentifier state;
-
-   private com.commercetools.api.models.product.ProductVariantDraft masterVariant;
-
-   private java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> categories;
-
-   private String key;
-
-   private com.commercetools.api.models.common.LocalizedString slug;
-
-   private com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType;
-
    @JsonCreator
-   ProductDraftImpl(@JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product.ProductVariantDraft> variants, @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory, @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords, @JsonProperty("categoryOrderHints") final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints, @JsonProperty("publish") final Boolean publish, @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state, @JsonProperty("masterVariant") final com.commercetools.api.models.product.ProductVariantDraft masterVariant, @JsonProperty("categories") final java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> categories, @JsonProperty("key") final String key, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug, @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType) {
-      this.searchKeywords = searchKeywords;
-      this.description = description;
-      this.variants = variants;
-      this.metaDescription = metaDescription;
-      this.taxCategory = taxCategory;
-      this.metaKeywords = metaKeywords;
-      this.categoryOrderHints = categoryOrderHints;
-      this.publish = publish;
-      this.metaTitle = metaTitle;
-      this.name = name;
-      this.state = state;
-      this.masterVariant = masterVariant;
-      this.categories = categories;
-      this.key = key;
-      this.slug = slug;
+   ProductDraftImpl(@JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug, @JsonProperty("key") final String key, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("categories") final java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> categories, @JsonProperty("categoryOrderHints") final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints, @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle, @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription, @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords, @JsonProperty("masterVariant") final com.commercetools.api.models.product.ProductVariantDraft masterVariant, @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product.ProductVariantDraft> variants, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory, @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords, @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state, @JsonProperty("publish") final Boolean publish) {
       this.productType = productType;
+      this.name = name;
+      this.slug = slug;
+      this.key = key;
+      this.description = description;
+      this.categories = categories;
+      this.categoryOrderHints = categoryOrderHints;
+      this.metaTitle = metaTitle;
+      this.metaDescription = metaDescription;
+      this.metaKeywords = metaKeywords;
+      this.masterVariant = masterVariant;
+      this.variants = variants;
+      this.taxCategory = taxCategory;
+      this.searchKeywords = searchKeywords;
+      this.state = state;
+      this.publish = publish;
    }
    public ProductDraftImpl() {
-
+      
    }
-
-
-   public com.commercetools.api.models.product.SearchKeywords getSearchKeywords(){
-      return this.searchKeywords;
-   }
-
-
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
-
+   
    /**
-   *  <p>An array of related product variants.</p>
+   *  <p>A predefined product type assigned to the product.
+   *  All products must have a product type.</p>
    */
-   public java.util.List<com.commercetools.api.models.product.ProductVariantDraft> getVariants(){
-      return this.variants;
+   public com.commercetools.api.models.product_type.ProductTypeResourceIdentifier getProductType(){
+      return this.productType;
    }
-
-
-   public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
-      return this.metaDescription;
-   }
-
-
-   public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
-      return this.taxCategory;
-   }
-
-
-   public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
-      return this.metaKeywords;
-   }
-
-
-   public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints(){
-      return this.categoryOrderHints;
-   }
-
-   /**
-   *  <p>If <code>true</code>, the product is published immediately.</p>
-   */
-   public Boolean getPublish(){
-      return this.publish;
-   }
-
-
-   public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
-      return this.metaTitle;
-   }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getName(){
       return this.name;
    }
-
-
-   public com.commercetools.api.models.state.StateResourceIdentifier getState(){
-      return this.state;
-   }
-
-   /**
-   *  <p>The master product variant.
-   *  Required if the <code>variants</code> array has product variants.</p>
-   */
-   public com.commercetools.api.models.product.ProductVariantDraft getMasterVariant(){
-      return this.masterVariant;
-   }
-
-   /**
-   *  <p>Categories assigned to the product.</p>
-   */
-   public java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> getCategories(){
-      return this.categories;
-   }
-
-   /**
-   *  <p>User-specific unique identifier for the product.</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
-
+   
    /**
    *  <p>Human-readable identifiers usually used as deep-link URLs for the product.
    *  A slug must be unique across a project, but a product can have the same slug for different languages.
@@ -174,77 +106,145 @@ public final class ProductDraftImpl implements ProductDraft {
    public com.commercetools.api.models.common.LocalizedString getSlug(){
       return this.slug;
    }
-
+   
    /**
-   *  <p>A predefined product type assigned to the product.
-   *  All products must have a product type.</p>
+   *  <p>User-specific unique identifier for the product.</p>
    */
-   public com.commercetools.api.models.product_type.ProductTypeResourceIdentifier getProductType(){
-      return this.productType;
+   public String getKey(){
+      return this.key;
    }
-
-   public void setSearchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords){
-      this.searchKeywords = searchKeywords;
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getDescription(){
+      return this.description;
    }
-
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
+   
+   /**
+   *  <p>Categories assigned to the product.</p>
+   */
+   public java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> getCategories(){
+      return this.categories;
    }
-
-   public void setVariants(final java.util.List<com.commercetools.api.models.product.ProductVariantDraft> variants){
-      this.variants = variants;
+   
+   
+   public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints(){
+      return this.categoryOrderHints;
    }
-
-   public void setMetaDescription(final com.commercetools.api.models.common.LocalizedString metaDescription){
-      this.metaDescription = metaDescription;
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
+      return this.metaTitle;
    }
-
-   public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory){
-      this.taxCategory = taxCategory;
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
+      return this.metaDescription;
    }
-
-   public void setMetaKeywords(final com.commercetools.api.models.common.LocalizedString metaKeywords){
-      this.metaKeywords = metaKeywords;
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
+      return this.metaKeywords;
    }
-
-   public void setCategoryOrderHints(final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints){
-      this.categoryOrderHints = categoryOrderHints;
+   
+   /**
+   *  <p>The master product variant.
+   *  Required if the <code>variants</code> array has product variants.</p>
+   */
+   public com.commercetools.api.models.product.ProductVariantDraft getMasterVariant(){
+      return this.masterVariant;
    }
-
-   public void setPublish(final Boolean publish){
-      this.publish = publish;
+   
+   /**
+   *  <p>An array of related product variants.</p>
+   */
+   public java.util.List<com.commercetools.api.models.product.ProductVariantDraft> getVariants(){
+      return this.variants;
    }
-
-   public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle){
-      this.metaTitle = metaTitle;
+   
+   
+   public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
+      return this.taxCategory;
    }
-
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
+   
+   
+   public com.commercetools.api.models.product.SearchKeywords getSearchKeywords(){
+      return this.searchKeywords;
    }
-
-   public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
-      this.state = state;
+   
+   
+   public com.commercetools.api.models.state.StateResourceIdentifier getState(){
+      return this.state;
    }
-
-   public void setMasterVariant(final com.commercetools.api.models.product.ProductVariantDraft masterVariant){
-      this.masterVariant = masterVariant;
-   }
-
-   public void setCategories(final java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> categories){
-      this.categories = categories;
-   }
-
-   public void setKey(final String key){
-      this.key = key;
-   }
-
-   public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
-      this.slug = slug;
+   
+   /**
+   *  <p>If <code>true</code>, the product is published immediately.</p>
+   */
+   public Boolean getPublish(){
+      return this.publish;
    }
 
    public void setProductType(final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType){
       this.productType = productType;
+   }
+   
+   public void setName(final com.commercetools.api.models.common.LocalizedString name){
+      this.name = name;
+   }
+   
+   public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
+      this.slug = slug;
+   }
+   
+   public void setKey(final String key){
+      this.key = key;
+   }
+   
+   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+      this.description = description;
+   }
+   
+   public void setCategories(final java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> categories){
+      this.categories = categories;
+   }
+   
+   public void setCategoryOrderHints(final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints){
+      this.categoryOrderHints = categoryOrderHints;
+   }
+   
+   public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle){
+      this.metaTitle = metaTitle;
+   }
+   
+   public void setMetaDescription(final com.commercetools.api.models.common.LocalizedString metaDescription){
+      this.metaDescription = metaDescription;
+   }
+   
+   public void setMetaKeywords(final com.commercetools.api.models.common.LocalizedString metaKeywords){
+      this.metaKeywords = metaKeywords;
+   }
+   
+   public void setMasterVariant(final com.commercetools.api.models.product.ProductVariantDraft masterVariant){
+      this.masterVariant = masterVariant;
+   }
+   
+   public void setVariants(final java.util.List<com.commercetools.api.models.product.ProductVariantDraft> variants){
+      this.variants = variants;
+   }
+   
+   public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory){
+      this.taxCategory = taxCategory;
+   }
+   
+   public void setSearchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords){
+      this.searchKeywords = searchKeywords;
+   }
+   
+   public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
+      this.state = state;
+   }
+   
+   public void setPublish(final Boolean publish){
+      this.publish = publish;
    }
 
 }

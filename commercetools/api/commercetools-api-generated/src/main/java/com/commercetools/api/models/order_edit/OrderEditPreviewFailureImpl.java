@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure {
 
    private String type;
-
+   
    private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class OrderEditPreviewFailureImpl implements OrderEditPreviewFailur
       this.type = "PreviewFailure";
    }
    public OrderEditPreviewFailureImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors(){
       return this.errors;
    }

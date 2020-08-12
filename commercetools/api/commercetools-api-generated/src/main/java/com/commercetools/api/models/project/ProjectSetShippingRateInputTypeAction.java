@@ -30,11 +30,11 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
    public ShippingRateInputType getShippingRateInputType();
 
    public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
-
+   
    public static ProjectSetShippingRateInputTypeActionImpl of(){
       return new ProjectSetShippingRateInputTypeActionImpl();
    }
-
+   
 
    public static ProjectSetShippingRateInputTypeActionImpl of(final ProjectSetShippingRateInputTypeAction template) {
       ProjectSetShippingRateInputTypeActionImpl instance = new ProjectSetShippingRateInputTypeActionImpl();

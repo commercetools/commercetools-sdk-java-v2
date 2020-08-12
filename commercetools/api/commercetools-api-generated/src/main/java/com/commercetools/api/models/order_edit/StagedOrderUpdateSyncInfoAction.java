@@ -23,30 +23,30 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderUpdateSyncInfoActionImpl.class)
 public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("channel")
    public ChannelResourceIdentifier getChannel();
-
-
+   
+   
    @JsonProperty("externalId")
    public String getExternalId();
-
-
+   
+   
    @JsonProperty("syncedAt")
    public ZonedDateTime getSyncedAt();
 
    public void setChannel(final ChannelResourceIdentifier channel);
-
+   
    public void setExternalId(final String externalId);
-
+   
    public void setSyncedAt(final ZonedDateTime syncedAt);
-
+   
    public static StagedOrderUpdateSyncInfoActionImpl of(){
       return new StagedOrderUpdateSyncInfoActionImpl();
    }
-
+   
 
    public static StagedOrderUpdateSyncInfoActionImpl of(final StagedOrderUpdateSyncInfoAction template) {
       StagedOrderUpdateSyncInfoActionImpl instance = new StagedOrderUpdateSyncInfoActionImpl();

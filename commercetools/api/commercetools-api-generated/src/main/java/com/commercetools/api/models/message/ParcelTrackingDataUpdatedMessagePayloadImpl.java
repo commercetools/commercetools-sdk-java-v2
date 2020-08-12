@@ -24,54 +24,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTrackingDataUpdatedMessagePayload {
 
    private String type;
-
+   
    private String deliveryId;
-
+   
+   private String parcelId;
+   
    private com.commercetools.api.models.order.TrackingData trackingData;
 
-   private String parcelId;
-
    @JsonCreator
-   ParcelTrackingDataUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData, @JsonProperty("parcelId") final String parcelId) {
+   ParcelTrackingDataUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("parcelId") final String parcelId, @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData) {
       this.deliveryId = deliveryId;
-      this.trackingData = trackingData;
       this.parcelId = parcelId;
+      this.trackingData = trackingData;
       this.type = "ParcelTrackingDataUpdated";
    }
    public ParcelTrackingDataUpdatedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public String getDeliveryId(){
       return this.deliveryId;
    }
-
-
-   public com.commercetools.api.models.order.TrackingData getTrackingData(){
-      return this.trackingData;
-   }
-
-
+   
+   
    public String getParcelId(){
       return this.parcelId;
+   }
+   
+   
+   public com.commercetools.api.models.order.TrackingData getTrackingData(){
+      return this.trackingData;
    }
 
    public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
-
-   public void setTrackingData(final com.commercetools.api.models.order.TrackingData trackingData){
-      this.trackingData = trackingData;
-   }
-
+   
    public void setParcelId(final String parcelId){
       this.parcelId = parcelId;
+   }
+   
+   public void setTrackingData(final com.commercetools.api.models.order.TrackingData trackingData){
+      this.trackingData = trackingData;
    }
 
 }

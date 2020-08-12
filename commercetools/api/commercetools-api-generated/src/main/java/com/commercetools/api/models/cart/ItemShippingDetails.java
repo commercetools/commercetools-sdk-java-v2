@@ -39,18 +39,18 @@ public interface ItemShippingDetails  {
    public Boolean getValid();
 
    public void setTargets(final List<ItemShippingTarget> targets);
-
+   
    public void setValid(final Boolean valid);
-
+   
    public static ItemShippingDetailsImpl of(){
       return new ItemShippingDetailsImpl();
    }
-
+   
 
    public static ItemShippingDetailsImpl of(final ItemShippingDetails template) {
       ItemShippingDetailsImpl instance = new ItemShippingDetailsImpl();
-      instance.setValid(template.getValid());
       instance.setTargets(template.getTargets());
+      instance.setValid(template.getValid());
       return instance;
    }
 

@@ -15,12 +15,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class DiscountedLineItemPriceForQuantityBuilder {
    
    
-   private Integer quantity;
+   private Double quantity;
    
    
    private com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice;
    
-   public DiscountedLineItemPriceForQuantityBuilder quantity( final Integer quantity) {
+   public DiscountedLineItemPriceForQuantityBuilder quantity( final Double quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -31,7 +31,7 @@ public final class DiscountedLineItemPriceForQuantityBuilder {
    }
    
    
-   public Integer getQuantity(){
+   public Double getQuantity(){
       return this.quantity;
    }
    

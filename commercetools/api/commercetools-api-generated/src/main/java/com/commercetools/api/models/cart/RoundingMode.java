@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum RoundingMode {
 
-
+  
   @JsonProperty("HalfEven")
   HALF_EVEN("HalfEven"),
-
-
+  
+  
   @JsonProperty("HalfUp")
   HALF_UP("HalfUp"),
-
-
+  
+  
   @JsonProperty("HalfDown")
   HALF_DOWN("HalfDown");
 

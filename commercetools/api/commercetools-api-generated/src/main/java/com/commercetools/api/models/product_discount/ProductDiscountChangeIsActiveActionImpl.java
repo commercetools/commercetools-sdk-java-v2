@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductDiscountChangeIsActiveActionImpl implements ProductDiscountChangeIsActiveAction {
 
    private String action;
-
+   
    private Boolean isActive;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ProductDiscountChangeIsActiveActionImpl implements ProductDis
       this.action = "changeIsActive";
    }
    public ProductDiscountChangeIsActiveActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public Boolean getIsActive(){
       return this.isActive;
    }

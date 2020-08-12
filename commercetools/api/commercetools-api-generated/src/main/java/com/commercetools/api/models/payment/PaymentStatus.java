@@ -51,9 +51,9 @@ public interface PaymentStatus  {
 
    public static PaymentStatusImpl of(final PaymentStatus template) {
       PaymentStatusImpl instance = new PaymentStatusImpl();
+      instance.setInterfaceCode(template.getInterfaceCode());
       instance.setInterfaceText(template.getInterfaceText());
       instance.setState(template.getState());
-      instance.setInterfaceCode(template.getInterfaceCode());
       return instance;
    }
 

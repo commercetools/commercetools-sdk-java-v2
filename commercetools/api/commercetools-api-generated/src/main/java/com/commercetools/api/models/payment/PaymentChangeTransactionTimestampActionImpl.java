@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentChangeTransactionTimestampActionImpl implements PaymentChangeTransactionTimestampAction {
 
    private String action;
-
+   
    private String transactionId;
-
+   
    private java.time.ZonedDateTime timestamp;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class PaymentChangeTransactionTimestampActionImpl implements Paymen
       this.action = "changeTransactionTimestamp";
    }
    public PaymentChangeTransactionTimestampActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getTransactionId(){
       return this.transactionId;
    }
-
-
+   
+   
    public java.time.ZonedDateTime getTimestamp(){
       return this.timestamp;
    }
@@ -57,7 +57,7 @@ public final class PaymentChangeTransactionTimestampActionImpl implements Paymen
    public void setTransactionId(final String transactionId){
       this.transactionId = transactionId;
    }
-
+   
    public void setTimestamp(final java.time.ZonedDateTime timestamp){
       this.timestamp = timestamp;
    }

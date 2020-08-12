@@ -14,74 +14,74 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ShippingRateBuilder {
-
-
-   private java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers;
-
-
+   
+   
    private com.commercetools.api.models.common.TypedMoney price;
-
+   
    @Nullable
    private com.commercetools.api.models.common.TypedMoney freeAbove;
-
+   
    @Nullable
    private Boolean isMatching;
-
-   public ShippingRateBuilder tiers( final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
-      this.tiers = tiers;
-      return this;
-   }
-
+   
+   
+   private java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers;
+   
    public ShippingRateBuilder price( final com.commercetools.api.models.common.TypedMoney price) {
       this.price = price;
       return this;
    }
-
+   
    public ShippingRateBuilder freeAbove(@Nullable final com.commercetools.api.models.common.TypedMoney freeAbove) {
       this.freeAbove = freeAbove;
       return this;
    }
-
+   
    public ShippingRateBuilder isMatching(@Nullable final Boolean isMatching) {
       this.isMatching = isMatching;
       return this;
    }
-
-
-   public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers(){
-      return this.tiers;
+   
+   public ShippingRateBuilder tiers( final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
+      this.tiers = tiers;
+      return this;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.TypedMoney getPrice(){
       return this.price;
    }
-
+   
    @Nullable
    public com.commercetools.api.models.common.TypedMoney getFreeAbove(){
       return this.freeAbove;
    }
-
+   
    @Nullable
    public Boolean getIsMatching(){
       return this.isMatching;
    }
-
-   public ShippingRate build() {
-       return new ShippingRateImpl(tiers, price, freeAbove, isMatching);
+   
+   
+   public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers(){
+      return this.tiers;
    }
 
+   public ShippingRate build() {
+       return new ShippingRateImpl(price, freeAbove, isMatching, tiers);
+   }
+   
    public static ShippingRateBuilder of() {
       return new ShippingRateBuilder();
    }
-
+   
    public static ShippingRateBuilder of(final ShippingRate template) {
       ShippingRateBuilder builder = new ShippingRateBuilder();
-      builder.tiers = template.getTiers();
       builder.price = template.getPrice();
       builder.freeAbove = template.getFreeAbove();
       builder.isMatching = template.getIsMatching();
+      builder.tiers = template.getTiers();
       return builder;
    }
-
+   
 }

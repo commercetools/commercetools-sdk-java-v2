@@ -22,54 +22,44 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerEmailVerifiedMessageImpl implements CustomerEmailVerifiedMessage {
 
-   private java.time.ZonedDateTime createdAt;
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
    private String id;
    
    private Long version;
    
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    private Long sequenceNumber;
    
    private com.commercetools.api.models.common.Reference resource;
    
-   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-   
    private Long resourceVersion;
    
    private String type;
+   
+   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
    @JsonCreator
-   CustomerEmailVerifiedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   CustomerEmailVerifiedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
+      this.createdBy = createdBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.type = "CustomerEmailVerified";
    }
    public CustomerEmailVerifiedMessageImpl() {
       
-   }
-   
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
    }
    
    
@@ -83,13 +73,23 @@ public final class CustomerEmailVerifiedMessageImpl implements CustomerEmailVeri
    }
    
    
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
+   }
+   
+   
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    
@@ -103,11 +103,6 @@ public final class CustomerEmailVerifiedMessageImpl implements CustomerEmailVeri
    }
    
    
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-   
-   
    public Long getResourceVersion(){
       return this.resourceVersion;
    }
@@ -116,15 +111,12 @@ public final class CustomerEmailVerifiedMessageImpl implements CustomerEmailVeri
    public String getType(){
       return this.type;
    }
+   
+   
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
+   }
 
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-   
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
-   
    public void setId(final String id){
       this.id = id;
    }
@@ -133,12 +125,20 @@ public final class CustomerEmailVerifiedMessageImpl implements CustomerEmailVeri
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
+   }
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
    }
    
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
+   }
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
    }
    
    public void setSequenceNumber(final Long sequenceNumber){
@@ -149,12 +149,12 @@ public final class CustomerEmailVerifiedMessageImpl implements CustomerEmailVeri
       this.resource = resource;
    }
    
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-   }
-   
    public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
+   }
+   
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
 
 }

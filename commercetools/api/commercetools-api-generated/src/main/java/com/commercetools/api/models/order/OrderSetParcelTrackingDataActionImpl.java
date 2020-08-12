@@ -25,14 +25,14 @@ public final class OrderSetParcelTrackingDataActionImpl implements OrderSetParce
 
    private String action;
    
-   private com.commercetools.api.models.order.TrackingData trackingData;
-   
    private String parcelId;
+   
+   private com.commercetools.api.models.order.TrackingData trackingData;
 
    @JsonCreator
-   OrderSetParcelTrackingDataActionImpl(@JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData, @JsonProperty("parcelId") final String parcelId) {
-      this.trackingData = trackingData;
+   OrderSetParcelTrackingDataActionImpl(@JsonProperty("parcelId") final String parcelId, @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData) {
       this.parcelId = parcelId;
+      this.trackingData = trackingData;
       this.action = "setParcelTrackingData";
    }
    public OrderSetParcelTrackingDataActionImpl() {
@@ -45,21 +45,21 @@ public final class OrderSetParcelTrackingDataActionImpl implements OrderSetParce
    }
    
    
-   public com.commercetools.api.models.order.TrackingData getTrackingData(){
-      return this.trackingData;
-   }
-   
-   
    public String getParcelId(){
       return this.parcelId;
    }
-
-   public void setTrackingData(final com.commercetools.api.models.order.TrackingData trackingData){
-      this.trackingData = trackingData;
-   }
    
+   
+   public com.commercetools.api.models.order.TrackingData getTrackingData(){
+      return this.trackingData;
+   }
+
    public void setParcelId(final String parcelId){
       this.parcelId = parcelId;
+   }
+   
+   public void setTrackingData(final com.commercetools.api.models.order.TrackingData trackingData){
+      this.trackingData = trackingData;
    }
 
 }

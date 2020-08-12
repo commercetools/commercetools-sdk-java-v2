@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodUpdateImpl implements ShippingMethodUpdate {
 
-   private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions;
-   
    private Long version;
+   
+   private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions;
 
    @JsonCreator
-   ShippingMethodUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   ShippingMethodUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public ShippingMethodUpdateImpl() {
       
    }
    
    
-   public java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> getActions(){
-      return this.actions;
-   }
-   
-   
    public Long getVersion(){
       return this.version;
    }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions){
-      this.actions = actions;
-   }
    
+   
+   public java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> getActions(){
+      return this.actions;
+   }
+
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

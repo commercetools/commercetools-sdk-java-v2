@@ -22,50 +22,57 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics {
 
-   private Integer highestRating;
-
-   private Integer averageRating;
-
+   private Double averageRating;
+   
+   private Double highestRating;
+   
+   private Double lowestRating;
+   
    private Integer count;
-
+   
    private com.fasterxml.jackson.databind.JsonNode ratingsDistribution;
 
-   private Integer lowestRating;
-
    @JsonCreator
-   ReviewRatingStatisticsImpl(@JsonProperty("highestRating") final Integer highestRating, @JsonProperty("averageRating") final Integer averageRating, @JsonProperty("count") final Integer count, @JsonProperty("ratingsDistribution") final com.fasterxml.jackson.databind.JsonNode ratingsDistribution, @JsonProperty("lowestRating") final Integer lowestRating) {
-      this.highestRating = highestRating;
+   ReviewRatingStatisticsImpl(@JsonProperty("averageRating") final Double averageRating, @JsonProperty("highestRating") final Double highestRating, @JsonProperty("lowestRating") final Double lowestRating, @JsonProperty("count") final Integer count, @JsonProperty("ratingsDistribution") final com.fasterxml.jackson.databind.JsonNode ratingsDistribution) {
       this.averageRating = averageRating;
+      this.highestRating = highestRating;
+      this.lowestRating = lowestRating;
       this.count = count;
       this.ratingsDistribution = ratingsDistribution;
-      this.lowestRating = lowestRating;
    }
    public ReviewRatingStatisticsImpl() {
-
+      
    }
-
-   /**
-   *  <p>Highest rating of one target</p>
-   */
-   public Integer getHighestRating(){
-      return this.highestRating;
-   }
-
+   
    /**
    *  <p>Average rating of one target
    *  This number is rounded with 5 decimals.</p>
    */
-   public Integer getAverageRating(){
+   public Double getAverageRating(){
       return this.averageRating;
    }
-
+   
+   /**
+   *  <p>Highest rating of one target</p>
+   */
+   public Double getHighestRating(){
+      return this.highestRating;
+   }
+   
+   /**
+   *  <p>Lowest rating of one target</p>
+   */
+   public Double getLowestRating(){
+      return this.lowestRating;
+   }
+   
    /**
    *  <p>Number of ratings taken into account</p>
    */
    public Integer getCount(){
       return this.count;
    }
-
+   
    /**
    *  <p>The full distribution of the ratings.
    *  The keys are the different ratings and the values are the count of reviews having this rating.
@@ -75,31 +82,24 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
       return this.ratingsDistribution;
    }
 
-   /**
-   *  <p>Lowest rating of one target</p>
-   */
-   public Integer getLowestRating(){
-      return this.lowestRating;
-   }
-
-   public void setHighestRating(final Integer highestRating){
-      this.highestRating = highestRating;
-   }
-
-   public void setAverageRating(final Integer averageRating){
+   public void setAverageRating(final Double averageRating){
       this.averageRating = averageRating;
    }
-
+   
+   public void setHighestRating(final Double highestRating){
+      this.highestRating = highestRating;
+   }
+   
+   public void setLowestRating(final Double lowestRating){
+      this.lowestRating = lowestRating;
+   }
+   
    public void setCount(final Integer count){
       this.count = count;
    }
-
+   
    public void setRatingsDistribution(final com.fasterxml.jackson.databind.JsonNode ratingsDistribution){
       this.ratingsDistribution = ratingsDistribution;
-   }
-
-   public void setLowestRating(final Integer lowestRating){
-      this.lowestRating = lowestRating;
    }
 
 }

@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerResetPasswordImpl implements CustomerResetPassword {
 
+   private String tokenValue;
+   
    private String newPassword;
-
+   
    private Long version;
 
-   private String tokenValue;
-
    @JsonCreator
-   CustomerResetPasswordImpl(@JsonProperty("newPassword") final String newPassword, @JsonProperty("version") final Long version, @JsonProperty("tokenValue") final String tokenValue) {
+   CustomerResetPasswordImpl(@JsonProperty("tokenValue") final String tokenValue, @JsonProperty("newPassword") final String newPassword, @JsonProperty("version") final Long version) {
+      this.tokenValue = tokenValue;
       this.newPassword = newPassword;
       this.version = version;
-      this.tokenValue = tokenValue;
    }
    public CustomerResetPasswordImpl() {
-
+      
    }
-
-
+   
+   
+   public String getTokenValue(){
+      return this.tokenValue;
+   }
+   
+   
    public String getNewPassword(){
       return this.newPassword;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
 
-
-   public String getTokenValue(){
-      return this.tokenValue;
+   public void setTokenValue(final String tokenValue){
+      this.tokenValue = tokenValue;
    }
-
+   
    public void setNewPassword(final String newPassword){
       this.newPassword = newPassword;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
-   }
-
-   public void setTokenValue(final String tokenValue){
-      this.tokenValue = tokenValue;
    }
 
 }

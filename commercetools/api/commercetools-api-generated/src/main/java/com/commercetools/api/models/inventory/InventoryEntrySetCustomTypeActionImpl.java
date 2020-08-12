@@ -25,26 +25,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InventoryEntrySetCustomTypeActionImpl implements InventoryEntrySetCustomTypeAction {
 
    private String action;
-
+   
+   private com.commercetools.api.models.type.TypeResourceIdentifier type;
+   
    private com.commercetools.api.models.type.FieldContainer fields;
 
-   private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
    @JsonCreator
-   InventoryEntrySetCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type) {
-      this.fields = fields;
+   InventoryEntrySetCustomTypeActionImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
       this.type = type;
+      this.fields = fields;
       this.action = "setCustomType";
    }
    public InventoryEntrySetCustomTypeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
+   /**
+   *  <p>If absent, the custom type and any existing CustomFields are removed.</p>
+   */
+   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+      return this.type;
+   }
+   
    /**
    *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
    *  Sets the custom fields to this value.</p>
@@ -53,19 +60,12 @@ public final class InventoryEntrySetCustomTypeActionImpl implements InventoryEnt
       return this.fields;
    }
 
-   /**
-   *  <p>If absent, the custom type and any existing CustomFields are removed.</p>
-   */
-   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
-      return this.type;
-   }
-
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
-
    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
       this.type = type;
+   }
+   
+   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+      this.fields = fields;
    }
 
 }

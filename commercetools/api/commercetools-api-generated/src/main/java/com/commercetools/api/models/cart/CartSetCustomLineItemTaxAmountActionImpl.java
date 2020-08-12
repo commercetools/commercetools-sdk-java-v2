@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLineItemTaxAmountAction {
 
    private String action;
-
+   
    private String customLineItemId;
-
+   
    private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCu
       this.action = "setCustomLineItemTaxAmount";
    }
    public CartSetCustomLineItemTaxAmountActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getCustomLineItemId(){
       return this.customLineItemId;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
       return this.externalTaxAmount;
    }
@@ -57,7 +57,7 @@ public final class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCu
    public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
-
+   
    public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount){
       this.externalTaxAmount = externalTaxAmount;
    }

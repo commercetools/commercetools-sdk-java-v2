@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DeliveryCloudEventsFormatImpl implements DeliveryCloudEventsFormat {
 
    private String type;
-
+   
    private String cloudEventsVersion;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class DeliveryCloudEventsFormatImpl implements DeliveryCloudEventsF
       this.type = "CloudEvents";
    }
    public DeliveryCloudEventsFormatImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public String getCloudEventsVersion(){
       return this.cloudEventsVersion;
    }

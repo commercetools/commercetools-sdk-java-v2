@@ -14,35 +14,20 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ProductMoveImageToPositionActionBuilder {
    
-   
-   private String imageUrl;
-   
-   @Nullable
-   private Boolean staged;
-   
-   
-   private Long position;
-   
    @Nullable
    private Long variantId;
    
    @Nullable
    private String sku;
    
-   public ProductMoveImageToPositionActionBuilder imageUrl( final String imageUrl) {
-      this.imageUrl = imageUrl;
-      return this;
-   }
    
-   public ProductMoveImageToPositionActionBuilder staged(@Nullable final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
+   private String imageUrl;
    
-   public ProductMoveImageToPositionActionBuilder position( final Long position) {
-      this.position = position;
-      return this;
-   }
+   
+   private Long position;
+   
+   @Nullable
+   private Boolean staged;
    
    public ProductMoveImageToPositionActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
@@ -54,19 +39,19 @@ public final class ProductMoveImageToPositionActionBuilder {
       return this;
    }
    
-   
-   public String getImageUrl(){
-      return this.imageUrl;
+   public ProductMoveImageToPositionActionBuilder imageUrl( final String imageUrl) {
+      this.imageUrl = imageUrl;
+      return this;
    }
    
-   @Nullable
-   public Boolean getStaged(){
-      return this.staged;
+   public ProductMoveImageToPositionActionBuilder position( final Long position) {
+      this.position = position;
+      return this;
    }
    
-   
-   public Long getPosition(){
-      return this.position;
+   public ProductMoveImageToPositionActionBuilder staged(@Nullable final Boolean staged) {
+      this.staged = staged;
+      return this;
    }
    
    @Nullable
@@ -78,9 +63,24 @@ public final class ProductMoveImageToPositionActionBuilder {
    public String getSku(){
       return this.sku;
    }
+   
+   
+   public String getImageUrl(){
+      return this.imageUrl;
+   }
+   
+   
+   public Long getPosition(){
+      return this.position;
+   }
+   
+   @Nullable
+   public Boolean getStaged(){
+      return this.staged;
+   }
 
    public ProductMoveImageToPositionAction build() {
-       return new ProductMoveImageToPositionActionImpl(imageUrl, staged, position, variantId, sku);
+       return new ProductMoveImageToPositionActionImpl(variantId, sku, imageUrl, position, staged);
    }
    
    public static ProductMoveImageToPositionActionBuilder of() {
@@ -89,11 +89,11 @@ public final class ProductMoveImageToPositionActionBuilder {
    
    public static ProductMoveImageToPositionActionBuilder of(final ProductMoveImageToPositionAction template) {
       ProductMoveImageToPositionActionBuilder builder = new ProductMoveImageToPositionActionBuilder();
-      builder.imageUrl = template.getImageUrl();
-      builder.staged = template.getStaged();
-      builder.position = template.getPosition();
       builder.variantId = template.getVariantId();
       builder.sku = template.getSku();
+      builder.imageUrl = template.getImageUrl();
+      builder.position = template.getPosition();
+      builder.staged = template.getStaged();
       return builder;
    }
    

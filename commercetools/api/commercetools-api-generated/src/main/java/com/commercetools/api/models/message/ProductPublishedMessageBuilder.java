@@ -16,200 +16,200 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductPublishedMessageBuilder {
-
-
-   private java.time.ZonedDateTime createdAt;
-
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
-
+   
+   
    private String id;
-
-
+   
+   
    private Long version;
-
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-
+   
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   
    private Long sequenceNumber;
-
-
+   
+   
    private com.commercetools.api.models.common.Reference resource;
-
+   
+   
+   private Long resourceVersion;
+   
    @Nullable
    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
-
-   private Long resourceVersion;
-
-
+   
+   
    private java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls;
-
-
+   
+   
    private com.commercetools.api.models.product.ProductProjection productProjection;
-
-
+   
+   
    private com.commercetools.api.models.cart.ProductPublishScope scope;
-
-   public ProductPublishedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-
-   public ProductPublishedMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
-
+   
    public ProductPublishedMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
-
+   
    public ProductPublishedMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
-
-   public ProductPublishedMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   
+   public ProductPublishedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
       return this;
    }
-
+   
+   public ProductPublishedMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
+      return this;
+   }
+   
    public ProductPublishedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
-
+   
+   public ProductPublishedMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
    public ProductPublishedMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
-
+   
    public ProductPublishedMessageBuilder resource( final com.commercetools.api.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
-
-   public ProductPublishedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-      return this;
-   }
-
+   
    public ProductPublishedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
-
+   
+   public ProductPublishedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+      return this;
+   }
+   
    public ProductPublishedMessageBuilder removedImageUrls( final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls) {
       this.removedImageUrls = removedImageUrls;
       return this;
    }
-
+   
    public ProductPublishedMessageBuilder productProjection( final com.commercetools.api.models.product.ProductProjection productProjection) {
       this.productProjection = productProjection;
       return this;
    }
-
+   
    public ProductPublishedMessageBuilder scope( final com.commercetools.api.models.cart.ProductPublishScope scope) {
       this.scope = scope;
       return this;
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
    @Nullable
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
+   
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
    public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Reference getResource(){
       return this.resource;
    }
-
+   
+   
+   public Long getResourceVersion(){
+      return this.resourceVersion;
+   }
+   
    @Nullable
    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
-
-
-   public Long getResourceVersion(){
-      return this.resourceVersion;
-   }
-
-
+   
+   
    public java.util.List<com.fasterxml.jackson.databind.JsonNode> getRemovedImageUrls(){
       return this.removedImageUrls;
    }
-
-
+   
+   
    public com.commercetools.api.models.product.ProductProjection getProductProjection(){
       return this.productProjection;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.ProductPublishScope getScope(){
       return this.scope;
    }
 
    public ProductPublishedMessage build() {
-       return new ProductPublishedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, removedImageUrls, productProjection, scope);
+       return new ProductPublishedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls, productProjection, scope);
    }
-
+   
    public static ProductPublishedMessageBuilder of() {
       return new ProductPublishedMessageBuilder();
    }
-
+   
    public static ProductPublishedMessageBuilder of(final ProductPublishedMessage template) {
       ProductPublishedMessageBuilder builder = new ProductPublishedMessageBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
+      builder.createdBy = template.getCreatedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
-      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
+      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.removedImageUrls = template.getRemovedImageUrls();
       builder.productProjection = template.getProductProjection();
       builder.scope = template.getScope();
       return builder;
    }
-
+   
 }

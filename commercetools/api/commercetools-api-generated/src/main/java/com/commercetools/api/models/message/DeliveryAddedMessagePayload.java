@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = DeliveryAddedMessagePayloadImpl.class)
 public interface DeliveryAddedMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("delivery")
    public Delivery getDelivery();
 
    public void setDelivery(final Delivery delivery);
-
+   
    public static DeliveryAddedMessagePayloadImpl of(){
       return new DeliveryAddedMessagePayloadImpl();
    }
-
+   
 
    public static DeliveryAddedMessagePayloadImpl of(final DeliveryAddedMessagePayload template) {
       DeliveryAddedMessagePayloadImpl instance = new DeliveryAddedMessagePayloadImpl();

@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -27,24 +29,24 @@ import io.vrap.rmf.base.client.*;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public class ByProjectKeyCartDiscountsKeyByKeyPost {
-
-
+   
+   
    private ApiHttpHeaders headers = new ApiHttpHeaders();
    private Map<String, String> additionalQueryParams = new HashMap<>();
-   private final ApiHttpClient apiHttpClient;
+   private final ApiHttpClient apiHttpClient; 
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    private String key;
-
+   
    private com.commercetools.api.models.cart_discount.CartDiscountUpdate cartDiscountUpdate;
-
+   
    public ByProjectKeyCartDiscountsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.cart_discount.CartDiscountUpdate cartDiscountUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.key = key;
       this.cartDiscountUpdate = cartDiscountUpdate;
    }
-
+   
    public ApiHttpRequest createHttpRequest() {
       ApiHttpRequest httpRequest = new ApiHttpRequest();
       List<String> params = new ArrayList<>();
@@ -55,13 +57,13 @@ public class ByProjectKeyCartDiscountsKeyByKeyPost {
       if(!params.isEmpty()){
          httpRequestPath += "?" + String.join("&", params);
       }
-      httpRequest.setRelativeUrl(httpRequestPath);
+      httpRequest.setRelativeUrl(httpRequestPath); 
       httpRequest.setMethod(ApiHttpMethod.POST);
       httpRequest.setHeaders(headers);
       try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(cartDiscountUpdate));}catch(Exception e){e.printStackTrace();}
       return httpRequest;
    }
-
+   
    public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount> executeBlocking(){
       try {
           return execute().get();
@@ -69,7 +71,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyPost {
           throw new RuntimeException(e);
       }
    }
-
+   
    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
               .thenApply(response -> {
@@ -79,60 +81,60 @@ public class ByProjectKeyCartDiscountsKeyByKeyPost {
                   return Utils.convertResponse(response,com.commercetools.api.models.cart_discount.CartDiscount.class);
               });
    }
-
+   
    public String getProjectKey() {return this.projectKey;}
    public String getKey() {return this.key;}
-
+   
    public List<String> getExpand() {
       return this.expand;
    }
-
+   
    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
-
+   
    public void setKey(final String key) {this.key = key;}
-
+   
    public ByProjectKeyCartDiscountsKeyByKeyPost addExpand(final String expand){
       this.expand.add(expand);
       return this;
    }
-
+   
    public ByProjectKeyCartDiscountsKeyByKeyPost withExpand(final List<String> expand){
       this.expand = expand;
       return this;
    }
-
+   
    public ByProjectKeyCartDiscountsKeyByKeyPost addHeader(final String key, final String value) {
       this.headers.addHeader(key, value);
       return this;
    }
-
+   
    public ByProjectKeyCartDiscountsKeyByKeyPost withHeaders(final ApiHttpHeaders headers) {
       this.headers = headers;
       return this;
    }
-
+   
    public String getHeaderValue(final String key) {
       return this.headers.getHeaderValue(key);
    }
-
+   
    public ApiHttpHeaders getHeaders() {
       return this.headers;
    }
-
+   
    public ByProjectKeyCartDiscountsKeyByKeyPost addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
       this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
       return this;
    }
-
+   
    public ByProjectKeyCartDiscountsKeyByKeyPost setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
       this.additionalQueryParams = additionalQueryParams;
       return this;
    }
-
+   
    public Map<String, String> getAdditionalQueryParams() {
       return this.additionalQueryParams;
    }
-
+   
    private String urlEncode(final String s){
       try{
            return URLEncoder.encode(s, "UTF-8");

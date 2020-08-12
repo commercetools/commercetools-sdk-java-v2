@@ -28,9 +28,9 @@ public final class ProductUnpublishedMessagePayloadImpl implements ProductUnpubl
    ProductUnpublishedMessagePayloadImpl() {
       this.type = "ProductUnpublished";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ItemStateImpl.class)
 public interface ItemState  {
 
-
+   
    @NotNull
    @JsonProperty("quantity")
-   public Integer getQuantity();
-
+   public Double getQuantity();
+   
    @NotNull
    @Valid
    @JsonProperty("state")
    public StateReference getState();
 
-   public void setQuantity(final Integer quantity);
-
+   public void setQuantity(final Double quantity);
+   
    public void setState(final StateReference state);
-
+   
    public static ItemStateImpl of(){
       return new ItemStateImpl();
    }
-
+   
 
    public static ItemStateImpl of(final ItemState template) {
       ItemStateImpl instance = new ItemStateImpl();

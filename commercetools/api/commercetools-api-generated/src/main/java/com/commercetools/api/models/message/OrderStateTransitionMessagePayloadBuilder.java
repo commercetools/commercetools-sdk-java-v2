@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderStateTransitionMessagePayloadBuilder {
-
-
-   private Boolean force;
-
-
+   
+   
    private com.commercetools.api.models.state.StateReference state;
-
-   public OrderStateTransitionMessagePayloadBuilder force( final Boolean force) {
-      this.force = force;
-      return this;
-   }
-
+   
+   
+   private Boolean force;
+   
    public OrderStateTransitionMessagePayloadBuilder state( final com.commercetools.api.models.state.StateReference state) {
       this.state = state;
       return this;
    }
-
-
+   
+   public OrderStateTransitionMessagePayloadBuilder force( final Boolean force) {
+      this.force = force;
+      return this;
+   }
+   
+   
+   public com.commercetools.api.models.state.StateReference getState(){
+      return this.state;
+   }
+   
+   
    public Boolean getForce(){
       return this.force;
    }
 
-
-   public com.commercetools.api.models.state.StateReference getState(){
-      return this.state;
-   }
-
    public OrderStateTransitionMessagePayload build() {
-       return new OrderStateTransitionMessagePayloadImpl(force, state);
+       return new OrderStateTransitionMessagePayloadImpl(state, force);
    }
-
+   
    public static OrderStateTransitionMessagePayloadBuilder of() {
       return new OrderStateTransitionMessagePayloadBuilder();
    }
-
+   
    public static OrderStateTransitionMessagePayloadBuilder of(final OrderStateTransitionMessagePayload template) {
       OrderStateTransitionMessagePayloadBuilder builder = new OrderStateTransitionMessagePayloadBuilder();
-      builder.force = template.getForce();
       builder.state = template.getState();
+      builder.force = template.getForce();
       return builder;
    }
-
+   
 }

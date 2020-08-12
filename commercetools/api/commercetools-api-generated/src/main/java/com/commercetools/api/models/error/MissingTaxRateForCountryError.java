@@ -21,36 +21,36 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingTaxRateForCountryErrorImpl.class)
 public interface MissingTaxRateForCountryError extends ErrorObject {
 
-
+   
    @NotNull
    @JsonProperty("taxCategoryId")
    public String getTaxCategoryId();
-
-
+   
+   
    @JsonProperty("country")
    public String getCountry();
-
-
+   
+   
    @JsonProperty("state")
    public String getState();
 
    public void setTaxCategoryId(final String taxCategoryId);
-
+   
    public void setCountry(final String country);
-
+   
    public void setState(final String state);
-
+   
    public static MissingTaxRateForCountryErrorImpl of(){
       return new MissingTaxRateForCountryErrorImpl();
    }
-
+   
 
    public static MissingTaxRateForCountryErrorImpl of(final MissingTaxRateForCountryError template) {
       MissingTaxRateForCountryErrorImpl instance = new MissingTaxRateForCountryErrorImpl();
       instance.setMessage(template.getMessage());
+      instance.setTaxCategoryId(template.getTaxCategoryId());
       instance.setCountry(template.getCountry());
       instance.setState(template.getState());
-      instance.setTaxCategoryId(template.getTaxCategoryId());
       return instance;
    }
 

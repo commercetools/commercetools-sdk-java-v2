@@ -1,8 +1,8 @@
 package com.commercetools.api.models.zone;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.zone.Location;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.zone.ZoneImpl;
@@ -23,7 +23,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ZoneImpl.class)
-public interface Zone extends LoggedResource {
+public interface Zone extends BaseResource {
 
    /**
    *  <p>The unique ID of the zone.</p>
@@ -102,16 +102,16 @@ public interface Zone extends LoggedResource {
 
    public static ZoneImpl of(final Zone template) {
       ZoneImpl instance = new ZoneImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setKey(template.getKey());
       instance.setName(template.getName());
       instance.setDescription(template.getDescription());
       instance.setLocations(template.getLocations());
-      instance.setKey(template.getKey());
       return instance;
    }
 

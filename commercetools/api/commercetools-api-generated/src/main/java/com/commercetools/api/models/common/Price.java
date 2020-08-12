@@ -98,16 +98,16 @@ public interface Price  {
 
    public static PriceImpl of(final Price template) {
       PriceImpl instance = new PriceImpl();
-      instance.setDiscounted(template.getDiscounted());
-      instance.setCountry(template.getCountry());
-      instance.setTiers(template.getTiers());
-      instance.setCustomerGroup(template.getCustomerGroup());
-      instance.setCustom(template.getCustom());
-      instance.setChannel(template.getChannel());
-      instance.setValidUntil(template.getValidUntil());
-      instance.setValidFrom(template.getValidFrom());
       instance.setId(template.getId());
       instance.setValue(template.getValue());
+      instance.setCountry(template.getCountry());
+      instance.setCustomerGroup(template.getCustomerGroup());
+      instance.setChannel(template.getChannel());
+      instance.setValidFrom(template.getValidFrom());
+      instance.setValidUntil(template.getValidUntil());
+      instance.setDiscounted(template.getDiscounted());
+      instance.setCustom(template.getCustom());
+      instance.setTiers(template.getTiers());
       return instance;
    }
 

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProjectChangeCurrenciesActionImpl implements ProjectChangeCurrenciesAction {
 
    private String action;
-
+   
    private java.util.List<String> currencies;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ProjectChangeCurrenciesActionImpl implements ProjectChangeCur
       this.action = "changeCurrencies";
    }
    public ProjectChangeCurrenciesActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>A three-digit currency code as per currency code.</p>
    */

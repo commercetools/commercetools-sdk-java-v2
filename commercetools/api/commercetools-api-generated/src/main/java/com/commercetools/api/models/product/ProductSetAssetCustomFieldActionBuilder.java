@@ -16,40 +16,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProductSetAssetCustomFieldActionBuilder {
    
    @Nullable
-   private String assetId;
-   
-   
-   private String name;
-   
-   @Nullable
-   private Boolean staged;
-   
-   @Nullable
    private Long variantId;
    
    @Nullable
    private String sku;
    
    @Nullable
-   private com.fasterxml.jackson.databind.JsonNode value;
+   private Boolean staged;
+   
+   @Nullable
+   private String assetId;
    
    @Nullable
    private String assetKey;
    
-   public ProductSetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
-      this.assetId = assetId;
-      return this;
-   }
    
-   public ProductSetAssetCustomFieldActionBuilder name( final String name) {
-      this.name = name;
-      return this;
-   }
+   private String name;
    
-   public ProductSetAssetCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
+   @Nullable
+   private com.fasterxml.jackson.databind.JsonNode value;
    
    public ProductSetAssetCustomFieldActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
@@ -61,8 +46,13 @@ public final class ProductSetAssetCustomFieldActionBuilder {
       return this;
    }
    
-   public ProductSetAssetCustomFieldActionBuilder value(@Nullable final com.fasterxml.jackson.databind.JsonNode value) {
-      this.value = value;
+   public ProductSetAssetCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
+      this.staged = staged;
+      return this;
+   }
+   
+   public ProductSetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
+      this.assetId = assetId;
       return this;
    }
    
@@ -71,19 +61,14 @@ public final class ProductSetAssetCustomFieldActionBuilder {
       return this;
    }
    
-   @Nullable
-   public String getAssetId(){
-      return this.assetId;
+   public ProductSetAssetCustomFieldActionBuilder name( final String name) {
+      this.name = name;
+      return this;
    }
    
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   @Nullable
-   public Boolean getStaged(){
-      return this.staged;
+   public ProductSetAssetCustomFieldActionBuilder value(@Nullable final com.fasterxml.jackson.databind.JsonNode value) {
+      this.value = value;
+      return this;
    }
    
    @Nullable
@@ -97,17 +82,32 @@ public final class ProductSetAssetCustomFieldActionBuilder {
    }
    
    @Nullable
-   public com.fasterxml.jackson.databind.JsonNode getValue(){
-      return this.value;
+   public Boolean getStaged(){
+      return this.staged;
+   }
+   
+   @Nullable
+   public String getAssetId(){
+      return this.assetId;
    }
    
    @Nullable
    public String getAssetKey(){
       return this.assetKey;
    }
+   
+   
+   public String getName(){
+      return this.name;
+   }
+   
+   @Nullable
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
+      return this.value;
+   }
 
    public ProductSetAssetCustomFieldAction build() {
-       return new ProductSetAssetCustomFieldActionImpl(assetId, name, staged, variantId, sku, value, assetKey);
+       return new ProductSetAssetCustomFieldActionImpl(variantId, sku, staged, assetId, assetKey, name, value);
    }
    
    public static ProductSetAssetCustomFieldActionBuilder of() {
@@ -116,13 +116,13 @@ public final class ProductSetAssetCustomFieldActionBuilder {
    
    public static ProductSetAssetCustomFieldActionBuilder of(final ProductSetAssetCustomFieldAction template) {
       ProductSetAssetCustomFieldActionBuilder builder = new ProductSetAssetCustomFieldActionBuilder();
-      builder.assetId = template.getAssetId();
-      builder.name = template.getName();
-      builder.staged = template.getStaged();
       builder.variantId = template.getVariantId();
       builder.sku = template.getSku();
-      builder.value = template.getValue();
+      builder.staged = template.getStaged();
+      builder.assetId = template.getAssetId();
       builder.assetKey = template.getAssetKey();
+      builder.name = template.getName();
+      builder.value = template.getValue();
       return builder;
    }
    

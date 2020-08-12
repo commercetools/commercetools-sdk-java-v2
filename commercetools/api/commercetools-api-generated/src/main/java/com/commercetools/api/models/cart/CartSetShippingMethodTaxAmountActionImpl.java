@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartSetShippingMethodTaxAmountActionImpl implements CartSetShippingMethodTaxAmountAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CartSetShippingMethodTaxAmountActionImpl implements CartSetSh
       this.action = "setShippingMethodTaxAmount";
    }
    public CartSetShippingMethodTaxAmountActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
       return this.externalTaxAmount;
    }

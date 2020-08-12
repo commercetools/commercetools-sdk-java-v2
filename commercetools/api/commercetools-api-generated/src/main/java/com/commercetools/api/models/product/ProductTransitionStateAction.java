@@ -22,28 +22,28 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTransitionStateActionImpl.class)
 public interface ProductTransitionStateAction extends ProductUpdateAction {
 
-
+   
    @Valid
    @JsonProperty("state")
    public StateResourceIdentifier getState();
-
-
+   
+   
    @JsonProperty("force")
    public Boolean getForce();
 
    public void setState(final StateResourceIdentifier state);
-
+   
    public void setForce(final Boolean force);
-
+   
    public static ProductTransitionStateActionImpl of(){
       return new ProductTransitionStateActionImpl();
    }
-
+   
 
    public static ProductTransitionStateActionImpl of(final ProductTransitionStateAction template) {
       ProductTransitionStateActionImpl instance = new ProductTransitionStateActionImpl();
-      instance.setForce(template.getForce());
       instance.setState(template.getState());
+      instance.setForce(template.getForce());
       return instance;
    }
 

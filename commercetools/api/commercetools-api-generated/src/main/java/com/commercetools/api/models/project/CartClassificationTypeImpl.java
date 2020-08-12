@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartClassificationTypeImpl implements CartClassificationType {
 
    private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
-
+   
    private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
    @JsonCreator
@@ -34,15 +34,15 @@ public final class CartClassificationTypeImpl implements CartClassificationType 
       this.type = ShippingRateTierType.findEnumViaJsonName("CartClassification").get();
    }
    public CartClassificationTypeImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
       return this.type;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues(){
       return this.values;
    }

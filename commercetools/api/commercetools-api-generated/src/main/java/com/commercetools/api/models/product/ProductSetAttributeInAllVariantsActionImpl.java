@@ -24,56 +24,56 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAttributeInAllVariantsAction {
 
    private String action;
-
+   
    private String name;
-
+   
+   private com.fasterxml.jackson.databind.JsonNode value;
+   
    private Boolean staged;
 
-   private com.fasterxml.jackson.databind.JsonNode value;
-
    @JsonCreator
-   ProductSetAttributeInAllVariantsActionImpl(@JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
+   ProductSetAttributeInAllVariantsActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value, @JsonProperty("staged") final Boolean staged) {
       this.name = name;
-      this.staged = staged;
       this.value = value;
+      this.staged = staged;
       this.action = "setAttributeInAllVariants";
    }
    public ProductSetAttributeInAllVariantsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
-
-   public Boolean getStaged(){
-      return this.staged;
-   }
-
+   
    /**
    *  <p>The same update behavior as for Set Attribute applies.</p>
    */
    public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
+   }
 
    public void setName(final String name){
       this.name = name;
    }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
-
+   
    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
    }
 
 }

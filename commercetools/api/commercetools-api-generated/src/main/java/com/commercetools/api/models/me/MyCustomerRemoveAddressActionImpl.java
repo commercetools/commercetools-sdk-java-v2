@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyCustomerRemoveAddressActionImpl implements MyCustomerRemoveAddressAction {
 
    private String action;
-
+   
    private String addressId;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class MyCustomerRemoveAddressActionImpl implements MyCustomerRemove
       this.action = "removeAddress";
    }
    public MyCustomerRemoveAddressActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAddressId(){
       return this.addressId;
    }

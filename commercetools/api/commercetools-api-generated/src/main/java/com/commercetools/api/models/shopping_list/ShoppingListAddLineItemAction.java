@@ -23,56 +23,56 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListAddLineItemActionImpl.class)
 public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction {
 
-
-
+   
+   
    @JsonProperty("sku")
    public String getSku();
-
-
+   
+   
    @JsonProperty("productId")
    public String getProductId();
-
-
+   
+   
    @JsonProperty("variantId")
    public Long getVariantId();
-
-
+   
+   
    @JsonProperty("quantity")
    public Long getQuantity();
-
-
+   
+   
    @JsonProperty("addedAt")
    public ZonedDateTime getAddedAt();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
 
    public void setSku(final String sku);
-
+   
    public void setProductId(final String productId);
-
+   
    public void setVariantId(final Long variantId);
-
+   
    public void setQuantity(final Long quantity);
-
+   
    public void setAddedAt(final ZonedDateTime addedAt);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public static ShoppingListAddLineItemActionImpl of(){
       return new ShoppingListAddLineItemActionImpl();
    }
-
+   
 
    public static ShoppingListAddLineItemActionImpl of(final ShoppingListAddLineItemAction template) {
       ShoppingListAddLineItemActionImpl instance = new ShoppingListAddLineItemActionImpl();
-      instance.setAddedAt(template.getAddedAt());
-      instance.setQuantity(template.getQuantity());
-      instance.setProductId(template.getProductId());
-      instance.setCustom(template.getCustom());
-      instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
+      instance.setProductId(template.getProductId());
+      instance.setVariantId(template.getVariantId());
+      instance.setQuantity(template.getQuantity());
+      instance.setAddedAt(template.getAddedAt());
+      instance.setCustom(template.getCustom());
       return instance;
    }
 

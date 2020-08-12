@@ -23,18 +23,18 @@ import java.io.IOException;
 @JsonDeserialize(as = RangeFacetResultImpl.class)
 public interface RangeFacetResult extends FacetResult {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("ranges")
    public List<FacetResultRange> getRanges();
 
    public void setRanges(final List<FacetResultRange> ranges);
-
+   
    public static RangeFacetResultImpl of(){
       return new RangeFacetResultImpl();
    }
-
+   
 
    public static RangeFacetResultImpl of(final RangeFacetResult template) {
       RangeFacetResultImpl instance = new RangeFacetResultImpl();

@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface InventoryEntryResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static InventoryEntryResourceIdentifierImpl of(){
       return new InventoryEntryResourceIdentifierImpl();
    }
-
+   
 
    public static InventoryEntryResourceIdentifierImpl of(final InventoryEntryResourceIdentifier template) {
       InventoryEntryResourceIdentifierImpl instance = new InventoryEntryResourceIdentifierImpl();

@@ -46,8 +46,8 @@ public interface CustomerSignInResult  {
 
    public static CustomerSignInResultImpl of(final CustomerSignInResult template) {
       CustomerSignInResultImpl instance = new CustomerSignInResultImpl();
-      instance.setCart(template.getCart());
       instance.setCustomer(template.getCustomer());
+      instance.setCart(template.getCart());
       return instance;
    }
 

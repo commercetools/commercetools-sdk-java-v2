@@ -27,16 +27,16 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
    *  This limit can be increased per project after we review the performance impact.
    *  Please contact Support via the support and provide the region, project key and use case.</p>
    */
-
+   
    @JsonProperty("timeoutInMs")
    public Integer getTimeoutInMs();
 
    public void setTimeoutInMs(final Integer timeoutInMs);
-
+   
    public static ExtensionSetTimeoutInMsActionImpl of(){
       return new ExtensionSetTimeoutInMsActionImpl();
    }
-
+   
 
    public static ExtensionSetTimeoutInMsActionImpl of(final ExtensionSetTimeoutInMsAction template) {
       ExtensionSetTimeoutInMsActionImpl instance = new ExtensionSetTimeoutInMsActionImpl();

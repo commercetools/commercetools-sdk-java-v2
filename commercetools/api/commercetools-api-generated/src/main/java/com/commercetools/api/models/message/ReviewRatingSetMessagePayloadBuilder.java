@@ -16,29 +16,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ReviewRatingSetMessagePayloadBuilder {
    
    @Nullable
-   private Integer oldRating;
+   private Double oldRating;
+   
+   @Nullable
+   private Double newRating;
    
    
    private Boolean includedInStatistics;
    
    @Nullable
-   private Integer newRating;
-   
-   @Nullable
    private com.commercetools.api.models.common.Reference target;
    
-   public ReviewRatingSetMessagePayloadBuilder oldRating(@Nullable final Integer oldRating) {
+   public ReviewRatingSetMessagePayloadBuilder oldRating(@Nullable final Double oldRating) {
       this.oldRating = oldRating;
+      return this;
+   }
+   
+   public ReviewRatingSetMessagePayloadBuilder newRating(@Nullable final Double newRating) {
+      this.newRating = newRating;
       return this;
    }
    
    public ReviewRatingSetMessagePayloadBuilder includedInStatistics( final Boolean includedInStatistics) {
       this.includedInStatistics = includedInStatistics;
-      return this;
-   }
-   
-   public ReviewRatingSetMessagePayloadBuilder newRating(@Nullable final Integer newRating) {
-      this.newRating = newRating;
       return this;
    }
    
@@ -48,8 +48,13 @@ public final class ReviewRatingSetMessagePayloadBuilder {
    }
    
    @Nullable
-   public Integer getOldRating(){
+   public Double getOldRating(){
       return this.oldRating;
+   }
+   
+   @Nullable
+   public Double getNewRating(){
+      return this.newRating;
    }
    
    
@@ -58,17 +63,12 @@ public final class ReviewRatingSetMessagePayloadBuilder {
    }
    
    @Nullable
-   public Integer getNewRating(){
-      return this.newRating;
-   }
-   
-   @Nullable
    public com.commercetools.api.models.common.Reference getTarget(){
       return this.target;
    }
 
    public ReviewRatingSetMessagePayload build() {
-       return new ReviewRatingSetMessagePayloadImpl(oldRating, includedInStatistics, newRating, target);
+       return new ReviewRatingSetMessagePayloadImpl(oldRating, newRating, includedInStatistics, target);
    }
    
    public static ReviewRatingSetMessagePayloadBuilder of() {
@@ -78,8 +78,8 @@ public final class ReviewRatingSetMessagePayloadBuilder {
    public static ReviewRatingSetMessagePayloadBuilder of(final ReviewRatingSetMessagePayload template) {
       ReviewRatingSetMessagePayloadBuilder builder = new ReviewRatingSetMessagePayloadBuilder();
       builder.oldRating = template.getOldRating();
-      builder.includedInStatistics = template.getIncludedInStatistics();
       builder.newRating = template.getNewRating();
+      builder.includedInStatistics = template.getIncludedInStatistics();
       builder.target = template.getTarget();
       return builder;
    }

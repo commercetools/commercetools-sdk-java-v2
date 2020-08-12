@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartSetShippingRateInputActionImpl implements CartSetShippingRateInputAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class CartSetShippingRateInputActionImpl implements CartSetShipping
       this.action = "setShippingRateInput";
    }
    public CartSetShippingRateInputActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>Based on the definition of ShippingRateInputType.
    *  If CartClassification is defined, it must be ClassificationShippingRateInput.

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShippingMethodChangeTaxCategoryActionImpl implements ShippingMethodChangeTaxCategoryAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ShippingMethodChangeTaxCategoryActionImpl implements Shipping
       this.action = "changeTaxCategory";
    }
    public ShippingMethodChangeTaxCategoryActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }

@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MessageConfigurationDraftImpl implements MessageConfigurationDraft {
 
+   private Boolean enabled;
+   
    private Integer deleteDaysAfterCreation;
 
-   private Boolean enabled;
-
    @JsonCreator
-   MessageConfigurationDraftImpl(@JsonProperty("deleteDaysAfterCreation") final Integer deleteDaysAfterCreation, @JsonProperty("enabled") final Boolean enabled) {
-      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
+   MessageConfigurationDraftImpl(@JsonProperty("enabled") final Boolean enabled, @JsonProperty("deleteDaysAfterCreation") final Integer deleteDaysAfterCreation) {
       this.enabled = enabled;
+      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
    }
    public MessageConfigurationDraftImpl() {
-
+      
    }
-
-
+   
+   
+   public Boolean getEnabled(){
+      return this.enabled;
+   }
+   
+   
    public Integer getDeleteDaysAfterCreation(){
       return this.deleteDaysAfterCreation;
    }
 
-
-   public Boolean getEnabled(){
-      return this.enabled;
-   }
-
-   public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation){
-      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
-   }
-
    public void setEnabled(final Boolean enabled){
       this.enabled = enabled;
+   }
+   
+   public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation){
+      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
    }
 
 }

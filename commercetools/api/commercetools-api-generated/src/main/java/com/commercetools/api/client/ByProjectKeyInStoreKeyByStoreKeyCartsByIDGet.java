@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,11 +22,11 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-*  <p>Returns a cart by its ID from a specific Store. The {storeKey} path parameter maps to a Store’s key.
+*  <p>Returns a cart by its ID from a specific Store. The {storeKey} path parameter maps to a Store's key.
 *  If the cart exists in the commercetools project but does not have the store field,
 *  or the store field references a different store, this method returns a ResourceNotFound error.
 *  The cart may not contain up-to-date prices, discounts etc.
-*  If you want to ensure they’re up-to-date, send an Update request with the Recalculate update action instead.</p>
+*  If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

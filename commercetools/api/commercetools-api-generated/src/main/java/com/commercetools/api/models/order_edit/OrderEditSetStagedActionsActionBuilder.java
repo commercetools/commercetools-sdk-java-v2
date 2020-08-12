@@ -14,16 +14,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderEditSetStagedActionsActionBuilder {
-
-
+   
+   
    private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
-
+   
    public OrderEditSetStagedActionsActionBuilder stagedActions( final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
       this.stagedActions = stagedActions;
       return this;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions(){
       return this.stagedActions;
    }
@@ -31,15 +31,15 @@ public final class OrderEditSetStagedActionsActionBuilder {
    public OrderEditSetStagedActionsAction build() {
        return new OrderEditSetStagedActionsActionImpl(stagedActions);
    }
-
+   
    public static OrderEditSetStagedActionsActionBuilder of() {
       return new OrderEditSetStagedActionsActionBuilder();
    }
-
+   
    public static OrderEditSetStagedActionsActionBuilder of(final OrderEditSetStagedActionsAction template) {
       OrderEditSetStagedActionsActionBuilder builder = new OrderEditSetStagedActionsActionBuilder();
       builder.stagedActions = template.getStagedActions();
       return builder;
    }
-
+   
 }

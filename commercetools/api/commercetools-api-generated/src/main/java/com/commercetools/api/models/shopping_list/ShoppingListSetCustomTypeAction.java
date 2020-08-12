@@ -38,18 +38,18 @@ public interface ShoppingListSetCustomTypeAction extends ShoppingListUpdateActio
    public FieldContainer getFields();
 
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final FieldContainer fields);
-
+   
    public static ShoppingListSetCustomTypeActionImpl of(){
       return new ShoppingListSetCustomTypeActionImpl();
    }
-
+   
 
    public static ShoppingListSetCustomTypeActionImpl of(final ShoppingListSetCustomTypeAction template) {
       ShoppingListSetCustomTypeActionImpl instance = new ShoppingListSetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

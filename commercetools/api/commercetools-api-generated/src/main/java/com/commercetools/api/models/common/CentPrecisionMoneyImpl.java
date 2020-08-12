@@ -23,40 +23,40 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CentPrecisionMoneyImpl implements CentPrecisionMoney {
 
-   private Long centAmount;
-
-   private Integer fractionDigits;
-
    private com.commercetools.api.models.common.MoneyType type;
-
+   
+   private Integer fractionDigits;
+   
+   private Long centAmount;
+   
    private String currencyCode;
 
    @JsonCreator
-   CentPrecisionMoneyImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("currencyCode") final String currencyCode) {
-      this.centAmount = centAmount;
+   CentPrecisionMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
       this.fractionDigits = fractionDigits;
+      this.centAmount = centAmount;
       this.currencyCode = currencyCode;
       this.type = MoneyType.findEnumViaJsonName("centPrecision").get();
    }
    public CentPrecisionMoneyImpl() {
-
+      
    }
-
-
-   public Long getCentAmount(){
-      return this.centAmount;
-   }
-
-
-   public Integer getFractionDigits(){
-      return this.fractionDigits;
-   }
-
-
+   
+   
    public com.commercetools.api.models.common.MoneyType getType(){
       return this.type;
    }
-
+   
+   
+   public Integer getFractionDigits(){
+      return this.fractionDigits;
+   }
+   
+   
+   public Long getCentAmount(){
+      return this.centAmount;
+   }
+   
    /**
    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
    */
@@ -64,14 +64,14 @@ public final class CentPrecisionMoneyImpl implements CentPrecisionMoney {
       return this.currencyCode;
    }
 
-   public void setCentAmount(final Long centAmount){
-      this.centAmount = centAmount;
-   }
-
    public void setFractionDigits(final Integer fractionDigits){
       this.fractionDigits = fractionDigits;
    }
-
+   
+   public void setCentAmount(final Long centAmount){
+      this.centAmount = centAmount;
+   }
+   
    public void setCurrencyCode(final String currencyCode){
       this.currencyCode = currencyCode;
    }

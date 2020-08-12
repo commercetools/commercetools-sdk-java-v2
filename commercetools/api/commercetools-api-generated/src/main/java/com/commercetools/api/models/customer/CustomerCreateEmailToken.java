@@ -21,35 +21,35 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerCreateEmailTokenImpl.class)
 public interface CustomerCreateEmailToken  {
 
-
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-
-
+   
+   
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("ttlMinutes")
    public Long getTtlMinutes();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setTtlMinutes(final Long ttlMinutes);
-
+   
    public static CustomerCreateEmailTokenImpl of(){
       return new CustomerCreateEmailTokenImpl();
    }
-
+   
 
    public static CustomerCreateEmailTokenImpl of(final CustomerCreateEmailToken template) {
       CustomerCreateEmailTokenImpl instance = new CustomerCreateEmailTokenImpl();
-      instance.setTtlMinutes(template.getTtlMinutes());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
+      instance.setTtlMinutes(template.getTtlMinutes());
       return instance;
    }
 

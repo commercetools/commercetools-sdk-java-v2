@@ -22,19 +22,27 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ItemShippingDetailsImpl implements ItemShippingDetails {
 
+   private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets;
+   
    private Boolean valid;
 
-   private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets;
-
    @JsonCreator
-   ItemShippingDetailsImpl(@JsonProperty("valid") final Boolean valid, @JsonProperty("targets") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets) {
-      this.valid = valid;
+   ItemShippingDetailsImpl(@JsonProperty("targets") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets, @JsonProperty("valid") final Boolean valid) {
       this.targets = targets;
+      this.valid = valid;
    }
    public ItemShippingDetailsImpl() {
-
+      
    }
-
+   
+   /**
+   *  <p>Used to map what sub-quantity should be shipped to which address.
+   *  Duplicate address keys are not allowed.</p>
+   */
+   public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargets(){
+      return this.targets;
+   }
+   
    /**
    *  <p><code>true</code> if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise.
    *  A cart cannot be ordered when the value is <code>false</code>.
@@ -44,20 +52,12 @@ public final class ItemShippingDetailsImpl implements ItemShippingDetails {
       return this.valid;
    }
 
-   /**
-   *  <p>Used to map what sub-quantity should be shipped to which address.
-   *  Duplicate address keys are not allowed.</p>
-   */
-   public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargets(){
-      return this.targets;
-   }
-
-   public void setValid(final Boolean valid){
-      this.valid = valid;
-   }
-
    public void setTargets(final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets){
       this.targets = targets;
+   }
+   
+   public void setValid(final Boolean valid){
+      this.valid = valid;
    }
 
 }

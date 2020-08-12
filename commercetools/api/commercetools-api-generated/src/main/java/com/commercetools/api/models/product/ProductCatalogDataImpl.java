@@ -22,23 +22,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductCatalogDataImpl implements ProductCatalogData {
 
+   private Boolean published;
+   
    private com.commercetools.api.models.product.ProductData current;
    
    private com.commercetools.api.models.product.ProductData staged;
    
-   private Boolean published;
-   
    private Boolean hasStagedChanges;
 
    @JsonCreator
-   ProductCatalogDataImpl(@JsonProperty("current") final com.commercetools.api.models.product.ProductData current, @JsonProperty("staged") final com.commercetools.api.models.product.ProductData staged, @JsonProperty("published") final Boolean published, @JsonProperty("hasStagedChanges") final Boolean hasStagedChanges) {
+   ProductCatalogDataImpl(@JsonProperty("published") final Boolean published, @JsonProperty("current") final com.commercetools.api.models.product.ProductData current, @JsonProperty("staged") final com.commercetools.api.models.product.ProductData staged, @JsonProperty("hasStagedChanges") final Boolean hasStagedChanges) {
+      this.published = published;
       this.current = current;
       this.staged = staged;
-      this.published = published;
       this.hasStagedChanges = hasStagedChanges;
    }
    public ProductCatalogDataImpl() {
       
+   }
+   
+   
+   public Boolean getPublished(){
+      return this.published;
    }
    
    
@@ -52,25 +57,20 @@ public final class ProductCatalogDataImpl implements ProductCatalogData {
    }
    
    
-   public Boolean getPublished(){
-      return this.published;
-   }
-   
-   
    public Boolean getHasStagedChanges(){
       return this.hasStagedChanges;
    }
 
+   public void setPublished(final Boolean published){
+      this.published = published;
+   }
+   
    public void setCurrent(final com.commercetools.api.models.product.ProductData current){
       this.current = current;
    }
    
    public void setStaged(final com.commercetools.api.models.product.ProductData staged){
       this.staged = staged;
-   }
-   
-   public void setPublished(final Boolean published){
-      this.published = published;
    }
    
    public void setHasStagedChanges(final Boolean hasStagedChanges){

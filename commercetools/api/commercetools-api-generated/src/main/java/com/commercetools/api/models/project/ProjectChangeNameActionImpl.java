@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProjectChangeNameActionImpl implements ProjectChangeNameAction {
 
    private String action;
-
+   
    private String name;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ProjectChangeNameActionImpl implements ProjectChangeNameActio
       this.action = "changeName";
    }
    public ProjectChangeNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }

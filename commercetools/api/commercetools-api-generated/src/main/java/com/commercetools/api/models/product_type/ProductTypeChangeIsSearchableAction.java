@@ -21,23 +21,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangeIsSearchableActionImpl.class)
 public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("attributeName")
    public String getAttributeName();
-
+   
    @NotNull
    @JsonProperty("isSearchable")
    public Boolean getIsSearchable();
 
    public void setAttributeName(final String attributeName);
-
+   
    public void setIsSearchable(final Boolean isSearchable);
-
+   
    public static ProductTypeChangeIsSearchableActionImpl of(){
       return new ProductTypeChangeIsSearchableActionImpl();
    }
-
+   
 
    public static ProductTypeChangeIsSearchableActionImpl of(final ProductTypeChangeIsSearchableAction template) {
       ProductTypeChangeIsSearchableActionImpl instance = new ProductTypeChangeIsSearchableActionImpl();

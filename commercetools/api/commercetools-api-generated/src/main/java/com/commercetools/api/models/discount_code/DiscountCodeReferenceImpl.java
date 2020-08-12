@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DiscountCodeReferenceImpl implements DiscountCodeReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.discount_code.DiscountCode obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class DiscountCodeReferenceImpl implements DiscountCodeReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("discount-code").get();
    }
    public DiscountCodeReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.discount_code.DiscountCode getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class DiscountCodeReferenceImpl implements DiscountCodeReference {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.discount_code.DiscountCode obj){
       this.obj = obj;
    }

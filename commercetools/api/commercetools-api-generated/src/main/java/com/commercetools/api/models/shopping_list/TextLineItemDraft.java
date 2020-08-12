@@ -26,7 +26,7 @@ public interface TextLineItemDraft  {
    /**
    *  <p>Defaults to the current date and time.</p>
    */
-
+   
    @JsonProperty("addedAt")
    public ZonedDateTime getAddedAt();
    /**
@@ -35,11 +35,11 @@ public interface TextLineItemDraft  {
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-
+   
    @NotNull
    @Valid
    @JsonProperty("name")
@@ -47,32 +47,32 @@ public interface TextLineItemDraft  {
    /**
    *  <p>Defaults to <code>1</code>.</p>
    */
-
+   
    @JsonProperty("quantity")
    public Integer getQuantity();
 
    public void setAddedAt(final ZonedDateTime addedAt);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public void setQuantity(final Integer quantity);
-
+   
    public static TextLineItemDraftImpl of(){
       return new TextLineItemDraftImpl();
    }
-
+   
 
    public static TextLineItemDraftImpl of(final TextLineItemDraft template) {
       TextLineItemDraftImpl instance = new TextLineItemDraftImpl();
       instance.setAddedAt(template.getAddedAt());
-      instance.setQuantity(template.getQuantity());
       instance.setCustom(template.getCustom());
-      instance.setName(template.getName());
       instance.setDescription(template.getDescription());
+      instance.setName(template.getName());
+      instance.setQuantity(template.getQuantity());
       return instance;
    }
 

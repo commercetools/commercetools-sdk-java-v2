@@ -22,35 +22,35 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySetAssetDescriptionActionImpl.class)
 public interface CategorySetAssetDescriptionAction extends CategoryUpdateAction {
 
-
-
+   
+   
    @JsonProperty("assetId")
    public String getAssetId();
-
-
+   
+   
    @JsonProperty("assetKey")
    public String getAssetKey();
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
 
    public void setAssetId(final String assetId);
-
+   
    public void setAssetKey(final String assetKey);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public static CategorySetAssetDescriptionActionImpl of(){
       return new CategorySetAssetDescriptionActionImpl();
    }
-
+   
 
    public static CategorySetAssetDescriptionActionImpl of(final CategorySetAssetDescriptionAction template) {
       CategorySetAssetDescriptionActionImpl instance = new CategorySetAssetDescriptionActionImpl();
       instance.setAssetId(template.getAssetId());
-      instance.setDescription(template.getDescription());
       instance.setAssetKey(template.getAssetKey());
+      instance.setDescription(template.getDescription());
       return instance;
    }
 

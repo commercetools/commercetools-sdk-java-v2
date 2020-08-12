@@ -29,9 +29,9 @@ public final class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDr
       this.targets = targets;
    }
    public ItemShippingDetailsDraftImpl() {
-
+      
    }
-
+   
    /**
    *  <p>Used to capture one or more (custom) line item specific shipping addresses.
    *  By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item.

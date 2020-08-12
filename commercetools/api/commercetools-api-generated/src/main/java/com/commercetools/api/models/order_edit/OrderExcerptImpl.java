@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderExcerptImpl implements OrderExcerpt {
 
    private com.commercetools.api.models.common.TypedMoney totalPrice;
-
+   
    private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
-
+   
    private Integer version;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class OrderExcerptImpl implements OrderExcerpt {
       this.version = version;
    }
    public OrderExcerptImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.TypedMoney getTotalPrice(){
       return this.totalPrice;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice(){
       return this.taxedPrice;
    }
-
-
+   
+   
    public Integer getVersion(){
       return this.version;
    }
@@ -57,11 +57,11 @@ public final class OrderExcerptImpl implements OrderExcerpt {
    public void setTotalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice){
       this.totalPrice = totalPrice;
    }
-
+   
    public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedPrice taxedPrice){
       this.taxedPrice = taxedPrice;
    }
-
+   
    public void setVersion(final Integer version){
       this.version = version;
    }

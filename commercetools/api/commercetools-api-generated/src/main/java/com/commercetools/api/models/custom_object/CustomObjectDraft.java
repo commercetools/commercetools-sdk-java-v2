@@ -33,34 +33,34 @@ public interface CustomObjectDraft  {
    @NotNull
    @JsonProperty("key")
    public String getKey();
-
+   
    @NotNull
    @JsonProperty("value")
    public JsonNode getValue();
-
-
+   
+   
    @JsonProperty("version")
    public Long getVersion();
 
    public void setContainer(final String container);
-
+   
    public void setKey(final String key);
-
+   
    public void setValue(final JsonNode value);
-
+   
    public void setVersion(final Long version);
-
+   
    public static CustomObjectDraftImpl of(){
       return new CustomObjectDraftImpl();
    }
-
+   
 
    public static CustomObjectDraftImpl of(final CustomObjectDraft template) {
       CustomObjectDraftImpl instance = new CustomObjectDraftImpl();
       instance.setContainer(template.getContainer());
-      instance.setVersion(template.getVersion());
-      instance.setValue(template.getValue());
       instance.setKey(template.getKey());
+      instance.setValue(template.getValue());
+      instance.setVersion(template.getVersion());
       return instance;
    }
 

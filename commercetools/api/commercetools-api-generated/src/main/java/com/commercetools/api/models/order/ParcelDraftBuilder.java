@@ -15,60 +15,60 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ParcelDraftBuilder {
-
-   @Nullable
-   private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
-
-   @Nullable
-   private com.commercetools.api.models.order.TrackingData trackingData;
-
+   
    @Nullable
    private com.commercetools.api.models.order.ParcelMeasurements measurements;
-
-   public ParcelDraftBuilder items(@Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
-      this.items = items;
-      return this;
-   }
-
-   public ParcelDraftBuilder trackingData(@Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
-      this.trackingData = trackingData;
-      return this;
-   }
-
+   
+   @Nullable
+   private com.commercetools.api.models.order.TrackingData trackingData;
+   
+   @Nullable
+   private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
+   
    public ParcelDraftBuilder measurements(@Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
       this.measurements = measurements;
       return this;
    }
-
+   
+   public ParcelDraftBuilder trackingData(@Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
+      this.trackingData = trackingData;
+      return this;
+   }
+   
+   public ParcelDraftBuilder items(@Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+      this.items = items;
+      return this;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
+      return this.measurements;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.order.TrackingData getTrackingData(){
+      return this.trackingData;
+   }
+   
    @Nullable
    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
       return this.items;
    }
 
-   @Nullable
-   public com.commercetools.api.models.order.TrackingData getTrackingData(){
-      return this.trackingData;
-   }
-
-   @Nullable
-   public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
-      return this.measurements;
-   }
-
    public ParcelDraft build() {
-       return new ParcelDraftImpl(items, trackingData, measurements);
+       return new ParcelDraftImpl(measurements, trackingData, items);
    }
-
+   
    public static ParcelDraftBuilder of() {
       return new ParcelDraftBuilder();
    }
-
+   
    public static ParcelDraftBuilder of(final ParcelDraft template) {
       ParcelDraftBuilder builder = new ParcelDraftBuilder();
-      builder.items = template.getItems();
-      builder.trackingData = template.getTrackingData();
       builder.measurements = template.getMeasurements();
+      builder.trackingData = template.getTrackingData();
+      builder.items = template.getItems();
       return builder;
    }
-
+   
 }

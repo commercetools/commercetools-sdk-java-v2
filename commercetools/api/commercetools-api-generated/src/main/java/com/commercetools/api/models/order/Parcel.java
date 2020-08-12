@@ -64,11 +64,11 @@ public interface Parcel  {
 
    public static ParcelImpl of(final Parcel template) {
       ParcelImpl instance = new ParcelImpl();
-      instance.setCreatedAt(template.getCreatedAt());
       instance.setId(template.getId());
-      instance.setItems(template.getItems());
-      instance.setTrackingData(template.getTrackingData());
+      instance.setCreatedAt(template.getCreatedAt());
       instance.setMeasurements(template.getMeasurements());
+      instance.setTrackingData(template.getTrackingData());
+      instance.setItems(template.getItems());
       return instance;
    }
 

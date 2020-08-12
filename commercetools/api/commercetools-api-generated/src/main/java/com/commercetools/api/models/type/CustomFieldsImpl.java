@@ -23,19 +23,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldsImpl implements CustomFields {
 
+   private com.commercetools.api.models.type.TypeReference type;
+   
    private com.commercetools.api.models.type.FieldContainer fields;
 
-   private com.commercetools.api.models.type.TypeReference type;
-
    @JsonCreator
-   CustomFieldsImpl(@JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.api.models.type.TypeReference type) {
-      this.fields = fields;
+   CustomFieldsImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeReference type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
       this.type = type;
+      this.fields = fields;
    }
    public CustomFieldsImpl() {
-
+      
    }
-
+   
+   
+   public com.commercetools.api.models.type.TypeReference getType(){
+      return this.type;
+   }
+   
    /**
    *  <p>A valid JSON object, based on FieldDefinition.</p>
    */
@@ -43,17 +48,12 @@ public final class CustomFieldsImpl implements CustomFields {
       return this.fields;
    }
 
-
-   public com.commercetools.api.models.type.TypeReference getType(){
-      return this.type;
-   }
-
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
-
    public void setType(final com.commercetools.api.models.type.TypeReference type){
       this.type = type;
+   }
+   
+   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+      this.fields = fields;
    }
 
 }

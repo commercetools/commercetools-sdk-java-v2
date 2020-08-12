@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = StateSetDescriptionActionImpl.class)
 public interface StateSetDescriptionAction extends StateUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
 
    public void setDescription(final LocalizedString description);
-
+   
    public static StateSetDescriptionActionImpl of(){
       return new StateSetDescriptionActionImpl();
    }
-
+   
 
    public static StateSetDescriptionActionImpl of(final StateSetDescriptionAction template) {
       StateSetDescriptionActionImpl instance = new StateSetDescriptionActionImpl();

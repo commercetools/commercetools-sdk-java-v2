@@ -23,22 +23,32 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxedPriceImpl implements TaxedPrice {
 
+   private com.commercetools.api.models.common.TypedMoney totalNet;
+   
+   private com.commercetools.api.models.common.TypedMoney totalGross;
+   
    private java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions;
 
-   private com.commercetools.api.models.common.TypedMoney totalGross;
-
-   private com.commercetools.api.models.common.TypedMoney totalNet;
-
    @JsonCreator
-   TaxedPriceImpl(@JsonProperty("taxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions, @JsonProperty("totalGross") final com.commercetools.api.models.common.TypedMoney totalGross, @JsonProperty("totalNet") final com.commercetools.api.models.common.TypedMoney totalNet) {
-      this.taxPortions = taxPortions;
-      this.totalGross = totalGross;
+   TaxedPriceImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.TypedMoney totalNet, @JsonProperty("totalGross") final com.commercetools.api.models.common.TypedMoney totalGross, @JsonProperty("taxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions) {
       this.totalNet = totalNet;
+      this.totalGross = totalGross;
+      this.taxPortions = taxPortions;
    }
    public TaxedPriceImpl() {
-
+      
    }
-
+   
+   
+   public com.commercetools.api.models.common.TypedMoney getTotalNet(){
+      return this.totalNet;
+   }
+   
+   
+   public com.commercetools.api.models.common.TypedMoney getTotalGross(){
+      return this.totalGross;
+   }
+   
    /**
    *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
    */
@@ -46,26 +56,16 @@ public final class TaxedPriceImpl implements TaxedPrice {
       return this.taxPortions;
    }
 
-
-   public com.commercetools.api.models.common.TypedMoney getTotalGross(){
-      return this.totalGross;
+   public void setTotalNet(final com.commercetools.api.models.common.TypedMoney totalNet){
+      this.totalNet = totalNet;
    }
-
-
-   public com.commercetools.api.models.common.TypedMoney getTotalNet(){
-      return this.totalNet;
-   }
-
-   public void setTaxPortions(final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions){
-      this.taxPortions = taxPortions;
-   }
-
+   
    public void setTotalGross(final com.commercetools.api.models.common.TypedMoney totalGross){
       this.totalGross = totalGross;
    }
-
-   public void setTotalNet(final com.commercetools.api.models.common.TypedMoney totalNet){
-      this.totalNet = totalNet;
+   
+   public void setTaxPortions(final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions){
+      this.taxPortions = taxPortions;
    }
 
 }

@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelSetAddressActionImpl.class)
 public interface ChannelSetAddressAction extends ChannelUpdateAction {
 
-
+   
    @Valid
    @JsonProperty("address")
    public Address getAddress();
 
    public void setAddress(final Address address);
-
+   
    public static ChannelSetAddressActionImpl of(){
       return new ChannelSetAddressActionImpl();
    }
-
+   
 
    public static ChannelSetAddressActionImpl of(final ChannelSetAddressAction template) {
       ChannelSetAddressActionImpl instance = new ChannelSetAddressActionImpl();

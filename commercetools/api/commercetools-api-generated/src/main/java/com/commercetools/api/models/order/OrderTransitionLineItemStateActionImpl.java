@@ -26,22 +26,22 @@ public final class OrderTransitionLineItemStateActionImpl implements OrderTransi
 
    private String action;
    
-   private com.commercetools.api.models.state.StateResourceIdentifier toState;
-   
-   private com.commercetools.api.models.state.StateResourceIdentifier fromState;
+   private String lineItemId;
    
    private Long quantity;
    
-   private String lineItemId;
+   private com.commercetools.api.models.state.StateResourceIdentifier fromState;
+   
+   private com.commercetools.api.models.state.StateResourceIdentifier toState;
    
    private java.time.ZonedDateTime actualTransitionDate;
 
    @JsonCreator
-   OrderTransitionLineItemStateActionImpl(@JsonProperty("toState") final com.commercetools.api.models.state.StateResourceIdentifier toState, @JsonProperty("fromState") final com.commercetools.api.models.state.StateResourceIdentifier fromState, @JsonProperty("quantity") final Long quantity, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("actualTransitionDate") final java.time.ZonedDateTime actualTransitionDate) {
-      this.toState = toState;
-      this.fromState = fromState;
-      this.quantity = quantity;
+   OrderTransitionLineItemStateActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Long quantity, @JsonProperty("fromState") final com.commercetools.api.models.state.StateResourceIdentifier fromState, @JsonProperty("toState") final com.commercetools.api.models.state.StateResourceIdentifier toState, @JsonProperty("actualTransitionDate") final java.time.ZonedDateTime actualTransitionDate) {
       this.lineItemId = lineItemId;
+      this.quantity = quantity;
+      this.fromState = fromState;
+      this.toState = toState;
       this.actualTransitionDate = actualTransitionDate;
       this.action = "transitionLineItemState";
    }
@@ -55,13 +55,8 @@ public final class OrderTransitionLineItemStateActionImpl implements OrderTransi
    }
    
    
-   public com.commercetools.api.models.state.StateResourceIdentifier getToState(){
-      return this.toState;
-   }
-   
-   
-   public com.commercetools.api.models.state.StateResourceIdentifier getFromState(){
-      return this.fromState;
+   public String getLineItemId(){
+      return this.lineItemId;
    }
    
    
@@ -70,8 +65,13 @@ public final class OrderTransitionLineItemStateActionImpl implements OrderTransi
    }
    
    
-   public String getLineItemId(){
-      return this.lineItemId;
+   public com.commercetools.api.models.state.StateResourceIdentifier getFromState(){
+      return this.fromState;
+   }
+   
+   
+   public com.commercetools.api.models.state.StateResourceIdentifier getToState(){
+      return this.toState;
    }
    
    
@@ -79,20 +79,20 @@ public final class OrderTransitionLineItemStateActionImpl implements OrderTransi
       return this.actualTransitionDate;
    }
 
-   public void setToState(final com.commercetools.api.models.state.StateResourceIdentifier toState){
-      this.toState = toState;
-   }
-   
-   public void setFromState(final com.commercetools.api.models.state.StateResourceIdentifier fromState){
-      this.fromState = fromState;
+   public void setLineItemId(final String lineItemId){
+      this.lineItemId = lineItemId;
    }
    
    public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
    
-   public void setLineItemId(final String lineItemId){
-      this.lineItemId = lineItemId;
+   public void setFromState(final com.commercetools.api.models.state.StateResourceIdentifier fromState){
+      this.fromState = fromState;
+   }
+   
+   public void setToState(final com.commercetools.api.models.state.StateResourceIdentifier toState){
+      this.toState = toState;
    }
    
    public void setActualTransitionDate(final java.time.ZonedDateTime actualTransitionDate){

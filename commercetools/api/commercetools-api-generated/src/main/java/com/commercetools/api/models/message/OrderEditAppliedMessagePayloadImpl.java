@@ -25,42 +25,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessagePayload {
 
    private String type;
-
+   
+   private com.commercetools.api.models.order_edit.OrderEditReference edit;
+   
    private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
-   private com.commercetools.api.models.order_edit.OrderEditReference edit;
-
    @JsonCreator
-   OrderEditAppliedMessagePayloadImpl(@JsonProperty("result") final com.commercetools.api.models.order_edit.OrderEditApplied result, @JsonProperty("edit") final com.commercetools.api.models.order_edit.OrderEditReference edit) {
-      this.result = result;
+   OrderEditAppliedMessagePayloadImpl(@JsonProperty("edit") final com.commercetools.api.models.order_edit.OrderEditReference edit, @JsonProperty("result") final com.commercetools.api.models.order_edit.OrderEditApplied result) {
       this.edit = edit;
+      this.result = result;
       this.type = "OrderEditApplied";
    }
    public OrderEditAppliedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
+   public com.commercetools.api.models.order_edit.OrderEditReference getEdit(){
+      return this.edit;
+   }
+   
+   
    public com.commercetools.api.models.order_edit.OrderEditApplied getResult(){
       return this.result;
    }
 
-
-   public com.commercetools.api.models.order_edit.OrderEditReference getEdit(){
-      return this.edit;
-   }
-
-   public void setResult(final com.commercetools.api.models.order_edit.OrderEditApplied result){
-      this.result = result;
-   }
-
    public void setEdit(final com.commercetools.api.models.order_edit.OrderEditReference edit){
       this.edit = edit;
+   }
+   
+   public void setResult(final com.commercetools.api.models.order_edit.OrderEditApplied result){
+      this.result = result;
    }
 
 }

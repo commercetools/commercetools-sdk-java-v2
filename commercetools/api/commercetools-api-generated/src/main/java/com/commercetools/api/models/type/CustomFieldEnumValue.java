@@ -21,28 +21,28 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomFieldEnumValueImpl.class)
 public interface CustomFieldEnumValue  {
 
-
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
-
+   
    @NotNull
    @JsonProperty("label")
    public String getLabel();
 
    public void setKey(final String key);
-
+   
    public void setLabel(final String label);
-
+   
    public static CustomFieldEnumValueImpl of(){
       return new CustomFieldEnumValueImpl();
    }
-
+   
 
    public static CustomFieldEnumValueImpl of(final CustomFieldEnumValue template) {
       CustomFieldEnumValueImpl instance = new CustomFieldEnumValueImpl();
-      instance.setLabel(template.getLabel());
       instance.setKey(template.getKey());
+      instance.setLabel(template.getLabel());
       return instance;
    }
 

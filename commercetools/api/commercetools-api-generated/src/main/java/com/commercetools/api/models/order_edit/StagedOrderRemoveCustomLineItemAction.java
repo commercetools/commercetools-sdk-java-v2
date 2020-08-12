@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderRemoveCustomLineItemActionImpl.class)
 public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("customLineItemId")
    public String getCustomLineItemId();
 
    public void setCustomLineItemId(final String customLineItemId);
-
+   
    public static StagedOrderRemoveCustomLineItemActionImpl of(){
       return new StagedOrderRemoveCustomLineItemActionImpl();
    }
-
+   
 
    public static StagedOrderRemoveCustomLineItemActionImpl of(final StagedOrderRemoveCustomLineItemAction template) {
       StagedOrderRemoveCustomLineItemActionImpl instance = new StagedOrderRemoveCustomLineItemActionImpl();

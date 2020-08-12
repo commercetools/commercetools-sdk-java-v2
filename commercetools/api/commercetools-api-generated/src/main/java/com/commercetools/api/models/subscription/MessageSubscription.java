@@ -21,28 +21,28 @@ import java.io.IOException;
 @JsonDeserialize(as = MessageSubscriptionImpl.class)
 public interface MessageSubscription  {
 
-
+   
    @NotNull
    @JsonProperty("resourceTypeId")
    public String getResourceTypeId();
-
-
+   
+   
    @JsonProperty("types")
    public List<String> getTypes();
 
    public void setResourceTypeId(final String resourceTypeId);
-
+   
    public void setTypes(final List<String> types);
-
+   
    public static MessageSubscriptionImpl of(){
       return new MessageSubscriptionImpl();
    }
-
+   
 
    public static MessageSubscriptionImpl of(final MessageSubscription template) {
       MessageSubscriptionImpl instance = new MessageSubscriptionImpl();
-      instance.setTypes(template.getTypes());
       instance.setResourceTypeId(template.getResourceTypeId());
+      instance.setTypes(template.getTypes());
       return instance;
    }
 

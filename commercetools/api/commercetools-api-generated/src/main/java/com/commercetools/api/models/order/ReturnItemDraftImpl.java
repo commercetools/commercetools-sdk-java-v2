@@ -22,71 +22,71 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReturnItemDraftImpl implements ReturnItemDraft {
 
+   private Long quantity;
+   
+   private String lineItemId;
+   
+   private String customLineItemId;
+   
+   private String comment;
+   
    private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
-   private String customLineItemId;
-
-   private Long quantity;
-
-   private String lineItemId;
-
-   private String comment;
-
    @JsonCreator
-   ReturnItemDraftImpl(@JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState, @JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("quantity") final Long quantity, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("comment") final String comment) {
-      this.shipmentState = shipmentState;
-      this.customLineItemId = customLineItemId;
+   ReturnItemDraftImpl(@JsonProperty("quantity") final Long quantity, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("comment") final String comment, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
       this.quantity = quantity;
       this.lineItemId = lineItemId;
+      this.customLineItemId = customLineItemId;
       this.comment = comment;
+      this.shipmentState = shipmentState;
    }
    public ReturnItemDraftImpl() {
-
+      
    }
-
-
-   public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
-      return this.shipmentState;
-   }
-
-
-   public String getCustomLineItemId(){
-      return this.customLineItemId;
-   }
-
-
+   
+   
    public Long getQuantity(){
       return this.quantity;
    }
-
-
+   
+   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
-
+   
+   
+   public String getCustomLineItemId(){
+      return this.customLineItemId;
+   }
+   
+   
    public String getComment(){
       return this.comment;
    }
-
-   public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
-      this.shipmentState = shipmentState;
-   }
-
-   public void setCustomLineItemId(final String customLineItemId){
-      this.customLineItemId = customLineItemId;
+   
+   
+   public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
+      return this.shipmentState;
    }
 
    public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
-
+   
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
-
+   
+   public void setCustomLineItemId(final String customLineItemId){
+      this.customLineItemId = customLineItemId;
+   }
+   
    public void setComment(final String comment){
       this.comment = comment;
+   }
+   
+   public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
+      this.shipmentState = shipmentState;
    }
 
 }

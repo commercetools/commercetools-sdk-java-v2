@@ -1,6 +1,7 @@
 package com.commercetools.api.models.project;
 
 import com.commercetools.api.models.project.ProjectChangeCountriesAction;
+import com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledAction;
 import com.commercetools.api.models.project.ProjectChangeCurrenciesAction;
 import com.commercetools.api.models.project.ProjectChangeLanguagesAction;
 import com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction;
@@ -23,6 +24,7 @@ import java.io.IOException;
 
 @JsonSubTypes({
    @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCountriesActionImpl.class, name = "changeCountries"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledActionImpl.class, name = "changeCountryTaxRateFallbackEnabled"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCurrenciesActionImpl.class, name = "changeCurrencies"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeLanguagesActionImpl.class, name = "changeLanguages"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionImpl.class, name = "changeMessagesConfiguration"),
@@ -44,7 +46,7 @@ import java.io.IOException;
 public interface ProjectUpdateAction  {
 
 
-
+   
 
 
 }

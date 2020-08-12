@@ -21,28 +21,28 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeRemoveEnumValuesActionImpl.class)
 public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("attributeName")
    public String getAttributeName();
-
+   
    @NotNull
    @JsonProperty("keys")
    public List<String> getKeys();
 
    public void setAttributeName(final String attributeName);
-
+   
    public void setKeys(final List<String> keys);
-
+   
    public static ProductTypeRemoveEnumValuesActionImpl of(){
       return new ProductTypeRemoveEnumValuesActionImpl();
    }
-
+   
 
    public static ProductTypeRemoveEnumValuesActionImpl of(final ProductTypeRemoveEnumValuesAction template) {
       ProductTypeRemoveEnumValuesActionImpl instance = new ProductTypeRemoveEnumValuesActionImpl();
-      instance.setKeys(template.getKeys());
       instance.setAttributeName(template.getAttributeName());
+      instance.setKeys(template.getKeys());
       return instance;
    }
 

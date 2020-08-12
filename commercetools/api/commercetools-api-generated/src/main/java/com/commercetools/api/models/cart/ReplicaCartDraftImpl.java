@@ -29,10 +29,10 @@ public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
       this.reference = reference;
    }
    public ReplicaCartDraftImpl() {
-
+      
    }
-
-
+   
+   
    public com.fasterxml.jackson.databind.JsonNode getReference(){
       return this.reference;
    }

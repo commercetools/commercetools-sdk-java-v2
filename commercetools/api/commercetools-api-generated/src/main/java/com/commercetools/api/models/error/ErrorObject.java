@@ -23,6 +23,7 @@ import com.commercetools.api.models.error.InvalidJsonInputError;
 import com.commercetools.api.models.error.InvalidOperationError;
 import com.commercetools.api.models.error.InvalidSubjectError;
 import com.commercetools.api.models.error.InvalidTokenError;
+import com.commercetools.api.models.error.LanguageUsedInStoresError;
 import com.commercetools.api.models.error.MatchingPriceNotFoundError;
 import com.commercetools.api.models.error.MissingTaxRateForCountryError;
 import com.commercetools.api.models.error.NoMatchingProductDiscountFoundError;
@@ -59,6 +60,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidOperationErrorImpl.class, name = "InvalidOperation"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidSubjectErrorImpl.class, name = "InvalidSubject"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidTokenErrorImpl.class, name = "invalid_token"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.LanguageUsedInStoresErrorImpl.class, name = "LanguageUsedInStores"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.MatchingPriceNotFoundErrorImpl.class, name = "MatchingPriceNotFound"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingTaxRateForCountryErrorImpl.class, name = "MissingTaxRateForCountry"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorImpl.class, name = "NoMatchingProductDiscountFound"),
@@ -68,15 +70,15 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.RequiredFieldErrorImpl.class, name = "RequiredField"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceNotFoundErrorImpl.class, name = "ResourceNotFound"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = "ShippingMethodDoesNotMatchCart"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.AccessDeniedErrorImpl.class, name = "access_denied"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = "ConcurrentModification"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = "DiscountCodeNonApplicable"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = "DuplicateAttributeValue"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = "DuplicateAttributeValues"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = "ConcurrentModification"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldErrorImpl.class, name = "DuplicateField"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorImpl.class, name = "DuplicateFieldWithConflictingResource"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicatePriceScopeErrorImpl.class, name = "DuplicatePriceScope"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = "DuplicateAttributeValue"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.AccessDeniedErrorImpl.class, name = "access_denied"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateVariantValuesErrorImpl.class, name = "DuplicateVariantValues"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = "DuplicateAttributeValues"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicatePriceScopeErrorImpl.class, name = "DuplicatePriceScope"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorImpl.class, name = "DuplicateFieldWithConflictingResource"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValueIsUsedErrorImpl.class, name = "EnumValueIsUsed")
 })
 @JsonTypeInfo(
@@ -91,13 +93,13 @@ import java.io.IOException;
 )
 public interface ErrorObject  {
 
-
+   
    @NotNull
    @JsonProperty("message")
    public String getMessage();
 
    public void setMessage(final String message);
-
+   
 
 
 }

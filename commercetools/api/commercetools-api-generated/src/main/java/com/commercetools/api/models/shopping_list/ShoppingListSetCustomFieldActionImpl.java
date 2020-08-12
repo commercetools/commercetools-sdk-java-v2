@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShoppingListSetCustomFieldActionImpl implements ShoppingListSetCustomFieldAction {
 
    private String action;
-
+   
    private String name;
-
+   
    private com.fasterxml.jackson.databind.JsonNode value;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class ShoppingListSetCustomFieldActionImpl implements ShoppingListS
       this.action = "setCustomField";
    }
    public ShoppingListSetCustomFieldActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
-
+   
+   
    public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
@@ -57,7 +57,7 @@ public final class ShoppingListSetCustomFieldActionImpl implements ShoppingListS
    public void setName(final String name){
       this.name = name;
    }
-
+   
    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }

@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -27,24 +29,24 @@ import io.vrap.rmf.base.client.*;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public class ByProjectKeyChannelsByIDPost {
-
-
+   
+   
    private ApiHttpHeaders headers = new ApiHttpHeaders();
    private Map<String, String> additionalQueryParams = new HashMap<>();
-   private final ApiHttpClient apiHttpClient;
+   private final ApiHttpClient apiHttpClient; 
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    private String ID;
-
+   
    private com.commercetools.api.models.channel.ChannelUpdate channelUpdate;
-
+   
    public ByProjectKeyChannelsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.channel.ChannelUpdate channelUpdate){
       this.apiHttpClient = apiHttpClient;
       this.projectKey = projectKey;
       this.ID = ID;
       this.channelUpdate = channelUpdate;
    }
-
+   
    public ApiHttpRequest createHttpRequest() {
       ApiHttpRequest httpRequest = new ApiHttpRequest();
       List<String> params = new ArrayList<>();
@@ -55,13 +57,13 @@ public class ByProjectKeyChannelsByIDPost {
       if(!params.isEmpty()){
          httpRequestPath += "?" + String.join("&", params);
       }
-      httpRequest.setRelativeUrl(httpRequestPath);
+      httpRequest.setRelativeUrl(httpRequestPath); 
       httpRequest.setMethod(ApiHttpMethod.POST);
       httpRequest.setHeaders(headers);
       try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(channelUpdate));}catch(Exception e){e.printStackTrace();}
       return httpRequest;
    }
-
+   
    public ApiHttpResponse<com.commercetools.api.models.channel.Channel> executeBlocking(){
       try {
           return execute().get();
@@ -69,7 +71,7 @@ public class ByProjectKeyChannelsByIDPost {
           throw new RuntimeException(e);
       }
    }
-
+   
    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.channel.Channel>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
               .thenApply(response -> {
@@ -79,60 +81,60 @@ public class ByProjectKeyChannelsByIDPost {
                   return Utils.convertResponse(response,com.commercetools.api.models.channel.Channel.class);
               });
    }
-
+   
    public String getProjectKey() {return this.projectKey;}
    public String getID() {return this.ID;}
-
+   
    public List<String> getExpand() {
       return this.expand;
    }
-
+   
    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
-
+   
    public void setID(final String ID) {this.ID = ID;}
-
+   
    public ByProjectKeyChannelsByIDPost addExpand(final String expand){
       this.expand.add(expand);
       return this;
    }
-
+   
    public ByProjectKeyChannelsByIDPost withExpand(final List<String> expand){
       this.expand = expand;
       return this;
    }
-
+   
    public ByProjectKeyChannelsByIDPost addHeader(final String key, final String value) {
       this.headers.addHeader(key, value);
       return this;
    }
-
+   
    public ByProjectKeyChannelsByIDPost withHeaders(final ApiHttpHeaders headers) {
       this.headers = headers;
       return this;
    }
-
+   
    public String getHeaderValue(final String key) {
       return this.headers.getHeaderValue(key);
    }
-
+   
    public ApiHttpHeaders getHeaders() {
       return this.headers;
    }
-
+   
    public ByProjectKeyChannelsByIDPost addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
       this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
       return this;
    }
-
+   
    public ByProjectKeyChannelsByIDPost setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
       this.additionalQueryParams = additionalQueryParams;
       return this;
    }
-
+   
    public Map<String, String> getAdditionalQueryParams() {
       return this.additionalQueryParams;
    }
-
+   
    private String urlEncode(final String s){
       try{
            return URLEncoder.encode(s, "UTF-8");

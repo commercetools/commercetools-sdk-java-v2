@@ -23,11 +23,11 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelDraftImpl.class)
 public interface ParcelDraft  {
 
-
+   
    @Valid
    @JsonProperty("measurements")
    public ParcelMeasurements getMeasurements();
-
+   
    @Valid
    @JsonProperty("trackingData")
    public TrackingData getTrackingData();
@@ -39,21 +39,21 @@ public interface ParcelDraft  {
    public List<DeliveryItem> getItems();
 
    public void setMeasurements(final ParcelMeasurements measurements);
-
+   
    public void setTrackingData(final TrackingData trackingData);
-
+   
    public void setItems(final List<DeliveryItem> items);
-
+   
    public static ParcelDraftImpl of(){
       return new ParcelDraftImpl();
    }
-
+   
 
    public static ParcelDraftImpl of(final ParcelDraft template) {
       ParcelDraftImpl instance = new ParcelDraftImpl();
-      instance.setItems(template.getItems());
-      instance.setTrackingData(template.getTrackingData());
       instance.setMeasurements(template.getMeasurements());
+      instance.setTrackingData(template.getTrackingData());
+      instance.setItems(template.getItems());
       return instance;
    }
 

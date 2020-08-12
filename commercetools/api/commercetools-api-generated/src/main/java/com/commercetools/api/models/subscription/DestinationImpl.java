@@ -33,9 +33,9 @@ public final class DestinationImpl implements Destination {
    DestinationImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

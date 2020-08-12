@@ -24,16 +24,16 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
    /**
    *  <p>If not provided, the method is unset.</p>
    */
-
+   
    @JsonProperty("method")
    public String getMethod();
 
    public void setMethod(final String method);
-
+   
    public static PaymentSetMethodInfoMethodActionImpl of(){
       return new PaymentSetMethodInfoMethodActionImpl();
    }
-
+   
 
    public static PaymentSetMethodInfoMethodActionImpl of(final PaymentSetMethodInfoMethodAction template) {
       PaymentSetMethodInfoMethodActionImpl instance = new PaymentSetMethodInfoMethodActionImpl();

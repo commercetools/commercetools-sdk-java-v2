@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyCartRecalculateActionBuilder {
-
+   
    @Nullable
    private Boolean updateProductData;
-
+   
    public MyCartRecalculateActionBuilder updateProductData(@Nullable final Boolean updateProductData) {
       this.updateProductData = updateProductData;
       return this;
    }
-
+   
    @Nullable
    public Boolean getUpdateProductData(){
       return this.updateProductData;
@@ -30,15 +30,15 @@ public final class MyCartRecalculateActionBuilder {
    public MyCartRecalculateAction build() {
        return new MyCartRecalculateActionImpl(updateProductData);
    }
-
+   
    public static MyCartRecalculateActionBuilder of() {
       return new MyCartRecalculateActionBuilder();
    }
-
+   
    public static MyCartRecalculateActionBuilder of(final MyCartRecalculateAction template) {
       MyCartRecalculateActionBuilder builder = new MyCartRecalculateActionBuilder();
       builder.updateProductData = template.getUpdateProductData();
       return builder;
    }
-
+   
 }

@@ -31,11 +31,11 @@ public interface OrderEditSetStagedActionsAction extends OrderEditUpdateAction {
    public List<StagedOrderUpdateAction> getStagedActions();
 
    public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
-
+   
    public static OrderEditSetStagedActionsActionImpl of(){
       return new OrderEditSetStagedActionsActionImpl();
    }
-
+   
 
    public static OrderEditSetStagedActionsActionImpl of(final OrderEditSetStagedActionsAction template) {
       OrderEditSetStagedActionsActionImpl instance = new OrderEditSetStagedActionsActionImpl();

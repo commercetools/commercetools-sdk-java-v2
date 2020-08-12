@@ -24,42 +24,42 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderAddParcelToDeliveryActionImpl.class)
 public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("deliveryId")
    public String getDeliveryId();
-
+   
    @Valid
    @JsonProperty("measurements")
    public ParcelMeasurements getMeasurements();
-
+   
    @Valid
    @JsonProperty("trackingData")
    public TrackingData getTrackingData();
-
+   
    @Valid
    @JsonProperty("items")
    public List<DeliveryItem> getItems();
 
    public void setDeliveryId(final String deliveryId);
-
+   
    public void setMeasurements(final ParcelMeasurements measurements);
-
+   
    public void setTrackingData(final TrackingData trackingData);
-
+   
    public void setItems(final List<DeliveryItem> items);
-
+   
    public static StagedOrderAddParcelToDeliveryActionImpl of(){
       return new StagedOrderAddParcelToDeliveryActionImpl();
    }
-
+   
 
    public static StagedOrderAddParcelToDeliveryActionImpl of(final StagedOrderAddParcelToDeliveryAction template) {
       StagedOrderAddParcelToDeliveryActionImpl instance = new StagedOrderAddParcelToDeliveryActionImpl();
       instance.setDeliveryId(template.getDeliveryId());
-      instance.setItems(template.getItems());
-      instance.setTrackingData(template.getTrackingData());
       instance.setMeasurements(template.getMeasurements());
+      instance.setTrackingData(template.getTrackingData());
+      instance.setItems(template.getItems());
       return instance;
    }
 

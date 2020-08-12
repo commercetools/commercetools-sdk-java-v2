@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum LineItemMode {
 
-
+  
   @JsonProperty("Standard")
   STANDARD("Standard"),
-
-
+  
+  
   @JsonProperty("GiftLineItem")
   GIFT_LINE_ITEM("GiftLineItem");
 

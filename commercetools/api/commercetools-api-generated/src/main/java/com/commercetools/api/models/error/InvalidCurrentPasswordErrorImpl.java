@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPasswordError {
 
    private String code;
-
+   
    private String message;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPass
       this.code = "InvalidCurrentPassword";
    }
    public InvalidCurrentPasswordErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }

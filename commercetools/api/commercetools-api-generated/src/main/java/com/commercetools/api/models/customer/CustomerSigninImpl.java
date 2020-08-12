@@ -22,83 +22,83 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSigninImpl implements CustomerSignin {
 
+   private String email;
+   
+   private String password;
+   
+   private String anonymousCartId;
+   
+   private com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode;
+   
+   private String anonymousId;
+   
    private Boolean updateProductData;
 
-   private String anonymousId;
-
-   private String password;
-
-   private com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode;
-
-   private String anonymousCartId;
-
-   private String email;
-
    @JsonCreator
-   CustomerSigninImpl(@JsonProperty("updateProductData") final Boolean updateProductData, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("password") final String password, @JsonProperty("anonymousCartSignInMode") final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode, @JsonProperty("anonymousCartId") final String anonymousCartId, @JsonProperty("email") final String email) {
-      this.updateProductData = updateProductData;
-      this.anonymousId = anonymousId;
-      this.password = password;
-      this.anonymousCartSignInMode = anonymousCartSignInMode;
-      this.anonymousCartId = anonymousCartId;
+   CustomerSigninImpl(@JsonProperty("email") final String email, @JsonProperty("password") final String password, @JsonProperty("anonymousCartId") final String anonymousCartId, @JsonProperty("anonymousCartSignInMode") final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("updateProductData") final Boolean updateProductData) {
       this.email = email;
+      this.password = password;
+      this.anonymousCartId = anonymousCartId;
+      this.anonymousCartSignInMode = anonymousCartSignInMode;
+      this.anonymousId = anonymousId;
+      this.updateProductData = updateProductData;
    }
    public CustomerSigninImpl() {
-
+      
    }
-
-
+   
+   
+   public String getEmail(){
+      return this.email;
+   }
+   
+   
+   public String getPassword(){
+      return this.password;
+   }
+   
+   
+   public String getAnonymousCartId(){
+      return this.anonymousCartId;
+   }
+   
+   
+   public com.commercetools.api.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode(){
+      return this.anonymousCartSignInMode;
+   }
+   
+   
+   public String getAnonymousId(){
+      return this.anonymousId;
+   }
+   
+   
    public Boolean getUpdateProductData(){
       return this.updateProductData;
    }
 
-
-   public String getAnonymousId(){
-      return this.anonymousId;
+   public void setEmail(final String email){
+      this.email = email;
    }
-
-
-   public String getPassword(){
-      return this.password;
-   }
-
-
-   public com.commercetools.api.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode(){
-      return this.anonymousCartSignInMode;
-   }
-
-
-   public String getAnonymousCartId(){
-      return this.anonymousCartId;
-   }
-
-
-   public String getEmail(){
-      return this.email;
-   }
-
-   public void setUpdateProductData(final Boolean updateProductData){
-      this.updateProductData = updateProductData;
-   }
-
-   public void setAnonymousId(final String anonymousId){
-      this.anonymousId = anonymousId;
-   }
-
+   
    public void setPassword(final String password){
       this.password = password;
    }
-
-   public void setAnonymousCartSignInMode(final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode){
-      this.anonymousCartSignInMode = anonymousCartSignInMode;
-   }
-
+   
    public void setAnonymousCartId(final String anonymousCartId){
       this.anonymousCartId = anonymousCartId;
    }
-
-   public void setEmail(final String email){
-      this.email = email;
+   
+   public void setAnonymousCartSignInMode(final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode){
+      this.anonymousCartSignInMode = anonymousCartSignInMode;
+   }
+   
+   public void setAnonymousId(final String anonymousId){
+      this.anonymousId = anonymousId;
+   }
+   
+   public void setUpdateProductData(final Boolean updateProductData){
+      this.updateProductData = updateProductData;
    }
 
 }

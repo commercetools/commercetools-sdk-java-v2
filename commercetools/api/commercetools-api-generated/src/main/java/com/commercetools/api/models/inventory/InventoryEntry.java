@@ -1,9 +1,9 @@
 package com.commercetools.api.models.inventory;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.inventory.InventoryEntryImpl;
@@ -24,7 +24,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = InventoryEntryImpl.class)
-public interface InventoryEntry extends LoggedResource {
+public interface InventoryEntry extends BaseResource {
 
    /**
    *  <p>The unique ID of the inventory entry.</p>
@@ -32,15 +32,15 @@ public interface InventoryEntry extends LoggedResource {
    @NotNull
    @JsonProperty("id")
    public String getId();
-
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -56,7 +56,7 @@ public interface InventoryEntry extends LoggedResource {
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-
+   
    @NotNull
    @JsonProperty("sku")
    public String getSku();
@@ -83,66 +83,66 @@ public interface InventoryEntry extends LoggedResource {
    /**
    *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
    */
-
+   
    @JsonProperty("restockableInDays")
    public Long getRestockableInDays();
    /**
    *  <p>The date and time of the next restock.</p>
    */
-
+   
    @JsonProperty("expectedDelivery")
    public ZonedDateTime getExpectedDelivery();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setCreatedAt(final ZonedDateTime createdAt);
-
+   
    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+   
    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+   
    public void setCreatedBy(final CreatedBy createdBy);
-
+   
    public void setSku(final String sku);
-
+   
    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
+   
    public void setQuantityOnStock(final Long quantityOnStock);
-
+   
    public void setAvailableQuantity(final Long availableQuantity);
-
+   
    public void setRestockableInDays(final Long restockableInDays);
-
+   
    public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
-
+   
    public void setCustom(final CustomFields custom);
-
+   
    public static InventoryEntryImpl of(){
       return new InventoryEntryImpl();
    }
-
+   
 
    public static InventoryEntryImpl of(final InventoryEntry template) {
       InventoryEntryImpl instance = new InventoryEntryImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setSku(template.getSku());
+      instance.setSupplyChannel(template.getSupplyChannel());
+      instance.setQuantityOnStock(template.getQuantityOnStock());
       instance.setAvailableQuantity(template.getAvailableQuantity());
+      instance.setRestockableInDays(template.getRestockableInDays());
       instance.setExpectedDelivery(template.getExpectedDelivery());
       instance.setCustom(template.getCustom());
-      instance.setQuantityOnStock(template.getQuantityOnStock());
-      instance.setSupplyChannel(template.getSupplyChannel());
-      instance.setRestockableInDays(template.getRestockableInDays());
-      instance.setSku(template.getSku());
       return instance;
    }
 

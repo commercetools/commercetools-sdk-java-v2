@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeAddAttributeDefinitionActionImpl implements ProductTypeAddAttributeDefinitionAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ProductTypeAddAttributeDefinitionActionImpl implements Produc
       this.action = "addAttributeDefinition";
    }
    public ProductTypeAddAttributeDefinitionActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.product_type.AttributeDefinitionDraft getAttribute(){
       return this.attribute;
    }

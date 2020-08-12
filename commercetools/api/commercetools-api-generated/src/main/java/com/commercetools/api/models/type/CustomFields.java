@@ -46,8 +46,8 @@ public interface CustomFields  {
 
    public static CustomFieldsImpl of(final CustomFields template) {
       CustomFieldsImpl instance = new CustomFieldsImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

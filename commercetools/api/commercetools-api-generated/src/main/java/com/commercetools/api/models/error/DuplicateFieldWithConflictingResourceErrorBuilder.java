@@ -20,21 +20,21 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
    private String message;
    
    
-   private com.commercetools.api.models.common.Reference conflictingResource;
+   private String field;
    
    
    private com.fasterxml.jackson.databind.JsonNode duplicateValue;
    
    
-   private String field;
+   private com.commercetools.api.models.common.Reference conflictingResource;
    
    public DuplicateFieldWithConflictingResourceErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
    
-   public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource( final com.commercetools.api.models.common.Reference conflictingResource) {
-      this.conflictingResource = conflictingResource;
+   public DuplicateFieldWithConflictingResourceErrorBuilder field( final String field) {
+      this.field = field;
       return this;
    }
    
@@ -43,8 +43,8 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
       return this;
    }
    
-   public DuplicateFieldWithConflictingResourceErrorBuilder field( final String field) {
-      this.field = field;
+   public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource( final com.commercetools.api.models.common.Reference conflictingResource) {
+      this.conflictingResource = conflictingResource;
       return this;
    }
    
@@ -54,8 +54,8 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
    }
    
    
-   public com.commercetools.api.models.common.Reference getConflictingResource(){
-      return this.conflictingResource;
+   public String getField(){
+      return this.field;
    }
    
    
@@ -64,12 +64,12 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
    }
    
    
-   public String getField(){
-      return this.field;
+   public com.commercetools.api.models.common.Reference getConflictingResource(){
+      return this.conflictingResource;
    }
 
    public DuplicateFieldWithConflictingResourceError build() {
-       return new DuplicateFieldWithConflictingResourceErrorImpl(message, conflictingResource, duplicateValue, field);
+       return new DuplicateFieldWithConflictingResourceErrorImpl(message, field, duplicateValue, conflictingResource);
    }
    
    public static DuplicateFieldWithConflictingResourceErrorBuilder of() {
@@ -79,9 +79,9 @@ public final class DuplicateFieldWithConflictingResourceErrorBuilder {
    public static DuplicateFieldWithConflictingResourceErrorBuilder of(final DuplicateFieldWithConflictingResourceError template) {
       DuplicateFieldWithConflictingResourceErrorBuilder builder = new DuplicateFieldWithConflictingResourceErrorBuilder();
       builder.message = template.getMessage();
-      builder.conflictingResource = template.getConflictingResource();
-      builder.duplicateValue = template.getDuplicateValue();
       builder.field = template.getField();
+      builder.duplicateValue = template.getDuplicateValue();
+      builder.conflictingResource = template.getConflictingResource();
       return builder;
    }
    

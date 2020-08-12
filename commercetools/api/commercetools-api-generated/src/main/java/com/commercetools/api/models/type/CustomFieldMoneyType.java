@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface CustomFieldMoneyType extends FieldType {
 
 
-
+   
    public static CustomFieldMoneyTypeImpl of(){
       return new CustomFieldMoneyTypeImpl();
    }
-
+   
 
    public static CustomFieldMoneyTypeImpl of(final CustomFieldMoneyType template) {
       CustomFieldMoneyTypeImpl instance = new CustomFieldMoneyTypeImpl();

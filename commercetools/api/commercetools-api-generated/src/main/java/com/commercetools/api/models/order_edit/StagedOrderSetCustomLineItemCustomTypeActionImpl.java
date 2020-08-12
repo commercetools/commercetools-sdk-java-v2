@@ -25,54 +25,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderSetCustomLineItemCustomTypeActionImpl implements StagedOrderSetCustomLineItemCustomTypeAction {
 
    private String action;
-
+   
    private String customLineItemId;
-
+   
+   private com.commercetools.api.models.type.TypeResourceIdentifier type;
+   
    private com.commercetools.api.models.type.FieldContainer fields;
 
-   private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
    @JsonCreator
-   StagedOrderSetCustomLineItemCustomTypeActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+   StagedOrderSetCustomLineItemCustomTypeActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
       this.customLineItemId = customLineItemId;
-      this.fields = fields;
       this.type = type;
+      this.fields = fields;
       this.action = "setCustomLineItemCustomType";
    }
    public StagedOrderSetCustomLineItemCustomTypeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getCustomLineItemId(){
       return this.customLineItemId;
    }
-
-
-   public com.commercetools.api.models.type.FieldContainer getFields(){
-      return this.fields;
-   }
-
-
+   
+   
    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
       return this.type;
+   }
+   
+   
+   public com.commercetools.api.models.type.FieldContainer getFields(){
+      return this.fields;
    }
 
    public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
-
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
-
+   
    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
       this.type = type;
+   }
+   
+   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+      this.fields = fields;
    }
 
 }

@@ -17,27 +17,27 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class TypeDraftBuilder {
    
    
-   private com.commercetools.api.models.common.LocalizedString name;
+   private String key;
    
-   @Nullable
-   private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
+   
+   private com.commercetools.api.models.common.LocalizedString name;
    
    @Nullable
    private com.commercetools.api.models.common.LocalizedString description;
    
    
-   private String key;
-   
-   
    private java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds;
    
-   public TypeDraftBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
-      this.name = name;
+   @Nullable
+   private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
+   
+   public TypeDraftBuilder key( final String key) {
+      this.key = key;
       return this;
    }
    
-   public TypeDraftBuilder fieldDefinitions(@Nullable final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
-      this.fieldDefinitions = fieldDefinitions;
+   public TypeDraftBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+      this.name = name;
       return this;
    }
    
@@ -46,29 +46,14 @@ public final class TypeDraftBuilder {
       return this;
    }
    
-   public TypeDraftBuilder key( final String key) {
-      this.key = key;
-      return this;
-   }
-   
    public TypeDraftBuilder resourceTypeIds( final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds) {
       this.resourceTypeIds = resourceTypeIds;
       return this;
    }
    
-   
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
-   @Nullable
-   public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions(){
-      return this.fieldDefinitions;
-   }
-   
-   @Nullable
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
+   public TypeDraftBuilder fieldDefinitions(@Nullable final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
+      this.fieldDefinitions = fieldDefinitions;
+      return this;
    }
    
    
@@ -77,12 +62,27 @@ public final class TypeDraftBuilder {
    }
    
    
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.LocalizedString getDescription(){
+      return this.description;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.type.ResourceTypeId> getResourceTypeIds(){
       return this.resourceTypeIds;
    }
+   
+   @Nullable
+   public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions(){
+      return this.fieldDefinitions;
+   }
 
    public TypeDraft build() {
-       return new TypeDraftImpl(name, fieldDefinitions, description, key, resourceTypeIds);
+       return new TypeDraftImpl(key, name, description, resourceTypeIds, fieldDefinitions);
    }
    
    public static TypeDraftBuilder of() {
@@ -91,11 +91,11 @@ public final class TypeDraftBuilder {
    
    public static TypeDraftBuilder of(final TypeDraft template) {
       TypeDraftBuilder builder = new TypeDraftBuilder();
-      builder.name = template.getName();
-      builder.fieldDefinitions = template.getFieldDefinitions();
-      builder.description = template.getDescription();
       builder.key = template.getKey();
+      builder.name = template.getName();
+      builder.description = template.getDescription();
       builder.resourceTypeIds = template.getResourceTypeIds();
+      builder.fieldDefinitions = template.getFieldDefinitions();
       return builder;
    }
    

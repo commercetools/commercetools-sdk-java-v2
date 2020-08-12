@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -36,6 +38,8 @@ public class ByProjectKeyProductsByIDGet {
    private List<String> priceCountry = new ArrayList<>();
    private List<String> priceCustomerGroup = new ArrayList<>();
    private List<String> priceChannel = new ArrayList<>();
+   private List<String> localeProjection = new ArrayList<>();
+   private List<String> storeProjection = new ArrayList<>();
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    private String ID;
@@ -54,6 +58,8 @@ public class ByProjectKeyProductsByIDGet {
       params.add(this.priceCountry.stream().map(s -> "priceCountry=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.priceCustomerGroup.stream().map(s -> "priceCustomerGroup=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.priceChannel.stream().map(s -> "priceChannel=" + urlEncode(s)).collect(Collectors.joining("&")));
+      params.add(this.localeProjection.stream().map(s -> "localeProjection=" + urlEncode(s)).collect(Collectors.joining("&")));
+      params.add(this.storeProjection.stream().map(s -> "storeProjection=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.expand.stream().map(s -> "expand=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
       params.removeIf(String::isEmpty);
@@ -105,6 +111,14 @@ public class ByProjectKeyProductsByIDGet {
       return this.priceChannel;
    }
    
+   public List<String> getLocaleProjection() {
+      return this.localeProjection;
+   }
+   
+   public List<String> getStoreProjection() {
+      return this.storeProjection;
+   }
+   
    public List<String> getExpand() {
       return this.expand;
    }
@@ -150,6 +164,26 @@ public class ByProjectKeyProductsByIDGet {
    
    public ByProjectKeyProductsByIDGet withPriceChannel(final List<String> priceChannel){
       this.priceChannel = priceChannel;
+      return this;
+   }
+   
+   public ByProjectKeyProductsByIDGet addLocaleProjection(final String localeProjection){
+      this.localeProjection.add(localeProjection);
+      return this;
+   }
+   
+   public ByProjectKeyProductsByIDGet withLocaleProjection(final List<String> localeProjection){
+      this.localeProjection = localeProjection;
+      return this;
+   }
+   
+   public ByProjectKeyProductsByIDGet addStoreProjection(final String storeProjection){
+      this.storeProjection.add(storeProjection);
+      return this;
+   }
+   
+   public ByProjectKeyProductsByIDGet withStoreProjection(final List<String> storeProjection){
+      this.storeProjection = storeProjection;
       return this;
    }
    

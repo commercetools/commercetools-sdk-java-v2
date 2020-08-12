@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeChangeLocalizedEnumValueOrderActionImpl implements ProductTypeChangeLocalizedEnumValueOrderAction {
 
    private String action;
-
+   
+   private String attributeName;
+   
    private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
 
-   private String attributeName;
-
    @JsonCreator
-   ProductTypeChangeLocalizedEnumValueOrderActionImpl(@JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values, @JsonProperty("attributeName") final String attributeName) {
-      this.values = values;
+   ProductTypeChangeLocalizedEnumValueOrderActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
       this.attributeName = attributeName;
+      this.values = values;
       this.action = "changeLocalizedEnumValueOrder";
    }
    public ProductTypeChangeLocalizedEnumValueOrderActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getAttributeName(){
+      return this.attributeName;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> getValues(){
       return this.values;
    }
 
-
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-
-   public void setValues(final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values){
-      this.values = values;
-   }
-
    public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
+   }
+   
+   public void setValues(final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values){
+      this.values = values;
    }
 
 }

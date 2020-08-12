@@ -25,54 +25,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction {
 
    private String action;
-
+   
+   private String returnTrackingId;
+   
+   private java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items;
+   
    private java.time.ZonedDateTime returnDate;
 
-   private String returnTrackingId;
-
-   private java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items;
-
    @JsonCreator
-   OrderAddReturnInfoActionImpl(@JsonProperty("returnDate") final java.time.ZonedDateTime returnDate, @JsonProperty("returnTrackingId") final String returnTrackingId, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items) {
-      this.returnDate = returnDate;
+   OrderAddReturnInfoActionImpl(@JsonProperty("returnTrackingId") final String returnTrackingId, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items, @JsonProperty("returnDate") final java.time.ZonedDateTime returnDate) {
       this.returnTrackingId = returnTrackingId;
       this.items = items;
+      this.returnDate = returnDate;
       this.action = "addReturnInfo";
    }
    public OrderAddReturnInfoActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
-   public java.time.ZonedDateTime getReturnDate(){
-      return this.returnDate;
-   }
-
-
+   
+   
    public String getReturnTrackingId(){
       return this.returnTrackingId;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.order.ReturnItemDraft> getItems(){
       return this.items;
    }
-
-   public void setReturnDate(final java.time.ZonedDateTime returnDate){
-      this.returnDate = returnDate;
+   
+   
+   public java.time.ZonedDateTime getReturnDate(){
+      return this.returnDate;
    }
 
    public void setReturnTrackingId(final String returnTrackingId){
       this.returnTrackingId = returnTrackingId;
    }
-
+   
    public void setItems(final java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items){
       this.items = items;
+   }
+   
+   public void setReturnDate(final java.time.ZonedDateTime returnDate){
+      this.returnDate = returnDate;
    }
 
 }

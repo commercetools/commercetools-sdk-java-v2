@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderAddPaymentActionImpl implements OrderAddPaymentAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class OrderAddPaymentActionImpl implements OrderAddPaymentAction {
       this.action = "addPayment";
    }
    public OrderAddPaymentActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment(){
       return this.payment;
    }

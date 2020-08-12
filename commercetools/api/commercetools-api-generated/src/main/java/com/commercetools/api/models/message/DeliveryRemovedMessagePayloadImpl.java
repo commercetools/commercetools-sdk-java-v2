@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.order.Delivery delivery;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedM
       this.type = "DeliveryRemoved";
    }
    public DeliveryRemovedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.Delivery getDelivery(){
       return this.delivery;
    }

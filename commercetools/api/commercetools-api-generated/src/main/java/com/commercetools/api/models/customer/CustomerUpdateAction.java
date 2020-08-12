@@ -3,11 +3,13 @@ package com.commercetools.api.models.customer;
 import com.commercetools.api.models.customer.CustomerAddAddressAction;
 import com.commercetools.api.models.customer.CustomerAddBillingAddressIdAction;
 import com.commercetools.api.models.customer.CustomerAddShippingAddressIdAction;
+import com.commercetools.api.models.customer.CustomerAddStoreAction;
 import com.commercetools.api.models.customer.CustomerChangeAddressAction;
 import com.commercetools.api.models.customer.CustomerChangeEmailAction;
 import com.commercetools.api.models.customer.CustomerRemoveAddressAction;
 import com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdAction;
 import com.commercetools.api.models.customer.CustomerRemoveShippingAddressIdAction;
+import com.commercetools.api.models.customer.CustomerRemoveStoreAction;
 import com.commercetools.api.models.customer.CustomerSetCompanyNameAction;
 import com.commercetools.api.models.customer.CustomerSetCustomFieldAction;
 import com.commercetools.api.models.customer.CustomerSetCustomTypeAction;
@@ -23,6 +25,7 @@ import com.commercetools.api.models.customer.CustomerSetLastNameAction;
 import com.commercetools.api.models.customer.CustomerSetLocaleAction;
 import com.commercetools.api.models.customer.CustomerSetMiddleNameAction;
 import com.commercetools.api.models.customer.CustomerSetSalutationAction;
+import com.commercetools.api.models.customer.CustomerSetStoresAction;
 import com.commercetools.api.models.customer.CustomerSetTitleAction;
 import com.commercetools.api.models.customer.CustomerSetVatIdAction;
 
@@ -42,11 +45,13 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerAddAddressActionImpl.class, name = "addAddress"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerAddBillingAddressIdActionImpl.class, name = "addBillingAddressId"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerAddShippingAddressIdActionImpl.class, name = "addShippingAddressId"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerAddStoreActionImpl.class, name = "addStore"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerChangeAddressActionImpl.class, name = "changeAddress"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerChangeEmailActionImpl.class, name = "changeEmail"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerRemoveAddressActionImpl.class, name = "removeAddress"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdActionImpl.class, name = "removeBillingAddressId"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerRemoveShippingAddressIdActionImpl.class, name = "removeShippingAddressId"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerRemoveStoreActionImpl.class, name = "removeStore"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetCompanyNameActionImpl.class, name = "setCompanyName"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetCustomFieldActionImpl.class, name = "setCustomField"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetCustomTypeActionImpl.class, name = "setCustomType"),
@@ -62,6 +67,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetLocaleActionImpl.class, name = "setLocale"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetMiddleNameActionImpl.class, name = "setMiddleName"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetSalutationActionImpl.class, name = "setSalutation"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetStoresActionImpl.class, name = "setStores"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetTitleActionImpl.class, name = "setTitle"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetVatIdActionImpl.class, name = "setVatId")
 })
@@ -78,7 +84,7 @@ import java.io.IOException;
 public interface CustomerUpdateAction  {
 
 
-
+   
 
 
 }

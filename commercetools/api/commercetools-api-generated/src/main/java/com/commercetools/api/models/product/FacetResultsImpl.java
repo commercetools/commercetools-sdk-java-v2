@@ -29,10 +29,10 @@ public final class FacetResultsImpl implements FacetResults {
       this.values = values;
    }
    public FacetResultsImpl() {
-
+      
    }
-
-
+   
+   
    public Map<String,com.fasterxml.jackson.databind.JsonNode> values() {
        return values;
    }

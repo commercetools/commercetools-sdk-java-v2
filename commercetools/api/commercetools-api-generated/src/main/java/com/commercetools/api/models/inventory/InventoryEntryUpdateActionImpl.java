@@ -35,9 +35,9 @@ public final class InventoryEntryUpdateActionImpl implements InventoryEntryUpdat
    InventoryEntryUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

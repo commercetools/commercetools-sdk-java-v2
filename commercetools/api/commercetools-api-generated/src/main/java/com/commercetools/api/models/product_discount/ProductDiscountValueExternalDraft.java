@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface ProductDiscountValueExternalDraft extends ProductDiscountValueDraft {
 
 
-
+   
    public static ProductDiscountValueExternalDraftImpl of(){
       return new ProductDiscountValueExternalDraftImpl();
    }
-
+   
 
    public static ProductDiscountValueExternalDraftImpl of(final ProductDiscountValueExternalDraft template) {
       ProductDiscountValueExternalDraftImpl instance = new ProductDiscountValueExternalDraftImpl();

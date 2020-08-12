@@ -29,11 +29,11 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
    public List<String> getCountries();
 
    public void setCountries(final List<String> countries);
-
+   
    public static ProjectChangeCountriesActionImpl of(){
       return new ProjectChangeCountriesActionImpl();
    }
-
+   
 
    public static ProjectChangeCountriesActionImpl of(final ProjectChangeCountriesAction template) {
       ProjectChangeCountriesActionImpl instance = new ProjectChangeCountriesActionImpl();

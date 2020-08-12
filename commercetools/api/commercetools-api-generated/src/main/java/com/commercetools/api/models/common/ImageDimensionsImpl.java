@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ImageDimensionsImpl implements ImageDimensions {
 
    private Integer w;
-
+   
    private Integer h;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ImageDimensionsImpl implements ImageDimensions {
       this.h = h;
    }
    public ImageDimensionsImpl() {
-
+      
    }
-
-
+   
+   
    public Integer getW(){
       return this.w;
    }
-
-
+   
+   
    public Integer getH(){
       return this.h;
    }
@@ -48,7 +48,7 @@ public final class ImageDimensionsImpl implements ImageDimensions {
    public void setW(final Integer w){
       this.w = w;
    }
-
+   
    public void setH(final Integer h){
       this.h = h;
    }

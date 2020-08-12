@@ -25,14 +25,14 @@ public final class StagedOrderSetParcelItemsActionImpl implements StagedOrderSet
 
    private String action;
    
-   private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
-   
    private String parcelId;
+   
+   private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
    @JsonCreator
-   StagedOrderSetParcelItemsActionImpl(@JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items, @JsonProperty("parcelId") final String parcelId) {
-      this.items = items;
+   StagedOrderSetParcelItemsActionImpl(@JsonProperty("parcelId") final String parcelId, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
       this.parcelId = parcelId;
+      this.items = items;
       this.action = "setParcelItems";
    }
    public StagedOrderSetParcelItemsActionImpl() {
@@ -45,21 +45,21 @@ public final class StagedOrderSetParcelItemsActionImpl implements StagedOrderSet
    }
    
    
-   public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
-      return this.items;
-   }
-   
-   
    public String getParcelId(){
       return this.parcelId;
    }
-
-   public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
-      this.items = items;
-   }
    
+   
+   public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
+      return this.items;
+   }
+
    public void setParcelId(final String parcelId){
       this.parcelId = parcelId;
+   }
+   
+   public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
+      this.items = items;
    }
 
 }

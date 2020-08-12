@@ -24,11 +24,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartSetCustomLineItemCustomFieldActionImpl implements CartSetCustomLineItemCustomFieldAction {
 
    private String action;
-
+   
    private String customLineItemId;
-
+   
    private String name;
-
+   
    private com.fasterxml.jackson.databind.JsonNode value;
 
    @JsonCreator
@@ -39,25 +39,25 @@ public final class CartSetCustomLineItemCustomFieldActionImpl implements CartSet
       this.action = "setCustomLineItemCustomField";
    }
    public CartSetCustomLineItemCustomFieldActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getCustomLineItemId(){
       return this.customLineItemId;
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
-
+   
+   
    public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
@@ -65,11 +65,11 @@ public final class CartSetCustomLineItemCustomFieldActionImpl implements CartSet
    public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
-
+   
    public void setName(final String name){
       this.name = name;
    }
-
+   
    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }

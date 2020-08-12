@@ -23,36 +23,36 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderCustomLineItemDiscountSetMessagePayloadImpl.class)
 public interface OrderCustomLineItemDiscountSetMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @JsonProperty("customLineItemId")
    public String getCustomLineItemId();
-
+   
    @NotNull
    @Valid
    @JsonProperty("discountedPricePerQuantity")
    public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
-
+   
    @Valid
    @JsonProperty("taxedPrice")
    public TaxedItemPrice getTaxedPrice();
 
    public void setCustomLineItemId(final String customLineItemId);
-
+   
    public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
-
+   
    public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-
+   
    public static OrderCustomLineItemDiscountSetMessagePayloadImpl of(){
       return new OrderCustomLineItemDiscountSetMessagePayloadImpl();
    }
-
+   
 
    public static OrderCustomLineItemDiscountSetMessagePayloadImpl of(final OrderCustomLineItemDiscountSetMessagePayload template) {
       OrderCustomLineItemDiscountSetMessagePayloadImpl instance = new OrderCustomLineItemDiscountSetMessagePayloadImpl();
       instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setTaxedPrice(template.getTaxedPrice());
       instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
+      instance.setTaxedPrice(template.getTaxedPrice());
       return instance;
    }
 

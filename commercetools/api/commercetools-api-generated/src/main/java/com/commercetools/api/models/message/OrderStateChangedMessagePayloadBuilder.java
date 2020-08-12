@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderStateChangedMessagePayloadBuilder {
-
-
-   private com.commercetools.api.models.order.OrderState oldOrderState;
-
-
+   
+   
    private com.commercetools.api.models.order.OrderState orderState;
-
-   public OrderStateChangedMessagePayloadBuilder oldOrderState( final com.commercetools.api.models.order.OrderState oldOrderState) {
-      this.oldOrderState = oldOrderState;
-      return this;
-   }
-
+   
+   
+   private com.commercetools.api.models.order.OrderState oldOrderState;
+   
    public OrderStateChangedMessagePayloadBuilder orderState( final com.commercetools.api.models.order.OrderState orderState) {
       this.orderState = orderState;
       return this;
    }
-
-
+   
+   public OrderStateChangedMessagePayloadBuilder oldOrderState( final com.commercetools.api.models.order.OrderState oldOrderState) {
+      this.oldOrderState = oldOrderState;
+      return this;
+   }
+   
+   
+   public com.commercetools.api.models.order.OrderState getOrderState(){
+      return this.orderState;
+   }
+   
+   
    public com.commercetools.api.models.order.OrderState getOldOrderState(){
       return this.oldOrderState;
    }
 
-
-   public com.commercetools.api.models.order.OrderState getOrderState(){
-      return this.orderState;
-   }
-
    public OrderStateChangedMessagePayload build() {
-       return new OrderStateChangedMessagePayloadImpl(oldOrderState, orderState);
+       return new OrderStateChangedMessagePayloadImpl(orderState, oldOrderState);
    }
-
+   
    public static OrderStateChangedMessagePayloadBuilder of() {
       return new OrderStateChangedMessagePayloadBuilder();
    }
-
+   
    public static OrderStateChangedMessagePayloadBuilder of(final OrderStateChangedMessagePayload template) {
       OrderStateChangedMessagePayloadBuilder builder = new OrderStateChangedMessagePayloadBuilder();
-      builder.oldOrderState = template.getOldOrderState();
       builder.orderState = template.getOrderState();
+      builder.oldOrderState = template.getOldOrderState();
       return builder;
    }
-
+   
 }

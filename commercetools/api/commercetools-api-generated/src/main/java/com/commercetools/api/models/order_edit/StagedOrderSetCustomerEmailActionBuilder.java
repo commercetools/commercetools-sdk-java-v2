@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class StagedOrderSetCustomerEmailActionBuilder {
-
+   
    @Nullable
    private String email;
-
+   
    public StagedOrderSetCustomerEmailActionBuilder email(@Nullable final String email) {
       this.email = email;
       return this;
    }
-
+   
    @Nullable
    public String getEmail(){
       return this.email;
@@ -30,15 +30,15 @@ public final class StagedOrderSetCustomerEmailActionBuilder {
    public StagedOrderSetCustomerEmailAction build() {
        return new StagedOrderSetCustomerEmailActionImpl(email);
    }
-
+   
    public static StagedOrderSetCustomerEmailActionBuilder of() {
       return new StagedOrderSetCustomerEmailActionBuilder();
    }
-
+   
    public static StagedOrderSetCustomerEmailActionBuilder of(final StagedOrderSetCustomerEmailAction template) {
       StagedOrderSetCustomerEmailActionBuilder builder = new StagedOrderSetCustomerEmailActionBuilder();
       builder.email = template.getEmail();
       return builder;
    }
-
+   
 }

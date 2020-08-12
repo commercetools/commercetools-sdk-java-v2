@@ -47,8 +47,8 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
 
    public static CategorySetCustomTypeActionImpl of(final CategorySetCustomTypeAction template) {
       CategorySetCustomTypeActionImpl instance = new CategorySetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

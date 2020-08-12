@@ -1,10 +1,10 @@
 package com.commercetools.api.models.discount_code;
 
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
@@ -26,7 +26,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = DiscountCodeImpl.class)
-public interface DiscountCode extends LoggedResource {
+public interface DiscountCode extends BaseResource {
 
    /**
    *  <p>The unique ID of the discount code.</p>
@@ -34,15 +34,15 @@ public interface DiscountCode extends LoggedResource {
    @NotNull
    @JsonProperty("id")
    public String getId();
-
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -58,11 +58,11 @@ public interface DiscountCode extends LoggedResource {
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-
+   
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
@@ -84,10 +84,10 @@ public interface DiscountCode extends LoggedResource {
    /**
    *  <p>The discount code can only be applied to carts that match this predicate.</p>
    */
-
+   
    @JsonProperty("cartPredicate")
    public String getCartPredicate();
-
+   
    @NotNull
    @JsonProperty("isActive")
    public Boolean getIsActive();
@@ -102,16 +102,16 @@ public interface DiscountCode extends LoggedResource {
    /**
    *  <p>The discount code can only be applied <code>maxApplications</code> times.</p>
    */
-
+   
    @JsonProperty("maxApplications")
    public Long getMaxApplications();
    /**
    *  <p>The discount code can only be applied <code>maxApplicationsPerCustomer</code> times per customer.</p>
    */
-
+   
    @JsonProperty("maxApplicationsPerCustomer")
    public Long getMaxApplicationsPerCustomer();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
@@ -125,81 +125,81 @@ public interface DiscountCode extends LoggedResource {
    *  <p>The time from which the discount can be applied on a cart.
    *  Before that time the code is invalid.</p>
    */
-
+   
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
    /**
    *  <p>The time until the discount can be applied on a cart.
    *  After that time the code is invalid.</p>
    */
-
+   
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setCreatedAt(final ZonedDateTime createdAt);
-
+   
    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+   
    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+   
    public void setCreatedBy(final CreatedBy createdBy);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public void setCode(final String code);
-
+   
    public void setCartDiscounts(final List<CartDiscountReference> cartDiscounts);
-
+   
    public void setCartPredicate(final String cartPredicate);
-
+   
    public void setIsActive(final Boolean isActive);
-
+   
    public void setReferences(final List<Reference> references);
-
+   
    public void setMaxApplications(final Long maxApplications);
-
+   
    public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer);
-
+   
    public void setCustom(final CustomFields custom);
-
+   
    public void setGroups(final List<String> groups);
-
+   
    public void setValidFrom(final ZonedDateTime validFrom);
-
+   
    public void setValidUntil(final ZonedDateTime validUntil);
-
+   
    public static DiscountCodeImpl of(){
       return new DiscountCodeImpl();
    }
-
+   
 
    public static DiscountCodeImpl of(final DiscountCode template) {
       DiscountCodeImpl instance = new DiscountCodeImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCartDiscounts(template.getCartDiscounts());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setName(template.getName());
+      instance.setDescription(template.getDescription());
       instance.setCode(template.getCode());
-      instance.setReferences(template.getReferences());
+      instance.setCartDiscounts(template.getCartDiscounts());
       instance.setCartPredicate(template.getCartPredicate());
+      instance.setIsActive(template.getIsActive());
+      instance.setReferences(template.getReferences());
+      instance.setMaxApplications(template.getMaxApplications());
+      instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
       instance.setCustom(template.getCustom());
       instance.setGroups(template.getGroups());
-      instance.setDescription(template.getDescription());
       instance.setValidFrom(template.getValidFrom());
-      instance.setIsActive(template.getIsActive());
-      instance.setMaxApplications(template.getMaxApplications());
-      instance.setName(template.getName());
       instance.setValidUntil(template.getValidUntil());
-      instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
       return instance;
    }
 

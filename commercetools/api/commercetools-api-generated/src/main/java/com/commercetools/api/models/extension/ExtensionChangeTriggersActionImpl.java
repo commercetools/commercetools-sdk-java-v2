@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ExtensionChangeTriggersActionImpl implements ExtensionChangeTriggersAction {
 
    private String action;
-
+   
    private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ExtensionChangeTriggersActionImpl implements ExtensionChangeT
       this.action = "changeTriggers";
    }
    public ExtensionChangeTriggersActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers(){
       return this.triggers;
    }

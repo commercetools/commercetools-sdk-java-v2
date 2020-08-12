@@ -26,9 +26,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TypedMoneyDraftImpl implements TypedMoneyDraft {
 
    private Long centAmount;
-
+   
    private String currencyCode;
-
+   
    private com.commercetools.api.models.common.MoneyType type;
 
    @JsonCreator
@@ -38,22 +38,22 @@ public final class TypedMoneyDraftImpl implements TypedMoneyDraft {
       this.type = MoneyType.findEnumViaJsonName("null").get();
    }
    public TypedMoneyDraftImpl() {
-
+      
    }
-
-
+   
+   
    public Long getCentAmount(){
       return this.centAmount;
    }
-
+   
    /**
    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
    */
    public String getCurrencyCode(){
       return this.currencyCode;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.MoneyType getType(){
       return this.type;
    }
@@ -61,7 +61,7 @@ public final class TypedMoneyDraftImpl implements TypedMoneyDraft {
    public void setCentAmount(final Long centAmount){
       this.centAmount = centAmount;
    }
-
+   
    public void setCurrencyCode(final String currencyCode){
       this.currencyCode = currencyCode;
    }

@@ -13,23 +13,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TransactionType {
 
-
+  
   @JsonProperty("Authorization")
   AUTHORIZATION("Authorization"),
-
-
+  
+  
   @JsonProperty("CancelAuthorization")
   CANCEL_AUTHORIZATION("CancelAuthorization"),
-
-
+  
+  
   @JsonProperty("Charge")
   CHARGE("Charge"),
-
-
+  
+  
   @JsonProperty("Refund")
   REFUND("Refund"),
-
-
+  
+  
   @JsonProperty("Chargeback")
   CHARGEBACK("Chargeback");
 

@@ -22,24 +22,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxRateDraftImpl implements TaxRateDraft {
 
-   private String country;
+   private String name;
    
-   private Integer amount;
+   private Double amount;
    
    private Boolean includedInPrice;
    
-   private String name;
+   private String country;
    
    private String state;
    
    private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
    @JsonCreator
-   TaxRateDraftImpl(@JsonProperty("country") final String country, @JsonProperty("amount") final Integer amount, @JsonProperty("includedInPrice") final Boolean includedInPrice, @JsonProperty("name") final String name, @JsonProperty("state") final String state, @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
-      this.country = country;
+   TaxRateDraftImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Double amount, @JsonProperty("includedInPrice") final Boolean includedInPrice, @JsonProperty("country") final String country, @JsonProperty("state") final String state, @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
+      this.name = name;
       this.amount = amount;
       this.includedInPrice = includedInPrice;
-      this.name = name;
+      this.country = country;
       this.state = state;
       this.subRates = subRates;
    }
@@ -47,11 +47,9 @@ public final class TaxRateDraftImpl implements TaxRateDraft {
       
    }
    
-   /**
-   *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-   */
-   public String getCountry(){
-      return this.country;
+   
+   public String getName(){
+      return this.name;
    }
    
    /**
@@ -60,7 +58,7 @@ public final class TaxRateDraftImpl implements TaxRateDraft {
    *  If <code>subRates</code> are specified
    *  then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
    */
-   public Integer getAmount(){
+   public Double getAmount(){
       return this.amount;
    }
    
@@ -69,9 +67,11 @@ public final class TaxRateDraftImpl implements TaxRateDraft {
       return this.includedInPrice;
    }
    
-   
-   public String getName(){
-      return this.name;
+   /**
+   *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+   */
+   public String getCountry(){
+      return this.country;
    }
    
    /**
@@ -90,11 +90,11 @@ public final class TaxRateDraftImpl implements TaxRateDraft {
       return this.subRates;
    }
 
-   public void setCountry(final String country){
-      this.country = country;
+   public void setName(final String name){
+      this.name = name;
    }
    
-   public void setAmount(final Integer amount){
+   public void setAmount(final Double amount){
       this.amount = amount;
    }
    
@@ -102,8 +102,8 @@ public final class TaxRateDraftImpl implements TaxRateDraft {
       this.includedInPrice = includedInPrice;
    }
    
-   public void setName(final String name){
-      this.name = name;
+   public void setCountry(final String country){
+      this.country = country;
    }
    
    public void setState(final String state){

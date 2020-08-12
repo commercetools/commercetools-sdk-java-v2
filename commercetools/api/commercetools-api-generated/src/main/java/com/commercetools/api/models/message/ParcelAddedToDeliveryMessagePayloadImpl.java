@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDeliveryMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.order.Delivery delivery;
-
+   
    private com.commercetools.api.models.order.Parcel parcel;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAdde
       this.type = "ParcelAddedToDelivery";
    }
    public ParcelAddedToDeliveryMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.Delivery getDelivery(){
       return this.delivery;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.Parcel getParcel(){
       return this.parcel;
    }
@@ -58,7 +58,7 @@ public final class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAdde
    public void setDelivery(final com.commercetools.api.models.order.Delivery delivery){
       this.delivery = delivery;
    }
-
+   
    public void setParcel(final com.commercetools.api.models.order.Parcel parcel){
       this.parcel = parcel;
    }

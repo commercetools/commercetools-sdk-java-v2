@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PriceTierDraftImpl implements PriceTierDraft {
 
+   private Long minimumQuantity;
+   
    private com.commercetools.api.models.common.Money value;
 
-   private Long minimumQuantity;
-
    @JsonCreator
-   PriceTierDraftImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value, @JsonProperty("minimumQuantity") final Long minimumQuantity) {
-      this.value = value;
+   PriceTierDraftImpl(@JsonProperty("minimumQuantity") final Long minimumQuantity, @JsonProperty("value") final com.commercetools.api.models.common.Money value) {
       this.minimumQuantity = minimumQuantity;
+      this.value = value;
    }
    public PriceTierDraftImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getMinimumQuantity(){
+      return this.minimumQuantity;
+   }
+   
+   
    public com.commercetools.api.models.common.Money getValue(){
       return this.value;
    }
 
-
-   public Long getMinimumQuantity(){
-      return this.minimumQuantity;
-   }
-
-   public void setValue(final com.commercetools.api.models.common.Money value){
-      this.value = value;
-   }
-
    public void setMinimumQuantity(final Long minimumQuantity){
       this.minimumQuantity = minimumQuantity;
+   }
+   
+   public void setValue(final com.commercetools.api.models.common.Money value){
+      this.value = value;
    }
 
 }

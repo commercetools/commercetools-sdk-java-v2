@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxCategoryReplaceTaxRateActionImpl.class)
 public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("taxRateId")
    public String getTaxRateId();
-
+   
    @NotNull
    @Valid
    @JsonProperty("taxRate")
    public TaxRateDraft getTaxRate();
 
    public void setTaxRateId(final String taxRateId);
-
+   
    public void setTaxRate(final TaxRateDraft taxRate);
-
+   
    public static TaxCategoryReplaceTaxRateActionImpl of(){
       return new TaxCategoryReplaceTaxRateActionImpl();
    }
-
+   
 
    public static TaxCategoryReplaceTaxRateActionImpl of(final TaxCategoryReplaceTaxRateAction template) {
       TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();
-      instance.setTaxRate(template.getTaxRate());
       instance.setTaxRateId(template.getTaxRateId());
+      instance.setTaxRate(template.getTaxRate());
       return instance;
    }
 

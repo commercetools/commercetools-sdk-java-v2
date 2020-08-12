@@ -22,39 +22,39 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantDeletedMessageImpl.class)
 public interface ProductVariantDeletedMessage extends Message {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("variant")
    public ProductVariant getVariant();
-
+   
    @NotNull
    @JsonProperty("removedImageUrls")
    public List<String> getRemovedImageUrls();
 
    public void setVariant(final ProductVariant variant);
-
+   
    public void setRemovedImageUrls(final List<String> removedImageUrls);
-
+   
    public static ProductVariantDeletedMessageImpl of(){
       return new ProductVariantDeletedMessageImpl();
    }
-
+   
 
    public static ProductVariantDeletedMessageImpl of(final ProductVariantDeletedMessage template) {
       ProductVariantDeletedMessageImpl instance = new ProductVariantDeletedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setRemovedImageUrls(template.getRemovedImageUrls());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setVariant(template.getVariant());
+      instance.setRemovedImageUrls(template.getRemovedImageUrls());
       return instance;
    }
 

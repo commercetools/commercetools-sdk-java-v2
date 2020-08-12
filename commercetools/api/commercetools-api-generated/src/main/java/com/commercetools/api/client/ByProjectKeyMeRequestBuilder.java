@@ -29,8 +29,8 @@ public class ByProjectKeyMeRequestBuilder {
       return new ByProjectKeyMeDelete(apiHttpClient, projectKey);
    }
    
-   public ByProjectKeyMeEmailRequestBuilder email() {
-      return new ByProjectKeyMeEmailRequestBuilder(apiHttpClient, projectKey);
+   public ByProjectKeyMeEmailConfirmRequestBuilder emailConfirm() {
+      return new ByProjectKeyMeEmailConfirmRequestBuilder(apiHttpClient, projectKey);
    }
    public ByProjectKeyMePasswordRequestBuilder password() {
       return new ByProjectKeyMePasswordRequestBuilder(apiHttpClient, projectKey);
@@ -55,8 +55,5 @@ public class ByProjectKeyMeRequestBuilder {
    }
    public ByProjectKeyMeShoppingListsRequestBuilder shoppingLists() {
       return new ByProjectKeyMeShoppingListsRequestBuilder(apiHttpClient, projectKey);
-   }
-   public ByProjectKeyMePaymentRequestBuilder payment() {
-      return new ByProjectKeyMePaymentRequestBuilder(apiHttpClient, projectKey);
    }
 }

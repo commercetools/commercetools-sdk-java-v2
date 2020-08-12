@@ -16,88 +16,88 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyCartRemoveLineItemActionBuilder {
-
-   @Nullable
-   private Integer quantity;
-
-   @Nullable
-   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-
-
+   
+   
    private String lineItemId;
-
+   
    @Nullable
-   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
-
+   private Double quantity;
+   
    @Nullable
    private com.commercetools.api.models.common.Money externalPrice;
-
-   public MyCartRemoveLineItemActionBuilder quantity(@Nullable final Integer quantity) {
-      this.quantity = quantity;
-      return this;
-   }
-
-   public MyCartRemoveLineItemActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-      this.externalTotalPrice = externalTotalPrice;
-      return this;
-   }
-
+   
+   @Nullable
+   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
+   
+   @Nullable
+   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
+   
    public MyCartRemoveLineItemActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
-
-   public MyCartRemoveLineItemActionBuilder shippingDetailsToRemove(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {
-      this.shippingDetailsToRemove = shippingDetailsToRemove;
+   
+   public MyCartRemoveLineItemActionBuilder quantity(@Nullable final Double quantity) {
+      this.quantity = quantity;
       return this;
    }
-
+   
    public MyCartRemoveLineItemActionBuilder externalPrice(@Nullable final com.commercetools.api.models.common.Money externalPrice) {
       this.externalPrice = externalPrice;
       return this;
    }
-
+   
+   public MyCartRemoveLineItemActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+      this.externalTotalPrice = externalTotalPrice;
+      return this;
+   }
+   
+   public MyCartRemoveLineItemActionBuilder shippingDetailsToRemove(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {
+      this.shippingDetailsToRemove = shippingDetailsToRemove;
+      return this;
+   }
+   
+   
+   public String getLineItemId(){
+      return this.lineItemId;
+   }
+   
    @Nullable
-   public Integer getQuantity(){
+   public Double getQuantity(){
       return this.quantity;
    }
-
+   
+   @Nullable
+   public com.commercetools.api.models.common.Money getExternalPrice(){
+      return this.externalPrice;
+   }
+   
    @Nullable
    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
       return this.externalTotalPrice;
    }
-
-
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-
+   
    @Nullable
    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetailsToRemove(){
       return this.shippingDetailsToRemove;
    }
 
-   @Nullable
-   public com.commercetools.api.models.common.Money getExternalPrice(){
-      return this.externalPrice;
-   }
-
    public MyCartRemoveLineItemAction build() {
-       return new MyCartRemoveLineItemActionImpl(quantity, externalTotalPrice, lineItemId, shippingDetailsToRemove, externalPrice);
+       return new MyCartRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice, shippingDetailsToRemove);
    }
-
+   
    public static MyCartRemoveLineItemActionBuilder of() {
       return new MyCartRemoveLineItemActionBuilder();
    }
-
+   
    public static MyCartRemoveLineItemActionBuilder of(final MyCartRemoveLineItemAction template) {
       MyCartRemoveLineItemActionBuilder builder = new MyCartRemoveLineItemActionBuilder();
-      builder.quantity = template.getQuantity();
-      builder.externalTotalPrice = template.getExternalTotalPrice();
       builder.lineItemId = template.getLineItemId();
-      builder.shippingDetailsToRemove = template.getShippingDetailsToRemove();
+      builder.quantity = template.getQuantity();
       builder.externalPrice = template.getExternalPrice();
+      builder.externalTotalPrice = template.getExternalTotalPrice();
+      builder.shippingDetailsToRemove = template.getShippingDetailsToRemove();
       return builder;
    }
-
+   
 }

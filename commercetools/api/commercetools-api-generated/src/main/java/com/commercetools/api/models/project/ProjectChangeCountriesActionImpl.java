@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesAction {
 
    private String action;
-
+   
    private java.util.List<String> countries;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ProjectChangeCountriesActionImpl implements ProjectChangeCoun
       this.action = "changeCountries";
    }
    public ProjectChangeCountriesActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>A two-digit country code as per country code.</p>
    */

@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CustomerSignInResultBuilder {
-
+   
+   
+   private com.commercetools.api.models.customer.Customer customer;
+   
    @Nullable
    private com.fasterxml.jackson.databind.JsonNode cart;
-
-
-   private com.commercetools.api.models.customer.Customer customer;
-
-   public CustomerSignInResultBuilder cart(@Nullable final com.fasterxml.jackson.databind.JsonNode cart) {
-      this.cart = cart;
-      return this;
-   }
-
+   
    public CustomerSignInResultBuilder customer( final com.commercetools.api.models.customer.Customer customer) {
       this.customer = customer;
       return this;
    }
-
+   
+   public CustomerSignInResultBuilder cart(@Nullable final com.fasterxml.jackson.databind.JsonNode cart) {
+      this.cart = cart;
+      return this;
+   }
+   
+   
+   public com.commercetools.api.models.customer.Customer getCustomer(){
+      return this.customer;
+   }
+   
    @Nullable
    public com.fasterxml.jackson.databind.JsonNode getCart(){
       return this.cart;
    }
 
-
-   public com.commercetools.api.models.customer.Customer getCustomer(){
-      return this.customer;
-   }
-
    public CustomerSignInResult build() {
-       return new CustomerSignInResultImpl(cart, customer);
+       return new CustomerSignInResultImpl(customer, cart);
    }
-
+   
    public static CustomerSignInResultBuilder of() {
       return new CustomerSignInResultBuilder();
    }
-
+   
    public static CustomerSignInResultBuilder of(final CustomerSignInResult template) {
       CustomerSignInResultBuilder builder = new CustomerSignInResultBuilder();
-      builder.cart = template.getCart();
       builder.customer = template.getCustomer();
+      builder.cart = template.getCart();
       return builder;
    }
-
+   
 }

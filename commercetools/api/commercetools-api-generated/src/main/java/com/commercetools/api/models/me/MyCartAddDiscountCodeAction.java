@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartAddDiscountCodeActionImpl.class)
 public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("code")
    public String getCode();
 
    public void setCode(final String code);
-
+   
    public static MyCartAddDiscountCodeActionImpl of(){
       return new MyCartAddDiscountCodeActionImpl();
    }
-
+   
 
    public static MyCartAddDiscountCodeActionImpl of(final MyCartAddDiscountCodeAction template) {
       MyCartAddDiscountCodeActionImpl instance = new MyCartAddDiscountCodeActionImpl();

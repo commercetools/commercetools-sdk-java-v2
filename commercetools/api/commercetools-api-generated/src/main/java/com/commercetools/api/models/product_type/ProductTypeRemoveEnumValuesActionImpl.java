@@ -23,42 +23,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveEnumValuesAction {
 
    private String action;
-
+   
+   private String attributeName;
+   
    private java.util.List<String> keys;
 
-   private String attributeName;
-
    @JsonCreator
-   ProductTypeRemoveEnumValuesActionImpl(@JsonProperty("keys") final java.util.List<String> keys, @JsonProperty("attributeName") final String attributeName) {
-      this.keys = keys;
+   ProductTypeRemoveEnumValuesActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("keys") final java.util.List<String> keys) {
       this.attributeName = attributeName;
+      this.keys = keys;
       this.action = "removeEnumValues";
    }
    public ProductTypeRemoveEnumValuesActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getAttributeName(){
+      return this.attributeName;
+   }
+   
+   
    public java.util.List<String> getKeys(){
       return this.keys;
    }
 
-
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-
-   public void setKeys(final java.util.List<String> keys){
-      this.keys = keys;
-   }
-
    public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
+   }
+   
+   public void setKeys(final java.util.List<String> keys){
+      this.keys = keys;
    }
 
 }

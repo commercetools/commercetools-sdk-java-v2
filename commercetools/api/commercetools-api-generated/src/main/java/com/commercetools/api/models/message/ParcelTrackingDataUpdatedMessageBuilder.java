@@ -16,22 +16,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ParcelTrackingDataUpdatedMessageBuilder {
    
    
-   private java.time.ZonedDateTime createdAt;
-   
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   
    private String id;
    
    
    private Long version;
    
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+   
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    
    private Long sequenceNumber;
@@ -39,30 +39,20 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    
    private com.commercetools.api.models.common.Reference resource;
    
+   
+   private Long resourceVersion;
+   
    @Nullable
    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private Long resourceVersion;
-   
-   
    private String deliveryId;
-   
-   @Nullable
-   private com.commercetools.api.models.order.TrackingData trackingData;
    
    
    private String parcelId;
    
-   public ParcelTrackingDataUpdatedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-   
-   public ParcelTrackingDataUpdatedMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.order.TrackingData trackingData;
    
    public ParcelTrackingDataUpdatedMessageBuilder id( final String id) {
       this.id = id;
@@ -74,13 +64,23 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   public ParcelTrackingDataUpdatedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
+      return this;
+   }
+   
+   public ParcelTrackingDataUpdatedMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
       return this;
    }
    
    public ParcelTrackingDataUpdatedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public ParcelTrackingDataUpdatedMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
       return this;
    }
    
@@ -94,13 +94,13 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+   public ParcelTrackingDataUpdatedMessageBuilder resourceVersion( final Long resourceVersion) {
+      this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder resourceVersion( final Long resourceVersion) {
-      this.resourceVersion = resourceVersion;
+   public ParcelTrackingDataUpdatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
    
@@ -109,24 +109,14 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this;
    }
    
-   public ParcelTrackingDataUpdatedMessageBuilder trackingData(@Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
-      this.trackingData = trackingData;
-      return this;
-   }
-   
    public ParcelTrackingDataUpdatedMessageBuilder parcelId( final String parcelId) {
       this.parcelId = parcelId;
       return this;
    }
    
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
+   public ParcelTrackingDataUpdatedMessageBuilder trackingData(@Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
+      this.trackingData = trackingData;
+      return this;
    }
    
    
@@ -139,14 +129,24 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this.version;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    @Nullable
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    
@@ -159,14 +159,14 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this.resource;
    }
    
-   @Nullable
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-   
    
    public Long getResourceVersion(){
       return this.resourceVersion;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
    }
    
    
@@ -174,18 +174,18 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
       return this.deliveryId;
    }
    
-   @Nullable
-   public com.commercetools.api.models.order.TrackingData getTrackingData(){
-      return this.trackingData;
-   }
-   
    
    public String getParcelId(){
       return this.parcelId;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.order.TrackingData getTrackingData(){
+      return this.trackingData;
+   }
 
    public ParcelTrackingDataUpdatedMessage build() {
-       return new ParcelTrackingDataUpdatedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, deliveryId, trackingData, parcelId);
+       return new ParcelTrackingDataUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId, trackingData);
    }
    
    public static ParcelTrackingDataUpdatedMessageBuilder of() {
@@ -194,19 +194,19 @@ public final class ParcelTrackingDataUpdatedMessageBuilder {
    
    public static ParcelTrackingDataUpdatedMessageBuilder of(final ParcelTrackingDataUpdatedMessage template) {
       ParcelTrackingDataUpdatedMessageBuilder builder = new ParcelTrackingDataUpdatedMessageBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
+      builder.createdBy = template.getCreatedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
-      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
+      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.deliveryId = template.getDeliveryId();
-      builder.trackingData = template.getTrackingData();
       builder.parcelId = template.getParcelId();
+      builder.trackingData = template.getTrackingData();
       return builder;
    }
    

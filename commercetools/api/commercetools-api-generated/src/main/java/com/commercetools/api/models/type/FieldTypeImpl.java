@@ -39,9 +39,9 @@ public final class FieldTypeImpl implements FieldType {
    FieldTypeImpl() {
       this.name = "null";
    }
-
-
-
+   
+   
+   
    public String getName(){
       return this.name;
    }

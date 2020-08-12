@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxR
       this.action = "addTaxRate";
    }
    public TaxCategoryAddTaxRateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate(){
       return this.taxRate;
    }

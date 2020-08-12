@@ -1,8 +1,8 @@
 package com.commercetools.api.models.customer_group;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,129 +26,129 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerGroupImpl implements CustomerGroup {
 
-   private java.time.ZonedDateTime createdAt;
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
    private String id;
-
+   
    private Long version;
-
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private String key;
+   
+   private String name;
+   
    private com.commercetools.api.models.type.CustomFields custom;
 
-   private String name;
-
-   private String key;
-
    @JsonCreator
-   CustomerGroupImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("name") final String name, @JsonProperty("key") final String key) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   CustomerGroupImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final String name, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
-      this.custom = custom;
-      this.name = name;
+      this.createdBy = createdBy;
       this.key = key;
+      this.name = name;
+      this.custom = custom;
    }
    public CustomerGroupImpl() {
-
+      
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
+   
    /**
    *  <p>The unique ID of the customer group.</p>
    */
    public String getId(){
       return this.id;
    }
-
+   
    /**
    *  <p>The current version of the customer group.</p>
    */
    public Long getVersion(){
       return this.version;
    }
-
-   /**
-   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
-   */
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
    /**
    *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
-   public com.commercetools.api.models.type.CustomFields getCustom(){
-      return this.custom;
+   
+   /**
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
-
-
-   public String getName(){
-      return this.name;
-   }
-
+   
    /**
    *  <p>User-specific unique identifier for the customer group.</p>
    */
    public String getKey(){
       return this.key;
    }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
+   
+   
+   public String getName(){
+      return this.name;
    }
-
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
+   
+   
+   public com.commercetools.api.models.type.CustomFields getCustom(){
+      return this.custom;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
    }
-
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
+   }
+   
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
-
-   public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
-      this.custom = custom;
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
    }
-
+   
+   public void setKey(final String key){
+      this.key = key;
+   }
+   
    public void setName(final String name){
       this.name = name;
    }
-
-   public void setKey(final String key){
-      this.key = key;
+   
+   public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
+      this.custom = custom;
    }
 
 }

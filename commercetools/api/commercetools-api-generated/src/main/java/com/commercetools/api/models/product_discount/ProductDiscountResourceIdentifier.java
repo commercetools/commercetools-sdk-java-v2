@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface ProductDiscountResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static ProductDiscountResourceIdentifierImpl of(){
       return new ProductDiscountResourceIdentifierImpl();
    }
-
+   
 
    public static ProductDiscountResourceIdentifierImpl of(final ProductDiscountResourceIdentifier template) {
       ProductDiscountResourceIdentifierImpl instance = new ProductDiscountResourceIdentifierImpl();

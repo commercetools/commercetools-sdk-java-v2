@@ -25,54 +25,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderEditAppliedImpl implements OrderEditApplied {
 
    private String type;
-
+   
+   private java.time.ZonedDateTime appliedAt;
+   
+   private com.commercetools.api.models.order_edit.OrderExcerpt excerptBeforeEdit;
+   
    private com.commercetools.api.models.order_edit.OrderExcerpt excerptAfterEdit;
 
-   private com.commercetools.api.models.order_edit.OrderExcerpt excerptBeforeEdit;
-
-   private java.time.ZonedDateTime appliedAt;
-
    @JsonCreator
-   OrderEditAppliedImpl(@JsonProperty("excerptAfterEdit") final com.commercetools.api.models.order_edit.OrderExcerpt excerptAfterEdit, @JsonProperty("excerptBeforeEdit") final com.commercetools.api.models.order_edit.OrderExcerpt excerptBeforeEdit, @JsonProperty("appliedAt") final java.time.ZonedDateTime appliedAt) {
-      this.excerptAfterEdit = excerptAfterEdit;
-      this.excerptBeforeEdit = excerptBeforeEdit;
+   OrderEditAppliedImpl(@JsonProperty("appliedAt") final java.time.ZonedDateTime appliedAt, @JsonProperty("excerptBeforeEdit") final com.commercetools.api.models.order_edit.OrderExcerpt excerptBeforeEdit, @JsonProperty("excerptAfterEdit") final com.commercetools.api.models.order_edit.OrderExcerpt excerptAfterEdit) {
       this.appliedAt = appliedAt;
+      this.excerptBeforeEdit = excerptBeforeEdit;
+      this.excerptAfterEdit = excerptAfterEdit;
       this.type = "Applied";
    }
    public OrderEditAppliedImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
+   public java.time.ZonedDateTime getAppliedAt(){
+      return this.appliedAt;
+   }
+   
+   
+   public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptBeforeEdit(){
+      return this.excerptBeforeEdit;
+   }
+   
+   
    public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptAfterEdit(){
       return this.excerptAfterEdit;
    }
 
-
-   public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptBeforeEdit(){
-      return this.excerptBeforeEdit;
+   public void setAppliedAt(final java.time.ZonedDateTime appliedAt){
+      this.appliedAt = appliedAt;
    }
-
-
-   public java.time.ZonedDateTime getAppliedAt(){
-      return this.appliedAt;
-   }
-
-   public void setExcerptAfterEdit(final com.commercetools.api.models.order_edit.OrderExcerpt excerptAfterEdit){
-      this.excerptAfterEdit = excerptAfterEdit;
-   }
-
+   
    public void setExcerptBeforeEdit(final com.commercetools.api.models.order_edit.OrderExcerpt excerptBeforeEdit){
       this.excerptBeforeEdit = excerptBeforeEdit;
    }
-
-   public void setAppliedAt(final java.time.ZonedDateTime appliedAt){
-      this.appliedAt = appliedAt;
+   
+   public void setExcerptAfterEdit(final com.commercetools.api.models.order_edit.OrderExcerpt excerptAfterEdit){
+      this.excerptAfterEdit = excerptAfterEdit;
    }
 
 }

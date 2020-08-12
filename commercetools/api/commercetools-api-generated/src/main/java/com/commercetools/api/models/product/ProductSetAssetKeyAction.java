@@ -21,19 +21,19 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetAssetKeyActionImpl.class)
 public interface ProductSetAssetKeyAction extends ProductUpdateAction {
 
-
-
+   
+   
    @JsonProperty("variantId")
    public Long getVariantId();
-
-
+   
+   
    @JsonProperty("sku")
    public String getSku();
-
-
+   
+   
    @JsonProperty("staged")
    public Boolean getStaged();
-
+   
    @NotNull
    @JsonProperty("assetId")
    public String getAssetId();
@@ -41,31 +41,31 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
    *  <p>User-defined identifier for the asset.
    *  If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
    */
-
+   
    @JsonProperty("assetKey")
    public String getAssetKey();
 
    public void setVariantId(final Long variantId);
-
+   
    public void setSku(final String sku);
-
+   
    public void setStaged(final Boolean staged);
-
+   
    public void setAssetId(final String assetId);
-
+   
    public void setAssetKey(final String assetKey);
-
+   
    public static ProductSetAssetKeyActionImpl of(){
       return new ProductSetAssetKeyActionImpl();
    }
-
+   
 
    public static ProductSetAssetKeyActionImpl of(final ProductSetAssetKeyAction template) {
       ProductSetAssetKeyActionImpl instance = new ProductSetAssetKeyActionImpl();
-      instance.setAssetId(template.getAssetId());
-      instance.setStaged(template.getStaged());
       instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
+      instance.setStaged(template.getStaged());
+      instance.setAssetId(template.getAssetId());
       instance.setAssetKey(template.getAssetKey());
       return instance;
    }

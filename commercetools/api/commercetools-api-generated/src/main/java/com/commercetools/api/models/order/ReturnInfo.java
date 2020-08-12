@@ -51,9 +51,9 @@ public interface ReturnInfo  {
 
    public static ReturnInfoImpl of(final ReturnInfo template) {
       ReturnInfoImpl instance = new ReturnInfoImpl();
-      instance.setReturnDate(template.getReturnDate());
-      instance.setReturnTrackingId(template.getReturnTrackingId());
       instance.setItems(template.getItems());
+      instance.setReturnTrackingId(template.getReturnTrackingId());
+      instance.setReturnDate(template.getReturnDate());
       return instance;
    }
 

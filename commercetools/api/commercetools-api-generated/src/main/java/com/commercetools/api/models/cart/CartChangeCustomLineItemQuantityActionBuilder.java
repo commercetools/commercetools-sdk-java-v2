@@ -18,14 +18,14 @@ public final class CartChangeCustomLineItemQuantityActionBuilder {
    private String customLineItemId;
    
    
-   private Integer quantity;
+   private Double quantity;
    
    public CartChangeCustomLineItemQuantityActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public CartChangeCustomLineItemQuantityActionBuilder quantity( final Integer quantity) {
+   public CartChangeCustomLineItemQuantityActionBuilder quantity( final Double quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -36,7 +36,7 @@ public final class CartChangeCustomLineItemQuantityActionBuilder {
    }
    
    
-   public Integer getQuantity(){
+   public Double getQuantity(){
       return this.quantity;
    }
 

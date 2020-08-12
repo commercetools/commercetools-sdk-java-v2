@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderDiscountCodeRemovedMessagePayloadImpl implements OrderDiscountCodeRemovedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class OrderDiscountCodeRemovedMessagePayloadImpl implements OrderDi
       this.type = "OrderDiscountCodeRemoved";
    }
    public OrderDiscountCodeRemovedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
       return this.discountCode;
    }

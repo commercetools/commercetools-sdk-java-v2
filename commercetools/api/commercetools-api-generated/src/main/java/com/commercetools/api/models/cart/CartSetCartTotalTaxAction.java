@@ -30,24 +30,24 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
    @Valid
    @JsonProperty("externalTotalGross")
    public Money getExternalTotalGross();
-
+   
    @Valid
    @JsonProperty("externalTaxPortions")
    public List<TaxPortionDraft> getExternalTaxPortions();
 
    public void setExternalTotalGross(final Money externalTotalGross);
-
+   
    public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
-
+   
    public static CartSetCartTotalTaxActionImpl of(){
       return new CartSetCartTotalTaxActionImpl();
    }
-
+   
 
    public static CartSetCartTotalTaxActionImpl of(final CartSetCartTotalTaxAction template) {
       CartSetCartTotalTaxActionImpl instance = new CartSetCartTotalTaxActionImpl();
-      instance.setExternalTaxPortions(template.getExternalTaxPortions());
       instance.setExternalTotalGross(template.getExternalTotalGross());
+      instance.setExternalTaxPortions(template.getExternalTaxPortions());
       return instance;
    }
 

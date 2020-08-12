@@ -24,16 +24,16 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
    /**
    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static CustomerSetKeyActionImpl of(){
       return new CustomerSetKeyActionImpl();
    }
-
+   
 
    public static CustomerSetKeyActionImpl of(final CustomerSetKeyAction template) {
       CustomerSetKeyActionImpl instance = new CustomerSetKeyActionImpl();

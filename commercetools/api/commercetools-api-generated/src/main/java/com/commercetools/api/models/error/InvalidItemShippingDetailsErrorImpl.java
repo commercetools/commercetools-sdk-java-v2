@@ -23,54 +23,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingDetailsError {
 
    private String code;
-
+   
    private String message;
-
+   
+   private String subject;
+   
    private String itemId;
 
-   private String subject;
-
    @JsonCreator
-   InvalidItemShippingDetailsErrorImpl(@JsonProperty("message") final String message, @JsonProperty("itemId") final String itemId, @JsonProperty("subject") final String subject) {
+   InvalidItemShippingDetailsErrorImpl(@JsonProperty("message") final String message, @JsonProperty("subject") final String subject, @JsonProperty("itemId") final String itemId) {
       this.message = message;
-      this.itemId = itemId;
       this.subject = subject;
+      this.itemId = itemId;
       this.code = "InvalidItemShippingDetails";
    }
    public InvalidItemShippingDetailsErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
-
-
-   public String getItemId(){
-      return this.itemId;
-   }
-
-
+   
+   
    public String getSubject(){
       return this.subject;
+   }
+   
+   
+   public String getItemId(){
+      return this.itemId;
    }
 
    public void setMessage(final String message){
       this.message = message;
    }
-
-   public void setItemId(final String itemId){
-      this.itemId = itemId;
-   }
-
+   
    public void setSubject(final String subject){
       this.subject = subject;
+   }
+   
+   public void setItemId(final String itemId){
+      this.itemId = itemId;
    }
 
 }

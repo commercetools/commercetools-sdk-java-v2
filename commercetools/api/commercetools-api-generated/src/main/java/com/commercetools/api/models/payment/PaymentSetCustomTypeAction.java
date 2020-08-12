@@ -38,18 +38,18 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
    public FieldContainer getFields();
 
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final FieldContainer fields);
-
+   
    public static PaymentSetCustomTypeActionImpl of(){
       return new PaymentSetCustomTypeActionImpl();
    }
-
+   
 
    public static PaymentSetCustomTypeActionImpl of(final PaymentSetCustomTypeAction template) {
       PaymentSetCustomTypeActionImpl instance = new PaymentSetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

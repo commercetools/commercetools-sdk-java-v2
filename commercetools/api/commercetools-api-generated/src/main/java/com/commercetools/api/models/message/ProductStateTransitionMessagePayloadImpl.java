@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductStateTransitionMessagePayloadImpl implements ProductStateTransitionMessagePayload {
 
    private String type;
-
+   
+   private com.commercetools.api.models.state.StateReference state;
+   
    private Boolean force;
 
-   private com.commercetools.api.models.state.StateReference state;
-
    @JsonCreator
-   ProductStateTransitionMessagePayloadImpl(@JsonProperty("force") final Boolean force, @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
-      this.force = force;
+   ProductStateTransitionMessagePayloadImpl(@JsonProperty("state") final com.commercetools.api.models.state.StateReference state, @JsonProperty("force") final Boolean force) {
       this.state = state;
+      this.force = force;
       this.type = "ProductStateTransition";
    }
    public ProductStateTransitionMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
+   public com.commercetools.api.models.state.StateReference getState(){
+      return this.state;
+   }
+   
+   
    public Boolean getForce(){
       return this.force;
    }
 
-
-   public com.commercetools.api.models.state.StateReference getState(){
-      return this.state;
-   }
-
-   public void setForce(final Boolean force){
-      this.force = force;
-   }
-
    public void setState(final com.commercetools.api.models.state.StateReference state){
       this.state = state;
+   }
+   
+   public void setForce(final Boolean force){
+      this.force = force;
    }
 
 }

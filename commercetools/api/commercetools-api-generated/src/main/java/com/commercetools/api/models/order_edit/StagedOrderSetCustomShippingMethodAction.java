@@ -24,43 +24,43 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetCustomShippingMethodActionImpl.class)
 public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("shippingMethodName")
    public String getShippingMethodName();
-
+   
    @NotNull
    @Valid
    @JsonProperty("shippingRate")
    public ShippingRateDraft getShippingRate();
-
+   
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryResourceIdentifier getTaxCategory();
-
+   
    @Valid
    @JsonProperty("externalTaxRate")
    public ExternalTaxRateDraft getExternalTaxRate();
 
    public void setShippingMethodName(final String shippingMethodName);
-
+   
    public void setShippingRate(final ShippingRateDraft shippingRate);
-
+   
    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-
+   
    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-
+   
    public static StagedOrderSetCustomShippingMethodActionImpl of(){
       return new StagedOrderSetCustomShippingMethodActionImpl();
    }
-
+   
 
    public static StagedOrderSetCustomShippingMethodActionImpl of(final StagedOrderSetCustomShippingMethodAction template) {
       StagedOrderSetCustomShippingMethodActionImpl instance = new StagedOrderSetCustomShippingMethodActionImpl();
-      instance.setShippingRate(template.getShippingRate());
-      instance.setExternalTaxRate(template.getExternalTaxRate());
       instance.setShippingMethodName(template.getShippingMethodName());
+      instance.setShippingRate(template.getShippingRate());
       instance.setTaxCategory(template.getTaxCategory());
+      instance.setExternalTaxRate(template.getExternalTaxRate());
       return instance;
    }
 

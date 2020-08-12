@@ -21,43 +21,43 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductCatalogDataImpl.class)
 public interface ProductCatalogData  {
 
-
+   
    @NotNull
    @JsonProperty("published")
    public Boolean getPublished();
-
+   
    @NotNull
    @Valid
    @JsonProperty("current")
    public ProductData getCurrent();
-
+   
    @NotNull
    @Valid
    @JsonProperty("staged")
    public ProductData getStaged();
-
+   
    @NotNull
    @JsonProperty("hasStagedChanges")
    public Boolean getHasStagedChanges();
 
    public void setPublished(final Boolean published);
-
+   
    public void setCurrent(final ProductData current);
-
+   
    public void setStaged(final ProductData staged);
-
+   
    public void setHasStagedChanges(final Boolean hasStagedChanges);
-
+   
    public static ProductCatalogDataImpl of(){
       return new ProductCatalogDataImpl();
    }
-
+   
 
    public static ProductCatalogDataImpl of(final ProductCatalogData template) {
       ProductCatalogDataImpl instance = new ProductCatalogDataImpl();
+      instance.setPublished(template.getPublished());
       instance.setCurrent(template.getCurrent());
       instance.setStaged(template.getStaged());
-      instance.setPublished(template.getPublished());
       instance.setHasStagedChanges(template.getHasStagedChanges());
       return instance;
    }

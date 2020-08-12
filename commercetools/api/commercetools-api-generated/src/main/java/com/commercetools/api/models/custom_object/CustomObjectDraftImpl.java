@@ -23,62 +23,62 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomObjectDraftImpl implements CustomObjectDraft {
 
    private String container;
-
+   
+   private String key;
+   
+   private com.fasterxml.jackson.databind.JsonNode value;
+   
    private Long version;
 
-   private com.fasterxml.jackson.databind.JsonNode value;
-
-   private String key;
-
    @JsonCreator
-   CustomObjectDraftImpl(@JsonProperty("container") final String container, @JsonProperty("version") final Long version, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value, @JsonProperty("key") final String key) {
+   CustomObjectDraftImpl(@JsonProperty("container") final String container, @JsonProperty("key") final String key, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value, @JsonProperty("version") final Long version) {
       this.container = container;
-      this.version = version;
-      this.value = value;
       this.key = key;
+      this.value = value;
+      this.version = version;
    }
    public CustomObjectDraftImpl() {
-
+      
    }
-
+   
    /**
    *  <p>A namespace to group custom objects.</p>
    */
    public String getContainer(){
       return this.container;
    }
-
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-
-   public com.fasterxml.jackson.databind.JsonNode getValue(){
-      return this.value;
-   }
-
+   
    /**
    *  <p>A user-defined key that is unique within the given container.</p>
    */
    public String getKey(){
       return this.key;
    }
+   
+   
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
+      return this.value;
+   }
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
 
    public void setContainer(final String container){
       this.container = container;
    }
-
-   public void setVersion(final Long version){
-      this.version = version;
+   
+   public void setKey(final String key){
+      this.key = key;
    }
-
+   
    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }
-
-   public void setKey(final String key){
-      this.key = key;
+   
+   public void setVersion(final Long version){
+      this.version = version;
    }
 
 }

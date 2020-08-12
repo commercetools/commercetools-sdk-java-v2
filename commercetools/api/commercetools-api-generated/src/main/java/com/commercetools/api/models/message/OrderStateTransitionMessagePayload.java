@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderStateTransitionMessagePayloadImpl.class)
 public interface OrderStateTransitionMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("state")
    public StateReference getState();
-
+   
    @NotNull
    @JsonProperty("force")
    public Boolean getForce();
 
    public void setState(final StateReference state);
-
+   
    public void setForce(final Boolean force);
-
+   
    public static OrderStateTransitionMessagePayloadImpl of(){
       return new OrderStateTransitionMessagePayloadImpl();
    }
-
+   
 
    public static OrderStateTransitionMessagePayloadImpl of(final OrderStateTransitionMessagePayload template) {
       OrderStateTransitionMessagePayloadImpl instance = new OrderStateTransitionMessagePayloadImpl();
-      instance.setForce(template.getForce());
       instance.setState(template.getState());
+      instance.setForce(template.getForce());
       return instance;
    }
 

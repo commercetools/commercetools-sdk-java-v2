@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl implements MyCartApplyDeltaToLineItemShippingDetailsTargetsAction {
 
    private String action;
-
+   
    private String lineItemId;
-
+   
    private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl im
       this.action = "applyDeltaToLineItemShippingDetailsTargets";
    }
    public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta(){
       return this.targetsDelta;
    }
@@ -57,7 +57,7 @@ public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl im
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
-
+   
    public void setTargetsDelta(final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta){
       this.targetsDelta = targetsDelta;
    }

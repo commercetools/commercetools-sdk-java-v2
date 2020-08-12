@@ -26,7 +26,7 @@ public interface OrderEditDraft  {
    /**
    *  <p>Unique identifier for this edit.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
    /**
@@ -51,41 +51,41 @@ public interface OrderEditDraft  {
    /**
    *  <p>This field can be used to add additional textual information regarding the edit.</p>
    */
-
+   
    @JsonProperty("comment")
    public String getComment();
    /**
    *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
    */
-
+   
    @JsonProperty("dryRun")
    public Boolean getDryRun();
 
    public void setKey(final String key);
-
+   
    public void setResource(final OrderReference resource);
-
+   
    public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public void setComment(final String comment);
-
+   
    public void setDryRun(final Boolean dryRun);
-
+   
    public static OrderEditDraftImpl of(){
       return new OrderEditDraftImpl();
    }
-
+   
 
    public static OrderEditDraftImpl of(final OrderEditDraft template) {
       OrderEditDraftImpl instance = new OrderEditDraftImpl();
-      instance.setDryRun(template.getDryRun());
+      instance.setKey(template.getKey());
       instance.setResource(template.getResource());
+      instance.setStagedActions(template.getStagedActions());
       instance.setCustom(template.getCustom());
       instance.setComment(template.getComment());
-      instance.setStagedActions(template.getStagedActions());
-      instance.setKey(template.getKey());
+      instance.setDryRun(template.getDryRun());
       return instance;
    }
 

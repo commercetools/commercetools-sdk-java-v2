@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListUpdateImpl implements ShoppingListUpdate {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   ShoppingListUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   ShoppingListUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public ShoppingListUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.category.Category category;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CategoryCreatedMessagePayloadImpl implements CategoryCreatedM
       this.type = "CategoryCreated";
    }
    public CategoryCreatedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.category.Category getCategory(){
       return this.category;
    }

@@ -25,14 +25,14 @@ public final class StagedOrderSetLineItemShippingDetailsActionImpl implements St
 
    private String action;
    
-   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-   
    private String lineItemId;
+   
+   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
    @JsonCreator
-   StagedOrderSetLineItemShippingDetailsActionImpl(@JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("lineItemId") final String lineItemId) {
-      this.shippingDetails = shippingDetails;
+   StagedOrderSetLineItemShippingDetailsActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.lineItemId = lineItemId;
+      this.shippingDetails = shippingDetails;
       this.action = "setLineItemShippingDetails";
    }
    public StagedOrderSetLineItemShippingDetailsActionImpl() {
@@ -45,21 +45,21 @@ public final class StagedOrderSetLineItemShippingDetailsActionImpl implements St
    }
    
    
-   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
-      return this.shippingDetails;
-   }
-   
-   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
-   public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
-      this.shippingDetails = shippingDetails;
-   }
    
+   
+   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
+      return this.shippingDetails;
+   }
+
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
+   }
+   
+   public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
+      this.shippingDetails = shippingDetails;
    }
 
 }

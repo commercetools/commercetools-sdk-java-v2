@@ -28,13 +28,13 @@ public interface ProductVariantImportDraft  {
    *  The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set,
    *  or alternatively you can just specify SKU of the product variant.</p>
    */
-
+   
    @JsonProperty("id")
    public Long getId();
    /**
    *  <p>The SKU of the existing variant.</p>
    */
-
+   
    @JsonProperty("sku")
    public String getSku();
    /**
@@ -61,27 +61,27 @@ public interface ProductVariantImportDraft  {
    public List<Image> getImages();
 
    public void setId(final Long id);
-
+   
    public void setSku(final String sku);
-
+   
    public void setPrices(final List<PriceDraft> prices);
-
+   
    public void setAttributes(final List<Attribute> attributes);
-
+   
    public void setImages(final List<Image> images);
-
+   
    public static ProductVariantImportDraftImpl of(){
       return new ProductVariantImportDraftImpl();
    }
-
+   
 
    public static ProductVariantImportDraftImpl of(final ProductVariantImportDraft template) {
       ProductVariantImportDraftImpl instance = new ProductVariantImportDraftImpl();
-      instance.setImages(template.getImages());
-      instance.setAttributes(template.getAttributes());
       instance.setId(template.getId());
-      instance.setPrices(template.getPrices());
       instance.setSku(template.getSku());
+      instance.setPrices(template.getPrices());
+      instance.setAttributes(template.getAttributes());
+      instance.setImages(template.getImages());
       return instance;
    }
 

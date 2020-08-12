@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ClassificationShippingRateInputImpl.class)
 public interface ClassificationShippingRateInput extends ShippingRateInput {
 
-
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
-
+   
    @NotNull
    @Valid
    @JsonProperty("label")
    public LocalizedString getLabel();
 
    public void setKey(final String key);
-
+   
    public void setLabel(final LocalizedString label);
-
+   
    public static ClassificationShippingRateInputImpl of(){
       return new ClassificationShippingRateInputImpl();
    }
-
+   
 
    public static ClassificationShippingRateInputImpl of(final ClassificationShippingRateInput template) {
       ClassificationShippingRateInputImpl instance = new ClassificationShippingRateInputImpl();
-      instance.setLabel(template.getLabel());
       instance.setKey(template.getKey());
+      instance.setLabel(template.getLabel());
       return instance;
    }
 

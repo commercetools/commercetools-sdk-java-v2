@@ -22,31 +22,31 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSlugChangedMessageImpl.class)
 public interface ProductSlugChangedMessage extends Message {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("slug")
    public LocalizedString getSlug();
 
    public void setSlug(final LocalizedString slug);
-
+   
    public static ProductSlugChangedMessageImpl of(){
       return new ProductSlugChangedMessageImpl();
    }
-
+   
 
    public static ProductSlugChangedMessageImpl of(final ProductSlugChangedMessage template) {
       ProductSlugChangedMessageImpl instance = new ProductSlugChangedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setSlug(template.getSlug());
       return instance;
    }

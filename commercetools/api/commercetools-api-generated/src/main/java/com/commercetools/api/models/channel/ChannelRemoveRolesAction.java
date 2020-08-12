@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelRemoveRolesActionImpl.class)
 public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("roles")
    public List<ChannelRoleEnum> getRoles();
 
    public void setRoles(final List<ChannelRoleEnum> roles);
-
+   
    public static ChannelRemoveRolesActionImpl of(){
       return new ChannelRemoveRolesActionImpl();
    }
-
+   
 
    public static ChannelRemoveRolesActionImpl of(final ChannelRemoveRolesAction template) {
       ChannelRemoveRolesActionImpl instance = new ChannelRemoveRolesActionImpl();

@@ -21,38 +21,38 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderCustomerEmailSetMessageImpl.class)
 public interface OrderCustomerEmailSetMessage extends Message {
 
-
-
+   
+   
    @JsonProperty("email")
    public String getEmail();
-
-
+   
+   
    @JsonProperty("oldEmail")
    public String getOldEmail();
 
    public void setEmail(final String email);
-
+   
    public void setOldEmail(final String oldEmail);
-
+   
    public static OrderCustomerEmailSetMessageImpl of(){
       return new OrderCustomerEmailSetMessageImpl();
    }
-
+   
 
    public static OrderCustomerEmailSetMessageImpl of(final OrderCustomerEmailSetMessage template) {
       OrderCustomerEmailSetMessageImpl instance = new OrderCustomerEmailSetMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setOldEmail(template.getOldEmail());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setEmail(template.getEmail());
+      instance.setOldEmail(template.getOldEmail());
       return instance;
    }
 

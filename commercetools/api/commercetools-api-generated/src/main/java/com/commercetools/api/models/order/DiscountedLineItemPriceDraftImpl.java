@@ -23,35 +23,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPriceDraft {
 
+   private com.commercetools.api.models.common.Money value;
+   
    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts;
 
-   private com.commercetools.api.models.common.Money value;
-
    @JsonCreator
-   DiscountedLineItemPriceDraftImpl(@JsonProperty("includedDiscounts") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts, @JsonProperty("value") final com.commercetools.api.models.common.Money value) {
-      this.includedDiscounts = includedDiscounts;
+   DiscountedLineItemPriceDraftImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value, @JsonProperty("includedDiscounts") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
       this.value = value;
+      this.includedDiscounts = includedDiscounts;
    }
    public DiscountedLineItemPriceDraftImpl() {
-
+      
    }
-
-
+   
+   
+   public com.commercetools.api.models.common.Money getValue(){
+      return this.value;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> getIncludedDiscounts(){
       return this.includedDiscounts;
    }
 
-
-   public com.commercetools.api.models.common.Money getValue(){
-      return this.value;
-   }
-
-   public void setIncludedDiscounts(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts){
-      this.includedDiscounts = includedDiscounts;
-   }
-
    public void setValue(final com.commercetools.api.models.common.Money value){
       this.value = value;
+   }
+   
+   public void setIncludedDiscounts(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts){
+      this.includedDiscounts = includedDiscounts;
    }
 
 }

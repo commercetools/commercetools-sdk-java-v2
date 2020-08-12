@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneUpdateImpl implements ZoneUpdate {
 
-   private java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions;
-   
    private Long version;
+   
+   private java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions;
 
    @JsonCreator
-   ZoneUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   ZoneUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public ZoneUpdateImpl() {
       
    }
    
    
-   public java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> getActions(){
-      return this.actions;
-   }
-   
-   
    public Long getVersion(){
       return this.version;
    }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions){
-      this.actions = actions;
-   }
    
+   
+   public java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> getActions(){
+      return this.actions;
+   }
+
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

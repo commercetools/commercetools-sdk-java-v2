@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelSetRolesActionImpl.class)
 public interface ChannelSetRolesAction extends ChannelUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("roles")
    public List<ChannelRoleEnum> getRoles();
 
    public void setRoles(final List<ChannelRoleEnum> roles);
-
+   
    public static ChannelSetRolesActionImpl of(){
       return new ChannelSetRolesActionImpl();
    }
-
+   
 
    public static ChannelSetRolesActionImpl of(final ChannelSetRolesAction template) {
       ChannelSetRolesActionImpl instance = new ChannelSetRolesActionImpl();

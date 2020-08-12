@@ -24,20 +24,20 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListDraftImpl.class)
 public interface MyShoppingListDraft  {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-
+   
    @Valid
    @JsonProperty("lineItems")
    public List<ShoppingListLineItemDraft> getLineItems();
-
+   
    @Valid
    @JsonProperty("textLineItems")
    public List<TextLineItemDraft> getTextLineItems();
@@ -50,35 +50,35 @@ public interface MyShoppingListDraft  {
    /**
    *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
    */
-
+   
    @JsonProperty("deleteDaysAfterLastModification")
    public Long getDeleteDaysAfterLastModification();
 
    public void setName(final LocalizedString name);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public void setLineItems(final List<ShoppingListLineItemDraft> lineItems);
-
+   
    public void setTextLineItems(final List<TextLineItemDraft> textLineItems);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
-
+   
    public static MyShoppingListDraftImpl of(){
       return new MyShoppingListDraftImpl();
    }
-
+   
 
    public static MyShoppingListDraftImpl of(final MyShoppingListDraft template) {
       MyShoppingListDraftImpl instance = new MyShoppingListDraftImpl();
-      instance.setLineItems(template.getLineItems());
-      instance.setTextLineItems(template.getTextLineItems());
-      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
-      instance.setCustom(template.getCustom());
       instance.setName(template.getName());
       instance.setDescription(template.getDescription());
+      instance.setLineItems(template.getLineItems());
+      instance.setTextLineItems(template.getTextLineItems());
+      instance.setCustom(template.getCustom());
+      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
       return instance;
    }
 

@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface CustomerEmailVerifiedMessagePayload extends MessagePayload {
 
 
-
+   
    public static CustomerEmailVerifiedMessagePayloadImpl of(){
       return new CustomerEmailVerifiedMessagePayloadImpl();
    }
-
+   
 
    public static CustomerEmailVerifiedMessagePayloadImpl of(final CustomerEmailVerifiedMessagePayload template) {
       CustomerEmailVerifiedMessagePayloadImpl instance = new CustomerEmailVerifiedMessagePayloadImpl();

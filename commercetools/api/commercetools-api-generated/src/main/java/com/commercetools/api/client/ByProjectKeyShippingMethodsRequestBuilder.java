@@ -28,6 +28,15 @@ public class ByProjectKeyShippingMethodsRequestBuilder {
    public ByProjectKeyShippingMethodsKeyByKeyRequestBuilder withKey(String key) {
       return new ByProjectKeyShippingMethodsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
    }
+   public ByProjectKeyShippingMethodsMatchingCartRequestBuilder matchingCart() {
+      return new ByProjectKeyShippingMethodsMatchingCartRequestBuilder(apiHttpClient, projectKey);
+   }
+   public ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder matchingOrderedit() {
+      return new ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder(apiHttpClient, projectKey);
+   }
+   public ByProjectKeyShippingMethodsMatchingLocationRequestBuilder matchingLocation() {
+      return new ByProjectKeyShippingMethodsMatchingLocationRequestBuilder(apiHttpClient, projectKey);
+   }
    public ByProjectKeyShippingMethodsByIDRequestBuilder withId(String ID) {
       return new ByProjectKeyShippingMethodsByIDRequestBuilder(apiHttpClient, projectKey, ID);
    }

@@ -27,19 +27,19 @@ public interface MyOrderFromCartDraft  {
    @NotNull
    @JsonProperty("id")
    public String getId();
-
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public static MyOrderFromCartDraftImpl of(){
       return new MyOrderFromCartDraftImpl();
    }
-
+   
 
    public static MyOrderFromCartDraftImpl of(final MyOrderFromCartDraft template) {
       MyOrderFromCartDraftImpl instance = new MyOrderFromCartDraftImpl();

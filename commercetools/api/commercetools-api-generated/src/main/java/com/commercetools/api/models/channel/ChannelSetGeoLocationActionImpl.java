@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocationAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.GeoJson geoLocation;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocat
       this.action = "setGeoLocation";
    }
    public ChannelSetGeoLocationActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.GeoJson getGeoLocation(){
       return this.geoLocation;
    }

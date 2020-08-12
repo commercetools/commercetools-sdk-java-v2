@@ -29,11 +29,11 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
    public List<String> getLanguages();
 
    public void setLanguages(final List<String> languages);
-
+   
    public static ProjectChangeLanguagesActionImpl of(){
       return new ProjectChangeLanguagesActionImpl();
    }
-
+   
 
    public static ProjectChangeLanguagesActionImpl of(final ProjectChangeLanguagesAction template) {
       ProjectChangeLanguagesActionImpl instance = new ProjectChangeLanguagesActionImpl();

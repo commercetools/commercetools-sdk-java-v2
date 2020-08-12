@@ -27,15 +27,15 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
    
    private String assetId;
    
-   private com.commercetools.api.models.common.LocalizedString description;
-   
    private String assetKey;
+   
+   private com.commercetools.api.models.common.LocalizedString description;
 
    @JsonCreator
-   CategorySetAssetDescriptionActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("assetKey") final String assetKey) {
+   CategorySetAssetDescriptionActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
       this.assetId = assetId;
-      this.description = description;
       this.assetKey = assetKey;
+      this.description = description;
       this.action = "setAssetDescription";
    }
    public CategorySetAssetDescriptionActionImpl() {
@@ -53,25 +53,25 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
    }
    
    
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
+   public String getAssetKey(){
+      return this.assetKey;
    }
    
    
-   public String getAssetKey(){
-      return this.assetKey;
+   public com.commercetools.api.models.common.LocalizedString getDescription(){
+      return this.description;
    }
 
    public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
    
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
-   }
-   
    public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
+   }
+   
+   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+      this.description = description;
    }
 
 }

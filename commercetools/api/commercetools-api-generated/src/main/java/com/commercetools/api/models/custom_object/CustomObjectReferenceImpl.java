@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomObjectReferenceImpl implements CustomObjectReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.custom_object.CustomObject obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class CustomObjectReferenceImpl implements CustomObjectReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("key-value-document").get();
    }
    public CustomObjectReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.custom_object.CustomObject getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class CustomObjectReferenceImpl implements CustomObjectReference {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.custom_object.CustomObject obj){
       this.obj = obj;
    }

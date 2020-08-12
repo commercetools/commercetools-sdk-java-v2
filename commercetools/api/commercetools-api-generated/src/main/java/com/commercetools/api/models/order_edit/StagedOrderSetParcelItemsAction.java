@@ -43,8 +43,8 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
 
    public static StagedOrderSetParcelItemsActionImpl of(final StagedOrderSetParcelItemsAction template) {
       StagedOrderSetParcelItemsActionImpl instance = new StagedOrderSetParcelItemsActionImpl();
-      instance.setItems(template.getItems());
       instance.setParcelId(template.getParcelId());
+      instance.setItems(template.getItems());
       return instance;
    }
 

@@ -21,35 +21,35 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangeEnumKeyActionImpl.class)
 public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("attributeName")
    public String getAttributeName();
-
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
-
+   
    @NotNull
    @JsonProperty("newKey")
    public String getNewKey();
 
    public void setAttributeName(final String attributeName);
-
+   
    public void setKey(final String key);
-
+   
    public void setNewKey(final String newKey);
-
+   
    public static ProductTypeChangeEnumKeyActionImpl of(){
       return new ProductTypeChangeEnumKeyActionImpl();
    }
-
+   
 
    public static ProductTypeChangeEnumKeyActionImpl of(final ProductTypeChangeEnumKeyAction template) {
       ProductTypeChangeEnumKeyActionImpl instance = new ProductTypeChangeEnumKeyActionImpl();
-      instance.setNewKey(template.getNewKey());
       instance.setAttributeName(template.getAttributeName());
       instance.setKey(template.getKey());
+      instance.setNewKey(template.getNewKey());
       return instance;
    }
 

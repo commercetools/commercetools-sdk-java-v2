@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountChangeNameActionImpl.class)
 public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
 
    public void setName(final LocalizedString name);
-
+   
    public static ProductDiscountChangeNameActionImpl of(){
       return new ProductDiscountChangeNameActionImpl();
    }
-
+   
 
    public static ProductDiscountChangeNameActionImpl of(final ProductDiscountChangeNameAction template) {
       ProductDiscountChangeNameActionImpl instance = new ProductDiscountChangeNameActionImpl();

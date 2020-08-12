@@ -23,185 +23,185 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage {
 
-   private java.time.ZonedDateTime createdAt;
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
    private String id;
-
+   
    private Long version;
-
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
    private Long sequenceNumber;
-
+   
    private com.commercetools.api.models.common.Reference resource;
-
-   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
+   
    private Long resourceVersion;
-
+   
    private String type;
-
-   private Integer oldRating;
-
+   
+   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   
+   private Double oldRating;
+   
+   private Double newRating;
+   
    private Boolean includedInStatistics;
-
-   private Integer newRating;
-
+   
    private com.commercetools.api.models.common.Reference target;
 
    @JsonCreator
-   ReviewRatingSetMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("oldRating") final Integer oldRating, @JsonProperty("includedInStatistics") final Boolean includedInStatistics, @JsonProperty("newRating") final Integer newRating, @JsonProperty("target") final com.commercetools.api.models.common.Reference target) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   ReviewRatingSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("oldRating") final Double oldRating, @JsonProperty("newRating") final Double newRating, @JsonProperty("includedInStatistics") final Boolean includedInStatistics, @JsonProperty("target") final com.commercetools.api.models.common.Reference target) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
+      this.createdBy = createdBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.oldRating = oldRating;
-      this.includedInStatistics = includedInStatistics;
       this.newRating = newRating;
+      this.includedInStatistics = includedInStatistics;
       this.target = target;
       this.type = "ReviewRatingSet";
    }
    public ReviewRatingSetMessageImpl() {
-
+      
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
+   
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
+   
+   
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
    public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Reference getResource(){
       return this.resource;
    }
-
-
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-
-
+   
+   
    public Long getResourceVersion(){
       return this.resourceVersion;
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
-   public Integer getOldRating(){
+   
+   
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
+   }
+   
+   
+   public Double getOldRating(){
       return this.oldRating;
    }
-
-
+   
+   
+   public Double getNewRating(){
+      return this.newRating;
+   }
+   
+   
    public Boolean getIncludedInStatistics(){
       return this.includedInStatistics;
    }
-
-
-   public Integer getNewRating(){
-      return this.newRating;
-   }
-
-
+   
+   
    public com.commercetools.api.models.common.Reference getTarget(){
       return this.target;
-   }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
    }
-
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
+   }
+   
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
-
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
    public void setSequenceNumber(final Long sequenceNumber){
       this.sequenceNumber = sequenceNumber;
    }
-
+   
    public void setResource(final com.commercetools.api.models.common.Reference resource){
       this.resource = resource;
    }
-
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-   }
-
+   
    public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
    }
-
-   public void setOldRating(final Integer oldRating){
+   
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+   }
+   
+   public void setOldRating(final Double oldRating){
       this.oldRating = oldRating;
    }
-
+   
+   public void setNewRating(final Double newRating){
+      this.newRating = newRating;
+   }
+   
    public void setIncludedInStatistics(final Boolean includedInStatistics){
       this.includedInStatistics = includedInStatistics;
    }
-
-   public void setNewRating(final Integer newRating){
-      this.newRating = newRating;
-   }
-
+   
    public void setTarget(final com.commercetools.api.models.common.Reference target){
       this.target = target;
    }

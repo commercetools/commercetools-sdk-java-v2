@@ -24,16 +24,16 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
    /**
    *  <p>If the <code>cartPredicate</code> parameter is not included, the field will be emptied.</p>
    */
-
+   
    @JsonProperty("cartPredicate")
    public String getCartPredicate();
 
    public void setCartPredicate(final String cartPredicate);
-
+   
    public static DiscountCodeSetCartPredicateActionImpl of(){
       return new DiscountCodeSetCartPredicateActionImpl();
    }
-
+   
 
    public static DiscountCodeSetCartPredicateActionImpl of(final DiscountCodeSetCartPredicateAction template) {
       DiscountCodeSetCartPredicateActionImpl instance = new DiscountCodeSetCartPredicateActionImpl();

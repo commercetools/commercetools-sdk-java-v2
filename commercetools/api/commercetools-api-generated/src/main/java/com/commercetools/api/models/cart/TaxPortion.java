@@ -21,8 +21,8 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxPortionImpl.class)
 public interface TaxPortion  {
 
-
-
+   
+   
    @JsonProperty("name")
    public String getName();
    /**
@@ -30,29 +30,29 @@ public interface TaxPortion  {
    */
    @NotNull
    @JsonProperty("rate")
-   public Integer getRate();
-
+   public Double getRate();
+   
    @NotNull
    @Valid
    @JsonProperty("amount")
    public TypedMoney getAmount();
 
    public void setName(final String name);
-
-   public void setRate(final Integer rate);
-
+   
+   public void setRate(final Double rate);
+   
    public void setAmount(final TypedMoney amount);
-
+   
    public static TaxPortionImpl of(){
       return new TaxPortionImpl();
    }
-
+   
 
    public static TaxPortionImpl of(final TaxPortion template) {
       TaxPortionImpl instance = new TaxPortionImpl();
-      instance.setAmount(template.getAmount());
-      instance.setRate(template.getRate());
       instance.setName(template.getName());
+      instance.setRate(template.getRate());
+      instance.setAmount(template.getAmount());
       return instance;
    }
 

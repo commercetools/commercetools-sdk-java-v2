@@ -43,8 +43,8 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
 
    public static PaymentTransitionStateActionImpl of(final PaymentTransitionStateAction template) {
       PaymentTransitionStateActionImpl instance = new PaymentTransitionStateActionImpl();
-      instance.setForce(template.getForce());
       instance.setState(template.getState());
+      instance.setForce(template.getForce());
       return instance;
    }
 

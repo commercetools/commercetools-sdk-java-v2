@@ -29,9 +29,9 @@ public final class SuggestTokenizerImpl implements SuggestTokenizer {
    SuggestTokenizerImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderImportCustomLineItemStateActionImpl.class)
 public interface OrderImportCustomLineItemStateAction extends OrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("customLineItemId")
    public String getCustomLineItemId();
-
+   
    @NotNull
    @Valid
    @JsonProperty("state")
    public List<ItemState> getState();
 
    public void setCustomLineItemId(final String customLineItemId);
-
+   
    public void setState(final List<ItemState> state);
-
+   
    public static OrderImportCustomLineItemStateActionImpl of(){
       return new OrderImportCustomLineItemStateActionImpl();
    }
-
+   
 
    public static OrderImportCustomLineItemStateActionImpl of(final OrderImportCustomLineItemStateAction template) {
       OrderImportCustomLineItemStateActionImpl instance = new OrderImportCustomLineItemStateActionImpl();

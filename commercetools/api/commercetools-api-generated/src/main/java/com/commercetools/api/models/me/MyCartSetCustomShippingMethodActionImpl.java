@@ -27,20 +27,20 @@ public final class MyCartSetCustomShippingMethodActionImpl implements MyCartSetC
 
    private String action;
    
-   private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
-   
-   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-   
    private String shippingMethodName;
    
+   private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
+   
    private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
+   
+   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
    @JsonCreator
-   MyCartSetCustomShippingMethodActionImpl(@JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("shippingMethodName") final String shippingMethodName, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
-      this.shippingRate = shippingRate;
-      this.externalTaxRate = externalTaxRate;
+   MyCartSetCustomShippingMethodActionImpl(@JsonProperty("shippingMethodName") final String shippingMethodName, @JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.shippingMethodName = shippingMethodName;
+      this.shippingRate = shippingRate;
       this.taxCategory = taxCategory;
+      this.externalTaxRate = externalTaxRate;
       this.action = "setCustomShippingMethod";
    }
    public MyCartSetCustomShippingMethodActionImpl() {
@@ -53,39 +53,39 @@ public final class MyCartSetCustomShippingMethodActionImpl implements MyCartSetC
    }
    
    
-   public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate(){
-      return this.shippingRate;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
-      return this.externalTaxRate;
-   }
-   
-   
    public String getShippingMethodName(){
       return this.shippingMethodName;
+   }
+   
+   
+   public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate(){
+      return this.shippingRate;
    }
    
    
    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }
+   
+   
+   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+      return this.externalTaxRate;
+   }
 
-   public void setShippingRate(final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate){
-      this.shippingRate = shippingRate;
-   }
-   
-   public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
-      this.externalTaxRate = externalTaxRate;
-   }
-   
    public void setShippingMethodName(final String shippingMethodName){
       this.shippingMethodName = shippingMethodName;
    }
    
+   public void setShippingRate(final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate){
+      this.shippingRate = shippingRate;
+   }
+   
    public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory){
       this.taxCategory = taxCategory;
+   }
+   
+   public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
+      this.externalTaxRate = externalTaxRate;
    }
 
 }

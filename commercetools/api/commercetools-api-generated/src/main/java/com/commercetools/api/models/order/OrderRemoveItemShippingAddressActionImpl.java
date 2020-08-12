@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderRemoveItemShippingAddressActionImpl implements OrderRemoveItemShippingAddressAction {
 
    private String action;
-
+   
    private String addressKey;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class OrderRemoveItemShippingAddressActionImpl implements OrderRemo
       this.action = "removeItemShippingAddress";
    }
    public OrderRemoveItemShippingAddressActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAddressKey(){
       return this.addressKey;
    }

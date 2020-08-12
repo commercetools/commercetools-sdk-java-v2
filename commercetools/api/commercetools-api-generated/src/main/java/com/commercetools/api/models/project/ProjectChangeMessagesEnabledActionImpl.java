@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProjectChangeMessagesEnabledActionImpl implements ProjectChangeMessagesEnabledAction {
 
    private String action;
-
+   
    private Boolean messagesEnabled;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ProjectChangeMessagesEnabledActionImpl implements ProjectChan
       this.action = "changeMessagesEnabled";
    }
    public ProjectChangeMessagesEnabledActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public Boolean getMessagesEnabled(){
       return this.messagesEnabled;
    }

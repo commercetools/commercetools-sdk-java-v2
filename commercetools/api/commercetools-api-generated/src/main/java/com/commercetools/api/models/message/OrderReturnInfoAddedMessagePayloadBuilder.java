@@ -14,16 +14,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderReturnInfoAddedMessagePayloadBuilder {
-
-
+   
+   
    private com.commercetools.api.models.order.ReturnInfo returnInfo;
-
+   
    public OrderReturnInfoAddedMessagePayloadBuilder returnInfo( final com.commercetools.api.models.order.ReturnInfo returnInfo) {
       this.returnInfo = returnInfo;
       return this;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.ReturnInfo getReturnInfo(){
       return this.returnInfo;
    }
@@ -31,15 +31,15 @@ public final class OrderReturnInfoAddedMessagePayloadBuilder {
    public OrderReturnInfoAddedMessagePayload build() {
        return new OrderReturnInfoAddedMessagePayloadImpl(returnInfo);
    }
-
+   
    public static OrderReturnInfoAddedMessagePayloadBuilder of() {
       return new OrderReturnInfoAddedMessagePayloadBuilder();
    }
-
+   
    public static OrderReturnInfoAddedMessagePayloadBuilder of(final OrderReturnInfoAddedMessagePayload template) {
       OrderReturnInfoAddedMessagePayloadBuilder builder = new OrderReturnInfoAddedMessagePayloadBuilder();
       builder.returnInfo = template.getReturnInfo();
       return builder;
    }
-
+   
 }

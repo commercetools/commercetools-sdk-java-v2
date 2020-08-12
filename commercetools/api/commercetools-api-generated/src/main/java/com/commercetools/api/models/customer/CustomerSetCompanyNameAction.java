@@ -24,16 +24,16 @@ public interface CustomerSetCompanyNameAction extends CustomerUpdateAction {
    /**
    *  <p>If not defined, the company name is unset.</p>
    */
-
+   
    @JsonProperty("companyName")
    public String getCompanyName();
 
    public void setCompanyName(final String companyName);
-
+   
    public static CustomerSetCompanyNameActionImpl of(){
       return new CustomerSetCompanyNameActionImpl();
    }
-
+   
 
    public static CustomerSetCompanyNameActionImpl of(final CustomerSetCompanyNameAction template) {
       CustomerSetCompanyNameActionImpl instance = new CustomerSetCompanyNameActionImpl();

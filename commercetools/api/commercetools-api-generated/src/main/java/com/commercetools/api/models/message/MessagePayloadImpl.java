@@ -16,7 +16,9 @@ import com.commercetools.api.models.message.DeliveryAddedMessagePayload;
 import com.commercetools.api.models.message.DeliveryAddressSetMessagePayload;
 import com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload;
 import com.commercetools.api.models.message.DeliveryRemovedMessagePayload;
+import com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload;
 import com.commercetools.api.models.message.InventoryEntryDeletedMessagePayload;
+import com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayload;
 import com.commercetools.api.models.message.LineItemStateTransitionMessagePayload;
 import com.commercetools.api.models.message.OrderBillingAddressSetMessagePayload;
 import com.commercetools.api.models.message.OrderCreatedMessagePayload;
@@ -41,6 +43,7 @@ import com.commercetools.api.models.message.OrderShippingInfoSetMessagePayload;
 import com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayload;
 import com.commercetools.api.models.message.OrderStateChangedMessagePayload;
 import com.commercetools.api.models.message.OrderStateTransitionMessagePayload;
+import com.commercetools.api.models.message.OrderStoreSetMessagePayload;
 import com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayload;
 import com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayload;
 import com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayload;
@@ -95,9 +98,9 @@ public final class MessagePayloadImpl implements MessagePayload {
    MessagePayloadImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

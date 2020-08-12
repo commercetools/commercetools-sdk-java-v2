@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyCartSetDeleteDaysAfterLastModificationActionImpl implements MyCartSetDeleteDaysAfterLastModificationAction {
 
    private String action;
-
+   
    private Integer deleteDaysAfterLastModification;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class MyCartSetDeleteDaysAfterLastModificationActionImpl implements
       this.action = "setDeleteDaysAfterLastModification";
    }
    public MyCartSetDeleteDaysAfterLastModificationActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public Integer getDeleteDaysAfterLastModification(){
       return this.deleteDaysAfterLastModification;
    }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
 
    private String action;
-
+   
    private com.fasterxml.jackson.databind.JsonNode target;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
       this.action = "setTarget";
    }
    public ReviewSetTargetActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>Identifies the target of the review.
    *  Can be a Product or a Channel.

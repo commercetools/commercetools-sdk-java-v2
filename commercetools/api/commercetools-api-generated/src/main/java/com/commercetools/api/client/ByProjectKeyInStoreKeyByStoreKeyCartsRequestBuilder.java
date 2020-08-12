@@ -27,6 +27,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder {
       return new ByProjectKeyInStoreKeyByStoreKeyCartsPost(apiHttpClient, projectKey, storeKey, cartDraft);
    }
    
+   public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdRequestBuilder withCustomerId(String customerId) {
+      return new ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdRequestBuilder(apiHttpClient, projectKey, storeKey, customerId);
+   }
    public ByProjectKeyInStoreKeyByStoreKeyCartsByIDRequestBuilder withId(String ID) {
       return new ByProjectKeyInStoreKeyByStoreKeyCartsByIDRequestBuilder(apiHttpClient, projectKey, storeKey, ID);
    }

@@ -23,19 +23,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSignInResultImpl implements CustomerSignInResult {
 
+   private com.commercetools.api.models.customer.Customer customer;
+   
    private com.fasterxml.jackson.databind.JsonNode cart;
 
-   private com.commercetools.api.models.customer.Customer customer;
-
    @JsonCreator
-   CustomerSignInResultImpl(@JsonProperty("cart") final com.fasterxml.jackson.databind.JsonNode cart, @JsonProperty("customer") final com.commercetools.api.models.customer.Customer customer) {
-      this.cart = cart;
+   CustomerSignInResultImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.Customer customer, @JsonProperty("cart") final com.fasterxml.jackson.databind.JsonNode cart) {
       this.customer = customer;
+      this.cart = cart;
    }
    public CustomerSignInResultImpl() {
-
+      
    }
-
+   
+   
+   public com.commercetools.api.models.customer.Customer getCustomer(){
+      return this.customer;
+   }
+   
    /**
    *  <p>A cart that is associated to the customer.
    *  Empty if the customer does not have a cart yet.</p>
@@ -44,17 +49,12 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
       return this.cart;
    }
 
-
-   public com.commercetools.api.models.customer.Customer getCustomer(){
-      return this.customer;
-   }
-
-   public void setCart(final com.fasterxml.jackson.databind.JsonNode cart){
-      this.cart = cart;
-   }
-
    public void setCustomer(final com.commercetools.api.models.customer.Customer customer){
       this.customer = customer;
+   }
+   
+   public void setCart(final com.fasterxml.jackson.databind.JsonNode cart){
+      this.cart = cart;
    }
 
 }

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderSetLocaleActionImpl implements StagedOrderSetLocaleAction {
 
    private String action;
-
+   
    private String locale;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class StagedOrderSetLocaleActionImpl implements StagedOrderSetLocal
       this.action = "setLocale";
    }
    public StagedOrderSetLocaleActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getLocale(){
       return this.locale;
    }

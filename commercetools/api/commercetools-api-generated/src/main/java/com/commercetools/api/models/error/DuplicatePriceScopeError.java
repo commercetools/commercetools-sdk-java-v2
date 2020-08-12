@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = DuplicatePriceScopeErrorImpl.class)
 public interface DuplicatePriceScopeError extends ErrorObject {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("conflictingPrices")
    public List<Price> getConflictingPrices();
 
    public void setConflictingPrices(final List<Price> conflictingPrices);
-
+   
    public static DuplicatePriceScopeErrorImpl of(){
       return new DuplicatePriceScopeErrorImpl();
    }
-
+   
 
    public static DuplicatePriceScopeErrorImpl of(final DuplicatePriceScopeError template) {
       DuplicatePriceScopeErrorImpl instance = new DuplicatePriceScopeErrorImpl();

@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderImportLineItemStateActionImpl implements StagedOrderImportLineItemStateAction {
 
    private String action;
-
+   
    private String lineItemId;
-
+   
    private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class StagedOrderImportLineItemStateActionImpl implements StagedOrd
       this.action = "importLineItemState";
    }
    public StagedOrderImportLineItemStateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.order.ItemState> getState(){
       return this.state;
    }
@@ -57,7 +57,7 @@ public final class StagedOrderImportLineItemStateActionImpl implements StagedOrd
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
-
+   
    public void setState(final java.util.List<com.commercetools.api.models.order.ItemState> state){
       this.state = state;
    }

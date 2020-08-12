@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class DeliveryItemBuilder {
-
-
-   private Integer quantity;
-
-
+   
+   
    private String id;
-
-   public DeliveryItemBuilder quantity( final Integer quantity) {
-      this.quantity = quantity;
-      return this;
-   }
-
+   
+   
+   private Double quantity;
+   
    public DeliveryItemBuilder id( final String id) {
       this.id = id;
       return this;
    }
-
-
-   public Integer getQuantity(){
-      return this.quantity;
+   
+   public DeliveryItemBuilder quantity( final Double quantity) {
+      this.quantity = quantity;
+      return this;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-   public DeliveryItem build() {
-       return new DeliveryItemImpl(quantity, id);
+   
+   
+   public Double getQuantity(){
+      return this.quantity;
    }
 
+   public DeliveryItem build() {
+       return new DeliveryItemImpl(id, quantity);
+   }
+   
    public static DeliveryItemBuilder of() {
       return new DeliveryItemBuilder();
    }
-
+   
    public static DeliveryItemBuilder of(final DeliveryItem template) {
       DeliveryItemBuilder builder = new DeliveryItemBuilder();
-      builder.quantity = template.getQuantity();
       builder.id = template.getId();
+      builder.quantity = template.getQuantity();
       return builder;
    }
-
+   
 }

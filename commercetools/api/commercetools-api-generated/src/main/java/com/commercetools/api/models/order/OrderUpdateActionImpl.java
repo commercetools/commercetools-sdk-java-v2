@@ -35,6 +35,7 @@ import com.commercetools.api.models.order.OrderSetParcelTrackingDataAction;
 import com.commercetools.api.models.order.OrderSetReturnPaymentStateAction;
 import com.commercetools.api.models.order.OrderSetReturnShipmentStateAction;
 import com.commercetools.api.models.order.OrderSetShippingAddressAction;
+import com.commercetools.api.models.order.OrderSetStoreAction;
 import com.commercetools.api.models.order.OrderTransitionCustomLineItemStateAction;
 import com.commercetools.api.models.order.OrderTransitionLineItemStateAction;
 import com.commercetools.api.models.order.OrderTransitionStateAction;
@@ -67,9 +68,9 @@ public final class OrderUpdateActionImpl implements OrderUpdateAction {
    OrderUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

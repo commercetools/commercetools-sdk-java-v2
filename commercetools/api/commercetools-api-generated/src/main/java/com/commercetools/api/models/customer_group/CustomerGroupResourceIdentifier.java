@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface CustomerGroupResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static CustomerGroupResourceIdentifierImpl of(){
       return new CustomerGroupResourceIdentifierImpl();
    }
-
+   
 
    public static CustomerGroupResourceIdentifierImpl of(final CustomerGroupResourceIdentifier template) {
       CustomerGroupResourceIdentifierImpl instance = new CustomerGroupResourceIdentifierImpl();

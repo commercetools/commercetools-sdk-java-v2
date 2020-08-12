@@ -22,7 +22,7 @@ import java.io.IOException;
 @JsonDeserialize(as = ZoneRateImpl.class)
 public interface ZoneRate  {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("zone")
@@ -36,13 +36,13 @@ public interface ZoneRate  {
    public List<ShippingRate> getShippingRates();
 
    public void setZone(final ZoneReference zone);
-
+   
    public void setShippingRates(final List<ShippingRate> shippingRates);
-
+   
    public static ZoneRateImpl of(){
       return new ZoneRateImpl();
    }
-
+   
 
    public static ZoneRateImpl of(final ZoneRate template) {
       ZoneRateImpl instance = new ZoneRateImpl();

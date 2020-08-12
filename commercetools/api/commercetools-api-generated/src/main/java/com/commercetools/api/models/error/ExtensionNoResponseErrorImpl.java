@@ -26,13 +26,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError {
 
    private String code;
-
+   
    private String message;
-
+   
    private com.commercetools.api.models.common.LocalizedString localizedMessage;
-
+   
    private com.fasterxml.jackson.databind.JsonNode extensionExtraInfo;
-
+   
    private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
 
    @JsonCreator
@@ -44,30 +44,30 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
       this.code = "ExtensionNoResponse";
    }
    public ExtensionNoResponseErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage(){
       return this.localizedMessage;
    }
-
-
+   
+   
    public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo(){
       return this.extensionExtraInfo;
    }
-
-
+   
+   
    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension(){
       return this.errorByExtension;
    }
@@ -75,15 +75,15 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
    public void setMessage(final String message){
       this.message = message;
    }
-
+   
    public void setLocalizedMessage(final com.commercetools.api.models.common.LocalizedString localizedMessage){
       this.localizedMessage = localizedMessage;
    }
-
+   
    public void setExtensionExtraInfo(final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo){
       this.extensionExtraInfo = extensionExtraInfo;
    }
-
+   
    public void setErrorByExtension(final com.commercetools.api.models.error.ErrorByExtension errorByExtension){
       this.errorByExtension = errorByExtension;
    }

@@ -22,31 +22,31 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderDeletedMessageImpl.class)
 public interface OrderDeletedMessage extends Message {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("order")
    public Order getOrder();
 
    public void setOrder(final Order order);
-
+   
    public static OrderDeletedMessageImpl of(){
       return new OrderDeletedMessageImpl();
    }
-
+   
 
    public static OrderDeletedMessageImpl of(final OrderDeletedMessage template) {
       OrderDeletedMessageImpl instance = new OrderDeletedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setOrder(template.getOrder());
       return instance;
    }

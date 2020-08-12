@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetCustomerEmailActionImpl.class)
 public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateAction {
 
-
-
+   
+   
    @JsonProperty("email")
    public String getEmail();
 
    public void setEmail(final String email);
-
+   
    public static StagedOrderSetCustomerEmailActionImpl of(){
       return new StagedOrderSetCustomerEmailActionImpl();
    }
-
+   
 
    public static StagedOrderSetCustomerEmailActionImpl of(final StagedOrderSetCustomerEmailAction template) {
       StagedOrderSetCustomerEmailActionImpl instance = new StagedOrderSetCustomerEmailActionImpl();

@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ChannelReferenceImpl implements ChannelReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.channel.Channel obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class ChannelReferenceImpl implements ChannelReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("channel").get();
    }
    public ChannelReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.channel.Channel getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class ChannelReferenceImpl implements ChannelReference {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.channel.Channel obj){
       this.obj = obj;
    }

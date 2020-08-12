@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetStatusInterfaceTextActionImpl.class)
 public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("interfaceText")
    public String getInterfaceText();
 
    public void setInterfaceText(final String interfaceText);
-
+   
    public static PaymentSetStatusInterfaceTextActionImpl of(){
       return new PaymentSetStatusInterfaceTextActionImpl();
    }
-
+   
 
    public static PaymentSetStatusInterfaceTextActionImpl of(final PaymentSetStatusInterfaceTextAction template) {
       PaymentSetStatusInterfaceTextActionImpl instance = new PaymentSetStatusInterfaceTextActionImpl();

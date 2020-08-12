@@ -23,42 +23,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AzureEventGridDestinationImpl implements AzureEventGridDestination {
 
    private String type;
-
+   
+   private String uri;
+   
    private String accessKey;
 
-   private String uri;
-
    @JsonCreator
-   AzureEventGridDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("uri") final String uri) {
-      this.accessKey = accessKey;
+   AzureEventGridDestinationImpl(@JsonProperty("uri") final String uri, @JsonProperty("accessKey") final String accessKey) {
       this.uri = uri;
+      this.accessKey = accessKey;
       this.type = "EventGrid";
    }
    public AzureEventGridDestinationImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
+   public String getUri(){
+      return this.uri;
+   }
+   
+   
    public String getAccessKey(){
       return this.accessKey;
    }
 
-
-   public String getUri(){
-      return this.uri;
-   }
-
-   public void setAccessKey(final String accessKey){
-      this.accessKey = accessKey;
-   }
-
    public void setUri(final String uri){
       this.uri = uri;
+   }
+   
+   public void setAccessKey(final String accessKey){
+      this.accessKey = accessKey;
    }
 
 }

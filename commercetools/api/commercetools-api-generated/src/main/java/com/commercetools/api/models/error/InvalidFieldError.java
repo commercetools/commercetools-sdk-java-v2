@@ -22,36 +22,36 @@ import java.io.IOException;
 @JsonDeserialize(as = InvalidFieldErrorImpl.class)
 public interface InvalidFieldError extends ErrorObject {
 
-
+   
    @NotNull
    @JsonProperty("field")
    public String getField();
-
+   
    @NotNull
    @JsonProperty("invalidValue")
    public JsonNode getInvalidValue();
-
-
+   
+   
    @JsonProperty("allowedValues")
    public List<JsonNode> getAllowedValues();
 
    public void setField(final String field);
-
+   
    public void setInvalidValue(final JsonNode invalidValue);
-
+   
    public void setAllowedValues(final List<JsonNode> allowedValues);
-
+   
    public static InvalidFieldErrorImpl of(){
       return new InvalidFieldErrorImpl();
    }
-
+   
 
    public static InvalidFieldErrorImpl of(final InvalidFieldError template) {
       InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();
       instance.setMessage(template.getMessage());
-      instance.setAllowedValues(template.getAllowedValues());
       instance.setField(template.getField());
       instance.setInvalidValue(template.getInvalidValue());
+      instance.setAllowedValues(template.getAllowedValues());
       return instance;
    }
 

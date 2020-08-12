@@ -28,11 +28,11 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingInfoImportDraftImpl.class)
 public interface ShippingInfoImportDraft  {
 
-
+   
    @NotNull
    @JsonProperty("shippingMethodName")
    public String getShippingMethodName();
-
+   
    @NotNull
    @Valid
    @JsonProperty("price")
@@ -44,11 +44,11 @@ public interface ShippingInfoImportDraft  {
    @Valid
    @JsonProperty("shippingRate")
    public ShippingRateDraft getShippingRate();
-
+   
    @Valid
    @JsonProperty("taxRate")
    public TaxRate getTaxRate();
-
+   
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryResourceIdentifier getTaxCategory();
@@ -64,51 +64,51 @@ public interface ShippingInfoImportDraft  {
    @Valid
    @JsonProperty("deliveries")
    public List<Delivery> getDeliveries();
-
+   
    @Valid
    @JsonProperty("discountedPrice")
    public DiscountedLineItemPriceDraft getDiscountedPrice();
    /**
    *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
    */
-
+   
    @JsonProperty("shippingMethodState")
    public ShippingMethodState getShippingMethodState();
 
    public void setShippingMethodName(final String shippingMethodName);
-
+   
    public void setPrice(final Money price);
-
+   
    public void setShippingRate(final ShippingRateDraft shippingRate);
-
+   
    public void setTaxRate(final TaxRate taxRate);
-
+   
    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-
+   
    public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
-
+   
    public void setDeliveries(final List<Delivery> deliveries);
-
+   
    public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);
-
+   
    public void setShippingMethodState(final ShippingMethodState shippingMethodState);
-
+   
    public static ShippingInfoImportDraftImpl of(){
       return new ShippingInfoImportDraftImpl();
    }
-
+   
 
    public static ShippingInfoImportDraftImpl of(final ShippingInfoImportDraft template) {
       ShippingInfoImportDraftImpl instance = new ShippingInfoImportDraftImpl();
-      instance.setTaxRate(template.getTaxRate());
+      instance.setShippingMethodName(template.getShippingMethodName());
+      instance.setPrice(template.getPrice());
       instance.setShippingRate(template.getShippingRate());
+      instance.setTaxRate(template.getTaxRate());
+      instance.setTaxCategory(template.getTaxCategory());
+      instance.setShippingMethod(template.getShippingMethod());
+      instance.setDeliveries(template.getDeliveries());
       instance.setDiscountedPrice(template.getDiscountedPrice());
       instance.setShippingMethodState(template.getShippingMethodState());
-      instance.setPrice(template.getPrice());
-      instance.setShippingMethod(template.getShippingMethod());
-      instance.setShippingMethodName(template.getShippingMethodName());
-      instance.setDeliveries(template.getDeliveries());
-      instance.setTaxCategory(template.getTaxCategory());
       return instance;
    }
 

@@ -41,8 +41,8 @@ public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUp
 
    public static MyShoppingListRemoveTextLineItemActionImpl of(final MyShoppingListRemoveTextLineItemAction template) {
       MyShoppingListRemoveTextLineItemActionImpl instance = new MyShoppingListRemoveTextLineItemActionImpl();
-      instance.setQuantity(template.getQuantity());
       instance.setTextLineItemId(template.getTextLineItemId());
+      instance.setQuantity(template.getQuantity());
       return instance;
    }
 

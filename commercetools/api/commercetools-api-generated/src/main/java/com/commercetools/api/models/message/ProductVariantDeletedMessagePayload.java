@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantDeletedMessagePayloadImpl.class)
 public interface ProductVariantDeletedMessagePayload extends MessagePayload {
 
-
-   @NotNull
-   @JsonProperty("removedImageUrls")
-   public List<String> getRemovedImageUrls();
-
+   
    @NotNull
    @Valid
    @JsonProperty("variant")
    public ProductVariant getVariant();
-
-   public void setRemovedImageUrls(final List<String> removedImageUrls);
+   
+   @NotNull
+   @JsonProperty("removedImageUrls")
+   public List<String> getRemovedImageUrls();
 
    public void setVariant(final ProductVariant variant);
-
+   
+   public void setRemovedImageUrls(final List<String> removedImageUrls);
+   
    public static ProductVariantDeletedMessagePayloadImpl of(){
       return new ProductVariantDeletedMessagePayloadImpl();
    }
-
+   
 
    public static ProductVariantDeletedMessagePayloadImpl of(final ProductVariantDeletedMessagePayload template) {
       ProductVariantDeletedMessagePayloadImpl instance = new ProductVariantDeletedMessagePayloadImpl();
-      instance.setRemovedImageUrls(template.getRemovedImageUrls());
       instance.setVariant(template.getVariant());
+      instance.setRemovedImageUrls(template.getRemovedImageUrls());
       return instance;
    }
 

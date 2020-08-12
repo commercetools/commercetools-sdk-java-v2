@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface ZoneResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static ZoneResourceIdentifierImpl of(){
       return new ZoneResourceIdentifierImpl();
    }
-
+   
 
    public static ZoneResourceIdentifierImpl of(final ZoneResourceIdentifier template) {
       ZoneResourceIdentifierImpl instance = new ZoneResourceIdentifierImpl();

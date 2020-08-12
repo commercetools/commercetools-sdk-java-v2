@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductSetDescriptionActionImpl implements ProductSetDescriptionAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.LocalizedString description;
-
+   
    private Boolean staged;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class ProductSetDescriptionActionImpl implements ProductSetDescript
       this.action = "setDescription";
    }
    public ProductSetDescriptionActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getDescription(){
       return this.description;
    }
-
-
+   
+   
    public Boolean getStaged(){
       return this.staged;
    }
@@ -57,7 +57,7 @@ public final class ProductSetDescriptionActionImpl implements ProductSetDescript
    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
       this.description = description;
    }
-
+   
    public void setStaged(final Boolean staged){
       this.staged = staged;
    }

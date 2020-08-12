@@ -25,28 +25,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TransactionDraftImpl implements TransactionDraft {
 
-   private String interactionId;
-
+   private java.time.ZonedDateTime timestamp;
+   
+   private com.commercetools.api.models.payment.TransactionType type;
+   
    private com.commercetools.api.models.common.Money amount;
-
+   
+   private String interactionId;
+   
    private com.commercetools.api.models.payment.TransactionState state;
 
-   private com.commercetools.api.models.payment.TransactionType type;
-
-   private java.time.ZonedDateTime timestamp;
-
    @JsonCreator
-   TransactionDraftImpl(@JsonProperty("interactionId") final String interactionId, @JsonProperty("amount") final com.commercetools.api.models.common.Money amount, @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state, @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
-      this.interactionId = interactionId;
-      this.amount = amount;
-      this.state = state;
-      this.type = type;
+   TransactionDraftImpl(@JsonProperty("timestamp") final java.time.ZonedDateTime timestamp, @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type, @JsonProperty("amount") final com.commercetools.api.models.common.Money amount, @JsonProperty("interactionId") final String interactionId, @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state) {
       this.timestamp = timestamp;
+      this.type = type;
+      this.amount = amount;
+      this.interactionId = interactionId;
+      this.state = state;
    }
    public TransactionDraftImpl() {
-
+      
    }
-
+   
+   /**
+   *  <p>The time at which the transaction took place.</p>
+   */
+   public java.time.ZonedDateTime getTimestamp(){
+      return this.timestamp;
+   }
+   
+   /**
+   *  <p>The type of this transaction.</p>
+   */
+   public com.commercetools.api.models.payment.TransactionType getType(){
+      return this.type;
+   }
+   
+   
+   public com.commercetools.api.models.common.Money getAmount(){
+      return this.amount;
+   }
+   
    /**
    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
    *  If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
@@ -54,12 +73,7 @@ public final class TransactionDraftImpl implements TransactionDraft {
    public String getInteractionId(){
       return this.interactionId;
    }
-
-
-   public com.commercetools.api.models.common.Money getAmount(){
-      return this.amount;
-   }
-
+   
    /**
    *  <p>The state of this transaction.
    *  If not set, defaults to <code>Initial</code>.</p>
@@ -68,38 +82,24 @@ public final class TransactionDraftImpl implements TransactionDraft {
       return this.state;
    }
 
-   /**
-   *  <p>The type of this transaction.</p>
-   */
-   public com.commercetools.api.models.payment.TransactionType getType(){
-      return this.type;
+   public void setTimestamp(final java.time.ZonedDateTime timestamp){
+      this.timestamp = timestamp;
    }
-
-   /**
-   *  <p>The time at which the transaction took place.</p>
-   */
-   public java.time.ZonedDateTime getTimestamp(){
-      return this.timestamp;
-   }
-
-   public void setInteractionId(final String interactionId){
-      this.interactionId = interactionId;
-   }
-
-   public void setAmount(final com.commercetools.api.models.common.Money amount){
-      this.amount = amount;
-   }
-
-   public void setState(final com.commercetools.api.models.payment.TransactionState state){
-      this.state = state;
-   }
-
+   
    public void setType(final com.commercetools.api.models.payment.TransactionType type){
       this.type = type;
    }
-
-   public void setTimestamp(final java.time.ZonedDateTime timestamp){
-      this.timestamp = timestamp;
+   
+   public void setAmount(final com.commercetools.api.models.common.Money amount){
+      this.amount = amount;
+   }
+   
+   public void setInteractionId(final String interactionId){
+      this.interactionId = interactionId;
+   }
+   
+   public void setState(final com.commercetools.api.models.payment.TransactionState state){
+      this.state = state;
    }
 
 }

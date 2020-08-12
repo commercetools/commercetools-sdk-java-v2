@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderImportedMessagePayloadImpl implements OrderImportedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.order.Order order;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class OrderImportedMessagePayloadImpl implements OrderImportedMessa
       this.type = "OrderImported";
    }
    public OrderImportedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.Order getOrder(){
       return this.order;
    }

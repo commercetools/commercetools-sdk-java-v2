@@ -38,18 +38,18 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
    public FieldContainer getFields();
 
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final FieldContainer fields);
-
+   
    public static DiscountCodeSetCustomTypeActionImpl of(){
       return new DiscountCodeSetCustomTypeActionImpl();
    }
-
+   
 
    public static DiscountCodeSetCustomTypeActionImpl of(final DiscountCodeSetCustomTypeAction template) {
       DiscountCodeSetCustomTypeActionImpl instance = new DiscountCodeSetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddressAction {
 
    private String action;
-
+   
    private String deliveryId;
-
+   
    private com.commercetools.api.models.common.Address address;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class OrderSetDeliveryAddressActionImpl implements OrderSetDelivery
       this.action = "setDeliveryAddress";
    }
    public OrderSetDeliveryAddressActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getDeliveryId(){
       return this.deliveryId;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Address getAddress(){
       return this.address;
    }
@@ -57,7 +57,7 @@ public final class OrderSetDeliveryAddressActionImpl implements OrderSetDelivery
    public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
-
+   
    public void setAddress(final com.commercetools.api.models.common.Address address){
       this.address = address;
    }

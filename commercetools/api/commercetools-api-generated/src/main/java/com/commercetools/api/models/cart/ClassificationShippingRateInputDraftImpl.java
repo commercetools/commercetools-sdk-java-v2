@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ClassificationShippingRateInputDraftImpl implements ClassificationShippingRateInputDraft {
 
    private String type;
-
+   
    private String key;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ClassificationShippingRateInputDraftImpl implements Classific
       this.type = "Classification";
    }
    public ClassificationShippingRateInputDraftImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public String getKey(){
       return this.key;
    }

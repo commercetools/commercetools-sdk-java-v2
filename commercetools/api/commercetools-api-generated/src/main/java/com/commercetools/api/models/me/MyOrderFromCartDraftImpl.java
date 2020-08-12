@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft {
 
    private String id;
-
+   
    private Long version;
 
    @JsonCreator
@@ -32,17 +32,17 @@ public final class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft {
       this.version = version;
    }
    public MyOrderFromCartDraftImpl() {
-
+      
    }
-
+   
    /**
    *  <p>The unique ID of the cart from which an order is created.</p>
    */
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
@@ -50,7 +50,7 @@ public final class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }

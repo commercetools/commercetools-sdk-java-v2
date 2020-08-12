@@ -42,8 +42,8 @@ public interface OrderShippingAddressSetMessagePayload extends MessagePayload {
 
    public static OrderShippingAddressSetMessagePayloadImpl of(final OrderShippingAddressSetMessagePayload template) {
       OrderShippingAddressSetMessagePayloadImpl instance = new OrderShippingAddressSetMessagePayloadImpl();
-      instance.setOldAddress(template.getOldAddress());
       instance.setAddress(template.getAddress());
+      instance.setOldAddress(template.getOldAddress());
       return instance;
    }
 

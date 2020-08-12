@@ -22,41 +22,41 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ItemShippingTargetImpl implements ItemShippingTarget {
 
-   private Integer quantity;
-
    private String addressKey;
+   
+   private Double quantity;
 
    @JsonCreator
-   ItemShippingTargetImpl(@JsonProperty("quantity") final Integer quantity, @JsonProperty("addressKey") final String addressKey) {
-      this.quantity = quantity;
+   ItemShippingTargetImpl(@JsonProperty("addressKey") final String addressKey, @JsonProperty("quantity") final Double quantity) {
       this.addressKey = addressKey;
+      this.quantity = quantity;
    }
    public ItemShippingTargetImpl() {
-
+      
    }
-
-   /**
-   *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>.
-   *  Only positive values are allowed.
-   *  Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
-   */
-   public Integer getQuantity(){
-      return this.quantity;
-   }
-
+   
    /**
    *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
    */
    public String getAddressKey(){
       return this.addressKey;
    }
-
-   public void setQuantity(final Integer quantity){
-      this.quantity = quantity;
+   
+   /**
+   *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>.
+   *  Only positive values are allowed.
+   *  Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+   */
+   public Double getQuantity(){
+      return this.quantity;
    }
 
    public void setAddressKey(final String addressKey){
       this.addressKey = addressKey;
+   }
+   
+   public void setQuantity(final Double quantity){
+      this.quantity = quantity;
    }
 
 }

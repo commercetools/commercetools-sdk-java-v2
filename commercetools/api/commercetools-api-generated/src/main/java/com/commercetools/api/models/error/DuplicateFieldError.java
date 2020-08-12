@@ -23,36 +23,36 @@ import java.io.IOException;
 @JsonDeserialize(as = DuplicateFieldErrorImpl.class)
 public interface DuplicateFieldError extends ErrorObject {
 
-
-
+   
+   
    @JsonProperty("field")
    public String getField();
-
-
+   
+   
    @JsonProperty("duplicateValue")
    public JsonNode getDuplicateValue();
-
+   
    @Valid
    @JsonProperty("conflictingResource")
    public Reference getConflictingResource();
 
    public void setField(final String field);
-
+   
    public void setDuplicateValue(final JsonNode duplicateValue);
-
+   
    public void setConflictingResource(final Reference conflictingResource);
-
+   
    public static DuplicateFieldErrorImpl of(){
       return new DuplicateFieldErrorImpl();
    }
-
+   
 
    public static DuplicateFieldErrorImpl of(final DuplicateFieldError template) {
       DuplicateFieldErrorImpl instance = new DuplicateFieldErrorImpl();
       instance.setMessage(template.getMessage());
-      instance.setConflictingResource(template.getConflictingResource());
-      instance.setDuplicateValue(template.getDuplicateValue());
       instance.setField(template.getField());
+      instance.setDuplicateValue(template.getDuplicateValue());
+      instance.setConflictingResource(template.getConflictingResource());
       return instance;
    }
 

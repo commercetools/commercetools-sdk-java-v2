@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class InsufficientScopeErrorBuilder {
-
-
+   
+   
    private String message;
-
+   
    public InsufficientScopeErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
@@ -30,15 +30,15 @@ public final class InsufficientScopeErrorBuilder {
    public InsufficientScopeError build() {
        return new InsufficientScopeErrorImpl(message);
    }
-
+   
    public static InsufficientScopeErrorBuilder of() {
       return new InsufficientScopeErrorBuilder();
    }
-
+   
    public static InsufficientScopeErrorBuilder of(final InsufficientScopeError template) {
       InsufficientScopeErrorBuilder builder = new InsufficientScopeErrorBuilder();
       builder.message = template.getMessage();
       return builder;
    }
-
+   
 }

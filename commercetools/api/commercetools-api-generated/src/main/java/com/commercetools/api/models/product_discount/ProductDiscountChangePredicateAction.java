@@ -29,11 +29,11 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
    public String getPredicate();
 
    public void setPredicate(final String predicate);
-
+   
    public static ProductDiscountChangePredicateActionImpl of(){
       return new ProductDiscountChangePredicateActionImpl();
    }
-
+   
 
    public static ProductDiscountChangePredicateActionImpl of(final ProductDiscountChangePredicateAction template) {
       ProductDiscountChangePredicateActionImpl instance = new ProductDiscountChangePredicateActionImpl();

@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetAmountRefundedActionImpl.class)
 public interface PaymentSetAmountRefundedAction extends PaymentUpdateAction {
 
-
+   
    @Valid
    @JsonProperty("amount")
    public Money getAmount();
 
    public void setAmount(final Money amount);
-
+   
    public static PaymentSetAmountRefundedActionImpl of(){
       return new PaymentSetAmountRefundedActionImpl();
    }
-
+   
 
    public static PaymentSetAmountRefundedActionImpl of(final PaymentSetAmountRefundedAction template) {
       PaymentSetAmountRefundedActionImpl instance = new PaymentSetAmountRefundedActionImpl();

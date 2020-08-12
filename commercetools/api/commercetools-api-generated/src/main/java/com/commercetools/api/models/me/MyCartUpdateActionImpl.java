@@ -52,9 +52,9 @@ public final class MyCartUpdateActionImpl implements MyCartUpdateAction {
    MyCartUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

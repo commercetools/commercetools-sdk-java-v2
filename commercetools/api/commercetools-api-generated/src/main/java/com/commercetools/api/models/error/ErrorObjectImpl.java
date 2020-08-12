@@ -23,6 +23,7 @@ import com.commercetools.api.models.error.InvalidJsonInputError;
 import com.commercetools.api.models.error.InvalidOperationError;
 import com.commercetools.api.models.error.InvalidSubjectError;
 import com.commercetools.api.models.error.InvalidTokenError;
+import com.commercetools.api.models.error.LanguageUsedInStoresError;
 import com.commercetools.api.models.error.MatchingPriceNotFoundError;
 import com.commercetools.api.models.error.MissingTaxRateForCountryError;
 import com.commercetools.api.models.error.NoMatchingProductDiscountFoundError;
@@ -54,7 +55,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ErrorObjectImpl implements ErrorObject {
 
    private String code;
-
+   
    private String message;
 
    @JsonCreator
@@ -63,15 +64,15 @@ public final class ErrorObjectImpl implements ErrorObject {
       this.code = "null";
    }
    public ErrorObjectImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }

@@ -42,9 +42,9 @@ public final class CartDiscountUpdateActionImpl implements CartDiscountUpdateAct
    CartDiscountUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

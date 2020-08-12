@@ -24,16 +24,16 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
    /**
    *  <p>If not defined, the external ID is unset.</p>
    */
-
+   
    @JsonProperty("externalId")
    public String getExternalId();
 
    public void setExternalId(final String externalId);
-
+   
    public static CategorySetExternalIdActionImpl of(){
       return new CategorySetExternalIdActionImpl();
    }
-
+   
 
    public static CategorySetExternalIdActionImpl of(final CategorySetExternalIdAction template) {
       CategorySetExternalIdActionImpl instance = new CategorySetExternalIdActionImpl();

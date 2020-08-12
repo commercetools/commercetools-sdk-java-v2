@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ZoneRateImpl implements ZoneRate {
 
    private com.commercetools.api.models.zone.ZoneReference zone;
-
+   
    private java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class ZoneRateImpl implements ZoneRate {
       this.shippingRates = shippingRates;
    }
    public ZoneRateImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.zone.ZoneReference getZone(){
       return this.zone;
    }
-
+   
    /**
    *  <p>The array does not contain two shipping rates with the same currency.</p>
    */
@@ -51,7 +51,7 @@ public final class ZoneRateImpl implements ZoneRate {
    public void setZone(final com.commercetools.api.models.zone.ZoneReference zone){
       this.zone = zone;
    }
-
+   
    public void setShippingRates(final java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates){
       this.shippingRates = shippingRates;
    }

@@ -28,9 +28,9 @@ public final class CustomFieldStringTypeImpl implements CustomFieldStringType {
    CustomFieldStringTypeImpl() {
       this.name = "String";
    }
-
-
-
+   
+   
+   
    public String getName(){
       return this.name;
    }

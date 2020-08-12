@@ -25,78 +25,78 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomLineItemStateTransitionMessagePayloadImpl implements CustomLineItemStateTransitionMessagePayload {
 
    private String type;
-
+   
+   private String customLineItemId;
+   
+   private java.time.ZonedDateTime transitionDate;
+   
+   private Long quantity;
+   
+   private com.commercetools.api.models.state.StateReference fromState;
+   
    private com.commercetools.api.models.state.StateReference toState;
 
-   private com.commercetools.api.models.state.StateReference fromState;
-
-   private String customLineItemId;
-
-   private Long quantity;
-
-   private java.time.ZonedDateTime transitionDate;
-
    @JsonCreator
-   CustomLineItemStateTransitionMessagePayloadImpl(@JsonProperty("toState") final com.commercetools.api.models.state.StateReference toState, @JsonProperty("fromState") final com.commercetools.api.models.state.StateReference fromState, @JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("quantity") final Long quantity, @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate) {
-      this.toState = toState;
-      this.fromState = fromState;
+   CustomLineItemStateTransitionMessagePayloadImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate, @JsonProperty("quantity") final Long quantity, @JsonProperty("fromState") final com.commercetools.api.models.state.StateReference fromState, @JsonProperty("toState") final com.commercetools.api.models.state.StateReference toState) {
       this.customLineItemId = customLineItemId;
-      this.quantity = quantity;
       this.transitionDate = transitionDate;
+      this.quantity = quantity;
+      this.fromState = fromState;
+      this.toState = toState;
       this.type = "CustomLineItemStateTransition";
    }
    public CustomLineItemStateTransitionMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
-   public com.commercetools.api.models.state.StateReference getToState(){
-      return this.toState;
-   }
-
-
-   public com.commercetools.api.models.state.StateReference getFromState(){
-      return this.fromState;
-   }
-
-
+   
+   
    public String getCustomLineItemId(){
       return this.customLineItemId;
    }
-
-
-   public Long getQuantity(){
-      return this.quantity;
-   }
-
-
+   
+   
    public java.time.ZonedDateTime getTransitionDate(){
       return this.transitionDate;
    }
-
-   public void setToState(final com.commercetools.api.models.state.StateReference toState){
-      this.toState = toState;
+   
+   
+   public Long getQuantity(){
+      return this.quantity;
    }
-
-   public void setFromState(final com.commercetools.api.models.state.StateReference fromState){
-      this.fromState = fromState;
+   
+   
+   public com.commercetools.api.models.state.StateReference getFromState(){
+      return this.fromState;
+   }
+   
+   
+   public com.commercetools.api.models.state.StateReference getToState(){
+      return this.toState;
    }
 
    public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
-
+   
+   public void setTransitionDate(final java.time.ZonedDateTime transitionDate){
+      this.transitionDate = transitionDate;
+   }
+   
    public void setQuantity(final Long quantity){
       this.quantity = quantity;
    }
-
-   public void setTransitionDate(final java.time.ZonedDateTime transitionDate){
-      this.transitionDate = transitionDate;
+   
+   public void setFromState(final com.commercetools.api.models.state.StateReference fromState){
+      this.fromState = fromState;
+   }
+   
+   public void setToState(final com.commercetools.api.models.state.StateReference toState){
+      this.toState = toState;
    }
 
 }

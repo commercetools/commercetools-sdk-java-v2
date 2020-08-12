@@ -46,9 +46,9 @@ public final class MyShoppingListUpdateActionImpl implements MyShoppingListUpdat
    MyShoppingListUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

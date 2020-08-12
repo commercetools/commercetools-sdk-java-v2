@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductSlugChangedMessagePayloadImpl implements ProductSlugChangedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.common.LocalizedString slug;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ProductSlugChangedMessagePayloadImpl implements ProductSlugCh
       this.type = "ProductSlugChanged";
    }
    public ProductSlugChangedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getSlug(){
       return this.slug;
    }

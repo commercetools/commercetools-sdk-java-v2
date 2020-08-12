@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderUpdateImpl implements OrderUpdate {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.order.OrderUpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   OrderUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.order.OrderUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   OrderUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.order.OrderUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public OrderUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.order.OrderUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.order.OrderUpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.order.OrderUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

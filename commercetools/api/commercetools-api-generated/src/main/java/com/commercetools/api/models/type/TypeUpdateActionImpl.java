@@ -42,9 +42,9 @@ public final class TypeUpdateActionImpl implements TypeUpdateAction {
    TypeUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

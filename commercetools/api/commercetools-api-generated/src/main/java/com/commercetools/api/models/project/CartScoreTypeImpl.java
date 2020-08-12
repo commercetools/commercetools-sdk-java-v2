@@ -29,9 +29,9 @@ public final class CartScoreTypeImpl implements CartScoreType {
    CartScoreTypeImpl() {
       this.type = ShippingRateTierType.findEnumViaJsonName("CartScore").get();
    }
-
-
-
+   
+   
+   
    public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
       return this.type;
    }

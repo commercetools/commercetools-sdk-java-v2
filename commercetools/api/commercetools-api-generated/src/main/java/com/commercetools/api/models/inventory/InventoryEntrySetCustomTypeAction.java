@@ -38,18 +38,18 @@ public interface InventoryEntrySetCustomTypeAction extends InventoryEntryUpdateA
    public FieldContainer getFields();
 
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final FieldContainer fields);
-
+   
    public static InventoryEntrySetCustomTypeActionImpl of(){
       return new InventoryEntrySetCustomTypeActionImpl();
    }
-
+   
 
    public static InventoryEntrySetCustomTypeActionImpl of(final InventoryEntrySetCustomTypeAction template) {
       InventoryEntrySetCustomTypeActionImpl instance = new InventoryEntrySetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

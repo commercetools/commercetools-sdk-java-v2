@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetShippingMethodTaxRateActionImpl.class)
 public interface CartSetShippingMethodTaxRateAction extends CartUpdateAction {
 
-
+   
    @Valid
    @JsonProperty("externalTaxRate")
    public ExternalTaxRateDraft getExternalTaxRate();
 
    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-
+   
    public static CartSetShippingMethodTaxRateActionImpl of(){
       return new CartSetShippingMethodTaxRateActionImpl();
    }
-
+   
 
    public static CartSetShippingMethodTaxRateActionImpl of(final CartSetShippingMethodTaxRateAction template) {
       CartSetShippingMethodTaxRateActionImpl instance = new CartSetShippingMethodTaxRateActionImpl();

@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface EnumValueIsUsedError extends ErrorObject {
 
 
-
+   
    public static EnumValueIsUsedErrorImpl of(){
       return new EnumValueIsUsedErrorImpl();
    }
-
+   
 
    public static EnumValueIsUsedErrorImpl of(final EnumValueIsUsedError template) {
       EnumValueIsUsedErrorImpl instance = new EnumValueIsUsedErrorImpl();

@@ -17,30 +17,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ShoppingListAddLineItemActionBuilder {
    
    @Nullable
-   private java.time.ZonedDateTime addedAt;
-   
-   @Nullable
-   private Long quantity;
+   private String sku;
    
    @Nullable
    private String productId;
    
    @Nullable
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-   
-   @Nullable
    private Long variantId;
    
    @Nullable
-   private String sku;
+   private Long quantity;
    
-   public ShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
-      this.addedAt = addedAt;
-      return this;
-   }
+   @Nullable
+   private java.time.ZonedDateTime addedAt;
    
-   public ShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
-      this.quantity = quantity;
+   @Nullable
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   
+   public ShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
+      this.sku = sku;
       return this;
    }
    
@@ -49,29 +44,29 @@ public final class ShoppingListAddLineItemActionBuilder {
       return this;
    }
    
-   public ShoppingListAddLineItemActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-      this.custom = custom;
-      return this;
-   }
-   
    public ShoppingListAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
       return this;
    }
    
-   public ShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
-      this.sku = sku;
+   public ShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
+      this.quantity = quantity;
+      return this;
+   }
+   
+   public ShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
+      this.addedAt = addedAt;
+      return this;
+   }
+   
+   public ShoppingListAddLineItemActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+      this.custom = custom;
       return this;
    }
    
    @Nullable
-   public java.time.ZonedDateTime getAddedAt(){
-      return this.addedAt;
-   }
-   
-   @Nullable
-   public Long getQuantity(){
-      return this.quantity;
+   public String getSku(){
+      return this.sku;
    }
    
    @Nullable
@@ -80,22 +75,27 @@ public final class ShoppingListAddLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
-   }
-   
-   @Nullable
    public Long getVariantId(){
       return this.variantId;
    }
    
    @Nullable
-   public String getSku(){
-      return this.sku;
+   public Long getQuantity(){
+      return this.quantity;
+   }
+   
+   @Nullable
+   public java.time.ZonedDateTime getAddedAt(){
+      return this.addedAt;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
    }
 
    public ShoppingListAddLineItemAction build() {
-       return new ShoppingListAddLineItemActionImpl(addedAt, quantity, productId, custom, variantId, sku);
+       return new ShoppingListAddLineItemActionImpl(sku, productId, variantId, quantity, addedAt, custom);
    }
    
    public static ShoppingListAddLineItemActionBuilder of() {
@@ -104,12 +104,12 @@ public final class ShoppingListAddLineItemActionBuilder {
    
    public static ShoppingListAddLineItemActionBuilder of(final ShoppingListAddLineItemAction template) {
       ShoppingListAddLineItemActionBuilder builder = new ShoppingListAddLineItemActionBuilder();
-      builder.addedAt = template.getAddedAt();
-      builder.quantity = template.getQuantity();
-      builder.productId = template.getProductId();
-      builder.custom = template.getCustom();
-      builder.variantId = template.getVariantId();
       builder.sku = template.getSku();
+      builder.productId = template.getProductId();
+      builder.variantId = template.getVariantId();
+      builder.quantity = template.getQuantity();
+      builder.addedAt = template.getAddedAt();
+      builder.custom = template.getCustom();
       return builder;
    }
    

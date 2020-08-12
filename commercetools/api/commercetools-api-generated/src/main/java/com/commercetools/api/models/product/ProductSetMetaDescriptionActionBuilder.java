@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductSetMetaDescriptionActionBuilder {
-
-   @Nullable
-   private Boolean staged;
-
+   
    @Nullable
    private com.commercetools.api.models.common.LocalizedString metaDescription;
-
-   public ProductSetMetaDescriptionActionBuilder staged(@Nullable final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
-
+   
+   @Nullable
+   private Boolean staged;
+   
    public ProductSetMetaDescriptionActionBuilder metaDescription(@Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
       this.metaDescription = metaDescription;
       return this;
    }
-
+   
+   public ProductSetMetaDescriptionActionBuilder staged(@Nullable final Boolean staged) {
+      this.staged = staged;
+      return this;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
+      return this.metaDescription;
+   }
+   
    @Nullable
    public Boolean getStaged(){
       return this.staged;
    }
 
-   @Nullable
-   public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
-      return this.metaDescription;
-   }
-
    public ProductSetMetaDescriptionAction build() {
-       return new ProductSetMetaDescriptionActionImpl(staged, metaDescription);
+       return new ProductSetMetaDescriptionActionImpl(metaDescription, staged);
    }
-
+   
    public static ProductSetMetaDescriptionActionBuilder of() {
       return new ProductSetMetaDescriptionActionBuilder();
    }
-
+   
    public static ProductSetMetaDescriptionActionBuilder of(final ProductSetMetaDescriptionAction template) {
       ProductSetMetaDescriptionActionBuilder builder = new ProductSetMetaDescriptionActionBuilder();
-      builder.staged = template.getStaged();
       builder.metaDescription = template.getMetaDescription();
+      builder.staged = template.getStaged();
       return builder;
    }
-
+   
 }

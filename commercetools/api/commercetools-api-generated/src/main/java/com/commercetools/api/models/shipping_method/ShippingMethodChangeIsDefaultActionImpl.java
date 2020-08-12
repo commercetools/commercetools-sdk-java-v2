@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodChangeIsDefaultAction {
 
    private String action;
-
+   
    private Boolean isDefault;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ShippingMethodChangeIsDefaultActionImpl implements ShippingMe
       this.action = "changeIsDefault";
    }
    public ShippingMethodChangeIsDefaultActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>Only one ShippingMethod in a project can be default.</p>
    */

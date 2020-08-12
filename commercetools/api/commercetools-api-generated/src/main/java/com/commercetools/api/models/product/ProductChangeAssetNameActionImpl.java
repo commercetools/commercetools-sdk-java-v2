@@ -24,90 +24,90 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameAction {
 
    private String action;
-
+   
+   private Long variantId;
+   
+   private String sku;
+   
+   private Boolean staged;
+   
    private String assetId;
-
+   
+   private String assetKey;
+   
    private com.commercetools.api.models.common.LocalizedString name;
 
-   private Boolean staged;
-
-   private Long variantId;
-
-   private String sku;
-
-   private String assetKey;
-
    @JsonCreator
-   ProductChangeAssetNameActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("assetKey") final String assetKey) {
-      this.assetId = assetId;
-      this.name = name;
-      this.staged = staged;
+   ProductChangeAssetNameActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged, @JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
       this.variantId = variantId;
       this.sku = sku;
+      this.staged = staged;
+      this.assetId = assetId;
       this.assetKey = assetKey;
+      this.name = name;
       this.action = "changeAssetName";
    }
    public ProductChangeAssetNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
-   public String getAssetId(){
-      return this.assetId;
-   }
-
-
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
-
-
-   public Boolean getStaged(){
-      return this.staged;
-   }
-
-
+   
+   
    public Long getVariantId(){
       return this.variantId;
    }
-
-
+   
+   
    public String getSku(){
       return this.sku;
    }
-
-
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
+   }
+   
+   
+   public String getAssetId(){
+      return this.assetId;
+   }
+   
+   
    public String getAssetKey(){
       return this.assetKey;
    }
-
-   public void setAssetId(final String assetId){
-      this.assetId = assetId;
-   }
-
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
-   }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
    }
 
    public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
-
+   
    public void setSku(final String sku){
       this.sku = sku;
    }
-
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
+   }
+   
+   public void setAssetId(final String assetId){
+      this.assetId = assetId;
+   }
+   
    public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
+   }
+   
+   public void setName(final com.commercetools.api.models.common.LocalizedString name){
+      this.name = name;
    }
 
 }

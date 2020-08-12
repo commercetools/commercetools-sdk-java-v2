@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = StateChangeKeyActionImpl.class)
 public interface StateChangeKeyAction extends StateUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static StateChangeKeyActionImpl of(){
       return new StateChangeKeyActionImpl();
    }
-
+   
 
    public static StateChangeKeyActionImpl of(final StateChangeKeyAction template) {
       StateChangeKeyActionImpl instance = new StateChangeKeyActionImpl();

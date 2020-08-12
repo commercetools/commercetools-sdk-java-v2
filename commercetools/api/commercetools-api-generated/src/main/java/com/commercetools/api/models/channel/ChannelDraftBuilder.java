@@ -18,14 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ChannelDraftBuilder {
    
-   @Nullable
-   private com.commercetools.api.models.common.Address address;
    
-   @Nullable
-   private com.commercetools.api.models.common.GeoJson geoLocation;
-   
-   @Nullable
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   private String key;
    
    @Nullable
    private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
@@ -36,21 +30,17 @@ public final class ChannelDraftBuilder {
    @Nullable
    private com.commercetools.api.models.common.LocalizedString description;
    
+   @Nullable
+   private com.commercetools.api.models.common.Address address;
    
-   private String key;
+   @Nullable
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
    
-   public ChannelDraftBuilder address(@Nullable final com.commercetools.api.models.common.Address address) {
-      this.address = address;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.common.GeoJson geoLocation;
    
-   public ChannelDraftBuilder geoLocation(@Nullable final com.commercetools.api.models.common.GeoJson geoLocation) {
-      this.geoLocation = geoLocation;
-      return this;
-   }
-   
-   public ChannelDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-      this.custom = custom;
+   public ChannelDraftBuilder key( final String key) {
+      this.key = key;
       return this;
    }
    
@@ -69,24 +59,24 @@ public final class ChannelDraftBuilder {
       return this;
    }
    
-   public ChannelDraftBuilder key( final String key) {
-      this.key = key;
+   public ChannelDraftBuilder address(@Nullable final com.commercetools.api.models.common.Address address) {
+      this.address = address;
       return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
+   public ChannelDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+      this.custom = custom;
+      return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.GeoJson getGeoLocation(){
-      return this.geoLocation;
+   public ChannelDraftBuilder geoLocation(@Nullable final com.commercetools.api.models.common.GeoJson geoLocation) {
+      this.geoLocation = geoLocation;
+      return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
+   
+   public String getKey(){
+      return this.key;
    }
    
    @Nullable
@@ -104,13 +94,23 @@ public final class ChannelDraftBuilder {
       return this.description;
    }
    
+   @Nullable
+   public com.commercetools.api.models.common.Address getAddress(){
+      return this.address;
+   }
    
-   public String getKey(){
-      return this.key;
+   @Nullable
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.GeoJson getGeoLocation(){
+      return this.geoLocation;
    }
 
    public ChannelDraft build() {
-       return new ChannelDraftImpl(address, geoLocation, custom, roles, name, description, key);
+       return new ChannelDraftImpl(key, roles, name, description, address, custom, geoLocation);
    }
    
    public static ChannelDraftBuilder of() {
@@ -119,13 +119,13 @@ public final class ChannelDraftBuilder {
    
    public static ChannelDraftBuilder of(final ChannelDraft template) {
       ChannelDraftBuilder builder = new ChannelDraftBuilder();
-      builder.address = template.getAddress();
-      builder.geoLocation = template.getGeoLocation();
-      builder.custom = template.getCustom();
+      builder.key = template.getKey();
       builder.roles = template.getRoles();
       builder.name = template.getName();
       builder.description = template.getDescription();
-      builder.key = template.getKey();
+      builder.address = template.getAddress();
+      builder.custom = template.getCustom();
+      builder.geoLocation = template.getGeoLocation();
       return builder;
    }
    

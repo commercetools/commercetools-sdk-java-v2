@@ -32,9 +32,9 @@ public final class ZoneUpdateActionImpl implements ZoneUpdateAction {
    ZoneUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

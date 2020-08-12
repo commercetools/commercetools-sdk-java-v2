@@ -24,54 +24,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductSetDiscountedPriceActionImpl implements ProductSetDiscountedPriceAction {
 
    private String action;
-
+   
+   private String priceId;
+   
+   private Boolean staged;
+   
    private com.commercetools.api.models.common.DiscountedPrice discounted;
 
-   private Boolean staged;
-
-   private String priceId;
-
    @JsonCreator
-   ProductSetDiscountedPriceActionImpl(@JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted, @JsonProperty("staged") final Boolean staged, @JsonProperty("priceId") final String priceId) {
-      this.discounted = discounted;
-      this.staged = staged;
+   ProductSetDiscountedPriceActionImpl(@JsonProperty("priceId") final String priceId, @JsonProperty("staged") final Boolean staged, @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted) {
       this.priceId = priceId;
+      this.staged = staged;
+      this.discounted = discounted;
       this.action = "setDiscountedPrice";
    }
    public ProductSetDiscountedPriceActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getPriceId(){
+      return this.priceId;
+   }
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
+   }
+   
+   
    public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
       return this.discounted;
    }
 
-
-   public Boolean getStaged(){
-      return this.staged;
+   public void setPriceId(final String priceId){
+      this.priceId = priceId;
    }
-
-
-   public String getPriceId(){
-      return this.priceId;
-   }
-
-   public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted){
-      this.discounted = discounted;
-   }
-
+   
    public void setStaged(final Boolean staged){
       this.staged = staged;
    }
-
-   public void setPriceId(final String priceId){
-      this.priceId = priceId;
+   
+   public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted){
+      this.discounted = discounted;
    }
 
 }

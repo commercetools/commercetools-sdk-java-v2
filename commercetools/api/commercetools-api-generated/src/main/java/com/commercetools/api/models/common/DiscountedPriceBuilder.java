@@ -16,33 +16,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class DiscountedPriceBuilder {
    
    
-   private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
-   
-   
    private com.commercetools.api.models.common.Money value;
    
-   public DiscountedPriceBuilder discount( final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {
-      this.discount = discount;
-      return this;
-   }
+   
+   private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
    
    public DiscountedPriceBuilder value( final com.commercetools.api.models.common.Money value) {
       this.value = value;
       return this;
    }
    
-   
-   public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount(){
-      return this.discount;
+   public DiscountedPriceBuilder discount( final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {
+      this.discount = discount;
+      return this;
    }
    
    
    public com.commercetools.api.models.common.Money getValue(){
       return this.value;
    }
+   
+   
+   public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount(){
+      return this.discount;
+   }
 
    public DiscountedPrice build() {
-       return new DiscountedPriceImpl(discount, value);
+       return new DiscountedPriceImpl(value, discount);
    }
    
    public static DiscountedPriceBuilder of() {
@@ -51,8 +51,8 @@ public final class DiscountedPriceBuilder {
    
    public static DiscountedPriceBuilder of(final DiscountedPrice template) {
       DiscountedPriceBuilder builder = new DiscountedPriceBuilder();
-      builder.discount = template.getDiscount();
       builder.value = template.getValue();
+      builder.discount = template.getDiscount();
       return builder;
    }
    

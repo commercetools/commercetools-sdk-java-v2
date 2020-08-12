@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountChangeRequiresDiscountCodeActionImpl implements CartDiscountChangeRequiresDiscountCodeAction {
 
    private String action;
-
+   
    private Boolean requiresDiscountCode;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class CartDiscountChangeRequiresDiscountCodeActionImpl implements C
       this.action = "changeRequiresDiscountCode";
    }
    public CartDiscountChangeRequiresDiscountCodeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public Boolean getRequiresDiscountCode(){
       return this.requiresDiscountCode;
    }

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOrderAction {
 
    private String action;
-
+   
    private java.util.List<String> assetOrder;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class CategoryChangeAssetOrderActionImpl implements CategoryChangeA
       this.action = "changeAssetOrder";
    }
    public CategoryChangeAssetOrderActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.util.List<String> getAssetOrder(){
       return this.assetOrder;
    }

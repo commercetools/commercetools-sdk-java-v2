@@ -23,63 +23,53 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsUpdatedMessage {
 
-   private java.time.ZonedDateTime createdAt;
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
    private String id;
    
    private Long version;
    
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    private Long sequenceNumber;
    
    private com.commercetools.api.models.common.Reference resource;
    
-   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-   
    private Long resourceVersion;
    
    private String type;
    
+   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   
    private String deliveryId;
    
-   private com.commercetools.api.models.order.ParcelMeasurements measurements;
-   
    private String parcelId;
+   
+   private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
    @JsonCreator
-   ParcelMeasurementsUpdatedMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("deliveryId") final String deliveryId, @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements, @JsonProperty("parcelId") final String parcelId) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   ParcelMeasurementsUpdatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("deliveryId") final String deliveryId, @JsonProperty("parcelId") final String parcelId, @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
+      this.createdBy = createdBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.deliveryId = deliveryId;
-      this.measurements = measurements;
       this.parcelId = parcelId;
+      this.measurements = measurements;
       this.type = "ParcelMeasurementsUpdated";
    }
    public ParcelMeasurementsUpdatedMessageImpl() {
       
-   }
-   
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
    }
    
    
@@ -93,13 +83,23 @@ public final class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasure
    }
    
    
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
+   }
+   
+   
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    
@@ -113,11 +113,6 @@ public final class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasure
    }
    
    
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-   
-   
    public Long getResourceVersion(){
       return this.resourceVersion;
    }
@@ -128,28 +123,25 @@ public final class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasure
    }
    
    
-   public String getDeliveryId(){
-      return this.deliveryId;
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
    }
    
    
-   public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
-      return this.measurements;
+   public String getDeliveryId(){
+      return this.deliveryId;
    }
    
    
    public String getParcelId(){
       return this.parcelId;
    }
+   
+   
+   public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
+      return this.measurements;
+   }
 
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-   
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
-   
    public void setId(final String id){
       this.id = id;
    }
@@ -158,12 +150,20 @@ public final class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasure
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
+   }
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
    }
    
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
+   }
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
    }
    
    public void setSequenceNumber(final Long sequenceNumber){
@@ -174,24 +174,24 @@ public final class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasure
       this.resource = resource;
    }
    
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-   }
-   
    public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
+   }
+   
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
    
    public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
    
-   public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements){
-      this.measurements = measurements;
-   }
-   
    public void setParcelId(final String parcelId){
       this.parcelId = parcelId;
+   }
+   
+   public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements){
+      this.measurements = measurements;
    }
 
 }

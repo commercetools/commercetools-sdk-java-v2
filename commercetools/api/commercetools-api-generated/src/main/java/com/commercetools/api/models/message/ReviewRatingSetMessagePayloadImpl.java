@@ -25,19 +25,19 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
 
    private String type;
    
-   private Integer oldRating;
+   private Double oldRating;
+   
+   private Double newRating;
    
    private Boolean includedInStatistics;
-   
-   private Integer newRating;
    
    private com.commercetools.api.models.common.Reference target;
 
    @JsonCreator
-   ReviewRatingSetMessagePayloadImpl(@JsonProperty("oldRating") final Integer oldRating, @JsonProperty("includedInStatistics") final Boolean includedInStatistics, @JsonProperty("newRating") final Integer newRating, @JsonProperty("target") final com.commercetools.api.models.common.Reference target) {
+   ReviewRatingSetMessagePayloadImpl(@JsonProperty("oldRating") final Double oldRating, @JsonProperty("newRating") final Double newRating, @JsonProperty("includedInStatistics") final Boolean includedInStatistics, @JsonProperty("target") final com.commercetools.api.models.common.Reference target) {
       this.oldRating = oldRating;
-      this.includedInStatistics = includedInStatistics;
       this.newRating = newRating;
+      this.includedInStatistics = includedInStatistics;
       this.target = target;
       this.type = "ReviewRatingSet";
    }
@@ -51,8 +51,13 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
    }
    
    
-   public Integer getOldRating(){
+   public Double getOldRating(){
       return this.oldRating;
+   }
+   
+   
+   public Double getNewRating(){
+      return this.newRating;
    }
    
    
@@ -61,25 +66,20 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
    }
    
    
-   public Integer getNewRating(){
-      return this.newRating;
-   }
-   
-   
    public com.commercetools.api.models.common.Reference getTarget(){
       return this.target;
    }
 
-   public void setOldRating(final Integer oldRating){
+   public void setOldRating(final Double oldRating){
       this.oldRating = oldRating;
+   }
+   
+   public void setNewRating(final Double newRating){
+      this.newRating = newRating;
    }
    
    public void setIncludedInStatistics(final Boolean includedInStatistics){
       this.includedInStatistics = includedInStatistics;
-   }
-   
-   public void setNewRating(final Integer newRating){
-      this.newRating = newRating;
    }
    
    public void setTarget(final com.commercetools.api.models.common.Reference target){

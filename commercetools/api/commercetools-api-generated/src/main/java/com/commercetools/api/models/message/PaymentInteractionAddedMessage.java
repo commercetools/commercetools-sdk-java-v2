@@ -22,31 +22,31 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentInteractionAddedMessageImpl.class)
 public interface PaymentInteractionAddedMessage extends Message {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("interaction")
    public CustomFields getInteraction();
 
    public void setInteraction(final CustomFields interaction);
-
+   
    public static PaymentInteractionAddedMessageImpl of(){
       return new PaymentInteractionAddedMessageImpl();
    }
-
+   
 
    public static PaymentInteractionAddedMessageImpl of(final PaymentInteractionAddedMessage template) {
       PaymentInteractionAddedMessageImpl instance = new PaymentInteractionAddedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setInteraction(template.getInteraction());
       return instance;
    }

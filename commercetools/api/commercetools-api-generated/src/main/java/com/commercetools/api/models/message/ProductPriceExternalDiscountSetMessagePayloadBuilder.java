@@ -15,23 +15,43 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ProductPriceExternalDiscountSetMessagePayloadBuilder {
    
+   
+   private Integer variantId;
+   
+   @Nullable
+   private String variantKey;
+   
+   @Nullable
+   private String sku;
+   
+   
+   private String priceId;
+   
    @Nullable
    private com.commercetools.api.models.common.DiscountedPrice discounted;
    
    
    private Boolean staged;
    
+   public ProductPriceExternalDiscountSetMessagePayloadBuilder variantId( final Integer variantId) {
+      this.variantId = variantId;
+      return this;
+   }
    
-   private Integer variantId;
+   public ProductPriceExternalDiscountSetMessagePayloadBuilder variantKey(@Nullable final String variantKey) {
+      this.variantKey = variantKey;
+      return this;
+   }
    
+   public ProductPriceExternalDiscountSetMessagePayloadBuilder sku(@Nullable final String sku) {
+      this.sku = sku;
+      return this;
+   }
    
-   private String priceId;
-   
-   @Nullable
-   private String sku;
-   
-   @Nullable
-   private String variantKey;
+   public ProductPriceExternalDiscountSetMessagePayloadBuilder priceId( final String priceId) {
+      this.priceId = priceId;
+      return this;
+   }
    
    public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
       this.discounted = discounted;
@@ -43,24 +63,24 @@ public final class ProductPriceExternalDiscountSetMessagePayloadBuilder {
       return this;
    }
    
-   public ProductPriceExternalDiscountSetMessagePayloadBuilder variantId( final Integer variantId) {
-      this.variantId = variantId;
-      return this;
+   
+   public Integer getVariantId(){
+      return this.variantId;
    }
    
-   public ProductPriceExternalDiscountSetMessagePayloadBuilder priceId( final String priceId) {
-      this.priceId = priceId;
-      return this;
+   @Nullable
+   public String getVariantKey(){
+      return this.variantKey;
    }
    
-   public ProductPriceExternalDiscountSetMessagePayloadBuilder sku(@Nullable final String sku) {
-      this.sku = sku;
-      return this;
+   @Nullable
+   public String getSku(){
+      return this.sku;
    }
    
-   public ProductPriceExternalDiscountSetMessagePayloadBuilder variantKey(@Nullable final String variantKey) {
-      this.variantKey = variantKey;
-      return this;
+   
+   public String getPriceId(){
+      return this.priceId;
    }
    
    @Nullable
@@ -72,29 +92,9 @@ public final class ProductPriceExternalDiscountSetMessagePayloadBuilder {
    public Boolean getStaged(){
       return this.staged;
    }
-   
-   
-   public Integer getVariantId(){
-      return this.variantId;
-   }
-   
-   
-   public String getPriceId(){
-      return this.priceId;
-   }
-   
-   @Nullable
-   public String getSku(){
-      return this.sku;
-   }
-   
-   @Nullable
-   public String getVariantKey(){
-      return this.variantKey;
-   }
 
    public ProductPriceExternalDiscountSetMessagePayload build() {
-       return new ProductPriceExternalDiscountSetMessagePayloadImpl(discounted, staged, variantId, priceId, sku, variantKey);
+       return new ProductPriceExternalDiscountSetMessagePayloadImpl(variantId, variantKey, sku, priceId, discounted, staged);
    }
    
    public static ProductPriceExternalDiscountSetMessagePayloadBuilder of() {
@@ -103,12 +103,12 @@ public final class ProductPriceExternalDiscountSetMessagePayloadBuilder {
    
    public static ProductPriceExternalDiscountSetMessagePayloadBuilder of(final ProductPriceExternalDiscountSetMessagePayload template) {
       ProductPriceExternalDiscountSetMessagePayloadBuilder builder = new ProductPriceExternalDiscountSetMessagePayloadBuilder();
+      builder.variantId = template.getVariantId();
+      builder.variantKey = template.getVariantKey();
+      builder.sku = template.getSku();
+      builder.priceId = template.getPriceId();
       builder.discounted = template.getDiscounted();
       builder.staged = template.getStaged();
-      builder.variantId = template.getVariantId();
-      builder.priceId = template.getPriceId();
-      builder.sku = template.getSku();
-      builder.variantKey = template.getVariantKey();
       return builder;
    }
    

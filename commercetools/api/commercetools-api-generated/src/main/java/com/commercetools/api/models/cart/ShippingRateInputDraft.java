@@ -16,8 +16,8 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.api.models.cart.ClassificationShippingRateInputDraftImpl.class, name = "Classification"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.cart.ScoreShippingRateInputDraftImpl.class, name = "Score")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart.ScoreShippingRateInputDraftImpl.class, name = "Score"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart.ClassificationShippingRateInputDraftImpl.class, name = "Classification")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,
@@ -32,7 +32,7 @@ import java.io.IOException;
 public interface ShippingRateInputDraft  {
 
 
-
+   
 
 
 }

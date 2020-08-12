@@ -57,9 +57,9 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
    public static OrderAddParcelToDeliveryActionImpl of(final OrderAddParcelToDeliveryAction template) {
       OrderAddParcelToDeliveryActionImpl instance = new OrderAddParcelToDeliveryActionImpl();
       instance.setDeliveryId(template.getDeliveryId());
-      instance.setItems(template.getItems());
-      instance.setTrackingData(template.getTrackingData());
       instance.setMeasurements(template.getMeasurements());
+      instance.setTrackingData(template.getTrackingData());
+      instance.setItems(template.getItems());
       return instance;
    }
 

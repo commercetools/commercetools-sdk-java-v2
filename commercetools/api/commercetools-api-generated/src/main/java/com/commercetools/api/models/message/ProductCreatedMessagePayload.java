@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductCreatedMessagePayloadImpl.class)
 public interface ProductCreatedMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("productProjection")
    public ProductProjection getProductProjection();
 
    public void setProductProjection(final ProductProjection productProjection);
-
+   
    public static ProductCreatedMessagePayloadImpl of(){
       return new ProductCreatedMessagePayloadImpl();
    }
-
+   
 
    public static ProductCreatedMessagePayloadImpl of(final ProductCreatedMessagePayload template) {
       ProductCreatedMessagePayloadImpl instance = new ProductCreatedMessagePayloadImpl();

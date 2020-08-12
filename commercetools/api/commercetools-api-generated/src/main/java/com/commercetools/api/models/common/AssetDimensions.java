@@ -21,23 +21,23 @@ import java.io.IOException;
 @JsonDeserialize(as = AssetDimensionsImpl.class)
 public interface AssetDimensions  {
 
-
+   
    @NotNull
    @JsonProperty("w")
    public Integer getW();
-
+   
    @NotNull
    @JsonProperty("h")
    public Integer getH();
 
    public void setW(final Integer w);
-
+   
    public void setH(final Integer h);
-
+   
    public static AssetDimensionsImpl of(){
       return new AssetDimensionsImpl();
    }
-
+   
 
    public static AssetDimensionsImpl of(final AssetDimensions template) {
       AssetDimensionsImpl instance = new AssetDimensionsImpl();

@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum LineItemPriceMode {
 
-
+  
   @JsonProperty("Platform")
   PLATFORM("Platform"),
-
-
+  
+  
   @JsonProperty("ExternalTotal")
   EXTERNAL_TOTAL("ExternalTotal"),
-
-
+  
+  
   @JsonProperty("ExternalPrice")
   EXTERNAL_PRICE("ExternalPrice");
 

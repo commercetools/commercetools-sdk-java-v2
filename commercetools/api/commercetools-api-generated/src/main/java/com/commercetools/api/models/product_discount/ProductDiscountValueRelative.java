@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountValueRelativeImpl.class)
 public interface ProductDiscountValueRelative extends ProductDiscountValue {
 
-
+   
    @NotNull
    @JsonProperty("permyriad")
    public Long getPermyriad();
 
    public void setPermyriad(final Long permyriad);
-
+   
    public static ProductDiscountValueRelativeImpl of(){
       return new ProductDiscountValueRelativeImpl();
    }
-
+   
 
    public static ProductDiscountValueRelativeImpl of(final ProductDiscountValueRelative template) {
       ProductDiscountValueRelativeImpl instance = new ProductDiscountValueRelativeImpl();

@@ -50,8 +50,8 @@ public interface MyCartSetLineItemCustomTypeAction extends MyCartUpdateAction {
    public static MyCartSetLineItemCustomTypeActionImpl of(final MyCartSetLineItemCustomTypeAction template) {
       MyCartSetLineItemCustomTypeActionImpl instance = new MyCartSetLineItemCustomTypeActionImpl();
       instance.setLineItemId(template.getLineItemId());
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

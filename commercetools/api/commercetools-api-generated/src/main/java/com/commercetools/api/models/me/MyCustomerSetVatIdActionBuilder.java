@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyCustomerSetVatIdActionBuilder {
-
+   
    @Nullable
    private String vatId;
-
+   
    public MyCustomerSetVatIdActionBuilder vatId(@Nullable final String vatId) {
       this.vatId = vatId;
       return this;
    }
-
+   
    @Nullable
    public String getVatId(){
       return this.vatId;
@@ -30,15 +30,15 @@ public final class MyCustomerSetVatIdActionBuilder {
    public MyCustomerSetVatIdAction build() {
        return new MyCustomerSetVatIdActionImpl(vatId);
    }
-
+   
    public static MyCustomerSetVatIdActionBuilder of() {
       return new MyCustomerSetVatIdActionBuilder();
    }
-
+   
    public static MyCustomerSetVatIdActionBuilder of(final MyCustomerSetVatIdAction template) {
       MyCustomerSetVatIdActionBuilder builder = new MyCustomerSetVatIdActionBuilder();
       builder.vatId = template.getVatId();
       return builder;
    }
-
+   
 }

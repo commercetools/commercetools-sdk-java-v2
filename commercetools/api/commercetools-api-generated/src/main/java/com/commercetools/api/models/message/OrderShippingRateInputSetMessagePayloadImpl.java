@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippingRateInputSetMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
-
+   
    private com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderS
       this.type = "OrderShippingRateInputSet";
    }
    public OrderShippingRateInputSetMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput(){
       return this.shippingRateInput;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.ShippingRateInput getOldShippingRateInput(){
       return this.oldShippingRateInput;
    }
@@ -57,7 +57,7 @@ public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderS
    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput){
       this.shippingRateInput = shippingRateInput;
    }
-
+   
    public void setOldShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput){
       this.oldShippingRateInput = oldShippingRateInput;
    }

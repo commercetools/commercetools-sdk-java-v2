@@ -31,11 +31,11 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
    public CustomerResourceIdentifier getCustomer();
 
    public void setCustomer(final CustomerResourceIdentifier customer);
-
+   
    public static ReviewSetCustomerActionImpl of(){
       return new ReviewSetCustomerActionImpl();
    }
-
+   
 
    public static ReviewSetCustomerActionImpl of(final ReviewSetCustomerAction template) {
       ReviewSetCustomerActionImpl instance = new ReviewSetCustomerActionImpl();

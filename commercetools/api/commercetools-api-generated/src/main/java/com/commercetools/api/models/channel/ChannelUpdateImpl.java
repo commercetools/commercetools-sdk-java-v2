@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelUpdateImpl implements ChannelUpdate {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   ChannelUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   ChannelUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public ChannelUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPriceAction {
 
    private String action;
-
+   
    private String lineItemId;
-
+   
    private com.commercetools.api.models.common.Money externalPrice;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPric
       this.action = "setLineItemPrice";
    }
    public CartSetLineItemPriceActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Money getExternalPrice(){
       return this.externalPrice;
    }
@@ -57,7 +57,7 @@ public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPric
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
-
+   
    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice){
       this.externalPrice = externalPrice;
    }

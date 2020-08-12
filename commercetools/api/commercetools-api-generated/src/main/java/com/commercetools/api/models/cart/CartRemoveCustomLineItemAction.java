@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CartRemoveCustomLineItemActionImpl.class)
 public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("customLineItemId")
    public String getCustomLineItemId();
 
    public void setCustomLineItemId(final String customLineItemId);
-
+   
    public static CartRemoveCustomLineItemActionImpl of(){
       return new CartRemoveCustomLineItemActionImpl();
    }
-
+   
 
    public static CartRemoveCustomLineItemActionImpl of(final CartRemoveCustomLineItemAction template) {
       CartRemoveCustomLineItemActionImpl instance = new CartRemoveCustomLineItemActionImpl();

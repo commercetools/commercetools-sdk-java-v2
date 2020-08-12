@@ -32,11 +32,11 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
    public JsonNode getTarget();
 
    public void setTarget(final JsonNode target);
-
+   
    public static ReviewSetTargetActionImpl of(){
       return new ReviewSetTargetActionImpl();
    }
-
+   
 
    public static ReviewSetTargetActionImpl of(final ReviewSetTargetAction template) {
       ReviewSetTargetActionImpl instance = new ReviewSetTargetActionImpl();

@@ -29,9 +29,9 @@ public final class ShippingRateInputImpl implements ShippingRateInput {
    ShippingRateInputImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

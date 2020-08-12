@@ -113,17 +113,17 @@ public interface ReviewDraft  {
 
    public static ReviewDraftImpl of(final ReviewDraft template) {
       ReviewDraftImpl instance = new ReviewDraftImpl();
-      instance.setUniquenessValue(template.getUniquenessValue());
-      instance.setAuthorName(template.getAuthorName());
-      instance.setCustom(template.getCustom());
-      instance.setRating(template.getRating());
-      instance.setState(template.getState());
-      instance.setText(template.getText());
-      instance.setTitle(template.getTitle());
-      instance.setLocale(template.getLocale());
       instance.setKey(template.getKey());
-      instance.setCustomer(template.getCustomer());
+      instance.setUniquenessValue(template.getUniquenessValue());
+      instance.setLocale(template.getLocale());
+      instance.setAuthorName(template.getAuthorName());
+      instance.setTitle(template.getTitle());
+      instance.setText(template.getText());
       instance.setTarget(template.getTarget());
+      instance.setState(template.getState());
+      instance.setRating(template.getRating());
+      instance.setCustomer(template.getCustomer());
+      instance.setCustom(template.getCustom());
       return instance;
    }
 

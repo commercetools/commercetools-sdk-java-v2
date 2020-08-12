@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyShoppingListChangeTextLineItemNameActionImpl implements MyShoppingListChangeTextLineItemNameAction {
 
    private String action;
-
+   
+   private String textLineItemId;
+   
    private com.commercetools.api.models.common.LocalizedString name;
 
-   private String textLineItemId;
-
    @JsonCreator
-   MyShoppingListChangeTextLineItemNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("textLineItemId") final String textLineItemId) {
-      this.name = name;
+   MyShoppingListChangeTextLineItemNameActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
       this.textLineItemId = textLineItemId;
+      this.name = name;
       this.action = "changeTextLineItemName";
    }
    public MyShoppingListChangeTextLineItemNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getTextLineItemId(){
+      return this.textLineItemId;
+   }
+   
+   
    public com.commercetools.api.models.common.LocalizedString getName(){
       return this.name;
    }
 
-
-   public String getTextLineItemId(){
-      return this.textLineItemId;
-   }
-
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
-   }
-
    public void setTextLineItemId(final String textLineItemId){
       this.textLineItemId = textLineItemId;
+   }
+   
+   public void setName(final com.commercetools.api.models.common.LocalizedString name){
+      this.name = name;
    }
 
 }

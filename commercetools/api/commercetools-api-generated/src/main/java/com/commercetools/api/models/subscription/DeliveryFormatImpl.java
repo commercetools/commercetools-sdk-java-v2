@@ -29,9 +29,9 @@ public final class DeliveryFormatImpl implements DeliveryFormat {
    DeliveryFormatImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute {
 
    private String type;
-
+   
    private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbs
       this.type = "absolute";
    }
    public CartDiscountValueAbsoluteImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.common.TypedMoney> getMoney(){
       return this.money;
    }

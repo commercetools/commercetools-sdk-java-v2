@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionChangeTriggersActionImpl.class)
 public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("triggers")
    public List<ExtensionTrigger> getTriggers();
 
    public void setTriggers(final List<ExtensionTrigger> triggers);
-
+   
    public static ExtensionChangeTriggersActionImpl of(){
       return new ExtensionChangeTriggersActionImpl();
    }
-
+   
 
    public static ExtensionChangeTriggersActionImpl of(final ExtensionChangeTriggersAction template) {
       ExtensionChangeTriggersActionImpl instance = new ExtensionChangeTriggersActionImpl();

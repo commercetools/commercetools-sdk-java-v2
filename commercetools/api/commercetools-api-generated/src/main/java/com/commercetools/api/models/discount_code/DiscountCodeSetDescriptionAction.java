@@ -30,11 +30,11 @@ public interface DiscountCodeSetDescriptionAction extends DiscountCodeUpdateActi
    public LocalizedString getDescription();
 
    public void setDescription(final LocalizedString description);
-
+   
    public static DiscountCodeSetDescriptionActionImpl of(){
       return new DiscountCodeSetDescriptionActionImpl();
    }
-
+   
 
    public static DiscountCodeSetDescriptionActionImpl of(final DiscountCodeSetDescriptionAction template) {
       DiscountCodeSetDescriptionActionImpl instance = new DiscountCodeSetDescriptionActionImpl();

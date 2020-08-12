@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InventoryEntryReferenceImpl implements InventoryEntryReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.inventory.InventoryEntry obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class InventoryEntryReferenceImpl implements InventoryEntryReferenc
       this.typeId = ReferenceTypeId.findEnumViaJsonName("inventory-entry").get();
    }
    public InventoryEntryReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.inventory.InventoryEntry getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class InventoryEntryReferenceImpl implements InventoryEntryReferenc
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.inventory.InventoryEntry obj){
       this.obj = obj;
    }

@@ -43,8 +43,8 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
 
    public static MyCartSetShippingMethodActionImpl of(final MyCartSetShippingMethodAction template) {
       MyCartSetShippingMethodActionImpl instance = new MyCartSetShippingMethodActionImpl();
-      instance.setExternalTaxRate(template.getExternalTaxRate());
       instance.setShippingMethod(template.getShippingMethod());
+      instance.setExternalTaxRate(template.getExternalTaxRate());
       return instance;
    }
 

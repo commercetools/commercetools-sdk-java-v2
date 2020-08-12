@@ -1,9 +1,9 @@
 package com.commercetools.api.models.shopping_list;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.shopping_list.ShoppingListLineItem;
 import com.commercetools.api.models.shopping_list.TextLineItem;
@@ -23,37 +23,37 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class MyShoppingListBuilder {
    
    
-   private java.time.ZonedDateTime createdAt;
-   
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   
    private String id;
    
    
    private Long version;
    
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
    
    @Nullable
-   private String anonymousId;
-   
-   @Nullable
-   private java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems;
-   
-   @Nullable
-   private Long deleteDaysAfterLastModification;
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    @Nullable
    private com.commercetools.api.models.type.CustomFields custom;
    
    @Nullable
+   private com.commercetools.api.models.customer.CustomerReference customer;
+   
+   @Nullable
+   private Long deleteDaysAfterLastModification;
+   
+   @Nullable
    private com.commercetools.api.models.common.LocalizedString description;
+   
+   @Nullable
+   private String key;
    
    @Nullable
    private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems;
@@ -65,20 +65,10 @@ public final class MyShoppingListBuilder {
    private com.commercetools.api.models.common.LocalizedString slug;
    
    @Nullable
-   private String key;
+   private java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems;
    
    @Nullable
-   private com.commercetools.api.models.customer.CustomerReference customer;
-   
-   public MyShoppingListBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-   
-   public MyShoppingListBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
+   private String anonymousId;
    
    public MyShoppingListBuilder id( final String id) {
       this.id = id;
@@ -90,8 +80,13 @@ public final class MyShoppingListBuilder {
       return this;
    }
    
-   public MyShoppingListBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   public MyShoppingListBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
+      return this;
+   }
+   
+   public MyShoppingListBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
       return this;
    }
    
@@ -100,18 +95,8 @@ public final class MyShoppingListBuilder {
       return this;
    }
    
-   public MyShoppingListBuilder anonymousId(@Nullable final String anonymousId) {
-      this.anonymousId = anonymousId;
-      return this;
-   }
-   
-   public MyShoppingListBuilder textLineItems(@Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems) {
-      this.textLineItems = textLineItems;
-      return this;
-   }
-   
-   public MyShoppingListBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
-      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+   public MyShoppingListBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
       return this;
    }
    
@@ -120,8 +105,23 @@ public final class MyShoppingListBuilder {
       return this;
    }
    
+   public MyShoppingListBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
+      this.customer = customer;
+      return this;
+   }
+   
+   public MyShoppingListBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
+      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+      return this;
+   }
+   
    public MyShoppingListBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
       this.description = description;
+      return this;
+   }
+   
+   public MyShoppingListBuilder key(@Nullable final String key) {
+      this.key = key;
       return this;
    }
    
@@ -140,24 +140,14 @@ public final class MyShoppingListBuilder {
       return this;
    }
    
-   public MyShoppingListBuilder key(@Nullable final String key) {
-      this.key = key;
+   public MyShoppingListBuilder textLineItems(@Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems) {
+      this.textLineItems = textLineItems;
       return this;
    }
    
-   public MyShoppingListBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
-      this.customer = customer;
+   public MyShoppingListBuilder anonymousId(@Nullable final String anonymousId) {
+      this.anonymousId = anonymousId;
       return this;
-   }
-   
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
    }
    
    
@@ -170,9 +160,14 @@ public final class MyShoppingListBuilder {
       return this.version;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    @Nullable
@@ -181,18 +176,8 @@ public final class MyShoppingListBuilder {
    }
    
    @Nullable
-   public String getAnonymousId(){
-      return this.anonymousId;
-   }
-   
-   @Nullable
-   public java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> getTextLineItems(){
-      return this.textLineItems;
-   }
-   
-   @Nullable
-   public Long getDeleteDaysAfterLastModification(){
-      return this.deleteDaysAfterLastModification;
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    @Nullable
@@ -201,8 +186,23 @@ public final class MyShoppingListBuilder {
    }
    
    @Nullable
+   public com.commercetools.api.models.customer.CustomerReference getCustomer(){
+      return this.customer;
+   }
+   
+   @Nullable
+   public Long getDeleteDaysAfterLastModification(){
+      return this.deleteDaysAfterLastModification;
+   }
+   
+   @Nullable
    public com.commercetools.api.models.common.LocalizedString getDescription(){
       return this.description;
+   }
+   
+   @Nullable
+   public String getKey(){
+      return this.key;
    }
    
    @Nullable
@@ -221,17 +221,17 @@ public final class MyShoppingListBuilder {
    }
    
    @Nullable
-   public String getKey(){
-      return this.key;
+   public java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> getTextLineItems(){
+      return this.textLineItems;
    }
    
    @Nullable
-   public com.commercetools.api.models.customer.CustomerReference getCustomer(){
-      return this.customer;
+   public String getAnonymousId(){
+      return this.anonymousId;
    }
 
    public MyShoppingList build() {
-       return new MyShoppingListImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, anonymousId, textLineItems, deleteDaysAfterLastModification, custom, description, lineItems, name, slug, key, customer);
+       return new MyShoppingListImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, custom, customer, deleteDaysAfterLastModification, description, key, lineItems, name, slug, textLineItems, anonymousId);
    }
    
    public static MyShoppingListBuilder of() {
@@ -240,22 +240,22 @@ public final class MyShoppingListBuilder {
    
    public static MyShoppingListBuilder of(final MyShoppingList template) {
       MyShoppingListBuilder builder = new MyShoppingListBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
-      builder.anonymousId = template.getAnonymousId();
-      builder.textLineItems = template.getTextLineItems();
-      builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+      builder.createdBy = template.getCreatedBy();
       builder.custom = template.getCustom();
+      builder.customer = template.getCustomer();
+      builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
       builder.description = template.getDescription();
+      builder.key = template.getKey();
       builder.lineItems = template.getLineItems();
       builder.name = template.getName();
       builder.slug = template.getSlug();
-      builder.key = template.getKey();
-      builder.customer = template.getCustomer();
+      builder.textLineItems = template.getTextLineItems();
+      builder.anonymousId = template.getAnonymousId();
       return builder;
    }
    

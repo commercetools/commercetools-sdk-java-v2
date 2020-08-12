@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderShippingInfoSetMessagePayloadImpl.class)
 public interface OrderShippingInfoSetMessagePayload extends MessagePayload {
 
-
+   
    @Valid
    @JsonProperty("shippingInfo")
    public ShippingInfo getShippingInfo();
-
+   
    @Valid
    @JsonProperty("oldShippingInfo")
    public ShippingInfo getOldShippingInfo();
 
    public void setShippingInfo(final ShippingInfo shippingInfo);
-
+   
    public void setOldShippingInfo(final ShippingInfo oldShippingInfo);
-
+   
    public static OrderShippingInfoSetMessagePayloadImpl of(){
       return new OrderShippingInfoSetMessagePayloadImpl();
    }
-
+   
 
    public static OrderShippingInfoSetMessagePayloadImpl of(final OrderShippingInfoSetMessagePayload template) {
       OrderShippingInfoSetMessagePayloadImpl instance = new OrderShippingInfoSetMessagePayloadImpl();

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class PaymentSetCustomerActionImpl implements PaymentSetCustomerAct
       this.action = "setCustomer";
    }
    public PaymentSetCustomerActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>A reference to the customer this payment belongs to.</p>
    */

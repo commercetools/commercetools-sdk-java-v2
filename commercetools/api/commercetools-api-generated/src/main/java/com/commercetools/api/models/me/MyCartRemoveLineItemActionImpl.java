@@ -26,78 +26,78 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemAction {
 
    private String action;
-
-   private Integer quantity;
-
-   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-
+   
    private String lineItemId;
-
+   
+   private Double quantity;
+   
+   private com.commercetools.api.models.common.Money externalPrice;
+   
+   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
+   
    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
 
-   private com.commercetools.api.models.common.Money externalPrice;
-
    @JsonCreator
-   MyCartRemoveLineItemActionImpl(@JsonProperty("quantity") final Integer quantity, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("shippingDetailsToRemove") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice) {
-      this.quantity = quantity;
-      this.externalTotalPrice = externalTotalPrice;
+   MyCartRemoveLineItemActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Double quantity, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("shippingDetailsToRemove") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {
       this.lineItemId = lineItemId;
-      this.shippingDetailsToRemove = shippingDetailsToRemove;
+      this.quantity = quantity;
       this.externalPrice = externalPrice;
+      this.externalTotalPrice = externalTotalPrice;
+      this.shippingDetailsToRemove = shippingDetailsToRemove;
       this.action = "removeLineItem";
    }
    public MyCartRemoveLineItemActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
-   public Integer getQuantity(){
-      return this.quantity;
-   }
-
-
-   public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
-      return this.externalTotalPrice;
-   }
-
-
+   
+   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
-
-   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetailsToRemove(){
-      return this.shippingDetailsToRemove;
+   
+   
+   public Double getQuantity(){
+      return this.quantity;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Money getExternalPrice(){
       return this.externalPrice;
    }
-
-   public void setQuantity(final Integer quantity){
-      this.quantity = quantity;
+   
+   
+   public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+      return this.externalTotalPrice;
    }
-
-   public void setExternalTotalPrice(final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
-      this.externalTotalPrice = externalTotalPrice;
+   
+   
+   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetailsToRemove(){
+      return this.shippingDetailsToRemove;
    }
 
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
-
-   public void setShippingDetailsToRemove(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove){
-      this.shippingDetailsToRemove = shippingDetailsToRemove;
+   
+   public void setQuantity(final Double quantity){
+      this.quantity = quantity;
    }
-
+   
    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice){
       this.externalPrice = externalPrice;
+   }
+   
+   public void setExternalTotalPrice(final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
+      this.externalTotalPrice = externalTotalPrice;
+   }
+   
+   public void setShippingDetailsToRemove(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove){
+      this.shippingDetailsToRemove = shippingDetailsToRemove;
    }
 
 }

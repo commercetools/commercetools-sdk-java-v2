@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetLocaleActionImpl.class)
 public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
 
-
-
+   
+   
    @JsonProperty("locale")
    public String getLocale();
 
    public void setLocale(final String locale);
-
+   
    public static StagedOrderSetLocaleActionImpl of(){
       return new StagedOrderSetLocaleActionImpl();
    }
-
+   
 
    public static StagedOrderSetLocaleActionImpl of(final StagedOrderSetLocaleAction template) {
       StagedOrderSetLocaleActionImpl instance = new StagedOrderSetLocaleActionImpl();

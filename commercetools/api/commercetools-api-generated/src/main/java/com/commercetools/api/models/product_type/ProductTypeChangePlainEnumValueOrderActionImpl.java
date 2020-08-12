@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeChangePlainEnumValueOrderActionImpl implements ProductTypeChangePlainEnumValueOrderAction {
 
    private String action;
-
+   
+   private String attributeName;
+   
    private java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values;
 
-   private String attributeName;
-
    @JsonCreator
-   ProductTypeChangePlainEnumValueOrderActionImpl(@JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values, @JsonProperty("attributeName") final String attributeName) {
-      this.values = values;
+   ProductTypeChangePlainEnumValueOrderActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
       this.attributeName = attributeName;
+      this.values = values;
       this.action = "changePlainEnumValueOrder";
    }
    public ProductTypeChangePlainEnumValueOrderActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getAttributeName(){
+      return this.attributeName;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues(){
       return this.values;
    }
 
-
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-
-   public void setValues(final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values){
-      this.values = values;
-   }
-
    public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
+   }
+   
+   public void setValues(final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values){
+      this.values = values;
    }
 
 }

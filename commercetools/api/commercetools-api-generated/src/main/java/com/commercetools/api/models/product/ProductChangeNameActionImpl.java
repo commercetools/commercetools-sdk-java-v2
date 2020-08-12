@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductChangeNameActionImpl implements ProductChangeNameAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.LocalizedString name;
-
+   
    private Boolean staged;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class ProductChangeNameActionImpl implements ProductChangeNameActio
       this.action = "changeName";
    }
    public ProductChangeNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getName(){
       return this.name;
    }
-
-
+   
+   
    public Boolean getStaged(){
       return this.staged;
    }
@@ -57,7 +57,7 @@ public final class ProductChangeNameActionImpl implements ProductChangeNameActio
    public void setName(final com.commercetools.api.models.common.LocalizedString name){
       this.name = name;
    }
-
+   
    public void setStaged(final Boolean staged){
       this.staged = staged;
    }

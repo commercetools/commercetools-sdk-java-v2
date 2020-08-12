@@ -24,26 +24,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductDiscountSetValidFromAndUntilActionImpl implements ProductDiscountSetValidFromAndUntilAction {
 
    private String action;
-
+   
+   private java.time.ZonedDateTime validFrom;
+   
    private java.time.ZonedDateTime validUntil;
 
-   private java.time.ZonedDateTime validFrom;
-
    @JsonCreator
-   ProductDiscountSetValidFromAndUntilActionImpl(@JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom) {
-      this.validUntil = validUntil;
+   ProductDiscountSetValidFromAndUntilActionImpl(@JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
       this.validFrom = validFrom;
+      this.validUntil = validUntil;
       this.action = "setValidFromAndUntil";
    }
    public ProductDiscountSetValidFromAndUntilActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
+   
+   public java.time.ZonedDateTime getValidFrom(){
+      return this.validFrom;
+   }
+   
    /**
    *  <p>The timeframe for which the discount should be effective.
    *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
@@ -52,17 +57,12 @@ public final class ProductDiscountSetValidFromAndUntilActionImpl implements Prod
       return this.validUntil;
    }
 
-
-   public java.time.ZonedDateTime getValidFrom(){
-      return this.validFrom;
-   }
-
-   public void setValidUntil(final java.time.ZonedDateTime validUntil){
-      this.validUntil = validUntil;
-   }
-
    public void setValidFrom(final java.time.ZonedDateTime validFrom){
       this.validFrom = validFrom;
+   }
+   
+   public void setValidUntil(final java.time.ZonedDateTime validUntil){
+      this.validUntil = validUntil;
    }
 
 }

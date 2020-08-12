@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -38,12 +40,14 @@ public class ByProjectKeyProductsGet {
    private List<String> priceCountry = new ArrayList<>();
    private List<String> priceCustomerGroup = new ArrayList<>();
    private List<String> priceChannel = new ArrayList<>();
+   private List<String> localeProjection = new ArrayList<>();
+   private List<String> storeProjection = new ArrayList<>();
    private List<String> expand = new ArrayList<>();
-   private List<String> where = new ArrayList<>();
    private List<String> sort = new ArrayList<>();
-   private List<Integer> limit = new ArrayList<>();
-   private List<Integer> offset = new ArrayList<>();
+   private List<Double> limit = new ArrayList<>();
+   private List<Double> offset = new ArrayList<>();
    private List<Boolean> withTotal = new ArrayList<>();
+   private List<String> where = new ArrayList<>();
    private String projectKey;
    
    
@@ -59,12 +63,14 @@ public class ByProjectKeyProductsGet {
       params.add(this.priceCountry.stream().map(s -> "priceCountry=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.priceCustomerGroup.stream().map(s -> "priceCustomerGroup=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.priceChannel.stream().map(s -> "priceChannel=" + urlEncode(s)).collect(Collectors.joining("&")));
+      params.add(this.localeProjection.stream().map(s -> "localeProjection=" + urlEncode(s)).collect(Collectors.joining("&")));
+      params.add(this.storeProjection.stream().map(s -> "storeProjection=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.expand.stream().map(s -> "expand=" + urlEncode(s)).collect(Collectors.joining("&")));
-      params.add(this.where.stream().map(s -> "where=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.sort.stream().map(s -> "sort=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.limit.stream().map(s -> "limit=" + s).collect(Collectors.joining("&")));
       params.add(this.offset.stream().map(s -> "offset=" + s).collect(Collectors.joining("&")));
       params.add(this.withTotal.stream().map(s -> "withTotal=" + s).collect(Collectors.joining("&")));
+      params.add(this.where.stream().map(s -> "where=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
       params.removeIf(String::isEmpty);
       String httpRequestPath = String.format("/%s/products", this.projectKey);
@@ -114,28 +120,36 @@ public class ByProjectKeyProductsGet {
       return this.priceChannel;
    }
    
-   public List<String> getExpand() {
-      return this.expand;
+   public List<String> getLocaleProjection() {
+      return this.localeProjection;
    }
    
-   public List<String> getWhere() {
-      return this.where;
+   public List<String> getStoreProjection() {
+      return this.storeProjection;
+   }
+   
+   public List<String> getExpand() {
+      return this.expand;
    }
    
    public List<String> getSort() {
       return this.sort;
    }
    
-   public List<Integer> getLimit() {
+   public List<Double> getLimit() {
       return this.limit;
    }
    
-   public List<Integer> getOffset() {
+   public List<Double> getOffset() {
       return this.offset;
    }
    
    public List<Boolean> getWithTotal() {
       return this.withTotal;
+   }
+   
+   public List<String> getWhere() {
+      return this.where;
    }
    
    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
@@ -180,6 +194,26 @@ public class ByProjectKeyProductsGet {
       return this;
    }
    
+   public ByProjectKeyProductsGet addLocaleProjection(final String localeProjection){
+      this.localeProjection.add(localeProjection);
+      return this;
+   }
+   
+   public ByProjectKeyProductsGet withLocaleProjection(final List<String> localeProjection){
+      this.localeProjection = localeProjection;
+      return this;
+   }
+   
+   public ByProjectKeyProductsGet addStoreProjection(final String storeProjection){
+      this.storeProjection.add(storeProjection);
+      return this;
+   }
+   
+   public ByProjectKeyProductsGet withStoreProjection(final List<String> storeProjection){
+      this.storeProjection = storeProjection;
+      return this;
+   }
+   
    public ByProjectKeyProductsGet addExpand(final String expand){
       this.expand.add(expand);
       return this;
@@ -187,16 +221,6 @@ public class ByProjectKeyProductsGet {
    
    public ByProjectKeyProductsGet withExpand(final List<String> expand){
       this.expand = expand;
-      return this;
-   }
-   
-   public ByProjectKeyProductsGet addWhere(final String where){
-      this.where.add(where);
-      return this;
-   }
-   
-   public ByProjectKeyProductsGet withWhere(final List<String> where){
-      this.where = where;
       return this;
    }
    
@@ -210,22 +234,22 @@ public class ByProjectKeyProductsGet {
       return this;
    }
    
-   public ByProjectKeyProductsGet addLimit(final Integer limit){
+   public ByProjectKeyProductsGet addLimit(final Double limit){
       this.limit.add(limit);
       return this;
    }
    
-   public ByProjectKeyProductsGet withLimit(final List<Integer> limit){
+   public ByProjectKeyProductsGet withLimit(final List<Double> limit){
       this.limit = limit;
       return this;
    }
    
-   public ByProjectKeyProductsGet addOffset(final Integer offset){
+   public ByProjectKeyProductsGet addOffset(final Double offset){
       this.offset.add(offset);
       return this;
    }
    
-   public ByProjectKeyProductsGet withOffset(final List<Integer> offset){
+   public ByProjectKeyProductsGet withOffset(final List<Double> offset){
       this.offset = offset;
       return this;
    }
@@ -237,6 +261,16 @@ public class ByProjectKeyProductsGet {
    
    public ByProjectKeyProductsGet withWithTotal(final List<Boolean> withTotal){
       this.withTotal = withTotal;
+      return this;
+   }
+   
+   public ByProjectKeyProductsGet addWhere(final String where){
+      this.where.add(where);
+      return this;
+   }
+   
+   public ByProjectKeyProductsGet withWhere(final List<String> where){
+      this.where = where;
       return this;
    }
    

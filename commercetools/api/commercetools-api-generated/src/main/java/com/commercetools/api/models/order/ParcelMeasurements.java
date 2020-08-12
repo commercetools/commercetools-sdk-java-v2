@@ -21,42 +21,42 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelMeasurementsImpl.class)
 public interface ParcelMeasurements  {
 
-
-
+   
+   
    @JsonProperty("heightInMillimeter")
-   public Integer getHeightInMillimeter();
-
-
+   public Double getHeightInMillimeter();
+   
+   
    @JsonProperty("lengthInMillimeter")
-   public Integer getLengthInMillimeter();
-
-
+   public Double getLengthInMillimeter();
+   
+   
    @JsonProperty("widthInMillimeter")
-   public Integer getWidthInMillimeter();
-
-
+   public Double getWidthInMillimeter();
+   
+   
    @JsonProperty("weightInGram")
-   public Integer getWeightInGram();
+   public Double getWeightInGram();
 
-   public void setHeightInMillimeter(final Integer heightInMillimeter);
-
-   public void setLengthInMillimeter(final Integer lengthInMillimeter);
-
-   public void setWidthInMillimeter(final Integer widthInMillimeter);
-
-   public void setWeightInGram(final Integer weightInGram);
-
+   public void setHeightInMillimeter(final Double heightInMillimeter);
+   
+   public void setLengthInMillimeter(final Double lengthInMillimeter);
+   
+   public void setWidthInMillimeter(final Double widthInMillimeter);
+   
+   public void setWeightInGram(final Double weightInGram);
+   
    public static ParcelMeasurementsImpl of(){
       return new ParcelMeasurementsImpl();
    }
-
+   
 
    public static ParcelMeasurementsImpl of(final ParcelMeasurements template) {
       ParcelMeasurementsImpl instance = new ParcelMeasurementsImpl();
-      instance.setWeightInGram(template.getWeightInGram());
-      instance.setLengthInMillimeter(template.getLengthInMillimeter());
       instance.setHeightInMillimeter(template.getHeightInMillimeter());
+      instance.setLengthInMillimeter(template.getLengthInMillimeter());
       instance.setWidthInMillimeter(template.getWidthInMillimeter());
+      instance.setWeightInGram(template.getWeightInGram());
       return instance;
    }
 

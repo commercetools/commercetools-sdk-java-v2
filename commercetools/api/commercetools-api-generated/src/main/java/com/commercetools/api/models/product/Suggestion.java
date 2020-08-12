@@ -29,11 +29,11 @@ public interface Suggestion  {
    public String getText();
 
    public void setText(final String text);
-
+   
    public static SuggestionImpl of(){
       return new SuggestionImpl();
    }
-
+   
 
    public static SuggestionImpl of(final Suggestion template) {
       SuggestionImpl instance = new SuggestionImpl();

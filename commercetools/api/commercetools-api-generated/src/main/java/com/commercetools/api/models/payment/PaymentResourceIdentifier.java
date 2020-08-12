@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface PaymentResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static PaymentResourceIdentifierImpl of(){
       return new PaymentResourceIdentifierImpl();
    }
-
+   
 
    public static PaymentResourceIdentifierImpl of(final PaymentResourceIdentifier template) {
       PaymentResourceIdentifierImpl instance = new PaymentResourceIdentifierImpl();

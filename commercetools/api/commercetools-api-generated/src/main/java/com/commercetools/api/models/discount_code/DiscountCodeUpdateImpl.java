@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeUpdateImpl implements DiscountCodeUpdate {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   DiscountCodeUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   DiscountCodeUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public DiscountCodeUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

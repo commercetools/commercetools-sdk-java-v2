@@ -20,21 +20,21 @@ public final class CategorySetAssetCustomTypeActionBuilder {
    private String assetId;
    
    @Nullable
-   private com.fasterxml.jackson.databind.JsonNode fields;
+   private String assetKey;
    
    @Nullable
    private com.commercetools.api.models.type.TypeResourceIdentifier type;
    
    @Nullable
-   private String assetKey;
+   private com.fasterxml.jackson.databind.JsonNode fields;
    
    public CategorySetAssetCustomTypeActionBuilder assetId(@Nullable final String assetId) {
       this.assetId = assetId;
       return this;
    }
    
-   public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
-      this.fields = fields;
+   public CategorySetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
+      this.assetKey = assetKey;
       return this;
    }
    
@@ -43,8 +43,8 @@ public final class CategorySetAssetCustomTypeActionBuilder {
       return this;
    }
    
-   public CategorySetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
-      this.assetKey = assetKey;
+   public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
+      this.fields = fields;
       return this;
    }
    
@@ -54,8 +54,8 @@ public final class CategorySetAssetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public com.fasterxml.jackson.databind.JsonNode getFields(){
-      return this.fields;
+   public String getAssetKey(){
+      return this.assetKey;
    }
    
    @Nullable
@@ -64,12 +64,12 @@ public final class CategorySetAssetCustomTypeActionBuilder {
    }
    
    @Nullable
-   public String getAssetKey(){
-      return this.assetKey;
+   public com.fasterxml.jackson.databind.JsonNode getFields(){
+      return this.fields;
    }
 
    public CategorySetAssetCustomTypeAction build() {
-       return new CategorySetAssetCustomTypeActionImpl(assetId, fields, type, assetKey);
+       return new CategorySetAssetCustomTypeActionImpl(assetId, assetKey, type, fields);
    }
    
    public static CategorySetAssetCustomTypeActionBuilder of() {
@@ -79,9 +79,9 @@ public final class CategorySetAssetCustomTypeActionBuilder {
    public static CategorySetAssetCustomTypeActionBuilder of(final CategorySetAssetCustomTypeAction template) {
       CategorySetAssetCustomTypeActionBuilder builder = new CategorySetAssetCustomTypeActionBuilder();
       builder.assetId = template.getAssetId();
-      builder.fields = template.getFields();
-      builder.type = template.getType();
       builder.assetKey = template.getAssetKey();
+      builder.type = template.getType();
+      builder.fields = template.getFields();
       return builder;
    }
    

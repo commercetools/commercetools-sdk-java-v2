@@ -21,42 +21,42 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerChangePasswordImpl.class)
 public interface CustomerChangePassword  {
 
-
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("currentPassword")
    public String getCurrentPassword();
-
+   
    @NotNull
    @JsonProperty("newPassword")
    public String getNewPassword();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setCurrentPassword(final String currentPassword);
-
+   
    public void setNewPassword(final String newPassword);
-
+   
    public static CustomerChangePasswordImpl of(){
       return new CustomerChangePasswordImpl();
    }
-
+   
 
    public static CustomerChangePasswordImpl of(final CustomerChangePassword template) {
       CustomerChangePasswordImpl instance = new CustomerChangePasswordImpl();
-      instance.setNewPassword(template.getNewPassword());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
       instance.setCurrentPassword(template.getCurrentPassword());
+      instance.setNewPassword(template.getNewPassword());
       return instance;
    }
 

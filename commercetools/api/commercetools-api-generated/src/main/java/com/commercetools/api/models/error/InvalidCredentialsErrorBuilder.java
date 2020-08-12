@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class InvalidCredentialsErrorBuilder {
-
-
+   
+   
    private String message;
-
+   
    public InvalidCredentialsErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
@@ -30,15 +30,15 @@ public final class InvalidCredentialsErrorBuilder {
    public InvalidCredentialsError build() {
        return new InvalidCredentialsErrorImpl(message);
    }
-
+   
    public static InvalidCredentialsErrorBuilder of() {
       return new InvalidCredentialsErrorBuilder();
    }
-
+   
    public static InvalidCredentialsErrorBuilder of(final InvalidCredentialsError template) {
       InvalidCredentialsErrorBuilder builder = new InvalidCredentialsErrorBuilder();
       builder.message = template.getMessage();
       return builder;
    }
-
+   
 }

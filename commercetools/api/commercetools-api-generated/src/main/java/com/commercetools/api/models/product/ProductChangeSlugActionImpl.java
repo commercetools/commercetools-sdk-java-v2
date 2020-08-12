@@ -24,31 +24,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductChangeSlugActionImpl implements ProductChangeSlugAction {
 
    private String action;
-
+   
+   private com.commercetools.api.models.common.LocalizedString slug;
+   
    private Boolean staged;
 
-   private com.commercetools.api.models.common.LocalizedString slug;
-
    @JsonCreator
-   ProductChangeSlugActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
-      this.staged = staged;
+   ProductChangeSlugActionImpl(@JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug, @JsonProperty("staged") final Boolean staged) {
       this.slug = slug;
+      this.staged = staged;
       this.action = "changeSlug";
    }
    public ProductChangeSlugActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
-   public Boolean getStaged(){
-      return this.staged;
-   }
-
+   
    /**
    *  <p>Every slug must be unique across a project, but a product can have the same slug for different languages.
    *  Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters.
@@ -57,13 +52,18 @@ public final class ProductChangeSlugActionImpl implements ProductChangeSlugActio
    public com.commercetools.api.models.common.LocalizedString getSlug(){
       return this.slug;
    }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
    }
 
    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
       this.slug = slug;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
    }
 
 }

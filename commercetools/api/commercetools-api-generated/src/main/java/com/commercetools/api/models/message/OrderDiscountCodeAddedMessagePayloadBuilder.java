@@ -14,16 +14,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderDiscountCodeAddedMessagePayloadBuilder {
-
-
+   
+   
    private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
-
+   
    public OrderDiscountCodeAddedMessagePayloadBuilder discountCode( final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
       this.discountCode = discountCode;
       return this;
    }
-
-
+   
+   
    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
       return this.discountCode;
    }
@@ -31,15 +31,15 @@ public final class OrderDiscountCodeAddedMessagePayloadBuilder {
    public OrderDiscountCodeAddedMessagePayload build() {
        return new OrderDiscountCodeAddedMessagePayloadImpl(discountCode);
    }
-
+   
    public static OrderDiscountCodeAddedMessagePayloadBuilder of() {
       return new OrderDiscountCodeAddedMessagePayloadBuilder();
    }
-
+   
    public static OrderDiscountCodeAddedMessagePayloadBuilder of(final OrderDiscountCodeAddedMessagePayload template) {
       OrderDiscountCodeAddedMessagePayloadBuilder builder = new OrderDiscountCodeAddedMessagePayloadBuilder();
       builder.discountCode = template.getDiscountCode();
       return builder;
    }
-
+   
 }

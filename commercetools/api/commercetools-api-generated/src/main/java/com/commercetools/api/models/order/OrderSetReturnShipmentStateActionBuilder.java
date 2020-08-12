@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderSetReturnShipmentStateActionBuilder {
-
-
-   private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
-
-
+   
+   
    private String returnItemId;
-
-   public OrderSetReturnShipmentStateActionBuilder shipmentState( final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
-      this.shipmentState = shipmentState;
-      return this;
-   }
-
+   
+   
+   private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
+   
    public OrderSetReturnShipmentStateActionBuilder returnItemId( final String returnItemId) {
       this.returnItemId = returnItemId;
       return this;
    }
-
-
+   
+   public OrderSetReturnShipmentStateActionBuilder shipmentState( final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
+      this.shipmentState = shipmentState;
+      return this;
+   }
+   
+   
+   public String getReturnItemId(){
+      return this.returnItemId;
+   }
+   
+   
    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
       return this.shipmentState;
    }
 
-
-   public String getReturnItemId(){
-      return this.returnItemId;
-   }
-
    public OrderSetReturnShipmentStateAction build() {
-       return new OrderSetReturnShipmentStateActionImpl(shipmentState, returnItemId);
+       return new OrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
    }
-
+   
    public static OrderSetReturnShipmentStateActionBuilder of() {
       return new OrderSetReturnShipmentStateActionBuilder();
    }
-
+   
    public static OrderSetReturnShipmentStateActionBuilder of(final OrderSetReturnShipmentStateAction template) {
       OrderSetReturnShipmentStateActionBuilder builder = new OrderSetReturnShipmentStateActionBuilder();
-      builder.shipmentState = template.getShipmentState();
       builder.returnItemId = template.getReturnItemId();
+      builder.shipmentState = template.getShipmentState();
       return builder;
    }
-
+   
 }

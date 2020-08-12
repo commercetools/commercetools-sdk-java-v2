@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountUpdateImpl.class)
 public interface ProductDiscountUpdate  {
 
-
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @Valid
    @JsonProperty("actions")
    public List<ProductDiscountUpdateAction> getActions();
 
    public void setVersion(final Long version);
-
+   
    public void setActions(final List<ProductDiscountUpdateAction> actions);
-
+   
    public static ProductDiscountUpdateImpl of(){
       return new ProductDiscountUpdateImpl();
    }
-
+   
 
    public static ProductDiscountUpdateImpl of(final ProductDiscountUpdate template) {
       ProductDiscountUpdateImpl instance = new ProductDiscountUpdateImpl();
-      instance.setActions(template.getActions());
       instance.setVersion(template.getVersion());
+      instance.setActions(template.getActions());
       return instance;
    }
 

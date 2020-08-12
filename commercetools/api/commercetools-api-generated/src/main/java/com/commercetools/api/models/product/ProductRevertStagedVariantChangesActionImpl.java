@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductRevertStagedVariantChangesActionImpl implements ProductRevertStagedVariantChangesAction {
 
    private String action;
-
+   
    private Long variantId;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ProductRevertStagedVariantChangesActionImpl implements Produc
       this.action = "revertStagedVariantChanges";
    }
    public ProductRevertStagedVariantChangesActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public Long getVariantId(){
       return this.variantId;
    }

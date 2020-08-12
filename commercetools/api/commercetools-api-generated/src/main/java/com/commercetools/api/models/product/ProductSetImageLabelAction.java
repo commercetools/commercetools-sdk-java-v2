@@ -64,11 +64,11 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
    public static ProductSetImageLabelActionImpl of(final ProductSetImageLabelAction template) {
       ProductSetImageLabelActionImpl instance = new ProductSetImageLabelActionImpl();
-      instance.setImageUrl(template.getImageUrl());
-      instance.setStaged(template.getStaged());
-      instance.setLabel(template.getLabel());
-      instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
+      instance.setVariantId(template.getVariantId());
+      instance.setImageUrl(template.getImageUrl());
+      instance.setLabel(template.getLabel());
+      instance.setStaged(template.getStaged());
       return instance;
    }
 

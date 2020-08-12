@@ -16,7 +16,9 @@ import com.commercetools.api.models.message.DeliveryAddedMessagePayload;
 import com.commercetools.api.models.message.DeliveryAddressSetMessagePayload;
 import com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload;
 import com.commercetools.api.models.message.DeliveryRemovedMessagePayload;
+import com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload;
 import com.commercetools.api.models.message.InventoryEntryDeletedMessagePayload;
+import com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayload;
 import com.commercetools.api.models.message.LineItemStateTransitionMessagePayload;
 import com.commercetools.api.models.message.OrderBillingAddressSetMessagePayload;
 import com.commercetools.api.models.message.OrderCreatedMessagePayload;
@@ -41,6 +43,7 @@ import com.commercetools.api.models.message.OrderShippingInfoSetMessagePayload;
 import com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayload;
 import com.commercetools.api.models.message.OrderStateChangedMessagePayload;
 import com.commercetools.api.models.message.OrderStateTransitionMessagePayload;
+import com.commercetools.api.models.message.OrderStoreSetMessagePayload;
 import com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayload;
 import com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayload;
 import com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayload;
@@ -105,6 +108,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayloadImpl.class, name = "OrderShippingRateInputSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderStateChangedMessagePayloadImpl.class, name = "OrderStateChanged"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderStateTransitionMessagePayloadImpl.class, name = "OrderStateTransition"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderStoreSetMessagePayloadImpl.class, name = "OrderStoreSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayloadImpl.class, name = "ParcelAddedToDelivery"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayloadImpl.class, name = "ParcelItemsUpdated"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayloadImpl.class, name = "ParcelMeasurementsUpdated"),
@@ -132,24 +136,26 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewCreatedMessagePayloadImpl.class, name = "ReviewCreated"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewRatingSetMessagePayloadImpl.class, name = "ReviewRatingSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewStateTransitionMessagePayloadImpl.class, name = "ReviewStateTransition"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CategoryCreatedMessagePayloadImpl.class, name = "CategoryCreated"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CategorySlugChangedMessagePayloadImpl.class, name = "CategorySlugChanged"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayloadImpl.class, name = "CustomLineItemStateTransition"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressAddedMessagePayloadImpl.class, name = "CustomerAddressAdded"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressChangedMessagePayloadImpl.class, name = "CustomerAddressChanged"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressRemovedMessagePayloadImpl.class, name = "CustomerAddressRemoved"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCompanyNameSetMessagePayloadImpl.class, name = "CustomerCompanyNameSet"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCreatedMessagePayloadImpl.class, name = "CustomerCreated"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayloadImpl.class, name = "CustomerDateOfBirthSet"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailChangedMessagePayloadImpl.class, name = "CustomerEmailChanged"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadImpl.class, name = "CustomerEmailVerified"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupSetMessagePayloadImpl.class, name = "CustomerGroupSet"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddedMessagePayloadImpl.class, name = "DeliveryAdded"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadImpl.class, name = "DeliveryAddressSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayloadImpl.class, name = "DeliveryItemsUpdated"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CategorySlugChangedMessagePayloadImpl.class, name = "CategorySlugChanged"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryRemovedMessagePayloadImpl.class, name = "DeliveryRemoved"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadImpl.class, name = "CustomerEmailVerified"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayloadImpl.class, name = "CustomLineItemStateTransition"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailChangedMessagePayloadImpl.class, name = "CustomerEmailChanged"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadImpl.class, name = "DeliveryAddressSet"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.LineItemStateTransitionMessagePayloadImpl.class, name = "LineItemStateTransition"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCreatedMessagePayloadImpl.class, name = "CustomerCreated"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryDeletedMessagePayloadImpl.class, name = "InventoryEntryDeleted"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.message.LineItemStateTransitionMessagePayloadImpl.class, name = "LineItemStateTransition")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupSetMessagePayloadImpl.class, name = "CustomerGroupSet"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryCreatedMessagePayloadImpl.class, name = "InventoryEntryCreated"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadImpl.class, name = "InventoryEntryQuantitySet"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CategoryCreatedMessagePayloadImpl.class, name = "CategoryCreated"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressAddedMessagePayloadImpl.class, name = "CustomerAddressAdded"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCompanyNameSetMessagePayloadImpl.class, name = "CustomerCompanyNameSet"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressChangedMessagePayloadImpl.class, name = "CustomerAddressChanged"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayloadImpl.class, name = "CustomerDateOfBirthSet"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddedMessagePayloadImpl.class, name = "DeliveryAdded"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressRemovedMessagePayloadImpl.class, name = "CustomerAddressRemoved")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,
@@ -164,7 +170,7 @@ import java.io.IOException;
 public interface MessagePayload  {
 
 
-
+   
 
 
 }

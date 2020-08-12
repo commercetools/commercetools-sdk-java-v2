@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface ResourceNotFoundError extends ErrorObject {
 
 
-
+   
    public static ResourceNotFoundErrorImpl of(){
       return new ResourceNotFoundErrorImpl();
    }
-
+   
 
    public static ResourceNotFoundErrorImpl of(final ResourceNotFoundError template) {
       ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();

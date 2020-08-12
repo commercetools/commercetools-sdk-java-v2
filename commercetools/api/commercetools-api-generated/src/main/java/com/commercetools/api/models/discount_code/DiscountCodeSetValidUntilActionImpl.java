@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DiscountCodeSetValidUntilActionImpl implements DiscountCodeSetValidUntilAction {
 
    private String action;
-
+   
    private java.time.ZonedDateTime validUntil;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class DiscountCodeSetValidUntilActionImpl implements DiscountCodeSe
       this.action = "setValidUntil";
    }
    public DiscountCodeSetValidUntilActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
    */

@@ -9,6 +9,7 @@ import com.commercetools.api.models.shipping_method.ShippingMethodRemoveShipping
 import com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -37,9 +38,9 @@ public final class ShippingMethodUpdateActionImpl implements ShippingMethodUpdat
    ShippingMethodUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

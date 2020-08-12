@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetLocaleActionImpl.class)
 public interface CartSetLocaleAction extends CartUpdateAction {
 
-
-
+   
+   
    @JsonProperty("locale")
    public String getLocale();
 
    public void setLocale(final String locale);
-
+   
    public static CartSetLocaleActionImpl of(){
       return new CartSetLocaleActionImpl();
    }
-
+   
 
    public static CartSetLocaleActionImpl of(final CartSetLocaleAction template) {
       CartSetLocaleActionImpl instance = new CartSetLocaleActionImpl();

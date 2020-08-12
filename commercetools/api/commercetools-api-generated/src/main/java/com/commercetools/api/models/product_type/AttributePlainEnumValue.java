@@ -21,28 +21,28 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributePlainEnumValueImpl.class)
 public interface AttributePlainEnumValue  {
 
-
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
-
+   
    @NotNull
    @JsonProperty("label")
    public String getLabel();
 
    public void setKey(final String key);
-
+   
    public void setLabel(final String label);
-
+   
    public static AttributePlainEnumValueImpl of(){
       return new AttributePlainEnumValueImpl();
    }
-
+   
 
    public static AttributePlainEnumValueImpl of(final AttributePlainEnumValue template) {
       AttributePlainEnumValueImpl instance = new AttributePlainEnumValueImpl();
-      instance.setLabel(template.getLabel());
       instance.setKey(template.getKey());
+      instance.setLabel(template.getLabel());
       return instance;
    }
 

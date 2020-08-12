@@ -23,17 +23,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomObjectReferenceImpl.class)
 public interface CustomObjectReference extends Reference {
 
-
+   
    @Valid
    @JsonProperty("obj")
    public CustomObject getObj();
 
    public void setObj(final CustomObject obj);
-
+   
    public static CustomObjectReferenceImpl of(){
       return new CustomObjectReferenceImpl();
    }
-
+   
 
    public static CustomObjectReferenceImpl of(final CustomObjectReference template) {
       CustomObjectReferenceImpl instance = new CustomObjectReferenceImpl();

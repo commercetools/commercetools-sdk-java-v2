@@ -23,11 +23,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OutOfStockErrorImpl implements OutOfStockError {
 
    private String code;
-
+   
    private String message;
-
+   
    private java.util.List<String> lineItems;
-
+   
    private java.util.List<String> skus;
 
    @JsonCreator
@@ -38,25 +38,25 @@ public final class OutOfStockErrorImpl implements OutOfStockError {
       this.code = "OutOfStock";
    }
    public OutOfStockErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
-
-
+   
+   
    public java.util.List<String> getLineItems(){
       return this.lineItems;
    }
-
-
+   
+   
    public java.util.List<String> getSkus(){
       return this.skus;
    }
@@ -64,11 +64,11 @@ public final class OutOfStockErrorImpl implements OutOfStockError {
    public void setMessage(final String message){
       this.message = message;
    }
-
+   
    public void setLineItems(final java.util.List<String> lineItems){
       this.lineItems = lineItems;
    }
-
+   
    public void setSkus(final java.util.List<String> skus){
       this.skus = skus;
    }

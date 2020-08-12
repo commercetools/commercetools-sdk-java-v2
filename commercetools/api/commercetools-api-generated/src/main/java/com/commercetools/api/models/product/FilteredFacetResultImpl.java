@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class FilteredFacetResultImpl implements FilteredFacetResult {
 
    private com.commercetools.api.models.product.FacetTypes type;
-
+   
    private Long count;
-
+   
    private Long productCount;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class FilteredFacetResultImpl implements FilteredFacetResult {
       this.type = FacetTypes.findEnumViaJsonName("filter").get();
    }
    public FilteredFacetResultImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.product.FacetTypes getType(){
       return this.type;
    }
-
-
+   
+   
    public Long getCount(){
       return this.count;
    }
-
-
+   
+   
    public Long getProductCount(){
       return this.productCount;
    }
@@ -57,7 +57,7 @@ public final class FilteredFacetResultImpl implements FilteredFacetResult {
    public void setCount(final Long count){
       this.count = count;
    }
-
+   
    public void setProductCount(final Long productCount){
       this.productCount = productCount;
    }

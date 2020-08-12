@@ -1,9 +1,9 @@
 package com.commercetools.api.models.shopping_list;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.shopping_list.ShoppingListLineItem;
 import com.commercetools.api.models.shopping_list.TextLineItem;
@@ -27,7 +27,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ShoppingListImpl.class)
-public interface ShoppingList extends LoggedResource {
+public interface ShoppingList extends BaseResource {
 
    /**
    *  <p>The unique ID of the shopping list.</p>
@@ -152,22 +152,22 @@ public interface ShoppingList extends LoggedResource {
 
    public static ShoppingListImpl of(final ShoppingList template) {
       ShoppingListImpl instance = new ShoppingListImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setAnonymousId(template.getAnonymousId());
-      instance.setTextLineItems(template.getTextLineItems());
-      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setCustom(template.getCustom());
+      instance.setCustomer(template.getCustomer());
+      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
       instance.setDescription(template.getDescription());
+      instance.setKey(template.getKey());
       instance.setLineItems(template.getLineItems());
       instance.setName(template.getName());
       instance.setSlug(template.getSlug());
-      instance.setKey(template.getKey());
-      instance.setCustomer(template.getCustomer());
+      instance.setTextLineItems(template.getTextLineItems());
+      instance.setAnonymousId(template.getAnonymousId());
       return instance;
    }
 

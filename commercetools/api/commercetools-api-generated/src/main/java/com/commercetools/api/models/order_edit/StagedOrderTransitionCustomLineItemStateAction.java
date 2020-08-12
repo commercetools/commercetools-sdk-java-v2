@@ -23,50 +23,50 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderTransitionCustomLineItemStateActionImpl.class)
 public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("customLineItemId")
    public String getCustomLineItemId();
-
+   
    @NotNull
    @JsonProperty("quantity")
    public Long getQuantity();
-
+   
    @NotNull
    @Valid
    @JsonProperty("fromState")
    public StateResourceIdentifier getFromState();
-
+   
    @NotNull
    @Valid
    @JsonProperty("toState")
    public StateResourceIdentifier getToState();
-
-
+   
+   
    @JsonProperty("actualTransitionDate")
    public ZonedDateTime getActualTransitionDate();
 
    public void setCustomLineItemId(final String customLineItemId);
-
+   
    public void setQuantity(final Long quantity);
-
+   
    public void setFromState(final StateResourceIdentifier fromState);
-
+   
    public void setToState(final StateResourceIdentifier toState);
-
+   
    public void setActualTransitionDate(final ZonedDateTime actualTransitionDate);
-
+   
    public static StagedOrderTransitionCustomLineItemStateActionImpl of(){
       return new StagedOrderTransitionCustomLineItemStateActionImpl();
    }
-
+   
 
    public static StagedOrderTransitionCustomLineItemStateActionImpl of(final StagedOrderTransitionCustomLineItemStateAction template) {
       StagedOrderTransitionCustomLineItemStateActionImpl instance = new StagedOrderTransitionCustomLineItemStateActionImpl();
-      instance.setToState(template.getToState());
-      instance.setFromState(template.getFromState());
       instance.setCustomLineItemId(template.getCustomLineItemId());
       instance.setQuantity(template.getQuantity());
+      instance.setFromState(template.getFromState());
+      instance.setToState(template.getToState());
       instance.setActualTransitionDate(template.getActualTransitionDate());
       return instance;
    }

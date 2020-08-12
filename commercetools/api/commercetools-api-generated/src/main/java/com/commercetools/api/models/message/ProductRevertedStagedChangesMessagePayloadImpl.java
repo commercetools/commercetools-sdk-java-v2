@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductRevertedStagedChangesMessagePayloadImpl implements ProductRevertedStagedChangesMessagePayload {
 
    private String type;
-
+   
    private java.util.List<String> removedImageUrls;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ProductRevertedStagedChangesMessagePayloadImpl implements Pro
       this.type = "ProductRevertedStagedChanges";
    }
    public ProductRevertedStagedChangesMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public java.util.List<String> getRemovedImageUrls(){
       return this.removedImageUrls;
    }

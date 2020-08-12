@@ -37,9 +37,9 @@ public final class ChannelUpdateActionImpl implements ChannelUpdateAction {
    ChannelUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

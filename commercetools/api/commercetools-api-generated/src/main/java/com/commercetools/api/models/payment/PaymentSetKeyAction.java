@@ -26,16 +26,16 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
    *  256 characters).
    *  If not provided an existing key will be removed.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static PaymentSetKeyActionImpl of(){
       return new PaymentSetKeyActionImpl();
    }
-
+   
 
    public static PaymentSetKeyActionImpl of(final PaymentSetKeyAction template) {
       PaymentSetKeyActionImpl instance = new PaymentSetKeyActionImpl();

@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionInputImpl.class)
 public interface ExtensionInput  {
 
-
+   
    @NotNull
    @JsonProperty("action")
    public ExtensionAction getAction();
-
+   
    @NotNull
    @Valid
    @JsonProperty("resource")
    public Reference getResource();
 
    public void setAction(final ExtensionAction action);
-
+   
    public void setResource(final Reference resource);
-
+   
    public static ExtensionInputImpl of(){
       return new ExtensionInputImpl();
    }
-
+   
 
    public static ExtensionInputImpl of(final ExtensionInput template) {
       ExtensionInputImpl instance = new ExtensionInputImpl();
-      instance.setResource(template.getResource());
       instance.setAction(template.getAction());
+      instance.setResource(template.getResource());
       return instance;
    }
 

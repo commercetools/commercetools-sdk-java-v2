@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductDiscountSetValidFromActionImpl implements ProductDiscountSetValidFromAction {
 
    private String action;
-
+   
    private java.time.ZonedDateTime validFrom;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class ProductDiscountSetValidFromActionImpl implements ProductDisco
       this.action = "setValidFrom";
    }
    public ProductDiscountSetValidFromActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>The time from which the discount should be effective.
    *  Please take Eventual Consistency into account for calculated product discount values.</p>

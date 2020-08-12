@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelAction {
 
    private String action;
-
+   
    private String attributeName;
-
+   
    private com.commercetools.api.models.common.LocalizedString label;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class ProductTypeChangeLabelActionImpl implements ProductTypeChange
       this.action = "changeLabel";
    }
    public ProductTypeChangeLabelActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAttributeName(){
       return this.attributeName;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getLabel(){
       return this.label;
    }
@@ -57,7 +57,7 @@ public final class ProductTypeChangeLabelActionImpl implements ProductTypeChange
    public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
    }
-
+   
    public void setLabel(final com.commercetools.api.models.common.LocalizedString label){
       this.label = label;
    }

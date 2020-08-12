@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectChangeMessagesEnabledActionImpl.class)
 public interface ProjectChangeMessagesEnabledAction extends ProjectUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("messagesEnabled")
    public Boolean getMessagesEnabled();
 
    public void setMessagesEnabled(final Boolean messagesEnabled);
-
+   
    public static ProjectChangeMessagesEnabledActionImpl of(){
       return new ProjectChangeMessagesEnabledActionImpl();
    }
-
+   
 
    public static ProjectChangeMessagesEnabledActionImpl of(final ProjectChangeMessagesEnabledAction template) {
       ProjectChangeMessagesEnabledActionImpl instance = new ProjectChangeMessagesEnabledActionImpl();

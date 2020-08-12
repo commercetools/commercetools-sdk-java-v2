@@ -13,74 +13,74 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ParcelMeasurementsBuilder {
-
+   
    @Nullable
-   private Integer weightInGram;
-
+   private Double heightInMillimeter;
+   
    @Nullable
-   private Integer lengthInMillimeter;
-
+   private Double lengthInMillimeter;
+   
    @Nullable
-   private Integer heightInMillimeter;
-
+   private Double widthInMillimeter;
+   
    @Nullable
-   private Integer widthInMillimeter;
-
-   public ParcelMeasurementsBuilder weightInGram(@Nullable final Integer weightInGram) {
-      this.weightInGram = weightInGram;
-      return this;
-   }
-
-   public ParcelMeasurementsBuilder lengthInMillimeter(@Nullable final Integer lengthInMillimeter) {
-      this.lengthInMillimeter = lengthInMillimeter;
-      return this;
-   }
-
-   public ParcelMeasurementsBuilder heightInMillimeter(@Nullable final Integer heightInMillimeter) {
+   private Double weightInGram;
+   
+   public ParcelMeasurementsBuilder heightInMillimeter(@Nullable final Double heightInMillimeter) {
       this.heightInMillimeter = heightInMillimeter;
       return this;
    }
-
-   public ParcelMeasurementsBuilder widthInMillimeter(@Nullable final Integer widthInMillimeter) {
+   
+   public ParcelMeasurementsBuilder lengthInMillimeter(@Nullable final Double lengthInMillimeter) {
+      this.lengthInMillimeter = lengthInMillimeter;
+      return this;
+   }
+   
+   public ParcelMeasurementsBuilder widthInMillimeter(@Nullable final Double widthInMillimeter) {
       this.widthInMillimeter = widthInMillimeter;
       return this;
    }
-
+   
+   public ParcelMeasurementsBuilder weightInGram(@Nullable final Double weightInGram) {
+      this.weightInGram = weightInGram;
+      return this;
+   }
+   
    @Nullable
-   public Integer getWeightInGram(){
+   public Double getHeightInMillimeter(){
+      return this.heightInMillimeter;
+   }
+   
+   @Nullable
+   public Double getLengthInMillimeter(){
+      return this.lengthInMillimeter;
+   }
+   
+   @Nullable
+   public Double getWidthInMillimeter(){
+      return this.widthInMillimeter;
+   }
+   
+   @Nullable
+   public Double getWeightInGram(){
       return this.weightInGram;
    }
 
-   @Nullable
-   public Integer getLengthInMillimeter(){
-      return this.lengthInMillimeter;
-   }
-
-   @Nullable
-   public Integer getHeightInMillimeter(){
-      return this.heightInMillimeter;
-   }
-
-   @Nullable
-   public Integer getWidthInMillimeter(){
-      return this.widthInMillimeter;
-   }
-
    public ParcelMeasurements build() {
-       return new ParcelMeasurementsImpl(weightInGram, lengthInMillimeter, heightInMillimeter, widthInMillimeter);
+       return new ParcelMeasurementsImpl(heightInMillimeter, lengthInMillimeter, widthInMillimeter, weightInGram);
    }
-
+   
    public static ParcelMeasurementsBuilder of() {
       return new ParcelMeasurementsBuilder();
    }
-
+   
    public static ParcelMeasurementsBuilder of(final ParcelMeasurements template) {
       ParcelMeasurementsBuilder builder = new ParcelMeasurementsBuilder();
-      builder.weightInGram = template.getWeightInGram();
-      builder.lengthInMillimeter = template.getLengthInMillimeter();
       builder.heightInMillimeter = template.getHeightInMillimeter();
+      builder.lengthInMillimeter = template.getLengthInMillimeter();
       builder.widthInMillimeter = template.getWidthInMillimeter();
+      builder.weightInGram = template.getWeightInGram();
       return builder;
    }
-
+   
 }

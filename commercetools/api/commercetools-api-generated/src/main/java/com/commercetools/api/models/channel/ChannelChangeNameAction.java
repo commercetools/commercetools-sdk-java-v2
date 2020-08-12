@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelChangeNameActionImpl.class)
 public interface ChannelChangeNameAction extends ChannelUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
 
    public void setName(final LocalizedString name);
-
+   
    public static ChannelChangeNameActionImpl of(){
       return new ChannelChangeNameActionImpl();
    }
-
+   
 
    public static ChannelChangeNameActionImpl of(final ChannelChangeNameAction template) {
       ChannelChangeNameActionImpl instance = new ChannelChangeNameActionImpl();

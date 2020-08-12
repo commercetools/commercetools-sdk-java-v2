@@ -24,16 +24,16 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
    /**
    *  <p>If set, a customer with the given ID must exist in the project.</p>
    */
-
+   
    @JsonProperty("customerId")
    public String getCustomerId();
 
    public void setCustomerId(final String customerId);
-
+   
    public static CartSetCustomerIdActionImpl of(){
       return new CartSetCustomerIdActionImpl();
    }
-
+   
 
    public static CartSetCustomerIdActionImpl of(final CartSetCustomerIdAction template) {
       CartSetCustomerIdActionImpl instance = new CartSetCustomerIdActionImpl();

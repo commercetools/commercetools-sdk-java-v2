@@ -14,9 +14,9 @@ import com.commercetools.api.models.cart.TaxMode;
 import com.commercetools.api.models.cart.TaxedPrice;
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.order.PaymentInfo;
@@ -41,7 +41,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = CartImpl.class)
-public interface Cart extends LoggedResource {
+public interface Cart extends BaseResource {
 
    /**
    *  <p>The unique ID of the cart.</p>
@@ -299,39 +299,39 @@ public interface Cart extends LoggedResource {
 
    public static CartImpl of(final Cart template) {
       CartImpl instance = new CartImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCountry(template.getCountry());
-      instance.setTotalPrice(template.getTotalPrice());
-      instance.setShippingRateInput(template.getShippingRateInput());
-      instance.setTaxedPrice(template.getTaxedPrice());
-      instance.setOrigin(template.getOrigin());
-      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
-      instance.setShippingInfo(template.getShippingInfo());
-      instance.setRefusedGifts(template.getRefusedGifts());
-      instance.setLocale(template.getLocale());
-      instance.setInventoryMode(template.getInventoryMode());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCustomerId(template.getCustomerId());
+      instance.setCustomerEmail(template.getCustomerEmail());
+      instance.setAnonymousId(template.getAnonymousId());
+      instance.setStore(template.getStore());
       instance.setLineItems(template.getLineItems());
       instance.setCustomLineItems(template.getCustomLineItems());
-      instance.setItemShippingAddresses(template.getItemShippingAddresses());
-      instance.setCustomerEmail(template.getCustomerEmail());
+      instance.setTotalPrice(template.getTotalPrice());
+      instance.setTaxedPrice(template.getTaxedPrice());
       instance.setCartState(template.getCartState());
-      instance.setCustomerId(template.getCustomerId());
-      instance.setAnonymousId(template.getAnonymousId());
-      instance.setDiscountCodes(template.getDiscountCodes());
-      instance.setCustomerGroup(template.getCustomerGroup());
-      instance.setCustom(template.getCustom());
-      instance.setTaxCalculationMode(template.getTaxCalculationMode());
-      instance.setStore(template.getStore());
-      instance.setTaxRoundingMode(template.getTaxRoundingMode());
-      instance.setTaxMode(template.getTaxMode());
       instance.setShippingAddress(template.getShippingAddress());
       instance.setBillingAddress(template.getBillingAddress());
+      instance.setInventoryMode(template.getInventoryMode());
+      instance.setTaxMode(template.getTaxMode());
+      instance.setTaxRoundingMode(template.getTaxRoundingMode());
+      instance.setTaxCalculationMode(template.getTaxCalculationMode());
+      instance.setCustomerGroup(template.getCustomerGroup());
+      instance.setCountry(template.getCountry());
+      instance.setShippingInfo(template.getShippingInfo());
+      instance.setDiscountCodes(template.getDiscountCodes());
+      instance.setCustom(template.getCustom());
       instance.setPaymentInfo(template.getPaymentInfo());
+      instance.setLocale(template.getLocale());
+      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+      instance.setRefusedGifts(template.getRefusedGifts());
+      instance.setOrigin(template.getOrigin());
+      instance.setShippingRateInput(template.getShippingRateInput());
+      instance.setItemShippingAddresses(template.getItemShippingAddresses());
       return instance;
    }
 

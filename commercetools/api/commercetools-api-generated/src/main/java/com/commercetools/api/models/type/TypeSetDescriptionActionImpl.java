@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TypeSetDescriptionActionImpl implements TypeSetDescriptionAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.LocalizedString description;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class TypeSetDescriptionActionImpl implements TypeSetDescriptionAct
       this.action = "setDescription";
    }
    public TypeSetDescriptionActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getDescription(){
       return this.description;
    }

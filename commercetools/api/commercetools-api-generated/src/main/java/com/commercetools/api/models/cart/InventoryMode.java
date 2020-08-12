@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum InventoryMode {
 
-
+  
   @JsonProperty("TrackOnly")
   TRACK_ONLY("TrackOnly"),
-
-
+  
+  
   @JsonProperty("ReserveOnOrder")
   RESERVE_ON_ORDER("ReserveOnOrder"),
-
-
+  
+  
   @JsonProperty("None")
   NONE("None");
 

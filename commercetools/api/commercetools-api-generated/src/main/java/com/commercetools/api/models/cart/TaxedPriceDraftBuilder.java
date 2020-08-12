@@ -16,16 +16,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class TaxedPriceDraftBuilder {
    
    
-   private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
+   private com.commercetools.api.models.common.TypedMoneyDraft totalNet;
    
    
    private com.commercetools.api.models.common.TypedMoneyDraft totalGross;
    
    
-   private com.commercetools.api.models.common.TypedMoneyDraft totalNet;
+   private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
    
-   public TaxedPriceDraftBuilder taxPortions( final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions) {
-      this.taxPortions = taxPortions;
+   public TaxedPriceDraftBuilder totalNet( final com.commercetools.api.models.common.TypedMoneyDraft totalNet) {
+      this.totalNet = totalNet;
       return this;
    }
    
@@ -34,14 +34,14 @@ public final class TaxedPriceDraftBuilder {
       return this;
    }
    
-   public TaxedPriceDraftBuilder totalNet( final com.commercetools.api.models.common.TypedMoneyDraft totalNet) {
-      this.totalNet = totalNet;
+   public TaxedPriceDraftBuilder taxPortions( final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions) {
+      this.taxPortions = taxPortions;
       return this;
    }
    
    
-   public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getTaxPortions(){
-      return this.taxPortions;
+   public com.commercetools.api.models.common.TypedMoneyDraft getTotalNet(){
+      return this.totalNet;
    }
    
    
@@ -50,12 +50,12 @@ public final class TaxedPriceDraftBuilder {
    }
    
    
-   public com.commercetools.api.models.common.TypedMoneyDraft getTotalNet(){
-      return this.totalNet;
+   public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getTaxPortions(){
+      return this.taxPortions;
    }
 
    public TaxedPriceDraft build() {
-       return new TaxedPriceDraftImpl(taxPortions, totalGross, totalNet);
+       return new TaxedPriceDraftImpl(totalNet, totalGross, taxPortions);
    }
    
    public static TaxedPriceDraftBuilder of() {
@@ -64,9 +64,9 @@ public final class TaxedPriceDraftBuilder {
    
    public static TaxedPriceDraftBuilder of(final TaxedPriceDraft template) {
       TaxedPriceDraftBuilder builder = new TaxedPriceDraftBuilder();
-      builder.taxPortions = template.getTaxPortions();
-      builder.totalGross = template.getTotalGross();
       builder.totalNet = template.getTotalNet();
+      builder.totalGross = template.getTotalGross();
+      builder.taxPortions = template.getTaxPortions();
       return builder;
    }
    

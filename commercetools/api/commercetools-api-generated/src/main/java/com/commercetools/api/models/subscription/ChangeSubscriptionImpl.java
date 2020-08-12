@@ -29,10 +29,10 @@ public final class ChangeSubscriptionImpl implements ChangeSubscription {
       this.resourceTypeId = resourceTypeId;
    }
    public ChangeSubscriptionImpl() {
-
+      
    }
-
-
+   
+   
    public String getResourceTypeId(){
       return this.resourceTypeId;
    }

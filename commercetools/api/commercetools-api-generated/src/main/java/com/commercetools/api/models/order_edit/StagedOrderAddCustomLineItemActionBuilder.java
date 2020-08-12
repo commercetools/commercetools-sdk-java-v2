@@ -19,20 +19,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class StagedOrderAddCustomLineItemActionBuilder {
    
-   @Nullable
-   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-   
-   @Nullable
-   private Integer quantity;
-   
    
    private com.commercetools.api.models.common.Money money;
    
-   @Nullable
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-   
    
    private com.commercetools.api.models.common.LocalizedString name;
+   
+   @Nullable
+   private Double quantity;
    
    
    private String slug;
@@ -40,28 +34,24 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
    @Nullable
    private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
    
-   public StagedOrderAddCustomLineItemActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-      this.externalTaxRate = externalTaxRate;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
    
-   public StagedOrderAddCustomLineItemActionBuilder quantity(@Nullable final Integer quantity) {
-      this.quantity = quantity;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    public StagedOrderAddCustomLineItemActionBuilder money( final com.commercetools.api.models.common.Money money) {
       this.money = money;
       return this;
    }
    
-   public StagedOrderAddCustomLineItemActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-      this.custom = custom;
+   public StagedOrderAddCustomLineItemActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+      this.name = name;
       return this;
    }
    
-   public StagedOrderAddCustomLineItemActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
-      this.name = name;
+   public StagedOrderAddCustomLineItemActionBuilder quantity(@Nullable final Double quantity) {
+      this.quantity = quantity;
       return this;
    }
    
@@ -75,14 +65,14 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
       return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
-      return this.externalTaxRate;
+   public StagedOrderAddCustomLineItemActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+      this.custom = custom;
+      return this;
    }
    
-   @Nullable
-   public Integer getQuantity(){
-      return this.quantity;
+   public StagedOrderAddCustomLineItemActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+      this.externalTaxRate = externalTaxRate;
+      return this;
    }
    
    
@@ -90,14 +80,14 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
       return this.money;
    }
    
-   @Nullable
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
-   }
-   
    
    public com.commercetools.api.models.common.LocalizedString getName(){
       return this.name;
+   }
+   
+   @Nullable
+   public Double getQuantity(){
+      return this.quantity;
    }
    
    
@@ -109,9 +99,19 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
       return this.taxCategory;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+      return this.externalTaxRate;
+   }
 
    public StagedOrderAddCustomLineItemAction build() {
-       return new StagedOrderAddCustomLineItemActionImpl(externalTaxRate, quantity, money, custom, name, slug, taxCategory);
+       return new StagedOrderAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom, externalTaxRate);
    }
    
    public static StagedOrderAddCustomLineItemActionBuilder of() {
@@ -120,13 +120,13 @@ public final class StagedOrderAddCustomLineItemActionBuilder {
    
    public static StagedOrderAddCustomLineItemActionBuilder of(final StagedOrderAddCustomLineItemAction template) {
       StagedOrderAddCustomLineItemActionBuilder builder = new StagedOrderAddCustomLineItemActionBuilder();
-      builder.externalTaxRate = template.getExternalTaxRate();
-      builder.quantity = template.getQuantity();
       builder.money = template.getMoney();
-      builder.custom = template.getCustom();
       builder.name = template.getName();
+      builder.quantity = template.getQuantity();
       builder.slug = template.getSlug();
       builder.taxCategory = template.getTaxCategory();
+      builder.custom = template.getCustom();
+      builder.externalTaxRate = template.getExternalTaxRate();
       return builder;
    }
    

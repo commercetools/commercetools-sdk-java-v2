@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentTransactionStateChangedMessagePayloadImpl implements PaymentTransactionStateChangedMessagePayload {
 
    private String type;
-
+   
+   private String transactionId;
+   
    private com.commercetools.api.models.payment.TransactionState state;
 
-   private String transactionId;
-
    @JsonCreator
-   PaymentTransactionStateChangedMessagePayloadImpl(@JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state, @JsonProperty("transactionId") final String transactionId) {
-      this.state = state;
+   PaymentTransactionStateChangedMessagePayloadImpl(@JsonProperty("transactionId") final String transactionId, @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state) {
       this.transactionId = transactionId;
+      this.state = state;
       this.type = "PaymentTransactionStateChanged";
    }
    public PaymentTransactionStateChangedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
+   public String getTransactionId(){
+      return this.transactionId;
+   }
+   
+   
    public com.commercetools.api.models.payment.TransactionState getState(){
       return this.state;
    }
 
-
-   public String getTransactionId(){
-      return this.transactionId;
-   }
-
-   public void setState(final com.commercetools.api.models.payment.TransactionState state){
-      this.state = state;
-   }
-
    public void setTransactionId(final String transactionId){
       this.transactionId = transactionId;
+   }
+   
+   public void setState(final com.commercetools.api.models.payment.TransactionState state){
+      this.state = state;
    }
 
 }

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AccessDeniedErrorImpl implements AccessDeniedError {
 
    private String code;
-
+   
    private String message;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class AccessDeniedErrorImpl implements AccessDeniedError {
       this.code = "access_denied";
    }
    public AccessDeniedErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }

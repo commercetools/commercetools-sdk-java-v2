@@ -22,64 +22,32 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxRateImpl implements TaxRate {
 
-   private String country;
-   
-   private Integer amount;
-   
-   private Boolean includedInPrice;
+   private String id;
    
    private String name;
    
-   private String state;
+   private Double amount;
    
-   private String id;
+   private Boolean includedInPrice;
+   
+   private String country;
+   
+   private String state;
    
    private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
    @JsonCreator
-   TaxRateImpl(@JsonProperty("country") final String country, @JsonProperty("amount") final Integer amount, @JsonProperty("includedInPrice") final Boolean includedInPrice, @JsonProperty("name") final String name, @JsonProperty("state") final String state, @JsonProperty("id") final String id, @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
-      this.country = country;
+   TaxRateImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name, @JsonProperty("amount") final Double amount, @JsonProperty("includedInPrice") final Boolean includedInPrice, @JsonProperty("country") final String country, @JsonProperty("state") final String state, @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
+      this.id = id;
+      this.name = name;
       this.amount = amount;
       this.includedInPrice = includedInPrice;
-      this.name = name;
+      this.country = country;
       this.state = state;
-      this.id = id;
       this.subRates = subRates;
    }
    public TaxRateImpl() {
       
-   }
-   
-   /**
-   *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-   */
-   public String getCountry(){
-      return this.country;
-   }
-   
-   /**
-   *  <p>Percentage in the range of [0..1].
-   *  The sum of the amounts of all <code>subRates</code>, if there are any.</p>
-   */
-   public Integer getAmount(){
-      return this.amount;
-   }
-   
-   
-   public Boolean getIncludedInPrice(){
-      return this.includedInPrice;
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   /**
-   *  <p>The state in the country</p>
-   */
-   public String getState(){
-      return this.state;
    }
    
    /**
@@ -91,6 +59,38 @@ public final class TaxRateImpl implements TaxRate {
       return this.id;
    }
    
+   
+   public String getName(){
+      return this.name;
+   }
+   
+   /**
+   *  <p>Percentage in the range of [0..1].
+   *  The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+   */
+   public Double getAmount(){
+      return this.amount;
+   }
+   
+   
+   public Boolean getIncludedInPrice(){
+      return this.includedInPrice;
+   }
+   
+   /**
+   *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+   */
+   public String getCountry(){
+      return this.country;
+   }
+   
+   /**
+   *  <p>The state in the country</p>
+   */
+   public String getState(){
+      return this.state;
+   }
+   
    /**
    *  <p>For countries (e.g.
    *  the US) where the total tax is a combination of multiple taxes (e.g.
@@ -100,11 +100,15 @@ public final class TaxRateImpl implements TaxRate {
       return this.subRates;
    }
 
-   public void setCountry(final String country){
-      this.country = country;
+   public void setId(final String id){
+      this.id = id;
    }
    
-   public void setAmount(final Integer amount){
+   public void setName(final String name){
+      this.name = name;
+   }
+   
+   public void setAmount(final Double amount){
       this.amount = amount;
    }
    
@@ -112,16 +116,12 @@ public final class TaxRateImpl implements TaxRate {
       this.includedInPrice = includedInPrice;
    }
    
-   public void setName(final String name){
-      this.name = name;
+   public void setCountry(final String country){
+      this.country = country;
    }
    
    public void setState(final String state){
       this.state = state;
-   }
-   
-   public void setId(final String id){
-      this.id = id;
    }
    
    public void setSubRates(final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates){

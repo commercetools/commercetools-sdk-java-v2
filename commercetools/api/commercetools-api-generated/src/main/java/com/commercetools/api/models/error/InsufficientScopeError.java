@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface InsufficientScopeError extends ErrorObject {
 
 
-
+   
    public static InsufficientScopeErrorImpl of(){
       return new InsufficientScopeErrorImpl();
    }
-
+   
 
    public static InsufficientScopeErrorImpl of(final InsufficientScopeError template) {
       InsufficientScopeErrorImpl instance = new InsufficientScopeErrorImpl();

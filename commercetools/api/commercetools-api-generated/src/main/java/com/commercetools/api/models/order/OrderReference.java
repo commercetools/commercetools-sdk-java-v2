@@ -23,17 +23,17 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderReferenceImpl.class)
 public interface OrderReference extends Reference {
 
-
+   
    @Valid
    @JsonProperty("obj")
    public Order getObj();
 
    public void setObj(final Order obj);
-
+   
    public static OrderReferenceImpl of(){
       return new OrderReferenceImpl();
    }
-
+   
 
    public static OrderReferenceImpl of(final OrderReference template) {
       OrderReferenceImpl instance = new OrderReferenceImpl();

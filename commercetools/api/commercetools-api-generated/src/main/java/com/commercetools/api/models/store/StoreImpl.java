@@ -1,9 +1,11 @@
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.channel.ChannelReference;
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.LoggedResource;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -26,74 +28,76 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoreImpl implements Store {
 
-   private java.time.ZonedDateTime createdAt;
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
    private String id;
-
+   
    private Long version;
-
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-   private com.commercetools.api.models.common.LocalizedString name;
-
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
    private String key;
+   
+   private com.commercetools.api.models.common.LocalizedString name;
+   
+   private java.util.List<String> languages;
+   
+   private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
+   
+   private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
 
    @JsonCreator
-   StoreImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("key") final String key) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   StoreImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("languages") final java.util.List<String> languages, @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels, @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
-      this.name = name;
+      this.createdBy = createdBy;
       this.key = key;
+      this.name = name;
+      this.languages = languages;
+      this.distributionChannels = distributionChannels;
+      this.supplyChannels = supplyChannels;
    }
    public StoreImpl() {
-
+      
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
+   
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-   /**
-   *  <p>The name of the store</p>
-   */
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
+   
+   
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
-
+   
    /**
    *  <p>User-specific unique identifier for the store.
    *  The <code>key</code> is mandatory and immutable.
@@ -102,37 +106,75 @@ public final class StoreImpl implements Store {
    public String getKey(){
       return this.key;
    }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
+   
+   /**
+   *  <p>The name of the store</p>
+   */
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
    }
-
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
+   
+   
+   public java.util.List<String> getLanguages(){
+      return this.languages;
+   }
+   
+   /**
+   *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
+   */
+   public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels(){
+      return this.distributionChannels;
+   }
+   
+   /**
+   *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+   */
+   public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
+      return this.supplyChannels;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
    }
-
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
+   }
+   
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
-
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
+   public void setKey(final String key){
+      this.key = key;
+   }
+   
    public void setName(final com.commercetools.api.models.common.LocalizedString name){
       this.name = name;
    }
-
-   public void setKey(final String key){
-      this.key = key;
+   
+   public void setLanguages(final java.util.List<String> languages){
+      this.languages = languages;
+   }
+   
+   public void setDistributionChannels(final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels){
+      this.distributionChannels = distributionChannels;
+   }
+   
+   public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels){
+      this.supplyChannels = supplyChannels;
    }
 
 }

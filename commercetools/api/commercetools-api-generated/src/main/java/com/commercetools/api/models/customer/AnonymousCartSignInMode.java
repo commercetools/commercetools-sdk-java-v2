@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum AnonymousCartSignInMode {
 
-
+  
   @JsonProperty("MergeWithExistingCustomerCart")
   MERGE_WITH_EXISTING_CUSTOMER_CART("MergeWithExistingCustomerCart"),
-
-
+  
+  
   @JsonProperty("UseAsNewActiveCustomerCart")
   USE_AS_NEW_ACTIVE_CUSTOMER_CART("UseAsNewActiveCustomerCart");
 

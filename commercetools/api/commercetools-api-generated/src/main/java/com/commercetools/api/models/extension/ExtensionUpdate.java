@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionUpdateImpl.class)
 public interface ExtensionUpdate  {
 
-
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @Valid
    @JsonProperty("actions")
    public List<ExtensionUpdateAction> getActions();
 
    public void setVersion(final Long version);
-
+   
    public void setActions(final List<ExtensionUpdateAction> actions);
-
+   
    public static ExtensionUpdateImpl of(){
       return new ExtensionUpdateImpl();
    }
-
+   
 
    public static ExtensionUpdateImpl of(final ExtensionUpdate template) {
       ExtensionUpdateImpl instance = new ExtensionUpdateImpl();
-      instance.setActions(template.getActions());
       instance.setVersion(template.getVersion());
+      instance.setActions(template.getActions());
       return instance;
    }
 

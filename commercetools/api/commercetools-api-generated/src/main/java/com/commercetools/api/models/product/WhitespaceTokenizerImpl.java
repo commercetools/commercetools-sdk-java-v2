@@ -28,9 +28,9 @@ public final class WhitespaceTokenizerImpl implements WhitespaceTokenizer {
    WhitespaceTokenizerImpl() {
       this.type = "whitespace";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

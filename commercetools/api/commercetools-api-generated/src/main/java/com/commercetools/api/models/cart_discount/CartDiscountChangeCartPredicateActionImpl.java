@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountChangeCartPredicateActionImpl implements CartDiscountChangeCartPredicateAction {
 
    private String action;
-
+   
    private String cartPredicate;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class CartDiscountChangeCartPredicateActionImpl implements CartDisc
       this.action = "changeCartPredicate";
    }
    public CartDiscountChangeCartPredicateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>A valid Cart predicate.</p>
    */

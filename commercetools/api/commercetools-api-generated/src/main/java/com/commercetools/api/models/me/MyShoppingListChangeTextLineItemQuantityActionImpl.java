@@ -23,42 +23,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyShoppingListChangeTextLineItemQuantityActionImpl implements MyShoppingListChangeTextLineItemQuantityAction {
 
    private String action;
-
+   
+   private String textLineItemId;
+   
    private Long quantity;
 
-   private String textLineItemId;
-
    @JsonCreator
-   MyShoppingListChangeTextLineItemQuantityActionImpl(@JsonProperty("quantity") final Long quantity, @JsonProperty("textLineItemId") final String textLineItemId) {
-      this.quantity = quantity;
+   MyShoppingListChangeTextLineItemQuantityActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("quantity") final Long quantity) {
       this.textLineItemId = textLineItemId;
+      this.quantity = quantity;
       this.action = "changeTextLineItemQuantity";
    }
    public MyShoppingListChangeTextLineItemQuantityActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getTextLineItemId(){
+      return this.textLineItemId;
+   }
+   
+   
    public Long getQuantity(){
       return this.quantity;
    }
 
-
-   public String getTextLineItemId(){
-      return this.textLineItemId;
-   }
-
-   public void setQuantity(final Long quantity){
-      this.quantity = quantity;
-   }
-
    public void setTextLineItemId(final String textLineItemId){
       this.textLineItemId = textLineItemId;
+   }
+   
+   public void setQuantity(final Long quantity){
+      this.quantity = quantity;
    }
 
 }

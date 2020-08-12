@@ -25,16 +25,16 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
    *  <p>A valid Cart predicate.
    *  If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
    */
-
+   
    @JsonProperty("predicate")
    public String getPredicate();
 
    public void setPredicate(final String predicate);
-
+   
    public static ShippingMethodSetPredicateActionImpl of(){
       return new ShippingMethodSetPredicateActionImpl();
    }
-
+   
 
    public static ShippingMethodSetPredicateActionImpl of(final ShippingMethodSetPredicateAction template) {
       ShippingMethodSetPredicateActionImpl instance = new ShippingMethodSetPredicateActionImpl();

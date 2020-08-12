@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TypeChangeLabelActionImpl implements TypeChangeLabelAction {
 
    private String action;
-
+   
    private String fieldName;
-
+   
    private com.commercetools.api.models.common.LocalizedString label;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class TypeChangeLabelActionImpl implements TypeChangeLabelAction {
       this.action = "changeLabel";
    }
    public TypeChangeLabelActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getFieldName(){
       return this.fieldName;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getLabel(){
       return this.label;
    }
@@ -57,7 +57,7 @@ public final class TypeChangeLabelActionImpl implements TypeChangeLabelAction {
    public void setFieldName(final String fieldName){
       this.fieldName = fieldName;
    }
-
+   
    public void setLabel(final com.commercetools.api.models.common.LocalizedString label){
       this.label = label;
    }

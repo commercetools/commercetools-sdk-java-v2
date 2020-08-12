@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderRemoveParcelFromDeliveryActionImpl.class)
 public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("parcelId")
    public String getParcelId();
 
    public void setParcelId(final String parcelId);
-
+   
    public static OrderRemoveParcelFromDeliveryActionImpl of(){
       return new OrderRemoveParcelFromDeliveryActionImpl();
    }
-
+   
 
    public static OrderRemoveParcelFromDeliveryActionImpl of(final OrderRemoveParcelFromDeliveryAction template) {
       OrderRemoveParcelFromDeliveryActionImpl instance = new OrderRemoveParcelFromDeliveryActionImpl();

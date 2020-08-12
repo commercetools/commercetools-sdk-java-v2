@@ -14,214 +14,214 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ReviewRatingSetMessageBuilder {
-
-
-   private java.time.ZonedDateTime createdAt;
-
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
-
+   
+   
    private String id;
-
-
+   
+   
    private Long version;
-
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-
+   
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   
    private Long sequenceNumber;
-
-
+   
+   
    private com.commercetools.api.models.common.Reference resource;
-
+   
+   
+   private Long resourceVersion;
+   
    @Nullable
    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
-
-   private Long resourceVersion;
-
+   
    @Nullable
-   private Integer oldRating;
-
-
+   private Double oldRating;
+   
+   @Nullable
+   private Double newRating;
+   
+   
    private Boolean includedInStatistics;
-
-   @Nullable
-   private Integer newRating;
-
+   
    @Nullable
    private com.commercetools.api.models.common.Reference target;
-
-   public ReviewRatingSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-
-   public ReviewRatingSetMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
-
+   
    public ReviewRatingSetMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
-
+   
    public ReviewRatingSetMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
-
-   public ReviewRatingSetMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   
+   public ReviewRatingSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
       return this;
    }
-
+   
+   public ReviewRatingSetMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
+      return this;
+   }
+   
    public ReviewRatingSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
-
+   
+   public ReviewRatingSetMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
    public ReviewRatingSetMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
-
+   
    public ReviewRatingSetMessageBuilder resource( final com.commercetools.api.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
-
-   public ReviewRatingSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-      return this;
-   }
-
+   
    public ReviewRatingSetMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
-
-   public ReviewRatingSetMessageBuilder oldRating(@Nullable final Integer oldRating) {
+   
+   public ReviewRatingSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+      return this;
+   }
+   
+   public ReviewRatingSetMessageBuilder oldRating(@Nullable final Double oldRating) {
       this.oldRating = oldRating;
       return this;
    }
-
+   
+   public ReviewRatingSetMessageBuilder newRating(@Nullable final Double newRating) {
+      this.newRating = newRating;
+      return this;
+   }
+   
    public ReviewRatingSetMessageBuilder includedInStatistics( final Boolean includedInStatistics) {
       this.includedInStatistics = includedInStatistics;
       return this;
    }
-
-   public ReviewRatingSetMessageBuilder newRating(@Nullable final Integer newRating) {
-      this.newRating = newRating;
-      return this;
-   }
-
+   
    public ReviewRatingSetMessageBuilder target(@Nullable final com.commercetools.api.models.common.Reference target) {
       this.target = target;
       return this;
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
    @Nullable
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
+   
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
    public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Reference getResource(){
       return this.resource;
    }
-
+   
+   
+   public Long getResourceVersion(){
+      return this.resourceVersion;
+   }
+   
    @Nullable
    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
-
-
-   public Long getResourceVersion(){
-      return this.resourceVersion;
-   }
-
+   
    @Nullable
-   public Integer getOldRating(){
+   public Double getOldRating(){
       return this.oldRating;
    }
-
-
+   
+   @Nullable
+   public Double getNewRating(){
+      return this.newRating;
+   }
+   
+   
    public Boolean getIncludedInStatistics(){
       return this.includedInStatistics;
    }
-
-   @Nullable
-   public Integer getNewRating(){
-      return this.newRating;
-   }
-
+   
    @Nullable
    public com.commercetools.api.models.common.Reference getTarget(){
       return this.target;
    }
 
    public ReviewRatingSetMessage build() {
-       return new ReviewRatingSetMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, oldRating, includedInStatistics, newRating, target);
+       return new ReviewRatingSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldRating, newRating, includedInStatistics, target);
    }
-
+   
    public static ReviewRatingSetMessageBuilder of() {
       return new ReviewRatingSetMessageBuilder();
    }
-
+   
    public static ReviewRatingSetMessageBuilder of(final ReviewRatingSetMessage template) {
       ReviewRatingSetMessageBuilder builder = new ReviewRatingSetMessageBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
+      builder.createdBy = template.getCreatedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
-      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
+      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.oldRating = template.getOldRating();
-      builder.includedInStatistics = template.getIncludedInStatistics();
       builder.newRating = template.getNewRating();
+      builder.includedInStatistics = template.getIncludedInStatistics();
       builder.target = template.getTarget();
       return builder;
    }
-
+   
 }

@@ -24,82 +24,82 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft {
 
    private java.time.ZonedDateTime addedAt;
-
-   private Integer quantity;
-
-   private String productId;
-
+   
    private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
+   
+   private String sku;
+   
+   private String productId;
+   
+   private Integer quantity;
+   
    private Long variantId;
 
-   private String sku;
-
    @JsonCreator
-   ShoppingListLineItemDraftImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final Integer quantity, @JsonProperty("productId") final String productId, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku) {
+   ShoppingListLineItemDraftImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("sku") final String sku, @JsonProperty("productId") final String productId, @JsonProperty("quantity") final Integer quantity, @JsonProperty("variantId") final Long variantId) {
       this.addedAt = addedAt;
-      this.quantity = quantity;
-      this.productId = productId;
       this.custom = custom;
-      this.variantId = variantId;
       this.sku = sku;
+      this.productId = productId;
+      this.quantity = quantity;
+      this.variantId = variantId;
    }
    public ShoppingListLineItemDraftImpl() {
-
+      
    }
-
-
+   
+   
    public java.time.ZonedDateTime getAddedAt(){
       return this.addedAt;
    }
-
-
-   public Integer getQuantity(){
-      return this.quantity;
-   }
-
-
-   public String getProductId(){
-      return this.productId;
-   }
-
-
+   
+   
    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
-
-
-   public Long getVariantId(){
-      return this.variantId;
-   }
-
-
+   
+   
    public String getSku(){
       return this.sku;
+   }
+   
+   
+   public String getProductId(){
+      return this.productId;
+   }
+   
+   
+   public Integer getQuantity(){
+      return this.quantity;
+   }
+   
+   
+   public Long getVariantId(){
+      return this.variantId;
    }
 
    public void setAddedAt(final java.time.ZonedDateTime addedAt){
       this.addedAt = addedAt;
    }
-
-   public void setQuantity(final Integer quantity){
-      this.quantity = quantity;
-   }
-
-   public void setProductId(final String productId){
-      this.productId = productId;
-   }
-
+   
    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
-
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
-
+   
    public void setSku(final String sku){
       this.sku = sku;
+   }
+   
+   public void setProductId(final String productId){
+      this.productId = productId;
+   }
+   
+   public void setQuantity(final Integer quantity){
+      this.quantity = quantity;
+   }
+   
+   public void setVariantId(final Long variantId){
+      this.variantId = variantId;
    }
 
 }

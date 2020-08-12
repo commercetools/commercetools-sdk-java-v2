@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMethodDoesNotMatchCartError {
 
    private String code;
-
+   
    private String message;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMe
       this.code = "ShippingMethodDoesNotMatchCart";
    }
    public ShippingMethodDoesNotMatchCartErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }

@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyPaymentUpdateBuilder {
-
-
-   private java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions;
-
-
+   
+   
    private Long version;
-
-   public MyPaymentUpdateBuilder actions( final java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions) {
-      this.actions = actions;
-      return this;
-   }
-
+   
+   
+   private java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions;
+   
    public MyPaymentUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
-
-
+   
+   public MyPaymentUpdateBuilder actions( final java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions) {
+      this.actions = actions;
+      return this;
+   }
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
    public MyPaymentUpdate build() {
-       return new MyPaymentUpdateImpl(actions, version);
+       return new MyPaymentUpdateImpl(version, actions);
    }
-
+   
    public static MyPaymentUpdateBuilder of() {
       return new MyPaymentUpdateBuilder();
    }
-
+   
    public static MyPaymentUpdateBuilder of(final MyPaymentUpdate template) {
       MyPaymentUpdateBuilder builder = new MyPaymentUpdateBuilder();
-      builder.actions = template.getActions();
       builder.version = template.getVersion();
+      builder.actions = template.getActions();
       return builder;
    }
-
+   
 }

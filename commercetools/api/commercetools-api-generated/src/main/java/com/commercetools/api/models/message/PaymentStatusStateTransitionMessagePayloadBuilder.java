@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class PaymentStatusStateTransitionMessagePayloadBuilder {
-
-
-   private Boolean force;
-
-
+   
+   
    private com.commercetools.api.models.state.StateReference state;
-
-   public PaymentStatusStateTransitionMessagePayloadBuilder force( final Boolean force) {
-      this.force = force;
-      return this;
-   }
-
+   
+   
+   private Boolean force;
+   
    public PaymentStatusStateTransitionMessagePayloadBuilder state( final com.commercetools.api.models.state.StateReference state) {
       this.state = state;
       return this;
    }
-
-
+   
+   public PaymentStatusStateTransitionMessagePayloadBuilder force( final Boolean force) {
+      this.force = force;
+      return this;
+   }
+   
+   
+   public com.commercetools.api.models.state.StateReference getState(){
+      return this.state;
+   }
+   
+   
    public Boolean getForce(){
       return this.force;
    }
 
-
-   public com.commercetools.api.models.state.StateReference getState(){
-      return this.state;
-   }
-
    public PaymentStatusStateTransitionMessagePayload build() {
-       return new PaymentStatusStateTransitionMessagePayloadImpl(force, state);
+       return new PaymentStatusStateTransitionMessagePayloadImpl(state, force);
    }
-
+   
    public static PaymentStatusStateTransitionMessagePayloadBuilder of() {
       return new PaymentStatusStateTransitionMessagePayloadBuilder();
    }
-
+   
    public static PaymentStatusStateTransitionMessagePayloadBuilder of(final PaymentStatusStateTransitionMessagePayload template) {
       PaymentStatusStateTransitionMessagePayloadBuilder builder = new PaymentStatusStateTransitionMessagePayloadBuilder();
-      builder.force = template.getForce();
       builder.state = template.getState();
+      builder.force = template.getForce();
       return builder;
    }
-
+   
 }

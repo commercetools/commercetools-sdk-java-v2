@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.payment.Payment payment;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMes
       this.type = "PaymentCreated";
    }
    public PaymentCreatedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.payment.Payment getPayment(){
       return this.payment;
    }

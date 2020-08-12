@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerAddressAddedMessagePayloadImpl.class)
 public interface CustomerAddressAddedMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("address")
    public Address getAddress();
 
    public void setAddress(final Address address);
-
+   
    public static CustomerAddressAddedMessagePayloadImpl of(){
       return new CustomerAddressAddedMessagePayloadImpl();
    }
-
+   
 
    public static CustomerAddressAddedMessagePayloadImpl of(final CustomerAddressAddedMessagePayload template) {
       CustomerAddressAddedMessagePayloadImpl instance = new CustomerAddressAddedMessagePayloadImpl();

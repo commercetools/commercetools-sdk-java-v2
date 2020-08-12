@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = DuplicateVariantValuesErrorImpl.class)
 public interface DuplicateVariantValuesError extends ErrorObject {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("variantValues")
    public VariantValues getVariantValues();
 
    public void setVariantValues(final VariantValues variantValues);
-
+   
    public static DuplicateVariantValuesErrorImpl of(){
       return new DuplicateVariantValuesErrorImpl();
    }
-
+   
 
    public static DuplicateVariantValuesErrorImpl of(final DuplicateVariantValuesError template) {
       DuplicateVariantValuesErrorImpl instance = new DuplicateVariantValuesErrorImpl();

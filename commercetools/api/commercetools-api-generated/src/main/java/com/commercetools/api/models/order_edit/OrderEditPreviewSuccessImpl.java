@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess {
 
    private String type;
-
+   
    private com.commercetools.api.models.order_edit.StagedOrder preview;
-
+   
    private java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class OrderEditPreviewSuccessImpl implements OrderEditPreviewSucces
       this.type = "PreviewSuccess";
    }
    public OrderEditPreviewSuccessImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.order_edit.StagedOrder getPreview(){
       return this.preview;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.message.MessagePayload> getMessagePayloads(){
       return this.messagePayloads;
    }
@@ -58,7 +58,7 @@ public final class OrderEditPreviewSuccessImpl implements OrderEditPreviewSucces
    public void setPreview(final com.commercetools.api.models.order_edit.StagedOrder preview){
       this.preview = preview;
    }
-
+   
    public void setMessagePayloads(final java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads){
       this.messagePayloads = messagePayloads;
    }

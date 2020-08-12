@@ -23,30 +23,30 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditAppliedMessagePayloadImpl.class)
 public interface OrderEditAppliedMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("edit")
    public OrderEditReference getEdit();
-
+   
    @NotNull
    @Valid
    @JsonProperty("result")
    public OrderEditApplied getResult();
 
    public void setEdit(final OrderEditReference edit);
-
+   
    public void setResult(final OrderEditApplied result);
-
+   
    public static OrderEditAppliedMessagePayloadImpl of(){
       return new OrderEditAppliedMessagePayloadImpl();
    }
-
+   
 
    public static OrderEditAppliedMessagePayloadImpl of(final OrderEditAppliedMessagePayload template) {
       OrderEditAppliedMessagePayloadImpl instance = new OrderEditAppliedMessagePayloadImpl();
-      instance.setResult(template.getResult());
       instance.setEdit(template.getEdit());
+      instance.setResult(template.getResult());
       return instance;
    }
 

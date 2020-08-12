@@ -28,9 +28,9 @@ public final class CustomFieldLocalizedStringTypeImpl implements CustomFieldLoca
    CustomFieldLocalizedStringTypeImpl() {
       this.name = "LocalizedString";
    }
-
-
-
+   
+   
+   
    public String getName(){
       return this.name;
    }

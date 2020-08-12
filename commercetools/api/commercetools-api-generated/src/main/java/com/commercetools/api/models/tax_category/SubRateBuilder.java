@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class SubRateBuilder {
-
-
-   private Integer amount;
-
-
+   
+   
    private String name;
-
-   public SubRateBuilder amount( final Integer amount) {
-      this.amount = amount;
-      return this;
-   }
-
+   
+   
+   private Double amount;
+   
    public SubRateBuilder name( final String name) {
       this.name = name;
       return this;
    }
-
-
-   public Integer getAmount(){
-      return this.amount;
+   
+   public SubRateBuilder amount( final Double amount) {
+      this.amount = amount;
+      return this;
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
-   public SubRate build() {
-       return new SubRateImpl(amount, name);
+   
+   
+   public Double getAmount(){
+      return this.amount;
    }
 
+   public SubRate build() {
+       return new SubRateImpl(name, amount);
+   }
+   
    public static SubRateBuilder of() {
       return new SubRateBuilder();
    }
-
+   
    public static SubRateBuilder of(final SubRate template) {
       SubRateBuilder builder = new SubRateBuilder();
-      builder.amount = template.getAmount();
       builder.name = template.getName();
+      builder.amount = template.getAmount();
       return builder;
    }
-
+   
 }

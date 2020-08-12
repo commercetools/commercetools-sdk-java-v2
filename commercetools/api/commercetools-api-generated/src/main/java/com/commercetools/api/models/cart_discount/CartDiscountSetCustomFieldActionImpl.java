@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountSetCustomFieldAction {
 
    private String action;
-
+   
    private String name;
-
+   
    private com.fasterxml.jackson.databind.JsonNode value;
 
    @JsonCreator
@@ -36,21 +36,22 @@ public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountS
       this.action = "setCustomField";
    }
    public CartDiscountSetCustomFieldActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
+   
    /**
    *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists.
+   *  Trying to remove a field that does not exist will fail with an <code>InvalidOperation</code> error.
    *  If <code>value</code> is provided, set the <code>value</code> of the field defined by the <code>name</code>.
    *  The FieldDefinition determines the format for the <code>value</code> to be provided.</p>
    */
@@ -61,7 +62,7 @@ public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountS
    public void setName(final String name){
       this.name = name;
    }
-
+   
    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }

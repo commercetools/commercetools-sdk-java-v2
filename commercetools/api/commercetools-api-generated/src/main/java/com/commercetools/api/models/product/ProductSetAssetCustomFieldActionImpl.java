@@ -25,29 +25,29 @@ public final class ProductSetAssetCustomFieldActionImpl implements ProductSetAss
 
    private String action;
    
-   private String assetId;
-   
-   private String name;
-   
-   private Boolean staged;
-   
    private Long variantId;
    
    private String sku;
    
-   private com.fasterxml.jackson.databind.JsonNode value;
+   private Boolean staged;
+   
+   private String assetId;
    
    private String assetKey;
+   
+   private String name;
+   
+   private com.fasterxml.jackson.databind.JsonNode value;
 
    @JsonCreator
-   ProductSetAssetCustomFieldActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("name") final String name, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value, @JsonProperty("assetKey") final String assetKey) {
-      this.assetId = assetId;
-      this.name = name;
-      this.staged = staged;
+   ProductSetAssetCustomFieldActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged, @JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
       this.variantId = variantId;
       this.sku = sku;
-      this.value = value;
+      this.staged = staged;
+      this.assetId = assetId;
       this.assetKey = assetKey;
+      this.name = name;
+      this.value = value;
       this.action = "setAssetCustomField";
    }
    public ProductSetAssetCustomFieldActionImpl() {
@@ -57,21 +57,6 @@ public final class ProductSetAssetCustomFieldActionImpl implements ProductSetAss
    
    public String getAction(){
       return this.action;
-   }
-   
-   
-   public String getAssetId(){
-      return this.assetId;
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
    }
    
    
@@ -85,27 +70,30 @@ public final class ProductSetAssetCustomFieldActionImpl implements ProductSetAss
    }
    
    
-   public com.fasterxml.jackson.databind.JsonNode getValue(){
-      return this.value;
+   public Boolean getStaged(){
+      return this.staged;
+   }
+   
+   
+   public String getAssetId(){
+      return this.assetId;
    }
    
    
    public String getAssetKey(){
       return this.assetKey;
    }
+   
+   
+   public String getName(){
+      return this.name;
+   }
+   
+   
+   public com.fasterxml.jackson.databind.JsonNode getValue(){
+      return this.value;
+   }
 
-   public void setAssetId(final String assetId){
-      this.assetId = assetId;
-   }
-   
-   public void setName(final String name){
-      this.name = name;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
-   
    public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
@@ -114,12 +102,24 @@ public final class ProductSetAssetCustomFieldActionImpl implements ProductSetAss
       this.sku = sku;
    }
    
-   public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
-      this.value = value;
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
+   }
+   
+   public void setAssetId(final String assetId){
+      this.assetId = assetId;
    }
    
    public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
+   }
+   
+   public void setName(final String name){
+      this.name = name;
+   }
+   
+   public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
+      this.value = value;
    }
 
 }

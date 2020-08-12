@@ -23,28 +23,28 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelSetCustomTypeActionImpl.class)
 public interface ChannelSetCustomTypeAction extends ChannelUpdateAction {
 
-
+   
    @Valid
    @JsonProperty("type")
    public TypeResourceIdentifier getType();
-
+   
    @Valid
    @JsonProperty("fields")
    public FieldContainer getFields();
 
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final FieldContainer fields);
-
+   
    public static ChannelSetCustomTypeActionImpl of(){
       return new ChannelSetCustomTypeActionImpl();
    }
-
+   
 
    public static ChannelSetCustomTypeActionImpl of(final ChannelSetCustomTypeAction template) {
       ChannelSetCustomTypeActionImpl instance = new ChannelSetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

@@ -23,25 +23,46 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionDraftImpl implements ExtensionDraft {
 
+   private String key;
+   
+   private com.commercetools.api.models.extension.ExtensionDestination destination;
+   
+   private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
+   
    private Integer timeoutInMs;
 
-   private com.commercetools.api.models.extension.ExtensionDestination destination;
-
-   private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
-
-   private String key;
-
    @JsonCreator
-   ExtensionDraftImpl(@JsonProperty("timeoutInMs") final Integer timeoutInMs, @JsonProperty("destination") final com.commercetools.api.models.extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers, @JsonProperty("key") final String key) {
-      this.timeoutInMs = timeoutInMs;
+   ExtensionDraftImpl(@JsonProperty("key") final String key, @JsonProperty("destination") final com.commercetools.api.models.extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers, @JsonProperty("timeoutInMs") final Integer timeoutInMs) {
+      this.key = key;
       this.destination = destination;
       this.triggers = triggers;
-      this.key = key;
+      this.timeoutInMs = timeoutInMs;
    }
    public ExtensionDraftImpl() {
-
+      
    }
-
+   
+   /**
+   *  <p>User-specific unique identifier for the extension</p>
+   */
+   public String getKey(){
+      return this.key;
+   }
+   
+   /**
+   *  <p>Details where the extension can be reached</p>
+   */
+   public com.commercetools.api.models.extension.ExtensionDestination getDestination(){
+      return this.destination;
+   }
+   
+   /**
+   *  <p>Describes what triggers the extension</p>
+   */
+   public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers(){
+      return this.triggers;
+   }
+   
    /**
    *  <p>The maximum time the commercetools platform waits for a response from the extension.
    *  The maximum value is 2000 ms (2 seconds).
@@ -52,41 +73,20 @@ public final class ExtensionDraftImpl implements ExtensionDraft {
       return this.timeoutInMs;
    }
 
-   /**
-   *  <p>Details where the extension can be reached</p>
-   */
-   public com.commercetools.api.models.extension.ExtensionDestination getDestination(){
-      return this.destination;
+   public void setKey(final String key){
+      this.key = key;
    }
-
-   /**
-   *  <p>Describes what triggers the extension</p>
-   */
-   public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers(){
-      return this.triggers;
-   }
-
-   /**
-   *  <p>User-specific unique identifier for the extension</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
-
-   public void setTimeoutInMs(final Integer timeoutInMs){
-      this.timeoutInMs = timeoutInMs;
-   }
-
+   
    public void setDestination(final com.commercetools.api.models.extension.ExtensionDestination destination){
       this.destination = destination;
    }
-
+   
    public void setTriggers(final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers){
       this.triggers = triggers;
    }
-
-   public void setKey(final String key){
-      this.key = key;
+   
+   public void setTimeoutInMs(final Integer timeoutInMs){
+      this.timeoutInMs = timeoutInMs;
    }
 
 }

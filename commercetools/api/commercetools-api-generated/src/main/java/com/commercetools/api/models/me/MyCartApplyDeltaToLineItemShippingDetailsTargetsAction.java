@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl.class)
 public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends MyCartUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("lineItemId")
    public String getLineItemId();
-
+   
    @NotNull
    @Valid
    @JsonProperty("targetsDelta")
    public List<ItemShippingTarget> getTargetsDelta();
 
    public void setLineItemId(final String lineItemId);
-
+   
    public void setTargetsDelta(final List<ItemShippingTarget> targetsDelta);
-
+   
    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl of(){
       return new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
    }
-
+   
 
    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl of(final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
       MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();

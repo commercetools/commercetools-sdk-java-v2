@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetCountryActionImpl.class)
 public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
 
-
-
+   
+   
    @JsonProperty("country")
    public String getCountry();
 
    public void setCountry(final String country);
-
+   
    public static StagedOrderSetCountryActionImpl of(){
       return new StagedOrderSetCountryActionImpl();
    }
-
+   
 
    public static StagedOrderSetCountryActionImpl of(final StagedOrderSetCountryAction template) {
       StagedOrderSetCountryActionImpl instance = new StagedOrderSetCountryActionImpl();

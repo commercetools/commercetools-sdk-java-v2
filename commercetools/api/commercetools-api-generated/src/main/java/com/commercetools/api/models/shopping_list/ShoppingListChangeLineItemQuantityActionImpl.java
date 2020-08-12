@@ -24,14 +24,14 @@ public final class ShoppingListChangeLineItemQuantityActionImpl implements Shopp
 
    private String action;
    
-   private Long quantity;
-   
    private String lineItemId;
+   
+   private Long quantity;
 
    @JsonCreator
-   ShoppingListChangeLineItemQuantityActionImpl(@JsonProperty("quantity") final Long quantity, @JsonProperty("lineItemId") final String lineItemId) {
-      this.quantity = quantity;
+   ShoppingListChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Long quantity) {
       this.lineItemId = lineItemId;
+      this.quantity = quantity;
       this.action = "changeLineItemQuantity";
    }
    public ShoppingListChangeLineItemQuantityActionImpl() {
@@ -44,21 +44,21 @@ public final class ShoppingListChangeLineItemQuantityActionImpl implements Shopp
    }
    
    
-   public Long getQuantity(){
-      return this.quantity;
-   }
-   
-   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
-   public void setQuantity(final Long quantity){
-      this.quantity = quantity;
-   }
    
+   
+   public Long getQuantity(){
+      return this.quantity;
+   }
+
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
+   }
+   
+   public void setQuantity(final Long quantity){
+      this.quantity = quantity;
    }
 
 }

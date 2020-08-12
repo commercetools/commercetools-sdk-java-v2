@@ -26,78 +26,78 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShoppingListAddTextLineItemActionImpl implements ShoppingListAddTextLineItemAction {
 
    private String action;
-
-   private java.time.ZonedDateTime addedAt;
-
+   
+   private com.commercetools.api.models.common.LocalizedString name;
+   
+   private com.commercetools.api.models.common.LocalizedString description;
+   
    private Long quantity;
-
+   
+   private java.time.ZonedDateTime addedAt;
+   
    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-   private com.commercetools.api.models.common.LocalizedString name;
-
-   private com.commercetools.api.models.common.LocalizedString description;
-
    @JsonCreator
-   ShoppingListAddTextLineItemActionImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final Long quantity, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
-      this.addedAt = addedAt;
-      this.quantity = quantity;
-      this.custom = custom;
+   ShoppingListAddTextLineItemActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("quantity") final Long quantity, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
       this.name = name;
       this.description = description;
+      this.quantity = quantity;
+      this.addedAt = addedAt;
+      this.custom = custom;
       this.action = "addTextLineItem";
    }
    public ShoppingListAddTextLineItemActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
-   public java.time.ZonedDateTime getAddedAt(){
-      return this.addedAt;
-   }
-
-
-   public Long getQuantity(){
-      return this.quantity;
-   }
-
-
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
-   }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getName(){
       return this.name;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getDescription(){
       return this.description;
    }
-
-   public void setAddedAt(final java.time.ZonedDateTime addedAt){
-      this.addedAt = addedAt;
+   
+   
+   public Long getQuantity(){
+      return this.quantity;
    }
-
-   public void setQuantity(final Long quantity){
-      this.quantity = quantity;
+   
+   
+   public java.time.ZonedDateTime getAddedAt(){
+      return this.addedAt;
    }
-
-   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
-      this.custom = custom;
+   
+   
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
    }
 
    public void setName(final com.commercetools.api.models.common.LocalizedString name){
       this.name = name;
    }
-
+   
    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
       this.description = description;
+   }
+   
+   public void setQuantity(final Long quantity){
+      this.quantity = quantity;
+   }
+   
+   public void setAddedAt(final java.time.ZonedDateTime addedAt){
+      this.addedAt = addedAt;
+   }
+   
+   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
+      this.custom = custom;
    }
 
 }

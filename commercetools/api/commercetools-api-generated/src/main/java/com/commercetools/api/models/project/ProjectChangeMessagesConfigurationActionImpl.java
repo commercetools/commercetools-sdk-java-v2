@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProjectChangeMessagesConfigurationActionImpl implements ProjectChangeMessagesConfigurationAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ProjectChangeMessagesConfigurationActionImpl implements Proje
       this.action = "changeMessagesConfiguration";
    }
    public ProjectChangeMessagesConfigurationActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.message.MessageConfigurationDraft getMessagesConfiguration(){
       return this.messagesConfiguration;
    }

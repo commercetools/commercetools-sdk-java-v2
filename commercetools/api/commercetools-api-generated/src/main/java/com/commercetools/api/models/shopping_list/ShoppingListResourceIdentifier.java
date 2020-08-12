@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface ShoppingListResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static ShoppingListResourceIdentifierImpl of(){
       return new ShoppingListResourceIdentifierImpl();
    }
-
+   
 
    public static ShoppingListResourceIdentifierImpl of(final ShoppingListResourceIdentifier template) {
       ShoppingListResourceIdentifierImpl instance = new ShoppingListResourceIdentifierImpl();

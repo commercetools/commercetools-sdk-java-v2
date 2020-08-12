@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerGroupReferenceImpl implements CustomerGroupReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.customer_group.CustomerGroup obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class CustomerGroupReferenceImpl implements CustomerGroupReference 
       this.typeId = ReferenceTypeId.findEnumViaJsonName("customer-group").get();
    }
    public CustomerGroupReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.customer_group.CustomerGroup getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class CustomerGroupReferenceImpl implements CustomerGroupReference 
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.customer_group.CustomerGroup obj){
       this.obj = obj;
    }

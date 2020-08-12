@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListChangeTextLineItemsOrderActionImpl.class)
 public interface MyShoppingListChangeTextLineItemsOrderAction extends MyShoppingListUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("textLineItemOrder")
    public List<String> getTextLineItemOrder();
 
    public void setTextLineItemOrder(final List<String> textLineItemOrder);
-
+   
    public static MyShoppingListChangeTextLineItemsOrderActionImpl of(){
       return new MyShoppingListChangeTextLineItemsOrderActionImpl();
    }
-
+   
 
    public static MyShoppingListChangeTextLineItemsOrderActionImpl of(final MyShoppingListChangeTextLineItemsOrderAction template) {
       MyShoppingListChangeTextLineItemsOrderActionImpl instance = new MyShoppingListChangeTextLineItemsOrderActionImpl();

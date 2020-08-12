@@ -28,9 +28,9 @@ public final class DeliveryPlatformFormatImpl implements DeliveryPlatformFormat 
    DeliveryPlatformFormatImpl() {
       this.type = "Platform";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

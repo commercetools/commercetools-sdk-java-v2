@@ -21,28 +21,28 @@ import java.io.IOException;
 @JsonDeserialize(as = SearchKeywordImpl.class)
 public interface SearchKeyword  {
 
-
+   
    @NotNull
    @JsonProperty("text")
    public String getText();
-
-
+   
+   
    @JsonProperty("suggestTokenizer")
    public JsonNode getSuggestTokenizer();
 
    public void setText(final String text);
-
+   
    public void setSuggestTokenizer(final JsonNode suggestTokenizer);
-
+   
    public static SearchKeywordImpl of(){
       return new SearchKeywordImpl();
    }
-
+   
 
    public static SearchKeywordImpl of(final SearchKeyword template) {
       SearchKeywordImpl instance = new SearchKeywordImpl();
-      instance.setSuggestTokenizer(template.getSuggestTokenizer());
       instance.setText(template.getText());
+      instance.setSuggestTokenizer(template.getSuggestTokenizer());
       return instance;
    }
 

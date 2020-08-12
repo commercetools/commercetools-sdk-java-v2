@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShoppingListSetTextLineItemDescriptionActionImpl implements ShoppingListSetTextLineItemDescriptionAction {
 
    private String action;
-
+   
+   private String textLineItemId;
+   
    private com.commercetools.api.models.common.LocalizedString description;
 
-   private String textLineItemId;
-
    @JsonCreator
-   ShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("textLineItemId") final String textLineItemId) {
-      this.description = description;
+   ShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
       this.textLineItemId = textLineItemId;
+      this.description = description;
       this.action = "setTextLineItemDescription";
    }
    public ShoppingListSetTextLineItemDescriptionActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getTextLineItemId(){
+      return this.textLineItemId;
+   }
+   
+   
    public com.commercetools.api.models.common.LocalizedString getDescription(){
       return this.description;
    }
 
-
-   public String getTextLineItemId(){
-      return this.textLineItemId;
-   }
-
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
-   }
-
    public void setTextLineItemId(final String textLineItemId){
       this.textLineItemId = textLineItemId;
+   }
+   
+   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+      this.description = description;
    }
 
 }

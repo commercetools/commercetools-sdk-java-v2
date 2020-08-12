@@ -17,33 +17,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OrderSetCustomTypeActionBuilder {
    
    @Nullable
-   private com.commercetools.api.models.type.FieldContainer fields;
-   
-   @Nullable
    private com.commercetools.api.models.type.TypeResourceIdentifier type;
    
-   public OrderSetCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
-      this.fields = fields;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.type.FieldContainer fields;
    
    public OrderSetCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.type.FieldContainer getFields(){
-      return this.fields;
+   public OrderSetCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+      this.fields = fields;
+      return this;
    }
    
    @Nullable
    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.type.FieldContainer getFields(){
+      return this.fields;
+   }
 
    public OrderSetCustomTypeAction build() {
-       return new OrderSetCustomTypeActionImpl(fields, type);
+       return new OrderSetCustomTypeActionImpl(type, fields);
    }
    
    public static OrderSetCustomTypeActionBuilder of() {
@@ -52,8 +52,8 @@ public final class OrderSetCustomTypeActionBuilder {
    
    public static OrderSetCustomTypeActionBuilder of(final OrderSetCustomTypeAction template) {
       OrderSetCustomTypeActionBuilder builder = new OrderSetCustomTypeActionBuilder();
-      builder.fields = template.getFields();
       builder.type = template.getType();
+      builder.fields = template.getFields();
       return builder;
    }
    

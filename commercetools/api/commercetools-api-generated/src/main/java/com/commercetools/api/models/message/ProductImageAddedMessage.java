@@ -49,19 +49,19 @@ public interface ProductImageAddedMessage extends Message {
 
    public static ProductImageAddedMessageImpl of(final ProductImageAddedMessage template) {
       ProductImageAddedMessageImpl instance = new ProductImageAddedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+      instance.setVariantId(template.getVariantId());
       instance.setImage(template.getImage());
       instance.setStaged(template.getStaged());
-      instance.setVariantId(template.getVariantId());
       return instance;
    }
 

@@ -26,42 +26,42 @@ public interface ZoneDraft  {
    *  Must be unique across a project.
    *  The field can be reset using the Set Key UpdateAction.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-
-
+   
+   
    @JsonProperty("description")
    public String getDescription();
-
+   
    @NotNull
    @Valid
    @JsonProperty("locations")
    public List<Location> getLocations();
 
    public void setKey(final String key);
-
+   
    public void setName(final String name);
-
+   
    public void setDescription(final String description);
-
+   
    public void setLocations(final List<Location> locations);
-
+   
    public static ZoneDraftImpl of(){
       return new ZoneDraftImpl();
    }
-
+   
 
    public static ZoneDraftImpl of(final ZoneDraft template) {
       ZoneDraftImpl instance = new ZoneDraftImpl();
+      instance.setKey(template.getKey());
       instance.setName(template.getName());
       instance.setDescription(template.getDescription());
       instance.setLocations(template.getLocations());
-      instance.setKey(template.getKey());
       return instance;
    }
 

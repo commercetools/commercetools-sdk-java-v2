@@ -23,17 +23,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerGroupReferenceImpl.class)
 public interface CustomerGroupReference extends Reference {
 
-
+   
    @Valid
    @JsonProperty("obj")
    public CustomerGroup getObj();
 
    public void setObj(final CustomerGroup obj);
-
+   
    public static CustomerGroupReferenceImpl of(){
       return new CustomerGroupReferenceImpl();
    }
-
+   
 
    public static CustomerGroupReferenceImpl of(final CustomerGroupReference template) {
       CustomerGroupReferenceImpl instance = new CustomerGroupReferenceImpl();

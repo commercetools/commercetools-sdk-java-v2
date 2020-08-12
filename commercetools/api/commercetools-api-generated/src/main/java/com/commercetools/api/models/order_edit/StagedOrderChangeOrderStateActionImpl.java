@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderChangeOrderStateActionImpl implements StagedOrderChangeOrderStateAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.order.OrderState orderState;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class StagedOrderChangeOrderStateActionImpl implements StagedOrderC
       this.action = "changeOrderState";
    }
    public StagedOrderChangeOrderStateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.OrderState getOrderState(){
       return this.orderState;
    }

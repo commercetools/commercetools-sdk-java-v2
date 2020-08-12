@@ -25,16 +25,16 @@ public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
    /**
    *  <p>If not defined, the date of birth is unset.</p>
    */
-
+   
    @JsonProperty("dateOfBirth")
    public LocalDate getDateOfBirth();
 
    public void setDateOfBirth(final LocalDate dateOfBirth);
-
+   
    public static CustomerSetDateOfBirthActionImpl of(){
       return new CustomerSetDateOfBirthActionImpl();
    }
-
+   
 
    public static CustomerSetDateOfBirthActionImpl of(final CustomerSetDateOfBirthAction template) {
       CustomerSetDateOfBirthActionImpl instance = new CustomerSetDateOfBirthActionImpl();

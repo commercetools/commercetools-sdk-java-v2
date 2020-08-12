@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDeletedMessagePayloadImpl.class)
 public interface ProductDeletedMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @JsonProperty("removedImageUrls")
    public List<String> getRemovedImageUrls();
-
+   
    @NotNull
    @Valid
    @JsonProperty("currentProjection")
    public ProductProjection getCurrentProjection();
 
    public void setRemovedImageUrls(final List<String> removedImageUrls);
-
+   
    public void setCurrentProjection(final ProductProjection currentProjection);
-
+   
    public static ProductDeletedMessagePayloadImpl of(){
       return new ProductDeletedMessagePayloadImpl();
    }
-
+   
 
    public static ProductDeletedMessagePayloadImpl of(final ProductDeletedMessagePayload template) {
       ProductDeletedMessagePayloadImpl instance = new ProductDeletedMessagePayloadImpl();

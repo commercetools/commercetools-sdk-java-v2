@@ -27,17 +27,17 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl impl
 
    private String action;
    
-   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-   
    private com.commercetools.api.models.common.Address address;
    
    private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
+   
+   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
    @JsonCreator
-   StagedOrderSetShippingAddressAndShippingMethodActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
-      this.externalTaxRate = externalTaxRate;
+   StagedOrderSetShippingAddressAndShippingMethodActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.address = address;
       this.shippingMethod = shippingMethod;
+      this.externalTaxRate = externalTaxRate;
       this.action = "setShippingAddressAndShippingMethod";
    }
    public StagedOrderSetShippingAddressAndShippingMethodActionImpl() {
@@ -50,11 +50,6 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl impl
    }
    
    
-   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
-      return this.externalTaxRate;
-   }
-   
-   
    public com.commercetools.api.models.common.Address getAddress(){
       return this.address;
    }
@@ -63,17 +58,22 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl impl
    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
       return this.shippingMethod;
    }
-
-   public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
-      this.externalTaxRate = externalTaxRate;
-   }
    
+   
+   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+      return this.externalTaxRate;
+   }
+
    public void setAddress(final com.commercetools.api.models.common.Address address){
       this.address = address;
    }
    
    public void setShippingMethod(final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod){
       this.shippingMethod = shippingMethod;
+   }
+   
+   public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
+      this.externalTaxRate = externalTaxRate;
    }
 
 }

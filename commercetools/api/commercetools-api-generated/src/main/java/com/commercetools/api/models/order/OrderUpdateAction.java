@@ -35,6 +35,7 @@ import com.commercetools.api.models.order.OrderSetParcelTrackingDataAction;
 import com.commercetools.api.models.order.OrderSetReturnPaymentStateAction;
 import com.commercetools.api.models.order.OrderSetReturnShipmentStateAction;
 import com.commercetools.api.models.order.OrderSetShippingAddressAction;
+import com.commercetools.api.models.order.OrderSetStoreAction;
 import com.commercetools.api.models.order.OrderTransitionCustomLineItemStateAction;
 import com.commercetools.api.models.order.OrderTransitionLineItemStateAction;
 import com.commercetools.api.models.order.OrderTransitionStateAction;
@@ -89,6 +90,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetReturnPaymentStateActionImpl.class, name = "setReturnPaymentState"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetReturnShipmentStateActionImpl.class, name = "setReturnShipmentState"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetShippingAddressActionImpl.class, name = "setShippingAddress"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetStoreActionImpl.class, name = "setStore"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderTransitionCustomLineItemStateActionImpl.class, name = "transitionCustomLineItemState"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderTransitionLineItemStateActionImpl.class, name = "transitionLineItemState"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderTransitionStateActionImpl.class, name = "transitionState"),
@@ -108,7 +110,7 @@ import java.io.IOException;
 public interface OrderUpdateAction  {
 
 
-
+   
 
 
 }

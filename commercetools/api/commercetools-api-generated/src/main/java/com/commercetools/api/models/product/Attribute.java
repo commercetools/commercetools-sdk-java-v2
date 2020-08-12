@@ -21,7 +21,7 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeImpl.class)
 public interface Attribute  {
 
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
@@ -33,13 +33,13 @@ public interface Attribute  {
    public JsonNode getValue();
 
    public void setName(final String name);
-
+   
    public void setValue(final JsonNode value);
-
+   
    public static AttributeImpl of(){
       return new AttributeImpl();
    }
-
+   
 
    public static AttributeImpl of(final Attribute template) {
       AttributeImpl instance = new AttributeImpl();

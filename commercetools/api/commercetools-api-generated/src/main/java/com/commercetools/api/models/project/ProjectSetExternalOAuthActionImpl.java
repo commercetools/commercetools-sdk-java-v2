@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProjectSetExternalOAuthActionImpl implements ProjectSetExternalOAuthAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class ProjectSetExternalOAuthActionImpl implements ProjectSetExtern
       this.action = "setExternalOAuth";
    }
    public ProjectSetExternalOAuthActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If you do not provide the <code>externalOAuth</code> field or provide a value
    *  of <code>null</code>, the update action unsets the External OAuth provider.</p>

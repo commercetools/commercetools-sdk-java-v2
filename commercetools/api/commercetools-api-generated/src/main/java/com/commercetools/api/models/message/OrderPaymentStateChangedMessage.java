@@ -22,38 +22,38 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderPaymentStateChangedMessageImpl.class)
 public interface OrderPaymentStateChangedMessage extends Message {
 
-
+   
    @NotNull
    @JsonProperty("paymentState")
    public PaymentState getPaymentState();
-
-
+   
+   
    @JsonProperty("oldPaymentState")
    public PaymentState getOldPaymentState();
 
    public void setPaymentState(final PaymentState paymentState);
-
+   
    public void setOldPaymentState(final PaymentState oldPaymentState);
-
+   
    public static OrderPaymentStateChangedMessageImpl of(){
       return new OrderPaymentStateChangedMessageImpl();
    }
-
+   
 
    public static OrderPaymentStateChangedMessageImpl of(final OrderPaymentStateChangedMessage template) {
       OrderPaymentStateChangedMessageImpl instance = new OrderPaymentStateChangedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setOldPaymentState(template.getOldPaymentState());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setPaymentState(template.getPaymentState());
+      instance.setOldPaymentState(template.getOldPaymentState());
       return instance;
    }
 

@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface AccessDeniedError extends ErrorObject {
 
 
-
+   
    public static AccessDeniedErrorImpl of(){
       return new AccessDeniedErrorImpl();
    }
-
+   
 
    public static AccessDeniedErrorImpl of(final AccessDeniedError template) {
       AccessDeniedErrorImpl instance = new AccessDeniedErrorImpl();

@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = PriceTierImpl.class)
 public interface PriceTier  {
 
-
+   
    @NotNull
    @JsonProperty("minimumQuantity")
    public Long getMinimumQuantity();
-
+   
    @NotNull
    @Valid
    @JsonProperty("value")
    public TypedMoney getValue();
 
    public void setMinimumQuantity(final Long minimumQuantity);
-
+   
    public void setValue(final TypedMoney value);
-
+   
    public static PriceTierImpl of(){
       return new PriceTierImpl();
    }
-
+   
 
    public static PriceTierImpl of(final PriceTier template) {
       PriceTierImpl instance = new PriceTierImpl();
-      instance.setValue(template.getValue());
       instance.setMinimumQuantity(template.getMinimumQuantity());
+      instance.setValue(template.getValue());
       return instance;
    }
 

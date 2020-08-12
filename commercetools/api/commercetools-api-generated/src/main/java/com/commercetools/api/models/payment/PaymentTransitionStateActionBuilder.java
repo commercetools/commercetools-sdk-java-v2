@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class PaymentTransitionStateActionBuilder {
-
+   
+   
+   private com.commercetools.api.models.state.StateResourceIdentifier state;
+   
    @Nullable
    private Boolean force;
-
-
-   private com.commercetools.api.models.state.StateResourceIdentifier state;
-
-   public PaymentTransitionStateActionBuilder force(@Nullable final Boolean force) {
-      this.force = force;
-      return this;
-   }
-
+   
    public PaymentTransitionStateActionBuilder state( final com.commercetools.api.models.state.StateResourceIdentifier state) {
       this.state = state;
       return this;
    }
-
+   
+   public PaymentTransitionStateActionBuilder force(@Nullable final Boolean force) {
+      this.force = force;
+      return this;
+   }
+   
+   
+   public com.commercetools.api.models.state.StateResourceIdentifier getState(){
+      return this.state;
+   }
+   
    @Nullable
    public Boolean getForce(){
       return this.force;
    }
 
-
-   public com.commercetools.api.models.state.StateResourceIdentifier getState(){
-      return this.state;
-   }
-
    public PaymentTransitionStateAction build() {
-       return new PaymentTransitionStateActionImpl(force, state);
+       return new PaymentTransitionStateActionImpl(state, force);
    }
-
+   
    public static PaymentTransitionStateActionBuilder of() {
       return new PaymentTransitionStateActionBuilder();
    }
-
+   
    public static PaymentTransitionStateActionBuilder of(final PaymentTransitionStateAction template) {
       PaymentTransitionStateActionBuilder builder = new PaymentTransitionStateActionBuilder();
-      builder.force = template.getForce();
       builder.state = template.getState();
+      builder.force = template.getForce();
       return builder;
    }
-
+   
 }

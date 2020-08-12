@@ -1,8 +1,8 @@
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.subscription.ChangeSubscription;
 import com.commercetools.api.models.subscription.DeliveryFormat;
 import com.commercetools.api.models.subscription.Destination;
@@ -27,21 +27,21 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = SubscriptionImpl.class)
-public interface Subscription extends LoggedResource {
+public interface Subscription extends BaseResource {
 
-
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -57,77 +57,77 @@ public interface Subscription extends LoggedResource {
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-
+   
    @NotNull
    @Valid
    @JsonProperty("changes")
    public List<ChangeSubscription> getChanges();
-
+   
    @NotNull
    @Valid
    @JsonProperty("destination")
    public Destination getDestination();
-
-
+   
+   
    @JsonProperty("key")
    public String getKey();
-
+   
    @NotNull
    @Valid
    @JsonProperty("messages")
    public List<MessageSubscription> getMessages();
-
+   
    @NotNull
    @Valid
    @JsonProperty("format")
    public DeliveryFormat getFormat();
-
+   
    @NotNull
    @JsonProperty("status")
    public SubscriptionHealthStatus getStatus();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setCreatedAt(final ZonedDateTime createdAt);
-
+   
    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+   
    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+   
    public void setCreatedBy(final CreatedBy createdBy);
-
+   
    public void setChanges(final List<ChangeSubscription> changes);
-
+   
    public void setDestination(final Destination destination);
-
+   
    public void setKey(final String key);
-
+   
    public void setMessages(final List<MessageSubscription> messages);
-
+   
    public void setFormat(final DeliveryFormat format);
-
+   
    public void setStatus(final SubscriptionHealthStatus status);
-
+   
    public static SubscriptionImpl of(){
       return new SubscriptionImpl();
    }
-
+   
 
    public static SubscriptionImpl of(final Subscription template) {
       SubscriptionImpl instance = new SubscriptionImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setFormat(template.getFormat());
-      instance.setDestination(template.getDestination());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setChanges(template.getChanges());
-      instance.setMessages(template.getMessages());
+      instance.setDestination(template.getDestination());
       instance.setKey(template.getKey());
+      instance.setMessages(template.getMessages());
+      instance.setFormat(template.getFormat());
       instance.setStatus(template.getStatus());
       return instance;
    }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceDiscountsSetMessagePayload {
 
    private String type;
-
+   
    private java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ProductPriceDiscountsSetMessagePayloadImpl implements Product
       this.type = "ProductPriceDiscountsSet";
    }
    public ProductPriceDiscountsSetMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices(){
       return this.updatedPrices;
    }

@@ -25,49 +25,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantDraftImpl implements ProductVariantDraft {
 
-   private java.util.List<com.commercetools.api.models.common.Image> images;
-   
-   private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
-   
-   private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
-   
-   private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
-   
    private String sku;
    
    private String key;
+   
+   private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
+   
+   private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
+   
+   private java.util.List<com.commercetools.api.models.common.Image> images;
+   
+   private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
    @JsonCreator
-   ProductVariantDraftImpl(@JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.AssetDraft> assets, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes, @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices, @JsonProperty("sku") final String sku, @JsonProperty("key") final String key) {
-      this.images = images;
-      this.assets = assets;
-      this.attributes = attributes;
-      this.prices = prices;
+   ProductVariantDraftImpl(@JsonProperty("sku") final String sku, @JsonProperty("key") final String key, @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes, @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.AssetDraft> assets) {
       this.sku = sku;
       this.key = key;
+      this.prices = prices;
+      this.attributes = attributes;
+      this.images = images;
+      this.assets = assets;
    }
    public ProductVariantDraftImpl() {
       
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.common.Image> getImages(){
-      return this.images;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets(){
-      return this.assets;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes(){
-      return this.attributes;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices(){
-      return this.prices;
    }
    
    
@@ -79,29 +59,49 @@ public final class ProductVariantDraftImpl implements ProductVariantDraft {
    public String getKey(){
       return this.key;
    }
+   
+   
+   public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices(){
+      return this.prices;
+   }
+   
+   
+   public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes(){
+      return this.attributes;
+   }
+   
+   
+   public java.util.List<com.commercetools.api.models.common.Image> getImages(){
+      return this.images;
+   }
+   
+   
+   public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets(){
+      return this.assets;
+   }
 
-   public void setImages(final java.util.List<com.commercetools.api.models.common.Image> images){
-      this.images = images;
-   }
-   
-   public void setAssets(final java.util.List<com.commercetools.api.models.common.AssetDraft> assets){
-      this.assets = assets;
-   }
-   
-   public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes){
-      this.attributes = attributes;
-   }
-   
-   public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices){
-      this.prices = prices;
-   }
-   
    public void setSku(final String sku){
       this.sku = sku;
    }
    
    public void setKey(final String key){
       this.key = key;
+   }
+   
+   public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices){
+      this.prices = prices;
+   }
+   
+   public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes){
+      this.attributes = attributes;
+   }
+   
+   public void setImages(final java.util.List<com.commercetools.api.models.common.Image> images){
+      this.images = images;
+   }
+   
+   public void setAssets(final java.util.List<com.commercetools.api.models.common.AssetDraft> assets){
+      this.assets = assets;
    }
 
 }

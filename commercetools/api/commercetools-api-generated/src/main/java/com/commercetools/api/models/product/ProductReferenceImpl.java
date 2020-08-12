@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductReferenceImpl implements ProductReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.product.Product obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class ProductReferenceImpl implements ProductReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("product").get();
    }
    public ProductReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.product.Product getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class ProductReferenceImpl implements ProductReference {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.product.Product obj){
       this.obj = obj;
    }

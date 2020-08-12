@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderShipmentStateChangedMessagePayloadImpl.class)
 public interface OrderShipmentStateChangedMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @JsonProperty("shipmentState")
    public ShipmentState getShipmentState();
-
-
+   
+   
    @JsonProperty("oldShipmentState")
    public ShipmentState getOldShipmentState();
 
    public void setShipmentState(final ShipmentState shipmentState);
-
+   
    public void setOldShipmentState(final ShipmentState oldShipmentState);
-
+   
    public static OrderShipmentStateChangedMessagePayloadImpl of(){
       return new OrderShipmentStateChangedMessagePayloadImpl();
    }
-
+   
 
    public static OrderShipmentStateChangedMessagePayloadImpl of(final OrderShipmentStateChangedMessagePayload template) {
       OrderShipmentStateChangedMessagePayloadImpl instance = new OrderShipmentStateChangedMessagePayloadImpl();

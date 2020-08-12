@@ -30,9 +30,9 @@ public final class CartDiscountValueImpl implements CartDiscountValue {
    CartDiscountValueImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

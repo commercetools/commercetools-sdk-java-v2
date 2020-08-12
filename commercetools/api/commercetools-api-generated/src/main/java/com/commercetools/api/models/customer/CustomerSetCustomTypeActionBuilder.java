@@ -15,46 +15,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CustomerSetCustomTypeActionBuilder {
-
-   @Nullable
-   private com.commercetools.api.models.type.FieldContainer fields;
-
+   
    @Nullable
    private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
-   public CustomerSetCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
-      this.fields = fields;
-      return this;
-   }
-
+   
+   @Nullable
+   private com.commercetools.api.models.type.FieldContainer fields;
+   
    public CustomerSetCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
-
+   
+   public CustomerSetCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+      this.fields = fields;
+      return this;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+      return this.type;
+   }
+   
    @Nullable
    public com.commercetools.api.models.type.FieldContainer getFields(){
       return this.fields;
    }
 
-   @Nullable
-   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
-      return this.type;
-   }
-
    public CustomerSetCustomTypeAction build() {
-       return new CustomerSetCustomTypeActionImpl(fields, type);
+       return new CustomerSetCustomTypeActionImpl(type, fields);
    }
-
+   
    public static CustomerSetCustomTypeActionBuilder of() {
       return new CustomerSetCustomTypeActionBuilder();
    }
-
+   
    public static CustomerSetCustomTypeActionBuilder of(final CustomerSetCustomTypeAction template) {
       CustomerSetCustomTypeActionBuilder builder = new CustomerSetCustomTypeActionBuilder();
-      builder.fields = template.getFields();
       builder.type = template.getType();
+      builder.fields = template.getFields();
       return builder;
    }
-
+   
 }

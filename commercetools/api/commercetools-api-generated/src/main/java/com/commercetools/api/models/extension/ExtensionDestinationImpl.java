@@ -29,9 +29,9 @@ public final class ExtensionDestinationImpl implements ExtensionDestination {
    ExtensionDestinationImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

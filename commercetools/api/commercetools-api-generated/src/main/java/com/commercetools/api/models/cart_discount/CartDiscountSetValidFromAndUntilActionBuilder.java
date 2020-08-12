@@ -16,33 +16,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class CartDiscountSetValidFromAndUntilActionBuilder {
    
    @Nullable
-   private java.time.ZonedDateTime validUntil;
-   
-   @Nullable
    private java.time.ZonedDateTime validFrom;
    
-   public CartDiscountSetValidFromAndUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
-      this.validUntil = validUntil;
-      return this;
-   }
+   @Nullable
+   private java.time.ZonedDateTime validUntil;
    
    public CartDiscountSetValidFromAndUntilActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
       this.validFrom = validFrom;
       return this;
    }
    
-   @Nullable
-   public java.time.ZonedDateTime getValidUntil(){
-      return this.validUntil;
+   public CartDiscountSetValidFromAndUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
+      this.validUntil = validUntil;
+      return this;
    }
    
    @Nullable
    public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }
+   
+   @Nullable
+   public java.time.ZonedDateTime getValidUntil(){
+      return this.validUntil;
+   }
 
    public CartDiscountSetValidFromAndUntilAction build() {
-       return new CartDiscountSetValidFromAndUntilActionImpl(validUntil, validFrom);
+       return new CartDiscountSetValidFromAndUntilActionImpl(validFrom, validUntil);
    }
    
    public static CartDiscountSetValidFromAndUntilActionBuilder of() {
@@ -51,8 +51,8 @@ public final class CartDiscountSetValidFromAndUntilActionBuilder {
    
    public static CartDiscountSetValidFromAndUntilActionBuilder of(final CartDiscountSetValidFromAndUntilAction template) {
       CartDiscountSetValidFromAndUntilActionBuilder builder = new CartDiscountSetValidFromAndUntilActionBuilder();
-      builder.validUntil = template.getValidUntil();
       builder.validFrom = template.getValidFrom();
+      builder.validUntil = template.getValidUntil();
       return builder;
    }
    

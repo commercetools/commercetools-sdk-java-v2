@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditUpdateImpl implements OrderEditUpdate {
 
+   private Long version;
+   
+   private java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions;
+   
    private Boolean dryRun;
 
-   private java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions;
-
-   private Long version;
-
    @JsonCreator
-   OrderEditUpdateImpl(@JsonProperty("dryRun") final Boolean dryRun, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.dryRun = dryRun;
-      this.actions = actions;
+   OrderEditUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions, @JsonProperty("dryRun") final Boolean dryRun) {
       this.version = version;
+      this.actions = actions;
+      this.dryRun = dryRun;
    }
    public OrderEditUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
+   public java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> getActions(){
+      return this.actions;
+   }
+   
+   
    public Boolean getDryRun(){
       return this.dryRun;
    }
 
-
-   public java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> getActions(){
-      return this.actions;
+   public void setVersion(final Long version){
+      this.version = version;
    }
-
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setDryRun(final Boolean dryRun){
-      this.dryRun = dryRun;
-   }
-
+   
    public void setActions(final java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions){
       this.actions = actions;
    }
-
-   public void setVersion(final Long version){
-      this.version = version;
+   
+   public void setDryRun(final Boolean dryRun){
+      this.dryRun = dryRun;
    }
 
 }

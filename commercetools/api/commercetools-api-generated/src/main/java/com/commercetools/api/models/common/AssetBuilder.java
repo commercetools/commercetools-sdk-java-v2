@@ -17,10 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class AssetBuilder {
    
    
-   private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
+   private String id;
    
-   @Nullable
-   private com.commercetools.api.models.type.CustomFields custom;
+   
+   private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
    
    
    private com.commercetools.api.models.common.LocalizedString name;
@@ -28,22 +28,22 @@ public final class AssetBuilder {
    @Nullable
    private com.commercetools.api.models.common.LocalizedString description;
    
+   @Nullable
+   private java.util.List<String> tags;
    
-   private String id;
+   @Nullable
+   private com.commercetools.api.models.type.CustomFields custom;
    
    @Nullable
    private String key;
    
-   @Nullable
-   private java.util.List<String> tags;
-   
-   public AssetBuilder sources( final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
-      this.sources = sources;
+   public AssetBuilder id( final String id) {
+      this.id = id;
       return this;
    }
    
-   public AssetBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
-      this.custom = custom;
+   public AssetBuilder sources( final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
+      this.sources = sources;
       return this;
    }
    
@@ -57,8 +57,13 @@ public final class AssetBuilder {
       return this;
    }
    
-   public AssetBuilder id( final String id) {
-      this.id = id;
+   public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
+      this.tags = tags;
+      return this;
+   }
+   
+   public AssetBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+      this.custom = custom;
       return this;
    }
    
@@ -67,19 +72,14 @@ public final class AssetBuilder {
       return this;
    }
    
-   public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
-      this.tags = tags;
-      return this;
+   
+   public String getId(){
+      return this.id;
    }
    
    
    public java.util.List<com.commercetools.api.models.common.AssetSource> getSources(){
       return this.sources;
-   }
-   
-   @Nullable
-   public com.commercetools.api.models.type.CustomFields getCustom(){
-      return this.custom;
    }
    
    
@@ -92,23 +92,23 @@ public final class AssetBuilder {
       return this.description;
    }
    
+   @Nullable
+   public java.util.List<String> getTags(){
+      return this.tags;
+   }
    
-   public String getId(){
-      return this.id;
+   @Nullable
+   public com.commercetools.api.models.type.CustomFields getCustom(){
+      return this.custom;
    }
    
    @Nullable
    public String getKey(){
       return this.key;
    }
-   
-   @Nullable
-   public java.util.List<String> getTags(){
-      return this.tags;
-   }
 
    public Asset build() {
-       return new AssetImpl(sources, custom, name, description, id, key, tags);
+       return new AssetImpl(id, sources, name, description, tags, custom, key);
    }
    
    public static AssetBuilder of() {
@@ -117,13 +117,13 @@ public final class AssetBuilder {
    
    public static AssetBuilder of(final Asset template) {
       AssetBuilder builder = new AssetBuilder();
+      builder.id = template.getId();
       builder.sources = template.getSources();
-      builder.custom = template.getCustom();
       builder.name = template.getName();
       builder.description = template.getDescription();
-      builder.id = template.getId();
-      builder.key = template.getKey();
       builder.tags = template.getTags();
+      builder.custom = template.getCustom();
+      builder.key = template.getKey();
       return builder;
    }
    

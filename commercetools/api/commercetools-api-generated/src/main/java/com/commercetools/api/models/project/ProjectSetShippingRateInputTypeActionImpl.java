@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectSetShippingRateInputTypeAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectS
       this.action = "setShippingRateInputType";
    }
    public ProjectSetShippingRateInputTypeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If not set, removes existing shippingRateInputType.</p>
    */

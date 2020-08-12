@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxCategoryUpdateImpl.class)
 public interface TaxCategoryUpdate  {
 
-
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @Valid
    @JsonProperty("actions")
    public List<TaxCategoryUpdateAction> getActions();
 
    public void setVersion(final Long version);
-
+   
    public void setActions(final List<TaxCategoryUpdateAction> actions);
-
+   
    public static TaxCategoryUpdateImpl of(){
       return new TaxCategoryUpdateImpl();
    }
-
+   
 
    public static TaxCategoryUpdateImpl of(final TaxCategoryUpdate template) {
       TaxCategoryUpdateImpl instance = new TaxCategoryUpdateImpl();
-      instance.setActions(template.getActions());
       instance.setVersion(template.getVersion());
+      instance.setActions(template.getActions());
       return instance;
    }
 

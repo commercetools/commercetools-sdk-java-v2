@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGroupAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class CustomerSetCustomerGroupActionImpl implements CustomerSetCust
       this.action = "setCustomerGroup";
    }
    public CustomerSetCustomerGroupActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If not defined, the customer group is unset.</p>
    */

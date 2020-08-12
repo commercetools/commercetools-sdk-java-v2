@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InventoryEntrySetRestockableInDaysActionImpl implements InventoryEntrySetRestockableInDaysAction {
 
    private String action;
-
+   
    private Long restockableInDays;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class InventoryEntrySetRestockableInDaysActionImpl implements Inven
       this.action = "setRestockableInDays";
    }
    public InventoryEntrySetRestockableInDaysActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public Long getRestockableInDays(){
       return this.restockableInDays;
    }

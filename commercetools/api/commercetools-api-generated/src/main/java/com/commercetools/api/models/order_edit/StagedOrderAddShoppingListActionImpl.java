@@ -25,11 +25,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderAddShoppingListActionImpl implements StagedOrderAddShoppingListAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
-
+   
    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-
+   
    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
    @JsonCreator
@@ -40,25 +40,25 @@ public final class StagedOrderAddShoppingListActionImpl implements StagedOrderAd
       this.action = "addShoppingList";
    }
    public StagedOrderAddShoppingListActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList(){
       return this.shoppingList;
    }
-
-
+   
+   
    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
       return this.supplyChannel;
    }
-
-
+   
+   
    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
       return this.distributionChannel;
    }
@@ -66,11 +66,11 @@ public final class StagedOrderAddShoppingListActionImpl implements StagedOrderAd
    public void setShoppingList(final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList){
       this.shoppingList = shoppingList;
    }
-
+   
    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
       this.supplyChannel = supplyChannel;
    }
-
+   
    public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
       this.distributionChannel = distributionChannel;
    }

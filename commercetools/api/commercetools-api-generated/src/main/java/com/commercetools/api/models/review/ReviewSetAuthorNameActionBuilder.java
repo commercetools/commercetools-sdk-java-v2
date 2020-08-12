@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ReviewSetAuthorNameActionBuilder {
-
+   
    @Nullable
    private String authorName;
-
+   
    public ReviewSetAuthorNameActionBuilder authorName(@Nullable final String authorName) {
       this.authorName = authorName;
       return this;
    }
-
+   
    @Nullable
    public String getAuthorName(){
       return this.authorName;
@@ -30,15 +30,15 @@ public final class ReviewSetAuthorNameActionBuilder {
    public ReviewSetAuthorNameAction build() {
        return new ReviewSetAuthorNameActionImpl(authorName);
    }
-
+   
    public static ReviewSetAuthorNameActionBuilder of() {
       return new ReviewSetAuthorNameActionBuilder();
    }
-
+   
    public static ReviewSetAuthorNameActionBuilder of(final ReviewSetAuthorNameAction template) {
       ReviewSetAuthorNameActionBuilder builder = new ReviewSetAuthorNameActionBuilder();
       builder.authorName = template.getAuthorName();
       return builder;
    }
-
+   
 }

@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetShippingMethodTaxRateActionImpl.class)
 public interface StagedOrderSetShippingMethodTaxRateAction extends StagedOrderUpdateAction {
 
-
+   
    @Valid
    @JsonProperty("externalTaxRate")
    public ExternalTaxRateDraft getExternalTaxRate();
 
    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-
+   
    public static StagedOrderSetShippingMethodTaxRateActionImpl of(){
       return new StagedOrderSetShippingMethodTaxRateActionImpl();
    }
-
+   
 
    public static StagedOrderSetShippingMethodTaxRateActionImpl of(final StagedOrderSetShippingMethodTaxRateAction template) {
       StagedOrderSetShippingMethodTaxRateActionImpl instance = new StagedOrderSetShippingMethodTaxRateActionImpl();

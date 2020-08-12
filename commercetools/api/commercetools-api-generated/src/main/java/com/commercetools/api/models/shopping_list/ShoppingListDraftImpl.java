@@ -26,84 +26,84 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListDraftImpl implements ShoppingListDraft {
 
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   
+   private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
+   
+   private Long deleteDaysAfterLastModification;
+   
+   private com.commercetools.api.models.common.LocalizedString description;
+   
+   private String key;
+   
    private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems;
-
+   
+   private com.commercetools.api.models.common.LocalizedString name;
+   
+   private com.commercetools.api.models.common.LocalizedString slug;
+   
+   private java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems;
+   
    private String anonymousId;
 
-   private java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems;
-
-   private Long deleteDaysAfterLastModification;
-
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
-   private com.commercetools.api.models.common.LocalizedString name;
-
-   private com.commercetools.api.models.common.LocalizedString description;
-
-   private com.commercetools.api.models.common.LocalizedString slug;
-
-   private String key;
-
-   private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
-
    @JsonCreator
-   ShoppingListDraftImpl(@JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
-      this.lineItems = lineItems;
-      this.anonymousId = anonymousId;
-      this.textLineItems = textLineItems;
-      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+   ShoppingListDraftImpl(@JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("key") final String key, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug, @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems, @JsonProperty("anonymousId") final String anonymousId) {
       this.custom = custom;
-      this.name = name;
-      this.description = description;
-      this.slug = slug;
-      this.key = key;
       this.customer = customer;
+      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+      this.description = description;
+      this.key = key;
+      this.lineItems = lineItems;
+      this.name = name;
+      this.slug = slug;
+      this.textLineItems = textLineItems;
+      this.anonymousId = anonymousId;
    }
    public ShoppingListDraftImpl() {
-
+      
    }
-
-
-   public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems(){
-      return this.lineItems;
-   }
-
-   /**
-   *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
-   */
-   public String getAnonymousId(){
-      return this.anonymousId;
-   }
-
-
-   public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems(){
-      return this.textLineItems;
-   }
-
-   /**
-   *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
-   */
-   public Long getDeleteDaysAfterLastModification(){
-      return this.deleteDaysAfterLastModification;
-   }
-
+   
    /**
    *  <p>The custom fields.</p>
    */
    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
       return this.custom;
    }
-
-
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
+   
+   
+   public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
+      return this.customer;
    }
-
-
+   
+   /**
+   *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+   */
+   public Long getDeleteDaysAfterLastModification(){
+      return this.deleteDaysAfterLastModification;
+   }
+   
+   
    public com.commercetools.api.models.common.LocalizedString getDescription(){
       return this.description;
    }
-
+   
+   /**
+   *  <p>User-specific unique identifier for the shopping list.</p>
+   */
+   public String getKey(){
+      return this.key;
+   }
+   
+   
+   public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems(){
+      return this.lineItems;
+   }
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
+   }
+   
    /**
    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
    *  Each slug is unique across a project, but a shopping list can have the same slug for different languages.
@@ -112,57 +112,57 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
    public com.commercetools.api.models.common.LocalizedString getSlug(){
       return this.slug;
    }
-
+   
+   
+   public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems(){
+      return this.textLineItems;
+   }
+   
    /**
-   *  <p>User-specific unique identifier for the shopping list.</p>
+   *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
-   public String getKey(){
-      return this.key;
-   }
-
-
-   public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
-      return this.customer;
-   }
-
-   public void setLineItems(final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems){
-      this.lineItems = lineItems;
-   }
-
-   public void setAnonymousId(final String anonymousId){
-      this.anonymousId = anonymousId;
-   }
-
-   public void setTextLineItems(final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems){
-      this.textLineItems = textLineItems;
-   }
-
-   public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification){
-      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+   public String getAnonymousId(){
+      return this.anonymousId;
    }
 
    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
       this.custom = custom;
    }
-
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
+   
+   public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer){
+      this.customer = customer;
    }
-
+   
+   public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification){
+      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+   }
+   
    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
       this.description = description;
    }
-
-   public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
-      this.slug = slug;
-   }
-
+   
    public void setKey(final String key){
       this.key = key;
    }
-
-   public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer){
-      this.customer = customer;
+   
+   public void setLineItems(final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems){
+      this.lineItems = lineItems;
+   }
+   
+   public void setName(final com.commercetools.api.models.common.LocalizedString name){
+      this.name = name;
+   }
+   
+   public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
+      this.slug = slug;
+   }
+   
+   public void setTextLineItems(final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems){
+      this.textLineItems = textLineItems;
+   }
+   
+   public void setAnonymousId(final String anonymousId){
+      this.anonymousId = anonymousId;
    }
 
 }

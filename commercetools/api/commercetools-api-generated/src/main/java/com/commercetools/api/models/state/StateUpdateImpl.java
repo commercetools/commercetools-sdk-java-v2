@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateUpdateImpl implements StateUpdate {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   StateUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   StateUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public StateUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.state.StateUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

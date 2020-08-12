@@ -174,28 +174,28 @@ public interface ProductProjection extends BaseResource {
 
    public static ProductProjectionImpl of(final ProductProjection template) {
       ProductProjectionImpl instance = new ProductProjectionImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setSearchKeywords(template.getSearchKeywords());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
+      instance.setKey(template.getKey());
+      instance.setProductType(template.getProductType());
+      instance.setName(template.getName());
       instance.setDescription(template.getDescription());
-      instance.setVariants(template.getVariants());
-      instance.setPublished(template.getPublished());
-      instance.setHasStagedChanges(template.getHasStagedChanges());
-      instance.setMetaDescription(template.getMetaDescription());
-      instance.setTaxCategory(template.getTaxCategory());
-      instance.setMetaKeywords(template.getMetaKeywords());
+      instance.setSlug(template.getSlug());
+      instance.setCategories(template.getCategories());
       instance.setCategoryOrderHints(template.getCategoryOrderHints());
       instance.setMetaTitle(template.getMetaTitle());
-      instance.setName(template.getName());
-      instance.setState(template.getState());
+      instance.setMetaDescription(template.getMetaDescription());
+      instance.setMetaKeywords(template.getMetaKeywords());
+      instance.setSearchKeywords(template.getSearchKeywords());
+      instance.setHasStagedChanges(template.getHasStagedChanges());
+      instance.setPublished(template.getPublished());
       instance.setMasterVariant(template.getMasterVariant());
-      instance.setCategories(template.getCategories());
+      instance.setVariants(template.getVariants());
+      instance.setTaxCategory(template.getTaxCategory());
+      instance.setState(template.getState());
       instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
-      instance.setSlug(template.getSlug());
-      instance.setProductType(template.getProductType());
-      instance.setKey(template.getKey());
       return instance;
    }
 

@@ -23,30 +23,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodAddShippingRateActionImpl.class)
 public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("zone")
    public ZoneResourceIdentifier getZone();
-
+   
    @NotNull
    @Valid
    @JsonProperty("shippingRate")
    public ShippingRateDraft getShippingRate();
 
    public void setZone(final ZoneResourceIdentifier zone);
-
+   
    public void setShippingRate(final ShippingRateDraft shippingRate);
-
+   
    public static ShippingMethodAddShippingRateActionImpl of(){
       return new ShippingMethodAddShippingRateActionImpl();
    }
-
+   
 
    public static ShippingMethodAddShippingRateActionImpl of(final ShippingMethodAddShippingRateAction template) {
       ShippingMethodAddShippingRateActionImpl instance = new ShippingMethodAddShippingRateActionImpl();
-      instance.setShippingRate(template.getShippingRate());
       instance.setZone(template.getZone());
+      instance.setShippingRate(template.getShippingRate());
       return instance;
    }
 

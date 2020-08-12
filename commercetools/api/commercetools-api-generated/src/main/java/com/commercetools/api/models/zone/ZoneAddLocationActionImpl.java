@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ZoneAddLocationActionImpl implements ZoneAddLocationAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.zone.Location location;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ZoneAddLocationActionImpl implements ZoneAddLocationAction {
       this.action = "addLocation";
    }
    public ZoneAddLocationActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.zone.Location getLocation(){
       return this.location;
    }

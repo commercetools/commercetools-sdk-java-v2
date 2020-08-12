@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmentStateChangedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.order.ShipmentState shipmentState;
-
+   
    private com.commercetools.api.models.order.ShipmentState oldShipmentState;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class OrderShipmentStateChangedMessagePayloadImpl implements OrderS
       this.type = "OrderShipmentStateChanged";
    }
    public OrderShipmentStateChangedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.ShipmentState getShipmentState(){
       return this.shipmentState;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.ShipmentState getOldShipmentState(){
       return this.oldShipmentState;
    }
@@ -57,7 +57,7 @@ public final class OrderShipmentStateChangedMessagePayloadImpl implements OrderS
    public void setShipmentState(final com.commercetools.api.models.order.ShipmentState shipmentState){
       this.shipmentState = shipmentState;
    }
-
+   
    public void setOldShipmentState(final com.commercetools.api.models.order.ShipmentState oldShipmentState){
       this.oldShipmentState = oldShipmentState;
    }

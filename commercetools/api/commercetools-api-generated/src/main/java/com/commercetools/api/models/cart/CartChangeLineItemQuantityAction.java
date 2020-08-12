@@ -30,7 +30,7 @@ public interface CartChangeLineItemQuantityAction extends CartUpdateAction {
    
    @NotNull
    @JsonProperty("quantity")
-   public Integer getQuantity();
+   public Double getQuantity();
    
    @Valid
    @JsonProperty("externalPrice")
@@ -42,7 +42,7 @@ public interface CartChangeLineItemQuantityAction extends CartUpdateAction {
 
    public void setLineItemId(final String lineItemId);
    
-   public void setQuantity(final Integer quantity);
+   public void setQuantity(final Double quantity);
    
    public void setExternalPrice(final Money externalPrice);
    
@@ -55,10 +55,10 @@ public interface CartChangeLineItemQuantityAction extends CartUpdateAction {
 
    public static CartChangeLineItemQuantityActionImpl of(final CartChangeLineItemQuantityAction template) {
       CartChangeLineItemQuantityActionImpl instance = new CartChangeLineItemQuantityActionImpl();
-      instance.setQuantity(template.getQuantity());
-      instance.setExternalTotalPrice(template.getExternalTotalPrice());
       instance.setLineItemId(template.getLineItemId());
+      instance.setQuantity(template.getQuantity());
       instance.setExternalPrice(template.getExternalPrice());
+      instance.setExternalTotalPrice(template.getExternalTotalPrice());
       return instance;
    }
 

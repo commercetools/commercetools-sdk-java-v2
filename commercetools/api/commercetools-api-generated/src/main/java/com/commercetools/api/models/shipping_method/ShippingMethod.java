@@ -1,8 +1,9 @@
 package com.commercetools.api.models.shipping_method;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
+import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.shipping_method.ZoneRate;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import java.time.ZonedDateTime;
@@ -24,7 +25,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ShippingMethodImpl.class)
-public interface ShippingMethod extends LoggedResource {
+public interface ShippingMethod extends BaseResource {
 
    /**
    *  <p>The unique ID of the shipping method.</p>
@@ -69,6 +70,10 @@ public interface ShippingMethod extends LoggedResource {
    @JsonProperty("description")
    public String getDescription();
    
+   @Valid
+   @JsonProperty("localizedDescription")
+   public LocalizedString getLocalizedDescription();
+   
    @NotNull
    @Valid
    @JsonProperty("taxCategory")
@@ -109,6 +114,8 @@ public interface ShippingMethod extends LoggedResource {
    
    public void setDescription(final String description);
    
+   public void setLocalizedDescription(final LocalizedString localizedDescription);
+   
    public void setTaxCategory(final TaxCategoryReference taxCategory);
    
    public void setZoneRates(final List<ZoneRate> zoneRates);
@@ -124,19 +131,20 @@ public interface ShippingMethod extends LoggedResource {
 
    public static ShippingMethodImpl of(final ShippingMethod template) {
       ShippingMethodImpl instance = new ShippingMethodImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setZoneRates(template.getZoneRates());
-      instance.setPredicate(template.getPredicate());
-      instance.setIsDefault(template.getIsDefault());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setKey(template.getKey());
       instance.setName(template.getName());
       instance.setDescription(template.getDescription());
-      instance.setKey(template.getKey());
+      instance.setLocalizedDescription(template.getLocalizedDescription());
       instance.setTaxCategory(template.getTaxCategory());
+      instance.setZoneRates(template.getZoneRates());
+      instance.setIsDefault(template.getIsDefault());
+      instance.setPredicate(template.getPredicate());
       return instance;
    }
 

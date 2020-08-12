@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZoneAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ShippingMethodRemoveZoneActionImpl implements ShippingMethodR
       this.action = "removeZone";
    }
    public ShippingMethodRemoveZoneActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone(){
       return this.zone;
    }

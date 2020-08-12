@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReviewReferenceImpl implements ReviewReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.review.Review obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class ReviewReferenceImpl implements ReviewReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("review").get();
    }
    public ReviewReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.review.Review getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class ReviewReferenceImpl implements ReviewReference {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.review.Review obj){
       this.obj = obj;
    }

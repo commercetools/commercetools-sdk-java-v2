@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ZoneChangeNameActionImpl.class)
 public interface ZoneChangeNameAction extends ZoneUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
 
    public void setName(final String name);
-
+   
    public static ZoneChangeNameActionImpl of(){
       return new ZoneChangeNameActionImpl();
    }
-
+   
 
    public static ZoneChangeNameActionImpl of(final ZoneChangeNameAction template) {
       ZoneChangeNameActionImpl instance = new ZoneChangeNameActionImpl();

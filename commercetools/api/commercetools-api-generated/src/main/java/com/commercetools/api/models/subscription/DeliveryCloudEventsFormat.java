@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = DeliveryCloudEventsFormatImpl.class)
 public interface DeliveryCloudEventsFormat extends DeliveryFormat {
 
-
+   
    @NotNull
    @JsonProperty("cloudEventsVersion")
    public String getCloudEventsVersion();
 
    public void setCloudEventsVersion(final String cloudEventsVersion);
-
+   
    public static DeliveryCloudEventsFormatImpl of(){
       return new DeliveryCloudEventsFormatImpl();
    }
-
+   
 
    public static DeliveryCloudEventsFormatImpl of(final DeliveryCloudEventsFormat template) {
       DeliveryCloudEventsFormatImpl instance = new DeliveryCloudEventsFormatImpl();

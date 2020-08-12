@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ChannelSetRolesActionImpl implements ChannelSetRolesAction {
 
    private String action;
-
+   
    private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ChannelSetRolesActionImpl implements ChannelSetRolesAction {
       this.action = "setRoles";
    }
    public ChannelSetRolesActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }

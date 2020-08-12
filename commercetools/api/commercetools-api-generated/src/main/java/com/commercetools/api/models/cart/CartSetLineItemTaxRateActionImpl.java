@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTaxRateAction {
 
    private String action;
-
+   
+   private String lineItemId;
+   
    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-   private String lineItemId;
-
    @JsonCreator
-   CartSetLineItemTaxRateActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("lineItemId") final String lineItemId) {
-      this.externalTaxRate = externalTaxRate;
+   CartSetLineItemTaxRateActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
       this.lineItemId = lineItemId;
+      this.externalTaxRate = externalTaxRate;
       this.action = "setLineItemTaxRate";
    }
    public CartSetLineItemTaxRateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getLineItemId(){
+      return this.lineItemId;
+   }
+   
+   
    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
 
-
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-
-   public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
-      this.externalTaxRate = externalTaxRate;
-   }
-
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
+   }
+   
+   public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
+      this.externalTaxRate = externalTaxRate;
    }
 
 }

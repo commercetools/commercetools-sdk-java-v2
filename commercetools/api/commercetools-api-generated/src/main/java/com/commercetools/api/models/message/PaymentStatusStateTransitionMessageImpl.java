@@ -23,163 +23,163 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentStatusStateTransitionMessageImpl implements PaymentStatusStateTransitionMessage {
 
-   private java.time.ZonedDateTime createdAt;
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
    private String id;
-
+   
    private Long version;
-
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
    private Long sequenceNumber;
-
+   
    private com.commercetools.api.models.common.Reference resource;
-
-   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
+   
    private Long resourceVersion;
-
+   
    private String type;
-
+   
+   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   
+   private com.commercetools.api.models.state.StateReference state;
+   
    private Boolean force;
 
-   private com.commercetools.api.models.state.StateReference state;
-
    @JsonCreator
-   PaymentStatusStateTransitionMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("force") final Boolean force, @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   PaymentStatusStateTransitionMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("state") final com.commercetools.api.models.state.StateReference state, @JsonProperty("force") final Boolean force) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
+      this.createdBy = createdBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
-      this.force = force;
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.state = state;
+      this.force = force;
       this.type = "PaymentStatusStateTransition";
    }
    public PaymentStatusStateTransitionMessageImpl() {
-
+      
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
+   
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
+   
+   
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
    public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Reference getResource(){
       return this.resource;
    }
-
-
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-
-
+   
+   
    public Long getResourceVersion(){
       return this.resourceVersion;
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
-   public Boolean getForce(){
-      return this.force;
+   
+   
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
    }
-
-
+   
+   
    public com.commercetools.api.models.state.StateReference getState(){
       return this.state;
    }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
+   
+   
+   public Boolean getForce(){
+      return this.force;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
    }
-
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
+   }
+   
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
-
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
    public void setSequenceNumber(final Long sequenceNumber){
       this.sequenceNumber = sequenceNumber;
    }
-
+   
    public void setResource(final com.commercetools.api.models.common.Reference resource){
       this.resource = resource;
    }
-
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-   }
-
+   
    public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
    }
-
-   public void setForce(final Boolean force){
-      this.force = force;
+   
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
-
+   
    public void setState(final com.commercetools.api.models.state.StateReference state){
       this.state = state;
+   }
+   
+   public void setForce(final Boolean force){
+      this.force = force;
    }
 
 }

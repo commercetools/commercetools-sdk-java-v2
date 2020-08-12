@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft {
 
    private Long centAmount;
-
+   
    private String currencyCode;
-
+   
    private com.commercetools.api.models.common.MoneyType type;
 
    @JsonCreator
@@ -36,22 +36,22 @@ public final class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraf
       this.type = MoneyType.findEnumViaJsonName("centPrecision").get();
    }
    public CentPrecisionMoneyDraftImpl() {
-
+      
    }
-
-
+   
+   
    public Long getCentAmount(){
       return this.centAmount;
    }
-
+   
    /**
    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
    */
    public String getCurrencyCode(){
       return this.currencyCode;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.MoneyType getType(){
       return this.type;
    }
@@ -59,7 +59,7 @@ public final class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraf
    public void setCentAmount(final Long centAmount){
       this.centAmount = centAmount;
    }
-
+   
    public void setCurrencyCode(final String currencyCode){
       this.currencyCode = currencyCode;
    }

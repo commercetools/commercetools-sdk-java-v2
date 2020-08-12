@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum SelectionMode {
 
-
+  
   @JsonProperty("Cheapest")
   CHEAPEST("Cheapest"),
-
-
+  
+  
   @JsonProperty("MostExpensive")
   MOST_EXPENSIVE("MostExpensive");
 

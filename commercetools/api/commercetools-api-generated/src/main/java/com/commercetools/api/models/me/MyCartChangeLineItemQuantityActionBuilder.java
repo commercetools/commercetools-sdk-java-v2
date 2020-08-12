@@ -15,74 +15,74 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyCartChangeLineItemQuantityActionBuilder {
-
-
-   private Integer quantity;
-
-   @Nullable
-   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-
-
+   
+   
    private String lineItemId;
-
+   
+   
+   private Double quantity;
+   
    @Nullable
    private com.commercetools.api.models.common.Money externalPrice;
-
-   public MyCartChangeLineItemQuantityActionBuilder quantity( final Integer quantity) {
-      this.quantity = quantity;
-      return this;
-   }
-
-   public MyCartChangeLineItemQuantityActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-      this.externalTotalPrice = externalTotalPrice;
-      return this;
-   }
-
+   
+   @Nullable
+   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
+   
    public MyCartChangeLineItemQuantityActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
-
+   
+   public MyCartChangeLineItemQuantityActionBuilder quantity( final Double quantity) {
+      this.quantity = quantity;
+      return this;
+   }
+   
    public MyCartChangeLineItemQuantityActionBuilder externalPrice(@Nullable final com.commercetools.api.models.common.Money externalPrice) {
       this.externalPrice = externalPrice;
       return this;
    }
-
-
-   public Integer getQuantity(){
+   
+   public MyCartChangeLineItemQuantityActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+      this.externalTotalPrice = externalTotalPrice;
+      return this;
+   }
+   
+   
+   public String getLineItemId(){
+      return this.lineItemId;
+   }
+   
+   
+   public Double getQuantity(){
       return this.quantity;
    }
-
+   
+   @Nullable
+   public com.commercetools.api.models.common.Money getExternalPrice(){
+      return this.externalPrice;
+   }
+   
    @Nullable
    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
       return this.externalTotalPrice;
    }
 
-
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-
-   @Nullable
-   public com.commercetools.api.models.common.Money getExternalPrice(){
-      return this.externalPrice;
-   }
-
    public MyCartChangeLineItemQuantityAction build() {
-       return new MyCartChangeLineItemQuantityActionImpl(quantity, externalTotalPrice, lineItemId, externalPrice);
+       return new MyCartChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
    }
-
+   
    public static MyCartChangeLineItemQuantityActionBuilder of() {
       return new MyCartChangeLineItemQuantityActionBuilder();
    }
-
+   
    public static MyCartChangeLineItemQuantityActionBuilder of(final MyCartChangeLineItemQuantityAction template) {
       MyCartChangeLineItemQuantityActionBuilder builder = new MyCartChangeLineItemQuantityActionBuilder();
-      builder.quantity = template.getQuantity();
-      builder.externalTotalPrice = template.getExternalTotalPrice();
       builder.lineItemId = template.getLineItemId();
+      builder.quantity = template.getQuantity();
       builder.externalPrice = template.getExternalPrice();
+      builder.externalTotalPrice = template.getExternalTotalPrice();
       return builder;
    }
-
+   
 }

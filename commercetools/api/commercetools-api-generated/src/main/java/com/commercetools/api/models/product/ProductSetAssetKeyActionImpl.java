@@ -24,22 +24,22 @@ public final class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAct
 
    private String action;
    
-   private String assetId;
-   
-   private Boolean staged;
-   
    private Long variantId;
    
    private String sku;
    
+   private Boolean staged;
+   
+   private String assetId;
+   
    private String assetKey;
 
    @JsonCreator
-   ProductSetAssetKeyActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("assetKey") final String assetKey) {
-      this.assetId = assetId;
-      this.staged = staged;
+   ProductSetAssetKeyActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged, @JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey) {
       this.variantId = variantId;
       this.sku = sku;
+      this.staged = staged;
+      this.assetId = assetId;
       this.assetKey = assetKey;
       this.action = "setAssetKey";
    }
@@ -53,8 +53,13 @@ public final class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAct
    }
    
    
-   public String getAssetId(){
-      return this.assetId;
+   public Long getVariantId(){
+      return this.variantId;
+   }
+   
+   
+   public String getSku(){
+      return this.sku;
    }
    
    
@@ -63,13 +68,8 @@ public final class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAct
    }
    
    
-   public Long getVariantId(){
-      return this.variantId;
-   }
-   
-   
-   public String getSku(){
-      return this.sku;
+   public String getAssetId(){
+      return this.assetId;
    }
    
    /**
@@ -80,20 +80,20 @@ public final class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAct
       return this.assetKey;
    }
 
-   public void setAssetId(final String assetId){
-      this.assetId = assetId;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
-   
    public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
    
    public void setSku(final String sku){
       this.sku = sku;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
+   }
+   
+   public void setAssetId(final String assetId){
+      this.assetId = assetId;
    }
    
    public void setAssetKey(final String assetKey){

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountChangeValueActionImpl implements CartDiscountChangeValueAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CartDiscountChangeValueActionImpl implements CartDiscountChan
       this.action = "changeValue";
    }
    public CartDiscountChangeValueActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue(){
       return this.value;
    }

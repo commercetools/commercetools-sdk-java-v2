@@ -30,11 +30,11 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
    public LocalizedString getName();
 
    public void setName(final LocalizedString name);
-
+   
    public static DiscountCodeSetNameActionImpl of(){
       return new DiscountCodeSetNameActionImpl();
    }
-
+   
 
    public static DiscountCodeSetNameActionImpl of(final DiscountCodeSetNameAction template) {
       DiscountCodeSetNameActionImpl instance = new DiscountCodeSetNameActionImpl();

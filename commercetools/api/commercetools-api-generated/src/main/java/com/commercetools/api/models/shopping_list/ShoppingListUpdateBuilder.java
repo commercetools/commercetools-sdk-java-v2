@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ShoppingListUpdateBuilder {
-
-
-   private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions;
-
-
+   
+   
    private Long version;
-
-   public ShoppingListUpdateBuilder actions( final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions) {
-      this.actions = actions;
-      return this;
-   }
-
+   
+   
+   private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions;
+   
    public ShoppingListUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
-
-
+   
+   public ShoppingListUpdateBuilder actions( final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions) {
+      this.actions = actions;
+      return this;
+   }
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
    public ShoppingListUpdate build() {
-       return new ShoppingListUpdateImpl(actions, version);
+       return new ShoppingListUpdateImpl(version, actions);
    }
-
+   
    public static ShoppingListUpdateBuilder of() {
       return new ShoppingListUpdateBuilder();
    }
-
+   
    public static ShoppingListUpdateBuilder of(final ShoppingListUpdate template) {
       ShoppingListUpdateBuilder builder = new ShoppingListUpdateBuilder();
-      builder.actions = template.getActions();
       builder.version = template.getVersion();
+      builder.actions = template.getActions();
       return builder;
    }
-
+   
 }

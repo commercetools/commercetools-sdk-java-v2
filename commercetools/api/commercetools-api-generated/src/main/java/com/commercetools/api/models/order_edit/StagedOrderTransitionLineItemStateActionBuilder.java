@@ -17,27 +17,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class StagedOrderTransitionLineItemStateActionBuilder {
    
    
-   private com.commercetools.api.models.state.StateResourceIdentifier toState;
-   
-   
-   private com.commercetools.api.models.state.StateResourceIdentifier fromState;
+   private String lineItemId;
    
    
    private Long quantity;
    
    
-   private String lineItemId;
+   private com.commercetools.api.models.state.StateResourceIdentifier fromState;
+   
+   
+   private com.commercetools.api.models.state.StateResourceIdentifier toState;
    
    @Nullable
    private java.time.ZonedDateTime actualTransitionDate;
    
-   public StagedOrderTransitionLineItemStateActionBuilder toState( final com.commercetools.api.models.state.StateResourceIdentifier toState) {
-      this.toState = toState;
-      return this;
-   }
-   
-   public StagedOrderTransitionLineItemStateActionBuilder fromState( final com.commercetools.api.models.state.StateResourceIdentifier fromState) {
-      this.fromState = fromState;
+   public StagedOrderTransitionLineItemStateActionBuilder lineItemId( final String lineItemId) {
+      this.lineItemId = lineItemId;
       return this;
    }
    
@@ -46,8 +41,13 @@ public final class StagedOrderTransitionLineItemStateActionBuilder {
       return this;
    }
    
-   public StagedOrderTransitionLineItemStateActionBuilder lineItemId( final String lineItemId) {
-      this.lineItemId = lineItemId;
+   public StagedOrderTransitionLineItemStateActionBuilder fromState( final com.commercetools.api.models.state.StateResourceIdentifier fromState) {
+      this.fromState = fromState;
+      return this;
+   }
+   
+   public StagedOrderTransitionLineItemStateActionBuilder toState( final com.commercetools.api.models.state.StateResourceIdentifier toState) {
+      this.toState = toState;
       return this;
    }
    
@@ -57,13 +57,8 @@ public final class StagedOrderTransitionLineItemStateActionBuilder {
    }
    
    
-   public com.commercetools.api.models.state.StateResourceIdentifier getToState(){
-      return this.toState;
-   }
-   
-   
-   public com.commercetools.api.models.state.StateResourceIdentifier getFromState(){
-      return this.fromState;
+   public String getLineItemId(){
+      return this.lineItemId;
    }
    
    
@@ -72,8 +67,13 @@ public final class StagedOrderTransitionLineItemStateActionBuilder {
    }
    
    
-   public String getLineItemId(){
-      return this.lineItemId;
+   public com.commercetools.api.models.state.StateResourceIdentifier getFromState(){
+      return this.fromState;
+   }
+   
+   
+   public com.commercetools.api.models.state.StateResourceIdentifier getToState(){
+      return this.toState;
    }
    
    @Nullable
@@ -82,7 +82,7 @@ public final class StagedOrderTransitionLineItemStateActionBuilder {
    }
 
    public StagedOrderTransitionLineItemStateAction build() {
-       return new StagedOrderTransitionLineItemStateActionImpl(toState, fromState, quantity, lineItemId, actualTransitionDate);
+       return new StagedOrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState, actualTransitionDate);
    }
    
    public static StagedOrderTransitionLineItemStateActionBuilder of() {
@@ -91,10 +91,10 @@ public final class StagedOrderTransitionLineItemStateActionBuilder {
    
    public static StagedOrderTransitionLineItemStateActionBuilder of(final StagedOrderTransitionLineItemStateAction template) {
       StagedOrderTransitionLineItemStateActionBuilder builder = new StagedOrderTransitionLineItemStateActionBuilder();
-      builder.toState = template.getToState();
-      builder.fromState = template.getFromState();
-      builder.quantity = template.getQuantity();
       builder.lineItemId = template.getLineItemId();
+      builder.quantity = template.getQuantity();
+      builder.fromState = template.getFromState();
+      builder.toState = template.getToState();
       builder.actualTransitionDate = template.getActualTransitionDate();
       return builder;
    }

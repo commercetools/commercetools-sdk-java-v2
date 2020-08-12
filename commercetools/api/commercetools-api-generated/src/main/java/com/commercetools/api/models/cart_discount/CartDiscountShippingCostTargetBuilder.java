@@ -13,21 +13,21 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartDiscountShippingCostTargetBuilder {
-
-
-
+   
+   
+   
 
    public CartDiscountShippingCostTarget build() {
        return new CartDiscountShippingCostTargetImpl();
    }
-
+   
    public static CartDiscountShippingCostTargetBuilder of() {
       return new CartDiscountShippingCostTargetBuilder();
    }
-
+   
    public static CartDiscountShippingCostTargetBuilder of(final CartDiscountShippingCostTarget template) {
       CartDiscountShippingCostTargetBuilder builder = new CartDiscountShippingCostTargetBuilder();
       return builder;
    }
-
+   
 }

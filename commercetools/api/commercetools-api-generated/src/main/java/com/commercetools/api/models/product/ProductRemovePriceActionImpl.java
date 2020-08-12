@@ -23,44 +23,44 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductRemovePriceActionImpl implements ProductRemovePriceAction {
 
    private String action;
-
+   
+   private String priceId;
+   
    private Boolean staged;
 
-   private String priceId;
-
    @JsonCreator
-   ProductRemovePriceActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("priceId") final String priceId) {
-      this.staged = staged;
+   ProductRemovePriceActionImpl(@JsonProperty("priceId") final String priceId, @JsonProperty("staged") final Boolean staged) {
       this.priceId = priceId;
+      this.staged = staged;
       this.action = "removePrice";
    }
    public ProductRemovePriceActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
-   public Boolean getStaged(){
-      return this.staged;
-   }
-
+   
    /**
    *  <p>ID of the <a href="#price">Price</a></p>
    */
    public String getPriceId(){
       return this.priceId;
    }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
    }
 
    public void setPriceId(final String priceId){
       this.priceId = priceId;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
    }
 
 }

@@ -26,16 +26,16 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
    *  <p>The time from which the discount should be effective.
    *  Please take Eventual Consistency into account for calculated product discount values.</p>
    */
-
+   
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
 
    public void setValidFrom(final ZonedDateTime validFrom);
-
+   
    public static ProductDiscountSetValidFromActionImpl of(){
       return new ProductDiscountSetValidFromActionImpl();
    }
-
+   
 
    public static ProductDiscountSetValidFromActionImpl of(final ProductDiscountSetValidFromAction template) {
       ProductDiscountSetValidFromActionImpl instance = new ProductDiscountSetValidFromActionImpl();

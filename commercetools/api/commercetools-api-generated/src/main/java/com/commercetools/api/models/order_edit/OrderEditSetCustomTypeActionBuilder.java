@@ -17,33 +17,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OrderEditSetCustomTypeActionBuilder {
    
    @Nullable
-   private com.fasterxml.jackson.databind.JsonNode fields;
-   
-   @Nullable
    private com.commercetools.api.models.type.TypeResourceIdentifier type;
    
-   public OrderEditSetCustomTypeActionBuilder fields(@Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
-      this.fields = fields;
-      return this;
-   }
+   @Nullable
+   private com.fasterxml.jackson.databind.JsonNode fields;
    
    public OrderEditSetCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
    
-   @Nullable
-   public com.fasterxml.jackson.databind.JsonNode getFields(){
-      return this.fields;
+   public OrderEditSetCustomTypeActionBuilder fields(@Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
+      this.fields = fields;
+      return this;
    }
    
    @Nullable
    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
+   
+   @Nullable
+   public com.fasterxml.jackson.databind.JsonNode getFields(){
+      return this.fields;
+   }
 
    public OrderEditSetCustomTypeAction build() {
-       return new OrderEditSetCustomTypeActionImpl(fields, type);
+       return new OrderEditSetCustomTypeActionImpl(type, fields);
    }
    
    public static OrderEditSetCustomTypeActionBuilder of() {
@@ -52,8 +52,8 @@ public final class OrderEditSetCustomTypeActionBuilder {
    
    public static OrderEditSetCustomTypeActionBuilder of(final OrderEditSetCustomTypeAction template) {
       OrderEditSetCustomTypeActionBuilder builder = new OrderEditSetCustomTypeActionBuilder();
-      builder.fields = template.getFields();
       builder.type = template.getType();
+      builder.fields = template.getFields();
       return builder;
    }
    

@@ -15,15 +15,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class GeoJsonPointBuilder {
    
    
-   private java.util.List<Integer> coordinates;
+   private java.util.List<Double> coordinates;
    
-   public GeoJsonPointBuilder coordinates( final java.util.List<Integer> coordinates) {
+   public GeoJsonPointBuilder coordinates( final java.util.List<Double> coordinates) {
       this.coordinates = coordinates;
       return this;
    }
    
    
-   public java.util.List<Integer> getCoordinates(){
+   public java.util.List<Double> getCoordinates(){
       return this.coordinates;
    }
 

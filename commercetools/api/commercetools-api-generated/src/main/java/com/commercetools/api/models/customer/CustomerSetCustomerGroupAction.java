@@ -30,11 +30,11 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
    public CustomerGroupResourceIdentifier getCustomerGroup();
 
    public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
-
+   
    public static CustomerSetCustomerGroupActionImpl of(){
       return new CustomerSetCustomerGroupActionImpl();
    }
-
+   
 
    public static CustomerSetCustomerGroupActionImpl of(final CustomerSetCustomerGroupAction template) {
       CustomerSetCustomerGroupActionImpl instance = new CustomerSetCustomerGroupActionImpl();

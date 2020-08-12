@@ -24,54 +24,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyShoppingListSetTextLineItemCustomFieldActionImpl implements MyShoppingListSetTextLineItemCustomFieldAction {
 
    private String action;
-
+   
+   private String textLineItemId;
+   
    private String name;
-
+   
    private com.fasterxml.jackson.databind.JsonNode value;
 
-   private String textLineItemId;
-
    @JsonCreator
-   MyShoppingListSetTextLineItemCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value, @JsonProperty("textLineItemId") final String textLineItemId) {
+   MyShoppingListSetTextLineItemCustomFieldActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
+      this.textLineItemId = textLineItemId;
       this.name = name;
       this.value = value;
-      this.textLineItemId = textLineItemId;
       this.action = "setTextLineItemCustomField";
    }
    public MyShoppingListSetTextLineItemCustomFieldActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getTextLineItemId(){
+      return this.textLineItemId;
+   }
+   
+   
    public String getName(){
       return this.name;
    }
-
-
+   
+   
    public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
 
-
-   public String getTextLineItemId(){
-      return this.textLineItemId;
+   public void setTextLineItemId(final String textLineItemId){
+      this.textLineItemId = textLineItemId;
    }
-
+   
    public void setName(final String name){
       this.name = name;
    }
-
+   
    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
-   }
-
-   public void setTextLineItemId(final String textLineItemId){
-      this.textLineItemId = textLineItemId;
    }
 
 }

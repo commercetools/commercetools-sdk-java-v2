@@ -23,17 +23,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewReferenceImpl.class)
 public interface ReviewReference extends Reference {
 
-
+   
    @Valid
    @JsonProperty("obj")
    public Review getObj();
 
    public void setObj(final Review obj);
-
+   
    public static ReviewReferenceImpl of(){
       return new ReviewReferenceImpl();
    }
-
+   
 
    public static ReviewReferenceImpl of(final ReviewReference template) {
       ReviewReferenceImpl instance = new ReviewReferenceImpl();

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShoppingListChangeTextLineItemsOrderActionImpl implements ShoppingListChangeTextLineItemsOrderAction {
 
    private String action;
-
+   
    private java.util.List<String> textLineItemOrder;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ShoppingListChangeTextLineItemsOrderActionImpl implements Sho
       this.action = "changeTextLineItemsOrder";
    }
    public ShoppingListChangeTextLineItemsOrderActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.util.List<String> getTextLineItemOrder(){
       return this.textLineItemOrder;
    }

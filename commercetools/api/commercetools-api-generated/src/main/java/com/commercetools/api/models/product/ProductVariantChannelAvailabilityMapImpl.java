@@ -29,10 +29,10 @@ public final class ProductVariantChannelAvailabilityMapImpl implements ProductVa
       this.values = values;
    }
    public ProductVariantChannelAvailabilityMapImpl() {
-
+      
    }
-
-
+   
+   
    public Map<String,com.commercetools.api.models.product.ProductVariantChannelAvailability> values() {
        return values;
    }

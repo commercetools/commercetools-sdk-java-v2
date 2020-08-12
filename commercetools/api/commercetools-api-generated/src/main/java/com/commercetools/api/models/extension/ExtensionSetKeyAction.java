@@ -24,16 +24,16 @@ public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
    /**
    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static ExtensionSetKeyActionImpl of(){
       return new ExtensionSetKeyActionImpl();
    }
-
+   
 
    public static ExtensionSetKeyActionImpl of(final ExtensionSetKeyAction template) {
       ExtensionSetKeyActionImpl instance = new ExtensionSetKeyActionImpl();

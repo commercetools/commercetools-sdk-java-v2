@@ -23,17 +23,17 @@ import java.io.IOException;
 @JsonDeserialize(as = StateReferenceImpl.class)
 public interface StateReference extends Reference {
 
-
+   
    @Valid
    @JsonProperty("obj")
    public State getObj();
 
    public void setObj(final State obj);
-
+   
    public static StateReferenceImpl of(){
       return new StateReferenceImpl();
    }
-
+   
 
    public static StateReferenceImpl of(final StateReference template) {
       StateReferenceImpl instance = new StateReferenceImpl();

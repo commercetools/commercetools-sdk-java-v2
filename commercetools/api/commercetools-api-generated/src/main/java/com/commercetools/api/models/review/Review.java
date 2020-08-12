@@ -1,8 +1,8 @@
 package com.commercetools.api.models.review;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFields;
@@ -26,7 +26,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ReviewImpl.class)
-public interface Review extends LoggedResource {
+public interface Review extends BaseResource {
 
    /**
    *  <p>The unique ID of the review.</p>
@@ -40,11 +40,11 @@ public interface Review extends LoggedResource {
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -63,34 +63,34 @@ public interface Review extends LoggedResource {
    /**
    *  <p>User-specific unique identifier for the review.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
-
-
+   
+   
    @JsonProperty("uniquenessValue")
    public String getUniquenessValue();
-
-
+   
+   
    @JsonProperty("locale")
    public String getLocale();
-
-
+   
+   
    @JsonProperty("authorName")
    public String getAuthorName();
-
-
+   
+   
    @JsonProperty("title")
    public String getTitle();
-
-
+   
+   
    @JsonProperty("text")
    public String getText();
    /**
    *  <p>Identifies the target of the review.
    *  Can be a Product or a Channel</p>
    */
-
+   
    @JsonProperty("target")
    public JsonNode getTarget();
    /**
@@ -104,10 +104,10 @@ public interface Review extends LoggedResource {
    /**
    *  <p>Number between -100 and 100 included.</p>
    */
-
+   
    @JsonProperty("rating")
    public Integer getRating();
-
+   
    @Valid
    @JsonProperty("state")
    public StateReference getState();
@@ -117,72 +117,72 @@ public interface Review extends LoggedResource {
    @Valid
    @JsonProperty("customer")
    public CustomerReference getCustomer();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setCreatedAt(final ZonedDateTime createdAt);
-
+   
    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+   
    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+   
    public void setCreatedBy(final CreatedBy createdBy);
-
+   
    public void setKey(final String key);
-
+   
    public void setUniquenessValue(final String uniquenessValue);
-
+   
    public void setLocale(final String locale);
-
+   
    public void setAuthorName(final String authorName);
-
+   
    public void setTitle(final String title);
-
+   
    public void setText(final String text);
-
+   
    public void setTarget(final JsonNode target);
-
+   
    public void setIncludedInStatistics(final Boolean includedInStatistics);
-
+   
    public void setRating(final Integer rating);
-
+   
    public void setState(final StateReference state);
-
+   
    public void setCustomer(final CustomerReference customer);
-
+   
    public void setCustom(final CustomFields custom);
-
+   
    public static ReviewImpl of(){
       return new ReviewImpl();
    }
-
+   
 
    public static ReviewImpl of(final Review template) {
       ReviewImpl instance = new ReviewImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setKey(template.getKey());
       instance.setUniquenessValue(template.getUniquenessValue());
-      instance.setCustom(template.getCustom());
-      instance.setRating(template.getRating());
-      instance.setTitle(template.getTitle());
       instance.setLocale(template.getLocale());
+      instance.setAuthorName(template.getAuthorName());
+      instance.setTitle(template.getTitle());
+      instance.setText(template.getText());
       instance.setTarget(template.getTarget());
       instance.setIncludedInStatistics(template.getIncludedInStatistics());
-      instance.setAuthorName(template.getAuthorName());
+      instance.setRating(template.getRating());
       instance.setState(template.getState());
-      instance.setText(template.getText());
-      instance.setKey(template.getKey());
       instance.setCustomer(template.getCustomer());
+      instance.setCustom(template.getCustom());
       return instance;
    }
 

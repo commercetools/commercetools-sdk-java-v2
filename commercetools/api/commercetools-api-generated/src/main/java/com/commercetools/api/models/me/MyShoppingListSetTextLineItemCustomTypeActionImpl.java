@@ -25,54 +25,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyShoppingListSetTextLineItemCustomTypeActionImpl implements MyShoppingListSetTextLineItemCustomTypeAction {
 
    private String action;
-
+   
+   private String textLineItemId;
+   
+   private com.commercetools.api.models.type.TypeResourceIdentifier type;
+   
    private com.commercetools.api.models.type.FieldContainer fields;
 
-   private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
-   private String textLineItemId;
-
    @JsonCreator
-   MyShoppingListSetTextLineItemCustomTypeActionImpl(@JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("textLineItemId") final String textLineItemId) {
-      this.fields = fields;
-      this.type = type;
+   MyShoppingListSetTextLineItemCustomTypeActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
       this.textLineItemId = textLineItemId;
+      this.type = type;
+      this.fields = fields;
       this.action = "setTextLineItemCustomType";
    }
    public MyShoppingListSetTextLineItemCustomTypeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getTextLineItemId(){
+      return this.textLineItemId;
+   }
+   
+   
+   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+      return this.type;
+   }
+   
+   
    public com.commercetools.api.models.type.FieldContainer getFields(){
       return this.fields;
    }
 
-
-   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
-      return this.type;
+   public void setTextLineItemId(final String textLineItemId){
+      this.textLineItemId = textLineItemId;
    }
-
-
-   public String getTextLineItemId(){
-      return this.textLineItemId;
-   }
-
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
-
+   
    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
       this.type = type;
    }
-
-   public void setTextLineItemId(final String textLineItemId){
-      this.textLineItemId = textLineItemId;
+   
+   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+      this.fields = fields;
    }
 
 }

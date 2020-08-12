@@ -22,39 +22,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
 
+   private String paymentInterface;
+   
    private String method;
-
+   
    private com.commercetools.api.models.common.LocalizedString name;
 
-   private String paymentInterface;
-
    @JsonCreator
-   PaymentMethodInfoImpl(@JsonProperty("method") final String method, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("paymentInterface") final String paymentInterface) {
+   PaymentMethodInfoImpl(@JsonProperty("paymentInterface") final String paymentInterface, @JsonProperty("method") final String method, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
+      this.paymentInterface = paymentInterface;
       this.method = method;
       this.name = name;
-      this.paymentInterface = paymentInterface;
    }
    public PaymentMethodInfoImpl() {
-
+      
    }
-
-   /**
-   *  <p>The payment method that is used, e.g.
-   *  e.g.
-   *  a conventional string representing Credit Card, Cash Advance etc.</p>
-   */
-   public String getMethod(){
-      return this.method;
-   }
-
-   /**
-   *  <p>A human-readable, localized name for the payment method, e.g.
-   *  'Credit Card'.</p>
-   */
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
-
+   
    /**
    *  <p>The interface that handles the payment (usually a PSP).
    *  Cannot be changed once it has been set.
@@ -63,17 +46,34 @@ public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
    public String getPaymentInterface(){
       return this.paymentInterface;
    }
-
-   public void setMethod(final String method){
-      this.method = method;
+   
+   /**
+   *  <p>The payment method that is used, e.g.
+   *  e.g.
+   *  a conventional string representing Credit Card, Cash Advance etc.</p>
+   */
+   public String getMethod(){
+      return this.method;
    }
-
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
+   
+   /**
+   *  <p>A human-readable, localized name for the payment method, e.g.
+   *  'Credit Card'.</p>
+   */
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
    }
 
    public void setPaymentInterface(final String paymentInterface){
       this.paymentInterface = paymentInterface;
+   }
+   
+   public void setMethod(final String method){
+      this.method = method;
+   }
+   
+   public void setName(final com.commercetools.api.models.common.LocalizedString name){
+      this.name = name;
    }
 
 }

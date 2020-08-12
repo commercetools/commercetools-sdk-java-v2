@@ -28,7 +28,7 @@ public class ByProjectKeyMeShoppingListsRequestBuilder {
    public ByProjectKeyMeShoppingListsByIDRequestBuilder withId(String ID) {
       return new ByProjectKeyMeShoppingListsByIDRequestBuilder(apiHttpClient, projectKey, ID);
    }
-   public ByProjectKeyMeShoppingListsKeyByKeyRequestBuilder keyWithKeyValue(String key) {
+   public ByProjectKeyMeShoppingListsKeyByKeyRequestBuilder withKey(String key) {
       return new ByProjectKeyMeShoppingListsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
    }
 }

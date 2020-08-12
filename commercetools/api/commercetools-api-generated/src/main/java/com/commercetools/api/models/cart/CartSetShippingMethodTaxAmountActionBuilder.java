@@ -14,15 +14,15 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartSetShippingMethodTaxAmountActionBuilder {
-
+   
    @Nullable
    private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
-
+   
    public CartSetShippingMethodTaxAmountActionBuilder externalTaxAmount(@Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
       this.externalTaxAmount = externalTaxAmount;
       return this;
    }
-
+   
    @Nullable
    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
       return this.externalTaxAmount;
@@ -31,15 +31,15 @@ public final class CartSetShippingMethodTaxAmountActionBuilder {
    public CartSetShippingMethodTaxAmountAction build() {
        return new CartSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
    }
-
+   
    public static CartSetShippingMethodTaxAmountActionBuilder of() {
       return new CartSetShippingMethodTaxAmountActionBuilder();
    }
-
+   
    public static CartSetShippingMethodTaxAmountActionBuilder of(final CartSetShippingMethodTaxAmountAction template) {
       CartSetShippingMethodTaxAmountActionBuilder builder = new CartSetShippingMethodTaxAmountActionBuilder();
       builder.externalTaxAmount = template.getExternalTaxAmount();
       return builder;
    }
-
+   
 }

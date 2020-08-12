@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ExternalLineItemTotalPriceImpl.class)
 public interface ExternalLineItemTotalPrice  {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("price")
    public Money getPrice();
-
+   
    @NotNull
    @Valid
    @JsonProperty("totalPrice")
    public Money getTotalPrice();
 
    public void setPrice(final Money price);
-
+   
    public void setTotalPrice(final Money totalPrice);
-
+   
    public static ExternalLineItemTotalPriceImpl of(){
       return new ExternalLineItemTotalPriceImpl();
    }
-
+   
 
    public static ExternalLineItemTotalPriceImpl of(final ExternalLineItemTotalPrice template) {
       ExternalLineItemTotalPriceImpl instance = new ExternalLineItemTotalPriceImpl();
-      instance.setTotalPrice(template.getTotalPrice());
       instance.setPrice(template.getPrice());
+      instance.setTotalPrice(template.getTotalPrice());
       return instance;
    }
 

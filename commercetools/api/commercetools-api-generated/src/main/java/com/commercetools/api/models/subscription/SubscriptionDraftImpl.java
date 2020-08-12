@@ -25,36 +25,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubscriptionDraftImpl implements SubscriptionDraft {
 
-   private com.commercetools.api.models.subscription.DeliveryFormat format;
+   private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
    
    private com.commercetools.api.models.subscription.Destination destination;
    
-   private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
+   private String key;
    
    private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
    
-   private String key;
+   private com.commercetools.api.models.subscription.DeliveryFormat format;
 
    @JsonCreator
-   SubscriptionDraftImpl(@JsonProperty("format") final com.commercetools.api.models.subscription.DeliveryFormat format, @JsonProperty("destination") final com.commercetools.api.models.subscription.Destination destination, @JsonProperty("changes") final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes, @JsonProperty("messages") final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages, @JsonProperty("key") final String key) {
-      this.format = format;
-      this.destination = destination;
+   SubscriptionDraftImpl(@JsonProperty("changes") final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes, @JsonProperty("destination") final com.commercetools.api.models.subscription.Destination destination, @JsonProperty("key") final String key, @JsonProperty("messages") final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages, @JsonProperty("format") final com.commercetools.api.models.subscription.DeliveryFormat format) {
       this.changes = changes;
-      this.messages = messages;
+      this.destination = destination;
       this.key = key;
+      this.messages = messages;
+      this.format = format;
    }
    public SubscriptionDraftImpl() {
       
-   }
-   
-   
-   public com.commercetools.api.models.subscription.DeliveryFormat getFormat(){
-      return this.format;
-   }
-   
-   
-   public com.commercetools.api.models.subscription.Destination getDestination(){
-      return this.destination;
    }
    
    
@@ -63,33 +53,43 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
    }
    
    
-   public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
-      return this.messages;
+   public com.commercetools.api.models.subscription.Destination getDestination(){
+      return this.destination;
    }
    
    
    public String getKey(){
       return this.key;
    }
+   
+   
+   public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
+      return this.messages;
+   }
+   
+   
+   public com.commercetools.api.models.subscription.DeliveryFormat getFormat(){
+      return this.format;
+   }
 
-   public void setFormat(final com.commercetools.api.models.subscription.DeliveryFormat format){
-      this.format = format;
+   public void setChanges(final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes){
+      this.changes = changes;
    }
    
    public void setDestination(final com.commercetools.api.models.subscription.Destination destination){
       this.destination = destination;
    }
    
-   public void setChanges(final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes){
-      this.changes = changes;
+   public void setKey(final String key){
+      this.key = key;
    }
    
    public void setMessages(final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages){
       this.messages = messages;
    }
    
-   public void setKey(final String key){
-      this.key = key;
+   public void setFormat(final com.commercetools.api.models.subscription.DeliveryFormat format){
+      this.format = format;
    }
 
 }

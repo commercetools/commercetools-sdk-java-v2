@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +35,7 @@ public class ByProjectKeyProductsByIDImagesPost {
    private Map<String, String> additionalQueryParams = new HashMap<>();
    private final ApiHttpClient apiHttpClient; 
    private List<String> filename = new ArrayList<>();
-   private List<Integer> variant = new ArrayList<>();
+   private List<Double> variant = new ArrayList<>();
    private List<String> sku = new ArrayList<>();
    private List<Boolean> staged = new ArrayList<>();
    private String projectKey;
@@ -64,7 +66,7 @@ public class ByProjectKeyProductsByIDImagesPost {
       httpRequest.setRelativeUrl(httpRequestPath); 
       httpRequest.setMethod(ApiHttpMethod.POST);
       httpRequest.setHeaders(headers);
-      try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(file));}catch(Exception e){e.printStackTrace();}
+      try{httpRequest.setBody(Files.readAllBytes(file.toPath()));}catch(Exception e){e.printStackTrace();}
       return httpRequest;
    }
    
@@ -93,7 +95,7 @@ public class ByProjectKeyProductsByIDImagesPost {
       return this.filename;
    }
    
-   public List<Integer> getVariant() {
+   public List<Double> getVariant() {
       return this.variant;
    }
    
@@ -119,12 +121,12 @@ public class ByProjectKeyProductsByIDImagesPost {
       return this;
    }
    
-   public ByProjectKeyProductsByIDImagesPost addVariant(final Integer variant){
+   public ByProjectKeyProductsByIDImagesPost addVariant(final Double variant){
       this.variant.add(variant);
       return this;
    }
    
-   public ByProjectKeyProductsByIDImagesPost withVariant(final List<Integer> variant){
+   public ByProjectKeyProductsByIDImagesPost withVariant(final List<Double> variant){
       this.variant = variant;
       return this;
    }

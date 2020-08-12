@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyCustomerSetLocaleActionImpl implements MyCustomerSetLocaleAction {
 
    private String action;
-
+   
    private String locale;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class MyCustomerSetLocaleActionImpl implements MyCustomerSetLocaleA
       this.action = "setLocale";
    }
    public MyCustomerSetLocaleActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getLocale(){
       return this.locale;
    }

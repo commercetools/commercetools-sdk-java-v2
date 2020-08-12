@@ -37,18 +37,18 @@ public interface CustomFieldsDraft  {
    public FieldContainer getFields();
 
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final FieldContainer fields);
-
+   
    public static CustomFieldsDraftImpl of(){
       return new CustomFieldsDraftImpl();
    }
-
+   
 
    public static CustomFieldsDraftImpl of(final CustomFieldsDraft template) {
       CustomFieldsDraftImpl instance = new CustomFieldsDraftImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

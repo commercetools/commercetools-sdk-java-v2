@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = StateRemoveRolesActionImpl.class)
 public interface StateRemoveRolesAction extends StateUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("roles")
    public List<StateRoleEnum> getRoles();
 
    public void setRoles(final List<StateRoleEnum> roles);
-
+   
    public static StateRemoveRolesActionImpl of(){
       return new StateRemoveRolesActionImpl();
    }
-
+   
 
    public static StateRemoveRolesActionImpl of(final StateRemoveRolesAction template) {
       StateRemoveRolesActionImpl instance = new StateRemoveRolesActionImpl();

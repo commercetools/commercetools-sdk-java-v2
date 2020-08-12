@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeChangeEnumValueLabelActionImpl.class)
 public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("fieldName")
    public String getFieldName();
-
+   
    @NotNull
    @Valid
    @JsonProperty("value")
    public CustomFieldEnumValue getValue();
 
    public void setFieldName(final String fieldName);
-
+   
    public void setValue(final CustomFieldEnumValue value);
-
+   
    public static TypeChangeEnumValueLabelActionImpl of(){
       return new TypeChangeEnumValueLabelActionImpl();
    }
-
+   
 
    public static TypeChangeEnumValueLabelActionImpl of(final TypeChangeEnumValueLabelAction template) {
       TypeChangeEnumValueLabelActionImpl instance = new TypeChangeEnumValueLabelActionImpl();

@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubscriptionUpdateImpl implements SubscriptionUpdate {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   SubscriptionUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   SubscriptionUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public SubscriptionUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

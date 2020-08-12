@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.order.Delivery delivery;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessa
       this.type = "DeliveryAdded";
    }
    public DeliveryAddedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.Delivery getDelivery(){
       return this.delivery;
    }

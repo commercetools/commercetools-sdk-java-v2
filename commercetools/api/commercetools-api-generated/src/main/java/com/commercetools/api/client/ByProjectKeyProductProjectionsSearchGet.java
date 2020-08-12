@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -33,20 +35,23 @@ public class ByProjectKeyProductProjectionsSearchGet {
    private Map<String, String> additionalQueryParams = new HashMap<>();
    private final ApiHttpClient apiHttpClient; 
    private List<Boolean> fuzzy = new ArrayList<>();
-   private List<Integer> fuzzyLevel = new ArrayList<>();
+   private List<Double> fuzzyLevel = new ArrayList<>();
+   private List<Boolean> markMatchingVariants = new ArrayList<>();
    private List<Boolean> staged = new ArrayList<>();
    private List<String> filter = new ArrayList<>();
    private List<String> filterFacets = new ArrayList<>();
    private List<String> filterQuery = new ArrayList<>();
    private List<String> facet = new ArrayList<>();
    private List<String> sort = new ArrayList<>();
-   private List<Integer> limit = new ArrayList<>();
-   private List<Integer> offset = new ArrayList<>();
+   private List<Double> limit = new ArrayList<>();
+   private List<Double> offset = new ArrayList<>();
    private List<Boolean> withTotal = new ArrayList<>();
    private List<String> priceCurrency = new ArrayList<>();
    private List<String> priceCountry = new ArrayList<>();
    private List<String> priceCustomerGroup = new ArrayList<>();
    private List<String> priceChannel = new ArrayList<>();
+   private List<String> localeProjection = new ArrayList<>();
+   private List<String> storeProjection = new ArrayList<>();
    private List<String> expand = new ArrayList<>();
    private String projectKey;
    
@@ -61,6 +66,7 @@ public class ByProjectKeyProductProjectionsSearchGet {
       List<String> params = new ArrayList<>();
       params.add(this.fuzzy.stream().map(s -> "fuzzy=" + s).collect(Collectors.joining("&")));
       params.add(this.fuzzyLevel.stream().map(s -> "fuzzyLevel=" + s).collect(Collectors.joining("&")));
+      params.add(this.markMatchingVariants.stream().map(s -> "markMatchingVariants=" + s).collect(Collectors.joining("&")));
       params.add(this.staged.stream().map(s -> "staged=" + s).collect(Collectors.joining("&")));
       params.add(this.filter.stream().map(s -> "filter=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.filterFacets.stream().map(s -> "filter.facets=" + urlEncode(s)).collect(Collectors.joining("&")));
@@ -74,6 +80,8 @@ public class ByProjectKeyProductProjectionsSearchGet {
       params.add(this.priceCountry.stream().map(s -> "priceCountry=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.priceCustomerGroup.stream().map(s -> "priceCustomerGroup=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.priceChannel.stream().map(s -> "priceChannel=" + urlEncode(s)).collect(Collectors.joining("&")));
+      params.add(this.localeProjection.stream().map(s -> "localeProjection=" + urlEncode(s)).collect(Collectors.joining("&")));
+      params.add(this.storeProjection.stream().map(s -> "storeProjection=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(this.expand.stream().map(s -> "expand=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
       params.removeIf(String::isEmpty);
@@ -112,8 +120,12 @@ public class ByProjectKeyProductProjectionsSearchGet {
       return this.fuzzy;
    }
    
-   public List<Integer> getFuzzyLevel() {
+   public List<Double> getFuzzyLevel() {
       return this.fuzzyLevel;
+   }
+   
+   public List<Boolean> getMarkMatchingVariants() {
+      return this.markMatchingVariants;
    }
    
    public List<Boolean> getStaged() {
@@ -140,11 +152,11 @@ public class ByProjectKeyProductProjectionsSearchGet {
       return this.sort;
    }
    
-   public List<Integer> getLimit() {
+   public List<Double> getLimit() {
       return this.limit;
    }
    
-   public List<Integer> getOffset() {
+   public List<Double> getOffset() {
       return this.offset;
    }
    
@@ -168,6 +180,14 @@ public class ByProjectKeyProductProjectionsSearchGet {
       return this.priceChannel;
    }
    
+   public List<String> getLocaleProjection() {
+      return this.localeProjection;
+   }
+   
+   public List<String> getStoreProjection() {
+      return this.storeProjection;
+   }
+   
    public List<String> getExpand() {
       return this.expand;
    }
@@ -184,13 +204,23 @@ public class ByProjectKeyProductProjectionsSearchGet {
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Integer fuzzyLevel){
+   public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Double fuzzyLevel){
       this.fuzzyLevel.add(fuzzyLevel);
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final List<Integer> fuzzyLevel){
+   public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final List<Double> fuzzyLevel){
       this.fuzzyLevel = fuzzyLevel;
+      return this;
+   }
+   
+   public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final Boolean markMatchingVariants){
+      this.markMatchingVariants.add(markMatchingVariants);
+      return this;
+   }
+   
+   public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final List<Boolean> markMatchingVariants){
+      this.markMatchingVariants = markMatchingVariants;
       return this;
    }
    
@@ -254,22 +284,22 @@ public class ByProjectKeyProductProjectionsSearchGet {
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSearchGet addLimit(final Integer limit){
+   public ByProjectKeyProductProjectionsSearchGet addLimit(final Double limit){
       this.limit.add(limit);
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSearchGet withLimit(final List<Integer> limit){
+   public ByProjectKeyProductProjectionsSearchGet withLimit(final List<Double> limit){
       this.limit = limit;
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSearchGet addOffset(final Integer offset){
+   public ByProjectKeyProductProjectionsSearchGet addOffset(final Double offset){
       this.offset.add(offset);
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSearchGet withOffset(final List<Integer> offset){
+   public ByProjectKeyProductProjectionsSearchGet withOffset(final List<Double> offset){
       this.offset = offset;
       return this;
    }
@@ -321,6 +351,26 @@ public class ByProjectKeyProductProjectionsSearchGet {
    
    public ByProjectKeyProductProjectionsSearchGet withPriceChannel(final List<String> priceChannel){
       this.priceChannel = priceChannel;
+      return this;
+   }
+   
+   public ByProjectKeyProductProjectionsSearchGet addLocaleProjection(final String localeProjection){
+      this.localeProjection.add(localeProjection);
+      return this;
+   }
+   
+   public ByProjectKeyProductProjectionsSearchGet withLocaleProjection(final List<String> localeProjection){
+      this.localeProjection = localeProjection;
+      return this;
+   }
+   
+   public ByProjectKeyProductProjectionsSearchGet addStoreProjection(final String storeProjection){
+      this.storeProjection.add(storeProjection);
+      return this;
+   }
+   
+   public ByProjectKeyProductProjectionsSearchGet withStoreProjection(final List<String> storeProjection){
+      this.storeProjection = storeProjection;
       return this;
    }
    

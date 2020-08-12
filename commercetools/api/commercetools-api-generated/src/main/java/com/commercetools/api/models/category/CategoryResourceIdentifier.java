@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface CategoryResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static CategoryResourceIdentifierImpl of(){
       return new CategoryResourceIdentifierImpl();
    }
-
+   
 
    public static CategoryResourceIdentifierImpl of(final CategoryResourceIdentifier template) {
       CategoryResourceIdentifierImpl instance = new CategoryResourceIdentifierImpl();

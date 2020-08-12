@@ -23,17 +23,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountReferenceImpl.class)
 public interface CartDiscountReference extends Reference {
 
-
+   
    @Valid
    @JsonProperty("obj")
    public CartDiscount getObj();
 
    public void setObj(final CartDiscount obj);
-
+   
    public static CartDiscountReferenceImpl of(){
       return new CartDiscountReferenceImpl();
    }
-
+   
 
    public static CartDiscountReferenceImpl of(final CartDiscountReference template) {
       CartDiscountReferenceImpl instance = new CartDiscountReferenceImpl();

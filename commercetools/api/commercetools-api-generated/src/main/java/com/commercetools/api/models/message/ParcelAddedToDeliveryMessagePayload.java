@@ -23,25 +23,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelAddedToDeliveryMessagePayloadImpl.class)
 public interface ParcelAddedToDeliveryMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("delivery")
    public Delivery getDelivery();
-
+   
    @NotNull
    @Valid
    @JsonProperty("parcel")
    public Parcel getParcel();
 
    public void setDelivery(final Delivery delivery);
-
+   
    public void setParcel(final Parcel parcel);
-
+   
    public static ParcelAddedToDeliveryMessagePayloadImpl of(){
       return new ParcelAddedToDeliveryMessagePayloadImpl();
    }
-
+   
 
    public static ParcelAddedToDeliveryMessagePayloadImpl of(final ParcelAddedToDeliveryMessagePayload template) {
       ParcelAddedToDeliveryMessagePayloadImpl instance = new ParcelAddedToDeliveryMessagePayloadImpl();

@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = MyPaymentSetMethodInfoMethodActionImpl.class)
 public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateAction {
 
-
-
+   
+   
    @JsonProperty("method")
    public String getMethod();
 
    public void setMethod(final String method);
-
+   
    public static MyPaymentSetMethodInfoMethodActionImpl of(){
       return new MyPaymentSetMethodInfoMethodActionImpl();
    }
-
+   
 
    public static MyPaymentSetMethodInfoMethodActionImpl of(final MyPaymentSetMethodInfoMethodAction template) {
       MyPaymentSetMethodInfoMethodActionImpl instance = new MyPaymentSetMethodInfoMethodActionImpl();

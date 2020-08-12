@@ -21,28 +21,28 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductLegacySetSkuActionImpl.class)
 public interface ProductLegacySetSkuAction extends ProductUpdateAction {
 
-
-
+   
+   
    @JsonProperty("sku")
    public String getSku();
-
+   
    @NotNull
    @JsonProperty("variantId")
    public Integer getVariantId();
 
    public void setSku(final String sku);
-
+   
    public void setVariantId(final Integer variantId);
-
+   
    public static ProductLegacySetSkuActionImpl of(){
       return new ProductLegacySetSkuActionImpl();
    }
-
+   
 
    public static ProductLegacySetSkuActionImpl of(final ProductLegacySetSkuAction template) {
       ProductLegacySetSkuActionImpl instance = new ProductLegacySetSkuActionImpl();
-      instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
+      instance.setVariantId(template.getVariantId());
       return instance;
    }
 

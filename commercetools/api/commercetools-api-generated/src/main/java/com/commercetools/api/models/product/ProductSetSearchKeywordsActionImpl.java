@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywordsAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.product.SearchKeywords searchKeywords;
-
+   
    private Boolean staged;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class ProductSetSearchKeywordsActionImpl implements ProductSetSearc
       this.action = "setSearchKeywords";
    }
    public ProductSetSearchKeywordsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords(){
       return this.searchKeywords;
    }
-
-
+   
+   
    public Boolean getStaged(){
       return this.staged;
    }
@@ -57,7 +57,7 @@ public final class ProductSetSearchKeywordsActionImpl implements ProductSetSearc
    public void setSearchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords){
       this.searchKeywords = searchKeywords;
    }
-
+   
    public void setStaged(final Boolean staged){
       this.staged = staged;
    }

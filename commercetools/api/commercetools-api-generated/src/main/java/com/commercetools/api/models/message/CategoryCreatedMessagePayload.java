@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryCreatedMessagePayloadImpl.class)
 public interface CategoryCreatedMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("category")
    public Category getCategory();
 
    public void setCategory(final Category category);
-
+   
    public static CategoryCreatedMessagePayloadImpl of(){
       return new CategoryCreatedMessagePayloadImpl();
    }
-
+   
 
    public static CategoryCreatedMessagePayloadImpl of(final CategoryCreatedMessagePayload template) {
       CategoryCreatedMessagePayloadImpl instance = new CategoryCreatedMessagePayloadImpl();

@@ -22,28 +22,28 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderCustomerGroupSetMessagePayloadImpl.class)
 public interface OrderCustomerGroupSetMessagePayload extends MessagePayload {
 
-
+   
    @Valid
    @JsonProperty("customerGroup")
    public CustomerGroupReference getCustomerGroup();
-
+   
    @Valid
    @JsonProperty("oldCustomerGroup")
    public CustomerGroupReference getOldCustomerGroup();
 
    public void setCustomerGroup(final CustomerGroupReference customerGroup);
-
+   
    public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
-
+   
    public static OrderCustomerGroupSetMessagePayloadImpl of(){
       return new OrderCustomerGroupSetMessagePayloadImpl();
    }
-
+   
 
    public static OrderCustomerGroupSetMessagePayloadImpl of(final OrderCustomerGroupSetMessagePayload template) {
       OrderCustomerGroupSetMessagePayloadImpl instance = new OrderCustomerGroupSetMessagePayloadImpl();
-      instance.setOldCustomerGroup(template.getOldCustomerGroup());
       instance.setCustomerGroup(template.getCustomerGroup());
+      instance.setOldCustomerGroup(template.getOldCustomerGroup());
       return instance;
    }
 

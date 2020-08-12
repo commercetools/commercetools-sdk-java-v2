@@ -42,8 +42,8 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
 
    public static OrderSetParcelTrackingDataActionImpl of(final OrderSetParcelTrackingDataAction template) {
       OrderSetParcelTrackingDataActionImpl instance = new OrderSetParcelTrackingDataActionImpl();
-      instance.setTrackingData(template.getTrackingData());
       instance.setParcelId(template.getParcelId());
+      instance.setTrackingData(template.getTrackingData());
       return instance;
    }
 

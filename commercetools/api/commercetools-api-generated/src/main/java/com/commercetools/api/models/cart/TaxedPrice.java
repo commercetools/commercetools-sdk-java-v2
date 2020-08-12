@@ -22,12 +22,12 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxedPriceImpl.class)
 public interface TaxedPrice  {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("totalNet")
    public TypedMoney getTotalNet();
-
+   
    @NotNull
    @Valid
    @JsonProperty("totalGross")
@@ -41,21 +41,21 @@ public interface TaxedPrice  {
    public List<TaxPortion> getTaxPortions();
 
    public void setTotalNet(final TypedMoney totalNet);
-
+   
    public void setTotalGross(final TypedMoney totalGross);
-
+   
    public void setTaxPortions(final List<TaxPortion> taxPortions);
-
+   
    public static TaxedPriceImpl of(){
       return new TaxedPriceImpl();
    }
-
+   
 
    public static TaxedPriceImpl of(final TaxedPrice template) {
       TaxedPriceImpl instance = new TaxedPriceImpl();
-      instance.setTaxPortions(template.getTaxPortions());
-      instance.setTotalGross(template.getTotalGross());
       instance.setTotalNet(template.getTotalNet());
+      instance.setTotalGross(template.getTotalGross());
+      instance.setTaxPortions(template.getTaxPortions());
       return instance;
    }
 

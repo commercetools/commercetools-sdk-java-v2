@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DiscountCodeSetValidFromActionImpl implements DiscountCodeSetValidFromAction {
 
    private String action;
-
+   
    private java.time.ZonedDateTime validFrom;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class DiscountCodeSetValidFromActionImpl implements DiscountCodeSet
       this.action = "setValidFrom";
    }
    public DiscountCodeSetValidFromActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
    */

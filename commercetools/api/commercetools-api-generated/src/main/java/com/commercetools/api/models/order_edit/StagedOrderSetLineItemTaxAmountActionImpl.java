@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSetLineItemTaxAmountAction {
 
    private String action;
-
+   
    private String lineItemId;
-
+   
    private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOr
       this.action = "setLineItemTaxAmount";
    }
    public StagedOrderSetLineItemTaxAmountActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
       return this.externalTaxAmount;
    }
@@ -57,7 +57,7 @@ public final class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOr
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
-
+   
    public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount){
       this.externalTaxAmount = externalTaxAmount;
    }

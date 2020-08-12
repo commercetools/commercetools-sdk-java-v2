@@ -22,44 +22,44 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelItemsUpdatedMessagePayloadImpl.class)
 public interface ParcelItemsUpdatedMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @JsonProperty("parcelId")
    public String getParcelId();
-
-
+   
+   
    @JsonProperty("deliveryId")
    public String getDeliveryId();
-
+   
    @NotNull
    @Valid
    @JsonProperty("items")
    public List<DeliveryItem> getItems();
-
+   
    @NotNull
    @Valid
    @JsonProperty("oldItems")
    public List<DeliveryItem> getOldItems();
 
    public void setParcelId(final String parcelId);
-
+   
    public void setDeliveryId(final String deliveryId);
-
+   
    public void setItems(final List<DeliveryItem> items);
-
+   
    public void setOldItems(final List<DeliveryItem> oldItems);
-
+   
    public static ParcelItemsUpdatedMessagePayloadImpl of(){
       return new ParcelItemsUpdatedMessagePayloadImpl();
    }
-
+   
 
    public static ParcelItemsUpdatedMessagePayloadImpl of(final ParcelItemsUpdatedMessagePayload template) {
       ParcelItemsUpdatedMessagePayloadImpl instance = new ParcelItemsUpdatedMessagePayloadImpl();
-      instance.setDeliveryId(template.getDeliveryId());
-      instance.setOldItems(template.getOldItems());
-      instance.setItems(template.getItems());
       instance.setParcelId(template.getParcelId());
+      instance.setDeliveryId(template.getDeliveryId());
+      instance.setItems(template.getItems());
+      instance.setOldItems(template.getOldItems());
       return instance;
    }
 

@@ -23,47 +23,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxedPriceDraftImpl implements TaxedPriceDraft {
 
+   private com.commercetools.api.models.common.TypedMoneyDraft totalNet;
+   
+   private com.commercetools.api.models.common.TypedMoneyDraft totalGross;
+   
    private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
 
-   private com.commercetools.api.models.common.TypedMoneyDraft totalGross;
-
-   private com.commercetools.api.models.common.TypedMoneyDraft totalNet;
-
    @JsonCreator
-   TaxedPriceDraftImpl(@JsonProperty("taxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions, @JsonProperty("totalGross") final com.commercetools.api.models.common.TypedMoneyDraft totalGross, @JsonProperty("totalNet") final com.commercetools.api.models.common.TypedMoneyDraft totalNet) {
-      this.taxPortions = taxPortions;
-      this.totalGross = totalGross;
+   TaxedPriceDraftImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.TypedMoneyDraft totalNet, @JsonProperty("totalGross") final com.commercetools.api.models.common.TypedMoneyDraft totalGross, @JsonProperty("taxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions) {
       this.totalNet = totalNet;
+      this.totalGross = totalGross;
+      this.taxPortions = taxPortions;
    }
    public TaxedPriceDraftImpl() {
-
+      
    }
-
-
+   
+   
+   public com.commercetools.api.models.common.TypedMoneyDraft getTotalNet(){
+      return this.totalNet;
+   }
+   
+   
+   public com.commercetools.api.models.common.TypedMoneyDraft getTotalGross(){
+      return this.totalGross;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getTaxPortions(){
       return this.taxPortions;
    }
 
-
-   public com.commercetools.api.models.common.TypedMoneyDraft getTotalGross(){
-      return this.totalGross;
+   public void setTotalNet(final com.commercetools.api.models.common.TypedMoneyDraft totalNet){
+      this.totalNet = totalNet;
    }
-
-
-   public com.commercetools.api.models.common.TypedMoneyDraft getTotalNet(){
-      return this.totalNet;
-   }
-
-   public void setTaxPortions(final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions){
-      this.taxPortions = taxPortions;
-   }
-
+   
    public void setTotalGross(final com.commercetools.api.models.common.TypedMoneyDraft totalGross){
       this.totalGross = totalGross;
    }
-
-   public void setTotalNet(final com.commercetools.api.models.common.TypedMoneyDraft totalNet){
-      this.totalNet = totalNet;
+   
+   public void setTaxPortions(final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions){
+      this.taxPortions = taxPortions;
    }
 
 }

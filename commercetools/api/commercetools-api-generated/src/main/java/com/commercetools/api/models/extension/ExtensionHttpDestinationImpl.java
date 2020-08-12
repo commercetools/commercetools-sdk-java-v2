@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestination {
 
    private String type;
-
+   
    private String url;
-
+   
    private com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication authentication;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestinat
       this.type = "HTTP";
    }
    public ExtensionHttpDestinationImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public String getUrl(){
       return this.url;
    }
-
-
+   
+   
    public com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication getAuthentication(){
       return this.authentication;
    }
@@ -57,7 +57,7 @@ public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestinat
    public void setUrl(final String url){
       this.url = url;
    }
-
+   
    public void setAuthentication(final com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication authentication){
       this.authentication = authentication;
    }

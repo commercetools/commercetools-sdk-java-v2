@@ -65,12 +65,12 @@ public interface UserProvidedIdentifiers  {
 
    public static UserProvidedIdentifiersImpl of(final UserProvidedIdentifiers template) {
       UserProvidedIdentifiersImpl instance = new UserProvidedIdentifiersImpl();
-      instance.setOrderNumber(template.getOrderNumber());
-      instance.setExternalId(template.getExternalId());
-      instance.setSku(template.getSku());
-      instance.setCustomerNumber(template.getCustomerNumber());
-      instance.setSlug(template.getSlug());
       instance.setKey(template.getKey());
+      instance.setExternalId(template.getExternalId());
+      instance.setOrderNumber(template.getOrderNumber());
+      instance.setCustomerNumber(template.getCustomerNumber());
+      instance.setSku(template.getSku());
+      instance.setSlug(template.getSlug());
       return instance;
    }
 

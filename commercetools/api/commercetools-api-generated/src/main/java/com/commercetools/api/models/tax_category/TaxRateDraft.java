@@ -21,7 +21,7 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxRateDraftImpl.class)
 public interface TaxRateDraft  {
 
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
@@ -31,10 +31,10 @@ public interface TaxRateDraft  {
    *  If <code>subRates</code> are specified
    *  then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
    */
-
+   
    @JsonProperty("amount")
-   public Integer getAmount();
-
+   public Double getAmount();
+   
    @NotNull
    @JsonProperty("includedInPrice")
    public Boolean getIncludedInPrice();
@@ -47,7 +47,7 @@ public interface TaxRateDraft  {
    /**
    *  <p>The state in the country</p>
    */
-
+   
    @JsonProperty("state")
    public String getState();
    /**
@@ -60,28 +60,28 @@ public interface TaxRateDraft  {
    public List<SubRate> getSubRates();
 
    public void setName(final String name);
-
-   public void setAmount(final Integer amount);
-
+   
+   public void setAmount(final Double amount);
+   
    public void setIncludedInPrice(final Boolean includedInPrice);
-
+   
    public void setCountry(final String country);
-
+   
    public void setState(final String state);
-
+   
    public void setSubRates(final List<SubRate> subRates);
-
+   
    public static TaxRateDraftImpl of(){
       return new TaxRateDraftImpl();
    }
-
+   
 
    public static TaxRateDraftImpl of(final TaxRateDraft template) {
       TaxRateDraftImpl instance = new TaxRateDraftImpl();
-      instance.setCountry(template.getCountry());
+      instance.setName(template.getName());
       instance.setAmount(template.getAmount());
       instance.setIncludedInPrice(template.getIncludedInPrice());
-      instance.setName(template.getName());
+      instance.setCountry(template.getCountry());
       instance.setState(template.getState());
       instance.setSubRates(template.getSubRates());
       return instance;

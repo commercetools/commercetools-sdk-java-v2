@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderChangeCustomLineItemMoneyActionImpl implements StagedOrderChangeCustomLineItemMoneyAction {
 
    private String action;
-
+   
    private String customLineItemId;
-
+   
    private com.commercetools.api.models.common.Money money;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class StagedOrderChangeCustomLineItemMoneyActionImpl implements Sta
       this.action = "changeCustomLineItemMoney";
    }
    public StagedOrderChangeCustomLineItemMoneyActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getCustomLineItemId(){
       return this.customLineItemId;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Money getMoney(){
       return this.money;
    }
@@ -57,7 +57,7 @@ public final class StagedOrderChangeCustomLineItemMoneyActionImpl implements Sta
    public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
-
+   
    public void setMoney(final com.commercetools.api.models.common.Money money){
       this.money = money;
    }

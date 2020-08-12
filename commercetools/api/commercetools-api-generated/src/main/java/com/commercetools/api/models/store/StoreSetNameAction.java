@@ -30,11 +30,11 @@ public interface StoreSetNameAction extends StoreUpdateAction {
    public LocalizedString getName();
 
    public void setName(final LocalizedString name);
-
+   
    public static StoreSetNameActionImpl of(){
       return new StoreSetNameActionImpl();
    }
-
+   
 
    public static StoreSetNameActionImpl of(final StoreSetNameAction template) {
       StoreSetNameActionImpl instance = new StoreSetNameActionImpl();

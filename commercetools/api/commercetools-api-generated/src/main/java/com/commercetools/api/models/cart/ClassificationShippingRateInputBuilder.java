@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ClassificationShippingRateInputBuilder {
-
-
-   private com.commercetools.api.models.common.LocalizedString label;
-
-
+   
+   
    private String key;
-
-   public ClassificationShippingRateInputBuilder label( final com.commercetools.api.models.common.LocalizedString label) {
-      this.label = label;
-      return this;
-   }
-
+   
+   
+   private com.commercetools.api.models.common.LocalizedString label;
+   
    public ClassificationShippingRateInputBuilder key( final String key) {
       this.key = key;
       return this;
    }
-
-
+   
+   public ClassificationShippingRateInputBuilder label( final com.commercetools.api.models.common.LocalizedString label) {
+      this.label = label;
+      return this;
+   }
+   
+   
+   public String getKey(){
+      return this.key;
+   }
+   
+   
    public com.commercetools.api.models.common.LocalizedString getLabel(){
       return this.label;
    }
 
-
-   public String getKey(){
-      return this.key;
-   }
-
    public ClassificationShippingRateInput build() {
-       return new ClassificationShippingRateInputImpl(label, key);
+       return new ClassificationShippingRateInputImpl(key, label);
    }
-
+   
    public static ClassificationShippingRateInputBuilder of() {
       return new ClassificationShippingRateInputBuilder();
    }
-
+   
    public static ClassificationShippingRateInputBuilder of(final ClassificationShippingRateInput template) {
       ClassificationShippingRateInputBuilder builder = new ClassificationShippingRateInputBuilder();
-      builder.label = template.getLabel();
       builder.key = template.getKey();
+      builder.label = template.getLabel();
       return builder;
    }
-
+   
 }

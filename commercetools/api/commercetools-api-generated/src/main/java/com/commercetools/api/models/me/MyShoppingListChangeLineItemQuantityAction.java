@@ -21,28 +21,28 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListChangeLineItemQuantityActionImpl.class)
 public interface MyShoppingListChangeLineItemQuantityAction extends MyShoppingListUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("lineItemId")
    public String getLineItemId();
-
+   
    @NotNull
    @JsonProperty("quantity")
    public Long getQuantity();
 
    public void setLineItemId(final String lineItemId);
-
+   
    public void setQuantity(final Long quantity);
-
+   
    public static MyShoppingListChangeLineItemQuantityActionImpl of(){
       return new MyShoppingListChangeLineItemQuantityActionImpl();
    }
-
+   
 
    public static MyShoppingListChangeLineItemQuantityActionImpl of(final MyShoppingListChangeLineItemQuantityAction template) {
       MyShoppingListChangeLineItemQuantityActionImpl instance = new MyShoppingListChangeLineItemQuantityActionImpl();
-      instance.setQuantity(template.getQuantity());
       instance.setLineItemId(template.getLineItemId());
+      instance.setQuantity(template.getQuantity());
       return instance;
    }
 

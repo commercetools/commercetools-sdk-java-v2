@@ -43,8 +43,8 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
 
    public static StagedOrderTransitionStateActionImpl of(final StagedOrderTransitionStateAction template) {
       StagedOrderTransitionStateActionImpl instance = new StagedOrderTransitionStateActionImpl();
-      instance.setForce(template.getForce());
       instance.setState(template.getState());
+      instance.setForce(template.getForce());
       return instance;
    }
 

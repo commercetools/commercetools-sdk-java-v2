@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface StateResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static StateResourceIdentifierImpl of(){
       return new StateResourceIdentifierImpl();
    }
-
+   
 
    public static StateResourceIdentifierImpl of(final StateResourceIdentifier template) {
       StateResourceIdentifierImpl instance = new StateResourceIdentifierImpl();

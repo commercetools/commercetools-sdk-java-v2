@@ -15,60 +15,60 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderDiscountCodeStateSetMessagePayloadBuilder {
-
-
+   
+   
    private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
-
+   
+   
+   private com.commercetools.api.models.cart.DiscountCodeState state;
+   
    @Nullable
    private com.commercetools.api.models.cart.DiscountCodeState oldState;
-
-
-   private com.commercetools.api.models.cart.DiscountCodeState state;
-
+   
    public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode( final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
       this.discountCode = discountCode;
       return this;
    }
-
-   public OrderDiscountCodeStateSetMessagePayloadBuilder oldState(@Nullable final com.commercetools.api.models.cart.DiscountCodeState oldState) {
-      this.oldState = oldState;
-      return this;
-   }
-
+   
    public OrderDiscountCodeStateSetMessagePayloadBuilder state( final com.commercetools.api.models.cart.DiscountCodeState state) {
       this.state = state;
       return this;
    }
-
-
+   
+   public OrderDiscountCodeStateSetMessagePayloadBuilder oldState(@Nullable final com.commercetools.api.models.cart.DiscountCodeState oldState) {
+      this.oldState = oldState;
+      return this;
+   }
+   
+   
    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
       return this.discountCode;
    }
-
+   
+   
+   public com.commercetools.api.models.cart.DiscountCodeState getState(){
+      return this.state;
+   }
+   
    @Nullable
    public com.commercetools.api.models.cart.DiscountCodeState getOldState(){
       return this.oldState;
    }
 
-
-   public com.commercetools.api.models.cart.DiscountCodeState getState(){
-      return this.state;
-   }
-
    public OrderDiscountCodeStateSetMessagePayload build() {
-       return new OrderDiscountCodeStateSetMessagePayloadImpl(discountCode, oldState, state);
+       return new OrderDiscountCodeStateSetMessagePayloadImpl(discountCode, state, oldState);
    }
-
+   
    public static OrderDiscountCodeStateSetMessagePayloadBuilder of() {
       return new OrderDiscountCodeStateSetMessagePayloadBuilder();
    }
-
+   
    public static OrderDiscountCodeStateSetMessagePayloadBuilder of(final OrderDiscountCodeStateSetMessagePayload template) {
       OrderDiscountCodeStateSetMessagePayloadBuilder builder = new OrderDiscountCodeStateSetMessagePayloadBuilder();
       builder.discountCode = template.getDiscountCode();
-      builder.oldState = template.getOldState();
       builder.state = template.getState();
+      builder.oldState = template.getOldState();
       return builder;
    }
-
+   
 }

@@ -13,41 +13,41 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CategorySetAssetTagsActionBuilder {
-
+   
    @Nullable
    private String assetId;
-
+   
    @Nullable
    private String assetKey;
-
+   
    @Nullable
    private java.util.List<String> tags;
-
+   
    public CategorySetAssetTagsActionBuilder assetId(@Nullable final String assetId) {
       this.assetId = assetId;
       return this;
    }
-
+   
    public CategorySetAssetTagsActionBuilder assetKey(@Nullable final String assetKey) {
       this.assetKey = assetKey;
       return this;
    }
-
+   
    public CategorySetAssetTagsActionBuilder tags(@Nullable final java.util.List<String> tags) {
       this.tags = tags;
       return this;
    }
-
+   
    @Nullable
    public String getAssetId(){
       return this.assetId;
    }
-
+   
    @Nullable
    public String getAssetKey(){
       return this.assetKey;
    }
-
+   
    @Nullable
    public java.util.List<String> getTags(){
       return this.tags;
@@ -56,11 +56,11 @@ public final class CategorySetAssetTagsActionBuilder {
    public CategorySetAssetTagsAction build() {
        return new CategorySetAssetTagsActionImpl(assetId, assetKey, tags);
    }
-
+   
    public static CategorySetAssetTagsActionBuilder of() {
       return new CategorySetAssetTagsActionBuilder();
    }
-
+   
    public static CategorySetAssetTagsActionBuilder of(final CategorySetAssetTagsAction template) {
       CategorySetAssetTagsActionBuilder builder = new CategorySetAssetTagsActionBuilder();
       builder.assetId = template.getAssetId();
@@ -68,5 +68,5 @@ public final class CategorySetAssetTagsActionBuilder {
       builder.tags = template.getTags();
       return builder;
    }
-
+   
 }

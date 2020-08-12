@@ -38,18 +38,18 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
    public FieldContainer getFields();
 
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final FieldContainer fields);
-
+   
    public static CustomerGroupSetCustomTypeActionImpl of(){
       return new CustomerGroupSetCustomTypeActionImpl();
    }
-
+   
 
    public static CustomerGroupSetCustomTypeActionImpl of(final CustomerGroupSetCustomTypeAction template) {
       CustomerGroupSetCustomTypeActionImpl instance = new CustomerGroupSetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

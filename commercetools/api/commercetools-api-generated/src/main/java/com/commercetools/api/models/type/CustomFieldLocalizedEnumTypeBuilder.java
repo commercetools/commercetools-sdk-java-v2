@@ -14,16 +14,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CustomFieldLocalizedEnumTypeBuilder {
-
-
+   
+   
    private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
-
+   
    public CustomFieldLocalizedEnumTypeBuilder values( final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
       this.values = values;
       return this;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues(){
       return this.values;
    }
@@ -31,15 +31,15 @@ public final class CustomFieldLocalizedEnumTypeBuilder {
    public CustomFieldLocalizedEnumType build() {
        return new CustomFieldLocalizedEnumTypeImpl(values);
    }
-
+   
    public static CustomFieldLocalizedEnumTypeBuilder of() {
       return new CustomFieldLocalizedEnumTypeBuilder();
    }
-
+   
    public static CustomFieldLocalizedEnumTypeBuilder of(final CustomFieldLocalizedEnumType template) {
       CustomFieldLocalizedEnumTypeBuilder builder = new CustomFieldLocalizedEnumTypeBuilder();
       builder.values = template.getValues();
       return builder;
    }
-
+   
 }

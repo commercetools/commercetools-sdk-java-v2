@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxRoundingModeAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxR
       this.action = "changeTaxRoundingMode";
    }
    public CartChangeTaxRoundingModeActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode(){
       return this.taxRoundingMode;
    }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductPublishActionImpl implements ProductPublishAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.cart.ProductPublishScope scope;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ProductPublishActionImpl implements ProductPublishAction {
       this.action = "publish";
    }
    public ProductPublishActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.ProductPublishScope getScope(){
       return this.scope;
    }

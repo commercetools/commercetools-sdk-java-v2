@@ -23,32 +23,44 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerSetDefaultBillingAddressActionImpl implements CustomerSetDefaultBillingAddressAction {
 
    private String action;
-
+   
    private String addressId;
+   
+   private String addressKey;
 
    @JsonCreator
-   CustomerSetDefaultBillingAddressActionImpl(@JsonProperty("addressId") final String addressId) {
+   CustomerSetDefaultBillingAddressActionImpl(@JsonProperty("addressId") final String addressId, @JsonProperty("addressKey") final String addressKey) {
       this.addressId = addressId;
+      this.addressKey = addressKey;
       this.action = "setDefaultBillingAddress";
    }
    public CustomerSetDefaultBillingAddressActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>
    */
    public String getAddressId(){
       return this.addressId;
    }
+   
+   
+   public String getAddressKey(){
+      return this.addressKey;
+   }
 
    public void setAddressId(final String addressId){
       this.addressId = addressId;
+   }
+   
+   public void setAddressKey(final String addressKey){
+      this.addressKey = addressKey;
    }
 
 }

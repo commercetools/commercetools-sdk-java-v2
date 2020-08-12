@@ -29,11 +29,11 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
    public List<String> getCurrencies();
 
    public void setCurrencies(final List<String> currencies);
-
+   
    public static ProjectChangeCurrenciesActionImpl of(){
       return new ProjectChangeCurrenciesActionImpl();
    }
-
+   
 
    public static ProjectChangeCurrenciesActionImpl of(final ProjectChangeCurrenciesAction template) {
       ProjectChangeCurrenciesActionImpl instance = new ProjectChangeCurrenciesActionImpl();

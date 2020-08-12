@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentChangeTransactionStateActionImpl implements PaymentChangeTransactionStateAction {
 
    private String action;
-
+   
+   private String transactionId;
+   
    private com.commercetools.api.models.payment.TransactionState state;
 
-   private String transactionId;
-
    @JsonCreator
-   PaymentChangeTransactionStateActionImpl(@JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state, @JsonProperty("transactionId") final String transactionId) {
-      this.state = state;
+   PaymentChangeTransactionStateActionImpl(@JsonProperty("transactionId") final String transactionId, @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state) {
       this.transactionId = transactionId;
+      this.state = state;
       this.action = "changeTransactionState";
    }
    public PaymentChangeTransactionStateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getTransactionId(){
+      return this.transactionId;
+   }
+   
+   
    public com.commercetools.api.models.payment.TransactionState getState(){
       return this.state;
    }
 
-
-   public String getTransactionId(){
-      return this.transactionId;
-   }
-
-   public void setState(final com.commercetools.api.models.payment.TransactionState state){
-      this.state = state;
-   }
-
    public void setTransactionId(final String transactionId){
       this.transactionId = transactionId;
+   }
+   
+   public void setState(final com.commercetools.api.models.payment.TransactionState state){
+      this.state = state;
    }
 
 }

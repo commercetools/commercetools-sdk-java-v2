@@ -21,28 +21,28 @@ import java.io.IOException;
 @JsonDeserialize(as = ExternalOAuthImpl.class)
 public interface ExternalOAuth  {
 
-
+   
    @NotNull
    @JsonProperty("url")
    public String getUrl();
-
+   
    @NotNull
    @JsonProperty("authorizationHeader")
    public String getAuthorizationHeader();
 
    public void setUrl(final String url);
-
+   
    public void setAuthorizationHeader(final String authorizationHeader);
-
+   
    public static ExternalOAuthImpl of(){
       return new ExternalOAuthImpl();
    }
-
+   
 
    public static ExternalOAuthImpl of(final ExternalOAuth template) {
       ExternalOAuthImpl instance = new ExternalOAuthImpl();
-      instance.setAuthorizationHeader(template.getAuthorizationHeader());
       instance.setUrl(template.getUrl());
+      instance.setAuthorizationHeader(template.getAuthorizationHeader());
       return instance;
    }
 

@@ -22,57 +22,57 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductChangeAssetNameActionImpl.class)
 public interface ProductChangeAssetNameAction extends ProductUpdateAction {
 
-
-
+   
+   
    @JsonProperty("variantId")
    public Long getVariantId();
-
-
+   
+   
    @JsonProperty("sku")
    public String getSku();
-
-
+   
+   
    @JsonProperty("staged")
    public Boolean getStaged();
-
-
+   
+   
    @JsonProperty("assetId")
    public String getAssetId();
-
-
+   
+   
    @JsonProperty("assetKey")
    public String getAssetKey();
-
+   
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
 
    public void setVariantId(final Long variantId);
-
+   
    public void setSku(final String sku);
-
+   
    public void setStaged(final Boolean staged);
-
+   
    public void setAssetId(final String assetId);
-
+   
    public void setAssetKey(final String assetKey);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public static ProductChangeAssetNameActionImpl of(){
       return new ProductChangeAssetNameActionImpl();
    }
-
+   
 
    public static ProductChangeAssetNameActionImpl of(final ProductChangeAssetNameAction template) {
       ProductChangeAssetNameActionImpl instance = new ProductChangeAssetNameActionImpl();
-      instance.setAssetId(template.getAssetId());
-      instance.setName(template.getName());
-      instance.setStaged(template.getStaged());
       instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
+      instance.setStaged(template.getStaged());
+      instance.setAssetId(template.getAssetId());
       instance.setAssetKey(template.getAssetKey());
+      instance.setName(template.getName());
       return instance;
    }
 

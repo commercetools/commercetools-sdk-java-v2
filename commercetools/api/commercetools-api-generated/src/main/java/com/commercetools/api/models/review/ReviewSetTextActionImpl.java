@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReviewSetTextActionImpl implements ReviewSetTextAction {
 
    private String action;
-
+   
    private String text;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ReviewSetTextActionImpl implements ReviewSetTextAction {
       this.action = "setText";
    }
    public ReviewSetTextActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */

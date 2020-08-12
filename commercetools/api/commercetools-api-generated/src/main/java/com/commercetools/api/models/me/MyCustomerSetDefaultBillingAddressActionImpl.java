@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MyCustomerSetDefaultBillingAddressActionImpl implements MyCustomerSetDefaultBillingAddressAction {
 
    private String action;
-
+   
    private String addressId;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class MyCustomerSetDefaultBillingAddressActionImpl implements MyCus
       this.action = "setDefaultBillingAddress";
    }
    public MyCustomerSetDefaultBillingAddressActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAddressId(){
       return this.addressId;
    }

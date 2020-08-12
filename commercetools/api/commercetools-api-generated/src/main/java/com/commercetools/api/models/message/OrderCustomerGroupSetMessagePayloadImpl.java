@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGroupSetMessagePayload {
 
    private String type;
-
+   
+   private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
+   
    private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
-   private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
-
    @JsonCreator
-   OrderCustomerGroupSetMessagePayloadImpl(@JsonProperty("oldCustomerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup, @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
-      this.oldCustomerGroup = oldCustomerGroup;
+   OrderCustomerGroupSetMessagePayloadImpl(@JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("oldCustomerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {
       this.customerGroup = customerGroup;
+      this.oldCustomerGroup = oldCustomerGroup;
       this.type = "OrderCustomerGroupSet";
    }
    public OrderCustomerGroupSetMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
+   public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
+      return this.customerGroup;
+   }
+   
+   
    public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup(){
       return this.oldCustomerGroup;
    }
 
-
-   public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
-      return this.customerGroup;
-   }
-
-   public void setOldCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup){
-      this.oldCustomerGroup = oldCustomerGroup;
-   }
-
    public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup){
       this.customerGroup = customerGroup;
+   }
+   
+   public void setOldCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup){
+      this.oldCustomerGroup = oldCustomerGroup;
    }
 
 }

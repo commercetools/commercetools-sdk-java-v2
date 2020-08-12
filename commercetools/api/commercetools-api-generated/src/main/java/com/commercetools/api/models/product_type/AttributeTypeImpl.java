@@ -40,9 +40,9 @@ public final class AttributeTypeImpl implements AttributeType {
    AttributeTypeImpl() {
       this.name = "null";
    }
-
-
-
+   
+   
+   
    public String getName(){
       return this.name;
    }

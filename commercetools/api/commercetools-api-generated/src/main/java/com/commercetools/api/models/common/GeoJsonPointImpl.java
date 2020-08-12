@@ -24,10 +24,10 @@ public final class GeoJsonPointImpl implements GeoJsonPoint {
 
    private String type;
    
-   private java.util.List<Integer> coordinates;
+   private java.util.List<Double> coordinates;
 
    @JsonCreator
-   GeoJsonPointImpl(@JsonProperty("coordinates") final java.util.List<Integer> coordinates) {
+   GeoJsonPointImpl(@JsonProperty("coordinates") final java.util.List<Double> coordinates) {
       this.coordinates = coordinates;
       this.type = "Point";
    }
@@ -41,11 +41,11 @@ public final class GeoJsonPointImpl implements GeoJsonPoint {
    }
    
    
-   public java.util.List<Integer> getCoordinates(){
+   public java.util.List<Double> getCoordinates(){
       return this.coordinates;
    }
 
-   public void setCoordinates(final java.util.List<Integer> coordinates){
+   public void setCoordinates(final java.util.List<Double> coordinates){
       this.coordinates = coordinates;
    }
 

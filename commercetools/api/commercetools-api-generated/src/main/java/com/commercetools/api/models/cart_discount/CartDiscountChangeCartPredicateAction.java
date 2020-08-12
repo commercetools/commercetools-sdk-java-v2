@@ -29,11 +29,11 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
    public String getCartPredicate();
 
    public void setCartPredicate(final String cartPredicate);
-
+   
    public static CartDiscountChangeCartPredicateActionImpl of(){
       return new CartDiscountChangeCartPredicateActionImpl();
    }
-
+   
 
    public static CartDiscountChangeCartPredicateActionImpl of(final CartDiscountChangeCartPredicateAction template) {
       CartDiscountChangeCartPredicateActionImpl instance = new CartDiscountChangeCartPredicateActionImpl();

@@ -1,6 +1,13 @@
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.store.StoreSetLanguagesAction;
 import com.commercetools.api.models.store.StoreSetNameAction;
+import com.commercetools.api.models.store.StoresAddDistributionChannelsAction;
+import com.commercetools.api.models.store.StoresAddSupplyChannelsAction;
+import com.commercetools.api.models.store.StoresRemoveDistributionChannelsAction;
+import com.commercetools.api.models.store.StoresRemoveSupplyChannelsAction;
+import com.commercetools.api.models.store.StoresSetDistributionChannelsAction;
+import com.commercetools.api.models.store.StoresSetSupplyChannelsAction;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -28,9 +35,9 @@ public final class StoreUpdateActionImpl implements StoreUpdateAction {
    StoreUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

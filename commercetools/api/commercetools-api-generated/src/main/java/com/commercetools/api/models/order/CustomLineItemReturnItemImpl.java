@@ -22,113 +22,113 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem {
 
-   private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
-
-   private java.time.ZonedDateTime createdAt;
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
-   private Long quantity;
-
-   private String comment;
-
    private String id;
-
-   private com.commercetools.api.models.order.ReturnPaymentState paymentState;
-
+   
+   private Long quantity;
+   
    private String type;
-
+   
+   private String comment;
+   
+   private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
+   
+   private com.commercetools.api.models.order.ReturnPaymentState paymentState;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
+   private java.time.ZonedDateTime createdAt;
+   
    private String customLineItemId;
 
    @JsonCreator
-   CustomLineItemReturnItemImpl(@JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("quantity") final Long quantity, @JsonProperty("comment") final String comment, @JsonProperty("id") final String id, @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState, @JsonProperty("customLineItemId") final String customLineItemId) {
-      this.shipmentState = shipmentState;
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   CustomLineItemReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Long quantity, @JsonProperty("comment") final String comment, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState, @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("customLineItemId") final String customLineItemId) {
+      this.id = id;
       this.quantity = quantity;
       this.comment = comment;
-      this.id = id;
+      this.shipmentState = shipmentState;
       this.paymentState = paymentState;
+      this.lastModifiedAt = lastModifiedAt;
+      this.createdAt = createdAt;
       this.customLineItemId = customLineItemId;
       this.type = "CustomLineItemReturnItem";
    }
    public CustomLineItemReturnItemImpl() {
-
+      
    }
-
-
-   public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
-      return this.shipmentState;
-   }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
-   public Long getQuantity(){
-      return this.quantity;
-   }
-
-
-   public String getComment(){
-      return this.comment;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
-   public com.commercetools.api.models.order.ReturnPaymentState getPaymentState(){
-      return this.paymentState;
+   
+   
+   public Long getQuantity(){
+      return this.quantity;
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
+   public String getComment(){
+      return this.comment;
+   }
+   
+   
+   public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
+      return this.shipmentState;
+   }
+   
+   
+   public com.commercetools.api.models.order.ReturnPaymentState getPaymentState(){
+      return this.paymentState;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
    public String getCustomLineItemId(){
       return this.customLineItemId;
-   }
-
-   public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
-      this.shipmentState = shipmentState;
-   }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
-
-   public void setQuantity(final Long quantity){
-      this.quantity = quantity;
-   }
-
-   public void setComment(final String comment){
-      this.comment = comment;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
+   public void setQuantity(final Long quantity){
+      this.quantity = quantity;
+   }
+   
+   public void setComment(final String comment){
+      this.comment = comment;
+   }
+   
+   public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
+      this.shipmentState = shipmentState;
+   }
+   
    public void setPaymentState(final com.commercetools.api.models.order.ReturnPaymentState paymentState){
       this.paymentState = paymentState;
    }
-
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
+   }
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
+   }
+   
    public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }

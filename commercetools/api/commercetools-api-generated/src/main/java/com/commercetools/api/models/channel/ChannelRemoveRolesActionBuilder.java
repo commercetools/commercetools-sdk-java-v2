@@ -14,16 +14,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ChannelRemoveRolesActionBuilder {
-
-
+   
+   
    private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
-
+   
    public ChannelRemoveRolesActionBuilder roles( final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
       this.roles = roles;
       return this;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
@@ -31,15 +31,15 @@ public final class ChannelRemoveRolesActionBuilder {
    public ChannelRemoveRolesAction build() {
        return new ChannelRemoveRolesActionImpl(roles);
    }
-
+   
    public static ChannelRemoveRolesActionBuilder of() {
       return new ChannelRemoveRolesActionBuilder();
    }
-
+   
    public static ChannelRemoveRolesActionBuilder of(final ChannelRemoveRolesAction template) {
       ChannelRemoveRolesActionBuilder builder = new ChannelRemoveRolesActionBuilder();
       builder.roles = template.getRoles();
       return builder;
    }
-
+   
 }

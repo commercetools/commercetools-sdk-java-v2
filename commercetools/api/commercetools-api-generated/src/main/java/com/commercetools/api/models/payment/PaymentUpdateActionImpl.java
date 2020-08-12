@@ -49,9 +49,9 @@ public final class PaymentUpdateActionImpl implements PaymentUpdateAction {
    PaymentUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

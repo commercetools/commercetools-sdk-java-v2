@@ -1,8 +1,8 @@
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.order.OrderReference;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.order_edit.OrderEditResult;
@@ -26,7 +26,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = OrderEditImpl.class)
-public interface OrderEdit extends LoggedResource {
+public interface OrderEdit extends BaseResource {
 
    /**
    *  <p>The unique ID of the OrderEdit.</p>
@@ -40,11 +40,11 @@ public interface OrderEdit extends LoggedResource {
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -63,7 +63,7 @@ public interface OrderEdit extends LoggedResource {
    /**
    *  <p>Unique identifier for this edit.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
    /**
@@ -81,7 +81,7 @@ public interface OrderEdit extends LoggedResource {
    @Valid
    @JsonProperty("stagedActions")
    public List<StagedOrderUpdateAction> getStagedActions();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
@@ -96,53 +96,53 @@ public interface OrderEdit extends LoggedResource {
    /**
    *  <p>This field can be used to add textual information regarding the edit.</p>
    */
-
+   
    @JsonProperty("comment")
    public String getComment();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setCreatedAt(final ZonedDateTime createdAt);
-
+   
    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+   
    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+   
    public void setCreatedBy(final CreatedBy createdBy);
-
+   
    public void setKey(final String key);
-
+   
    public void setResource(final OrderReference resource);
-
+   
    public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
-
+   
    public void setCustom(final CustomFields custom);
-
+   
    public void setResult(final OrderEditResult result);
-
+   
    public void setComment(final String comment);
-
+   
    public static OrderEditImpl of(){
       return new OrderEditImpl();
    }
-
+   
 
    public static OrderEditImpl of(final OrderEdit template) {
       OrderEditImpl instance = new OrderEditImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setResult(template.getResult());
-      instance.setResource(template.getResource());
-      instance.setCustom(template.getCustom());
-      instance.setComment(template.getComment());
-      instance.setStagedActions(template.getStagedActions());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setKey(template.getKey());
+      instance.setResource(template.getResource());
+      instance.setStagedActions(template.getStagedActions());
+      instance.setCustom(template.getCustom());
+      instance.setResult(template.getResult());
+      instance.setComment(template.getComment());
       return instance;
    }
 

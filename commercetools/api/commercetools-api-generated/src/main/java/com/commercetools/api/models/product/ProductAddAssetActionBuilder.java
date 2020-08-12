@@ -16,37 +16,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProductAddAssetActionBuilder {
    
    @Nullable
-   private Integer position;
+   private Long variantId;
+   
+   @Nullable
+   private String sku;
    
    @Nullable
    private Boolean staged;
-   
-   @Nullable
-   private Long variantId;
    
    
    private com.commercetools.api.models.common.AssetDraft asset;
    
    @Nullable
-   private String sku;
-   
-   public ProductAddAssetActionBuilder position(@Nullable final Integer position) {
-      this.position = position;
-      return this;
-   }
-   
-   public ProductAddAssetActionBuilder staged(@Nullable final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
+   private Integer position;
    
    public ProductAddAssetActionBuilder variantId(@Nullable final Long variantId) {
       this.variantId = variantId;
-      return this;
-   }
-   
-   public ProductAddAssetActionBuilder asset( final com.commercetools.api.models.common.AssetDraft asset) {
-      this.asset = asset;
       return this;
    }
    
@@ -55,19 +40,34 @@ public final class ProductAddAssetActionBuilder {
       return this;
    }
    
-   @Nullable
-   public Integer getPosition(){
-      return this.position;
+   public ProductAddAssetActionBuilder staged(@Nullable final Boolean staged) {
+      this.staged = staged;
+      return this;
    }
    
-   @Nullable
-   public Boolean getStaged(){
-      return this.staged;
+   public ProductAddAssetActionBuilder asset( final com.commercetools.api.models.common.AssetDraft asset) {
+      this.asset = asset;
+      return this;
+   }
+   
+   public ProductAddAssetActionBuilder position(@Nullable final Integer position) {
+      this.position = position;
+      return this;
    }
    
    @Nullable
    public Long getVariantId(){
       return this.variantId;
+   }
+   
+   @Nullable
+   public String getSku(){
+      return this.sku;
+   }
+   
+   @Nullable
+   public Boolean getStaged(){
+      return this.staged;
    }
    
    
@@ -76,12 +76,12 @@ public final class ProductAddAssetActionBuilder {
    }
    
    @Nullable
-   public String getSku(){
-      return this.sku;
+   public Integer getPosition(){
+      return this.position;
    }
 
    public ProductAddAssetAction build() {
-       return new ProductAddAssetActionImpl(position, staged, variantId, asset, sku);
+       return new ProductAddAssetActionImpl(variantId, sku, staged, asset, position);
    }
    
    public static ProductAddAssetActionBuilder of() {
@@ -90,11 +90,11 @@ public final class ProductAddAssetActionBuilder {
    
    public static ProductAddAssetActionBuilder of(final ProductAddAssetAction template) {
       ProductAddAssetActionBuilder builder = new ProductAddAssetActionBuilder();
-      builder.position = template.getPosition();
-      builder.staged = template.getStaged();
       builder.variantId = template.getVariantId();
-      builder.asset = template.getAsset();
       builder.sku = template.getSku();
+      builder.staged = template.getStaged();
+      builder.asset = template.getAsset();
+      builder.position = template.getPosition();
       return builder;
    }
    

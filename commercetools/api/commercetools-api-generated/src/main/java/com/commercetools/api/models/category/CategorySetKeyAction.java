@@ -26,16 +26,16 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
    *  Keys can only contain alphanumeric characters (<code>a-Z, 0-9</code>), underscores and hyphens (<code>-, _</code>) and be between 2 and 256 characters.
    *  If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static CategorySetKeyActionImpl of(){
       return new CategorySetKeyActionImpl();
    }
-
+   
 
    public static CategorySetKeyActionImpl of(final CategorySetKeyAction template) {
       CategorySetKeyActionImpl instance = new CategorySetKeyActionImpl();

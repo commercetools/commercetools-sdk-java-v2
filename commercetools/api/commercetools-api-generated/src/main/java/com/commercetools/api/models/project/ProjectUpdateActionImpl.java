@@ -1,6 +1,7 @@
 package com.commercetools.api.models.project;
 
 import com.commercetools.api.models.project.ProjectChangeCountriesAction;
+import com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledAction;
 import com.commercetools.api.models.project.ProjectChangeCurrenciesAction;
 import com.commercetools.api.models.project.ProjectChangeLanguagesAction;
 import com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction;
@@ -35,9 +36,9 @@ public final class ProjectUpdateActionImpl implements ProjectUpdateAction {
    ProjectUpdateActionImpl() {
       this.action = "null";
    }
-
-
-
+   
+   
+   
    public String getAction(){
       return this.action;
    }

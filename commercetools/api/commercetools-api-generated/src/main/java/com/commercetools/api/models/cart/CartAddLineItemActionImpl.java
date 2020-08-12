@@ -30,41 +30,41 @@ public final class CartAddLineItemActionImpl implements CartAddLineItemAction {
 
    private String action;
    
-   private Integer quantity;
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   
+   private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
    
    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
    
-   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-   
    private String productId;
-   
-   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-   
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-   
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
    
    private Long variantId;
    
    private String sku;
    
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+   private Double quantity;
+   
+   private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
    
    private com.commercetools.api.models.common.Money externalPrice;
+   
+   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
+   
+   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
    @JsonCreator
-   CartAddLineItemActionImpl(@JsonProperty("quantity") final Integer quantity, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("productId") final String productId, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice) {
-      this.quantity = quantity;
-      this.externalTaxRate = externalTaxRate;
-      this.shippingDetails = shippingDetails;
-      this.productId = productId;
-      this.externalTotalPrice = externalTotalPrice;
+   CartAddLineItemActionImpl(@JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Double quantity, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.custom = custom;
-      this.supplyChannel = supplyChannel;
+      this.distributionChannel = distributionChannel;
+      this.externalTaxRate = externalTaxRate;
+      this.productId = productId;
       this.variantId = variantId;
       this.sku = sku;
-      this.distributionChannel = distributionChannel;
+      this.quantity = quantity;
+      this.supplyChannel = supplyChannel;
       this.externalPrice = externalPrice;
+      this.externalTotalPrice = externalTotalPrice;
+      this.shippingDetails = shippingDetails;
       this.action = "addLineItem";
    }
    public CartAddLineItemActionImpl() {
@@ -77,8 +77,13 @@ public final class CartAddLineItemActionImpl implements CartAddLineItemAction {
    }
    
    
-   public Integer getQuantity(){
-      return this.quantity;
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
+   }
+   
+   
+   public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
+      return this.distributionChannel;
    }
    
    
@@ -87,28 +92,8 @@ public final class CartAddLineItemActionImpl implements CartAddLineItemAction {
    }
    
    
-   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
-      return this.shippingDetails;
-   }
-   
-   
    public String getProductId(){
       return this.productId;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
-      return this.externalTotalPrice;
-   }
-   
-   
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
-   }
-   
-   
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
-      return this.supplyChannel;
    }
    
    
@@ -122,41 +107,44 @@ public final class CartAddLineItemActionImpl implements CartAddLineItemAction {
    }
    
    
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
-      return this.distributionChannel;
+   public Double getQuantity(){
+      return this.quantity;
+   }
+   
+   
+   public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
+      return this.supplyChannel;
    }
    
    
    public com.commercetools.api.models.common.Money getExternalPrice(){
       return this.externalPrice;
    }
+   
+   
+   public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+      return this.externalTotalPrice;
+   }
+   
+   
+   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
+      return this.shippingDetails;
+   }
 
-   public void setQuantity(final Integer quantity){
-      this.quantity = quantity;
+   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
+      this.custom = custom;
+   }
+   
+   public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
+      this.distributionChannel = distributionChannel;
    }
    
    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
       this.externalTaxRate = externalTaxRate;
    }
    
-   public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
-      this.shippingDetails = shippingDetails;
-   }
-   
    public void setProductId(final String productId){
       this.productId = productId;
-   }
-   
-   public void setExternalTotalPrice(final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
-      this.externalTotalPrice = externalTotalPrice;
-   }
-   
-   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
-      this.custom = custom;
-   }
-   
-   public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
-      this.supplyChannel = supplyChannel;
    }
    
    public void setVariantId(final Long variantId){
@@ -167,12 +155,24 @@ public final class CartAddLineItemActionImpl implements CartAddLineItemAction {
       this.sku = sku;
    }
    
-   public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
-      this.distributionChannel = distributionChannel;
+   public void setQuantity(final Double quantity){
+      this.quantity = quantity;
+   }
+   
+   public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
+      this.supplyChannel = supplyChannel;
    }
    
    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice){
       this.externalPrice = externalPrice;
+   }
+   
+   public void setExternalTotalPrice(final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
+      this.externalTotalPrice = externalTotalPrice;
+   }
+   
+   public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
+      this.shippingDetails = shippingDetails;
    }
 
 }

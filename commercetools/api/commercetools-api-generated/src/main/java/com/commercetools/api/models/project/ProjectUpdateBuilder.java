@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProjectUpdateBuilder {
-
-
-   private java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions;
-
-
+   
+   
    private Long version;
-
-   public ProjectUpdateBuilder actions( final java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions) {
-      this.actions = actions;
-      return this;
-   }
-
+   
+   
+   private java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions;
+   
    public ProjectUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
-
-
+   
+   public ProjectUpdateBuilder actions( final java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions) {
+      this.actions = actions;
+      return this;
+   }
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
    public ProjectUpdate build() {
-       return new ProjectUpdateImpl(actions, version);
+       return new ProjectUpdateImpl(version, actions);
    }
-
+   
    public static ProjectUpdateBuilder of() {
       return new ProjectUpdateBuilder();
    }
-
+   
    public static ProjectUpdateBuilder of(final ProjectUpdate template) {
       ProjectUpdateBuilder builder = new ProjectUpdateBuilder();
-      builder.actions = template.getActions();
       builder.version = template.getVersion();
+      builder.actions = template.getActions();
       return builder;
    }
-
+   
 }

@@ -70,12 +70,12 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
 
    public static ReviewStateTransitionMessagePayloadImpl of(final ReviewStateTransitionMessagePayload template) {
       ReviewStateTransitionMessagePayloadImpl instance = new ReviewStateTransitionMessagePayloadImpl();
-      instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
       instance.setOldState(template.getOldState());
-      instance.setForce(template.getForce());
-      instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
       instance.setNewState(template.getNewState());
+      instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
+      instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
       instance.setTarget(template.getTarget());
+      instance.setForce(template.getForce());
       return instance;
    }
 

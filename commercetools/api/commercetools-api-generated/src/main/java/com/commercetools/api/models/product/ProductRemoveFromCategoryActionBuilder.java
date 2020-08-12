@@ -15,34 +15,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ProductRemoveFromCategoryActionBuilder {
    
-   @Nullable
-   private Boolean staged;
-   
    
    private com.commercetools.api.models.category.CategoryResourceIdentifier category;
    
-   public ProductRemoveFromCategoryActionBuilder staged(@Nullable final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
+   @Nullable
+   private Boolean staged;
    
    public ProductRemoveFromCategoryActionBuilder category( final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
       this.category = category;
       return this;
    }
    
-   @Nullable
-   public Boolean getStaged(){
-      return this.staged;
+   public ProductRemoveFromCategoryActionBuilder staged(@Nullable final Boolean staged) {
+      this.staged = staged;
+      return this;
    }
    
    
    public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
       return this.category;
    }
+   
+   @Nullable
+   public Boolean getStaged(){
+      return this.staged;
+   }
 
    public ProductRemoveFromCategoryAction build() {
-       return new ProductRemoveFromCategoryActionImpl(staged, category);
+       return new ProductRemoveFromCategoryActionImpl(category, staged);
    }
    
    public static ProductRemoveFromCategoryActionBuilder of() {
@@ -51,8 +51,8 @@ public final class ProductRemoveFromCategoryActionBuilder {
    
    public static ProductRemoveFromCategoryActionBuilder of(final ProductRemoveFromCategoryAction template) {
       ProductRemoveFromCategoryActionBuilder builder = new ProductRemoveFromCategoryActionBuilder();
-      builder.staged = template.getStaged();
       builder.category = template.getCategory();
+      builder.staged = template.getStaged();
       return builder;
    }
    

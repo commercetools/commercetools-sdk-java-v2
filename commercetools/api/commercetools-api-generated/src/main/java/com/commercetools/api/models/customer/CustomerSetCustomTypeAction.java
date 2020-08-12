@@ -48,8 +48,8 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
 
    public static CustomerSetCustomTypeActionImpl of(final CustomerSetCustomTypeAction template) {
       CustomerSetCustomTypeActionImpl instance = new CustomerSetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

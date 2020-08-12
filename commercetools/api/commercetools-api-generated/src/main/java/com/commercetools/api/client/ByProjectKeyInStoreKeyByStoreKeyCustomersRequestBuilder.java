@@ -36,11 +36,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder {
    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenRequestBuilder emailToken() {
       return new ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenRequestBuilder(apiHttpClient, projectKey, storeKey);
    }
-   public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailRequestBuilder email() {
-      return new ByProjectKeyInStoreKeyByStoreKeyCustomersEmailRequestBuilder(apiHttpClient, projectKey, storeKey);
+   public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmRequestBuilder emailConfirm() {
+      return new ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmRequestBuilder(apiHttpClient, projectKey, storeKey);
    }
    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordRequestBuilder password() {
       return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordRequestBuilder(apiHttpClient, projectKey, storeKey);
+   }
+   public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetRequestBuilder passwordReset() {
+      return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetRequestBuilder(apiHttpClient, projectKey, storeKey);
    }
    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenRequestBuilder passwordToken() {
       return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenRequestBuilder(apiHttpClient, projectKey, storeKey);

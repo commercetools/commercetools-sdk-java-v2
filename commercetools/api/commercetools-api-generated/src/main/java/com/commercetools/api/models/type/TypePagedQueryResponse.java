@@ -60,10 +60,10 @@ public interface TypePagedQueryResponse  {
 
    public static TypePagedQueryResponseImpl of(final TypePagedQueryResponse template) {
       TypePagedQueryResponseImpl instance = new TypePagedQueryResponseImpl();
+      instance.setLimit(template.getLimit());
+      instance.setCount(template.getCount());
       instance.setTotal(template.getTotal());
       instance.setOffset(template.getOffset());
-      instance.setCount(template.getCount());
-      instance.setLimit(template.getLimit());
       instance.setResults(template.getResults());
       return instance;
    }

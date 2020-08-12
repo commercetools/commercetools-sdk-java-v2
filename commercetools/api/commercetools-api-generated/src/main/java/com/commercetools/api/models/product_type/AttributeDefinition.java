@@ -86,36 +86,36 @@ public interface AttributeDefinition  {
    public Boolean getIsSearchable();
 
    public void setType(final AttributeType type);
-
+   
    public void setName(final String name);
-
+   
    public void setLabel(final LocalizedString label);
-
+   
    public void setIsRequired(final Boolean isRequired);
-
+   
    public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
-
+   
    public void setInputTip(final LocalizedString inputTip);
-
+   
    public void setInputHint(final TextInputHint inputHint);
-
+   
    public void setIsSearchable(final Boolean isSearchable);
-
+   
    public static AttributeDefinitionImpl of(){
       return new AttributeDefinitionImpl();
    }
-
+   
 
    public static AttributeDefinitionImpl of(final AttributeDefinition template) {
       AttributeDefinitionImpl instance = new AttributeDefinitionImpl();
+      instance.setType(template.getType());
+      instance.setName(template.getName());
+      instance.setLabel(template.getLabel());
       instance.setIsRequired(template.getIsRequired());
       instance.setAttributeConstraint(template.getAttributeConstraint());
-      instance.setName(template.getName());
+      instance.setInputTip(template.getInputTip());
       instance.setInputHint(template.getInputHint());
       instance.setIsSearchable(template.getIsSearchable());
-      instance.setLabel(template.getLabel());
-      instance.setType(template.getType());
-      instance.setInputTip(template.getInputTip());
       return instance;
    }
 

@@ -22,28 +22,28 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderBillingAddressSetMessagePayloadImpl.class)
 public interface OrderBillingAddressSetMessagePayload extends MessagePayload {
 
-
+   
    @Valid
    @JsonProperty("address")
    public Address getAddress();
-
+   
    @Valid
    @JsonProperty("oldAddress")
    public Address getOldAddress();
 
    public void setAddress(final Address address);
-
+   
    public void setOldAddress(final Address oldAddress);
-
+   
    public static OrderBillingAddressSetMessagePayloadImpl of(){
       return new OrderBillingAddressSetMessagePayloadImpl();
    }
-
+   
 
    public static OrderBillingAddressSetMessagePayloadImpl of(final OrderBillingAddressSetMessagePayload template) {
       OrderBillingAddressSetMessagePayloadImpl instance = new OrderBillingAddressSetMessagePayloadImpl();
-      instance.setOldAddress(template.getOldAddress());
       instance.setAddress(template.getAddress());
+      instance.setOldAddress(template.getOldAddress());
       return instance;
    }
 

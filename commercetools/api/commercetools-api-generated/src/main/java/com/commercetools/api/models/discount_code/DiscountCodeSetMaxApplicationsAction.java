@@ -24,16 +24,16 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
    /**
    *  <p>If the <code>maxApplications</code> parameter is not included, the field will be emptied.</p>
    */
-
+   
    @JsonProperty("maxApplications")
    public Long getMaxApplications();
 
    public void setMaxApplications(final Long maxApplications);
-
+   
    public static DiscountCodeSetMaxApplicationsActionImpl of(){
       return new DiscountCodeSetMaxApplicationsActionImpl();
    }
-
+   
 
    public static DiscountCodeSetMaxApplicationsActionImpl of(final DiscountCodeSetMaxApplicationsAction template) {
       DiscountCodeSetMaxApplicationsActionImpl instance = new DiscountCodeSetMaxApplicationsActionImpl();

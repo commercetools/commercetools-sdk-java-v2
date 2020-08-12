@@ -15,34 +15,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CartSetLineItemTaxRateActionBuilder {
    
-   @Nullable
-   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-   
    
    private String lineItemId;
    
-   public CartSetLineItemTaxRateActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-      this.externalTaxRate = externalTaxRate;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    public CartSetLineItemTaxRateActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
-      return this.externalTaxRate;
+   public CartSetLineItemTaxRateActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+      this.externalTaxRate = externalTaxRate;
+      return this;
    }
    
    
    public String getLineItemId(){
       return this.lineItemId;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+      return this.externalTaxRate;
+   }
 
    public CartSetLineItemTaxRateAction build() {
-       return new CartSetLineItemTaxRateActionImpl(externalTaxRate, lineItemId);
+       return new CartSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate);
    }
    
    public static CartSetLineItemTaxRateActionBuilder of() {
@@ -51,8 +51,8 @@ public final class CartSetLineItemTaxRateActionBuilder {
    
    public static CartSetLineItemTaxRateActionBuilder of(final CartSetLineItemTaxRateAction template) {
       CartSetLineItemTaxRateActionBuilder builder = new CartSetLineItemTaxRateActionBuilder();
-      builder.externalTaxRate = template.getExternalTaxRate();
       builder.lineItemId = template.getLineItemId();
+      builder.externalTaxRate = template.getExternalTaxRate();
       return builder;
    }
    

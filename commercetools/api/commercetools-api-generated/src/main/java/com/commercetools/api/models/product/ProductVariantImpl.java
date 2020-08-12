@@ -27,155 +27,155 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantImpl implements ProductVariant {
 
-   private com.commercetools.api.models.common.ScopedPrice scopedPrice;
-
-   private java.util.List<com.commercetools.api.models.common.Image> images;
-
-   private java.util.List<com.commercetools.api.models.common.Asset> assets;
-
-   private Boolean isMatchingVariant;
-
+   private Long id;
+   
+   private String sku;
+   
+   private String key;
+   
+   private java.util.List<com.commercetools.api.models.common.Price> prices;
+   
+   private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
+   
    private com.commercetools.api.models.common.Price price;
-
+   
+   private java.util.List<com.commercetools.api.models.common.Image> images;
+   
+   private java.util.List<com.commercetools.api.models.common.Asset> assets;
+   
+   private com.commercetools.api.models.product.ProductVariantAvailability availability;
+   
+   private Boolean isMatchingVariant;
+   
+   private com.commercetools.api.models.common.ScopedPrice scopedPrice;
+   
    private Boolean scopedPriceDiscounted;
 
-   private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
-
-   private com.commercetools.api.models.product.ProductVariantAvailability availability;
-
-   private Long id;
-
-   private java.util.List<com.commercetools.api.models.common.Price> prices;
-
-   private String sku;
-
-   private String key;
-
    @JsonCreator
-   ProductVariantImpl(@JsonProperty("scopedPrice") final com.commercetools.api.models.common.ScopedPrice scopedPrice, @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.Asset> assets, @JsonProperty("isMatchingVariant") final Boolean isMatchingVariant, @JsonProperty("price") final com.commercetools.api.models.common.Price price, @JsonProperty("scopedPriceDiscounted") final Boolean scopedPriceDiscounted, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes, @JsonProperty("availability") final com.commercetools.api.models.product.ProductVariantAvailability availability, @JsonProperty("id") final Long id, @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.Price> prices, @JsonProperty("sku") final String sku, @JsonProperty("key") final String key) {
-      this.scopedPrice = scopedPrice;
-      this.images = images;
-      this.assets = assets;
-      this.isMatchingVariant = isMatchingVariant;
-      this.price = price;
-      this.scopedPriceDiscounted = scopedPriceDiscounted;
-      this.attributes = attributes;
-      this.availability = availability;
+   ProductVariantImpl(@JsonProperty("id") final Long id, @JsonProperty("sku") final String sku, @JsonProperty("key") final String key, @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.Price> prices, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes, @JsonProperty("price") final com.commercetools.api.models.common.Price price, @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images, @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.Asset> assets, @JsonProperty("availability") final com.commercetools.api.models.product.ProductVariantAvailability availability, @JsonProperty("isMatchingVariant") final Boolean isMatchingVariant, @JsonProperty("scopedPrice") final com.commercetools.api.models.common.ScopedPrice scopedPrice, @JsonProperty("scopedPriceDiscounted") final Boolean scopedPriceDiscounted) {
       this.id = id;
-      this.prices = prices;
       this.sku = sku;
       this.key = key;
+      this.prices = prices;
+      this.attributes = attributes;
+      this.price = price;
+      this.images = images;
+      this.assets = assets;
+      this.availability = availability;
+      this.isMatchingVariant = isMatchingVariant;
+      this.scopedPrice = scopedPrice;
+      this.scopedPriceDiscounted = scopedPriceDiscounted;
    }
    public ProductVariantImpl() {
-
+      
    }
-
-
-   public com.commercetools.api.models.common.ScopedPrice getScopedPrice(){
-      return this.scopedPrice;
-   }
-
-
-   public java.util.List<com.commercetools.api.models.common.Image> getImages(){
-      return this.images;
-   }
-
-
-   public java.util.List<com.commercetools.api.models.common.Asset> getAssets(){
-      return this.assets;
-   }
-
-
-   public Boolean getIsMatchingVariant(){
-      return this.isMatchingVariant;
-   }
-
-
-   public com.commercetools.api.models.common.Price getPrice(){
-      return this.price;
-   }
-
-
-   public Boolean getScopedPriceDiscounted(){
-      return this.scopedPriceDiscounted;
-   }
-
-
-   public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes(){
-      return this.attributes;
-   }
-
-
-   public com.commercetools.api.models.product.ProductVariantAvailability getAvailability(){
-      return this.availability;
-   }
-
-
+   
+   
    public Long getId(){
       return this.id;
    }
-
-
-   public java.util.List<com.commercetools.api.models.common.Price> getPrices(){
-      return this.prices;
-   }
-
-
+   
+   
    public String getSku(){
       return this.sku;
    }
-
-
+   
+   
    public String getKey(){
       return this.key;
    }
-
-   public void setScopedPrice(final com.commercetools.api.models.common.ScopedPrice scopedPrice){
-      this.scopedPrice = scopedPrice;
+   
+   
+   public java.util.List<com.commercetools.api.models.common.Price> getPrices(){
+      return this.prices;
    }
-
-   public void setImages(final java.util.List<com.commercetools.api.models.common.Image> images){
-      this.images = images;
+   
+   
+   public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes(){
+      return this.attributes;
    }
-
-   public void setAssets(final java.util.List<com.commercetools.api.models.common.Asset> assets){
-      this.assets = assets;
+   
+   
+   public com.commercetools.api.models.common.Price getPrice(){
+      return this.price;
    }
-
-   public void setIsMatchingVariant(final Boolean isMatchingVariant){
-      this.isMatchingVariant = isMatchingVariant;
+   
+   
+   public java.util.List<com.commercetools.api.models.common.Image> getImages(){
+      return this.images;
    }
-
-   public void setPrice(final com.commercetools.api.models.common.Price price){
-      this.price = price;
+   
+   
+   public java.util.List<com.commercetools.api.models.common.Asset> getAssets(){
+      return this.assets;
    }
-
-   public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted){
-      this.scopedPriceDiscounted = scopedPriceDiscounted;
+   
+   
+   public com.commercetools.api.models.product.ProductVariantAvailability getAvailability(){
+      return this.availability;
    }
-
-   public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes){
-      this.attributes = attributes;
+   
+   
+   public Boolean getIsMatchingVariant(){
+      return this.isMatchingVariant;
    }
-
-   public void setAvailability(final com.commercetools.api.models.product.ProductVariantAvailability availability){
-      this.availability = availability;
+   
+   
+   public com.commercetools.api.models.common.ScopedPrice getScopedPrice(){
+      return this.scopedPrice;
+   }
+   
+   
+   public Boolean getScopedPriceDiscounted(){
+      return this.scopedPriceDiscounted;
    }
 
    public void setId(final Long id){
       this.id = id;
    }
-
-   public void setPrices(final java.util.List<com.commercetools.api.models.common.Price> prices){
-      this.prices = prices;
-   }
-
+   
    public void setSku(final String sku){
       this.sku = sku;
    }
-
+   
    public void setKey(final String key){
       this.key = key;
+   }
+   
+   public void setPrices(final java.util.List<com.commercetools.api.models.common.Price> prices){
+      this.prices = prices;
+   }
+   
+   public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes){
+      this.attributes = attributes;
+   }
+   
+   public void setPrice(final com.commercetools.api.models.common.Price price){
+      this.price = price;
+   }
+   
+   public void setImages(final java.util.List<com.commercetools.api.models.common.Image> images){
+      this.images = images;
+   }
+   
+   public void setAssets(final java.util.List<com.commercetools.api.models.common.Asset> assets){
+      this.assets = assets;
+   }
+   
+   public void setAvailability(final com.commercetools.api.models.product.ProductVariantAvailability availability){
+      this.availability = availability;
+   }
+   
+   public void setIsMatchingVariant(final Boolean isMatchingVariant){
+      this.isMatchingVariant = isMatchingVariant;
+   }
+   
+   public void setScopedPrice(final com.commercetools.api.models.common.ScopedPrice scopedPrice){
+      this.scopedPrice = scopedPrice;
+   }
+   
+   public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted){
+      this.scopedPriceDiscounted = scopedPriceDiscounted;
    }
 
 }

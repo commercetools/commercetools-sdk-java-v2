@@ -16,33 +16,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class StagedOrderSetReturnShipmentStateActionBuilder {
    
    
-   private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
-   
-   
    private String returnItemId;
    
-   public StagedOrderSetReturnShipmentStateActionBuilder shipmentState( final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
-      this.shipmentState = shipmentState;
-      return this;
-   }
+   
+   private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
    
    public StagedOrderSetReturnShipmentStateActionBuilder returnItemId( final String returnItemId) {
       this.returnItemId = returnItemId;
       return this;
    }
    
-   
-   public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
-      return this.shipmentState;
+   public StagedOrderSetReturnShipmentStateActionBuilder shipmentState( final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
+      this.shipmentState = shipmentState;
+      return this;
    }
    
    
    public String getReturnItemId(){
       return this.returnItemId;
    }
+   
+   
+   public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
+      return this.shipmentState;
+   }
 
    public StagedOrderSetReturnShipmentStateAction build() {
-       return new StagedOrderSetReturnShipmentStateActionImpl(shipmentState, returnItemId);
+       return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
    }
    
    public static StagedOrderSetReturnShipmentStateActionBuilder of() {
@@ -51,8 +51,8 @@ public final class StagedOrderSetReturnShipmentStateActionBuilder {
    
    public static StagedOrderSetReturnShipmentStateActionBuilder of(final StagedOrderSetReturnShipmentStateAction template) {
       StagedOrderSetReturnShipmentStateActionBuilder builder = new StagedOrderSetReturnShipmentStateActionBuilder();
-      builder.shipmentState = template.getShipmentState();
       builder.returnItemId = template.getReturnItemId();
+      builder.shipmentState = template.getShipmentState();
       return builder;
    }
    

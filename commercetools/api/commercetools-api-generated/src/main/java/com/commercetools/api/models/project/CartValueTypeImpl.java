@@ -29,9 +29,9 @@ public final class CartValueTypeImpl implements CartValueType {
    CartValueTypeImpl() {
       this.type = ShippingRateTierType.findEnumViaJsonName("CartValue").get();
    }
-
-
-
+   
+   
+   
    public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
       return this.type;
    }

@@ -23,88 +23,88 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction {
 
    private String action;
-
-   private String assetId;
-
-   private Boolean staged;
-
+   
    private Long variantId;
-
+   
    private String sku;
-
+   
+   private Boolean staged;
+   
+   private String assetId;
+   
    private String assetKey;
-
+   
    private java.util.List<String> tags;
 
    @JsonCreator
-   ProductSetAssetTagsActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("assetKey") final String assetKey, @JsonProperty("tags") final java.util.List<String> tags) {
-      this.assetId = assetId;
-      this.staged = staged;
+   ProductSetAssetTagsActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged, @JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("tags") final java.util.List<String> tags) {
       this.variantId = variantId;
       this.sku = sku;
+      this.staged = staged;
+      this.assetId = assetId;
       this.assetKey = assetKey;
       this.tags = tags;
       this.action = "setAssetTags";
    }
    public ProductSetAssetTagsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
-   public String getAssetId(){
-      return this.assetId;
-   }
-
-
-   public Boolean getStaged(){
-      return this.staged;
-   }
-
-
+   
+   
    public Long getVariantId(){
       return this.variantId;
    }
-
-
+   
+   
    public String getSku(){
       return this.sku;
    }
-
-
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
+   }
+   
+   
+   public String getAssetId(){
+      return this.assetId;
+   }
+   
+   
    public String getAssetKey(){
       return this.assetKey;
    }
-
-
+   
+   
    public java.util.List<String> getTags(){
       return this.tags;
-   }
-
-   public void setAssetId(final String assetId){
-      this.assetId = assetId;
-   }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
    }
 
    public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
-
+   
    public void setSku(final String sku){
       this.sku = sku;
    }
-
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
+   }
+   
+   public void setAssetId(final String assetId){
+      this.assetId = assetId;
+   }
+   
    public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
    }
-
+   
    public void setTags(final java.util.List<String> tags){
       this.tags = tags;
    }

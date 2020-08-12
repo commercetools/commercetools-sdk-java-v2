@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeAddLocalizedEnumValueActionImpl.class)
 public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("attributeName")
    public String getAttributeName();
-
+   
    @NotNull
    @Valid
    @JsonProperty("value")
    public AttributeLocalizedEnumValue getValue();
 
    public void setAttributeName(final String attributeName);
-
+   
    public void setValue(final AttributeLocalizedEnumValue value);
-
+   
    public static ProductTypeAddLocalizedEnumValueActionImpl of(){
       return new ProductTypeAddLocalizedEnumValueActionImpl();
    }
-
+   
 
    public static ProductTypeAddLocalizedEnumValueActionImpl of(final ProductTypeAddLocalizedEnumValueAction template) {
       ProductTypeAddLocalizedEnumValueActionImpl instance = new ProductTypeAddLocalizedEnumValueActionImpl();

@@ -14,60 +14,60 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CentPrecisionMoneyBuilder {
-
-
-   private Long centAmount;
-
-
+   
+   
    private Integer fractionDigits;
-
-
+   
+   
+   private Long centAmount;
+   
+   
    private String currencyCode;
-
-   public CentPrecisionMoneyBuilder centAmount( final Long centAmount) {
-      this.centAmount = centAmount;
-      return this;
-   }
-
+   
    public CentPrecisionMoneyBuilder fractionDigits( final Integer fractionDigits) {
       this.fractionDigits = fractionDigits;
       return this;
    }
-
+   
+   public CentPrecisionMoneyBuilder centAmount( final Long centAmount) {
+      this.centAmount = centAmount;
+      return this;
+   }
+   
    public CentPrecisionMoneyBuilder currencyCode( final String currencyCode) {
       this.currencyCode = currencyCode;
       return this;
    }
-
-
-   public Long getCentAmount(){
-      return this.centAmount;
-   }
-
-
+   
+   
    public Integer getFractionDigits(){
       return this.fractionDigits;
    }
-
-
+   
+   
+   public Long getCentAmount(){
+      return this.centAmount;
+   }
+   
+   
    public String getCurrencyCode(){
       return this.currencyCode;
    }
 
    public CentPrecisionMoney build() {
-       return new CentPrecisionMoneyImpl(centAmount, fractionDigits, currencyCode);
+       return new CentPrecisionMoneyImpl(fractionDigits, centAmount, currencyCode);
    }
-
+   
    public static CentPrecisionMoneyBuilder of() {
       return new CentPrecisionMoneyBuilder();
    }
-
+   
    public static CentPrecisionMoneyBuilder of(final CentPrecisionMoney template) {
       CentPrecisionMoneyBuilder builder = new CentPrecisionMoneyBuilder();
-      builder.centAmount = template.getCentAmount();
       builder.fractionDigits = template.getFractionDigits();
+      builder.centAmount = template.getCentAmount();
       builder.currencyCode = template.getCurrencyCode();
       return builder;
    }
-
+   
 }

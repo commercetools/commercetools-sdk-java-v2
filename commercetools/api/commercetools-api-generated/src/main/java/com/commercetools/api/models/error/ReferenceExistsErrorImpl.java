@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReferenceExistsErrorImpl implements ReferenceExistsError {
 
    private String code;
-
+   
    private String message;
-
+   
    private com.commercetools.api.models.common.ReferenceTypeId referencedBy;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class ReferenceExistsErrorImpl implements ReferenceExistsError {
       this.code = "ReferenceExists";
    }
    public ReferenceExistsErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getReferencedBy(){
       return this.referencedBy;
    }
@@ -57,7 +57,7 @@ public final class ReferenceExistsErrorImpl implements ReferenceExistsError {
    public void setMessage(final String message){
       this.message = message;
    }
-
+   
    public void setReferencedBy(final com.commercetools.api.models.common.ReferenceTypeId referencedBy){
       this.referencedBy = referencedBy;
    }

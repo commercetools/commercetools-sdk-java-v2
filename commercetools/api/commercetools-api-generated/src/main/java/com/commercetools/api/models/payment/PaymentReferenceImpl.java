@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentReferenceImpl implements PaymentReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.payment.Payment obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class PaymentReferenceImpl implements PaymentReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("payment").get();
    }
    public PaymentReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.payment.Payment getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class PaymentReferenceImpl implements PaymentReference {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.payment.Payment obj){
       this.obj = obj;
    }

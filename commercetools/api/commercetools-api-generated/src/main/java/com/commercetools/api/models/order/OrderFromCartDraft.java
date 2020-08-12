@@ -84,13 +84,13 @@ public interface OrderFromCartDraft  {
 
    public static OrderFromCartDraftImpl of(final OrderFromCartDraft template) {
       OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();
-      instance.setShipmentState(template.getShipmentState());
-      instance.setOrderNumber(template.getOrderNumber());
-      instance.setState(template.getState());
       instance.setId(template.getId());
-      instance.setPaymentState(template.getPaymentState());
       instance.setVersion(template.getVersion());
+      instance.setOrderNumber(template.getOrderNumber());
+      instance.setPaymentState(template.getPaymentState());
+      instance.setShipmentState(template.getShipmentState());
       instance.setOrderState(template.getOrderState());
+      instance.setState(template.getState());
       return instance;
    }
 

@@ -23,8 +23,4 @@ public class ByProjectKeyMeOrdersByIDRequestBuilder {
       return new ByProjectKeyMeOrdersByIDGet(apiHttpClient, projectKey, ID);
    }
    
-   public ByProjectKeyMeOrdersByIDPost post(com.commercetools.api.models.common.Update update) {
-      return new ByProjectKeyMeOrdersByIDPost(apiHttpClient, projectKey, ID, update);
-   }
-   
 }

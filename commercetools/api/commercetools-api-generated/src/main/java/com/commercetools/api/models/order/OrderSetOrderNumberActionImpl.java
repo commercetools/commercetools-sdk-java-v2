@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberAction {
 
    private String action;
-
+   
    private String orderNumber;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberA
       this.action = "setOrderNumber";
    }
    public OrderSetOrderNumberActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getOrderNumber(){
       return this.orderNumber;
    }

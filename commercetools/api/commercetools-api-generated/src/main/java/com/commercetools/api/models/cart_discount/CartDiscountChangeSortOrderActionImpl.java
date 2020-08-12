@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountChangeSortOrderActionImpl implements CartDiscountChangeSortOrderAction {
 
    private String action;
-
+   
    private String sortOrder;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class CartDiscountChangeSortOrderActionImpl implements CartDiscount
       this.action = "changeSortOrder";
    }
    public CartDiscountChangeSortOrderActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>The string must contain a number between 0 and 1.
    *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>

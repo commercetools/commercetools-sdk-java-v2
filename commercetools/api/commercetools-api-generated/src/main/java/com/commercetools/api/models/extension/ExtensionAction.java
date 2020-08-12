@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ExtensionAction {
 
-
+  
   @JsonProperty("Create")
   CREATE("Create"),
-
-
+  
+  
   @JsonProperty("Update")
   UPDATE("Update");
 

@@ -16,55 +16,55 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ExtensionBadResponseErrorBuilder {
-
-
+   
+   
    private String message;
-
+   
    @Nullable
    private com.commercetools.api.models.common.LocalizedString localizedMessage;
-
+   
    @Nullable
    private com.fasterxml.jackson.databind.JsonNode extensionExtraInfo;
-
-
+   
+   
    private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
-
+   
    public ExtensionBadResponseErrorBuilder message( final String message) {
       this.message = message;
       return this;
    }
-
+   
    public ExtensionBadResponseErrorBuilder localizedMessage(@Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {
       this.localizedMessage = localizedMessage;
       return this;
    }
-
+   
    public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo) {
       this.extensionExtraInfo = extensionExtraInfo;
       return this;
    }
-
+   
    public ExtensionBadResponseErrorBuilder errorByExtension( final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
       this.errorByExtension = errorByExtension;
       return this;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
-
+   
    @Nullable
    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage(){
       return this.localizedMessage;
    }
-
+   
    @Nullable
    public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo(){
       return this.extensionExtraInfo;
    }
-
-
+   
+   
    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension(){
       return this.errorByExtension;
    }
@@ -72,11 +72,11 @@ public final class ExtensionBadResponseErrorBuilder {
    public ExtensionBadResponseError build() {
        return new ExtensionBadResponseErrorImpl(message, localizedMessage, extensionExtraInfo, errorByExtension);
    }
-
+   
    public static ExtensionBadResponseErrorBuilder of() {
       return new ExtensionBadResponseErrorBuilder();
    }
-
+   
    public static ExtensionBadResponseErrorBuilder of(final ExtensionBadResponseError template) {
       ExtensionBadResponseErrorBuilder builder = new ExtensionBadResponseErrorBuilder();
       builder.message = template.getMessage();
@@ -85,5 +85,5 @@ public final class ExtensionBadResponseErrorBuilder {
       builder.errorByExtension = template.getErrorByExtension();
       return builder;
    }
-
+   
 }

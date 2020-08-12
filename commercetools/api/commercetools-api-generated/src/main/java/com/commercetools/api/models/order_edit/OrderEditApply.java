@@ -21,28 +21,28 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditApplyImpl.class)
 public interface OrderEditApply  {
 
-
+   
    @NotNull
    @JsonProperty("editVersion")
    public Integer getEditVersion();
-
+   
    @NotNull
    @JsonProperty("resourceVersion")
    public Integer getResourceVersion();
 
    public void setEditVersion(final Integer editVersion);
-
+   
    public void setResourceVersion(final Integer resourceVersion);
-
+   
    public static OrderEditApplyImpl of(){
       return new OrderEditApplyImpl();
    }
-
+   
 
    public static OrderEditApplyImpl of(final OrderEditApply template) {
       OrderEditApplyImpl instance = new OrderEditApplyImpl();
-      instance.setResourceVersion(template.getResourceVersion());
       instance.setEditVersion(template.getEditVersion());
+      instance.setResourceVersion(template.getResourceVersion());
       return instance;
    }
 

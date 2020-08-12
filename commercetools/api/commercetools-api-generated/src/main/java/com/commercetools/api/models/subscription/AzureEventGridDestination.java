@@ -41,8 +41,8 @@ public interface AzureEventGridDestination extends Destination {
 
    public static AzureEventGridDestinationImpl of(final AzureEventGridDestination template) {
       AzureEventGridDestinationImpl instance = new AzureEventGridDestinationImpl();
-      instance.setAccessKey(template.getAccessKey());
       instance.setUri(template.getUri());
+      instance.setAccessKey(template.getAccessKey());
       return instance;
    }
 

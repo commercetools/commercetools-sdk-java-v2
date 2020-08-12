@@ -22,18 +22,18 @@ import java.io.IOException;
 public interface LastModifiedBy extends ClientLogging {
 
 
-
+   
    public static LastModifiedByImpl of(){
       return new LastModifiedByImpl();
    }
-
+   
 
    public static LastModifiedByImpl of(final LastModifiedBy template) {
       LastModifiedByImpl instance = new LastModifiedByImpl();
-      instance.setAnonymousId(template.getAnonymousId());
       instance.setClientId(template.getClientId());
       instance.setExternalUserId(template.getExternalUserId());
       instance.setCustomer(template.getCustomer());
+      instance.setAnonymousId(template.getAnonymousId());
       return instance;
    }
 

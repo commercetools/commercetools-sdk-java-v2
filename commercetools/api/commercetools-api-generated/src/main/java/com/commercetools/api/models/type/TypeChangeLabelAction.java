@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeChangeLabelActionImpl.class)
 public interface TypeChangeLabelAction extends TypeUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("fieldName")
    public String getFieldName();
-
+   
    @NotNull
    @Valid
    @JsonProperty("label")
    public LocalizedString getLabel();
 
    public void setFieldName(final String fieldName);
-
+   
    public void setLabel(final LocalizedString label);
-
+   
    public static TypeChangeLabelActionImpl of(){
       return new TypeChangeLabelActionImpl();
    }
-
+   
 
    public static TypeChangeLabelActionImpl of(final TypeChangeLabelAction template) {
       TypeChangeLabelActionImpl instance = new TypeChangeLabelActionImpl();

@@ -22,59 +22,59 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerChangePasswordImpl implements CustomerChangePassword {
 
+   private String id;
+   
+   private Long version;
+   
+   private String currentPassword;
+   
    private String newPassword;
 
-   private String id;
-
-   private Long version;
-
-   private String currentPassword;
-
    @JsonCreator
-   CustomerChangePasswordImpl(@JsonProperty("newPassword") final String newPassword, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("currentPassword") final String currentPassword) {
-      this.newPassword = newPassword;
+   CustomerChangePasswordImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("currentPassword") final String currentPassword, @JsonProperty("newPassword") final String newPassword) {
       this.id = id;
       this.version = version;
       this.currentPassword = currentPassword;
+      this.newPassword = newPassword;
    }
    public CustomerChangePasswordImpl() {
-
+      
    }
-
-
-   public String getNewPassword(){
-      return this.newPassword;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-
+   
+   
    public String getCurrentPassword(){
       return this.currentPassword;
    }
-
-   public void setNewPassword(final String newPassword){
-      this.newPassword = newPassword;
+   
+   
+   public String getNewPassword(){
+      return this.newPassword;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
+   
    public void setCurrentPassword(final String currentPassword){
       this.currentPassword = currentPassword;
+   }
+   
+   public void setNewPassword(final String newPassword){
+      this.newPassword = newPassword;
    }
 
 }

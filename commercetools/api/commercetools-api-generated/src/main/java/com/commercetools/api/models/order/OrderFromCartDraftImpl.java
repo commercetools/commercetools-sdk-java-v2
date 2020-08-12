@@ -25,39 +25,46 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
 
-   private com.commercetools.api.models.order.ShipmentState shipmentState;
-
+   private String id;
+   
+   private Long version;
+   
    private String orderNumber;
-
+   
+   private com.commercetools.api.models.order.PaymentState paymentState;
+   
+   private com.commercetools.api.models.order.ShipmentState shipmentState;
+   
+   private com.commercetools.api.models.order.OrderState orderState;
+   
    private com.commercetools.api.models.state.StateResourceIdentifier state;
 
-   private String id;
-
-   private com.commercetools.api.models.order.PaymentState paymentState;
-
-   private Long version;
-
-   private com.commercetools.api.models.order.OrderState orderState;
-
    @JsonCreator
-   OrderFromCartDraftImpl(@JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state, @JsonProperty("id") final String id, @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState, @JsonProperty("version") final Long version, @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState) {
-      this.shipmentState = shipmentState;
-      this.orderNumber = orderNumber;
-      this.state = state;
+   OrderFromCartDraftImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState, @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState, @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state) {
       this.id = id;
-      this.paymentState = paymentState;
       this.version = version;
+      this.orderNumber = orderNumber;
+      this.paymentState = paymentState;
+      this.shipmentState = shipmentState;
       this.orderState = orderState;
+      this.state = state;
    }
    public OrderFromCartDraftImpl() {
-
+      
    }
-
-
-   public com.commercetools.api.models.order.ShipmentState getShipmentState(){
-      return this.shipmentState;
+   
+   /**
+   *  <p>The unique id of the cart from which an order is created.</p>
+   */
+   public String getId(){
+      return this.id;
    }
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
    /**
    *  <p>String that uniquely identifies an order.
    *  It can be used to create more human-readable (in contrast to ID) identifier for the order.
@@ -68,62 +75,55 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
    public String getOrderNumber(){
       return this.orderNumber;
    }
-
-
-   public com.commercetools.api.models.state.StateResourceIdentifier getState(){
-      return this.state;
-   }
-
-   /**
-   *  <p>The unique id of the cart from which an order is created.</p>
-   */
-   public String getId(){
-      return this.id;
-   }
-
-
+   
+   
    public com.commercetools.api.models.order.PaymentState getPaymentState(){
       return this.paymentState;
    }
-
-
-   public Long getVersion(){
-      return this.version;
+   
+   
+   public com.commercetools.api.models.order.ShipmentState getShipmentState(){
+      return this.shipmentState;
    }
-
+   
    /**
    *  <p>Order will be created with <code>Open</code> status by default.</p>
    */
    public com.commercetools.api.models.order.OrderState getOrderState(){
       return this.orderState;
    }
-
-   public void setShipmentState(final com.commercetools.api.models.order.ShipmentState shipmentState){
-      this.shipmentState = shipmentState;
-   }
-
-   public void setOrderNumber(final String orderNumber){
-      this.orderNumber = orderNumber;
-   }
-
-   public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
-      this.state = state;
+   
+   
+   public com.commercetools.api.models.state.StateResourceIdentifier getState(){
+      return this.state;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
-   public void setPaymentState(final com.commercetools.api.models.order.PaymentState paymentState){
-      this.paymentState = paymentState;
-   }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
+   
+   public void setOrderNumber(final String orderNumber){
+      this.orderNumber = orderNumber;
+   }
+   
+   public void setPaymentState(final com.commercetools.api.models.order.PaymentState paymentState){
+      this.paymentState = paymentState;
+   }
+   
+   public void setShipmentState(final com.commercetools.api.models.order.ShipmentState shipmentState){
+      this.shipmentState = shipmentState;
+   }
+   
    public void setOrderState(final com.commercetools.api.models.order.OrderState orderState){
       this.orderState = orderState;
+   }
+   
+   public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
+      this.state = state;
    }
 
 }

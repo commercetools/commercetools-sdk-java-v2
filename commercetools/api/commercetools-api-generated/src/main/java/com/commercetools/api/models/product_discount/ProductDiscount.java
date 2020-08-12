@@ -1,9 +1,9 @@
 package com.commercetools.api.models.product_discount;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.product_discount.ProductDiscountValue;
 import java.time.ZonedDateTime;
@@ -25,7 +25,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ProductDiscountImpl.class)
-public interface ProductDiscount extends LoggedResource {
+public interface ProductDiscount extends BaseResource {
 
    /**
    *  <p>The unique ID of the product discount</p>
@@ -39,11 +39,11 @@ public interface ProductDiscount extends LoggedResource {
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -59,7 +59,7 @@ public interface ProductDiscount extends LoggedResource {
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-
+   
    @NotNull
    @Valid
    @JsonProperty("name")
@@ -68,14 +68,14 @@ public interface ProductDiscount extends LoggedResource {
    *  <p>User-specific unique identifier for a product discount.
    *  Must be unique across a project.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-
+   
    @NotNull
    @Valid
    @JsonProperty("value")
@@ -112,72 +112,72 @@ public interface ProductDiscount extends LoggedResource {
    *  <p>The time from which the discount should be effective.
    *  Please take Eventual Consistency into account for calculated product discount values.</p>
    */
-
+   
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
    /**
    *  <p>The time from which the discount should be ineffective.
    *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
    */
-
+   
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setCreatedAt(final ZonedDateTime createdAt);
-
+   
    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+   
    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+   
    public void setCreatedBy(final CreatedBy createdBy);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public void setKey(final String key);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public void setValue(final ProductDiscountValue value);
-
+   
    public void setPredicate(final String predicate);
-
+   
    public void setSortOrder(final String sortOrder);
-
+   
    public void setIsActive(final Boolean isActive);
-
+   
    public void setReferences(final List<Reference> references);
-
+   
    public void setValidFrom(final ZonedDateTime validFrom);
-
+   
    public void setValidUntil(final ZonedDateTime validUntil);
-
+   
    public static ProductDiscountImpl of(){
       return new ProductDiscountImpl();
    }
-
+   
 
    public static ProductDiscountImpl of(final ProductDiscount template) {
       ProductDiscountImpl instance = new ProductDiscountImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setReferences(template.getReferences());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setName(template.getName());
+      instance.setKey(template.getKey());
       instance.setDescription(template.getDescription());
-      instance.setValidFrom(template.getValidFrom());
-      instance.setIsActive(template.getIsActive());
+      instance.setValue(template.getValue());
       instance.setPredicate(template.getPredicate());
       instance.setSortOrder(template.getSortOrder());
-      instance.setName(template.getName());
+      instance.setIsActive(template.getIsActive());
+      instance.setReferences(template.getReferences());
+      instance.setValidFrom(template.getValidFrom());
       instance.setValidUntil(template.getValidUntil());
-      instance.setValue(template.getValue());
-      instance.setKey(template.getKey());
       return instance;
    }
 

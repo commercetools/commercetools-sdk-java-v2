@@ -30,11 +30,11 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
    public CustomerResourceIdentifier getCustomer();
 
    public void setCustomer(final CustomerResourceIdentifier customer);
-
+   
    public static PaymentSetCustomerActionImpl of(){
       return new PaymentSetCustomerActionImpl();
    }
-
+   
 
    public static PaymentSetCustomerActionImpl of(final PaymentSetCustomerAction template) {
       PaymentSetCustomerActionImpl instance = new PaymentSetCustomerActionImpl();

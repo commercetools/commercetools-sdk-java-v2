@@ -59,10 +59,10 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
 
    public static ProductRemoveAssetActionImpl of(final ProductRemoveAssetAction template) {
       ProductRemoveAssetActionImpl instance = new ProductRemoveAssetActionImpl();
-      instance.setAssetId(template.getAssetId());
-      instance.setStaged(template.getStaged());
       instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
+      instance.setStaged(template.getStaged());
+      instance.setAssetId(template.getAssetId());
       instance.setAssetKey(template.getAssetKey());
       return instance;
    }

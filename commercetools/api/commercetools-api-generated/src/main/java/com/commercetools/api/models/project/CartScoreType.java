@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface CartScoreType extends ShippingRateInputType {
 
 
-
+   
    public static CartScoreTypeImpl of(){
       return new CartScoreTypeImpl();
    }
-
+   
 
    public static CartScoreTypeImpl of(final CartScoreType template) {
       CartScoreTypeImpl instance = new CartScoreTypeImpl();

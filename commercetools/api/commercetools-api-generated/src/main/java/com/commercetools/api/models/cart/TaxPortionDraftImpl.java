@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxPortionDraftImpl implements TaxPortionDraft {
 
+   private String name;
+   
+   private Double rate;
+   
    private com.commercetools.api.models.common.Money amount;
 
-   private Integer rate;
-
-   private String name;
-
    @JsonCreator
-   TaxPortionDraftImpl(@JsonProperty("amount") final com.commercetools.api.models.common.Money amount, @JsonProperty("rate") final Integer rate, @JsonProperty("name") final String name) {
-      this.amount = amount;
-      this.rate = rate;
+   TaxPortionDraftImpl(@JsonProperty("name") final String name, @JsonProperty("rate") final Double rate, @JsonProperty("amount") final com.commercetools.api.models.common.Money amount) {
       this.name = name;
+      this.rate = rate;
+      this.amount = amount;
    }
    public TaxPortionDraftImpl() {
-
+      
    }
-
-
+   
+   
+   public String getName(){
+      return this.name;
+   }
+   
+   
+   public Double getRate(){
+      return this.rate;
+   }
+   
+   
    public com.commercetools.api.models.common.Money getAmount(){
       return this.amount;
    }
 
-
-   public Integer getRate(){
-      return this.rate;
-   }
-
-
-   public String getName(){
-      return this.name;
-   }
-
-   public void setAmount(final com.commercetools.api.models.common.Money amount){
-      this.amount = amount;
-   }
-
-   public void setRate(final Integer rate){
-      this.rate = rate;
-   }
-
    public void setName(final String name){
       this.name = name;
+   }
+   
+   public void setRate(final Double rate){
+      this.rate = rate;
+   }
+   
+   public void setAmount(final com.commercetools.api.models.common.Money amount){
+      this.amount = amount;
    }
 
 }

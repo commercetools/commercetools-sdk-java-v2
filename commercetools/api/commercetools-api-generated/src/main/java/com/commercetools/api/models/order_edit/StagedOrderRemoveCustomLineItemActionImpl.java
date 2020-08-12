@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderRemoveCustomLineItemActionImpl implements StagedOrderRemoveCustomLineItemAction {
 
    private String action;
-
+   
    private String customLineItemId;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class StagedOrderRemoveCustomLineItemActionImpl implements StagedOr
       this.action = "removeCustomLineItem";
    }
    public StagedOrderRemoveCustomLineItemActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getCustomLineItemId(){
       return this.customLineItemId;
    }

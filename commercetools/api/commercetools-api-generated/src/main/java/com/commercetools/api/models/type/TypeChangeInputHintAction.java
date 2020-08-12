@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeChangeInputHintActionImpl.class)
 public interface TypeChangeInputHintAction extends TypeUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("fieldName")
    public String getFieldName();
-
+   
    @NotNull
    @JsonProperty("inputHint")
    public TypeTextInputHint getInputHint();
 
    public void setFieldName(final String fieldName);
-
+   
    public void setInputHint(final TypeTextInputHint inputHint);
-
+   
    public static TypeChangeInputHintActionImpl of(){
       return new TypeChangeInputHintActionImpl();
    }
-
+   
 
    public static TypeChangeInputHintActionImpl of(final TypeChangeInputHintAction template) {
       TypeChangeInputHintActionImpl instance = new TypeChangeInputHintActionImpl();

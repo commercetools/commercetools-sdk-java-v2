@@ -24,63 +24,63 @@ import java.io.IOException;
 @JsonDeserialize(as = StateDraftImpl.class)
 public interface StateDraft  {
 
-
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
-
+   
    @NotNull
    @JsonProperty("type")
    public StateTypeEnum getType();
-
+   
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-
-
+   
+   
    @JsonProperty("initial")
    public Boolean getInitial();
-
-
+   
+   
    @JsonProperty("roles")
    public List<StateRoleEnum> getRoles();
-
+   
    @Valid
    @JsonProperty("transitions")
    public List<StateResourceIdentifier> getTransitions();
 
    public void setKey(final String key);
-
+   
    public void setType(final StateTypeEnum type);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public void setInitial(final Boolean initial);
-
+   
    public void setRoles(final List<StateRoleEnum> roles);
-
+   
    public void setTransitions(final List<StateResourceIdentifier> transitions);
-
+   
    public static StateDraftImpl of(){
       return new StateDraftImpl();
    }
-
+   
 
    public static StateDraftImpl of(final StateDraft template) {
       StateDraftImpl instance = new StateDraftImpl();
-      instance.setInitial(template.getInitial());
-      instance.setRoles(template.getRoles());
+      instance.setKey(template.getKey());
+      instance.setType(template.getType());
       instance.setName(template.getName());
       instance.setDescription(template.getDescription());
+      instance.setInitial(template.getInitial());
+      instance.setRoles(template.getRoles());
       instance.setTransitions(template.getTransitions());
-      instance.setType(template.getType());
-      instance.setKey(template.getKey());
       return instance;
    }
 

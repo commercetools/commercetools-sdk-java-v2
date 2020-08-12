@@ -42,8 +42,8 @@ public interface CategoryUpdate  {
 
    public static CategoryUpdateImpl of(final CategoryUpdate template) {
       CategoryUpdateImpl instance = new CategoryUpdateImpl();
-      instance.setActions(template.getActions());
       instance.setVersion(template.getVersion());
+      instance.setActions(template.getActions());
       return instance;
    }
 

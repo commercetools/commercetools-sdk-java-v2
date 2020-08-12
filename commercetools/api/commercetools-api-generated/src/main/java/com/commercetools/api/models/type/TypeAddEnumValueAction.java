@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeAddEnumValueActionImpl.class)
 public interface TypeAddEnumValueAction extends TypeUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("fieldName")
    public String getFieldName();
-
+   
    @NotNull
    @Valid
    @JsonProperty("value")
    public CustomFieldEnumValue getValue();
 
    public void setFieldName(final String fieldName);
-
+   
    public void setValue(final CustomFieldEnumValue value);
-
+   
    public static TypeAddEnumValueActionImpl of(){
       return new TypeAddEnumValueActionImpl();
    }
-
+   
 
    public static TypeAddEnumValueActionImpl of(final TypeAddEnumValueAction template) {
       TypeAddEnumValueActionImpl instance = new TypeAddEnumValueActionImpl();

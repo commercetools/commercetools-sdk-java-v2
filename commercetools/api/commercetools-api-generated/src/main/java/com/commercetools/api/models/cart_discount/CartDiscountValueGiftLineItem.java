@@ -57,8 +57,8 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
    public static CartDiscountValueGiftLineItemImpl of(final CartDiscountValueGiftLineItem template) {
       CartDiscountValueGiftLineItemImpl instance = new CartDiscountValueGiftLineItemImpl();
       instance.setProduct(template.getProduct());
-      instance.setSupplyChannel(template.getSupplyChannel());
       instance.setVariantId(template.getVariantId());
+      instance.setSupplyChannel(template.getSupplyChannel());
       instance.setDistributionChannel(template.getDistributionChannel());
       return instance;
    }

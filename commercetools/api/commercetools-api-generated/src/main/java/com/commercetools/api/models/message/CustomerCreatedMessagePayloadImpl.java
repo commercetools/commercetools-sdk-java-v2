@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessagePayload {
 
    private String type;
-
+   
    private com.commercetools.api.models.customer.Customer customer;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CustomerCreatedMessagePayloadImpl implements CustomerCreatedM
       this.type = "CustomerCreated";
    }
    public CustomerCreatedMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public com.commercetools.api.models.customer.Customer getCustomer(){
       return this.customer;
    }

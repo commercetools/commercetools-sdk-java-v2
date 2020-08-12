@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerEmailChangedMessageImpl.class)
 public interface CustomerEmailChangedMessage extends Message {
 
-
+   
    @NotNull
    @JsonProperty("email")
    public String getEmail();
 
    public void setEmail(final String email);
-
+   
    public static CustomerEmailChangedMessageImpl of(){
       return new CustomerEmailChangedMessageImpl();
    }
-
+   
 
    public static CustomerEmailChangedMessageImpl of(final CustomerEmailChangedMessage template) {
       CustomerEmailChangedMessageImpl instance = new CustomerEmailChangedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setEmail(template.getEmail());
       return instance;
    }

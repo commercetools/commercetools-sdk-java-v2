@@ -30,75 +30,64 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomLineItemImpl implements CustomLineItem {
 
-   private com.commercetools.api.models.tax_category.TaxRate taxRate;
-   
-   private Integer quantity;
-   
-   private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
-   
-   private com.commercetools.api.models.common.TypedMoney money;
-   
-   private com.commercetools.api.models.common.TypedMoney totalPrice;
-   
-   private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
-   
-   private com.commercetools.api.models.type.CustomFields custom;
+   private String id;
    
    private com.commercetools.api.models.common.LocalizedString name;
    
-   private java.util.List<com.commercetools.api.models.order.ItemState> state;
+   private com.commercetools.api.models.common.TypedMoney money;
    
-   private String id;
+   private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
    
-   private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+   private com.commercetools.api.models.common.TypedMoney totalPrice;
    
    private String slug;
    
+   private Double quantity;
+   
+   private java.util.List<com.commercetools.api.models.order.ItemState> state;
+   
    private com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory;
+   
+   private com.commercetools.api.models.tax_category.TaxRate taxRate;
+   
+   private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+   
+   private com.commercetools.api.models.type.CustomFields custom;
+   
+   private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
 
    @JsonCreator
-   CustomLineItemImpl(@JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate, @JsonProperty("quantity") final Integer quantity, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails, @JsonProperty("money") final com.commercetools.api.models.common.TypedMoney money, @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state, @JsonProperty("id") final String id, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("slug") final String slug, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
-      this.taxRate = taxRate;
-      this.quantity = quantity;
-      this.shippingDetails = shippingDetails;
-      this.money = money;
-      this.totalPrice = totalPrice;
-      this.taxedPrice = taxedPrice;
-      this.custom = custom;
-      this.name = name;
-      this.state = state;
+   CustomLineItemImpl(@JsonProperty("id") final String id, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("money") final com.commercetools.api.models.common.TypedMoney money, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice, @JsonProperty("slug") final String slug, @JsonProperty("quantity") final Double quantity, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails) {
       this.id = id;
-      this.discountedPricePerQuantity = discountedPricePerQuantity;
+      this.name = name;
+      this.money = money;
+      this.taxedPrice = taxedPrice;
+      this.totalPrice = totalPrice;
       this.slug = slug;
+      this.quantity = quantity;
+      this.state = state;
       this.taxCategory = taxCategory;
+      this.taxRate = taxRate;
+      this.discountedPricePerQuantity = discountedPricePerQuantity;
+      this.custom = custom;
+      this.shippingDetails = shippingDetails;
    }
    public CustomLineItemImpl() {
       
    }
    
    /**
-   *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set.
-   *  For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+   *  <p>The unique ID of this CustomLineItem.</p>
    */
-   public com.commercetools.api.models.tax_category.TaxRate getTaxRate(){
-      return this.taxRate;
+   public String getId(){
+      return this.id;
    }
    
    /**
-   *  <p>The amount of a CustomLineItem in the cart.
-   *  Must be a positive integer.</p>
+   *  <p>The name of this CustomLineItem.</p>
    */
-   public Integer getQuantity(){
-      return this.quantity;
-   }
-   
-   /**
-   *  <p>Container for custom line item specific address(es).
-   *  CustomLineItem fields that can be used in query predicates: <code>slug</code>, <code>name</code>, <code>quantity</code>,
-   *  <code>money</code>, <code>state</code>, <code>discountedPricePerQuantity</code>.</p>
-   */
-   public com.commercetools.api.models.cart.ItemShippingDetails getShippingDetails(){
-      return this.shippingDetails;
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
    }
    
    /**
@@ -107,6 +96,13 @@ public final class CustomLineItemImpl implements CustomLineItem {
    */
    public com.commercetools.api.models.common.TypedMoney getMoney(){
       return this.money;
+   }
+   
+   /**
+   *  <p>Set once the <code>taxRate</code> is set.</p>
+   */
+   public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
+      return this.taxedPrice;
    }
    
    /**
@@ -120,10 +116,41 @@ public final class CustomLineItemImpl implements CustomLineItem {
    }
    
    /**
-   *  <p>Set once the <code>taxRate</code> is set.</p>
+   *  <p>A unique String in the cart to identify this CustomLineItem.</p>
    */
-   public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
-      return this.taxedPrice;
+   public String getSlug(){
+      return this.slug;
+   }
+   
+   /**
+   *  <p>The amount of a CustomLineItem in the cart.
+   *  Must be a positive integer.</p>
+   */
+   public Double getQuantity(){
+      return this.quantity;
+   }
+   
+   
+   public java.util.List<com.commercetools.api.models.order.ItemState> getState(){
+      return this.state;
+   }
+   
+   
+   public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory(){
+      return this.taxCategory;
+   }
+   
+   /**
+   *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set.
+   *  For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+   */
+   public com.commercetools.api.models.tax_category.TaxRate getTaxRate(){
+      return this.taxRate;
+   }
+   
+   
+   public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
+      return this.discountedPricePerQuantity;
    }
    
    
@@ -132,91 +159,64 @@ public final class CustomLineItemImpl implements CustomLineItem {
    }
    
    /**
-   *  <p>The name of this CustomLineItem.</p>
+   *  <p>Container for custom line item specific address(es).
+   *  CustomLineItem fields that can be used in query predicates: <code>slug</code>, <code>name</code>, <code>quantity</code>,
+   *  <code>money</code>, <code>state</code>, <code>discountedPricePerQuantity</code>.</p>
    */
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.order.ItemState> getState(){
-      return this.state;
-   }
-   
-   /**
-   *  <p>The unique ID of this CustomLineItem.</p>
-   */
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
-      return this.discountedPricePerQuantity;
-   }
-   
-   /**
-   *  <p>A unique String in the cart to identify this CustomLineItem.</p>
-   */
-   public String getSlug(){
-      return this.slug;
-   }
-   
-   
-   public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory(){
-      return this.taxCategory;
+   public com.commercetools.api.models.cart.ItemShippingDetails getShippingDetails(){
+      return this.shippingDetails;
    }
 
-   public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRate taxRate){
-      this.taxRate = taxRate;
-   }
-   
-   public void setQuantity(final Integer quantity){
-      this.quantity = quantity;
-   }
-   
-   public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails){
-      this.shippingDetails = shippingDetails;
-   }
-   
-   public void setMoney(final com.commercetools.api.models.common.TypedMoney money){
-      this.money = money;
-   }
-   
-   public void setTotalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice){
-      this.totalPrice = totalPrice;
-   }
-   
-   public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice){
-      this.taxedPrice = taxedPrice;
-   }
-   
-   public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
-      this.custom = custom;
+   public void setId(final String id){
+      this.id = id;
    }
    
    public void setName(final com.commercetools.api.models.common.LocalizedString name){
       this.name = name;
    }
    
-   public void setState(final java.util.List<com.commercetools.api.models.order.ItemState> state){
-      this.state = state;
+   public void setMoney(final com.commercetools.api.models.common.TypedMoney money){
+      this.money = money;
    }
    
-   public void setId(final String id){
-      this.id = id;
+   public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice){
+      this.taxedPrice = taxedPrice;
    }
    
-   public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
-      this.discountedPricePerQuantity = discountedPricePerQuantity;
+   public void setTotalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice){
+      this.totalPrice = totalPrice;
    }
    
    public void setSlug(final String slug){
       this.slug = slug;
    }
    
+   public void setQuantity(final Double quantity){
+      this.quantity = quantity;
+   }
+   
+   public void setState(final java.util.List<com.commercetools.api.models.order.ItemState> state){
+      this.state = state;
+   }
+   
    public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory){
       this.taxCategory = taxCategory;
+   }
+   
+   public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRate taxRate){
+      this.taxRate = taxRate;
+   }
+   
+   public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
+      this.discountedPricePerQuantity = discountedPricePerQuantity;
+   }
+   
+   public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
+      this.custom = custom;
+   }
+   
+   public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails){
+      this.shippingDetails = shippingDetails;
    }
 
 }

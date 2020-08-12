@@ -48,9 +48,9 @@ public interface OrderEditUpdate  {
 
    public static OrderEditUpdateImpl of(final OrderEditUpdate template) {
       OrderEditUpdateImpl instance = new OrderEditUpdateImpl();
-      instance.setDryRun(template.getDryRun());
-      instance.setActions(template.getActions());
       instance.setVersion(template.getVersion());
+      instance.setActions(template.getActions());
+      instance.setDryRun(template.getDryRun());
       return instance;
    }
 

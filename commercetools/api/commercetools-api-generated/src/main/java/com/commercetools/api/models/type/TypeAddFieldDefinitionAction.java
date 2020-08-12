@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeAddFieldDefinitionActionImpl.class)
 public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("fieldDefinition")
    public FieldDefinition getFieldDefinition();
 
    public void setFieldDefinition(final FieldDefinition fieldDefinition);
-
+   
    public static TypeAddFieldDefinitionActionImpl of(){
       return new TypeAddFieldDefinitionActionImpl();
    }
-
+   
 
    public static TypeAddFieldDefinitionActionImpl of(final TypeAddFieldDefinitionAction template) {
       TypeAddFieldDefinitionActionImpl instance = new TypeAddFieldDefinitionActionImpl();

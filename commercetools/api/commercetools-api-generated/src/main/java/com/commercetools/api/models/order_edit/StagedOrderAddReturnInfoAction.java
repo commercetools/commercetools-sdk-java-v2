@@ -23,36 +23,36 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderAddReturnInfoActionImpl.class)
 public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction {
 
-
-
+   
+   
    @JsonProperty("returnTrackingId")
    public String getReturnTrackingId();
-
+   
    @NotNull
    @Valid
    @JsonProperty("items")
    public List<ReturnItemDraft> getItems();
-
-
+   
+   
    @JsonProperty("returnDate")
    public ZonedDateTime getReturnDate();
 
    public void setReturnTrackingId(final String returnTrackingId);
-
+   
    public void setItems(final List<ReturnItemDraft> items);
-
+   
    public void setReturnDate(final ZonedDateTime returnDate);
-
+   
    public static StagedOrderAddReturnInfoActionImpl of(){
       return new StagedOrderAddReturnInfoActionImpl();
    }
-
+   
 
    public static StagedOrderAddReturnInfoActionImpl of(final StagedOrderAddReturnInfoAction template) {
       StagedOrderAddReturnInfoActionImpl instance = new StagedOrderAddReturnInfoActionImpl();
-      instance.setReturnDate(template.getReturnDate());
       instance.setReturnTrackingId(template.getReturnTrackingId());
       instance.setItems(template.getItems());
+      instance.setReturnDate(template.getReturnDate());
       return instance;
    }
 

@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class SyncInfoImpl implements SyncInfo {
 
    private com.commercetools.api.models.channel.ChannelReference channel;
-
+   
    private String externalId;
-
+   
    private java.time.ZonedDateTime syncedAt;
 
    @JsonCreator
@@ -36,24 +36,24 @@ public final class SyncInfoImpl implements SyncInfo {
       this.syncedAt = syncedAt;
    }
    public SyncInfoImpl() {
-
+      
    }
-
+   
    /**
    *  <p>Connection to a particular synchronization destination.</p>
    */
    public com.commercetools.api.models.channel.ChannelReference getChannel(){
       return this.channel;
    }
-
+   
    /**
    *  <p>Can be used to reference an external order instance, file etc.</p>
    */
    public String getExternalId(){
       return this.externalId;
    }
-
-
+   
+   
    public java.time.ZonedDateTime getSyncedAt(){
       return this.syncedAt;
    }
@@ -61,11 +61,11 @@ public final class SyncInfoImpl implements SyncInfo {
    public void setChannel(final com.commercetools.api.models.channel.ChannelReference channel){
       this.channel = channel;
    }
-
+   
    public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
-
+   
    public void setSyncedAt(final java.time.ZonedDateTime syncedAt){
       this.syncedAt = syncedAt;
    }

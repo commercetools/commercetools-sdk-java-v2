@@ -18,14 +18,14 @@ public final class StagedOrderChangeCustomLineItemQuantityActionBuilder {
    private String customLineItemId;
    
    
-   private Integer quantity;
+   private Double quantity;
    
    public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
       return this;
    }
    
-   public StagedOrderChangeCustomLineItemQuantityActionBuilder quantity( final Integer quantity) {
+   public StagedOrderChangeCustomLineItemQuantityActionBuilder quantity( final Double quantity) {
       this.quantity = quantity;
       return this;
    }
@@ -36,7 +36,7 @@ public final class StagedOrderChangeCustomLineItemQuantityActionBuilder {
    }
    
    
-   public Integer getQuantity(){
+   public Double getQuantity(){
       return this.quantity;
    }
 

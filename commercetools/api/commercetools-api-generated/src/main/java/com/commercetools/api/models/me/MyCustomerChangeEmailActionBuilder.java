@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyCustomerChangeEmailActionBuilder {
-
-
+   
+   
    private String email;
-
+   
    public MyCustomerChangeEmailActionBuilder email( final String email) {
       this.email = email;
       return this;
    }
-
-
+   
+   
    public String getEmail(){
       return this.email;
    }
@@ -30,15 +30,15 @@ public final class MyCustomerChangeEmailActionBuilder {
    public MyCustomerChangeEmailAction build() {
        return new MyCustomerChangeEmailActionImpl(email);
    }
-
+   
    public static MyCustomerChangeEmailActionBuilder of() {
       return new MyCustomerChangeEmailActionBuilder();
    }
-
+   
    public static MyCustomerChangeEmailActionBuilder of(final MyCustomerChangeEmailAction template) {
       MyCustomerChangeEmailActionBuilder builder = new MyCustomerChangeEmailActionBuilder();
       builder.email = template.getEmail();
       return builder;
    }
-
+   
 }

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomFieldSetTypeImpl implements CustomFieldSetType {
 
    private String name;
-
+   
    private com.commercetools.api.models.type.FieldType elementType;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class CustomFieldSetTypeImpl implements CustomFieldSetType {
       this.name = "Set";
    }
    public CustomFieldSetTypeImpl() {
-
+      
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
-
+   
+   
    public com.commercetools.api.models.type.FieldType getElementType(){
       return this.elementType;
    }

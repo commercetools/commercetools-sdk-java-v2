@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountValueRelativeImpl.class)
 public interface CartDiscountValueRelative extends CartDiscountValue {
 
-
+   
    @NotNull
    @JsonProperty("permyriad")
    public Long getPermyriad();
 
    public void setPermyriad(final Long permyriad);
-
+   
    public static CartDiscountValueRelativeImpl of(){
       return new CartDiscountValueRelativeImpl();
    }
-
+   
 
    public static CartDiscountValueRelativeImpl of(final CartDiscountValueRelative template) {
       CartDiscountValueRelativeImpl instance = new CartDiscountValueRelativeImpl();

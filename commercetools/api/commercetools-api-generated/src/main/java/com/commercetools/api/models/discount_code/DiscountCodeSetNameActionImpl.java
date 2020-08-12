@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DiscountCodeSetNameActionImpl implements DiscountCodeSetNameAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.LocalizedString name;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class DiscountCodeSetNameActionImpl implements DiscountCodeSetNameA
       this.action = "setName";
    }
    public DiscountCodeSetNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If the <code>name</code> parameter is not included, the field will be emptied.</p>
    */

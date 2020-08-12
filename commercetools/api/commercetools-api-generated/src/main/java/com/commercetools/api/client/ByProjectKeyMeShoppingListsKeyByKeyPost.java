@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +21,9 @@ import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
 
+/**
+*  <p>Update MyShoppingList by key</p>
+*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
@@ -29,7 +34,7 @@ public class ByProjectKeyMeShoppingListsKeyByKeyPost {
    private ApiHttpHeaders headers = new ApiHttpHeaders();
    private Map<String, String> additionalQueryParams = new HashMap<>();
    private final ApiHttpClient apiHttpClient; 
-   
+   private List<String> expand = new ArrayList<>();
    private String projectKey;
    private String key;
    
@@ -45,7 +50,7 @@ public class ByProjectKeyMeShoppingListsKeyByKeyPost {
    public ApiHttpRequest createHttpRequest() {
       ApiHttpRequest httpRequest = new ApiHttpRequest();
       List<String> params = new ArrayList<>();
-      
+      params.add(this.expand.stream().map(s -> "expand=" + urlEncode(s)).collect(Collectors.joining("&")));
       params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
       params.removeIf(String::isEmpty);
       String httpRequestPath = String.format("/%s/me/shopping-lists/key=%s", this.projectKey, this.key);
@@ -59,7 +64,7 @@ public class ByProjectKeyMeShoppingListsKeyByKeyPost {
       return httpRequest;
    }
    
-   public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
+   public ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList> executeBlocking(){
       try {
           return execute().get();
       } catch (Exception e) {
@@ -67,24 +72,36 @@ public class ByProjectKeyMeShoppingListsKeyByKeyPost {
       }
    }
    
-   public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
+   public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList>> execute(){
       return apiHttpClient.execute(this.createHttpRequest())
               .thenApply(response -> {
                   if(response.getStatusCode() >= 400){
                       throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
                   }
-                  return Utils.convertResponse(response,com.fasterxml.jackson.databind.JsonNode.class);
+                  return Utils.convertResponse(response,com.commercetools.api.models.shopping_list.MyShoppingList.class);
               });
    }
    
    public String getProjectKey() {return this.projectKey;}
    public String getKey() {return this.key;}
    
+   public List<String> getExpand() {
+      return this.expand;
+   }
    
    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
    
    public void setKey(final String key) {this.key = key;}
    
+   public ByProjectKeyMeShoppingListsKeyByKeyPost addExpand(final String expand){
+      this.expand.add(expand);
+      return this;
+   }
+   
+   public ByProjectKeyMeShoppingListsKeyByKeyPost withExpand(final List<String> expand){
+      this.expand = expand;
+      return this;
+   }
    
    public ByProjectKeyMeShoppingListsKeyByKeyPost addHeader(final String key, final String value) {
       this.headers.addHeader(key, value);

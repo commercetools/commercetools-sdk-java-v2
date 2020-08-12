@@ -14,41 +14,41 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderSetLineItemCustomFieldActionBuilder {
-
-
+   
+   
    private String lineItemId;
-
-
+   
+   
    private String name;
-
+   
    @Nullable
    private com.fasterxml.jackson.databind.JsonNode value;
-
+   
    public OrderSetLineItemCustomFieldActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
-
+   
    public OrderSetLineItemCustomFieldActionBuilder name( final String name) {
       this.name = name;
       return this;
    }
-
+   
    public OrderSetLineItemCustomFieldActionBuilder value(@Nullable final com.fasterxml.jackson.databind.JsonNode value) {
       this.value = value;
       return this;
    }
-
-
+   
+   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
+   
    @Nullable
    public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
@@ -57,11 +57,11 @@ public final class OrderSetLineItemCustomFieldActionBuilder {
    public OrderSetLineItemCustomFieldAction build() {
        return new OrderSetLineItemCustomFieldActionImpl(lineItemId, name, value);
    }
-
+   
    public static OrderSetLineItemCustomFieldActionBuilder of() {
       return new OrderSetLineItemCustomFieldActionBuilder();
    }
-
+   
    public static OrderSetLineItemCustomFieldActionBuilder of(final OrderSetLineItemCustomFieldAction template) {
       OrderSetLineItemCustomFieldActionBuilder builder = new OrderSetLineItemCustomFieldActionBuilder();
       builder.lineItemId = template.getLineItemId();
@@ -69,5 +69,5 @@ public final class OrderSetLineItemCustomFieldActionBuilder {
       builder.value = template.getValue();
       return builder;
    }
-
+   
 }

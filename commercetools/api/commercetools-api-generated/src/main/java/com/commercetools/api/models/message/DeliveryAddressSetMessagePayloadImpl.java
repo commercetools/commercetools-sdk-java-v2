@@ -25,17 +25,17 @@ public final class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddre
 
    private String type;
    
-   private com.commercetools.api.models.common.Address oldAddress;
-   
    private String deliveryId;
    
    private com.commercetools.api.models.common.Address address;
+   
+   private com.commercetools.api.models.common.Address oldAddress;
 
    @JsonCreator
-   DeliveryAddressSetMessagePayloadImpl(@JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress, @JsonProperty("deliveryId") final String deliveryId, @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
-      this.oldAddress = oldAddress;
+   DeliveryAddressSetMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress) {
       this.deliveryId = deliveryId;
       this.address = address;
+      this.oldAddress = oldAddress;
       this.type = "DeliveryAddressSet";
    }
    public DeliveryAddressSetMessagePayloadImpl() {
@@ -48,11 +48,6 @@ public final class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddre
    }
    
    
-   public com.commercetools.api.models.common.Address getOldAddress(){
-      return this.oldAddress;
-   }
-   
-   
    public String getDeliveryId(){
       return this.deliveryId;
    }
@@ -61,17 +56,22 @@ public final class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddre
    public com.commercetools.api.models.common.Address getAddress(){
       return this.address;
    }
-
-   public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress){
-      this.oldAddress = oldAddress;
-   }
    
+   
+   public com.commercetools.api.models.common.Address getOldAddress(){
+      return this.oldAddress;
+   }
+
    public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
    
    public void setAddress(final com.commercetools.api.models.common.Address address){
       this.address = address;
+   }
+   
+   public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress){
+      this.oldAddress = oldAddress;
    }
 
 }

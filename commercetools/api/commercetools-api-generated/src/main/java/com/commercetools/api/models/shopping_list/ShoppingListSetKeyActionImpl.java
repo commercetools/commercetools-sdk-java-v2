@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAction {
 
    private String action;
-
+   
    private String key;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAct
       this.action = "setKey";
    }
    public ShoppingListSetKeyActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>User-specific unique identifier for the shopping list.</p>
    */

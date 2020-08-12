@@ -22,31 +22,31 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductCreatedMessageImpl.class)
 public interface ProductCreatedMessage extends Message {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("productProjection")
    public ProductProjection getProductProjection();
 
    public void setProductProjection(final ProductProjection productProjection);
-
+   
    public static ProductCreatedMessageImpl of(){
       return new ProductCreatedMessageImpl();
    }
-
+   
 
    public static ProductCreatedMessageImpl of(final ProductCreatedMessage template) {
       ProductCreatedMessageImpl instance = new ProductCreatedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setProductProjection(template.getProductProjection());
       return instance;
    }

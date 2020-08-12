@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomFieldLocalizedEnumTypeImpl.class)
 public interface CustomFieldLocalizedEnumType extends FieldType {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("values")
    public List<CustomFieldLocalizedEnumValue> getValues();
 
    public void setValues(final List<CustomFieldLocalizedEnumValue> values);
-
+   
    public static CustomFieldLocalizedEnumTypeImpl of(){
       return new CustomFieldLocalizedEnumTypeImpl();
    }
-
+   
 
    public static CustomFieldLocalizedEnumTypeImpl of(final CustomFieldLocalizedEnumType template) {
       CustomFieldLocalizedEnumTypeImpl instance = new CustomFieldLocalizedEnumTypeImpl();

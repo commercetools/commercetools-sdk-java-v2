@@ -21,7 +21,7 @@ import java.io.IOException;
 @JsonDeserialize(as = MoneyImpl.class)
 public interface Money  {
 
-
+   
    @NotNull
    @JsonProperty("centAmount")
    public Long getCentAmount();
@@ -33,13 +33,13 @@ public interface Money  {
    public String getCurrencyCode();
 
    public void setCentAmount(final Long centAmount);
-
+   
    public void setCurrencyCode(final String currencyCode);
-
+   
    public static MoneyImpl of(){
       return new MoneyImpl();
    }
-
+   
 
    public static MoneyImpl of(final Money template) {
       MoneyImpl instance = new MoneyImpl();

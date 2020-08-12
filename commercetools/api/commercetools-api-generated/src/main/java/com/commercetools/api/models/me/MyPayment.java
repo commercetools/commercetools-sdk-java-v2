@@ -94,14 +94,14 @@ public interface MyPayment  {
 
    public static MyPaymentImpl of(final MyPayment template) {
       MyPaymentImpl instance = new MyPaymentImpl();
-      instance.setAnonymousId(template.getAnonymousId());
-      instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
-      instance.setCustom(template.getCustom());
-      instance.setAmountPlanned(template.getAmountPlanned());
       instance.setId(template.getId());
-      instance.setTransactions(template.getTransactions());
       instance.setVersion(template.getVersion());
       instance.setCustomer(template.getCustomer());
+      instance.setAnonymousId(template.getAnonymousId());
+      instance.setAmountPlanned(template.getAmountPlanned());
+      instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
+      instance.setTransactions(template.getTransactions());
+      instance.setCustom(template.getCustom());
       return instance;
    }
 

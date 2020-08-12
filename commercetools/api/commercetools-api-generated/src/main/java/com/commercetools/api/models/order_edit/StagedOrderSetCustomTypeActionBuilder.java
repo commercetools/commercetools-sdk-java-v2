@@ -17,33 +17,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class StagedOrderSetCustomTypeActionBuilder {
    
    @Nullable
-   private com.commercetools.api.models.type.FieldContainer fields;
-   
-   @Nullable
    private com.commercetools.api.models.type.TypeResourceIdentifier type;
    
-   public StagedOrderSetCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
-      this.fields = fields;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.type.FieldContainer fields;
    
    public StagedOrderSetCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.type.FieldContainer getFields(){
-      return this.fields;
+   public StagedOrderSetCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+      this.fields = fields;
+      return this;
    }
    
    @Nullable
    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
       return this.type;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.type.FieldContainer getFields(){
+      return this.fields;
+   }
 
    public StagedOrderSetCustomTypeAction build() {
-       return new StagedOrderSetCustomTypeActionImpl(fields, type);
+       return new StagedOrderSetCustomTypeActionImpl(type, fields);
    }
    
    public static StagedOrderSetCustomTypeActionBuilder of() {
@@ -52,8 +52,8 @@ public final class StagedOrderSetCustomTypeActionBuilder {
    
    public static StagedOrderSetCustomTypeActionBuilder of(final StagedOrderSetCustomTypeAction template) {
       StagedOrderSetCustomTypeActionBuilder builder = new StagedOrderSetCustomTypeActionBuilder();
-      builder.fields = template.getFields();
       builder.type = template.getType();
+      builder.fields = template.getFields();
       return builder;
    }
    

@@ -25,187 +25,187 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscountSetMessage {
 
-   private java.time.ZonedDateTime createdAt;
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
    private String id;
-
+   
    private Long version;
-
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
    private Long sequenceNumber;
-
+   
    private com.commercetools.api.models.common.Reference resource;
-
-   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
+   
    private Long resourceVersion;
-
+   
    private String type;
-
-   private com.commercetools.api.models.common.Money totalPrice;
-
+   
+   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   
    private String lineItemId;
-
+   
+   private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+   
+   private com.commercetools.api.models.common.Money totalPrice;
+   
    private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
-   private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
-
    @JsonCreator
-   OrderLineItemDiscountSetMessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   OrderLineItemDiscountSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
+      this.createdBy = createdBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
-      this.totalPrice = totalPrice;
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.lineItemId = lineItemId;
-      this.taxedPrice = taxedPrice;
       this.discountedPricePerQuantity = discountedPricePerQuantity;
+      this.totalPrice = totalPrice;
+      this.taxedPrice = taxedPrice;
       this.type = "OrderLineItemDiscountSet";
    }
    public OrderLineItemDiscountSetMessageImpl() {
-
+      
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
+   
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
+   
+   
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
    public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Reference getResource(){
       return this.resource;
    }
-
-
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-
-
+   
+   
    public Long getResourceVersion(){
       return this.resourceVersion;
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
-   public com.commercetools.api.models.common.Money getTotalPrice(){
-      return this.totalPrice;
+   
+   
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
    }
-
-
+   
+   
    public String getLineItemId(){
       return this.lineItemId;
    }
-
-
-   public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
-      return this.taxedPrice;
-   }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
       return this.discountedPricePerQuantity;
    }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
+   
+   
+   public com.commercetools.api.models.common.Money getTotalPrice(){
+      return this.totalPrice;
    }
-
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
+   
+   
+   public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
+      return this.taxedPrice;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
    }
-
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
+   }
+   
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
-
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
    public void setSequenceNumber(final Long sequenceNumber){
       this.sequenceNumber = sequenceNumber;
    }
-
+   
    public void setResource(final com.commercetools.api.models.common.Reference resource){
       this.resource = resource;
    }
-
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-   }
-
+   
    public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
    }
-
-   public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice){
-      this.totalPrice = totalPrice;
+   
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
-
+   
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
    }
-
-   public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice){
-      this.taxedPrice = taxedPrice;
-   }
-
+   
    public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
       this.discountedPricePerQuantity = discountedPricePerQuantity;
+   }
+   
+   public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice){
+      this.totalPrice = totalPrice;
+   }
+   
+   public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice){
+      this.taxedPrice = taxedPrice;
    }
 
 }

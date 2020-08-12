@@ -1,8 +1,8 @@
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.subscription.ChangeSubscription;
 import com.commercetools.api.models.subscription.DeliveryFormat;
 import com.commercetools.api.models.subscription.Destination;
@@ -21,186 +21,186 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class SubscriptionBuilder {
-
-
-   private java.time.ZonedDateTime createdAt;
-
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
-
+   
+   
    private String id;
-
-
+   
+   
    private Long version;
-
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-
-   private com.commercetools.api.models.subscription.DeliveryFormat format;
-
-
-   private com.commercetools.api.models.subscription.Destination destination;
-
-
+   
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   
    private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
-
-
-   private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
-
+   
+   
+   private com.commercetools.api.models.subscription.Destination destination;
+   
    @Nullable
    private String key;
-
-
+   
+   
+   private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
+   
+   
+   private com.commercetools.api.models.subscription.DeliveryFormat format;
+   
+   
    private com.commercetools.api.models.subscription.SubscriptionHealthStatus status;
-
-   public SubscriptionBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-
-   public SubscriptionBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
-
+   
    public SubscriptionBuilder id( final String id) {
       this.id = id;
       return this;
    }
-
+   
    public SubscriptionBuilder version( final Long version) {
       this.version = version;
       return this;
    }
-
-   public SubscriptionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   
+   public SubscriptionBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
       return this;
    }
-
+   
+   public SubscriptionBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
+      return this;
+   }
+   
    public SubscriptionBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
-
-   public SubscriptionBuilder format( final com.commercetools.api.models.subscription.DeliveryFormat format) {
-      this.format = format;
+   
+   public SubscriptionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
       return this;
    }
-
-   public SubscriptionBuilder destination( final com.commercetools.api.models.subscription.Destination destination) {
-      this.destination = destination;
-      return this;
-   }
-
+   
    public SubscriptionBuilder changes( final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
       this.changes = changes;
       return this;
    }
-
-   public SubscriptionBuilder messages( final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
-      this.messages = messages;
+   
+   public SubscriptionBuilder destination( final com.commercetools.api.models.subscription.Destination destination) {
+      this.destination = destination;
       return this;
    }
-
+   
    public SubscriptionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
-
+   
+   public SubscriptionBuilder messages( final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
+      this.messages = messages;
+      return this;
+   }
+   
+   public SubscriptionBuilder format( final com.commercetools.api.models.subscription.DeliveryFormat format) {
+      this.format = format;
+      return this;
+   }
+   
    public SubscriptionBuilder status( final com.commercetools.api.models.subscription.SubscriptionHealthStatus status) {
       this.status = status;
       return this;
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
    @Nullable
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
-   public com.commercetools.api.models.subscription.DeliveryFormat getFormat(){
-      return this.format;
+   
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
-
-
-   public com.commercetools.api.models.subscription.Destination getDestination(){
-      return this.destination;
-   }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges(){
       return this.changes;
    }
-
-
-   public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
-      return this.messages;
+   
+   
+   public com.commercetools.api.models.subscription.Destination getDestination(){
+      return this.destination;
    }
-
+   
    @Nullable
    public String getKey(){
       return this.key;
    }
-
-
+   
+   
+   public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
+      return this.messages;
+   }
+   
+   
+   public com.commercetools.api.models.subscription.DeliveryFormat getFormat(){
+      return this.format;
+   }
+   
+   
    public com.commercetools.api.models.subscription.SubscriptionHealthStatus getStatus(){
       return this.status;
    }
 
    public Subscription build() {
-       return new SubscriptionImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, format, destination, changes, messages, key, status);
+       return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes, destination, key, messages, format, status);
    }
-
+   
    public static SubscriptionBuilder of() {
       return new SubscriptionBuilder();
    }
-
+   
    public static SubscriptionBuilder of(final Subscription template) {
       SubscriptionBuilder builder = new SubscriptionBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
-      builder.format = template.getFormat();
-      builder.destination = template.getDestination();
+      builder.createdBy = template.getCreatedBy();
       builder.changes = template.getChanges();
-      builder.messages = template.getMessages();
+      builder.destination = template.getDestination();
       builder.key = template.getKey();
+      builder.messages = template.getMessages();
+      builder.format = template.getFormat();
       builder.status = template.getStatus();
       return builder;
    }
-
+   
 }

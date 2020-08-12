@@ -22,28 +22,28 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetLineItemTotalPriceActionImpl.class)
 public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("lineItemId")
    public String getLineItemId();
-
+   
    @Valid
    @JsonProperty("externalTotalPrice")
    public ExternalLineItemTotalPrice getExternalTotalPrice();
 
    public void setLineItemId(final String lineItemId);
-
+   
    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
-
+   
    public static CartSetLineItemTotalPriceActionImpl of(){
       return new CartSetLineItemTotalPriceActionImpl();
    }
-
+   
 
    public static CartSetLineItemTotalPriceActionImpl of(final CartSetLineItemTotalPriceAction template) {
       CartSetLineItemTotalPriceActionImpl instance = new CartSetLineItemTotalPriceActionImpl();
-      instance.setExternalTotalPrice(template.getExternalTotalPrice());
       instance.setLineItemId(template.getLineItemId());
+      instance.setExternalTotalPrice(template.getExternalTotalPrice());
       return instance;
    }
 

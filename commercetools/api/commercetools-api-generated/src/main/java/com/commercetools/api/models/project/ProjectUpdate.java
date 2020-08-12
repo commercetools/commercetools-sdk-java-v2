@@ -42,8 +42,8 @@ public interface ProjectUpdate  {
 
    public static ProjectUpdateImpl of(final ProjectUpdate template) {
       ProjectUpdateImpl instance = new ProjectUpdateImpl();
-      instance.setActions(template.getActions());
       instance.setVersion(template.getVersion());
+      instance.setActions(template.getActions());
       return instance;
    }
 

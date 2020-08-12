@@ -29,10 +29,10 @@ public final class PaymentInfoImpl implements PaymentInfo {
       this.payments = payments;
    }
    public PaymentInfoImpl() {
-
+      
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.payment.PaymentReference> getPayments(){
       return this.payments;
    }

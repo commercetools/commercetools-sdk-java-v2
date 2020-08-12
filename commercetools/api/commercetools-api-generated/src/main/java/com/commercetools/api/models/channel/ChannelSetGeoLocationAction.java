@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelSetGeoLocationActionImpl.class)
 public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
 
-
+   
    @Valid
    @JsonProperty("geoLocation")
    public GeoJson getGeoLocation();
 
    public void setGeoLocation(final GeoJson geoLocation);
-
+   
    public static ChannelSetGeoLocationActionImpl of(){
       return new ChannelSetGeoLocationActionImpl();
    }
-
+   
 
    public static ChannelSetGeoLocationActionImpl of(final ChannelSetGeoLocationAction template) {
       ChannelSetGeoLocationActionImpl instance = new ChannelSetGeoLocationActionImpl();

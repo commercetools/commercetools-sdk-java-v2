@@ -14,74 +14,74 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductSetProductPriceCustomFieldActionBuilder {
-
-
-   private String name;
-
+   
+   
+   private String priceId;
+   
    @Nullable
    private Boolean staged;
-
-
-   private String priceId;
-
+   
+   
+   private String name;
+   
    @Nullable
    private com.fasterxml.jackson.databind.JsonNode value;
-
-   public ProductSetProductPriceCustomFieldActionBuilder name( final String name) {
-      this.name = name;
-      return this;
-   }
-
-   public ProductSetProductPriceCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
-
+   
    public ProductSetProductPriceCustomFieldActionBuilder priceId( final String priceId) {
       this.priceId = priceId;
       return this;
    }
-
+   
+   public ProductSetProductPriceCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
+      this.staged = staged;
+      return this;
+   }
+   
+   public ProductSetProductPriceCustomFieldActionBuilder name( final String name) {
+      this.name = name;
+      return this;
+   }
+   
    public ProductSetProductPriceCustomFieldActionBuilder value(@Nullable final com.fasterxml.jackson.databind.JsonNode value) {
       this.value = value;
       return this;
    }
-
-
-   public String getName(){
-      return this.name;
+   
+   
+   public String getPriceId(){
+      return this.priceId;
    }
-
+   
    @Nullable
    public Boolean getStaged(){
       return this.staged;
    }
-
-
-   public String getPriceId(){
-      return this.priceId;
+   
+   
+   public String getName(){
+      return this.name;
    }
-
+   
    @Nullable
    public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
    }
 
    public ProductSetProductPriceCustomFieldAction build() {
-       return new ProductSetProductPriceCustomFieldActionImpl(name, staged, priceId, value);
+       return new ProductSetProductPriceCustomFieldActionImpl(priceId, staged, name, value);
    }
-
+   
    public static ProductSetProductPriceCustomFieldActionBuilder of() {
       return new ProductSetProductPriceCustomFieldActionBuilder();
    }
-
+   
    public static ProductSetProductPriceCustomFieldActionBuilder of(final ProductSetProductPriceCustomFieldAction template) {
       ProductSetProductPriceCustomFieldActionBuilder builder = new ProductSetProductPriceCustomFieldActionBuilder();
-      builder.name = template.getName();
-      builder.staged = template.getStaged();
       builder.priceId = template.getPriceId();
+      builder.staged = template.getStaged();
+      builder.name = template.getName();
       builder.value = template.getValue();
       return builder;
    }
-
+   
 }

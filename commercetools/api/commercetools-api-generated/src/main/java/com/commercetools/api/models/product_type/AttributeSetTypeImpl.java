@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AttributeSetTypeImpl implements AttributeSetType {
 
    private String name;
-
+   
    private com.commercetools.api.models.product_type.AttributeType elementType;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class AttributeSetTypeImpl implements AttributeSetType {
       this.name = "set";
    }
    public AttributeSetTypeImpl() {
-
+      
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
-
+   
+   
    public com.commercetools.api.models.product_type.AttributeType getElementType(){
       return this.elementType;
    }

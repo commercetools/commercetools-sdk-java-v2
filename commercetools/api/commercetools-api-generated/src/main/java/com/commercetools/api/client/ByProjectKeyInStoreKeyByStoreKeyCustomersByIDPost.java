@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +22,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-*  <p>Updates a customer in the store specified by {storeKey}. The {storeKey} path parameter maps to a Store’s key.
+*  <p>Updates a customer in the store specified by {storeKey}. The {storeKey} path parameter maps to a Store's key.
 *  If the customer exists in the commercetools project but the stores field references a different store,
 *  this method returns a ResourceNotFound error.</p>
 */

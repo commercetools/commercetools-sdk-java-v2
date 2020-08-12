@@ -28,9 +28,9 @@ public final class CustomerEmailVerifiedMessagePayloadImpl implements CustomerEm
    CustomerEmailVerifiedMessagePayloadImpl() {
       this.type = "CustomerEmailVerified";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

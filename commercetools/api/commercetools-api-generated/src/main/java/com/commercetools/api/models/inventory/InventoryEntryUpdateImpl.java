@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntryUpdateImpl implements InventoryEntryUpdate {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   InventoryEntryUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   InventoryEntryUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public InventoryEntryUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

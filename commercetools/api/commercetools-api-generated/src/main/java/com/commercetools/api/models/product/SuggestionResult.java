@@ -21,7 +21,7 @@ import java.io.IOException;
 @JsonDeserialize(as = SuggestionResultImpl.class)
 public interface SuggestionResult  {
 
-
+   
    @NotNull
    @Valid
    @JsonAnyGetter
@@ -29,11 +29,11 @@ public interface SuggestionResult  {
 
    @JsonAnySetter
    public void setValue(String key, List<Suggestion> value);
-
+   
    public static SuggestionResultImpl of(){
       return new SuggestionResultImpl();
    }
-
+   
 
    public static SuggestionResultImpl of(final SuggestionResult template) {
       SuggestionResultImpl instance = new SuggestionResultImpl();

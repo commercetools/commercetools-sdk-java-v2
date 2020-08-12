@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyCustomerAddBillingAddressIdActionBuilder {
-
-
+   
+   
    private String addressId;
-
+   
    public MyCustomerAddBillingAddressIdActionBuilder addressId( final String addressId) {
       this.addressId = addressId;
       return this;
    }
-
-
+   
+   
    public String getAddressId(){
       return this.addressId;
    }
@@ -30,15 +30,15 @@ public final class MyCustomerAddBillingAddressIdActionBuilder {
    public MyCustomerAddBillingAddressIdAction build() {
        return new MyCustomerAddBillingAddressIdActionImpl(addressId);
    }
-
+   
    public static MyCustomerAddBillingAddressIdActionBuilder of() {
       return new MyCustomerAddBillingAddressIdActionBuilder();
    }
-
+   
    public static MyCustomerAddBillingAddressIdActionBuilder of(final MyCustomerAddBillingAddressIdAction template) {
       MyCustomerAddBillingAddressIdActionBuilder builder = new MyCustomerAddBillingAddressIdActionBuilder();
       builder.addressId = template.getAddressId();
       return builder;
    }
-
+   
 }

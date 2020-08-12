@@ -24,14 +24,14 @@ public final class MyShoppingListRemoveTextLineItemActionImpl implements MyShopp
 
    private String action;
    
-   private Long quantity;
-   
    private String textLineItemId;
+   
+   private Long quantity;
 
    @JsonCreator
-   MyShoppingListRemoveTextLineItemActionImpl(@JsonProperty("quantity") final Long quantity, @JsonProperty("textLineItemId") final String textLineItemId) {
-      this.quantity = quantity;
+   MyShoppingListRemoveTextLineItemActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("quantity") final Long quantity) {
       this.textLineItemId = textLineItemId;
+      this.quantity = quantity;
       this.action = "removeTextLineItem";
    }
    public MyShoppingListRemoveTextLineItemActionImpl() {
@@ -44,21 +44,21 @@ public final class MyShoppingListRemoveTextLineItemActionImpl implements MyShopp
    }
    
    
-   public Long getQuantity(){
-      return this.quantity;
-   }
-   
-   
    public String getTextLineItemId(){
       return this.textLineItemId;
    }
-
-   public void setQuantity(final Long quantity){
-      this.quantity = quantity;
-   }
    
+   
+   public Long getQuantity(){
+      return this.quantity;
+   }
+
    public void setTextLineItemId(final String textLineItemId){
       this.textLineItemId = textLineItemId;
+   }
+   
+   public void setQuantity(final Long quantity){
+      this.quantity = quantity;
    }
 
 }

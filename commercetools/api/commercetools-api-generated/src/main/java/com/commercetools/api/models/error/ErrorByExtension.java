@@ -21,23 +21,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ErrorByExtensionImpl.class)
 public interface ErrorByExtension  {
 
-
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-
-
+   
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setId(final String id);
-
+   
    public void setKey(final String key);
-
+   
    public static ErrorByExtensionImpl of(){
       return new ErrorByExtensionImpl();
    }
-
+   
 
    public static ErrorByExtensionImpl of(final ErrorByExtension template) {
       ErrorByExtensionImpl instance = new ErrorByExtensionImpl();

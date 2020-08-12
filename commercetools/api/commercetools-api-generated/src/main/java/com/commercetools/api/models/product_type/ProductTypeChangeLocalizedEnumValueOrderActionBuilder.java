@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductTypeChangeLocalizedEnumValueOrderActionBuilder {
-
-
-   private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
-
-
+   
+   
    private String attributeName;
-
-   public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values( final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
-      this.values = values;
-      return this;
-   }
-
+   
+   
+   private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
+   
    public ProductTypeChangeLocalizedEnumValueOrderActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
-
-
+   
+   public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values( final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
+      this.values = values;
+      return this;
+   }
+   
+   
+   public String getAttributeName(){
+      return this.attributeName;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> getValues(){
       return this.values;
    }
 
-
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-
    public ProductTypeChangeLocalizedEnumValueOrderAction build() {
-       return new ProductTypeChangeLocalizedEnumValueOrderActionImpl(values, attributeName);
+       return new ProductTypeChangeLocalizedEnumValueOrderActionImpl(attributeName, values);
    }
-
+   
    public static ProductTypeChangeLocalizedEnumValueOrderActionBuilder of() {
       return new ProductTypeChangeLocalizedEnumValueOrderActionBuilder();
    }
-
+   
    public static ProductTypeChangeLocalizedEnumValueOrderActionBuilder of(final ProductTypeChangeLocalizedEnumValueOrderAction template) {
       ProductTypeChangeLocalizedEnumValueOrderActionBuilder builder = new ProductTypeChangeLocalizedEnumValueOrderActionBuilder();
-      builder.values = template.getValues();
       builder.attributeName = template.getAttributeName();
+      builder.values = template.getValues();
       return builder;
    }
-
+   
 }

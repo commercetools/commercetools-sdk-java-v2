@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductSetKeyActionImpl implements ProductSetKeyAction {
 
    private String action;
-
+   
    private String key;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class ProductSetKeyActionImpl implements ProductSetKeyAction {
       this.action = "setKey";
    }
    public ProductSetKeyActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>User-specific unique identifier for the product.
    *  If left blank or set to <code>null</code>, the product key is unset/removed.</p>

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ExtensionTriggerImpl implements ExtensionTrigger {
 
    private com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId;
-
+   
    private java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ExtensionTriggerImpl implements ExtensionTrigger {
       this.actions = actions;
    }
    public ExtensionTriggerImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId(){
       return this.resourceTypeId;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.extension.ExtensionAction> getActions(){
       return this.actions;
    }
@@ -49,7 +49,7 @@ public final class ExtensionTriggerImpl implements ExtensionTrigger {
    public void setResourceTypeId(final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId){
       this.resourceTypeId = resourceTypeId;
    }
-
+   
    public void setActions(final java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions){
       this.actions = actions;
    }

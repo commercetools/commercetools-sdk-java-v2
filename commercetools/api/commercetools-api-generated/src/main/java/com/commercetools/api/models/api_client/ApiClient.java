@@ -85,13 +85,13 @@ public interface ApiClient  {
 
    public static ApiClientImpl of(final ApiClient template) {
       ApiClientImpl instance = new ApiClientImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setDeleteAt(template.getDeleteAt());
-      instance.setLastUsedAt(template.getLastUsedAt());
-      instance.setScope(template.getScope());
-      instance.setName(template.getName());
-      instance.setSecret(template.getSecret());
       instance.setId(template.getId());
+      instance.setName(template.getName());
+      instance.setScope(template.getScope());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastUsedAt(template.getLastUsedAt());
+      instance.setDeleteAt(template.getDeleteAt());
+      instance.setSecret(template.getSecret());
       return instance;
    }
 

@@ -24,66 +24,66 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InvalidFieldErrorImpl implements InvalidFieldError {
 
    private String code;
-
+   
    private String message;
-
+   
+   private String field;
+   
+   private com.fasterxml.jackson.databind.JsonNode invalidValue;
+   
    private java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues;
 
-   private String field;
-
-   private com.fasterxml.jackson.databind.JsonNode invalidValue;
-
    @JsonCreator
-   InvalidFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("allowedValues") final java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues, @JsonProperty("field") final String field, @JsonProperty("invalidValue") final com.fasterxml.jackson.databind.JsonNode invalidValue) {
+   InvalidFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field, @JsonProperty("invalidValue") final com.fasterxml.jackson.databind.JsonNode invalidValue, @JsonProperty("allowedValues") final java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues) {
       this.message = message;
-      this.allowedValues = allowedValues;
       this.field = field;
       this.invalidValue = invalidValue;
+      this.allowedValues = allowedValues;
       this.code = "InvalidField";
    }
    public InvalidFieldErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
-
-
-   public java.util.List<com.fasterxml.jackson.databind.JsonNode> getAllowedValues(){
-      return this.allowedValues;
-   }
-
-
+   
+   
    public String getField(){
       return this.field;
    }
-
-
+   
+   
    public com.fasterxml.jackson.databind.JsonNode getInvalidValue(){
       return this.invalidValue;
+   }
+   
+   
+   public java.util.List<com.fasterxml.jackson.databind.JsonNode> getAllowedValues(){
+      return this.allowedValues;
    }
 
    public void setMessage(final String message){
       this.message = message;
    }
-
-   public void setAllowedValues(final java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues){
-      this.allowedValues = allowedValues;
-   }
-
+   
    public void setField(final String field){
       this.field = field;
    }
-
+   
    public void setInvalidValue(final com.fasterxml.jackson.databind.JsonNode invalidValue){
       this.invalidValue = invalidValue;
+   }
+   
+   public void setAllowedValues(final java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues){
+      this.allowedValues = allowedValues;
    }
 
 }

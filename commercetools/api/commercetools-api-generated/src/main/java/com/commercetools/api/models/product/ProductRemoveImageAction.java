@@ -55,10 +55,10 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
 
    public static ProductRemoveImageActionImpl of(final ProductRemoveImageAction template) {
       ProductRemoveImageActionImpl instance = new ProductRemoveImageActionImpl();
-      instance.setImageUrl(template.getImageUrl());
-      instance.setStaged(template.getStaged());
       instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
+      instance.setImageUrl(template.getImageUrl());
+      instance.setStaged(template.getStaged());
       return instance;
    }
 

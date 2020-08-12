@@ -25,115 +25,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryDraftImpl implements CategoryDraft {
 
-   private com.commercetools.api.models.category.CategoryResourceIdentifier parent;
-
-   private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
-
-   private com.commercetools.api.models.common.LocalizedString metaKeywords;
-
-   private String orderHint;
-
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
-   private com.commercetools.api.models.common.LocalizedString metaTitle;
-
    private com.commercetools.api.models.common.LocalizedString name;
-
-   private String externalId;
-
+   
+   private com.commercetools.api.models.common.LocalizedString slug;
+   
    private com.commercetools.api.models.common.LocalizedString description;
-
+   
+   private com.commercetools.api.models.category.CategoryResourceIdentifier parent;
+   
+   private String orderHint;
+   
+   private String externalId;
+   
+   private com.commercetools.api.models.common.LocalizedString metaTitle;
+   
    private com.commercetools.api.models.common.LocalizedString metaDescription;
-
+   
+   private com.commercetools.api.models.common.LocalizedString metaKeywords;
+   
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   
+   private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
+   
    private String key;
 
-   private com.commercetools.api.models.common.LocalizedString slug;
-
    @JsonCreator
-   CategoryDraftImpl(@JsonProperty("parent") final com.commercetools.api.models.category.CategoryResourceIdentifier parent, @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.AssetDraft> assets, @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords, @JsonProperty("orderHint") final String orderHint, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("externalId") final String externalId, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription, @JsonProperty("key") final String key, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
-      this.parent = parent;
-      this.assets = assets;
-      this.metaKeywords = metaKeywords;
-      this.orderHint = orderHint;
-      this.custom = custom;
-      this.metaTitle = metaTitle;
+   CategoryDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("parent") final com.commercetools.api.models.category.CategoryResourceIdentifier parent, @JsonProperty("orderHint") final String orderHint, @JsonProperty("externalId") final String externalId, @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle, @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription, @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.AssetDraft> assets, @JsonProperty("key") final String key) {
       this.name = name;
-      this.externalId = externalId;
-      this.description = description;
-      this.metaDescription = metaDescription;
-      this.key = key;
       this.slug = slug;
+      this.description = description;
+      this.parent = parent;
+      this.orderHint = orderHint;
+      this.externalId = externalId;
+      this.metaTitle = metaTitle;
+      this.metaDescription = metaDescription;
+      this.metaKeywords = metaKeywords;
+      this.custom = custom;
+      this.assets = assets;
+      this.key = key;
    }
    public CategoryDraftImpl() {
-
+      
    }
-
-   /**
-   *  <p>A category that is the parent of this category in the category tree.
-   *  The parent can be set by its ID or by its key.</p>
-   */
-   public com.commercetools.api.models.category.CategoryResourceIdentifier getParent(){
-      return this.parent;
-   }
-
-
-   public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets(){
-      return this.assets;
-   }
-
-
-   public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
-      return this.metaKeywords;
-   }
-
-   /**
-   *  <p>An attribute as base for a custom category order in one level.
-   *  A random value will be assigned by API if not set.</p>
-   */
-   public String getOrderHint(){
-      return this.orderHint;
-   }
-
-   /**
-   *  <p>The custom fields.</p>
-   */
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
-   }
-
-
-   public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
-      return this.metaTitle;
-   }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getName(){
       return this.name;
    }
-
-
-   public String getExternalId(){
-      return this.externalId;
-   }
-
-
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
-
-
-   public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
-      return this.metaDescription;
-   }
-
-   /**
-   *  <p>User-defined unique identifier for the category.
-   *  Keys can only contain alphanumeric characters (<code>a-Z, 0-9</code>), underscores and hyphens (<code>-, _</code>) and be between 2 and 256 characters.</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
-
+   
    /**
    *  <p>human-readable identifier usually used as deep-link URL to the related category.
    *  Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters.
@@ -143,53 +82,114 @@ public final class CategoryDraftImpl implements CategoryDraft {
    public com.commercetools.api.models.common.LocalizedString getSlug(){
       return this.slug;
    }
-
-   public void setParent(final com.commercetools.api.models.category.CategoryResourceIdentifier parent){
-      this.parent = parent;
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getDescription(){
+      return this.description;
    }
-
-   public void setAssets(final java.util.List<com.commercetools.api.models.common.AssetDraft> assets){
-      this.assets = assets;
+   
+   /**
+   *  <p>A category that is the parent of this category in the category tree.
+   *  The parent can be set by its ID or by its key.</p>
+   */
+   public com.commercetools.api.models.category.CategoryResourceIdentifier getParent(){
+      return this.parent;
    }
-
-   public void setMetaKeywords(final com.commercetools.api.models.common.LocalizedString metaKeywords){
-      this.metaKeywords = metaKeywords;
+   
+   /**
+   *  <p>An attribute as base for a custom category order in one level.
+   *  A random value will be assigned by API if not set.</p>
+   */
+   public String getOrderHint(){
+      return this.orderHint;
    }
-
-   public void setOrderHint(final String orderHint){
-      this.orderHint = orderHint;
+   
+   
+   public String getExternalId(){
+      return this.externalId;
    }
-
-   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
-      this.custom = custom;
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
+      return this.metaTitle;
    }
-
-   public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle){
-      this.metaTitle = metaTitle;
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
+      return this.metaDescription;
+   }
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
+      return this.metaKeywords;
+   }
+   
+   /**
+   *  <p>The custom fields.</p>
+   */
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
+   }
+   
+   
+   public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets(){
+      return this.assets;
+   }
+   
+   /**
+   *  <p>User-defined unique identifier for the category.
+   *  Keys can only contain alphanumeric characters (<code>a-Z, 0-9</code>), underscores and hyphens (<code>-, _</code>) and be between 2 and 256 characters.</p>
+   */
+   public String getKey(){
+      return this.key;
    }
 
    public void setName(final com.commercetools.api.models.common.LocalizedString name){
       this.name = name;
    }
-
-   public void setExternalId(final String externalId){
-      this.externalId = externalId;
+   
+   public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
+      this.slug = slug;
    }
-
+   
    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
       this.description = description;
    }
-
+   
+   public void setParent(final com.commercetools.api.models.category.CategoryResourceIdentifier parent){
+      this.parent = parent;
+   }
+   
+   public void setOrderHint(final String orderHint){
+      this.orderHint = orderHint;
+   }
+   
+   public void setExternalId(final String externalId){
+      this.externalId = externalId;
+   }
+   
+   public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle){
+      this.metaTitle = metaTitle;
+   }
+   
    public void setMetaDescription(final com.commercetools.api.models.common.LocalizedString metaDescription){
       this.metaDescription = metaDescription;
    }
-
+   
+   public void setMetaKeywords(final com.commercetools.api.models.common.LocalizedString metaKeywords){
+      this.metaKeywords = metaKeywords;
+   }
+   
+   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
+      this.custom = custom;
+   }
+   
+   public void setAssets(final java.util.List<com.commercetools.api.models.common.AssetDraft> assets){
+      this.assets = assets;
+   }
+   
    public void setKey(final String key){
       this.key = key;
-   }
-
-   public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
-      this.slug = slug;
    }
 
 }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerSetDateOfBirthActionImpl implements CustomerSetDateOfBirthAction {
 
    private String action;
-
+   
    private java.time.LocalDate dateOfBirth;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class CustomerSetDateOfBirthActionImpl implements CustomerSetDateOf
       this.action = "setDateOfBirth";
    }
    public CustomerSetDateOfBirthActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If not defined, the date of birth is unset.</p>
    */

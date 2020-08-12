@@ -60,10 +60,10 @@ public interface DiscountCodePagedQueryResponse  {
 
    public static DiscountCodePagedQueryResponseImpl of(final DiscountCodePagedQueryResponse template) {
       DiscountCodePagedQueryResponseImpl instance = new DiscountCodePagedQueryResponseImpl();
+      instance.setLimit(template.getLimit());
+      instance.setCount(template.getCount());
       instance.setTotal(template.getTotal());
       instance.setOffset(template.getOffset());
-      instance.setCount(template.getCount());
-      instance.setLimit(template.getLimit());
       instance.setResults(template.getResults());
       return instance;
    }

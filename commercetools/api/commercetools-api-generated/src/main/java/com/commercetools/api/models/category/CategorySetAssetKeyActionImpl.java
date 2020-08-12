@@ -23,9 +23,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction {
 
    private String action;
-
+   
    private String assetId;
-
+   
    private String assetKey;
 
    @JsonCreator
@@ -35,19 +35,19 @@ public final class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyA
       this.action = "setAssetKey";
    }
    public CategorySetAssetKeyActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAssetId(){
       return this.assetId;
    }
-
+   
    /**
    *  <p>User-defined identifier for the asset.
    *  If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
@@ -59,7 +59,7 @@ public final class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyA
    public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
-
+   
    public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
    }

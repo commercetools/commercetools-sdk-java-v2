@@ -25,43 +25,38 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DeliveryImpl implements Delivery {
 
+   private String id;
+   
    private java.time.ZonedDateTime createdAt;
-
+   
+   private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
+   
+   private java.util.List<com.commercetools.api.models.order.Parcel> parcels;
+   
    private com.commercetools.api.models.common.Address address;
 
-   private String id;
-
-   private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
-
-   private java.util.List<com.commercetools.api.models.order.Parcel> parcels;
-
    @JsonCreator
-   DeliveryImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("id") final String id, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items, @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.Parcel> parcels) {
-      this.createdAt = createdAt;
-      this.address = address;
+   DeliveryImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items, @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.Parcel> parcels, @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
       this.id = id;
+      this.createdAt = createdAt;
       this.items = items;
       this.parcels = parcels;
+      this.address = address;
    }
    public DeliveryImpl() {
-
+      
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
    /**
    *  <p>Items which are shipped in this delivery regardless their distribution over several parcels.
    *  Can also be specified individually for each Parcel.</p>
@@ -69,30 +64,35 @@ public final class DeliveryImpl implements Delivery {
    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
       return this.items;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.order.Parcel> getParcels(){
       return this.parcels;
    }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-
-   public void setAddress(final com.commercetools.api.models.common.Address address){
-      this.address = address;
+   
+   
+   public com.commercetools.api.models.common.Address getAddress(){
+      return this.address;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
+   }
+   
    public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
       this.items = items;
    }
-
+   
    public void setParcels(final java.util.List<com.commercetools.api.models.order.Parcel> parcels){
       this.parcels = parcels;
+   }
+   
+   public void setAddress(final com.commercetools.api.models.common.Address address){
+      this.address = address;
    }
 
 }

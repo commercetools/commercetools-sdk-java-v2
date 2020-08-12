@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAction {
 
    private String action;
-
+   
    private String interfaceId;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfac
       this.action = "setInterfaceId";
    }
    public PaymentSetInterfaceIdActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getInterfaceId(){
       return this.interfaceId;
    }

@@ -35,4 +35,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
    public ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder login() {
       return new ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder(apiHttpClient, projectKey, storeKey);
    }
+   public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder shippingMethods() {
+      return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder(apiHttpClient, projectKey, storeKey);
+   }
 }

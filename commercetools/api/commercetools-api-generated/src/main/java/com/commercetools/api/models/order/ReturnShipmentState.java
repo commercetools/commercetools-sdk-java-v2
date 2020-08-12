@@ -13,19 +13,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ReturnShipmentState {
 
-
+  
   @JsonProperty("Advised")
   ADVISED("Advised"),
-
-
+  
+  
   @JsonProperty("Returned")
   RETURNED("Returned"),
-
-
+  
+  
   @JsonProperty("BackInStock")
   BACK_IN_STOCK("BackInStock"),
-
-
+  
+  
   @JsonProperty("Unusable")
   UNUSABLE("Unusable");
 

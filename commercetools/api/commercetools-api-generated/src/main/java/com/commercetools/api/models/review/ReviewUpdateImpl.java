@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewUpdateImpl implements ReviewUpdate {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   ReviewUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   ReviewUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public ReviewUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

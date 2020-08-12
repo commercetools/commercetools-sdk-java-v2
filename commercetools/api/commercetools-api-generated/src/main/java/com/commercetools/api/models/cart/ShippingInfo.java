@@ -29,7 +29,7 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingInfoImpl.class)
 public interface ShippingInfo  {
 
-
+   
    @NotNull
    @JsonProperty("shippingMethodName")
    public String getShippingMethodName();
@@ -60,7 +60,7 @@ public interface ShippingInfo  {
    @Valid
    @JsonProperty("taxRate")
    public TaxRate getTaxRate();
-
+   
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryReference getTaxCategory();
@@ -76,7 +76,7 @@ public interface ShippingInfo  {
    @Valid
    @JsonProperty("deliveries")
    public List<Delivery> getDeliveries();
-
+   
    @Valid
    @JsonProperty("discountedPrice")
    public DiscountedLineItemPrice getDiscountedPrice();
@@ -88,42 +88,42 @@ public interface ShippingInfo  {
    public ShippingMethodState getShippingMethodState();
 
    public void setShippingMethodName(final String shippingMethodName);
-
+   
    public void setPrice(final TypedMoney price);
-
+   
    public void setShippingRate(final ShippingRate shippingRate);
-
+   
    public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-
+   
    public void setTaxRate(final TaxRate taxRate);
-
+   
    public void setTaxCategory(final TaxCategoryReference taxCategory);
-
+   
    public void setShippingMethod(final ShippingMethodReference shippingMethod);
-
+   
    public void setDeliveries(final List<Delivery> deliveries);
-
+   
    public void setDiscountedPrice(final DiscountedLineItemPrice discountedPrice);
-
+   
    public void setShippingMethodState(final ShippingMethodState shippingMethodState);
-
+   
    public static ShippingInfoImpl of(){
       return new ShippingInfoImpl();
    }
-
+   
 
    public static ShippingInfoImpl of(final ShippingInfo template) {
       ShippingInfoImpl instance = new ShippingInfoImpl();
-      instance.setTaxRate(template.getTaxRate());
+      instance.setShippingMethodName(template.getShippingMethodName());
+      instance.setPrice(template.getPrice());
       instance.setShippingRate(template.getShippingRate());
+      instance.setTaxedPrice(template.getTaxedPrice());
+      instance.setTaxRate(template.getTaxRate());
+      instance.setTaxCategory(template.getTaxCategory());
+      instance.setShippingMethod(template.getShippingMethod());
+      instance.setDeliveries(template.getDeliveries());
       instance.setDiscountedPrice(template.getDiscountedPrice());
       instance.setShippingMethodState(template.getShippingMethodState());
-      instance.setTaxedPrice(template.getTaxedPrice());
-      instance.setPrice(template.getPrice());
-      instance.setShippingMethod(template.getShippingMethod());
-      instance.setShippingMethodName(template.getShippingMethodName());
-      instance.setDeliveries(template.getDeliveries());
-      instance.setTaxCategory(template.getTaxCategory());
       return instance;
    }
 

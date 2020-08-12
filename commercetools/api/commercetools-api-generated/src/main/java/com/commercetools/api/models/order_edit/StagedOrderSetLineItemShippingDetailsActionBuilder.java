@@ -15,34 +15,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class StagedOrderSetLineItemShippingDetailsActionBuilder {
    
-   @Nullable
-   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-   
    
    private String lineItemId;
    
-   public StagedOrderSetLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
-      this.shippingDetails = shippingDetails;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
    
    public StagedOrderSetLineItemShippingDetailsActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
-      return this.shippingDetails;
+   public StagedOrderSetLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+      this.shippingDetails = shippingDetails;
+      return this;
    }
    
    
    public String getLineItemId(){
       return this.lineItemId;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
+      return this.shippingDetails;
+   }
 
    public StagedOrderSetLineItemShippingDetailsAction build() {
-       return new StagedOrderSetLineItemShippingDetailsActionImpl(shippingDetails, lineItemId);
+       return new StagedOrderSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
    }
    
    public static StagedOrderSetLineItemShippingDetailsActionBuilder of() {
@@ -51,8 +51,8 @@ public final class StagedOrderSetLineItemShippingDetailsActionBuilder {
    
    public static StagedOrderSetLineItemShippingDetailsActionBuilder of(final StagedOrderSetLineItemShippingDetailsAction template) {
       StagedOrderSetLineItemShippingDetailsActionBuilder builder = new StagedOrderSetLineItemShippingDetailsActionBuilder();
-      builder.shippingDetails = template.getShippingDetails();
       builder.lineItemId = template.getLineItemId();
+      builder.shippingDetails = template.getShippingDetails();
       return builder;
    }
    

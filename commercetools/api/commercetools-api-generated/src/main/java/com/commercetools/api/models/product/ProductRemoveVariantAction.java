@@ -21,35 +21,35 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductRemoveVariantActionImpl.class)
 public interface ProductRemoveVariantAction extends ProductUpdateAction {
 
-
-
+   
+   
    @JsonProperty("id")
    public Long getId();
-
-
+   
+   
    @JsonProperty("sku")
    public String getSku();
-
-
+   
+   
    @JsonProperty("staged")
    public Boolean getStaged();
 
    public void setId(final Long id);
-
+   
    public void setSku(final String sku);
-
+   
    public void setStaged(final Boolean staged);
-
+   
    public static ProductRemoveVariantActionImpl of(){
       return new ProductRemoveVariantActionImpl();
    }
-
+   
 
    public static ProductRemoveVariantActionImpl of(final ProductRemoveVariantAction template) {
       ProductRemoveVariantActionImpl instance = new ProductRemoveVariantActionImpl();
-      instance.setStaged(template.getStaged());
       instance.setId(template.getId());
       instance.setSku(template.getSku());
+      instance.setStaged(template.getStaged());
       return instance;
    }
 

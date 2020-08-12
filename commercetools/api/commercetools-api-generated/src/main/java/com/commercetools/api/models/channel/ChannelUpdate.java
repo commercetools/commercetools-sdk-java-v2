@@ -42,8 +42,8 @@ public interface ChannelUpdate  {
 
    public static ChannelUpdateImpl of(final ChannelUpdate template) {
       ChannelUpdateImpl instance = new ChannelUpdateImpl();
-      instance.setActions(template.getActions());
       instance.setVersion(template.getVersion());
+      instance.setActions(template.getActions());
       return instance;
    }
 

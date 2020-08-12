@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderRemovePaymentActionImpl.class)
 public interface OrderRemovePaymentAction extends OrderUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("payment")
    public PaymentResourceIdentifier getPayment();
 
    public void setPayment(final PaymentResourceIdentifier payment);
-
+   
    public static OrderRemovePaymentActionImpl of(){
       return new OrderRemovePaymentActionImpl();
    }
-
+   
 
    public static OrderRemovePaymentActionImpl of(final OrderRemovePaymentAction template) {
       OrderRemovePaymentActionImpl instance = new OrderRemovePaymentActionImpl();

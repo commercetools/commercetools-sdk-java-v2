@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomFieldEnumTypeImpl implements CustomFieldEnumType {
 
    private String name;
-
+   
    private java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CustomFieldEnumTypeImpl implements CustomFieldEnumType {
       this.name = "Enum";
    }
    public CustomFieldEnumTypeImpl() {
-
+      
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> getValues(){
       return this.values;
    }

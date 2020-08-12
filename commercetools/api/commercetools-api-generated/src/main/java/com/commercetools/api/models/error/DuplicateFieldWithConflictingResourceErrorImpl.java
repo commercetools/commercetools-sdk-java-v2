@@ -28,18 +28,18 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl implements Dup
    
    private String message;
    
-   private com.commercetools.api.models.common.Reference conflictingResource;
+   private String field;
    
    private com.fasterxml.jackson.databind.JsonNode duplicateValue;
    
-   private String field;
+   private com.commercetools.api.models.common.Reference conflictingResource;
 
    @JsonCreator
-   DuplicateFieldWithConflictingResourceErrorImpl(@JsonProperty("message") final String message, @JsonProperty("conflictingResource") final com.commercetools.api.models.common.Reference conflictingResource, @JsonProperty("duplicateValue") final com.fasterxml.jackson.databind.JsonNode duplicateValue, @JsonProperty("field") final String field) {
+   DuplicateFieldWithConflictingResourceErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field, @JsonProperty("duplicateValue") final com.fasterxml.jackson.databind.JsonNode duplicateValue, @JsonProperty("conflictingResource") final com.commercetools.api.models.common.Reference conflictingResource) {
       this.message = message;
-      this.conflictingResource = conflictingResource;
-      this.duplicateValue = duplicateValue;
       this.field = field;
+      this.duplicateValue = duplicateValue;
+      this.conflictingResource = conflictingResource;
       this.code = "DuplicateFieldWithConflictingResource";
    }
    public DuplicateFieldWithConflictingResourceErrorImpl() {
@@ -57,8 +57,8 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl implements Dup
    }
    
    
-   public com.commercetools.api.models.common.Reference getConflictingResource(){
-      return this.conflictingResource;
+   public String getField(){
+      return this.field;
    }
    
    
@@ -67,24 +67,24 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl implements Dup
    }
    
    
-   public String getField(){
-      return this.field;
+   public com.commercetools.api.models.common.Reference getConflictingResource(){
+      return this.conflictingResource;
    }
 
    public void setMessage(final String message){
       this.message = message;
    }
    
-   public void setConflictingResource(final com.commercetools.api.models.common.Reference conflictingResource){
-      this.conflictingResource = conflictingResource;
+   public void setField(final String field){
+      this.field = field;
    }
    
    public void setDuplicateValue(final com.fasterxml.jackson.databind.JsonNode duplicateValue){
       this.duplicateValue = duplicateValue;
    }
    
-   public void setField(final String field){
-      this.field = field;
+   public void setConflictingResource(final com.commercetools.api.models.common.Reference conflictingResource){
+      this.conflictingResource = conflictingResource;
    }
 
 }

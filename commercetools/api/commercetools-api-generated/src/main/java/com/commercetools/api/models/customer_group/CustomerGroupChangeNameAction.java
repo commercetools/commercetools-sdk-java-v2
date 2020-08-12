@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerGroupChangeNameActionImpl.class)
 public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
 
    public void setName(final String name);
-
+   
    public static CustomerGroupChangeNameActionImpl of(){
       return new CustomerGroupChangeNameActionImpl();
    }
-
+   
 
    public static CustomerGroupChangeNameActionImpl of(final CustomerGroupChangeNameAction template) {
       CustomerGroupChangeNameActionImpl instance = new CustomerGroupChangeNameActionImpl();

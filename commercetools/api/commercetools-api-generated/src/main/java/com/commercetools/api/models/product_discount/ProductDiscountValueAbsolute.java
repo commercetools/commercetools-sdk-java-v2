@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountValueAbsoluteImpl.class)
 public interface ProductDiscountValueAbsolute extends ProductDiscountValue {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("money")
    public List<TypedMoney> getMoney();
 
    public void setMoney(final List<TypedMoney> money);
-
+   
    public static ProductDiscountValueAbsoluteImpl of(){
       return new ProductDiscountValueAbsoluteImpl();
    }
-
+   
 
    public static ProductDiscountValueAbsoluteImpl of(final ProductDiscountValueAbsolute template) {
       ProductDiscountValueAbsoluteImpl instance = new ProductDiscountValueAbsoluteImpl();

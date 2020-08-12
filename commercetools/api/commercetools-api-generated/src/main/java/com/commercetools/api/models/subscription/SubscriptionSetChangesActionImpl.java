@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class SubscriptionSetChangesActionImpl implements SubscriptionSetChangesAction {
 
    private String action;
-
+   
    private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class SubscriptionSetChangesActionImpl implements SubscriptionSetCh
       this.action = "setChanges";
    }
    public SubscriptionSetChangesActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges(){
       return this.changes;
    }

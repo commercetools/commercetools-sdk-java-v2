@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerGroupSetCustomFieldActionImpl.class)
 public interface CustomerGroupSetCustomFieldAction extends CustomerGroupUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-
-
+   
+   
    @JsonProperty("value")
    public JsonNode getValue();
 
    public void setName(final String name);
-
+   
    public void setValue(final JsonNode value);
-
+   
    public static CustomerGroupSetCustomFieldActionImpl of(){
       return new CustomerGroupSetCustomFieldActionImpl();
    }
-
+   
 
    public static CustomerGroupSetCustomFieldActionImpl of(final CustomerGroupSetCustomFieldAction template) {
       CustomerGroupSetCustomFieldActionImpl instance = new CustomerGroupSetCustomFieldActionImpl();

@@ -42,8 +42,8 @@ public interface StoreUpdate  {
 
    public static StoreUpdateImpl of(final StoreUpdate template) {
       StoreUpdateImpl instance = new StoreUpdateImpl();
-      instance.setActions(template.getActions());
       instance.setVersion(template.getVersion());
+      instance.setActions(template.getActions());
       return instance;
    }
 

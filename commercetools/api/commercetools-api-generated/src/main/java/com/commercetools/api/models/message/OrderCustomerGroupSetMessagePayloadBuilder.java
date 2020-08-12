@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderCustomerGroupSetMessagePayloadBuilder {
-
-   @Nullable
-   private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
-
+   
    @Nullable
    private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
-
-   public OrderCustomerGroupSetMessagePayloadBuilder oldCustomerGroup(@Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {
-      this.oldCustomerGroup = oldCustomerGroup;
-      return this;
-   }
-
+   
+   @Nullable
+   private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
+   
    public OrderCustomerGroupSetMessagePayloadBuilder customerGroup(@Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
       this.customerGroup = customerGroup;
       return this;
    }
-
+   
+   public OrderCustomerGroupSetMessagePayloadBuilder oldCustomerGroup(@Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {
+      this.oldCustomerGroup = oldCustomerGroup;
+      return this;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
+      return this.customerGroup;
+   }
+   
    @Nullable
    public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup(){
       return this.oldCustomerGroup;
    }
 
-   @Nullable
-   public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
-      return this.customerGroup;
-   }
-
    public OrderCustomerGroupSetMessagePayload build() {
-       return new OrderCustomerGroupSetMessagePayloadImpl(oldCustomerGroup, customerGroup);
+       return new OrderCustomerGroupSetMessagePayloadImpl(customerGroup, oldCustomerGroup);
    }
-
+   
    public static OrderCustomerGroupSetMessagePayloadBuilder of() {
       return new OrderCustomerGroupSetMessagePayloadBuilder();
    }
-
+   
    public static OrderCustomerGroupSetMessagePayloadBuilder of(final OrderCustomerGroupSetMessagePayload template) {
       OrderCustomerGroupSetMessagePayloadBuilder builder = new OrderCustomerGroupSetMessagePayloadBuilder();
-      builder.oldCustomerGroup = template.getOldCustomerGroup();
       builder.customerGroup = template.getCustomerGroup();
+      builder.oldCustomerGroup = template.getOldCustomerGroup();
       return builder;
    }
-
+   
 }

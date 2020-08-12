@@ -34,11 +34,14 @@ public class ByProjectKeyCustomersRequestBuilder {
    public ByProjectKeyCustomersEmailTokenRequestBuilder emailToken() {
       return new ByProjectKeyCustomersEmailTokenRequestBuilder(apiHttpClient, projectKey);
    }
-   public ByProjectKeyCustomersEmailRequestBuilder email() {
-      return new ByProjectKeyCustomersEmailRequestBuilder(apiHttpClient, projectKey);
+   public ByProjectKeyCustomersEmailConfirmRequestBuilder emailConfirm() {
+      return new ByProjectKeyCustomersEmailConfirmRequestBuilder(apiHttpClient, projectKey);
    }
    public ByProjectKeyCustomersPasswordRequestBuilder password() {
       return new ByProjectKeyCustomersPasswordRequestBuilder(apiHttpClient, projectKey);
+   }
+   public ByProjectKeyCustomersPasswordResetRequestBuilder passwordReset() {
+      return new ByProjectKeyCustomersPasswordResetRequestBuilder(apiHttpClient, projectKey);
    }
    public ByProjectKeyCustomersPasswordTokenRequestBuilder passwordToken() {
       return new ByProjectKeyCustomersPasswordTokenRequestBuilder(apiHttpClient, projectKey);

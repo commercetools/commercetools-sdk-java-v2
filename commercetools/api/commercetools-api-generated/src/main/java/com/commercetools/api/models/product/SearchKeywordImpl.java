@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SearchKeywordImpl implements SearchKeyword {
 
+   private String text;
+   
    private com.fasterxml.jackson.databind.JsonNode suggestTokenizer;
 
-   private String text;
-
    @JsonCreator
-   SearchKeywordImpl(@JsonProperty("suggestTokenizer") final com.fasterxml.jackson.databind.JsonNode suggestTokenizer, @JsonProperty("text") final String text) {
-      this.suggestTokenizer = suggestTokenizer;
+   SearchKeywordImpl(@JsonProperty("text") final String text, @JsonProperty("suggestTokenizer") final com.fasterxml.jackson.databind.JsonNode suggestTokenizer) {
       this.text = text;
+      this.suggestTokenizer = suggestTokenizer;
    }
    public SearchKeywordImpl() {
-
+      
    }
-
-
+   
+   
+   public String getText(){
+      return this.text;
+   }
+   
+   
    public com.fasterxml.jackson.databind.JsonNode getSuggestTokenizer(){
       return this.suggestTokenizer;
    }
 
-
-   public String getText(){
-      return this.text;
-   }
-
-   public void setSuggestTokenizer(final com.fasterxml.jackson.databind.JsonNode suggestTokenizer){
-      this.suggestTokenizer = suggestTokenizer;
-   }
-
    public void setText(final String text){
       this.text = text;
+   }
+   
+   public void setSuggestTokenizer(final com.fasterxml.jackson.databind.JsonNode suggestTokenizer){
+      this.suggestTokenizer = suggestTokenizer;
    }
 
 }

@@ -19,35 +19,25 @@ public final class DiscountCodeNonApplicableErrorBuilder {
    private String message;
    
    @Nullable
-   private String reason;
-   
-   @Nullable
-   private java.time.ZonedDateTime validityCheckTime;
-   
-   @Nullable
    private String discountCode;
    
    @Nullable
-   private java.time.ZonedDateTime validUntil;
+   private String reason;
+   
+   @Nullable
+   private String dicountCodeId;
    
    @Nullable
    private java.time.ZonedDateTime validFrom;
    
    @Nullable
-   private String dicountCodeId;
+   private java.time.ZonedDateTime validUntil;
+   
+   @Nullable
+   private java.time.ZonedDateTime validityCheckTime;
    
    public DiscountCodeNonApplicableErrorBuilder message( final String message) {
       this.message = message;
-      return this;
-   }
-   
-   public DiscountCodeNonApplicableErrorBuilder reason(@Nullable final String reason) {
-      this.reason = reason;
-      return this;
-   }
-   
-   public DiscountCodeNonApplicableErrorBuilder validityCheckTime(@Nullable final java.time.ZonedDateTime validityCheckTime) {
-      this.validityCheckTime = validityCheckTime;
       return this;
    }
    
@@ -56,8 +46,13 @@ public final class DiscountCodeNonApplicableErrorBuilder {
       return this;
    }
    
-   public DiscountCodeNonApplicableErrorBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
-      this.validUntil = validUntil;
+   public DiscountCodeNonApplicableErrorBuilder reason(@Nullable final String reason) {
+      this.reason = reason;
+      return this;
+   }
+   
+   public DiscountCodeNonApplicableErrorBuilder dicountCodeId(@Nullable final String dicountCodeId) {
+      this.dicountCodeId = dicountCodeId;
       return this;
    }
    
@@ -66,8 +61,13 @@ public final class DiscountCodeNonApplicableErrorBuilder {
       return this;
    }
    
-   public DiscountCodeNonApplicableErrorBuilder dicountCodeId(@Nullable final String dicountCodeId) {
-      this.dicountCodeId = dicountCodeId;
+   public DiscountCodeNonApplicableErrorBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
+      this.validUntil = validUntil;
+      return this;
+   }
+   
+   public DiscountCodeNonApplicableErrorBuilder validityCheckTime(@Nullable final java.time.ZonedDateTime validityCheckTime) {
+      this.validityCheckTime = validityCheckTime;
       return this;
    }
    
@@ -77,23 +77,18 @@ public final class DiscountCodeNonApplicableErrorBuilder {
    }
    
    @Nullable
-   public String getReason(){
-      return this.reason;
-   }
-   
-   @Nullable
-   public java.time.ZonedDateTime getValidityCheckTime(){
-      return this.validityCheckTime;
-   }
-   
-   @Nullable
    public String getDiscountCode(){
       return this.discountCode;
    }
    
    @Nullable
-   public java.time.ZonedDateTime getValidUntil(){
-      return this.validUntil;
+   public String getReason(){
+      return this.reason;
+   }
+   
+   @Nullable
+   public String getDicountCodeId(){
+      return this.dicountCodeId;
    }
    
    @Nullable
@@ -102,12 +97,17 @@ public final class DiscountCodeNonApplicableErrorBuilder {
    }
    
    @Nullable
-   public String getDicountCodeId(){
-      return this.dicountCodeId;
+   public java.time.ZonedDateTime getValidUntil(){
+      return this.validUntil;
+   }
+   
+   @Nullable
+   public java.time.ZonedDateTime getValidityCheckTime(){
+      return this.validityCheckTime;
    }
 
    public DiscountCodeNonApplicableError build() {
-       return new DiscountCodeNonApplicableErrorImpl(message, reason, validityCheckTime, discountCode, validUntil, validFrom, dicountCodeId);
+       return new DiscountCodeNonApplicableErrorImpl(message, discountCode, reason, dicountCodeId, validFrom, validUntil, validityCheckTime);
    }
    
    public static DiscountCodeNonApplicableErrorBuilder of() {
@@ -117,12 +117,12 @@ public final class DiscountCodeNonApplicableErrorBuilder {
    public static DiscountCodeNonApplicableErrorBuilder of(final DiscountCodeNonApplicableError template) {
       DiscountCodeNonApplicableErrorBuilder builder = new DiscountCodeNonApplicableErrorBuilder();
       builder.message = template.getMessage();
-      builder.reason = template.getReason();
-      builder.validityCheckTime = template.getValidityCheckTime();
       builder.discountCode = template.getDiscountCode();
-      builder.validUntil = template.getValidUntil();
-      builder.validFrom = template.getValidFrom();
+      builder.reason = template.getReason();
       builder.dicountCodeId = template.getDicountCodeId();
+      builder.validFrom = template.getValidFrom();
+      builder.validUntil = template.getValidUntil();
+      builder.validityCheckTime = template.getValidityCheckTime();
       return builder;
    }
    

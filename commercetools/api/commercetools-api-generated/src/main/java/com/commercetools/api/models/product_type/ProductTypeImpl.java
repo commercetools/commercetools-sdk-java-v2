@@ -1,8 +1,8 @@
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.product_type.AttributeDefinition;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,51 +26,41 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeImpl implements ProductType {
 
-   private java.time.ZonedDateTime createdAt;
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
    private String id;
    
    private Long version;
    
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private String key;
    
    private String name;
    
    private String description;
    
    private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
-   
-   private String key;
 
    @JsonCreator
-   ProductTypeImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes, @JsonProperty("key") final String key) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   ProductTypeImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
+      this.createdBy = createdBy;
+      this.key = key;
       this.name = name;
       this.description = description;
       this.attributes = attributes;
-      this.key = key;
    }
    public ProductTypeImpl() {
       
-   }
-   
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
    }
    
    /**
@@ -87,6 +77,23 @@ public final class ProductTypeImpl implements ProductType {
       return this.version;
    }
    
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
+   /**
+   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   */
+   public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
+      return this.lastModifiedBy;
+   }
+   
    /**
    *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
@@ -95,10 +102,11 @@ public final class ProductTypeImpl implements ProductType {
    }
    
    /**
-   *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+   *  <p>User-specific unique identifier for the product type (max.
+   *  256 characters).</p>
    */
-   public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
-      return this.lastModifiedBy;
+   public String getKey(){
+      return this.key;
    }
    
    
@@ -115,23 +123,7 @@ public final class ProductTypeImpl implements ProductType {
    public java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> getAttributes(){
       return this.attributes;
    }
-   
-   /**
-   *  <p>User-specific unique identifier for the product type (max.
-   *  256 characters).</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
 
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-   
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
-   
    public void setId(final String id){
       this.id = id;
    }
@@ -140,12 +132,24 @@ public final class ProductTypeImpl implements ProductType {
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
+   }
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
    }
    
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
+   }
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
+   public void setKey(final String key){
+      this.key = key;
    }
    
    public void setName(final String name){
@@ -158,10 +162,6 @@ public final class ProductTypeImpl implements ProductType {
    
    public void setAttributes(final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes){
       this.attributes = attributes;
-   }
-   
-   public void setKey(final String key){
-      this.key = key;
    }
 
 }

@@ -24,54 +24,54 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNameAction {
 
    private String action;
-
+   
    private String assetId;
-
+   
+   private String assetKey;
+   
    private com.commercetools.api.models.common.LocalizedString name;
 
-   private String assetKey;
-
    @JsonCreator
-   CategoryChangeAssetNameActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("assetKey") final String assetKey) {
+   CategoryChangeAssetNameActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
       this.assetId = assetId;
-      this.name = name;
       this.assetKey = assetKey;
+      this.name = name;
       this.action = "changeAssetName";
    }
    public CategoryChangeAssetNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAssetId(){
       return this.assetId;
    }
-
-
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
-
-
+   
+   
    public String getAssetKey(){
       return this.assetKey;
+   }
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
    }
 
    public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
-
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
-   }
-
+   
    public void setAssetKey(final String assetKey){
       this.assetKey = assetKey;
+   }
+   
+   public void setName(final com.commercetools.api.models.common.LocalizedString name){
+      this.name = name;
    }
 
 }

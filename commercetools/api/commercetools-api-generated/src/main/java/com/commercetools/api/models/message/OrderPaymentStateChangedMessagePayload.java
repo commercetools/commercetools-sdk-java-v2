@@ -42,8 +42,8 @@ public interface OrderPaymentStateChangedMessagePayload extends MessagePayload {
 
    public static OrderPaymentStateChangedMessagePayloadImpl of(final OrderPaymentStateChangedMessagePayload template) {
       OrderPaymentStateChangedMessagePayloadImpl instance = new OrderPaymentStateChangedMessagePayloadImpl();
-      instance.setOldPaymentState(template.getOldPaymentState());
       instance.setPaymentState(template.getPaymentState());
+      instance.setOldPaymentState(template.getOldPaymentState());
       return instance;
    }
 

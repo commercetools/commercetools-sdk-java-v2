@@ -28,9 +28,9 @@ public final class AttributeNumberTypeImpl implements AttributeNumberType {
    AttributeNumberTypeImpl() {
       this.name = "number";
    }
-
-
-
+   
+   
+   
    public String getName(){
       return this.name;
    }

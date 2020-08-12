@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessagesAction {
 
    private String action;
-
+   
    private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class SubscriptionSetMessagesActionImpl implements SubscriptionSetM
       this.action = "setMessages";
    }
    public SubscriptionSetMessagesActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
       return this.messages;
    }

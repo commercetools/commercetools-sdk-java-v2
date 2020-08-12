@@ -23,36 +23,36 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderAddReturnInfoActionImpl.class)
 public interface OrderAddReturnInfoAction extends OrderUpdateAction {
 
-
-
+   
+   
    @JsonProperty("returnTrackingId")
    public String getReturnTrackingId();
-
+   
    @NotNull
    @Valid
    @JsonProperty("items")
    public List<ReturnItemDraft> getItems();
-
-
+   
+   
    @JsonProperty("returnDate")
    public ZonedDateTime getReturnDate();
 
    public void setReturnTrackingId(final String returnTrackingId);
-
+   
    public void setItems(final List<ReturnItemDraft> items);
-
+   
    public void setReturnDate(final ZonedDateTime returnDate);
-
+   
    public static OrderAddReturnInfoActionImpl of(){
       return new OrderAddReturnInfoActionImpl();
    }
-
+   
 
    public static OrderAddReturnInfoActionImpl of(final OrderAddReturnInfoAction template) {
       OrderAddReturnInfoActionImpl instance = new OrderAddReturnInfoActionImpl();
-      instance.setReturnDate(template.getReturnDate());
       instance.setReturnTrackingId(template.getReturnTrackingId());
       instance.setItems(template.getItems());
+      instance.setReturnDate(template.getReturnDate());
       return instance;
    }
 

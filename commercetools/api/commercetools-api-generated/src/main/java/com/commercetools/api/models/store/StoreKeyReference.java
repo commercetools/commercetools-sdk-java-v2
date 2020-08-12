@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface StoreKeyReference extends KeyReference {
 
 
-
+   
    public static StoreKeyReferenceImpl of(){
       return new StoreKeyReferenceImpl();
    }
-
+   
 
    public static StoreKeyReferenceImpl of(final StoreKeyReference template) {
       StoreKeyReferenceImpl instance = new StoreKeyReferenceImpl();

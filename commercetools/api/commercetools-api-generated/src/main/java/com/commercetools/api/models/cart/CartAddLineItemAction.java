@@ -54,7 +54,7 @@ public interface CartAddLineItemAction extends CartUpdateAction {
    
    
    @JsonProperty("quantity")
-   public Integer getQuantity();
+   public Double getQuantity();
    
    @Valid
    @JsonProperty("supplyChannel")
@@ -84,7 +84,7 @@ public interface CartAddLineItemAction extends CartUpdateAction {
    
    public void setSku(final String sku);
    
-   public void setQuantity(final Integer quantity);
+   public void setQuantity(final Double quantity);
    
    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
    
@@ -101,17 +101,17 @@ public interface CartAddLineItemAction extends CartUpdateAction {
 
    public static CartAddLineItemActionImpl of(final CartAddLineItemAction template) {
       CartAddLineItemActionImpl instance = new CartAddLineItemActionImpl();
-      instance.setQuantity(template.getQuantity());
-      instance.setExternalTaxRate(template.getExternalTaxRate());
-      instance.setShippingDetails(template.getShippingDetails());
-      instance.setProductId(template.getProductId());
-      instance.setExternalTotalPrice(template.getExternalTotalPrice());
       instance.setCustom(template.getCustom());
-      instance.setSupplyChannel(template.getSupplyChannel());
+      instance.setDistributionChannel(template.getDistributionChannel());
+      instance.setExternalTaxRate(template.getExternalTaxRate());
+      instance.setProductId(template.getProductId());
       instance.setVariantId(template.getVariantId());
       instance.setSku(template.getSku());
-      instance.setDistributionChannel(template.getDistributionChannel());
+      instance.setQuantity(template.getQuantity());
+      instance.setSupplyChannel(template.getSupplyChannel());
       instance.setExternalPrice(template.getExternalPrice());
+      instance.setExternalTotalPrice(template.getExternalTotalPrice());
+      instance.setShippingDetails(template.getShippingDetails());
       return instance;
    }
 

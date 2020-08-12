@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AttributeImpl implements Attribute {
 
    private String name;
-
+   
    private com.fasterxml.jackson.databind.JsonNode value;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class AttributeImpl implements Attribute {
       this.value = value;
    }
    public AttributeImpl() {
-
+      
    }
-
-
+   
+   
    public String getName(){
       return this.name;
    }
-
+   
    /**
    *  <p>A valid JSON value, based on an AttributeDefinition.</p>
    */
@@ -50,7 +50,7 @@ public final class AttributeImpl implements Attribute {
    public void setName(final String name){
       this.name = name;
    }
-
+   
    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
    }

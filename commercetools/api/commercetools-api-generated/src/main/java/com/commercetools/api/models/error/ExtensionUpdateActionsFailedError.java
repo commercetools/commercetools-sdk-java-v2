@@ -24,30 +24,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionUpdateActionsFailedErrorImpl.class)
 public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
-
+   
    @Valid
    @JsonProperty("localizedMessage")
    public LocalizedString getLocalizedMessage();
-
+   
    @Valid
    @JsonProperty("extensionExtraInfo")
    public JsonNode getExtensionExtraInfo();
-
+   
    @NotNull
    @Valid
    @JsonProperty("errorByExtension")
    public ErrorByExtension getErrorByExtension();
 
    public void setLocalizedMessage(final LocalizedString localizedMessage);
-
+   
    public void setExtensionExtraInfo(final JsonNode extensionExtraInfo);
-
+   
    public void setErrorByExtension(final ErrorByExtension errorByExtension);
-
+   
    public static ExtensionUpdateActionsFailedErrorImpl of(){
       return new ExtensionUpdateActionsFailedErrorImpl();
    }
-
+   
 
    public static ExtensionUpdateActionsFailedErrorImpl of(final ExtensionUpdateActionsFailedError template) {
       ExtensionUpdateActionsFailedErrorImpl instance = new ExtensionUpdateActionsFailedErrorImpl();

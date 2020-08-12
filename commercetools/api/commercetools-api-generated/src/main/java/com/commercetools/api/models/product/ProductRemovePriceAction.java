@@ -27,24 +27,24 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
    @NotNull
    @JsonProperty("priceId")
    public String getPriceId();
-
-
+   
+   
    @JsonProperty("staged")
    public Boolean getStaged();
 
    public void setPriceId(final String priceId);
-
+   
    public void setStaged(final Boolean staged);
-
+   
    public static ProductRemovePriceActionImpl of(){
       return new ProductRemovePriceActionImpl();
    }
-
+   
 
    public static ProductRemovePriceActionImpl of(final ProductRemovePriceAction template) {
       ProductRemovePriceActionImpl instance = new ProductRemovePriceActionImpl();
-      instance.setStaged(template.getStaged());
       instance.setPriceId(template.getPriceId());
+      instance.setStaged(template.getStaged());
       return instance;
    }
 

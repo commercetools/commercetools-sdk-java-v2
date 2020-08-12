@@ -24,66 +24,66 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategorySetAssetCustomFieldActionImpl implements CategorySetAssetCustomFieldAction {
 
    private String action;
-
+   
    private String assetId;
-
+   
+   private String assetKey;
+   
    private String name;
-
+   
    private com.fasterxml.jackson.databind.JsonNode value;
 
-   private String assetKey;
-
    @JsonCreator
-   CategorySetAssetCustomFieldActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value, @JsonProperty("assetKey") final String assetKey) {
+   CategorySetAssetCustomFieldActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
       this.assetId = assetId;
+      this.assetKey = assetKey;
       this.name = name;
       this.value = value;
-      this.assetKey = assetKey;
       this.action = "setAssetCustomField";
    }
    public CategorySetAssetCustomFieldActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAssetId(){
       return this.assetId;
    }
-
-
+   
+   
+   public String getAssetKey(){
+      return this.assetKey;
+   }
+   
+   
    public String getName(){
       return this.name;
    }
-
-
+   
+   
    public com.fasterxml.jackson.databind.JsonNode getValue(){
       return this.value;
-   }
-
-
-   public String getAssetKey(){
-      return this.assetKey;
    }
 
    public void setAssetId(final String assetId){
       this.assetId = assetId;
    }
-
+   
+   public void setAssetKey(final String assetKey){
+      this.assetKey = assetKey;
+   }
+   
    public void setName(final String name){
       this.name = name;
    }
-
+   
    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
       this.value = value;
-   }
-
-   public void setAssetKey(final String assetKey){
-      this.assetKey = assetKey;
    }
 
 }

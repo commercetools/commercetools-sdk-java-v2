@@ -15,27 +15,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ShippingMethodPagedQueryResponseBuilder {
    
    @Nullable
-   private Long total;
-   
-   
-   private Long offset;
+   private Long limit;
    
    
    private Long count;
    
+   @Nullable
+   private Long total;
    
-   private Long limit;
+   @Nullable
+   private Long offset;
    
    
    private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results;
    
-   public ShippingMethodPagedQueryResponseBuilder total(@Nullable final Long total) {
-      this.total = total;
-      return this;
-   }
-   
-   public ShippingMethodPagedQueryResponseBuilder offset( final Long offset) {
-      this.offset = offset;
+   public ShippingMethodPagedQueryResponseBuilder limit(@Nullable final Long limit) {
+      this.limit = limit;
       return this;
    }
    
@@ -44,8 +39,13 @@ public final class ShippingMethodPagedQueryResponseBuilder {
       return this;
    }
    
-   public ShippingMethodPagedQueryResponseBuilder limit( final Long limit) {
-      this.limit = limit;
+   public ShippingMethodPagedQueryResponseBuilder total(@Nullable final Long total) {
+      this.total = total;
+      return this;
+   }
+   
+   public ShippingMethodPagedQueryResponseBuilder offset(@Nullable final Long offset) {
+      this.offset = offset;
       return this;
    }
    
@@ -55,13 +55,8 @@ public final class ShippingMethodPagedQueryResponseBuilder {
    }
    
    @Nullable
-   public Long getTotal(){
-      return this.total;
-   }
-   
-   
-   public Long getOffset(){
-      return this.offset;
+   public Long getLimit(){
+      return this.limit;
    }
    
    
@@ -69,9 +64,14 @@ public final class ShippingMethodPagedQueryResponseBuilder {
       return this.count;
    }
    
+   @Nullable
+   public Long getTotal(){
+      return this.total;
+   }
    
-   public Long getLimit(){
-      return this.limit;
+   @Nullable
+   public Long getOffset(){
+      return this.offset;
    }
    
    
@@ -80,7 +80,7 @@ public final class ShippingMethodPagedQueryResponseBuilder {
    }
 
    public ShippingMethodPagedQueryResponse build() {
-       return new ShippingMethodPagedQueryResponseImpl(total, offset, count, limit, results);
+       return new ShippingMethodPagedQueryResponseImpl(limit, count, total, offset, results);
    }
    
    public static ShippingMethodPagedQueryResponseBuilder of() {
@@ -89,10 +89,10 @@ public final class ShippingMethodPagedQueryResponseBuilder {
    
    public static ShippingMethodPagedQueryResponseBuilder of(final ShippingMethodPagedQueryResponse template) {
       ShippingMethodPagedQueryResponseBuilder builder = new ShippingMethodPagedQueryResponseBuilder();
+      builder.limit = template.getLimit();
+      builder.count = template.getCount();
       builder.total = template.getTotal();
       builder.offset = template.getOffset();
-      builder.count = template.getCount();
-      builder.limit = template.getLimit();
       builder.results = template.getResults();
       return builder;
    }

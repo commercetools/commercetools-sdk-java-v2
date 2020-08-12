@@ -23,51 +23,45 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ApiClientImpl implements ApiClient {
 
-   private java.time.ZonedDateTime createdAt;
-   
-   private java.time.ZonedDateTime deleteAt;
-   
-   private java.time.LocalDate lastUsedAt;
-   
-   private String scope;
+   private String id;
    
    private String name;
    
-   private String secret;
+   private String scope;
    
-   private String id;
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.LocalDate lastUsedAt;
+   
+   private java.time.ZonedDateTime deleteAt;
+   
+   private String secret;
 
    @JsonCreator
-   ApiClientImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("deleteAt") final java.time.ZonedDateTime deleteAt, @JsonProperty("lastUsedAt") final java.time.LocalDate lastUsedAt, @JsonProperty("scope") final String scope, @JsonProperty("name") final String name, @JsonProperty("secret") final String secret, @JsonProperty("id") final String id) {
-      this.createdAt = createdAt;
-      this.deleteAt = deleteAt;
-      this.lastUsedAt = lastUsedAt;
-      this.scope = scope;
-      this.name = name;
-      this.secret = secret;
+   ApiClientImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name, @JsonProperty("scope") final String scope, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastUsedAt") final java.time.LocalDate lastUsedAt, @JsonProperty("deleteAt") final java.time.ZonedDateTime deleteAt, @JsonProperty("secret") final String secret) {
       this.id = id;
+      this.name = name;
+      this.scope = scope;
+      this.createdAt = createdAt;
+      this.lastUsedAt = lastUsedAt;
+      this.deleteAt = deleteAt;
+      this.secret = secret;
    }
    public ApiClientImpl() {
       
    }
    
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
+   /**
+   *  <p>The unique ID of the API client.
+   *  This is the OAuth2 <code>client_id</code> and can be used to obtain a token.</p>
+   */
+   public String getId(){
+      return this.id;
    }
    
-   /**
-   *  <p>If set, the client will be deleted on (or shortly after) this point in time.</p>
-   */
-   public java.time.ZonedDateTime getDeleteAt(){
-      return this.deleteAt;
-   }
    
-   /**
-   *  <p>The last day this API Client was used to obtain a token.</p>
-   */
-   public java.time.LocalDate getLastUsedAt(){
-      return this.lastUsedAt;
+   public String getName(){
+      return this.name;
    }
    
    /**
@@ -79,8 +73,22 @@ public final class ApiClientImpl implements ApiClient {
    }
    
    
-   public String getName(){
-      return this.name;
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   /**
+   *  <p>The last day this API Client was used to obtain a token.</p>
+   */
+   public java.time.LocalDate getLastUsedAt(){
+      return this.lastUsedAt;
+   }
+   
+   /**
+   *  <p>If set, the client will be deleted on (or shortly after) this point in time.</p>
+   */
+   public java.time.ZonedDateTime getDeleteAt(){
+      return this.deleteAt;
    }
    
    /**
@@ -90,41 +98,33 @@ public final class ApiClientImpl implements ApiClient {
    public String getSecret(){
       return this.secret;
    }
-   
-   /**
-   *  <p>The unique ID of the API client.
-   *  This is the OAuth2 <code>client_id</code> and can be used to obtain a token.</p>
-   */
-   public String getId(){
-      return this.id;
-   }
 
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-   
-   public void setDeleteAt(final java.time.ZonedDateTime deleteAt){
-      this.deleteAt = deleteAt;
-   }
-   
-   public void setLastUsedAt(final java.time.LocalDate lastUsedAt){
-      this.lastUsedAt = lastUsedAt;
-   }
-   
-   public void setScope(final String scope){
-      this.scope = scope;
+   public void setId(final String id){
+      this.id = id;
    }
    
    public void setName(final String name){
       this.name = name;
    }
    
-   public void setSecret(final String secret){
-      this.secret = secret;
+   public void setScope(final String scope){
+      this.scope = scope;
    }
    
-   public void setId(final String id){
-      this.id = id;
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
+   }
+   
+   public void setLastUsedAt(final java.time.LocalDate lastUsedAt){
+      this.lastUsedAt = lastUsedAt;
+   }
+   
+   public void setDeleteAt(final java.time.ZonedDateTime deleteAt){
+      this.deleteAt = deleteAt;
+   }
+   
+   public void setSecret(final String secret){
+      this.secret = secret;
    }
 
 }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfBirthSetMessagePayload {
 
    private String type;
-
+   
    private java.time.LocalDate dateOfBirth;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerD
       this.type = "CustomerDateOfBirthSet";
    }
    public CustomerDateOfBirthSetMessagePayloadImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public java.time.LocalDate getDateOfBirth(){
       return this.dateOfBirth;
    }

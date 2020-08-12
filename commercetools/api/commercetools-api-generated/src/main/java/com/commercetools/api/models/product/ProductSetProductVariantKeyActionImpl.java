@@ -24,20 +24,20 @@ public final class ProductSetProductVariantKeyActionImpl implements ProductSetPr
 
    private String action;
    
-   private Boolean staged;
-   
    private Long variantId;
    
    private String sku;
    
    private String key;
+   
+   private Boolean staged;
 
    @JsonCreator
-   ProductSetProductVariantKeyActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("key") final String key) {
-      this.staged = staged;
+   ProductSetProductVariantKeyActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("key") final String key, @JsonProperty("staged") final Boolean staged) {
       this.variantId = variantId;
       this.sku = sku;
       this.key = key;
+      this.staged = staged;
       this.action = "setProductVariantKey";
    }
    public ProductSetProductVariantKeyActionImpl() {
@@ -47,11 +47,6 @@ public final class ProductSetProductVariantKeyActionImpl implements ProductSetPr
    
    public String getAction(){
       return this.action;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
    }
    
    
@@ -70,11 +65,12 @@ public final class ProductSetProductVariantKeyActionImpl implements ProductSetPr
    public String getKey(){
       return this.key;
    }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
    
+   
+   public Boolean getStaged(){
+      return this.staged;
+   }
+
    public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
@@ -85,6 +81,10 @@ public final class ProductSetProductVariantKeyActionImpl implements ProductSetPr
    
    public void setKey(final String key){
       this.key = key;
+   }
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
    }
 
 }

@@ -14,186 +14,186 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class PaymentTransactionStateChangedMessageBuilder {
-
-
-   private java.time.ZonedDateTime createdAt;
-
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
-
+   
+   
    private String id;
-
-
+   
+   
    private Long version;
-
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-
+   
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   
    private Long sequenceNumber;
-
-
+   
+   
    private com.commercetools.api.models.common.Reference resource;
-
+   
+   
+   private Long resourceVersion;
+   
    @Nullable
    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
-
-   private Long resourceVersion;
-
-
-   private com.commercetools.api.models.payment.TransactionState state;
-
-
+   
+   
    private String transactionId;
-
-   public PaymentTransactionStateChangedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-
-   public PaymentTransactionStateChangedMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
-
+   
+   
+   private com.commercetools.api.models.payment.TransactionState state;
+   
    public PaymentTransactionStateChangedMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
-
+   
    public PaymentTransactionStateChangedMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
-
-   public PaymentTransactionStateChangedMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   
+   public PaymentTransactionStateChangedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
       return this;
    }
-
+   
+   public PaymentTransactionStateChangedMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
+      return this;
+   }
+   
    public PaymentTransactionStateChangedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
-
+   
+   public PaymentTransactionStateChangedMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
    public PaymentTransactionStateChangedMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
-
+   
    public PaymentTransactionStateChangedMessageBuilder resource( final com.commercetools.api.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
-
-   public PaymentTransactionStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-      return this;
-   }
-
+   
    public PaymentTransactionStateChangedMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
-
-   public PaymentTransactionStateChangedMessageBuilder state( final com.commercetools.api.models.payment.TransactionState state) {
-      this.state = state;
+   
+   public PaymentTransactionStateChangedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
-
+   
    public PaymentTransactionStateChangedMessageBuilder transactionId( final String transactionId) {
       this.transactionId = transactionId;
       return this;
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
+   
+   public PaymentTransactionStateChangedMessageBuilder state( final com.commercetools.api.models.payment.TransactionState state) {
+      this.state = state;
+      return this;
    }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
    @Nullable
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
+   
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
    public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Reference getResource(){
       return this.resource;
    }
-
+   
+   
+   public Long getResourceVersion(){
+      return this.resourceVersion;
+   }
+   
    @Nullable
    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
-
-
-   public Long getResourceVersion(){
-      return this.resourceVersion;
+   
+   
+   public String getTransactionId(){
+      return this.transactionId;
    }
-
-
+   
+   
    public com.commercetools.api.models.payment.TransactionState getState(){
       return this.state;
    }
 
-
-   public String getTransactionId(){
-      return this.transactionId;
-   }
-
    public PaymentTransactionStateChangedMessage build() {
-       return new PaymentTransactionStateChangedMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, state, transactionId);
+       return new PaymentTransactionStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, transactionId, state);
    }
-
+   
    public static PaymentTransactionStateChangedMessageBuilder of() {
       return new PaymentTransactionStateChangedMessageBuilder();
    }
-
+   
    public static PaymentTransactionStateChangedMessageBuilder of(final PaymentTransactionStateChangedMessage template) {
       PaymentTransactionStateChangedMessageBuilder builder = new PaymentTransactionStateChangedMessageBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
+      builder.createdBy = template.getCreatedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
-      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.state = template.getState();
+      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.transactionId = template.getTransactionId();
+      builder.state = template.getState();
       return builder;
    }
-
+   
 }

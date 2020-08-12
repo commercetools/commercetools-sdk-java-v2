@@ -40,7 +40,7 @@ public interface LineItem  {
    @NotNull
    @JsonProperty("id")
    public String getId();
-
+   
    @NotNull
    @JsonProperty("productId")
    public String getProductId();
@@ -60,7 +60,7 @@ public interface LineItem  {
    @Valid
    @JsonProperty("productSlug")
    public LocalizedString getProductSlug();
-
+   
    @NotNull
    @Valid
    @JsonProperty("productType")
@@ -104,7 +104,7 @@ public interface LineItem  {
    @NotNull
    @JsonProperty("quantity")
    public Long getQuantity();
-
+   
    @NotNull
    @Valid
    @JsonProperty("state")
@@ -131,20 +131,20 @@ public interface LineItem  {
    @Valid
    @JsonProperty("distributionChannel")
    public ChannelReference getDistributionChannel();
-
+   
    @NotNull
    @Valid
    @JsonProperty("discountedPricePerQuantity")
    public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
-
+   
    @NotNull
    @JsonProperty("priceMode")
    public LineItemPriceMode getPriceMode();
-
+   
    @NotNull
    @JsonProperty("lineItemMode")
    public LineItemMode getLineItemMode();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
@@ -156,69 +156,69 @@ public interface LineItem  {
    public ItemShippingDetails getShippingDetails();
 
    public void setId(final String id);
-
+   
    public void setProductId(final String productId);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public void setProductSlug(final LocalizedString productSlug);
-
+   
    public void setProductType(final ProductTypeReference productType);
-
+   
    public void setVariant(final ProductVariant variant);
-
+   
    public void setPrice(final Price price);
-
+   
    public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-
+   
    public void setTotalPrice(final TypedMoney totalPrice);
-
+   
    public void setQuantity(final Long quantity);
-
+   
    public void setState(final List<ItemState> state);
-
+   
    public void setTaxRate(final TaxRate taxRate);
-
+   
    public void setSupplyChannel(final ChannelReference supplyChannel);
-
+   
    public void setDistributionChannel(final ChannelReference distributionChannel);
-
+   
    public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
-
+   
    public void setPriceMode(final LineItemPriceMode priceMode);
-
+   
    public void setLineItemMode(final LineItemMode lineItemMode);
-
+   
    public void setCustom(final CustomFields custom);
-
+   
    public void setShippingDetails(final ItemShippingDetails shippingDetails);
-
+   
    public static LineItemImpl of(){
       return new LineItemImpl();
    }
-
+   
 
    public static LineItemImpl of(final LineItem template) {
       LineItemImpl instance = new LineItemImpl();
-      instance.setQuantity(template.getQuantity());
-      instance.setPriceMode(template.getPriceMode());
-      instance.setProductId(template.getProductId());
-      instance.setTotalPrice(template.getTotalPrice());
-      instance.setTaxedPrice(template.getTaxedPrice());
-      instance.setCustom(template.getCustom());
-      instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
-      instance.setProductSlug(template.getProductSlug());
-      instance.setTaxRate(template.getTaxRate());
-      instance.setShippingDetails(template.getShippingDetails());
-      instance.setPrice(template.getPrice());
-      instance.setVariant(template.getVariant());
-      instance.setName(template.getName());
-      instance.setSupplyChannel(template.getSupplyChannel());
-      instance.setState(template.getState());
       instance.setId(template.getId());
-      instance.setDistributionChannel(template.getDistributionChannel());
-      instance.setLineItemMode(template.getLineItemMode());
+      instance.setProductId(template.getProductId());
+      instance.setName(template.getName());
+      instance.setProductSlug(template.getProductSlug());
       instance.setProductType(template.getProductType());
+      instance.setVariant(template.getVariant());
+      instance.setPrice(template.getPrice());
+      instance.setTaxedPrice(template.getTaxedPrice());
+      instance.setTotalPrice(template.getTotalPrice());
+      instance.setQuantity(template.getQuantity());
+      instance.setState(template.getState());
+      instance.setTaxRate(template.getTaxRate());
+      instance.setSupplyChannel(template.getSupplyChannel());
+      instance.setDistributionChannel(template.getDistributionChannel());
+      instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
+      instance.setPriceMode(template.getPriceMode());
+      instance.setLineItemMode(template.getLineItemMode());
+      instance.setCustom(template.getCustom());
+      instance.setShippingDetails(template.getShippingDetails());
       return instance;
    }
 

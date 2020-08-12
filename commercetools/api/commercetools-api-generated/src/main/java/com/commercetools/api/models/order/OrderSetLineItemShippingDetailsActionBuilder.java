@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderSetLineItemShippingDetailsActionBuilder {
-
+   
+   
+   private String lineItemId;
+   
    @Nullable
    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-
-
-   private String lineItemId;
-
-   public OrderSetLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
-      this.shippingDetails = shippingDetails;
-      return this;
-   }
-
+   
    public OrderSetLineItemShippingDetailsActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
-
+   
+   public OrderSetLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+      this.shippingDetails = shippingDetails;
+      return this;
+   }
+   
+   
+   public String getLineItemId(){
+      return this.lineItemId;
+   }
+   
    @Nullable
    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
 
-
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-
    public OrderSetLineItemShippingDetailsAction build() {
-       return new OrderSetLineItemShippingDetailsActionImpl(shippingDetails, lineItemId);
+       return new OrderSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
    }
-
+   
    public static OrderSetLineItemShippingDetailsActionBuilder of() {
       return new OrderSetLineItemShippingDetailsActionBuilder();
    }
-
+   
    public static OrderSetLineItemShippingDetailsActionBuilder of(final OrderSetLineItemShippingDetailsAction template) {
       OrderSetLineItemShippingDetailsActionBuilder builder = new OrderSetLineItemShippingDetailsActionBuilder();
-      builder.shippingDetails = template.getShippingDetails();
       builder.lineItemId = template.getLineItemId();
+      builder.shippingDetails = template.getShippingDetails();
       return builder;
    }
-
+   
 }

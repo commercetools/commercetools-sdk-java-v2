@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerGroupUpdateImpl implements CustomerGroupUpdate {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   CustomerGroupUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   CustomerGroupUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public CustomerGroupUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

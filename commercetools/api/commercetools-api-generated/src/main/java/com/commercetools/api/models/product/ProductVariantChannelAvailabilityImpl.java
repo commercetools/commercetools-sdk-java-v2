@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantChannelAvailabilityImpl implements ProductVariantChannelAvailability {
 
+   private Boolean isOnStock;
+   
+   private Long restockableInDays;
+   
    private Long availableQuantity;
 
-   private Long restockableInDays;
-
-   private Boolean isOnStock;
-
    @JsonCreator
-   ProductVariantChannelAvailabilityImpl(@JsonProperty("availableQuantity") final Long availableQuantity, @JsonProperty("restockableInDays") final Long restockableInDays, @JsonProperty("isOnStock") final Boolean isOnStock) {
-      this.availableQuantity = availableQuantity;
-      this.restockableInDays = restockableInDays;
+   ProductVariantChannelAvailabilityImpl(@JsonProperty("isOnStock") final Boolean isOnStock, @JsonProperty("restockableInDays") final Long restockableInDays, @JsonProperty("availableQuantity") final Long availableQuantity) {
       this.isOnStock = isOnStock;
+      this.restockableInDays = restockableInDays;
+      this.availableQuantity = availableQuantity;
    }
    public ProductVariantChannelAvailabilityImpl() {
-
+      
    }
-
-
+   
+   
+   public Boolean getIsOnStock(){
+      return this.isOnStock;
+   }
+   
+   
+   public Long getRestockableInDays(){
+      return this.restockableInDays;
+   }
+   
+   
    public Long getAvailableQuantity(){
       return this.availableQuantity;
    }
 
-
-   public Long getRestockableInDays(){
-      return this.restockableInDays;
+   public void setIsOnStock(final Boolean isOnStock){
+      this.isOnStock = isOnStock;
    }
-
-
-   public Boolean getIsOnStock(){
-      return this.isOnStock;
-   }
-
-   public void setAvailableQuantity(final Long availableQuantity){
-      this.availableQuantity = availableQuantity;
-   }
-
+   
    public void setRestockableInDays(final Long restockableInDays){
       this.restockableInDays = restockableInDays;
    }
-
-   public void setIsOnStock(final Boolean isOnStock){
-      this.isOnStock = isOnStock;
+   
+   public void setAvailableQuantity(final Long availableQuantity){
+      this.availableQuantity = availableQuantity;
    }
 
 }

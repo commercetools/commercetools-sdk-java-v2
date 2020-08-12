@@ -1,8 +1,9 @@
 package com.commercetools.api.models.shipping_method;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
+import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.shipping_method.ZoneRate;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import java.time.ZonedDateTime;
@@ -27,91 +28,128 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodImpl implements ShippingMethod {
 
-   private java.time.ZonedDateTime createdAt;
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
    private String id;
-
+   
    private Long version;
-
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private String key;
+   
+   private String name;
+   
+   private String description;
+   
+   private com.commercetools.api.models.common.LocalizedString localizedDescription;
+   
+   private com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory;
+   
    private java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates;
-
+   
+   private Boolean isDefault;
+   
    private String predicate;
 
-   private Boolean isDefault;
-
-   private String name;
-
-   private String description;
-
-   private String key;
-
-   private com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory;
-
    @JsonCreator
-   ShippingMethodImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("zoneRates") final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates, @JsonProperty("predicate") final String predicate, @JsonProperty("isDefault") final Boolean isDefault, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("key") final String key, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   ShippingMethodImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("localizedDescription") final com.commercetools.api.models.common.LocalizedString localizedDescription, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory, @JsonProperty("zoneRates") final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates, @JsonProperty("isDefault") final Boolean isDefault, @JsonProperty("predicate") final String predicate) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
-      this.zoneRates = zoneRates;
-      this.predicate = predicate;
-      this.isDefault = isDefault;
+      this.createdBy = createdBy;
+      this.key = key;
       this.name = name;
       this.description = description;
-      this.key = key;
+      this.localizedDescription = localizedDescription;
       this.taxCategory = taxCategory;
+      this.zoneRates = zoneRates;
+      this.isDefault = isDefault;
+      this.predicate = predicate;
    }
    public ShippingMethodImpl() {
-
+      
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
+   
    /**
    *  <p>The unique ID of the shipping method.</p>
    */
    public String getId(){
       return this.id;
    }
-
+   
    /**
    *  <p>The current version of the shipping method.</p>
    */
    public Long getVersion(){
       return this.version;
    }
-
-
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
+   
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
+   
+   
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   /**
+   *  <p>User-specific unique identifier for the shipping method.</p>
+   */
+   public String getKey(){
+      return this.key;
+   }
+   
+   
+   public String getName(){
+      return this.name;
+   }
+   
+   
+   public String getDescription(){
+      return this.description;
+   }
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getLocalizedDescription(){
+      return this.localizedDescription;
+   }
+   
+   
+   public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory(){
+      return this.taxCategory;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> getZoneRates(){
       return this.zoneRates;
    }
-
+   
+   /**
+   *  <p>One shipping method in a project can be default.</p>
+   */
+   public Boolean getIsDefault(){
+      return this.isDefault;
+   }
+   
    /**
    *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
    */
@@ -119,85 +157,60 @@ public final class ShippingMethodImpl implements ShippingMethod {
       return this.predicate;
    }
 
-   /**
-   *  <p>One shipping method in a project can be default.</p>
-   */
-   public Boolean getIsDefault(){
-      return this.isDefault;
-   }
-
-
-   public String getName(){
-      return this.name;
-   }
-
-
-   public String getDescription(){
-      return this.description;
-   }
-
-   /**
-   *  <p>User-specific unique identifier for the shipping method.</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
-
-
-   public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory(){
-      return this.taxCategory;
-   }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
-
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
    }
-
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
+   }
+   
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
-
-   public void setZoneRates(final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates){
-      this.zoneRates = zoneRates;
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
    }
-
-   public void setPredicate(final String predicate){
-      this.predicate = predicate;
-   }
-
-   public void setIsDefault(final Boolean isDefault){
-      this.isDefault = isDefault;
-   }
-
-   public void setName(final String name){
-      this.name = name;
-   }
-
-   public void setDescription(final String description){
-      this.description = description;
-   }
-
+   
    public void setKey(final String key){
       this.key = key;
    }
-
+   
+   public void setName(final String name){
+      this.name = name;
+   }
+   
+   public void setDescription(final String description){
+      this.description = description;
+   }
+   
+   public void setLocalizedDescription(final com.commercetools.api.models.common.LocalizedString localizedDescription){
+      this.localizedDescription = localizedDescription;
+   }
+   
    public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory){
       this.taxCategory = taxCategory;
+   }
+   
+   public void setZoneRates(final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates){
+      this.zoneRates = zoneRates;
+   }
+   
+   public void setIsDefault(final Boolean isDefault){
+      this.isDefault = isDefault;
+   }
+   
+   public void setPredicate(final String predicate){
+      this.predicate = predicate;
    }
 
 }

@@ -13,21 +13,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum DiscountCodeState {
 
-
+  
   @JsonProperty("NotActive")
   NOT_ACTIVE("NotActive"),
-
-
+  
+  
   @JsonProperty("DoesNotMatchCart")
   DOES_NOT_MATCH_CART("DoesNotMatchCart"),
-
-
+  
+  
   @JsonProperty("MatchesCart")
   MATCHES_CART("MatchesCart"),
-
-
+  
+  
   @JsonProperty("MaxApplicationReached")
-  MAX_APPLICATION_REACHED("MaxApplicationReached");
+  MAX_APPLICATION_REACHED("MaxApplicationReached"),
+  
+  
+  @JsonProperty("ApplicationStoppedByPreviousDiscount")
+  APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT("ApplicationStoppedByPreviousDiscount"),
+  
+  
+  @JsonProperty("NotValid")
+  NOT_VALID("NotValid");
 
   private final String jsonName;
 

@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ReplicaCartDraftBuilder {
-
-
+   
+   
    private com.fasterxml.jackson.databind.JsonNode reference;
-
+   
    public ReplicaCartDraftBuilder reference( final com.fasterxml.jackson.databind.JsonNode reference) {
       this.reference = reference;
       return this;
    }
-
-
+   
+   
    public com.fasterxml.jackson.databind.JsonNode getReference(){
       return this.reference;
    }
@@ -30,15 +30,15 @@ public final class ReplicaCartDraftBuilder {
    public ReplicaCartDraft build() {
        return new ReplicaCartDraftImpl(reference);
    }
-
+   
    public static ReplicaCartDraftBuilder of() {
       return new ReplicaCartDraftBuilder();
    }
-
+   
    public static ReplicaCartDraftBuilder of(final ReplicaCartDraft template) {
       ReplicaCartDraftBuilder builder = new ReplicaCartDraftBuilder();
       builder.reference = template.getReference();
       return builder;
    }
-
+   
 }

@@ -21,7 +21,7 @@ import java.io.IOException;
 @JsonDeserialize(as = SearchKeywordsImpl.class)
 public interface SearchKeywords  {
 
-
+   
    @NotNull
    @Valid
    @JsonAnyGetter
@@ -29,11 +29,11 @@ public interface SearchKeywords  {
 
    @JsonAnySetter
    public void setValue(String key, List<SearchKeyword> value);
-
+   
    public static SearchKeywordsImpl of(){
       return new SearchKeywordsImpl();
    }
-
+   
 
    public static SearchKeywordsImpl of(final SearchKeywords template) {
       SearchKeywordsImpl instance = new SearchKeywordsImpl();

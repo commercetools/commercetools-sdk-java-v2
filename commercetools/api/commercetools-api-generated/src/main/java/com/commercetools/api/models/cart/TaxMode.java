@@ -13,19 +13,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TaxMode {
 
-
+  
   @JsonProperty("Platform")
   PLATFORM("Platform"),
-
-
+  
+  
   @JsonProperty("External")
   EXTERNAL("External"),
-
-
+  
+  
   @JsonProperty("ExternalAmount")
   EXTERNAL_AMOUNT("ExternalAmount"),
-
-
+  
+  
   @JsonProperty("Disabled")
   DISABLED("Disabled");
 

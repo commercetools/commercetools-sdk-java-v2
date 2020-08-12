@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerCompanyNameSetMessageImpl.class)
 public interface CustomerCompanyNameSetMessage extends Message {
 
-
+   
    @NotNull
    @JsonProperty("companyName")
    public String getCompanyName();
 
    public void setCompanyName(final String companyName);
-
+   
    public static CustomerCompanyNameSetMessageImpl of(){
       return new CustomerCompanyNameSetMessageImpl();
    }
-
+   
 
    public static CustomerCompanyNameSetMessageImpl of(final CustomerCompanyNameSetMessage template) {
       CustomerCompanyNameSetMessageImpl instance = new CustomerCompanyNameSetMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setCompanyName(template.getCompanyName());
       return instance;
    }

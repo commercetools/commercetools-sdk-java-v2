@@ -43,18 +43,18 @@ public interface InventoryEntryDeletedMessage extends Message {
 
    public static InventoryEntryDeletedMessageImpl of(final InventoryEntryDeletedMessage template) {
       InventoryEntryDeletedMessageImpl instance = new InventoryEntryDeletedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setSupplyChannel(template.getSupplyChannel());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setSku(template.getSku());
+      instance.setSupplyChannel(template.getSupplyChannel());
       return instance;
    }
 

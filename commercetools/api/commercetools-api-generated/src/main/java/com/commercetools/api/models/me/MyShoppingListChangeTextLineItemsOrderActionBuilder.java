@@ -13,16 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyShoppingListChangeTextLineItemsOrderActionBuilder {
-
-
+   
+   
    private java.util.List<String> textLineItemOrder;
-
+   
    public MyShoppingListChangeTextLineItemsOrderActionBuilder textLineItemOrder( final java.util.List<String> textLineItemOrder) {
       this.textLineItemOrder = textLineItemOrder;
       return this;
    }
-
-
+   
+   
    public java.util.List<String> getTextLineItemOrder(){
       return this.textLineItemOrder;
    }
@@ -30,15 +30,15 @@ public final class MyShoppingListChangeTextLineItemsOrderActionBuilder {
    public MyShoppingListChangeTextLineItemsOrderAction build() {
        return new MyShoppingListChangeTextLineItemsOrderActionImpl(textLineItemOrder);
    }
-
+   
    public static MyShoppingListChangeTextLineItemsOrderActionBuilder of() {
       return new MyShoppingListChangeTextLineItemsOrderActionBuilder();
    }
-
+   
    public static MyShoppingListChangeTextLineItemsOrderActionBuilder of(final MyShoppingListChangeTextLineItemsOrderAction template) {
       MyShoppingListChangeTextLineItemsOrderActionBuilder builder = new MyShoppingListChangeTextLineItemsOrderActionBuilder();
       builder.textLineItemOrder = template.getTextLineItemOrder();
       return builder;
    }
-
+   
 }

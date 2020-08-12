@@ -30,11 +30,11 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
    public TaxCategoryResourceIdentifier getTaxCategory();
 
    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-
+   
    public static ProductSetTaxCategoryActionImpl of(){
       return new ProductSetTaxCategoryActionImpl();
    }
-
+   
 
    public static ProductSetTaxCategoryActionImpl of(final ProductSetTaxCategoryAction template) {
       ProductSetTaxCategoryActionImpl instance = new ProductSetTaxCategoryActionImpl();

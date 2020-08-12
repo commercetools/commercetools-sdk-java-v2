@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum StateRoleEnum {
 
-
+  
   @JsonProperty("ReviewIncludedInStatistics")
   REVIEW_INCLUDED_IN_STATISTICS("ReviewIncludedInStatistics"),
-
-
+  
+  
   @JsonProperty("Return")
   RETURN("Return");
 

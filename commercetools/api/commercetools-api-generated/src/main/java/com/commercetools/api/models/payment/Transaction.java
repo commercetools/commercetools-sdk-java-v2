@@ -80,12 +80,12 @@ public interface Transaction  {
 
    public static TransactionImpl of(final Transaction template) {
       TransactionImpl instance = new TransactionImpl();
-      instance.setInteractionId(template.getInteractionId());
-      instance.setAmount(template.getAmount());
-      instance.setState(template.getState());
       instance.setId(template.getId());
-      instance.setType(template.getType());
       instance.setTimestamp(template.getTimestamp());
+      instance.setType(template.getType());
+      instance.setAmount(template.getAmount());
+      instance.setInteractionId(template.getInteractionId());
+      instance.setState(template.getState());
       return instance;
    }
 

@@ -15,46 +15,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartSetShippingMethodActionBuilder {
-
-   @Nullable
-   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-
+   
    @Nullable
    private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
-
-   public CartSetShippingMethodActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-      this.externalTaxRate = externalTaxRate;
-      return this;
-   }
-
+   
+   @Nullable
+   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+   
    public CartSetShippingMethodActionBuilder shippingMethod(@Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
       this.shippingMethod = shippingMethod;
       return this;
    }
-
+   
+   public CartSetShippingMethodActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+      this.externalTaxRate = externalTaxRate;
+      return this;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
+      return this.shippingMethod;
+   }
+   
    @Nullable
    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
 
-   @Nullable
-   public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
-      return this.shippingMethod;
-   }
-
    public CartSetShippingMethodAction build() {
-       return new CartSetShippingMethodActionImpl(externalTaxRate, shippingMethod);
+       return new CartSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
    }
-
+   
    public static CartSetShippingMethodActionBuilder of() {
       return new CartSetShippingMethodActionBuilder();
    }
-
+   
    public static CartSetShippingMethodActionBuilder of(final CartSetShippingMethodAction template) {
       CartSetShippingMethodActionBuilder builder = new CartSetShippingMethodActionBuilder();
-      builder.externalTaxRate = template.getExternalTaxRate();
       builder.shippingMethod = template.getShippingMethod();
+      builder.externalTaxRate = template.getExternalTaxRate();
       return builder;
    }
-
+   
 }

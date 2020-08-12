@@ -23,12 +23,12 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySetAssetCustomTypeActionImpl.class)
 public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
 
-
-
+   
+   
    @JsonProperty("assetId")
    public String getAssetId();
-
-
+   
+   
    @JsonProperty("assetKey")
    public String getAssetKey();
    /**
@@ -46,24 +46,24 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
    public JsonNode getFields();
 
    public void setAssetId(final String assetId);
-
+   
    public void setAssetKey(final String assetKey);
-
+   
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final JsonNode fields);
-
+   
    public static CategorySetAssetCustomTypeActionImpl of(){
       return new CategorySetAssetCustomTypeActionImpl();
    }
-
+   
 
    public static CategorySetAssetCustomTypeActionImpl of(final CategorySetAssetCustomTypeAction template) {
       CategorySetAssetCustomTypeActionImpl instance = new CategorySetAssetCustomTypeActionImpl();
       instance.setAssetId(template.getAssetId());
-      instance.setFields(template.getFields());
-      instance.setType(template.getType());
       instance.setAssetKey(template.getAssetKey());
+      instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

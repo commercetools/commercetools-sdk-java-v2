@@ -34,11 +34,11 @@ public interface ItemShippingTarget  {
    */
    @NotNull
    @JsonProperty("quantity")
-   public Integer getQuantity();
+   public Double getQuantity();
 
    public void setAddressKey(final String addressKey);
    
-   public void setQuantity(final Integer quantity);
+   public void setQuantity(final Double quantity);
    
    public static ItemShippingTargetImpl of(){
       return new ItemShippingTargetImpl();
@@ -47,8 +47,8 @@ public interface ItemShippingTarget  {
 
    public static ItemShippingTargetImpl of(final ItemShippingTarget template) {
       ItemShippingTargetImpl instance = new ItemShippingTargetImpl();
-      instance.setQuantity(template.getQuantity());
       instance.setAddressKey(template.getAddressKey());
+      instance.setQuantity(template.getQuantity());
       return instance;
    }
 

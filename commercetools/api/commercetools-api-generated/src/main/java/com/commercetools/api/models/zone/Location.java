@@ -27,19 +27,19 @@ public interface Location  {
    @NotNull
    @JsonProperty("country")
    public String getCountry();
-
-
+   
+   
    @JsonProperty("state")
    public String getState();
 
    public void setCountry(final String country);
-
+   
    public void setState(final String state);
-
+   
    public static LocationImpl of(){
       return new LocationImpl();
    }
-
+   
 
    public static LocationImpl of(final Location template) {
       LocationImpl instance = new LocationImpl();

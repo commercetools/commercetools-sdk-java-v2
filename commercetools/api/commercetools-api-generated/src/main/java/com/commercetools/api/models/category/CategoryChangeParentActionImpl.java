@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategoryChangeParentActionImpl implements CategoryChangeParentAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.category.CategoryResourceIdentifier parent;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CategoryChangeParentActionImpl implements CategoryChangeParen
       this.action = "changeParent";
    }
    public CategoryChangeParentActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.category.CategoryResourceIdentifier getParent(){
       return this.parent;
    }

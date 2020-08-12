@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelSetCustomFieldActionImpl.class)
 public interface ChannelSetCustomFieldAction extends ChannelUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-
-
+   
+   
    @JsonProperty("value")
    public JsonNode getValue();
 
    public void setName(final String name);
-
+   
    public void setValue(final JsonNode value);
-
+   
    public static ChannelSetCustomFieldActionImpl of(){
       return new ChannelSetCustomFieldActionImpl();
    }
-
+   
 
    public static ChannelSetCustomFieldActionImpl of(final ChannelSetCustomFieldAction template) {
       ChannelSetCustomFieldActionImpl instance = new ChannelSetCustomFieldActionImpl();

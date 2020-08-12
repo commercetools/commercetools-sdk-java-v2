@@ -16,186 +16,186 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class DiscountCodeDraftBuilder {
-
-
-   private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
-
-
-   private String code;
-
-   @Nullable
-   private String cartPredicate;
-
-   @Nullable
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
+   
    @Nullable
    private com.commercetools.api.models.common.LocalizedString name;
-
-   @Nullable
-   private java.time.ZonedDateTime validUntil;
-
-   @Nullable
-   private java.util.List<String> groups;
-
+   
    @Nullable
    private com.commercetools.api.models.common.LocalizedString description;
-
+   
+   
+   private String code;
+   
+   
+   private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
+   
    @Nullable
-   private java.time.ZonedDateTime validFrom;
-
-   @Nullable
-   private Long maxApplicationsPerCustomer;
-
+   private String cartPredicate;
+   
    @Nullable
    private Boolean isActive;
-
+   
    @Nullable
    private Long maxApplications;
-
-   public DiscountCodeDraftBuilder cartDiscounts( final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
-      this.cartDiscounts = cartDiscounts;
-      return this;
-   }
-
-   public DiscountCodeDraftBuilder code( final String code) {
-      this.code = code;
-      return this;
-   }
-
-   public DiscountCodeDraftBuilder cartPredicate(@Nullable final String cartPredicate) {
-      this.cartPredicate = cartPredicate;
-      return this;
-   }
-
-   public DiscountCodeDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-      this.custom = custom;
-      return this;
-   }
-
+   
+   @Nullable
+   private Long maxApplicationsPerCustomer;
+   
+   @Nullable
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   
+   @Nullable
+   private java.util.List<String> groups;
+   
+   @Nullable
+   private java.time.ZonedDateTime validFrom;
+   
+   @Nullable
+   private java.time.ZonedDateTime validUntil;
+   
    public DiscountCodeDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
       this.name = name;
       return this;
    }
-
-   public DiscountCodeDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
-      this.validUntil = validUntil;
-      return this;
-   }
-
-   public DiscountCodeDraftBuilder groups(@Nullable final java.util.List<String> groups) {
-      this.groups = groups;
-      return this;
-   }
-
+   
    public DiscountCodeDraftBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
       this.description = description;
       return this;
    }
-
-   public DiscountCodeDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
-      this.validFrom = validFrom;
+   
+   public DiscountCodeDraftBuilder code( final String code) {
+      this.code = code;
       return this;
    }
-
-   public DiscountCodeDraftBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
-      this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+   
+   public DiscountCodeDraftBuilder cartDiscounts( final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
+      this.cartDiscounts = cartDiscounts;
       return this;
    }
-
+   
+   public DiscountCodeDraftBuilder cartPredicate(@Nullable final String cartPredicate) {
+      this.cartPredicate = cartPredicate;
+      return this;
+   }
+   
    public DiscountCodeDraftBuilder isActive(@Nullable final Boolean isActive) {
       this.isActive = isActive;
       return this;
    }
-
+   
    public DiscountCodeDraftBuilder maxApplications(@Nullable final Long maxApplications) {
       this.maxApplications = maxApplications;
       return this;
    }
-
-
-   public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts(){
-      return this.cartDiscounts;
+   
+   public DiscountCodeDraftBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
+      this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+      return this;
    }
-
-
-   public String getCode(){
-      return this.code;
+   
+   public DiscountCodeDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+      this.custom = custom;
+      return this;
    }
-
-   @Nullable
-   public String getCartPredicate(){
-      return this.cartPredicate;
+   
+   public DiscountCodeDraftBuilder groups(@Nullable final java.util.List<String> groups) {
+      this.groups = groups;
+      return this;
    }
-
-   @Nullable
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
+   
+   public DiscountCodeDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
+      this.validFrom = validFrom;
+      return this;
    }
-
+   
+   public DiscountCodeDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
+      this.validUntil = validUntil;
+      return this;
+   }
+   
    @Nullable
    public com.commercetools.api.models.common.LocalizedString getName(){
       return this.name;
    }
-
+   
+   @Nullable
+   public com.commercetools.api.models.common.LocalizedString getDescription(){
+      return this.description;
+   }
+   
+   
+   public String getCode(){
+      return this.code;
+   }
+   
+   
+   public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts(){
+      return this.cartDiscounts;
+   }
+   
+   @Nullable
+   public String getCartPredicate(){
+      return this.cartPredicate;
+   }
+   
+   @Nullable
+   public Boolean getIsActive(){
+      return this.isActive;
+   }
+   
+   @Nullable
+   public Long getMaxApplications(){
+      return this.maxApplications;
+   }
+   
+   @Nullable
+   public Long getMaxApplicationsPerCustomer(){
+      return this.maxApplicationsPerCustomer;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
+   }
+   
+   @Nullable
+   public java.util.List<String> getGroups(){
+      return this.groups;
+   }
+   
+   @Nullable
+   public java.time.ZonedDateTime getValidFrom(){
+      return this.validFrom;
+   }
+   
    @Nullable
    public java.time.ZonedDateTime getValidUntil(){
       return this.validUntil;
    }
 
-   @Nullable
-   public java.util.List<String> getGroups(){
-      return this.groups;
-   }
-
-   @Nullable
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
-
-   @Nullable
-   public java.time.ZonedDateTime getValidFrom(){
-      return this.validFrom;
-   }
-
-   @Nullable
-   public Long getMaxApplicationsPerCustomer(){
-      return this.maxApplicationsPerCustomer;
-   }
-
-   @Nullable
-   public Boolean getIsActive(){
-      return this.isActive;
-   }
-
-   @Nullable
-   public Long getMaxApplications(){
-      return this.maxApplications;
-   }
-
    public DiscountCodeDraft build() {
-       return new DiscountCodeDraftImpl(cartDiscounts, code, cartPredicate, custom, name, validUntil, groups, description, validFrom, maxApplicationsPerCustomer, isActive, maxApplications);
+       return new DiscountCodeDraftImpl(name, description, code, cartDiscounts, cartPredicate, isActive, maxApplications, maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
    }
-
+   
    public static DiscountCodeDraftBuilder of() {
       return new DiscountCodeDraftBuilder();
    }
-
+   
    public static DiscountCodeDraftBuilder of(final DiscountCodeDraft template) {
       DiscountCodeDraftBuilder builder = new DiscountCodeDraftBuilder();
-      builder.cartDiscounts = template.getCartDiscounts();
-      builder.code = template.getCode();
-      builder.cartPredicate = template.getCartPredicate();
-      builder.custom = template.getCustom();
       builder.name = template.getName();
-      builder.validUntil = template.getValidUntil();
-      builder.groups = template.getGroups();
       builder.description = template.getDescription();
-      builder.validFrom = template.getValidFrom();
-      builder.maxApplicationsPerCustomer = template.getMaxApplicationsPerCustomer();
+      builder.code = template.getCode();
+      builder.cartDiscounts = template.getCartDiscounts();
+      builder.cartPredicate = template.getCartPredicate();
       builder.isActive = template.getIsActive();
       builder.maxApplications = template.getMaxApplications();
+      builder.maxApplicationsPerCustomer = template.getMaxApplicationsPerCustomer();
+      builder.custom = template.getCustom();
+      builder.groups = template.getGroups();
+      builder.validFrom = template.getValidFrom();
+      builder.validUntil = template.getValidUntil();
       return builder;
    }
-
+   
 }

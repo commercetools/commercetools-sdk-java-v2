@@ -22,18 +22,18 @@ import java.io.IOException;
 public interface CreatedBy extends ClientLogging {
 
 
-
+   
    public static CreatedByImpl of(){
       return new CreatedByImpl();
    }
-
+   
 
    public static CreatedByImpl of(final CreatedBy template) {
       CreatedByImpl instance = new CreatedByImpl();
-      instance.setAnonymousId(template.getAnonymousId());
       instance.setClientId(template.getClientId());
       instance.setExternalUserId(template.getExternalUserId());
       instance.setCustomer(template.getCustomer());
+      instance.setAnonymousId(template.getAnonymousId());
       return instance;
    }
 

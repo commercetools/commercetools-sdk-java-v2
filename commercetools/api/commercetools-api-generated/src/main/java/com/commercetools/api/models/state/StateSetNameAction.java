@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = StateSetNameActionImpl.class)
 public interface StateSetNameAction extends StateUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
 
    public void setName(final LocalizedString name);
-
+   
    public static StateSetNameActionImpl of(){
       return new StateSetNameActionImpl();
    }
-
+   
 
    public static StateSetNameActionImpl of(final StateSetNameAction template) {
       StateSetNameActionImpl instance = new StateSetNameActionImpl();

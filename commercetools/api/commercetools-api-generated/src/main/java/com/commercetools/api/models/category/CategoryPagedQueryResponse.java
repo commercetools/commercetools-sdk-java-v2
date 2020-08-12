@@ -60,10 +60,10 @@ public interface CategoryPagedQueryResponse  {
 
    public static CategoryPagedQueryResponseImpl of(final CategoryPagedQueryResponse template) {
       CategoryPagedQueryResponseImpl instance = new CategoryPagedQueryResponseImpl();
+      instance.setLimit(template.getLimit());
+      instance.setCount(template.getCount());
       instance.setTotal(template.getTotal());
       instance.setOffset(template.getOffset());
-      instance.setCount(template.getCount());
-      instance.setLimit(template.getLimit());
       instance.setResults(template.getResults());
       return instance;
    }

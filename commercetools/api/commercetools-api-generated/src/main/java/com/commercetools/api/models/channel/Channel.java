@@ -2,11 +2,11 @@ package com.commercetools.api.models.channel;
 
 import com.commercetools.api.models.channel.ChannelRoleEnum;
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.GeoJson;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.review.ReviewRatingStatistics;
 import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
@@ -28,7 +28,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ChannelImpl.class)
-public interface Channel extends LoggedResource {
+public interface Channel extends BaseResource {
 
    /**
    *  <p>The unique ID of the channel.</p>
@@ -36,15 +36,15 @@ public interface Channel extends LoggedResource {
    @NotNull
    @JsonProperty("id")
    public String getId();
-
+   
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -98,7 +98,7 @@ public interface Channel extends LoggedResource {
    @Valid
    @JsonProperty("reviewRatingStatistics")
    public ReviewRatingStatistics getReviewRatingStatistics();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
@@ -110,54 +110,54 @@ public interface Channel extends LoggedResource {
    public GeoJson getGeoLocation();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setCreatedAt(final ZonedDateTime createdAt);
-
+   
    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+   
    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+   
    public void setCreatedBy(final CreatedBy createdBy);
-
+   
    public void setKey(final String key);
-
+   
    public void setRoles(final List<ChannelRoleEnum> roles);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public void setAddress(final Address address);
-
+   
    public void setReviewRatingStatistics(final ReviewRatingStatistics reviewRatingStatistics);
-
+   
    public void setCustom(final CustomFields custom);
-
+   
    public void setGeoLocation(final GeoJson geoLocation);
-
+   
    public static ChannelImpl of(){
       return new ChannelImpl();
    }
-
+   
 
    public static ChannelImpl of(final Channel template) {
       ChannelImpl instance = new ChannelImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setAddress(template.getAddress());
-      instance.setCustom(template.getCustom());
-      instance.setRoles(template.getRoles());
-      instance.setDescription(template.getDescription());
-      instance.setGeoLocation(template.getGeoLocation());
-      instance.setName(template.getName());
-      instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setKey(template.getKey());
+      instance.setRoles(template.getRoles());
+      instance.setName(template.getName());
+      instance.setDescription(template.getDescription());
+      instance.setAddress(template.getAddress());
+      instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
+      instance.setCustom(template.getCustom());
+      instance.setGeoLocation(template.getGeoLocation());
       return instance;
    }
 

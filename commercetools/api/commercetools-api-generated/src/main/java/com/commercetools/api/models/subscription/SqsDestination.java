@@ -21,42 +21,42 @@ import java.io.IOException;
 @JsonDeserialize(as = SqsDestinationImpl.class)
 public interface SqsDestination extends Destination {
 
-
+   
    @NotNull
    @JsonProperty("accessKey")
    public String getAccessKey();
-
+   
    @NotNull
    @JsonProperty("accessSecret")
    public String getAccessSecret();
-
+   
    @NotNull
    @JsonProperty("queueUrl")
    public String getQueueUrl();
-
+   
    @NotNull
    @JsonProperty("region")
    public String getRegion();
 
    public void setAccessKey(final String accessKey);
-
+   
    public void setAccessSecret(final String accessSecret);
-
+   
    public void setQueueUrl(final String queueUrl);
-
+   
    public void setRegion(final String region);
-
+   
    public static SqsDestinationImpl of(){
       return new SqsDestinationImpl();
    }
-
+   
 
    public static SqsDestinationImpl of(final SqsDestination template) {
       SqsDestinationImpl instance = new SqsDestinationImpl();
       instance.setAccessKey(template.getAccessKey());
+      instance.setAccessSecret(template.getAccessSecret());
       instance.setQueueUrl(template.getQueueUrl());
       instance.setRegion(template.getRegion());
-      instance.setAccessSecret(template.getAccessSecret());
       return instance;
    }
 

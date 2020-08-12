@@ -23,17 +23,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductReferenceImpl.class)
 public interface ProductReference extends Reference {
 
-
+   
    @Valid
    @JsonProperty("obj")
    public Product getObj();
 
    public void setObj(final Product obj);
-
+   
    public static ProductReferenceImpl of(){
       return new ProductReferenceImpl();
    }
-
+   
 
    public static ProductReferenceImpl of(final ProductReference template) {
       ProductReferenceImpl instance = new ProductReferenceImpl();

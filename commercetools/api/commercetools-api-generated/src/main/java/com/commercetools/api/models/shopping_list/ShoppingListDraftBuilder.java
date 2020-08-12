@@ -19,77 +19,37 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ShoppingListDraftBuilder {
    
    @Nullable
-   private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems;
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
    
    @Nullable
-   private String anonymousId;
-   
-   @Nullable
-   private java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems;
+   private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
    
    @Nullable
    private Long deleteDaysAfterLastModification;
    
    @Nullable
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-   
-   
-   private com.commercetools.api.models.common.LocalizedString name;
-   
-   @Nullable
    private com.commercetools.api.models.common.LocalizedString description;
-   
-   @Nullable
-   private com.commercetools.api.models.common.LocalizedString slug;
    
    @Nullable
    private String key;
    
    @Nullable
-   private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
+   private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems;
    
-   public ShoppingListDraftBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems) {
-      this.lineItems = lineItems;
-      return this;
-   }
    
-   public ShoppingListDraftBuilder anonymousId(@Nullable final String anonymousId) {
-      this.anonymousId = anonymousId;
-      return this;
-   }
+   private com.commercetools.api.models.common.LocalizedString name;
    
-   public ShoppingListDraftBuilder textLineItems(@Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems) {
-      this.textLineItems = textLineItems;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.common.LocalizedString slug;
    
-   public ShoppingListDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
-      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-      return this;
-   }
+   @Nullable
+   private java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems;
+   
+   @Nullable
+   private String anonymousId;
    
    public ShoppingListDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
       this.custom = custom;
-      return this;
-   }
-   
-   public ShoppingListDraftBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
-      this.name = name;
-      return this;
-   }
-   
-   public ShoppingListDraftBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
-      this.description = description;
-      return this;
-   }
-   
-   public ShoppingListDraftBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
-      this.slug = slug;
-      return this;
-   }
-   
-   public ShoppingListDraftBuilder key(@Nullable final String key) {
-      this.key = key;
       return this;
    }
    
@@ -98,19 +58,54 @@ public final class ShoppingListDraftBuilder {
       return this;
    }
    
-   @Nullable
-   public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems(){
-      return this.lineItems;
+   public ShoppingListDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
+      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+      return this;
+   }
+   
+   public ShoppingListDraftBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+      this.description = description;
+      return this;
+   }
+   
+   public ShoppingListDraftBuilder key(@Nullable final String key) {
+      this.key = key;
+      return this;
+   }
+   
+   public ShoppingListDraftBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems) {
+      this.lineItems = lineItems;
+      return this;
+   }
+   
+   public ShoppingListDraftBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+      this.name = name;
+      return this;
+   }
+   
+   public ShoppingListDraftBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
+      this.slug = slug;
+      return this;
+   }
+   
+   public ShoppingListDraftBuilder textLineItems(@Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems) {
+      this.textLineItems = textLineItems;
+      return this;
+   }
+   
+   public ShoppingListDraftBuilder anonymousId(@Nullable final String anonymousId) {
+      this.anonymousId = anonymousId;
+      return this;
    }
    
    @Nullable
-   public String getAnonymousId(){
-      return this.anonymousId;
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
    }
    
    @Nullable
-   public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems(){
-      return this.textLineItems;
+   public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
+      return this.customer;
    }
    
    @Nullable
@@ -119,23 +114,8 @@ public final class ShoppingListDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
-   @Nullable
    public com.commercetools.api.models.common.LocalizedString getDescription(){
       return this.description;
-   }
-   
-   @Nullable
-   public com.commercetools.api.models.common.LocalizedString getSlug(){
-      return this.slug;
    }
    
    @Nullable
@@ -144,12 +124,32 @@ public final class ShoppingListDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
-      return this.customer;
+   public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems(){
+      return this.lineItems;
+   }
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.LocalizedString getSlug(){
+      return this.slug;
+   }
+   
+   @Nullable
+   public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems(){
+      return this.textLineItems;
+   }
+   
+   @Nullable
+   public String getAnonymousId(){
+      return this.anonymousId;
    }
 
    public ShoppingListDraft build() {
-       return new ShoppingListDraftImpl(lineItems, anonymousId, textLineItems, deleteDaysAfterLastModification, custom, name, description, slug, key, customer);
+       return new ShoppingListDraftImpl(custom, customer, deleteDaysAfterLastModification, description, key, lineItems, name, slug, textLineItems, anonymousId);
    }
    
    public static ShoppingListDraftBuilder of() {
@@ -158,16 +158,16 @@ public final class ShoppingListDraftBuilder {
    
    public static ShoppingListDraftBuilder of(final ShoppingListDraft template) {
       ShoppingListDraftBuilder builder = new ShoppingListDraftBuilder();
-      builder.lineItems = template.getLineItems();
-      builder.anonymousId = template.getAnonymousId();
-      builder.textLineItems = template.getTextLineItems();
-      builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
       builder.custom = template.getCustom();
-      builder.name = template.getName();
-      builder.description = template.getDescription();
-      builder.slug = template.getSlug();
-      builder.key = template.getKey();
       builder.customer = template.getCustomer();
+      builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+      builder.description = template.getDescription();
+      builder.key = template.getKey();
+      builder.lineItems = template.getLineItems();
+      builder.name = template.getName();
+      builder.slug = template.getSlug();
+      builder.textLineItems = template.getTextLineItems();
+      builder.anonymousId = template.getAnonymousId();
       return builder;
    }
    

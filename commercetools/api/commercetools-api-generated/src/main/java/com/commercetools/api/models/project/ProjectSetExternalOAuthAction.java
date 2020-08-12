@@ -31,11 +31,11 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
    public ExternalOAuth getExternalOAuth();
 
    public void setExternalOAuth(final ExternalOAuth externalOAuth);
-
+   
    public static ProjectSetExternalOAuthActionImpl of(){
       return new ProjectSetExternalOAuthActionImpl();
    }
-
+   
 
    public static ProjectSetExternalOAuthActionImpl of(final ProjectSetExternalOAuthAction template) {
       ProjectSetExternalOAuthActionImpl instance = new ProjectSetExternalOAuthActionImpl();

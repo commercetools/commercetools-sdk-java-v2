@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerSetCustomerNumberActionImpl implements CustomerSetCustomerNumberAction {
 
    private String action;
-
+   
    private String customerNumber;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class CustomerSetCustomerNumberActionImpl implements CustomerSetCus
       this.action = "setCustomerNumber";
    }
    public CustomerSetCustomerNumberActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>It should be <strong>unique</strong> across a project.
    *  Once it's set, it cannot be changed.</p>

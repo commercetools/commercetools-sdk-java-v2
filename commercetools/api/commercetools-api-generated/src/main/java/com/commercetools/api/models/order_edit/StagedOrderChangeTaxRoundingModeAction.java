@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderChangeTaxRoundingModeActionImpl.class)
 public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("taxRoundingMode")
    public RoundingMode getTaxRoundingMode();
 
    public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
-
+   
    public static StagedOrderChangeTaxRoundingModeActionImpl of(){
       return new StagedOrderChangeTaxRoundingModeActionImpl();
    }
-
+   
 
    public static StagedOrderChangeTaxRoundingModeActionImpl of(final StagedOrderChangeTaxRoundingModeAction template) {
       StagedOrderChangeTaxRoundingModeActionImpl instance = new StagedOrderChangeTaxRoundingModeActionImpl();

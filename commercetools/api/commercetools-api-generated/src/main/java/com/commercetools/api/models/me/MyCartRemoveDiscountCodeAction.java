@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartRemoveDiscountCodeActionImpl.class)
 public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("discountCode")
    public DiscountCodeReference getDiscountCode();
 
    public void setDiscountCode(final DiscountCodeReference discountCode);
-
+   
    public static MyCartRemoveDiscountCodeActionImpl of(){
       return new MyCartRemoveDiscountCodeActionImpl();
    }
-
+   
 
    public static MyCartRemoveDiscountCodeActionImpl of(final MyCartRemoveDiscountCodeAction template) {
       MyCartRemoveDiscountCodeActionImpl instance = new MyCartRemoveDiscountCodeActionImpl();

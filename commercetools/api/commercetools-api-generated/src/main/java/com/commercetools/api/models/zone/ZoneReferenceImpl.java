@@ -25,9 +25,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ZoneReferenceImpl implements ZoneReference {
 
    private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+   
    private String id;
-
+   
    private com.commercetools.api.models.zone.Zone obj;
 
    @JsonCreator
@@ -37,20 +37,20 @@ public final class ZoneReferenceImpl implements ZoneReference {
       this.typeId = ReferenceTypeId.findEnumViaJsonName("zone").get();
    }
    public ZoneReferenceImpl() {
-
+      
    }
-
-
+   
+   
    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
       return this.typeId;
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public com.commercetools.api.models.zone.Zone getObj(){
       return this.obj;
    }
@@ -58,7 +58,7 @@ public final class ZoneReferenceImpl implements ZoneReference {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setObj(final com.commercetools.api.models.zone.Zone obj){
       this.obj = obj;
    }

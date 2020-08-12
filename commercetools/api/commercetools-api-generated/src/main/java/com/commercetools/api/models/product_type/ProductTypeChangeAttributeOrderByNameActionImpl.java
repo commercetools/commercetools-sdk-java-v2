@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeChangeAttributeOrderByNameActionImpl implements ProductTypeChangeAttributeOrderByNameAction {
 
    private String action;
-
+   
    private java.util.List<String> attributeNames;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ProductTypeChangeAttributeOrderByNameActionImpl implements Pr
       this.action = "changeAttributeOrderByName";
    }
    public ProductTypeChangeAttributeOrderByNameActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.util.List<String> getAttributeNames(){
       return this.attributeNames;
    }

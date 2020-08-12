@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = ReplicaCartDraftImpl.class)
 public interface ReplicaCartDraft  {
 
-
+   
    @NotNull
    @JsonProperty("reference")
    public JsonNode getReference();
 
    public void setReference(final JsonNode reference);
-
+   
    public static ReplicaCartDraftImpl of(){
       return new ReplicaCartDraftImpl();
    }
-
+   
 
    public static ReplicaCartDraftImpl of(final ReplicaCartDraft template) {
       ReplicaCartDraftImpl instance = new ReplicaCartDraftImpl();

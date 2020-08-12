@@ -14,186 +14,186 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductRemovedFromCategoryMessageBuilder {
-
-
-   private java.time.ZonedDateTime createdAt;
-
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
-
+   
+   
    private String id;
-
-
+   
+   
    private Long version;
-
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-
+   
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   
    private Long sequenceNumber;
-
-
+   
+   
    private com.commercetools.api.models.common.Reference resource;
-
+   
+   
+   private Long resourceVersion;
+   
    @Nullable
    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
-
-   private Long resourceVersion;
-
-
-   private Boolean staged;
-
-
+   
+   
    private com.commercetools.api.models.category.CategoryReference category;
-
-   public ProductRemovedFromCategoryMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-
-   public ProductRemovedFromCategoryMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
-
+   
+   
+   private Boolean staged;
+   
    public ProductRemovedFromCategoryMessageBuilder id( final String id) {
       this.id = id;
       return this;
    }
-
+   
    public ProductRemovedFromCategoryMessageBuilder version( final Long version) {
       this.version = version;
       return this;
    }
-
-   public ProductRemovedFromCategoryMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   
+   public ProductRemovedFromCategoryMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
       return this;
    }
-
+   
+   public ProductRemovedFromCategoryMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
+      return this;
+   }
+   
    public ProductRemovedFromCategoryMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
       return this;
    }
-
+   
+   public ProductRemovedFromCategoryMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
+      return this;
+   }
+   
    public ProductRemovedFromCategoryMessageBuilder sequenceNumber( final Long sequenceNumber) {
       this.sequenceNumber = sequenceNumber;
       return this;
    }
-
+   
    public ProductRemovedFromCategoryMessageBuilder resource( final com.commercetools.api.models.common.Reference resource) {
       this.resource = resource;
       return this;
    }
-
-   public ProductRemovedFromCategoryMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-      return this;
-   }
-
+   
    public ProductRemovedFromCategoryMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
-
-   public ProductRemovedFromCategoryMessageBuilder staged( final Boolean staged) {
-      this.staged = staged;
+   
+   public ProductRemovedFromCategoryMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
-
+   
    public ProductRemovedFromCategoryMessageBuilder category( final com.commercetools.api.models.category.CategoryReference category) {
       this.category = category;
       return this;
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
+   
+   public ProductRemovedFromCategoryMessageBuilder staged( final Boolean staged) {
+      this.staged = staged;
+      return this;
    }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
    @Nullable
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
+   
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
    public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Reference getResource(){
       return this.resource;
    }
-
+   
+   
+   public Long getResourceVersion(){
+      return this.resourceVersion;
+   }
+   
    @Nullable
    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
       return this.resourceUserProvidedIdentifiers;
    }
-
-
-   public Long getResourceVersion(){
-      return this.resourceVersion;
+   
+   
+   public com.commercetools.api.models.category.CategoryReference getCategory(){
+      return this.category;
    }
-
-
+   
+   
    public Boolean getStaged(){
       return this.staged;
    }
 
-
-   public com.commercetools.api.models.category.CategoryReference getCategory(){
-      return this.category;
-   }
-
    public ProductRemovedFromCategoryMessage build() {
-       return new ProductRemovedFromCategoryMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, staged, category);
+       return new ProductRemovedFromCategoryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, category, staged);
    }
-
+   
    public static ProductRemovedFromCategoryMessageBuilder of() {
       return new ProductRemovedFromCategoryMessageBuilder();
    }
-
+   
    public static ProductRemovedFromCategoryMessageBuilder of(final ProductRemovedFromCategoryMessage template) {
       ProductRemovedFromCategoryMessageBuilder builder = new ProductRemovedFromCategoryMessageBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
+      builder.createdBy = template.getCreatedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
-      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.staged = template.getStaged();
+      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.category = template.getCategory();
+      builder.staged = template.getStaged();
       return builder;
    }
-
+   
 }

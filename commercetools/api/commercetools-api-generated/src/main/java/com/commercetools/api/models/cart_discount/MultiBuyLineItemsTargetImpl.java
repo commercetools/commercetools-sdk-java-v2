@@ -24,15 +24,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget {
 
    private String type;
-
+   
    private String predicate;
-
+   
    private Integer triggerQuantity;
-
+   
    private Integer discountedQuantity;
-
+   
    private Integer maxOccurrence;
-
+   
    private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
    @JsonCreator
@@ -45,43 +45,43 @@ public final class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarge
       this.type = "multiBuyLineItems";
    }
    public MultiBuyLineItemsTargetImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
+   
    /**
    *  <p>A valid line item target predicate. The discount will be applied to line items that are matched by the predicate.</p>
    */
    public String getPredicate(){
       return this.predicate;
    }
-
+   
    /**
    *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
    */
    public Integer getTriggerQuantity(){
       return this.triggerQuantity;
    }
-
+   
    /**
    *  <p>Quantity of line items that are discounted per application of this discount.</p>
    */
    public Integer getDiscountedQuantity(){
       return this.discountedQuantity;
    }
-
+   
    /**
    *  <p>Maximum number of applications of this discount.</p>
    */
    public Integer getMaxOccurrence(){
       return this.maxOccurrence;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode(){
       return this.selectionMode;
    }
@@ -89,19 +89,19 @@ public final class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarge
    public void setPredicate(final String predicate){
       this.predicate = predicate;
    }
-
+   
    public void setTriggerQuantity(final Integer triggerQuantity){
       this.triggerQuantity = triggerQuantity;
    }
-
+   
    public void setDiscountedQuantity(final Integer discountedQuantity){
       this.discountedQuantity = discountedQuantity;
    }
-
+   
    public void setMaxOccurrence(final Integer maxOccurrence){
       this.maxOccurrence = maxOccurrence;
    }
-
+   
    public void setSelectionMode(final com.commercetools.api.models.cart_discount.SelectionMode selectionMode){
       this.selectionMode = selectionMode;
    }

@@ -23,36 +23,36 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderDiscountCodeStateSetMessagePayloadImpl.class)
 public interface OrderDiscountCodeStateSetMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("discountCode")
    public DiscountCodeReference getDiscountCode();
-
+   
    @NotNull
    @JsonProperty("state")
    public DiscountCodeState getState();
-
-
+   
+   
    @JsonProperty("oldState")
    public DiscountCodeState getOldState();
 
    public void setDiscountCode(final DiscountCodeReference discountCode);
-
+   
    public void setState(final DiscountCodeState state);
-
+   
    public void setOldState(final DiscountCodeState oldState);
-
+   
    public static OrderDiscountCodeStateSetMessagePayloadImpl of(){
       return new OrderDiscountCodeStateSetMessagePayloadImpl();
    }
-
+   
 
    public static OrderDiscountCodeStateSetMessagePayloadImpl of(final OrderDiscountCodeStateSetMessagePayload template) {
       OrderDiscountCodeStateSetMessagePayloadImpl instance = new OrderDiscountCodeStateSetMessagePayloadImpl();
       instance.setDiscountCode(template.getDiscountCode());
-      instance.setOldState(template.getOldState());
       instance.setState(template.getState());
+      instance.setOldState(template.getOldState());
       return instance;
    }
 

@@ -21,23 +21,23 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentStatusInterfaceCodeSetMessagePayloadImpl.class)
 public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @JsonProperty("paymentId")
    public String getPaymentId();
-
+   
    @NotNull
    @JsonProperty("interfaceCode")
    public String getInterfaceCode();
 
    public void setPaymentId(final String paymentId);
-
+   
    public void setInterfaceCode(final String interfaceCode);
-
+   
    public static PaymentStatusInterfaceCodeSetMessagePayloadImpl of(){
       return new PaymentStatusInterfaceCodeSetMessagePayloadImpl();
    }
-
+   
 
    public static PaymentStatusInterfaceCodeSetMessagePayloadImpl of(final PaymentStatusInterfaceCodeSetMessagePayload template) {
       PaymentStatusInterfaceCodeSetMessagePayloadImpl instance = new PaymentStatusInterfaceCodeSetMessagePayloadImpl();

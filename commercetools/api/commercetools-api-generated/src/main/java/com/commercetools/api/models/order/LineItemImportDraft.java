@@ -32,7 +32,7 @@ public interface LineItemImportDraft  {
    *  <p>ID of the existing product.
    *  You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
    */
-
+   
    @JsonProperty("productId")
    public String getProductId();
    /**
@@ -42,21 +42,21 @@ public interface LineItemImportDraft  {
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-
+   
    @NotNull
    @Valid
    @JsonProperty("variant")
    public ProductVariantImportDraft getVariant();
-
+   
    @NotNull
    @Valid
    @JsonProperty("price")
    public PriceDraft getPrice();
-
+   
    @NotNull
    @JsonProperty("quantity")
-   public Integer getQuantity();
-
+   public Double getQuantity();
+   
    @Valid
    @JsonProperty("state")
    public List<ItemState> getState();
@@ -77,7 +77,7 @@ public interface LineItemImportDraft  {
    @Valid
    @JsonProperty("distributionChannel")
    public ChannelResourceIdentifier getDistributionChannel();
-
+   
    @Valid
    @JsonProperty("taxRate")
    public TaxRate getTaxRate();
@@ -87,51 +87,51 @@ public interface LineItemImportDraft  {
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-
+   
    @Valid
    @JsonProperty("shippingDetails")
    public ItemShippingDetailsDraft getShippingDetails();
 
    public void setProductId(final String productId);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public void setVariant(final ProductVariantImportDraft variant);
-
+   
    public void setPrice(final PriceDraft price);
-
-   public void setQuantity(final Integer quantity);
-
+   
+   public void setQuantity(final Double quantity);
+   
    public void setState(final List<ItemState> state);
-
+   
    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
+   
    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
-
+   
    public void setTaxRate(final TaxRate taxRate);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
-
+   
    public static LineItemImportDraftImpl of(){
       return new LineItemImportDraftImpl();
    }
-
+   
 
    public static LineItemImportDraftImpl of(final LineItemImportDraft template) {
       LineItemImportDraftImpl instance = new LineItemImportDraftImpl();
-      instance.setTaxRate(template.getTaxRate());
-      instance.setQuantity(template.getQuantity());
-      instance.setShippingDetails(template.getShippingDetails());
       instance.setProductId(template.getProductId());
-      instance.setPrice(template.getPrice());
-      instance.setCustom(template.getCustom());
-      instance.setVariant(template.getVariant());
       instance.setName(template.getName());
-      instance.setSupplyChannel(template.getSupplyChannel());
+      instance.setVariant(template.getVariant());
+      instance.setPrice(template.getPrice());
+      instance.setQuantity(template.getQuantity());
       instance.setState(template.getState());
+      instance.setSupplyChannel(template.getSupplyChannel());
       instance.setDistributionChannel(template.getDistributionChannel());
+      instance.setTaxRate(template.getTaxRate());
+      instance.setCustom(template.getCustom());
+      instance.setShippingDetails(template.getShippingDetails());
       return instance;
    }
 

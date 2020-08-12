@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum MoneyType {
 
-
+  
   @JsonProperty("centPrecision")
   CENT_PRECISION("centPrecision"),
-
-
+  
+  
   @JsonProperty("highPrecision")
   HIGH_PRECISION("highPrecision");
 

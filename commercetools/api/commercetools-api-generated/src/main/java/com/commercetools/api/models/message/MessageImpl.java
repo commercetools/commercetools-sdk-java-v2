@@ -1,8 +1,8 @@
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.message.CategoryCreatedMessage;
 import com.commercetools.api.models.message.CategorySlugChangedMessage;
@@ -20,7 +20,9 @@ import com.commercetools.api.models.message.DeliveryAddedMessage;
 import com.commercetools.api.models.message.DeliveryAddressSetMessage;
 import com.commercetools.api.models.message.DeliveryItemsUpdatedMessage;
 import com.commercetools.api.models.message.DeliveryRemovedMessage;
+import com.commercetools.api.models.message.InventoryEntryCreatedMessage;
 import com.commercetools.api.models.message.InventoryEntryDeletedMessage;
+import com.commercetools.api.models.message.InventoryEntryQuantitySetMessage;
 import com.commercetools.api.models.message.LineItemStateTransitionMessage;
 import com.commercetools.api.models.message.OrderBillingAddressSetMessage;
 import com.commercetools.api.models.message.OrderCreatedMessage;
@@ -45,6 +47,7 @@ import com.commercetools.api.models.message.OrderShippingInfoSetMessage;
 import com.commercetools.api.models.message.OrderShippingRateInputSetMessage;
 import com.commercetools.api.models.message.OrderStateChangedMessage;
 import com.commercetools.api.models.message.OrderStateTransitionMessage;
+import com.commercetools.api.models.message.OrderStoreSetMessage;
 import com.commercetools.api.models.message.ParcelAddedToDeliveryMessage;
 import com.commercetools.api.models.message.ParcelItemsUpdatedMessage;
 import com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessage;
@@ -95,139 +98,139 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MessageImpl implements Message {
 
-   private java.time.ZonedDateTime createdAt;
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
    private String id;
-
+   
    private Long version;
-
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
    private Long sequenceNumber;
-
+   
    private com.commercetools.api.models.common.Reference resource;
-
+   
+   private Long resourceVersion;
+   
+   private String type;
+   
    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-   private Long resourceVersion;
-
-   private String type;
-
    @JsonCreator
-   MessageImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("resourceVersion") final Long resourceVersion) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   MessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
+      this.createdBy = createdBy;
       this.sequenceNumber = sequenceNumber;
       this.resource = resource;
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.resourceVersion = resourceVersion;
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       this.type = "null";
    }
    public MessageImpl() {
-
+      
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
+   
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
+   
+   
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
+   }
+   
+   
    public Long getSequenceNumber(){
       return this.sequenceNumber;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Reference getResource(){
       return this.resource;
    }
-
-
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-
-
+   
+   
    public Long getResourceVersion(){
       return this.resourceVersion;
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
+   
+   
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
    }
-
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
+   }
+   
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
-
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
    public void setSequenceNumber(final Long sequenceNumber){
       this.sequenceNumber = sequenceNumber;
    }
-
+   
    public void setResource(final com.commercetools.api.models.common.Reference resource){
       this.resource = resource;
    }
-
-   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-   }
-
+   
    public void setResourceVersion(final Long resourceVersion){
       this.resourceVersion = resourceVersion;
+   }
+   
+   public void setResourceUserProvidedIdentifiers(final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers){
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
    }
 
 }

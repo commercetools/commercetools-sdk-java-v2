@@ -49,9 +49,9 @@ public interface ApiClientDraft  {
 
    public static ApiClientDraftImpl of(final ApiClientDraft template) {
       ApiClientDraftImpl instance = new ApiClientDraftImpl();
-      instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
-      instance.setScope(template.getScope());
       instance.setName(template.getName());
+      instance.setScope(template.getScope());
+      instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
       return instance;
    }
 

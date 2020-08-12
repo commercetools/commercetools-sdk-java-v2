@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class UpdateImpl implements Update {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.common.UpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   UpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.common.UpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   UpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.common.UpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public UpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.common.UpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.common.UpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.common.UpdateAction> actions){
+      this.actions = actions;
    }
 
 }

@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface StoreResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static StoreResourceIdentifierImpl of(){
       return new StoreResourceIdentifierImpl();
    }
-
+   
 
    public static StoreResourceIdentifierImpl of(final StoreResourceIdentifier template) {
       StoreResourceIdentifierImpl instance = new StoreResourceIdentifierImpl();

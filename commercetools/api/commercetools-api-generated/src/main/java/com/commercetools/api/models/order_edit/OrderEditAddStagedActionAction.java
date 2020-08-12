@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditAddStagedActionActionImpl.class)
 public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("stagedAction")
    public StagedOrderUpdateAction getStagedAction();
 
    public void setStagedAction(final StagedOrderUpdateAction stagedAction);
-
+   
    public static OrderEditAddStagedActionActionImpl of(){
       return new OrderEditAddStagedActionActionImpl();
    }
-
+   
 
    public static OrderEditAddStagedActionActionImpl of(final OrderEditAddStagedActionAction template) {
       OrderEditAddStagedActionActionImpl instance = new OrderEditAddStagedActionActionImpl();

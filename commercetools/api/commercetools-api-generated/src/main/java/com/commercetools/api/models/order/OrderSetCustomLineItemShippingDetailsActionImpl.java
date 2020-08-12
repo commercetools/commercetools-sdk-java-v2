@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderSetCustomLineItemShippingDetailsActionImpl implements OrderSetCustomLineItemShippingDetailsAction {
 
    private String action;
-
+   
    private String customLineItemId;
-
+   
    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class OrderSetCustomLineItemShippingDetailsActionImpl implements Or
       this.action = "setCustomLineItemShippingDetails";
    }
    public OrderSetCustomLineItemShippingDetailsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getCustomLineItemId(){
       return this.customLineItemId;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
@@ -57,7 +57,7 @@ public final class OrderSetCustomLineItemShippingDetailsActionImpl implements Or
    public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
-
+   
    public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
       this.shippingDetails = shippingDetails;
    }

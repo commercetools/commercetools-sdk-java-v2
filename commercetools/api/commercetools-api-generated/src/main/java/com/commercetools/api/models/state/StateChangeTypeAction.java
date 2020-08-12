@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = StateChangeTypeActionImpl.class)
 public interface StateChangeTypeAction extends StateUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("type")
    public StateTypeEnum getType();
 
    public void setType(final StateTypeEnum type);
-
+   
    public static StateChangeTypeActionImpl of(){
       return new StateChangeTypeActionImpl();
    }
-
+   
 
    public static StateChangeTypeActionImpl of(final StateChangeTypeAction template) {
       StateChangeTypeActionImpl instance = new StateChangeTypeActionImpl();

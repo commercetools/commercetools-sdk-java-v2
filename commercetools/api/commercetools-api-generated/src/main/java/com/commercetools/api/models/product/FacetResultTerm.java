@@ -47,8 +47,8 @@ public interface FacetResultTerm  {
 
    public static FacetResultTermImpl of(final FacetResultTerm template) {
       FacetResultTermImpl instance = new FacetResultTermImpl();
-      instance.setCount(template.getCount());
       instance.setTerm(template.getTerm());
+      instance.setCount(template.getCount());
       instance.setProductCount(template.getProductCount());
       return instance;
    }

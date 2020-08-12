@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum CartState {
 
-
+  
   @JsonProperty("Active")
   ACTIVE("Active"),
-
-
+  
+  
   @JsonProperty("Merged")
   MERGED("Merged"),
-
-
+  
+  
   @JsonProperty("Ordered")
   ORDERED("Ordered");
 

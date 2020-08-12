@@ -21,23 +21,23 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeChangeEnumValueOrderActionImpl.class)
 public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("fieldName")
    public String getFieldName();
-
+   
    @NotNull
    @JsonProperty("keys")
    public List<String> getKeys();
 
    public void setFieldName(final String fieldName);
-
+   
    public void setKeys(final List<String> keys);
-
+   
    public static TypeChangeEnumValueOrderActionImpl of(){
       return new TypeChangeEnumValueOrderActionImpl();
    }
-
+   
 
    public static TypeChangeEnumValueOrderActionImpl of(final TypeChangeEnumValueOrderAction template) {
       TypeChangeEnumValueOrderActionImpl instance = new TypeChangeEnumValueOrderActionImpl();

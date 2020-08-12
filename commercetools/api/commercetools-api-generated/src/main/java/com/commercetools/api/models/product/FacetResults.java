@@ -21,18 +21,18 @@ import java.io.IOException;
 @JsonDeserialize(as = FacetResultsImpl.class)
 public interface FacetResults  {
 
-
+   
    @NotNull
    @JsonAnyGetter
    public Map<String, JsonNode> values();
 
    @JsonAnySetter
    public void setValue(String key, JsonNode value);
-
+   
    public static FacetResultsImpl of(){
       return new FacetResultsImpl();
    }
-
+   
 
    public static FacetResultsImpl of(final FacetResults template) {
       FacetResultsImpl instance = new FacetResultsImpl();

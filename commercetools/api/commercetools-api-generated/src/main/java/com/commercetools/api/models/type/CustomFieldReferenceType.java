@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomFieldReferenceTypeImpl.class)
 public interface CustomFieldReferenceType extends FieldType {
 
-
+   
    @NotNull
    @JsonProperty("referenceTypeId")
    public ReferenceTypeId getReferenceTypeId();
 
    public void setReferenceTypeId(final ReferenceTypeId referenceTypeId);
-
+   
    public static CustomFieldReferenceTypeImpl of(){
       return new CustomFieldReferenceTypeImpl();
    }
-
+   
 
    public static CustomFieldReferenceTypeImpl of(final CustomFieldReferenceType template) {
       CustomFieldReferenceTypeImpl instance = new CustomFieldReferenceTypeImpl();

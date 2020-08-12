@@ -24,16 +24,16 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
    /**
    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static OrderEditSetKeyActionImpl of(){
       return new OrderEditSetKeyActionImpl();
    }
-
+   
 
    public static OrderEditSetKeyActionImpl of(final OrderEditSetKeyAction template) {
       OrderEditSetKeyActionImpl instance = new OrderEditSetKeyActionImpl();

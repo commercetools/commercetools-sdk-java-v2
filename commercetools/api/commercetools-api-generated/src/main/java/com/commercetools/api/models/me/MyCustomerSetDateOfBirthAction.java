@@ -22,17 +22,17 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCustomerSetDateOfBirthActionImpl.class)
 public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
 
-
-
+   
+   
    @JsonProperty("dateOfBirth")
    public LocalDate getDateOfBirth();
 
    public void setDateOfBirth(final LocalDate dateOfBirth);
-
+   
    public static MyCustomerSetDateOfBirthActionImpl of(){
       return new MyCustomerSetDateOfBirthActionImpl();
    }
-
+   
 
    public static MyCustomerSetDateOfBirthActionImpl of(final MyCustomerSetDateOfBirthAction template) {
       MyCustomerSetDateOfBirthActionImpl instance = new MyCustomerSetDateOfBirthActionImpl();

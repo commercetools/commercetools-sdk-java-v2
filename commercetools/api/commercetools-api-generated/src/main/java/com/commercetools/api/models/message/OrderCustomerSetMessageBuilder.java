@@ -17,22 +17,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OrderCustomerSetMessageBuilder {
    
    
-   private java.time.ZonedDateTime createdAt;
-   
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   
    private String id;
    
    
    private Long version;
    
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+   
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    
    private Long sequenceNumber;
@@ -40,14 +40,14 @@ public final class OrderCustomerSetMessageBuilder {
    
    private com.commercetools.api.models.common.Reference resource;
    
-   @Nullable
-   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-   
    
    private Long resourceVersion;
    
    @Nullable
-   private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
+   private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+   
+   @Nullable
+   private com.commercetools.api.models.customer.CustomerReference customer;
    
    @Nullable
    private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
@@ -56,17 +56,7 @@ public final class OrderCustomerSetMessageBuilder {
    private com.commercetools.api.models.customer.CustomerReference oldCustomer;
    
    @Nullable
-   private com.commercetools.api.models.customer.CustomerReference customer;
-   
-   public OrderCustomerSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-   
-   public OrderCustomerSetMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
+   private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
    
    public OrderCustomerSetMessageBuilder id( final String id) {
       this.id = id;
@@ -78,13 +68,23 @@ public final class OrderCustomerSetMessageBuilder {
       return this;
    }
    
-   public OrderCustomerSetMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   public OrderCustomerSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
+      return this;
+   }
+   
+   public OrderCustomerSetMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
       return this;
    }
    
    public OrderCustomerSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public OrderCustomerSetMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
       return this;
    }
    
@@ -98,18 +98,18 @@ public final class OrderCustomerSetMessageBuilder {
       return this;
    }
    
-   public OrderCustomerSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-      return this;
-   }
-   
    public OrderCustomerSetMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public OrderCustomerSetMessageBuilder oldCustomerGroup(@Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {
-      this.oldCustomerGroup = oldCustomerGroup;
+   public OrderCustomerSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+      return this;
+   }
+   
+   public OrderCustomerSetMessageBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
+      this.customer = customer;
       return this;
    }
    
@@ -123,19 +123,9 @@ public final class OrderCustomerSetMessageBuilder {
       return this;
    }
    
-   public OrderCustomerSetMessageBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
-      this.customer = customer;
+   public OrderCustomerSetMessageBuilder oldCustomerGroup(@Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {
+      this.oldCustomerGroup = oldCustomerGroup;
       return this;
-   }
-   
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
    }
    
    
@@ -148,14 +138,24 @@ public final class OrderCustomerSetMessageBuilder {
       return this.version;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    @Nullable
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    
@@ -168,19 +168,19 @@ public final class OrderCustomerSetMessageBuilder {
       return this.resource;
    }
    
-   @Nullable
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-   
    
    public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
    @Nullable
-   public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup(){
-      return this.oldCustomerGroup;
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.customer.CustomerReference getCustomer(){
+      return this.customer;
    }
    
    @Nullable
@@ -194,12 +194,12 @@ public final class OrderCustomerSetMessageBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.models.customer.CustomerReference getCustomer(){
-      return this.customer;
+   public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup(){
+      return this.oldCustomerGroup;
    }
 
    public OrderCustomerSetMessage build() {
-       return new OrderCustomerSetMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, oldCustomerGroup, customerGroup, oldCustomer, customer);
+       return new OrderCustomerSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customer, customerGroup, oldCustomer, oldCustomerGroup);
    }
    
    public static OrderCustomerSetMessageBuilder of() {
@@ -208,20 +208,20 @@ public final class OrderCustomerSetMessageBuilder {
    
    public static OrderCustomerSetMessageBuilder of(final OrderCustomerSetMessage template) {
       OrderCustomerSetMessageBuilder builder = new OrderCustomerSetMessageBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
+      builder.createdBy = template.getCreatedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
-      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.oldCustomerGroup = template.getOldCustomerGroup();
+      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
+      builder.customer = template.getCustomer();
       builder.customerGroup = template.getCustomerGroup();
       builder.oldCustomer = template.getOldCustomer();
-      builder.customer = template.getCustomer();
+      builder.oldCustomerGroup = template.getOldCustomerGroup();
       return builder;
    }
    

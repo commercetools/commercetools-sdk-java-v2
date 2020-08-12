@@ -31,9 +31,9 @@ public final class FacetResultImpl implements FacetResult {
    FacetResultImpl() {
       this.type = FacetTypes.findEnumViaJsonName("null").get();
    }
-
-
-
+   
+   
+   
    public com.commercetools.api.models.product.FacetTypes getType(){
       return this.type;
    }

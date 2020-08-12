@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError {
 
    private String code;
-
+   
    private String message;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError {
       this.code = "EnumValueIsUsed";
    }
    public EnumValueIsUsedErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }

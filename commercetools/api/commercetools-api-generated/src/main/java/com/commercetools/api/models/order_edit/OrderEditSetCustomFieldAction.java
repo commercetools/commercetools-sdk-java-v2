@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditSetCustomFieldActionImpl.class)
 public interface OrderEditSetCustomFieldAction extends OrderEditUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
-
-
+   
+   
    @JsonProperty("value")
    public JsonNode getValue();
 
    public void setName(final String name);
-
+   
    public void setValue(final JsonNode value);
-
+   
    public static OrderEditSetCustomFieldActionImpl of(){
       return new OrderEditSetCustomFieldActionImpl();
    }
-
+   
 
    public static OrderEditSetCustomFieldActionImpl of(final OrderEditSetCustomFieldAction template) {
       OrderEditSetCustomFieldActionImpl instance = new OrderEditSetCustomFieldActionImpl();

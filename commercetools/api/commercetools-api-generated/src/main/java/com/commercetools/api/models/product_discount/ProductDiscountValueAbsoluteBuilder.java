@@ -14,16 +14,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductDiscountValueAbsoluteBuilder {
-
-
+   
+   
    private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
-
+   
    public ProductDiscountValueAbsoluteBuilder money( final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
       this.money = money;
       return this;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.common.TypedMoney> getMoney(){
       return this.money;
    }
@@ -31,15 +31,15 @@ public final class ProductDiscountValueAbsoluteBuilder {
    public ProductDiscountValueAbsolute build() {
        return new ProductDiscountValueAbsoluteImpl(money);
    }
-
+   
    public static ProductDiscountValueAbsoluteBuilder of() {
       return new ProductDiscountValueAbsoluteBuilder();
    }
-
+   
    public static ProductDiscountValueAbsoluteBuilder of(final ProductDiscountValueAbsolute template) {
       ProductDiscountValueAbsoluteBuilder builder = new ProductDiscountValueAbsoluteBuilder();
       builder.money = template.getMoney();
       return builder;
    }
-
+   
 }

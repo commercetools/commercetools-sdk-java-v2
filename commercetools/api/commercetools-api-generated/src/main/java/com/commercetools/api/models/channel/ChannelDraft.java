@@ -25,25 +25,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelDraftImpl.class)
 public interface ChannelDraft  {
 
-
+   
    @NotNull
    @JsonProperty("key")
    public String getKey();
    /**
    *  <p>If not specified, then channel will get InventorySupply role by default</p>
    */
-
+   
    @JsonProperty("roles")
    public List<ChannelRoleEnum> getRoles();
-
+   
    @Valid
    @JsonProperty("name")
    public LocalizedString getName();
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
-
+   
    @Valid
    @JsonProperty("address")
    public Address getAddress();
@@ -53,39 +53,39 @@ public interface ChannelDraft  {
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
-
+   
    @Valid
    @JsonProperty("geoLocation")
    public GeoJson getGeoLocation();
 
    public void setKey(final String key);
-
+   
    public void setRoles(final List<ChannelRoleEnum> roles);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public void setAddress(final Address address);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public void setGeoLocation(final GeoJson geoLocation);
-
+   
    public static ChannelDraftImpl of(){
       return new ChannelDraftImpl();
    }
-
+   
 
    public static ChannelDraftImpl of(final ChannelDraft template) {
       ChannelDraftImpl instance = new ChannelDraftImpl();
-      instance.setAddress(template.getAddress());
-      instance.setGeoLocation(template.getGeoLocation());
-      instance.setCustom(template.getCustom());
+      instance.setKey(template.getKey());
       instance.setRoles(template.getRoles());
       instance.setName(template.getName());
       instance.setDescription(template.getDescription());
-      instance.setKey(template.getKey());
+      instance.setAddress(template.getAddress());
+      instance.setCustom(template.getCustom());
+      instance.setGeoLocation(template.getGeoLocation());
       return instance;
    }
 

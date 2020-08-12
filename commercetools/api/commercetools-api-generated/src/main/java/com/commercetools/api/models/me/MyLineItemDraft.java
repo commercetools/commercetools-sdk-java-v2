@@ -23,18 +23,18 @@ import java.io.IOException;
 @JsonDeserialize(as = MyLineItemDraftImpl.class)
 public interface MyLineItemDraft  {
 
-
+   
    @NotNull
    @JsonProperty("productId")
    public String getProductId();
-
+   
    @NotNull
    @JsonProperty("variantId")
    public Long getVariantId();
-
+   
    @NotNull
    @JsonProperty("quantity")
-   public Integer getQuantity();
+   public Double getQuantity();
    /**
    *  <p>By providing supply channel information, you can unique identify
    *  inventory entries that should be reserved.
@@ -62,42 +62,42 @@ public interface MyLineItemDraft  {
    @Valid
    @JsonProperty("shippingDetails")
    public ItemShippingDetailsDraft getShippingDetails();
-
-
+   
+   
    @JsonProperty("sku")
    public String getSku();
 
    public void setProductId(final String productId);
-
+   
    public void setVariantId(final Long variantId);
-
-   public void setQuantity(final Integer quantity);
-
+   
+   public void setQuantity(final Double quantity);
+   
    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
+   
    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
-
+   
    public void setSku(final String sku);
-
+   
    public static MyLineItemDraftImpl of(){
       return new MyLineItemDraftImpl();
    }
-
+   
 
    public static MyLineItemDraftImpl of(final MyLineItemDraft template) {
       MyLineItemDraftImpl instance = new MyLineItemDraftImpl();
-      instance.setQuantity(template.getQuantity());
-      instance.setShippingDetails(template.getShippingDetails());
       instance.setProductId(template.getProductId());
-      instance.setCustom(template.getCustom());
-      instance.setSupplyChannel(template.getSupplyChannel());
       instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
+      instance.setQuantity(template.getQuantity());
+      instance.setSupplyChannel(template.getSupplyChannel());
       instance.setDistributionChannel(template.getDistributionChannel());
+      instance.setCustom(template.getCustom());
+      instance.setShippingDetails(template.getShippingDetails());
+      instance.setSku(template.getSku());
       return instance;
    }
 

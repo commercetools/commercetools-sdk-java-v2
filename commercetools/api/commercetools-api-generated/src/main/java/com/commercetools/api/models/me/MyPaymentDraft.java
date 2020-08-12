@@ -32,11 +32,11 @@ public interface MyPaymentDraft  {
    @Valid
    @JsonProperty("amountPlanned")
    public Money getAmountPlanned();
-
+   
    @Valid
    @JsonProperty("paymentMethodInfo")
    public PaymentMethodInfo getPaymentMethodInfo();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFieldsDraft getCustom();
@@ -49,23 +49,23 @@ public interface MyPaymentDraft  {
    public MyTransactionDraft getTransaction();
 
    public void setAmountPlanned(final Money amountPlanned);
-
+   
    public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public void setTransaction(final MyTransactionDraft transaction);
-
+   
    public static MyPaymentDraftImpl of(){
       return new MyPaymentDraftImpl();
    }
-
+   
 
    public static MyPaymentDraftImpl of(final MyPaymentDraft template) {
       MyPaymentDraftImpl instance = new MyPaymentDraftImpl();
+      instance.setAmountPlanned(template.getAmountPlanned());
       instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
       instance.setCustom(template.getCustom());
-      instance.setAmountPlanned(template.getAmountPlanned());
       instance.setTransaction(template.getTransaction());
       return instance;
    }

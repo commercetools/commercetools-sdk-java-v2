@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ShippingRateTierType {
 
-
+  
   @JsonProperty("CartValue")
   CART_VALUE("CartValue"),
-
-
+  
+  
   @JsonProperty("CartClassification")
   CART_CLASSIFICATION("CartClassification"),
-
-
+  
+  
   @JsonProperty("CartScore")
   CART_SCORE("CartScore");
 

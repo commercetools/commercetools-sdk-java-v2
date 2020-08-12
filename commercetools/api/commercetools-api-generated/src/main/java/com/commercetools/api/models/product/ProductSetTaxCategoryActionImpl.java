@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
    @JsonCreator
@@ -33,14 +33,14 @@ public final class ProductSetTaxCategoryActionImpl implements ProductSetTaxCateg
       this.action = "setTaxCategory";
    }
    public ProductSetTaxCategoryActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
    */

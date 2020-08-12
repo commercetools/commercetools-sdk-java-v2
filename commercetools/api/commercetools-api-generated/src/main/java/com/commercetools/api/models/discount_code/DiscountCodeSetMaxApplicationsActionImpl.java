@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DiscountCodeSetMaxApplicationsActionImpl implements DiscountCodeSetMaxApplicationsAction {
 
    private String action;
-
+   
    private Long maxApplications;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class DiscountCodeSetMaxApplicationsActionImpl implements DiscountC
       this.action = "setMaxApplications";
    }
    public DiscountCodeSetMaxApplicationsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If the <code>maxApplications</code> parameter is not included, the field will be emptied.</p>
    */

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartRecalculateActionImpl implements CartRecalculateAction {
 
    private String action;
-
+   
    private Boolean updateProductData;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class CartRecalculateActionImpl implements CartRecalculateAction {
       this.action = "recalculate";
    }
    public CartRecalculateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If set to <code>true</code>, the line item product data (<code>name</code>, <code>variant</code> and <code>productType</code>) will also be updated.
    *  If set to <code>false</code>,

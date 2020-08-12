@@ -29,11 +29,11 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
    public String getName();
 
    public void setName(final String name);
-
+   
    public static ProductTypeRemoveAttributeDefinitionActionImpl of(){
       return new ProductTypeRemoveAttributeDefinitionActionImpl();
    }
-
+   
 
    public static ProductTypeRemoveAttributeDefinitionActionImpl of(final ProductTypeRemoveAttributeDefinitionAction template) {
       ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();

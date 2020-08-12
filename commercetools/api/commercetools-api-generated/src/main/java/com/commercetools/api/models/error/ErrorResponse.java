@@ -59,11 +59,11 @@ public interface ErrorResponse  {
 
    public static ErrorResponseImpl of(final ErrorResponse template) {
       ErrorResponseImpl instance = new ErrorResponseImpl();
-      instance.setErrorDescription(template.getErrorDescription());
-      instance.setError(template.getError());
-      instance.setMessage(template.getMessage());
-      instance.setErrors(template.getErrors());
       instance.setStatusCode(template.getStatusCode());
+      instance.setMessage(template.getMessage());
+      instance.setError(template.getError());
+      instance.setErrorDescription(template.getErrorDescription());
+      instance.setErrors(template.getErrors());
       return instance;
    }
 

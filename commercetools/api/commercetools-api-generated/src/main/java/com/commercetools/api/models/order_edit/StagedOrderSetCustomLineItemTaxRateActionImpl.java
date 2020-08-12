@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderSetCustomLineItemTaxRateActionImpl implements StagedOrderSetCustomLineItemTaxRateAction {
 
    private String action;
-
+   
    private String customLineItemId;
-
+   
    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class StagedOrderSetCustomLineItemTaxRateActionImpl implements Stag
       this.action = "setCustomLineItemTaxRate";
    }
    public StagedOrderSetCustomLineItemTaxRateActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getCustomLineItemId(){
       return this.customLineItemId;
    }
-
-
+   
+   
    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
       return this.externalTaxRate;
    }
@@ -57,7 +57,7 @@ public final class StagedOrderSetCustomLineItemTaxRateActionImpl implements Stag
    public void setCustomLineItemId(final String customLineItemId){
       this.customLineItemId = customLineItemId;
    }
-
+   
    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
       this.externalTaxRate = externalTaxRate;
    }

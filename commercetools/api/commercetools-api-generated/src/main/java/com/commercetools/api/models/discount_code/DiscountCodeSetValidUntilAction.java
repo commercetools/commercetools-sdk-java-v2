@@ -25,16 +25,16 @@ public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateActio
    /**
    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
    */
-
+   
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();
 
    public void setValidUntil(final ZonedDateTime validUntil);
-
+   
    public static DiscountCodeSetValidUntilActionImpl of(){
       return new DiscountCodeSetValidUntilActionImpl();
    }
-
+   
 
    public static DiscountCodeSetValidUntilActionImpl of(final DiscountCodeSetValidUntilAction template) {
       DiscountCodeSetValidUntilActionImpl instance = new DiscountCodeSetValidUntilActionImpl();

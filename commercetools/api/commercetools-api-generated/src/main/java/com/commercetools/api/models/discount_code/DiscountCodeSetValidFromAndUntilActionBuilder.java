@@ -16,33 +16,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class DiscountCodeSetValidFromAndUntilActionBuilder {
    
    @Nullable
-   private java.time.ZonedDateTime validUntil;
-   
-   @Nullable
    private java.time.ZonedDateTime validFrom;
    
-   public DiscountCodeSetValidFromAndUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
-      this.validUntil = validUntil;
-      return this;
-   }
+   @Nullable
+   private java.time.ZonedDateTime validUntil;
    
    public DiscountCodeSetValidFromAndUntilActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
       this.validFrom = validFrom;
       return this;
    }
    
-   @Nullable
-   public java.time.ZonedDateTime getValidUntil(){
-      return this.validUntil;
+   public DiscountCodeSetValidFromAndUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
+      this.validUntil = validUntil;
+      return this;
    }
    
    @Nullable
    public java.time.ZonedDateTime getValidFrom(){
       return this.validFrom;
    }
+   
+   @Nullable
+   public java.time.ZonedDateTime getValidUntil(){
+      return this.validUntil;
+   }
 
    public DiscountCodeSetValidFromAndUntilAction build() {
-       return new DiscountCodeSetValidFromAndUntilActionImpl(validUntil, validFrom);
+       return new DiscountCodeSetValidFromAndUntilActionImpl(validFrom, validUntil);
    }
    
    public static DiscountCodeSetValidFromAndUntilActionBuilder of() {
@@ -51,8 +51,8 @@ public final class DiscountCodeSetValidFromAndUntilActionBuilder {
    
    public static DiscountCodeSetValidFromAndUntilActionBuilder of(final DiscountCodeSetValidFromAndUntilAction template) {
       DiscountCodeSetValidFromAndUntilActionBuilder builder = new DiscountCodeSetValidFromAndUntilActionBuilder();
-      builder.validUntil = template.getValidUntil();
       builder.validFrom = template.getValidFrom();
+      builder.validUntil = template.getValidUntil();
       return builder;
    }
    

@@ -14,6 +14,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CartPagedQueryResponseBuilder {
    
+   
+   private Long limit;
+   
+   
+   private Long count;
+   
    @Nullable
    private Long total;
    
@@ -21,13 +27,17 @@ public final class CartPagedQueryResponseBuilder {
    private Long offset;
    
    
-   private Long count;
-   
-   
-   private Long limit;
-   
-   
    private java.util.List<com.commercetools.api.models.cart.Cart> results;
+   
+   public CartPagedQueryResponseBuilder limit( final Long limit) {
+      this.limit = limit;
+      return this;
+   }
+   
+   public CartPagedQueryResponseBuilder count( final Long count) {
+      this.count = count;
+      return this;
+   }
    
    public CartPagedQueryResponseBuilder total(@Nullable final Long total) {
       this.total = total;
@@ -39,19 +49,19 @@ public final class CartPagedQueryResponseBuilder {
       return this;
    }
    
-   public CartPagedQueryResponseBuilder count( final Long count) {
-      this.count = count;
-      return this;
-   }
-   
-   public CartPagedQueryResponseBuilder limit( final Long limit) {
-      this.limit = limit;
-      return this;
-   }
-   
    public CartPagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.models.cart.Cart> results) {
       this.results = results;
       return this;
+   }
+   
+   
+   public Long getLimit(){
+      return this.limit;
+   }
+   
+   
+   public Long getCount(){
+      return this.count;
    }
    
    @Nullable
@@ -65,22 +75,12 @@ public final class CartPagedQueryResponseBuilder {
    }
    
    
-   public Long getCount(){
-      return this.count;
-   }
-   
-   
-   public Long getLimit(){
-      return this.limit;
-   }
-   
-   
    public java.util.List<com.commercetools.api.models.cart.Cart> getResults(){
       return this.results;
    }
 
    public CartPagedQueryResponse build() {
-       return new CartPagedQueryResponseImpl(total, offset, count, limit, results);
+       return new CartPagedQueryResponseImpl(limit, count, total, offset, results);
    }
    
    public static CartPagedQueryResponseBuilder of() {
@@ -89,10 +89,10 @@ public final class CartPagedQueryResponseBuilder {
    
    public static CartPagedQueryResponseBuilder of(final CartPagedQueryResponse template) {
       CartPagedQueryResponseBuilder builder = new CartPagedQueryResponseBuilder();
+      builder.limit = template.getLimit();
+      builder.count = template.getCount();
       builder.total = template.getTotal();
       builder.offset = template.getOffset();
-      builder.count = template.getCount();
-      builder.limit = template.getLimit();
       builder.results = template.getResults();
       return builder;
    }

@@ -13,19 +13,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum AttributeConstraintEnum {
 
-
+  
   @JsonProperty("None")
   NONE("None"),
-
-
+  
+  
   @JsonProperty("Unique")
   UNIQUE("Unique"),
-
-
+  
+  
   @JsonProperty("CombinationUnique")
   COMBINATION_UNIQUE("CombinationUnique"),
-
-
+  
+  
   @JsonProperty("SameForAll")
   SAME_FOR_ALL("SameForAll");
 

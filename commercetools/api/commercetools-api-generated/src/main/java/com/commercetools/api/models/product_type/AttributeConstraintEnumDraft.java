@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum AttributeConstraintEnumDraft {
 
-
+  
   @JsonProperty("None")
   NONE("None");
 

@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeChangeDescriptionActionImpl implements ProductTypeChangeDescriptionAction {
 
    private String action;
-
+   
    private String description;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ProductTypeChangeDescriptionActionImpl implements ProductType
       this.action = "changeDescription";
    }
    public ProductTypeChangeDescriptionActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getDescription(){
       return this.description;
    }

@@ -14,16 +14,16 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CustomerAddAddressActionBuilder {
-
-
+   
+   
    private com.commercetools.api.models.common.Address address;
-
+   
    public CustomerAddAddressActionBuilder address( final com.commercetools.api.models.common.Address address) {
       this.address = address;
       return this;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.Address getAddress(){
       return this.address;
    }
@@ -31,15 +31,15 @@ public final class CustomerAddAddressActionBuilder {
    public CustomerAddAddressAction build() {
        return new CustomerAddAddressActionImpl(address);
    }
-
+   
    public static CustomerAddAddressActionBuilder of() {
       return new CustomerAddAddressActionBuilder();
    }
-
+   
    public static CustomerAddAddressActionBuilder of(final CustomerAddAddressAction template) {
       CustomerAddAddressActionBuilder builder = new CustomerAddAddressActionBuilder();
       builder.address = template.getAddress();
       return builder;
    }
-
+   
 }

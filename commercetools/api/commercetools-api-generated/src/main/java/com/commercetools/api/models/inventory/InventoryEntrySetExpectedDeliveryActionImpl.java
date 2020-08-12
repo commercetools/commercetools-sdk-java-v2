@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InventoryEntrySetExpectedDeliveryActionImpl implements InventoryEntrySetExpectedDeliveryAction {
 
    private String action;
-
+   
    private java.time.ZonedDateTime expectedDelivery;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class InventoryEntrySetExpectedDeliveryActionImpl implements Invent
       this.action = "setExpectedDelivery";
    }
    public InventoryEntrySetExpectedDeliveryActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.time.ZonedDateTime getExpectedDelivery(){
       return this.expectedDelivery;
    }

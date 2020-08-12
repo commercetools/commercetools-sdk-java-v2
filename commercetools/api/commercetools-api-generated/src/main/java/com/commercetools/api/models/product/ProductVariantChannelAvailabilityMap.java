@@ -21,7 +21,7 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantChannelAvailabilityMapImpl.class)
 public interface ProductVariantChannelAvailabilityMap  {
 
-
+   
    @NotNull
    @Valid
    @JsonAnyGetter
@@ -29,11 +29,11 @@ public interface ProductVariantChannelAvailabilityMap  {
 
    @JsonAnySetter
    public void setValue(String key, ProductVariantChannelAvailability value);
-
+   
    public static ProductVariantChannelAvailabilityMapImpl of(){
       return new ProductVariantChannelAvailabilityMapImpl();
    }
-
+   
 
    public static ProductVariantChannelAvailabilityMapImpl of(final ProductVariantChannelAvailabilityMap template) {
       ProductVariantChannelAvailabilityMapImpl instance = new ProductVariantChannelAvailabilityMapImpl();

@@ -26,10 +26,10 @@ public interface TaxRate  {
    *  The external tax rates in a
    *  Cart do not contain an <code>id</code>.</p>
    */
-
+   
    @JsonProperty("id")
    public String getId();
-
+   
    @NotNull
    @JsonProperty("name")
    public String getName();
@@ -39,8 +39,8 @@ public interface TaxRate  {
    */
    @NotNull
    @JsonProperty("amount")
-   public Integer getAmount();
-
+   public Double getAmount();
+   
    @NotNull
    @JsonProperty("includedInPrice")
    public Boolean getIncludedInPrice();
@@ -53,7 +53,7 @@ public interface TaxRate  {
    /**
    *  <p>The state in the country</p>
    */
-
+   
    @JsonProperty("state")
    public String getState();
    /**
@@ -66,32 +66,32 @@ public interface TaxRate  {
    public List<SubRate> getSubRates();
 
    public void setId(final String id);
-
+   
    public void setName(final String name);
-
-   public void setAmount(final Integer amount);
-
+   
+   public void setAmount(final Double amount);
+   
    public void setIncludedInPrice(final Boolean includedInPrice);
-
+   
    public void setCountry(final String country);
-
+   
    public void setState(final String state);
-
+   
    public void setSubRates(final List<SubRate> subRates);
-
+   
    public static TaxRateImpl of(){
       return new TaxRateImpl();
    }
-
+   
 
    public static TaxRateImpl of(final TaxRate template) {
       TaxRateImpl instance = new TaxRateImpl();
-      instance.setCountry(template.getCountry());
+      instance.setId(template.getId());
+      instance.setName(template.getName());
       instance.setAmount(template.getAmount());
       instance.setIncludedInPrice(template.getIncludedInPrice());
-      instance.setName(template.getName());
+      instance.setCountry(template.getCountry());
       instance.setState(template.getState());
-      instance.setId(template.getId());
       instance.setSubRates(template.getSubRates());
       return instance;
    }

@@ -48,9 +48,9 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
 
    public static ProductSetDiscountedPriceActionImpl of(final ProductSetDiscountedPriceAction template) {
       ProductSetDiscountedPriceActionImpl instance = new ProductSetDiscountedPriceActionImpl();
-      instance.setDiscounted(template.getDiscounted());
-      instance.setStaged(template.getStaged());
       instance.setPriceId(template.getPriceId());
+      instance.setStaged(template.getStaged());
+      instance.setDiscounted(template.getDiscounted());
       return instance;
    }
 

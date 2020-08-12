@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface DeliveryPlatformFormat extends DeliveryFormat {
 
 
-
+   
    public static DeliveryPlatformFormatImpl of(){
       return new DeliveryPlatformFormatImpl();
    }
-
+   
 
    public static DeliveryPlatformFormatImpl of(final DeliveryPlatformFormat template) {
       DeliveryPlatformFormatImpl instance = new DeliveryPlatformFormatImpl();

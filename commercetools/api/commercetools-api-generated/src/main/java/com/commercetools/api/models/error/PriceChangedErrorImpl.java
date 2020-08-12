@@ -23,11 +23,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PriceChangedErrorImpl implements PriceChangedError {
 
    private String code;
-
+   
    private String message;
-
+   
    private java.util.List<String> lineItems;
-
+   
    private Boolean shipping;
 
    @JsonCreator
@@ -38,25 +38,25 @@ public final class PriceChangedErrorImpl implements PriceChangedError {
       this.code = "PriceChanged";
    }
    public PriceChangedErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }
-
-
+   
+   
    public java.util.List<String> getLineItems(){
       return this.lineItems;
    }
-
-
+   
+   
    public Boolean getShipping(){
       return this.shipping;
    }
@@ -64,11 +64,11 @@ public final class PriceChangedErrorImpl implements PriceChangedError {
    public void setMessage(final String message){
       this.message = message;
    }
-
+   
    public void setLineItems(final java.util.List<String> lineItems){
       this.lineItems = lineItems;
    }
-
+   
    public void setShipping(final Boolean shipping){
       this.shipping = shipping;
    }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.type.FieldDefinition fieldDefinition;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefin
       this.action = "addFieldDefinition";
    }
    public TypeAddFieldDefinitionActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.type.FieldDefinition getFieldDefinition(){
       return this.fieldDefinition;
    }

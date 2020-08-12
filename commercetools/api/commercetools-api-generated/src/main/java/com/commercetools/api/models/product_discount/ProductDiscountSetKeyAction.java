@@ -25,16 +25,16 @@ public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction
    *  <p>The key to set.
    *  If you provide a <code>null</code> value or do not set this field at all, the existing <code>key</code> field is removed.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static ProductDiscountSetKeyActionImpl of(){
       return new ProductDiscountSetKeyActionImpl();
    }
-
+   
 
    public static ProductDiscountSetKeyActionImpl of(final ProductDiscountSetKeyAction template) {
       ProductDiscountSetKeyActionImpl instance = new ProductDiscountSetKeyActionImpl();

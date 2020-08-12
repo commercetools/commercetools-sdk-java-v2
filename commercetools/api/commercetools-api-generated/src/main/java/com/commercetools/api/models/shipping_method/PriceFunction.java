@@ -27,24 +27,24 @@ public interface PriceFunction  {
    @NotNull
    @JsonProperty("currencyCode")
    public String getCurrencyCode();
-
+   
    @NotNull
    @JsonProperty("function")
    public String getFunction();
 
    public void setCurrencyCode(final String currencyCode);
-
+   
    public void setFunction(final String function);
-
+   
    public static PriceFunctionImpl of(){
       return new PriceFunctionImpl();
    }
-
+   
 
    public static PriceFunctionImpl of(final PriceFunction template) {
       PriceFunctionImpl instance = new PriceFunctionImpl();
-      instance.setFunction(template.getFunction());
       instance.setCurrencyCode(template.getCurrencyCode());
+      instance.setFunction(template.getFunction());
       return instance;
    }
 

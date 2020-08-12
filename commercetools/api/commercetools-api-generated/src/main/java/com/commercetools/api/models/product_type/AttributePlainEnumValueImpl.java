@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributePlainEnumValueImpl implements AttributePlainEnumValue {
 
+   private String key;
+   
    private String label;
 
-   private String key;
-
    @JsonCreator
-   AttributePlainEnumValueImpl(@JsonProperty("label") final String label, @JsonProperty("key") final String key) {
-      this.label = label;
+   AttributePlainEnumValueImpl(@JsonProperty("key") final String key, @JsonProperty("label") final String label) {
       this.key = key;
+      this.label = label;
    }
    public AttributePlainEnumValueImpl() {
-
+      
    }
-
-
+   
+   
+   public String getKey(){
+      return this.key;
+   }
+   
+   
    public String getLabel(){
       return this.label;
    }
 
-
-   public String getKey(){
-      return this.key;
-   }
-
-   public void setLabel(final String label){
-      this.label = label;
-   }
-
    public void setKey(final String key){
       this.key = key;
+   }
+   
+   public void setLabel(final String label){
+      this.label = label;
    }
 
 }

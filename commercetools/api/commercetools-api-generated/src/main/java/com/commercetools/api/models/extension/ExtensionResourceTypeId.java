@@ -13,19 +13,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ExtensionResourceTypeId {
 
-
+  
   @JsonProperty("cart")
   CART("cart"),
-
-
+  
+  
   @JsonProperty("order")
   ORDER("order"),
-
-
+  
+  
   @JsonProperty("payment")
   PAYMENT("payment"),
-
-
+  
+  
   @JsonProperty("customer")
   CUSTOMER("customer");
 

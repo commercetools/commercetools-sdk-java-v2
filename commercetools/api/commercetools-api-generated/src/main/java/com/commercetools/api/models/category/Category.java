@@ -2,10 +2,10 @@ package com.commercetools.api.models.category;
 
 import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.common.Asset;
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.category.CategoryImpl;
@@ -26,7 +26,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = CategoryImpl.class)
-public interface Category extends LoggedResource {
+public interface Category extends BaseResource {
 
    /**
    *  <p>The unique ID of the category.</p>
@@ -40,11 +40,11 @@ public interface Category extends LoggedResource {
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -60,7 +60,7 @@ public interface Category extends LoggedResource {
    @Valid
    @JsonProperty("createdBy")
    public CreatedBy getCreatedBy();
-
+   
    @NotNull
    @Valid
    @JsonProperty("name")
@@ -73,7 +73,7 @@ public interface Category extends LoggedResource {
    @Valid
    @JsonProperty("slug")
    public LocalizedString getSlug();
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
@@ -96,23 +96,23 @@ public interface Category extends LoggedResource {
    @NotNull
    @JsonProperty("orderHint")
    public String getOrderHint();
-
-
+   
+   
    @JsonProperty("externalId")
    public String getExternalId();
-
+   
    @Valid
    @JsonProperty("metaTitle")
    public LocalizedString getMetaTitle();
-
+   
    @Valid
    @JsonProperty("metaDescription")
    public LocalizedString getMetaDescription();
-
+   
    @Valid
    @JsonProperty("metaKeywords")
    public LocalizedString getMetaKeywords();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
@@ -125,74 +125,74 @@ public interface Category extends LoggedResource {
    /**
    *  <p>User-specific unique identifier for the category.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setCreatedAt(final ZonedDateTime createdAt);
-
+   
    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+   
    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+   
    public void setCreatedBy(final CreatedBy createdBy);
-
+   
    public void setName(final LocalizedString name);
-
+   
    public void setSlug(final LocalizedString slug);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public void setAncestors(final List<CategoryReference> ancestors);
-
+   
    public void setParent(final CategoryReference parent);
-
+   
    public void setOrderHint(final String orderHint);
-
+   
    public void setExternalId(final String externalId);
-
+   
    public void setMetaTitle(final LocalizedString metaTitle);
-
+   
    public void setMetaDescription(final LocalizedString metaDescription);
-
+   
    public void setMetaKeywords(final LocalizedString metaKeywords);
-
+   
    public void setCustom(final CustomFields custom);
-
+   
    public void setAssets(final List<Asset> assets);
-
+   
    public void setKey(final String key);
-
+   
    public static CategoryImpl of(){
       return new CategoryImpl();
    }
-
+   
 
    public static CategoryImpl of(final Category template) {
       CategoryImpl instance = new CategoryImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setParent(template.getParent());
-      instance.setCustom(template.getCustom());
-      instance.setExternalId(template.getExternalId());
-      instance.setDescription(template.getDescription());
-      instance.setMetaDescription(template.getMetaDescription());
-      instance.setAssets(template.getAssets());
-      instance.setMetaKeywords(template.getMetaKeywords());
-      instance.setOrderHint(template.getOrderHint());
-      instance.setMetaTitle(template.getMetaTitle());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setName(template.getName());
-      instance.setAncestors(template.getAncestors());
-      instance.setKey(template.getKey());
       instance.setSlug(template.getSlug());
+      instance.setDescription(template.getDescription());
+      instance.setAncestors(template.getAncestors());
+      instance.setParent(template.getParent());
+      instance.setOrderHint(template.getOrderHint());
+      instance.setExternalId(template.getExternalId());
+      instance.setMetaTitle(template.getMetaTitle());
+      instance.setMetaDescription(template.getMetaDescription());
+      instance.setMetaKeywords(template.getMetaKeywords());
+      instance.setCustom(template.getCustom());
+      instance.setAssets(template.getAssets());
+      instance.setKey(template.getKey());
       return instance;
    }
 

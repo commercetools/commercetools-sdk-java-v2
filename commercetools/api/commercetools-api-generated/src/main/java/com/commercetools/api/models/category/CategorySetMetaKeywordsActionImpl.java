@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategorySetMetaKeywordsActionImpl implements CategorySetMetaKeywordsAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.common.LocalizedString metaKeywords;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CategorySetMetaKeywordsActionImpl implements CategorySetMetaK
       this.action = "setMetaKeywords";
    }
    public CategorySetMetaKeywordsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
       return this.metaKeywords;
    }

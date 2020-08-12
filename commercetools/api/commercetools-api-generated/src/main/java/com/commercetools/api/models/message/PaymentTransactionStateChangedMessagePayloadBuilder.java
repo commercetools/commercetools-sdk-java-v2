@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class PaymentTransactionStateChangedMessagePayloadBuilder {
-
-
-   private com.commercetools.api.models.payment.TransactionState state;
-
-
+   
+   
    private String transactionId;
-
-   public PaymentTransactionStateChangedMessagePayloadBuilder state( final com.commercetools.api.models.payment.TransactionState state) {
-      this.state = state;
-      return this;
-   }
-
+   
+   
+   private com.commercetools.api.models.payment.TransactionState state;
+   
    public PaymentTransactionStateChangedMessagePayloadBuilder transactionId( final String transactionId) {
       this.transactionId = transactionId;
       return this;
    }
-
-
+   
+   public PaymentTransactionStateChangedMessagePayloadBuilder state( final com.commercetools.api.models.payment.TransactionState state) {
+      this.state = state;
+      return this;
+   }
+   
+   
+   public String getTransactionId(){
+      return this.transactionId;
+   }
+   
+   
    public com.commercetools.api.models.payment.TransactionState getState(){
       return this.state;
    }
 
-
-   public String getTransactionId(){
-      return this.transactionId;
-   }
-
    public PaymentTransactionStateChangedMessagePayload build() {
-       return new PaymentTransactionStateChangedMessagePayloadImpl(state, transactionId);
+       return new PaymentTransactionStateChangedMessagePayloadImpl(transactionId, state);
    }
-
+   
    public static PaymentTransactionStateChangedMessagePayloadBuilder of() {
       return new PaymentTransactionStateChangedMessagePayloadBuilder();
    }
-
+   
    public static PaymentTransactionStateChangedMessagePayloadBuilder of(final PaymentTransactionStateChangedMessagePayload template) {
       PaymentTransactionStateChangedMessagePayloadBuilder builder = new PaymentTransactionStateChangedMessagePayloadBuilder();
-      builder.state = template.getState();
       builder.transactionId = template.getTransactionId();
+      builder.state = template.getState();
       return builder;
    }
-
+   
 }

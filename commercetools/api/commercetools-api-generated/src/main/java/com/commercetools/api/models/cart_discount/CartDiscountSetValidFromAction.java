@@ -25,16 +25,16 @@ public interface CartDiscountSetValidFromAction extends CartDiscountUpdateAction
    /**
    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
    */
-
+   
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
 
    public void setValidFrom(final ZonedDateTime validFrom);
-
+   
    public static CartDiscountSetValidFromActionImpl of(){
       return new CartDiscountSetValidFromActionImpl();
    }
-
+   
 
    public static CartDiscountSetValidFromActionImpl of(final CartDiscountSetValidFromAction template) {
       CartDiscountSetValidFromActionImpl instance = new CartDiscountSetValidFromActionImpl();

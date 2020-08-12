@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategorySetExternalIdActionImpl implements CategorySetExternalIdAction {
 
    private String action;
-
+   
    private String externalId;
 
    @JsonCreator
@@ -32,14 +32,14 @@ public final class CategorySetExternalIdActionImpl implements CategorySetExterna
       this.action = "setExternalId";
    }
    public CategorySetExternalIdActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
+   
    /**
    *  <p>If not defined, the external ID is unset.</p>
    */

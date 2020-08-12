@@ -1,8 +1,8 @@
 package com.commercetools.api.models.tax_category;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.tax_category.TaxRate;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.tax_category.TaxCategory;
@@ -19,25 +19,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class TaxCategoryBuilder {
    
    
-   private java.time.ZonedDateTime createdAt;
-   
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   
    private String id;
    
    
    private Long version;
    
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
    
-   
-   private java.util.List<com.commercetools.api.models.tax_category.TaxRate> rates;
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    
    private String name;
@@ -45,18 +42,11 @@ public final class TaxCategoryBuilder {
    @Nullable
    private String description;
    
+   
+   private java.util.List<com.commercetools.api.models.tax_category.TaxRate> rates;
+   
    @Nullable
    private String key;
-   
-   public TaxCategoryBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
-   
-   public TaxCategoryBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
    
    public TaxCategoryBuilder id( final String id) {
       this.id = id;
@@ -68,8 +58,13 @@ public final class TaxCategoryBuilder {
       return this;
    }
    
-   public TaxCategoryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   public TaxCategoryBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
+      return this;
+   }
+   
+   public TaxCategoryBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
       return this;
    }
    
@@ -78,8 +73,8 @@ public final class TaxCategoryBuilder {
       return this;
    }
    
-   public TaxCategoryBuilder rates( final java.util.List<com.commercetools.api.models.tax_category.TaxRate> rates) {
-      this.rates = rates;
+   public TaxCategoryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
       return this;
    }
    
@@ -93,19 +88,14 @@ public final class TaxCategoryBuilder {
       return this;
    }
    
-   public TaxCategoryBuilder key(@Nullable final String key) {
-      this.key = key;
+   public TaxCategoryBuilder rates( final java.util.List<com.commercetools.api.models.tax_category.TaxRate> rates) {
+      this.rates = rates;
       return this;
    }
    
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
+   public TaxCategoryBuilder key(@Nullable final String key) {
+      this.key = key;
+      return this;
    }
    
    
@@ -118,9 +108,14 @@ public final class TaxCategoryBuilder {
       return this.version;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    @Nullable
@@ -128,9 +123,9 @@ public final class TaxCategoryBuilder {
       return this.lastModifiedBy;
    }
    
-   
-   public java.util.List<com.commercetools.api.models.tax_category.TaxRate> getRates(){
-      return this.rates;
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    
@@ -143,13 +138,18 @@ public final class TaxCategoryBuilder {
       return this.description;
    }
    
+   
+   public java.util.List<com.commercetools.api.models.tax_category.TaxRate> getRates(){
+      return this.rates;
+   }
+   
    @Nullable
    public String getKey(){
       return this.key;
    }
 
    public TaxCategory build() {
-       return new TaxCategoryImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, rates, name, description, key);
+       return new TaxCategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, description, rates, key);
    }
    
    public static TaxCategoryBuilder of() {
@@ -158,15 +158,15 @@ public final class TaxCategoryBuilder {
    
    public static TaxCategoryBuilder of(final TaxCategory template) {
       TaxCategoryBuilder builder = new TaxCategoryBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
-      builder.rates = template.getRates();
+      builder.createdBy = template.getCreatedBy();
       builder.name = template.getName();
       builder.description = template.getDescription();
+      builder.rates = template.getRates();
       builder.key = template.getKey();
       return builder;
    }

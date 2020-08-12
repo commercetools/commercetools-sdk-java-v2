@@ -14,29 +14,29 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderSetReturnPaymentStateActionBuilder {
-
-
+   
+   
    private String returnItemId;
-
-
+   
+   
    private com.commercetools.api.models.order.ReturnPaymentState paymentState;
-
+   
    public OrderSetReturnPaymentStateActionBuilder returnItemId( final String returnItemId) {
       this.returnItemId = returnItemId;
       return this;
    }
-
+   
    public OrderSetReturnPaymentStateActionBuilder paymentState( final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
       this.paymentState = paymentState;
       return this;
    }
-
-
+   
+   
    public String getReturnItemId(){
       return this.returnItemId;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.ReturnPaymentState getPaymentState(){
       return this.paymentState;
    }
@@ -44,16 +44,16 @@ public final class OrderSetReturnPaymentStateActionBuilder {
    public OrderSetReturnPaymentStateAction build() {
        return new OrderSetReturnPaymentStateActionImpl(returnItemId, paymentState);
    }
-
+   
    public static OrderSetReturnPaymentStateActionBuilder of() {
       return new OrderSetReturnPaymentStateActionBuilder();
    }
-
+   
    public static OrderSetReturnPaymentStateActionBuilder of(final OrderSetReturnPaymentStateAction template) {
       OrderSetReturnPaymentStateActionBuilder builder = new OrderSetReturnPaymentStateActionBuilder();
       builder.returnItemId = template.getReturnItemId();
       builder.paymentState = template.getPaymentState();
       return builder;
    }
-
+   
 }

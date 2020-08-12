@@ -21,25 +21,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class MyCartAddLineItemActionBuilder {
    
    @Nullable
-   private Integer quantity;
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   
+   @Nullable
+   private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
    
    @Nullable
    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
    
    @Nullable
-   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-   
-   @Nullable
    private String productId;
-   
-   @Nullable
-   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-   
-   @Nullable
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-   
-   @Nullable
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
    
    @Nullable
    private Long variantId;
@@ -48,13 +39,27 @@ public final class MyCartAddLineItemActionBuilder {
    private String sku;
    
    @Nullable
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+   private Double quantity;
+   
+   @Nullable
+   private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
    
    @Nullable
    private com.commercetools.api.models.common.Money externalPrice;
    
-   public MyCartAddLineItemActionBuilder quantity(@Nullable final Integer quantity) {
-      this.quantity = quantity;
+   @Nullable
+   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
+   
+   @Nullable
+   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+   
+   public MyCartAddLineItemActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+      this.custom = custom;
+      return this;
+   }
+   
+   public MyCartAddLineItemActionBuilder distributionChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+      this.distributionChannel = distributionChannel;
       return this;
    }
    
@@ -63,28 +68,8 @@ public final class MyCartAddLineItemActionBuilder {
       return this;
    }
    
-   public MyCartAddLineItemActionBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
-      this.shippingDetails = shippingDetails;
-      return this;
-   }
-   
    public MyCartAddLineItemActionBuilder productId(@Nullable final String productId) {
       this.productId = productId;
-      return this;
-   }
-   
-   public MyCartAddLineItemActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-      this.externalTotalPrice = externalTotalPrice;
-      return this;
-   }
-   
-   public MyCartAddLineItemActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-      this.custom = custom;
-      return this;
-   }
-   
-   public MyCartAddLineItemActionBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
-      this.supplyChannel = supplyChannel;
       return this;
    }
    
@@ -98,8 +83,13 @@ public final class MyCartAddLineItemActionBuilder {
       return this;
    }
    
-   public MyCartAddLineItemActionBuilder distributionChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
-      this.distributionChannel = distributionChannel;
+   public MyCartAddLineItemActionBuilder quantity(@Nullable final Double quantity) {
+      this.quantity = quantity;
+      return this;
+   }
+   
+   public MyCartAddLineItemActionBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+      this.supplyChannel = supplyChannel;
       return this;
    }
    
@@ -108,29 +98,14 @@ public final class MyCartAddLineItemActionBuilder {
       return this;
    }
    
-   @Nullable
-   public Integer getQuantity(){
-      return this.quantity;
+   public MyCartAddLineItemActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+      this.externalTotalPrice = externalTotalPrice;
+      return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
-      return this.externalTaxRate;
-   }
-   
-   @Nullable
-   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
-      return this.shippingDetails;
-   }
-   
-   @Nullable
-   public String getProductId(){
-      return this.productId;
-   }
-   
-   @Nullable
-   public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
-      return this.externalTotalPrice;
+   public MyCartAddLineItemActionBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+      this.shippingDetails = shippingDetails;
+      return this;
    }
    
    @Nullable
@@ -139,8 +114,18 @@ public final class MyCartAddLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
-      return this.supplyChannel;
+   public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
+      return this.distributionChannel;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+      return this.externalTaxRate;
+   }
+   
+   @Nullable
+   public String getProductId(){
+      return this.productId;
    }
    
    @Nullable
@@ -154,17 +139,32 @@ public final class MyCartAddLineItemActionBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
-      return this.distributionChannel;
+   public Double getQuantity(){
+      return this.quantity;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
+      return this.supplyChannel;
    }
    
    @Nullable
    public com.commercetools.api.models.common.Money getExternalPrice(){
       return this.externalPrice;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+      return this.externalTotalPrice;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
+      return this.shippingDetails;
+   }
 
    public MyCartAddLineItemAction build() {
-       return new MyCartAddLineItemActionImpl(quantity, externalTaxRate, shippingDetails, productId, externalTotalPrice, custom, supplyChannel, variantId, sku, distributionChannel, externalPrice);
+       return new MyCartAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId, sku, quantity, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
    }
    
    public static MyCartAddLineItemActionBuilder of() {
@@ -173,17 +173,17 @@ public final class MyCartAddLineItemActionBuilder {
    
    public static MyCartAddLineItemActionBuilder of(final MyCartAddLineItemAction template) {
       MyCartAddLineItemActionBuilder builder = new MyCartAddLineItemActionBuilder();
-      builder.quantity = template.getQuantity();
-      builder.externalTaxRate = template.getExternalTaxRate();
-      builder.shippingDetails = template.getShippingDetails();
-      builder.productId = template.getProductId();
-      builder.externalTotalPrice = template.getExternalTotalPrice();
       builder.custom = template.getCustom();
-      builder.supplyChannel = template.getSupplyChannel();
+      builder.distributionChannel = template.getDistributionChannel();
+      builder.externalTaxRate = template.getExternalTaxRate();
+      builder.productId = template.getProductId();
       builder.variantId = template.getVariantId();
       builder.sku = template.getSku();
-      builder.distributionChannel = template.getDistributionChannel();
+      builder.quantity = template.getQuantity();
+      builder.supplyChannel = template.getSupplyChannel();
       builder.externalPrice = template.getExternalPrice();
+      builder.externalTotalPrice = template.getExternalTotalPrice();
+      builder.shippingDetails = template.getShippingDetails();
       return builder;
    }
    

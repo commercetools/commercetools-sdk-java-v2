@@ -1,8 +1,8 @@
 package com.commercetools.api.models.zone;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.zone.Location;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,92 +26,77 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneImpl implements Zone {
 
-   private java.time.ZonedDateTime createdAt;
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
    private String id;
-
+   
    private Long version;
-
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private String key;
+   
    private String name;
-
+   
    private String description;
-
+   
    private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
-   private String key;
-
    @JsonCreator
-   ZoneImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("locations") final java.util.List<com.commercetools.api.models.zone.Location> locations, @JsonProperty("key") final String key) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   ZoneImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("locations") final java.util.List<com.commercetools.api.models.zone.Location> locations) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
+      this.createdBy = createdBy;
+      this.key = key;
       this.name = name;
       this.description = description;
       this.locations = locations;
-      this.key = key;
    }
    public ZoneImpl() {
-
+      
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
+   
    /**
    *  <p>The unique ID of the zone.</p>
    */
    public String getId(){
       return this.id;
    }
-
+   
    /**
    *  <p>The current version of the zone.</p>
    */
    public Long getVersion(){
       return this.version;
    }
-
-
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
+   
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
-
-   public String getName(){
-      return this.name;
+   
+   
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
-
-
-   public String getDescription(){
-      return this.description;
-   }
-
-
-   public java.util.List<com.commercetools.api.models.zone.Location> getLocations(){
-      return this.locations;
-   }
-
+   
    /**
    *  <p>User-specific unique identifier for a zone.
    *  Must be unique across a project.
@@ -120,45 +105,60 @@ public final class ZoneImpl implements Zone {
    public String getKey(){
       return this.key;
    }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
+   
+   
+   public String getName(){
+      return this.name;
    }
-
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
+   
+   
+   public String getDescription(){
+      return this.description;
+   }
+   
+   
+   public java.util.List<com.commercetools.api.models.zone.Location> getLocations(){
+      return this.locations;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
    }
-
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
+   }
+   
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
-
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
+   }
+   
+   public void setKey(final String key){
+      this.key = key;
+   }
+   
    public void setName(final String name){
       this.name = name;
    }
-
+   
    public void setDescription(final String description){
       this.description = description;
    }
-
+   
    public void setLocations(final java.util.List<com.commercetools.api.models.zone.Location> locations){
       this.locations = locations;
-   }
-
-   public void setKey(final String key){
-      this.key = key;
    }
 
 }

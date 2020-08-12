@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineItemShippingDetailsAction {
 
    private String action;
-
+   
+   private String lineItemId;
+   
    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
-   private String lineItemId;
-
    @JsonCreator
-   OrderSetLineItemShippingDetailsActionImpl(@JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("lineItemId") final String lineItemId) {
-      this.shippingDetails = shippingDetails;
+   OrderSetLineItemShippingDetailsActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
       this.lineItemId = lineItemId;
+      this.shippingDetails = shippingDetails;
       this.action = "setLineItemShippingDetails";
    }
    public OrderSetLineItemShippingDetailsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getLineItemId(){
+      return this.lineItemId;
+   }
+   
+   
    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
       return this.shippingDetails;
    }
 
-
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-
-   public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
-      this.shippingDetails = shippingDetails;
-   }
-
    public void setLineItemId(final String lineItemId){
       this.lineItemId = lineItemId;
+   }
+   
+   public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
+      this.shippingDetails = shippingDetails;
    }
 
 }

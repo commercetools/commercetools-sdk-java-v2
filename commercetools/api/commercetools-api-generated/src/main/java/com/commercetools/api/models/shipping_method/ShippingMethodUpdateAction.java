@@ -9,6 +9,7 @@ import com.commercetools.api.models.shipping_method.ShippingMethodRemoveShipping
 import com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction;
 
 
@@ -33,6 +34,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionImpl.class, name = "removeZone"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionActionImpl.class, name = "setDescription"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetKeyActionImpl.class, name = "setKey"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionActionImpl.class, name = "setLocalizedDescription"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionImpl.class, name = "setPredicate")
 })
 @JsonTypeInfo(
@@ -48,7 +50,7 @@ import java.io.IOException;
 public interface ShippingMethodUpdateAction  {
 
 
-
+   
 
 
 }

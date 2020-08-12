@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartSetLineItemTotalPriceActionBuilder {
-
+   
+   
+   private String lineItemId;
+   
    @Nullable
    private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-
-
-   private String lineItemId;
-
-   public CartSetLineItemTotalPriceActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-      this.externalTotalPrice = externalTotalPrice;
-      return this;
-   }
-
+   
    public CartSetLineItemTotalPriceActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
-
+   
+   public CartSetLineItemTotalPriceActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+      this.externalTotalPrice = externalTotalPrice;
+      return this;
+   }
+   
+   
+   public String getLineItemId(){
+      return this.lineItemId;
+   }
+   
    @Nullable
    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
       return this.externalTotalPrice;
    }
 
-
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-
    public CartSetLineItemTotalPriceAction build() {
-       return new CartSetLineItemTotalPriceActionImpl(externalTotalPrice, lineItemId);
+       return new CartSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);
    }
-
+   
    public static CartSetLineItemTotalPriceActionBuilder of() {
       return new CartSetLineItemTotalPriceActionBuilder();
    }
-
+   
    public static CartSetLineItemTotalPriceActionBuilder of(final CartSetLineItemTotalPriceAction template) {
       CartSetLineItemTotalPriceActionBuilder builder = new CartSetLineItemTotalPriceActionBuilder();
-      builder.externalTotalPrice = template.getExternalTotalPrice();
       builder.lineItemId = template.getLineItemId();
+      builder.externalTotalPrice = template.getExternalTotalPrice();
       return builder;
    }
-
+   
 }

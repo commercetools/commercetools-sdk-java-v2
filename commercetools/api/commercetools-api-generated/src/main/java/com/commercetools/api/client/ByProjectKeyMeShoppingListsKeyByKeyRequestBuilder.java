@@ -19,8 +19,16 @@ public class ByProjectKeyMeShoppingListsKeyByKeyRequestBuilder {
       this.key = key;
    }
    
+   public ByProjectKeyMeShoppingListsKeyByKeyGet get() {
+      return new ByProjectKeyMeShoppingListsKeyByKeyGet(apiHttpClient, projectKey, key);
+   }
+   
    public ByProjectKeyMeShoppingListsKeyByKeyPost post(com.commercetools.api.models.me.MyShoppingListUpdate myShoppingListUpdate) {
       return new ByProjectKeyMeShoppingListsKeyByKeyPost(apiHttpClient, projectKey, key, myShoppingListUpdate);
+   }
+   
+   public ByProjectKeyMeShoppingListsKeyByKeyDelete delete() {
+      return new ByProjectKeyMeShoppingListsKeyByKeyDelete(apiHttpClient, projectKey, key);
    }
    
 }

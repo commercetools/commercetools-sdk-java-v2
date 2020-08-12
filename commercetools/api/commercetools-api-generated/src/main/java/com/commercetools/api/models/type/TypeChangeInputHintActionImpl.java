@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TypeChangeInputHintActionImpl implements TypeChangeInputHintAction {
 
    private String action;
-
+   
    private String fieldName;
-
+   
    private com.commercetools.api.models.type.TypeTextInputHint inputHint;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class TypeChangeInputHintActionImpl implements TypeChangeInputHintA
       this.action = "changeInputHint";
    }
    public TypeChangeInputHintActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getFieldName(){
       return this.fieldName;
    }
-
-
+   
+   
    public com.commercetools.api.models.type.TypeTextInputHint getInputHint(){
       return this.inputHint;
    }
@@ -57,7 +57,7 @@ public final class TypeChangeInputHintActionImpl implements TypeChangeInputHintA
    public void setFieldName(final String fieldName){
       this.fieldName = fieldName;
    }
-
+   
    public void setInputHint(final com.commercetools.api.models.type.TypeTextInputHint inputHint){
       this.inputHint = inputHint;
    }

@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderSetDeliveryItemsActionImpl.class)
 public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("deliveryId")
    public String getDeliveryId();
-
+   
    @NotNull
    @Valid
    @JsonProperty("items")
    public List<DeliveryItem> getItems();
 
    public void setDeliveryId(final String deliveryId);
-
+   
    public void setItems(final List<DeliveryItem> items);
-
+   
    public static OrderSetDeliveryItemsActionImpl of(){
       return new OrderSetDeliveryItemsActionImpl();
    }
-
+   
 
    public static OrderSetDeliveryItemsActionImpl of(final OrderSetDeliveryItemsAction template) {
       OrderSetDeliveryItemsActionImpl instance = new OrderSetDeliveryItemsActionImpl();

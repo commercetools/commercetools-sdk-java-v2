@@ -19,19 +19,14 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
    
    private String customLineItemId;
    
-   @Nullable
-   private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
-   
    
    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
    
+   @Nullable
+   private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
+   
    public OrderCustomLineItemDiscountSetMessagePayloadBuilder customLineItemId( final String customLineItemId) {
       this.customLineItemId = customLineItemId;
-      return this;
-   }
-   
-   public OrderCustomLineItemDiscountSetMessagePayloadBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
-      this.taxedPrice = taxedPrice;
       return this;
    }
    
@@ -40,23 +35,28 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
       return this;
    }
    
+   public OrderCustomLineItemDiscountSetMessagePayloadBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
+      this.taxedPrice = taxedPrice;
+      return this;
+   }
+   
    
    public String getCustomLineItemId(){
       return this.customLineItemId;
-   }
-   
-   @Nullable
-   public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
-      return this.taxedPrice;
    }
    
    
    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
       return this.discountedPricePerQuantity;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
+      return this.taxedPrice;
+   }
 
    public OrderCustomLineItemDiscountSetMessagePayload build() {
-       return new OrderCustomLineItemDiscountSetMessagePayloadImpl(customLineItemId, taxedPrice, discountedPricePerQuantity);
+       return new OrderCustomLineItemDiscountSetMessagePayloadImpl(customLineItemId, discountedPricePerQuantity, taxedPrice);
    }
    
    public static OrderCustomLineItemDiscountSetMessagePayloadBuilder of() {
@@ -66,8 +66,8 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
    public static OrderCustomLineItemDiscountSetMessagePayloadBuilder of(final OrderCustomLineItemDiscountSetMessagePayload template) {
       OrderCustomLineItemDiscountSetMessagePayloadBuilder builder = new OrderCustomLineItemDiscountSetMessagePayloadBuilder();
       builder.customLineItemId = template.getCustomLineItemId();
-      builder.taxedPrice = template.getTaxedPrice();
       builder.discountedPricePerQuantity = template.getDiscountedPricePerQuantity();
+      builder.taxedPrice = template.getTaxedPrice();
       return builder;
    }
    

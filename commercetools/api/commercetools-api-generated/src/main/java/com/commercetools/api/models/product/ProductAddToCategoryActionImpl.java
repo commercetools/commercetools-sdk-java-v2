@@ -25,17 +25,17 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
 
    private String action;
    
+   private com.commercetools.api.models.category.CategoryResourceIdentifier category;
+   
    private String orderHint;
    
    private Boolean staged;
-   
-   private com.commercetools.api.models.category.CategoryResourceIdentifier category;
 
    @JsonCreator
-   ProductAddToCategoryActionImpl(@JsonProperty("orderHint") final String orderHint, @JsonProperty("staged") final Boolean staged, @JsonProperty("category") final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
+   ProductAddToCategoryActionImpl(@JsonProperty("category") final com.commercetools.api.models.category.CategoryResourceIdentifier category, @JsonProperty("orderHint") final String orderHint, @JsonProperty("staged") final Boolean staged) {
+      this.category = category;
       this.orderHint = orderHint;
       this.staged = staged;
-      this.category = category;
       this.action = "addToCategory";
    }
    public ProductAddToCategoryActionImpl() {
@@ -48,6 +48,11 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
    }
    
    
+   public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
+      return this.category;
+   }
+   
+   
    public String getOrderHint(){
       return this.orderHint;
    }
@@ -56,22 +61,17 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
    public Boolean getStaged(){
       return this.staged;
    }
-   
-   
-   public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
-      return this.category;
-   }
 
+   public void setCategory(final com.commercetools.api.models.category.CategoryResourceIdentifier category){
+      this.category = category;
+   }
+   
    public void setOrderHint(final String orderHint){
       this.orderHint = orderHint;
    }
    
    public void setStaged(final Boolean staged){
       this.staged = staged;
-   }
-   
-   public void setCategory(final com.commercetools.api.models.category.CategoryResourceIdentifier category){
-      this.category = category;
    }
 
 }

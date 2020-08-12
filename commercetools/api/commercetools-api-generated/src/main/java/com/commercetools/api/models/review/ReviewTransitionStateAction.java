@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewTransitionStateActionImpl.class)
 public interface ReviewTransitionStateAction extends ReviewUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("state")
    public StateResourceIdentifier getState();
-
-
+   
+   
    @JsonProperty("force")
    public Boolean getForce();
 
    public void setState(final StateResourceIdentifier state);
-
+   
    public void setForce(final Boolean force);
-
+   
    public static ReviewTransitionStateActionImpl of(){
       return new ReviewTransitionStateActionImpl();
    }
-
+   
 
    public static ReviewTransitionStateActionImpl of(final ReviewTransitionStateAction template) {
       ReviewTransitionStateActionImpl instance = new ReviewTransitionStateActionImpl();
-      instance.setForce(template.getForce());
       instance.setState(template.getState());
+      instance.setForce(template.getForce());
       return instance;
    }
 

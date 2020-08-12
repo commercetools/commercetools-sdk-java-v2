@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartDiscountValueRelativeDraftImpl implements CartDiscountValueRelativeDraft {
 
    private String type;
-
+   
    private Long permyriad;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class CartDiscountValueRelativeDraftImpl implements CartDiscountVal
       this.type = "relative";
    }
    public CartDiscountValueRelativeDraftImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public Long getPermyriad(){
       return this.permyriad;
    }

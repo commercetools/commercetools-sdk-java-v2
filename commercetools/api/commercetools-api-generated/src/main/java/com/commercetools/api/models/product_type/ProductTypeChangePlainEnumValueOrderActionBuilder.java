@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductTypeChangePlainEnumValueOrderActionBuilder {
-
-
-   private java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values;
-
-
+   
+   
    private String attributeName;
-
-   public ProductTypeChangePlainEnumValueOrderActionBuilder values( final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
-      this.values = values;
-      return this;
-   }
-
+   
+   
+   private java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values;
+   
    public ProductTypeChangePlainEnumValueOrderActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
-
-
+   
+   public ProductTypeChangePlainEnumValueOrderActionBuilder values( final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
+      this.values = values;
+      return this;
+   }
+   
+   
+   public String getAttributeName(){
+      return this.attributeName;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues(){
       return this.values;
    }
 
-
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-
    public ProductTypeChangePlainEnumValueOrderAction build() {
-       return new ProductTypeChangePlainEnumValueOrderActionImpl(values, attributeName);
+       return new ProductTypeChangePlainEnumValueOrderActionImpl(attributeName, values);
    }
-
+   
    public static ProductTypeChangePlainEnumValueOrderActionBuilder of() {
       return new ProductTypeChangePlainEnumValueOrderActionBuilder();
    }
-
+   
    public static ProductTypeChangePlainEnumValueOrderActionBuilder of(final ProductTypeChangePlainEnumValueOrderAction template) {
       ProductTypeChangePlainEnumValueOrderActionBuilder builder = new ProductTypeChangePlainEnumValueOrderActionBuilder();
-      builder.values = template.getValues();
       builder.attributeName = template.getAttributeName();
+      builder.values = template.getValues();
       return builder;
    }
-
+   
 }

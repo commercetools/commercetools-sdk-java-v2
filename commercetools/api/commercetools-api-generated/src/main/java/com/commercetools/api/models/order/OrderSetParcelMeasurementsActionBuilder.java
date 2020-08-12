@@ -15,34 +15,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class OrderSetParcelMeasurementsActionBuilder {
    
-   @Nullable
-   private com.commercetools.api.models.order.ParcelMeasurements measurements;
-   
    
    private String parcelId;
    
-   public OrderSetParcelMeasurementsActionBuilder measurements(@Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
-      this.measurements = measurements;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.order.ParcelMeasurements measurements;
    
    public OrderSetParcelMeasurementsActionBuilder parcelId( final String parcelId) {
       this.parcelId = parcelId;
       return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
-      return this.measurements;
+   public OrderSetParcelMeasurementsActionBuilder measurements(@Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
+      this.measurements = measurements;
+      return this;
    }
    
    
    public String getParcelId(){
       return this.parcelId;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
+      return this.measurements;
+   }
 
    public OrderSetParcelMeasurementsAction build() {
-       return new OrderSetParcelMeasurementsActionImpl(measurements, parcelId);
+       return new OrderSetParcelMeasurementsActionImpl(parcelId, measurements);
    }
    
    public static OrderSetParcelMeasurementsActionBuilder of() {
@@ -51,8 +51,8 @@ public final class OrderSetParcelMeasurementsActionBuilder {
    
    public static OrderSetParcelMeasurementsActionBuilder of(final OrderSetParcelMeasurementsAction template) {
       OrderSetParcelMeasurementsActionBuilder builder = new OrderSetParcelMeasurementsActionBuilder();
-      builder.measurements = template.getMeasurements();
       builder.parcelId = template.getParcelId();
+      builder.measurements = template.getMeasurements();
       return builder;
    }
    

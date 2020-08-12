@@ -56,32 +56,32 @@ public interface FieldDefinition  {
    *  <p>Provides a visual representation type for this field.
    *  It is only relevant for string-based field types like StringType and LocalizedStringType.</p>
    */
-
+   
    @JsonProperty("inputHint")
    public TypeTextInputHint getInputHint();
 
    public void setType(final FieldType type);
-
+   
    public void setName(final String name);
-
+   
    public void setLabel(final LocalizedString label);
-
+   
    public void setRequired(final Boolean required);
-
+   
    public void setInputHint(final TypeTextInputHint inputHint);
-
+   
    public static FieldDefinitionImpl of(){
       return new FieldDefinitionImpl();
    }
-
+   
 
    public static FieldDefinitionImpl of(final FieldDefinition template) {
       FieldDefinitionImpl instance = new FieldDefinitionImpl();
-      instance.setName(template.getName());
-      instance.setInputHint(template.getInputHint());
-      instance.setLabel(template.getLabel());
       instance.setType(template.getType());
+      instance.setName(template.getName());
+      instance.setLabel(template.getLabel());
       instance.setRequired(template.getRequired());
+      instance.setInputHint(template.getInputHint());
       return instance;
    }
 

@@ -27,19 +27,19 @@ public interface ReviewRatingStatistics  {
    */
    @NotNull
    @JsonProperty("averageRating")
-   public Integer getAverageRating();
+   public Double getAverageRating();
    /**
    *  <p>Highest rating of one target</p>
    */
    @NotNull
    @JsonProperty("highestRating")
-   public Integer getHighestRating();
+   public Double getHighestRating();
    /**
    *  <p>Lowest rating of one target</p>
    */
    @NotNull
    @JsonProperty("lowestRating")
-   public Integer getLowestRating();
+   public Double getLowestRating();
    /**
    *  <p>Number of ratings taken into account</p>
    */
@@ -56,28 +56,28 @@ public interface ReviewRatingStatistics  {
    @JsonProperty("ratingsDistribution")
    public JsonNode getRatingsDistribution();
 
-   public void setAverageRating(final Integer averageRating);
-
-   public void setHighestRating(final Integer highestRating);
-
-   public void setLowestRating(final Integer lowestRating);
-
+   public void setAverageRating(final Double averageRating);
+   
+   public void setHighestRating(final Double highestRating);
+   
+   public void setLowestRating(final Double lowestRating);
+   
    public void setCount(final Integer count);
-
+   
    public void setRatingsDistribution(final JsonNode ratingsDistribution);
-
+   
    public static ReviewRatingStatisticsImpl of(){
       return new ReviewRatingStatisticsImpl();
    }
-
+   
 
    public static ReviewRatingStatisticsImpl of(final ReviewRatingStatistics template) {
       ReviewRatingStatisticsImpl instance = new ReviewRatingStatisticsImpl();
-      instance.setHighestRating(template.getHighestRating());
       instance.setAverageRating(template.getAverageRating());
+      instance.setHighestRating(template.getHighestRating());
+      instance.setLowestRating(template.getLowestRating());
       instance.setCount(template.getCount());
       instance.setRatingsDistribution(template.getRatingsDistribution());
-      instance.setLowestRating(template.getLowestRating());
       return instance;
    }
 

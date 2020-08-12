@@ -1,8 +1,8 @@
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.product.ProductCatalogData;
 import com.commercetools.api.models.product_type.ProductTypeReference;
 import com.commercetools.api.models.review.ReviewRatingStatistics;
@@ -27,7 +27,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ProductImpl.class)
-public interface Product extends LoggedResource {
+public interface Product extends BaseResource {
 
    /**
    *  <p>The unique ID of the product.</p>
@@ -41,11 +41,11 @@ public interface Product extends LoggedResource {
    @NotNull
    @JsonProperty("version")
    public Long getVersion();
-
+   
    @NotNull
    @JsonProperty("createdAt")
    public ZonedDateTime getCreatedAt();
-
+   
    @NotNull
    @JsonProperty("lastModifiedAt")
    public ZonedDateTime getLastModifiedAt();
@@ -65,10 +65,10 @@ public interface Product extends LoggedResource {
    *  <p>User-specific unique identifier for the product.
    *  <em>Product keys are different from product variant keys.</em></p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
-
+   
    @NotNull
    @Valid
    @JsonProperty("productType")
@@ -80,11 +80,11 @@ public interface Product extends LoggedResource {
    @Valid
    @JsonProperty("masterData")
    public ProductCatalogData getMasterData();
-
+   
    @Valid
    @JsonProperty("taxCategory")
    public TaxCategoryReference getTaxCategory();
-
+   
    @Valid
    @JsonProperty("state")
    public StateReference getState();
@@ -96,48 +96,48 @@ public interface Product extends LoggedResource {
    public ReviewRatingStatistics getReviewRatingStatistics();
 
    public void setId(final String id);
-
+   
    public void setVersion(final Long version);
-
+   
    public void setCreatedAt(final ZonedDateTime createdAt);
-
+   
    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+   
    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+   
    public void setCreatedBy(final CreatedBy createdBy);
-
+   
    public void setKey(final String key);
-
+   
    public void setProductType(final ProductTypeReference productType);
-
+   
    public void setMasterData(final ProductCatalogData masterData);
-
+   
    public void setTaxCategory(final TaxCategoryReference taxCategory);
-
+   
    public void setState(final StateReference state);
-
+   
    public void setReviewRatingStatistics(final ReviewRatingStatistics reviewRatingStatistics);
-
+   
    public static ProductImpl of(){
       return new ProductImpl();
    }
-
+   
 
    public static ProductImpl of(final Product template) {
       ProductImpl instance = new ProductImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
+      instance.setKey(template.getKey());
+      instance.setProductType(template.getProductType());
       instance.setMasterData(template.getMasterData());
+      instance.setTaxCategory(template.getTaxCategory());
       instance.setState(template.getState());
       instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
-      instance.setProductType(template.getProductType());
-      instance.setKey(template.getKey());
-      instance.setTaxCategory(template.getTaxCategory());
       return instance;
    }
 

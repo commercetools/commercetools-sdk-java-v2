@@ -28,6 +28,9 @@ public class ByProjectKeyCartsRequestBuilder {
    public ByProjectKeyCartsReplicateRequestBuilder replicate() {
       return new ByProjectKeyCartsReplicateRequestBuilder(apiHttpClient, projectKey);
    }
+   public ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder withCustomerId(String customerId) {
+      return new ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder(apiHttpClient, projectKey, customerId);
+   }
    public ByProjectKeyCartsByIDRequestBuilder withId(String ID) {
       return new ByProjectKeyCartsByIDRequestBuilder(apiHttpClient, projectKey, ID);
    }

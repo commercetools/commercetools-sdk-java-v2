@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProductDiscountFoundError {
 
    private String code;
-
+   
    private String message;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class NoMatchingProductDiscountFoundErrorImpl implements NoMatching
       this.code = "NoMatchingProductDiscountFound";
    }
    public NoMatchingProductDiscountFoundErrorImpl() {
-
+      
    }
-
-
+   
+   
    public String getCode(){
       return this.code;
    }
-
-
+   
+   
    public String getMessage(){
       return this.message;
    }

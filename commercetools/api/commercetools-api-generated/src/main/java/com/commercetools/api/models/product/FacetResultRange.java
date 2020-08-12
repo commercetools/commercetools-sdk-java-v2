@@ -21,84 +21,84 @@ import java.io.IOException;
 @JsonDeserialize(as = FacetResultRangeImpl.class)
 public interface FacetResultRange  {
 
-
+   
    @NotNull
    @JsonProperty("from")
-   public Integer getFrom();
-
+   public Double getFrom();
+   
    @NotNull
    @JsonProperty("fromStr")
    public String getFromStr();
-
+   
    @NotNull
    @JsonProperty("to")
-   public Integer getTo();
-
+   public Double getTo();
+   
    @NotNull
    @JsonProperty("toStr")
    public String getToStr();
-
+   
    @NotNull
    @JsonProperty("count")
    public Long getCount();
-
-
+   
+   
    @JsonProperty("productCount")
    public Long getProductCount();
-
+   
    @NotNull
    @JsonProperty("total")
    public Long getTotal();
-
+   
    @NotNull
    @JsonProperty("min")
-   public Integer getMin();
-
+   public Double getMin();
+   
    @NotNull
    @JsonProperty("max")
-   public Integer getMax();
-
+   public Double getMax();
+   
    @NotNull
    @JsonProperty("mean")
-   public Integer getMean();
+   public Double getMean();
 
-   public void setFrom(final Integer from);
-
+   public void setFrom(final Double from);
+   
    public void setFromStr(final String fromStr);
-
-   public void setTo(final Integer to);
-
+   
+   public void setTo(final Double to);
+   
    public void setToStr(final String toStr);
-
+   
    public void setCount(final Long count);
-
+   
    public void setProductCount(final Long productCount);
-
+   
    public void setTotal(final Long total);
-
-   public void setMin(final Integer min);
-
-   public void setMax(final Integer max);
-
-   public void setMean(final Integer mean);
-
+   
+   public void setMin(final Double min);
+   
+   public void setMax(final Double max);
+   
+   public void setMean(final Double mean);
+   
    public static FacetResultRangeImpl of(){
       return new FacetResultRangeImpl();
    }
-
+   
 
    public static FacetResultRangeImpl of(final FacetResultRange template) {
       FacetResultRangeImpl instance = new FacetResultRangeImpl();
+      instance.setFrom(template.getFrom());
+      instance.setFromStr(template.getFromStr());
+      instance.setTo(template.getTo());
       instance.setToStr(template.getToStr());
+      instance.setCount(template.getCount());
+      instance.setProductCount(template.getProductCount());
       instance.setTotal(template.getTotal());
       instance.setMin(template.getMin());
-      instance.setFromStr(template.getFromStr());
       instance.setMax(template.getMax());
       instance.setMean(template.getMean());
-      instance.setCount(template.getCount());
-      instance.setFrom(template.getFrom());
-      instance.setTo(template.getTo());
-      instance.setProductCount(template.getProductCount());
       return instance;
    }
 

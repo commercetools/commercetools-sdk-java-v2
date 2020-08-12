@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineItemAction {
 
    private String action;
-
+   
    private String customLineItemId;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class CartRemoveCustomLineItemActionImpl implements CartRemoveCusto
       this.action = "removeCustomLineItem";
    }
    public CartRemoveCustomLineItemActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getCustomLineItemId(){
       return this.customLineItemId;
    }

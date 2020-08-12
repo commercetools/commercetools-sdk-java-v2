@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = RequiredFieldErrorImpl.class)
 public interface RequiredFieldError extends ErrorObject {
 
-
+   
    @NotNull
    @JsonProperty("field")
    public String getField();
 
    public void setField(final String field);
-
+   
    public static RequiredFieldErrorImpl of(){
       return new RequiredFieldErrorImpl();
    }
-
+   
 
    public static RequiredFieldErrorImpl of(final RequiredFieldError template) {
       RequiredFieldErrorImpl instance = new RequiredFieldErrorImpl();

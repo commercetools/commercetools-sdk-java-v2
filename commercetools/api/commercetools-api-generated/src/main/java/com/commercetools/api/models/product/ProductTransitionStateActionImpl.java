@@ -25,14 +25,14 @@ public final class ProductTransitionStateActionImpl implements ProductTransition
 
    private String action;
    
-   private Boolean force;
-   
    private com.commercetools.api.models.state.StateResourceIdentifier state;
+   
+   private Boolean force;
 
    @JsonCreator
-   ProductTransitionStateActionImpl(@JsonProperty("force") final Boolean force, @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state) {
-      this.force = force;
+   ProductTransitionStateActionImpl(@JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state, @JsonProperty("force") final Boolean force) {
       this.state = state;
+      this.force = force;
       this.action = "transitionState";
    }
    public ProductTransitionStateActionImpl() {
@@ -45,21 +45,21 @@ public final class ProductTransitionStateActionImpl implements ProductTransition
    }
    
    
-   public Boolean getForce(){
-      return this.force;
-   }
-   
-   
    public com.commercetools.api.models.state.StateResourceIdentifier getState(){
       return this.state;
    }
-
-   public void setForce(final Boolean force){
-      this.force = force;
-   }
    
+   
+   public Boolean getForce(){
+      return this.force;
+   }
+
    public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
       this.state = state;
+   }
+   
+   public void setForce(final Boolean force){
+      this.force = force;
    }
 
 }

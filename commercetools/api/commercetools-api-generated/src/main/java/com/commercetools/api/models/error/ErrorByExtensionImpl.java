@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ErrorByExtensionImpl implements ErrorByExtension {
 
    private String id;
-
+   
    private String key;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class ErrorByExtensionImpl implements ErrorByExtension {
       this.key = key;
    }
    public ErrorByExtensionImpl() {
-
+      
    }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public String getKey(){
       return this.key;
    }
@@ -48,7 +48,7 @@ public final class ErrorByExtensionImpl implements ErrorByExtension {
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setKey(final String key){
       this.key = key;
    }

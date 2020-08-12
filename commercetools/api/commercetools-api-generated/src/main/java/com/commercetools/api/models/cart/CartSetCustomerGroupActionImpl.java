@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CartSetCustomerGroupActionImpl implements CartSetCustomerGroupAction {
 
    private String action;
-
+   
    private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class CartSetCustomerGroupActionImpl implements CartSetCustomerGrou
       this.action = "setCustomerGroup";
    }
    public CartSetCustomerGroupActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
       return this.customerGroup;
    }

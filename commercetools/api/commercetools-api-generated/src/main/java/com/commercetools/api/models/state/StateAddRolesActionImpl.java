@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StateAddRolesActionImpl implements StateAddRolesAction {
 
    private String action;
-
+   
    private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class StateAddRolesActionImpl implements StateAddRolesAction {
       this.action = "addRoles";
    }
    public StateAddRolesActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles(){
       return this.roles;
    }

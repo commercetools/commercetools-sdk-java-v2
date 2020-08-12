@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomTokenizerImpl implements CustomTokenizer {
 
    private String type;
-
+   
    private java.util.List<String> inputs;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class CustomTokenizerImpl implements CustomTokenizer {
       this.type = "custom";
    }
    public CustomTokenizerImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
+   
+   
    public java.util.List<String> getInputs(){
       return this.inputs;
    }

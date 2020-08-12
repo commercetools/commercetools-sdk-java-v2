@@ -1,9 +1,9 @@
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.type.FieldDefinition;
 import com.commercetools.api.models.type.ResourceTypeId;
 import java.time.ZonedDateTime;
@@ -28,54 +28,44 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeImpl implements Type {
 
-   private java.time.ZonedDateTime createdAt;
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
    private String id;
    
    private Long version;
    
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
    
-   private com.commercetools.api.models.common.LocalizedString name;
-   
-   private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
-   
-   private com.commercetools.api.models.common.LocalizedString description;
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    private String key;
    
+   private com.commercetools.api.models.common.LocalizedString name;
+   
+   private com.commercetools.api.models.common.LocalizedString description;
+   
    private java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds;
+   
+   private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
 
    @JsonCreator
-   TypeImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("fieldDefinitions") final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("key") final String key, @JsonProperty("resourceTypeIds") final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   TypeImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("resourceTypeIds") final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds, @JsonProperty("fieldDefinitions") final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
-      this.name = name;
-      this.fieldDefinitions = fieldDefinitions;
-      this.description = description;
+      this.createdBy = createdBy;
       this.key = key;
+      this.name = name;
+      this.description = description;
       this.resourceTypeIds = resourceTypeIds;
+      this.fieldDefinitions = fieldDefinitions;
    }
    public TypeImpl() {
       
-   }
-   
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
    }
    
    /**
@@ -92,11 +82,14 @@ public final class TypeImpl implements Type {
       return this.version;
    }
    
-   /**
-   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
-   */
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    /**
@@ -106,19 +99,11 @@ public final class TypeImpl implements Type {
       return this.lastModifiedBy;
    }
    
-   
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions(){
-      return this.fieldDefinitions;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
+   /**
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+   */
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    /**
@@ -129,21 +114,28 @@ public final class TypeImpl implements Type {
       return this.key;
    }
    
+   
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
+   }
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getDescription(){
+      return this.description;
+   }
+   
    /**
    *  <p>Defines for which resource(s) the type is valid.</p>
    */
    public java.util.List<com.commercetools.api.models.type.ResourceTypeId> getResourceTypeIds(){
       return this.resourceTypeIds;
    }
+   
+   
+   public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions(){
+      return this.fieldDefinitions;
+   }
 
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-   
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
-   
    public void setId(final String id){
       this.id = id;
    }
@@ -152,32 +144,40 @@ public final class TypeImpl implements Type {
       this.version = version;
    }
    
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
+   }
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
    }
    
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
    
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
-   }
-   
-   public void setFieldDefinitions(final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions){
-      this.fieldDefinitions = fieldDefinitions;
-   }
-   
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
    }
    
    public void setKey(final String key){
       this.key = key;
    }
    
+   public void setName(final com.commercetools.api.models.common.LocalizedString name){
+      this.name = name;
+   }
+   
+   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+      this.description = description;
+   }
+   
    public void setResourceTypeIds(final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds){
       this.resourceTypeIds = resourceTypeIds;
+   }
+   
+   public void setFieldDefinitions(final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions){
+      this.fieldDefinitions = fieldDefinitions;
    }
 
 }

@@ -29,11 +29,11 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
    public Boolean getIsDefault();
 
    public void setIsDefault(final Boolean isDefault);
-
+   
    public static ShippingMethodChangeIsDefaultActionImpl of(){
       return new ShippingMethodChangeIsDefaultActionImpl();
    }
-
+   
 
    public static ShippingMethodChangeIsDefaultActionImpl of(final ShippingMethodChangeIsDefaultAction template) {
       ShippingMethodChangeIsDefaultActionImpl instance = new ShippingMethodChangeIsDefaultActionImpl();

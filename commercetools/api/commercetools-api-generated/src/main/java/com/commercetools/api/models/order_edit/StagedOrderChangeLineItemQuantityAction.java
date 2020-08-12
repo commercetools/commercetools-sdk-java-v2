@@ -23,42 +23,42 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderChangeLineItemQuantityActionImpl.class)
 public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("lineItemId")
    public String getLineItemId();
-
+   
    @NotNull
    @JsonProperty("quantity")
-   public Integer getQuantity();
-
+   public Double getQuantity();
+   
    @Valid
    @JsonProperty("externalPrice")
    public Money getExternalPrice();
-
+   
    @Valid
    @JsonProperty("externalTotalPrice")
    public ExternalLineItemTotalPrice getExternalTotalPrice();
 
    public void setLineItemId(final String lineItemId);
-
-   public void setQuantity(final Integer quantity);
-
+   
+   public void setQuantity(final Double quantity);
+   
    public void setExternalPrice(final Money externalPrice);
-
+   
    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
-
+   
    public static StagedOrderChangeLineItemQuantityActionImpl of(){
       return new StagedOrderChangeLineItemQuantityActionImpl();
    }
-
+   
 
    public static StagedOrderChangeLineItemQuantityActionImpl of(final StagedOrderChangeLineItemQuantityAction template) {
       StagedOrderChangeLineItemQuantityActionImpl instance = new StagedOrderChangeLineItemQuantityActionImpl();
-      instance.setQuantity(template.getQuantity());
-      instance.setExternalTotalPrice(template.getExternalTotalPrice());
       instance.setLineItemId(template.getLineItemId());
+      instance.setQuantity(template.getQuantity());
       instance.setExternalPrice(template.getExternalPrice());
+      instance.setExternalTotalPrice(template.getExternalTotalPrice());
       return instance;
    }
 

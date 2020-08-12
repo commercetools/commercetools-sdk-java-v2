@@ -24,66 +24,66 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductSetPricesActionImpl implements ProductSetPricesAction {
 
    private String action;
-
+   
+   private Long variantId;
+   
+   private String sku;
+   
+   private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
+   
    private Boolean staged;
 
-   private Long variantId;
-
-   private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
-
-   private String sku;
-
    @JsonCreator
-   ProductSetPricesActionImpl(@JsonProperty("staged") final Boolean staged, @JsonProperty("variantId") final Long variantId, @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices, @JsonProperty("sku") final String sku) {
-      this.staged = staged;
+   ProductSetPricesActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices, @JsonProperty("staged") final Boolean staged) {
       this.variantId = variantId;
-      this.prices = prices;
       this.sku = sku;
+      this.prices = prices;
+      this.staged = staged;
       this.action = "setPrices";
    }
    public ProductSetPricesActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
-   public Boolean getStaged(){
-      return this.staged;
-   }
-
-
+   
+   
    public Long getVariantId(){
       return this.variantId;
    }
-
-
-   public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices(){
-      return this.prices;
-   }
-
-
+   
+   
    public String getSku(){
       return this.sku;
    }
-
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
+   
+   
+   public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices(){
+      return this.prices;
+   }
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
    }
 
    public void setVariantId(final Long variantId){
       this.variantId = variantId;
    }
-
+   
+   public void setSku(final String sku){
+      this.sku = sku;
+   }
+   
    public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices){
       this.prices = prices;
    }
-
-   public void setSku(final String sku){
-      this.sku = sku;
+   
+   public void setStaged(final Boolean staged){
+      this.staged = staged;
    }
 
 }

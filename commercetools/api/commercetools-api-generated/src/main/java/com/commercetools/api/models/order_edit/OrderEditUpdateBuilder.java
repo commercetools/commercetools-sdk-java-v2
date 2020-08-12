@@ -14,17 +14,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class OrderEditUpdateBuilder {
    
-   @Nullable
-   private Boolean dryRun;
+   
+   private Long version;
    
    
    private java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions;
    
+   @Nullable
+   private Boolean dryRun;
    
-   private Long version;
-   
-   public OrderEditUpdateBuilder dryRun(@Nullable final Boolean dryRun) {
-      this.dryRun = dryRun;
+   public OrderEditUpdateBuilder version( final Long version) {
+      this.version = version;
       return this;
    }
    
@@ -33,14 +33,14 @@ public final class OrderEditUpdateBuilder {
       return this;
    }
    
-   public OrderEditUpdateBuilder version( final Long version) {
-      this.version = version;
+   public OrderEditUpdateBuilder dryRun(@Nullable final Boolean dryRun) {
+      this.dryRun = dryRun;
       return this;
    }
    
-   @Nullable
-   public Boolean getDryRun(){
-      return this.dryRun;
+   
+   public Long getVersion(){
+      return this.version;
    }
    
    
@@ -48,13 +48,13 @@ public final class OrderEditUpdateBuilder {
       return this.actions;
    }
    
-   
-   public Long getVersion(){
-      return this.version;
+   @Nullable
+   public Boolean getDryRun(){
+      return this.dryRun;
    }
 
    public OrderEditUpdate build() {
-       return new OrderEditUpdateImpl(dryRun, actions, version);
+       return new OrderEditUpdateImpl(version, actions, dryRun);
    }
    
    public static OrderEditUpdateBuilder of() {
@@ -63,9 +63,9 @@ public final class OrderEditUpdateBuilder {
    
    public static OrderEditUpdateBuilder of(final OrderEditUpdate template) {
       OrderEditUpdateBuilder builder = new OrderEditUpdateBuilder();
-      builder.dryRun = template.getDryRun();
-      builder.actions = template.getActions();
       builder.version = template.getVersion();
+      builder.actions = template.getActions();
+      builder.dryRun = template.getDryRun();
       return builder;
    }
    

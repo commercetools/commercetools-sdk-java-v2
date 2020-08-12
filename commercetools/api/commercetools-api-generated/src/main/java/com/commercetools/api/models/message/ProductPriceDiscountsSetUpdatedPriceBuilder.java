@@ -13,102 +13,102 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductPriceDiscountsSetUpdatedPriceBuilder {
-
-   @Nullable
-   private com.commercetools.api.models.common.DiscountedPrice discounted;
-
-
-   private Boolean staged;
-
-
+   
+   
    private Integer variantId;
-
-
-   private String priceId;
-
-   @Nullable
-   private String sku;
-
+   
    @Nullable
    private String variantKey;
-
-   public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
-      this.discounted = discounted;
-      return this;
-   }
-
-   public ProductPriceDiscountsSetUpdatedPriceBuilder staged( final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
-
+   
+   @Nullable
+   private String sku;
+   
+   
+   private String priceId;
+   
+   @Nullable
+   private com.commercetools.api.models.common.DiscountedPrice discounted;
+   
+   
+   private Boolean staged;
+   
    public ProductPriceDiscountsSetUpdatedPriceBuilder variantId( final Integer variantId) {
       this.variantId = variantId;
       return this;
    }
-
-   public ProductPriceDiscountsSetUpdatedPriceBuilder priceId( final String priceId) {
-      this.priceId = priceId;
-      return this;
-   }
-
-   public ProductPriceDiscountsSetUpdatedPriceBuilder sku(@Nullable final String sku) {
-      this.sku = sku;
-      return this;
-   }
-
+   
    public ProductPriceDiscountsSetUpdatedPriceBuilder variantKey(@Nullable final String variantKey) {
       this.variantKey = variantKey;
       return this;
    }
-
-   @Nullable
-   public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
-      return this.discounted;
+   
+   public ProductPriceDiscountsSetUpdatedPriceBuilder sku(@Nullable final String sku) {
+      this.sku = sku;
+      return this;
    }
-
-
-   public Boolean getStaged(){
-      return this.staged;
+   
+   public ProductPriceDiscountsSetUpdatedPriceBuilder priceId( final String priceId) {
+      this.priceId = priceId;
+      return this;
    }
-
-
+   
+   public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
+      this.discounted = discounted;
+      return this;
+   }
+   
+   public ProductPriceDiscountsSetUpdatedPriceBuilder staged( final Boolean staged) {
+      this.staged = staged;
+      return this;
+   }
+   
+   
    public Integer getVariantId(){
       return this.variantId;
    }
-
-
-   public String getPriceId(){
-      return this.priceId;
-   }
-
-   @Nullable
-   public String getSku(){
-      return this.sku;
-   }
-
+   
    @Nullable
    public String getVariantKey(){
       return this.variantKey;
    }
-
-   public ProductPriceDiscountsSetUpdatedPrice build() {
-       return new ProductPriceDiscountsSetUpdatedPriceImpl(discounted, staged, variantId, priceId, sku, variantKey);
+   
+   @Nullable
+   public String getSku(){
+      return this.sku;
+   }
+   
+   
+   public String getPriceId(){
+      return this.priceId;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
+      return this.discounted;
+   }
+   
+   
+   public Boolean getStaged(){
+      return this.staged;
    }
 
+   public ProductPriceDiscountsSetUpdatedPrice build() {
+       return new ProductPriceDiscountsSetUpdatedPriceImpl(variantId, variantKey, sku, priceId, discounted, staged);
+   }
+   
    public static ProductPriceDiscountsSetUpdatedPriceBuilder of() {
       return new ProductPriceDiscountsSetUpdatedPriceBuilder();
    }
-
+   
    public static ProductPriceDiscountsSetUpdatedPriceBuilder of(final ProductPriceDiscountsSetUpdatedPrice template) {
       ProductPriceDiscountsSetUpdatedPriceBuilder builder = new ProductPriceDiscountsSetUpdatedPriceBuilder();
+      builder.variantId = template.getVariantId();
+      builder.variantKey = template.getVariantKey();
+      builder.sku = template.getSku();
+      builder.priceId = template.getPriceId();
       builder.discounted = template.getDiscounted();
       builder.staged = template.getStaged();
-      builder.variantId = template.getVariantId();
-      builder.priceId = template.getPriceId();
-      builder.sku = template.getSku();
-      builder.variantKey = template.getVariantKey();
       return builder;
    }
-
+   
 }

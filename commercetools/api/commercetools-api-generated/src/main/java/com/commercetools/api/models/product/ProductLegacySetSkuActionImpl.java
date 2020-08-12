@@ -23,42 +23,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuAction {
 
    private String action;
-
+   
+   private String sku;
+   
    private Integer variantId;
 
-   private String sku;
-
    @JsonCreator
-   ProductLegacySetSkuActionImpl(@JsonProperty("variantId") final Integer variantId, @JsonProperty("sku") final String sku) {
-      this.variantId = variantId;
+   ProductLegacySetSkuActionImpl(@JsonProperty("sku") final String sku, @JsonProperty("variantId") final Integer variantId) {
       this.sku = sku;
+      this.variantId = variantId;
       this.action = "legacySetSku";
    }
    public ProductLegacySetSkuActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getSku(){
+      return this.sku;
+   }
+   
+   
    public Integer getVariantId(){
       return this.variantId;
    }
 
-
-   public String getSku(){
-      return this.sku;
-   }
-
-   public void setVariantId(final Integer variantId){
-      this.variantId = variantId;
-   }
-
    public void setSku(final String sku){
       this.sku = sku;
+   }
+   
+   public void setVariantId(final Integer variantId){
+      this.variantId = variantId;
    }
 
 }

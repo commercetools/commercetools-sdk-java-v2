@@ -28,9 +28,9 @@ public final class ProductDiscountValueExternalDraftImpl implements ProductDisco
    ProductDiscountValueExternalDraftImpl() {
       this.type = "external";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

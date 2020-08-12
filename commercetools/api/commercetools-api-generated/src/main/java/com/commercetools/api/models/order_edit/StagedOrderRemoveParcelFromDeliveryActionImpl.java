@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderRemoveParcelFromDeliveryActionImpl implements StagedOrderRemoveParcelFromDeliveryAction {
 
    private String action;
-
+   
    private String parcelId;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class StagedOrderRemoveParcelFromDeliveryActionImpl implements Stag
       this.action = "removeParcelFromDelivery";
    }
    public StagedOrderRemoveParcelFromDeliveryActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getParcelId(){
       return this.parcelId;
    }

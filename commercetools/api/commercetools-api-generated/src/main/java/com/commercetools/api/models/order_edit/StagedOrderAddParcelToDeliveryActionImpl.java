@@ -26,66 +26,66 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddParcelToDeliveryAction {
 
    private String action;
-
+   
    private String deliveryId;
-
+   
+   private com.commercetools.api.models.order.ParcelMeasurements measurements;
+   
+   private com.commercetools.api.models.order.TrackingData trackingData;
+   
    private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
-   private com.commercetools.api.models.order.TrackingData trackingData;
-
-   private com.commercetools.api.models.order.ParcelMeasurements measurements;
-
    @JsonCreator
-   StagedOrderAddParcelToDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items, @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData, @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
+   StagedOrderAddParcelToDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements, @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
       this.deliveryId = deliveryId;
-      this.items = items;
-      this.trackingData = trackingData;
       this.measurements = measurements;
+      this.trackingData = trackingData;
+      this.items = items;
       this.action = "addParcelToDelivery";
    }
    public StagedOrderAddParcelToDeliveryActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getDeliveryId(){
       return this.deliveryId;
    }
-
-
-   public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
-      return this.items;
+   
+   
+   public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
+      return this.measurements;
    }
-
-
+   
+   
    public com.commercetools.api.models.order.TrackingData getTrackingData(){
       return this.trackingData;
    }
-
-
-   public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
-      return this.measurements;
+   
+   
+   public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
+      return this.items;
    }
 
    public void setDeliveryId(final String deliveryId){
       this.deliveryId = deliveryId;
    }
-
-   public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
-      this.items = items;
+   
+   public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements){
+      this.measurements = measurements;
    }
-
+   
    public void setTrackingData(final com.commercetools.api.models.order.TrackingData trackingData){
       this.trackingData = trackingData;
    }
-
-   public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements){
-      this.measurements = measurements;
+   
+   public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
+      this.items = items;
    }
 
 }

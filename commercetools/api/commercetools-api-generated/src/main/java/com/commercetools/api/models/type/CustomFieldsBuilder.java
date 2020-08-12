@@ -16,33 +16,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class CustomFieldsBuilder {
    
    
-   private com.commercetools.api.models.type.FieldContainer fields;
-   
-   
    private com.commercetools.api.models.type.TypeReference type;
    
-   public CustomFieldsBuilder fields( final com.commercetools.api.models.type.FieldContainer fields) {
-      this.fields = fields;
-      return this;
-   }
+   
+   private com.commercetools.api.models.type.FieldContainer fields;
    
    public CustomFieldsBuilder type( final com.commercetools.api.models.type.TypeReference type) {
       this.type = type;
       return this;
    }
    
-   
-   public com.commercetools.api.models.type.FieldContainer getFields(){
-      return this.fields;
+   public CustomFieldsBuilder fields( final com.commercetools.api.models.type.FieldContainer fields) {
+      this.fields = fields;
+      return this;
    }
    
    
    public com.commercetools.api.models.type.TypeReference getType(){
       return this.type;
    }
+   
+   
+   public com.commercetools.api.models.type.FieldContainer getFields(){
+      return this.fields;
+   }
 
    public CustomFields build() {
-       return new CustomFieldsImpl(fields, type);
+       return new CustomFieldsImpl(type, fields);
    }
    
    public static CustomFieldsBuilder of() {
@@ -51,8 +51,8 @@ public final class CustomFieldsBuilder {
    
    public static CustomFieldsBuilder of(final CustomFields template) {
       CustomFieldsBuilder builder = new CustomFieldsBuilder();
-      builder.fields = template.getFields();
       builder.type = template.getType();
+      builder.fields = template.getFields();
       return builder;
    }
    

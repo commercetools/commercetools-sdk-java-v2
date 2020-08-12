@@ -14,60 +14,60 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class DeliveryItemsUpdatedMessagePayloadBuilder {
-
-
+   
+   
    private String deliveryId;
-
-
-   private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
-
-
+   
+   
    private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
-
+   
+   
+   private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
+   
    public DeliveryItemsUpdatedMessagePayloadBuilder deliveryId( final String deliveryId) {
       this.deliveryId = deliveryId;
       return this;
    }
-
-   public DeliveryItemsUpdatedMessagePayloadBuilder oldItems( final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
-      this.oldItems = oldItems;
-      return this;
-   }
-
+   
    public DeliveryItemsUpdatedMessagePayloadBuilder items( final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
       this.items = items;
       return this;
    }
-
-
+   
+   public DeliveryItemsUpdatedMessagePayloadBuilder oldItems( final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
+      this.oldItems = oldItems;
+      return this;
+   }
+   
+   
    public String getDeliveryId(){
       return this.deliveryId;
    }
-
-
+   
+   
+   public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
+      return this.items;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems(){
       return this.oldItems;
    }
 
-
-   public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
-      return this.items;
-   }
-
    public DeliveryItemsUpdatedMessagePayload build() {
-       return new DeliveryItemsUpdatedMessagePayloadImpl(deliveryId, oldItems, items);
+       return new DeliveryItemsUpdatedMessagePayloadImpl(deliveryId, items, oldItems);
    }
-
+   
    public static DeliveryItemsUpdatedMessagePayloadBuilder of() {
       return new DeliveryItemsUpdatedMessagePayloadBuilder();
    }
-
+   
    public static DeliveryItemsUpdatedMessagePayloadBuilder of(final DeliveryItemsUpdatedMessagePayload template) {
       DeliveryItemsUpdatedMessagePayloadBuilder builder = new DeliveryItemsUpdatedMessagePayloadBuilder();
       builder.deliveryId = template.getDeliveryId();
-      builder.oldItems = template.getOldItems();
       builder.items = template.getItems();
+      builder.oldItems = template.getOldItems();
       return builder;
    }
-
+   
 }

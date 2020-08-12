@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductAddedToCategoryMessagePayloadBuilder {
-
-
-   private Boolean staged;
-
-
+   
+   
    private com.commercetools.api.models.category.CategoryReference category;
-
-   public ProductAddedToCategoryMessagePayloadBuilder staged( final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
-
+   
+   
+   private Boolean staged;
+   
    public ProductAddedToCategoryMessagePayloadBuilder category( final com.commercetools.api.models.category.CategoryReference category) {
       this.category = category;
       return this;
    }
-
-
+   
+   public ProductAddedToCategoryMessagePayloadBuilder staged( final Boolean staged) {
+      this.staged = staged;
+      return this;
+   }
+   
+   
+   public com.commercetools.api.models.category.CategoryReference getCategory(){
+      return this.category;
+   }
+   
+   
    public Boolean getStaged(){
       return this.staged;
    }
 
-
-   public com.commercetools.api.models.category.CategoryReference getCategory(){
-      return this.category;
-   }
-
    public ProductAddedToCategoryMessagePayload build() {
-       return new ProductAddedToCategoryMessagePayloadImpl(staged, category);
+       return new ProductAddedToCategoryMessagePayloadImpl(category, staged);
    }
-
+   
    public static ProductAddedToCategoryMessagePayloadBuilder of() {
       return new ProductAddedToCategoryMessagePayloadBuilder();
    }
-
+   
    public static ProductAddedToCategoryMessagePayloadBuilder of(final ProductAddedToCategoryMessagePayload template) {
       ProductAddedToCategoryMessagePayloadBuilder builder = new ProductAddedToCategoryMessagePayloadBuilder();
-      builder.staged = template.getStaged();
       builder.category = template.getCategory();
+      builder.staged = template.getStaged();
       return builder;
    }
-
+   
 }

@@ -24,18 +24,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypedMoneyImpl implements TypedMoney {
 
-   private Long centAmount;
+   private com.commercetools.api.models.common.MoneyType type;
    
    private Integer fractionDigits;
    
-   private com.commercetools.api.models.common.MoneyType type;
+   private Long centAmount;
    
    private String currencyCode;
 
    @JsonCreator
-   TypedMoneyImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("currencyCode") final String currencyCode) {
-      this.centAmount = centAmount;
+   TypedMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
       this.fractionDigits = fractionDigits;
+      this.centAmount = centAmount;
       this.currencyCode = currencyCode;
       this.type = MoneyType.findEnumViaJsonName("null").get();
    }
@@ -44,8 +44,8 @@ public final class TypedMoneyImpl implements TypedMoney {
    }
    
    
-   public Long getCentAmount(){
-      return this.centAmount;
+   public com.commercetools.api.models.common.MoneyType getType(){
+      return this.type;
    }
    
    
@@ -54,8 +54,8 @@ public final class TypedMoneyImpl implements TypedMoney {
    }
    
    
-   public com.commercetools.api.models.common.MoneyType getType(){
-      return this.type;
+   public Long getCentAmount(){
+      return this.centAmount;
    }
    
    /**
@@ -65,12 +65,12 @@ public final class TypedMoneyImpl implements TypedMoney {
       return this.currencyCode;
    }
 
-   public void setCentAmount(final Long centAmount){
-      this.centAmount = centAmount;
-   }
-   
    public void setFractionDigits(final Integer fractionDigits){
       this.fractionDigits = fractionDigits;
+   }
+   
+   public void setCentAmount(final Long centAmount){
+      this.centAmount = centAmount;
    }
    
    public void setCurrencyCode(final String currencyCode){

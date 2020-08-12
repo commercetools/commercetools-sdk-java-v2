@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CategoryUpdateBuilder {
-
-
-   private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
-
-
+   
+   
    private Long version;
-
-   public CategoryUpdateBuilder actions( final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
-      this.actions = actions;
-      return this;
-   }
-
+   
+   
+   private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
+   
    public CategoryUpdateBuilder version( final Long version) {
       this.version = version;
       return this;
    }
-
-
+   
+   public CategoryUpdateBuilder actions( final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
+      this.actions = actions;
+      return this;
+   }
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
    public CategoryUpdate build() {
-       return new CategoryUpdateImpl(actions, version);
+       return new CategoryUpdateImpl(version, actions);
    }
-
+   
    public static CategoryUpdateBuilder of() {
       return new CategoryUpdateBuilder();
    }
-
+   
    public static CategoryUpdateBuilder of(final CategoryUpdate template) {
       CategoryUpdateBuilder builder = new CategoryUpdateBuilder();
-      builder.actions = template.getActions();
       builder.version = template.getVersion();
+      builder.actions = template.getActions();
       return builder;
    }
-
+   
 }

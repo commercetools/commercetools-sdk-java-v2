@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductTypeChangePlainEnumValueLabelActionBuilder {
-
-
-   private com.commercetools.api.models.product_type.AttributePlainEnumValue newValue;
-
-
+   
+   
    private String attributeName;
-
-   public ProductTypeChangePlainEnumValueLabelActionBuilder newValue( final com.commercetools.api.models.product_type.AttributePlainEnumValue newValue) {
-      this.newValue = newValue;
-      return this;
-   }
-
+   
+   
+   private com.commercetools.api.models.product_type.AttributePlainEnumValue newValue;
+   
    public ProductTypeChangePlainEnumValueLabelActionBuilder attributeName( final String attributeName) {
       this.attributeName = attributeName;
       return this;
    }
-
-
+   
+   public ProductTypeChangePlainEnumValueLabelActionBuilder newValue( final com.commercetools.api.models.product_type.AttributePlainEnumValue newValue) {
+      this.newValue = newValue;
+      return this;
+   }
+   
+   
+   public String getAttributeName(){
+      return this.attributeName;
+   }
+   
+   
    public com.commercetools.api.models.product_type.AttributePlainEnumValue getNewValue(){
       return this.newValue;
    }
 
-
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-
    public ProductTypeChangePlainEnumValueLabelAction build() {
-       return new ProductTypeChangePlainEnumValueLabelActionImpl(newValue, attributeName);
+       return new ProductTypeChangePlainEnumValueLabelActionImpl(attributeName, newValue);
    }
-
+   
    public static ProductTypeChangePlainEnumValueLabelActionBuilder of() {
       return new ProductTypeChangePlainEnumValueLabelActionBuilder();
    }
-
+   
    public static ProductTypeChangePlainEnumValueLabelActionBuilder of(final ProductTypeChangePlainEnumValueLabelAction template) {
       ProductTypeChangePlainEnumValueLabelActionBuilder builder = new ProductTypeChangePlainEnumValueLabelActionBuilder();
-      builder.newValue = template.getNewValue();
       builder.attributeName = template.getAttributeName();
+      builder.newValue = template.getNewValue();
       return builder;
    }
-
+   
 }

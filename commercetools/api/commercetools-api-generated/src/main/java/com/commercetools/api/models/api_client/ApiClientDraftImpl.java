@@ -22,20 +22,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ApiClientDraftImpl implements ApiClientDraft {
 
-   private Long deleteDaysAfterCreation;
+   private String name;
    
    private String scope;
    
-   private String name;
+   private Long deleteDaysAfterCreation;
 
    @JsonCreator
-   ApiClientDraftImpl(@JsonProperty("deleteDaysAfterCreation") final Long deleteDaysAfterCreation, @JsonProperty("scope") final String scope, @JsonProperty("name") final String name) {
-      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
-      this.scope = scope;
+   ApiClientDraftImpl(@JsonProperty("name") final String name, @JsonProperty("scope") final String scope, @JsonProperty("deleteDaysAfterCreation") final Long deleteDaysAfterCreation) {
       this.name = name;
+      this.scope = scope;
+      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
    }
    public ApiClientDraftImpl() {
       
+   }
+   
+   
+   public String getName(){
+      return this.name;
+   }
+   
+   
+   public String getScope(){
+      return this.scope;
    }
    
    /**
@@ -44,27 +54,17 @@ public final class ApiClientDraftImpl implements ApiClientDraft {
    public Long getDeleteDaysAfterCreation(){
       return this.deleteDaysAfterCreation;
    }
-   
-   
-   public String getScope(){
-      return this.scope;
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
 
-   public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation){
-      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
+   public void setName(final String name){
+      this.name = name;
    }
    
    public void setScope(final String scope){
       this.scope = scope;
    }
    
-   public void setName(final String name){
-      this.name = name;
+   public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation){
+      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
    }
 
 }

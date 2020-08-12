@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InventoryEntryRemoveQuantityActionImpl implements InventoryEntryRemoveQuantityAction {
 
    private String action;
-
+   
    private Long quantity;
 
    @JsonCreator
@@ -32,15 +32,15 @@ public final class InventoryEntryRemoveQuantityActionImpl implements InventoryEn
       this.action = "removeQuantity";
    }
    public InventoryEntryRemoveQuantityActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public Long getQuantity(){
       return this.quantity;
    }

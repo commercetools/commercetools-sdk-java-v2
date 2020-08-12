@@ -24,16 +24,16 @@ public interface CustomerGroupSetKeyAction extends CustomerGroupUpdateAction {
    /**
    *  <p>User-specific unique identifier for the customer group.</p>
    */
-
+   
    @JsonProperty("key")
    public String getKey();
 
    public void setKey(final String key);
-
+   
    public static CustomerGroupSetKeyActionImpl of(){
       return new CustomerGroupSetKeyActionImpl();
    }
-
+   
 
    public static CustomerGroupSetKeyActionImpl of(final CustomerGroupSetKeyAction template) {
       CustomerGroupSetKeyActionImpl instance = new CustomerGroupSetKeyActionImpl();

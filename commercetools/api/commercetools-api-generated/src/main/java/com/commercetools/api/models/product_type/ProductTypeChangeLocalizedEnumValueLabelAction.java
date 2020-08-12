@@ -43,8 +43,8 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
 
    public static ProductTypeChangeLocalizedEnumValueLabelActionImpl of(final ProductTypeChangeLocalizedEnumValueLabelAction template) {
       ProductTypeChangeLocalizedEnumValueLabelActionImpl instance = new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
-      instance.setNewValue(template.getNewValue());
       instance.setAttributeName(template.getAttributeName());
+      instance.setNewValue(template.getNewValue());
       return instance;
    }
 

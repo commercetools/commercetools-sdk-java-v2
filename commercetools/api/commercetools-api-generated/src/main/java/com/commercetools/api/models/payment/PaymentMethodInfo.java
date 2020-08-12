@@ -58,9 +58,9 @@ public interface PaymentMethodInfo  {
 
    public static PaymentMethodInfoImpl of(final PaymentMethodInfo template) {
       PaymentMethodInfoImpl instance = new PaymentMethodInfoImpl();
+      instance.setPaymentInterface(template.getPaymentInterface());
       instance.setMethod(template.getMethod());
       instance.setName(template.getName());
-      instance.setPaymentInterface(template.getPaymentInterface());
       return instance;
    }
 

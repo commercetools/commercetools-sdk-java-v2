@@ -16,17 +16,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder {
    
-   @Nullable
-   private com.commercetools.api.models.type.FieldContainer fields;
+   
+   private String textLineItemId;
    
    @Nullable
    private com.commercetools.api.models.type.TypeResourceIdentifier type;
    
+   @Nullable
+   private com.commercetools.api.models.type.FieldContainer fields;
    
-   private String textLineItemId;
-   
-   public MyShoppingListSetTextLineItemCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
-      this.fields = fields;
+   public MyShoppingListSetTextLineItemCustomTypeActionBuilder textLineItemId( final String textLineItemId) {
+      this.textLineItemId = textLineItemId;
       return this;
    }
    
@@ -35,14 +35,14 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder {
       return this;
    }
    
-   public MyShoppingListSetTextLineItemCustomTypeActionBuilder textLineItemId( final String textLineItemId) {
-      this.textLineItemId = textLineItemId;
+   public MyShoppingListSetTextLineItemCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+      this.fields = fields;
       return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.type.FieldContainer getFields(){
-      return this.fields;
+   
+   public String getTextLineItemId(){
+      return this.textLineItemId;
    }
    
    @Nullable
@@ -50,13 +50,13 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder {
       return this.type;
    }
    
-   
-   public String getTextLineItemId(){
-      return this.textLineItemId;
+   @Nullable
+   public com.commercetools.api.models.type.FieldContainer getFields(){
+      return this.fields;
    }
 
    public MyShoppingListSetTextLineItemCustomTypeAction build() {
-       return new MyShoppingListSetTextLineItemCustomTypeActionImpl(fields, type, textLineItemId);
+       return new MyShoppingListSetTextLineItemCustomTypeActionImpl(textLineItemId, type, fields);
    }
    
    public static MyShoppingListSetTextLineItemCustomTypeActionBuilder of() {
@@ -65,9 +65,9 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionBuilder {
    
    public static MyShoppingListSetTextLineItemCustomTypeActionBuilder of(final MyShoppingListSetTextLineItemCustomTypeAction template) {
       MyShoppingListSetTextLineItemCustomTypeActionBuilder builder = new MyShoppingListSetTextLineItemCustomTypeActionBuilder();
-      builder.fields = template.getFields();
-      builder.type = template.getType();
       builder.textLineItemId = template.getTextLineItemId();
+      builder.type = template.getType();
+      builder.fields = template.getFields();
       return builder;
    }
    

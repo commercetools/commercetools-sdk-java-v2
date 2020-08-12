@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentUpdateImpl implements MyPaymentUpdate {
 
+   private Long version;
+   
    private java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions;
 
-   private Long version;
-
    @JsonCreator
-   MyPaymentUpdateImpl(@JsonProperty("actions") final java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions, @JsonProperty("version") final Long version) {
-      this.actions = actions;
+   MyPaymentUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions) {
       this.version = version;
+      this.actions = actions;
    }
    public MyPaymentUpdateImpl() {
-
+      
    }
-
-
+   
+   
+   public Long getVersion(){
+      return this.version;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> getActions(){
       return this.actions;
    }
 
-
-   public Long getVersion(){
-      return this.version;
-   }
-
-   public void setActions(final java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions){
-      this.actions = actions;
-   }
-
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setActions(final java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions){
+      this.actions = actions;
    }
 
 }

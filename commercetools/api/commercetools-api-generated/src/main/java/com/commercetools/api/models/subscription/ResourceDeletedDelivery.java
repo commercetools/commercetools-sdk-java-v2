@@ -45,8 +45,8 @@ public interface ResourceDeletedDelivery extends SubscriptionDelivery {
       instance.setProjectKey(template.getProjectKey());
       instance.setResource(template.getResource());
       instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setModifiedAt(template.getModifiedAt());
       instance.setVersion(template.getVersion());
+      instance.setModifiedAt(template.getModifiedAt());
       return instance;
    }
 

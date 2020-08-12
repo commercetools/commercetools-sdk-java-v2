@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction {
 
    private String action;
-
+   
    private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
    @JsonCreator
@@ -33,15 +33,15 @@ public final class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAct
       this.action = "removeRoles";
    }
    public ChannelRemoveRolesActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }

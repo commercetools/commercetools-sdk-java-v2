@@ -23,40 +23,40 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditAppliedMessageImpl.class)
 public interface OrderEditAppliedMessage extends Message {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("edit")
    public OrderEditReference getEdit();
-
+   
    @NotNull
    @Valid
    @JsonProperty("result")
    public OrderEditApplied getResult();
 
    public void setEdit(final OrderEditReference edit);
-
+   
    public void setResult(final OrderEditApplied result);
-
+   
    public static OrderEditAppliedMessageImpl of(){
       return new OrderEditAppliedMessageImpl();
    }
-
+   
 
    public static OrderEditAppliedMessageImpl of(final OrderEditAppliedMessage template) {
       OrderEditAppliedMessageImpl instance = new OrderEditAppliedMessageImpl();
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setId(template.getId());
       instance.setVersion(template.getVersion());
-      instance.setCreatedBy(template.getCreatedBy());
+      instance.setCreatedAt(template.getCreatedAt());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
       instance.setLastModifiedBy(template.getLastModifiedBy());
+      instance.setCreatedBy(template.getCreatedBy());
       instance.setSequenceNumber(template.getSequenceNumber());
       instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setResourceVersion(template.getResourceVersion());
-      instance.setResult(template.getResult());
+      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
       instance.setEdit(template.getEdit());
+      instance.setResult(template.getResult());
       return instance;
    }
 

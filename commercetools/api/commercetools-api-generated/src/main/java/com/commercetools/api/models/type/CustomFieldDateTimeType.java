@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface CustomFieldDateTimeType extends FieldType {
 
 
-
+   
    public static CustomFieldDateTimeTypeImpl of(){
       return new CustomFieldDateTimeTypeImpl();
    }
-
+   
 
    public static CustomFieldDateTimeTypeImpl of(final CustomFieldDateTimeType template) {
       CustomFieldDateTimeTypeImpl instance = new CustomFieldDateTimeTypeImpl();

@@ -30,11 +30,11 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
    public List<String> getGroups();
 
    public void setGroups(final List<String> groups);
-
+   
    public static DiscountCodeChangeGroupsActionImpl of(){
       return new DiscountCodeChangeGroupsActionImpl();
    }
-
+   
 
    public static DiscountCodeChangeGroupsActionImpl of(final DiscountCodeChangeGroupsAction template) {
       DiscountCodeChangeGroupsActionImpl instance = new DiscountCodeChangeGroupsActionImpl();

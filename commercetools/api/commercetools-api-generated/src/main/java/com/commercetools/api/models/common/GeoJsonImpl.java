@@ -28,9 +28,9 @@ public final class GeoJsonImpl implements GeoJson {
    GeoJsonImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

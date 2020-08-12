@@ -18,22 +18,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OrderLineItemDiscountSetMessageBuilder {
    
    
-   private java.time.ZonedDateTime createdAt;
-   
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   
    private String id;
    
    
    private Long version;
    
-   @Nullable
-   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   
+   private java.time.ZonedDateTime lastModifiedAt;
    
    @Nullable
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+   
+   @Nullable
+   private com.commercetools.api.models.common.CreatedBy createdBy;
    
    
    private Long sequenceNumber;
@@ -41,33 +41,23 @@ public final class OrderLineItemDiscountSetMessageBuilder {
    
    private com.commercetools.api.models.common.Reference resource;
    
+   
+   private Long resourceVersion;
+   
    @Nullable
    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
    
    
-   private Long resourceVersion;
-   
-   
-   private com.commercetools.api.models.common.Money totalPrice;
-   
-   
    private String lineItemId;
-   
-   @Nullable
-   private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
    
    
    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
    
-   public OrderLineItemDiscountSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
-      this.createdAt = createdAt;
-      return this;
-   }
    
-   public OrderLineItemDiscountSetMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
-      this.lastModifiedAt = lastModifiedAt;
-      return this;
-   }
+   private com.commercetools.api.models.common.Money totalPrice;
+   
+   @Nullable
+   private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
    
    public OrderLineItemDiscountSetMessageBuilder id( final String id) {
       this.id = id;
@@ -79,13 +69,23 @@ public final class OrderLineItemDiscountSetMessageBuilder {
       return this;
    }
    
-   public OrderLineItemDiscountSetMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-      this.createdBy = createdBy;
+   public OrderLineItemDiscountSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+      this.createdAt = createdAt;
+      return this;
+   }
+   
+   public OrderLineItemDiscountSetMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+      this.lastModifiedAt = lastModifiedAt;
       return this;
    }
    
    public OrderLineItemDiscountSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
       this.lastModifiedBy = lastModifiedBy;
+      return this;
+   }
+   
+   public OrderLineItemDiscountSetMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+      this.createdBy = createdBy;
       return this;
    }
    
@@ -99,18 +99,13 @@ public final class OrderLineItemDiscountSetMessageBuilder {
       return this;
    }
    
-   public OrderLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
-      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-      return this;
-   }
-   
    public OrderLineItemDiscountSetMessageBuilder resourceVersion( final Long resourceVersion) {
       this.resourceVersion = resourceVersion;
       return this;
    }
    
-   public OrderLineItemDiscountSetMessageBuilder totalPrice( final com.commercetools.api.models.common.Money totalPrice) {
-      this.totalPrice = totalPrice;
+   public OrderLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+      this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
       return this;
    }
    
@@ -119,24 +114,19 @@ public final class OrderLineItemDiscountSetMessageBuilder {
       return this;
    }
    
-   public OrderLineItemDiscountSetMessageBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
-      this.taxedPrice = taxedPrice;
-      return this;
-   }
-   
    public OrderLineItemDiscountSetMessageBuilder discountedPricePerQuantity( final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
       this.discountedPricePerQuantity = discountedPricePerQuantity;
       return this;
    }
    
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
+   public OrderLineItemDiscountSetMessageBuilder totalPrice( final com.commercetools.api.models.common.Money totalPrice) {
+      this.totalPrice = totalPrice;
+      return this;
    }
    
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
+   public OrderLineItemDiscountSetMessageBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
+      this.taxedPrice = taxedPrice;
+      return this;
    }
    
    
@@ -149,14 +139,24 @@ public final class OrderLineItemDiscountSetMessageBuilder {
       return this.version;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
+   }
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
    }
    
    @Nullable
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
    
    
@@ -169,19 +169,14 @@ public final class OrderLineItemDiscountSetMessageBuilder {
       return this.resource;
    }
    
-   @Nullable
-   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
-      return this.resourceUserProvidedIdentifiers;
-   }
-   
    
    public Long getResourceVersion(){
       return this.resourceVersion;
    }
    
-   
-   public com.commercetools.api.models.common.Money getTotalPrice(){
-      return this.totalPrice;
+   @Nullable
+   public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+      return this.resourceUserProvidedIdentifiers;
    }
    
    
@@ -189,18 +184,23 @@ public final class OrderLineItemDiscountSetMessageBuilder {
       return this.lineItemId;
    }
    
-   @Nullable
-   public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
-      return this.taxedPrice;
-   }
-   
    
    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
       return this.discountedPricePerQuantity;
    }
+   
+   
+   public com.commercetools.api.models.common.Money getTotalPrice(){
+      return this.totalPrice;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
+      return this.taxedPrice;
+   }
 
    public OrderLineItemDiscountSetMessage build() {
-       return new OrderLineItemDiscountSetMessageImpl(createdAt, lastModifiedAt, id, version, createdBy, lastModifiedBy, sequenceNumber, resource, resourceUserProvidedIdentifiers, resourceVersion, totalPrice, lineItemId, taxedPrice, discountedPricePerQuantity);
+       return new OrderLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, discountedPricePerQuantity, totalPrice, taxedPrice);
    }
    
    public static OrderLineItemDiscountSetMessageBuilder of() {
@@ -209,20 +209,20 @@ public final class OrderLineItemDiscountSetMessageBuilder {
    
    public static OrderLineItemDiscountSetMessageBuilder of(final OrderLineItemDiscountSetMessage template) {
       OrderLineItemDiscountSetMessageBuilder builder = new OrderLineItemDiscountSetMessageBuilder();
-      builder.createdAt = template.getCreatedAt();
-      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.id = template.getId();
       builder.version = template.getVersion();
-      builder.createdBy = template.getCreatedBy();
+      builder.createdAt = template.getCreatedAt();
+      builder.lastModifiedAt = template.getLastModifiedAt();
       builder.lastModifiedBy = template.getLastModifiedBy();
+      builder.createdBy = template.getCreatedBy();
       builder.sequenceNumber = template.getSequenceNumber();
       builder.resource = template.getResource();
-      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.resourceVersion = template.getResourceVersion();
-      builder.totalPrice = template.getTotalPrice();
+      builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
       builder.lineItemId = template.getLineItemId();
-      builder.taxedPrice = template.getTaxedPrice();
       builder.discountedPricePerQuantity = template.getDiscountedPricePerQuantity();
+      builder.totalPrice = template.getTotalPrice();
+      builder.taxedPrice = template.getTaxedPrice();
       return builder;
    }
    

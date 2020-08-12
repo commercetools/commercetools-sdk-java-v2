@@ -75,13 +75,13 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
 
    public static ProductAddVariantActionImpl of(final ProductAddVariantAction template) {
       ProductAddVariantActionImpl instance = new ProductAddVariantActionImpl();
-      instance.setImages(template.getImages());
-      instance.setAssets(template.getAssets());
-      instance.setAttributes(template.getAttributes());
-      instance.setStaged(template.getStaged());
-      instance.setPrices(template.getPrices());
       instance.setSku(template.getSku());
       instance.setKey(template.getKey());
+      instance.setPrices(template.getPrices());
+      instance.setImages(template.getImages());
+      instance.setAttributes(template.getAttributes());
+      instance.setStaged(template.getStaged());
+      instance.setAssets(template.getAssets());
       return instance;
    }
 

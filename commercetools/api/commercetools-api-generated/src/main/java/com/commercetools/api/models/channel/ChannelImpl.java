@@ -2,11 +2,11 @@ package com.commercetools.api.models.channel;
 
 import com.commercetools.api.models.channel.ChannelRoleEnum;
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.GeoJson;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.LoggedResource;
 import com.commercetools.api.models.review.ReviewRatingStatistics;
 import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
@@ -31,104 +31,98 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelImpl implements Channel {
 
-   private java.time.ZonedDateTime createdAt;
-
-   private java.time.ZonedDateTime lastModifiedAt;
-
    private String id;
-
+   
    private Long version;
-
-   private com.commercetools.api.models.common.CreatedBy createdBy;
-
+   
+   private java.time.ZonedDateTime createdAt;
+   
+   private java.time.ZonedDateTime lastModifiedAt;
+   
    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-   private com.commercetools.api.models.common.Address address;
-
-   private com.commercetools.api.models.type.CustomFields custom;
-
+   
+   private com.commercetools.api.models.common.CreatedBy createdBy;
+   
+   private String key;
+   
    private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
-
+   
+   private com.commercetools.api.models.common.LocalizedString name;
+   
    private com.commercetools.api.models.common.LocalizedString description;
-
+   
+   private com.commercetools.api.models.common.Address address;
+   
+   private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
+   
+   private com.commercetools.api.models.type.CustomFields custom;
+   
    private com.commercetools.api.models.common.GeoJson geoLocation;
 
-   private com.commercetools.api.models.common.LocalizedString name;
-
-   private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
-
-   private String key;
-
    @JsonCreator
-   ChannelImpl(@JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("roles") final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("geoLocation") final com.commercetools.api.models.common.GeoJson geoLocation, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("reviewRatingStatistics") final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("key") final String key) {
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
+   ChannelImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("roles") final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("reviewRatingStatistics") final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("geoLocation") final com.commercetools.api.models.common.GeoJson geoLocation) {
       this.id = id;
       this.version = version;
-      this.createdBy = createdBy;
+      this.createdAt = createdAt;
+      this.lastModifiedAt = lastModifiedAt;
       this.lastModifiedBy = lastModifiedBy;
-      this.address = address;
-      this.custom = custom;
-      this.roles = roles;
-      this.description = description;
-      this.geoLocation = geoLocation;
-      this.name = name;
-      this.reviewRatingStatistics = reviewRatingStatistics;
+      this.createdBy = createdBy;
       this.key = key;
+      this.roles = roles;
+      this.name = name;
+      this.description = description;
+      this.address = address;
+      this.reviewRatingStatistics = reviewRatingStatistics;
+      this.custom = custom;
+      this.geoLocation = geoLocation;
    }
    public ChannelImpl() {
-
+      
    }
-
-
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-
-
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-
+   
    /**
    *  <p>The unique ID of the channel.</p>
    */
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-   /**
-   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
-   */
-   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
-      return this.createdBy;
+   
+   
+   public java.time.ZonedDateTime getCreatedAt(){
+      return this.createdAt;
    }
-
+   
+   
+   public java.time.ZonedDateTime getLastModifiedAt(){
+      return this.lastModifiedAt;
+   }
+   
    /**
    *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
    */
    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
       return this.lastModifiedBy;
    }
-
+   
    /**
-   *  <p>The address where this channel is located (e.g.
-   *  if the channel is a physical store).</p>
+   *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
    */
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
+   public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+      return this.createdBy;
    }
-
-
-   public com.commercetools.api.models.type.CustomFields getCustom(){
-      return this.custom;
+   
+   /**
+   *  <p>Any arbitrary string key that uniquely identifies this channel within the project.</p>
+   */
+   public String getKey(){
+      return this.key;
    }
-
+   
    /**
    *  <p>The roles of this channel.
    *  Each channel must have at least one role.</p>
@@ -136,14 +130,41 @@ public final class ChannelImpl implements Channel {
    public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles(){
       return this.roles;
    }
-
+   
+   /**
+   *  <p>A human-readable name of the channel.</p>
+   */
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
+   }
+   
    /**
    *  <p>A human-readable description of the channel.</p>
    */
    public com.commercetools.api.models.common.LocalizedString getDescription(){
       return this.description;
    }
-
+   
+   /**
+   *  <p>The address where this channel is located (e.g.
+   *  if the channel is a physical store).</p>
+   */
+   public com.commercetools.api.models.common.Address getAddress(){
+      return this.address;
+   }
+   
+   /**
+   *  <p>Statistics about the review ratings taken into account for this channel.</p>
+   */
+   public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
+      return this.reviewRatingStatistics;
+   }
+   
+   
+   public com.commercetools.api.models.type.CustomFields getCustom(){
+      return this.custom;
+   }
+   
    /**
    *  <p>A GeoJSON geometry object encoding the geo location of the channel.</p>
    */
@@ -151,81 +172,60 @@ public final class ChannelImpl implements Channel {
       return this.geoLocation;
    }
 
-   /**
-   *  <p>A human-readable name of the channel.</p>
-   */
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
-
-   /**
-   *  <p>Statistics about the review ratings taken into account for this channel.</p>
-   */
-   public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
-      return this.reviewRatingStatistics;
-   }
-
-   /**
-   *  <p>Any arbitrary string key that uniquely identifies this channel within the project.</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
-
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
-
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
    }
-
-   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
-      this.createdBy = createdBy;
+   
+   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+      this.createdAt = createdAt;
    }
-
+   
+   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+      this.lastModifiedAt = lastModifiedAt;
+   }
+   
    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
       this.lastModifiedBy = lastModifiedBy;
    }
-
-   public void setAddress(final com.commercetools.api.models.common.Address address){
-      this.address = address;
+   
+   public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
+      this.createdBy = createdBy;
    }
-
-   public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
-      this.custom = custom;
+   
+   public void setKey(final String key){
+      this.key = key;
    }
-
+   
    public void setRoles(final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles){
       this.roles = roles;
    }
-
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
-   }
-
-   public void setGeoLocation(final com.commercetools.api.models.common.GeoJson geoLocation){
-      this.geoLocation = geoLocation;
-   }
-
+   
    public void setName(final com.commercetools.api.models.common.LocalizedString name){
       this.name = name;
    }
-
+   
+   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+      this.description = description;
+   }
+   
+   public void setAddress(final com.commercetools.api.models.common.Address address){
+      this.address = address;
+   }
+   
    public void setReviewRatingStatistics(final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics){
       this.reviewRatingStatistics = reviewRatingStatistics;
    }
-
-   public void setKey(final String key){
-      this.key = key;
+   
+   public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
+      this.custom = custom;
+   }
+   
+   public void setGeoLocation(final com.commercetools.api.models.common.GeoJson geoLocation){
+      this.geoLocation = geoLocation;
    }
 
 }

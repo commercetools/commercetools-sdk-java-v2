@@ -22,18 +22,18 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentInteractionAddedMessagePayloadImpl.class)
 public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("interaction")
    public CustomFields getInteraction();
 
    public void setInteraction(final CustomFields interaction);
-
+   
    public static PaymentInteractionAddedMessagePayloadImpl of(){
       return new PaymentInteractionAddedMessagePayloadImpl();
    }
-
+   
 
    public static PaymentInteractionAddedMessagePayloadImpl of(final PaymentInteractionAddedMessagePayload template) {
       PaymentInteractionAddedMessagePayloadImpl instance = new PaymentInteractionAddedMessagePayloadImpl();

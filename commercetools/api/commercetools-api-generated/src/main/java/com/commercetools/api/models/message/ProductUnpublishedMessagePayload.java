@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface ProductUnpublishedMessagePayload extends MessagePayload {
 
 
-
+   
    public static ProductUnpublishedMessagePayloadImpl of(){
       return new ProductUnpublishedMessagePayloadImpl();
    }
-
+   
 
    public static ProductUnpublishedMessagePayloadImpl of(final ProductUnpublishedMessagePayload template) {
       ProductUnpublishedMessagePayloadImpl instance = new ProductUnpublishedMessagePayloadImpl();

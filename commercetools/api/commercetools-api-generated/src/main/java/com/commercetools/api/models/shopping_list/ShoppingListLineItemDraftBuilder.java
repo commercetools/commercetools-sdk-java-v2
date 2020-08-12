@@ -19,32 +19,22 @@ public final class ShoppingListLineItemDraftBuilder {
    private java.time.ZonedDateTime addedAt;
    
    @Nullable
-   private Integer quantity;
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   
+   @Nullable
+   private String sku;
    
    @Nullable
    private String productId;
    
    @Nullable
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   private Integer quantity;
    
    @Nullable
    private Long variantId;
    
-   @Nullable
-   private String sku;
-   
    public ShoppingListLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
       this.addedAt = addedAt;
-      return this;
-   }
-   
-   public ShoppingListLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
-      this.quantity = quantity;
-      return this;
-   }
-   
-   public ShoppingListLineItemDraftBuilder productId(@Nullable final String productId) {
-      this.productId = productId;
       return this;
    }
    
@@ -53,13 +43,23 @@ public final class ShoppingListLineItemDraftBuilder {
       return this;
    }
    
-   public ShoppingListLineItemDraftBuilder variantId(@Nullable final Long variantId) {
-      this.variantId = variantId;
+   public ShoppingListLineItemDraftBuilder sku(@Nullable final String sku) {
+      this.sku = sku;
       return this;
    }
    
-   public ShoppingListLineItemDraftBuilder sku(@Nullable final String sku) {
-      this.sku = sku;
+   public ShoppingListLineItemDraftBuilder productId(@Nullable final String productId) {
+      this.productId = productId;
+      return this;
+   }
+   
+   public ShoppingListLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
+      this.quantity = quantity;
+      return this;
+   }
+   
+   public ShoppingListLineItemDraftBuilder variantId(@Nullable final Long variantId) {
+      this.variantId = variantId;
       return this;
    }
    
@@ -69,8 +69,13 @@ public final class ShoppingListLineItemDraftBuilder {
    }
    
    @Nullable
-   public Integer getQuantity(){
-      return this.quantity;
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
+   }
+   
+   @Nullable
+   public String getSku(){
+      return this.sku;
    }
    
    @Nullable
@@ -79,22 +84,17 @@ public final class ShoppingListLineItemDraftBuilder {
    }
    
    @Nullable
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
+   public Integer getQuantity(){
+      return this.quantity;
    }
    
    @Nullable
    public Long getVariantId(){
       return this.variantId;
    }
-   
-   @Nullable
-   public String getSku(){
-      return this.sku;
-   }
 
    public ShoppingListLineItemDraft build() {
-       return new ShoppingListLineItemDraftImpl(addedAt, quantity, productId, custom, variantId, sku);
+       return new ShoppingListLineItemDraftImpl(addedAt, custom, sku, productId, quantity, variantId);
    }
    
    public static ShoppingListLineItemDraftBuilder of() {
@@ -104,11 +104,11 @@ public final class ShoppingListLineItemDraftBuilder {
    public static ShoppingListLineItemDraftBuilder of(final ShoppingListLineItemDraft template) {
       ShoppingListLineItemDraftBuilder builder = new ShoppingListLineItemDraftBuilder();
       builder.addedAt = template.getAddedAt();
-      builder.quantity = template.getQuantity();
-      builder.productId = template.getProductId();
       builder.custom = template.getCustom();
-      builder.variantId = template.getVariantId();
       builder.sku = template.getSku();
+      builder.productId = template.getProductId();
+      builder.quantity = template.getQuantity();
+      builder.variantId = template.getVariantId();
       return builder;
    }
    

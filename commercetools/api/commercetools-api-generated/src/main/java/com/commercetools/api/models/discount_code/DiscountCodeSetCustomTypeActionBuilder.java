@@ -15,46 +15,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class DiscountCodeSetCustomTypeActionBuilder {
-
-   @Nullable
-   private com.commercetools.api.models.type.FieldContainer fields;
-
+   
    @Nullable
    private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
-   public DiscountCodeSetCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
-      this.fields = fields;
-      return this;
-   }
-
+   
+   @Nullable
+   private com.commercetools.api.models.type.FieldContainer fields;
+   
    public DiscountCodeSetCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
       this.type = type;
       return this;
    }
-
+   
+   public DiscountCodeSetCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+      this.fields = fields;
+      return this;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+      return this.type;
+   }
+   
    @Nullable
    public com.commercetools.api.models.type.FieldContainer getFields(){
       return this.fields;
    }
 
-   @Nullable
-   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
-      return this.type;
-   }
-
    public DiscountCodeSetCustomTypeAction build() {
-       return new DiscountCodeSetCustomTypeActionImpl(fields, type);
+       return new DiscountCodeSetCustomTypeActionImpl(type, fields);
    }
-
+   
    public static DiscountCodeSetCustomTypeActionBuilder of() {
       return new DiscountCodeSetCustomTypeActionBuilder();
    }
-
+   
    public static DiscountCodeSetCustomTypeActionBuilder of(final DiscountCodeSetCustomTypeAction template) {
       DiscountCodeSetCustomTypeActionBuilder builder = new DiscountCodeSetCustomTypeActionBuilder();
-      builder.fields = template.getFields();
       builder.type = template.getType();
+      builder.fields = template.getFields();
       return builder;
    }
-
+   
 }

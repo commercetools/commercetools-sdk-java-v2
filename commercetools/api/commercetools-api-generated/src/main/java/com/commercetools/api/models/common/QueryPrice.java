@@ -27,11 +27,11 @@ import java.io.IOException;
 @JsonDeserialize(as = QueryPriceImpl.class)
 public interface QueryPrice  {
 
-
+   
    @NotNull
    @JsonProperty("id")
    public String getId();
-
+   
    @NotNull
    @Valid
    @JsonProperty("value")
@@ -39,75 +39,75 @@ public interface QueryPrice  {
    /**
    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
    */
-
+   
    @JsonProperty("country")
    public String getCountry();
-
+   
    @Valid
    @JsonProperty("customerGroup")
    public CustomerGroupReference getCustomerGroup();
-
+   
    @Valid
    @JsonProperty("channel")
    public ChannelReference getChannel();
-
-
+   
+   
    @JsonProperty("validFrom")
    public ZonedDateTime getValidFrom();
-
-
+   
+   
    @JsonProperty("validUntil")
    public ZonedDateTime getValidUntil();
-
+   
    @Valid
    @JsonProperty("discounted")
    public DiscountedPrice getDiscounted();
-
+   
    @Valid
    @JsonProperty("custom")
    public CustomFields getCustom();
-
+   
    @Valid
    @JsonProperty("tiers")
    public List<PriceTierDraft> getTiers();
 
    public void setId(final String id);
-
+   
    public void setValue(final Money value);
-
+   
    public void setCountry(final String country);
-
+   
    public void setCustomerGroup(final CustomerGroupReference customerGroup);
-
+   
    public void setChannel(final ChannelReference channel);
-
+   
    public void setValidFrom(final ZonedDateTime validFrom);
-
+   
    public void setValidUntil(final ZonedDateTime validUntil);
-
+   
    public void setDiscounted(final DiscountedPrice discounted);
-
+   
    public void setCustom(final CustomFields custom);
-
+   
    public void setTiers(final List<PriceTierDraft> tiers);
-
+   
    public static QueryPriceImpl of(){
       return new QueryPriceImpl();
    }
-
+   
 
    public static QueryPriceImpl of(final QueryPrice template) {
       QueryPriceImpl instance = new QueryPriceImpl();
-      instance.setDiscounted(template.getDiscounted());
-      instance.setCountry(template.getCountry());
-      instance.setTiers(template.getTiers());
-      instance.setCustomerGroup(template.getCustomerGroup());
-      instance.setCustom(template.getCustom());
-      instance.setChannel(template.getChannel());
-      instance.setValidUntil(template.getValidUntil());
-      instance.setValidFrom(template.getValidFrom());
       instance.setId(template.getId());
       instance.setValue(template.getValue());
+      instance.setCountry(template.getCountry());
+      instance.setCustomerGroup(template.getCustomerGroup());
+      instance.setChannel(template.getChannel());
+      instance.setValidFrom(template.getValidFrom());
+      instance.setValidUntil(template.getValidUntil());
+      instance.setDiscounted(template.getDiscounted());
+      instance.setCustom(template.getCustom());
+      instance.setTiers(template.getTiers());
       return instance;
    }
 

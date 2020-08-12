@@ -17,29 +17,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class CartChangeLineItemQuantityActionBuilder {
    
    
-   private Integer quantity;
-   
-   @Nullable
-   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-   
-   
    private String lineItemId;
+   
+   
+   private Double quantity;
    
    @Nullable
    private com.commercetools.api.models.common.Money externalPrice;
    
-   public CartChangeLineItemQuantityActionBuilder quantity( final Integer quantity) {
-      this.quantity = quantity;
-      return this;
-   }
-   
-   public CartChangeLineItemQuantityActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-      this.externalTotalPrice = externalTotalPrice;
-      return this;
-   }
+   @Nullable
+   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
    
    public CartChangeLineItemQuantityActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
+      return this;
+   }
+   
+   public CartChangeLineItemQuantityActionBuilder quantity( final Double quantity) {
+      this.quantity = quantity;
       return this;
    }
    
@@ -48,14 +43,9 @@ public final class CartChangeLineItemQuantityActionBuilder {
       return this;
    }
    
-   
-   public Integer getQuantity(){
-      return this.quantity;
-   }
-   
-   @Nullable
-   public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
-      return this.externalTotalPrice;
+   public CartChangeLineItemQuantityActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+      this.externalTotalPrice = externalTotalPrice;
+      return this;
    }
    
    
@@ -63,13 +53,23 @@ public final class CartChangeLineItemQuantityActionBuilder {
       return this.lineItemId;
    }
    
+   
+   public Double getQuantity(){
+      return this.quantity;
+   }
+   
    @Nullable
    public com.commercetools.api.models.common.Money getExternalPrice(){
       return this.externalPrice;
    }
+   
+   @Nullable
+   public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+      return this.externalTotalPrice;
+   }
 
    public CartChangeLineItemQuantityAction build() {
-       return new CartChangeLineItemQuantityActionImpl(quantity, externalTotalPrice, lineItemId, externalPrice);
+       return new CartChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
    }
    
    public static CartChangeLineItemQuantityActionBuilder of() {
@@ -78,10 +78,10 @@ public final class CartChangeLineItemQuantityActionBuilder {
    
    public static CartChangeLineItemQuantityActionBuilder of(final CartChangeLineItemQuantityAction template) {
       CartChangeLineItemQuantityActionBuilder builder = new CartChangeLineItemQuantityActionBuilder();
-      builder.quantity = template.getQuantity();
-      builder.externalTotalPrice = template.getExternalTotalPrice();
       builder.lineItemId = template.getLineItemId();
+      builder.quantity = template.getQuantity();
       builder.externalPrice = template.getExternalPrice();
+      builder.externalTotalPrice = template.getExternalTotalPrice();
       return builder;
    }
    

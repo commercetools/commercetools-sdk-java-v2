@@ -23,9 +23,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeChangeLocalizedEnumValueOrderAction {
 
    private String action;
-
+   
    private String fieldName;
-
+   
    private java.util.List<String> keys;
 
    @JsonCreator
@@ -35,20 +35,20 @@ public final class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeCh
       this.action = "changeLocalizedEnumValueOrder";
    }
    public TypeChangeLocalizedEnumValueOrderActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getFieldName(){
       return this.fieldName;
    }
-
-
+   
+   
    public java.util.List<String> getKeys(){
       return this.keys;
    }
@@ -56,7 +56,7 @@ public final class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeCh
    public void setFieldName(final String fieldName){
       this.fieldName = fieldName;
    }
-
+   
    public void setKeys(final java.util.List<String> keys){
       this.keys = keys;
    }

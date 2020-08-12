@@ -22,28 +22,28 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetParcelTrackingDataActionImpl.class)
 public interface StagedOrderSetParcelTrackingDataAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("parcelId")
    public String getParcelId();
-
+   
    @Valid
    @JsonProperty("trackingData")
    public TrackingData getTrackingData();
 
    public void setParcelId(final String parcelId);
-
+   
    public void setTrackingData(final TrackingData trackingData);
-
+   
    public static StagedOrderSetParcelTrackingDataActionImpl of(){
       return new StagedOrderSetParcelTrackingDataActionImpl();
    }
-
+   
 
    public static StagedOrderSetParcelTrackingDataActionImpl of(final StagedOrderSetParcelTrackingDataAction template) {
       StagedOrderSetParcelTrackingDataActionImpl instance = new StagedOrderSetParcelTrackingDataActionImpl();
-      instance.setTrackingData(template.getTrackingData());
       instance.setParcelId(template.getParcelId());
+      instance.setTrackingData(template.getTrackingData());
       return instance;
    }
 

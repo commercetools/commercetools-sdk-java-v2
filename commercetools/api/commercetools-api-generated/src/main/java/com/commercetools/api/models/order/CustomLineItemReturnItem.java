@@ -21,27 +21,27 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomLineItemReturnItemImpl.class)
 public interface CustomLineItemReturnItem extends ReturnItem {
 
-
+   
    @NotNull
    @JsonProperty("customLineItemId")
    public String getCustomLineItemId();
 
    public void setCustomLineItemId(final String customLineItemId);
-
+   
    public static CustomLineItemReturnItemImpl of(){
       return new CustomLineItemReturnItemImpl();
    }
-
+   
 
    public static CustomLineItemReturnItemImpl of(final CustomLineItemReturnItem template) {
       CustomLineItemReturnItemImpl instance = new CustomLineItemReturnItemImpl();
-      instance.setShipmentState(template.getShipmentState());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
+      instance.setId(template.getId());
       instance.setQuantity(template.getQuantity());
       instance.setComment(template.getComment());
-      instance.setId(template.getId());
+      instance.setShipmentState(template.getShipmentState());
       instance.setPaymentState(template.getPaymentState());
+      instance.setLastModifiedAt(template.getLastModifiedAt());
+      instance.setCreatedAt(template.getCreatedAt());
       instance.setCustomLineItemId(template.getCustomLineItemId());
       return instance;
    }

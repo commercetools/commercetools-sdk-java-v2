@@ -23,9 +23,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChangeIsSearchableAction {
 
    private String action;
-
+   
    private String attributeName;
-
+   
    private Boolean isSearchable;
 
    @JsonCreator
@@ -35,20 +35,20 @@ public final class ProductTypeChangeIsSearchableActionImpl implements ProductTyp
       this.action = "changeIsSearchable";
    }
    public ProductTypeChangeIsSearchableActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAttributeName(){
       return this.attributeName;
    }
-
-
+   
+   
    public Boolean getIsSearchable(){
       return this.isSearchable;
    }
@@ -56,7 +56,7 @@ public final class ProductTypeChangeIsSearchableActionImpl implements ProductTyp
    public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
    }
-
+   
    public void setIsSearchable(final Boolean isSearchable){
       this.isSearchable = isSearchable;
    }

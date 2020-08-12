@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAddLocalizedEnumValueAction {
 
    private String action;
-
+   
    private String attributeName;
-
+   
    private com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class ProductTypeAddLocalizedEnumValueActionImpl implements Product
       this.action = "addLocalizedEnumValue";
    }
    public ProductTypeAddLocalizedEnumValueActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAttributeName(){
       return this.attributeName;
    }
-
-
+   
+   
    public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getValue(){
       return this.value;
    }
@@ -57,7 +57,7 @@ public final class ProductTypeAddLocalizedEnumValueActionImpl implements Product
    public void setAttributeName(final String attributeName){
       this.attributeName = attributeName;
    }
-
+   
    public void setValue(final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value){
       this.value = value;
    }

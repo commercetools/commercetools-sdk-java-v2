@@ -29,10 +29,10 @@ public final class FieldContainerImpl implements FieldContainer {
       this.values = values;
    }
    public FieldContainerImpl() {
-
+      
    }
-
-
+   
+   
    public Map<String,com.fasterxml.jackson.databind.JsonNode> values() {
        return values;
    }

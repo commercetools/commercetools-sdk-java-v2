@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductLegacySetSkuActionBuilder {
-
-
-   private Integer variantId;
-
+   
    @Nullable
    private String sku;
-
-   public ProductLegacySetSkuActionBuilder variantId( final Integer variantId) {
-      this.variantId = variantId;
-      return this;
-   }
-
+   
+   
+   private Integer variantId;
+   
    public ProductLegacySetSkuActionBuilder sku(@Nullable final String sku) {
       this.sku = sku;
       return this;
    }
-
-
-   public Integer getVariantId(){
-      return this.variantId;
+   
+   public ProductLegacySetSkuActionBuilder variantId( final Integer variantId) {
+      this.variantId = variantId;
+      return this;
    }
-
+   
    @Nullable
    public String getSku(){
       return this.sku;
    }
-
-   public ProductLegacySetSkuAction build() {
-       return new ProductLegacySetSkuActionImpl(variantId, sku);
+   
+   
+   public Integer getVariantId(){
+      return this.variantId;
    }
 
+   public ProductLegacySetSkuAction build() {
+       return new ProductLegacySetSkuActionImpl(sku, variantId);
+   }
+   
    public static ProductLegacySetSkuActionBuilder of() {
       return new ProductLegacySetSkuActionBuilder();
    }
-
+   
    public static ProductLegacySetSkuActionBuilder of(final ProductLegacySetSkuAction template) {
       ProductLegacySetSkuActionBuilder builder = new ProductLegacySetSkuActionBuilder();
-      builder.variantId = template.getVariantId();
       builder.sku = template.getSku();
+      builder.variantId = template.getVariantId();
       return builder;
    }
-
+   
 }

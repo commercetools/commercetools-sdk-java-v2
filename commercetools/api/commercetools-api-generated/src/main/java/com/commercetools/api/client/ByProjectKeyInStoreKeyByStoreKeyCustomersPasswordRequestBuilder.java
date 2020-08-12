@@ -23,7 +23,4 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordRequestBuilder {
       return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(apiHttpClient, projectKey, storeKey, customerChangePassword);
    }
    
-   public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetRequestBuilder reset() {
-      return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetRequestBuilder(apiHttpClient, projectKey, storeKey);
-   }
 }

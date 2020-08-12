@@ -13,15 +13,15 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ReviewSetKeyActionBuilder {
-
+   
    @Nullable
    private String key;
-
+   
    public ReviewSetKeyActionBuilder key(@Nullable final String key) {
       this.key = key;
       return this;
    }
-
+   
    @Nullable
    public String getKey(){
       return this.key;
@@ -30,15 +30,15 @@ public final class ReviewSetKeyActionBuilder {
    public ReviewSetKeyAction build() {
        return new ReviewSetKeyActionImpl(key);
    }
-
+   
    public static ReviewSetKeyActionBuilder of() {
       return new ReviewSetKeyActionBuilder();
    }
-
+   
    public static ReviewSetKeyActionBuilder of(final ReviewSetKeyAction template) {
       ReviewSetKeyActionBuilder builder = new ReviewSetKeyActionBuilder();
       builder.key = template.getKey();
       return builder;
    }
-
+   
 }

@@ -21,17 +21,17 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeRemoveFieldDefinitionActionImpl.class)
 public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("fieldName")
    public String getFieldName();
 
    public void setFieldName(final String fieldName);
-
+   
    public static TypeRemoveFieldDefinitionActionImpl of(){
       return new TypeRemoveFieldDefinitionActionImpl();
    }
-
+   
 
    public static TypeRemoveFieldDefinitionActionImpl of(final TypeRemoveFieldDefinitionAction template) {
       TypeRemoveFieldDefinitionActionImpl instance = new TypeRemoveFieldDefinitionActionImpl();

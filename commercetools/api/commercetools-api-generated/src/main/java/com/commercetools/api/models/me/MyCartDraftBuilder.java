@@ -18,200 +18,200 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyCartDraftBuilder {
-
-   @Nullable
-   private java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems;
-
-   @Nullable
-   private String country;
-
-   @Nullable
-   private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
-
-   @Nullable
-   private com.commercetools.api.models.cart.TaxMode taxMode;
-
-   @Nullable
-   private Long deleteDaysAfterLastModification;
-
-   @Nullable
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
-   @Nullable
-   private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
-
+   
+   
+   private String currency;
+   
    @Nullable
    private String customerEmail;
-
+   
    @Nullable
-   private com.commercetools.api.models.common.Address shippingAddress;
-
-
-   private String currency;
-
-   @Nullable
-   private com.commercetools.api.models.common.Address billingAddress;
-
-   @Nullable
-   private String locale;
-
+   private String country;
+   
    @Nullable
    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
-
-   public MyCartDraftBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems) {
-      this.lineItems = lineItems;
-      return this;
-   }
-
-   public MyCartDraftBuilder country(@Nullable final String country) {
-      this.country = country;
-      return this;
-   }
-
-   public MyCartDraftBuilder itemShippingAddresses(@Nullable final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
-      this.itemShippingAddresses = itemShippingAddresses;
-      return this;
-   }
-
-   public MyCartDraftBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {
-      this.taxMode = taxMode;
-      return this;
-   }
-
-   public MyCartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
-      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-      return this;
-   }
-
-   public MyCartDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-      this.custom = custom;
-      return this;
-   }
-
-   public MyCartDraftBuilder shippingMethod(@Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
-      this.shippingMethod = shippingMethod;
-      return this;
-   }
-
-   public MyCartDraftBuilder customerEmail(@Nullable final String customerEmail) {
-      this.customerEmail = customerEmail;
-      return this;
-   }
-
-   public MyCartDraftBuilder shippingAddress(@Nullable final com.commercetools.api.models.common.Address shippingAddress) {
-      this.shippingAddress = shippingAddress;
-      return this;
-   }
-
+   
+   @Nullable
+   private java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems;
+   
+   @Nullable
+   private com.commercetools.api.models.common.Address shippingAddress;
+   
+   @Nullable
+   private com.commercetools.api.models.common.Address billingAddress;
+   
+   @Nullable
+   private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
+   
+   @Nullable
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   
+   @Nullable
+   private String locale;
+   
+   @Nullable
+   private com.commercetools.api.models.cart.TaxMode taxMode;
+   
+   @Nullable
+   private Long deleteDaysAfterLastModification;
+   
+   @Nullable
+   private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
+   
    public MyCartDraftBuilder currency( final String currency) {
       this.currency = currency;
       return this;
    }
-
-   public MyCartDraftBuilder billingAddress(@Nullable final com.commercetools.api.models.common.Address billingAddress) {
-      this.billingAddress = billingAddress;
+   
+   public MyCartDraftBuilder customerEmail(@Nullable final String customerEmail) {
+      this.customerEmail = customerEmail;
       return this;
    }
-
-   public MyCartDraftBuilder locale(@Nullable final String locale) {
-      this.locale = locale;
+   
+   public MyCartDraftBuilder country(@Nullable final String country) {
+      this.country = country;
       return this;
    }
-
+   
    public MyCartDraftBuilder inventoryMode(@Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
       this.inventoryMode = inventoryMode;
       return this;
    }
-
-   @Nullable
-   public java.util.List<com.commercetools.api.models.me.MyLineItemDraft> getLineItems(){
-      return this.lineItems;
+   
+   public MyCartDraftBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems) {
+      this.lineItems = lineItems;
+      return this;
    }
-
+   
+   public MyCartDraftBuilder shippingAddress(@Nullable final com.commercetools.api.models.common.Address shippingAddress) {
+      this.shippingAddress = shippingAddress;
+      return this;
+   }
+   
+   public MyCartDraftBuilder billingAddress(@Nullable final com.commercetools.api.models.common.Address billingAddress) {
+      this.billingAddress = billingAddress;
+      return this;
+   }
+   
+   public MyCartDraftBuilder shippingMethod(@Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
+      this.shippingMethod = shippingMethod;
+      return this;
+   }
+   
+   public MyCartDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+      this.custom = custom;
+      return this;
+   }
+   
+   public MyCartDraftBuilder locale(@Nullable final String locale) {
+      this.locale = locale;
+      return this;
+   }
+   
+   public MyCartDraftBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {
+      this.taxMode = taxMode;
+      return this;
+   }
+   
+   public MyCartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
+      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+      return this;
+   }
+   
+   public MyCartDraftBuilder itemShippingAddresses(@Nullable final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
+      this.itemShippingAddresses = itemShippingAddresses;
+      return this;
+   }
+   
+   
+   public String getCurrency(){
+      return this.currency;
+   }
+   
+   @Nullable
+   public String getCustomerEmail(){
+      return this.customerEmail;
+   }
+   
    @Nullable
    public String getCountry(){
       return this.country;
    }
-
+   
+   @Nullable
+   public com.commercetools.api.models.cart.InventoryMode getInventoryMode(){
+      return this.inventoryMode;
+   }
+   
+   @Nullable
+   public java.util.List<com.commercetools.api.models.me.MyLineItemDraft> getLineItems(){
+      return this.lineItems;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.Address getShippingAddress(){
+      return this.shippingAddress;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.common.Address getBillingAddress(){
+      return this.billingAddress;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
+      return this.shippingMethod;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
+   }
+   
+   @Nullable
+   public String getLocale(){
+      return this.locale;
+   }
+   
+   @Nullable
+   public com.commercetools.api.models.cart.TaxMode getTaxMode(){
+      return this.taxMode;
+   }
+   
+   @Nullable
+   public Long getDeleteDaysAfterLastModification(){
+      return this.deleteDaysAfterLastModification;
+   }
+   
    @Nullable
    public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses(){
       return this.itemShippingAddresses;
    }
 
-   @Nullable
-   public com.commercetools.api.models.cart.TaxMode getTaxMode(){
-      return this.taxMode;
-   }
-
-   @Nullable
-   public Long getDeleteDaysAfterLastModification(){
-      return this.deleteDaysAfterLastModification;
-   }
-
-   @Nullable
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
-   }
-
-   @Nullable
-   public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
-      return this.shippingMethod;
-   }
-
-   @Nullable
-   public String getCustomerEmail(){
-      return this.customerEmail;
-   }
-
-   @Nullable
-   public com.commercetools.api.models.common.Address getShippingAddress(){
-      return this.shippingAddress;
-   }
-
-
-   public String getCurrency(){
-      return this.currency;
-   }
-
-   @Nullable
-   public com.commercetools.api.models.common.Address getBillingAddress(){
-      return this.billingAddress;
-   }
-
-   @Nullable
-   public String getLocale(){
-      return this.locale;
-   }
-
-   @Nullable
-   public com.commercetools.api.models.cart.InventoryMode getInventoryMode(){
-      return this.inventoryMode;
-   }
-
    public MyCartDraft build() {
-       return new MyCartDraftImpl(lineItems, country, itemShippingAddresses, taxMode, deleteDaysAfterLastModification, custom, shippingMethod, customerEmail, shippingAddress, currency, billingAddress, locale, inventoryMode);
+       return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress, billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification, itemShippingAddresses);
    }
-
+   
    public static MyCartDraftBuilder of() {
       return new MyCartDraftBuilder();
    }
-
+   
    public static MyCartDraftBuilder of(final MyCartDraft template) {
       MyCartDraftBuilder builder = new MyCartDraftBuilder();
-      builder.lineItems = template.getLineItems();
+      builder.currency = template.getCurrency();
+      builder.customerEmail = template.getCustomerEmail();
       builder.country = template.getCountry();
-      builder.itemShippingAddresses = template.getItemShippingAddresses();
+      builder.inventoryMode = template.getInventoryMode();
+      builder.lineItems = template.getLineItems();
+      builder.shippingAddress = template.getShippingAddress();
+      builder.billingAddress = template.getBillingAddress();
+      builder.shippingMethod = template.getShippingMethod();
+      builder.custom = template.getCustom();
+      builder.locale = template.getLocale();
       builder.taxMode = template.getTaxMode();
       builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
-      builder.custom = template.getCustom();
-      builder.shippingMethod = template.getShippingMethod();
-      builder.customerEmail = template.getCustomerEmail();
-      builder.shippingAddress = template.getShippingAddress();
-      builder.currency = template.getCurrency();
-      builder.billingAddress = template.getBillingAddress();
-      builder.locale = template.getLocale();
-      builder.inventoryMode = template.getInventoryMode();
+      builder.itemShippingAddresses = template.getItemShippingAddresses();
       return builder;
    }
-
+   
 }

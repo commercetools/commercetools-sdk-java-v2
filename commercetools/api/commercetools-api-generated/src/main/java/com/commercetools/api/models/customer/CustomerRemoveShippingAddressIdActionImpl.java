@@ -23,30 +23,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerRemoveShippingAddressIdActionImpl implements CustomerRemoveShippingAddressIdAction {
 
    private String action;
-
+   
    private String addressId;
+   
+   private String addressKey;
 
    @JsonCreator
-   CustomerRemoveShippingAddressIdActionImpl(@JsonProperty("addressId") final String addressId) {
+   CustomerRemoveShippingAddressIdActionImpl(@JsonProperty("addressId") final String addressId, @JsonProperty("addressKey") final String addressKey) {
       this.addressId = addressId;
+      this.addressKey = addressKey;
       this.action = "removeShippingAddressId";
    }
    public CustomerRemoveShippingAddressIdActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getAddressId(){
       return this.addressId;
+   }
+   
+   
+   public String getAddressKey(){
+      return this.addressKey;
    }
 
    public void setAddressId(final String addressId){
       this.addressId = addressId;
+   }
+   
+   public void setAddressKey(final String addressKey){
+      this.addressKey = addressKey;
    }
 
 }

@@ -14,21 +14,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CustomerRemoveAddressActionBuilder {
    
-   
+   @Nullable
    private String addressId;
    
-   public CustomerRemoveAddressActionBuilder addressId( final String addressId) {
+   @Nullable
+   private String addressKey;
+   
+   public CustomerRemoveAddressActionBuilder addressId(@Nullable final String addressId) {
       this.addressId = addressId;
       return this;
    }
    
+   public CustomerRemoveAddressActionBuilder addressKey(@Nullable final String addressKey) {
+      this.addressKey = addressKey;
+      return this;
+   }
    
+   @Nullable
    public String getAddressId(){
       return this.addressId;
    }
+   
+   @Nullable
+   public String getAddressKey(){
+      return this.addressKey;
+   }
 
    public CustomerRemoveAddressAction build() {
-       return new CustomerRemoveAddressActionImpl(addressId);
+       return new CustomerRemoveAddressActionImpl(addressId, addressKey);
    }
    
    public static CustomerRemoveAddressActionBuilder of() {
@@ -38,6 +51,7 @@ public final class CustomerRemoveAddressActionBuilder {
    public static CustomerRemoveAddressActionBuilder of(final CustomerRemoveAddressAction template) {
       CustomerRemoveAddressActionBuilder builder = new CustomerRemoveAddressActionBuilder();
       builder.addressId = template.getAddressId();
+      builder.addressKey = template.getAddressKey();
       return builder;
    }
    

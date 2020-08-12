@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken {
 
+   private String id;
+   
+   private Long version;
+   
    private Long ttlMinutes;
 
-   private String id;
-
-   private Long version;
-
    @JsonCreator
-   CustomerCreateEmailTokenImpl(@JsonProperty("ttlMinutes") final Long ttlMinutes, @JsonProperty("id") final String id, @JsonProperty("version") final Long version) {
-      this.ttlMinutes = ttlMinutes;
+   CustomerCreateEmailTokenImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("ttlMinutes") final Long ttlMinutes) {
       this.id = id;
       this.version = version;
+      this.ttlMinutes = ttlMinutes;
    }
    public CustomerCreateEmailTokenImpl() {
-
+      
    }
-
-
-   public Long getTtlMinutes(){
-      return this.ttlMinutes;
-   }
-
-
+   
+   
    public String getId(){
       return this.id;
    }
-
-
+   
+   
    public Long getVersion(){
       return this.version;
    }
-
-   public void setTtlMinutes(final Long ttlMinutes){
-      this.ttlMinutes = ttlMinutes;
+   
+   
+   public Long getTtlMinutes(){
+      return this.ttlMinutes;
    }
 
    public void setId(final String id){
       this.id = id;
    }
-
+   
    public void setVersion(final Long version){
       this.version = version;
+   }
+   
+   public void setTtlMinutes(final Long ttlMinutes){
+      this.ttlMinutes = ttlMinutes;
    }
 
 }

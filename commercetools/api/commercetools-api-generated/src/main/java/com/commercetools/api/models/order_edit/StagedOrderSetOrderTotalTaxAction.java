@@ -23,29 +23,29 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetOrderTotalTaxActionImpl.class)
 public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("externalTotalGross")
    public Money getExternalTotalGross();
-
+   
    @Valid
    @JsonProperty("externalTaxPortions")
    public List<TaxPortionDraft> getExternalTaxPortions();
 
    public void setExternalTotalGross(final Money externalTotalGross);
-
+   
    public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
-
+   
    public static StagedOrderSetOrderTotalTaxActionImpl of(){
       return new StagedOrderSetOrderTotalTaxActionImpl();
    }
-
+   
 
    public static StagedOrderSetOrderTotalTaxActionImpl of(final StagedOrderSetOrderTotalTaxAction template) {
       StagedOrderSetOrderTotalTaxActionImpl instance = new StagedOrderSetOrderTotalTaxActionImpl();
-      instance.setExternalTaxPortions(template.getExternalTaxPortions());
       instance.setExternalTotalGross(template.getExternalTotalGross());
+      instance.setExternalTaxPortions(template.getExternalTaxPortions());
       return instance;
    }
 

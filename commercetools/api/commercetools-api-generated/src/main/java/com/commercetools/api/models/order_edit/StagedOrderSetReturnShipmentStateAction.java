@@ -22,28 +22,28 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetReturnShipmentStateActionImpl.class)
 public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("returnItemId")
    public String getReturnItemId();
-
+   
    @NotNull
    @JsonProperty("shipmentState")
    public ReturnShipmentState getShipmentState();
 
    public void setReturnItemId(final String returnItemId);
-
+   
    public void setShipmentState(final ReturnShipmentState shipmentState);
-
+   
    public static StagedOrderSetReturnShipmentStateActionImpl of(){
       return new StagedOrderSetReturnShipmentStateActionImpl();
    }
-
+   
 
    public static StagedOrderSetReturnShipmentStateActionImpl of(final StagedOrderSetReturnShipmentStateAction template) {
       StagedOrderSetReturnShipmentStateActionImpl instance = new StagedOrderSetReturnShipmentStateActionImpl();
-      instance.setShipmentState(template.getShipmentState());
       instance.setReturnItemId(template.getReturnItemId());
+      instance.setShipmentState(template.getShipmentState());
       return instance;
    }
 

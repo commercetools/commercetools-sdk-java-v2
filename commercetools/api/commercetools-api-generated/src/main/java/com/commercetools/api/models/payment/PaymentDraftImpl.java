@@ -27,107 +27,86 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentDraftImpl implements PaymentDraft {
 
-   private com.commercetools.api.models.common.Money amountAuthorized;
-
+   private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
+   
    private String anonymousId;
-
-   private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
-
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
-   private String authorizedUntil;
-
+   
    private String externalId;
-
-   private java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions;
-
-   private com.commercetools.api.models.common.Money amountPaid;
-
-   private com.commercetools.api.models.common.Money amountRefunded;
-
-   private com.commercetools.api.models.common.Money amountPlanned;
-
-   private java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> interfaceInteractions;
-
+   
    private String interfaceId;
-
+   
+   private com.commercetools.api.models.common.Money amountPlanned;
+   
+   private com.commercetools.api.models.common.Money amountAuthorized;
+   
+   private String authorizedUntil;
+   
+   private com.commercetools.api.models.common.Money amountPaid;
+   
+   private com.commercetools.api.models.common.Money amountRefunded;
+   
+   private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
+   
+   private com.commercetools.api.models.payment.PaymentStatusDraft paymentStatus;
+   
+   private java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions;
+   
+   private java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> interfaceInteractions;
+   
+   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+   
    private String key;
 
-   private com.commercetools.api.models.payment.PaymentStatusDraft paymentStatus;
-
-   private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
-
    @JsonCreator
-   PaymentDraftImpl(@JsonProperty("amountAuthorized") final com.commercetools.api.models.common.Money amountAuthorized, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("authorizedUntil") final String authorizedUntil, @JsonProperty("externalId") final String externalId, @JsonProperty("transactions") final java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions, @JsonProperty("amountPaid") final com.commercetools.api.models.common.Money amountPaid, @JsonProperty("amountRefunded") final com.commercetools.api.models.common.Money amountRefunded, @JsonProperty("amountPlanned") final com.commercetools.api.models.common.Money amountPlanned, @JsonProperty("interfaceInteractions") final java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> interfaceInteractions, @JsonProperty("interfaceId") final String interfaceId, @JsonProperty("key") final String key, @JsonProperty("paymentStatus") final com.commercetools.api.models.payment.PaymentStatusDraft paymentStatus, @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
-      this.amountAuthorized = amountAuthorized;
+   PaymentDraftImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("externalId") final String externalId, @JsonProperty("interfaceId") final String interfaceId, @JsonProperty("amountPlanned") final com.commercetools.api.models.common.Money amountPlanned, @JsonProperty("amountAuthorized") final com.commercetools.api.models.common.Money amountAuthorized, @JsonProperty("authorizedUntil") final String authorizedUntil, @JsonProperty("amountPaid") final com.commercetools.api.models.common.Money amountPaid, @JsonProperty("amountRefunded") final com.commercetools.api.models.common.Money amountRefunded, @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("paymentStatus") final com.commercetools.api.models.payment.PaymentStatusDraft paymentStatus, @JsonProperty("transactions") final java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions, @JsonProperty("interfaceInteractions") final java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> interfaceInteractions, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("key") final String key) {
+      this.customer = customer;
       this.anonymousId = anonymousId;
-      this.paymentMethodInfo = paymentMethodInfo;
-      this.custom = custom;
-      this.authorizedUntil = authorizedUntil;
       this.externalId = externalId;
-      this.transactions = transactions;
+      this.interfaceId = interfaceId;
+      this.amountPlanned = amountPlanned;
+      this.amountAuthorized = amountAuthorized;
+      this.authorizedUntil = authorizedUntil;
       this.amountPaid = amountPaid;
       this.amountRefunded = amountRefunded;
-      this.amountPlanned = amountPlanned;
-      this.interfaceInteractions = interfaceInteractions;
-      this.interfaceId = interfaceId;
-      this.key = key;
+      this.paymentMethodInfo = paymentMethodInfo;
       this.paymentStatus = paymentStatus;
-      this.customer = customer;
+      this.transactions = transactions;
+      this.interfaceInteractions = interfaceInteractions;
+      this.custom = custom;
+      this.key = key;
    }
    public PaymentDraftImpl() {
-
+      
    }
-
-
-   public com.commercetools.api.models.common.Money getAmountAuthorized(){
-      return this.amountAuthorized;
+   
+   /**
+   *  <p>A reference to the customer this payment belongs to.</p>
+   */
+   public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
+      return this.customer;
    }
-
+   
    /**
    *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
    */
    public String getAnonymousId(){
       return this.anonymousId;
    }
-
-
-   public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
-      return this.paymentMethodInfo;
-   }
-
-
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
-   }
-
-
-   public String getAuthorizedUntil(){
-      return this.authorizedUntil;
-   }
-
-
+   
+   
    public String getExternalId(){
       return this.externalId;
    }
-
+   
    /**
-   *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+   *  <p>The identifier that is used by the interface that manages the payment (usually the PSP).
+   *  Cannot be changed once it has been set.
+   *  The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
    */
-   public java.util.List<com.commercetools.api.models.payment.TransactionDraft> getTransactions(){
-      return this.transactions;
+   public String getInterfaceId(){
+      return this.interfaceId;
    }
-
-
-   public com.commercetools.api.models.common.Money getAmountPaid(){
-      return this.amountPaid;
-   }
-
-
-   public com.commercetools.api.models.common.Money getAmountRefunded(){
-      return this.amountRefunded;
-   }
-
+   
    /**
    *  <p>How much money this payment intends to receive from the customer.
    *  The value usually matches the cart or order gross total.</p>
@@ -135,7 +114,44 @@ public final class PaymentDraftImpl implements PaymentDraft {
    public com.commercetools.api.models.common.Money getAmountPlanned(){
       return this.amountPlanned;
    }
-
+   
+   
+   public com.commercetools.api.models.common.Money getAmountAuthorized(){
+      return this.amountAuthorized;
+   }
+   
+   
+   public String getAuthorizedUntil(){
+      return this.authorizedUntil;
+   }
+   
+   
+   public com.commercetools.api.models.common.Money getAmountPaid(){
+      return this.amountPaid;
+   }
+   
+   
+   public com.commercetools.api.models.common.Money getAmountRefunded(){
+      return this.amountRefunded;
+   }
+   
+   
+   public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
+      return this.paymentMethodInfo;
+   }
+   
+   
+   public com.commercetools.api.models.payment.PaymentStatusDraft getPaymentStatus(){
+      return this.paymentStatus;
+   }
+   
+   /**
+   *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+   */
+   public java.util.List<com.commercetools.api.models.payment.TransactionDraft> getTransactions(){
+      return this.transactions;
+   }
+   
    /**
    *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP.
    *  Some interactions may result in a transaction.
@@ -145,16 +161,12 @@ public final class PaymentDraftImpl implements PaymentDraft {
    public java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> getInterfaceInteractions(){
       return this.interfaceInteractions;
    }
-
-   /**
-   *  <p>The identifier that is used by the interface that manages the payment (usually the PSP).
-   *  Cannot be changed once it has been set.
-   *  The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
-   */
-   public String getInterfaceId(){
-      return this.interfaceId;
+   
+   
+   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+      return this.custom;
    }
-
+   
    /**
    *  <p>User-specific unique identifier for the payment (max.
    *  256 characters).</p>
@@ -163,76 +175,64 @@ public final class PaymentDraftImpl implements PaymentDraft {
       return this.key;
    }
 
-
-   public com.commercetools.api.models.payment.PaymentStatusDraft getPaymentStatus(){
-      return this.paymentStatus;
+   public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer){
+      this.customer = customer;
    }
-
-   /**
-   *  <p>A reference to the customer this payment belongs to.</p>
-   */
-   public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
-      return this.customer;
-   }
-
-   public void setAmountAuthorized(final com.commercetools.api.models.common.Money amountAuthorized){
-      this.amountAuthorized = amountAuthorized;
-   }
-
+   
    public void setAnonymousId(final String anonymousId){
       this.anonymousId = anonymousId;
    }
-
-   public void setPaymentMethodInfo(final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo){
-      this.paymentMethodInfo = paymentMethodInfo;
-   }
-
-   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
-      this.custom = custom;
-   }
-
-   public void setAuthorizedUntil(final String authorizedUntil){
-      this.authorizedUntil = authorizedUntil;
-   }
-
+   
    public void setExternalId(final String externalId){
       this.externalId = externalId;
    }
-
-   public void setTransactions(final java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions){
-      this.transactions = transactions;
-   }
-
-   public void setAmountPaid(final com.commercetools.api.models.common.Money amountPaid){
-      this.amountPaid = amountPaid;
-   }
-
-   public void setAmountRefunded(final com.commercetools.api.models.common.Money amountRefunded){
-      this.amountRefunded = amountRefunded;
-   }
-
-   public void setAmountPlanned(final com.commercetools.api.models.common.Money amountPlanned){
-      this.amountPlanned = amountPlanned;
-   }
-
-   public void setInterfaceInteractions(final java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> interfaceInteractions){
-      this.interfaceInteractions = interfaceInteractions;
-   }
-
+   
    public void setInterfaceId(final String interfaceId){
       this.interfaceId = interfaceId;
    }
-
-   public void setKey(final String key){
-      this.key = key;
+   
+   public void setAmountPlanned(final com.commercetools.api.models.common.Money amountPlanned){
+      this.amountPlanned = amountPlanned;
    }
-
+   
+   public void setAmountAuthorized(final com.commercetools.api.models.common.Money amountAuthorized){
+      this.amountAuthorized = amountAuthorized;
+   }
+   
+   public void setAuthorizedUntil(final String authorizedUntil){
+      this.authorizedUntil = authorizedUntil;
+   }
+   
+   public void setAmountPaid(final com.commercetools.api.models.common.Money amountPaid){
+      this.amountPaid = amountPaid;
+   }
+   
+   public void setAmountRefunded(final com.commercetools.api.models.common.Money amountRefunded){
+      this.amountRefunded = amountRefunded;
+   }
+   
+   public void setPaymentMethodInfo(final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo){
+      this.paymentMethodInfo = paymentMethodInfo;
+   }
+   
    public void setPaymentStatus(final com.commercetools.api.models.payment.PaymentStatusDraft paymentStatus){
       this.paymentStatus = paymentStatus;
    }
-
-   public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer){
-      this.customer = customer;
+   
+   public void setTransactions(final java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions){
+      this.transactions = transactions;
+   }
+   
+   public void setInterfaceInteractions(final java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> interfaceInteractions){
+      this.interfaceInteractions = interfaceInteractions;
+   }
+   
+   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
+      this.custom = custom;
+   }
+   
+   public void setKey(final String key){
+      this.key = key;
    }
 
 }

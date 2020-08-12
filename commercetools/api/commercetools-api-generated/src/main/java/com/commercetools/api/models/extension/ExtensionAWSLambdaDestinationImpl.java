@@ -23,52 +23,52 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ExtensionAWSLambdaDestinationImpl implements ExtensionAWSLambdaDestination {
 
    private String type;
-
-   private String accessKey;
-
+   
    private String arn;
-
+   
+   private String accessKey;
+   
    private String accessSecret;
 
    @JsonCreator
-   ExtensionAWSLambdaDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("arn") final String arn, @JsonProperty("accessSecret") final String accessSecret) {
-      this.accessKey = accessKey;
+   ExtensionAWSLambdaDestinationImpl(@JsonProperty("arn") final String arn, @JsonProperty("accessKey") final String accessKey, @JsonProperty("accessSecret") final String accessSecret) {
       this.arn = arn;
+      this.accessKey = accessKey;
       this.accessSecret = accessSecret;
       this.type = "AWSLambda";
    }
    public ExtensionAWSLambdaDestinationImpl() {
-
+      
    }
-
-
+   
+   
    public String getType(){
       return this.type;
    }
-
-
-   public String getAccessKey(){
-      return this.accessKey;
-   }
-
-
+   
+   
    public String getArn(){
       return this.arn;
    }
-
-
+   
+   
+   public String getAccessKey(){
+      return this.accessKey;
+   }
+   
+   
    public String getAccessSecret(){
       return this.accessSecret;
-   }
-
-   public void setAccessKey(final String accessKey){
-      this.accessKey = accessKey;
    }
 
    public void setArn(final String arn){
       this.arn = arn;
    }
-
+   
+   public void setAccessKey(final String accessKey){
+      this.accessKey = accessKey;
+   }
+   
    public void setAccessSecret(final String accessSecret){
       this.accessSecret = accessSecret;
    }

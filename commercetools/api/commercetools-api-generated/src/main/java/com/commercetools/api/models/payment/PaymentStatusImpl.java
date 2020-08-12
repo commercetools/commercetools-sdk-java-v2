@@ -22,51 +22,51 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentStatusImpl implements PaymentStatus {
 
+   private String interfaceCode;
+   
    private String interfaceText;
-
+   
    private com.commercetools.api.models.state.StateReference state;
 
-   private String interfaceCode;
-
    @JsonCreator
-   PaymentStatusImpl(@JsonProperty("interfaceText") final String interfaceText, @JsonProperty("state") final com.commercetools.api.models.state.StateReference state, @JsonProperty("interfaceCode") final String interfaceCode) {
+   PaymentStatusImpl(@JsonProperty("interfaceCode") final String interfaceCode, @JsonProperty("interfaceText") final String interfaceText, @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
+      this.interfaceCode = interfaceCode;
       this.interfaceText = interfaceText;
       this.state = state;
-      this.interfaceCode = interfaceCode;
    }
    public PaymentStatusImpl() {
-
+      
    }
-
-   /**
-   *  <p>A text describing the current status returned by the interface that processes the payment.</p>
-   */
-   public String getInterfaceText(){
-      return this.interfaceText;
-   }
-
-
-   public com.commercetools.api.models.state.StateReference getState(){
-      return this.state;
-   }
-
+   
    /**
    *  <p>A code describing the current status returned by the interface that processes the payment.</p>
    */
    public String getInterfaceCode(){
       return this.interfaceCode;
    }
-
-   public void setInterfaceText(final String interfaceText){
-      this.interfaceText = interfaceText;
+   
+   /**
+   *  <p>A text describing the current status returned by the interface that processes the payment.</p>
+   */
+   public String getInterfaceText(){
+      return this.interfaceText;
    }
-
-   public void setState(final com.commercetools.api.models.state.StateReference state){
-      this.state = state;
+   
+   
+   public com.commercetools.api.models.state.StateReference getState(){
+      return this.state;
    }
 
    public void setInterfaceCode(final String interfaceCode){
       this.interfaceCode = interfaceCode;
+   }
+   
+   public void setInterfaceText(final String interfaceText){
+      this.interfaceText = interfaceText;
+   }
+   
+   public void setState(final com.commercetools.api.models.state.StateReference state){
+      this.state = state;
    }
 
 }

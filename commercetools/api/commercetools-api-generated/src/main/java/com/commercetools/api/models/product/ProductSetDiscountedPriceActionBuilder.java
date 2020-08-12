@@ -15,17 +15,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ProductSetDiscountedPriceActionBuilder {
    
-   @Nullable
-   private com.commercetools.api.models.common.DiscountedPrice discounted;
+   
+   private String priceId;
    
    @Nullable
    private Boolean staged;
    
+   @Nullable
+   private com.commercetools.api.models.common.DiscountedPrice discounted;
    
-   private String priceId;
-   
-   public ProductSetDiscountedPriceActionBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
-      this.discounted = discounted;
+   public ProductSetDiscountedPriceActionBuilder priceId( final String priceId) {
+      this.priceId = priceId;
       return this;
    }
    
@@ -34,14 +34,14 @@ public final class ProductSetDiscountedPriceActionBuilder {
       return this;
    }
    
-   public ProductSetDiscountedPriceActionBuilder priceId( final String priceId) {
-      this.priceId = priceId;
+   public ProductSetDiscountedPriceActionBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
+      this.discounted = discounted;
       return this;
    }
    
-   @Nullable
-   public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
-      return this.discounted;
+   
+   public String getPriceId(){
+      return this.priceId;
    }
    
    @Nullable
@@ -49,13 +49,13 @@ public final class ProductSetDiscountedPriceActionBuilder {
       return this.staged;
    }
    
-   
-   public String getPriceId(){
-      return this.priceId;
+   @Nullable
+   public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
+      return this.discounted;
    }
 
    public ProductSetDiscountedPriceAction build() {
-       return new ProductSetDiscountedPriceActionImpl(discounted, staged, priceId);
+       return new ProductSetDiscountedPriceActionImpl(priceId, staged, discounted);
    }
    
    public static ProductSetDiscountedPriceActionBuilder of() {
@@ -64,9 +64,9 @@ public final class ProductSetDiscountedPriceActionBuilder {
    
    public static ProductSetDiscountedPriceActionBuilder of(final ProductSetDiscountedPriceAction template) {
       ProductSetDiscountedPriceActionBuilder builder = new ProductSetDiscountedPriceActionBuilder();
-      builder.discounted = template.getDiscounted();
-      builder.staged = template.getStaged();
       builder.priceId = template.getPriceId();
+      builder.staged = template.getStaged();
+      builder.discounted = template.getDiscounted();
       return builder;
    }
    

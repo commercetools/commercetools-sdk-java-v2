@@ -29,9 +29,9 @@ public final class ExtensionHttpDestinationAuthenticationImpl implements Extensi
    ExtensionHttpDestinationAuthenticationImpl() {
       this.type = "null";
    }
-
-
-
+   
+   
+   
    public String getType(){
       return this.type;
    }

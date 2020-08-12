@@ -22,28 +22,28 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListSetTextLineItemDescriptionActionImpl.class)
 public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppingListUpdateAction {
 
-
+   
    @NotNull
    @JsonProperty("textLineItemId")
    public String getTextLineItemId();
-
+   
    @Valid
    @JsonProperty("description")
    public LocalizedString getDescription();
 
    public void setTextLineItemId(final String textLineItemId);
-
+   
    public void setDescription(final LocalizedString description);
-
+   
    public static MyShoppingListSetTextLineItemDescriptionActionImpl of(){
       return new MyShoppingListSetTextLineItemDescriptionActionImpl();
    }
-
+   
 
    public static MyShoppingListSetTextLineItemDescriptionActionImpl of(final MyShoppingListSetTextLineItemDescriptionAction template) {
       MyShoppingListSetTextLineItemDescriptionActionImpl instance = new MyShoppingListSetTextLineItemDescriptionActionImpl();
-      instance.setDescription(template.getDescription());
       instance.setTextLineItemId(template.getTextLineItemId());
+      instance.setDescription(template.getDescription());
       return instance;
    }
 

@@ -22,11 +22,11 @@ import java.io.IOException;
 public interface CustomFieldNumberType extends FieldType {
 
 
-
+   
    public static CustomFieldNumberTypeImpl of(){
       return new CustomFieldNumberTypeImpl();
    }
-
+   
 
    public static CustomFieldNumberTypeImpl of(final CustomFieldNumberType template) {
       CustomFieldNumberTypeImpl instance = new CustomFieldNumberTypeImpl();

@@ -23,11 +23,11 @@ import java.io.IOException;
 public interface TaxCategoryResourceIdentifier extends ResourceIdentifier {
 
 
-
+   
    public static TaxCategoryResourceIdentifierImpl of(){
       return new TaxCategoryResourceIdentifierImpl();
    }
-
+   
 
    public static TaxCategoryResourceIdentifierImpl of(final TaxCategoryResourceIdentifier template) {
       TaxCategoryResourceIdentifierImpl instance = new TaxCategoryResourceIdentifierImpl();

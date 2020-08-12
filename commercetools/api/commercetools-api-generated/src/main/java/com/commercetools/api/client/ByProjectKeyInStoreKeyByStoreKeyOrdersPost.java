@@ -6,6 +6,8 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.nio.file.Files;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,8 +22,8 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-*  <p>Creates an order from a Cart from a specific Store. The {storeKey} path parameter maps to a Store’s key.
-*  When using this endpoint the orders’s store field is always set to the store specified in the path parameter.
+*  <p>Creates an order from a Cart from a specific Store. The {storeKey} path parameter maps to a Store's key.
+*  When using this endpoint the orders's store field is always set to the store specified in the path parameter.
 *  The cart must have a shipping address set before creating an order. When using the Platform TaxMode,
 *  the shipping address is used for tax calculation.</p>
 */

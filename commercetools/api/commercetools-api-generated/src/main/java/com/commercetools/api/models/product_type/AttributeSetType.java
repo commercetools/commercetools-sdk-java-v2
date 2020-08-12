@@ -21,18 +21,18 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeSetTypeImpl.class)
 public interface AttributeSetType extends AttributeType {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("elementType")
    public AttributeType getElementType();
 
    public void setElementType(final AttributeType elementType);
-
+   
    public static AttributeSetTypeImpl of(){
       return new AttributeSetTypeImpl();
    }
-
+   
 
    public static AttributeSetTypeImpl of(final AttributeSetType template) {
       AttributeSetTypeImpl instance = new AttributeSetTypeImpl();

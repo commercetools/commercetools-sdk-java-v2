@@ -38,18 +38,18 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
    public JsonNode getFields();
 
    public void setType(final TypeResourceIdentifier type);
-
+   
    public void setFields(final JsonNode fields);
-
+   
    public static CartDiscountSetCustomTypeActionImpl of(){
       return new CartDiscountSetCustomTypeActionImpl();
    }
-
+   
 
    public static CartDiscountSetCustomTypeActionImpl of(final CartDiscountSetCustomTypeAction template) {
       CartDiscountSetCustomTypeActionImpl instance = new CartDiscountSetCustomTypeActionImpl();
-      instance.setFields(template.getFields());
       instance.setType(template.getType());
+      instance.setFields(template.getFields());
       return instance;
    }
 

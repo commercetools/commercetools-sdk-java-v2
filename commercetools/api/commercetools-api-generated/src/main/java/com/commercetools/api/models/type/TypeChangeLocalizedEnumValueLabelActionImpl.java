@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeChangeLocalizedEnumValueLabelAction {
 
    private String action;
-
+   
    private String fieldName;
-
+   
    private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
    @JsonCreator
@@ -36,20 +36,20 @@ public final class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeCh
       this.action = "changeLocalizedEnumValueLabel";
    }
    public TypeChangeLocalizedEnumValueLabelActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
    public String getFieldName(){
       return this.fieldName;
    }
-
-
+   
+   
    public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue(){
       return this.value;
    }
@@ -57,7 +57,7 @@ public final class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeCh
    public void setFieldName(final String fieldName){
       this.fieldName = fieldName;
    }
-
+   
    public void setValue(final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value){
       this.value = value;
    }

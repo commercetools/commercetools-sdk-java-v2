@@ -26,24 +26,24 @@ public final class TextLineItemImpl implements TextLineItem {
 
    private java.time.ZonedDateTime addedAt;
    
-   private Integer quantity;
-   
    private com.commercetools.api.models.type.CustomFields custom;
-   
-   private com.commercetools.api.models.common.LocalizedString name;
    
    private com.commercetools.api.models.common.LocalizedString description;
    
    private String id;
+   
+   private com.commercetools.api.models.common.LocalizedString name;
+   
+   private Integer quantity;
 
    @JsonCreator
-   TextLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("quantity") final Integer quantity, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("id") final String id) {
+   TextLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("id") final String id, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("quantity") final Integer quantity) {
       this.addedAt = addedAt;
-      this.quantity = quantity;
       this.custom = custom;
-      this.name = name;
       this.description = description;
       this.id = id;
+      this.name = name;
+      this.quantity = quantity;
    }
    public TextLineItemImpl() {
       
@@ -57,18 +57,8 @@ public final class TextLineItemImpl implements TextLineItem {
    }
    
    
-   public Integer getQuantity(){
-      return this.quantity;
-   }
-   
-   
    public com.commercetools.api.models.type.CustomFields getCustom(){
       return this.custom;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
    }
    
    
@@ -82,21 +72,23 @@ public final class TextLineItemImpl implements TextLineItem {
    public String getId(){
       return this.id;
    }
+   
+   
+   public com.commercetools.api.models.common.LocalizedString getName(){
+      return this.name;
+   }
+   
+   
+   public Integer getQuantity(){
+      return this.quantity;
+   }
 
    public void setAddedAt(final java.time.ZonedDateTime addedAt){
       this.addedAt = addedAt;
    }
    
-   public void setQuantity(final Integer quantity){
-      this.quantity = quantity;
-   }
-   
    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
       this.custom = custom;
-   }
-   
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
    }
    
    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
@@ -105,6 +97,14 @@ public final class TextLineItemImpl implements TextLineItem {
    
    public void setId(final String id){
       this.id = id;
+   }
+   
+   public void setName(final com.commercetools.api.models.common.LocalizedString name){
+      this.name = name;
+   }
+   
+   public void setQuantity(final Integer quantity){
+      this.quantity = quantity;
    }
 
 }

@@ -32,11 +32,11 @@ import java.io.IOException;
 )
 public interface TypedMoney  {
 
-
+   
    @NotNull
    @JsonProperty("fractionDigits")
    public Integer getFractionDigits();
-
+   
    @NotNull
    @JsonProperty("centAmount")
    public Long getCentAmount();
@@ -48,11 +48,11 @@ public interface TypedMoney  {
    public String getCurrencyCode();
 
    public void setFractionDigits(final Integer fractionDigits);
-
+   
    public void setCentAmount(final Long centAmount);
-
+   
    public void setCurrencyCode(final String currencyCode);
-
+   
 
 
 }

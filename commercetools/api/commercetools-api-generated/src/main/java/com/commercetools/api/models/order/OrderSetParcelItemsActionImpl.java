@@ -24,42 +24,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction {
 
    private String action;
-
+   
+   private String parcelId;
+   
    private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
-   private String parcelId;
-
    @JsonCreator
-   OrderSetParcelItemsActionImpl(@JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items, @JsonProperty("parcelId") final String parcelId) {
-      this.items = items;
+   OrderSetParcelItemsActionImpl(@JsonProperty("parcelId") final String parcelId, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
       this.parcelId = parcelId;
+      this.items = items;
       this.action = "setParcelItems";
    }
    public OrderSetParcelItemsActionImpl() {
-
+      
    }
-
-
+   
+   
    public String getAction(){
       return this.action;
    }
-
-
+   
+   
+   public String getParcelId(){
+      return this.parcelId;
+   }
+   
+   
    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
       return this.items;
    }
 
-
-   public String getParcelId(){
-      return this.parcelId;
-   }
-
-   public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
-      this.items = items;
-   }
-
    public void setParcelId(final String parcelId){
       this.parcelId = parcelId;
+   }
+   
+   public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
+      this.items = items;
    }
 
 }

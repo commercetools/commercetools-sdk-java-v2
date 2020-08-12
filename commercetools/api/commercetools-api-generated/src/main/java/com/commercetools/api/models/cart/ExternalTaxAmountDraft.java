@@ -29,25 +29,25 @@ public interface ExternalTaxAmountDraft  {
    @Valid
    @JsonProperty("totalGross")
    public Money getTotalGross();
-
+   
    @NotNull
    @Valid
    @JsonProperty("taxRate")
    public ExternalTaxRateDraft getTaxRate();
 
    public void setTotalGross(final Money totalGross);
-
+   
    public void setTaxRate(final ExternalTaxRateDraft taxRate);
-
+   
    public static ExternalTaxAmountDraftImpl of(){
       return new ExternalTaxAmountDraftImpl();
    }
-
+   
 
    public static ExternalTaxAmountDraftImpl of(final ExternalTaxAmountDraft template) {
       ExternalTaxAmountDraftImpl instance = new ExternalTaxAmountDraftImpl();
-      instance.setTaxRate(template.getTaxRate());
       instance.setTotalGross(template.getTotalGross());
+      instance.setTaxRate(template.getTaxRate());
       return instance;
    }
 

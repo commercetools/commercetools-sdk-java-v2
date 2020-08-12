@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductAddedToCategoryMessagePayloadImpl.class)
 public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
 
-
+   
    @NotNull
    @Valid
    @JsonProperty("category")
    public CategoryReference getCategory();
-
+   
    @NotNull
    @JsonProperty("staged")
    public Boolean getStaged();
 
    public void setCategory(final CategoryReference category);
-
+   
    public void setStaged(final Boolean staged);
-
+   
    public static ProductAddedToCategoryMessagePayloadImpl of(){
       return new ProductAddedToCategoryMessagePayloadImpl();
    }
-
+   
 
    public static ProductAddedToCategoryMessagePayloadImpl of(final ProductAddedToCategoryMessagePayload template) {
       ProductAddedToCategoryMessagePayloadImpl instance = new ProductAddedToCategoryMessagePayloadImpl();
-      instance.setStaged(template.getStaged());
       instance.setCategory(template.getCategory());
+      instance.setStaged(template.getStaged());
       return instance;
    }
 

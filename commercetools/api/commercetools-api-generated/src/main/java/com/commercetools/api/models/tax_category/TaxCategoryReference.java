@@ -23,17 +23,17 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxCategoryReferenceImpl.class)
 public interface TaxCategoryReference extends Reference {
 
-
+   
    @Valid
    @JsonProperty("obj")
    public TaxCategory getObj();
 
    public void setObj(final TaxCategory obj);
-
+   
    public static TaxCategoryReferenceImpl of(){
       return new TaxCategoryReferenceImpl();
    }
-
+   
 
    public static TaxCategoryReferenceImpl of(final TaxCategoryReference template) {
       TaxCategoryReferenceImpl instance = new TaxCategoryReferenceImpl();

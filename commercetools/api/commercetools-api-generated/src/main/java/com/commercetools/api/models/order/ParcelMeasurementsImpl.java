@@ -22,59 +22,59 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ParcelMeasurementsImpl implements ParcelMeasurements {
 
-   private Integer weightInGram;
-
-   private Integer lengthInMillimeter;
-
-   private Integer heightInMillimeter;
-
-   private Integer widthInMillimeter;
+   private Double heightInMillimeter;
+   
+   private Double lengthInMillimeter;
+   
+   private Double widthInMillimeter;
+   
+   private Double weightInGram;
 
    @JsonCreator
-   ParcelMeasurementsImpl(@JsonProperty("weightInGram") final Integer weightInGram, @JsonProperty("lengthInMillimeter") final Integer lengthInMillimeter, @JsonProperty("heightInMillimeter") final Integer heightInMillimeter, @JsonProperty("widthInMillimeter") final Integer widthInMillimeter) {
-      this.weightInGram = weightInGram;
-      this.lengthInMillimeter = lengthInMillimeter;
+   ParcelMeasurementsImpl(@JsonProperty("heightInMillimeter") final Double heightInMillimeter, @JsonProperty("lengthInMillimeter") final Double lengthInMillimeter, @JsonProperty("widthInMillimeter") final Double widthInMillimeter, @JsonProperty("weightInGram") final Double weightInGram) {
       this.heightInMillimeter = heightInMillimeter;
+      this.lengthInMillimeter = lengthInMillimeter;
       this.widthInMillimeter = widthInMillimeter;
+      this.weightInGram = weightInGram;
    }
    public ParcelMeasurementsImpl() {
-
+      
    }
-
-
-   public Integer getWeightInGram(){
+   
+   
+   public Double getHeightInMillimeter(){
+      return this.heightInMillimeter;
+   }
+   
+   
+   public Double getLengthInMillimeter(){
+      return this.lengthInMillimeter;
+   }
+   
+   
+   public Double getWidthInMillimeter(){
+      return this.widthInMillimeter;
+   }
+   
+   
+   public Double getWeightInGram(){
       return this.weightInGram;
    }
 
-
-   public Integer getLengthInMillimeter(){
-      return this.lengthInMillimeter;
-   }
-
-
-   public Integer getHeightInMillimeter(){
-      return this.heightInMillimeter;
-   }
-
-
-   public Integer getWidthInMillimeter(){
-      return this.widthInMillimeter;
-   }
-
-   public void setWeightInGram(final Integer weightInGram){
-      this.weightInGram = weightInGram;
-   }
-
-   public void setLengthInMillimeter(final Integer lengthInMillimeter){
-      this.lengthInMillimeter = lengthInMillimeter;
-   }
-
-   public void setHeightInMillimeter(final Integer heightInMillimeter){
+   public void setHeightInMillimeter(final Double heightInMillimeter){
       this.heightInMillimeter = heightInMillimeter;
    }
-
-   public void setWidthInMillimeter(final Integer widthInMillimeter){
+   
+   public void setLengthInMillimeter(final Double lengthInMillimeter){
+      this.lengthInMillimeter = lengthInMillimeter;
+   }
+   
+   public void setWidthInMillimeter(final Double widthInMillimeter){
       this.widthInMillimeter = widthInMillimeter;
+   }
+   
+   public void setWeightInGram(final Double weightInGram){
+      this.weightInGram = weightInGram;
    }
 
 }

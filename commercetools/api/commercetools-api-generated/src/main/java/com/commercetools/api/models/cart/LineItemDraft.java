@@ -26,23 +26,23 @@ import java.io.IOException;
 @JsonDeserialize(as = LineItemDraftImpl.class)
 public interface LineItemDraft  {
 
-
-
+   
+   
    @JsonProperty("productId")
    public String getProductId();
-
-
+   
+   
    @JsonProperty("variantId")
    public Long getVariantId();
-
-
+   
+   
    @JsonProperty("sku")
    public String getSku();
    /**
    *  <p>The amount of a <code>LineItem</code>in the cart.
    *  Must be a positive integer.</p>
    */
-
+   
    @JsonProperty("quantity")
    public Long getQuantity();
    /**
@@ -93,45 +93,45 @@ public interface LineItemDraft  {
    public ItemShippingDetailsDraft getShippingDetails();
 
    public void setProductId(final String productId);
-
+   
    public void setVariantId(final Long variantId);
-
+   
    public void setSku(final String sku);
-
+   
    public void setQuantity(final Long quantity);
-
+   
    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
+   
    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
-
+   
    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-
+   
    public void setCustom(final CustomFieldsDraft custom);
-
+   
    public void setExternalPrice(final Money externalPrice);
-
+   
    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
-
+   
    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
-
+   
    public static LineItemDraftImpl of(){
       return new LineItemDraftImpl();
    }
-
+   
 
    public static LineItemDraftImpl of(final LineItemDraft template) {
       LineItemDraftImpl instance = new LineItemDraftImpl();
-      instance.setExternalTaxRate(template.getExternalTaxRate());
-      instance.setQuantity(template.getQuantity());
-      instance.setShippingDetails(template.getShippingDetails());
       instance.setProductId(template.getProductId());
-      instance.setExternalTotalPrice(template.getExternalTotalPrice());
-      instance.setCustom(template.getCustom());
-      instance.setSupplyChannel(template.getSupplyChannel());
       instance.setVariantId(template.getVariantId());
-      instance.setDistributionChannel(template.getDistributionChannel());
       instance.setSku(template.getSku());
+      instance.setQuantity(template.getQuantity());
+      instance.setSupplyChannel(template.getSupplyChannel());
+      instance.setDistributionChannel(template.getDistributionChannel());
+      instance.setExternalTaxRate(template.getExternalTaxRate());
+      instance.setCustom(template.getCustom());
       instance.setExternalPrice(template.getExternalPrice());
+      instance.setExternalTotalPrice(template.getExternalTotalPrice());
+      instance.setShippingDetails(template.getShippingDetails());
       return instance;
    }
 

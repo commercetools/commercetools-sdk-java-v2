@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyShoppingListChangeLineItemQuantityActionBuilder {
-
-
-   private Long quantity;
-
-
+   
+   
    private String lineItemId;
-
-   public MyShoppingListChangeLineItemQuantityActionBuilder quantity( final Long quantity) {
-      this.quantity = quantity;
-      return this;
-   }
-
+   
+   
+   private Long quantity;
+   
    public MyShoppingListChangeLineItemQuantityActionBuilder lineItemId( final String lineItemId) {
       this.lineItemId = lineItemId;
       return this;
    }
-
-
+   
+   public MyShoppingListChangeLineItemQuantityActionBuilder quantity( final Long quantity) {
+      this.quantity = quantity;
+      return this;
+   }
+   
+   
+   public String getLineItemId(){
+      return this.lineItemId;
+   }
+   
+   
    public Long getQuantity(){
       return this.quantity;
    }
 
-
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-
    public MyShoppingListChangeLineItemQuantityAction build() {
-       return new MyShoppingListChangeLineItemQuantityActionImpl(quantity, lineItemId);
+       return new MyShoppingListChangeLineItemQuantityActionImpl(lineItemId, quantity);
    }
-
+   
    public static MyShoppingListChangeLineItemQuantityActionBuilder of() {
       return new MyShoppingListChangeLineItemQuantityActionBuilder();
    }
-
+   
    public static MyShoppingListChangeLineItemQuantityActionBuilder of(final MyShoppingListChangeLineItemQuantityAction template) {
       MyShoppingListChangeLineItemQuantityActionBuilder builder = new MyShoppingListChangeLineItemQuantityActionBuilder();
-      builder.quantity = template.getQuantity();
       builder.lineItemId = template.getLineItemId();
+      builder.quantity = template.getQuantity();
       return builder;
    }
-
+   
 }

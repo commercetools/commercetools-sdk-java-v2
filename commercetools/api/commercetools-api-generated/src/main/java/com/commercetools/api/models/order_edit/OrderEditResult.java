@@ -18,10 +18,10 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
+   @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditPreviewSuccessImpl.class, name = "PreviewSuccess"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditAppliedImpl.class, name = "Applied"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditNotProcessedImpl.class, name = "NotProcessed"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditPreviewFailureImpl.class, name = "PreviewFailure"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditPreviewSuccessImpl.class, name = "PreviewSuccess")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditNotProcessedImpl.class, name = "NotProcessed")
 })
 @JsonTypeInfo(
    use = JsonTypeInfo.Id.NAME,
@@ -36,7 +36,7 @@ import java.io.IOException;
 public interface OrderEditResult  {
 
 
-
+   
 
 
 }

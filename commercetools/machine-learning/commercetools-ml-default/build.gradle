@@ -18,4 +18,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:3.8.0'
     testCompile 'org.awaitility:awaitility:4.0.2'
+
+    itestImplementation 'junit:junit:4.12'
+    itestImplementation 'org.assertj:assertj-core:3.8.0'
+    itestImplementation 'org.awaitility:awaitility:4.0.2'
 }

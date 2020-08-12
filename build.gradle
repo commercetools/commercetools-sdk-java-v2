@@ -23,6 +23,9 @@ plugins {
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
     id 'com.jfrog.bintray' version '1.8.3'
+
+    id 'com.softeq.gradle.itest' version '1.0.4'
+
 }
 
 //apply plugin: io.vrap.rmf.codegen.plugin.RamlCodegenPlugin
@@ -90,6 +93,8 @@ subprojects { project ->
     apply plugin: 'java-library' // needed to make sure that transitive deps have 'compile' scope
     apply plugin: 'com.jfrog.bintray'
 
+    apply plugin: 'com.softeq.gradle.itest'
+
     group='com.commercetools'
     version = System.getProperty('publish') ? globalVersion : currentVersion
 
@@ -107,6 +112,10 @@ subprojects { project ->
             licenses = ['MIT']
             vcsUrl = 'https://github.com/commercetools/commercetools-java-sdks'
         }
+    }
+
+    itestSourceSet {
+        name = "integrationTest"
     }
 
     task sourcesJar(type: Jar) {

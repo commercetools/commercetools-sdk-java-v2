@@ -36,8 +36,8 @@ public class ByProjectKeyStatesGet {
    private final ApiHttpClient apiHttpClient; 
    private List<String> expand = new ArrayList<>();
    private List<String> sort = new ArrayList<>();
-   private List<Double> limit = new ArrayList<>();
-   private List<Double> offset = new ArrayList<>();
+   private List<Integer> limit = new ArrayList<>();
+   private List<Integer> offset = new ArrayList<>();
    private List<Boolean> withTotal = new ArrayList<>();
    private List<String> where = new ArrayList<>();
    private String projectKey;
@@ -98,11 +98,11 @@ public class ByProjectKeyStatesGet {
       return this.sort;
    }
    
-   public List<Double> getLimit() {
+   public List<Integer> getLimit() {
       return this.limit;
    }
    
-   public List<Double> getOffset() {
+   public List<Integer> getOffset() {
       return this.offset;
    }
    
@@ -136,22 +136,22 @@ public class ByProjectKeyStatesGet {
       return this;
    }
    
-   public ByProjectKeyStatesGet addLimit(final Double limit){
+   public ByProjectKeyStatesGet addLimit(final Integer limit){
       this.limit.add(limit);
       return this;
    }
    
-   public ByProjectKeyStatesGet withLimit(final List<Double> limit){
+   public ByProjectKeyStatesGet withLimit(final List<Integer> limit){
       this.limit = limit;
       return this;
    }
    
-   public ByProjectKeyStatesGet addOffset(final Double offset){
+   public ByProjectKeyStatesGet addOffset(final Integer offset){
       this.offset.add(offset);
       return this;
    }
    
-   public ByProjectKeyStatesGet withOffset(final List<Double> offset){
+   public ByProjectKeyStatesGet withOffset(final List<Integer> offset){
       this.offset = offset;
       return this;
    }

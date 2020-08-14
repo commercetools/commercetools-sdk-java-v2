@@ -34,8 +34,8 @@ public class ByProjectKeyProductProjectionsSuggestGet {
    private List<Boolean> fuzzy = new ArrayList<>();
    private List<Boolean> staged = new ArrayList<>();
    private List<String> sort = new ArrayList<>();
-   private List<Double> limit = new ArrayList<>();
-   private List<Double> offset = new ArrayList<>();
+   private List<Integer> limit = new ArrayList<>();
+   private List<Integer> offset = new ArrayList<>();
    private List<Boolean> withTotal = new ArrayList<>();
    private String projectKey;
    
@@ -99,11 +99,11 @@ public class ByProjectKeyProductProjectionsSuggestGet {
       return this.sort;
    }
    
-   public List<Double> getLimit() {
+   public List<Integer> getLimit() {
       return this.limit;
    }
    
-   public List<Double> getOffset() {
+   public List<Integer> getOffset() {
       return this.offset;
    }
    
@@ -143,22 +143,22 @@ public class ByProjectKeyProductProjectionsSuggestGet {
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSuggestGet addLimit(final Double limit){
+   public ByProjectKeyProductProjectionsSuggestGet addLimit(final Integer limit){
       this.limit.add(limit);
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSuggestGet withLimit(final List<Double> limit){
+   public ByProjectKeyProductProjectionsSuggestGet withLimit(final List<Integer> limit){
       this.limit = limit;
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSuggestGet addOffset(final Double offset){
+   public ByProjectKeyProductProjectionsSuggestGet addOffset(final Integer offset){
       this.offset.add(offset);
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSuggestGet withOffset(final List<Double> offset){
+   public ByProjectKeyProductProjectionsSuggestGet withOffset(final List<Integer> offset){
       this.offset = offset;
       return this;
    }

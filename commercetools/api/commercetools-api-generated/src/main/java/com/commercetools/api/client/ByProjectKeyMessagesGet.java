@@ -36,8 +36,8 @@ public class ByProjectKeyMessagesGet {
    private final ApiHttpClient apiHttpClient; 
    private List<String> expand = new ArrayList<>();
    private List<String> sort = new ArrayList<>();
-   private List<Double> limit = new ArrayList<>();
-   private List<Double> offset = new ArrayList<>();
+   private List<Integer> limit = new ArrayList<>();
+   private List<Integer> offset = new ArrayList<>();
    private List<Boolean> withTotal = new ArrayList<>();
    private List<String> where = new ArrayList<>();
    private String projectKey;
@@ -98,11 +98,11 @@ public class ByProjectKeyMessagesGet {
       return this.sort;
    }
    
-   public List<Double> getLimit() {
+   public List<Integer> getLimit() {
       return this.limit;
    }
    
-   public List<Double> getOffset() {
+   public List<Integer> getOffset() {
       return this.offset;
    }
    
@@ -136,22 +136,22 @@ public class ByProjectKeyMessagesGet {
       return this;
    }
    
-   public ByProjectKeyMessagesGet addLimit(final Double limit){
+   public ByProjectKeyMessagesGet addLimit(final Integer limit){
       this.limit.add(limit);
       return this;
    }
    
-   public ByProjectKeyMessagesGet withLimit(final List<Double> limit){
+   public ByProjectKeyMessagesGet withLimit(final List<Integer> limit){
       this.limit = limit;
       return this;
    }
    
-   public ByProjectKeyMessagesGet addOffset(final Double offset){
+   public ByProjectKeyMessagesGet addOffset(final Integer offset){
       this.offset.add(offset);
       return this;
    }
    
-   public ByProjectKeyMessagesGet withOffset(final List<Double> offset){
+   public ByProjectKeyMessagesGet withOffset(final List<Integer> offset){
       this.offset = offset;
       return this;
    }

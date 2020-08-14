@@ -43,8 +43,8 @@ public class ByProjectKeyProductProjectionsSearchGet {
    private List<String> filterQuery = new ArrayList<>();
    private List<String> facet = new ArrayList<>();
    private List<String> sort = new ArrayList<>();
-   private List<Double> limit = new ArrayList<>();
-   private List<Double> offset = new ArrayList<>();
+   private List<Integer> limit = new ArrayList<>();
+   private List<Integer> offset = new ArrayList<>();
    private List<Boolean> withTotal = new ArrayList<>();
    private List<String> priceCurrency = new ArrayList<>();
    private List<String> priceCountry = new ArrayList<>();
@@ -152,11 +152,11 @@ public class ByProjectKeyProductProjectionsSearchGet {
       return this.sort;
    }
    
-   public List<Double> getLimit() {
+   public List<Integer> getLimit() {
       return this.limit;
    }
    
-   public List<Double> getOffset() {
+   public List<Integer> getOffset() {
       return this.offset;
    }
    
@@ -284,22 +284,22 @@ public class ByProjectKeyProductProjectionsSearchGet {
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSearchGet addLimit(final Double limit){
+   public ByProjectKeyProductProjectionsSearchGet addLimit(final Integer limit){
       this.limit.add(limit);
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSearchGet withLimit(final List<Double> limit){
+   public ByProjectKeyProductProjectionsSearchGet withLimit(final List<Integer> limit){
       this.limit = limit;
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSearchGet addOffset(final Double offset){
+   public ByProjectKeyProductProjectionsSearchGet addOffset(final Integer offset){
       this.offset.add(offset);
       return this;
    }
    
-   public ByProjectKeyProductProjectionsSearchGet withOffset(final List<Double> offset){
+   public ByProjectKeyProductProjectionsSearchGet withOffset(final List<Integer> offset){
       this.offset = offset;
       return this;
    }

@@ -37,8 +37,8 @@ public class ByProjectKeyCartsGet {
    private List<String> customerId = new ArrayList<>();
    private List<String> expand = new ArrayList<>();
    private List<String> sort = new ArrayList<>();
-   private List<Double> limit = new ArrayList<>();
-   private List<Double> offset = new ArrayList<>();
+   private List<Integer> limit = new ArrayList<>();
+   private List<Integer> offset = new ArrayList<>();
    private List<Boolean> withTotal = new ArrayList<>();
    private List<String> where = new ArrayList<>();
    private String projectKey;
@@ -104,11 +104,11 @@ public class ByProjectKeyCartsGet {
       return this.sort;
    }
    
-   public List<Double> getLimit() {
+   public List<Integer> getLimit() {
       return this.limit;
    }
    
-   public List<Double> getOffset() {
+   public List<Integer> getOffset() {
       return this.offset;
    }
    
@@ -152,22 +152,22 @@ public class ByProjectKeyCartsGet {
       return this;
    }
    
-   public ByProjectKeyCartsGet addLimit(final Double limit){
+   public ByProjectKeyCartsGet addLimit(final Integer limit){
       this.limit.add(limit);
       return this;
    }
    
-   public ByProjectKeyCartsGet withLimit(final List<Double> limit){
+   public ByProjectKeyCartsGet withLimit(final List<Integer> limit){
       this.limit = limit;
       return this;
    }
    
-   public ByProjectKeyCartsGet addOffset(final Double offset){
+   public ByProjectKeyCartsGet addOffset(final Integer offset){
       this.offset.add(offset);
       return this;
    }
    
-   public ByProjectKeyCartsGet withOffset(final List<Double> offset){
+   public ByProjectKeyCartsGet withOffset(final List<Integer> offset){
       this.offset = offset;
       return this;
    }

@@ -36,8 +36,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsGet {
    private final ApiHttpClient apiHttpClient; 
    private List<String> expand = new ArrayList<>();
    private List<String> sort = new ArrayList<>();
-   private List<Double> limit = new ArrayList<>();
-   private List<Double> offset = new ArrayList<>();
+   private List<Integer> limit = new ArrayList<>();
+   private List<Integer> offset = new ArrayList<>();
    private List<Boolean> withTotal = new ArrayList<>();
    private List<String> where = new ArrayList<>();
    private String projectKey;
@@ -101,11 +101,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsGet {
       return this.sort;
    }
    
-   public List<Double> getLimit() {
+   public List<Integer> getLimit() {
       return this.limit;
    }
    
-   public List<Double> getOffset() {
+   public List<Integer> getOffset() {
       return this.offset;
    }
    
@@ -141,22 +141,22 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsGet {
       return this;
    }
    
-   public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addLimit(final Double limit){
+   public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addLimit(final Integer limit){
       this.limit.add(limit);
       return this;
    }
    
-   public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withLimit(final List<Double> limit){
+   public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withLimit(final List<Integer> limit){
       this.limit = limit;
       return this;
    }
    
-   public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addOffset(final Double offset){
+   public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet addOffset(final Integer offset){
       this.offset.add(offset);
       return this;
    }
    
-   public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withOffset(final List<Double> offset){
+   public ByProjectKeyInStoreKeyByStoreKeyMeCartsGet withOffset(final List<Integer> offset){
       this.offset = offset;
       return this;
    }

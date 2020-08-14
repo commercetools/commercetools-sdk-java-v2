@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeChangeLocalizedEnumValueOrderActionImpl.class)
 public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("fieldName")
-   public String getFieldName();
-   
-   @NotNull
-   @JsonProperty("keys")
-   public List<String> getKeys();
+    
+    @NotNull
+    @JsonProperty("fieldName")
+    public String getFieldName();
+    
+    @NotNull
+    @JsonProperty("keys")
+    public List<String> getKeys();
 
-   public void setFieldName(final String fieldName);
-   
-   public void setKeys(final List<String> keys);
-   
-   public static TypeChangeLocalizedEnumValueOrderActionImpl of(){
-      return new TypeChangeLocalizedEnumValueOrderActionImpl();
-   }
-   
+    public void setFieldName(final String fieldName);
+    
+    public void setKeys(final List<String> keys);
 
-   public static TypeChangeLocalizedEnumValueOrderActionImpl of(final TypeChangeLocalizedEnumValueOrderAction template) {
-      TypeChangeLocalizedEnumValueOrderActionImpl instance = new TypeChangeLocalizedEnumValueOrderActionImpl();
-      instance.setFieldName(template.getFieldName());
-      instance.setKeys(template.getKeys());
-      return instance;
-   }
+    public static TypeChangeLocalizedEnumValueOrderActionImpl of(){
+        return new TypeChangeLocalizedEnumValueOrderActionImpl();
+    }
+    
+
+    public static TypeChangeLocalizedEnumValueOrderActionImpl of(final TypeChangeLocalizedEnumValueOrderAction template) {
+        TypeChangeLocalizedEnumValueOrderActionImpl instance = new TypeChangeLocalizedEnumValueOrderActionImpl();
+        instance.setFieldName(template.getFieldName());
+        instance.setKeys(template.getKeys());
+        return instance;
+    }
 
 }

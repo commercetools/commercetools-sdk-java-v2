@@ -22,10 +22,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyDraftImpl.class, name = "highPrecision")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = TypedMoneyDraftImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = TypedMoneyDraftImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -34,7 +34,7 @@ import java.io.IOException;
 public interface TypedMoneyDraft extends Money {
 
 
-   
+
 
 
 }

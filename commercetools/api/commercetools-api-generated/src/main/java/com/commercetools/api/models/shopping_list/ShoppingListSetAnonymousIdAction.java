@@ -21,25 +21,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListSetAnonymousIdActionImpl.class)
 public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateAction {
 
-   /**
-   *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to.
-   *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
-   */
-   
-   @JsonProperty("anonymousId")
-   public String getAnonymousId();
+    /**
+    *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to.
+    *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
+    */
+    
+    @JsonProperty("anonymousId")
+    public String getAnonymousId();
 
-   public void setAnonymousId(final String anonymousId);
-   
-   public static ShoppingListSetAnonymousIdActionImpl of(){
-      return new ShoppingListSetAnonymousIdActionImpl();
-   }
-   
+    public void setAnonymousId(final String anonymousId);
 
-   public static ShoppingListSetAnonymousIdActionImpl of(final ShoppingListSetAnonymousIdAction template) {
-      ShoppingListSetAnonymousIdActionImpl instance = new ShoppingListSetAnonymousIdActionImpl();
-      instance.setAnonymousId(template.getAnonymousId());
-      return instance;
-   }
+    public static ShoppingListSetAnonymousIdActionImpl of(){
+        return new ShoppingListSetAnonymousIdActionImpl();
+    }
+    
+
+    public static ShoppingListSetAnonymousIdActionImpl of(final ShoppingListSetAnonymousIdAction template) {
+        ShoppingListSetAnonymousIdActionImpl instance = new ShoppingListSetAnonymousIdActionImpl();
+        instance.setAnonymousId(template.getAnonymousId());
+        return instance;
+    }
 
 }

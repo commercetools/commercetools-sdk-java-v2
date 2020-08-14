@@ -25,18 +25,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingRateInputTypeImpl implements ShippingRateInputType {
 
-   private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
+    private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
 
-   @JsonCreator
-   ShippingRateInputTypeImpl() {
-      this.type = ShippingRateTierType.findEnumViaJsonName("null").get();
-   }
-   
-   
-   
-   public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
-      return this.type;
-   }
+    @JsonCreator
+    ShippingRateInputTypeImpl() {
+        this.type = ShippingRateTierType.findEnumViaJsonName("null").get();
+    }
+    
+
+    
+    public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
+        return this.type;
+    }
 
 
 }

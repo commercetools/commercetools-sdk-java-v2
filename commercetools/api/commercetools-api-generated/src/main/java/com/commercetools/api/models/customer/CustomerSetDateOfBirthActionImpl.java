@@ -23,33 +23,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSetDateOfBirthActionImpl implements CustomerSetDateOfBirthAction {
 
-   private String action;
-   
-   private java.time.LocalDate dateOfBirth;
+    private String action;
+    
+    private java.time.LocalDate dateOfBirth;
 
-   @JsonCreator
-   CustomerSetDateOfBirthActionImpl(@JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth) {
-      this.dateOfBirth = dateOfBirth;
-      this.action = "setDateOfBirth";
-   }
-   public CustomerSetDateOfBirthActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If not defined, the date of birth is unset.</p>
-   */
-   public java.time.LocalDate getDateOfBirth(){
-      return this.dateOfBirth;
-   }
+    @JsonCreator
+    CustomerSetDateOfBirthActionImpl(@JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        this.action = "setDateOfBirth";
+    }
+    public CustomerSetDateOfBirthActionImpl() {
+       
+    }
 
-   public void setDateOfBirth(final java.time.LocalDate dateOfBirth){
-      this.dateOfBirth = dateOfBirth;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If not defined, the date of birth is unset.</p>
+    */
+    public java.time.LocalDate getDateOfBirth(){
+        return this.dateOfBirth;
+    }
+
+    public void setDateOfBirth(final java.time.LocalDate dateOfBirth){
+        this.dateOfBirth = dateOfBirth;
+    }
 
 }

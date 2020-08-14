@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddressRemovedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.common.Address address;
+    private String type;
+    
+    private com.commercetools.api.models.common.Address address;
 
-   @JsonCreator
-   CustomerAddressRemovedMessagePayloadImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address) {
-      this.address = address;
-      this.type = "CustomerAddressRemoved";
-   }
-   public CustomerAddressRemovedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
-   }
+    @JsonCreator
+    CustomerAddressRemovedMessagePayloadImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+        this.address = address;
+        this.type = "CustomerAddressRemoved";
+    }
+    public CustomerAddressRemovedMessagePayloadImpl() {
+       
+    }
 
-   public void setAddress(final com.commercetools.api.models.common.Address address){
-      this.address = address;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
+        return this.address;
+    }
+
+    public void setAddress(final com.commercetools.api.models.common.Address address){
+        this.address = address;
+    }
 
 }

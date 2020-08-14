@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetDescriptionActionImpl implements ProductSetDescriptionAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString description;
-   
-   private Boolean staged;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString description;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductSetDescriptionActionImpl(@JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("staged") final Boolean staged) {
-      this.description = description;
-      this.staged = staged;
-      this.action = "setDescription";
-   }
-   public ProductSetDescriptionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductSetDescriptionActionImpl(@JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("staged") final Boolean staged) {
+        this.description = description;
+        this.staged = staged;
+        this.action = "setDescription";
+    }
+    public ProductSetDescriptionActionImpl() {
+       
+    }
 
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
+        return this.description;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+        this.description = description;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

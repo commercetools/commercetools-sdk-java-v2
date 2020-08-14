@@ -23,83 +23,83 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft {
 
-   private java.time.ZonedDateTime addedAt;
-   
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
-   
-   private String sku;
-   
-   private String productId;
-   
-   private Integer quantity;
-   
-   private Long variantId;
+    private java.time.ZonedDateTime addedAt;
+    
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    
+    private String sku;
+    
+    private String productId;
+    
+    private Integer quantity;
+    
+    private Long variantId;
 
-   @JsonCreator
-   ShoppingListLineItemDraftImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("sku") final String sku, @JsonProperty("productId") final String productId, @JsonProperty("quantity") final Integer quantity, @JsonProperty("variantId") final Long variantId) {
-      this.addedAt = addedAt;
-      this.custom = custom;
-      this.sku = sku;
-      this.productId = productId;
-      this.quantity = quantity;
-      this.variantId = variantId;
-   }
-   public ShoppingListLineItemDraftImpl() {
-      
-   }
-   
-   
-   public java.time.ZonedDateTime getAddedAt(){
-      return this.addedAt;
-   }
-   
-   
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
-   }
-   
-   
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public String getProductId(){
-      return this.productId;
-   }
-   
-   
-   public Integer getQuantity(){
-      return this.quantity;
-   }
-   
-   
-   public Long getVariantId(){
-      return this.variantId;
-   }
+    @JsonCreator
+    ShoppingListLineItemDraftImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("sku") final String sku, @JsonProperty("productId") final String productId, @JsonProperty("quantity") final Integer quantity, @JsonProperty("variantId") final Long variantId) {
+        this.addedAt = addedAt;
+        this.custom = custom;
+        this.sku = sku;
+        this.productId = productId;
+        this.quantity = quantity;
+        this.variantId = variantId;
+    }
+    public ShoppingListLineItemDraftImpl() {
+       
+    }
 
-   public void setAddedAt(final java.time.ZonedDateTime addedAt){
-      this.addedAt = addedAt;
-   }
-   
-   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
-      this.custom = custom;
-   }
-   
-   public void setSku(final String sku){
-      this.sku = sku;
-   }
-   
-   public void setProductId(final String productId){
-      this.productId = productId;
-   }
-   
-   public void setQuantity(final Integer quantity){
-      this.quantity = quantity;
-   }
-   
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
+    
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
+    }
+    
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+        return this.custom;
+    }
+    
+    
+    public String getSku(){
+        return this.sku;
+    }
+    
+    
+    public String getProductId(){
+        return this.productId;
+    }
+    
+    
+    public Integer getQuantity(){
+        return this.quantity;
+    }
+    
+    
+    public Long getVariantId(){
+        return this.variantId;
+    }
+
+    public void setAddedAt(final java.time.ZonedDateTime addedAt){
+        this.addedAt = addedAt;
+    }
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
+        this.custom = custom;
+    }
+    
+    public void setSku(final String sku){
+        this.sku = sku;
+    }
+    
+    public void setProductId(final String productId){
+        this.productId = productId;
+    }
+    
+    public void setQuantity(final Integer quantity){
+        this.quantity = quantity;
+    }
+    
+    public void setVariantId(final Long variantId){
+        this.variantId = variantId;
+    }
 
 }

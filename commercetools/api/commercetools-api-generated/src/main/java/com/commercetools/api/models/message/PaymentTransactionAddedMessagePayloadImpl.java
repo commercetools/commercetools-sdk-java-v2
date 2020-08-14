@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentTransactionAddedMessagePayloadImpl implements PaymentTransactionAddedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.payment.Transaction transaction;
+    private String type;
+    
+    private com.commercetools.api.models.payment.Transaction transaction;
 
-   @JsonCreator
-   PaymentTransactionAddedMessagePayloadImpl(@JsonProperty("transaction") final com.commercetools.api.models.payment.Transaction transaction) {
-      this.transaction = transaction;
-      this.type = "PaymentTransactionAdded";
-   }
-   public PaymentTransactionAddedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.payment.Transaction getTransaction(){
-      return this.transaction;
-   }
+    @JsonCreator
+    PaymentTransactionAddedMessagePayloadImpl(@JsonProperty("transaction") final com.commercetools.api.models.payment.Transaction transaction) {
+        this.transaction = transaction;
+        this.type = "PaymentTransactionAdded";
+    }
+    public PaymentTransactionAddedMessagePayloadImpl() {
+       
+    }
 
-   public void setTransaction(final com.commercetools.api.models.payment.Transaction transaction){
-      this.transaction = transaction;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.payment.Transaction getTransaction(){
+        return this.transaction;
+    }
+
+    public void setTransaction(final com.commercetools.api.models.payment.Transaction transaction){
+        this.transaction = transaction;
+    }
 
 }

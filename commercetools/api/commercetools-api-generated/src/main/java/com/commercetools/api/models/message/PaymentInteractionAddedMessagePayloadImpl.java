@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentInteractionAddedMessagePayloadImpl implements PaymentInteractionAddedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.type.CustomFields interaction;
+    private String type;
+    
+    private com.commercetools.api.models.type.CustomFields interaction;
 
-   @JsonCreator
-   PaymentInteractionAddedMessagePayloadImpl(@JsonProperty("interaction") final com.commercetools.api.models.type.CustomFields interaction) {
-      this.interaction = interaction;
-      this.type = "PaymentInteractionAdded";
-   }
-   public PaymentInteractionAddedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.type.CustomFields getInteraction(){
-      return this.interaction;
-   }
+    @JsonCreator
+    PaymentInteractionAddedMessagePayloadImpl(@JsonProperty("interaction") final com.commercetools.api.models.type.CustomFields interaction) {
+        this.interaction = interaction;
+        this.type = "PaymentInteractionAdded";
+    }
+    public PaymentInteractionAddedMessagePayloadImpl() {
+       
+    }
 
-   public void setInteraction(final com.commercetools.api.models.type.CustomFields interaction){
-      this.interaction = interaction;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.type.CustomFields getInteraction(){
+        return this.interaction;
+    }
+
+    public void setInteraction(final com.commercetools.api.models.type.CustomFields interaction){
+        this.interaction = interaction;
+    }
 
 }

@@ -22,36 +22,36 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderSetLineItemCustomFieldActionImpl.class)
 public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public static OrderSetLineItemCustomFieldActionImpl of(){
-      return new OrderSetLineItemCustomFieldActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
 
-   public static OrderSetLineItemCustomFieldActionImpl of(final OrderSetLineItemCustomFieldAction template) {
-      OrderSetLineItemCustomFieldActionImpl instance = new OrderSetLineItemCustomFieldActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static OrderSetLineItemCustomFieldActionImpl of(){
+        return new OrderSetLineItemCustomFieldActionImpl();
+    }
+    
+
+    public static OrderSetLineItemCustomFieldActionImpl of(final OrderSetLineItemCustomFieldAction template) {
+        OrderSetLineItemCustomFieldActionImpl instance = new OrderSetLineItemCustomFieldActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderRemoveItemShippingAddressActionImpl.class)
 public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("addressKey")
-   public String getAddressKey();
+    
+    @NotNull
+    @JsonProperty("addressKey")
+    public String getAddressKey();
 
-   public void setAddressKey(final String addressKey);
-   
-   public static OrderRemoveItemShippingAddressActionImpl of(){
-      return new OrderRemoveItemShippingAddressActionImpl();
-   }
-   
+    public void setAddressKey(final String addressKey);
 
-   public static OrderRemoveItemShippingAddressActionImpl of(final OrderRemoveItemShippingAddressAction template) {
-      OrderRemoveItemShippingAddressActionImpl instance = new OrderRemoveItemShippingAddressActionImpl();
-      instance.setAddressKey(template.getAddressKey());
-      return instance;
-   }
+    public static OrderRemoveItemShippingAddressActionImpl of(){
+        return new OrderRemoveItemShippingAddressActionImpl();
+    }
+    
+
+    public static OrderRemoveItemShippingAddressActionImpl of(final OrderRemoveItemShippingAddressAction template) {
+        OrderRemoveItemShippingAddressActionImpl instance = new OrderRemoveItemShippingAddressActionImpl();
+        instance.setAddressKey(template.getAddressKey());
+        return instance;
+    }
 
 }

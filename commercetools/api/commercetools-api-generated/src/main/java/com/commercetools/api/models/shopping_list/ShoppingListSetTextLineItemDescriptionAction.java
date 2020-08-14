@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListSetTextLineItemDescriptionActionImpl.class)
 public interface ShoppingListSetTextLineItemDescriptionAction extends ShoppingListUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("textLineItemId")
-   public String getTextLineItemId();
-   
-   @Valid
-   @JsonProperty("description")
-   public LocalizedString getDescription();
+    
+    @NotNull
+    @JsonProperty("textLineItemId")
+    public String getTextLineItemId();
+    
+    @Valid
+    @JsonProperty("description")
+    public LocalizedString getDescription();
 
-   public void setTextLineItemId(final String textLineItemId);
-   
-   public void setDescription(final LocalizedString description);
-   
-   public static ShoppingListSetTextLineItemDescriptionActionImpl of(){
-      return new ShoppingListSetTextLineItemDescriptionActionImpl();
-   }
-   
+    public void setTextLineItemId(final String textLineItemId);
+    
+    public void setDescription(final LocalizedString description);
 
-   public static ShoppingListSetTextLineItemDescriptionActionImpl of(final ShoppingListSetTextLineItemDescriptionAction template) {
-      ShoppingListSetTextLineItemDescriptionActionImpl instance = new ShoppingListSetTextLineItemDescriptionActionImpl();
-      instance.setTextLineItemId(template.getTextLineItemId());
-      instance.setDescription(template.getDescription());
-      return instance;
-   }
+    public static ShoppingListSetTextLineItemDescriptionActionImpl of(){
+        return new ShoppingListSetTextLineItemDescriptionActionImpl();
+    }
+    
+
+    public static ShoppingListSetTextLineItemDescriptionActionImpl of(final ShoppingListSetTextLineItemDescriptionAction template) {
+        ShoppingListSetTextLineItemDescriptionActionImpl instance = new ShoppingListSetTextLineItemDescriptionActionImpl();
+        instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setDescription(template.getDescription());
+        return instance;
+    }
 
 }

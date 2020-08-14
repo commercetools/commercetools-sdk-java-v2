@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldLocalizedStringTypeImpl implements CustomFieldLocalizedStringType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   CustomFieldLocalizedStringTypeImpl() {
-      this.name = "LocalizedString";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    CustomFieldLocalizedStringTypeImpl() {
+        this.name = "LocalizedString";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentSetKeyActionImpl implements PaymentSetKeyAction {
 
-   private String action;
-   
-   private String key;
+    private String action;
+    
+    private String key;
 
-   @JsonCreator
-   PaymentSetKeyActionImpl(@JsonProperty("key") final String key) {
-      this.key = key;
-      this.action = "setKey";
-   }
-   public PaymentSetKeyActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>User-specific unique identifier for the payment (max.
-   *  256 characters).
-   *  If not provided an existing key will be removed.</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    PaymentSetKeyActionImpl(@JsonProperty("key") final String key) {
+        this.key = key;
+        this.action = "setKey";
+    }
+    public PaymentSetKeyActionImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>User-specific unique identifier for the payment (max.
+    *  256 characters).
+    *  If not provided an existing key will be removed.</p>
+    */
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

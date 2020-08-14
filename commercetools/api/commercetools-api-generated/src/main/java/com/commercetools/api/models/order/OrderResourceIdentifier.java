@@ -23,17 +23,17 @@ import java.io.IOException;
 public interface OrderResourceIdentifier extends ResourceIdentifier {
 
 
-   
-   public static OrderResourceIdentifierImpl of(){
-      return new OrderResourceIdentifierImpl();
-   }
-   
 
-   public static OrderResourceIdentifierImpl of(final OrderResourceIdentifier template) {
-      OrderResourceIdentifierImpl instance = new OrderResourceIdentifierImpl();
-      instance.setId(template.getId());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static OrderResourceIdentifierImpl of(){
+        return new OrderResourceIdentifierImpl();
+    }
+    
+
+    public static OrderResourceIdentifierImpl of(final OrderResourceIdentifier template) {
+        OrderResourceIdentifierImpl instance = new OrderResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

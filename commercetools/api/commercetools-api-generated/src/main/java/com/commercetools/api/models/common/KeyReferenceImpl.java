@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class KeyReferenceImpl implements KeyReference {
 
-   private com.commercetools.api.models.common.ReferenceTypeId typeId;
-   
-   private String key;
+    private com.commercetools.api.models.common.ReferenceTypeId typeId;
+    
+    private String key;
 
-   @JsonCreator
-   KeyReferenceImpl(@JsonProperty("key") final String key) {
-      this.key = key;
-      this.typeId = ReferenceTypeId.findEnumViaJsonName("null").get();
-   }
-   public KeyReferenceImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
-      return this.typeId;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    KeyReferenceImpl(@JsonProperty("key") final String key) {
+        this.key = key;
+        this.typeId = ReferenceTypeId.findEnumViaJsonName("null").get();
+    }
+    public KeyReferenceImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
+        return this.typeId;
+    }
+    
+    
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

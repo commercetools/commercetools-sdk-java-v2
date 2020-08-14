@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetLineItemShippingDetailsActionImpl.class)
 public interface StagedOrderSetLineItemShippingDetailsAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @Valid
-   @JsonProperty("shippingDetails")
-   public ItemShippingDetailsDraft getShippingDetails();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @Valid
+    @JsonProperty("shippingDetails")
+    public ItemShippingDetailsDraft getShippingDetails();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
-   
-   public static StagedOrderSetLineItemShippingDetailsActionImpl of(){
-      return new StagedOrderSetLineItemShippingDetailsActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-   public static StagedOrderSetLineItemShippingDetailsActionImpl of(final StagedOrderSetLineItemShippingDetailsAction template) {
-      StagedOrderSetLineItemShippingDetailsActionImpl instance = new StagedOrderSetLineItemShippingDetailsActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setShippingDetails(template.getShippingDetails());
-      return instance;
-   }
+    public static StagedOrderSetLineItemShippingDetailsActionImpl of(){
+        return new StagedOrderSetLineItemShippingDetailsActionImpl();
+    }
+    
+
+    public static StagedOrderSetLineItemShippingDetailsActionImpl of(final StagedOrderSetLineItemShippingDetailsAction template) {
+        StagedOrderSetLineItemShippingDetailsActionImpl instance = new StagedOrderSetLineItemShippingDetailsActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setShippingDetails(template.getShippingDetails());
+        return instance;
+    }
 
 }

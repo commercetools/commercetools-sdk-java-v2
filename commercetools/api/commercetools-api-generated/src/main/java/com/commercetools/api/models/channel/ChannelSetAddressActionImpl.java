@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelSetAddressActionImpl implements ChannelSetAddressAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.Address address;
+    private String action;
+    
+    private com.commercetools.api.models.common.Address address;
 
-   @JsonCreator
-   ChannelSetAddressActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address) {
-      this.address = address;
-      this.action = "setAddress";
-   }
-   public ChannelSetAddressActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
-   }
+    @JsonCreator
+    ChannelSetAddressActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+        this.address = address;
+        this.action = "setAddress";
+    }
+    public ChannelSetAddressActionImpl() {
+       
+    }
 
-   public void setAddress(final com.commercetools.api.models.common.Address address){
-      this.address = address;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
+        return this.address;
+    }
+
+    public void setAddress(final com.commercetools.api.models.common.Address address){
+        this.address = address;
+    }
 
 }

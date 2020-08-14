@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
 
 
-   
-   public static ProductRevertStagedChangesActionImpl of(){
-      return new ProductRevertStagedChangesActionImpl();
-   }
-   
 
-   public static ProductRevertStagedChangesActionImpl of(final ProductRevertStagedChangesAction template) {
-      ProductRevertStagedChangesActionImpl instance = new ProductRevertStagedChangesActionImpl();
-      return instance;
-   }
+    public static ProductRevertStagedChangesActionImpl of(){
+        return new ProductRevertStagedChangesActionImpl();
+    }
+    
+
+    public static ProductRevertStagedChangesActionImpl of(final ProductRevertStagedChangesAction template) {
+        ProductRevertStagedChangesActionImpl instance = new ProductRevertStagedChangesActionImpl();
+        return instance;
+    }
 
 }

@@ -23,17 +23,17 @@ import java.io.IOException;
 public interface ChannelResourceIdentifier extends ResourceIdentifier {
 
 
-   
-   public static ChannelResourceIdentifierImpl of(){
-      return new ChannelResourceIdentifierImpl();
-   }
-   
 
-   public static ChannelResourceIdentifierImpl of(final ChannelResourceIdentifier template) {
-      ChannelResourceIdentifierImpl instance = new ChannelResourceIdentifierImpl();
-      instance.setId(template.getId());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ChannelResourceIdentifierImpl of(){
+        return new ChannelResourceIdentifierImpl();
+    }
+    
+
+    public static ChannelResourceIdentifierImpl of(final ChannelResourceIdentifier template) {
+        ChannelResourceIdentifierImpl instance = new ChannelResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

@@ -20,10 +20,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.DeliveryCloudEventsFormatImpl.class, name = "CloudEvents")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = DeliveryFormatImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = DeliveryFormatImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -32,7 +32,7 @@ import java.io.IOException;
 public interface DeliveryFormat  {
 
 
-   
+
 
 
 }

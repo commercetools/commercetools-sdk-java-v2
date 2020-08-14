@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetShippingMethodTaxRateActionImpl implements StagedOrderSetShippingMethodTaxRateAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+    private String action;
+    
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-   @JsonCreator
-   StagedOrderSetShippingMethodTaxRateActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-      this.externalTaxRate = externalTaxRate;
-      this.action = "setShippingMethodTaxRate";
-   }
-   public StagedOrderSetShippingMethodTaxRateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
-      return this.externalTaxRate;
-   }
+    @JsonCreator
+    StagedOrderSetShippingMethodTaxRateActionImpl(@JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+        this.externalTaxRate = externalTaxRate;
+        this.action = "setShippingMethodTaxRate";
+    }
+    public StagedOrderSetShippingMethodTaxRateActionImpl() {
+       
+    }
 
-   public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
-      this.externalTaxRate = externalTaxRate;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+        return this.externalTaxRate;
+    }
+
+    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
+        this.externalTaxRate = externalTaxRate;
+    }
 
 }

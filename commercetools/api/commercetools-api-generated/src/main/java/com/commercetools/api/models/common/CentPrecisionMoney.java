@@ -23,18 +23,18 @@ import java.io.IOException;
 public interface CentPrecisionMoney extends TypedMoney {
 
 
-   
-   public static CentPrecisionMoneyImpl of(){
-      return new CentPrecisionMoneyImpl();
-   }
-   
 
-   public static CentPrecisionMoneyImpl of(final CentPrecisionMoney template) {
-      CentPrecisionMoneyImpl instance = new CentPrecisionMoneyImpl();
-      instance.setFractionDigits(template.getFractionDigits());
-      instance.setCentAmount(template.getCentAmount());
-      instance.setCurrencyCode(template.getCurrencyCode());
-      return instance;
-   }
+    public static CentPrecisionMoneyImpl of(){
+        return new CentPrecisionMoneyImpl();
+    }
+    
+
+    public static CentPrecisionMoneyImpl of(final CentPrecisionMoney template) {
+        CentPrecisionMoneyImpl instance = new CentPrecisionMoneyImpl();
+        instance.setFractionDigits(template.getFractionDigits());
+        instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        return instance;
+    }
 
 }

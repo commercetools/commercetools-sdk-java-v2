@@ -21,31 +21,31 @@ import java.io.IOException;
 @JsonDeserialize(as = MoneyImpl.class)
 public interface Money  {
 
-   
-   @NotNull
-   @JsonProperty("centAmount")
-   public Long getCentAmount();
-   /**
-   *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-   */
-   @NotNull
-   @JsonProperty("currencyCode")
-   public String getCurrencyCode();
+    
+    @NotNull
+    @JsonProperty("centAmount")
+    public Long getCentAmount();
+    /**
+    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    */
+    @NotNull
+    @JsonProperty("currencyCode")
+    public String getCurrencyCode();
 
-   public void setCentAmount(final Long centAmount);
-   
-   public void setCurrencyCode(final String currencyCode);
-   
-   public static MoneyImpl of(){
-      return new MoneyImpl();
-   }
-   
+    public void setCentAmount(final Long centAmount);
+    
+    public void setCurrencyCode(final String currencyCode);
 
-   public static MoneyImpl of(final Money template) {
-      MoneyImpl instance = new MoneyImpl();
-      instance.setCentAmount(template.getCentAmount());
-      instance.setCurrencyCode(template.getCurrencyCode());
-      return instance;
-   }
+    public static MoneyImpl of(){
+        return new MoneyImpl();
+    }
+    
+
+    public static MoneyImpl of(final Money template) {
+        MoneyImpl instance = new MoneyImpl();
+        instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        return instance;
+    }
 
 }

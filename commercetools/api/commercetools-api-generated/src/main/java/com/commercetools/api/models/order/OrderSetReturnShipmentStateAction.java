@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderSetReturnShipmentStateActionImpl.class)
 public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("returnItemId")
-   public String getReturnItemId();
-   
-   @NotNull
-   @JsonProperty("shipmentState")
-   public ReturnShipmentState getShipmentState();
+    
+    @NotNull
+    @JsonProperty("returnItemId")
+    public String getReturnItemId();
+    
+    @NotNull
+    @JsonProperty("shipmentState")
+    public ReturnShipmentState getShipmentState();
 
-   public void setReturnItemId(final String returnItemId);
-   
-   public void setShipmentState(final ReturnShipmentState shipmentState);
-   
-   public static OrderSetReturnShipmentStateActionImpl of(){
-      return new OrderSetReturnShipmentStateActionImpl();
-   }
-   
+    public void setReturnItemId(final String returnItemId);
+    
+    public void setShipmentState(final ReturnShipmentState shipmentState);
 
-   public static OrderSetReturnShipmentStateActionImpl of(final OrderSetReturnShipmentStateAction template) {
-      OrderSetReturnShipmentStateActionImpl instance = new OrderSetReturnShipmentStateActionImpl();
-      instance.setReturnItemId(template.getReturnItemId());
-      instance.setShipmentState(template.getShipmentState());
-      return instance;
-   }
+    public static OrderSetReturnShipmentStateActionImpl of(){
+        return new OrderSetReturnShipmentStateActionImpl();
+    }
+    
+
+    public static OrderSetReturnShipmentStateActionImpl of(final OrderSetReturnShipmentStateAction template) {
+        OrderSetReturnShipmentStateActionImpl instance = new OrderSetReturnShipmentStateActionImpl();
+        instance.setReturnItemId(template.getReturnItemId());
+        instance.setShipmentState(template.getShipmentState());
+        return instance;
+    }
 
 }

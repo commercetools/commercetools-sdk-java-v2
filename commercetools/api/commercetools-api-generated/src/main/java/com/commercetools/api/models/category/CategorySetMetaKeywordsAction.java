@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySetMetaKeywordsActionImpl.class)
 public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("metaKeywords")
-   public LocalizedString getMetaKeywords();
+    
+    @Valid
+    @JsonProperty("metaKeywords")
+    public LocalizedString getMetaKeywords();
 
-   public void setMetaKeywords(final LocalizedString metaKeywords);
-   
-   public static CategorySetMetaKeywordsActionImpl of(){
-      return new CategorySetMetaKeywordsActionImpl();
-   }
-   
+    public void setMetaKeywords(final LocalizedString metaKeywords);
 
-   public static CategorySetMetaKeywordsActionImpl of(final CategorySetMetaKeywordsAction template) {
-      CategorySetMetaKeywordsActionImpl instance = new CategorySetMetaKeywordsActionImpl();
-      instance.setMetaKeywords(template.getMetaKeywords());
-      return instance;
-   }
+    public static CategorySetMetaKeywordsActionImpl of(){
+        return new CategorySetMetaKeywordsActionImpl();
+    }
+    
+
+    public static CategorySetMetaKeywordsActionImpl of(final CategorySetMetaKeywordsAction template) {
+        CategorySetMetaKeywordsActionImpl instance = new CategorySetMetaKeywordsActionImpl();
+        instance.setMetaKeywords(template.getMetaKeywords());
+        return instance;
+    }
 
 }

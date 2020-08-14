@@ -22,34 +22,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewSetRatingActionImpl implements ReviewSetRatingAction {
 
-   private String action;
-   
-   private Integer rating;
+    private String action;
+    
+    private Integer rating;
 
-   @JsonCreator
-   ReviewSetRatingActionImpl(@JsonProperty("rating") final Integer rating) {
-      this.rating = rating;
-      this.action = "setRating";
-   }
-   public ReviewSetRatingActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>Number between -100 and 100 included.
-   *  If <code>rating</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   public Integer getRating(){
-      return this.rating;
-   }
+    @JsonCreator
+    ReviewSetRatingActionImpl(@JsonProperty("rating") final Integer rating) {
+        this.rating = rating;
+        this.action = "setRating";
+    }
+    public ReviewSetRatingActionImpl() {
+       
+    }
 
-   public void setRating(final Integer rating){
-      this.rating = rating;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>Number between -100 and 100 included.
+    *  If <code>rating</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    public Integer getRating(){
+        return this.rating;
+    }
+
+    public void setRating(final Integer rating){
+        this.rating = rating;
+    }
 
 }

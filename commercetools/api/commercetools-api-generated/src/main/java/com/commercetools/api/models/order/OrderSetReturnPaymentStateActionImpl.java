@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPaymentStateAction {
 
-   private String action;
-   
-   private String returnItemId;
-   
-   private com.commercetools.api.models.order.ReturnPaymentState paymentState;
+    private String action;
+    
+    private String returnItemId;
+    
+    private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
-   @JsonCreator
-   OrderSetReturnPaymentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId, @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
-      this.returnItemId = returnItemId;
-      this.paymentState = paymentState;
-      this.action = "setReturnPaymentState";
-   }
-   public OrderSetReturnPaymentStateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getReturnItemId(){
-      return this.returnItemId;
-   }
-   
-   
-   public com.commercetools.api.models.order.ReturnPaymentState getPaymentState(){
-      return this.paymentState;
-   }
+    @JsonCreator
+    OrderSetReturnPaymentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId, @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
+        this.returnItemId = returnItemId;
+        this.paymentState = paymentState;
+        this.action = "setReturnPaymentState";
+    }
+    public OrderSetReturnPaymentStateActionImpl() {
+       
+    }
 
-   public void setReturnItemId(final String returnItemId){
-      this.returnItemId = returnItemId;
-   }
-   
-   public void setPaymentState(final com.commercetools.api.models.order.ReturnPaymentState paymentState){
-      this.paymentState = paymentState;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getReturnItemId(){
+        return this.returnItemId;
+    }
+    
+    
+    public com.commercetools.api.models.order.ReturnPaymentState getPaymentState(){
+        return this.paymentState;
+    }
+
+    public void setReturnItemId(final String returnItemId){
+        this.returnItemId = returnItemId;
+    }
+    
+    public void setPaymentState(final com.commercetools.api.models.order.ReturnPaymentState paymentState){
+        this.paymentState = paymentState;
+    }
 
 }

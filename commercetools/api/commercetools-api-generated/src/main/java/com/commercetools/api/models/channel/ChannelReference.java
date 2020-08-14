@@ -23,23 +23,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelReferenceImpl.class)
 public interface ChannelReference extends Reference {
 
-   
-   @Valid
-   @JsonProperty("obj")
-   public Channel getObj();
+    
+    @Valid
+    @JsonProperty("obj")
+    public Channel getObj();
 
-   public void setObj(final Channel obj);
-   
-   public static ChannelReferenceImpl of(){
-      return new ChannelReferenceImpl();
-   }
-   
+    public void setObj(final Channel obj);
 
-   public static ChannelReferenceImpl of(final ChannelReference template) {
-      ChannelReferenceImpl instance = new ChannelReferenceImpl();
-      instance.setId(template.getId());
-      instance.setObj(template.getObj());
-      return instance;
-   }
+    public static ChannelReferenceImpl of(){
+        return new ChannelReferenceImpl();
+    }
+    
+
+    public static ChannelReferenceImpl of(final ChannelReference template) {
+        ChannelReferenceImpl instance = new ChannelReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(template.getObj());
+        return instance;
+    }
 
 }

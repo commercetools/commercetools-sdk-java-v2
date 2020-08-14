@@ -21,57 +21,57 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductPriceDiscountsSetUpdatedPriceImpl.class)
 public interface ProductPriceDiscountsSetUpdatedPrice  {
 
-   
-   @NotNull
-   @JsonProperty("variantId")
-   public Integer getVariantId();
-   
-   
-   @JsonProperty("variantKey")
-   public String getVariantKey();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   @NotNull
-   @JsonProperty("priceId")
-   public String getPriceId();
-   
-   @Valid
-   @JsonProperty("discounted")
-   public DiscountedPrice getDiscounted();
-   
-   @NotNull
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @NotNull
+    @JsonProperty("variantId")
+    public Integer getVariantId();
+    
+    
+    @JsonProperty("variantKey")
+    public String getVariantKey();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    @NotNull
+    @JsonProperty("priceId")
+    public String getPriceId();
+    
+    @Valid
+    @JsonProperty("discounted")
+    public DiscountedPrice getDiscounted();
+    
+    @NotNull
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setVariantId(final Integer variantId);
-   
-   public void setVariantKey(final String variantKey);
-   
-   public void setSku(final String sku);
-   
-   public void setPriceId(final String priceId);
-   
-   public void setDiscounted(final DiscountedPrice discounted);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductPriceDiscountsSetUpdatedPriceImpl of(){
-      return new ProductPriceDiscountsSetUpdatedPriceImpl();
-   }
-   
+    public void setVariantId(final Integer variantId);
+    
+    public void setVariantKey(final String variantKey);
+    
+    public void setSku(final String sku);
+    
+    public void setPriceId(final String priceId);
+    
+    public void setDiscounted(final DiscountedPrice discounted);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductPriceDiscountsSetUpdatedPriceImpl of(final ProductPriceDiscountsSetUpdatedPrice template) {
-      ProductPriceDiscountsSetUpdatedPriceImpl instance = new ProductPriceDiscountsSetUpdatedPriceImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setVariantKey(template.getVariantKey());
-      instance.setSku(template.getSku());
-      instance.setPriceId(template.getPriceId());
-      instance.setDiscounted(template.getDiscounted());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductPriceDiscountsSetUpdatedPriceImpl of(){
+        return new ProductPriceDiscountsSetUpdatedPriceImpl();
+    }
+    
+
+    public static ProductPriceDiscountsSetUpdatedPriceImpl of(final ProductPriceDiscountsSetUpdatedPrice template) {
+        ProductPriceDiscountsSetUpdatedPriceImpl instance = new ProductPriceDiscountsSetUpdatedPriceImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setVariantKey(template.getVariantKey());
+        instance.setSku(template.getSku());
+        instance.setPriceId(template.getPriceId());
+        instance.setDiscounted(template.getDiscounted());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

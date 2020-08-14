@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewSetLocaleActionImpl.class)
 public interface ReviewSetLocaleAction extends ReviewUpdateAction {
 
-   /**
-   *  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   
-   @JsonProperty("locale")
-   public String getLocale();
+    /**
+    *  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    
+    @JsonProperty("locale")
+    public String getLocale();
 
-   public void setLocale(final String locale);
-   
-   public static ReviewSetLocaleActionImpl of(){
-      return new ReviewSetLocaleActionImpl();
-   }
-   
+    public void setLocale(final String locale);
 
-   public static ReviewSetLocaleActionImpl of(final ReviewSetLocaleAction template) {
-      ReviewSetLocaleActionImpl instance = new ReviewSetLocaleActionImpl();
-      instance.setLocale(template.getLocale());
-      return instance;
-   }
+    public static ReviewSetLocaleActionImpl of(){
+        return new ReviewSetLocaleActionImpl();
+    }
+    
+
+    public static ReviewSetLocaleActionImpl of(final ReviewSetLocaleAction template) {
+        ReviewSetLocaleActionImpl instance = new ReviewSetLocaleActionImpl();
+        instance.setLocale(template.getLocale());
+        return instance;
+    }
 
 }

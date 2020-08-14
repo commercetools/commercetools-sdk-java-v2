@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartDiscountValueAbsoluteBuilder {
-   
-   
-   private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
-   
-   public CartDiscountValueAbsoluteBuilder money( final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
-      this.money = money;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.common.TypedMoney> getMoney(){
-      return this.money;
-   }
 
-   public CartDiscountValueAbsolute build() {
-       return new CartDiscountValueAbsoluteImpl(money);
-   }
-   
-   public static CartDiscountValueAbsoluteBuilder of() {
-      return new CartDiscountValueAbsoluteBuilder();
-   }
-   
-   public static CartDiscountValueAbsoluteBuilder of(final CartDiscountValueAbsolute template) {
-      CartDiscountValueAbsoluteBuilder builder = new CartDiscountValueAbsoluteBuilder();
-      builder.money = template.getMoney();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
+
+    public CartDiscountValueAbsoluteBuilder money( final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
+        this.money = money;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.api.models.common.TypedMoney> getMoney(){
+        return this.money;
+    }
+
+    public CartDiscountValueAbsolute build() {
+        return new CartDiscountValueAbsoluteImpl(money);
+    }
+
+    public static CartDiscountValueAbsoluteBuilder of() {
+        return new CartDiscountValueAbsoluteBuilder();
+    }
+
+    public static CartDiscountValueAbsoluteBuilder of(final CartDiscountValueAbsolute template) {
+        CartDiscountValueAbsoluteBuilder builder = new CartDiscountValueAbsoluteBuilder();
+        builder.money = template.getMoney();
+        return builder;
+    }
+
 }

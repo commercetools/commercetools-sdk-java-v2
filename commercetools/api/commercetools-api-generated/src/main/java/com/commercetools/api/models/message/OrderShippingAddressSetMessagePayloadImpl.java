@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderShippingAddressSetMessagePayloadImpl implements OrderShippingAddressSetMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.common.Address address;
-   
-   private com.commercetools.api.models.common.Address oldAddress;
+    private String type;
+    
+    private com.commercetools.api.models.common.Address address;
+    
+    private com.commercetools.api.models.common.Address oldAddress;
 
-   @JsonCreator
-   OrderShippingAddressSetMessagePayloadImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress) {
-      this.address = address;
-      this.oldAddress = oldAddress;
-      this.type = "OrderShippingAddressSet";
-   }
-   public OrderShippingAddressSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
-   }
-   
-   
-   public com.commercetools.api.models.common.Address getOldAddress(){
-      return this.oldAddress;
-   }
+    @JsonCreator
+    OrderShippingAddressSetMessagePayloadImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress) {
+        this.address = address;
+        this.oldAddress = oldAddress;
+        this.type = "OrderShippingAddressSet";
+    }
+    public OrderShippingAddressSetMessagePayloadImpl() {
+       
+    }
 
-   public void setAddress(final com.commercetools.api.models.common.Address address){
-      this.address = address;
-   }
-   
-   public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress){
-      this.oldAddress = oldAddress;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
+        return this.address;
+    }
+    
+    
+    public com.commercetools.api.models.common.Address getOldAddress(){
+        return this.oldAddress;
+    }
+
+    public void setAddress(final com.commercetools.api.models.common.Address address){
+        this.address = address;
+    }
+    
+    public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress){
+        this.oldAddress = oldAddress;
+    }
 
 }

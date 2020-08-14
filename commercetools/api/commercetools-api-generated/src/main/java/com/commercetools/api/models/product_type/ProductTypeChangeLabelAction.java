@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangeLabelActionImpl.class)
 public interface ProductTypeChangeLabelAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("attributeName")
-   public String getAttributeName();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("label")
-   public LocalizedString getLabel();
+    
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("label")
+    public LocalizedString getLabel();
 
-   public void setAttributeName(final String attributeName);
-   
-   public void setLabel(final LocalizedString label);
-   
-   public static ProductTypeChangeLabelActionImpl of(){
-      return new ProductTypeChangeLabelActionImpl();
-   }
-   
+    public void setAttributeName(final String attributeName);
+    
+    public void setLabel(final LocalizedString label);
 
-   public static ProductTypeChangeLabelActionImpl of(final ProductTypeChangeLabelAction template) {
-      ProductTypeChangeLabelActionImpl instance = new ProductTypeChangeLabelActionImpl();
-      instance.setAttributeName(template.getAttributeName());
-      instance.setLabel(template.getLabel());
-      return instance;
-   }
+    public static ProductTypeChangeLabelActionImpl of(){
+        return new ProductTypeChangeLabelActionImpl();
+    }
+    
+
+    public static ProductTypeChangeLabelActionImpl of(final ProductTypeChangeLabelAction template) {
+        ProductTypeChangeLabelActionImpl instance = new ProductTypeChangeLabelActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setLabel(template.getLabel());
+        return instance;
+    }
 
 }

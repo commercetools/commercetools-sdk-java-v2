@@ -18,10 +18,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.common.GeoJsonPointImpl.class, name = "Point")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = GeoJsonImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = GeoJsonImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -30,7 +30,7 @@ import java.io.IOException;
 public interface GeoJson  {
 
 
-   
+
 
 
 }

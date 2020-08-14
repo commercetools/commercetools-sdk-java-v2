@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface AttributeMoneyType extends AttributeType {
 
 
-   
-   public static AttributeMoneyTypeImpl of(){
-      return new AttributeMoneyTypeImpl();
-   }
-   
 
-   public static AttributeMoneyTypeImpl of(final AttributeMoneyType template) {
-      AttributeMoneyTypeImpl instance = new AttributeMoneyTypeImpl();
-      return instance;
-   }
+    public static AttributeMoneyTypeImpl of(){
+        return new AttributeMoneyTypeImpl();
+    }
+    
+
+    public static AttributeMoneyTypeImpl of(final AttributeMoneyType template) {
+        AttributeMoneyTypeImpl instance = new AttributeMoneyTypeImpl();
+        return instance;
+    }
 
 }

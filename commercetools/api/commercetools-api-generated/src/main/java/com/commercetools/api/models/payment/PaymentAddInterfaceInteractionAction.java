@@ -23,30 +23,30 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentAddInterfaceInteractionActionImpl.class)
 public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static PaymentAddInterfaceInteractionActionImpl of(){
-      return new PaymentAddInterfaceInteractionActionImpl();
-   }
-   
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static PaymentAddInterfaceInteractionActionImpl of(final PaymentAddInterfaceInteractionAction template) {
-      PaymentAddInterfaceInteractionActionImpl instance = new PaymentAddInterfaceInteractionActionImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static PaymentAddInterfaceInteractionActionImpl of(){
+        return new PaymentAddInterfaceInteractionActionImpl();
+    }
+    
+
+    public static PaymentAddInterfaceInteractionActionImpl of(final PaymentAddInterfaceInteractionAction template) {
+        PaymentAddInterfaceInteractionActionImpl instance = new PaymentAddInterfaceInteractionActionImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

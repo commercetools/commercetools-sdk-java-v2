@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetKeyActionImpl implements CategorySetKeyAction {
 
-   private String action;
-   
-   private String key;
+    private String action;
+    
+    private String key;
 
-   @JsonCreator
-   CategorySetKeyActionImpl(@JsonProperty("key") final String key) {
-      this.key = key;
-      this.action = "setKey";
-   }
-   public CategorySetKeyActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>User-defined unique identifier for the category.
-   *  Keys can only contain alphanumeric characters (<code>a-Z, 0-9</code>), underscores and hyphens (<code>-, _</code>) and be between 2 and 256 characters.
-   *  If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    CategorySetKeyActionImpl(@JsonProperty("key") final String key) {
+        this.key = key;
+        this.action = "setKey";
+    }
+    public CategorySetKeyActionImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>User-defined unique identifier for the category.
+    *  Keys can only contain alphanumeric characters (<code>a-Z, 0-9</code>), underscores and hyphens (<code>-, _</code>) and be between 2 and 256 characters.
+    *  If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

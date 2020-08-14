@@ -22,36 +22,36 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionSetTimeoutInMsActionImpl implements ExtensionSetTimeoutInMsAction {
 
-   private String action;
-   
-   private Integer timeoutInMs;
+    private String action;
+    
+    private Integer timeoutInMs;
 
-   @JsonCreator
-   ExtensionSetTimeoutInMsActionImpl(@JsonProperty("timeoutInMs") final Integer timeoutInMs) {
-      this.timeoutInMs = timeoutInMs;
-      this.action = "setTimeoutInMs";
-   }
-   public ExtensionSetTimeoutInMsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>The maximum time the commercetools platform waits for a response from the extension.
-   *  The maximum value is 2000 ms (2 seconds).
-   *  This limit can be increased per project after we review the performance impact.
-   *  Please contact Support via the support and provide the region, project key and use case.</p>
-   */
-   public Integer getTimeoutInMs(){
-      return this.timeoutInMs;
-   }
+    @JsonCreator
+    ExtensionSetTimeoutInMsActionImpl(@JsonProperty("timeoutInMs") final Integer timeoutInMs) {
+        this.timeoutInMs = timeoutInMs;
+        this.action = "setTimeoutInMs";
+    }
+    public ExtensionSetTimeoutInMsActionImpl() {
+       
+    }
 
-   public void setTimeoutInMs(final Integer timeoutInMs){
-      this.timeoutInMs = timeoutInMs;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>The maximum time the commercetools platform waits for a response from the extension.
+    *  The maximum value is 2000 ms (2 seconds).
+    *  This limit can be increased per project after we review the performance impact.
+    *  Please contact Support via the support and provide the region, project key and use case.</p>
+    */
+    public Integer getTimeoutInMs(){
+        return this.timeoutInMs;
+    }
+
+    public void setTimeoutInMs(final Integer timeoutInMs){
+        this.timeoutInMs = timeoutInMs;
+    }
 
 }

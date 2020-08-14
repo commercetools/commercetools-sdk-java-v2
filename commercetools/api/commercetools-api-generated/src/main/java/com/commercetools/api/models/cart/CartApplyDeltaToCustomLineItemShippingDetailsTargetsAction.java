@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl.class)
 public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("customLineItemId")
-   public String getCustomLineItemId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("targetsDelta")
-   public List<ItemShippingTarget> getTargetsDelta();
+    
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("targetsDelta")
+    public List<ItemShippingTarget> getTargetsDelta();
 
-   public void setCustomLineItemId(final String customLineItemId);
-   
-   public void setTargetsDelta(final List<ItemShippingTarget> targetsDelta);
-   
-   public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl of(){
-      return new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl();
-   }
-   
+    public void setCustomLineItemId(final String customLineItemId);
+    
+    public void setTargetsDelta(final List<ItemShippingTarget> targetsDelta);
 
-   public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl of(final CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction template) {
-      CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl instance = new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl();
-      instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setTargetsDelta(template.getTargetsDelta());
-      return instance;
-   }
+    public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl of(){
+        return new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl();
+    }
+    
+
+    public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl of(final CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction template) {
+        CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl instance = new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setTargetsDelta(template.getTargetsDelta());
+        return instance;
+    }
 
 }

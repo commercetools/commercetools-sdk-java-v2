@@ -22,32 +22,32 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryAddAssetActionImpl.class)
 public interface CategoryAddAssetAction extends CategoryUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("asset")
-   public AssetDraft getAsset();
-   /**
-   *  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>
-   */
-   
-   @JsonProperty("position")
-   public Integer getPosition();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("asset")
+    public AssetDraft getAsset();
+    /**
+    *  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>
+    */
+    
+    @JsonProperty("position")
+    public Integer getPosition();
 
-   public void setAsset(final AssetDraft asset);
-   
-   public void setPosition(final Integer position);
-   
-   public static CategoryAddAssetActionImpl of(){
-      return new CategoryAddAssetActionImpl();
-   }
-   
+    public void setAsset(final AssetDraft asset);
+    
+    public void setPosition(final Integer position);
 
-   public static CategoryAddAssetActionImpl of(final CategoryAddAssetAction template) {
-      CategoryAddAssetActionImpl instance = new CategoryAddAssetActionImpl();
-      instance.setAsset(template.getAsset());
-      instance.setPosition(template.getPosition());
-      return instance;
-   }
+    public static CategoryAddAssetActionImpl of(){
+        return new CategoryAddAssetActionImpl();
+    }
+    
+
+    public static CategoryAddAssetActionImpl of(final CategoryAddAssetAction template) {
+        CategoryAddAssetActionImpl instance = new CategoryAddAssetActionImpl();
+        instance.setAsset(template.getAsset());
+        instance.setPosition(template.getPosition());
+        return instance;
+    }
 
 }

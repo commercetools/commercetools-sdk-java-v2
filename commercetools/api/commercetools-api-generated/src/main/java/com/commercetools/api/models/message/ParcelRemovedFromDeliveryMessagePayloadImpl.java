@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemovedFromDeliveryMessagePayload {
 
-   private String type;
-   
-   private String deliveryId;
-   
-   private com.commercetools.api.models.order.Parcel parcel;
+    private String type;
+    
+    private String deliveryId;
+    
+    private com.commercetools.api.models.order.Parcel parcel;
 
-   @JsonCreator
-   ParcelRemovedFromDeliveryMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel) {
-      this.deliveryId = deliveryId;
-      this.parcel = parcel;
-      this.type = "ParcelRemovedFromDelivery";
-   }
-   public ParcelRemovedFromDeliveryMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getDeliveryId(){
-      return this.deliveryId;
-   }
-   
-   
-   public com.commercetools.api.models.order.Parcel getParcel(){
-      return this.parcel;
-   }
+    @JsonCreator
+    ParcelRemovedFromDeliveryMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel) {
+        this.deliveryId = deliveryId;
+        this.parcel = parcel;
+        this.type = "ParcelRemovedFromDelivery";
+    }
+    public ParcelRemovedFromDeliveryMessagePayloadImpl() {
+       
+    }
 
-   public void setDeliveryId(final String deliveryId){
-      this.deliveryId = deliveryId;
-   }
-   
-   public void setParcel(final com.commercetools.api.models.order.Parcel parcel){
-      this.parcel = parcel;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getDeliveryId(){
+        return this.deliveryId;
+    }
+    
+    
+    public com.commercetools.api.models.order.Parcel getParcel(){
+        return this.parcel;
+    }
+
+    public void setDeliveryId(final String deliveryId){
+        this.deliveryId = deliveryId;
+    }
+    
+    public void setParcel(final com.commercetools.api.models.order.Parcel parcel){
+        this.parcel = parcel;
+    }
 
 }

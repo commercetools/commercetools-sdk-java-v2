@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCustomerSetVatIdActionImpl implements MyCustomerSetVatIdAction {
 
-   private String action;
-   
-   private String vatId;
+    private String action;
+    
+    private String vatId;
 
-   @JsonCreator
-   MyCustomerSetVatIdActionImpl(@JsonProperty("vatId") final String vatId) {
-      this.vatId = vatId;
-      this.action = "setVatId";
-   }
-   public MyCustomerSetVatIdActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getVatId(){
-      return this.vatId;
-   }
+    @JsonCreator
+    MyCustomerSetVatIdActionImpl(@JsonProperty("vatId") final String vatId) {
+        this.vatId = vatId;
+        this.action = "setVatId";
+    }
+    public MyCustomerSetVatIdActionImpl() {
+       
+    }
 
-   public void setVatId(final String vatId){
-      this.vatId = vatId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getVatId(){
+        return this.vatId;
+    }
+
+    public void setVatId(final String vatId){
+        this.vatId = vatId;
+    }
 
 }

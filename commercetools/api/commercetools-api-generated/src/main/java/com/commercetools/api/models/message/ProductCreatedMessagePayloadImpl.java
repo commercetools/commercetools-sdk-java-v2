@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductCreatedMessagePayloadImpl implements ProductCreatedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.product.ProductProjection productProjection;
+    private String type;
+    
+    private com.commercetools.api.models.product.ProductProjection productProjection;
 
-   @JsonCreator
-   ProductCreatedMessagePayloadImpl(@JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection) {
-      this.productProjection = productProjection;
-      this.type = "ProductCreated";
-   }
-   public ProductCreatedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.product.ProductProjection getProductProjection(){
-      return this.productProjection;
-   }
+    @JsonCreator
+    ProductCreatedMessagePayloadImpl(@JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection) {
+        this.productProjection = productProjection;
+        this.type = "ProductCreated";
+    }
+    public ProductCreatedMessagePayloadImpl() {
+       
+    }
 
-   public void setProductProjection(final com.commercetools.api.models.product.ProductProjection productProjection){
-      this.productProjection = productProjection;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.product.ProductProjection getProductProjection(){
+        return this.productProjection;
+    }
+
+    public void setProductProjection(final com.commercetools.api.models.product.ProductProjection productProjection){
+        this.productProjection = productProjection;
+    }
 
 }

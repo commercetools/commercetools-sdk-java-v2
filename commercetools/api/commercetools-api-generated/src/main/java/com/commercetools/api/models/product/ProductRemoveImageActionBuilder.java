@@ -13,74 +13,74 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductRemoveImageActionBuilder {
-   
-   @Nullable
-   private Long variantId;
-   
-   @Nullable
-   private String sku;
-   
-   
-   private String imageUrl;
-   
-   @Nullable
-   private Boolean staged;
-   
-   public ProductRemoveImageActionBuilder variantId(@Nullable final Long variantId) {
-      this.variantId = variantId;
-      return this;
-   }
-   
-   public ProductRemoveImageActionBuilder sku(@Nullable final String sku) {
-      this.sku = sku;
-      return this;
-   }
-   
-   public ProductRemoveImageActionBuilder imageUrl( final String imageUrl) {
-      this.imageUrl = imageUrl;
-      return this;
-   }
-   
-   public ProductRemoveImageActionBuilder staged(@Nullable final Boolean staged) {
-      this.staged = staged;
-      return this;
-   }
-   
-   @Nullable
-   public Long getVariantId(){
-      return this.variantId;
-   }
-   
-   @Nullable
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public String getImageUrl(){
-      return this.imageUrl;
-   }
-   
-   @Nullable
-   public Boolean getStaged(){
-      return this.staged;
-   }
 
-   public ProductRemoveImageAction build() {
-       return new ProductRemoveImageActionImpl(variantId, sku, imageUrl, staged);
-   }
-   
-   public static ProductRemoveImageActionBuilder of() {
-      return new ProductRemoveImageActionBuilder();
-   }
-   
-   public static ProductRemoveImageActionBuilder of(final ProductRemoveImageAction template) {
-      ProductRemoveImageActionBuilder builder = new ProductRemoveImageActionBuilder();
-      builder.variantId = template.getVariantId();
-      builder.sku = template.getSku();
-      builder.imageUrl = template.getImageUrl();
-      builder.staged = template.getStaged();
-      return builder;
-   }
-   
+    @Nullable
+    private Long variantId;
+    
+    @Nullable
+    private String sku;
+    
+    
+    private String imageUrl;
+    
+    @Nullable
+    private Boolean staged;
+
+    public ProductRemoveImageActionBuilder variantId(@Nullable final Long variantId) {
+        this.variantId = variantId;
+        return this;
+    }
+    
+    public ProductRemoveImageActionBuilder sku(@Nullable final String sku) {
+        this.sku = sku;
+        return this;
+    }
+    
+    public ProductRemoveImageActionBuilder imageUrl( final String imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    public ProductRemoveImageActionBuilder staged(@Nullable final Boolean staged) {
+        this.staged = staged;
+        return this;
+    }
+
+    @Nullable
+    public Long getVariantId(){
+        return this.variantId;
+    }
+    
+    @Nullable
+    public String getSku(){
+        return this.sku;
+    }
+    
+    
+    public String getImageUrl(){
+        return this.imageUrl;
+    }
+    
+    @Nullable
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public ProductRemoveImageAction build() {
+        return new ProductRemoveImageActionImpl(variantId, sku, imageUrl, staged);
+    }
+
+    public static ProductRemoveImageActionBuilder of() {
+        return new ProductRemoveImageActionBuilder();
+    }
+
+    public static ProductRemoveImageActionBuilder of(final ProductRemoveImageAction template) {
+        ProductRemoveImageActionBuilder builder = new ProductRemoveImageActionBuilder();
+        builder.variantId = template.getVariantId();
+        builder.sku = template.getSku();
+        builder.imageUrl = template.getImageUrl();
+        builder.staged = template.getStaged();
+        return builder;
+    }
+
 }

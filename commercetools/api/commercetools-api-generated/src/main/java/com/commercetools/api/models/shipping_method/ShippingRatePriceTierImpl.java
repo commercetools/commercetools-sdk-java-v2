@@ -25,18 +25,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingRatePriceTierImpl implements ShippingRatePriceTier {
 
-   private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
+    private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
 
-   @JsonCreator
-   ShippingRatePriceTierImpl() {
-      this.type = ShippingRateTierType.findEnumViaJsonName("null").get();
-   }
-   
-   
-   
-   public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
-      return this.type;
-   }
+    @JsonCreator
+    ShippingRatePriceTierImpl() {
+        this.type = ShippingRateTierType.findEnumViaJsonName("null").get();
+    }
+    
+
+    
+    public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
+        return this.type;
+    }
 
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCustomerSetVatIdActionImpl.class)
 public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
 
-   
-   
-   @JsonProperty("vatId")
-   public String getVatId();
+    
+    
+    @JsonProperty("vatId")
+    public String getVatId();
 
-   public void setVatId(final String vatId);
-   
-   public static MyCustomerSetVatIdActionImpl of(){
-      return new MyCustomerSetVatIdActionImpl();
-   }
-   
+    public void setVatId(final String vatId);
 
-   public static MyCustomerSetVatIdActionImpl of(final MyCustomerSetVatIdAction template) {
-      MyCustomerSetVatIdActionImpl instance = new MyCustomerSetVatIdActionImpl();
-      instance.setVatId(template.getVatId());
-      return instance;
-   }
+    public static MyCustomerSetVatIdActionImpl of(){
+        return new MyCustomerSetVatIdActionImpl();
+    }
+    
+
+    public static MyCustomerSetVatIdActionImpl of(final MyCustomerSetVatIdAction template) {
+        MyCustomerSetVatIdActionImpl instance = new MyCustomerSetVatIdActionImpl();
+        instance.setVatId(template.getVatId());
+        return instance;
+    }
 
 }

@@ -22,32 +22,32 @@ import java.io.IOException;
 @JsonDeserialize(as = ResourceDeletedDeliveryImpl.class)
 public interface ResourceDeletedDelivery extends SubscriptionDelivery {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @JsonProperty("modifiedAt")
-   public ZonedDateTime getModifiedAt();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @JsonProperty("modifiedAt")
+    public ZonedDateTime getModifiedAt();
 
-   public void setVersion(final Long version);
-   
-   public void setModifiedAt(final ZonedDateTime modifiedAt);
-   
-   public static ResourceDeletedDeliveryImpl of(){
-      return new ResourceDeletedDeliveryImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setModifiedAt(final ZonedDateTime modifiedAt);
 
-   public static ResourceDeletedDeliveryImpl of(final ResourceDeletedDelivery template) {
-      ResourceDeletedDeliveryImpl instance = new ResourceDeletedDeliveryImpl();
-      instance.setProjectKey(template.getProjectKey());
-      instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setVersion(template.getVersion());
-      instance.setModifiedAt(template.getModifiedAt());
-      return instance;
-   }
+    public static ResourceDeletedDeliveryImpl of(){
+        return new ResourceDeletedDeliveryImpl();
+    }
+    
+
+    public static ResourceDeletedDeliveryImpl of(final ResourceDeletedDelivery template) {
+        ResourceDeletedDeliveryImpl instance = new ResourceDeletedDeliveryImpl();
+        instance.setProjectKey(template.getProjectKey());
+        instance.setResource(template.getResource());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setVersion(template.getVersion());
+        instance.setModifiedAt(template.getModifiedAt());
+        return instance;
+    }
 
 }

@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetReturnPaymentStateActionImpl.class)
 public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("returnItemId")
-   public String getReturnItemId();
-   
-   @NotNull
-   @JsonProperty("paymentState")
-   public ReturnPaymentState getPaymentState();
+    
+    @NotNull
+    @JsonProperty("returnItemId")
+    public String getReturnItemId();
+    
+    @NotNull
+    @JsonProperty("paymentState")
+    public ReturnPaymentState getPaymentState();
 
-   public void setReturnItemId(final String returnItemId);
-   
-   public void setPaymentState(final ReturnPaymentState paymentState);
-   
-   public static StagedOrderSetReturnPaymentStateActionImpl of(){
-      return new StagedOrderSetReturnPaymentStateActionImpl();
-   }
-   
+    public void setReturnItemId(final String returnItemId);
+    
+    public void setPaymentState(final ReturnPaymentState paymentState);
 
-   public static StagedOrderSetReturnPaymentStateActionImpl of(final StagedOrderSetReturnPaymentStateAction template) {
-      StagedOrderSetReturnPaymentStateActionImpl instance = new StagedOrderSetReturnPaymentStateActionImpl();
-      instance.setReturnItemId(template.getReturnItemId());
-      instance.setPaymentState(template.getPaymentState());
-      return instance;
-   }
+    public static StagedOrderSetReturnPaymentStateActionImpl of(){
+        return new StagedOrderSetReturnPaymentStateActionImpl();
+    }
+    
+
+    public static StagedOrderSetReturnPaymentStateActionImpl of(final StagedOrderSetReturnPaymentStateAction template) {
+        StagedOrderSetReturnPaymentStateActionImpl instance = new StagedOrderSetReturnPaymentStateActionImpl();
+        instance.setReturnItemId(template.getReturnItemId());
+        instance.setPaymentState(template.getPaymentState());
+        return instance;
+    }
 
 }

@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetLocaleActionImpl implements CartSetLocaleAction {
 
-   private String action;
-   
-   private String locale;
+    private String action;
+    
+    private String locale;
 
-   @JsonCreator
-   CartSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
-      this.locale = locale;
-      this.action = "setLocale";
-   }
-   public CartSetLocaleActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLocale(){
-      return this.locale;
-   }
+    @JsonCreator
+    CartSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
+        this.locale = locale;
+        this.action = "setLocale";
+    }
+    public CartSetLocaleActionImpl() {
+       
+    }
 
-   public void setLocale(final String locale){
-      this.locale = locale;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLocale(){
+        return this.locale;
+    }
+
+    public void setLocale(final String locale){
+        this.locale = locale;
+    }
 
 }

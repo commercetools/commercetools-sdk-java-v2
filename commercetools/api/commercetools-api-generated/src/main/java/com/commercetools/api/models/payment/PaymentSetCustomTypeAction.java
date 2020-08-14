@@ -23,34 +23,34 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetCustomTypeActionImpl.class)
 public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
 
-   /**
-   *  <p>If set, the custom type is set to this new value.
-   *  If absent, the custom type and any existing custom fields are removed.</p>
-   */
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   /**
-   *  <p>Sets the custom fields to this value.</p>
-   */
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    /**
+    *  <p>If set, the custom type is set to this new value.
+    *  If absent, the custom type and any existing custom fields are removed.</p>
+    */
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    /**
+    *  <p>Sets the custom fields to this value.</p>
+    */
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static PaymentSetCustomTypeActionImpl of(){
-      return new PaymentSetCustomTypeActionImpl();
-   }
-   
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static PaymentSetCustomTypeActionImpl of(final PaymentSetCustomTypeAction template) {
-      PaymentSetCustomTypeActionImpl instance = new PaymentSetCustomTypeActionImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static PaymentSetCustomTypeActionImpl of(){
+        return new PaymentSetCustomTypeActionImpl();
+    }
+    
+
+    public static PaymentSetCustomTypeActionImpl of(final PaymentSetCustomTypeAction template) {
+        PaymentSetCustomTypeActionImpl instance = new PaymentSetCustomTypeActionImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

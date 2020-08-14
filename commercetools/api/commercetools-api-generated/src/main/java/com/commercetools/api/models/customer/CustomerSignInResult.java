@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSignInResultImpl.class)
 public interface CustomerSignInResult  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("customer")
-   public Customer getCustomer();
-   /**
-   *  <p>A cart that is associated to the customer.
-   *  Empty if the customer does not have a cart yet.</p>
-   */
-   @Valid
-   @JsonProperty("cart")
-   public JsonNode getCart();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("customer")
+    public Customer getCustomer();
+    /**
+    *  <p>A cart that is associated to the customer.
+    *  Empty if the customer does not have a cart yet.</p>
+    */
+    @Valid
+    @JsonProperty("cart")
+    public JsonNode getCart();
 
-   public void setCustomer(final Customer customer);
-   
-   public void setCart(final JsonNode cart);
-   
-   public static CustomerSignInResultImpl of(){
-      return new CustomerSignInResultImpl();
-   }
-   
+    public void setCustomer(final Customer customer);
+    
+    public void setCart(final JsonNode cart);
 
-   public static CustomerSignInResultImpl of(final CustomerSignInResult template) {
-      CustomerSignInResultImpl instance = new CustomerSignInResultImpl();
-      instance.setCustomer(template.getCustomer());
-      instance.setCart(template.getCart());
-      return instance;
-   }
+    public static CustomerSignInResultImpl of(){
+        return new CustomerSignInResultImpl();
+    }
+    
+
+    public static CustomerSignInResultImpl of(final CustomerSignInResult template) {
+        CustomerSignInResultImpl instance = new CustomerSignInResultImpl();
+        instance.setCustomer(template.getCustomer());
+        instance.setCart(template.getCart());
+        return instance;
+    }
 
 }

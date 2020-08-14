@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelAction {
 
-   private String action;
-   
-   private String attributeName;
-   
-   private com.commercetools.api.models.common.LocalizedString label;
+    private String action;
+    
+    private String attributeName;
+    
+    private com.commercetools.api.models.common.LocalizedString label;
 
-   @JsonCreator
-   ProductTypeChangeLabelActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
-      this.attributeName = attributeName;
-      this.label = label;
-      this.action = "changeLabel";
-   }
-   public ProductTypeChangeLabelActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getLabel(){
-      return this.label;
-   }
+    @JsonCreator
+    ProductTypeChangeLabelActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
+        this.attributeName = attributeName;
+        this.label = label;
+        this.action = "changeLabel";
+    }
+    public ProductTypeChangeLabelActionImpl() {
+       
+    }
 
-   public void setAttributeName(final String attributeName){
-      this.attributeName = attributeName;
-   }
-   
-   public void setLabel(final com.commercetools.api.models.common.LocalizedString label){
-      this.label = label;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAttributeName(){
+        return this.attributeName;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getLabel(){
+        return this.label;
+    }
+
+    public void setAttributeName(final String attributeName){
+        this.attributeName = attributeName;
+    }
+    
+    public void setLabel(final com.commercetools.api.models.common.LocalizedString label){
+        this.label = label;
+    }
 
 }

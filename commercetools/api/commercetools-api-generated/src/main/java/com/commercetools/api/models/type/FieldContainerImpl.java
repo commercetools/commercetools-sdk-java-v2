@@ -22,26 +22,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FieldContainerImpl implements FieldContainer {
 
-   private Map<String, com.fasterxml.jackson.databind.JsonNode> values;
+    private Map<String, com.fasterxml.jackson.databind.JsonNode> values;
 
-   @JsonCreator
-   FieldContainerImpl(@JsonProperty("values") final Map<String, com.fasterxml.jackson.databind.JsonNode> values) {
-      this.values = values;
-   }
-   public FieldContainerImpl() {
-      
-   }
-   
-   
-   public Map<String,com.fasterxml.jackson.databind.JsonNode> values() {
-       return values;
-   }
+    @JsonCreator
+    FieldContainerImpl(@JsonProperty("values") final Map<String, com.fasterxml.jackson.databind.JsonNode> values) {
+        this.values = values;
+    }
+    public FieldContainerImpl() {
+       
+    }
 
-   public void setValue(String key, com.fasterxml.jackson.databind.JsonNode value) {
-       if (values == null) {
-           values = new HashMap<>();
-       }
-       values.put(key, value);
-   }
+    
+    public Map<String,com.fasterxml.jackson.databind.JsonNode> values() {
+        return values;
+    }
+
+    public void setValue(String key, com.fasterxml.jackson.databind.JsonNode value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+    }
 
 }

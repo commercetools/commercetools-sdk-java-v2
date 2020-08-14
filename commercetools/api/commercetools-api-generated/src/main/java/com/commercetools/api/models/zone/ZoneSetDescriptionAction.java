@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ZoneSetDescriptionActionImpl.class)
 public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
 
-   
-   
-   @JsonProperty("description")
-   public String getDescription();
+    
+    
+    @JsonProperty("description")
+    public String getDescription();
 
-   public void setDescription(final String description);
-   
-   public static ZoneSetDescriptionActionImpl of(){
-      return new ZoneSetDescriptionActionImpl();
-   }
-   
+    public void setDescription(final String description);
 
-   public static ZoneSetDescriptionActionImpl of(final ZoneSetDescriptionAction template) {
-      ZoneSetDescriptionActionImpl instance = new ZoneSetDescriptionActionImpl();
-      instance.setDescription(template.getDescription());
-      return instance;
-   }
+    public static ZoneSetDescriptionActionImpl of(){
+        return new ZoneSetDescriptionActionImpl();
+    }
+    
+
+    public static ZoneSetDescriptionActionImpl of(final ZoneSetDescriptionAction template) {
+        ZoneSetDescriptionActionImpl instance = new ZoneSetDescriptionActionImpl();
+        instance.setDescription(template.getDescription());
+        return instance;
+    }
 
 }

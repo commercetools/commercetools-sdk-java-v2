@@ -13,33 +13,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum OrderState {
 
-  
-  @JsonProperty("Open")
-  OPEN("Open"),
-  
-  
-  @JsonProperty("Confirmed")
-  CONFIRMED("Confirmed"),
-  
-  
-  @JsonProperty("Complete")
-  COMPLETE("Complete"),
-  
-  
-  @JsonProperty("Cancelled")
-  CANCELLED("Cancelled");
+    
+    @JsonProperty("Open")
+    OPEN("Open"),
+    
+    
+    @JsonProperty("Confirmed")
+    CONFIRMED("Confirmed"),
+    
+    
+    @JsonProperty("Complete")
+    COMPLETE("Complete"),
+    
+    
+    @JsonProperty("Cancelled")
+    CANCELLED("Cancelled");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private OrderState(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private OrderState(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<OrderState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<OrderState> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

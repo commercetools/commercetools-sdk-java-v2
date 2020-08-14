@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLineItemTaxAmountAction {
 
-   private String action;
-   
-   private String customLineItemId;
-   
-   private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
+    private String action;
+    
+    private String customLineItemId;
+    
+    private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
-   @JsonCreator
-   CartSetCustomLineItemTaxAmountActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
-      this.customLineItemId = customLineItemId;
-      this.externalTaxAmount = externalTaxAmount;
-      this.action = "setCustomLineItemTaxAmount";
-   }
-   public CartSetCustomLineItemTaxAmountActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getCustomLineItemId(){
-      return this.customLineItemId;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
-      return this.externalTaxAmount;
-   }
+    @JsonCreator
+    CartSetCustomLineItemTaxAmountActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
+        this.customLineItemId = customLineItemId;
+        this.externalTaxAmount = externalTaxAmount;
+        this.action = "setCustomLineItemTaxAmount";
+    }
+    public CartSetCustomLineItemTaxAmountActionImpl() {
+       
+    }
 
-   public void setCustomLineItemId(final String customLineItemId){
-      this.customLineItemId = customLineItemId;
-   }
-   
-   public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount){
-      this.externalTaxAmount = externalTaxAmount;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getCustomLineItemId(){
+        return this.customLineItemId;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
+        return this.externalTaxAmount;
+    }
+
+    public void setCustomLineItemId(final String customLineItemId){
+        this.customLineItemId = customLineItemId;
+    }
+    
+    public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount){
+        this.externalTaxAmount = externalTaxAmount;
+    }
 
 }

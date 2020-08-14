@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductUnpublishActionImpl implements ProductUnpublishAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   ProductUnpublishActionImpl() {
-      this.action = "unpublish";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    ProductUnpublishActionImpl() {
+        this.action = "unpublish";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

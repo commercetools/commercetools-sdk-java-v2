@@ -23,34 +23,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntrySetSupplyChannelAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
+    private String action;
+    
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
-   @JsonCreator
-   InventoryEntrySetSupplyChannelActionImpl(@JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
-      this.supplyChannel = supplyChannel;
-      this.action = "setSupplyChannel";
-   }
-   public InventoryEntrySetSupplyChannelActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If absent, the supply channel is removed.
-   *  This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
-   */
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
-      return this.supplyChannel;
-   }
+    @JsonCreator
+    InventoryEntrySetSupplyChannelActionImpl(@JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
+        this.action = "setSupplyChannel";
+    }
+    public InventoryEntrySetSupplyChannelActionImpl() {
+       
+    }
 
-   public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
-      this.supplyChannel = supplyChannel;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If absent, the supply channel is removed.
+    *  This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+    */
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
+        return this.supplyChannel;
+    }
+
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
+        this.supplyChannel = supplyChannel;
+    }
 
 }

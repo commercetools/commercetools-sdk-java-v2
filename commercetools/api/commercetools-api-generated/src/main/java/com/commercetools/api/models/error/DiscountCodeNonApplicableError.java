@@ -22,58 +22,58 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeNonApplicableErrorImpl.class)
 public interface DiscountCodeNonApplicableError extends ErrorObject {
 
-   
-   
-   @JsonProperty("discountCode")
-   public String getDiscountCode();
-   
-   
-   @JsonProperty("reason")
-   public String getReason();
-   
-   
-   @JsonProperty("dicountCodeId")
-   public String getDicountCodeId();
-   
-   
-   @JsonProperty("validFrom")
-   public ZonedDateTime getValidFrom();
-   
-   
-   @JsonProperty("validUntil")
-   public ZonedDateTime getValidUntil();
-   
-   
-   @JsonProperty("validityCheckTime")
-   public ZonedDateTime getValidityCheckTime();
+    
+    
+    @JsonProperty("discountCode")
+    public String getDiscountCode();
+    
+    
+    @JsonProperty("reason")
+    public String getReason();
+    
+    
+    @JsonProperty("dicountCodeId")
+    public String getDicountCodeId();
+    
+    
+    @JsonProperty("validFrom")
+    public ZonedDateTime getValidFrom();
+    
+    
+    @JsonProperty("validUntil")
+    public ZonedDateTime getValidUntil();
+    
+    
+    @JsonProperty("validityCheckTime")
+    public ZonedDateTime getValidityCheckTime();
 
-   public void setDiscountCode(final String discountCode);
-   
-   public void setReason(final String reason);
-   
-   public void setDicountCodeId(final String dicountCodeId);
-   
-   public void setValidFrom(final ZonedDateTime validFrom);
-   
-   public void setValidUntil(final ZonedDateTime validUntil);
-   
-   public void setValidityCheckTime(final ZonedDateTime validityCheckTime);
-   
-   public static DiscountCodeNonApplicableErrorImpl of(){
-      return new DiscountCodeNonApplicableErrorImpl();
-   }
-   
+    public void setDiscountCode(final String discountCode);
+    
+    public void setReason(final String reason);
+    
+    public void setDicountCodeId(final String dicountCodeId);
+    
+    public void setValidFrom(final ZonedDateTime validFrom);
+    
+    public void setValidUntil(final ZonedDateTime validUntil);
+    
+    public void setValidityCheckTime(final ZonedDateTime validityCheckTime);
 
-   public static DiscountCodeNonApplicableErrorImpl of(final DiscountCodeNonApplicableError template) {
-      DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setDiscountCode(template.getDiscountCode());
-      instance.setReason(template.getReason());
-      instance.setDicountCodeId(template.getDicountCodeId());
-      instance.setValidFrom(template.getValidFrom());
-      instance.setValidUntil(template.getValidUntil());
-      instance.setValidityCheckTime(template.getValidityCheckTime());
-      return instance;
-   }
+    public static DiscountCodeNonApplicableErrorImpl of(){
+        return new DiscountCodeNonApplicableErrorImpl();
+    }
+    
+
+    public static DiscountCodeNonApplicableErrorImpl of(final DiscountCodeNonApplicableError template) {
+        DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setDiscountCode(template.getDiscountCode());
+        instance.setReason(template.getReason());
+        instance.setDicountCodeId(template.getDicountCodeId());
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        instance.setValidityCheckTime(template.getValidityCheckTime());
+        return instance;
+    }
 
 }

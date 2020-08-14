@@ -24,31 +24,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class RangeFacetResultImpl implements RangeFacetResult {
 
-   private com.commercetools.api.models.product.FacetTypes type;
-   
-   private java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges;
+    private com.commercetools.api.models.product.FacetTypes type;
+    
+    private java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges;
 
-   @JsonCreator
-   RangeFacetResultImpl(@JsonProperty("ranges") final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges) {
-      this.ranges = ranges;
-      this.type = FacetTypes.findEnumViaJsonName("range").get();
-   }
-   public RangeFacetResultImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.product.FacetTypes getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.product.FacetResultRange> getRanges(){
-      return this.ranges;
-   }
+    @JsonCreator
+    RangeFacetResultImpl(@JsonProperty("ranges") final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges) {
+        this.ranges = ranges;
+        this.type = FacetTypes.findEnumViaJsonName("range").get();
+    }
+    public RangeFacetResultImpl() {
+       
+    }
 
-   public void setRanges(final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges){
-      this.ranges = ranges;
-   }
+    
+    public com.commercetools.api.models.product.FacetTypes getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.product.FacetResultRange> getRanges(){
+        return this.ranges;
+    }
+
+    public void setRanges(final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges){
+        this.ranges = ranges;
+    }
 
 }

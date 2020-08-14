@@ -23,35 +23,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class GraphQLResponseImpl implements GraphQLResponse {
 
-   private com.fasterxml.jackson.databind.JsonNode data;
-   
-   private java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors;
+    private com.fasterxml.jackson.databind.JsonNode data;
+    
+    private java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors;
 
-   @JsonCreator
-   GraphQLResponseImpl(@JsonProperty("data") final com.fasterxml.jackson.databind.JsonNode data, @JsonProperty("errors") final java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors) {
-      this.data = data;
-      this.errors = errors;
-   }
-   public GraphQLResponseImpl() {
-      
-   }
-   
-   
-   public com.fasterxml.jackson.databind.JsonNode getData(){
-      return this.data;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> getErrors(){
-      return this.errors;
-   }
+    @JsonCreator
+    GraphQLResponseImpl(@JsonProperty("data") final com.fasterxml.jackson.databind.JsonNode data, @JsonProperty("errors") final java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors) {
+        this.data = data;
+        this.errors = errors;
+    }
+    public GraphQLResponseImpl() {
+       
+    }
 
-   public void setData(final com.fasterxml.jackson.databind.JsonNode data){
-      this.data = data;
-   }
-   
-   public void setErrors(final java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors){
-      this.errors = errors;
-   }
+    
+    public com.fasterxml.jackson.databind.JsonNode getData(){
+        return this.data;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> getErrors(){
+        return this.errors;
+    }
+
+    public void setData(final com.fasterxml.jackson.databind.JsonNode data){
+        this.data = data;
+    }
+    
+    public void setErrors(final java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors){
+        this.errors = errors;
+    }
 
 }

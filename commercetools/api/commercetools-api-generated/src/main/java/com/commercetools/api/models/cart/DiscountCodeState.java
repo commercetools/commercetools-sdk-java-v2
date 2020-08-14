@@ -13,41 +13,41 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum DiscountCodeState {
 
-  
-  @JsonProperty("NotActive")
-  NOT_ACTIVE("NotActive"),
-  
-  
-  @JsonProperty("DoesNotMatchCart")
-  DOES_NOT_MATCH_CART("DoesNotMatchCart"),
-  
-  
-  @JsonProperty("MatchesCart")
-  MATCHES_CART("MatchesCart"),
-  
-  
-  @JsonProperty("MaxApplicationReached")
-  MAX_APPLICATION_REACHED("MaxApplicationReached"),
-  
-  
-  @JsonProperty("ApplicationStoppedByPreviousDiscount")
-  APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT("ApplicationStoppedByPreviousDiscount"),
-  
-  
-  @JsonProperty("NotValid")
-  NOT_VALID("NotValid");
+    
+    @JsonProperty("NotActive")
+    NOT_ACTIVE("NotActive"),
+    
+    
+    @JsonProperty("DoesNotMatchCart")
+    DOES_NOT_MATCH_CART("DoesNotMatchCart"),
+    
+    
+    @JsonProperty("MatchesCart")
+    MATCHES_CART("MatchesCart"),
+    
+    
+    @JsonProperty("MaxApplicationReached")
+    MAX_APPLICATION_REACHED("MaxApplicationReached"),
+    
+    
+    @JsonProperty("ApplicationStoppedByPreviousDiscount")
+    APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT("ApplicationStoppedByPreviousDiscount"),
+    
+    
+    @JsonProperty("NotValid")
+    NOT_VALID("NotValid");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private DiscountCodeState(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private DiscountCodeState(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<DiscountCodeState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<DiscountCodeState> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

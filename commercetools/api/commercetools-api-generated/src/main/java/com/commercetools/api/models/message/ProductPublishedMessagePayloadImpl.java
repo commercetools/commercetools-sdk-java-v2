@@ -25,55 +25,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductPublishedMessagePayloadImpl implements ProductPublishedMessagePayload {
 
-   private String type;
-   
-   private java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls;
-   
-   private com.commercetools.api.models.product.ProductProjection productProjection;
-   
-   private com.commercetools.api.models.cart.ProductPublishScope scope;
+    private String type;
+    
+    private java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls;
+    
+    private com.commercetools.api.models.product.ProductProjection productProjection;
+    
+    private com.commercetools.api.models.cart.ProductPublishScope scope;
 
-   @JsonCreator
-   ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.api.models.cart.ProductPublishScope scope) {
-      this.removedImageUrls = removedImageUrls;
-      this.productProjection = productProjection;
-      this.scope = scope;
-      this.type = "ProductPublished";
-   }
-   public ProductPublishedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<com.fasterxml.jackson.databind.JsonNode> getRemovedImageUrls(){
-      return this.removedImageUrls;
-   }
-   
-   
-   public com.commercetools.api.models.product.ProductProjection getProductProjection(){
-      return this.productProjection;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ProductPublishScope getScope(){
-      return this.scope;
-   }
+    @JsonCreator
+    ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.api.models.cart.ProductPublishScope scope) {
+        this.removedImageUrls = removedImageUrls;
+        this.productProjection = productProjection;
+        this.scope = scope;
+        this.type = "ProductPublished";
+    }
+    public ProductPublishedMessagePayloadImpl() {
+       
+    }
 
-   public void setRemovedImageUrls(final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls){
-      this.removedImageUrls = removedImageUrls;
-   }
-   
-   public void setProductProjection(final com.commercetools.api.models.product.ProductProjection productProjection){
-      this.productProjection = productProjection;
-   }
-   
-   public void setScope(final com.commercetools.api.models.cart.ProductPublishScope scope){
-      this.scope = scope;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<com.fasterxml.jackson.databind.JsonNode> getRemovedImageUrls(){
+        return this.removedImageUrls;
+    }
+    
+    
+    public com.commercetools.api.models.product.ProductProjection getProductProjection(){
+        return this.productProjection;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ProductPublishScope getScope(){
+        return this.scope;
+    }
+
+    public void setRemovedImageUrls(final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls){
+        this.removedImageUrls = removedImageUrls;
+    }
+    
+    public void setProductProjection(final com.commercetools.api.models.product.ProductProjection productProjection){
+        this.productProjection = productProjection;
+    }
+    
+    public void setScope(final com.commercetools.api.models.cart.ProductPublishScope scope){
+        this.scope = scope;
+    }
 
 }

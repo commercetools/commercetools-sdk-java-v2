@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxedItemPriceDraftImpl implements TaxedItemPriceDraft {
 
-   private com.commercetools.api.models.common.Money totalNet;
-   
-   private com.commercetools.api.models.common.Money totalGross;
+    private com.commercetools.api.models.common.Money totalNet;
+    
+    private com.commercetools.api.models.common.Money totalGross;
 
-   @JsonCreator
-   TaxedItemPriceDraftImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.Money totalNet, @JsonProperty("totalGross") final com.commercetools.api.models.common.Money totalGross) {
-      this.totalNet = totalNet;
-      this.totalGross = totalGross;
-   }
-   public TaxedItemPriceDraftImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getTotalNet(){
-      return this.totalNet;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getTotalGross(){
-      return this.totalGross;
-   }
+    @JsonCreator
+    TaxedItemPriceDraftImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.Money totalNet, @JsonProperty("totalGross") final com.commercetools.api.models.common.Money totalGross) {
+        this.totalNet = totalNet;
+        this.totalGross = totalGross;
+    }
+    public TaxedItemPriceDraftImpl() {
+       
+    }
 
-   public void setTotalNet(final com.commercetools.api.models.common.Money totalNet){
-      this.totalNet = totalNet;
-   }
-   
-   public void setTotalGross(final com.commercetools.api.models.common.Money totalGross){
-      this.totalGross = totalGross;
-   }
+    
+    public com.commercetools.api.models.common.Money getTotalNet(){
+        return this.totalNet;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getTotalGross(){
+        return this.totalGross;
+    }
+
+    public void setTotalNet(final com.commercetools.api.models.common.Money totalNet){
+        this.totalNet = totalNet;
+    }
+    
+    public void setTotalGross(final com.commercetools.api.models.common.Money totalGross){
+        this.totalGross = totalGross;
+    }
 
 }

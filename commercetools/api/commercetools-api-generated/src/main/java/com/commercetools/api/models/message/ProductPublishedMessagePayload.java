@@ -24,37 +24,37 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductPublishedMessagePayloadImpl.class)
 public interface ProductPublishedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("removedImageUrls")
-   public List<JsonNode> getRemovedImageUrls();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("productProjection")
-   public ProductProjection getProductProjection();
-   
-   @NotNull
-   @JsonProperty("scope")
-   public ProductPublishScope getScope();
+    
+    @NotNull
+    @JsonProperty("removedImageUrls")
+    public List<JsonNode> getRemovedImageUrls();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("productProjection")
+    public ProductProjection getProductProjection();
+    
+    @NotNull
+    @JsonProperty("scope")
+    public ProductPublishScope getScope();
 
-   public void setRemovedImageUrls(final List<JsonNode> removedImageUrls);
-   
-   public void setProductProjection(final ProductProjection productProjection);
-   
-   public void setScope(final ProductPublishScope scope);
-   
-   public static ProductPublishedMessagePayloadImpl of(){
-      return new ProductPublishedMessagePayloadImpl();
-   }
-   
+    public void setRemovedImageUrls(final List<JsonNode> removedImageUrls);
+    
+    public void setProductProjection(final ProductProjection productProjection);
+    
+    public void setScope(final ProductPublishScope scope);
 
-   public static ProductPublishedMessagePayloadImpl of(final ProductPublishedMessagePayload template) {
-      ProductPublishedMessagePayloadImpl instance = new ProductPublishedMessagePayloadImpl();
-      instance.setRemovedImageUrls(template.getRemovedImageUrls());
-      instance.setProductProjection(template.getProductProjection());
-      instance.setScope(template.getScope());
-      return instance;
-   }
+    public static ProductPublishedMessagePayloadImpl of(){
+        return new ProductPublishedMessagePayloadImpl();
+    }
+    
+
+    public static ProductPublishedMessagePayloadImpl of(final ProductPublishedMessagePayload template) {
+        ProductPublishedMessagePayloadImpl instance = new ProductPublishedMessagePayloadImpl();
+        instance.setRemovedImageUrls(template.getRemovedImageUrls());
+        instance.setProductProjection(template.getProductProjection());
+        instance.setScope(template.getScope());
+        return instance;
+    }
 
 }

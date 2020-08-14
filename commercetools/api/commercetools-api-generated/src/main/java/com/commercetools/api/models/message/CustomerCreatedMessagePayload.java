@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerCreatedMessagePayloadImpl.class)
 public interface CustomerCreatedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("customer")
-   public Customer getCustomer();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("customer")
+    public Customer getCustomer();
 
-   public void setCustomer(final Customer customer);
-   
-   public static CustomerCreatedMessagePayloadImpl of(){
-      return new CustomerCreatedMessagePayloadImpl();
-   }
-   
+    public void setCustomer(final Customer customer);
 
-   public static CustomerCreatedMessagePayloadImpl of(final CustomerCreatedMessagePayload template) {
-      CustomerCreatedMessagePayloadImpl instance = new CustomerCreatedMessagePayloadImpl();
-      instance.setCustomer(template.getCustomer());
-      return instance;
-   }
+    public static CustomerCreatedMessagePayloadImpl of(){
+        return new CustomerCreatedMessagePayloadImpl();
+    }
+    
+
+    public static CustomerCreatedMessagePayloadImpl of(final CustomerCreatedMessagePayload template) {
+        CustomerCreatedMessagePayloadImpl instance = new CustomerCreatedMessagePayloadImpl();
+        instance.setCustomer(template.getCustomer());
+        return instance;
+    }
 
 }

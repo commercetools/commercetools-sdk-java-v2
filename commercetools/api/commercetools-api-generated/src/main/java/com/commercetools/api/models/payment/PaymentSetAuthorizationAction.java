@@ -23,29 +23,29 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetAuthorizationActionImpl.class)
 public interface PaymentSetAuthorizationAction extends PaymentUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("amount")
-   public Money getAmount();
-   
-   
-   @JsonProperty("until")
-   public ZonedDateTime getUntil();
+    
+    @Valid
+    @JsonProperty("amount")
+    public Money getAmount();
+    
+    
+    @JsonProperty("until")
+    public ZonedDateTime getUntil();
 
-   public void setAmount(final Money amount);
-   
-   public void setUntil(final ZonedDateTime until);
-   
-   public static PaymentSetAuthorizationActionImpl of(){
-      return new PaymentSetAuthorizationActionImpl();
-   }
-   
+    public void setAmount(final Money amount);
+    
+    public void setUntil(final ZonedDateTime until);
 
-   public static PaymentSetAuthorizationActionImpl of(final PaymentSetAuthorizationAction template) {
-      PaymentSetAuthorizationActionImpl instance = new PaymentSetAuthorizationActionImpl();
-      instance.setAmount(template.getAmount());
-      instance.setUntil(template.getUntil());
-      return instance;
-   }
+    public static PaymentSetAuthorizationActionImpl of(){
+        return new PaymentSetAuthorizationActionImpl();
+    }
+    
+
+    public static PaymentSetAuthorizationActionImpl of(final PaymentSetAuthorizationAction template) {
+        PaymentSetAuthorizationActionImpl instance = new PaymentSetAuthorizationActionImpl();
+        instance.setAmount(template.getAmount());
+        instance.setUntil(template.getUntil());
+        return instance;
+    }
 
 }

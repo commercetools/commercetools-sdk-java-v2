@@ -23,55 +23,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasurementsUpdatedMessagePayload {
 
-   private String type;
-   
-   private String deliveryId;
-   
-   private String parcelId;
-   
-   private com.commercetools.api.models.order.ParcelMeasurements measurements;
+    private String type;
+    
+    private String deliveryId;
+    
+    private String parcelId;
+    
+    private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
-   @JsonCreator
-   ParcelMeasurementsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("parcelId") final String parcelId, @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
-      this.deliveryId = deliveryId;
-      this.parcelId = parcelId;
-      this.measurements = measurements;
-      this.type = "ParcelMeasurementsUpdated";
-   }
-   public ParcelMeasurementsUpdatedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getDeliveryId(){
-      return this.deliveryId;
-   }
-   
-   
-   public String getParcelId(){
-      return this.parcelId;
-   }
-   
-   
-   public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
-      return this.measurements;
-   }
+    @JsonCreator
+    ParcelMeasurementsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("parcelId") final String parcelId, @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
+        this.deliveryId = deliveryId;
+        this.parcelId = parcelId;
+        this.measurements = measurements;
+        this.type = "ParcelMeasurementsUpdated";
+    }
+    public ParcelMeasurementsUpdatedMessagePayloadImpl() {
+       
+    }
 
-   public void setDeliveryId(final String deliveryId){
-      this.deliveryId = deliveryId;
-   }
-   
-   public void setParcelId(final String parcelId){
-      this.parcelId = parcelId;
-   }
-   
-   public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements){
-      this.measurements = measurements;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getDeliveryId(){
+        return this.deliveryId;
+    }
+    
+    
+    public String getParcelId(){
+        return this.parcelId;
+    }
+    
+    
+    public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
+        return this.measurements;
+    }
+
+    public void setDeliveryId(final String deliveryId){
+        this.deliveryId = deliveryId;
+    }
+    
+    public void setParcelId(final String parcelId){
+        this.parcelId = parcelId;
+    }
+    
+    public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements){
+        this.measurements = measurements;
+    }
 
 }

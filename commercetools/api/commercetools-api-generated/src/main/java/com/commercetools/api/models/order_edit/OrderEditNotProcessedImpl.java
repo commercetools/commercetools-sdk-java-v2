@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditNotProcessedImpl implements OrderEditNotProcessed {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   OrderEditNotProcessedImpl() {
-      this.type = "NotProcessed";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    OrderEditNotProcessedImpl() {
+        this.type = "NotProcessed";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

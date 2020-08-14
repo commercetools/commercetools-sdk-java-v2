@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetCountryActionImpl implements CartSetCountryAction {
 
-   private String action;
-   
-   private String country;
+    private String action;
+    
+    private String country;
 
-   @JsonCreator
-   CartSetCountryActionImpl(@JsonProperty("country") final String country) {
-      this.country = country;
-      this.action = "setCountry";
-   }
-   public CartSetCountryActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-   */
-   public String getCountry(){
-      return this.country;
-   }
+    @JsonCreator
+    CartSetCountryActionImpl(@JsonProperty("country") final String country) {
+        this.country = country;
+        this.action = "setCountry";
+    }
+    public CartSetCountryActionImpl() {
+       
+    }
 
-   public void setCountry(final String country){
-      this.country = country;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    */
+    public String getCountry(){
+        return this.country;
+    }
+
+    public void setCountry(final String country){
+        this.country = country;
+    }
 
 }

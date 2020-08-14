@@ -22,56 +22,56 @@ import java.io.IOException;
 public interface StagedOrder extends Order {
 
 
-   
-   public static StagedOrderImpl of(){
-      return new StagedOrderImpl();
-   }
-   
 
-   public static StagedOrderImpl of(final StagedOrder template) {
-      StagedOrderImpl instance = new StagedOrderImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setCompletedAt(template.getCompletedAt());
-      instance.setOrderNumber(template.getOrderNumber());
-      instance.setCustomerId(template.getCustomerId());
-      instance.setCustomerEmail(template.getCustomerEmail());
-      instance.setAnonymousId(template.getAnonymousId());
-      instance.setStore(template.getStore());
-      instance.setLineItems(template.getLineItems());
-      instance.setCustomLineItems(template.getCustomLineItems());
-      instance.setTotalPrice(template.getTotalPrice());
-      instance.setTaxedPrice(template.getTaxedPrice());
-      instance.setShippingAddress(template.getShippingAddress());
-      instance.setBillingAddress(template.getBillingAddress());
-      instance.setTaxMode(template.getTaxMode());
-      instance.setTaxRoundingMode(template.getTaxRoundingMode());
-      instance.setCustomerGroup(template.getCustomerGroup());
-      instance.setCountry(template.getCountry());
-      instance.setOrderState(template.getOrderState());
-      instance.setState(template.getState());
-      instance.setShipmentState(template.getShipmentState());
-      instance.setPaymentState(template.getPaymentState());
-      instance.setShippingInfo(template.getShippingInfo());
-      instance.setSyncInfo(template.getSyncInfo());
-      instance.setReturnInfo(template.getReturnInfo());
-      instance.setDiscountCodes(template.getDiscountCodes());
-      instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
-      instance.setCart(template.getCart());
-      instance.setCustom(template.getCustom());
-      instance.setPaymentInfo(template.getPaymentInfo());
-      instance.setLocale(template.getLocale());
-      instance.setInventoryMode(template.getInventoryMode());
-      instance.setOrigin(template.getOrigin());
-      instance.setTaxCalculationMode(template.getTaxCalculationMode());
-      instance.setShippingRateInput(template.getShippingRateInput());
-      instance.setItemShippingAddresses(template.getItemShippingAddresses());
-      instance.setRefusedGifts(template.getRefusedGifts());
-      return instance;
-   }
+    public static StagedOrderImpl of(){
+        return new StagedOrderImpl();
+    }
+    
+
+    public static StagedOrderImpl of(final StagedOrder template) {
+        StagedOrderImpl instance = new StagedOrderImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setCompletedAt(template.getCompletedAt());
+        instance.setOrderNumber(template.getOrderNumber());
+        instance.setCustomerId(template.getCustomerId());
+        instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setStore(template.getStore());
+        instance.setLineItems(template.getLineItems());
+        instance.setCustomLineItems(template.getCustomLineItems());
+        instance.setTotalPrice(template.getTotalPrice());
+        instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setShippingAddress(template.getShippingAddress());
+        instance.setBillingAddress(template.getBillingAddress());
+        instance.setTaxMode(template.getTaxMode());
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        instance.setCustomerGroup(template.getCustomerGroup());
+        instance.setCountry(template.getCountry());
+        instance.setOrderState(template.getOrderState());
+        instance.setState(template.getState());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setShippingInfo(template.getShippingInfo());
+        instance.setSyncInfo(template.getSyncInfo());
+        instance.setReturnInfo(template.getReturnInfo());
+        instance.setDiscountCodes(template.getDiscountCodes());
+        instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
+        instance.setCart(template.getCart());
+        instance.setCustom(template.getCustom());
+        instance.setPaymentInfo(template.getPaymentInfo());
+        instance.setLocale(template.getLocale());
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setOrigin(template.getOrigin());
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        instance.setShippingRateInput(template.getShippingRateInput());
+        instance.setItemShippingAddresses(template.getItemShippingAddresses());
+        instance.setRefusedGifts(template.getRefusedGifts());
+        return instance;
+    }
 
 }

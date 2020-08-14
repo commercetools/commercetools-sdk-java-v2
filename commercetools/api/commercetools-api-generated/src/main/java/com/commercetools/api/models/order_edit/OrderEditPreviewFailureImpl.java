@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure {
 
-   private String type;
-   
-   private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
+    private String type;
+    
+    private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
-   @JsonCreator
-   OrderEditPreviewFailureImpl(@JsonProperty("errors") final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
-      this.errors = errors;
-      this.type = "PreviewFailure";
-   }
-   public OrderEditPreviewFailureImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors(){
-      return this.errors;
-   }
+    @JsonCreator
+    OrderEditPreviewFailureImpl(@JsonProperty("errors") final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
+        this.errors = errors;
+        this.type = "PreviewFailure";
+    }
+    public OrderEditPreviewFailureImpl() {
+       
+    }
 
-   public void setErrors(final java.util.List<com.commercetools.api.models.error.ErrorObject> errors){
-      this.errors = errors;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors(){
+        return this.errors;
+    }
+
+    public void setErrors(final java.util.List<com.commercetools.api.models.error.ErrorObject> errors){
+        this.errors = errors;
+    }
 
 }

@@ -24,31 +24,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartClassificationTypeImpl implements CartClassificationType {
 
-   private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
-   
-   private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
+    private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
+    
+    private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
-   @JsonCreator
-   CartClassificationTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
-      this.values = values;
-      this.type = ShippingRateTierType.findEnumViaJsonName("CartClassification").get();
-   }
-   public CartClassificationTypeImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues(){
-      return this.values;
-   }
+    @JsonCreator
+    CartClassificationTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
+        this.values = values;
+        this.type = ShippingRateTierType.findEnumViaJsonName("CartClassification").get();
+    }
+    public CartClassificationTypeImpl() {
+       
+    }
 
-   public void setValues(final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values){
-      this.values = values;
-   }
+    
+    public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues(){
+        return this.values;
+    }
+
+    public void setValues(final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values){
+        this.values = values;
+    }
 
 }

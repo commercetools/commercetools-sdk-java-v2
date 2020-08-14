@@ -22,34 +22,34 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomFieldsDraftImpl.class)
 public interface CustomFieldsDraft  {
 
-   /**
-   *  <p>The <code>id</code> or the <code>key</code> of the type to use.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   /**
-   *  <p>A valid JSON object, based on the FieldDefinitions of the Type.</p>
-   */
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    /**
+    *  <p>The <code>id</code> or the <code>key</code> of the type to use.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    /**
+    *  <p>A valid JSON object, based on the FieldDefinitions of the Type.</p>
+    */
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static CustomFieldsDraftImpl of(){
-      return new CustomFieldsDraftImpl();
-   }
-   
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static CustomFieldsDraftImpl of(final CustomFieldsDraft template) {
-      CustomFieldsDraftImpl instance = new CustomFieldsDraftImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static CustomFieldsDraftImpl of(){
+        return new CustomFieldsDraftImpl();
+    }
+    
+
+    public static CustomFieldsDraftImpl of(final CustomFieldsDraft template) {
+        CustomFieldsDraftImpl instance = new CustomFieldsDraftImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

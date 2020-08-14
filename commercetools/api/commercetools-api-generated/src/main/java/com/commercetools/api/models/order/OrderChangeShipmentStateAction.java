@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderChangeShipmentStateActionImpl.class)
 public interface OrderChangeShipmentStateAction extends OrderUpdateAction {
 
-   
-   
-   @JsonProperty("shipmentState")
-   public ShipmentState getShipmentState();
+    
+    
+    @JsonProperty("shipmentState")
+    public ShipmentState getShipmentState();
 
-   public void setShipmentState(final ShipmentState shipmentState);
-   
-   public static OrderChangeShipmentStateActionImpl of(){
-      return new OrderChangeShipmentStateActionImpl();
-   }
-   
+    public void setShipmentState(final ShipmentState shipmentState);
 
-   public static OrderChangeShipmentStateActionImpl of(final OrderChangeShipmentStateAction template) {
-      OrderChangeShipmentStateActionImpl instance = new OrderChangeShipmentStateActionImpl();
-      instance.setShipmentState(template.getShipmentState());
-      return instance;
-   }
+    public static OrderChangeShipmentStateActionImpl of(){
+        return new OrderChangeShipmentStateActionImpl();
+    }
+    
+
+    public static OrderChangeShipmentStateActionImpl of(final OrderChangeShipmentStateAction template) {
+        OrderChangeShipmentStateActionImpl instance = new OrderChangeShipmentStateActionImpl();
+        instance.setShipmentState(template.getShipmentState());
+        return instance;
+    }
 
 }

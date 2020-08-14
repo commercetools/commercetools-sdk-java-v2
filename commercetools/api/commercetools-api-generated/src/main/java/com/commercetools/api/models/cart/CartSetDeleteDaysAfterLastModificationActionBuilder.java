@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartSetDeleteDaysAfterLastModificationActionBuilder {
-   
-   @Nullable
-   private Integer deleteDaysAfterLastModification;
-   
-   public CartSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
-      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-      return this;
-   }
-   
-   @Nullable
-   public Integer getDeleteDaysAfterLastModification(){
-      return this.deleteDaysAfterLastModification;
-   }
 
-   public CartSetDeleteDaysAfterLastModificationAction build() {
-       return new CartSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
-   }
-   
-   public static CartSetDeleteDaysAfterLastModificationActionBuilder of() {
-      return new CartSetDeleteDaysAfterLastModificationActionBuilder();
-   }
-   
-   public static CartSetDeleteDaysAfterLastModificationActionBuilder of(final CartSetDeleteDaysAfterLastModificationAction template) {
-      CartSetDeleteDaysAfterLastModificationActionBuilder builder = new CartSetDeleteDaysAfterLastModificationActionBuilder();
-      builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
-      return builder;
-   }
-   
+    @Nullable
+    private Integer deleteDaysAfterLastModification;
+
+    public CartSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        return this;
+    }
+
+    @Nullable
+    public Integer getDeleteDaysAfterLastModification(){
+        return this.deleteDaysAfterLastModification;
+    }
+
+    public CartSetDeleteDaysAfterLastModificationAction build() {
+        return new CartSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
+    }
+
+    public static CartSetDeleteDaysAfterLastModificationActionBuilder of() {
+        return new CartSetDeleteDaysAfterLastModificationActionBuilder();
+    }
+
+    public static CartSetDeleteDaysAfterLastModificationActionBuilder of(final CartSetDeleteDaysAfterLastModificationAction template) {
+        CartSetDeleteDaysAfterLastModificationActionBuilder builder = new CartSetDeleteDaysAfterLastModificationActionBuilder();
+        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+        return builder;
+    }
+
 }

@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderTransitionStateActionImpl implements StagedOrderTransitionStateAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.state.StateResourceIdentifier state;
-   
-   private Boolean force;
+    private String action;
+    
+    private com.commercetools.api.models.state.StateResourceIdentifier state;
+    
+    private Boolean force;
 
-   @JsonCreator
-   StagedOrderTransitionStateActionImpl(@JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state, @JsonProperty("force") final Boolean force) {
-      this.state = state;
-      this.force = force;
-      this.action = "transitionState";
-   }
-   public StagedOrderTransitionStateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.state.StateResourceIdentifier getState(){
-      return this.state;
-   }
-   
-   
-   public Boolean getForce(){
-      return this.force;
-   }
+    @JsonCreator
+    StagedOrderTransitionStateActionImpl(@JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state, @JsonProperty("force") final Boolean force) {
+        this.state = state;
+        this.force = force;
+        this.action = "transitionState";
+    }
+    public StagedOrderTransitionStateActionImpl() {
+       
+    }
 
-   public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
-      this.state = state;
-   }
-   
-   public void setForce(final Boolean force){
-      this.force = force;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.state.StateResourceIdentifier getState(){
+        return this.state;
+    }
+    
+    
+    public Boolean getForce(){
+        return this.force;
+    }
+
+    public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
+        this.state = state;
+    }
+    
+    public void setForce(final Boolean force){
+        this.force = force;
+    }
 
 }

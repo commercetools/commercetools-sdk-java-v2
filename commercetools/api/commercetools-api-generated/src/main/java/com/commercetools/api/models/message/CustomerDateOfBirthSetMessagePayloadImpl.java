@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfBirthSetMessagePayload {
 
-   private String type;
-   
-   private java.time.LocalDate dateOfBirth;
+    private String type;
+    
+    private java.time.LocalDate dateOfBirth;
 
-   @JsonCreator
-   CustomerDateOfBirthSetMessagePayloadImpl(@JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth) {
-      this.dateOfBirth = dateOfBirth;
-      this.type = "CustomerDateOfBirthSet";
-   }
-   public CustomerDateOfBirthSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.time.LocalDate getDateOfBirth(){
-      return this.dateOfBirth;
-   }
+    @JsonCreator
+    CustomerDateOfBirthSetMessagePayloadImpl(@JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        this.type = "CustomerDateOfBirthSet";
+    }
+    public CustomerDateOfBirthSetMessagePayloadImpl() {
+       
+    }
 
-   public void setDateOfBirth(final java.time.LocalDate dateOfBirth){
-      this.dateOfBirth = dateOfBirth;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.time.LocalDate getDateOfBirth(){
+        return this.dateOfBirth;
+    }
+
+    public void setDateOfBirth(final java.time.LocalDate dateOfBirth){
+        this.dateOfBirth = dateOfBirth;
+    }
 
 }

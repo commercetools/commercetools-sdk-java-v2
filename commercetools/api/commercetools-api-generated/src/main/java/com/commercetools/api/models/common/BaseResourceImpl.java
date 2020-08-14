@@ -53,59 +53,59 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class BaseResourceImpl implements BaseResource {
 
-   private String id;
-   
-   private Long version;
-   
-   private java.time.ZonedDateTime createdAt;
-   
-   private java.time.ZonedDateTime lastModifiedAt;
+    private String id;
+    
+    private Long version;
+    
+    private java.time.ZonedDateTime createdAt;
+    
+    private java.time.ZonedDateTime lastModifiedAt;
 
-   @JsonCreator
-   BaseResourceImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
-      this.id = id;
-      this.version = version;
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
-   }
-   public BaseResourceImpl() {
-      
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
-   }
-   
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
+    @JsonCreator
+    BaseResourceImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
+        this.id = id;
+        this.version = version;
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+    }
+    public BaseResourceImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setVersion(final Long version){
-      this.version = version;
-   }
-   
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-   
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public Long getVersion(){
+        return this.version;
+    }
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
+        return this.createdAt;
+    }
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
+        return this.lastModifiedAt;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setVersion(final Long version){
+        this.version = version;
+    }
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+        this.createdAt = createdAt;
+    }
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+        this.lastModifiedAt = lastModifiedAt;
+    }
 
 }

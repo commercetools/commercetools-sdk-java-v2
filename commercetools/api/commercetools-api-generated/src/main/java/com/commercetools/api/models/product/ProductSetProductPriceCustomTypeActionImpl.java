@@ -24,67 +24,67 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetProductPriceCustomTypeActionImpl implements ProductSetProductPriceCustomTypeAction {
 
-   private String action;
-   
-   private String priceId;
-   
-   private Boolean staged;
-   
-   private com.commercetools.api.models.type.TypeResourceIdentifier type;
-   
-   private com.commercetools.api.models.type.FieldContainer fields;
+    private String action;
+    
+    private String priceId;
+    
+    private Boolean staged;
+    
+    private com.commercetools.api.models.type.TypeResourceIdentifier type;
+    
+    private com.commercetools.api.models.type.FieldContainer fields;
 
-   @JsonCreator
-   ProductSetProductPriceCustomTypeActionImpl(@JsonProperty("priceId") final String priceId, @JsonProperty("staged") final Boolean staged, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
-      this.priceId = priceId;
-      this.staged = staged;
-      this.type = type;
-      this.fields = fields;
-      this.action = "setProductPriceCustomType";
-   }
-   public ProductSetProductPriceCustomTypeActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getPriceId(){
-      return this.priceId;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
-   
-   
-   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.type.FieldContainer getFields(){
-      return this.fields;
-   }
+    @JsonCreator
+    ProductSetProductPriceCustomTypeActionImpl(@JsonProperty("priceId") final String priceId, @JsonProperty("staged") final Boolean staged, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
+        this.priceId = priceId;
+        this.staged = staged;
+        this.type = type;
+        this.fields = fields;
+        this.action = "setProductPriceCustomType";
+    }
+    public ProductSetProductPriceCustomTypeActionImpl() {
+       
+    }
 
-   public void setPriceId(final String priceId){
-      this.priceId = priceId;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
-   
-   public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
-      this.type = type;
-   }
-   
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getPriceId(){
+        return this.priceId;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+    
+    
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.type.FieldContainer getFields(){
+        return this.fields;
+    }
+
+    public void setPriceId(final String priceId){
+        this.priceId = priceId;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
+    
+    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
+        this.type = type;
+    }
+    
+    public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+        this.fields = fields;
+    }
 
 }

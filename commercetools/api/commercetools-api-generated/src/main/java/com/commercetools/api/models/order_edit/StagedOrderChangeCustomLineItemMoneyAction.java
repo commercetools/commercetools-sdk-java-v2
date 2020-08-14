@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderChangeCustomLineItemMoneyActionImpl.class)
 public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("customLineItemId")
-   public String getCustomLineItemId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("money")
-   public Money getMoney();
+    
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("money")
+    public Money getMoney();
 
-   public void setCustomLineItemId(final String customLineItemId);
-   
-   public void setMoney(final Money money);
-   
-   public static StagedOrderChangeCustomLineItemMoneyActionImpl of(){
-      return new StagedOrderChangeCustomLineItemMoneyActionImpl();
-   }
-   
+    public void setCustomLineItemId(final String customLineItemId);
+    
+    public void setMoney(final Money money);
 
-   public static StagedOrderChangeCustomLineItemMoneyActionImpl of(final StagedOrderChangeCustomLineItemMoneyAction template) {
-      StagedOrderChangeCustomLineItemMoneyActionImpl instance = new StagedOrderChangeCustomLineItemMoneyActionImpl();
-      instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setMoney(template.getMoney());
-      return instance;
-   }
+    public static StagedOrderChangeCustomLineItemMoneyActionImpl of(){
+        return new StagedOrderChangeCustomLineItemMoneyActionImpl();
+    }
+    
+
+    public static StagedOrderChangeCustomLineItemMoneyActionImpl of(final StagedOrderChangeCustomLineItemMoneyAction template) {
+        StagedOrderChangeCustomLineItemMoneyActionImpl instance = new StagedOrderChangeCustomLineItemMoneyActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setMoney(template.getMoney());
+        return instance;
+    }
 
 }

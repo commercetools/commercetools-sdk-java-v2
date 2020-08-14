@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePasswordResetToken {
 
-   private String email;
-   
-   private Long ttlMinutes;
+    private String email;
+    
+    private Long ttlMinutes;
 
-   @JsonCreator
-   CustomerCreatePasswordResetTokenImpl(@JsonProperty("email") final String email, @JsonProperty("ttlMinutes") final Long ttlMinutes) {
-      this.email = email;
-      this.ttlMinutes = ttlMinutes;
-   }
-   public CustomerCreatePasswordResetTokenImpl() {
-      
-   }
-   
-   
-   public String getEmail(){
-      return this.email;
-   }
-   
-   
-   public Long getTtlMinutes(){
-      return this.ttlMinutes;
-   }
+    @JsonCreator
+    CustomerCreatePasswordResetTokenImpl(@JsonProperty("email") final String email, @JsonProperty("ttlMinutes") final Long ttlMinutes) {
+        this.email = email;
+        this.ttlMinutes = ttlMinutes;
+    }
+    public CustomerCreatePasswordResetTokenImpl() {
+       
+    }
 
-   public void setEmail(final String email){
-      this.email = email;
-   }
-   
-   public void setTtlMinutes(final Long ttlMinutes){
-      this.ttlMinutes = ttlMinutes;
-   }
+    
+    public String getEmail(){
+        return this.email;
+    }
+    
+    
+    public Long getTtlMinutes(){
+        return this.ttlMinutes;
+    }
+
+    public void setEmail(final String email){
+        this.email = email;
+    }
+    
+    public void setTtlMinutes(final Long ttlMinutes){
+        this.ttlMinutes = ttlMinutes;
+    }
 
 }

@@ -13,29 +13,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum InventoryMode {
 
-  
-  @JsonProperty("TrackOnly")
-  TRACK_ONLY("TrackOnly"),
-  
-  
-  @JsonProperty("ReserveOnOrder")
-  RESERVE_ON_ORDER("ReserveOnOrder"),
-  
-  
-  @JsonProperty("None")
-  NONE("None");
+    
+    @JsonProperty("TrackOnly")
+    TRACK_ONLY("TrackOnly"),
+    
+    
+    @JsonProperty("ReserveOnOrder")
+    RESERVE_ON_ORDER("ReserveOnOrder"),
+    
+    
+    @JsonProperty("None")
+    NONE("None");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private InventoryMode(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private InventoryMode(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<InventoryMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<InventoryMode> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

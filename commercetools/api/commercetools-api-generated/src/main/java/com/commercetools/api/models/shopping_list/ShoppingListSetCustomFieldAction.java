@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListSetCustomFieldActionImpl.class)
 public interface ShoppingListSetCustomFieldAction extends ShoppingListUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
 
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public static ShoppingListSetCustomFieldActionImpl of(){
-      return new ShoppingListSetCustomFieldActionImpl();
-   }
-   
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
 
-   public static ShoppingListSetCustomFieldActionImpl of(final ShoppingListSetCustomFieldAction template) {
-      ShoppingListSetCustomFieldActionImpl instance = new ShoppingListSetCustomFieldActionImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static ShoppingListSetCustomFieldActionImpl of(){
+        return new ShoppingListSetCustomFieldActionImpl();
+    }
+    
+
+    public static ShoppingListSetCustomFieldActionImpl of(final ShoppingListSetCustomFieldAction template) {
+        ShoppingListSetCustomFieldActionImpl instance = new ShoppingListSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

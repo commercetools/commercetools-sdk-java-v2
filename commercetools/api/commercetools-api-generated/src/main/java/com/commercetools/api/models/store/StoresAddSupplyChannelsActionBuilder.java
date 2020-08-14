@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class StoresAddSupplyChannelsActionBuilder {
-   
-   
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-   
-   public StoresAddSupplyChannelsActionBuilder supplyChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
-      this.supplyChannel = supplyChannel;
-      return this;
-   }
-   
-   
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
-      return this.supplyChannel;
-   }
 
-   public StoresAddSupplyChannelsAction build() {
-       return new StoresAddSupplyChannelsActionImpl(supplyChannel);
-   }
-   
-   public static StoresAddSupplyChannelsActionBuilder of() {
-      return new StoresAddSupplyChannelsActionBuilder();
-   }
-   
-   public static StoresAddSupplyChannelsActionBuilder of(final StoresAddSupplyChannelsAction template) {
-      StoresAddSupplyChannelsActionBuilder builder = new StoresAddSupplyChannelsActionBuilder();
-      builder.supplyChannel = template.getSupplyChannel();
-      return builder;
-   }
-   
+    
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
+
+    public StoresAddSupplyChannelsActionBuilder supplyChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
+        return this;
+    }
+
+    
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
+        return this.supplyChannel;
+    }
+
+    public StoresAddSupplyChannelsAction build() {
+        return new StoresAddSupplyChannelsActionImpl(supplyChannel);
+    }
+
+    public static StoresAddSupplyChannelsActionBuilder of() {
+        return new StoresAddSupplyChannelsActionBuilder();
+    }
+
+    public static StoresAddSupplyChannelsActionBuilder of(final StoresAddSupplyChannelsAction template) {
+        StoresAddSupplyChannelsActionBuilder builder = new StoresAddSupplyChannelsActionBuilder();
+        builder.supplyChannel = template.getSupplyChannel();
+        return builder;
+    }
+
 }

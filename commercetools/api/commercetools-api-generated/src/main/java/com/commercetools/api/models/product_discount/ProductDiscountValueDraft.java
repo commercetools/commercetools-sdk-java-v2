@@ -22,10 +22,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraftImpl.class, name = "absolute")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = ProductDiscountValueDraftImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = ProductDiscountValueDraftImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -34,7 +34,7 @@ import java.io.IOException;
 public interface ProductDiscountValueDraft  {
 
 
-   
+
 
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListChangeLineItemsOrderActionImpl.class)
 public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingListUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemOrder")
-   public List<String> getLineItemOrder();
+    
+    @NotNull
+    @JsonProperty("lineItemOrder")
+    public List<String> getLineItemOrder();
 
-   public void setLineItemOrder(final List<String> lineItemOrder);
-   
-   public static MyShoppingListChangeLineItemsOrderActionImpl of(){
-      return new MyShoppingListChangeLineItemsOrderActionImpl();
-   }
-   
+    public void setLineItemOrder(final List<String> lineItemOrder);
 
-   public static MyShoppingListChangeLineItemsOrderActionImpl of(final MyShoppingListChangeLineItemsOrderAction template) {
-      MyShoppingListChangeLineItemsOrderActionImpl instance = new MyShoppingListChangeLineItemsOrderActionImpl();
-      instance.setLineItemOrder(template.getLineItemOrder());
-      return instance;
-   }
+    public static MyShoppingListChangeLineItemsOrderActionImpl of(){
+        return new MyShoppingListChangeLineItemsOrderActionImpl();
+    }
+    
+
+    public static MyShoppingListChangeLineItemsOrderActionImpl of(final MyShoppingListChangeLineItemsOrderAction template) {
+        MyShoppingListChangeLineItemsOrderActionImpl instance = new MyShoppingListChangeLineItemsOrderActionImpl();
+        instance.setLineItemOrder(template.getLineItemOrder());
+        return instance;
+    }
 
 }

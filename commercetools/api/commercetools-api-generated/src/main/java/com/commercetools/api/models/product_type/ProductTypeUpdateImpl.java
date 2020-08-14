@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeUpdateImpl implements ProductTypeUpdate {
 
-   private Long version;
-   
-   private java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions;
+    private Long version;
+    
+    private java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions;
 
-   @JsonCreator
-   ProductTypeUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions) {
-      this.version = version;
-      this.actions = actions;
-   }
-   public ProductTypeUpdateImpl() {
-      
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> getActions(){
-      return this.actions;
-   }
+    @JsonCreator
+    ProductTypeUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions) {
+        this.version = version;
+        this.actions = actions;
+    }
+    public ProductTypeUpdateImpl() {
+       
+    }
 
-   public void setVersion(final Long version){
-      this.version = version;
-   }
-   
-   public void setActions(final java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions){
-      this.actions = actions;
-   }
+    
+    public Long getVersion(){
+        return this.version;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> getActions(){
+        return this.actions;
+    }
+
+    public void setVersion(final Long version){
+        this.version = version;
+    }
+    
+    public void setActions(final java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions){
+        this.actions = actions;
+    }
 
 }

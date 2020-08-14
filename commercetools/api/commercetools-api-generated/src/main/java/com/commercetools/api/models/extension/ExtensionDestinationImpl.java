@@ -23,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionDestinationImpl implements ExtensionDestination {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   ExtensionDestinationImpl() {
-      this.type = "null";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    ExtensionDestinationImpl() {
+        this.type = "null";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

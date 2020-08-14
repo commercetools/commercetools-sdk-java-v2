@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StoreSetLanguagesActionImpl.class)
 public interface StoreSetLanguagesAction extends StoreUpdateAction {
 
-   
-   
-   @JsonProperty("languages")
-   public List<String> getLanguages();
+    
+    
+    @JsonProperty("languages")
+    public List<String> getLanguages();
 
-   public void setLanguages(final List<String> languages);
-   
-   public static StoreSetLanguagesActionImpl of(){
-      return new StoreSetLanguagesActionImpl();
-   }
-   
+    public void setLanguages(final List<String> languages);
 
-   public static StoreSetLanguagesActionImpl of(final StoreSetLanguagesAction template) {
-      StoreSetLanguagesActionImpl instance = new StoreSetLanguagesActionImpl();
-      instance.setLanguages(template.getLanguages());
-      return instance;
-   }
+    public static StoreSetLanguagesActionImpl of(){
+        return new StoreSetLanguagesActionImpl();
+    }
+    
+
+    public static StoreSetLanguagesActionImpl of(final StoreSetLanguagesAction template) {
+        StoreSetLanguagesActionImpl instance = new StoreSetLanguagesActionImpl();
+        instance.setLanguages(template.getLanguages());
+        return instance;
+    }
 
 }

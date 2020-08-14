@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface OrderEditNotProcessed extends OrderEditResult {
 
 
-   
-   public static OrderEditNotProcessedImpl of(){
-      return new OrderEditNotProcessedImpl();
-   }
-   
 
-   public static OrderEditNotProcessedImpl of(final OrderEditNotProcessed template) {
-      OrderEditNotProcessedImpl instance = new OrderEditNotProcessedImpl();
-      return instance;
-   }
+    public static OrderEditNotProcessedImpl of(){
+        return new OrderEditNotProcessedImpl();
+    }
+    
+
+    public static OrderEditNotProcessedImpl of(final OrderEditNotProcessed template) {
+        OrderEditNotProcessedImpl instance = new OrderEditNotProcessedImpl();
+        return instance;
+    }
 
 }

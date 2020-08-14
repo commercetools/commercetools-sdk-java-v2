@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderSetCustomLineItemShippingDetailsActionImpl.class)
 public interface OrderSetCustomLineItemShippingDetailsAction extends OrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("customLineItemId")
-   public String getCustomLineItemId();
-   
-   @Valid
-   @JsonProperty("shippingDetails")
-   public ItemShippingDetailsDraft getShippingDetails();
+    
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+    
+    @Valid
+    @JsonProperty("shippingDetails")
+    public ItemShippingDetailsDraft getShippingDetails();
 
-   public void setCustomLineItemId(final String customLineItemId);
-   
-   public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
-   
-   public static OrderSetCustomLineItemShippingDetailsActionImpl of(){
-      return new OrderSetCustomLineItemShippingDetailsActionImpl();
-   }
-   
+    public void setCustomLineItemId(final String customLineItemId);
+    
+    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-   public static OrderSetCustomLineItemShippingDetailsActionImpl of(final OrderSetCustomLineItemShippingDetailsAction template) {
-      OrderSetCustomLineItemShippingDetailsActionImpl instance = new OrderSetCustomLineItemShippingDetailsActionImpl();
-      instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setShippingDetails(template.getShippingDetails());
-      return instance;
-   }
+    public static OrderSetCustomLineItemShippingDetailsActionImpl of(){
+        return new OrderSetCustomLineItemShippingDetailsActionImpl();
+    }
+    
+
+    public static OrderSetCustomLineItemShippingDetailsActionImpl of(final OrderSetCustomLineItemShippingDetailsAction template) {
+        OrderSetCustomLineItemShippingDetailsActionImpl instance = new OrderSetCustomLineItemShippingDetailsActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setShippingDetails(template.getShippingDetails());
+        return instance;
+    }
 
 }

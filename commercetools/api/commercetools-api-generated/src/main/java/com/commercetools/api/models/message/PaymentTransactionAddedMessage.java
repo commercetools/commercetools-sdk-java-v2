@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentTransactionAddedMessageImpl.class)
 public interface PaymentTransactionAddedMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("transaction")
-   public Transaction getTransaction();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("transaction")
+    public Transaction getTransaction();
 
-   public void setTransaction(final Transaction transaction);
-   
-   public static PaymentTransactionAddedMessageImpl of(){
-      return new PaymentTransactionAddedMessageImpl();
-   }
-   
+    public void setTransaction(final Transaction transaction);
 
-   public static PaymentTransactionAddedMessageImpl of(final PaymentTransactionAddedMessage template) {
-      PaymentTransactionAddedMessageImpl instance = new PaymentTransactionAddedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setTransaction(template.getTransaction());
-      return instance;
-   }
+    public static PaymentTransactionAddedMessageImpl of(){
+        return new PaymentTransactionAddedMessageImpl();
+    }
+    
+
+    public static PaymentTransactionAddedMessageImpl of(final PaymentTransactionAddedMessage template) {
+        PaymentTransactionAddedMessageImpl instance = new PaymentTransactionAddedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setTransaction(template.getTransaction());
+        return instance;
+    }
 
 }

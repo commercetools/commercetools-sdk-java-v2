@@ -22,23 +22,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
 
-   private com.fasterxml.jackson.databind.JsonNode reference;
+    private com.fasterxml.jackson.databind.JsonNode reference;
 
-   @JsonCreator
-   ReplicaCartDraftImpl(@JsonProperty("reference") final com.fasterxml.jackson.databind.JsonNode reference) {
-      this.reference = reference;
-   }
-   public ReplicaCartDraftImpl() {
-      
-   }
-   
-   
-   public com.fasterxml.jackson.databind.JsonNode getReference(){
-      return this.reference;
-   }
+    @JsonCreator
+    ReplicaCartDraftImpl(@JsonProperty("reference") final com.fasterxml.jackson.databind.JsonNode reference) {
+        this.reference = reference;
+    }
+    public ReplicaCartDraftImpl() {
+       
+    }
 
-   public void setReference(final com.fasterxml.jackson.databind.JsonNode reference){
-      this.reference = reference;
-   }
+    
+    public com.fasterxml.jackson.databind.JsonNode getReference(){
+        return this.reference;
+    }
+
+    public void setReference(final com.fasterxml.jackson.databind.JsonNode reference){
+        this.reference = reference;
+    }
 
 }

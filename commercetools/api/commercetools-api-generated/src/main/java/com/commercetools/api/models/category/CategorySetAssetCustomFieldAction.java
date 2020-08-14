@@ -22,43 +22,43 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySetAssetCustomFieldActionImpl.class)
 public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction {
 
-   
-   
-   @JsonProperty("assetId")
-   public String getAssetId();
-   
-   
-   @JsonProperty("assetKey")
-   public String getAssetKey();
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
+    
+    
+    @JsonProperty("assetId")
+    public String getAssetId();
+    
+    
+    @JsonProperty("assetKey")
+    public String getAssetKey();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
 
-   public void setAssetId(final String assetId);
-   
-   public void setAssetKey(final String assetKey);
-   
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public static CategorySetAssetCustomFieldActionImpl of(){
-      return new CategorySetAssetCustomFieldActionImpl();
-   }
-   
+    public void setAssetId(final String assetId);
+    
+    public void setAssetKey(final String assetKey);
+    
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
 
-   public static CategorySetAssetCustomFieldActionImpl of(final CategorySetAssetCustomFieldAction template) {
-      CategorySetAssetCustomFieldActionImpl instance = new CategorySetAssetCustomFieldActionImpl();
-      instance.setAssetId(template.getAssetId());
-      instance.setAssetKey(template.getAssetKey());
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static CategorySetAssetCustomFieldActionImpl of(){
+        return new CategorySetAssetCustomFieldActionImpl();
+    }
+    
+
+    public static CategorySetAssetCustomFieldActionImpl of(final CategorySetAssetCustomFieldAction template) {
+        CategorySetAssetCustomFieldActionImpl instance = new CategorySetAssetCustomFieldActionImpl();
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

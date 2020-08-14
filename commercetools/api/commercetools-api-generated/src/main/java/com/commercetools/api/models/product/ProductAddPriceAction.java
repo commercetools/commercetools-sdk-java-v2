@@ -22,44 +22,44 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductAddPriceActionImpl.class)
 public interface ProductAddPriceAction extends ProductUpdateAction {
 
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("price")
-   public PriceDraft getPrice();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("price")
+    public PriceDraft getPrice();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setSku(final String sku);
-   
-   public void setPrice(final PriceDraft price);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductAddPriceActionImpl of(){
-      return new ProductAddPriceActionImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setSku(final String sku);
+    
+    public void setPrice(final PriceDraft price);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductAddPriceActionImpl of(final ProductAddPriceAction template) {
-      ProductAddPriceActionImpl instance = new ProductAddPriceActionImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
-      instance.setPrice(template.getPrice());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductAddPriceActionImpl of(){
+        return new ProductAddPriceActionImpl();
+    }
+    
+
+    public static ProductAddPriceActionImpl of(final ProductAddPriceAction template) {
+        ProductAddPriceActionImpl instance = new ProductAddPriceActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setPrice(template.getPrice());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

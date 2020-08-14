@@ -21,25 +21,25 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetAnonymousIdActionImpl.class)
 public interface PaymentSetAnonymousIdAction extends PaymentUpdateAction {
 
-   /**
-   *  <p>Anonymous ID of the anonymous customer that this payment belongs to.
-   *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
-   */
-   
-   @JsonProperty("anonymousId")
-   public String getAnonymousId();
+    /**
+    *  <p>Anonymous ID of the anonymous customer that this payment belongs to.
+    *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
+    */
+    
+    @JsonProperty("anonymousId")
+    public String getAnonymousId();
 
-   public void setAnonymousId(final String anonymousId);
-   
-   public static PaymentSetAnonymousIdActionImpl of(){
-      return new PaymentSetAnonymousIdActionImpl();
-   }
-   
+    public void setAnonymousId(final String anonymousId);
 
-   public static PaymentSetAnonymousIdActionImpl of(final PaymentSetAnonymousIdAction template) {
-      PaymentSetAnonymousIdActionImpl instance = new PaymentSetAnonymousIdActionImpl();
-      instance.setAnonymousId(template.getAnonymousId());
-      return instance;
-   }
+    public static PaymentSetAnonymousIdActionImpl of(){
+        return new PaymentSetAnonymousIdActionImpl();
+    }
+    
+
+    public static PaymentSetAnonymousIdActionImpl of(final PaymentSetAnonymousIdAction template) {
+        PaymentSetAnonymousIdActionImpl instance = new PaymentSetAnonymousIdActionImpl();
+        instance.setAnonymousId(template.getAnonymousId());
+        return instance;
+    }
 
 }

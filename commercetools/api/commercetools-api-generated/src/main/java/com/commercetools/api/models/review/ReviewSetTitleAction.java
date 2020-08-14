@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewSetTitleActionImpl.class)
 public interface ReviewSetTitleAction extends ReviewUpdateAction {
 
-   /**
-   *  <p>If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   
-   @JsonProperty("title")
-   public String getTitle();
+    /**
+    *  <p>If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    
+    @JsonProperty("title")
+    public String getTitle();
 
-   public void setTitle(final String title);
-   
-   public static ReviewSetTitleActionImpl of(){
-      return new ReviewSetTitleActionImpl();
-   }
-   
+    public void setTitle(final String title);
 
-   public static ReviewSetTitleActionImpl of(final ReviewSetTitleAction template) {
-      ReviewSetTitleActionImpl instance = new ReviewSetTitleActionImpl();
-      instance.setTitle(template.getTitle());
-      return instance;
-   }
+    public static ReviewSetTitleActionImpl of(){
+        return new ReviewSetTitleActionImpl();
+    }
+    
+
+    public static ReviewSetTitleActionImpl of(final ReviewSetTitleAction template) {
+        ReviewSetTitleActionImpl instance = new ReviewSetTitleActionImpl();
+        instance.setTitle(template.getTitle());
+        return instance;
+    }
 
 }

@@ -21,36 +21,36 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerResetPasswordImpl.class)
 public interface CustomerResetPassword  {
 
-   
-   @NotNull
-   @JsonProperty("tokenValue")
-   public String getTokenValue();
-   
-   @NotNull
-   @JsonProperty("newPassword")
-   public String getNewPassword();
-   
-   
-   @JsonProperty("version")
-   public Long getVersion();
+    
+    @NotNull
+    @JsonProperty("tokenValue")
+    public String getTokenValue();
+    
+    @NotNull
+    @JsonProperty("newPassword")
+    public String getNewPassword();
+    
+    
+    @JsonProperty("version")
+    public Long getVersion();
 
-   public void setTokenValue(final String tokenValue);
-   
-   public void setNewPassword(final String newPassword);
-   
-   public void setVersion(final Long version);
-   
-   public static CustomerResetPasswordImpl of(){
-      return new CustomerResetPasswordImpl();
-   }
-   
+    public void setTokenValue(final String tokenValue);
+    
+    public void setNewPassword(final String newPassword);
+    
+    public void setVersion(final Long version);
 
-   public static CustomerResetPasswordImpl of(final CustomerResetPassword template) {
-      CustomerResetPasswordImpl instance = new CustomerResetPasswordImpl();
-      instance.setTokenValue(template.getTokenValue());
-      instance.setNewPassword(template.getNewPassword());
-      instance.setVersion(template.getVersion());
-      return instance;
-   }
+    public static CustomerResetPasswordImpl of(){
+        return new CustomerResetPasswordImpl();
+    }
+    
+
+    public static CustomerResetPasswordImpl of(final CustomerResetPassword template) {
+        CustomerResetPasswordImpl instance = new CustomerResetPasswordImpl();
+        instance.setTokenValue(template.getTokenValue());
+        instance.setNewPassword(template.getNewPassword());
+        instance.setVersion(template.getVersion());
+        return instance;
+    }
 
 }

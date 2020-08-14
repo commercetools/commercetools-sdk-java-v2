@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class GeoJsonPointImpl implements GeoJsonPoint {
 
-   private String type;
-   
-   private java.util.List<Double> coordinates;
+    private String type;
+    
+    private java.util.List<Double> coordinates;
 
-   @JsonCreator
-   GeoJsonPointImpl(@JsonProperty("coordinates") final java.util.List<Double> coordinates) {
-      this.coordinates = coordinates;
-      this.type = "Point";
-   }
-   public GeoJsonPointImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<Double> getCoordinates(){
-      return this.coordinates;
-   }
+    @JsonCreator
+    GeoJsonPointImpl(@JsonProperty("coordinates") final java.util.List<Double> coordinates) {
+        this.coordinates = coordinates;
+        this.type = "Point";
+    }
+    public GeoJsonPointImpl() {
+       
+    }
 
-   public void setCoordinates(final java.util.List<Double> coordinates){
-      this.coordinates = coordinates;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<Double> getCoordinates(){
+        return this.coordinates;
+    }
+
+    public void setCoordinates(final java.util.List<Double> coordinates){
+        this.coordinates = coordinates;
+    }
 
 }

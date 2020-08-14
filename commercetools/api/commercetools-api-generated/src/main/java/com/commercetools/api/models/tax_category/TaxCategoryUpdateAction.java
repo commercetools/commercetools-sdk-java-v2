@@ -28,10 +28,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategorySetKeyActionImpl.class, name = "setKey")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "action",
-   defaultImpl = TaxCategoryUpdateActionImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "action",
+    defaultImpl = TaxCategoryUpdateActionImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -40,7 +40,7 @@ import java.io.IOException;
 public interface TaxCategoryUpdateAction  {
 
 
-   
+
 
 
 }

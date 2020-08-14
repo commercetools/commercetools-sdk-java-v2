@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectChangeLanguagesActionImpl.class)
 public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
 
-   /**
-   *  <p>.</p>
-   */
-   @NotNull
-   @JsonProperty("languages")
-   public List<String> getLanguages();
+    /**
+    *  <p>.</p>
+    */
+    @NotNull
+    @JsonProperty("languages")
+    public List<String> getLanguages();
 
-   public void setLanguages(final List<String> languages);
-   
-   public static ProjectChangeLanguagesActionImpl of(){
-      return new ProjectChangeLanguagesActionImpl();
-   }
-   
+    public void setLanguages(final List<String> languages);
 
-   public static ProjectChangeLanguagesActionImpl of(final ProjectChangeLanguagesAction template) {
-      ProjectChangeLanguagesActionImpl instance = new ProjectChangeLanguagesActionImpl();
-      instance.setLanguages(template.getLanguages());
-      return instance;
-   }
+    public static ProjectChangeLanguagesActionImpl of(){
+        return new ProjectChangeLanguagesActionImpl();
+    }
+    
+
+    public static ProjectChangeLanguagesActionImpl of(final ProjectChangeLanguagesAction template) {
+        ProjectChangeLanguagesActionImpl instance = new ProjectChangeLanguagesActionImpl();
+        instance.setLanguages(template.getLanguages());
+        return instance;
+    }
 
 }

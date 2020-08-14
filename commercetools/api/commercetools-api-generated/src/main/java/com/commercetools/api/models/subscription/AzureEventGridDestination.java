@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = AzureEventGridDestinationImpl.class)
 public interface AzureEventGridDestination extends Destination {
 
-   
-   @NotNull
-   @JsonProperty("uri")
-   public String getUri();
-   
-   @NotNull
-   @JsonProperty("accessKey")
-   public String getAccessKey();
+    
+    @NotNull
+    @JsonProperty("uri")
+    public String getUri();
+    
+    @NotNull
+    @JsonProperty("accessKey")
+    public String getAccessKey();
 
-   public void setUri(final String uri);
-   
-   public void setAccessKey(final String accessKey);
-   
-   public static AzureEventGridDestinationImpl of(){
-      return new AzureEventGridDestinationImpl();
-   }
-   
+    public void setUri(final String uri);
+    
+    public void setAccessKey(final String accessKey);
 
-   public static AzureEventGridDestinationImpl of(final AzureEventGridDestination template) {
-      AzureEventGridDestinationImpl instance = new AzureEventGridDestinationImpl();
-      instance.setUri(template.getUri());
-      instance.setAccessKey(template.getAccessKey());
-      return instance;
-   }
+    public static AzureEventGridDestinationImpl of(){
+        return new AzureEventGridDestinationImpl();
+    }
+    
+
+    public static AzureEventGridDestinationImpl of(final AzureEventGridDestination template) {
+        AzureEventGridDestinationImpl instance = new AzureEventGridDestinationImpl();
+        instance.setUri(template.getUri());
+        instance.setAccessKey(template.getAccessKey());
+        return instance;
+    }
 
 }

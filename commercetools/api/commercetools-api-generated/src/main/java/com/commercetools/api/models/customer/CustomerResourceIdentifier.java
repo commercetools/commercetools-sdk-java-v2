@@ -23,17 +23,17 @@ import java.io.IOException;
 public interface CustomerResourceIdentifier extends ResourceIdentifier {
 
 
-   
-   public static CustomerResourceIdentifierImpl of(){
-      return new CustomerResourceIdentifierImpl();
-   }
-   
 
-   public static CustomerResourceIdentifierImpl of(final CustomerResourceIdentifier template) {
-      CustomerResourceIdentifierImpl instance = new CustomerResourceIdentifierImpl();
-      instance.setId(template.getId());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static CustomerResourceIdentifierImpl of(){
+        return new CustomerResourceIdentifierImpl();
+    }
+    
+
+    public static CustomerResourceIdentifierImpl of(final CustomerResourceIdentifier template) {
+        CustomerResourceIdentifierImpl instance = new CustomerResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

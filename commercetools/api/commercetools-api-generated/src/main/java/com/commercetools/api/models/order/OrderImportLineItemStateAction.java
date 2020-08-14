@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderImportLineItemStateActionImpl.class)
 public interface OrderImportLineItemStateAction extends OrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("state")
-   public List<ItemState> getState();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("state")
+    public List<ItemState> getState();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setState(final List<ItemState> state);
-   
-   public static OrderImportLineItemStateActionImpl of(){
-      return new OrderImportLineItemStateActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setState(final List<ItemState> state);
 
-   public static OrderImportLineItemStateActionImpl of(final OrderImportLineItemStateAction template) {
-      OrderImportLineItemStateActionImpl instance = new OrderImportLineItemStateActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setState(template.getState());
-      return instance;
-   }
+    public static OrderImportLineItemStateActionImpl of(){
+        return new OrderImportLineItemStateActionImpl();
+    }
+    
+
+    public static OrderImportLineItemStateActionImpl of(final OrderImportLineItemStateAction template) {
+        OrderImportLineItemStateActionImpl instance = new OrderImportLineItemStateActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setState(template.getState());
+        return instance;
+    }
 
 }

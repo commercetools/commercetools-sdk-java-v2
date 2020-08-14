@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetExternalIdActionImpl.class)
 public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
 
-   /**
-   *  <p>If not defined, the external ID is unset.</p>
-   */
-   
-   @JsonProperty("externalId")
-   public String getExternalId();
+    /**
+    *  <p>If not defined, the external ID is unset.</p>
+    */
+    
+    @JsonProperty("externalId")
+    public String getExternalId();
 
-   public void setExternalId(final String externalId);
-   
-   public static CustomerSetExternalIdActionImpl of(){
-      return new CustomerSetExternalIdActionImpl();
-   }
-   
+    public void setExternalId(final String externalId);
 
-   public static CustomerSetExternalIdActionImpl of(final CustomerSetExternalIdAction template) {
-      CustomerSetExternalIdActionImpl instance = new CustomerSetExternalIdActionImpl();
-      instance.setExternalId(template.getExternalId());
-      return instance;
-   }
+    public static CustomerSetExternalIdActionImpl of(){
+        return new CustomerSetExternalIdActionImpl();
+    }
+    
+
+    public static CustomerSetExternalIdActionImpl of(final CustomerSetExternalIdAction template) {
+        CustomerSetExternalIdActionImpl instance = new CustomerSetExternalIdActionImpl();
+        instance.setExternalId(template.getExternalId());
+        return instance;
+    }
 
 }

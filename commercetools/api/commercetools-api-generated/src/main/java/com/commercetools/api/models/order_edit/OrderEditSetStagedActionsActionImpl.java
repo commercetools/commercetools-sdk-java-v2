@@ -23,33 +23,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedActionsAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
 
-   @JsonCreator
-   OrderEditSetStagedActionsActionImpl(@JsonProperty("stagedActions") final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
-      this.stagedActions = stagedActions;
-      this.action = "setStagedActions";
-   }
-   public OrderEditSetStagedActionsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>The actions to edit the <code>resource</code>.</p>
-   */
-   public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions(){
-      return this.stagedActions;
-   }
+    @JsonCreator
+    OrderEditSetStagedActionsActionImpl(@JsonProperty("stagedActions") final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
+        this.stagedActions = stagedActions;
+        this.action = "setStagedActions";
+    }
+    public OrderEditSetStagedActionsActionImpl() {
+       
+    }
 
-   public void setStagedActions(final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions){
-      this.stagedActions = stagedActions;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>The actions to edit the <code>resource</code>.</p>
+    */
+    public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions(){
+        return this.stagedActions;
+    }
+
+    public void setStagedActions(final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions){
+        this.stagedActions = stagedActions;
+    }
 
 }

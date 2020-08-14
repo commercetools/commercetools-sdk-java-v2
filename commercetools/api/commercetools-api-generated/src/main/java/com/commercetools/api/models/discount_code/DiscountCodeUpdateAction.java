@@ -42,10 +42,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilActionImpl.class, name = "setValidUntil")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "action",
-   defaultImpl = DiscountCodeUpdateActionImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "action",
+    defaultImpl = DiscountCodeUpdateActionImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -54,7 +54,7 @@ import java.io.IOException;
 public interface DiscountCodeUpdateAction  {
 
 
-   
+
 
 
 }

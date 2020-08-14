@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodSetDescriptionActionImpl.class)
 public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdateAction {
 
-   
-   
-   @JsonProperty("description")
-   public String getDescription();
+    
+    
+    @JsonProperty("description")
+    public String getDescription();
 
-   public void setDescription(final String description);
-   
-   public static ShippingMethodSetDescriptionActionImpl of(){
-      return new ShippingMethodSetDescriptionActionImpl();
-   }
-   
+    public void setDescription(final String description);
 
-   public static ShippingMethodSetDescriptionActionImpl of(final ShippingMethodSetDescriptionAction template) {
-      ShippingMethodSetDescriptionActionImpl instance = new ShippingMethodSetDescriptionActionImpl();
-      instance.setDescription(template.getDescription());
-      return instance;
-   }
+    public static ShippingMethodSetDescriptionActionImpl of(){
+        return new ShippingMethodSetDescriptionActionImpl();
+    }
+    
+
+    public static ShippingMethodSetDescriptionActionImpl of(final ShippingMethodSetDescriptionAction template) {
+        ShippingMethodSetDescriptionActionImpl instance = new ShippingMethodSetDescriptionActionImpl();
+        instance.setDescription(template.getDescription());
+        return instance;
+    }
 
 }

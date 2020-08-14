@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.type.FieldDefinition fieldDefinition;
+    private String action;
+    
+    private com.commercetools.api.models.type.FieldDefinition fieldDefinition;
 
-   @JsonCreator
-   TypeAddFieldDefinitionActionImpl(@JsonProperty("fieldDefinition") final com.commercetools.api.models.type.FieldDefinition fieldDefinition) {
-      this.fieldDefinition = fieldDefinition;
-      this.action = "addFieldDefinition";
-   }
-   public TypeAddFieldDefinitionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.type.FieldDefinition getFieldDefinition(){
-      return this.fieldDefinition;
-   }
+    @JsonCreator
+    TypeAddFieldDefinitionActionImpl(@JsonProperty("fieldDefinition") final com.commercetools.api.models.type.FieldDefinition fieldDefinition) {
+        this.fieldDefinition = fieldDefinition;
+        this.action = "addFieldDefinition";
+    }
+    public TypeAddFieldDefinitionActionImpl() {
+       
+    }
 
-   public void setFieldDefinition(final com.commercetools.api.models.type.FieldDefinition fieldDefinition){
-      this.fieldDefinition = fieldDefinition;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.type.FieldDefinition getFieldDefinition(){
+        return this.fieldDefinition;
+    }
+
+    public void setFieldDefinition(final com.commercetools.api.models.type.FieldDefinition fieldDefinition){
+        this.fieldDefinition = fieldDefinition;
+    }
 
 }

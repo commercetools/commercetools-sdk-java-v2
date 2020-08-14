@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartSetLocaleActionImpl.class)
 public interface MyCartSetLocaleAction extends MyCartUpdateAction {
 
-   
-   
-   @JsonProperty("locale")
-   public String getLocale();
+    
+    
+    @JsonProperty("locale")
+    public String getLocale();
 
-   public void setLocale(final String locale);
-   
-   public static MyCartSetLocaleActionImpl of(){
-      return new MyCartSetLocaleActionImpl();
-   }
-   
+    public void setLocale(final String locale);
 
-   public static MyCartSetLocaleActionImpl of(final MyCartSetLocaleAction template) {
-      MyCartSetLocaleActionImpl instance = new MyCartSetLocaleActionImpl();
-      instance.setLocale(template.getLocale());
-      return instance;
-   }
+    public static MyCartSetLocaleActionImpl of(){
+        return new MyCartSetLocaleActionImpl();
+    }
+    
+
+    public static MyCartSetLocaleActionImpl of(final MyCartSetLocaleAction template) {
+        MyCartSetLocaleActionImpl instance = new MyCartSetLocaleActionImpl();
+        instance.setLocale(template.getLocale());
+        return instance;
+    }
 
 }

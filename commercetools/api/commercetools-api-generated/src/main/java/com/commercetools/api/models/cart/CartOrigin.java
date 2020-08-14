@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum CartOrigin {
 
-  
-  @JsonProperty("Customer")
-  CUSTOMER("Customer"),
-  
-  
-  @JsonProperty("Merchant")
-  MERCHANT("Merchant");
+    
+    @JsonProperty("Customer")
+    CUSTOMER("Customer"),
+    
+    
+    @JsonProperty("Merchant")
+    MERCHANT("Merchant");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private CartOrigin(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private CartOrigin(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<CartOrigin> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<CartOrigin> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

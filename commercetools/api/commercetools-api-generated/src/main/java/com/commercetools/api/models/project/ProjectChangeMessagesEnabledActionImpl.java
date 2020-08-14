@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeMessagesEnabledActionImpl implements ProjectChangeMessagesEnabledAction {
 
-   private String action;
-   
-   private Boolean messagesEnabled;
+    private String action;
+    
+    private Boolean messagesEnabled;
 
-   @JsonCreator
-   ProjectChangeMessagesEnabledActionImpl(@JsonProperty("messagesEnabled") final Boolean messagesEnabled) {
-      this.messagesEnabled = messagesEnabled;
-      this.action = "changeMessagesEnabled";
-   }
-   public ProjectChangeMessagesEnabledActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Boolean getMessagesEnabled(){
-      return this.messagesEnabled;
-   }
+    @JsonCreator
+    ProjectChangeMessagesEnabledActionImpl(@JsonProperty("messagesEnabled") final Boolean messagesEnabled) {
+        this.messagesEnabled = messagesEnabled;
+        this.action = "changeMessagesEnabled";
+    }
+    public ProjectChangeMessagesEnabledActionImpl() {
+       
+    }
 
-   public void setMessagesEnabled(final Boolean messagesEnabled){
-      this.messagesEnabled = messagesEnabled;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Boolean getMessagesEnabled(){
+        return this.messagesEnabled;
+    }
+
+    public void setMessagesEnabled(final Boolean messagesEnabled){
+        this.messagesEnabled = messagesEnabled;
+    }
 
 }

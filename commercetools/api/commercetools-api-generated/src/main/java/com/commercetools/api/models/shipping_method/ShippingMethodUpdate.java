@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodUpdateImpl.class)
 public interface ShippingMethodUpdate  {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("actions")
-   public List<ShippingMethodUpdateAction> getActions();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("actions")
+    public List<ShippingMethodUpdateAction> getActions();
 
-   public void setVersion(final Long version);
-   
-   public void setActions(final List<ShippingMethodUpdateAction> actions);
-   
-   public static ShippingMethodUpdateImpl of(){
-      return new ShippingMethodUpdateImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setActions(final List<ShippingMethodUpdateAction> actions);
 
-   public static ShippingMethodUpdateImpl of(final ShippingMethodUpdate template) {
-      ShippingMethodUpdateImpl instance = new ShippingMethodUpdateImpl();
-      instance.setVersion(template.getVersion());
-      instance.setActions(template.getActions());
-      return instance;
-   }
+    public static ShippingMethodUpdateImpl of(){
+        return new ShippingMethodUpdateImpl();
+    }
+    
+
+    public static ShippingMethodUpdateImpl of(final ShippingMethodUpdate template) {
+        ShippingMethodUpdateImpl instance = new ShippingMethodUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(template.getActions());
+        return instance;
+    }
 
 }

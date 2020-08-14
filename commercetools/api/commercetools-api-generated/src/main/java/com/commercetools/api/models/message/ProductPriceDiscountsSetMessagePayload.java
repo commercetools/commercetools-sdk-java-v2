@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductPriceDiscountsSetMessagePayloadImpl.class)
 public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("updatedPrices")
-   public List<ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("updatedPrices")
+    public List<ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices();
 
-   public void setUpdatedPrices(final List<ProductPriceDiscountsSetUpdatedPrice> updatedPrices);
-   
-   public static ProductPriceDiscountsSetMessagePayloadImpl of(){
-      return new ProductPriceDiscountsSetMessagePayloadImpl();
-   }
-   
+    public void setUpdatedPrices(final List<ProductPriceDiscountsSetUpdatedPrice> updatedPrices);
 
-   public static ProductPriceDiscountsSetMessagePayloadImpl of(final ProductPriceDiscountsSetMessagePayload template) {
-      ProductPriceDiscountsSetMessagePayloadImpl instance = new ProductPriceDiscountsSetMessagePayloadImpl();
-      instance.setUpdatedPrices(template.getUpdatedPrices());
-      return instance;
-   }
+    public static ProductPriceDiscountsSetMessagePayloadImpl of(){
+        return new ProductPriceDiscountsSetMessagePayloadImpl();
+    }
+    
+
+    public static ProductPriceDiscountsSetMessagePayloadImpl of(final ProductPriceDiscountsSetMessagePayload template) {
+        ProductPriceDiscountsSetMessagePayloadImpl instance = new ProductPriceDiscountsSetMessagePayloadImpl();
+        instance.setUpdatedPrices(template.getUpdatedPrices());
+        return instance;
+    }
 
 }

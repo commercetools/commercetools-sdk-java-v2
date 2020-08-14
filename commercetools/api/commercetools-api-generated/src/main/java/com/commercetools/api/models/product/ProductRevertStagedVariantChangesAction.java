@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductRevertStagedVariantChangesActionImpl.class)
 public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("variantId")
-   public Long getVariantId();
+    
+    @NotNull
+    @JsonProperty("variantId")
+    public Long getVariantId();
 
-   public void setVariantId(final Long variantId);
-   
-   public static ProductRevertStagedVariantChangesActionImpl of(){
-      return new ProductRevertStagedVariantChangesActionImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
 
-   public static ProductRevertStagedVariantChangesActionImpl of(final ProductRevertStagedVariantChangesAction template) {
-      ProductRevertStagedVariantChangesActionImpl instance = new ProductRevertStagedVariantChangesActionImpl();
-      instance.setVariantId(template.getVariantId());
-      return instance;
-   }
+    public static ProductRevertStagedVariantChangesActionImpl of(){
+        return new ProductRevertStagedVariantChangesActionImpl();
+    }
+    
+
+    public static ProductRevertStagedVariantChangesActionImpl of(final ProductRevertStagedVariantChangesAction template) {
+        ProductRevertStagedVariantChangesActionImpl instance = new ProductRevertStagedVariantChangesActionImpl();
+        instance.setVariantId(template.getVariantId());
+        return instance;
+    }
 
 }

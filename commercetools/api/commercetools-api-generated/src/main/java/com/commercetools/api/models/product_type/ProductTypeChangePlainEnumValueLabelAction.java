@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangePlainEnumValueLabelActionImpl.class)
 public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("attributeName")
-   public String getAttributeName();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("newValue")
-   public AttributePlainEnumValue getNewValue();
+    
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("newValue")
+    public AttributePlainEnumValue getNewValue();
 
-   public void setAttributeName(final String attributeName);
-   
-   public void setNewValue(final AttributePlainEnumValue newValue);
-   
-   public static ProductTypeChangePlainEnumValueLabelActionImpl of(){
-      return new ProductTypeChangePlainEnumValueLabelActionImpl();
-   }
-   
+    public void setAttributeName(final String attributeName);
+    
+    public void setNewValue(final AttributePlainEnumValue newValue);
 
-   public static ProductTypeChangePlainEnumValueLabelActionImpl of(final ProductTypeChangePlainEnumValueLabelAction template) {
-      ProductTypeChangePlainEnumValueLabelActionImpl instance = new ProductTypeChangePlainEnumValueLabelActionImpl();
-      instance.setAttributeName(template.getAttributeName());
-      instance.setNewValue(template.getNewValue());
-      return instance;
-   }
+    public static ProductTypeChangePlainEnumValueLabelActionImpl of(){
+        return new ProductTypeChangePlainEnumValueLabelActionImpl();
+    }
+    
+
+    public static ProductTypeChangePlainEnumValueLabelActionImpl of(final ProductTypeChangePlainEnumValueLabelAction template) {
+        ProductTypeChangePlainEnumValueLabelActionImpl instance = new ProductTypeChangePlainEnumValueLabelActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNewValue(template.getNewValue());
+        return instance;
+    }
 
 }

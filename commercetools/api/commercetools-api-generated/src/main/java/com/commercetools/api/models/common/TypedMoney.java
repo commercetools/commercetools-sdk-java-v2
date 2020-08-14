@@ -21,10 +21,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyImpl.class, name = "highPrecision")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = TypedMoneyImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = TypedMoneyImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -32,27 +32,27 @@ import java.io.IOException;
 )
 public interface TypedMoney  {
 
-   
-   @NotNull
-   @JsonProperty("fractionDigits")
-   public Integer getFractionDigits();
-   
-   @NotNull
-   @JsonProperty("centAmount")
-   public Long getCentAmount();
-   /**
-   *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-   */
-   @NotNull
-   @JsonProperty("currencyCode")
-   public String getCurrencyCode();
+    
+    @NotNull
+    @JsonProperty("fractionDigits")
+    public Integer getFractionDigits();
+    
+    @NotNull
+    @JsonProperty("centAmount")
+    public Long getCentAmount();
+    /**
+    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    */
+    @NotNull
+    @JsonProperty("currencyCode")
+    public String getCurrencyCode();
 
-   public void setFractionDigits(final Integer fractionDigits);
-   
-   public void setCentAmount(final Long centAmount);
-   
-   public void setCurrencyCode(final String currencyCode);
-   
+    public void setFractionDigits(final Integer fractionDigits);
+    
+    public void setCentAmount(final Long centAmount);
+    
+    public void setCurrencyCode(final String currencyCode);
+
 
 
 }

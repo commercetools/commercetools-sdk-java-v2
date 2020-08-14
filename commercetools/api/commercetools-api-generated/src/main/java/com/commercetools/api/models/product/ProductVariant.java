@@ -26,99 +26,99 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantImpl.class)
 public interface ProductVariant  {
 
-   
-   @NotNull
-   @JsonProperty("id")
-   public Long getId();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   
-   @JsonProperty("key")
-   public String getKey();
-   
-   @Valid
-   @JsonProperty("prices")
-   public List<Price> getPrices();
-   
-   @Valid
-   @JsonProperty("attributes")
-   public List<Attribute> getAttributes();
-   
-   @Valid
-   @JsonProperty("price")
-   public Price getPrice();
-   
-   @Valid
-   @JsonProperty("images")
-   public List<Image> getImages();
-   
-   @Valid
-   @JsonProperty("assets")
-   public List<Asset> getAssets();
-   
-   @Valid
-   @JsonProperty("availability")
-   public ProductVariantAvailability getAvailability();
-   
-   
-   @JsonProperty("isMatchingVariant")
-   public Boolean getIsMatchingVariant();
-   
-   @Valid
-   @JsonProperty("scopedPrice")
-   public ScopedPrice getScopedPrice();
-   
-   
-   @JsonProperty("scopedPriceDiscounted")
-   public Boolean getScopedPriceDiscounted();
+    
+    @NotNull
+    @JsonProperty("id")
+    public Long getId();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    
+    @JsonProperty("key")
+    public String getKey();
+    
+    @Valid
+    @JsonProperty("prices")
+    public List<Price> getPrices();
+    
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
+    
+    @Valid
+    @JsonProperty("price")
+    public Price getPrice();
+    
+    @Valid
+    @JsonProperty("images")
+    public List<Image> getImages();
+    
+    @Valid
+    @JsonProperty("assets")
+    public List<Asset> getAssets();
+    
+    @Valid
+    @JsonProperty("availability")
+    public ProductVariantAvailability getAvailability();
+    
+    
+    @JsonProperty("isMatchingVariant")
+    public Boolean getIsMatchingVariant();
+    
+    @Valid
+    @JsonProperty("scopedPrice")
+    public ScopedPrice getScopedPrice();
+    
+    
+    @JsonProperty("scopedPriceDiscounted")
+    public Boolean getScopedPriceDiscounted();
 
-   public void setId(final Long id);
-   
-   public void setSku(final String sku);
-   
-   public void setKey(final String key);
-   
-   public void setPrices(final List<Price> prices);
-   
-   public void setAttributes(final List<Attribute> attributes);
-   
-   public void setPrice(final Price price);
-   
-   public void setImages(final List<Image> images);
-   
-   public void setAssets(final List<Asset> assets);
-   
-   public void setAvailability(final ProductVariantAvailability availability);
-   
-   public void setIsMatchingVariant(final Boolean isMatchingVariant);
-   
-   public void setScopedPrice(final ScopedPrice scopedPrice);
-   
-   public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted);
-   
-   public static ProductVariantImpl of(){
-      return new ProductVariantImpl();
-   }
-   
+    public void setId(final Long id);
+    
+    public void setSku(final String sku);
+    
+    public void setKey(final String key);
+    
+    public void setPrices(final List<Price> prices);
+    
+    public void setAttributes(final List<Attribute> attributes);
+    
+    public void setPrice(final Price price);
+    
+    public void setImages(final List<Image> images);
+    
+    public void setAssets(final List<Asset> assets);
+    
+    public void setAvailability(final ProductVariantAvailability availability);
+    
+    public void setIsMatchingVariant(final Boolean isMatchingVariant);
+    
+    public void setScopedPrice(final ScopedPrice scopedPrice);
+    
+    public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted);
 
-   public static ProductVariantImpl of(final ProductVariant template) {
-      ProductVariantImpl instance = new ProductVariantImpl();
-      instance.setId(template.getId());
-      instance.setSku(template.getSku());
-      instance.setKey(template.getKey());
-      instance.setPrices(template.getPrices());
-      instance.setAttributes(template.getAttributes());
-      instance.setPrice(template.getPrice());
-      instance.setImages(template.getImages());
-      instance.setAssets(template.getAssets());
-      instance.setAvailability(template.getAvailability());
-      instance.setIsMatchingVariant(template.getIsMatchingVariant());
-      instance.setScopedPrice(template.getScopedPrice());
-      instance.setScopedPriceDiscounted(template.getScopedPriceDiscounted());
-      return instance;
-   }
+    public static ProductVariantImpl of(){
+        return new ProductVariantImpl();
+    }
+    
+
+    public static ProductVariantImpl of(final ProductVariant template) {
+        ProductVariantImpl instance = new ProductVariantImpl();
+        instance.setId(template.getId());
+        instance.setSku(template.getSku());
+        instance.setKey(template.getKey());
+        instance.setPrices(template.getPrices());
+        instance.setAttributes(template.getAttributes());
+        instance.setPrice(template.getPrice());
+        instance.setImages(template.getImages());
+        instance.setAssets(template.getAssets());
+        instance.setAvailability(template.getAvailability());
+        instance.setIsMatchingVariant(template.getIsMatchingVariant());
+        instance.setScopedPrice(template.getScopedPrice());
+        instance.setScopedPriceDiscounted(template.getScopedPriceDiscounted());
+        return instance;
+    }
 
 }

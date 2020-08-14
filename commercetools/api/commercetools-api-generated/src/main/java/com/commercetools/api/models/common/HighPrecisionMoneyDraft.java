@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = HighPrecisionMoneyDraftImpl.class)
 public interface HighPrecisionMoneyDraft extends TypedMoneyDraft {
 
-   
-   @NotNull
-   @JsonProperty("preciseAmount")
-   public Long getPreciseAmount();
+    
+    @NotNull
+    @JsonProperty("preciseAmount")
+    public Long getPreciseAmount();
 
-   public void setPreciseAmount(final Long preciseAmount);
-   
-   public static HighPrecisionMoneyDraftImpl of(){
-      return new HighPrecisionMoneyDraftImpl();
-   }
-   
+    public void setPreciseAmount(final Long preciseAmount);
 
-   public static HighPrecisionMoneyDraftImpl of(final HighPrecisionMoneyDraft template) {
-      HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
-      instance.setCentAmount(template.getCentAmount());
-      instance.setCurrencyCode(template.getCurrencyCode());
-      instance.setPreciseAmount(template.getPreciseAmount());
-      return instance;
-   }
+    public static HighPrecisionMoneyDraftImpl of(){
+        return new HighPrecisionMoneyDraftImpl();
+    }
+    
+
+    public static HighPrecisionMoneyDraftImpl of(final HighPrecisionMoneyDraft template) {
+        HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
+        instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setPreciseAmount(template.getPreciseAmount());
+        return instance;
+    }
 
 }

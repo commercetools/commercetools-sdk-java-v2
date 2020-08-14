@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCustomerSetFirstNameActionImpl implements MyCustomerSetFirstNameAction {
 
-   private String action;
-   
-   private String firstName;
+    private String action;
+    
+    private String firstName;
 
-   @JsonCreator
-   MyCustomerSetFirstNameActionImpl(@JsonProperty("firstName") final String firstName) {
-      this.firstName = firstName;
-      this.action = "setFirstName";
-   }
-   public MyCustomerSetFirstNameActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getFirstName(){
-      return this.firstName;
-   }
+    @JsonCreator
+    MyCustomerSetFirstNameActionImpl(@JsonProperty("firstName") final String firstName) {
+        this.firstName = firstName;
+        this.action = "setFirstName";
+    }
+    public MyCustomerSetFirstNameActionImpl() {
+       
+    }
 
-   public void setFirstName(final String firstName){
-      this.firstName = firstName;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getFirstName(){
+        return this.firstName;
+    }
+
+    public void setFirstName(final String firstName){
+        this.firstName = firstName;
+    }
 
 }

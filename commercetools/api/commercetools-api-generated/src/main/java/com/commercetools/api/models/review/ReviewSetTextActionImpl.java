@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewSetTextActionImpl implements ReviewSetTextAction {
 
-   private String action;
-   
-   private String text;
+    private String action;
+    
+    private String text;
 
-   @JsonCreator
-   ReviewSetTextActionImpl(@JsonProperty("text") final String text) {
-      this.text = text;
-      this.action = "setText";
-   }
-   public ReviewSetTextActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   public String getText(){
-      return this.text;
-   }
+    @JsonCreator
+    ReviewSetTextActionImpl(@JsonProperty("text") final String text) {
+        this.text = text;
+        this.action = "setText";
+    }
+    public ReviewSetTextActionImpl() {
+       
+    }
 
-   public void setText(final String text){
-      this.text = text;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    public String getText(){
+        return this.text;
+    }
+
+    public void setText(final String text){
+        this.text = text;
+    }
 
 }

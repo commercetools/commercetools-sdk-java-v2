@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangeAttributeNameActionImpl.class)
 public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("attributeName")
-   public String getAttributeName();
-   
-   @NotNull
-   @JsonProperty("newAttributeName")
-   public String getNewAttributeName();
+    
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+    
+    @NotNull
+    @JsonProperty("newAttributeName")
+    public String getNewAttributeName();
 
-   public void setAttributeName(final String attributeName);
-   
-   public void setNewAttributeName(final String newAttributeName);
-   
-   public static ProductTypeChangeAttributeNameActionImpl of(){
-      return new ProductTypeChangeAttributeNameActionImpl();
-   }
-   
+    public void setAttributeName(final String attributeName);
+    
+    public void setNewAttributeName(final String newAttributeName);
 
-   public static ProductTypeChangeAttributeNameActionImpl of(final ProductTypeChangeAttributeNameAction template) {
-      ProductTypeChangeAttributeNameActionImpl instance = new ProductTypeChangeAttributeNameActionImpl();
-      instance.setAttributeName(template.getAttributeName());
-      instance.setNewAttributeName(template.getNewAttributeName());
-      return instance;
-   }
+    public static ProductTypeChangeAttributeNameActionImpl of(){
+        return new ProductTypeChangeAttributeNameActionImpl();
+    }
+    
+
+    public static ProductTypeChangeAttributeNameActionImpl of(final ProductTypeChangeAttributeNameAction template) {
+        ProductTypeChangeAttributeNameActionImpl instance = new ProductTypeChangeAttributeNameActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNewAttributeName(template.getNewAttributeName());
+        return instance;
+    }
 
 }

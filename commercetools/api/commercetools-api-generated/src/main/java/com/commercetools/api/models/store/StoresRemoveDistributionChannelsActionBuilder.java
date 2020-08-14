@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class StoresRemoveDistributionChannelsActionBuilder {
-   
-   
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
-   
-   public StoresRemoveDistributionChannelsActionBuilder distributionChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
-      this.distributionChannel = distributionChannel;
-      return this;
-   }
-   
-   
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
-      return this.distributionChannel;
-   }
 
-   public StoresRemoveDistributionChannelsAction build() {
-       return new StoresRemoveDistributionChannelsActionImpl(distributionChannel);
-   }
-   
-   public static StoresRemoveDistributionChannelsActionBuilder of() {
-      return new StoresRemoveDistributionChannelsActionBuilder();
-   }
-   
-   public static StoresRemoveDistributionChannelsActionBuilder of(final StoresRemoveDistributionChannelsAction template) {
-      StoresRemoveDistributionChannelsActionBuilder builder = new StoresRemoveDistributionChannelsActionBuilder();
-      builder.distributionChannel = template.getDistributionChannel();
-      return builder;
-   }
-   
+    
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
+    public StoresRemoveDistributionChannelsActionBuilder distributionChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+        this.distributionChannel = distributionChannel;
+        return this;
+    }
+
+    
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
+        return this.distributionChannel;
+    }
+
+    public StoresRemoveDistributionChannelsAction build() {
+        return new StoresRemoveDistributionChannelsActionImpl(distributionChannel);
+    }
+
+    public static StoresRemoveDistributionChannelsActionBuilder of() {
+        return new StoresRemoveDistributionChannelsActionBuilder();
+    }
+
+    public static StoresRemoveDistributionChannelsActionBuilder of(final StoresRemoveDistributionChannelsAction template) {
+        StoresRemoveDistributionChannelsActionBuilder builder = new StoresRemoveDistributionChannelsActionBuilder();
+        builder.distributionChannel = template.getDistributionChannel();
+        return builder;
+    }
+
 }

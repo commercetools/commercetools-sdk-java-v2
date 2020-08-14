@@ -40,10 +40,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.type.CustomFieldDateTimeTypeImpl.class, name = "DateTime")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "name",
-   defaultImpl = FieldTypeImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "name",
+    defaultImpl = FieldTypeImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -52,7 +52,7 @@ import java.io.IOException;
 public interface FieldType  {
 
 
-   
+
 
 
 }

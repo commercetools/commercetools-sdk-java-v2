@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderPaymentStateChangedMessagePayloadImpl.class)
 public interface OrderPaymentStateChangedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("paymentState")
-   public PaymentState getPaymentState();
-   
-   
-   @JsonProperty("oldPaymentState")
-   public PaymentState getOldPaymentState();
+    
+    @NotNull
+    @JsonProperty("paymentState")
+    public PaymentState getPaymentState();
+    
+    
+    @JsonProperty("oldPaymentState")
+    public PaymentState getOldPaymentState();
 
-   public void setPaymentState(final PaymentState paymentState);
-   
-   public void setOldPaymentState(final PaymentState oldPaymentState);
-   
-   public static OrderPaymentStateChangedMessagePayloadImpl of(){
-      return new OrderPaymentStateChangedMessagePayloadImpl();
-   }
-   
+    public void setPaymentState(final PaymentState paymentState);
+    
+    public void setOldPaymentState(final PaymentState oldPaymentState);
 
-   public static OrderPaymentStateChangedMessagePayloadImpl of(final OrderPaymentStateChangedMessagePayload template) {
-      OrderPaymentStateChangedMessagePayloadImpl instance = new OrderPaymentStateChangedMessagePayloadImpl();
-      instance.setPaymentState(template.getPaymentState());
-      instance.setOldPaymentState(template.getOldPaymentState());
-      return instance;
-   }
+    public static OrderPaymentStateChangedMessagePayloadImpl of(){
+        return new OrderPaymentStateChangedMessagePayloadImpl();
+    }
+    
+
+    public static OrderPaymentStateChangedMessagePayloadImpl of(final OrderPaymentStateChangedMessagePayload template) {
+        OrderPaymentStateChangedMessagePayloadImpl instance = new OrderPaymentStateChangedMessagePayloadImpl();
+        instance.setPaymentState(template.getPaymentState());
+        instance.setOldPaymentState(template.getOldPaymentState());
+        return instance;
+    }
 
 }

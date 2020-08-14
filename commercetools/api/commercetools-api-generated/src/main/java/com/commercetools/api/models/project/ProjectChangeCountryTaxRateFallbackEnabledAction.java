@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectChangeCountryTaxRateFallbackEnabledActionImpl.class)
 public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends ProjectUpdateAction {
 
-   /**
-   *  <p>default value is <code>false</code></p>
-   */
-   @NotNull
-   @JsonProperty("countryTaxRateFallbackEnabled")
-   public Boolean getCountryTaxRateFallbackEnabled();
+    /**
+    *  <p>default value is <code>false</code></p>
+    */
+    @NotNull
+    @JsonProperty("countryTaxRateFallbackEnabled")
+    public Boolean getCountryTaxRateFallbackEnabled();
 
-   public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
-   
-   public static ProjectChangeCountryTaxRateFallbackEnabledActionImpl of(){
-      return new ProjectChangeCountryTaxRateFallbackEnabledActionImpl();
-   }
-   
+    public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
 
-   public static ProjectChangeCountryTaxRateFallbackEnabledActionImpl of(final ProjectChangeCountryTaxRateFallbackEnabledAction template) {
-      ProjectChangeCountryTaxRateFallbackEnabledActionImpl instance = new ProjectChangeCountryTaxRateFallbackEnabledActionImpl();
-      instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
-      return instance;
-   }
+    public static ProjectChangeCountryTaxRateFallbackEnabledActionImpl of(){
+        return new ProjectChangeCountryTaxRateFallbackEnabledActionImpl();
+    }
+    
+
+    public static ProjectChangeCountryTaxRateFallbackEnabledActionImpl of(final ProjectChangeCountryTaxRateFallbackEnabledAction template) {
+        ProjectChangeCountryTaxRateFallbackEnabledActionImpl instance = new ProjectChangeCountryTaxRateFallbackEnabledActionImpl();
+        instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
+        return instance;
+    }
 
 }

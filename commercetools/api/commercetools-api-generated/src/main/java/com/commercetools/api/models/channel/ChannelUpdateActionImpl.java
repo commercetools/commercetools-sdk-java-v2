@@ -31,18 +31,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelUpdateActionImpl implements ChannelUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   ChannelUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    ChannelUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

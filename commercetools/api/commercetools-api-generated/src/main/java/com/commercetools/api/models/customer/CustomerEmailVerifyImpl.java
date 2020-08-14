@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerEmailVerifyImpl implements CustomerEmailVerify {
 
-   private Long version;
-   
-   private String tokenValue;
+    private Long version;
+    
+    private String tokenValue;
 
-   @JsonCreator
-   CustomerEmailVerifyImpl(@JsonProperty("version") final Long version, @JsonProperty("tokenValue") final String tokenValue) {
-      this.version = version;
-      this.tokenValue = tokenValue;
-   }
-   public CustomerEmailVerifyImpl() {
-      
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
-   }
-   
-   
-   public String getTokenValue(){
-      return this.tokenValue;
-   }
+    @JsonCreator
+    CustomerEmailVerifyImpl(@JsonProperty("version") final Long version, @JsonProperty("tokenValue") final String tokenValue) {
+        this.version = version;
+        this.tokenValue = tokenValue;
+    }
+    public CustomerEmailVerifyImpl() {
+       
+    }
 
-   public void setVersion(final Long version){
-      this.version = version;
-   }
-   
-   public void setTokenValue(final String tokenValue){
-      this.tokenValue = tokenValue;
-   }
+    
+    public Long getVersion(){
+        return this.version;
+    }
+    
+    
+    public String getTokenValue(){
+        return this.tokenValue;
+    }
+
+    public void setVersion(final Long version){
+        this.version = version;
+    }
+    
+    public void setTokenValue(final String tokenValue){
+        this.tokenValue = tokenValue;
+    }
 
 }

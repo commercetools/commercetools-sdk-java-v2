@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomFieldEnumTypeImpl.class)
 public interface CustomFieldEnumType extends FieldType {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("values")
-   public List<CustomFieldEnumValue> getValues();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("values")
+    public List<CustomFieldEnumValue> getValues();
 
-   public void setValues(final List<CustomFieldEnumValue> values);
-   
-   public static CustomFieldEnumTypeImpl of(){
-      return new CustomFieldEnumTypeImpl();
-   }
-   
+    public void setValues(final List<CustomFieldEnumValue> values);
 
-   public static CustomFieldEnumTypeImpl of(final CustomFieldEnumType template) {
-      CustomFieldEnumTypeImpl instance = new CustomFieldEnumTypeImpl();
-      instance.setValues(template.getValues());
-      return instance;
-   }
+    public static CustomFieldEnumTypeImpl of(){
+        return new CustomFieldEnumTypeImpl();
+    }
+    
+
+    public static CustomFieldEnumTypeImpl of(final CustomFieldEnumType template) {
+        CustomFieldEnumTypeImpl instance = new CustomFieldEnumTypeImpl();
+        instance.setValues(template.getValues());
+        return instance;
+    }
 
 }

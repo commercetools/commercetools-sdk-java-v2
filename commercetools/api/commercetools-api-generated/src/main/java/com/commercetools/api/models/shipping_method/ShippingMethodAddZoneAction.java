@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodAddZoneActionImpl.class)
 public interface ShippingMethodAddZoneAction extends ShippingMethodUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("zone")
-   public ZoneResourceIdentifier getZone();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("zone")
+    public ZoneResourceIdentifier getZone();
 
-   public void setZone(final ZoneResourceIdentifier zone);
-   
-   public static ShippingMethodAddZoneActionImpl of(){
-      return new ShippingMethodAddZoneActionImpl();
-   }
-   
+    public void setZone(final ZoneResourceIdentifier zone);
 
-   public static ShippingMethodAddZoneActionImpl of(final ShippingMethodAddZoneAction template) {
-      ShippingMethodAddZoneActionImpl instance = new ShippingMethodAddZoneActionImpl();
-      instance.setZone(template.getZone());
-      return instance;
-   }
+    public static ShippingMethodAddZoneActionImpl of(){
+        return new ShippingMethodAddZoneActionImpl();
+    }
+    
+
+    public static ShippingMethodAddZoneActionImpl of(final ShippingMethodAddZoneAction template) {
+        ShippingMethodAddZoneActionImpl instance = new ShippingMethodAddZoneActionImpl();
+        instance.setZone(template.getZone());
+        return instance;
+    }
 
 }

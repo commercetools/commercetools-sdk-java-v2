@@ -25,18 +25,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubscriptionUpdateActionImpl implements SubscriptionUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   SubscriptionUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    SubscriptionUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

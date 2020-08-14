@@ -23,23 +23,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CartReferenceImpl.class)
 public interface CartReference extends Reference {
 
-   
-   @Valid
-   @JsonProperty("obj")
-   public Cart getObj();
+    
+    @Valid
+    @JsonProperty("obj")
+    public Cart getObj();
 
-   public void setObj(final Cart obj);
-   
-   public static CartReferenceImpl of(){
-      return new CartReferenceImpl();
-   }
-   
+    public void setObj(final Cart obj);
 
-   public static CartReferenceImpl of(final CartReference template) {
-      CartReferenceImpl instance = new CartReferenceImpl();
-      instance.setId(template.getId());
-      instance.setObj(template.getObj());
-      return instance;
-   }
+    public static CartReferenceImpl of(){
+        return new CartReferenceImpl();
+    }
+    
+
+    public static CartReferenceImpl of(final CartReference template) {
+        CartReferenceImpl instance = new CartReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(template.getObj());
+        return instance;
+    }
 
 }

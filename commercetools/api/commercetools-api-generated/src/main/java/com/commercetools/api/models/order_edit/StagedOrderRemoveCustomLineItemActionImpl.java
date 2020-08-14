@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderRemoveCustomLineItemActionImpl implements StagedOrderRemoveCustomLineItemAction {
 
-   private String action;
-   
-   private String customLineItemId;
+    private String action;
+    
+    private String customLineItemId;
 
-   @JsonCreator
-   StagedOrderRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId) {
-      this.customLineItemId = customLineItemId;
-      this.action = "removeCustomLineItem";
-   }
-   public StagedOrderRemoveCustomLineItemActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getCustomLineItemId(){
-      return this.customLineItemId;
-   }
+    @JsonCreator
+    StagedOrderRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId) {
+        this.customLineItemId = customLineItemId;
+        this.action = "removeCustomLineItem";
+    }
+    public StagedOrderRemoveCustomLineItemActionImpl() {
+       
+    }
 
-   public void setCustomLineItemId(final String customLineItemId){
-      this.customLineItemId = customLineItemId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getCustomLineItemId(){
+        return this.customLineItemId;
+    }
+
+    public void setCustomLineItemId(final String customLineItemId){
+        this.customLineItemId = customLineItemId;
+    }
 
 }

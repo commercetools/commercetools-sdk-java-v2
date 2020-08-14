@@ -23,17 +23,17 @@ import java.io.IOException;
 public interface CentPrecisionMoneyDraft extends TypedMoneyDraft {
 
 
-   
-   public static CentPrecisionMoneyDraftImpl of(){
-      return new CentPrecisionMoneyDraftImpl();
-   }
-   
 
-   public static CentPrecisionMoneyDraftImpl of(final CentPrecisionMoneyDraft template) {
-      CentPrecisionMoneyDraftImpl instance = new CentPrecisionMoneyDraftImpl();
-      instance.setCentAmount(template.getCentAmount());
-      instance.setCurrencyCode(template.getCurrencyCode());
-      return instance;
-   }
+    public static CentPrecisionMoneyDraftImpl of(){
+        return new CentPrecisionMoneyDraftImpl();
+    }
+    
+
+    public static CentPrecisionMoneyDraftImpl of(final CentPrecisionMoneyDraft template) {
+        CentPrecisionMoneyDraftImpl instance = new CentPrecisionMoneyDraftImpl();
+        instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        return instance;
+    }
 
 }

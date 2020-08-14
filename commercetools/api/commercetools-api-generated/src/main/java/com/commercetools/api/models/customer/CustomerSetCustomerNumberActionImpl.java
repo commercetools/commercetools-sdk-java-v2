@@ -22,34 +22,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSetCustomerNumberActionImpl implements CustomerSetCustomerNumberAction {
 
-   private String action;
-   
-   private String customerNumber;
+    private String action;
+    
+    private String customerNumber;
 
-   @JsonCreator
-   CustomerSetCustomerNumberActionImpl(@JsonProperty("customerNumber") final String customerNumber) {
-      this.customerNumber = customerNumber;
-      this.action = "setCustomerNumber";
-   }
-   public CustomerSetCustomerNumberActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>It should be <strong>unique</strong> across a project.
-   *  Once it's set, it cannot be changed.</p>
-   */
-   public String getCustomerNumber(){
-      return this.customerNumber;
-   }
+    @JsonCreator
+    CustomerSetCustomerNumberActionImpl(@JsonProperty("customerNumber") final String customerNumber) {
+        this.customerNumber = customerNumber;
+        this.action = "setCustomerNumber";
+    }
+    public CustomerSetCustomerNumberActionImpl() {
+       
+    }
 
-   public void setCustomerNumber(final String customerNumber){
-      this.customerNumber = customerNumber;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>It should be <strong>unique</strong> across a project.
+    *  Once it's set, it cannot be changed.</p>
+    */
+    public String getCustomerNumber(){
+        return this.customerNumber;
+    }
+
+    public void setCustomerNumber(final String customerNumber){
+        this.customerNumber = customerNumber;
+    }
 
 }

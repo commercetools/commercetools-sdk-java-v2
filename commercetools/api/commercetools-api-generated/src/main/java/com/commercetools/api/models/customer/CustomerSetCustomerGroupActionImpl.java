@@ -23,33 +23,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGroupAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
+    private String action;
+    
+    private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
-   @JsonCreator
-   CustomerSetCustomerGroupActionImpl(@JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
-      this.customerGroup = customerGroup;
-      this.action = "setCustomerGroup";
-   }
-   public CustomerSetCustomerGroupActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If not defined, the customer group is unset.</p>
-   */
-   public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
-      return this.customerGroup;
-   }
+    @JsonCreator
+    CustomerSetCustomerGroupActionImpl(@JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
+        this.customerGroup = customerGroup;
+        this.action = "setCustomerGroup";
+    }
+    public CustomerSetCustomerGroupActionImpl() {
+       
+    }
 
-   public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
-      this.customerGroup = customerGroup;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If not defined, the customer group is unset.</p>
+    */
+    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
+        return this.customerGroup;
+    }
+
+    public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
+        this.customerGroup = customerGroup;
+    }
 
 }

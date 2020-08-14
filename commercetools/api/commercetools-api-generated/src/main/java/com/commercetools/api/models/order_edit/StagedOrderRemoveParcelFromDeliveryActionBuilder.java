@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class StagedOrderRemoveParcelFromDeliveryActionBuilder {
-   
-   
-   private String parcelId;
-   
-   public StagedOrderRemoveParcelFromDeliveryActionBuilder parcelId( final String parcelId) {
-      this.parcelId = parcelId;
-      return this;
-   }
-   
-   
-   public String getParcelId(){
-      return this.parcelId;
-   }
 
-   public StagedOrderRemoveParcelFromDeliveryAction build() {
-       return new StagedOrderRemoveParcelFromDeliveryActionImpl(parcelId);
-   }
-   
-   public static StagedOrderRemoveParcelFromDeliveryActionBuilder of() {
-      return new StagedOrderRemoveParcelFromDeliveryActionBuilder();
-   }
-   
-   public static StagedOrderRemoveParcelFromDeliveryActionBuilder of(final StagedOrderRemoveParcelFromDeliveryAction template) {
-      StagedOrderRemoveParcelFromDeliveryActionBuilder builder = new StagedOrderRemoveParcelFromDeliveryActionBuilder();
-      builder.parcelId = template.getParcelId();
-      return builder;
-   }
-   
+    
+    private String parcelId;
+
+    public StagedOrderRemoveParcelFromDeliveryActionBuilder parcelId( final String parcelId) {
+        this.parcelId = parcelId;
+        return this;
+    }
+
+    
+    public String getParcelId(){
+        return this.parcelId;
+    }
+
+    public StagedOrderRemoveParcelFromDeliveryAction build() {
+        return new StagedOrderRemoveParcelFromDeliveryActionImpl(parcelId);
+    }
+
+    public static StagedOrderRemoveParcelFromDeliveryActionBuilder of() {
+        return new StagedOrderRemoveParcelFromDeliveryActionBuilder();
+    }
+
+    public static StagedOrderRemoveParcelFromDeliveryActionBuilder of(final StagedOrderRemoveParcelFromDeliveryAction template) {
+        StagedOrderRemoveParcelFromDeliveryActionBuilder builder = new StagedOrderRemoveParcelFromDeliveryActionBuilder();
+        builder.parcelId = template.getParcelId();
+        return builder;
+    }
+
 }

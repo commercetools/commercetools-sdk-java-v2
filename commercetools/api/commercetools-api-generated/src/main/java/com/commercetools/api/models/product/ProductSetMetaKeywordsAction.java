@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetMetaKeywordsActionImpl.class)
 public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("metaKeywords")
-   public LocalizedString getMetaKeywords();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @Valid
+    @JsonProperty("metaKeywords")
+    public LocalizedString getMetaKeywords();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setMetaKeywords(final LocalizedString metaKeywords);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductSetMetaKeywordsActionImpl of(){
-      return new ProductSetMetaKeywordsActionImpl();
-   }
-   
+    public void setMetaKeywords(final LocalizedString metaKeywords);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductSetMetaKeywordsActionImpl of(final ProductSetMetaKeywordsAction template) {
-      ProductSetMetaKeywordsActionImpl instance = new ProductSetMetaKeywordsActionImpl();
-      instance.setMetaKeywords(template.getMetaKeywords());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductSetMetaKeywordsActionImpl of(){
+        return new ProductSetMetaKeywordsActionImpl();
+    }
+    
+
+    public static ProductSetMetaKeywordsActionImpl of(final ProductSetMetaKeywordsAction template) {
+        ProductSetMetaKeywordsActionImpl instance = new ProductSetMetaKeywordsActionImpl();
+        instance.setMetaKeywords(template.getMetaKeywords());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

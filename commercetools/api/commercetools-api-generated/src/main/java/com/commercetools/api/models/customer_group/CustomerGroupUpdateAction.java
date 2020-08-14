@@ -24,10 +24,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupSetKeyActionImpl.class, name = "setKey")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "action",
-   defaultImpl = CustomerGroupUpdateActionImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "action",
+    defaultImpl = CustomerGroupUpdateActionImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -36,7 +36,7 @@ import java.io.IOException;
 public interface CustomerGroupUpdateAction  {
 
 
-   
+
 
 
 }

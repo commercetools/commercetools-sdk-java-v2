@@ -23,37 +23,37 @@ import java.io.IOException;
 @JsonDeserialize(as = CartValueTierImpl.class)
 public interface CartValueTier extends ShippingRatePriceTier {
 
-   
-   @NotNull
-   @JsonProperty("minimumCentAmount")
-   public Long getMinimumCentAmount();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("price")
-   public Money getPrice();
-   
-   
-   @JsonProperty("isMatching")
-   public Boolean getIsMatching();
+    
+    @NotNull
+    @JsonProperty("minimumCentAmount")
+    public Long getMinimumCentAmount();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("price")
+    public Money getPrice();
+    
+    
+    @JsonProperty("isMatching")
+    public Boolean getIsMatching();
 
-   public void setMinimumCentAmount(final Long minimumCentAmount);
-   
-   public void setPrice(final Money price);
-   
-   public void setIsMatching(final Boolean isMatching);
-   
-   public static CartValueTierImpl of(){
-      return new CartValueTierImpl();
-   }
-   
+    public void setMinimumCentAmount(final Long minimumCentAmount);
+    
+    public void setPrice(final Money price);
+    
+    public void setIsMatching(final Boolean isMatching);
 
-   public static CartValueTierImpl of(final CartValueTier template) {
-      CartValueTierImpl instance = new CartValueTierImpl();
-      instance.setMinimumCentAmount(template.getMinimumCentAmount());
-      instance.setPrice(template.getPrice());
-      instance.setIsMatching(template.getIsMatching());
-      return instance;
-   }
+    public static CartValueTierImpl of(){
+        return new CartValueTierImpl();
+    }
+    
+
+    public static CartValueTierImpl of(final CartValueTier template) {
+        CartValueTierImpl instance = new CartValueTierImpl();
+        instance.setMinimumCentAmount(template.getMinimumCentAmount());
+        instance.setPrice(template.getPrice());
+        instance.setIsMatching(template.getIsMatching());
+        return instance;
+    }
 
 }

@@ -13,21 +13,21 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductUnpublishedMessagePayloadBuilder {
-   
-   
-   
 
-   public ProductUnpublishedMessagePayload build() {
-       return new ProductUnpublishedMessagePayloadImpl();
-   }
-   
-   public static ProductUnpublishedMessagePayloadBuilder of() {
-      return new ProductUnpublishedMessagePayloadBuilder();
-   }
-   
-   public static ProductUnpublishedMessagePayloadBuilder of(final ProductUnpublishedMessagePayload template) {
-      ProductUnpublishedMessagePayloadBuilder builder = new ProductUnpublishedMessagePayloadBuilder();
-      return builder;
-   }
-   
+
+
+
+    public ProductUnpublishedMessagePayload build() {
+        return new ProductUnpublishedMessagePayloadImpl();
+    }
+
+    public static ProductUnpublishedMessagePayloadBuilder of() {
+        return new ProductUnpublishedMessagePayloadBuilder();
+    }
+
+    public static ProductUnpublishedMessagePayloadBuilder of(final ProductUnpublishedMessagePayload template) {
+        ProductUnpublishedMessagePayloadBuilder builder = new ProductUnpublishedMessagePayloadBuilder();
+        return builder;
+    }
+
 }

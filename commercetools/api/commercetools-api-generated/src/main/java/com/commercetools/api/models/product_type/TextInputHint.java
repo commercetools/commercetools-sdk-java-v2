@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TextInputHint {
 
-  
-  @JsonProperty("SingleLine")
-  SINGLE_LINE("SingleLine"),
-  
-  
-  @JsonProperty("MultiLine")
-  MULTI_LINE("MultiLine");
+    
+    @JsonProperty("SingleLine")
+    SINGLE_LINE("SingleLine"),
+    
+    
+    @JsonProperty("MultiLine")
+    MULTI_LINE("MultiLine");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private TextInputHint(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private TextInputHint(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<TextInputHint> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<TextInputHint> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderChangeCustomLineItemQuantityActionImpl.class)
 public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("customLineItemId")
-   public String getCustomLineItemId();
-   
-   @NotNull
-   @JsonProperty("quantity")
-   public Double getQuantity();
+    
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+    
+    @NotNull
+    @JsonProperty("quantity")
+    public Double getQuantity();
 
-   public void setCustomLineItemId(final String customLineItemId);
-   
-   public void setQuantity(final Double quantity);
-   
-   public static StagedOrderChangeCustomLineItemQuantityActionImpl of(){
-      return new StagedOrderChangeCustomLineItemQuantityActionImpl();
-   }
-   
+    public void setCustomLineItemId(final String customLineItemId);
+    
+    public void setQuantity(final Double quantity);
 
-   public static StagedOrderChangeCustomLineItemQuantityActionImpl of(final StagedOrderChangeCustomLineItemQuantityAction template) {
-      StagedOrderChangeCustomLineItemQuantityActionImpl instance = new StagedOrderChangeCustomLineItemQuantityActionImpl();
-      instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setQuantity(template.getQuantity());
-      return instance;
-   }
+    public static StagedOrderChangeCustomLineItemQuantityActionImpl of(){
+        return new StagedOrderChangeCustomLineItemQuantityActionImpl();
+    }
+    
+
+    public static StagedOrderChangeCustomLineItemQuantityActionImpl of(final StagedOrderChangeCustomLineItemQuantityAction template) {
+        StagedOrderChangeCustomLineItemQuantityActionImpl instance = new StagedOrderChangeCustomLineItemQuantityActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
 
 }

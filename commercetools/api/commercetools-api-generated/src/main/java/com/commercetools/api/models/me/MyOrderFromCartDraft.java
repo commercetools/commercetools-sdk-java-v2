@@ -21,31 +21,31 @@ import java.io.IOException;
 @JsonDeserialize(as = MyOrderFromCartDraftImpl.class)
 public interface MyOrderFromCartDraft  {
 
-   /**
-   *  <p>The unique ID of the cart from which an order is created.</p>
-   */
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
+    /**
+    *  <p>The unique ID of the cart from which an order is created.</p>
+    */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
 
-   public void setId(final String id);
-   
-   public void setVersion(final Long version);
-   
-   public static MyOrderFromCartDraftImpl of(){
-      return new MyOrderFromCartDraftImpl();
-   }
-   
+    public void setId(final String id);
+    
+    public void setVersion(final Long version);
 
-   public static MyOrderFromCartDraftImpl of(final MyOrderFromCartDraft template) {
-      MyOrderFromCartDraftImpl instance = new MyOrderFromCartDraftImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      return instance;
-   }
+    public static MyOrderFromCartDraftImpl of(){
+        return new MyOrderFromCartDraftImpl();
+    }
+    
+
+    public static MyOrderFromCartDraftImpl of(final MyOrderFromCartDraft template) {
+        MyOrderFromCartDraftImpl instance = new MyOrderFromCartDraftImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        return instance;
+    }
 
 }

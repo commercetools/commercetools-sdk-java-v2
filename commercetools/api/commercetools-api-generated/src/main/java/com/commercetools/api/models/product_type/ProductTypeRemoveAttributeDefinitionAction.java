@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeRemoveAttributeDefinitionActionImpl.class)
 public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeUpdateAction {
 
-   /**
-   *  <p>The name of the attribute to remove.</p>
-   */
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
+    /**
+    *  <p>The name of the attribute to remove.</p>
+    */
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
 
-   public void setName(final String name);
-   
-   public static ProductTypeRemoveAttributeDefinitionActionImpl of(){
-      return new ProductTypeRemoveAttributeDefinitionActionImpl();
-   }
-   
+    public void setName(final String name);
 
-   public static ProductTypeRemoveAttributeDefinitionActionImpl of(final ProductTypeRemoveAttributeDefinitionAction template) {
-      ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static ProductTypeRemoveAttributeDefinitionActionImpl of(){
+        return new ProductTypeRemoveAttributeDefinitionActionImpl();
+    }
+    
+
+    public static ProductTypeRemoveAttributeDefinitionActionImpl of(final ProductTypeRemoveAttributeDefinitionAction template) {
+        ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

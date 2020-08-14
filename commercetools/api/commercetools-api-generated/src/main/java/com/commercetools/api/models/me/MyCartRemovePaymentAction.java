@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartRemovePaymentActionImpl.class)
 public interface MyCartRemovePaymentAction extends MyCartUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("payment")
-   public PaymentResourceIdentifier getPayment();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("payment")
+    public PaymentResourceIdentifier getPayment();
 
-   public void setPayment(final PaymentResourceIdentifier payment);
-   
-   public static MyCartRemovePaymentActionImpl of(){
-      return new MyCartRemovePaymentActionImpl();
-   }
-   
+    public void setPayment(final PaymentResourceIdentifier payment);
 
-   public static MyCartRemovePaymentActionImpl of(final MyCartRemovePaymentAction template) {
-      MyCartRemovePaymentActionImpl instance = new MyCartRemovePaymentActionImpl();
-      instance.setPayment(template.getPayment());
-      return instance;
-   }
+    public static MyCartRemovePaymentActionImpl of(){
+        return new MyCartRemovePaymentActionImpl();
+    }
+    
+
+    public static MyCartRemovePaymentActionImpl of(final MyCartRemovePaymentAction template) {
+        MyCartRemovePaymentActionImpl instance = new MyCartRemovePaymentActionImpl();
+        instance.setPayment(template.getPayment());
+        return instance;
+    }
 
 }

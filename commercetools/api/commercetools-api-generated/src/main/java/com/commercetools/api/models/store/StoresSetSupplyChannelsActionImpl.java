@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoresSetSupplyChannelsActionImpl implements StoresSetSupplyChannelsAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
 
-   @JsonCreator
-   StoresSetSupplyChannelsActionImpl(@JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
-      this.supplyChannels = supplyChannels;
-      this.action = "setSupplyChannels";
-   }
-   public StoresSetSupplyChannelsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
-      return this.supplyChannels;
-   }
+    @JsonCreator
+    StoresSetSupplyChannelsActionImpl(@JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
+        this.supplyChannels = supplyChannels;
+        this.action = "setSupplyChannels";
+    }
+    public StoresSetSupplyChannelsActionImpl() {
+       
+    }
 
-   public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels){
-      this.supplyChannels = supplyChannels;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
+        return this.supplyChannels;
+    }
+
+    public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels){
+        this.supplyChannels = supplyChannels;
+    }
 
 }

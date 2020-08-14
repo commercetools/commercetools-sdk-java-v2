@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionAuthorizationHeaderAuthenticationImpl.class)
 public interface ExtensionAuthorizationHeaderAuthentication extends ExtensionHttpDestinationAuthentication {
 
-   
-   @NotNull
-   @JsonProperty("headerValue")
-   public String getHeaderValue();
+    
+    @NotNull
+    @JsonProperty("headerValue")
+    public String getHeaderValue();
 
-   public void setHeaderValue(final String headerValue);
-   
-   public static ExtensionAuthorizationHeaderAuthenticationImpl of(){
-      return new ExtensionAuthorizationHeaderAuthenticationImpl();
-   }
-   
+    public void setHeaderValue(final String headerValue);
 
-   public static ExtensionAuthorizationHeaderAuthenticationImpl of(final ExtensionAuthorizationHeaderAuthentication template) {
-      ExtensionAuthorizationHeaderAuthenticationImpl instance = new ExtensionAuthorizationHeaderAuthenticationImpl();
-      instance.setHeaderValue(template.getHeaderValue());
-      return instance;
-   }
+    public static ExtensionAuthorizationHeaderAuthenticationImpl of(){
+        return new ExtensionAuthorizationHeaderAuthenticationImpl();
+    }
+    
+
+    public static ExtensionAuthorizationHeaderAuthenticationImpl of(final ExtensionAuthorizationHeaderAuthentication template) {
+        ExtensionAuthorizationHeaderAuthenticationImpl instance = new ExtensionAuthorizationHeaderAuthenticationImpl();
+        instance.setHeaderValue(template.getHeaderValue());
+        return instance;
+    }
 
 }

@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodChangeIsDefaultAction {
 
-   private String action;
-   
-   private Boolean isDefault;
+    private String action;
+    
+    private Boolean isDefault;
 
-   @JsonCreator
-   ShippingMethodChangeIsDefaultActionImpl(@JsonProperty("isDefault") final Boolean isDefault) {
-      this.isDefault = isDefault;
-      this.action = "changeIsDefault";
-   }
-   public ShippingMethodChangeIsDefaultActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>Only one ShippingMethod in a project can be default.</p>
-   */
-   public Boolean getIsDefault(){
-      return this.isDefault;
-   }
+    @JsonCreator
+    ShippingMethodChangeIsDefaultActionImpl(@JsonProperty("isDefault") final Boolean isDefault) {
+        this.isDefault = isDefault;
+        this.action = "changeIsDefault";
+    }
+    public ShippingMethodChangeIsDefaultActionImpl() {
+       
+    }
 
-   public void setIsDefault(final Boolean isDefault){
-      this.isDefault = isDefault;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>Only one ShippingMethod in a project can be default.</p>
+    */
+    public Boolean getIsDefault(){
+        return this.isDefault;
+    }
+
+    public void setIsDefault(final Boolean isDefault){
+        this.isDefault = isDefault;
+    }
 
 }

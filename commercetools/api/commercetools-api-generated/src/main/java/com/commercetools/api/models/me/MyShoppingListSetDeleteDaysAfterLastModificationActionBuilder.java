@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder {
-   
-   @Nullable
-   private Long deleteDaysAfterLastModification;
-   
-   public MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
-      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-      return this;
-   }
-   
-   @Nullable
-   public Long getDeleteDaysAfterLastModification(){
-      return this.deleteDaysAfterLastModification;
-   }
 
-   public MyShoppingListSetDeleteDaysAfterLastModificationAction build() {
-       return new MyShoppingListSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
-   }
-   
-   public static MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder of() {
-      return new MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder();
-   }
-   
-   public static MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder of(final MyShoppingListSetDeleteDaysAfterLastModificationAction template) {
-      MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder builder = new MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder();
-      builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
-      return builder;
-   }
-   
+    @Nullable
+    private Long deleteDaysAfterLastModification;
+
+    public MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        return this;
+    }
+
+    @Nullable
+    public Long getDeleteDaysAfterLastModification(){
+        return this.deleteDaysAfterLastModification;
+    }
+
+    public MyShoppingListSetDeleteDaysAfterLastModificationAction build() {
+        return new MyShoppingListSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
+    }
+
+    public static MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder of() {
+        return new MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder();
+    }
+
+    public static MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder of(final MyShoppingListSetDeleteDaysAfterLastModificationAction template) {
+        MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder builder = new MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder();
+        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+        return builder;
+    }
+
 }

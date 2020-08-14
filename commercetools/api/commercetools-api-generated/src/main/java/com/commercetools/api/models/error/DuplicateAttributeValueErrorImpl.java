@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValueError {
 
-   private String code;
-   
-   private String message;
-   
-   private com.commercetools.api.models.product.Attribute attribute;
+    private String code;
+    
+    private String message;
+    
+    private com.commercetools.api.models.product.Attribute attribute;
 
-   @JsonCreator
-   DuplicateAttributeValueErrorImpl(@JsonProperty("message") final String message, @JsonProperty("attribute") final com.commercetools.api.models.product.Attribute attribute) {
-      this.message = message;
-      this.attribute = attribute;
-      this.code = "DuplicateAttributeValue";
-   }
-   public DuplicateAttributeValueErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
-   
-   
-   public com.commercetools.api.models.product.Attribute getAttribute(){
-      return this.attribute;
-   }
+    @JsonCreator
+    DuplicateAttributeValueErrorImpl(@JsonProperty("message") final String message, @JsonProperty("attribute") final com.commercetools.api.models.product.Attribute attribute) {
+        this.message = message;
+        this.attribute = attribute;
+        this.code = "DuplicateAttributeValue";
+    }
+    public DuplicateAttributeValueErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setAttribute(final com.commercetools.api.models.product.Attribute attribute){
-      this.attribute = attribute;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+    
+    
+    public com.commercetools.api.models.product.Attribute getAttribute(){
+        return this.attribute;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setAttribute(final com.commercetools.api.models.product.Attribute attribute){
+        this.attribute = attribute;
+    }
 
 }

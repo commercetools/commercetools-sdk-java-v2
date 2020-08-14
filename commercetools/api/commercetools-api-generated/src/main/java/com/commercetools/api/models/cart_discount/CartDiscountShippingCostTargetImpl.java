@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountShippingCostTargetImpl implements CartDiscountShippingCostTarget {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   CartDiscountShippingCostTargetImpl() {
-      this.type = "shipping";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    CartDiscountShippingCostTargetImpl() {
+        this.type = "shipping";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

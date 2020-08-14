@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeSetNameActionImpl.class)
 public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
 
-   /**
-   *  <p>If the <code>name</code> parameter is not included, the field will be emptied.</p>
-   */
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
+    /**
+    *  <p>If the <code>name</code> parameter is not included, the field will be emptied.</p>
+    */
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
 
-   public void setName(final LocalizedString name);
-   
-   public static DiscountCodeSetNameActionImpl of(){
-      return new DiscountCodeSetNameActionImpl();
-   }
-   
+    public void setName(final LocalizedString name);
 
-   public static DiscountCodeSetNameActionImpl of(final DiscountCodeSetNameAction template) {
-      DiscountCodeSetNameActionImpl instance = new DiscountCodeSetNameActionImpl();
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static DiscountCodeSetNameActionImpl of(){
+        return new DiscountCodeSetNameActionImpl();
+    }
+    
+
+    public static DiscountCodeSetNameActionImpl of(final DiscountCodeSetNameAction template) {
+        DiscountCodeSetNameActionImpl instance = new DiscountCodeSetNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

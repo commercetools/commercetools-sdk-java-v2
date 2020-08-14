@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = GraphQLResponseImpl.class)
 public interface GraphQLResponse  {
 
-   
-   
-   @JsonProperty("data")
-   public JsonNode getData();
-   
-   @Valid
-   @JsonProperty("errors")
-   public List<GraphQLError> getErrors();
+    
+    
+    @JsonProperty("data")
+    public JsonNode getData();
+    
+    @Valid
+    @JsonProperty("errors")
+    public List<GraphQLError> getErrors();
 
-   public void setData(final JsonNode data);
-   
-   public void setErrors(final List<GraphQLError> errors);
-   
-   public static GraphQLResponseImpl of(){
-      return new GraphQLResponseImpl();
-   }
-   
+    public void setData(final JsonNode data);
+    
+    public void setErrors(final List<GraphQLError> errors);
 
-   public static GraphQLResponseImpl of(final GraphQLResponse template) {
-      GraphQLResponseImpl instance = new GraphQLResponseImpl();
-      instance.setData(template.getData());
-      instance.setErrors(template.getErrors());
-      return instance;
-   }
+    public static GraphQLResponseImpl of(){
+        return new GraphQLResponseImpl();
+    }
+    
+
+    public static GraphQLResponseImpl of(final GraphQLResponse template) {
+        GraphQLResponseImpl instance = new GraphQLResponseImpl();
+        instance.setData(template.getData());
+        instance.setErrors(template.getErrors());
+        return instance;
+    }
 
 }

@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountValueExternalImpl implements ProductDiscountValueExternal {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   ProductDiscountValueExternalImpl() {
-      this.type = "external";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    ProductDiscountValueExternalImpl() {
+        this.type = "external";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

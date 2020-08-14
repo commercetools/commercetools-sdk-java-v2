@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerEmailVerifiedMessagePayloadImpl implements CustomerEmailVerifiedMessagePayload {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   CustomerEmailVerifiedMessagePayloadImpl() {
-      this.type = "CustomerEmailVerified";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    CustomerEmailVerifiedMessagePayloadImpl() {
+        this.type = "CustomerEmailVerified";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

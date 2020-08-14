@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeAttributeOrderByNameActionImpl implements ProductTypeChangeAttributeOrderByNameAction {
 
-   private String action;
-   
-   private java.util.List<String> attributeNames;
+    private String action;
+    
+    private java.util.List<String> attributeNames;
 
-   @JsonCreator
-   ProductTypeChangeAttributeOrderByNameActionImpl(@JsonProperty("attributeNames") final java.util.List<String> attributeNames) {
-      this.attributeNames = attributeNames;
-      this.action = "changeAttributeOrderByName";
-   }
-   public ProductTypeChangeAttributeOrderByNameActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<String> getAttributeNames(){
-      return this.attributeNames;
-   }
+    @JsonCreator
+    ProductTypeChangeAttributeOrderByNameActionImpl(@JsonProperty("attributeNames") final java.util.List<String> attributeNames) {
+        this.attributeNames = attributeNames;
+        this.action = "changeAttributeOrderByName";
+    }
+    public ProductTypeChangeAttributeOrderByNameActionImpl() {
+       
+    }
 
-   public void setAttributeNames(final java.util.List<String> attributeNames){
-      this.attributeNames = attributeNames;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<String> getAttributeNames(){
+        return this.attributeNames;
+    }
+
+    public void setAttributeNames(final java.util.List<String> attributeNames){
+        this.attributeNames = attributeNames;
+    }
 
 }

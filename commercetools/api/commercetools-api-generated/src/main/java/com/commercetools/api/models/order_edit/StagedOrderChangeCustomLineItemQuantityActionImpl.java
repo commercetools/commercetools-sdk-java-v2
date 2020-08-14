@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderChangeCustomLineItemQuantityActionImpl implements StagedOrderChangeCustomLineItemQuantityAction {
 
-   private String action;
-   
-   private String customLineItemId;
-   
-   private Double quantity;
+    private String action;
+    
+    private String customLineItemId;
+    
+    private Double quantity;
 
-   @JsonCreator
-   StagedOrderChangeCustomLineItemQuantityActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("quantity") final Double quantity) {
-      this.customLineItemId = customLineItemId;
-      this.quantity = quantity;
-      this.action = "changeCustomLineItemQuantity";
-   }
-   public StagedOrderChangeCustomLineItemQuantityActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getCustomLineItemId(){
-      return this.customLineItemId;
-   }
-   
-   
-   public Double getQuantity(){
-      return this.quantity;
-   }
+    @JsonCreator
+    StagedOrderChangeCustomLineItemQuantityActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("quantity") final Double quantity) {
+        this.customLineItemId = customLineItemId;
+        this.quantity = quantity;
+        this.action = "changeCustomLineItemQuantity";
+    }
+    public StagedOrderChangeCustomLineItemQuantityActionImpl() {
+       
+    }
 
-   public void setCustomLineItemId(final String customLineItemId){
-      this.customLineItemId = customLineItemId;
-   }
-   
-   public void setQuantity(final Double quantity){
-      this.quantity = quantity;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getCustomLineItemId(){
+        return this.customLineItemId;
+    }
+    
+    
+    public Double getQuantity(){
+        return this.quantity;
+    }
+
+    public void setCustomLineItemId(final String customLineItemId){
+        this.customLineItemId = customLineItemId;
+    }
+    
+    public void setQuantity(final Double quantity){
+        this.quantity = quantity;
+    }
 
 }

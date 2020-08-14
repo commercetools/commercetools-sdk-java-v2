@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = FieldContainerImpl.class)
 public interface FieldContainer  {
 
-   
-   @NotNull
-   @JsonAnyGetter
-   public Map<String, JsonNode> values();
+    
+    @NotNull
+    @JsonAnyGetter
+    public Map<String, JsonNode> values();
 
-   @JsonAnySetter
-   public void setValue(String key, JsonNode value);
-   
-   public static FieldContainerImpl of(){
-      return new FieldContainerImpl();
-   }
-   
+    @JsonAnySetter
+    public void setValue(String key, JsonNode value);
 
-   public static FieldContainerImpl of(final FieldContainer template) {
-      FieldContainerImpl instance = new FieldContainerImpl();
-      return instance;
-   }
+    public static FieldContainerImpl of(){
+        return new FieldContainerImpl();
+    }
+    
+
+    public static FieldContainerImpl of(final FieldContainer template) {
+        FieldContainerImpl instance = new FieldContainerImpl();
+        return instance;
+    }
 
 }

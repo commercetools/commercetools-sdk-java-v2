@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderChangeTaxCalculationModeActionImpl implements StagedOrderChangeTaxCalculationModeAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
+    private String action;
+    
+    private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
 
-   @JsonCreator
-   StagedOrderChangeTaxCalculationModeActionImpl(@JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
-      this.taxCalculationMode = taxCalculationMode;
-      this.action = "changeTaxCalculationMode";
-   }
-   public StagedOrderChangeTaxCalculationModeActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode(){
-      return this.taxCalculationMode;
-   }
+    @JsonCreator
+    StagedOrderChangeTaxCalculationModeActionImpl(@JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
+        this.taxCalculationMode = taxCalculationMode;
+        this.action = "changeTaxCalculationMode";
+    }
+    public StagedOrderChangeTaxCalculationModeActionImpl() {
+       
+    }
 
-   public void setTaxCalculationMode(final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode){
-      this.taxCalculationMode = taxCalculationMode;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode(){
+        return this.taxCalculationMode;
+    }
+
+    public void setTaxCalculationMode(final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode){
+        this.taxCalculationMode = taxCalculationMode;
+    }
 
 }

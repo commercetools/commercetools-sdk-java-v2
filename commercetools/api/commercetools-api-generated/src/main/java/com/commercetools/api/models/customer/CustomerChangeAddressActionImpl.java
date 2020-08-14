@@ -23,55 +23,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerChangeAddressActionImpl implements CustomerChangeAddressAction {
 
-   private String action;
-   
-   private String addressId;
-   
-   private String addressKey;
-   
-   private com.commercetools.api.models.common.Address address;
+    private String action;
+    
+    private String addressId;
+    
+    private String addressKey;
+    
+    private com.commercetools.api.models.common.Address address;
 
-   @JsonCreator
-   CustomerChangeAddressActionImpl(@JsonProperty("addressId") final String addressId, @JsonProperty("addressKey") final String addressKey, @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
-      this.addressId = addressId;
-      this.addressKey = addressKey;
-      this.address = address;
-      this.action = "changeAddress";
-   }
-   public CustomerChangeAddressActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAddressId(){
-      return this.addressId;
-   }
-   
-   
-   public String getAddressKey(){
-      return this.addressKey;
-   }
-   
-   
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
-   }
+    @JsonCreator
+    CustomerChangeAddressActionImpl(@JsonProperty("addressId") final String addressId, @JsonProperty("addressKey") final String addressKey, @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+        this.addressId = addressId;
+        this.addressKey = addressKey;
+        this.address = address;
+        this.action = "changeAddress";
+    }
+    public CustomerChangeAddressActionImpl() {
+       
+    }
 
-   public void setAddressId(final String addressId){
-      this.addressId = addressId;
-   }
-   
-   public void setAddressKey(final String addressKey){
-      this.addressKey = addressKey;
-   }
-   
-   public void setAddress(final com.commercetools.api.models.common.Address address){
-      this.address = address;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAddressId(){
+        return this.addressId;
+    }
+    
+    
+    public String getAddressKey(){
+        return this.addressKey;
+    }
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
+        return this.address;
+    }
+
+    public void setAddressId(final String addressId){
+        this.addressId = addressId;
+    }
+    
+    public void setAddressKey(final String addressKey){
+        this.addressKey = addressKey;
+    }
+    
+    public void setAddress(final com.commercetools.api.models.common.Address address){
+        this.address = address;
+    }
 
 }

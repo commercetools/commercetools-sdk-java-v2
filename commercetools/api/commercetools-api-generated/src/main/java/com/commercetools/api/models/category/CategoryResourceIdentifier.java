@@ -23,17 +23,17 @@ import java.io.IOException;
 public interface CategoryResourceIdentifier extends ResourceIdentifier {
 
 
-   
-   public static CategoryResourceIdentifierImpl of(){
-      return new CategoryResourceIdentifierImpl();
-   }
-   
 
-   public static CategoryResourceIdentifierImpl of(final CategoryResourceIdentifier template) {
-      CategoryResourceIdentifierImpl instance = new CategoryResourceIdentifierImpl();
-      instance.setId(template.getId());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static CategoryResourceIdentifierImpl of(){
+        return new CategoryResourceIdentifierImpl();
+    }
+    
+
+    public static CategoryResourceIdentifierImpl of(final CategoryResourceIdentifier template) {
+        CategoryResourceIdentifierImpl instance = new CategoryResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

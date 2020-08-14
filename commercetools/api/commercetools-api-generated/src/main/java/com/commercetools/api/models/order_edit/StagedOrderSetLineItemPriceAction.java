@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetLineItemPriceActionImpl.class)
 public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @Valid
-   @JsonProperty("externalPrice")
-   public Money getExternalPrice();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @Valid
+    @JsonProperty("externalPrice")
+    public Money getExternalPrice();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setExternalPrice(final Money externalPrice);
-   
-   public static StagedOrderSetLineItemPriceActionImpl of(){
-      return new StagedOrderSetLineItemPriceActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setExternalPrice(final Money externalPrice);
 
-   public static StagedOrderSetLineItemPriceActionImpl of(final StagedOrderSetLineItemPriceAction template) {
-      StagedOrderSetLineItemPriceActionImpl instance = new StagedOrderSetLineItemPriceActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setExternalPrice(template.getExternalPrice());
-      return instance;
-   }
+    public static StagedOrderSetLineItemPriceActionImpl of(){
+        return new StagedOrderSetLineItemPriceActionImpl();
+    }
+    
+
+    public static StagedOrderSetLineItemPriceActionImpl of(final StagedOrderSetLineItemPriceAction template) {
+        StagedOrderSetLineItemPriceActionImpl instance = new StagedOrderSetLineItemPriceActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setExternalPrice(template.getExternalPrice());
+        return instance;
+    }
 
 }

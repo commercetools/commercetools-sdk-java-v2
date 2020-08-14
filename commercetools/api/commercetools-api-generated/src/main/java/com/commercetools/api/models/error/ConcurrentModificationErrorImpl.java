@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ConcurrentModificationErrorImpl implements ConcurrentModificationError {
 
-   private String code;
-   
-   private String message;
-   
-   private Long currentVersion;
+    private String code;
+    
+    private String message;
+    
+    private Long currentVersion;
 
-   @JsonCreator
-   ConcurrentModificationErrorImpl(@JsonProperty("message") final String message, @JsonProperty("currentVersion") final Long currentVersion) {
-      this.message = message;
-      this.currentVersion = currentVersion;
-      this.code = "ConcurrentModification";
-   }
-   public ConcurrentModificationErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
-   
-   
-   public Long getCurrentVersion(){
-      return this.currentVersion;
-   }
+    @JsonCreator
+    ConcurrentModificationErrorImpl(@JsonProperty("message") final String message, @JsonProperty("currentVersion") final Long currentVersion) {
+        this.message = message;
+        this.currentVersion = currentVersion;
+        this.code = "ConcurrentModification";
+    }
+    public ConcurrentModificationErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setCurrentVersion(final Long currentVersion){
-      this.currentVersion = currentVersion;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+    
+    
+    public Long getCurrentVersion(){
+        return this.currentVersion;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setCurrentVersion(final Long currentVersion){
+        this.currentVersion = currentVersion;
+    }
 
 }

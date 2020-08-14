@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountChangeNameActionImpl.class)
 public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
 
-   public void setName(final LocalizedString name);
-   
-   public static CartDiscountChangeNameActionImpl of(){
-      return new CartDiscountChangeNameActionImpl();
-   }
-   
+    public void setName(final LocalizedString name);
 
-   public static CartDiscountChangeNameActionImpl of(final CartDiscountChangeNameAction template) {
-      CartDiscountChangeNameActionImpl instance = new CartDiscountChangeNameActionImpl();
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static CartDiscountChangeNameActionImpl of(){
+        return new CartDiscountChangeNameActionImpl();
+    }
+    
+
+    public static CartDiscountChangeNameActionImpl of(final CartDiscountChangeNameAction template) {
+        CartDiscountChangeNameActionImpl instance = new CartDiscountChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

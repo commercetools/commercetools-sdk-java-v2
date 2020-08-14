@@ -29,18 +29,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoreUpdateActionImpl implements StoreUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   StoreUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    StoreUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

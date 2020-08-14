@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateChangeInitialActionImpl implements StateChangeInitialAction {
 
-   private String action;
-   
-   private Boolean initial;
+    private String action;
+    
+    private Boolean initial;
 
-   @JsonCreator
-   StateChangeInitialActionImpl(@JsonProperty("initial") final Boolean initial) {
-      this.initial = initial;
-      this.action = "changeInitial";
-   }
-   public StateChangeInitialActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Boolean getInitial(){
-      return this.initial;
-   }
+    @JsonCreator
+    StateChangeInitialActionImpl(@JsonProperty("initial") final Boolean initial) {
+        this.initial = initial;
+        this.action = "changeInitial";
+    }
+    public StateChangeInitialActionImpl() {
+       
+    }
 
-   public void setInitial(final Boolean initial){
-      this.initial = initial;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Boolean getInitial(){
+        return this.initial;
+    }
+
+    public void setInitial(final Boolean initial){
+        this.initial = initial;
+    }
 
 }

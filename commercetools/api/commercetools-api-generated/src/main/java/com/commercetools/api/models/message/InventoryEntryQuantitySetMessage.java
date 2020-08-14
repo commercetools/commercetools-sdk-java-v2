@@ -21,53 +21,53 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntryQuantitySetMessageImpl.class)
 public interface InventoryEntryQuantitySetMessage extends Message {
 
-   
-   @NotNull
-   @JsonProperty("oldQuantityOnStock")
-   public Long getOldQuantityOnStock();
-   
-   @NotNull
-   @JsonProperty("newQuantityOnStock")
-   public Long getNewQuantityOnStock();
-   
-   @NotNull
-   @JsonProperty("oldAvailableQuantity")
-   public Long getOldAvailableQuantity();
-   
-   @NotNull
-   @JsonProperty("newAvailableQuantity")
-   public Long getNewAvailableQuantity();
+    
+    @NotNull
+    @JsonProperty("oldQuantityOnStock")
+    public Long getOldQuantityOnStock();
+    
+    @NotNull
+    @JsonProperty("newQuantityOnStock")
+    public Long getNewQuantityOnStock();
+    
+    @NotNull
+    @JsonProperty("oldAvailableQuantity")
+    public Long getOldAvailableQuantity();
+    
+    @NotNull
+    @JsonProperty("newAvailableQuantity")
+    public Long getNewAvailableQuantity();
 
-   public void setOldQuantityOnStock(final Long oldQuantityOnStock);
-   
-   public void setNewQuantityOnStock(final Long newQuantityOnStock);
-   
-   public void setOldAvailableQuantity(final Long oldAvailableQuantity);
-   
-   public void setNewAvailableQuantity(final Long newAvailableQuantity);
-   
-   public static InventoryEntryQuantitySetMessageImpl of(){
-      return new InventoryEntryQuantitySetMessageImpl();
-   }
-   
+    public void setOldQuantityOnStock(final Long oldQuantityOnStock);
+    
+    public void setNewQuantityOnStock(final Long newQuantityOnStock);
+    
+    public void setOldAvailableQuantity(final Long oldAvailableQuantity);
+    
+    public void setNewAvailableQuantity(final Long newAvailableQuantity);
 
-   public static InventoryEntryQuantitySetMessageImpl of(final InventoryEntryQuantitySetMessage template) {
-      InventoryEntryQuantitySetMessageImpl instance = new InventoryEntryQuantitySetMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setOldQuantityOnStock(template.getOldQuantityOnStock());
-      instance.setNewQuantityOnStock(template.getNewQuantityOnStock());
-      instance.setOldAvailableQuantity(template.getOldAvailableQuantity());
-      instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
-      return instance;
-   }
+    public static InventoryEntryQuantitySetMessageImpl of(){
+        return new InventoryEntryQuantitySetMessageImpl();
+    }
+    
+
+    public static InventoryEntryQuantitySetMessageImpl of(final InventoryEntryQuantitySetMessage template) {
+        InventoryEntryQuantitySetMessageImpl instance = new InventoryEntryQuantitySetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setOldQuantityOnStock(template.getOldQuantityOnStock());
+        instance.setNewQuantityOnStock(template.getNewQuantityOnStock());
+        instance.setOldAvailableQuantity(template.getOldAvailableQuantity());
+        instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
+        return instance;
+    }
 
 }

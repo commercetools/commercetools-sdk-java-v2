@@ -22,38 +22,38 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetAttributeInAllVariantsActionImpl.class)
 public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   /**
-   *  <p>The same update behavior as for Set Attribute applies.</p>
-   */
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    /**
+    *  <p>The same update behavior as for Set Attribute applies.</p>
+    */
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductSetAttributeInAllVariantsActionImpl of(){
-      return new ProductSetAttributeInAllVariantsActionImpl();
-   }
-   
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductSetAttributeInAllVariantsActionImpl of(final ProductSetAttributeInAllVariantsAction template) {
-      ProductSetAttributeInAllVariantsActionImpl instance = new ProductSetAttributeInAllVariantsActionImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductSetAttributeInAllVariantsActionImpl of(){
+        return new ProductSetAttributeInAllVariantsActionImpl();
+    }
+    
+
+    public static ProductSetAttributeInAllVariantsActionImpl of(final ProductSetAttributeInAllVariantsAction template) {
+        ProductSetAttributeInAllVariantsActionImpl instance = new ProductSetAttributeInAllVariantsActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

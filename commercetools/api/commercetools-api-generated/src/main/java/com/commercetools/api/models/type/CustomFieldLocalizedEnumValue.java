@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomFieldLocalizedEnumValueImpl.class)
 public interface CustomFieldLocalizedEnumValue  {
 
-   
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("label")
-   public LocalizedString getLabel();
+    
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("label")
+    public LocalizedString getLabel();
 
-   public void setKey(final String key);
-   
-   public void setLabel(final LocalizedString label);
-   
-   public static CustomFieldLocalizedEnumValueImpl of(){
-      return new CustomFieldLocalizedEnumValueImpl();
-   }
-   
+    public void setKey(final String key);
+    
+    public void setLabel(final LocalizedString label);
 
-   public static CustomFieldLocalizedEnumValueImpl of(final CustomFieldLocalizedEnumValue template) {
-      CustomFieldLocalizedEnumValueImpl instance = new CustomFieldLocalizedEnumValueImpl();
-      instance.setKey(template.getKey());
-      instance.setLabel(template.getLabel());
-      return instance;
-   }
+    public static CustomFieldLocalizedEnumValueImpl of(){
+        return new CustomFieldLocalizedEnumValueImpl();
+    }
+    
+
+    public static CustomFieldLocalizedEnumValueImpl of(final CustomFieldLocalizedEnumValue template) {
+        CustomFieldLocalizedEnumValueImpl instance = new CustomFieldLocalizedEnumValueImpl();
+        instance.setKey(template.getKey());
+        instance.setLabel(template.getLabel());
+        return instance;
+    }
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountChangeRequiresDiscountCodeActionImpl.class)
 public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscountUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("requiresDiscountCode")
-   public Boolean getRequiresDiscountCode();
+    
+    @NotNull
+    @JsonProperty("requiresDiscountCode")
+    public Boolean getRequiresDiscountCode();
 
-   public void setRequiresDiscountCode(final Boolean requiresDiscountCode);
-   
-   public static CartDiscountChangeRequiresDiscountCodeActionImpl of(){
-      return new CartDiscountChangeRequiresDiscountCodeActionImpl();
-   }
-   
+    public void setRequiresDiscountCode(final Boolean requiresDiscountCode);
 
-   public static CartDiscountChangeRequiresDiscountCodeActionImpl of(final CartDiscountChangeRequiresDiscountCodeAction template) {
-      CartDiscountChangeRequiresDiscountCodeActionImpl instance = new CartDiscountChangeRequiresDiscountCodeActionImpl();
-      instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
-      return instance;
-   }
+    public static CartDiscountChangeRequiresDiscountCodeActionImpl of(){
+        return new CartDiscountChangeRequiresDiscountCodeActionImpl();
+    }
+    
+
+    public static CartDiscountChangeRequiresDiscountCodeActionImpl of(final CartDiscountChangeRequiresDiscountCodeAction template) {
+        CartDiscountChangeRequiresDiscountCodeActionImpl instance = new CartDiscountChangeRequiresDiscountCodeActionImpl();
+        instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
+        return instance;
+    }
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateSetNameActionImpl implements StateSetNameAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString name;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString name;
 
-   @JsonCreator
-   StateSetNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
-      this.name = name;
-      this.action = "setName";
-   }
-   public StateSetNameActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
+    @JsonCreator
+    StateSetNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
+        this.name = name;
+        this.action = "setName";
+    }
+    public StateSetNameActionImpl() {
+       
+    }
 
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
+        return this.name;
+    }
+
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
+        this.name = name;
+    }
 
 }

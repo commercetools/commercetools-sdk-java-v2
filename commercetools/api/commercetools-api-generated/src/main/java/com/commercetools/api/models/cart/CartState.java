@@ -13,29 +13,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum CartState {
 
-  
-  @JsonProperty("Active")
-  ACTIVE("Active"),
-  
-  
-  @JsonProperty("Merged")
-  MERGED("Merged"),
-  
-  
-  @JsonProperty("Ordered")
-  ORDERED("Ordered");
+    
+    @JsonProperty("Active")
+    ACTIVE("Active"),
+    
+    
+    @JsonProperty("Merged")
+    MERGED("Merged"),
+    
+    
+    @JsonProperty("Ordered")
+    ORDERED("Ordered");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private CartState(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private CartState(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<CartState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<CartState> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

@@ -22,64 +22,64 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetAssetCustomFieldActionImpl.class)
 public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
 
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
-   
-   
-   @JsonProperty("assetId")
-   public String getAssetId();
-   
-   
-   @JsonProperty("assetKey")
-   public String getAssetKey();
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
+    
+    
+    @JsonProperty("assetId")
+    public String getAssetId();
+    
+    
+    @JsonProperty("assetKey")
+    public String getAssetKey();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setSku(final String sku);
-   
-   public void setStaged(final Boolean staged);
-   
-   public void setAssetId(final String assetId);
-   
-   public void setAssetKey(final String assetKey);
-   
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public static ProductSetAssetCustomFieldActionImpl of(){
-      return new ProductSetAssetCustomFieldActionImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setSku(final String sku);
+    
+    public void setStaged(final Boolean staged);
+    
+    public void setAssetId(final String assetId);
+    
+    public void setAssetKey(final String assetKey);
+    
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
 
-   public static ProductSetAssetCustomFieldActionImpl of(final ProductSetAssetCustomFieldAction template) {
-      ProductSetAssetCustomFieldActionImpl instance = new ProductSetAssetCustomFieldActionImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
-      instance.setStaged(template.getStaged());
-      instance.setAssetId(template.getAssetId());
-      instance.setAssetKey(template.getAssetKey());
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static ProductSetAssetCustomFieldActionImpl of(){
+        return new ProductSetAssetCustomFieldActionImpl();
+    }
+    
+
+    public static ProductSetAssetCustomFieldActionImpl of(final ProductSetAssetCustomFieldAction template) {
+        ProductSetAssetCustomFieldActionImpl instance = new ProductSetAssetCustomFieldActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

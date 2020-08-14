@@ -7,20 +7,20 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public class ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder {
-   
-   private final ApiHttpClient apiHttpClient;
-   private final String projectKey;
-   private final String customerId;
-   
-   
-   public ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String customerId) {
-      this.apiHttpClient = apiHttpClient;
-      this.projectKey = projectKey;
-      this.customerId = customerId;
-   }
-   
-   public ByProjectKeyCartsCustomerIdByCustomerIdGet get() {
-      return new ByProjectKeyCartsCustomerIdByCustomerIdGet(apiHttpClient, projectKey, customerId);
-   }
-   
+
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+    private final String customerId;
+    
+
+    public ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String customerId) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+        this.customerId = customerId;
+    }
+
+    public ByProjectKeyCartsCustomerIdByCustomerIdGet get() {
+        return new ByProjectKeyCartsCustomerIdByCustomerIdGet(apiHttpClient, projectKey, customerId);
+    }
+
 }

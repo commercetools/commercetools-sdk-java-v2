@@ -23,23 +23,23 @@ import java.io.IOException;
 @JsonDeserialize(as = StoreReferenceImpl.class)
 public interface StoreReference extends Reference {
 
-   
-   @Valid
-   @JsonProperty("obj")
-   public Store getObj();
+    
+    @Valid
+    @JsonProperty("obj")
+    public Store getObj();
 
-   public void setObj(final Store obj);
-   
-   public static StoreReferenceImpl of(){
-      return new StoreReferenceImpl();
-   }
-   
+    public void setObj(final Store obj);
 
-   public static StoreReferenceImpl of(final StoreReference template) {
-      StoreReferenceImpl instance = new StoreReferenceImpl();
-      instance.setId(template.getId());
-      instance.setObj(template.getObj());
-      return instance;
-   }
+    public static StoreReferenceImpl of(){
+        return new StoreReferenceImpl();
+    }
+    
+
+    public static StoreReferenceImpl of(final StoreReference template) {
+        StoreReferenceImpl instance = new StoreReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(template.getObj());
+        return instance;
+    }
 
 }

@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ScoreShippingRateInputDraftImpl implements ScoreShippingRateInputDraft {
 
-   private String type;
-   
-   private Double score;
+    private String type;
+    
+    private Double score;
 
-   @JsonCreator
-   ScoreShippingRateInputDraftImpl(@JsonProperty("score") final Double score) {
-      this.score = score;
-      this.type = "Score";
-   }
-   public ScoreShippingRateInputDraftImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public Double getScore(){
-      return this.score;
-   }
+    @JsonCreator
+    ScoreShippingRateInputDraftImpl(@JsonProperty("score") final Double score) {
+        this.score = score;
+        this.type = "Score";
+    }
+    public ScoreShippingRateInputDraftImpl() {
+       
+    }
 
-   public void setScore(final Double score){
-      this.score = score;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public Double getScore(){
+        return this.score;
+    }
+
+    public void setScore(final Double score){
+        this.score = score;
+    }
 
 }

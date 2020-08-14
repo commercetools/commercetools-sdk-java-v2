@@ -22,16 +22,16 @@ import java.io.IOException;
 public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
 
 
-   
-   public static ShippingMethodDoesNotMatchCartErrorImpl of(){
-      return new ShippingMethodDoesNotMatchCartErrorImpl();
-   }
-   
 
-   public static ShippingMethodDoesNotMatchCartErrorImpl of(final ShippingMethodDoesNotMatchCartError template) {
-      ShippingMethodDoesNotMatchCartErrorImpl instance = new ShippingMethodDoesNotMatchCartErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static ShippingMethodDoesNotMatchCartErrorImpl of(){
+        return new ShippingMethodDoesNotMatchCartErrorImpl();
+    }
+    
+
+    public static ShippingMethodDoesNotMatchCartErrorImpl of(final ShippingMethodDoesNotMatchCartError template) {
+        ShippingMethodDoesNotMatchCartErrorImpl instance = new ShippingMethodDoesNotMatchCartErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

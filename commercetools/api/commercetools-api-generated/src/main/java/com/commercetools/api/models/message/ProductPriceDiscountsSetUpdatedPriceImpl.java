@@ -22,83 +22,83 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDiscountsSetUpdatedPrice {
 
-   private Integer variantId;
-   
-   private String variantKey;
-   
-   private String sku;
-   
-   private String priceId;
-   
-   private com.commercetools.api.models.common.DiscountedPrice discounted;
-   
-   private Boolean staged;
+    private Integer variantId;
+    
+    private String variantKey;
+    
+    private String sku;
+    
+    private String priceId;
+    
+    private com.commercetools.api.models.common.DiscountedPrice discounted;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductPriceDiscountsSetUpdatedPriceImpl(@JsonProperty("variantId") final Integer variantId, @JsonProperty("variantKey") final String variantKey, @JsonProperty("sku") final String sku, @JsonProperty("priceId") final String priceId, @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted, @JsonProperty("staged") final Boolean staged) {
-      this.variantId = variantId;
-      this.variantKey = variantKey;
-      this.sku = sku;
-      this.priceId = priceId;
-      this.discounted = discounted;
-      this.staged = staged;
-   }
-   public ProductPriceDiscountsSetUpdatedPriceImpl() {
-      
-   }
-   
-   
-   public Integer getVariantId(){
-      return this.variantId;
-   }
-   
-   
-   public String getVariantKey(){
-      return this.variantKey;
-   }
-   
-   
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public String getPriceId(){
-      return this.priceId;
-   }
-   
-   
-   public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
-      return this.discounted;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductPriceDiscountsSetUpdatedPriceImpl(@JsonProperty("variantId") final Integer variantId, @JsonProperty("variantKey") final String variantKey, @JsonProperty("sku") final String sku, @JsonProperty("priceId") final String priceId, @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted, @JsonProperty("staged") final Boolean staged) {
+        this.variantId = variantId;
+        this.variantKey = variantKey;
+        this.sku = sku;
+        this.priceId = priceId;
+        this.discounted = discounted;
+        this.staged = staged;
+    }
+    public ProductPriceDiscountsSetUpdatedPriceImpl() {
+       
+    }
 
-   public void setVariantId(final Integer variantId){
-      this.variantId = variantId;
-   }
-   
-   public void setVariantKey(final String variantKey){
-      this.variantKey = variantKey;
-   }
-   
-   public void setSku(final String sku){
-      this.sku = sku;
-   }
-   
-   public void setPriceId(final String priceId){
-      this.priceId = priceId;
-   }
-   
-   public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted){
-      this.discounted = discounted;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public Integer getVariantId(){
+        return this.variantId;
+    }
+    
+    
+    public String getVariantKey(){
+        return this.variantKey;
+    }
+    
+    
+    public String getSku(){
+        return this.sku;
+    }
+    
+    
+    public String getPriceId(){
+        return this.priceId;
+    }
+    
+    
+    public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
+        return this.discounted;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setVariantId(final Integer variantId){
+        this.variantId = variantId;
+    }
+    
+    public void setVariantKey(final String variantKey){
+        this.variantKey = variantKey;
+    }
+    
+    public void setSku(final String sku){
+        this.sku = sku;
+    }
+    
+    public void setPriceId(final String priceId){
+        this.priceId = priceId;
+    }
+    
+    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted){
+        this.discounted = discounted;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

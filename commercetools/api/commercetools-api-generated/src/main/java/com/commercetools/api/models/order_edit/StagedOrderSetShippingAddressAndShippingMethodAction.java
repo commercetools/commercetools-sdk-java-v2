@@ -24,37 +24,37 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetShippingAddressAndShippingMethodActionImpl.class)
 public interface StagedOrderSetShippingAddressAndShippingMethodAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("address")
-   public Address getAddress();
-   
-   @Valid
-   @JsonProperty("shippingMethod")
-   public ShippingMethodResourceIdentifier getShippingMethod();
-   
-   @Valid
-   @JsonProperty("externalTaxRate")
-   public ExternalTaxRateDraft getExternalTaxRate();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("address")
+    public Address getAddress();
+    
+    @Valid
+    @JsonProperty("shippingMethod")
+    public ShippingMethodResourceIdentifier getShippingMethod();
+    
+    @Valid
+    @JsonProperty("externalTaxRate")
+    public ExternalTaxRateDraft getExternalTaxRate();
 
-   public void setAddress(final Address address);
-   
-   public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
-   
-   public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-   
-   public static StagedOrderSetShippingAddressAndShippingMethodActionImpl of(){
-      return new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
-   }
-   
+    public void setAddress(final Address address);
+    
+    public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
+    
+    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-   public static StagedOrderSetShippingAddressAndShippingMethodActionImpl of(final StagedOrderSetShippingAddressAndShippingMethodAction template) {
-      StagedOrderSetShippingAddressAndShippingMethodActionImpl instance = new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
-      instance.setAddress(template.getAddress());
-      instance.setShippingMethod(template.getShippingMethod());
-      instance.setExternalTaxRate(template.getExternalTaxRate());
-      return instance;
-   }
+    public static StagedOrderSetShippingAddressAndShippingMethodActionImpl of(){
+        return new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
+    }
+    
+
+    public static StagedOrderSetShippingAddressAndShippingMethodActionImpl of(final StagedOrderSetShippingAddressAndShippingMethodAction template) {
+        StagedOrderSetShippingAddressAndShippingMethodActionImpl instance = new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
+        instance.setAddress(template.getAddress());
+        instance.setShippingMethod(template.getShippingMethod());
+        instance.setExternalTaxRate(template.getExternalTaxRate());
+        return instance;
+    }
 
 }

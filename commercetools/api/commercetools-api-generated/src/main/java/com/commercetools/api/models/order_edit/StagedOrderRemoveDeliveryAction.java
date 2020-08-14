@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderRemoveDeliveryActionImpl.class)
 public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("deliveryId")
-   public String getDeliveryId();
+    
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
 
-   public void setDeliveryId(final String deliveryId);
-   
-   public static StagedOrderRemoveDeliveryActionImpl of(){
-      return new StagedOrderRemoveDeliveryActionImpl();
-   }
-   
+    public void setDeliveryId(final String deliveryId);
 
-   public static StagedOrderRemoveDeliveryActionImpl of(final StagedOrderRemoveDeliveryAction template) {
-      StagedOrderRemoveDeliveryActionImpl instance = new StagedOrderRemoveDeliveryActionImpl();
-      instance.setDeliveryId(template.getDeliveryId());
-      return instance;
-   }
+    public static StagedOrderRemoveDeliveryActionImpl of(){
+        return new StagedOrderRemoveDeliveryActionImpl();
+    }
+    
+
+    public static StagedOrderRemoveDeliveryActionImpl of(final StagedOrderRemoveDeliveryAction template) {
+        StagedOrderRemoveDeliveryActionImpl instance = new StagedOrderRemoveDeliveryActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        return instance;
+    }
 
 }

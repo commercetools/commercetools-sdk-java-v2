@@ -22,37 +22,37 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerChangeAddressActionImpl.class)
 public interface CustomerChangeAddressAction extends CustomerUpdateAction {
 
-   
-   
-   @JsonProperty("addressId")
-   public String getAddressId();
-   
-   
-   @JsonProperty("addressKey")
-   public String getAddressKey();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("address")
-   public Address getAddress();
+    
+    
+    @JsonProperty("addressId")
+    public String getAddressId();
+    
+    
+    @JsonProperty("addressKey")
+    public String getAddressKey();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("address")
+    public Address getAddress();
 
-   public void setAddressId(final String addressId);
-   
-   public void setAddressKey(final String addressKey);
-   
-   public void setAddress(final Address address);
-   
-   public static CustomerChangeAddressActionImpl of(){
-      return new CustomerChangeAddressActionImpl();
-   }
-   
+    public void setAddressId(final String addressId);
+    
+    public void setAddressKey(final String addressKey);
+    
+    public void setAddress(final Address address);
 
-   public static CustomerChangeAddressActionImpl of(final CustomerChangeAddressAction template) {
-      CustomerChangeAddressActionImpl instance = new CustomerChangeAddressActionImpl();
-      instance.setAddressId(template.getAddressId());
-      instance.setAddressKey(template.getAddressKey());
-      instance.setAddress(template.getAddress());
-      return instance;
-   }
+    public static CustomerChangeAddressActionImpl of(){
+        return new CustomerChangeAddressActionImpl();
+    }
+    
+
+    public static CustomerChangeAddressActionImpl of(final CustomerChangeAddressAction template) {
+        CustomerChangeAddressActionImpl instance = new CustomerChangeAddressActionImpl();
+        instance.setAddressId(template.getAddressId());
+        instance.setAddressKey(template.getAddressKey());
+        instance.setAddress(template.getAddress());
+        return instance;
+    }
 
 }

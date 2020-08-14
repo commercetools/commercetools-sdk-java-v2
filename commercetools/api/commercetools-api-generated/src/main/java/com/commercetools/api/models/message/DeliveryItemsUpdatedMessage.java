@@ -22,48 +22,48 @@ import java.io.IOException;
 @JsonDeserialize(as = DeliveryItemsUpdatedMessageImpl.class)
 public interface DeliveryItemsUpdatedMessage extends Message {
 
-   
-   @NotNull
-   @JsonProperty("deliveryId")
-   public String getDeliveryId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("items")
-   public List<DeliveryItem> getItems();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("oldItems")
-   public List<DeliveryItem> getOldItems();
+    
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("items")
+    public List<DeliveryItem> getItems();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("oldItems")
+    public List<DeliveryItem> getOldItems();
 
-   public void setDeliveryId(final String deliveryId);
-   
-   public void setItems(final List<DeliveryItem> items);
-   
-   public void setOldItems(final List<DeliveryItem> oldItems);
-   
-   public static DeliveryItemsUpdatedMessageImpl of(){
-      return new DeliveryItemsUpdatedMessageImpl();
-   }
-   
+    public void setDeliveryId(final String deliveryId);
+    
+    public void setItems(final List<DeliveryItem> items);
+    
+    public void setOldItems(final List<DeliveryItem> oldItems);
 
-   public static DeliveryItemsUpdatedMessageImpl of(final DeliveryItemsUpdatedMessage template) {
-      DeliveryItemsUpdatedMessageImpl instance = new DeliveryItemsUpdatedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setDeliveryId(template.getDeliveryId());
-      instance.setItems(template.getItems());
-      instance.setOldItems(template.getOldItems());
-      return instance;
-   }
+    public static DeliveryItemsUpdatedMessageImpl of(){
+        return new DeliveryItemsUpdatedMessageImpl();
+    }
+    
+
+    public static DeliveryItemsUpdatedMessageImpl of(final DeliveryItemsUpdatedMessage template) {
+        DeliveryItemsUpdatedMessageImpl instance = new DeliveryItemsUpdatedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setItems(template.getItems());
+        instance.setOldItems(template.getOldItems());
+        return instance;
+    }
 
 }

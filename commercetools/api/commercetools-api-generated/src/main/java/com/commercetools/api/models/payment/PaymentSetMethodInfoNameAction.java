@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetMethodInfoNameActionImpl.class)
 public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
 
-   /**
-   *  <p>If not provided, the name is unset.</p>
-   */
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
+    /**
+    *  <p>If not provided, the name is unset.</p>
+    */
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
 
-   public void setName(final LocalizedString name);
-   
-   public static PaymentSetMethodInfoNameActionImpl of(){
-      return new PaymentSetMethodInfoNameActionImpl();
-   }
-   
+    public void setName(final LocalizedString name);
 
-   public static PaymentSetMethodInfoNameActionImpl of(final PaymentSetMethodInfoNameAction template) {
-      PaymentSetMethodInfoNameActionImpl instance = new PaymentSetMethodInfoNameActionImpl();
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static PaymentSetMethodInfoNameActionImpl of(){
+        return new PaymentSetMethodInfoNameActionImpl();
+    }
+    
+
+    public static PaymentSetMethodInfoNameActionImpl of(final PaymentSetMethodInfoNameAction template) {
+        PaymentSetMethodInfoNameActionImpl instance = new PaymentSetMethodInfoNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

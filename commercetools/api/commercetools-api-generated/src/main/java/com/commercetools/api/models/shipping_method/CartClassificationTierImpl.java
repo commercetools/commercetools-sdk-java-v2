@@ -24,55 +24,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartClassificationTierImpl implements CartClassificationTier {
 
-   private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
-   
-   private String value;
-   
-   private com.commercetools.api.models.common.Money price;
-   
-   private Boolean isMatching;
+    private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
+    
+    private String value;
+    
+    private com.commercetools.api.models.common.Money price;
+    
+    private Boolean isMatching;
 
-   @JsonCreator
-   CartClassificationTierImpl(@JsonProperty("value") final String value, @JsonProperty("price") final com.commercetools.api.models.common.Money price, @JsonProperty("isMatching") final Boolean isMatching) {
-      this.value = value;
-      this.price = price;
-      this.isMatching = isMatching;
-      this.type = ShippingRateTierType.findEnumViaJsonName("CartClassification").get();
-   }
-   public CartClassificationTierImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
-      return this.type;
-   }
-   
-   
-   public String getValue(){
-      return this.value;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getPrice(){
-      return this.price;
-   }
-   
-   
-   public Boolean getIsMatching(){
-      return this.isMatching;
-   }
+    @JsonCreator
+    CartClassificationTierImpl(@JsonProperty("value") final String value, @JsonProperty("price") final com.commercetools.api.models.common.Money price, @JsonProperty("isMatching") final Boolean isMatching) {
+        this.value = value;
+        this.price = price;
+        this.isMatching = isMatching;
+        this.type = ShippingRateTierType.findEnumViaJsonName("CartClassification").get();
+    }
+    public CartClassificationTierImpl() {
+       
+    }
 
-   public void setValue(final String value){
-      this.value = value;
-   }
-   
-   public void setPrice(final com.commercetools.api.models.common.Money price){
-      this.price = price;
-   }
-   
-   public void setIsMatching(final Boolean isMatching){
-      this.isMatching = isMatching;
-   }
+    
+    public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
+        return this.type;
+    }
+    
+    
+    public String getValue(){
+        return this.value;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getPrice(){
+        return this.price;
+    }
+    
+    
+    public Boolean getIsMatching(){
+        return this.isMatching;
+    }
+
+    public void setValue(final String value){
+        this.value = value;
+    }
+    
+    public void setPrice(final com.commercetools.api.models.common.Money price){
+        this.price = price;
+    }
+    
+    public void setIsMatching(final Boolean isMatching){
+        this.isMatching = isMatching;
+    }
 
 }

@@ -22,58 +22,58 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetAssetSourcesActionImpl.class)
 public interface ProductSetAssetSourcesAction extends ProductUpdateAction {
 
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
-   
-   
-   @JsonProperty("assetId")
-   public String getAssetId();
-   
-   
-   @JsonProperty("assetKey")
-   public String getAssetKey();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("sources")
-   public List<AssetSource> getSources();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
+    
+    
+    @JsonProperty("assetId")
+    public String getAssetId();
+    
+    
+    @JsonProperty("assetKey")
+    public String getAssetKey();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("sources")
+    public List<AssetSource> getSources();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setSku(final String sku);
-   
-   public void setStaged(final Boolean staged);
-   
-   public void setAssetId(final String assetId);
-   
-   public void setAssetKey(final String assetKey);
-   
-   public void setSources(final List<AssetSource> sources);
-   
-   public static ProductSetAssetSourcesActionImpl of(){
-      return new ProductSetAssetSourcesActionImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setSku(final String sku);
+    
+    public void setStaged(final Boolean staged);
+    
+    public void setAssetId(final String assetId);
+    
+    public void setAssetKey(final String assetKey);
+    
+    public void setSources(final List<AssetSource> sources);
 
-   public static ProductSetAssetSourcesActionImpl of(final ProductSetAssetSourcesAction template) {
-      ProductSetAssetSourcesActionImpl instance = new ProductSetAssetSourcesActionImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
-      instance.setStaged(template.getStaged());
-      instance.setAssetId(template.getAssetId());
-      instance.setAssetKey(template.getAssetKey());
-      instance.setSources(template.getSources());
-      return instance;
-   }
+    public static ProductSetAssetSourcesActionImpl of(){
+        return new ProductSetAssetSourcesActionImpl();
+    }
+    
+
+    public static ProductSetAssetSourcesActionImpl of(final ProductSetAssetSourcesAction template) {
+        ProductSetAssetSourcesActionImpl instance = new ProductSetAssetSourcesActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setSources(template.getSources());
+        return instance;
+    }
 
 }

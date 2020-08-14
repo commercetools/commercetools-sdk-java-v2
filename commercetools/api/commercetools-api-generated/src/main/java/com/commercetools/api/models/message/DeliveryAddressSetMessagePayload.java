@@ -22,36 +22,36 @@ import java.io.IOException;
 @JsonDeserialize(as = DeliveryAddressSetMessagePayloadImpl.class)
 public interface DeliveryAddressSetMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("deliveryId")
-   public String getDeliveryId();
-   
-   @Valid
-   @JsonProperty("address")
-   public Address getAddress();
-   
-   @Valid
-   @JsonProperty("oldAddress")
-   public Address getOldAddress();
+    
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+    
+    @Valid
+    @JsonProperty("address")
+    public Address getAddress();
+    
+    @Valid
+    @JsonProperty("oldAddress")
+    public Address getOldAddress();
 
-   public void setDeliveryId(final String deliveryId);
-   
-   public void setAddress(final Address address);
-   
-   public void setOldAddress(final Address oldAddress);
-   
-   public static DeliveryAddressSetMessagePayloadImpl of(){
-      return new DeliveryAddressSetMessagePayloadImpl();
-   }
-   
+    public void setDeliveryId(final String deliveryId);
+    
+    public void setAddress(final Address address);
+    
+    public void setOldAddress(final Address oldAddress);
 
-   public static DeliveryAddressSetMessagePayloadImpl of(final DeliveryAddressSetMessagePayload template) {
-      DeliveryAddressSetMessagePayloadImpl instance = new DeliveryAddressSetMessagePayloadImpl();
-      instance.setDeliveryId(template.getDeliveryId());
-      instance.setAddress(template.getAddress());
-      instance.setOldAddress(template.getOldAddress());
-      return instance;
-   }
+    public static DeliveryAddressSetMessagePayloadImpl of(){
+        return new DeliveryAddressSetMessagePayloadImpl();
+    }
+    
+
+    public static DeliveryAddressSetMessagePayloadImpl of(final DeliveryAddressSetMessagePayload template) {
+        DeliveryAddressSetMessagePayloadImpl instance = new DeliveryAddressSetMessagePayloadImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setAddress(template.getAddress());
+        instance.setOldAddress(template.getOldAddress());
+        return instance;
+    }
 
 }

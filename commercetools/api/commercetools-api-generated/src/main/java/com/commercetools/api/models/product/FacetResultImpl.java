@@ -25,18 +25,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FacetResultImpl implements FacetResult {
 
-   private com.commercetools.api.models.product.FacetTypes type;
+    private com.commercetools.api.models.product.FacetTypes type;
 
-   @JsonCreator
-   FacetResultImpl() {
-      this.type = FacetTypes.findEnumViaJsonName("null").get();
-   }
-   
-   
-   
-   public com.commercetools.api.models.product.FacetTypes getType(){
-      return this.type;
-   }
+    @JsonCreator
+    FacetResultImpl() {
+        this.type = FacetTypes.findEnumViaJsonName("null").get();
+    }
+    
+
+    
+    public com.commercetools.api.models.product.FacetTypes getType(){
+        return this.type;
+    }
 
 
 }

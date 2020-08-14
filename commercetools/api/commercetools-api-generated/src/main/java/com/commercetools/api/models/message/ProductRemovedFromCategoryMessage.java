@@ -22,40 +22,40 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductRemovedFromCategoryMessageImpl.class)
 public interface ProductRemovedFromCategoryMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("category")
-   public CategoryReference getCategory();
-   
-   @NotNull
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("category")
+    public CategoryReference getCategory();
+    
+    @NotNull
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setCategory(final CategoryReference category);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductRemovedFromCategoryMessageImpl of(){
-      return new ProductRemovedFromCategoryMessageImpl();
-   }
-   
+    public void setCategory(final CategoryReference category);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductRemovedFromCategoryMessageImpl of(final ProductRemovedFromCategoryMessage template) {
-      ProductRemovedFromCategoryMessageImpl instance = new ProductRemovedFromCategoryMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setCategory(template.getCategory());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductRemovedFromCategoryMessageImpl of(){
+        return new ProductRemovedFromCategoryMessageImpl();
+    }
+    
+
+    public static ProductRemovedFromCategoryMessageImpl of(final ProductRemovedFromCategoryMessage template) {
+        ProductRemovedFromCategoryMessageImpl instance = new ProductRemovedFromCategoryMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setCategory(template.getCategory());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountChangePredicateActionImpl.class)
 public interface ProductDiscountChangePredicateAction extends ProductDiscountUpdateAction {
 
-   /**
-   *  <p>A valid ProductDiscount Predicate.</p>
-   */
-   @NotNull
-   @JsonProperty("predicate")
-   public String getPredicate();
+    /**
+    *  <p>A valid ProductDiscount Predicate.</p>
+    */
+    @NotNull
+    @JsonProperty("predicate")
+    public String getPredicate();
 
-   public void setPredicate(final String predicate);
-   
-   public static ProductDiscountChangePredicateActionImpl of(){
-      return new ProductDiscountChangePredicateActionImpl();
-   }
-   
+    public void setPredicate(final String predicate);
 
-   public static ProductDiscountChangePredicateActionImpl of(final ProductDiscountChangePredicateAction template) {
-      ProductDiscountChangePredicateActionImpl instance = new ProductDiscountChangePredicateActionImpl();
-      instance.setPredicate(template.getPredicate());
-      return instance;
-   }
+    public static ProductDiscountChangePredicateActionImpl of(){
+        return new ProductDiscountChangePredicateActionImpl();
+    }
+    
+
+    public static ProductDiscountChangePredicateActionImpl of(final ProductDiscountChangePredicateAction template) {
+        ProductDiscountChangePredicateActionImpl instance = new ProductDiscountChangePredicateActionImpl();
+        instance.setPredicate(template.getPredicate());
+        return instance;
+    }
 
 }

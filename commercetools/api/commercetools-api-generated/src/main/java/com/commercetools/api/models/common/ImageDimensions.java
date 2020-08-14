@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ImageDimensionsImpl.class)
 public interface ImageDimensions  {
 
-   
-   @NotNull
-   @JsonProperty("w")
-   public Integer getW();
-   
-   @NotNull
-   @JsonProperty("h")
-   public Integer getH();
+    
+    @NotNull
+    @JsonProperty("w")
+    public Integer getW();
+    
+    @NotNull
+    @JsonProperty("h")
+    public Integer getH();
 
-   public void setW(final Integer w);
-   
-   public void setH(final Integer h);
-   
-   public static ImageDimensionsImpl of(){
-      return new ImageDimensionsImpl();
-   }
-   
+    public void setW(final Integer w);
+    
+    public void setH(final Integer h);
 
-   public static ImageDimensionsImpl of(final ImageDimensions template) {
-      ImageDimensionsImpl instance = new ImageDimensionsImpl();
-      instance.setW(template.getW());
-      instance.setH(template.getH());
-      return instance;
-   }
+    public static ImageDimensionsImpl of(){
+        return new ImageDimensionsImpl();
+    }
+    
+
+    public static ImageDimensionsImpl of(final ImageDimensions template) {
+        ImageDimensionsImpl instance = new ImageDimensionsImpl();
+        instance.setW(template.getW());
+        instance.setH(template.getH());
+        return instance;
+    }
 
 }

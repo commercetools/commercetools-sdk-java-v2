@@ -22,69 +22,69 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetProductVariantKeyActionImpl implements ProductSetProductVariantKeyAction {
 
-   private String action;
-   
-   private Long variantId;
-   
-   private String sku;
-   
-   private String key;
-   
-   private Boolean staged;
+    private String action;
+    
+    private Long variantId;
+    
+    private String sku;
+    
+    private String key;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductSetProductVariantKeyActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("key") final String key, @JsonProperty("staged") final Boolean staged) {
-      this.variantId = variantId;
-      this.sku = sku;
-      this.key = key;
-      this.staged = staged;
-      this.action = "setProductVariantKey";
-   }
-   public ProductSetProductVariantKeyActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Long getVariantId(){
-      return this.variantId;
-   }
-   
-   
-   public String getSku(){
-      return this.sku;
-   }
-   
-   /**
-   *  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductSetProductVariantKeyActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("key") final String key, @JsonProperty("staged") final Boolean staged) {
+        this.variantId = variantId;
+        this.sku = sku;
+        this.key = key;
+        this.staged = staged;
+        this.action = "setProductVariantKey";
+    }
+    public ProductSetProductVariantKeyActionImpl() {
+       
+    }
 
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
-   
-   public void setSku(final String sku){
-      this.sku = sku;
-   }
-   
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Long getVariantId(){
+        return this.variantId;
+    }
+    
+    
+    public String getSku(){
+        return this.sku;
+    }
+    
+    /**
+    *  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>
+    */
+    public String getKey(){
+        return this.key;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setVariantId(final Long variantId){
+        this.variantId = variantId;
+    }
+    
+    public void setSku(final String sku){
+        this.sku = sku;
+    }
+    
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

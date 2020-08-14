@@ -92,18 +92,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MessagePayloadImpl implements MessagePayload {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   MessagePayloadImpl() {
-      this.type = "null";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    MessagePayloadImpl() {
+        this.type = "null";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

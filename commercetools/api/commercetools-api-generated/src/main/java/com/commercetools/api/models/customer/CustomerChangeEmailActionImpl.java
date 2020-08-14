@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerChangeEmailActionImpl implements CustomerChangeEmailAction {
 
-   private String action;
-   
-   private String email;
+    private String action;
+    
+    private String email;
 
-   @JsonCreator
-   CustomerChangeEmailActionImpl(@JsonProperty("email") final String email) {
-      this.email = email;
-      this.action = "changeEmail";
-   }
-   public CustomerChangeEmailActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getEmail(){
-      return this.email;
-   }
+    @JsonCreator
+    CustomerChangeEmailActionImpl(@JsonProperty("email") final String email) {
+        this.email = email;
+        this.action = "changeEmail";
+    }
+    public CustomerChangeEmailActionImpl() {
+       
+    }
 
-   public void setEmail(final String email){
-      this.email = email;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getEmail(){
+        return this.email;
+    }
+
+    public void setEmail(final String email){
+        this.email = email;
+    }
 
 }

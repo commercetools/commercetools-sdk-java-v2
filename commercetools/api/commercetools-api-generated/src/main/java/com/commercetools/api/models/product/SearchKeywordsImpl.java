@@ -22,26 +22,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SearchKeywordsImpl implements SearchKeywords {
 
-   private Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values;
+    private Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values;
 
-   @JsonCreator
-   SearchKeywordsImpl(@JsonProperty("values") final Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values) {
-      this.values = values;
-   }
-   public SearchKeywordsImpl() {
-      
-   }
-   
-   
-   public Map<String,java.util.List<com.commercetools.api.models.product.SearchKeyword>> values() {
-       return values;
-   }
+    @JsonCreator
+    SearchKeywordsImpl(@JsonProperty("values") final Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values) {
+        this.values = values;
+    }
+    public SearchKeywordsImpl() {
+       
+    }
 
-   public void setValue(String key, java.util.List<com.commercetools.api.models.product.SearchKeyword> value) {
-       if (values == null) {
-           values = new HashMap<>();
-       }
-       values.put(key, value);
-   }
+    
+    public Map<String,java.util.List<com.commercetools.api.models.product.SearchKeyword>> values() {
+        return values;
+    }
+
+    public void setValue(String key, java.util.List<com.commercetools.api.models.product.SearchKeyword> value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+    }
 
 }

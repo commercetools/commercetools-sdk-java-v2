@@ -22,39 +22,39 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductChangePriceActionImpl.class)
 public interface ProductChangePriceAction extends ProductUpdateAction {
 
-   /**
-   *  <p>ID of the <a href="#price">Price</a></p>
-   */
-   @NotNull
-   @JsonProperty("priceId")
-   public String getPriceId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("price")
-   public PriceDraft getPrice();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    /**
+    *  <p>ID of the <a href="#price">Price</a></p>
+    */
+    @NotNull
+    @JsonProperty("priceId")
+    public String getPriceId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("price")
+    public PriceDraft getPrice();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setPriceId(final String priceId);
-   
-   public void setPrice(final PriceDraft price);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductChangePriceActionImpl of(){
-      return new ProductChangePriceActionImpl();
-   }
-   
+    public void setPriceId(final String priceId);
+    
+    public void setPrice(final PriceDraft price);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductChangePriceActionImpl of(final ProductChangePriceAction template) {
-      ProductChangePriceActionImpl instance = new ProductChangePriceActionImpl();
-      instance.setPriceId(template.getPriceId());
-      instance.setPrice(template.getPrice());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductChangePriceActionImpl of(){
+        return new ProductChangePriceActionImpl();
+    }
+    
+
+    public static ProductChangePriceActionImpl of(final ProductChangePriceAction template) {
+        ProductChangePriceActionImpl instance = new ProductChangePriceActionImpl();
+        instance.setPriceId(template.getPriceId());
+        instance.setPrice(template.getPrice());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

@@ -22,16 +22,16 @@ import java.io.IOException;
 public interface LanguageUsedInStoresError extends ErrorObject {
 
 
-   
-   public static LanguageUsedInStoresErrorImpl of(){
-      return new LanguageUsedInStoresErrorImpl();
-   }
-   
 
-   public static LanguageUsedInStoresErrorImpl of(final LanguageUsedInStoresError template) {
-      LanguageUsedInStoresErrorImpl instance = new LanguageUsedInStoresErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static LanguageUsedInStoresErrorImpl of(){
+        return new LanguageUsedInStoresErrorImpl();
+    }
+    
+
+    public static LanguageUsedInStoresErrorImpl of(final LanguageUsedInStoresError template) {
+        LanguageUsedInStoresErrorImpl instance = new LanguageUsedInStoresErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

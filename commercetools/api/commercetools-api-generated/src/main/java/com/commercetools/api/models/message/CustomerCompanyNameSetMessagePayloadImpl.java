@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompanyNameSetMessagePayload {
 
-   private String type;
-   
-   private String companyName;
+    private String type;
+    
+    private String companyName;
 
-   @JsonCreator
-   CustomerCompanyNameSetMessagePayloadImpl(@JsonProperty("companyName") final String companyName) {
-      this.companyName = companyName;
-      this.type = "CustomerCompanyNameSet";
-   }
-   public CustomerCompanyNameSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getCompanyName(){
-      return this.companyName;
-   }
+    @JsonCreator
+    CustomerCompanyNameSetMessagePayloadImpl(@JsonProperty("companyName") final String companyName) {
+        this.companyName = companyName;
+        this.type = "CustomerCompanyNameSet";
+    }
+    public CustomerCompanyNameSetMessagePayloadImpl() {
+       
+    }
 
-   public void setCompanyName(final String companyName){
-      this.companyName = companyName;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getCompanyName(){
+        return this.companyName;
+    }
+
+    public void setCompanyName(final String companyName){
+        this.companyName = companyName;
+    }
 
 }

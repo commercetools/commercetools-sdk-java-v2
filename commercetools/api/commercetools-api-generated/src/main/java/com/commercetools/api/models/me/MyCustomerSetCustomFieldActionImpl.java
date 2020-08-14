@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCustomerSetCustomFieldActionImpl implements MyCustomerSetCustomFieldAction {
 
-   private String action;
-   
-   private String name;
-   
-   private com.fasterxml.jackson.databind.JsonNode value;
+    private String action;
+    
+    private String name;
+    
+    private com.fasterxml.jackson.databind.JsonNode value;
 
-   @JsonCreator
-   MyCustomerSetCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
-      this.name = name;
-      this.value = value;
-      this.action = "setCustomField";
-   }
-   public MyCustomerSetCustomFieldActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public com.fasterxml.jackson.databind.JsonNode getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    MyCustomerSetCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
+        this.name = name;
+        this.value = value;
+        this.action = "setCustomField";
+    }
+    public MyCustomerSetCustomFieldActionImpl() {
+       
+    }
 
-   public void setName(final String name){
-      this.name = name;
-   }
-   
-   public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
-      this.value = value;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public com.fasterxml.jackson.databind.JsonNode getValue(){
+        return this.value;
+    }
+
+    public void setName(final String name){
+        this.name = name;
+    }
+    
+    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
+        this.value = value;
+    }
 
 }

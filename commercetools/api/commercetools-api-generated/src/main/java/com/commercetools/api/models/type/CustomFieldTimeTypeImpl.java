@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldTimeTypeImpl implements CustomFieldTimeType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   CustomFieldTimeTypeImpl() {
-      this.name = "Time";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    CustomFieldTimeTypeImpl() {
+        this.name = "Time";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

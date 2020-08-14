@@ -27,18 +27,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxCategoryUpdateActionImpl implements TaxCategoryUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   TaxCategoryUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    TaxCategoryUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

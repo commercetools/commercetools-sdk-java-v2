@@ -27,92 +27,92 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderAddLineItemActionImpl.class)
 public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("custom")
-   public CustomFieldsDraft getCustom();
-   
-   @Valid
-   @JsonProperty("distributionChannel")
-   public ChannelResourceIdentifier getDistributionChannel();
-   
-   @Valid
-   @JsonProperty("externalTaxRate")
-   public ExternalTaxRateDraft getExternalTaxRate();
-   
-   
-   @JsonProperty("productId")
-   public String getProductId();
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   
-   @JsonProperty("quantity")
-   public Double getQuantity();
-   
-   @Valid
-   @JsonProperty("supplyChannel")
-   public ChannelResourceIdentifier getSupplyChannel();
-   
-   @Valid
-   @JsonProperty("externalPrice")
-   public Money getExternalPrice();
-   
-   @Valid
-   @JsonProperty("externalTotalPrice")
-   public ExternalLineItemTotalPrice getExternalTotalPrice();
-   
-   @Valid
-   @JsonProperty("shippingDetails")
-   public ItemShippingDetailsDraft getShippingDetails();
+    
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+    
+    @Valid
+    @JsonProperty("distributionChannel")
+    public ChannelResourceIdentifier getDistributionChannel();
+    
+    @Valid
+    @JsonProperty("externalTaxRate")
+    public ExternalTaxRateDraft getExternalTaxRate();
+    
+    
+    @JsonProperty("productId")
+    public String getProductId();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    
+    @JsonProperty("quantity")
+    public Double getQuantity();
+    
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
+    
+    @Valid
+    @JsonProperty("externalPrice")
+    public Money getExternalPrice();
+    
+    @Valid
+    @JsonProperty("externalTotalPrice")
+    public ExternalLineItemTotalPrice getExternalTotalPrice();
+    
+    @Valid
+    @JsonProperty("shippingDetails")
+    public ItemShippingDetailsDraft getShippingDetails();
 
-   public void setCustom(final CustomFieldsDraft custom);
-   
-   public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
-   
-   public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-   
-   public void setProductId(final String productId);
-   
-   public void setVariantId(final Long variantId);
-   
-   public void setSku(final String sku);
-   
-   public void setQuantity(final Double quantity);
-   
-   public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-   
-   public void setExternalPrice(final Money externalPrice);
-   
-   public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
-   
-   public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
-   
-   public static StagedOrderAddLineItemActionImpl of(){
-      return new StagedOrderAddLineItemActionImpl();
-   }
-   
+    public void setCustom(final CustomFieldsDraft custom);
+    
+    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
+    
+    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+    
+    public void setProductId(final String productId);
+    
+    public void setVariantId(final Long variantId);
+    
+    public void setSku(final String sku);
+    
+    public void setQuantity(final Double quantity);
+    
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
+    
+    public void setExternalPrice(final Money externalPrice);
+    
+    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
+    
+    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-   public static StagedOrderAddLineItemActionImpl of(final StagedOrderAddLineItemAction template) {
-      StagedOrderAddLineItemActionImpl instance = new StagedOrderAddLineItemActionImpl();
-      instance.setCustom(template.getCustom());
-      instance.setDistributionChannel(template.getDistributionChannel());
-      instance.setExternalTaxRate(template.getExternalTaxRate());
-      instance.setProductId(template.getProductId());
-      instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
-      instance.setQuantity(template.getQuantity());
-      instance.setSupplyChannel(template.getSupplyChannel());
-      instance.setExternalPrice(template.getExternalPrice());
-      instance.setExternalTotalPrice(template.getExternalTotalPrice());
-      instance.setShippingDetails(template.getShippingDetails());
-      return instance;
-   }
+    public static StagedOrderAddLineItemActionImpl of(){
+        return new StagedOrderAddLineItemActionImpl();
+    }
+    
+
+    public static StagedOrderAddLineItemActionImpl of(final StagedOrderAddLineItemAction template) {
+        StagedOrderAddLineItemActionImpl instance = new StagedOrderAddLineItemActionImpl();
+        instance.setCustom(template.getCustom());
+        instance.setDistributionChannel(template.getDistributionChannel());
+        instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setProductId(template.getProductId());
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setQuantity(template.getQuantity());
+        instance.setSupplyChannel(template.getSupplyChannel());
+        instance.setExternalPrice(template.getExternalPrice());
+        instance.setExternalTotalPrice(template.getExternalTotalPrice());
+        instance.setShippingDetails(template.getShippingDetails());
+        return instance;
+    }
 
 }

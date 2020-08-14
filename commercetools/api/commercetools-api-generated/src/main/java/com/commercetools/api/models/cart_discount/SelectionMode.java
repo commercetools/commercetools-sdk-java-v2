@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum SelectionMode {
 
-  
-  @JsonProperty("Cheapest")
-  CHEAPEST("Cheapest"),
-  
-  
-  @JsonProperty("MostExpensive")
-  MOST_EXPENSIVE("MostExpensive");
+    
+    @JsonProperty("Cheapest")
+    CHEAPEST("Cheapest"),
+    
+    
+    @JsonProperty("MostExpensive")
+    MOST_EXPENSIVE("MostExpensive");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private SelectionMode(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private SelectionMode(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<SelectionMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<SelectionMode> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySlugChangedMessagePayloadImpl.class)
 public interface CategorySlugChangedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("slug")
-   public LocalizedString getSlug();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("slug")
+    public LocalizedString getSlug();
 
-   public void setSlug(final LocalizedString slug);
-   
-   public static CategorySlugChangedMessagePayloadImpl of(){
-      return new CategorySlugChangedMessagePayloadImpl();
-   }
-   
+    public void setSlug(final LocalizedString slug);
 
-   public static CategorySlugChangedMessagePayloadImpl of(final CategorySlugChangedMessagePayload template) {
-      CategorySlugChangedMessagePayloadImpl instance = new CategorySlugChangedMessagePayloadImpl();
-      instance.setSlug(template.getSlug());
-      return instance;
-   }
+    public static CategorySlugChangedMessagePayloadImpl of(){
+        return new CategorySlugChangedMessagePayloadImpl();
+    }
+    
+
+    public static CategorySlugChangedMessagePayloadImpl of(final CategorySlugChangedMessagePayload template) {
+        CategorySlugChangedMessagePayloadImpl instance = new CategorySlugChangedMessagePayloadImpl();
+        instance.setSlug(template.getSlug());
+        return instance;
+    }
 
 }

@@ -24,47 +24,47 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductPublishedMessageImpl.class)
 public interface ProductPublishedMessage extends Message {
 
-   
-   @NotNull
-   @JsonProperty("removedImageUrls")
-   public List<JsonNode> getRemovedImageUrls();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("productProjection")
-   public ProductProjection getProductProjection();
-   
-   @NotNull
-   @JsonProperty("scope")
-   public ProductPublishScope getScope();
+    
+    @NotNull
+    @JsonProperty("removedImageUrls")
+    public List<JsonNode> getRemovedImageUrls();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("productProjection")
+    public ProductProjection getProductProjection();
+    
+    @NotNull
+    @JsonProperty("scope")
+    public ProductPublishScope getScope();
 
-   public void setRemovedImageUrls(final List<JsonNode> removedImageUrls);
-   
-   public void setProductProjection(final ProductProjection productProjection);
-   
-   public void setScope(final ProductPublishScope scope);
-   
-   public static ProductPublishedMessageImpl of(){
-      return new ProductPublishedMessageImpl();
-   }
-   
+    public void setRemovedImageUrls(final List<JsonNode> removedImageUrls);
+    
+    public void setProductProjection(final ProductProjection productProjection);
+    
+    public void setScope(final ProductPublishScope scope);
 
-   public static ProductPublishedMessageImpl of(final ProductPublishedMessage template) {
-      ProductPublishedMessageImpl instance = new ProductPublishedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setRemovedImageUrls(template.getRemovedImageUrls());
-      instance.setProductProjection(template.getProductProjection());
-      instance.setScope(template.getScope());
-      return instance;
-   }
+    public static ProductPublishedMessageImpl of(){
+        return new ProductPublishedMessageImpl();
+    }
+    
+
+    public static ProductPublishedMessageImpl of(final ProductPublishedMessage template) {
+        ProductPublishedMessageImpl instance = new ProductPublishedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setRemovedImageUrls(template.getRemovedImageUrls());
+        instance.setProductProjection(template.getProductProjection());
+        instance.setScope(template.getScope());
+        return instance;
+    }
 
 }

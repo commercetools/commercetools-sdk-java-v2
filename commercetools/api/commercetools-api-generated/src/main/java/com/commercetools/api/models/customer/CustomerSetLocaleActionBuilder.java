@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CustomerSetLocaleActionBuilder {
-   
-   @Nullable
-   private String locale;
-   
-   public CustomerSetLocaleActionBuilder locale(@Nullable final String locale) {
-      this.locale = locale;
-      return this;
-   }
-   
-   @Nullable
-   public String getLocale(){
-      return this.locale;
-   }
 
-   public CustomerSetLocaleAction build() {
-       return new CustomerSetLocaleActionImpl(locale);
-   }
-   
-   public static CustomerSetLocaleActionBuilder of() {
-      return new CustomerSetLocaleActionBuilder();
-   }
-   
-   public static CustomerSetLocaleActionBuilder of(final CustomerSetLocaleAction template) {
-      CustomerSetLocaleActionBuilder builder = new CustomerSetLocaleActionBuilder();
-      builder.locale = template.getLocale();
-      return builder;
-   }
-   
+    @Nullable
+    private String locale;
+
+    public CustomerSetLocaleActionBuilder locale(@Nullable final String locale) {
+        this.locale = locale;
+        return this;
+    }
+
+    @Nullable
+    public String getLocale(){
+        return this.locale;
+    }
+
+    public CustomerSetLocaleAction build() {
+        return new CustomerSetLocaleActionImpl(locale);
+    }
+
+    public static CustomerSetLocaleActionBuilder of() {
+        return new CustomerSetLocaleActionBuilder();
+    }
+
+    public static CustomerSetLocaleActionBuilder of(final CustomerSetLocaleAction template) {
+        CustomerSetLocaleActionBuilder builder = new CustomerSetLocaleActionBuilder();
+        builder.locale = template.getLocale();
+        return builder;
+    }
+
 }

@@ -13,29 +13,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum FacetTypes {
 
-  
-  @JsonProperty("terms")
-  TERMS("terms"),
-  
-  
-  @JsonProperty("range")
-  RANGE("range"),
-  
-  
-  @JsonProperty("filter")
-  FILTER("filter");
+    
+    @JsonProperty("terms")
+    TERMS("terms"),
+    
+    
+    @JsonProperty("range")
+    RANGE("range"),
+    
+    
+    @JsonProperty("filter")
+    FILTER("filter");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private FacetTypes(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private FacetTypes(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<FacetTypes> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<FacetTypes> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

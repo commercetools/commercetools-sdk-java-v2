@@ -22,83 +22,83 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers {
 
-   private String key;
-   
-   private String externalId;
-   
-   private String orderNumber;
-   
-   private String customerNumber;
-   
-   private String sku;
-   
-   private com.commercetools.api.models.common.LocalizedString slug;
+    private String key;
+    
+    private String externalId;
+    
+    private String orderNumber;
+    
+    private String customerNumber;
+    
+    private String sku;
+    
+    private com.commercetools.api.models.common.LocalizedString slug;
 
-   @JsonCreator
-   UserProvidedIdentifiersImpl(@JsonProperty("key") final String key, @JsonProperty("externalId") final String externalId, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("sku") final String sku, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
-      this.key = key;
-      this.externalId = externalId;
-      this.orderNumber = orderNumber;
-      this.customerNumber = customerNumber;
-      this.sku = sku;
-      this.slug = slug;
-   }
-   public UserProvidedIdentifiersImpl() {
-      
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
-   
-   
-   public String getExternalId(){
-      return this.externalId;
-   }
-   
-   
-   public String getOrderNumber(){
-      return this.orderNumber;
-   }
-   
-   
-   public String getCustomerNumber(){
-      return this.customerNumber;
-   }
-   
-   
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getSlug(){
-      return this.slug;
-   }
+    @JsonCreator
+    UserProvidedIdentifiersImpl(@JsonProperty("key") final String key, @JsonProperty("externalId") final String externalId, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("sku") final String sku, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
+        this.key = key;
+        this.externalId = externalId;
+        this.orderNumber = orderNumber;
+        this.customerNumber = customerNumber;
+        this.sku = sku;
+        this.slug = slug;
+    }
+    public UserProvidedIdentifiersImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setExternalId(final String externalId){
-      this.externalId = externalId;
-   }
-   
-   public void setOrderNumber(final String orderNumber){
-      this.orderNumber = orderNumber;
-   }
-   
-   public void setCustomerNumber(final String customerNumber){
-      this.customerNumber = customerNumber;
-   }
-   
-   public void setSku(final String sku){
-      this.sku = sku;
-   }
-   
-   public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
-      this.slug = slug;
-   }
+    
+    public String getKey(){
+        return this.key;
+    }
+    
+    
+    public String getExternalId(){
+        return this.externalId;
+    }
+    
+    
+    public String getOrderNumber(){
+        return this.orderNumber;
+    }
+    
+    
+    public String getCustomerNumber(){
+        return this.customerNumber;
+    }
+    
+    
+    public String getSku(){
+        return this.sku;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
+        return this.slug;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
+    public void setExternalId(final String externalId){
+        this.externalId = externalId;
+    }
+    
+    public void setOrderNumber(final String orderNumber){
+        this.orderNumber = orderNumber;
+    }
+    
+    public void setCustomerNumber(final String customerNumber){
+        this.customerNumber = customerNumber;
+    }
+    
+    public void setSku(final String sku){
+        this.sku = sku;
+    }
+    
+    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
+        this.slug = slug;
+    }
 
 }

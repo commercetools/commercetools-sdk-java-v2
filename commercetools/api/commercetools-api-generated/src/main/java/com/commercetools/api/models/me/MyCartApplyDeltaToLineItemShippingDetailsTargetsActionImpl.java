@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl implements MyCartApplyDeltaToLineItemShippingDetailsTargetsAction {
 
-   private String action;
-   
-   private String lineItemId;
-   
-   private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
+    private String action;
+    
+    private String lineItemId;
+    
+    private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
-   @JsonCreator
-   MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("targetsDelta") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
-      this.lineItemId = lineItemId;
-      this.targetsDelta = targetsDelta;
-      this.action = "applyDeltaToLineItemShippingDetailsTargets";
-   }
-   public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta(){
-      return this.targetsDelta;
-   }
+    @JsonCreator
+    MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("targetsDelta") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
+        this.lineItemId = lineItemId;
+        this.targetsDelta = targetsDelta;
+        this.action = "applyDeltaToLineItemShippingDetailsTargets";
+    }
+    public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl() {
+       
+    }
 
-   public void setLineItemId(final String lineItemId){
-      this.lineItemId = lineItemId;
-   }
-   
-   public void setTargetsDelta(final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta){
-      this.targetsDelta = targetsDelta;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLineItemId(){
+        return this.lineItemId;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta(){
+        return this.targetsDelta;
+    }
+
+    public void setLineItemId(final String lineItemId){
+        this.lineItemId = lineItemId;
+    }
+    
+    public void setTargetsDelta(final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta){
+        this.targetsDelta = targetsDelta;
+    }
 
 }

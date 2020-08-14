@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeChangeLocalizedEnumValueOrderAction {
 
-   private String action;
-   
-   private String fieldName;
-   
-   private java.util.List<String> keys;
+    private String action;
+    
+    private String fieldName;
+    
+    private java.util.List<String> keys;
 
-   @JsonCreator
-   TypeChangeLocalizedEnumValueOrderActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("keys") final java.util.List<String> keys) {
-      this.fieldName = fieldName;
-      this.keys = keys;
-      this.action = "changeLocalizedEnumValueOrder";
-   }
-   public TypeChangeLocalizedEnumValueOrderActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getFieldName(){
-      return this.fieldName;
-   }
-   
-   
-   public java.util.List<String> getKeys(){
-      return this.keys;
-   }
+    @JsonCreator
+    TypeChangeLocalizedEnumValueOrderActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("keys") final java.util.List<String> keys) {
+        this.fieldName = fieldName;
+        this.keys = keys;
+        this.action = "changeLocalizedEnumValueOrder";
+    }
+    public TypeChangeLocalizedEnumValueOrderActionImpl() {
+       
+    }
 
-   public void setFieldName(final String fieldName){
-      this.fieldName = fieldName;
-   }
-   
-   public void setKeys(final java.util.List<String> keys){
-      this.keys = keys;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getFieldName(){
+        return this.fieldName;
+    }
+    
+    
+    public java.util.List<String> getKeys(){
+        return this.keys;
+    }
+
+    public void setFieldName(final String fieldName){
+        this.fieldName = fieldName;
+    }
+    
+    public void setKeys(final java.util.List<String> keys){
+        this.keys = keys;
+    }
 
 }

@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl implements CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction {
 
-   private String action;
-   
-   private String customLineItemId;
-   
-   private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
+    private String action;
+    
+    private String customLineItemId;
+    
+    private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
-   @JsonCreator
-   CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("targetsDelta") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
-      this.customLineItemId = customLineItemId;
-      this.targetsDelta = targetsDelta;
-      this.action = "applyDeltaToCustomLineItemShippingDetailsTargets";
-   }
-   public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getCustomLineItemId(){
-      return this.customLineItemId;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta(){
-      return this.targetsDelta;
-   }
+    @JsonCreator
+    CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("targetsDelta") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
+        this.customLineItemId = customLineItemId;
+        this.targetsDelta = targetsDelta;
+        this.action = "applyDeltaToCustomLineItemShippingDetailsTargets";
+    }
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl() {
+       
+    }
 
-   public void setCustomLineItemId(final String customLineItemId){
-      this.customLineItemId = customLineItemId;
-   }
-   
-   public void setTargetsDelta(final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta){
-      this.targetsDelta = targetsDelta;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getCustomLineItemId(){
+        return this.customLineItemId;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta(){
+        return this.targetsDelta;
+    }
+
+    public void setCustomLineItemId(final String customLineItemId){
+        this.customLineItemId = customLineItemId;
+    }
+    
+    public void setTargetsDelta(final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta){
+        this.targetsDelta = targetsDelta;
+    }
 
 }

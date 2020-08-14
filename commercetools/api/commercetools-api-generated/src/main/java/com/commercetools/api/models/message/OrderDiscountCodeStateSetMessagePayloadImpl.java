@@ -24,55 +24,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscountCodeStateSetMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
-   
-   private com.commercetools.api.models.cart.DiscountCodeState state;
-   
-   private com.commercetools.api.models.cart.DiscountCodeState oldState;
+    private String type;
+    
+    private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
+    
+    private com.commercetools.api.models.cart.DiscountCodeState state;
+    
+    private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
-   @JsonCreator
-   OrderDiscountCodeStateSetMessagePayloadImpl(@JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode, @JsonProperty("state") final com.commercetools.api.models.cart.DiscountCodeState state, @JsonProperty("oldState") final com.commercetools.api.models.cart.DiscountCodeState oldState) {
-      this.discountCode = discountCode;
-      this.state = state;
-      this.oldState = oldState;
-      this.type = "OrderDiscountCodeStateSet";
-   }
-   public OrderDiscountCodeStateSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
-      return this.discountCode;
-   }
-   
-   
-   public com.commercetools.api.models.cart.DiscountCodeState getState(){
-      return this.state;
-   }
-   
-   
-   public com.commercetools.api.models.cart.DiscountCodeState getOldState(){
-      return this.oldState;
-   }
+    @JsonCreator
+    OrderDiscountCodeStateSetMessagePayloadImpl(@JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode, @JsonProperty("state") final com.commercetools.api.models.cart.DiscountCodeState state, @JsonProperty("oldState") final com.commercetools.api.models.cart.DiscountCodeState oldState) {
+        this.discountCode = discountCode;
+        this.state = state;
+        this.oldState = oldState;
+        this.type = "OrderDiscountCodeStateSet";
+    }
+    public OrderDiscountCodeStateSetMessagePayloadImpl() {
+       
+    }
 
-   public void setDiscountCode(final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode){
-      this.discountCode = discountCode;
-   }
-   
-   public void setState(final com.commercetools.api.models.cart.DiscountCodeState state){
-      this.state = state;
-   }
-   
-   public void setOldState(final com.commercetools.api.models.cart.DiscountCodeState oldState){
-      this.oldState = oldState;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
+        return this.discountCode;
+    }
+    
+    
+    public com.commercetools.api.models.cart.DiscountCodeState getState(){
+        return this.state;
+    }
+    
+    
+    public com.commercetools.api.models.cart.DiscountCodeState getOldState(){
+        return this.oldState;
+    }
+
+    public void setDiscountCode(final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode){
+        this.discountCode = discountCode;
+    }
+    
+    public void setState(final com.commercetools.api.models.cart.DiscountCodeState state){
+        this.state = state;
+    }
+    
+    public void setOldState(final com.commercetools.api.models.cart.DiscountCodeState oldState){
+        this.oldState = oldState;
+    }
 
 }

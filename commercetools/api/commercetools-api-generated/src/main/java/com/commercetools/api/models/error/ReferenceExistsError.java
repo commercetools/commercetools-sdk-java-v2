@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ReferenceExistsErrorImpl.class)
 public interface ReferenceExistsError extends ErrorObject {
 
-   
-   
-   @JsonProperty("referencedBy")
-   public ReferenceTypeId getReferencedBy();
+    
+    
+    @JsonProperty("referencedBy")
+    public ReferenceTypeId getReferencedBy();
 
-   public void setReferencedBy(final ReferenceTypeId referencedBy);
-   
-   public static ReferenceExistsErrorImpl of(){
-      return new ReferenceExistsErrorImpl();
-   }
-   
+    public void setReferencedBy(final ReferenceTypeId referencedBy);
 
-   public static ReferenceExistsErrorImpl of(final ReferenceExistsError template) {
-      ReferenceExistsErrorImpl instance = new ReferenceExistsErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setReferencedBy(template.getReferencedBy());
-      return instance;
-   }
+    public static ReferenceExistsErrorImpl of(){
+        return new ReferenceExistsErrorImpl();
+    }
+    
+
+    public static ReferenceExistsErrorImpl of(final ReferenceExistsError template) {
+        ReferenceExistsErrorImpl instance = new ReferenceExistsErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setReferencedBy(template.getReferencedBy());
+        return instance;
+    }
 
 }

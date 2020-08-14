@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountValueRelativeDraftImpl.class)
 public interface CartDiscountValueRelativeDraft extends CartDiscountValueDraft {
 
-   
-   @NotNull
-   @JsonProperty("permyriad")
-   public Long getPermyriad();
+    
+    @NotNull
+    @JsonProperty("permyriad")
+    public Long getPermyriad();
 
-   public void setPermyriad(final Long permyriad);
-   
-   public static CartDiscountValueRelativeDraftImpl of(){
-      return new CartDiscountValueRelativeDraftImpl();
-   }
-   
+    public void setPermyriad(final Long permyriad);
 
-   public static CartDiscountValueRelativeDraftImpl of(final CartDiscountValueRelativeDraft template) {
-      CartDiscountValueRelativeDraftImpl instance = new CartDiscountValueRelativeDraftImpl();
-      instance.setPermyriad(template.getPermyriad());
-      return instance;
-   }
+    public static CartDiscountValueRelativeDraftImpl of(){
+        return new CartDiscountValueRelativeDraftImpl();
+    }
+    
+
+    public static CartDiscountValueRelativeDraftImpl of(final CartDiscountValueRelativeDraft template) {
+        CartDiscountValueRelativeDraftImpl instance = new CartDiscountValueRelativeDraftImpl();
+        instance.setPermyriad(template.getPermyriad());
+        return instance;
+    }
 
 }

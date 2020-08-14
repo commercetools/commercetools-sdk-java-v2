@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountChangeTargetActionImpl.class)
 public interface CartDiscountChangeTargetAction extends CartDiscountUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("target")
-   public CartDiscountTarget getTarget();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("target")
+    public CartDiscountTarget getTarget();
 
-   public void setTarget(final CartDiscountTarget target);
-   
-   public static CartDiscountChangeTargetActionImpl of(){
-      return new CartDiscountChangeTargetActionImpl();
-   }
-   
+    public void setTarget(final CartDiscountTarget target);
 
-   public static CartDiscountChangeTargetActionImpl of(final CartDiscountChangeTargetAction template) {
-      CartDiscountChangeTargetActionImpl instance = new CartDiscountChangeTargetActionImpl();
-      instance.setTarget(template.getTarget());
-      return instance;
-   }
+    public static CartDiscountChangeTargetActionImpl of(){
+        return new CartDiscountChangeTargetActionImpl();
+    }
+    
+
+    public static CartDiscountChangeTargetActionImpl of(final CartDiscountChangeTargetAction template) {
+        CartDiscountChangeTargetActionImpl instance = new CartDiscountChangeTargetActionImpl();
+        instance.setTarget(template.getTarget());
+        return instance;
+    }
 
 }

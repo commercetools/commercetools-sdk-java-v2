@@ -34,192 +34,192 @@ import java.io.IOException;
 @JsonDeserialize(as = LineItemImpl.class)
 public interface LineItem  {
 
-   /**
-   *  <p>The unique ID of this LineItem.</p>
-   */
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
-   
-   @NotNull
-   @JsonProperty("productId")
-   public String getProductId();
-   /**
-   *  <p>The product name.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
-   /**
-   *  <p>The slug of a product is inserted on the fly.
-   *  It is always up-to-date and can therefore be used to link to the product detail page of the product.
-   *  It is empty if the product has been deleted.
-   *  The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>
-   */
-   @Valid
-   @JsonProperty("productSlug")
-   public LocalizedString getProductSlug();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("productType")
-   public ProductTypeReference getProductType();
-   /**
-   *  <p>The variant data is saved when the variant is added to the cart, and not updated automatically.
-   *  It can manually be updated with the Recalculate update action.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("variant")
-   public ProductVariant getVariant();
-   /**
-   *  <p>The price of a line item is selected from the prices array of the product variant.
-   *  If the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("price")
-   public Price getPrice();
-   /**
-   *  <p>Set once the <code>taxRate</code> is set.</p>
-   */
-   @Valid
-   @JsonProperty("taxedPrice")
-   public TaxedItemPrice getTaxedPrice();
-   /**
-   *  <p>The total price of this line item.
-   *  If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>.
-   *  Otherwise the total price is the product price multiplied by the <code>quantity</code>.
-   *  <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("totalPrice")
-   public TypedMoney getTotalPrice();
-   /**
-   *  <p>The amount of a LineItem in the cart.
-   *  Must be a positive integer.</p>
-   */
-   @NotNull
-   @JsonProperty("quantity")
-   public Long getQuantity();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("state")
-   public List<ItemState> getState();
-   /**
-   *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set.
-   *  For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
-   */
-   @Valid
-   @JsonProperty("taxRate")
-   public TaxRate getTaxRate();
-   /**
-   *  <p>The supply channel identifies the inventory entries that should be reserved.
-   *  The channel has
-   *  the role InventorySupply.</p>
-   */
-   @Valid
-   @JsonProperty("supplyChannel")
-   public ChannelReference getSupplyChannel();
-   /**
-   *  <p>The distribution channel is used to select a ProductPrice.
-   *  The channel has the role ProductDistribution.</p>
-   */
-   @Valid
-   @JsonProperty("distributionChannel")
-   public ChannelReference getDistributionChannel();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("discountedPricePerQuantity")
-   public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
-   
-   @NotNull
-   @JsonProperty("priceMode")
-   public LineItemPriceMode getPriceMode();
-   
-   @NotNull
-   @JsonProperty("lineItemMode")
-   public LineItemMode getLineItemMode();
-   
-   @Valid
-   @JsonProperty("custom")
-   public CustomFields getCustom();
-   /**
-   *  <p>Container for line item specific address(es).</p>
-   */
-   @Valid
-   @JsonProperty("shippingDetails")
-   public ItemShippingDetails getShippingDetails();
+    /**
+    *  <p>The unique ID of this LineItem.</p>
+    */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+    
+    @NotNull
+    @JsonProperty("productId")
+    public String getProductId();
+    /**
+    *  <p>The product name.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
+    /**
+    *  <p>The slug of a product is inserted on the fly.
+    *  It is always up-to-date and can therefore be used to link to the product detail page of the product.
+    *  It is empty if the product has been deleted.
+    *  The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>
+    */
+    @Valid
+    @JsonProperty("productSlug")
+    public LocalizedString getProductSlug();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("productType")
+    public ProductTypeReference getProductType();
+    /**
+    *  <p>The variant data is saved when the variant is added to the cart, and not updated automatically.
+    *  It can manually be updated with the Recalculate update action.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("variant")
+    public ProductVariant getVariant();
+    /**
+    *  <p>The price of a line item is selected from the prices array of the product variant.
+    *  If the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("price")
+    public Price getPrice();
+    /**
+    *  <p>Set once the <code>taxRate</code> is set.</p>
+    */
+    @Valid
+    @JsonProperty("taxedPrice")
+    public TaxedItemPrice getTaxedPrice();
+    /**
+    *  <p>The total price of this line item.
+    *  If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>.
+    *  Otherwise the total price is the product price multiplied by the <code>quantity</code>.
+    *  <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("totalPrice")
+    public TypedMoney getTotalPrice();
+    /**
+    *  <p>The amount of a LineItem in the cart.
+    *  Must be a positive integer.</p>
+    */
+    @NotNull
+    @JsonProperty("quantity")
+    public Long getQuantity();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("state")
+    public List<ItemState> getState();
+    /**
+    *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set.
+    *  For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+    */
+    @Valid
+    @JsonProperty("taxRate")
+    public TaxRate getTaxRate();
+    /**
+    *  <p>The supply channel identifies the inventory entries that should be reserved.
+    *  The channel has
+    *  the role InventorySupply.</p>
+    */
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelReference getSupplyChannel();
+    /**
+    *  <p>The distribution channel is used to select a ProductPrice.
+    *  The channel has the role ProductDistribution.</p>
+    */
+    @Valid
+    @JsonProperty("distributionChannel")
+    public ChannelReference getDistributionChannel();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("discountedPricePerQuantity")
+    public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
+    
+    @NotNull
+    @JsonProperty("priceMode")
+    public LineItemPriceMode getPriceMode();
+    
+    @NotNull
+    @JsonProperty("lineItemMode")
+    public LineItemMode getLineItemMode();
+    
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+    /**
+    *  <p>Container for line item specific address(es).</p>
+    */
+    @Valid
+    @JsonProperty("shippingDetails")
+    public ItemShippingDetails getShippingDetails();
 
-   public void setId(final String id);
-   
-   public void setProductId(final String productId);
-   
-   public void setName(final LocalizedString name);
-   
-   public void setProductSlug(final LocalizedString productSlug);
-   
-   public void setProductType(final ProductTypeReference productType);
-   
-   public void setVariant(final ProductVariant variant);
-   
-   public void setPrice(final Price price);
-   
-   public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-   
-   public void setTotalPrice(final TypedMoney totalPrice);
-   
-   public void setQuantity(final Long quantity);
-   
-   public void setState(final List<ItemState> state);
-   
-   public void setTaxRate(final TaxRate taxRate);
-   
-   public void setSupplyChannel(final ChannelReference supplyChannel);
-   
-   public void setDistributionChannel(final ChannelReference distributionChannel);
-   
-   public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
-   
-   public void setPriceMode(final LineItemPriceMode priceMode);
-   
-   public void setLineItemMode(final LineItemMode lineItemMode);
-   
-   public void setCustom(final CustomFields custom);
-   
-   public void setShippingDetails(final ItemShippingDetails shippingDetails);
-   
-   public static LineItemImpl of(){
-      return new LineItemImpl();
-   }
-   
+    public void setId(final String id);
+    
+    public void setProductId(final String productId);
+    
+    public void setName(final LocalizedString name);
+    
+    public void setProductSlug(final LocalizedString productSlug);
+    
+    public void setProductType(final ProductTypeReference productType);
+    
+    public void setVariant(final ProductVariant variant);
+    
+    public void setPrice(final Price price);
+    
+    public void setTaxedPrice(final TaxedItemPrice taxedPrice);
+    
+    public void setTotalPrice(final TypedMoney totalPrice);
+    
+    public void setQuantity(final Long quantity);
+    
+    public void setState(final List<ItemState> state);
+    
+    public void setTaxRate(final TaxRate taxRate);
+    
+    public void setSupplyChannel(final ChannelReference supplyChannel);
+    
+    public void setDistributionChannel(final ChannelReference distributionChannel);
+    
+    public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
+    
+    public void setPriceMode(final LineItemPriceMode priceMode);
+    
+    public void setLineItemMode(final LineItemMode lineItemMode);
+    
+    public void setCustom(final CustomFields custom);
+    
+    public void setShippingDetails(final ItemShippingDetails shippingDetails);
 
-   public static LineItemImpl of(final LineItem template) {
-      LineItemImpl instance = new LineItemImpl();
-      instance.setId(template.getId());
-      instance.setProductId(template.getProductId());
-      instance.setName(template.getName());
-      instance.setProductSlug(template.getProductSlug());
-      instance.setProductType(template.getProductType());
-      instance.setVariant(template.getVariant());
-      instance.setPrice(template.getPrice());
-      instance.setTaxedPrice(template.getTaxedPrice());
-      instance.setTotalPrice(template.getTotalPrice());
-      instance.setQuantity(template.getQuantity());
-      instance.setState(template.getState());
-      instance.setTaxRate(template.getTaxRate());
-      instance.setSupplyChannel(template.getSupplyChannel());
-      instance.setDistributionChannel(template.getDistributionChannel());
-      instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
-      instance.setPriceMode(template.getPriceMode());
-      instance.setLineItemMode(template.getLineItemMode());
-      instance.setCustom(template.getCustom());
-      instance.setShippingDetails(template.getShippingDetails());
-      return instance;
-   }
+    public static LineItemImpl of(){
+        return new LineItemImpl();
+    }
+    
+
+    public static LineItemImpl of(final LineItem template) {
+        LineItemImpl instance = new LineItemImpl();
+        instance.setId(template.getId());
+        instance.setProductId(template.getProductId());
+        instance.setName(template.getName());
+        instance.setProductSlug(template.getProductSlug());
+        instance.setProductType(template.getProductType());
+        instance.setVariant(template.getVariant());
+        instance.setPrice(template.getPrice());
+        instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setTotalPrice(template.getTotalPrice());
+        instance.setQuantity(template.getQuantity());
+        instance.setState(template.getState());
+        instance.setTaxRate(template.getTaxRate());
+        instance.setSupplyChannel(template.getSupplyChannel());
+        instance.setDistributionChannel(template.getDistributionChannel());
+        instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
+        instance.setPriceMode(template.getPriceMode());
+        instance.setLineItemMode(template.getLineItemMode());
+        instance.setCustom(template.getCustom());
+        instance.setShippingDetails(template.getShippingDetails());
+        return instance;
+    }
 
 }

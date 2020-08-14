@@ -13,29 +13,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum LineItemPriceMode {
 
-  
-  @JsonProperty("Platform")
-  PLATFORM("Platform"),
-  
-  
-  @JsonProperty("ExternalTotal")
-  EXTERNAL_TOTAL("ExternalTotal"),
-  
-  
-  @JsonProperty("ExternalPrice")
-  EXTERNAL_PRICE("ExternalPrice");
+    
+    @JsonProperty("Platform")
+    PLATFORM("Platform"),
+    
+    
+    @JsonProperty("ExternalTotal")
+    EXTERNAL_TOTAL("ExternalTotal"),
+    
+    
+    @JsonProperty("ExternalPrice")
+    EXTERNAL_PRICE("ExternalPrice");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private LineItemPriceMode(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private LineItemPriceMode(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<LineItemPriceMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<LineItemPriceMode> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

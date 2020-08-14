@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderChangeOrderStateActionImpl implements StagedOrderChangeOrderStateAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.order.OrderState orderState;
+    private String action;
+    
+    private com.commercetools.api.models.order.OrderState orderState;
 
-   @JsonCreator
-   StagedOrderChangeOrderStateActionImpl(@JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState) {
-      this.orderState = orderState;
-      this.action = "changeOrderState";
-   }
-   public StagedOrderChangeOrderStateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.order.OrderState getOrderState(){
-      return this.orderState;
-   }
+    @JsonCreator
+    StagedOrderChangeOrderStateActionImpl(@JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState) {
+        this.orderState = orderState;
+        this.action = "changeOrderState";
+    }
+    public StagedOrderChangeOrderStateActionImpl() {
+       
+    }
 
-   public void setOrderState(final com.commercetools.api.models.order.OrderState orderState){
-      this.orderState = orderState;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.order.OrderState getOrderState(){
+        return this.orderState;
+    }
+
+    public void setOrderState(final com.commercetools.api.models.order.OrderState orderState){
+        this.orderState = orderState;
+    }
 
 }

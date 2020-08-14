@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductUnpublishedMessagePayloadImpl implements ProductUnpublishedMessagePayload {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   ProductUnpublishedMessagePayloadImpl() {
-      this.type = "ProductUnpublished";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    ProductUnpublishedMessagePayloadImpl() {
+        this.type = "ProductUnpublished";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

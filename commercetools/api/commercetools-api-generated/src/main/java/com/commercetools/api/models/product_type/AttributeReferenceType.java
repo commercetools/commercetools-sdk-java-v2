@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeReferenceTypeImpl.class)
 public interface AttributeReferenceType extends AttributeType {
 
-   
-   @NotNull
-   @JsonProperty("referenceTypeId")
-   public ReferenceTypeId getReferenceTypeId();
+    
+    @NotNull
+    @JsonProperty("referenceTypeId")
+    public ReferenceTypeId getReferenceTypeId();
 
-   public void setReferenceTypeId(final ReferenceTypeId referenceTypeId);
-   
-   public static AttributeReferenceTypeImpl of(){
-      return new AttributeReferenceTypeImpl();
-   }
-   
+    public void setReferenceTypeId(final ReferenceTypeId referenceTypeId);
 
-   public static AttributeReferenceTypeImpl of(final AttributeReferenceType template) {
-      AttributeReferenceTypeImpl instance = new AttributeReferenceTypeImpl();
-      instance.setReferenceTypeId(template.getReferenceTypeId());
-      return instance;
-   }
+    public static AttributeReferenceTypeImpl of(){
+        return new AttributeReferenceTypeImpl();
+    }
+    
+
+    public static AttributeReferenceTypeImpl of(final AttributeReferenceType template) {
+        AttributeReferenceTypeImpl instance = new AttributeReferenceTypeImpl();
+        instance.setReferenceTypeId(template.getReferenceTypeId());
+        return instance;
+    }
 
 }

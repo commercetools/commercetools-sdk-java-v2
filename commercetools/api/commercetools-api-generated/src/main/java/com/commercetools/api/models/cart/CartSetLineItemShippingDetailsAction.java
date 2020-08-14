@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetLineItemShippingDetailsActionImpl.class)
 public interface CartSetLineItemShippingDetailsAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @Valid
-   @JsonProperty("shippingDetails")
-   public ItemShippingDetailsDraft getShippingDetails();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @Valid
+    @JsonProperty("shippingDetails")
+    public ItemShippingDetailsDraft getShippingDetails();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
-   
-   public static CartSetLineItemShippingDetailsActionImpl of(){
-      return new CartSetLineItemShippingDetailsActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-   public static CartSetLineItemShippingDetailsActionImpl of(final CartSetLineItemShippingDetailsAction template) {
-      CartSetLineItemShippingDetailsActionImpl instance = new CartSetLineItemShippingDetailsActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setShippingDetails(template.getShippingDetails());
-      return instance;
-   }
+    public static CartSetLineItemShippingDetailsActionImpl of(){
+        return new CartSetLineItemShippingDetailsActionImpl();
+    }
+    
+
+    public static CartSetLineItemShippingDetailsActionImpl of(final CartSetLineItemShippingDetailsAction template) {
+        CartSetLineItemShippingDetailsActionImpl instance = new CartSetLineItemShippingDetailsActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setShippingDetails(template.getShippingDetails());
+        return instance;
+    }
 
 }

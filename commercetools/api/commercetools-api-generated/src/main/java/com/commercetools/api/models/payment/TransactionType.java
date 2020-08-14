@@ -13,37 +13,37 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TransactionType {
 
-  
-  @JsonProperty("Authorization")
-  AUTHORIZATION("Authorization"),
-  
-  
-  @JsonProperty("CancelAuthorization")
-  CANCEL_AUTHORIZATION("CancelAuthorization"),
-  
-  
-  @JsonProperty("Charge")
-  CHARGE("Charge"),
-  
-  
-  @JsonProperty("Refund")
-  REFUND("Refund"),
-  
-  
-  @JsonProperty("Chargeback")
-  CHARGEBACK("Chargeback");
+    
+    @JsonProperty("Authorization")
+    AUTHORIZATION("Authorization"),
+    
+    
+    @JsonProperty("CancelAuthorization")
+    CANCEL_AUTHORIZATION("CancelAuthorization"),
+    
+    
+    @JsonProperty("Charge")
+    CHARGE("Charge"),
+    
+    
+    @JsonProperty("Refund")
+    REFUND("Refund"),
+    
+    
+    @JsonProperty("Chargeback")
+    CHARGEBACK("Chargeback");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private TransactionType(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private TransactionType(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<TransactionType> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<TransactionType> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

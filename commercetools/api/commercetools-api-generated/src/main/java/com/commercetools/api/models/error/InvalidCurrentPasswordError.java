@@ -22,16 +22,16 @@ import java.io.IOException;
 public interface InvalidCurrentPasswordError extends ErrorObject {
 
 
-   
-   public static InvalidCurrentPasswordErrorImpl of(){
-      return new InvalidCurrentPasswordErrorImpl();
-   }
-   
 
-   public static InvalidCurrentPasswordErrorImpl of(final InvalidCurrentPasswordError template) {
-      InvalidCurrentPasswordErrorImpl instance = new InvalidCurrentPasswordErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static InvalidCurrentPasswordErrorImpl of(){
+        return new InvalidCurrentPasswordErrorImpl();
+    }
+    
+
+    public static InvalidCurrentPasswordErrorImpl of(final InvalidCurrentPasswordError template) {
+        InvalidCurrentPasswordErrorImpl instance = new InvalidCurrentPasswordErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

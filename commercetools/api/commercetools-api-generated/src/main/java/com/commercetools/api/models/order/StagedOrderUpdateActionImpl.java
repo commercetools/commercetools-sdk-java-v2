@@ -90,18 +90,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderUpdateActionImpl implements StagedOrderUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   StagedOrderUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    StagedOrderUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

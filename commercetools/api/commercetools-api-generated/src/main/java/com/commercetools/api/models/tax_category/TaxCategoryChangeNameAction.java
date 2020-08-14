@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxCategoryChangeNameActionImpl.class)
 public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
 
-   public void setName(final String name);
-   
-   public static TaxCategoryChangeNameActionImpl of(){
-      return new TaxCategoryChangeNameActionImpl();
-   }
-   
+    public void setName(final String name);
 
-   public static TaxCategoryChangeNameActionImpl of(final TaxCategoryChangeNameAction template) {
-      TaxCategoryChangeNameActionImpl instance = new TaxCategoryChangeNameActionImpl();
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static TaxCategoryChangeNameActionImpl of(){
+        return new TaxCategoryChangeNameActionImpl();
+    }
+    
+
+    public static TaxCategoryChangeNameActionImpl of(final TaxCategoryChangeNameAction template) {
+        TaxCategoryChangeNameActionImpl instance = new TaxCategoryChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

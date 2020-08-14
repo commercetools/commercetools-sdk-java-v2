@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentStatusStateTransitionMessagePayloadImpl.class)
 public interface PaymentStatusStateTransitionMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("state")
-   public StateReference getState();
-   
-   @NotNull
-   @JsonProperty("force")
-   public Boolean getForce();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+    
+    @NotNull
+    @JsonProperty("force")
+    public Boolean getForce();
 
-   public void setState(final StateReference state);
-   
-   public void setForce(final Boolean force);
-   
-   public static PaymentStatusStateTransitionMessagePayloadImpl of(){
-      return new PaymentStatusStateTransitionMessagePayloadImpl();
-   }
-   
+    public void setState(final StateReference state);
+    
+    public void setForce(final Boolean force);
 
-   public static PaymentStatusStateTransitionMessagePayloadImpl of(final PaymentStatusStateTransitionMessagePayload template) {
-      PaymentStatusStateTransitionMessagePayloadImpl instance = new PaymentStatusStateTransitionMessagePayloadImpl();
-      instance.setState(template.getState());
-      instance.setForce(template.getForce());
-      return instance;
-   }
+    public static PaymentStatusStateTransitionMessagePayloadImpl of(){
+        return new PaymentStatusStateTransitionMessagePayloadImpl();
+    }
+    
+
+    public static PaymentStatusStateTransitionMessagePayloadImpl of(final PaymentStatusStateTransitionMessagePayload template) {
+        PaymentStatusStateTransitionMessagePayloadImpl instance = new PaymentStatusStateTransitionMessagePayloadImpl();
+        instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
 
 }

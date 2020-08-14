@@ -24,57 +24,57 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypedMoneyImpl implements TypedMoney {
 
-   private com.commercetools.api.models.common.MoneyType type;
-   
-   private Integer fractionDigits;
-   
-   private Long centAmount;
-   
-   private String currencyCode;
+    private com.commercetools.api.models.common.MoneyType type;
+    
+    private Integer fractionDigits;
+    
+    private Long centAmount;
+    
+    private String currencyCode;
 
-   @JsonCreator
-   TypedMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
-      this.fractionDigits = fractionDigits;
-      this.centAmount = centAmount;
-      this.currencyCode = currencyCode;
-      this.type = MoneyType.findEnumViaJsonName("null").get();
-   }
-   public TypedMoneyImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.MoneyType getType(){
-      return this.type;
-   }
-   
-   
-   public Integer getFractionDigits(){
-      return this.fractionDigits;
-   }
-   
-   
-   public Long getCentAmount(){
-      return this.centAmount;
-   }
-   
-   /**
-   *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-   */
-   public String getCurrencyCode(){
-      return this.currencyCode;
-   }
+    @JsonCreator
+    TypedMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
+        this.fractionDigits = fractionDigits;
+        this.centAmount = centAmount;
+        this.currencyCode = currencyCode;
+        this.type = MoneyType.findEnumViaJsonName("null").get();
+    }
+    public TypedMoneyImpl() {
+       
+    }
 
-   public void setFractionDigits(final Integer fractionDigits){
-      this.fractionDigits = fractionDigits;
-   }
-   
-   public void setCentAmount(final Long centAmount){
-      this.centAmount = centAmount;
-   }
-   
-   public void setCurrencyCode(final String currencyCode){
-      this.currencyCode = currencyCode;
-   }
+    
+    public com.commercetools.api.models.common.MoneyType getType(){
+        return this.type;
+    }
+    
+    
+    public Integer getFractionDigits(){
+        return this.fractionDigits;
+    }
+    
+    
+    public Long getCentAmount(){
+        return this.centAmount;
+    }
+    
+    /**
+    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    */
+    public String getCurrencyCode(){
+        return this.currencyCode;
+    }
+
+    public void setFractionDigits(final Integer fractionDigits){
+        this.fractionDigits = fractionDigits;
+    }
+    
+    public void setCentAmount(final Long centAmount){
+        this.centAmount = centAmount;
+    }
+    
+    public void setCurrencyCode(final String currencyCode){
+        this.currencyCode = currencyCode;
+    }
 
 }

@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentTransactionStateChangedMessagePayloadImpl.class)
 public interface PaymentTransactionStateChangedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("transactionId")
-   public String getTransactionId();
-   
-   @NotNull
-   @JsonProperty("state")
-   public TransactionState getState();
+    
+    @NotNull
+    @JsonProperty("transactionId")
+    public String getTransactionId();
+    
+    @NotNull
+    @JsonProperty("state")
+    public TransactionState getState();
 
-   public void setTransactionId(final String transactionId);
-   
-   public void setState(final TransactionState state);
-   
-   public static PaymentTransactionStateChangedMessagePayloadImpl of(){
-      return new PaymentTransactionStateChangedMessagePayloadImpl();
-   }
-   
+    public void setTransactionId(final String transactionId);
+    
+    public void setState(final TransactionState state);
 
-   public static PaymentTransactionStateChangedMessagePayloadImpl of(final PaymentTransactionStateChangedMessagePayload template) {
-      PaymentTransactionStateChangedMessagePayloadImpl instance = new PaymentTransactionStateChangedMessagePayloadImpl();
-      instance.setTransactionId(template.getTransactionId());
-      instance.setState(template.getState());
-      return instance;
-   }
+    public static PaymentTransactionStateChangedMessagePayloadImpl of(){
+        return new PaymentTransactionStateChangedMessagePayloadImpl();
+    }
+    
+
+    public static PaymentTransactionStateChangedMessagePayloadImpl of(final PaymentTransactionStateChangedMessagePayload template) {
+        PaymentTransactionStateChangedMessagePayloadImpl instance = new PaymentTransactionStateChangedMessagePayloadImpl();
+        instance.setTransactionId(template.getTransactionId());
+        instance.setState(template.getState());
+        return instance;
+    }
 
 }

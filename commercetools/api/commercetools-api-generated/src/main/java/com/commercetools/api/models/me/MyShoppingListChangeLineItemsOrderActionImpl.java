@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListChangeLineItemsOrderActionImpl implements MyShoppingListChangeLineItemsOrderAction {
 
-   private String action;
-   
-   private java.util.List<String> lineItemOrder;
+    private String action;
+    
+    private java.util.List<String> lineItemOrder;
 
-   @JsonCreator
-   MyShoppingListChangeLineItemsOrderActionImpl(@JsonProperty("lineItemOrder") final java.util.List<String> lineItemOrder) {
-      this.lineItemOrder = lineItemOrder;
-      this.action = "changeLineItemsOrder";
-   }
-   public MyShoppingListChangeLineItemsOrderActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<String> getLineItemOrder(){
-      return this.lineItemOrder;
-   }
+    @JsonCreator
+    MyShoppingListChangeLineItemsOrderActionImpl(@JsonProperty("lineItemOrder") final java.util.List<String> lineItemOrder) {
+        this.lineItemOrder = lineItemOrder;
+        this.action = "changeLineItemsOrder";
+    }
+    public MyShoppingListChangeLineItemsOrderActionImpl() {
+       
+    }
 
-   public void setLineItemOrder(final java.util.List<String> lineItemOrder){
-      this.lineItemOrder = lineItemOrder;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<String> getLineItemOrder(){
+        return this.lineItemOrder;
+    }
+
+    public void setLineItemOrder(final java.util.List<String> lineItemOrder){
+        this.lineItemOrder = lineItemOrder;
+    }
 
 }

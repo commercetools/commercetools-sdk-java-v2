@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetLineItemTaxAmountActionImpl.class)
 public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @Valid
-   @JsonProperty("externalTaxAmount")
-   public ExternalTaxAmountDraft getExternalTaxAmount();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @Valid
+    @JsonProperty("externalTaxAmount")
+    public ExternalTaxAmountDraft getExternalTaxAmount();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
-   
-   public static StagedOrderSetLineItemTaxAmountActionImpl of(){
-      return new StagedOrderSetLineItemTaxAmountActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
 
-   public static StagedOrderSetLineItemTaxAmountActionImpl of(final StagedOrderSetLineItemTaxAmountAction template) {
-      StagedOrderSetLineItemTaxAmountActionImpl instance = new StagedOrderSetLineItemTaxAmountActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setExternalTaxAmount(template.getExternalTaxAmount());
-      return instance;
-   }
+    public static StagedOrderSetLineItemTaxAmountActionImpl of(){
+        return new StagedOrderSetLineItemTaxAmountActionImpl();
+    }
+    
+
+    public static StagedOrderSetLineItemTaxAmountActionImpl of(final StagedOrderSetLineItemTaxAmountAction template) {
+        StagedOrderSetLineItemTaxAmountActionImpl instance = new StagedOrderSetLineItemTaxAmountActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setExternalTaxAmount(template.getExternalTaxAmount());
+        return instance;
+    }
 
 }

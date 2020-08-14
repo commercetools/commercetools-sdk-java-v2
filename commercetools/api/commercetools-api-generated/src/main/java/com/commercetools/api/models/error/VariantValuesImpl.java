@@ -23,47 +23,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class VariantValuesImpl implements VariantValues {
 
-   private String sku;
-   
-   private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
-   
-   private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
+    private String sku;
+    
+    private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
+    
+    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
-   @JsonCreator
-   VariantValuesImpl(@JsonProperty("sku") final String sku, @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
-      this.sku = sku;
-      this.prices = prices;
-      this.attributes = attributes;
-   }
-   public VariantValuesImpl() {
-      
-   }
-   
-   
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices(){
-      return this.prices;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes(){
-      return this.attributes;
-   }
+    @JsonCreator
+    VariantValuesImpl(@JsonProperty("sku") final String sku, @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.sku = sku;
+        this.prices = prices;
+        this.attributes = attributes;
+    }
+    public VariantValuesImpl() {
+       
+    }
 
-   public void setSku(final String sku){
-      this.sku = sku;
-   }
-   
-   public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices){
-      this.prices = prices;
-   }
-   
-   public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes){
-      this.attributes = attributes;
-   }
+    
+    public String getSku(){
+        return this.sku;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices(){
+        return this.prices;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes(){
+        return this.attributes;
+    }
+
+    public void setSku(final String sku){
+        this.sku = sku;
+    }
+    
+    public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices){
+        this.prices = prices;
+    }
+    
+    public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes){
+        this.attributes = attributes;
+    }
 
 }

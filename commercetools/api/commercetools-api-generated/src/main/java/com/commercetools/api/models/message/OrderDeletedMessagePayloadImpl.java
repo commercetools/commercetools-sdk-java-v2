@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderDeletedMessagePayloadImpl implements OrderDeletedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.order.Order order;
+    private String type;
+    
+    private com.commercetools.api.models.order.Order order;
 
-   @JsonCreator
-   OrderDeletedMessagePayloadImpl(@JsonProperty("order") final com.commercetools.api.models.order.Order order) {
-      this.order = order;
-      this.type = "OrderDeleted";
-   }
-   public OrderDeletedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.order.Order getOrder(){
-      return this.order;
-   }
+    @JsonCreator
+    OrderDeletedMessagePayloadImpl(@JsonProperty("order") final com.commercetools.api.models.order.Order order) {
+        this.order = order;
+        this.type = "OrderDeleted";
+    }
+    public OrderDeletedMessagePayloadImpl() {
+       
+    }
 
-   public void setOrder(final com.commercetools.api.models.order.Order order){
-      this.order = order;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.order.Order getOrder(){
+        return this.order;
+    }
+
+    public void setOrder(final com.commercetools.api.models.order.Order order){
+        this.order = order;
+    }
 
 }

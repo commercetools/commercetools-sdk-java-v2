@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface AttributeDateTimeType extends AttributeType {
 
 
-   
-   public static AttributeDateTimeTypeImpl of(){
-      return new AttributeDateTimeTypeImpl();
-   }
-   
 
-   public static AttributeDateTimeTypeImpl of(final AttributeDateTimeType template) {
-      AttributeDateTimeTypeImpl instance = new AttributeDateTimeTypeImpl();
-      return instance;
-   }
+    public static AttributeDateTimeTypeImpl of(){
+        return new AttributeDateTimeTypeImpl();
+    }
+    
+
+    public static AttributeDateTimeTypeImpl of(final AttributeDateTimeType template) {
+        AttributeDateTimeTypeImpl instance = new AttributeDateTimeTypeImpl();
+        return instance;
+    }
 
 }

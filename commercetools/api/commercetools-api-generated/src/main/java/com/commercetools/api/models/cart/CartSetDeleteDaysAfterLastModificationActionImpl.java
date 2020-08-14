@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetDeleteDaysAfterLastModificationActionImpl implements CartSetDeleteDaysAfterLastModificationAction {
 
-   private String action;
-   
-   private Integer deleteDaysAfterLastModification;
+    private String action;
+    
+    private Integer deleteDaysAfterLastModification;
 
-   @JsonCreator
-   CartSetDeleteDaysAfterLastModificationActionImpl(@JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification) {
-      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-      this.action = "setDeleteDaysAfterLastModification";
-   }
-   public CartSetDeleteDaysAfterLastModificationActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Integer getDeleteDaysAfterLastModification(){
-      return this.deleteDaysAfterLastModification;
-   }
+    @JsonCreator
+    CartSetDeleteDaysAfterLastModificationActionImpl(@JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification) {
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        this.action = "setDeleteDaysAfterLastModification";
+    }
+    public CartSetDeleteDaysAfterLastModificationActionImpl() {
+       
+    }
 
-   public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification){
-      this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Integer getDeleteDaysAfterLastModification(){
+        return this.deleteDaysAfterLastModification;
+    }
+
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification){
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+    }
 
 }

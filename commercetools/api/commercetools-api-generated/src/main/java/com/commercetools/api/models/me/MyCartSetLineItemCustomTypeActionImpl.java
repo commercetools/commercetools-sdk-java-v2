@@ -24,55 +24,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLineItemCustomTypeAction {
 
-   private String action;
-   
-   private String lineItemId;
-   
-   private com.commercetools.api.models.type.TypeResourceIdentifier type;
-   
-   private com.commercetools.api.models.type.FieldContainer fields;
+    private String action;
+    
+    private String lineItemId;
+    
+    private com.commercetools.api.models.type.TypeResourceIdentifier type;
+    
+    private com.commercetools.api.models.type.FieldContainer fields;
 
-   @JsonCreator
-   MyCartSetLineItemCustomTypeActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
-      this.lineItemId = lineItemId;
-      this.type = type;
-      this.fields = fields;
-      this.action = "setLineItemCustomType";
-   }
-   public MyCartSetLineItemCustomTypeActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-   
-   
-   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.type.FieldContainer getFields(){
-      return this.fields;
-   }
+    @JsonCreator
+    MyCartSetLineItemCustomTypeActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
+        this.lineItemId = lineItemId;
+        this.type = type;
+        this.fields = fields;
+        this.action = "setLineItemCustomType";
+    }
+    public MyCartSetLineItemCustomTypeActionImpl() {
+       
+    }
 
-   public void setLineItemId(final String lineItemId){
-      this.lineItemId = lineItemId;
-   }
-   
-   public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
-      this.type = type;
-   }
-   
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLineItemId(){
+        return this.lineItemId;
+    }
+    
+    
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.type.FieldContainer getFields(){
+        return this.fields;
+    }
+
+    public void setLineItemId(final String lineItemId){
+        this.lineItemId = lineItemId;
+    }
+    
+    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
+        this.type = type;
+    }
+    
+    public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+        this.fields = fields;
+    }
 
 }

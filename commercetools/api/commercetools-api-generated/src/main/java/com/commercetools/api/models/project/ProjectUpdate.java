@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectUpdateImpl.class)
 public interface ProjectUpdate  {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("actions")
-   public List<ProjectUpdateAction> getActions();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("actions")
+    public List<ProjectUpdateAction> getActions();
 
-   public void setVersion(final Long version);
-   
-   public void setActions(final List<ProjectUpdateAction> actions);
-   
-   public static ProjectUpdateImpl of(){
-      return new ProjectUpdateImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setActions(final List<ProjectUpdateAction> actions);
 
-   public static ProjectUpdateImpl of(final ProjectUpdate template) {
-      ProjectUpdateImpl instance = new ProjectUpdateImpl();
-      instance.setVersion(template.getVersion());
-      instance.setActions(template.getActions());
-      return instance;
-   }
+    public static ProjectUpdateImpl of(){
+        return new ProjectUpdateImpl();
+    }
+    
+
+    public static ProjectUpdateImpl of(final ProjectUpdate template) {
+        ProjectUpdateImpl instance = new ProjectUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(template.getActions());
+        return instance;
+    }
 
 }

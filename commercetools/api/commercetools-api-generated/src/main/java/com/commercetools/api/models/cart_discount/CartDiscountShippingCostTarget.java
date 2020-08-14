@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface CartDiscountShippingCostTarget extends CartDiscountTarget {
 
 
-   
-   public static CartDiscountShippingCostTargetImpl of(){
-      return new CartDiscountShippingCostTargetImpl();
-   }
-   
 
-   public static CartDiscountShippingCostTargetImpl of(final CartDiscountShippingCostTarget template) {
-      CartDiscountShippingCostTargetImpl instance = new CartDiscountShippingCostTargetImpl();
-      return instance;
-   }
+    public static CartDiscountShippingCostTargetImpl of(){
+        return new CartDiscountShippingCostTargetImpl();
+    }
+    
+
+    public static CartDiscountShippingCostTargetImpl of(final CartDiscountShippingCostTarget template) {
+        CartDiscountShippingCostTargetImpl instance = new CartDiscountShippingCostTargetImpl();
+        return instance;
+    }
 
 }

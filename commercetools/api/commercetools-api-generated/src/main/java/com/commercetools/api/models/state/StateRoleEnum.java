@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum StateRoleEnum {
 
-  
-  @JsonProperty("ReviewIncludedInStatistics")
-  REVIEW_INCLUDED_IN_STATISTICS("ReviewIncludedInStatistics"),
-  
-  
-  @JsonProperty("Return")
-  RETURN("Return");
+    
+    @JsonProperty("ReviewIncludedInStatistics")
+    REVIEW_INCLUDED_IN_STATISTICS("ReviewIncludedInStatistics"),
+    
+    
+    @JsonProperty("Return")
+    RETURN("Return");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private StateRoleEnum(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private StateRoleEnum(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<StateRoleEnum> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<StateRoleEnum> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

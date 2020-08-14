@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartRemoveDiscountCodeActionImpl implements CartRemoveDiscountCodeAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
+    private String action;
+    
+    private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
-   @JsonCreator
-   CartRemoveDiscountCodeActionImpl(@JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
-      this.discountCode = discountCode;
-      this.action = "removeDiscountCode";
-   }
-   public CartRemoveDiscountCodeActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
-      return this.discountCode;
-   }
+    @JsonCreator
+    CartRemoveDiscountCodeActionImpl(@JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
+        this.discountCode = discountCode;
+        this.action = "removeDiscountCode";
+    }
+    public CartRemoveDiscountCodeActionImpl() {
+       
+    }
 
-   public void setDiscountCode(final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode){
-      this.discountCode = discountCode;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
+        return this.discountCode;
+    }
+
+    public void setDiscountCode(final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode){
+        this.discountCode = discountCode;
+    }
 
 }

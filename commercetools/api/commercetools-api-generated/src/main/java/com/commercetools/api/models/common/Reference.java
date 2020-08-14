@@ -63,10 +63,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl.class, name = "cart-discount")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "typeId",
-   defaultImpl = ReferenceImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "typeId",
+    defaultImpl = ReferenceImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -74,13 +74,13 @@ import java.io.IOException;
 )
 public interface Reference  {
 
-   
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
+    
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
 
-   public void setId(final String id);
-   
+    public void setId(final String id);
+
 
 
 }

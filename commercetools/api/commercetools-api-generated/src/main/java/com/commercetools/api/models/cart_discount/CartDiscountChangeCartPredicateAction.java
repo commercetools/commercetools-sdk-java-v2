@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountChangeCartPredicateActionImpl.class)
 public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdateAction {
 
-   /**
-   *  <p>A valid Cart predicate.</p>
-   */
-   @NotNull
-   @JsonProperty("cartPredicate")
-   public String getCartPredicate();
+    /**
+    *  <p>A valid Cart predicate.</p>
+    */
+    @NotNull
+    @JsonProperty("cartPredicate")
+    public String getCartPredicate();
 
-   public void setCartPredicate(final String cartPredicate);
-   
-   public static CartDiscountChangeCartPredicateActionImpl of(){
-      return new CartDiscountChangeCartPredicateActionImpl();
-   }
-   
+    public void setCartPredicate(final String cartPredicate);
 
-   public static CartDiscountChangeCartPredicateActionImpl of(final CartDiscountChangeCartPredicateAction template) {
-      CartDiscountChangeCartPredicateActionImpl instance = new CartDiscountChangeCartPredicateActionImpl();
-      instance.setCartPredicate(template.getCartPredicate());
-      return instance;
-   }
+    public static CartDiscountChangeCartPredicateActionImpl of(){
+        return new CartDiscountChangeCartPredicateActionImpl();
+    }
+    
+
+    public static CartDiscountChangeCartPredicateActionImpl of(final CartDiscountChangeCartPredicateAction template) {
+        CartDiscountChangeCartPredicateActionImpl instance = new CartDiscountChangeCartPredicateActionImpl();
+        instance.setCartPredicate(template.getCartPredicate());
+        return instance;
+    }
 
 }

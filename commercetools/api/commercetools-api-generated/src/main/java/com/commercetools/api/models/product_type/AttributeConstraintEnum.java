@@ -13,33 +13,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum AttributeConstraintEnum {
 
-  
-  @JsonProperty("None")
-  NONE("None"),
-  
-  
-  @JsonProperty("Unique")
-  UNIQUE("Unique"),
-  
-  
-  @JsonProperty("CombinationUnique")
-  COMBINATION_UNIQUE("CombinationUnique"),
-  
-  
-  @JsonProperty("SameForAll")
-  SAME_FOR_ALL("SameForAll");
+    
+    @JsonProperty("None")
+    NONE("None"),
+    
+    
+    @JsonProperty("Unique")
+    UNIQUE("Unique"),
+    
+    
+    @JsonProperty("CombinationUnique")
+    COMBINATION_UNIQUE("CombinationUnique"),
+    
+    
+    @JsonProperty("SameForAll")
+    SAME_FOR_ALL("SameForAll");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private AttributeConstraintEnum(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private AttributeConstraintEnum(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<AttributeConstraintEnum> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<AttributeConstraintEnum> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

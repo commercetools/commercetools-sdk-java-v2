@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ChangeSubscriptionImpl.class)
 public interface ChangeSubscription  {
 
-   
-   @NotNull
-   @JsonProperty("resourceTypeId")
-   public String getResourceTypeId();
+    
+    @NotNull
+    @JsonProperty("resourceTypeId")
+    public String getResourceTypeId();
 
-   public void setResourceTypeId(final String resourceTypeId);
-   
-   public static ChangeSubscriptionImpl of(){
-      return new ChangeSubscriptionImpl();
-   }
-   
+    public void setResourceTypeId(final String resourceTypeId);
 
-   public static ChangeSubscriptionImpl of(final ChangeSubscription template) {
-      ChangeSubscriptionImpl instance = new ChangeSubscriptionImpl();
-      instance.setResourceTypeId(template.getResourceTypeId());
-      return instance;
-   }
+    public static ChangeSubscriptionImpl of(){
+        return new ChangeSubscriptionImpl();
+    }
+    
+
+    public static ChangeSubscriptionImpl of(final ChangeSubscription template) {
+        ChangeSubscriptionImpl instance = new ChangeSubscriptionImpl();
+        instance.setResourceTypeId(template.getResourceTypeId());
+        return instance;
+    }
 
 }

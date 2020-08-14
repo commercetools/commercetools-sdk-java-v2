@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneUpdateImpl implements ZoneUpdate {
 
-   private Long version;
-   
-   private java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions;
+    private Long version;
+    
+    private java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions;
 
-   @JsonCreator
-   ZoneUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
-      this.version = version;
-      this.actions = actions;
-   }
-   public ZoneUpdateImpl() {
-      
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> getActions(){
-      return this.actions;
-   }
+    @JsonCreator
+    ZoneUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
+        this.version = version;
+        this.actions = actions;
+    }
+    public ZoneUpdateImpl() {
+       
+    }
 
-   public void setVersion(final Long version){
-      this.version = version;
-   }
-   
-   public void setActions(final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions){
-      this.actions = actions;
-   }
+    
+    public Long getVersion(){
+        return this.version;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> getActions(){
+        return this.actions;
+    }
+
+    public void setVersion(final Long version){
+        this.version = version;
+    }
+    
+    public void setActions(final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions){
+        this.actions = actions;
+    }
 
 }

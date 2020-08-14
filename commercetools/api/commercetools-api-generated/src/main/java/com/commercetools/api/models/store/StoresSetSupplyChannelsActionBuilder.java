@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class StoresSetSupplyChannelsActionBuilder {
-   
-   @Nullable
-   private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
-   
-   public StoresSetSupplyChannelsActionBuilder supplyChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
-      this.supplyChannels = supplyChannels;
-      return this;
-   }
-   
-   @Nullable
-   public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
-      return this.supplyChannels;
-   }
 
-   public StoresSetSupplyChannelsAction build() {
-       return new StoresSetSupplyChannelsActionImpl(supplyChannels);
-   }
-   
-   public static StoresSetSupplyChannelsActionBuilder of() {
-      return new StoresSetSupplyChannelsActionBuilder();
-   }
-   
-   public static StoresSetSupplyChannelsActionBuilder of(final StoresSetSupplyChannelsAction template) {
-      StoresSetSupplyChannelsActionBuilder builder = new StoresSetSupplyChannelsActionBuilder();
-      builder.supplyChannels = template.getSupplyChannels();
-      return builder;
-   }
-   
+    @Nullable
+    private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
+
+    public StoresSetSupplyChannelsActionBuilder supplyChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
+        this.supplyChannels = supplyChannels;
+        return this;
+    }
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
+        return this.supplyChannels;
+    }
+
+    public StoresSetSupplyChannelsAction build() {
+        return new StoresSetSupplyChannelsActionImpl(supplyChannels);
+    }
+
+    public static StoresSetSupplyChannelsActionBuilder of() {
+        return new StoresSetSupplyChannelsActionBuilder();
+    }
+
+    public static StoresSetSupplyChannelsActionBuilder of(final StoresSetSupplyChannelsAction template) {
+        StoresSetSupplyChannelsActionBuilder builder = new StoresSetSupplyChannelsActionBuilder();
+        builder.supplyChannels = template.getSupplyChannels();
+        return builder;
+    }
+
 }

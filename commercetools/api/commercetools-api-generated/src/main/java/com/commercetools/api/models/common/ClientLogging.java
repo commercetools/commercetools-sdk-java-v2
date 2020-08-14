@@ -23,43 +23,43 @@ import java.io.IOException;
 @JsonDeserialize(as = ClientLoggingImpl.class)
 public interface ClientLogging  {
 
-   
-   
-   @JsonProperty("clientId")
-   public String getClientId();
-   
-   
-   @JsonProperty("externalUserId")
-   public String getExternalUserId();
-   
-   @Valid
-   @JsonProperty("customer")
-   public CustomerReference getCustomer();
-   
-   
-   @JsonProperty("anonymousId")
-   public String getAnonymousId();
+    
+    
+    @JsonProperty("clientId")
+    public String getClientId();
+    
+    
+    @JsonProperty("externalUserId")
+    public String getExternalUserId();
+    
+    @Valid
+    @JsonProperty("customer")
+    public CustomerReference getCustomer();
+    
+    
+    @JsonProperty("anonymousId")
+    public String getAnonymousId();
 
-   public void setClientId(final String clientId);
-   
-   public void setExternalUserId(final String externalUserId);
-   
-   public void setCustomer(final CustomerReference customer);
-   
-   public void setAnonymousId(final String anonymousId);
-   
-   public static ClientLoggingImpl of(){
-      return new ClientLoggingImpl();
-   }
-   
+    public void setClientId(final String clientId);
+    
+    public void setExternalUserId(final String externalUserId);
+    
+    public void setCustomer(final CustomerReference customer);
+    
+    public void setAnonymousId(final String anonymousId);
 
-   public static ClientLoggingImpl of(final ClientLogging template) {
-      ClientLoggingImpl instance = new ClientLoggingImpl();
-      instance.setClientId(template.getClientId());
-      instance.setExternalUserId(template.getExternalUserId());
-      instance.setCustomer(template.getCustomer());
-      instance.setAnonymousId(template.getAnonymousId());
-      return instance;
-   }
+    public static ClientLoggingImpl of(){
+        return new ClientLoggingImpl();
+    }
+    
+
+    public static ClientLoggingImpl of(final ClientLogging template) {
+        ClientLoggingImpl instance = new ClientLoggingImpl();
+        instance.setClientId(template.getClientId());
+        instance.setExternalUserId(template.getExternalUserId());
+        instance.setCustomer(template.getCustomer());
+        instance.setAnonymousId(template.getAnonymousId());
+        return instance;
+    }
 
 }

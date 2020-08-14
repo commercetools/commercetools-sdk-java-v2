@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionAuthorizationHeaderAuthenticationImpl implements ExtensionAuthorizationHeaderAuthentication {
 
-   private String type;
-   
-   private String headerValue;
+    private String type;
+    
+    private String headerValue;
 
-   @JsonCreator
-   ExtensionAuthorizationHeaderAuthenticationImpl(@JsonProperty("headerValue") final String headerValue) {
-      this.headerValue = headerValue;
-      this.type = "AuthorizationHeader";
-   }
-   public ExtensionAuthorizationHeaderAuthenticationImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getHeaderValue(){
-      return this.headerValue;
-   }
+    @JsonCreator
+    ExtensionAuthorizationHeaderAuthenticationImpl(@JsonProperty("headerValue") final String headerValue) {
+        this.headerValue = headerValue;
+        this.type = "AuthorizationHeader";
+    }
+    public ExtensionAuthorizationHeaderAuthenticationImpl() {
+       
+    }
 
-   public void setHeaderValue(final String headerValue){
-      this.headerValue = headerValue;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getHeaderValue(){
+        return this.headerValue;
+    }
+
+    public void setHeaderValue(final String headerValue){
+        this.headerValue = headerValue;
+    }
 
 }

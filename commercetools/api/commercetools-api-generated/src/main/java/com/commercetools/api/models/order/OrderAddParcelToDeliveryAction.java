@@ -24,43 +24,43 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderAddParcelToDeliveryActionImpl.class)
 public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("deliveryId")
-   public String getDeliveryId();
-   
-   @Valid
-   @JsonProperty("measurements")
-   public ParcelMeasurements getMeasurements();
-   
-   @Valid
-   @JsonProperty("trackingData")
-   public TrackingData getTrackingData();
-   
-   @Valid
-   @JsonProperty("items")
-   public List<DeliveryItem> getItems();
+    
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+    
+    @Valid
+    @JsonProperty("measurements")
+    public ParcelMeasurements getMeasurements();
+    
+    @Valid
+    @JsonProperty("trackingData")
+    public TrackingData getTrackingData();
+    
+    @Valid
+    @JsonProperty("items")
+    public List<DeliveryItem> getItems();
 
-   public void setDeliveryId(final String deliveryId);
-   
-   public void setMeasurements(final ParcelMeasurements measurements);
-   
-   public void setTrackingData(final TrackingData trackingData);
-   
-   public void setItems(final List<DeliveryItem> items);
-   
-   public static OrderAddParcelToDeliveryActionImpl of(){
-      return new OrderAddParcelToDeliveryActionImpl();
-   }
-   
+    public void setDeliveryId(final String deliveryId);
+    
+    public void setMeasurements(final ParcelMeasurements measurements);
+    
+    public void setTrackingData(final TrackingData trackingData);
+    
+    public void setItems(final List<DeliveryItem> items);
 
-   public static OrderAddParcelToDeliveryActionImpl of(final OrderAddParcelToDeliveryAction template) {
-      OrderAddParcelToDeliveryActionImpl instance = new OrderAddParcelToDeliveryActionImpl();
-      instance.setDeliveryId(template.getDeliveryId());
-      instance.setMeasurements(template.getMeasurements());
-      instance.setTrackingData(template.getTrackingData());
-      instance.setItems(template.getItems());
-      return instance;
-   }
+    public static OrderAddParcelToDeliveryActionImpl of(){
+        return new OrderAddParcelToDeliveryActionImpl();
+    }
+    
+
+    public static OrderAddParcelToDeliveryActionImpl of(final OrderAddParcelToDeliveryAction template) {
+        OrderAddParcelToDeliveryActionImpl instance = new OrderAddParcelToDeliveryActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setMeasurements(template.getMeasurements());
+        instance.setTrackingData(template.getTrackingData());
+        instance.setItems(template.getItems());
+        return instance;
+    }
 
 }

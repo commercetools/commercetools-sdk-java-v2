@@ -43,18 +43,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryUpdateActionImpl implements CategoryUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   CategoryUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    CategoryUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

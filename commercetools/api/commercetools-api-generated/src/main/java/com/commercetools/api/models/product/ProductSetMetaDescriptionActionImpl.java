@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetMetaDescriptionActionImpl implements ProductSetMetaDescriptionAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString metaDescription;
-   
-   private Boolean staged;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString metaDescription;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductSetMetaDescriptionActionImpl(@JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription, @JsonProperty("staged") final Boolean staged) {
-      this.metaDescription = metaDescription;
-      this.staged = staged;
-      this.action = "setMetaDescription";
-   }
-   public ProductSetMetaDescriptionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
-      return this.metaDescription;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductSetMetaDescriptionActionImpl(@JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription, @JsonProperty("staged") final Boolean staged) {
+        this.metaDescription = metaDescription;
+        this.staged = staged;
+        this.action = "setMetaDescription";
+    }
+    public ProductSetMetaDescriptionActionImpl() {
+       
+    }
 
-   public void setMetaDescription(final com.commercetools.api.models.common.LocalizedString metaDescription){
-      this.metaDescription = metaDescription;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
+        return this.metaDescription;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setMetaDescription(final com.commercetools.api.models.common.LocalizedString metaDescription){
+        this.metaDescription = metaDescription;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

@@ -23,37 +23,37 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderUpdateSyncInfoActionImpl.class)
 public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("channel")
-   public ChannelResourceIdentifier getChannel();
-   
-   
-   @JsonProperty("externalId")
-   public String getExternalId();
-   
-   
-   @JsonProperty("syncedAt")
-   public ZonedDateTime getSyncedAt();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("channel")
+    public ChannelResourceIdentifier getChannel();
+    
+    
+    @JsonProperty("externalId")
+    public String getExternalId();
+    
+    
+    @JsonProperty("syncedAt")
+    public ZonedDateTime getSyncedAt();
 
-   public void setChannel(final ChannelResourceIdentifier channel);
-   
-   public void setExternalId(final String externalId);
-   
-   public void setSyncedAt(final ZonedDateTime syncedAt);
-   
-   public static OrderUpdateSyncInfoActionImpl of(){
-      return new OrderUpdateSyncInfoActionImpl();
-   }
-   
+    public void setChannel(final ChannelResourceIdentifier channel);
+    
+    public void setExternalId(final String externalId);
+    
+    public void setSyncedAt(final ZonedDateTime syncedAt);
 
-   public static OrderUpdateSyncInfoActionImpl of(final OrderUpdateSyncInfoAction template) {
-      OrderUpdateSyncInfoActionImpl instance = new OrderUpdateSyncInfoActionImpl();
-      instance.setChannel(template.getChannel());
-      instance.setExternalId(template.getExternalId());
-      instance.setSyncedAt(template.getSyncedAt());
-      return instance;
-   }
+    public static OrderUpdateSyncInfoActionImpl of(){
+        return new OrderUpdateSyncInfoActionImpl();
+    }
+    
+
+    public static OrderUpdateSyncInfoActionImpl of(final OrderUpdateSyncInfoAction template) {
+        OrderUpdateSyncInfoActionImpl instance = new OrderUpdateSyncInfoActionImpl();
+        instance.setChannel(template.getChannel());
+        instance.setExternalId(template.getExternalId());
+        instance.setSyncedAt(template.getSyncedAt());
+        return instance;
+    }
 
 }

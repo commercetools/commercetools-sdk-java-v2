@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExternalOAuthImpl implements ExternalOAuth {
 
-   private String url;
-   
-   private String authorizationHeader;
+    private String url;
+    
+    private String authorizationHeader;
 
-   @JsonCreator
-   ExternalOAuthImpl(@JsonProperty("url") final String url, @JsonProperty("authorizationHeader") final String authorizationHeader) {
-      this.url = url;
-      this.authorizationHeader = authorizationHeader;
-   }
-   public ExternalOAuthImpl() {
-      
-   }
-   
-   
-   public String getUrl(){
-      return this.url;
-   }
-   
-   
-   public String getAuthorizationHeader(){
-      return this.authorizationHeader;
-   }
+    @JsonCreator
+    ExternalOAuthImpl(@JsonProperty("url") final String url, @JsonProperty("authorizationHeader") final String authorizationHeader) {
+        this.url = url;
+        this.authorizationHeader = authorizationHeader;
+    }
+    public ExternalOAuthImpl() {
+       
+    }
 
-   public void setUrl(final String url){
-      this.url = url;
-   }
-   
-   public void setAuthorizationHeader(final String authorizationHeader){
-      this.authorizationHeader = authorizationHeader;
-   }
+    
+    public String getUrl(){
+        return this.url;
+    }
+    
+    
+    public String getAuthorizationHeader(){
+        return this.authorizationHeader;
+    }
+
+    public void setUrl(final String url){
+        this.url = url;
+    }
+    
+    public void setAuthorizationHeader(final String authorizationHeader){
+        this.authorizationHeader = authorizationHeader;
+    }
 
 }

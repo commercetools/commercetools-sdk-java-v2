@@ -22,34 +22,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentSetAnonymousIdActionImpl implements PaymentSetAnonymousIdAction {
 
-   private String action;
-   
-   private String anonymousId;
+    private String action;
+    
+    private String anonymousId;
 
-   @JsonCreator
-   PaymentSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
-      this.anonymousId = anonymousId;
-      this.action = "setAnonymousId";
-   }
-   public PaymentSetAnonymousIdActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>Anonymous ID of the anonymous customer that this payment belongs to.
-   *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
-   */
-   public String getAnonymousId(){
-      return this.anonymousId;
-   }
+    @JsonCreator
+    PaymentSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
+        this.anonymousId = anonymousId;
+        this.action = "setAnonymousId";
+    }
+    public PaymentSetAnonymousIdActionImpl() {
+       
+    }
 
-   public void setAnonymousId(final String anonymousId){
-      this.anonymousId = anonymousId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>Anonymous ID of the anonymous customer that this payment belongs to.
+    *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
+    */
+    public String getAnonymousId(){
+        return this.anonymousId;
+    }
+
+    public void setAnonymousId(final String anonymousId){
+        this.anonymousId = anonymousId;
+    }
 
 }

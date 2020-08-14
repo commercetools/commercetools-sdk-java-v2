@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = SuggestionImpl.class)
 public interface Suggestion  {
 
-   /**
-   *  <p>The suggested text.</p>
-   */
-   @NotNull
-   @JsonProperty("text")
-   public String getText();
+    /**
+    *  <p>The suggested text.</p>
+    */
+    @NotNull
+    @JsonProperty("text")
+    public String getText();
 
-   public void setText(final String text);
-   
-   public static SuggestionImpl of(){
-      return new SuggestionImpl();
-   }
-   
+    public void setText(final String text);
 
-   public static SuggestionImpl of(final Suggestion template) {
-      SuggestionImpl instance = new SuggestionImpl();
-      instance.setText(template.getText());
-      return instance;
-   }
+    public static SuggestionImpl of(){
+        return new SuggestionImpl();
+    }
+    
+
+    public static SuggestionImpl of(final Suggestion template) {
+        SuggestionImpl instance = new SuggestionImpl();
+        instance.setText(template.getText());
+        return instance;
+    }
 
 }

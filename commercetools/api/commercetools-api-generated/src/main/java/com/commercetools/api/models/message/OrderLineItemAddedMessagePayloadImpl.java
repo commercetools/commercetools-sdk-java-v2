@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.cart.LineItem lineItem;
-   
-   private Long addedQuantity;
+    private String type;
+    
+    private com.commercetools.api.models.cart.LineItem lineItem;
+    
+    private Long addedQuantity;
 
-   @JsonCreator
-   OrderLineItemAddedMessagePayloadImpl(@JsonProperty("lineItem") final com.commercetools.api.models.cart.LineItem lineItem, @JsonProperty("addedQuantity") final Long addedQuantity) {
-      this.lineItem = lineItem;
-      this.addedQuantity = addedQuantity;
-      this.type = "OrderLineItemAdded";
-   }
-   public OrderLineItemAddedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.cart.LineItem getLineItem(){
-      return this.lineItem;
-   }
-   
-   
-   public Long getAddedQuantity(){
-      return this.addedQuantity;
-   }
+    @JsonCreator
+    OrderLineItemAddedMessagePayloadImpl(@JsonProperty("lineItem") final com.commercetools.api.models.cart.LineItem lineItem, @JsonProperty("addedQuantity") final Long addedQuantity) {
+        this.lineItem = lineItem;
+        this.addedQuantity = addedQuantity;
+        this.type = "OrderLineItemAdded";
+    }
+    public OrderLineItemAddedMessagePayloadImpl() {
+       
+    }
 
-   public void setLineItem(final com.commercetools.api.models.cart.LineItem lineItem){
-      this.lineItem = lineItem;
-   }
-   
-   public void setAddedQuantity(final Long addedQuantity){
-      this.addedQuantity = addedQuantity;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.cart.LineItem getLineItem(){
+        return this.lineItem;
+    }
+    
+    
+    public Long getAddedQuantity(){
+        return this.addedQuantity;
+    }
+
+    public void setLineItem(final com.commercetools.api.models.cart.LineItem lineItem){
+        this.lineItem = lineItem;
+    }
+    
+    public void setAddedQuantity(final Long addedQuantity){
+        this.addedQuantity = addedQuantity;
+    }
 
 }

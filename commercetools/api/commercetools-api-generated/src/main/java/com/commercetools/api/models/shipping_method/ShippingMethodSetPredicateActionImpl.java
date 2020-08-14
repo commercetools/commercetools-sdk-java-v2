@@ -22,34 +22,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodSetPredicateActionImpl implements ShippingMethodSetPredicateAction {
 
-   private String action;
-   
-   private String predicate;
+    private String action;
+    
+    private String predicate;
 
-   @JsonCreator
-   ShippingMethodSetPredicateActionImpl(@JsonProperty("predicate") final String predicate) {
-      this.predicate = predicate;
-      this.action = "setPredicate";
-   }
-   public ShippingMethodSetPredicateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>A valid Cart predicate.
-   *  If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
-   */
-   public String getPredicate(){
-      return this.predicate;
-   }
+    @JsonCreator
+    ShippingMethodSetPredicateActionImpl(@JsonProperty("predicate") final String predicate) {
+        this.predicate = predicate;
+        this.action = "setPredicate";
+    }
+    public ShippingMethodSetPredicateActionImpl() {
+       
+    }
 
-   public void setPredicate(final String predicate){
-      this.predicate = predicate;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>A valid Cart predicate.
+    *  If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+    */
+    public String getPredicate(){
+        return this.predicate;
+    }
+
+    public void setPredicate(final String predicate){
+        this.predicate = predicate;
+    }
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateAddRolesActionImpl implements StateAddRolesAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
-   @JsonCreator
-   StateAddRolesActionImpl(@JsonProperty("roles") final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
-      this.roles = roles;
-      this.action = "addRoles";
-   }
-   public StateAddRolesActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles(){
-      return this.roles;
-   }
+    @JsonCreator
+    StateAddRolesActionImpl(@JsonProperty("roles") final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
+        this.roles = roles;
+        this.action = "addRoles";
+    }
+    public StateAddRolesActionImpl() {
+       
+    }
 
-   public void setRoles(final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles){
-      this.roles = roles;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles(){
+        return this.roles;
+    }
+
+    public void setRoles(final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles){
+        this.roles = roles;
+    }
 
 }

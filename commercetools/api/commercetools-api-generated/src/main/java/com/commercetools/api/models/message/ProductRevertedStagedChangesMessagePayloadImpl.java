@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductRevertedStagedChangesMessagePayloadImpl implements ProductRevertedStagedChangesMessagePayload {
 
-   private String type;
-   
-   private java.util.List<String> removedImageUrls;
+    private String type;
+    
+    private java.util.List<String> removedImageUrls;
 
-   @JsonCreator
-   ProductRevertedStagedChangesMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
-      this.removedImageUrls = removedImageUrls;
-      this.type = "ProductRevertedStagedChanges";
-   }
-   public ProductRevertedStagedChangesMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<String> getRemovedImageUrls(){
-      return this.removedImageUrls;
-   }
+    @JsonCreator
+    ProductRevertedStagedChangesMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
+        this.removedImageUrls = removedImageUrls;
+        this.type = "ProductRevertedStagedChanges";
+    }
+    public ProductRevertedStagedChangesMessagePayloadImpl() {
+       
+    }
 
-   public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
-      this.removedImageUrls = removedImageUrls;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<String> getRemovedImageUrls(){
+        return this.removedImageUrls;
+    }
+
+    public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
+        this.removedImageUrls = removedImageUrls;
+    }
 
 }

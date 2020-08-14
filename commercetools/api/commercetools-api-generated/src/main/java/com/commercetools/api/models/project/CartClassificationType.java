@@ -23,23 +23,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CartClassificationTypeImpl.class)
 public interface CartClassificationType extends ShippingRateInputType {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("values")
-   public List<CustomFieldLocalizedEnumValue> getValues();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("values")
+    public List<CustomFieldLocalizedEnumValue> getValues();
 
-   public void setValues(final List<CustomFieldLocalizedEnumValue> values);
-   
-   public static CartClassificationTypeImpl of(){
-      return new CartClassificationTypeImpl();
-   }
-   
+    public void setValues(final List<CustomFieldLocalizedEnumValue> values);
 
-   public static CartClassificationTypeImpl of(final CartClassificationType template) {
-      CartClassificationTypeImpl instance = new CartClassificationTypeImpl();
-      instance.setValues(template.getValues());
-      return instance;
-   }
+    public static CartClassificationTypeImpl of(){
+        return new CartClassificationTypeImpl();
+    }
+    
+
+    public static CartClassificationTypeImpl of(final CartClassificationType template) {
+        CartClassificationTypeImpl instance = new CartClassificationTypeImpl();
+        instance.setValues(template.getValues());
+        return instance;
+    }
 
 }

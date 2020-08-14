@@ -27,18 +27,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentUpdateActionImpl implements MyPaymentUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   MyPaymentUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    MyPaymentUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

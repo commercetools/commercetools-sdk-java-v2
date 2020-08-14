@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = FilteredFacetResultImpl.class)
 public interface FilteredFacetResult extends FacetResult {
 
-   
-   @NotNull
-   @JsonProperty("count")
-   public Long getCount();
-   
-   
-   @JsonProperty("productCount")
-   public Long getProductCount();
+    
+    @NotNull
+    @JsonProperty("count")
+    public Long getCount();
+    
+    
+    @JsonProperty("productCount")
+    public Long getProductCount();
 
-   public void setCount(final Long count);
-   
-   public void setProductCount(final Long productCount);
-   
-   public static FilteredFacetResultImpl of(){
-      return new FilteredFacetResultImpl();
-   }
-   
+    public void setCount(final Long count);
+    
+    public void setProductCount(final Long productCount);
 
-   public static FilteredFacetResultImpl of(final FilteredFacetResult template) {
-      FilteredFacetResultImpl instance = new FilteredFacetResultImpl();
-      instance.setCount(template.getCount());
-      instance.setProductCount(template.getProductCount());
-      return instance;
-   }
+    public static FilteredFacetResultImpl of(){
+        return new FilteredFacetResultImpl();
+    }
+    
+
+    public static FilteredFacetResultImpl of(final FilteredFacetResult template) {
+        FilteredFacetResultImpl instance = new FilteredFacetResultImpl();
+        instance.setCount(template.getCount());
+        instance.setProductCount(template.getProductCount());
+        return instance;
+    }
 
 }

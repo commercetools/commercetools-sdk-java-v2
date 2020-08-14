@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeChangeIsActiveActionImpl.class)
 public interface DiscountCodeChangeIsActiveAction extends DiscountCodeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("isActive")
-   public Boolean getIsActive();
+    
+    @NotNull
+    @JsonProperty("isActive")
+    public Boolean getIsActive();
 
-   public void setIsActive(final Boolean isActive);
-   
-   public static DiscountCodeChangeIsActiveActionImpl of(){
-      return new DiscountCodeChangeIsActiveActionImpl();
-   }
-   
+    public void setIsActive(final Boolean isActive);
 
-   public static DiscountCodeChangeIsActiveActionImpl of(final DiscountCodeChangeIsActiveAction template) {
-      DiscountCodeChangeIsActiveActionImpl instance = new DiscountCodeChangeIsActiveActionImpl();
-      instance.setIsActive(template.getIsActive());
-      return instance;
-   }
+    public static DiscountCodeChangeIsActiveActionImpl of(){
+        return new DiscountCodeChangeIsActiveActionImpl();
+    }
+    
+
+    public static DiscountCodeChangeIsActiveActionImpl of(final DiscountCodeChangeIsActiveAction template) {
+        DiscountCodeChangeIsActiveActionImpl instance = new DiscountCodeChangeIsActiveActionImpl();
+        instance.setIsActive(template.getIsActive());
+        return instance;
+    }
 
 }

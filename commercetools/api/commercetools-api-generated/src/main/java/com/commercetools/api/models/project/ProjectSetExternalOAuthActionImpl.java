@@ -23,34 +23,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectSetExternalOAuthActionImpl implements ProjectSetExternalOAuthAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
+    private String action;
+    
+    private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
-   @JsonCreator
-   ProjectSetExternalOAuthActionImpl(@JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {
-      this.externalOAuth = externalOAuth;
-      this.action = "setExternalOAuth";
-   }
-   public ProjectSetExternalOAuthActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If you do not provide the <code>externalOAuth</code> field or provide a value
-   *  of <code>null</code>, the update action unsets the External OAuth provider.</p>
-   */
-   public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth(){
-      return this.externalOAuth;
-   }
+    @JsonCreator
+    ProjectSetExternalOAuthActionImpl(@JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {
+        this.externalOAuth = externalOAuth;
+        this.action = "setExternalOAuth";
+    }
+    public ProjectSetExternalOAuthActionImpl() {
+       
+    }
 
-   public void setExternalOAuth(final com.commercetools.api.models.project.ExternalOAuth externalOAuth){
-      this.externalOAuth = externalOAuth;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If you do not provide the <code>externalOAuth</code> field or provide a value
+    *  of <code>null</code>, the update action unsets the External OAuth provider.</p>
+    */
+    public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth(){
+        return this.externalOAuth;
+    }
+
+    public void setExternalOAuth(final com.commercetools.api.models.project.ExternalOAuth externalOAuth){
+        this.externalOAuth = externalOAuth;
+    }
 
 }

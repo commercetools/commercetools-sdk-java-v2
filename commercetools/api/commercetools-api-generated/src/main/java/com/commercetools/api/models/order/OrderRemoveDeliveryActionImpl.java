@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderRemoveDeliveryActionImpl implements OrderRemoveDeliveryAction {
 
-   private String action;
-   
-   private String deliveryId;
+    private String action;
+    
+    private String deliveryId;
 
-   @JsonCreator
-   OrderRemoveDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId) {
-      this.deliveryId = deliveryId;
-      this.action = "removeDelivery";
-   }
-   public OrderRemoveDeliveryActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getDeliveryId(){
-      return this.deliveryId;
-   }
+    @JsonCreator
+    OrderRemoveDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId) {
+        this.deliveryId = deliveryId;
+        this.action = "removeDelivery";
+    }
+    public OrderRemoveDeliveryActionImpl() {
+       
+    }
 
-   public void setDeliveryId(final String deliveryId){
-      this.deliveryId = deliveryId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getDeliveryId(){
+        return this.deliveryId;
+    }
+
+    public void setDeliveryId(final String deliveryId){
+        this.deliveryId = deliveryId;
+    }
 
 }

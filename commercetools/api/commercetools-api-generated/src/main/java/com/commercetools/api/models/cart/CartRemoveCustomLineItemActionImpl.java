@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineItemAction {
 
-   private String action;
-   
-   private String customLineItemId;
+    private String action;
+    
+    private String customLineItemId;
 
-   @JsonCreator
-   CartRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId) {
-      this.customLineItemId = customLineItemId;
-      this.action = "removeCustomLineItem";
-   }
-   public CartRemoveCustomLineItemActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getCustomLineItemId(){
-      return this.customLineItemId;
-   }
+    @JsonCreator
+    CartRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId) {
+        this.customLineItemId = customLineItemId;
+        this.action = "removeCustomLineItem";
+    }
+    public CartRemoveCustomLineItemActionImpl() {
+       
+    }
 
-   public void setCustomLineItemId(final String customLineItemId){
-      this.customLineItemId = customLineItemId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getCustomLineItemId(){
+        return this.customLineItemId;
+    }
+
+    public void setCustomLineItemId(final String customLineItemId){
+        this.customLineItemId = customLineItemId;
+    }
 
 }

@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeSetMaxApplicationsActionImpl.class)
 public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdateAction {
 
-   /**
-   *  <p>If the <code>maxApplications</code> parameter is not included, the field will be emptied.</p>
-   */
-   
-   @JsonProperty("maxApplications")
-   public Long getMaxApplications();
+    /**
+    *  <p>If the <code>maxApplications</code> parameter is not included, the field will be emptied.</p>
+    */
+    
+    @JsonProperty("maxApplications")
+    public Long getMaxApplications();
 
-   public void setMaxApplications(final Long maxApplications);
-   
-   public static DiscountCodeSetMaxApplicationsActionImpl of(){
-      return new DiscountCodeSetMaxApplicationsActionImpl();
-   }
-   
+    public void setMaxApplications(final Long maxApplications);
 
-   public static DiscountCodeSetMaxApplicationsActionImpl of(final DiscountCodeSetMaxApplicationsAction template) {
-      DiscountCodeSetMaxApplicationsActionImpl instance = new DiscountCodeSetMaxApplicationsActionImpl();
-      instance.setMaxApplications(template.getMaxApplications());
-      return instance;
-   }
+    public static DiscountCodeSetMaxApplicationsActionImpl of(){
+        return new DiscountCodeSetMaxApplicationsActionImpl();
+    }
+    
+
+    public static DiscountCodeSetMaxApplicationsActionImpl of(final DiscountCodeSetMaxApplicationsAction template) {
+        DiscountCodeSetMaxApplicationsActionImpl instance = new DiscountCodeSetMaxApplicationsActionImpl();
+        instance.setMaxApplications(template.getMaxApplications());
+        return instance;
+    }
 
 }

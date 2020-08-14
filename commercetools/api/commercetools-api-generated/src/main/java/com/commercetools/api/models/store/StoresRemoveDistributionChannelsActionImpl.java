@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoresRemoveDistributionChannelsActionImpl implements StoresRemoveDistributionChannelsAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+    private String action;
+    
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
-   @JsonCreator
-   StoresRemoveDistributionChannelsActionImpl(@JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
-      this.distributionChannel = distributionChannel;
-      this.action = "removeDistributionChannel";
-   }
-   public StoresRemoveDistributionChannelsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
-      return this.distributionChannel;
-   }
+    @JsonCreator
+    StoresRemoveDistributionChannelsActionImpl(@JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+        this.distributionChannel = distributionChannel;
+        this.action = "removeDistributionChannel";
+    }
+    public StoresRemoveDistributionChannelsActionImpl() {
+       
+    }
 
-   public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
-      this.distributionChannel = distributionChannel;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
+        return this.distributionChannel;
+    }
+
+    public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
+        this.distributionChannel = distributionChannel;
+    }
 
 }

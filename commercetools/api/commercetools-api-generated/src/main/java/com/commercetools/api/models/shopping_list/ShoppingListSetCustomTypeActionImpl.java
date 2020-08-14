@@ -24,48 +24,48 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListSetCustomTypeActionImpl implements ShoppingListSetCustomTypeAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.type.TypeResourceIdentifier type;
-   
-   private com.commercetools.api.models.type.FieldContainer fields;
+    private String action;
+    
+    private com.commercetools.api.models.type.TypeResourceIdentifier type;
+    
+    private com.commercetools.api.models.type.FieldContainer fields;
 
-   @JsonCreator
-   ShoppingListSetCustomTypeActionImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
-      this.type = type;
-      this.fields = fields;
-      this.action = "setCustomType";
-   }
-   public ShoppingListSetCustomTypeActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If set, the custom type is set to this new value.
-   *  If absent, the custom type and any existing custom fields are removed.</p>
-   */
-   public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
-      return this.type;
-   }
-   
-   /**
-   *  <p>If set, the custom fields are set to this new value.</p>
-   */
-   public com.commercetools.api.models.type.FieldContainer getFields(){
-      return this.fields;
-   }
+    @JsonCreator
+    ShoppingListSetCustomTypeActionImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type, @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
+        this.type = type;
+        this.fields = fields;
+        this.action = "setCustomType";
+    }
+    public ShoppingListSetCustomTypeActionImpl() {
+       
+    }
 
-   public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
-      this.type = type;
-   }
-   
-   public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
-      this.fields = fields;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If set, the custom type is set to this new value.
+    *  If absent, the custom type and any existing custom fields are removed.</p>
+    */
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+        return this.type;
+    }
+    
+    /**
+    *  <p>If set, the custom fields are set to this new value.</p>
+    */
+    public com.commercetools.api.models.type.FieldContainer getFields(){
+        return this.fields;
+    }
+
+    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type){
+        this.type = type;
+    }
+    
+    public void setFields(final com.commercetools.api.models.type.FieldContainer fields){
+        this.fields = fields;
+    }
 
 }

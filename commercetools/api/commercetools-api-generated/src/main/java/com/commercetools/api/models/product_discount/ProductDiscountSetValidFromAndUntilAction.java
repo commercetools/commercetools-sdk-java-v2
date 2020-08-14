@@ -22,32 +22,32 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountSetValidFromAndUntilActionImpl.class)
 public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscountUpdateAction {
 
-   
-   
-   @JsonProperty("validFrom")
-   public ZonedDateTime getValidFrom();
-   /**
-   *  <p>The timeframe for which the discount should be effective.
-   *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
-   */
-   
-   @JsonProperty("validUntil")
-   public ZonedDateTime getValidUntil();
+    
+    
+    @JsonProperty("validFrom")
+    public ZonedDateTime getValidFrom();
+    /**
+    *  <p>The timeframe for which the discount should be effective.
+    *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
+    */
+    
+    @JsonProperty("validUntil")
+    public ZonedDateTime getValidUntil();
 
-   public void setValidFrom(final ZonedDateTime validFrom);
-   
-   public void setValidUntil(final ZonedDateTime validUntil);
-   
-   public static ProductDiscountSetValidFromAndUntilActionImpl of(){
-      return new ProductDiscountSetValidFromAndUntilActionImpl();
-   }
-   
+    public void setValidFrom(final ZonedDateTime validFrom);
+    
+    public void setValidUntil(final ZonedDateTime validUntil);
 
-   public static ProductDiscountSetValidFromAndUntilActionImpl of(final ProductDiscountSetValidFromAndUntilAction template) {
-      ProductDiscountSetValidFromAndUntilActionImpl instance = new ProductDiscountSetValidFromAndUntilActionImpl();
-      instance.setValidFrom(template.getValidFrom());
-      instance.setValidUntil(template.getValidUntil());
-      return instance;
-   }
+    public static ProductDiscountSetValidFromAndUntilActionImpl of(){
+        return new ProductDiscountSetValidFromAndUntilActionImpl();
+    }
+    
+
+    public static ProductDiscountSetValidFromAndUntilActionImpl of(final ProductDiscountSetValidFromAndUntilAction template) {
+        ProductDiscountSetValidFromAndUntilActionImpl instance = new ProductDiscountSetValidFromAndUntilActionImpl();
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        return instance;
+    }
 
 }

@@ -23,44 +23,44 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountValueGiftLineItemImpl.class)
 public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("product")
-   public ProductReference getProduct();
-   
-   @NotNull
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   @Valid
-   @JsonProperty("supplyChannel")
-   public ChannelReference getSupplyChannel();
-   
-   @Valid
-   @JsonProperty("distributionChannel")
-   public ChannelReference getDistributionChannel();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
+    
+    @NotNull
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelReference getSupplyChannel();
+    
+    @Valid
+    @JsonProperty("distributionChannel")
+    public ChannelReference getDistributionChannel();
 
-   public void setProduct(final ProductReference product);
-   
-   public void setVariantId(final Long variantId);
-   
-   public void setSupplyChannel(final ChannelReference supplyChannel);
-   
-   public void setDistributionChannel(final ChannelReference distributionChannel);
-   
-   public static CartDiscountValueGiftLineItemImpl of(){
-      return new CartDiscountValueGiftLineItemImpl();
-   }
-   
+    public void setProduct(final ProductReference product);
+    
+    public void setVariantId(final Long variantId);
+    
+    public void setSupplyChannel(final ChannelReference supplyChannel);
+    
+    public void setDistributionChannel(final ChannelReference distributionChannel);
 
-   public static CartDiscountValueGiftLineItemImpl of(final CartDiscountValueGiftLineItem template) {
-      CartDiscountValueGiftLineItemImpl instance = new CartDiscountValueGiftLineItemImpl();
-      instance.setProduct(template.getProduct());
-      instance.setVariantId(template.getVariantId());
-      instance.setSupplyChannel(template.getSupplyChannel());
-      instance.setDistributionChannel(template.getDistributionChannel());
-      return instance;
-   }
+    public static CartDiscountValueGiftLineItemImpl of(){
+        return new CartDiscountValueGiftLineItemImpl();
+    }
+    
+
+    public static CartDiscountValueGiftLineItemImpl of(final CartDiscountValueGiftLineItem template) {
+        CartDiscountValueGiftLineItemImpl instance = new CartDiscountValueGiftLineItemImpl();
+        instance.setProduct(template.getProduct());
+        instance.setVariantId(template.getVariantId());
+        instance.setSupplyChannel(template.getSupplyChannel());
+        instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
 
 }

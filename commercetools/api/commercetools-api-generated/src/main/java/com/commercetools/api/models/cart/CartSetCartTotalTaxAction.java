@@ -23,32 +23,32 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetCartTotalTaxActionImpl.class)
 public interface CartSetCartTotalTaxAction extends CartUpdateAction {
 
-   /**
-   *  <p>The total gross amount of the cart (totalNet + taxes).</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("externalTotalGross")
-   public Money getExternalTotalGross();
-   
-   @Valid
-   @JsonProperty("externalTaxPortions")
-   public List<TaxPortionDraft> getExternalTaxPortions();
+    /**
+    *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("externalTotalGross")
+    public Money getExternalTotalGross();
+    
+    @Valid
+    @JsonProperty("externalTaxPortions")
+    public List<TaxPortionDraft> getExternalTaxPortions();
 
-   public void setExternalTotalGross(final Money externalTotalGross);
-   
-   public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
-   
-   public static CartSetCartTotalTaxActionImpl of(){
-      return new CartSetCartTotalTaxActionImpl();
-   }
-   
+    public void setExternalTotalGross(final Money externalTotalGross);
+    
+    public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
 
-   public static CartSetCartTotalTaxActionImpl of(final CartSetCartTotalTaxAction template) {
-      CartSetCartTotalTaxActionImpl instance = new CartSetCartTotalTaxActionImpl();
-      instance.setExternalTotalGross(template.getExternalTotalGross());
-      instance.setExternalTaxPortions(template.getExternalTaxPortions());
-      return instance;
-   }
+    public static CartSetCartTotalTaxActionImpl of(){
+        return new CartSetCartTotalTaxActionImpl();
+    }
+    
+
+    public static CartSetCartTotalTaxActionImpl of(final CartSetCartTotalTaxAction template) {
+        CartSetCartTotalTaxActionImpl instance = new CartSetCartTotalTaxActionImpl();
+        instance.setExternalTotalGross(template.getExternalTotalGross());
+        instance.setExternalTaxPortions(template.getExternalTaxPortions());
+        return instance;
+    }
 
 }

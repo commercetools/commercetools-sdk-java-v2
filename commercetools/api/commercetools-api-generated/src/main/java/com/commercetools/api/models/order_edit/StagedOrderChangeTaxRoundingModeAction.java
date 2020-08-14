@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderChangeTaxRoundingModeActionImpl.class)
 public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("taxRoundingMode")
-   public RoundingMode getTaxRoundingMode();
+    
+    @NotNull
+    @JsonProperty("taxRoundingMode")
+    public RoundingMode getTaxRoundingMode();
 
-   public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
-   
-   public static StagedOrderChangeTaxRoundingModeActionImpl of(){
-      return new StagedOrderChangeTaxRoundingModeActionImpl();
-   }
-   
+    public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
-   public static StagedOrderChangeTaxRoundingModeActionImpl of(final StagedOrderChangeTaxRoundingModeAction template) {
-      StagedOrderChangeTaxRoundingModeActionImpl instance = new StagedOrderChangeTaxRoundingModeActionImpl();
-      instance.setTaxRoundingMode(template.getTaxRoundingMode());
-      return instance;
-   }
+    public static StagedOrderChangeTaxRoundingModeActionImpl of(){
+        return new StagedOrderChangeTaxRoundingModeActionImpl();
+    }
+    
+
+    public static StagedOrderChangeTaxRoundingModeActionImpl of(final StagedOrderChangeTaxRoundingModeAction template) {
+        StagedOrderChangeTaxRoundingModeActionImpl instance = new StagedOrderChangeTaxRoundingModeActionImpl();
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        return instance;
+    }
 
 }

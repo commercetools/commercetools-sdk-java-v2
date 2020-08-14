@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePayload {
 
-   private String type;
-   
-   private java.util.List<String> removedImageUrls;
-   
-   private com.commercetools.api.models.product.ProductProjection currentProjection;
+    private String type;
+    
+    private java.util.List<String> removedImageUrls;
+    
+    private com.commercetools.api.models.product.ProductProjection currentProjection;
 
-   @JsonCreator
-   ProductDeletedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls, @JsonProperty("currentProjection") final com.commercetools.api.models.product.ProductProjection currentProjection) {
-      this.removedImageUrls = removedImageUrls;
-      this.currentProjection = currentProjection;
-      this.type = "ProductDeleted";
-   }
-   public ProductDeletedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<String> getRemovedImageUrls(){
-      return this.removedImageUrls;
-   }
-   
-   
-   public com.commercetools.api.models.product.ProductProjection getCurrentProjection(){
-      return this.currentProjection;
-   }
+    @JsonCreator
+    ProductDeletedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls, @JsonProperty("currentProjection") final com.commercetools.api.models.product.ProductProjection currentProjection) {
+        this.removedImageUrls = removedImageUrls;
+        this.currentProjection = currentProjection;
+        this.type = "ProductDeleted";
+    }
+    public ProductDeletedMessagePayloadImpl() {
+       
+    }
 
-   public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
-      this.removedImageUrls = removedImageUrls;
-   }
-   
-   public void setCurrentProjection(final com.commercetools.api.models.product.ProductProjection currentProjection){
-      this.currentProjection = currentProjection;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<String> getRemovedImageUrls(){
+        return this.removedImageUrls;
+    }
+    
+    
+    public com.commercetools.api.models.product.ProductProjection getCurrentProjection(){
+        return this.currentProjection;
+    }
+
+    public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
+        this.removedImageUrls = removedImageUrls;
+    }
+    
+    public void setCurrentProjection(final com.commercetools.api.models.product.ProductProjection currentProjection){
+        this.currentProjection = currentProjection;
+    }
 
 }

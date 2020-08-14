@@ -22,37 +22,37 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderExcerptImpl.class)
 public interface OrderExcerpt  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("totalPrice")
-   public TypedMoney getTotalPrice();
-   
-   @Valid
-   @JsonProperty("taxedPrice")
-   public TaxedPrice getTaxedPrice();
-   
-   @NotNull
-   @JsonProperty("version")
-   public Integer getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("totalPrice")
+    public TypedMoney getTotalPrice();
+    
+    @Valid
+    @JsonProperty("taxedPrice")
+    public TaxedPrice getTaxedPrice();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Integer getVersion();
 
-   public void setTotalPrice(final TypedMoney totalPrice);
-   
-   public void setTaxedPrice(final TaxedPrice taxedPrice);
-   
-   public void setVersion(final Integer version);
-   
-   public static OrderExcerptImpl of(){
-      return new OrderExcerptImpl();
-   }
-   
+    public void setTotalPrice(final TypedMoney totalPrice);
+    
+    public void setTaxedPrice(final TaxedPrice taxedPrice);
+    
+    public void setVersion(final Integer version);
 
-   public static OrderExcerptImpl of(final OrderExcerpt template) {
-      OrderExcerptImpl instance = new OrderExcerptImpl();
-      instance.setTotalPrice(template.getTotalPrice());
-      instance.setTaxedPrice(template.getTaxedPrice());
-      instance.setVersion(template.getVersion());
-      return instance;
-   }
+    public static OrderExcerptImpl of(){
+        return new OrderExcerptImpl();
+    }
+    
+
+    public static OrderExcerptImpl of(final OrderExcerpt template) {
+        OrderExcerptImpl instance = new OrderExcerptImpl();
+        instance.setTotalPrice(template.getTotalPrice());
+        instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setVersion(template.getVersion());
+        return instance;
+    }
 
 }

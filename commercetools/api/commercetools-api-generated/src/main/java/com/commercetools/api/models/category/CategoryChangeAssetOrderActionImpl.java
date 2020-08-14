@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOrderAction {
 
-   private String action;
-   
-   private java.util.List<String> assetOrder;
+    private String action;
+    
+    private java.util.List<String> assetOrder;
 
-   @JsonCreator
-   CategoryChangeAssetOrderActionImpl(@JsonProperty("assetOrder") final java.util.List<String> assetOrder) {
-      this.assetOrder = assetOrder;
-      this.action = "changeAssetOrder";
-   }
-   public CategoryChangeAssetOrderActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<String> getAssetOrder(){
-      return this.assetOrder;
-   }
+    @JsonCreator
+    CategoryChangeAssetOrderActionImpl(@JsonProperty("assetOrder") final java.util.List<String> assetOrder) {
+        this.assetOrder = assetOrder;
+        this.action = "changeAssetOrder";
+    }
+    public CategoryChangeAssetOrderActionImpl() {
+       
+    }
 
-   public void setAssetOrder(final java.util.List<String> assetOrder){
-      this.assetOrder = assetOrder;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<String> getAssetOrder(){
+        return this.assetOrder;
+    }
+
+    public void setAssetOrder(final java.util.List<String> assetOrder){
+        this.assetOrder = assetOrder;
+    }
 
 }

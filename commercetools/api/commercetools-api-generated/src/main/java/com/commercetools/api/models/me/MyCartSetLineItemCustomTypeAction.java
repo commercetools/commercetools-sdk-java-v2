@@ -23,36 +23,36 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartSetLineItemCustomTypeActionImpl.class)
 public interface MyCartSetLineItemCustomTypeAction extends MyCartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static MyCartSetLineItemCustomTypeActionImpl of(){
-      return new MyCartSetLineItemCustomTypeActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static MyCartSetLineItemCustomTypeActionImpl of(final MyCartSetLineItemCustomTypeAction template) {
-      MyCartSetLineItemCustomTypeActionImpl instance = new MyCartSetLineItemCustomTypeActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static MyCartSetLineItemCustomTypeActionImpl of(){
+        return new MyCartSetLineItemCustomTypeActionImpl();
+    }
+    
+
+    public static MyCartSetLineItemCustomTypeActionImpl of(final MyCartSetLineItemCustomTypeAction template) {
+        MyCartSetLineItemCustomTypeActionImpl instance = new MyCartSetLineItemCustomTypeActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

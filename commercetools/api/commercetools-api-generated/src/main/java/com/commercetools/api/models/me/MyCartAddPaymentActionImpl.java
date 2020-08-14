@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartAddPaymentActionImpl implements MyCartAddPaymentAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
+    private String action;
+    
+    private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
-   @JsonCreator
-   MyCartAddPaymentActionImpl(@JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
-      this.payment = payment;
-      this.action = "addPayment";
-   }
-   public MyCartAddPaymentActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment(){
-      return this.payment;
-   }
+    @JsonCreator
+    MyCartAddPaymentActionImpl(@JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
+        this.payment = payment;
+        this.action = "addPayment";
+    }
+    public MyCartAddPaymentActionImpl() {
+       
+    }
 
-   public void setPayment(final com.commercetools.api.models.payment.PaymentResourceIdentifier payment){
-      this.payment = payment;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment(){
+        return this.payment;
+    }
+
+    public void setPayment(final com.commercetools.api.models.payment.PaymentResourceIdentifier payment){
+        this.payment = payment;
+    }
 
 }

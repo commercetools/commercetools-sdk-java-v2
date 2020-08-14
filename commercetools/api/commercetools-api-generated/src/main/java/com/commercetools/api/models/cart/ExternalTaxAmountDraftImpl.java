@@ -23,37 +23,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft {
 
-   private com.commercetools.api.models.common.Money totalGross;
-   
-   private com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate;
+    private com.commercetools.api.models.common.Money totalGross;
+    
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate;
 
-   @JsonCreator
-   ExternalTaxAmountDraftImpl(@JsonProperty("totalGross") final com.commercetools.api.models.common.Money totalGross, @JsonProperty("taxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate) {
-      this.totalGross = totalGross;
-      this.taxRate = taxRate;
-   }
-   public ExternalTaxAmountDraftImpl() {
-      
-   }
-   
-   /**
-   *  <p>The total gross amount of the item (totalNet + taxes).</p>
-   */
-   public com.commercetools.api.models.common.Money getTotalGross(){
-      return this.totalGross;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ExternalTaxRateDraft getTaxRate(){
-      return this.taxRate;
-   }
+    @JsonCreator
+    ExternalTaxAmountDraftImpl(@JsonProperty("totalGross") final com.commercetools.api.models.common.Money totalGross, @JsonProperty("taxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate) {
+        this.totalGross = totalGross;
+        this.taxRate = taxRate;
+    }
+    public ExternalTaxAmountDraftImpl() {
+       
+    }
 
-   public void setTotalGross(final com.commercetools.api.models.common.Money totalGross){
-      this.totalGross = totalGross;
-   }
-   
-   public void setTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate){
-      this.taxRate = taxRate;
-   }
+    /**
+    *  <p>The total gross amount of the item (totalNet + taxes).</p>
+    */
+    public com.commercetools.api.models.common.Money getTotalGross(){
+        return this.totalGross;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getTaxRate(){
+        return this.taxRate;
+    }
+
+    public void setTotalGross(final com.commercetools.api.models.common.Money totalGross){
+        this.totalGross = totalGross;
+    }
+    
+    public void setTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate){
+        this.taxRate = taxRate;
+    }
 
 }

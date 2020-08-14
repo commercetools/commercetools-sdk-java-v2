@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeInfoImpl.class)
 public interface DiscountCodeInfo  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("discountCode")
-   public DiscountCodeReference getDiscountCode();
-   
-   @NotNull
-   @JsonProperty("state")
-   public DiscountCodeState getState();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("discountCode")
+    public DiscountCodeReference getDiscountCode();
+    
+    @NotNull
+    @JsonProperty("state")
+    public DiscountCodeState getState();
 
-   public void setDiscountCode(final DiscountCodeReference discountCode);
-   
-   public void setState(final DiscountCodeState state);
-   
-   public static DiscountCodeInfoImpl of(){
-      return new DiscountCodeInfoImpl();
-   }
-   
+    public void setDiscountCode(final DiscountCodeReference discountCode);
+    
+    public void setState(final DiscountCodeState state);
 
-   public static DiscountCodeInfoImpl of(final DiscountCodeInfo template) {
-      DiscountCodeInfoImpl instance = new DiscountCodeInfoImpl();
-      instance.setDiscountCode(template.getDiscountCode());
-      instance.setState(template.getState());
-      return instance;
-   }
+    public static DiscountCodeInfoImpl of(){
+        return new DiscountCodeInfoImpl();
+    }
+    
+
+    public static DiscountCodeInfoImpl of(final DiscountCodeInfo template) {
+        DiscountCodeInfoImpl instance = new DiscountCodeInfoImpl();
+        instance.setDiscountCode(template.getDiscountCode());
+        instance.setState(template.getState());
+        return instance;
+    }
 
 }

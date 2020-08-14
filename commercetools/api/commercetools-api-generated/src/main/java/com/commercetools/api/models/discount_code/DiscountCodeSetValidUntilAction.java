@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeSetValidUntilActionImpl.class)
 public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateAction {
 
-   /**
-   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
-   */
-   
-   @JsonProperty("validUntil")
-   public ZonedDateTime getValidUntil();
+    /**
+    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    */
+    
+    @JsonProperty("validUntil")
+    public ZonedDateTime getValidUntil();
 
-   public void setValidUntil(final ZonedDateTime validUntil);
-   
-   public static DiscountCodeSetValidUntilActionImpl of(){
-      return new DiscountCodeSetValidUntilActionImpl();
-   }
-   
+    public void setValidUntil(final ZonedDateTime validUntil);
 
-   public static DiscountCodeSetValidUntilActionImpl of(final DiscountCodeSetValidUntilAction template) {
-      DiscountCodeSetValidUntilActionImpl instance = new DiscountCodeSetValidUntilActionImpl();
-      instance.setValidUntil(template.getValidUntil());
-      return instance;
-   }
+    public static DiscountCodeSetValidUntilActionImpl of(){
+        return new DiscountCodeSetValidUntilActionImpl();
+    }
+    
+
+    public static DiscountCodeSetValidUntilActionImpl of(final DiscountCodeSetValidUntilAction template) {
+        DiscountCodeSetValidUntilActionImpl instance = new DiscountCodeSetValidUntilActionImpl();
+        instance.setValidUntil(template.getValidUntil());
+        return instance;
+    }
 
 }

@@ -21,35 +21,35 @@ import java.io.IOException;
 @JsonDeserialize(as = ItemShippingTargetImpl.class)
 public interface ItemShippingTarget  {
 
-   /**
-   *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
-   */
-   @NotNull
-   @JsonProperty("addressKey")
-   public String getAddressKey();
-   /**
-   *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>.
-   *  Only positive values are allowed.
-   *  Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
-   */
-   @NotNull
-   @JsonProperty("quantity")
-   public Double getQuantity();
+    /**
+    *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
+    */
+    @NotNull
+    @JsonProperty("addressKey")
+    public String getAddressKey();
+    /**
+    *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>.
+    *  Only positive values are allowed.
+    *  Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+    */
+    @NotNull
+    @JsonProperty("quantity")
+    public Double getQuantity();
 
-   public void setAddressKey(final String addressKey);
-   
-   public void setQuantity(final Double quantity);
-   
-   public static ItemShippingTargetImpl of(){
-      return new ItemShippingTargetImpl();
-   }
-   
+    public void setAddressKey(final String addressKey);
+    
+    public void setQuantity(final Double quantity);
 
-   public static ItemShippingTargetImpl of(final ItemShippingTarget template) {
-      ItemShippingTargetImpl instance = new ItemShippingTargetImpl();
-      instance.setAddressKey(template.getAddressKey());
-      instance.setQuantity(template.getQuantity());
-      return instance;
-   }
+    public static ItemShippingTargetImpl of(){
+        return new ItemShippingTargetImpl();
+    }
+    
+
+    public static ItemShippingTargetImpl of(final ItemShippingTarget template) {
+        ItemShippingTargetImpl instance = new ItemShippingTargetImpl();
+        instance.setAddressKey(template.getAddressKey());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
 
 }

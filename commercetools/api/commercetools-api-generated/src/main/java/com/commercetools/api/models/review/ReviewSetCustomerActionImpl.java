@@ -23,34 +23,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewSetCustomerActionImpl implements ReviewSetCustomerAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
+    private String action;
+    
+    private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
-   @JsonCreator
-   ReviewSetCustomerActionImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
-      this.customer = customer;
-      this.action = "setCustomer";
-   }
-   public ReviewSetCustomerActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>The customer who created the review.
-   *  If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
-      return this.customer;
-   }
+    @JsonCreator
+    ReviewSetCustomerActionImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
+        this.customer = customer;
+        this.action = "setCustomer";
+    }
+    public ReviewSetCustomerActionImpl() {
+       
+    }
 
-   public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer){
-      this.customer = customer;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>The customer who created the review.
+    *  If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
+        return this.customer;
+    }
+
+    public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer){
+        this.customer = customer;
+    }
 
 }

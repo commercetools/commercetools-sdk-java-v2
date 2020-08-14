@@ -22,37 +22,37 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryChangeAssetNameActionImpl.class)
 public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
 
-   
-   
-   @JsonProperty("assetId")
-   public String getAssetId();
-   
-   
-   @JsonProperty("assetKey")
-   public String getAssetKey();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
+    
+    
+    @JsonProperty("assetId")
+    public String getAssetId();
+    
+    
+    @JsonProperty("assetKey")
+    public String getAssetKey();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
 
-   public void setAssetId(final String assetId);
-   
-   public void setAssetKey(final String assetKey);
-   
-   public void setName(final LocalizedString name);
-   
-   public static CategoryChangeAssetNameActionImpl of(){
-      return new CategoryChangeAssetNameActionImpl();
-   }
-   
+    public void setAssetId(final String assetId);
+    
+    public void setAssetKey(final String assetKey);
+    
+    public void setName(final LocalizedString name);
 
-   public static CategoryChangeAssetNameActionImpl of(final CategoryChangeAssetNameAction template) {
-      CategoryChangeAssetNameActionImpl instance = new CategoryChangeAssetNameActionImpl();
-      instance.setAssetId(template.getAssetId());
-      instance.setAssetKey(template.getAssetKey());
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static CategoryChangeAssetNameActionImpl of(){
+        return new CategoryChangeAssetNameActionImpl();
+    }
+    
+
+    public static CategoryChangeAssetNameActionImpl of(final CategoryChangeAssetNameAction template) {
+        CategoryChangeAssetNameActionImpl instance = new CategoryChangeAssetNameActionImpl();
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

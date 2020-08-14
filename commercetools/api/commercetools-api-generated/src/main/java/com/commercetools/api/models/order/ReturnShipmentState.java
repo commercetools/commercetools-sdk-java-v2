@@ -13,33 +13,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ReturnShipmentState {
 
-  
-  @JsonProperty("Advised")
-  ADVISED("Advised"),
-  
-  
-  @JsonProperty("Returned")
-  RETURNED("Returned"),
-  
-  
-  @JsonProperty("BackInStock")
-  BACK_IN_STOCK("BackInStock"),
-  
-  
-  @JsonProperty("Unusable")
-  UNUSABLE("Unusable");
+    
+    @JsonProperty("Advised")
+    ADVISED("Advised"),
+    
+    
+    @JsonProperty("Returned")
+    RETURNED("Returned"),
+    
+    
+    @JsonProperty("BackInStock")
+    BACK_IN_STOCK("BackInStock"),
+    
+    
+    @JsonProperty("Unusable")
+    UNUSABLE("Unusable");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private ReturnShipmentState(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private ReturnShipmentState(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<ReturnShipmentState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<ReturnShipmentState> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

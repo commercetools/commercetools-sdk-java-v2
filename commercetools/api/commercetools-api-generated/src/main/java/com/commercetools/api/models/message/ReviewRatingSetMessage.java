@@ -22,53 +22,53 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewRatingSetMessageImpl.class)
 public interface ReviewRatingSetMessage extends Message {
 
-   
-   
-   @JsonProperty("oldRating")
-   public Double getOldRating();
-   
-   
-   @JsonProperty("newRating")
-   public Double getNewRating();
-   
-   @NotNull
-   @JsonProperty("includedInStatistics")
-   public Boolean getIncludedInStatistics();
-   
-   @Valid
-   @JsonProperty("target")
-   public Reference getTarget();
+    
+    
+    @JsonProperty("oldRating")
+    public Double getOldRating();
+    
+    
+    @JsonProperty("newRating")
+    public Double getNewRating();
+    
+    @NotNull
+    @JsonProperty("includedInStatistics")
+    public Boolean getIncludedInStatistics();
+    
+    @Valid
+    @JsonProperty("target")
+    public Reference getTarget();
 
-   public void setOldRating(final Double oldRating);
-   
-   public void setNewRating(final Double newRating);
-   
-   public void setIncludedInStatistics(final Boolean includedInStatistics);
-   
-   public void setTarget(final Reference target);
-   
-   public static ReviewRatingSetMessageImpl of(){
-      return new ReviewRatingSetMessageImpl();
-   }
-   
+    public void setOldRating(final Double oldRating);
+    
+    public void setNewRating(final Double newRating);
+    
+    public void setIncludedInStatistics(final Boolean includedInStatistics);
+    
+    public void setTarget(final Reference target);
 
-   public static ReviewRatingSetMessageImpl of(final ReviewRatingSetMessage template) {
-      ReviewRatingSetMessageImpl instance = new ReviewRatingSetMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setOldRating(template.getOldRating());
-      instance.setNewRating(template.getNewRating());
-      instance.setIncludedInStatistics(template.getIncludedInStatistics());
-      instance.setTarget(template.getTarget());
-      return instance;
-   }
+    public static ReviewRatingSetMessageImpl of(){
+        return new ReviewRatingSetMessageImpl();
+    }
+    
+
+    public static ReviewRatingSetMessageImpl of(final ReviewRatingSetMessage template) {
+        ReviewRatingSetMessageImpl instance = new ReviewRatingSetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setOldRating(template.getOldRating());
+        instance.setNewRating(template.getNewRating());
+        instance.setIncludedInStatistics(template.getIncludedInStatistics());
+        instance.setTarget(template.getTarget());
+        return instance;
+    }
 
 }

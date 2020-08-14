@@ -25,67 +25,67 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError {
 
-   private String code;
-   
-   private String message;
-   
-   private com.commercetools.api.models.common.LocalizedString localizedMessage;
-   
-   private com.fasterxml.jackson.databind.JsonNode extensionExtraInfo;
-   
-   private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
+    private String code;
+    
+    private String message;
+    
+    private com.commercetools.api.models.common.LocalizedString localizedMessage;
+    
+    private com.fasterxml.jackson.databind.JsonNode extensionExtraInfo;
+    
+    private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
 
-   @JsonCreator
-   ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message, @JsonProperty("localizedMessage") final com.commercetools.api.models.common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
-      this.message = message;
-      this.localizedMessage = localizedMessage;
-      this.extensionExtraInfo = extensionExtraInfo;
-      this.errorByExtension = errorByExtension;
-      this.code = "ExtensionNoResponse";
-   }
-   public ExtensionNoResponseErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getLocalizedMessage(){
-      return this.localizedMessage;
-   }
-   
-   
-   public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo(){
-      return this.extensionExtraInfo;
-   }
-   
-   
-   public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension(){
-      return this.errorByExtension;
-   }
+    @JsonCreator
+    ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message, @JsonProperty("localizedMessage") final com.commercetools.api.models.common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
+        this.message = message;
+        this.localizedMessage = localizedMessage;
+        this.extensionExtraInfo = extensionExtraInfo;
+        this.errorByExtension = errorByExtension;
+        this.code = "ExtensionNoResponse";
+    }
+    public ExtensionNoResponseErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setLocalizedMessage(final com.commercetools.api.models.common.LocalizedString localizedMessage){
-      this.localizedMessage = localizedMessage;
-   }
-   
-   public void setExtensionExtraInfo(final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo){
-      this.extensionExtraInfo = extensionExtraInfo;
-   }
-   
-   public void setErrorByExtension(final com.commercetools.api.models.error.ErrorByExtension errorByExtension){
-      this.errorByExtension = errorByExtension;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage(){
+        return this.localizedMessage;
+    }
+    
+    
+    public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo(){
+        return this.extensionExtraInfo;
+    }
+    
+    
+    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension(){
+        return this.errorByExtension;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setLocalizedMessage(final com.commercetools.api.models.common.LocalizedString localizedMessage){
+        this.localizedMessage = localizedMessage;
+    }
+    
+    public void setExtensionExtraInfo(final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo){
+        this.extensionExtraInfo = extensionExtraInfo;
+    }
+    
+    public void setErrorByExtension(final com.commercetools.api.models.error.ErrorByExtension errorByExtension){
+        this.errorByExtension = errorByExtension;
+    }
 
 }

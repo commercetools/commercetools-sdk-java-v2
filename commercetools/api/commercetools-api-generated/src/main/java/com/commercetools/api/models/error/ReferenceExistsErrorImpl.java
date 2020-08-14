@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReferenceExistsErrorImpl implements ReferenceExistsError {
 
-   private String code;
-   
-   private String message;
-   
-   private com.commercetools.api.models.common.ReferenceTypeId referencedBy;
+    private String code;
+    
+    private String message;
+    
+    private com.commercetools.api.models.common.ReferenceTypeId referencedBy;
 
-   @JsonCreator
-   ReferenceExistsErrorImpl(@JsonProperty("message") final String message, @JsonProperty("referencedBy") final com.commercetools.api.models.common.ReferenceTypeId referencedBy) {
-      this.message = message;
-      this.referencedBy = referencedBy;
-      this.code = "ReferenceExists";
-   }
-   public ReferenceExistsErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
-   
-   
-   public com.commercetools.api.models.common.ReferenceTypeId getReferencedBy(){
-      return this.referencedBy;
-   }
+    @JsonCreator
+    ReferenceExistsErrorImpl(@JsonProperty("message") final String message, @JsonProperty("referencedBy") final com.commercetools.api.models.common.ReferenceTypeId referencedBy) {
+        this.message = message;
+        this.referencedBy = referencedBy;
+        this.code = "ReferenceExists";
+    }
+    public ReferenceExistsErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setReferencedBy(final com.commercetools.api.models.common.ReferenceTypeId referencedBy){
-      this.referencedBy = referencedBy;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+    
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getReferencedBy(){
+        return this.referencedBy;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setReferencedBy(final com.commercetools.api.models.common.ReferenceTypeId referencedBy){
+        this.referencedBy = referencedBy;
+    }
 
 }

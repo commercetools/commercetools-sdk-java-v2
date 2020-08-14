@@ -23,57 +23,57 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductChangePriceActionImpl implements ProductChangePriceAction {
 
-   private String action;
-   
-   private String priceId;
-   
-   private com.commercetools.api.models.common.PriceDraft price;
-   
-   private Boolean staged;
+    private String action;
+    
+    private String priceId;
+    
+    private com.commercetools.api.models.common.PriceDraft price;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductChangePriceActionImpl(@JsonProperty("priceId") final String priceId, @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price, @JsonProperty("staged") final Boolean staged) {
-      this.priceId = priceId;
-      this.price = price;
-      this.staged = staged;
-      this.action = "changePrice";
-   }
-   public ProductChangePriceActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>ID of the <a href="#price">Price</a></p>
-   */
-   public String getPriceId(){
-      return this.priceId;
-   }
-   
-   
-   public com.commercetools.api.models.common.PriceDraft getPrice(){
-      return this.price;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductChangePriceActionImpl(@JsonProperty("priceId") final String priceId, @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price, @JsonProperty("staged") final Boolean staged) {
+        this.priceId = priceId;
+        this.price = price;
+        this.staged = staged;
+        this.action = "changePrice";
+    }
+    public ProductChangePriceActionImpl() {
+       
+    }
 
-   public void setPriceId(final String priceId){
-      this.priceId = priceId;
-   }
-   
-   public void setPrice(final com.commercetools.api.models.common.PriceDraft price){
-      this.price = price;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>ID of the <a href="#price">Price</a></p>
+    */
+    public String getPriceId(){
+        return this.priceId;
+    }
+    
+    
+    public com.commercetools.api.models.common.PriceDraft getPrice(){
+        return this.price;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setPriceId(final String priceId){
+        this.priceId = priceId;
+    }
+    
+    public void setPrice(final com.commercetools.api.models.common.PriceDraft price){
+        this.price = price;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

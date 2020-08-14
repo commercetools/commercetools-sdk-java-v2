@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = ExternalTaxAmountDraftImpl.class)
 public interface ExternalTaxAmountDraft  {
 
-   /**
-   *  <p>The total gross amount of the item (totalNet + taxes).</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("totalGross")
-   public Money getTotalGross();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("taxRate")
-   public ExternalTaxRateDraft getTaxRate();
+    /**
+    *  <p>The total gross amount of the item (totalNet + taxes).</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("totalGross")
+    public Money getTotalGross();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("taxRate")
+    public ExternalTaxRateDraft getTaxRate();
 
-   public void setTotalGross(final Money totalGross);
-   
-   public void setTaxRate(final ExternalTaxRateDraft taxRate);
-   
-   public static ExternalTaxAmountDraftImpl of(){
-      return new ExternalTaxAmountDraftImpl();
-   }
-   
+    public void setTotalGross(final Money totalGross);
+    
+    public void setTaxRate(final ExternalTaxRateDraft taxRate);
 
-   public static ExternalTaxAmountDraftImpl of(final ExternalTaxAmountDraft template) {
-      ExternalTaxAmountDraftImpl instance = new ExternalTaxAmountDraftImpl();
-      instance.setTotalGross(template.getTotalGross());
-      instance.setTaxRate(template.getTaxRate());
-      return instance;
-   }
+    public static ExternalTaxAmountDraftImpl of(){
+        return new ExternalTaxAmountDraftImpl();
+    }
+    
+
+    public static ExternalTaxAmountDraftImpl of(final ExternalTaxAmountDraft template) {
+        ExternalTaxAmountDraftImpl instance = new ExternalTaxAmountDraftImpl();
+        instance.setTotalGross(template.getTotalGross());
+        instance.setTaxRate(template.getTaxRate());
+        return instance;
+    }
 
 }

@@ -22,34 +22,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountChangeSortOrderActionImpl implements CartDiscountChangeSortOrderAction {
 
-   private String action;
-   
-   private String sortOrder;
+    private String action;
+    
+    private String sortOrder;
 
-   @JsonCreator
-   CartDiscountChangeSortOrderActionImpl(@JsonProperty("sortOrder") final String sortOrder) {
-      this.sortOrder = sortOrder;
-      this.action = "changeSortOrder";
-   }
-   public CartDiscountChangeSortOrderActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>The string must contain a number between 0 and 1.
-   *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>
-   */
-   public String getSortOrder(){
-      return this.sortOrder;
-   }
+    @JsonCreator
+    CartDiscountChangeSortOrderActionImpl(@JsonProperty("sortOrder") final String sortOrder) {
+        this.sortOrder = sortOrder;
+        this.action = "changeSortOrder";
+    }
+    public CartDiscountChangeSortOrderActionImpl() {
+       
+    }
 
-   public void setSortOrder(final String sortOrder){
-      this.sortOrder = sortOrder;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>The string must contain a number between 0 and 1.
+    *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>
+    */
+    public String getSortOrder(){
+        return this.sortOrder;
+    }
+
+    public void setSortOrder(final String sortOrder){
+        this.sortOrder = sortOrder;
+    }
 
 }

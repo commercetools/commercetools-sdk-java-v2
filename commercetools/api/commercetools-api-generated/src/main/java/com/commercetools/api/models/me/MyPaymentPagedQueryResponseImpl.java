@@ -22,71 +22,71 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentPagedQueryResponseImpl implements MyPaymentPagedQueryResponse {
 
-   private Long limit;
-   
-   private Long count;
-   
-   private Long total;
-   
-   private Long offset;
-   
-   private java.util.List<com.commercetools.api.models.me.MyPayment> results;
+    private Long limit;
+    
+    private Long count;
+    
+    private Long total;
+    
+    private Long offset;
+    
+    private java.util.List<com.commercetools.api.models.me.MyPayment> results;
 
-   @JsonCreator
-   MyPaymentPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.api.models.me.MyPayment> results) {
-      this.limit = limit;
-      this.count = count;
-      this.total = total;
-      this.offset = offset;
-      this.results = results;
-   }
-   public MyPaymentPagedQueryResponseImpl() {
-      
-   }
-   
-   
-   public Long getLimit(){
-      return this.limit;
-   }
-   
-   
-   public Long getCount(){
-      return this.count;
-   }
-   
-   
-   public Long getTotal(){
-      return this.total;
-   }
-   
-   
-   public Long getOffset(){
-      return this.offset;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.me.MyPayment> getResults(){
-      return this.results;
-   }
+    @JsonCreator
+    MyPaymentPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.api.models.me.MyPayment> results) {
+        this.limit = limit;
+        this.count = count;
+        this.total = total;
+        this.offset = offset;
+        this.results = results;
+    }
+    public MyPaymentPagedQueryResponseImpl() {
+       
+    }
 
-   public void setLimit(final Long limit){
-      this.limit = limit;
-   }
-   
-   public void setCount(final Long count){
-      this.count = count;
-   }
-   
-   public void setTotal(final Long total){
-      this.total = total;
-   }
-   
-   public void setOffset(final Long offset){
-      this.offset = offset;
-   }
-   
-   public void setResults(final java.util.List<com.commercetools.api.models.me.MyPayment> results){
-      this.results = results;
-   }
+    
+    public Long getLimit(){
+        return this.limit;
+    }
+    
+    
+    public Long getCount(){
+        return this.count;
+    }
+    
+    
+    public Long getTotal(){
+        return this.total;
+    }
+    
+    
+    public Long getOffset(){
+        return this.offset;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.me.MyPayment> getResults(){
+        return this.results;
+    }
+
+    public void setLimit(final Long limit){
+        this.limit = limit;
+    }
+    
+    public void setCount(final Long count){
+        this.count = count;
+    }
+    
+    public void setTotal(final Long total){
+        this.total = total;
+    }
+    
+    public void setOffset(final Long offset){
+        this.offset = offset;
+    }
+    
+    public void setResults(final java.util.List<com.commercetools.api.models.me.MyPayment> results){
+        this.results = results;
+    }
 
 }

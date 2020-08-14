@@ -22,40 +22,40 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductStateTransitionMessageImpl.class)
 public interface ProductStateTransitionMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("state")
-   public StateReference getState();
-   
-   @NotNull
-   @JsonProperty("force")
-   public Boolean getForce();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+    
+    @NotNull
+    @JsonProperty("force")
+    public Boolean getForce();
 
-   public void setState(final StateReference state);
-   
-   public void setForce(final Boolean force);
-   
-   public static ProductStateTransitionMessageImpl of(){
-      return new ProductStateTransitionMessageImpl();
-   }
-   
+    public void setState(final StateReference state);
+    
+    public void setForce(final Boolean force);
 
-   public static ProductStateTransitionMessageImpl of(final ProductStateTransitionMessage template) {
-      ProductStateTransitionMessageImpl instance = new ProductStateTransitionMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setState(template.getState());
-      instance.setForce(template.getForce());
-      return instance;
-   }
+    public static ProductStateTransitionMessageImpl of(){
+        return new ProductStateTransitionMessageImpl();
+    }
+    
+
+    public static ProductStateTransitionMessageImpl of(final ProductStateTransitionMessage template) {
+        ProductStateTransitionMessageImpl instance = new ProductStateTransitionMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
 
 }

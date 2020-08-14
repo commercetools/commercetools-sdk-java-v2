@@ -22,36 +22,36 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetDiscountedPriceActionImpl.class)
 public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("priceId")
-   public String getPriceId();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
-   
-   @Valid
-   @JsonProperty("discounted")
-   public DiscountedPrice getDiscounted();
+    
+    @NotNull
+    @JsonProperty("priceId")
+    public String getPriceId();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
+    
+    @Valid
+    @JsonProperty("discounted")
+    public DiscountedPrice getDiscounted();
 
-   public void setPriceId(final String priceId);
-   
-   public void setStaged(final Boolean staged);
-   
-   public void setDiscounted(final DiscountedPrice discounted);
-   
-   public static ProductSetDiscountedPriceActionImpl of(){
-      return new ProductSetDiscountedPriceActionImpl();
-   }
-   
+    public void setPriceId(final String priceId);
+    
+    public void setStaged(final Boolean staged);
+    
+    public void setDiscounted(final DiscountedPrice discounted);
 
-   public static ProductSetDiscountedPriceActionImpl of(final ProductSetDiscountedPriceAction template) {
-      ProductSetDiscountedPriceActionImpl instance = new ProductSetDiscountedPriceActionImpl();
-      instance.setPriceId(template.getPriceId());
-      instance.setStaged(template.getStaged());
-      instance.setDiscounted(template.getDiscounted());
-      return instance;
-   }
+    public static ProductSetDiscountedPriceActionImpl of(){
+        return new ProductSetDiscountedPriceActionImpl();
+    }
+    
+
+    public static ProductSetDiscountedPriceActionImpl of(final ProductSetDiscountedPriceAction template) {
+        ProductSetDiscountedPriceActionImpl instance = new ProductSetDiscountedPriceActionImpl();
+        instance.setPriceId(template.getPriceId());
+        instance.setStaged(template.getStaged());
+        instance.setDiscounted(template.getDiscounted());
+        return instance;
+    }
 
 }

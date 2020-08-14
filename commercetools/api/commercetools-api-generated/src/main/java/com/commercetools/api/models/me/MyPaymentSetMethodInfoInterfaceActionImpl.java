@@ -22,30 +22,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentSetMethodInfoInterfaceActionImpl implements MyPaymentSetMethodInfoInterfaceAction {
 
-   private String action;
-   
-   private String _interface;
+    private String action;
+    
+    private String _interface;
 
-   @JsonCreator
-   MyPaymentSetMethodInfoInterfaceActionImpl(@JsonProperty("interface") final String _interface) {
-      this._interface = _interface;
-      this.action = "setMethodInfoInterface";
-   }
-   public MyPaymentSetMethodInfoInterfaceActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   public String getInterface() {
-      return this._interface;
-   }
+    @JsonCreator
+    MyPaymentSetMethodInfoInterfaceActionImpl(@JsonProperty("interface") final String _interface) {
+        this._interface = _interface;
+        this.action = "setMethodInfoInterface";
+    }
+    public MyPaymentSetMethodInfoInterfaceActionImpl() {
+       
+    }
 
-   public void setInterface(final String _interface) {
-      this._interface = _interface;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    public String getInterface() {
+        return this._interface;
+    }
+
+    public void setInterface(final String _interface) {
+        this._interface = _interface;
+    }
 
 }

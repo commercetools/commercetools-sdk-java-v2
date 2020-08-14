@@ -23,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingRateInputDraftImpl implements ShippingRateInputDraft {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   ShippingRateInputDraftImpl() {
-      this.type = "null";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    ShippingRateInputDraftImpl() {
+        this.type = "null";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

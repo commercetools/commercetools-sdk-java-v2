@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerRemoveBillingAddressIdActionImpl implements CustomerRemoveBillingAddressIdAction {
 
-   private String action;
-   
-   private String addressId;
-   
-   private String addressKey;
+    private String action;
+    
+    private String addressId;
+    
+    private String addressKey;
 
-   @JsonCreator
-   CustomerRemoveBillingAddressIdActionImpl(@JsonProperty("addressId") final String addressId, @JsonProperty("addressKey") final String addressKey) {
-      this.addressId = addressId;
-      this.addressKey = addressKey;
-      this.action = "removeBillingAddressId";
-   }
-   public CustomerRemoveBillingAddressIdActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAddressId(){
-      return this.addressId;
-   }
-   
-   
-   public String getAddressKey(){
-      return this.addressKey;
-   }
+    @JsonCreator
+    CustomerRemoveBillingAddressIdActionImpl(@JsonProperty("addressId") final String addressId, @JsonProperty("addressKey") final String addressKey) {
+        this.addressId = addressId;
+        this.addressKey = addressKey;
+        this.action = "removeBillingAddressId";
+    }
+    public CustomerRemoveBillingAddressIdActionImpl() {
+       
+    }
 
-   public void setAddressId(final String addressId){
-      this.addressId = addressId;
-   }
-   
-   public void setAddressKey(final String addressKey){
-      this.addressKey = addressKey;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAddressId(){
+        return this.addressId;
+    }
+    
+    
+    public String getAddressKey(){
+        return this.addressKey;
+    }
+
+    public void setAddressId(final String addressId){
+        this.addressId = addressId;
+    }
+    
+    public void setAddressKey(final String addressKey){
+        this.addressKey = addressKey;
+    }
 
 }

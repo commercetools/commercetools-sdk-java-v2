@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewSetCustomFieldActionImpl.class)
 public interface ReviewSetCustomFieldAction extends ReviewUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
 
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public static ReviewSetCustomFieldActionImpl of(){
-      return new ReviewSetCustomFieldActionImpl();
-   }
-   
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
 
-   public static ReviewSetCustomFieldActionImpl of(final ReviewSetCustomFieldAction template) {
-      ReviewSetCustomFieldActionImpl instance = new ReviewSetCustomFieldActionImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static ReviewSetCustomFieldActionImpl of(){
+        return new ReviewSetCustomFieldActionImpl();
+    }
+    
+
+    public static ReviewSetCustomFieldActionImpl of(final ReviewSetCustomFieldAction template) {
+        ReviewSetCustomFieldActionImpl instance = new ReviewSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

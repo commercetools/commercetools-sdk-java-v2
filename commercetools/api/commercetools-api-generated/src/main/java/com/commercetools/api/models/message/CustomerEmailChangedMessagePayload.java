@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerEmailChangedMessagePayloadImpl.class)
 public interface CustomerEmailChangedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("email")
-   public String getEmail();
+    
+    @NotNull
+    @JsonProperty("email")
+    public String getEmail();
 
-   public void setEmail(final String email);
-   
-   public static CustomerEmailChangedMessagePayloadImpl of(){
-      return new CustomerEmailChangedMessagePayloadImpl();
-   }
-   
+    public void setEmail(final String email);
 
-   public static CustomerEmailChangedMessagePayloadImpl of(final CustomerEmailChangedMessagePayload template) {
-      CustomerEmailChangedMessagePayloadImpl instance = new CustomerEmailChangedMessagePayloadImpl();
-      instance.setEmail(template.getEmail());
-      return instance;
-   }
+    public static CustomerEmailChangedMessagePayloadImpl of(){
+        return new CustomerEmailChangedMessagePayloadImpl();
+    }
+    
+
+    public static CustomerEmailChangedMessagePayloadImpl of(final CustomerEmailChangedMessagePayload template) {
+        CustomerEmailChangedMessagePayloadImpl instance = new CustomerEmailChangedMessagePayloadImpl();
+        instance.setEmail(template.getEmail());
+        return instance;
+    }
 
 }

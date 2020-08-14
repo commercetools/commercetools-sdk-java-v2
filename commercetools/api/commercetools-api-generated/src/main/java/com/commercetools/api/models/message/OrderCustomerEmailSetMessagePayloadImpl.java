@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEmailSetMessagePayload {
 
-   private String type;
-   
-   private String email;
-   
-   private String oldEmail;
+    private String type;
+    
+    private String email;
+    
+    private String oldEmail;
 
-   @JsonCreator
-   OrderCustomerEmailSetMessagePayloadImpl(@JsonProperty("email") final String email, @JsonProperty("oldEmail") final String oldEmail) {
-      this.email = email;
-      this.oldEmail = oldEmail;
-      this.type = "OrderCustomerEmailSet";
-   }
-   public OrderCustomerEmailSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getEmail(){
-      return this.email;
-   }
-   
-   
-   public String getOldEmail(){
-      return this.oldEmail;
-   }
+    @JsonCreator
+    OrderCustomerEmailSetMessagePayloadImpl(@JsonProperty("email") final String email, @JsonProperty("oldEmail") final String oldEmail) {
+        this.email = email;
+        this.oldEmail = oldEmail;
+        this.type = "OrderCustomerEmailSet";
+    }
+    public OrderCustomerEmailSetMessagePayloadImpl() {
+       
+    }
 
-   public void setEmail(final String email){
-      this.email = email;
-   }
-   
-   public void setOldEmail(final String oldEmail){
-      this.oldEmail = oldEmail;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getEmail(){
+        return this.email;
+    }
+    
+    
+    public String getOldEmail(){
+        return this.oldEmail;
+    }
+
+    public void setEmail(final String email){
+        this.email = email;
+    }
+    
+    public void setOldEmail(final String oldEmail){
+        this.oldEmail = oldEmail;
+    }
 
 }

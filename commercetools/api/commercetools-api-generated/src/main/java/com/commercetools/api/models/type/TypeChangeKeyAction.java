@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeChangeKeyActionImpl.class)
 public interface TypeChangeKeyAction extends TypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
+    
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setKey(final String key);
-   
-   public static TypeChangeKeyActionImpl of(){
-      return new TypeChangeKeyActionImpl();
-   }
-   
+    public void setKey(final String key);
 
-   public static TypeChangeKeyActionImpl of(final TypeChangeKeyAction template) {
-      TypeChangeKeyActionImpl instance = new TypeChangeKeyActionImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static TypeChangeKeyActionImpl of(){
+        return new TypeChangeKeyActionImpl();
+    }
+    
+
+    public static TypeChangeKeyActionImpl of(final TypeChangeKeyAction template) {
+        TypeChangeKeyActionImpl instance = new TypeChangeKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

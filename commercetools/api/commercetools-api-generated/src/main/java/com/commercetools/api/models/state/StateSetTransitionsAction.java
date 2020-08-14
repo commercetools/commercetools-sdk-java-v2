@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StateSetTransitionsActionImpl.class)
 public interface StateSetTransitionsAction extends StateUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("transitions")
-   public List<StateResourceIdentifier> getTransitions();
+    
+    @Valid
+    @JsonProperty("transitions")
+    public List<StateResourceIdentifier> getTransitions();
 
-   public void setTransitions(final List<StateResourceIdentifier> transitions);
-   
-   public static StateSetTransitionsActionImpl of(){
-      return new StateSetTransitionsActionImpl();
-   }
-   
+    public void setTransitions(final List<StateResourceIdentifier> transitions);
 
-   public static StateSetTransitionsActionImpl of(final StateSetTransitionsAction template) {
-      StateSetTransitionsActionImpl instance = new StateSetTransitionsActionImpl();
-      instance.setTransitions(template.getTransitions());
-      return instance;
-   }
+    public static StateSetTransitionsActionImpl of(){
+        return new StateSetTransitionsActionImpl();
+    }
+    
+
+    public static StateSetTransitionsActionImpl of(final StateSetTransitionsAction template) {
+        StateSetTransitionsActionImpl instance = new StateSetTransitionsActionImpl();
+        instance.setTransitions(template.getTransitions());
+        return instance;
+    }
 
 }

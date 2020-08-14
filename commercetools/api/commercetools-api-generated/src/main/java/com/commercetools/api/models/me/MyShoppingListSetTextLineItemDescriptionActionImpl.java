@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListSetTextLineItemDescriptionActionImpl implements MyShoppingListSetTextLineItemDescriptionAction {
 
-   private String action;
-   
-   private String textLineItemId;
-   
-   private com.commercetools.api.models.common.LocalizedString description;
+    private String action;
+    
+    private String textLineItemId;
+    
+    private com.commercetools.api.models.common.LocalizedString description;
 
-   @JsonCreator
-   MyShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
-      this.textLineItemId = textLineItemId;
-      this.description = description;
-      this.action = "setTextLineItemDescription";
-   }
-   public MyShoppingListSetTextLineItemDescriptionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getTextLineItemId(){
-      return this.textLineItemId;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
+    @JsonCreator
+    MyShoppingListSetTextLineItemDescriptionActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
+        this.textLineItemId = textLineItemId;
+        this.description = description;
+        this.action = "setTextLineItemDescription";
+    }
+    public MyShoppingListSetTextLineItemDescriptionActionImpl() {
+       
+    }
 
-   public void setTextLineItemId(final String textLineItemId){
-      this.textLineItemId = textLineItemId;
-   }
-   
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getTextLineItemId(){
+        return this.textLineItemId;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
+        return this.description;
+    }
+
+    public void setTextLineItemId(final String textLineItemId){
+        this.textLineItemId = textLineItemId;
+    }
+    
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+        this.description = description;
+    }
 
 }

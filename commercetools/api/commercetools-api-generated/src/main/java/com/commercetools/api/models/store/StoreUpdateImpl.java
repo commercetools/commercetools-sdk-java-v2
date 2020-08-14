@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoreUpdateImpl implements StoreUpdate {
 
-   private Long version;
-   
-   private java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions;
+    private Long version;
+    
+    private java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions;
 
-   @JsonCreator
-   StoreUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions) {
-      this.version = version;
-      this.actions = actions;
-   }
-   public StoreUpdateImpl() {
-      
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.store.StoreUpdateAction> getActions(){
-      return this.actions;
-   }
+    @JsonCreator
+    StoreUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions) {
+        this.version = version;
+        this.actions = actions;
+    }
+    public StoreUpdateImpl() {
+       
+    }
 
-   public void setVersion(final Long version){
-      this.version = version;
-   }
-   
-   public void setActions(final java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions){
-      this.actions = actions;
-   }
+    
+    public Long getVersion(){
+        return this.version;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.store.StoreUpdateAction> getActions(){
+        return this.actions;
+    }
+
+    public void setVersion(final Long version){
+        this.version = version;
+    }
+    
+    public void setActions(final java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions){
+        this.actions = actions;
+    }
 
 }

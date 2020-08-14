@@ -21,23 +21,23 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentInfoImpl.class)
 public interface PaymentInfo  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("payments")
-   public List<PaymentReference> getPayments();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("payments")
+    public List<PaymentReference> getPayments();
 
-   public void setPayments(final List<PaymentReference> payments);
-   
-   public static PaymentInfoImpl of(){
-      return new PaymentInfoImpl();
-   }
-   
+    public void setPayments(final List<PaymentReference> payments);
 
-   public static PaymentInfoImpl of(final PaymentInfo template) {
-      PaymentInfoImpl instance = new PaymentInfoImpl();
-      instance.setPayments(template.getPayments());
-      return instance;
-   }
+    public static PaymentInfoImpl of(){
+        return new PaymentInfoImpl();
+    }
+    
+
+    public static PaymentInfoImpl of(final PaymentInfo template) {
+        PaymentInfoImpl instance = new PaymentInfoImpl();
+        instance.setPayments(template.getPayments());
+        return instance;
+    }
 
 }

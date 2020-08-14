@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldNumberTypeImpl implements CustomFieldNumberType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   CustomFieldNumberTypeImpl() {
-      this.name = "Number";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    CustomFieldNumberTypeImpl() {
+        this.name = "Number";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

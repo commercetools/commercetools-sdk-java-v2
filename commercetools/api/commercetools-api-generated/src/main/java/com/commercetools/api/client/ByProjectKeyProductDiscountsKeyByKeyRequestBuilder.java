@@ -7,28 +7,28 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public class ByProjectKeyProductDiscountsKeyByKeyRequestBuilder {
-   
-   private final ApiHttpClient apiHttpClient;
-   private final String projectKey;
-   private final String key;
-   
-   
-   public ByProjectKeyProductDiscountsKeyByKeyRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String key) {
-      this.apiHttpClient = apiHttpClient;
-      this.projectKey = projectKey;
-      this.key = key;
-   }
-   
-   public ByProjectKeyProductDiscountsKeyByKeyGet get() {
-      return new ByProjectKeyProductDiscountsKeyByKeyGet(apiHttpClient, projectKey, key);
-   }
-   
-   public ByProjectKeyProductDiscountsKeyByKeyPost post(com.commercetools.api.models.product_discount.ProductDiscountUpdate productDiscountUpdate) {
-      return new ByProjectKeyProductDiscountsKeyByKeyPost(apiHttpClient, projectKey, key, productDiscountUpdate);
-   }
-   
-   public ByProjectKeyProductDiscountsKeyByKeyDelete delete() {
-      return new ByProjectKeyProductDiscountsKeyByKeyDelete(apiHttpClient, projectKey, key);
-   }
-   
+
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+    private final String key;
+    
+
+    public ByProjectKeyProductDiscountsKeyByKeyRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String key) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+        this.key = key;
+    }
+
+    public ByProjectKeyProductDiscountsKeyByKeyGet get() {
+        return new ByProjectKeyProductDiscountsKeyByKeyGet(apiHttpClient, projectKey, key);
+    }
+    
+    public ByProjectKeyProductDiscountsKeyByKeyPost post(com.commercetools.api.models.product_discount.ProductDiscountUpdate productDiscountUpdate) {
+        return new ByProjectKeyProductDiscountsKeyByKeyPost(apiHttpClient, projectKey, key, productDiscountUpdate);
+    }
+    
+    public ByProjectKeyProductDiscountsKeyByKeyDelete delete() {
+        return new ByProjectKeyProductDiscountsKeyByKeyDelete(apiHttpClient, projectKey, key);
+    }
+
 }

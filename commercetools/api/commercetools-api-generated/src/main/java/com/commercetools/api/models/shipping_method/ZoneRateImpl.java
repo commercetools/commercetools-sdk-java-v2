@@ -23,37 +23,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneRateImpl implements ZoneRate {
 
-   private com.commercetools.api.models.zone.ZoneReference zone;
-   
-   private java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates;
+    private com.commercetools.api.models.zone.ZoneReference zone;
+    
+    private java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates;
 
-   @JsonCreator
-   ZoneRateImpl(@JsonProperty("zone") final com.commercetools.api.models.zone.ZoneReference zone, @JsonProperty("shippingRates") final java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates) {
-      this.zone = zone;
-      this.shippingRates = shippingRates;
-   }
-   public ZoneRateImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.zone.ZoneReference getZone(){
-      return this.zone;
-   }
-   
-   /**
-   *  <p>The array does not contain two shipping rates with the same currency.</p>
-   */
-   public java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> getShippingRates(){
-      return this.shippingRates;
-   }
+    @JsonCreator
+    ZoneRateImpl(@JsonProperty("zone") final com.commercetools.api.models.zone.ZoneReference zone, @JsonProperty("shippingRates") final java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates) {
+        this.zone = zone;
+        this.shippingRates = shippingRates;
+    }
+    public ZoneRateImpl() {
+       
+    }
 
-   public void setZone(final com.commercetools.api.models.zone.ZoneReference zone){
-      this.zone = zone;
-   }
-   
-   public void setShippingRates(final java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates){
-      this.shippingRates = shippingRates;
-   }
+    
+    public com.commercetools.api.models.zone.ZoneReference getZone(){
+        return this.zone;
+    }
+    
+    /**
+    *  <p>The array does not contain two shipping rates with the same currency.</p>
+    */
+    public java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> getShippingRates(){
+        return this.shippingRates;
+    }
+
+    public void setZone(final com.commercetools.api.models.zone.ZoneReference zone){
+        this.zone = zone;
+    }
+    
+    public void setShippingRates(final java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates){
+        this.shippingRates = shippingRates;
+    }
 
 }

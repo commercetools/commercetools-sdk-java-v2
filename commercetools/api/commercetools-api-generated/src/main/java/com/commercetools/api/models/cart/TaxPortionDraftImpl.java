@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxPortionDraftImpl implements TaxPortionDraft {
 
-   private String name;
-   
-   private Double rate;
-   
-   private com.commercetools.api.models.common.Money amount;
+    private String name;
+    
+    private Double rate;
+    
+    private com.commercetools.api.models.common.Money amount;
 
-   @JsonCreator
-   TaxPortionDraftImpl(@JsonProperty("name") final String name, @JsonProperty("rate") final Double rate, @JsonProperty("amount") final com.commercetools.api.models.common.Money amount) {
-      this.name = name;
-      this.rate = rate;
-      this.amount = amount;
-   }
-   public TaxPortionDraftImpl() {
-      
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public Double getRate(){
-      return this.rate;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getAmount(){
-      return this.amount;
-   }
+    @JsonCreator
+    TaxPortionDraftImpl(@JsonProperty("name") final String name, @JsonProperty("rate") final Double rate, @JsonProperty("amount") final com.commercetools.api.models.common.Money amount) {
+        this.name = name;
+        this.rate = rate;
+        this.amount = amount;
+    }
+    public TaxPortionDraftImpl() {
+       
+    }
 
-   public void setName(final String name){
-      this.name = name;
-   }
-   
-   public void setRate(final Double rate){
-      this.rate = rate;
-   }
-   
-   public void setAmount(final com.commercetools.api.models.common.Money amount){
-      this.amount = amount;
-   }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public Double getRate(){
+        return this.rate;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getAmount(){
+        return this.amount;
+    }
+
+    public void setName(final String name){
+        this.name = name;
+    }
+    
+    public void setRate(final Double rate){
+        this.rate = rate;
+    }
+    
+    public void setAmount(final com.commercetools.api.models.common.Money amount){
+        this.amount = amount;
+    }
 
 }

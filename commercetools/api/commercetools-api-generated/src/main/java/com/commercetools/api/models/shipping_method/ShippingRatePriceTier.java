@@ -23,10 +23,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.CartValueTierImpl.class, name = "CartValue")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = ShippingRatePriceTierImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = ShippingRatePriceTierImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -35,7 +35,7 @@ import java.io.IOException;
 public interface ShippingRatePriceTier  {
 
 
-   
+
 
 
 }

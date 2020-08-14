@@ -22,54 +22,54 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetAttributeActionImpl.class)
 public interface ProductSetAttributeAction extends ProductUpdateAction {
 
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   /**
-   *  <p>If the attribute exists and the value is omitted or set to <code>null</code>, the attribute is removed.
-   *  If the attribute exists and a value is provided, the new value is applied.
-   *  If the attribute does not exist and a value is provided, it is added as a new attribute.</p>
-   */
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    /**
+    *  <p>If the attribute exists and the value is omitted or set to <code>null</code>, the attribute is removed.
+    *  If the attribute exists and a value is provided, the new value is applied.
+    *  If the attribute does not exist and a value is provided, it is added as a new attribute.</p>
+    */
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setSku(final String sku);
-   
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductSetAttributeActionImpl of(){
-      return new ProductSetAttributeActionImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setSku(final String sku);
+    
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductSetAttributeActionImpl of(final ProductSetAttributeAction template) {
-      ProductSetAttributeActionImpl instance = new ProductSetAttributeActionImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductSetAttributeActionImpl of(){
+        return new ProductSetAttributeActionImpl();
+    }
+    
+
+    public static ProductSetAttributeActionImpl of(final ProductSetAttributeAction template) {
+        ProductSetAttributeActionImpl instance = new ProductSetAttributeActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

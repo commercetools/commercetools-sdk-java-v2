@@ -22,55 +22,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnumKeyAction {
 
-   private String action;
-   
-   private String attributeName;
-   
-   private String key;
-   
-   private String newKey;
+    private String action;
+    
+    private String attributeName;
+    
+    private String key;
+    
+    private String newKey;
 
-   @JsonCreator
-   ProductTypeChangeEnumKeyActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("key") final String key, @JsonProperty("newKey") final String newKey) {
-      this.attributeName = attributeName;
-      this.key = key;
-      this.newKey = newKey;
-      this.action = "changeEnumKey";
-   }
-   public ProductTypeChangeEnumKeyActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
-   
-   
-   public String getNewKey(){
-      return this.newKey;
-   }
+    @JsonCreator
+    ProductTypeChangeEnumKeyActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("key") final String key, @JsonProperty("newKey") final String newKey) {
+        this.attributeName = attributeName;
+        this.key = key;
+        this.newKey = newKey;
+        this.action = "changeEnumKey";
+    }
+    public ProductTypeChangeEnumKeyActionImpl() {
+       
+    }
 
-   public void setAttributeName(final String attributeName){
-      this.attributeName = attributeName;
-   }
-   
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setNewKey(final String newKey){
-      this.newKey = newKey;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAttributeName(){
+        return this.attributeName;
+    }
+    
+    
+    public String getKey(){
+        return this.key;
+    }
+    
+    
+    public String getNewKey(){
+        return this.newKey;
+    }
+
+    public void setAttributeName(final String attributeName){
+        this.attributeName = attributeName;
+    }
+    
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
+    public void setNewKey(final String newKey){
+        this.newKey = newKey;
+    }
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetDeleteDaysAfterLastModificationActionImpl.class)
 public interface CartSetDeleteDaysAfterLastModificationAction extends CartUpdateAction {
 
-   
-   
-   @JsonProperty("deleteDaysAfterLastModification")
-   public Integer getDeleteDaysAfterLastModification();
+    
+    
+    @JsonProperty("deleteDaysAfterLastModification")
+    public Integer getDeleteDaysAfterLastModification();
 
-   public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
-   
-   public static CartSetDeleteDaysAfterLastModificationActionImpl of(){
-      return new CartSetDeleteDaysAfterLastModificationActionImpl();
-   }
-   
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
-   public static CartSetDeleteDaysAfterLastModificationActionImpl of(final CartSetDeleteDaysAfterLastModificationAction template) {
-      CartSetDeleteDaysAfterLastModificationActionImpl instance = new CartSetDeleteDaysAfterLastModificationActionImpl();
-      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
-      return instance;
-   }
+    public static CartSetDeleteDaysAfterLastModificationActionImpl of(){
+        return new CartSetDeleteDaysAfterLastModificationActionImpl();
+    }
+    
+
+    public static CartSetDeleteDaysAfterLastModificationActionImpl of(final CartSetDeleteDaysAfterLastModificationAction template) {
+        CartSetDeleteDaysAfterLastModificationActionImpl instance = new CartSetDeleteDaysAfterLastModificationActionImpl();
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        return instance;
+    }
 
 }

@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountValueRelativeImpl implements CartDiscountValueRelative {
 
-   private String type;
-   
-   private Long permyriad;
+    private String type;
+    
+    private Long permyriad;
 
-   @JsonCreator
-   CartDiscountValueRelativeImpl(@JsonProperty("permyriad") final Long permyriad) {
-      this.permyriad = permyriad;
-      this.type = "relative";
-   }
-   public CartDiscountValueRelativeImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public Long getPermyriad(){
-      return this.permyriad;
-   }
+    @JsonCreator
+    CartDiscountValueRelativeImpl(@JsonProperty("permyriad") final Long permyriad) {
+        this.permyriad = permyriad;
+        this.type = "relative";
+    }
+    public CartDiscountValueRelativeImpl() {
+       
+    }
 
-   public void setPermyriad(final Long permyriad){
-      this.permyriad = permyriad;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public Long getPermyriad(){
+        return this.permyriad;
+    }
+
+    public void setPermyriad(final Long permyriad){
+        this.permyriad = permyriad;
+    }
 
 }

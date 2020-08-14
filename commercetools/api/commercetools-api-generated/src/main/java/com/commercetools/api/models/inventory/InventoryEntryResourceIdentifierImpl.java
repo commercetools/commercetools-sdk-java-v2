@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntryResourceIdentifierImpl implements InventoryEntryResourceIdentifier {
 
-   private com.commercetools.api.models.common.ReferenceTypeId typeId;
-   
-   private String id;
-   
-   private String key;
+    private com.commercetools.api.models.common.ReferenceTypeId typeId;
+    
+    private String id;
+    
+    private String key;
 
-   @JsonCreator
-   InventoryEntryResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
-      this.id = id;
-      this.key = key;
-      this.typeId = ReferenceTypeId.findEnumViaJsonName("inventory-entry").get();
-   }
-   public InventoryEntryResourceIdentifierImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
-      return this.typeId;
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    InventoryEntryResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
+        this.id = id;
+        this.key = key;
+        this.typeId = ReferenceTypeId.findEnumViaJsonName("inventory-entry").get();
+    }
+    public InventoryEntryResourceIdentifierImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
+        return this.typeId;
+    }
+    
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

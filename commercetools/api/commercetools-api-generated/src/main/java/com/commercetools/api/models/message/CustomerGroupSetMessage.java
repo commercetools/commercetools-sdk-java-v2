@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerGroupSetMessageImpl.class)
 public interface CustomerGroupSetMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("customerGroup")
-   public CustomerGroupReference getCustomerGroup();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("customerGroup")
+    public CustomerGroupReference getCustomerGroup();
 
-   public void setCustomerGroup(final CustomerGroupReference customerGroup);
-   
-   public static CustomerGroupSetMessageImpl of(){
-      return new CustomerGroupSetMessageImpl();
-   }
-   
+    public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
-   public static CustomerGroupSetMessageImpl of(final CustomerGroupSetMessage template) {
-      CustomerGroupSetMessageImpl instance = new CustomerGroupSetMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setCustomerGroup(template.getCustomerGroup());
-      return instance;
-   }
+    public static CustomerGroupSetMessageImpl of(){
+        return new CustomerGroupSetMessageImpl();
+    }
+    
+
+    public static CustomerGroupSetMessageImpl of(final CustomerGroupSetMessage template) {
+        CustomerGroupSetMessageImpl instance = new CustomerGroupSetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setCustomerGroup(template.getCustomerGroup());
+        return instance;
+    }
 
 }

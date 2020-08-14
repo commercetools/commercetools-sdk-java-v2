@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelChangeDescriptionActionImpl.class)
 public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("description")
-   public LocalizedString getDescription();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("description")
+    public LocalizedString getDescription();
 
-   public void setDescription(final LocalizedString description);
-   
-   public static ChannelChangeDescriptionActionImpl of(){
-      return new ChannelChangeDescriptionActionImpl();
-   }
-   
+    public void setDescription(final LocalizedString description);
 
-   public static ChannelChangeDescriptionActionImpl of(final ChannelChangeDescriptionAction template) {
-      ChannelChangeDescriptionActionImpl instance = new ChannelChangeDescriptionActionImpl();
-      instance.setDescription(template.getDescription());
-      return instance;
-   }
+    public static ChannelChangeDescriptionActionImpl of(){
+        return new ChannelChangeDescriptionActionImpl();
+    }
+    
+
+    public static ChannelChangeDescriptionActionImpl of(final ChannelChangeDescriptionAction template) {
+        ChannelChangeDescriptionActionImpl instance = new ChannelChangeDescriptionActionImpl();
+        instance.setDescription(template.getDescription());
+        return instance;
+    }
 
 }

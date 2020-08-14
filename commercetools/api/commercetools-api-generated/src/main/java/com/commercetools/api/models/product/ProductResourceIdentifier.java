@@ -23,17 +23,17 @@ import java.io.IOException;
 public interface ProductResourceIdentifier extends ResourceIdentifier {
 
 
-   
-   public static ProductResourceIdentifierImpl of(){
-      return new ProductResourceIdentifierImpl();
-   }
-   
 
-   public static ProductResourceIdentifierImpl of(final ProductResourceIdentifier template) {
-      ProductResourceIdentifierImpl instance = new ProductResourceIdentifierImpl();
-      instance.setId(template.getId());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ProductResourceIdentifierImpl of(){
+        return new ProductResourceIdentifierImpl();
+    }
+    
+
+    public static ProductResourceIdentifierImpl of(final ProductResourceIdentifier template) {
+        ProductResourceIdentifierImpl instance = new ProductResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

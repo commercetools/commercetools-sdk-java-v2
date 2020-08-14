@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangeInputHintActionImpl.class)
 public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("attributeName")
-   public String getAttributeName();
-   
-   @NotNull
-   @JsonProperty("newValue")
-   public TextInputHint getNewValue();
+    
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+    
+    @NotNull
+    @JsonProperty("newValue")
+    public TextInputHint getNewValue();
 
-   public void setAttributeName(final String attributeName);
-   
-   public void setNewValue(final TextInputHint newValue);
-   
-   public static ProductTypeChangeInputHintActionImpl of(){
-      return new ProductTypeChangeInputHintActionImpl();
-   }
-   
+    public void setAttributeName(final String attributeName);
+    
+    public void setNewValue(final TextInputHint newValue);
 
-   public static ProductTypeChangeInputHintActionImpl of(final ProductTypeChangeInputHintAction template) {
-      ProductTypeChangeInputHintActionImpl instance = new ProductTypeChangeInputHintActionImpl();
-      instance.setAttributeName(template.getAttributeName());
-      instance.setNewValue(template.getNewValue());
-      return instance;
-   }
+    public static ProductTypeChangeInputHintActionImpl of(){
+        return new ProductTypeChangeInputHintActionImpl();
+    }
+    
+
+    public static ProductTypeChangeInputHintActionImpl of(final ProductTypeChangeInputHintAction template) {
+        ProductTypeChangeInputHintActionImpl instance = new ProductTypeChangeInputHintActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNewValue(template.getNewValue());
+        return instance;
+    }
 
 }

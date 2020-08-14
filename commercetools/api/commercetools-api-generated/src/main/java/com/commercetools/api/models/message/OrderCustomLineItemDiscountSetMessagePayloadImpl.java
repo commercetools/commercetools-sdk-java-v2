@@ -24,55 +24,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderCustomLineItemDiscountSetMessagePayloadImpl implements OrderCustomLineItemDiscountSetMessagePayload {
 
-   private String type;
-   
-   private String customLineItemId;
-   
-   private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
-   
-   private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
+    private String type;
+    
+    private String customLineItemId;
+    
+    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+    
+    private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
-   @JsonCreator
-   OrderCustomLineItemDiscountSetMessagePayloadImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
-      this.customLineItemId = customLineItemId;
-      this.discountedPricePerQuantity = discountedPricePerQuantity;
-      this.taxedPrice = taxedPrice;
-      this.type = "OrderCustomLineItemDiscountSet";
-   }
-   public OrderCustomLineItemDiscountSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getCustomLineItemId(){
-      return this.customLineItemId;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
-      return this.discountedPricePerQuantity;
-   }
-   
-   
-   public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
-      return this.taxedPrice;
-   }
+    @JsonCreator
+    OrderCustomLineItemDiscountSetMessagePayloadImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
+        this.customLineItemId = customLineItemId;
+        this.discountedPricePerQuantity = discountedPricePerQuantity;
+        this.taxedPrice = taxedPrice;
+        this.type = "OrderCustomLineItemDiscountSet";
+    }
+    public OrderCustomLineItemDiscountSetMessagePayloadImpl() {
+       
+    }
 
-   public void setCustomLineItemId(final String customLineItemId){
-      this.customLineItemId = customLineItemId;
-   }
-   
-   public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
-      this.discountedPricePerQuantity = discountedPricePerQuantity;
-   }
-   
-   public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice){
-      this.taxedPrice = taxedPrice;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getCustomLineItemId(){
+        return this.customLineItemId;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
+        return this.discountedPricePerQuantity;
+    }
+    
+    
+    public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
+        return this.taxedPrice;
+    }
+
+    public void setCustomLineItemId(final String customLineItemId){
+        this.customLineItemId = customLineItemId;
+    }
+    
+    public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
+        this.discountedPricePerQuantity = discountedPricePerQuantity;
+    }
+    
+    public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice){
+        this.taxedPrice = taxedPrice;
+    }
 
 }

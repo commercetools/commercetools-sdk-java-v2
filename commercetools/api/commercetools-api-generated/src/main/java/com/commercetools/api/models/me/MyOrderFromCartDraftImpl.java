@@ -22,37 +22,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft {
 
-   private String id;
-   
-   private Long version;
+    private String id;
+    
+    private Long version;
 
-   @JsonCreator
-   MyOrderFromCartDraftImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version) {
-      this.id = id;
-      this.version = version;
-   }
-   public MyOrderFromCartDraftImpl() {
-      
-   }
-   
-   /**
-   *  <p>The unique ID of the cart from which an order is created.</p>
-   */
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
-   }
+    @JsonCreator
+    MyOrderFromCartDraftImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version) {
+        this.id = id;
+        this.version = version;
+    }
+    public MyOrderFromCartDraftImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setVersion(final Long version){
-      this.version = version;
-   }
+    /**
+    *  <p>The unique ID of the cart from which an order is created.</p>
+    */
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public Long getVersion(){
+        return this.version;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setVersion(final Long version){
+        this.version = version;
+    }
 
 }

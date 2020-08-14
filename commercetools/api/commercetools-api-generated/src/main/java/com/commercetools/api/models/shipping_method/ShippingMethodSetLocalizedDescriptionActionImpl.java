@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodSetLocalizedDescriptionActionImpl implements ShippingMethodSetLocalizedDescriptionAction {
 
-   private String action;
-   
-   private String localizedDescription;
+    private String action;
+    
+    private String localizedDescription;
 
-   @JsonCreator
-   ShippingMethodSetLocalizedDescriptionActionImpl(@JsonProperty("localizedDescription") final String localizedDescription) {
-      this.localizedDescription = localizedDescription;
-      this.action = "setLocalizedDescription";
-   }
-   public ShippingMethodSetLocalizedDescriptionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLocalizedDescription(){
-      return this.localizedDescription;
-   }
+    @JsonCreator
+    ShippingMethodSetLocalizedDescriptionActionImpl(@JsonProperty("localizedDescription") final String localizedDescription) {
+        this.localizedDescription = localizedDescription;
+        this.action = "setLocalizedDescription";
+    }
+    public ShippingMethodSetLocalizedDescriptionActionImpl() {
+       
+    }
 
-   public void setLocalizedDescription(final String localizedDescription){
-      this.localizedDescription = localizedDescription;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLocalizedDescription(){
+        return this.localizedDescription;
+    }
+
+    public void setLocalizedDescription(final String localizedDescription){
+        this.localizedDescription = localizedDescription;
+    }
 
 }

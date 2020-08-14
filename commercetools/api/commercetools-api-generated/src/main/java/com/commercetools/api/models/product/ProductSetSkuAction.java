@@ -21,39 +21,39 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetSkuActionImpl.class)
 public interface ProductSetSkuAction extends ProductUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   /**
-   *  <p>SKU must be unique.
-   *  If left blank or set to <code>null</code>, the sku is unset/removed.</p>
-   */
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @NotNull
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    /**
+    *  <p>SKU must be unique.
+    *  If left blank or set to <code>null</code>, the sku is unset/removed.</p>
+    */
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setSku(final String sku);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductSetSkuActionImpl of(){
-      return new ProductSetSkuActionImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setSku(final String sku);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductSetSkuActionImpl of(final ProductSetSkuAction template) {
-      ProductSetSkuActionImpl instance = new ProductSetSkuActionImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductSetSkuActionImpl of(){
+        return new ProductSetSkuActionImpl();
+    }
+    
+
+    public static ProductSetSkuActionImpl of(final ProductSetSkuAction template) {
+        ProductSetSkuActionImpl instance = new ProductSetSkuActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

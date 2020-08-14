@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetAnonymousIdActionImpl.class)
 public interface CartSetAnonymousIdAction extends CartUpdateAction {
 
-   /**
-   *  <p>If not set, any existing anonymous ID will be removed.</p>
-   */
-   
-   @JsonProperty("anonymousId")
-   public String getAnonymousId();
+    /**
+    *  <p>If not set, any existing anonymous ID will be removed.</p>
+    */
+    
+    @JsonProperty("anonymousId")
+    public String getAnonymousId();
 
-   public void setAnonymousId(final String anonymousId);
-   
-   public static CartSetAnonymousIdActionImpl of(){
-      return new CartSetAnonymousIdActionImpl();
-   }
-   
+    public void setAnonymousId(final String anonymousId);
 
-   public static CartSetAnonymousIdActionImpl of(final CartSetAnonymousIdAction template) {
-      CartSetAnonymousIdActionImpl instance = new CartSetAnonymousIdActionImpl();
-      instance.setAnonymousId(template.getAnonymousId());
-      return instance;
-   }
+    public static CartSetAnonymousIdActionImpl of(){
+        return new CartSetAnonymousIdActionImpl();
+    }
+    
+
+    public static CartSetAnonymousIdActionImpl of(final CartSetAnonymousIdAction template) {
+        CartSetAnonymousIdActionImpl instance = new CartSetAnonymousIdActionImpl();
+        instance.setAnonymousId(template.getAnonymousId());
+        return instance;
+    }
 
 }

@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldBooleanTypeImpl implements CustomFieldBooleanType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   CustomFieldBooleanTypeImpl() {
-      this.name = "Boolean";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    CustomFieldBooleanTypeImpl() {
+        this.name = "Boolean";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

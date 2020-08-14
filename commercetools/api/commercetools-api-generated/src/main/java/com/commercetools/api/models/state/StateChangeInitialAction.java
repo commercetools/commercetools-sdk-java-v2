@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StateChangeInitialActionImpl.class)
 public interface StateChangeInitialAction extends StateUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("initial")
-   public Boolean getInitial();
+    
+    @NotNull
+    @JsonProperty("initial")
+    public Boolean getInitial();
 
-   public void setInitial(final Boolean initial);
-   
-   public static StateChangeInitialActionImpl of(){
-      return new StateChangeInitialActionImpl();
-   }
-   
+    public void setInitial(final Boolean initial);
 
-   public static StateChangeInitialActionImpl of(final StateChangeInitialAction template) {
-      StateChangeInitialActionImpl instance = new StateChangeInitialActionImpl();
-      instance.setInitial(template.getInitial());
-      return instance;
-   }
+    public static StateChangeInitialActionImpl of(){
+        return new StateChangeInitialActionImpl();
+    }
+    
+
+    public static StateChangeInitialActionImpl of(final StateChangeInitialAction template) {
+        StateChangeInitialActionImpl instance = new StateChangeInitialActionImpl();
+        instance.setInitial(template.getInitial());
+        return instance;
+    }
 
 }

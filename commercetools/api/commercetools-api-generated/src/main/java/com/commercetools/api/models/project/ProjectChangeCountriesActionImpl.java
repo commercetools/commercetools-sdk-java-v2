@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesAction {
 
-   private String action;
-   
-   private java.util.List<String> countries;
+    private String action;
+    
+    private java.util.List<String> countries;
 
-   @JsonCreator
-   ProjectChangeCountriesActionImpl(@JsonProperty("countries") final java.util.List<String> countries) {
-      this.countries = countries;
-      this.action = "changeCountries";
-   }
-   public ProjectChangeCountriesActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>A two-digit country code as per country code.</p>
-   */
-   public java.util.List<String> getCountries(){
-      return this.countries;
-   }
+    @JsonCreator
+    ProjectChangeCountriesActionImpl(@JsonProperty("countries") final java.util.List<String> countries) {
+        this.countries = countries;
+        this.action = "changeCountries";
+    }
+    public ProjectChangeCountriesActionImpl() {
+       
+    }
 
-   public void setCountries(final java.util.List<String> countries){
-      this.countries = countries;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>A two-digit country code as per country code.</p>
+    */
+    public java.util.List<String> getCountries(){
+        return this.countries;
+    }
+
+    public void setCountries(final java.util.List<String> countries){
+        this.countries = countries;
+    }
 
 }

@@ -82,10 +82,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValueIsUsedErrorImpl.class, name = "EnumValueIsUsed")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "code",
-   defaultImpl = ErrorObjectImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "code",
+    defaultImpl = ErrorObjectImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -93,13 +93,13 @@ import java.io.IOException;
 )
 public interface ErrorObject  {
 
-   
-   @NotNull
-   @JsonProperty("message")
-   public String getMessage();
+    
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
 
-   public void setMessage(final String message);
-   
+    public void setMessage(final String message);
+
 
 
 }

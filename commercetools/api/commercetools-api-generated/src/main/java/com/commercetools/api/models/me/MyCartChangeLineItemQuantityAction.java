@@ -23,43 +23,43 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartChangeLineItemQuantityActionImpl.class)
 public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @NotNull
-   @JsonProperty("quantity")
-   public Double getQuantity();
-   
-   @Valid
-   @JsonProperty("externalPrice")
-   public Money getExternalPrice();
-   
-   @Valid
-   @JsonProperty("externalTotalPrice")
-   public ExternalLineItemTotalPrice getExternalTotalPrice();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @NotNull
+    @JsonProperty("quantity")
+    public Double getQuantity();
+    
+    @Valid
+    @JsonProperty("externalPrice")
+    public Money getExternalPrice();
+    
+    @Valid
+    @JsonProperty("externalTotalPrice")
+    public ExternalLineItemTotalPrice getExternalTotalPrice();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setQuantity(final Double quantity);
-   
-   public void setExternalPrice(final Money externalPrice);
-   
-   public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
-   
-   public static MyCartChangeLineItemQuantityActionImpl of(){
-      return new MyCartChangeLineItemQuantityActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setQuantity(final Double quantity);
+    
+    public void setExternalPrice(final Money externalPrice);
+    
+    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
-   public static MyCartChangeLineItemQuantityActionImpl of(final MyCartChangeLineItemQuantityAction template) {
-      MyCartChangeLineItemQuantityActionImpl instance = new MyCartChangeLineItemQuantityActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setQuantity(template.getQuantity());
-      instance.setExternalPrice(template.getExternalPrice());
-      instance.setExternalTotalPrice(template.getExternalTotalPrice());
-      return instance;
-   }
+    public static MyCartChangeLineItemQuantityActionImpl of(){
+        return new MyCartChangeLineItemQuantityActionImpl();
+    }
+    
+
+    public static MyCartChangeLineItemQuantityActionImpl of(final MyCartChangeLineItemQuantityAction template) {
+        MyCartChangeLineItemQuantityActionImpl instance = new MyCartChangeLineItemQuantityActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setQuantity(template.getQuantity());
+        instance.setExternalPrice(template.getExternalPrice());
+        instance.setExternalTotalPrice(template.getExternalTotalPrice());
+        return instance;
+    }
 
 }

@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListRemoveLineItemActionImpl.class)
 public interface ShoppingListRemoveLineItemAction extends ShoppingListUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   
-   @JsonProperty("quantity")
-   public Long getQuantity();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    
+    @JsonProperty("quantity")
+    public Long getQuantity();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setQuantity(final Long quantity);
-   
-   public static ShoppingListRemoveLineItemActionImpl of(){
-      return new ShoppingListRemoveLineItemActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setQuantity(final Long quantity);
 
-   public static ShoppingListRemoveLineItemActionImpl of(final ShoppingListRemoveLineItemAction template) {
-      ShoppingListRemoveLineItemActionImpl instance = new ShoppingListRemoveLineItemActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setQuantity(template.getQuantity());
-      return instance;
-   }
+    public static ShoppingListRemoveLineItemActionImpl of(){
+        return new ShoppingListRemoveLineItemActionImpl();
+    }
+    
+
+    public static ShoppingListRemoveLineItemActionImpl of(final ShoppingListRemoveLineItemAction template) {
+        ShoppingListRemoveLineItemActionImpl instance = new ShoppingListRemoveLineItemActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
 
 }

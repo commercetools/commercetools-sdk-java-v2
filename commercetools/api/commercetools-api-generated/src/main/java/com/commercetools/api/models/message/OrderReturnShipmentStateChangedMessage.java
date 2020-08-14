@@ -22,39 +22,39 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderReturnShipmentStateChangedMessageImpl.class)
 public interface OrderReturnShipmentStateChangedMessage extends Message {
 
-   
-   @NotNull
-   @JsonProperty("returnItemId")
-   public String getReturnItemId();
-   
-   @NotNull
-   @JsonProperty("returnShipmentState")
-   public ReturnShipmentState getReturnShipmentState();
+    
+    @NotNull
+    @JsonProperty("returnItemId")
+    public String getReturnItemId();
+    
+    @NotNull
+    @JsonProperty("returnShipmentState")
+    public ReturnShipmentState getReturnShipmentState();
 
-   public void setReturnItemId(final String returnItemId);
-   
-   public void setReturnShipmentState(final ReturnShipmentState returnShipmentState);
-   
-   public static OrderReturnShipmentStateChangedMessageImpl of(){
-      return new OrderReturnShipmentStateChangedMessageImpl();
-   }
-   
+    public void setReturnItemId(final String returnItemId);
+    
+    public void setReturnShipmentState(final ReturnShipmentState returnShipmentState);
 
-   public static OrderReturnShipmentStateChangedMessageImpl of(final OrderReturnShipmentStateChangedMessage template) {
-      OrderReturnShipmentStateChangedMessageImpl instance = new OrderReturnShipmentStateChangedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setReturnItemId(template.getReturnItemId());
-      instance.setReturnShipmentState(template.getReturnShipmentState());
-      return instance;
-   }
+    public static OrderReturnShipmentStateChangedMessageImpl of(){
+        return new OrderReturnShipmentStateChangedMessageImpl();
+    }
+    
+
+    public static OrderReturnShipmentStateChangedMessageImpl of(final OrderReturnShipmentStateChangedMessage template) {
+        OrderReturnShipmentStateChangedMessageImpl instance = new OrderReturnShipmentStateChangedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnShipmentState(template.getReturnShipmentState());
+        return instance;
+    }
 
 }

@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeAddPlainEnumValueActionImpl implements ProductTypeAddPlainEnumValueAction {
 
-   private String action;
-   
-   private String attributeName;
-   
-   private com.commercetools.api.models.product_type.AttributePlainEnumValue value;
+    private String action;
+    
+    private String attributeName;
+    
+    private com.commercetools.api.models.product_type.AttributePlainEnumValue value;
 
-   @JsonCreator
-   ProductTypeAddPlainEnumValueActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("value") final com.commercetools.api.models.product_type.AttributePlainEnumValue value) {
-      this.attributeName = attributeName;
-      this.value = value;
-      this.action = "addPlainEnumValue";
-   }
-   public ProductTypeAddPlainEnumValueActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-   
-   
-   public com.commercetools.api.models.product_type.AttributePlainEnumValue getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    ProductTypeAddPlainEnumValueActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("value") final com.commercetools.api.models.product_type.AttributePlainEnumValue value) {
+        this.attributeName = attributeName;
+        this.value = value;
+        this.action = "addPlainEnumValue";
+    }
+    public ProductTypeAddPlainEnumValueActionImpl() {
+       
+    }
 
-   public void setAttributeName(final String attributeName){
-      this.attributeName = attributeName;
-   }
-   
-   public void setValue(final com.commercetools.api.models.product_type.AttributePlainEnumValue value){
-      this.value = value;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAttributeName(){
+        return this.attributeName;
+    }
+    
+    
+    public com.commercetools.api.models.product_type.AttributePlainEnumValue getValue(){
+        return this.value;
+    }
+
+    public void setAttributeName(final String attributeName){
+        this.attributeName = attributeName;
+    }
+    
+    public void setValue(final com.commercetools.api.models.product_type.AttributePlainEnumValue value){
+        this.value = value;
+    }
 
 }

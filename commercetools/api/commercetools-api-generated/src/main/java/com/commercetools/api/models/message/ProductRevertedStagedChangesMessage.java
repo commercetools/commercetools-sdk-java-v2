@@ -21,32 +21,32 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductRevertedStagedChangesMessageImpl.class)
 public interface ProductRevertedStagedChangesMessage extends Message {
 
-   
-   @NotNull
-   @JsonProperty("removedImageUrls")
-   public List<String> getRemovedImageUrls();
+    
+    @NotNull
+    @JsonProperty("removedImageUrls")
+    public List<String> getRemovedImageUrls();
 
-   public void setRemovedImageUrls(final List<String> removedImageUrls);
-   
-   public static ProductRevertedStagedChangesMessageImpl of(){
-      return new ProductRevertedStagedChangesMessageImpl();
-   }
-   
+    public void setRemovedImageUrls(final List<String> removedImageUrls);
 
-   public static ProductRevertedStagedChangesMessageImpl of(final ProductRevertedStagedChangesMessage template) {
-      ProductRevertedStagedChangesMessageImpl instance = new ProductRevertedStagedChangesMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setRemovedImageUrls(template.getRemovedImageUrls());
-      return instance;
-   }
+    public static ProductRevertedStagedChangesMessageImpl of(){
+        return new ProductRevertedStagedChangesMessageImpl();
+    }
+    
+
+    public static ProductRevertedStagedChangesMessageImpl of(final ProductRevertedStagedChangesMessage template) {
+        ProductRevertedStagedChangesMessageImpl instance = new ProductRevertedStagedChangesMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setRemovedImageUrls(template.getRemovedImageUrls());
+        return instance;
+    }
 
 }

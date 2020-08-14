@@ -13,33 +13,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TransactionState {
 
-  
-  @JsonProperty("Initial")
-  INITIAL("Initial"),
-  
-  
-  @JsonProperty("Pending")
-  PENDING("Pending"),
-  
-  
-  @JsonProperty("Success")
-  SUCCESS("Success"),
-  
-  
-  @JsonProperty("Failure")
-  FAILURE("Failure");
+    
+    @JsonProperty("Initial")
+    INITIAL("Initial"),
+    
+    
+    @JsonProperty("Pending")
+    PENDING("Pending"),
+    
+    
+    @JsonProperty("Success")
+    SUCCESS("Success"),
+    
+    
+    @JsonProperty("Failure")
+    FAILURE("Failure");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private TransactionState(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private TransactionState(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<TransactionState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<TransactionState> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

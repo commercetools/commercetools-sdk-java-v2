@@ -21,43 +21,43 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantAvailabilityImpl.class)
 public interface ProductVariantAvailability  {
 
-   
-   
-   @JsonProperty("isOnStock")
-   public Boolean getIsOnStock();
-   
-   
-   @JsonProperty("restockableInDays")
-   public Long getRestockableInDays();
-   
-   
-   @JsonProperty("availableQuantity")
-   public Long getAvailableQuantity();
-   
-   @Valid
-   @JsonProperty("channels")
-   public ProductVariantChannelAvailabilityMap getChannels();
+    
+    
+    @JsonProperty("isOnStock")
+    public Boolean getIsOnStock();
+    
+    
+    @JsonProperty("restockableInDays")
+    public Long getRestockableInDays();
+    
+    
+    @JsonProperty("availableQuantity")
+    public Long getAvailableQuantity();
+    
+    @Valid
+    @JsonProperty("channels")
+    public ProductVariantChannelAvailabilityMap getChannels();
 
-   public void setIsOnStock(final Boolean isOnStock);
-   
-   public void setRestockableInDays(final Long restockableInDays);
-   
-   public void setAvailableQuantity(final Long availableQuantity);
-   
-   public void setChannels(final ProductVariantChannelAvailabilityMap channels);
-   
-   public static ProductVariantAvailabilityImpl of(){
-      return new ProductVariantAvailabilityImpl();
-   }
-   
+    public void setIsOnStock(final Boolean isOnStock);
+    
+    public void setRestockableInDays(final Long restockableInDays);
+    
+    public void setAvailableQuantity(final Long availableQuantity);
+    
+    public void setChannels(final ProductVariantChannelAvailabilityMap channels);
 
-   public static ProductVariantAvailabilityImpl of(final ProductVariantAvailability template) {
-      ProductVariantAvailabilityImpl instance = new ProductVariantAvailabilityImpl();
-      instance.setIsOnStock(template.getIsOnStock());
-      instance.setRestockableInDays(template.getRestockableInDays());
-      instance.setAvailableQuantity(template.getAvailableQuantity());
-      instance.setChannels(template.getChannels());
-      return instance;
-   }
+    public static ProductVariantAvailabilityImpl of(){
+        return new ProductVariantAvailabilityImpl();
+    }
+    
+
+    public static ProductVariantAvailabilityImpl of(final ProductVariantAvailability template) {
+        ProductVariantAvailabilityImpl instance = new ProductVariantAvailabilityImpl();
+        instance.setIsOnStock(template.getIsOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
+        instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setChannels(template.getChannels());
+        return instance;
+    }
 
 }

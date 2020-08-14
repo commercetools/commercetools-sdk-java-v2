@@ -24,45 +24,45 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.Money externalTotalGross;
-   
-   private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
+    private String action;
+    
+    private com.commercetools.api.models.common.Money externalTotalGross;
+    
+    private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
-   @JsonCreator
-   CartSetCartTotalTaxActionImpl(@JsonProperty("externalTotalGross") final com.commercetools.api.models.common.Money externalTotalGross, @JsonProperty("externalTaxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
-      this.externalTotalGross = externalTotalGross;
-      this.externalTaxPortions = externalTaxPortions;
-      this.action = "setCartTotalTax";
-   }
-   public CartSetCartTotalTaxActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>The total gross amount of the cart (totalNet + taxes).</p>
-   */
-   public com.commercetools.api.models.common.Money getExternalTotalGross(){
-      return this.externalTotalGross;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions(){
-      return this.externalTaxPortions;
-   }
+    @JsonCreator
+    CartSetCartTotalTaxActionImpl(@JsonProperty("externalTotalGross") final com.commercetools.api.models.common.Money externalTotalGross, @JsonProperty("externalTaxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
+        this.externalTotalGross = externalTotalGross;
+        this.externalTaxPortions = externalTaxPortions;
+        this.action = "setCartTotalTax";
+    }
+    public CartSetCartTotalTaxActionImpl() {
+       
+    }
 
-   public void setExternalTotalGross(final com.commercetools.api.models.common.Money externalTotalGross){
-      this.externalTotalGross = externalTotalGross;
-   }
-   
-   public void setExternalTaxPortions(final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions){
-      this.externalTaxPortions = externalTaxPortions;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+    */
+    public com.commercetools.api.models.common.Money getExternalTotalGross(){
+        return this.externalTotalGross;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions(){
+        return this.externalTaxPortions;
+    }
+
+    public void setExternalTotalGross(final com.commercetools.api.models.common.Money externalTotalGross){
+        this.externalTotalGross = externalTotalGross;
+    }
+    
+    public void setExternalTaxPortions(final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions){
+        this.externalTaxPortions = externalTaxPortions;
+    }
 
 }

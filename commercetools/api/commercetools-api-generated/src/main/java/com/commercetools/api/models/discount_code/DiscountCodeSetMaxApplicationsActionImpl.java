@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeSetMaxApplicationsActionImpl implements DiscountCodeSetMaxApplicationsAction {
 
-   private String action;
-   
-   private Long maxApplications;
+    private String action;
+    
+    private Long maxApplications;
 
-   @JsonCreator
-   DiscountCodeSetMaxApplicationsActionImpl(@JsonProperty("maxApplications") final Long maxApplications) {
-      this.maxApplications = maxApplications;
-      this.action = "setMaxApplications";
-   }
-   public DiscountCodeSetMaxApplicationsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If the <code>maxApplications</code> parameter is not included, the field will be emptied.</p>
-   */
-   public Long getMaxApplications(){
-      return this.maxApplications;
-   }
+    @JsonCreator
+    DiscountCodeSetMaxApplicationsActionImpl(@JsonProperty("maxApplications") final Long maxApplications) {
+        this.maxApplications = maxApplications;
+        this.action = "setMaxApplications";
+    }
+    public DiscountCodeSetMaxApplicationsActionImpl() {
+       
+    }
 
-   public void setMaxApplications(final Long maxApplications){
-      this.maxApplications = maxApplications;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If the <code>maxApplications</code> parameter is not included, the field will be emptied.</p>
+    */
+    public Long getMaxApplications(){
+        return this.maxApplications;
+    }
+
+    public void setMaxApplications(final Long maxApplications){
+        this.maxApplications = maxApplications;
+    }
 
 }

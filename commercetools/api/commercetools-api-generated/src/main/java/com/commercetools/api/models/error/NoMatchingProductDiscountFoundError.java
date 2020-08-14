@@ -22,16 +22,16 @@ import java.io.IOException;
 public interface NoMatchingProductDiscountFoundError extends ErrorObject {
 
 
-   
-   public static NoMatchingProductDiscountFoundErrorImpl of(){
-      return new NoMatchingProductDiscountFoundErrorImpl();
-   }
-   
 
-   public static NoMatchingProductDiscountFoundErrorImpl of(final NoMatchingProductDiscountFoundError template) {
-      NoMatchingProductDiscountFoundErrorImpl instance = new NoMatchingProductDiscountFoundErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static NoMatchingProductDiscountFoundErrorImpl of(){
+        return new NoMatchingProductDiscountFoundErrorImpl();
+    }
+    
+
+    public static NoMatchingProductDiscountFoundErrorImpl of(final NoMatchingProductDiscountFoundError template) {
+        NoMatchingProductDiscountFoundErrorImpl instance = new NoMatchingProductDiscountFoundErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

@@ -22,25 +22,25 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditSetStagedActionsActionImpl.class)
 public interface OrderEditSetStagedActionsAction extends OrderEditUpdateAction {
 
-   /**
-   *  <p>The actions to edit the <code>resource</code>.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("stagedActions")
-   public List<StagedOrderUpdateAction> getStagedActions();
+    /**
+    *  <p>The actions to edit the <code>resource</code>.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("stagedActions")
+    public List<StagedOrderUpdateAction> getStagedActions();
 
-   public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
-   
-   public static OrderEditSetStagedActionsActionImpl of(){
-      return new OrderEditSetStagedActionsActionImpl();
-   }
-   
+    public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
 
-   public static OrderEditSetStagedActionsActionImpl of(final OrderEditSetStagedActionsAction template) {
-      OrderEditSetStagedActionsActionImpl instance = new OrderEditSetStagedActionsActionImpl();
-      instance.setStagedActions(template.getStagedActions());
-      return instance;
-   }
+    public static OrderEditSetStagedActionsActionImpl of(){
+        return new OrderEditSetStagedActionsActionImpl();
+    }
+    
+
+    public static OrderEditSetStagedActionsActionImpl of(final OrderEditSetStagedActionsAction template) {
+        OrderEditSetStagedActionsActionImpl instance = new OrderEditSetStagedActionsActionImpl();
+        instance.setStagedActions(template.getStagedActions());
+        return instance;
+    }
 
 }

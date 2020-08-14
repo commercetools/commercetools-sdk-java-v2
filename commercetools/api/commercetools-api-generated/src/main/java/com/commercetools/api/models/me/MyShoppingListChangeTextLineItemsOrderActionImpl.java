@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListChangeTextLineItemsOrderActionImpl implements MyShoppingListChangeTextLineItemsOrderAction {
 
-   private String action;
-   
-   private java.util.List<String> textLineItemOrder;
+    private String action;
+    
+    private java.util.List<String> textLineItemOrder;
 
-   @JsonCreator
-   MyShoppingListChangeTextLineItemsOrderActionImpl(@JsonProperty("textLineItemOrder") final java.util.List<String> textLineItemOrder) {
-      this.textLineItemOrder = textLineItemOrder;
-      this.action = "changeTextLineItemsOrder";
-   }
-   public MyShoppingListChangeTextLineItemsOrderActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<String> getTextLineItemOrder(){
-      return this.textLineItemOrder;
-   }
+    @JsonCreator
+    MyShoppingListChangeTextLineItemsOrderActionImpl(@JsonProperty("textLineItemOrder") final java.util.List<String> textLineItemOrder) {
+        this.textLineItemOrder = textLineItemOrder;
+        this.action = "changeTextLineItemsOrder";
+    }
+    public MyShoppingListChangeTextLineItemsOrderActionImpl() {
+       
+    }
 
-   public void setTextLineItemOrder(final java.util.List<String> textLineItemOrder){
-      this.textLineItemOrder = textLineItemOrder;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<String> getTextLineItemOrder(){
+        return this.textLineItemOrder;
+    }
+
+    public void setTextLineItemOrder(final java.util.List<String> textLineItemOrder){
+        this.textLineItemOrder = textLineItemOrder;
+    }
 
 }

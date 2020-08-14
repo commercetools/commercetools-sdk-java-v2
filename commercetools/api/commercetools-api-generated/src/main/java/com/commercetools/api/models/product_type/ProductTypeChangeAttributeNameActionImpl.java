@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChangeAttributeNameAction {
 
-   private String action;
-   
-   private String attributeName;
-   
-   private String newAttributeName;
+    private String action;
+    
+    private String attributeName;
+    
+    private String newAttributeName;
 
-   @JsonCreator
-   ProductTypeChangeAttributeNameActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("newAttributeName") final String newAttributeName) {
-      this.attributeName = attributeName;
-      this.newAttributeName = newAttributeName;
-      this.action = "changeAttributeName";
-   }
-   public ProductTypeChangeAttributeNameActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-   
-   
-   public String getNewAttributeName(){
-      return this.newAttributeName;
-   }
+    @JsonCreator
+    ProductTypeChangeAttributeNameActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("newAttributeName") final String newAttributeName) {
+        this.attributeName = attributeName;
+        this.newAttributeName = newAttributeName;
+        this.action = "changeAttributeName";
+    }
+    public ProductTypeChangeAttributeNameActionImpl() {
+       
+    }
 
-   public void setAttributeName(final String attributeName){
-      this.attributeName = attributeName;
-   }
-   
-   public void setNewAttributeName(final String newAttributeName){
-      this.newAttributeName = newAttributeName;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAttributeName(){
+        return this.attributeName;
+    }
+    
+    
+    public String getNewAttributeName(){
+        return this.newAttributeName;
+    }
+
+    public void setAttributeName(final String attributeName){
+        this.attributeName = attributeName;
+    }
+    
+    public void setNewAttributeName(final String newAttributeName){
+        this.newAttributeName = newAttributeName;
+    }
 
 }

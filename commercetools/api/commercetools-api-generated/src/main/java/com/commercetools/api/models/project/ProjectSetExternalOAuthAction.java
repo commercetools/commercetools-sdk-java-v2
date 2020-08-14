@@ -22,25 +22,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectSetExternalOAuthActionImpl.class)
 public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
 
-   /**
-   *  <p>If you do not provide the <code>externalOAuth</code> field or provide a value
-   *  of <code>null</code>, the update action unsets the External OAuth provider.</p>
-   */
-   @Valid
-   @JsonProperty("externalOAuth")
-   public ExternalOAuth getExternalOAuth();
+    /**
+    *  <p>If you do not provide the <code>externalOAuth</code> field or provide a value
+    *  of <code>null</code>, the update action unsets the External OAuth provider.</p>
+    */
+    @Valid
+    @JsonProperty("externalOAuth")
+    public ExternalOAuth getExternalOAuth();
 
-   public void setExternalOAuth(final ExternalOAuth externalOAuth);
-   
-   public static ProjectSetExternalOAuthActionImpl of(){
-      return new ProjectSetExternalOAuthActionImpl();
-   }
-   
+    public void setExternalOAuth(final ExternalOAuth externalOAuth);
 
-   public static ProjectSetExternalOAuthActionImpl of(final ProjectSetExternalOAuthAction template) {
-      ProjectSetExternalOAuthActionImpl instance = new ProjectSetExternalOAuthActionImpl();
-      instance.setExternalOAuth(template.getExternalOAuth());
-      return instance;
-   }
+    public static ProjectSetExternalOAuthActionImpl of(){
+        return new ProjectSetExternalOAuthActionImpl();
+    }
+    
+
+    public static ProjectSetExternalOAuthActionImpl of(final ProjectSetExternalOAuthAction template) {
+        ProjectSetExternalOAuthActionImpl instance = new ProjectSetExternalOAuthActionImpl();
+        instance.setExternalOAuth(template.getExternalOAuth());
+        return instance;
+    }
 
 }

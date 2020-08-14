@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountResourceIdentifierImpl implements CartDiscountResourceIdentifier {
 
-   private com.commercetools.api.models.common.ReferenceTypeId typeId;
-   
-   private String id;
-   
-   private String key;
+    private com.commercetools.api.models.common.ReferenceTypeId typeId;
+    
+    private String id;
+    
+    private String key;
 
-   @JsonCreator
-   CartDiscountResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
-      this.id = id;
-      this.key = key;
-      this.typeId = ReferenceTypeId.findEnumViaJsonName("cart-discount").get();
-   }
-   public CartDiscountResourceIdentifierImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
-      return this.typeId;
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    CartDiscountResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
+        this.id = id;
+        this.key = key;
+        this.typeId = ReferenceTypeId.findEnumViaJsonName("cart-discount").get();
+    }
+    public CartDiscountResourceIdentifierImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
+        return this.typeId;
+    }
+    
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

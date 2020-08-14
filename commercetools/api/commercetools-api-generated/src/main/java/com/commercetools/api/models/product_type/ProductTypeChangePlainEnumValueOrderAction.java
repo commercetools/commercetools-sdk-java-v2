@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangePlainEnumValueOrderActionImpl.class)
 public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("attributeName")
-   public String getAttributeName();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("values")
-   public List<AttributePlainEnumValue> getValues();
+    
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("values")
+    public List<AttributePlainEnumValue> getValues();
 
-   public void setAttributeName(final String attributeName);
-   
-   public void setValues(final List<AttributePlainEnumValue> values);
-   
-   public static ProductTypeChangePlainEnumValueOrderActionImpl of(){
-      return new ProductTypeChangePlainEnumValueOrderActionImpl();
-   }
-   
+    public void setAttributeName(final String attributeName);
+    
+    public void setValues(final List<AttributePlainEnumValue> values);
 
-   public static ProductTypeChangePlainEnumValueOrderActionImpl of(final ProductTypeChangePlainEnumValueOrderAction template) {
-      ProductTypeChangePlainEnumValueOrderActionImpl instance = new ProductTypeChangePlainEnumValueOrderActionImpl();
-      instance.setAttributeName(template.getAttributeName());
-      instance.setValues(template.getValues());
-      return instance;
-   }
+    public static ProductTypeChangePlainEnumValueOrderActionImpl of(){
+        return new ProductTypeChangePlainEnumValueOrderActionImpl();
+    }
+    
+
+    public static ProductTypeChangePlainEnumValueOrderActionImpl of(final ProductTypeChangePlainEnumValueOrderAction template) {
+        ProductTypeChangePlainEnumValueOrderActionImpl instance = new ProductTypeChangePlainEnumValueOrderActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setValues(template.getValues());
+        return instance;
+    }
 
 }

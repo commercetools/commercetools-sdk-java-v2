@@ -15,32 +15,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class RangeFacetResultBuilder {
-   
-   
-   private java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges;
-   
-   public RangeFacetResultBuilder ranges( final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges) {
-      this.ranges = ranges;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.product.FacetResultRange> getRanges(){
-      return this.ranges;
-   }
 
-   public RangeFacetResult build() {
-       return new RangeFacetResultImpl(ranges);
-   }
-   
-   public static RangeFacetResultBuilder of() {
-      return new RangeFacetResultBuilder();
-   }
-   
-   public static RangeFacetResultBuilder of(final RangeFacetResult template) {
-      RangeFacetResultBuilder builder = new RangeFacetResultBuilder();
-      builder.ranges = template.getRanges();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges;
+
+    public RangeFacetResultBuilder ranges( final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges) {
+        this.ranges = ranges;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.api.models.product.FacetResultRange> getRanges(){
+        return this.ranges;
+    }
+
+    public RangeFacetResult build() {
+        return new RangeFacetResultImpl(ranges);
+    }
+
+    public static RangeFacetResultBuilder of() {
+        return new RangeFacetResultBuilder();
+    }
+
+    public static RangeFacetResultBuilder of(final RangeFacetResult template) {
+        RangeFacetResultBuilder builder = new RangeFacetResultBuilder();
+        builder.ranges = template.getRanges();
+        return builder;
+    }
+
 }

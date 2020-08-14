@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderChangeTaxCalculationModeActionImpl.class)
 public interface StagedOrderChangeTaxCalculationModeAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("taxCalculationMode")
-   public TaxCalculationMode getTaxCalculationMode();
+    
+    @NotNull
+    @JsonProperty("taxCalculationMode")
+    public TaxCalculationMode getTaxCalculationMode();
 
-   public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
-   
-   public static StagedOrderChangeTaxCalculationModeActionImpl of(){
-      return new StagedOrderChangeTaxCalculationModeActionImpl();
-   }
-   
+    public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
 
-   public static StagedOrderChangeTaxCalculationModeActionImpl of(final StagedOrderChangeTaxCalculationModeAction template) {
-      StagedOrderChangeTaxCalculationModeActionImpl instance = new StagedOrderChangeTaxCalculationModeActionImpl();
-      instance.setTaxCalculationMode(template.getTaxCalculationMode());
-      return instance;
-   }
+    public static StagedOrderChangeTaxCalculationModeActionImpl of(){
+        return new StagedOrderChangeTaxCalculationModeActionImpl();
+    }
+    
+
+    public static StagedOrderChangeTaxCalculationModeActionImpl of(final StagedOrderChangeTaxCalculationModeAction template) {
+        StagedOrderChangeTaxCalculationModeActionImpl instance = new StagedOrderChangeTaxCalculationModeActionImpl();
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        return instance;
+    }
 
 }

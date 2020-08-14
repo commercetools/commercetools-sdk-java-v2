@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountChangeIsActiveActionImpl implements CartDiscountChangeIsActiveAction {
 
-   private String action;
-   
-   private Boolean isActive;
+    private String action;
+    
+    private Boolean isActive;
 
-   @JsonCreator
-   CartDiscountChangeIsActiveActionImpl(@JsonProperty("isActive") final Boolean isActive) {
-      this.isActive = isActive;
-      this.action = "changeIsActive";
-   }
-   public CartDiscountChangeIsActiveActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Boolean getIsActive(){
-      return this.isActive;
-   }
+    @JsonCreator
+    CartDiscountChangeIsActiveActionImpl(@JsonProperty("isActive") final Boolean isActive) {
+        this.isActive = isActive;
+        this.action = "changeIsActive";
+    }
+    public CartDiscountChangeIsActiveActionImpl() {
+       
+    }
 
-   public void setIsActive(final Boolean isActive){
-      this.isActive = isActive;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Boolean getIsActive(){
+        return this.isActive;
+    }
+
+    public void setIsActive(final Boolean isActive){
+        this.isActive = isActive;
+    }
 
 }

@@ -62,18 +62,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderUpdateActionImpl implements OrderUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   OrderUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    OrderUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

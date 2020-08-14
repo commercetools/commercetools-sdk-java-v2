@@ -23,55 +23,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetLineItemCustomFieldActionImpl implements StagedOrderSetLineItemCustomFieldAction {
 
-   private String action;
-   
-   private String lineItemId;
-   
-   private String name;
-   
-   private com.fasterxml.jackson.databind.JsonNode value;
+    private String action;
+    
+    private String lineItemId;
+    
+    private String name;
+    
+    private com.fasterxml.jackson.databind.JsonNode value;
 
-   @JsonCreator
-   StagedOrderSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
-      this.lineItemId = lineItemId;
-      this.name = name;
-      this.value = value;
-      this.action = "setLineItemCustomField";
-   }
-   public StagedOrderSetLineItemCustomFieldActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public com.fasterxml.jackson.databind.JsonNode getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    StagedOrderSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
+        this.lineItemId = lineItemId;
+        this.name = name;
+        this.value = value;
+        this.action = "setLineItemCustomField";
+    }
+    public StagedOrderSetLineItemCustomFieldActionImpl() {
+       
+    }
 
-   public void setLineItemId(final String lineItemId){
-      this.lineItemId = lineItemId;
-   }
-   
-   public void setName(final String name){
-      this.name = name;
-   }
-   
-   public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
-      this.value = value;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLineItemId(){
+        return this.lineItemId;
+    }
+    
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public com.fasterxml.jackson.databind.JsonNode getValue(){
+        return this.value;
+    }
+
+    public void setLineItemId(final String lineItemId){
+        this.lineItemId = lineItemId;
+    }
+    
+    public void setName(final String name){
+        this.name = name;
+    }
+    
+    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
+        this.value = value;
+    }
 
 }

@@ -23,70 +23,70 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewStateTransitionMessageImpl.class)
 public interface ReviewStateTransitionMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("oldState")
-   public StateReference getOldState();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("newState")
-   public StateReference getNewState();
-   
-   @NotNull
-   @JsonProperty("oldIncludedInStatistics")
-   public Boolean getOldIncludedInStatistics();
-   
-   @NotNull
-   @JsonProperty("newIncludedInStatistics")
-   public Boolean getNewIncludedInStatistics();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("target")
-   public Reference getTarget();
-   
-   @NotNull
-   @JsonProperty("force")
-   public Boolean getForce();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("oldState")
+    public StateReference getOldState();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("newState")
+    public StateReference getNewState();
+    
+    @NotNull
+    @JsonProperty("oldIncludedInStatistics")
+    public Boolean getOldIncludedInStatistics();
+    
+    @NotNull
+    @JsonProperty("newIncludedInStatistics")
+    public Boolean getNewIncludedInStatistics();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("target")
+    public Reference getTarget();
+    
+    @NotNull
+    @JsonProperty("force")
+    public Boolean getForce();
 
-   public void setOldState(final StateReference oldState);
-   
-   public void setNewState(final StateReference newState);
-   
-   public void setOldIncludedInStatistics(final Boolean oldIncludedInStatistics);
-   
-   public void setNewIncludedInStatistics(final Boolean newIncludedInStatistics);
-   
-   public void setTarget(final Reference target);
-   
-   public void setForce(final Boolean force);
-   
-   public static ReviewStateTransitionMessageImpl of(){
-      return new ReviewStateTransitionMessageImpl();
-   }
-   
+    public void setOldState(final StateReference oldState);
+    
+    public void setNewState(final StateReference newState);
+    
+    public void setOldIncludedInStatistics(final Boolean oldIncludedInStatistics);
+    
+    public void setNewIncludedInStatistics(final Boolean newIncludedInStatistics);
+    
+    public void setTarget(final Reference target);
+    
+    public void setForce(final Boolean force);
 
-   public static ReviewStateTransitionMessageImpl of(final ReviewStateTransitionMessage template) {
-      ReviewStateTransitionMessageImpl instance = new ReviewStateTransitionMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setOldState(template.getOldState());
-      instance.setNewState(template.getNewState());
-      instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
-      instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
-      instance.setTarget(template.getTarget());
-      instance.setForce(template.getForce());
-      return instance;
-   }
+    public static ReviewStateTransitionMessageImpl of(){
+        return new ReviewStateTransitionMessageImpl();
+    }
+    
+
+    public static ReviewStateTransitionMessageImpl of(final ReviewStateTransitionMessage template) {
+        ReviewStateTransitionMessageImpl instance = new ReviewStateTransitionMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setOldState(template.getOldState());
+        instance.setNewState(template.getNewState());
+        instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
+        instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
+        instance.setTarget(template.getTarget());
+        instance.setForce(template.getForce());
+        return instance;
+    }
 
 }

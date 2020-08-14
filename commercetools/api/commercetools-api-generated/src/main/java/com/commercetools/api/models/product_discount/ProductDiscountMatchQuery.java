@@ -21,44 +21,44 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountMatchQueryImpl.class)
 public interface ProductDiscountMatchQuery  {
 
-   
-   @NotNull
-   @JsonProperty("productId")
-   public String getProductId();
-   
-   @NotNull
-   @JsonProperty("variantId")
-   public Integer getVariantId();
-   
-   @NotNull
-   @JsonProperty("staged")
-   public Boolean getStaged();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("price")
-   public QueryPrice getPrice();
+    
+    @NotNull
+    @JsonProperty("productId")
+    public String getProductId();
+    
+    @NotNull
+    @JsonProperty("variantId")
+    public Integer getVariantId();
+    
+    @NotNull
+    @JsonProperty("staged")
+    public Boolean getStaged();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("price")
+    public QueryPrice getPrice();
 
-   public void setProductId(final String productId);
-   
-   public void setVariantId(final Integer variantId);
-   
-   public void setStaged(final Boolean staged);
-   
-   public void setPrice(final QueryPrice price);
-   
-   public static ProductDiscountMatchQueryImpl of(){
-      return new ProductDiscountMatchQueryImpl();
-   }
-   
+    public void setProductId(final String productId);
+    
+    public void setVariantId(final Integer variantId);
+    
+    public void setStaged(final Boolean staged);
+    
+    public void setPrice(final QueryPrice price);
 
-   public static ProductDiscountMatchQueryImpl of(final ProductDiscountMatchQuery template) {
-      ProductDiscountMatchQueryImpl instance = new ProductDiscountMatchQueryImpl();
-      instance.setProductId(template.getProductId());
-      instance.setVariantId(template.getVariantId());
-      instance.setStaged(template.getStaged());
-      instance.setPrice(template.getPrice());
-      return instance;
-   }
+    public static ProductDiscountMatchQueryImpl of(){
+        return new ProductDiscountMatchQueryImpl();
+    }
+    
+
+    public static ProductDiscountMatchQueryImpl of(final ProductDiscountMatchQuery template) {
+        ProductDiscountMatchQueryImpl instance = new ProductDiscountMatchQueryImpl();
+        instance.setProductId(template.getProductId());
+        instance.setVariantId(template.getVariantId());
+        instance.setStaged(template.getStaged());
+        instance.setPrice(template.getPrice());
+        return instance;
+    }
 
 }

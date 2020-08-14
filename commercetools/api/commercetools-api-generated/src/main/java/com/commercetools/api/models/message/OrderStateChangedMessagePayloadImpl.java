@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.order.OrderState orderState;
-   
-   private com.commercetools.api.models.order.OrderState oldOrderState;
+    private String type;
+    
+    private com.commercetools.api.models.order.OrderState orderState;
+    
+    private com.commercetools.api.models.order.OrderState oldOrderState;
 
-   @JsonCreator
-   OrderStateChangedMessagePayloadImpl(@JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState, @JsonProperty("oldOrderState") final com.commercetools.api.models.order.OrderState oldOrderState) {
-      this.orderState = orderState;
-      this.oldOrderState = oldOrderState;
-      this.type = "OrderStateChanged";
-   }
-   public OrderStateChangedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.order.OrderState getOrderState(){
-      return this.orderState;
-   }
-   
-   
-   public com.commercetools.api.models.order.OrderState getOldOrderState(){
-      return this.oldOrderState;
-   }
+    @JsonCreator
+    OrderStateChangedMessagePayloadImpl(@JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState, @JsonProperty("oldOrderState") final com.commercetools.api.models.order.OrderState oldOrderState) {
+        this.orderState = orderState;
+        this.oldOrderState = oldOrderState;
+        this.type = "OrderStateChanged";
+    }
+    public OrderStateChangedMessagePayloadImpl() {
+       
+    }
 
-   public void setOrderState(final com.commercetools.api.models.order.OrderState orderState){
-      this.orderState = orderState;
-   }
-   
-   public void setOldOrderState(final com.commercetools.api.models.order.OrderState oldOrderState){
-      this.oldOrderState = oldOrderState;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.order.OrderState getOrderState(){
+        return this.orderState;
+    }
+    
+    
+    public com.commercetools.api.models.order.OrderState getOldOrderState(){
+        return this.oldOrderState;
+    }
+
+    public void setOrderState(final com.commercetools.api.models.order.OrderState orderState){
+        this.orderState = orderState;
+    }
+    
+    public void setOldOrderState(final com.commercetools.api.models.order.OrderState oldOrderState){
+        this.oldOrderState = oldOrderState;
+    }
 
 }

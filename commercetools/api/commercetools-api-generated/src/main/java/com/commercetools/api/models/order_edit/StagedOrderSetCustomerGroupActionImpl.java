@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCustomerGroupAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
+    private String action;
+    
+    private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
-   @JsonCreator
-   StagedOrderSetCustomerGroupActionImpl(@JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
-      this.customerGroup = customerGroup;
-      this.action = "setCustomerGroup";
-   }
-   public StagedOrderSetCustomerGroupActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
-      return this.customerGroup;
-   }
+    @JsonCreator
+    StagedOrderSetCustomerGroupActionImpl(@JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
+        this.customerGroup = customerGroup;
+        this.action = "setCustomerGroup";
+    }
+    public StagedOrderSetCustomerGroupActionImpl() {
+       
+    }
 
-   public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
-      this.customerGroup = customerGroup;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
+        return this.customerGroup;
+    }
+
+    public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
+        this.customerGroup = customerGroup;
+    }
 
 }

@@ -29,128 +29,128 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListImpl.class)
 public interface MyShoppingList extends BaseResource {
 
-   
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @JsonProperty("createdAt")
-   public ZonedDateTime getCreatedAt();
-   
-   @NotNull
-   @JsonProperty("lastModifiedAt")
-   public ZonedDateTime getLastModifiedAt();
-   
-   @Valid
-   @JsonProperty("lastModifiedBy")
-   public LastModifiedBy getLastModifiedBy();
-   
-   @Valid
-   @JsonProperty("createdBy")
-   public CreatedBy getCreatedBy();
-   
-   @Valid
-   @JsonProperty("custom")
-   public CustomFields getCustom();
-   
-   @Valid
-   @JsonProperty("customer")
-   public CustomerReference getCustomer();
-   
-   
-   @JsonProperty("deleteDaysAfterLastModification")
-   public Long getDeleteDaysAfterLastModification();
-   
-   @Valid
-   @JsonProperty("description")
-   public LocalizedString getDescription();
-   
-   
-   @JsonProperty("key")
-   public String getKey();
-   
-   @Valid
-   @JsonProperty("lineItems")
-   public List<ShoppingListLineItem> getLineItems();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
-   
-   @Valid
-   @JsonProperty("slug")
-   public LocalizedString getSlug();
-   
-   @Valid
-   @JsonProperty("textLineItems")
-   public List<TextLineItem> getTextLineItems();
-   
-   
-   @JsonProperty("anonymousId")
-   public String getAnonymousId();
+    
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @JsonProperty("createdAt")
+    public ZonedDateTime getCreatedAt();
+    
+    @NotNull
+    @JsonProperty("lastModifiedAt")
+    public ZonedDateTime getLastModifiedAt();
+    
+    @Valid
+    @JsonProperty("lastModifiedBy")
+    public LastModifiedBy getLastModifiedBy();
+    
+    @Valid
+    @JsonProperty("createdBy")
+    public CreatedBy getCreatedBy();
+    
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+    
+    @Valid
+    @JsonProperty("customer")
+    public CustomerReference getCustomer();
+    
+    
+    @JsonProperty("deleteDaysAfterLastModification")
+    public Long getDeleteDaysAfterLastModification();
+    
+    @Valid
+    @JsonProperty("description")
+    public LocalizedString getDescription();
+    
+    
+    @JsonProperty("key")
+    public String getKey();
+    
+    @Valid
+    @JsonProperty("lineItems")
+    public List<ShoppingListLineItem> getLineItems();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
+    
+    @Valid
+    @JsonProperty("slug")
+    public LocalizedString getSlug();
+    
+    @Valid
+    @JsonProperty("textLineItems")
+    public List<TextLineItem> getTextLineItems();
+    
+    
+    @JsonProperty("anonymousId")
+    public String getAnonymousId();
 
-   public void setId(final String id);
-   
-   public void setVersion(final Long version);
-   
-   public void setCreatedAt(final ZonedDateTime createdAt);
-   
-   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-   
-   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-   
-   public void setCreatedBy(final CreatedBy createdBy);
-   
-   public void setCustom(final CustomFields custom);
-   
-   public void setCustomer(final CustomerReference customer);
-   
-   public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
-   
-   public void setDescription(final LocalizedString description);
-   
-   public void setKey(final String key);
-   
-   public void setLineItems(final List<ShoppingListLineItem> lineItems);
-   
-   public void setName(final LocalizedString name);
-   
-   public void setSlug(final LocalizedString slug);
-   
-   public void setTextLineItems(final List<TextLineItem> textLineItems);
-   
-   public void setAnonymousId(final String anonymousId);
-   
-   public static MyShoppingListImpl of(){
-      return new MyShoppingListImpl();
-   }
-   
+    public void setId(final String id);
+    
+    public void setVersion(final Long version);
+    
+    public void setCreatedAt(final ZonedDateTime createdAt);
+    
+    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+    
+    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+    
+    public void setCreatedBy(final CreatedBy createdBy);
+    
+    public void setCustom(final CustomFields custom);
+    
+    public void setCustomer(final CustomerReference customer);
+    
+    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+    
+    public void setDescription(final LocalizedString description);
+    
+    public void setKey(final String key);
+    
+    public void setLineItems(final List<ShoppingListLineItem> lineItems);
+    
+    public void setName(final LocalizedString name);
+    
+    public void setSlug(final LocalizedString slug);
+    
+    public void setTextLineItems(final List<TextLineItem> textLineItems);
+    
+    public void setAnonymousId(final String anonymousId);
 
-   public static MyShoppingListImpl of(final MyShoppingList template) {
-      MyShoppingListImpl instance = new MyShoppingListImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setCustom(template.getCustom());
-      instance.setCustomer(template.getCustomer());
-      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
-      instance.setDescription(template.getDescription());
-      instance.setKey(template.getKey());
-      instance.setLineItems(template.getLineItems());
-      instance.setName(template.getName());
-      instance.setSlug(template.getSlug());
-      instance.setTextLineItems(template.getTextLineItems());
-      instance.setAnonymousId(template.getAnonymousId());
-      return instance;
-   }
+    public static MyShoppingListImpl of(){
+        return new MyShoppingListImpl();
+    }
+    
+
+    public static MyShoppingListImpl of(final MyShoppingList template) {
+        MyShoppingListImpl instance = new MyShoppingListImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setCustom(template.getCustom());
+        instance.setCustomer(template.getCustomer());
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setDescription(template.getDescription());
+        instance.setKey(template.getKey());
+        instance.setLineItems(template.getLineItems());
+        instance.setName(template.getName());
+        instance.setSlug(template.getSlug());
+        instance.setTextLineItems(template.getTextLineItems());
+        instance.setAnonymousId(template.getAnonymousId());
+        return instance;
+    }
 
 }

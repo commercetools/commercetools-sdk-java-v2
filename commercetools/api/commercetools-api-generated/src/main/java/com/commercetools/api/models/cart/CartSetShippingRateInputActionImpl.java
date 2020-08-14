@@ -23,36 +23,36 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetShippingRateInputActionImpl implements CartSetShippingRateInputAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
+    private String action;
+    
+    private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
-   @JsonCreator
-   CartSetShippingRateInputActionImpl(@JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
-      this.shippingRateInput = shippingRateInput;
-      this.action = "setShippingRateInput";
-   }
-   public CartSetShippingRateInputActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>Based on the definition of ShippingRateInputType.
-   *  If CartClassification is defined, it must be ClassificationShippingRateInput.
-   *  If CartScore is defined, it must be ScoreShippingRateInput.
-   *  Otherwise it can not bet set.</p>
-   */
-   public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput(){
-      return this.shippingRateInput;
-   }
+    @JsonCreator
+    CartSetShippingRateInputActionImpl(@JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
+        this.shippingRateInput = shippingRateInput;
+        this.action = "setShippingRateInput";
+    }
+    public CartSetShippingRateInputActionImpl() {
+       
+    }
 
-   public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput){
-      this.shippingRateInput = shippingRateInput;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>Based on the definition of ShippingRateInputType.
+    *  If CartClassification is defined, it must be ClassificationShippingRateInput.
+    *  If CartScore is defined, it must be ScoreShippingRateInput.
+    *  Otherwise it can not bet set.</p>
+    */
+    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput(){
+        return this.shippingRateInput;
+    }
+
+    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput){
+        this.shippingRateInput = shippingRateInput;
+    }
 
 }

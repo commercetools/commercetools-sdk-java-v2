@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntrySetExpectedDeliveryActionImpl.class)
 public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryUpdateAction {
 
-   
-   
-   @JsonProperty("expectedDelivery")
-   public ZonedDateTime getExpectedDelivery();
+    
+    
+    @JsonProperty("expectedDelivery")
+    public ZonedDateTime getExpectedDelivery();
 
-   public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
-   
-   public static InventoryEntrySetExpectedDeliveryActionImpl of(){
-      return new InventoryEntrySetExpectedDeliveryActionImpl();
-   }
-   
+    public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
 
-   public static InventoryEntrySetExpectedDeliveryActionImpl of(final InventoryEntrySetExpectedDeliveryAction template) {
-      InventoryEntrySetExpectedDeliveryActionImpl instance = new InventoryEntrySetExpectedDeliveryActionImpl();
-      instance.setExpectedDelivery(template.getExpectedDelivery());
-      return instance;
-   }
+    public static InventoryEntrySetExpectedDeliveryActionImpl of(){
+        return new InventoryEntrySetExpectedDeliveryActionImpl();
+    }
+    
+
+    public static InventoryEntrySetExpectedDeliveryActionImpl of(final InventoryEntrySetExpectedDeliveryAction template) {
+        InventoryEntrySetExpectedDeliveryActionImpl instance = new InventoryEntrySetExpectedDeliveryActionImpl();
+        instance.setExpectedDelivery(template.getExpectedDelivery());
+        return instance;
+    }
 
 }

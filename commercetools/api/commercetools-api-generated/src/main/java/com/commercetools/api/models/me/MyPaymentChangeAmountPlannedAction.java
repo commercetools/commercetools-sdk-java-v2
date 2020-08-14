@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = MyPaymentChangeAmountPlannedActionImpl.class)
 public interface MyPaymentChangeAmountPlannedAction extends MyPaymentUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("amount")
-   public Money getAmount();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("amount")
+    public Money getAmount();
 
-   public void setAmount(final Money amount);
-   
-   public static MyPaymentChangeAmountPlannedActionImpl of(){
-      return new MyPaymentChangeAmountPlannedActionImpl();
-   }
-   
+    public void setAmount(final Money amount);
 
-   public static MyPaymentChangeAmountPlannedActionImpl of(final MyPaymentChangeAmountPlannedAction template) {
-      MyPaymentChangeAmountPlannedActionImpl instance = new MyPaymentChangeAmountPlannedActionImpl();
-      instance.setAmount(template.getAmount());
-      return instance;
-   }
+    public static MyPaymentChangeAmountPlannedActionImpl of(){
+        return new MyPaymentChangeAmountPlannedActionImpl();
+    }
+    
+
+    public static MyPaymentChangeAmountPlannedActionImpl of(final MyPaymentChangeAmountPlannedAction template) {
+        MyPaymentChangeAmountPlannedActionImpl instance = new MyPaymentChangeAmountPlannedActionImpl();
+        instance.setAmount(template.getAmount());
+        return instance;
+    }
 
 }

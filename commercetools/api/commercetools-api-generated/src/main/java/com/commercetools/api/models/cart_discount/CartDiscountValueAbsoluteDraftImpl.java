@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountValueAbsoluteDraftImpl implements CartDiscountValueAbsoluteDraft {
 
-   private String type;
-   
-   private java.util.List<com.commercetools.api.models.common.Money> money;
+    private String type;
+    
+    private java.util.List<com.commercetools.api.models.common.Money> money;
 
-   @JsonCreator
-   CartDiscountValueAbsoluteDraftImpl(@JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money) {
-      this.money = money;
-      this.type = "absolute";
-   }
-   public CartDiscountValueAbsoluteDraftImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.common.Money> getMoney(){
-      return this.money;
-   }
+    @JsonCreator
+    CartDiscountValueAbsoluteDraftImpl(@JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money) {
+        this.money = money;
+        this.type = "absolute";
+    }
+    public CartDiscountValueAbsoluteDraftImpl() {
+       
+    }
 
-   public void setMoney(final java.util.List<com.commercetools.api.models.common.Money> money){
-      this.money = money;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.common.Money> getMoney(){
+        return this.money;
+    }
+
+    public void setMoney(final java.util.List<com.commercetools.api.models.common.Money> money){
+        this.money = money;
+    }
 
 }

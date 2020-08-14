@@ -22,37 +22,37 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductImageAddedMessagePayloadImpl.class)
 public interface ProductImageAddedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("image")
-   public Image getImage();
-   
-   @NotNull
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @NotNull
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("image")
+    public Image getImage();
+    
+    @NotNull
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setImage(final Image image);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductImageAddedMessagePayloadImpl of(){
-      return new ProductImageAddedMessagePayloadImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setImage(final Image image);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductImageAddedMessagePayloadImpl of(final ProductImageAddedMessagePayload template) {
-      ProductImageAddedMessagePayloadImpl instance = new ProductImageAddedMessagePayloadImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setImage(template.getImage());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductImageAddedMessagePayloadImpl of(){
+        return new ProductImageAddedMessagePayloadImpl();
+    }
+    
+
+    public static ProductImageAddedMessagePayloadImpl of(final ProductImageAddedMessagePayload template) {
+        ProductImageAddedMessagePayloadImpl instance = new ProductImageAddedMessagePayloadImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setImage(template.getImage());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

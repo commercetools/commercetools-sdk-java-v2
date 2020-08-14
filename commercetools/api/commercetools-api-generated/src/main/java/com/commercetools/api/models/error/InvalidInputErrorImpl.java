@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InvalidInputErrorImpl implements InvalidInputError {
 
-   private String code;
-   
-   private String message;
+    private String code;
+    
+    private String message;
 
-   @JsonCreator
-   InvalidInputErrorImpl(@JsonProperty("message") final String message) {
-      this.message = message;
-      this.code = "InvalidInput";
-   }
-   public InvalidInputErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
+    @JsonCreator
+    InvalidInputErrorImpl(@JsonProperty("message") final String message) {
+        this.message = message;
+        this.code = "InvalidInput";
+    }
+    public InvalidInputErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
 
 }

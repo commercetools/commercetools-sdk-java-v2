@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductRemoveFromCategoryActionImpl.class)
 public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("category")
-   public CategoryResourceIdentifier getCategory();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("category")
+    public CategoryResourceIdentifier getCategory();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setCategory(final CategoryResourceIdentifier category);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductRemoveFromCategoryActionImpl of(){
-      return new ProductRemoveFromCategoryActionImpl();
-   }
-   
+    public void setCategory(final CategoryResourceIdentifier category);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductRemoveFromCategoryActionImpl of(final ProductRemoveFromCategoryAction template) {
-      ProductRemoveFromCategoryActionImpl instance = new ProductRemoveFromCategoryActionImpl();
-      instance.setCategory(template.getCategory());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductRemoveFromCategoryActionImpl of(){
+        return new ProductRemoveFromCategoryActionImpl();
+    }
+    
+
+    public static ProductRemoveFromCategoryActionImpl of(final ProductRemoveFromCategoryAction template) {
+        ProductRemoveFromCategoryActionImpl instance = new ProductRemoveFromCategoryActionImpl();
+        instance.setCategory(template.getCategory());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

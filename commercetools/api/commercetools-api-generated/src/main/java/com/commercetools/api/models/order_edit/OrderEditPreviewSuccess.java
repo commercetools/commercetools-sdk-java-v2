@@ -23,31 +23,31 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditPreviewSuccessImpl.class)
 public interface OrderEditPreviewSuccess extends OrderEditResult {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("preview")
-   public StagedOrder getPreview();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("messagePayloads")
-   public List<MessagePayload> getMessagePayloads();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("preview")
+    public StagedOrder getPreview();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("messagePayloads")
+    public List<MessagePayload> getMessagePayloads();
 
-   public void setPreview(final StagedOrder preview);
-   
-   public void setMessagePayloads(final List<MessagePayload> messagePayloads);
-   
-   public static OrderEditPreviewSuccessImpl of(){
-      return new OrderEditPreviewSuccessImpl();
-   }
-   
+    public void setPreview(final StagedOrder preview);
+    
+    public void setMessagePayloads(final List<MessagePayload> messagePayloads);
 
-   public static OrderEditPreviewSuccessImpl of(final OrderEditPreviewSuccess template) {
-      OrderEditPreviewSuccessImpl instance = new OrderEditPreviewSuccessImpl();
-      instance.setPreview(template.getPreview());
-      instance.setMessagePayloads(template.getMessagePayloads());
-      return instance;
-   }
+    public static OrderEditPreviewSuccessImpl of(){
+        return new OrderEditPreviewSuccessImpl();
+    }
+    
+
+    public static OrderEditPreviewSuccessImpl of(final OrderEditPreviewSuccess template) {
+        OrderEditPreviewSuccessImpl instance = new OrderEditPreviewSuccessImpl();
+        instance.setPreview(template.getPreview());
+        instance.setMessagePayloads(template.getMessagePayloads());
+        return instance;
+    }
 
 }

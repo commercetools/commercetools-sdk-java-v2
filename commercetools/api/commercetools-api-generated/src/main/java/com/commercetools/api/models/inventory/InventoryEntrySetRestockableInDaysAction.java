@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntrySetRestockableInDaysActionImpl.class)
 public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntryUpdateAction {
 
-   
-   
-   @JsonProperty("restockableInDays")
-   public Long getRestockableInDays();
+    
+    
+    @JsonProperty("restockableInDays")
+    public Long getRestockableInDays();
 
-   public void setRestockableInDays(final Long restockableInDays);
-   
-   public static InventoryEntrySetRestockableInDaysActionImpl of(){
-      return new InventoryEntrySetRestockableInDaysActionImpl();
-   }
-   
+    public void setRestockableInDays(final Long restockableInDays);
 
-   public static InventoryEntrySetRestockableInDaysActionImpl of(final InventoryEntrySetRestockableInDaysAction template) {
-      InventoryEntrySetRestockableInDaysActionImpl instance = new InventoryEntrySetRestockableInDaysActionImpl();
-      instance.setRestockableInDays(template.getRestockableInDays());
-      return instance;
-   }
+    public static InventoryEntrySetRestockableInDaysActionImpl of(){
+        return new InventoryEntrySetRestockableInDaysActionImpl();
+    }
+    
+
+    public static InventoryEntrySetRestockableInDaysActionImpl of(final InventoryEntrySetRestockableInDaysAction template) {
+        InventoryEntrySetRestockableInDaysActionImpl instance = new InventoryEntrySetRestockableInDaysActionImpl();
+        instance.setRestockableInDays(template.getRestockableInDays());
+        return instance;
+    }
 
 }

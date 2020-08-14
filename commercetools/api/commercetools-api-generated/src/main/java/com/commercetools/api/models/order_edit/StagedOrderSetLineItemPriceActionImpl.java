@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetLineItemPriceActionImpl implements StagedOrderSetLineItemPriceAction {
 
-   private String action;
-   
-   private String lineItemId;
-   
-   private com.commercetools.api.models.common.Money externalPrice;
+    private String action;
+    
+    private String lineItemId;
+    
+    private com.commercetools.api.models.common.Money externalPrice;
 
-   @JsonCreator
-   StagedOrderSetLineItemPriceActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice) {
-      this.lineItemId = lineItemId;
-      this.externalPrice = externalPrice;
-      this.action = "setLineItemPrice";
-   }
-   public StagedOrderSetLineItemPriceActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getExternalPrice(){
-      return this.externalPrice;
-   }
+    @JsonCreator
+    StagedOrderSetLineItemPriceActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice) {
+        this.lineItemId = lineItemId;
+        this.externalPrice = externalPrice;
+        this.action = "setLineItemPrice";
+    }
+    public StagedOrderSetLineItemPriceActionImpl() {
+       
+    }
 
-   public void setLineItemId(final String lineItemId){
-      this.lineItemId = lineItemId;
-   }
-   
-   public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice){
-      this.externalPrice = externalPrice;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLineItemId(){
+        return this.lineItemId;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getExternalPrice(){
+        return this.externalPrice;
+    }
+
+    public void setLineItemId(final String lineItemId){
+        this.lineItemId = lineItemId;
+    }
+    
+    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice){
+        this.externalPrice = externalPrice;
+    }
 
 }

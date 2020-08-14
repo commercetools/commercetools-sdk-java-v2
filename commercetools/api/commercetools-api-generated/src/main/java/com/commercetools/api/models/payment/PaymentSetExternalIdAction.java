@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetExternalIdActionImpl.class)
 public interface PaymentSetExternalIdAction extends PaymentUpdateAction {
 
-   
-   
-   @JsonProperty("externalId")
-   public String getExternalId();
+    
+    
+    @JsonProperty("externalId")
+    public String getExternalId();
 
-   public void setExternalId(final String externalId);
-   
-   public static PaymentSetExternalIdActionImpl of(){
-      return new PaymentSetExternalIdActionImpl();
-   }
-   
+    public void setExternalId(final String externalId);
 
-   public static PaymentSetExternalIdActionImpl of(final PaymentSetExternalIdAction template) {
-      PaymentSetExternalIdActionImpl instance = new PaymentSetExternalIdActionImpl();
-      instance.setExternalId(template.getExternalId());
-      return instance;
-   }
+    public static PaymentSetExternalIdActionImpl of(){
+        return new PaymentSetExternalIdActionImpl();
+    }
+    
+
+    public static PaymentSetExternalIdActionImpl of(final PaymentSetExternalIdAction template) {
+        PaymentSetExternalIdActionImpl instance = new PaymentSetExternalIdActionImpl();
+        instance.setExternalId(template.getExternalId());
+        return instance;
+    }
 
 }

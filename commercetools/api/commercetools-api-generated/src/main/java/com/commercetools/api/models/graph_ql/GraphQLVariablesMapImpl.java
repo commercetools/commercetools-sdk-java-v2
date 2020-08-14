@@ -22,26 +22,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class GraphQLVariablesMapImpl implements GraphQLVariablesMap {
 
-   private Map<String, com.fasterxml.jackson.databind.JsonNode> values;
+    private Map<String, com.fasterxml.jackson.databind.JsonNode> values;
 
-   @JsonCreator
-   GraphQLVariablesMapImpl(@JsonProperty("values") final Map<String, com.fasterxml.jackson.databind.JsonNode> values) {
-      this.values = values;
-   }
-   public GraphQLVariablesMapImpl() {
-      
-   }
-   
-   
-   public Map<String,com.fasterxml.jackson.databind.JsonNode> values() {
-       return values;
-   }
+    @JsonCreator
+    GraphQLVariablesMapImpl(@JsonProperty("values") final Map<String, com.fasterxml.jackson.databind.JsonNode> values) {
+        this.values = values;
+    }
+    public GraphQLVariablesMapImpl() {
+       
+    }
 
-   public void setValue(String key, com.fasterxml.jackson.databind.JsonNode value) {
-       if (values == null) {
-           values = new HashMap<>();
-       }
-       values.put(key, value);
-   }
+    
+    public Map<String,com.fasterxml.jackson.databind.JsonNode> values() {
+        return values;
+    }
+
+    public void setValue(String key, com.fasterxml.jackson.databind.JsonNode value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+    }
 
 }

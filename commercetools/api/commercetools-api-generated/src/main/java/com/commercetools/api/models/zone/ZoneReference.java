@@ -23,23 +23,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ZoneReferenceImpl.class)
 public interface ZoneReference extends Reference {
 
-   
-   @Valid
-   @JsonProperty("obj")
-   public Zone getObj();
+    
+    @Valid
+    @JsonProperty("obj")
+    public Zone getObj();
 
-   public void setObj(final Zone obj);
-   
-   public static ZoneReferenceImpl of(){
-      return new ZoneReferenceImpl();
-   }
-   
+    public void setObj(final Zone obj);
 
-   public static ZoneReferenceImpl of(final ZoneReference template) {
-      ZoneReferenceImpl instance = new ZoneReferenceImpl();
-      instance.setId(template.getId());
-      instance.setObj(template.getObj());
-      return instance;
-   }
+    public static ZoneReferenceImpl of(){
+        return new ZoneReferenceImpl();
+    }
+    
+
+    public static ZoneReferenceImpl of(final ZoneReference template) {
+        ZoneReferenceImpl instance = new ZoneReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(template.getObj());
+        return instance;
+    }
 
 }

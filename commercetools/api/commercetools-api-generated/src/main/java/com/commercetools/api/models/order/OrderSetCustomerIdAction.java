@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderSetCustomerIdActionImpl.class)
 public interface OrderSetCustomerIdAction extends OrderUpdateAction {
 
-   
-   
-   @JsonProperty("customerId")
-   public String getCustomerId();
+    
+    
+    @JsonProperty("customerId")
+    public String getCustomerId();
 
-   public void setCustomerId(final String customerId);
-   
-   public static OrderSetCustomerIdActionImpl of(){
-      return new OrderSetCustomerIdActionImpl();
-   }
-   
+    public void setCustomerId(final String customerId);
 
-   public static OrderSetCustomerIdActionImpl of(final OrderSetCustomerIdAction template) {
-      OrderSetCustomerIdActionImpl instance = new OrderSetCustomerIdActionImpl();
-      instance.setCustomerId(template.getCustomerId());
-      return instance;
-   }
+    public static OrderSetCustomerIdActionImpl of(){
+        return new OrderSetCustomerIdActionImpl();
+    }
+    
+
+    public static OrderSetCustomerIdActionImpl of(final OrderSetCustomerIdAction template) {
+        OrderSetCustomerIdActionImpl instance = new OrderSetCustomerIdActionImpl();
+        instance.setCustomerId(template.getCustomerId());
+        return instance;
+    }
 
 }

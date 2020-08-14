@@ -34,18 +34,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeTypeImpl implements AttributeType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   AttributeTypeImpl() {
-      this.name = "null";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    AttributeTypeImpl() {
+        this.name = "null";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

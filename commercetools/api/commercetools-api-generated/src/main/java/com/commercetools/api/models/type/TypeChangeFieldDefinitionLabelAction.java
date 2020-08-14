@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeChangeFieldDefinitionLabelActionImpl.class)
 public interface TypeChangeFieldDefinitionLabelAction extends TypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("fieldName")
-   public String getFieldName();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("label")
-   public LocalizedString getLabel();
+    
+    @NotNull
+    @JsonProperty("fieldName")
+    public String getFieldName();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("label")
+    public LocalizedString getLabel();
 
-   public void setFieldName(final String fieldName);
-   
-   public void setLabel(final LocalizedString label);
-   
-   public static TypeChangeFieldDefinitionLabelActionImpl of(){
-      return new TypeChangeFieldDefinitionLabelActionImpl();
-   }
-   
+    public void setFieldName(final String fieldName);
+    
+    public void setLabel(final LocalizedString label);
 
-   public static TypeChangeFieldDefinitionLabelActionImpl of(final TypeChangeFieldDefinitionLabelAction template) {
-      TypeChangeFieldDefinitionLabelActionImpl instance = new TypeChangeFieldDefinitionLabelActionImpl();
-      instance.setFieldName(template.getFieldName());
-      instance.setLabel(template.getLabel());
-      return instance;
-   }
+    public static TypeChangeFieldDefinitionLabelActionImpl of(){
+        return new TypeChangeFieldDefinitionLabelActionImpl();
+    }
+    
+
+    public static TypeChangeFieldDefinitionLabelActionImpl of(final TypeChangeFieldDefinitionLabelAction template) {
+        TypeChangeFieldDefinitionLabelActionImpl instance = new TypeChangeFieldDefinitionLabelActionImpl();
+        instance.setFieldName(template.getFieldName());
+        instance.setLabel(template.getLabel());
+        return instance;
+    }
 
 }

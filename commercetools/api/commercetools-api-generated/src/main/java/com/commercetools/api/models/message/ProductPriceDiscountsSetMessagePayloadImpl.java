@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceDiscountsSetMessagePayload {
 
-   private String type;
-   
-   private java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
+    private String type;
+    
+    private java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
 
-   @JsonCreator
-   ProductPriceDiscountsSetMessagePayloadImpl(@JsonProperty("updatedPrices") final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
-      this.updatedPrices = updatedPrices;
-      this.type = "ProductPriceDiscountsSet";
-   }
-   public ProductPriceDiscountsSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices(){
-      return this.updatedPrices;
-   }
+    @JsonCreator
+    ProductPriceDiscountsSetMessagePayloadImpl(@JsonProperty("updatedPrices") final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
+        this.updatedPrices = updatedPrices;
+        this.type = "ProductPriceDiscountsSet";
+    }
+    public ProductPriceDiscountsSetMessagePayloadImpl() {
+       
+    }
 
-   public void setUpdatedPrices(final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices){
-      this.updatedPrices = updatedPrices;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices(){
+        return this.updatedPrices;
+    }
+
+    public void setUpdatedPrices(final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices){
+        this.updatedPrices = updatedPrices;
+    }
 
 }

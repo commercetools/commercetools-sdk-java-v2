@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DeliveryItemImpl implements DeliveryItem {
 
-   private String id;
-   
-   private Double quantity;
+    private String id;
+    
+    private Double quantity;
 
-   @JsonCreator
-   DeliveryItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Double quantity) {
-      this.id = id;
-      this.quantity = quantity;
-   }
-   public DeliveryItemImpl() {
-      
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public Double getQuantity(){
-      return this.quantity;
-   }
+    @JsonCreator
+    DeliveryItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Double quantity) {
+        this.id = id;
+        this.quantity = quantity;
+    }
+    public DeliveryItemImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setQuantity(final Double quantity){
-      this.quantity = quantity;
-   }
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public Double getQuantity(){
+        return this.quantity;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setQuantity(final Double quantity){
+        this.quantity = quantity;
+    }
 
 }

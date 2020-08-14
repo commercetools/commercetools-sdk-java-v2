@@ -25,67 +25,67 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItemDiscountSetMessagePayload {
 
-   private String type;
-   
-   private String lineItemId;
-   
-   private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
-   
-   private com.commercetools.api.models.common.Money totalPrice;
-   
-   private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
+    private String type;
+    
+    private String lineItemId;
+    
+    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+    
+    private com.commercetools.api.models.common.Money totalPrice;
+    
+    private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
-   @JsonCreator
-   OrderLineItemDiscountSetMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
-      this.lineItemId = lineItemId;
-      this.discountedPricePerQuantity = discountedPricePerQuantity;
-      this.totalPrice = totalPrice;
-      this.taxedPrice = taxedPrice;
-      this.type = "OrderLineItemDiscountSet";
-   }
-   public OrderLineItemDiscountSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
-      return this.discountedPricePerQuantity;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getTotalPrice(){
-      return this.totalPrice;
-   }
-   
-   
-   public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
-      return this.taxedPrice;
-   }
+    @JsonCreator
+    OrderLineItemDiscountSetMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
+        this.lineItemId = lineItemId;
+        this.discountedPricePerQuantity = discountedPricePerQuantity;
+        this.totalPrice = totalPrice;
+        this.taxedPrice = taxedPrice;
+        this.type = "OrderLineItemDiscountSet";
+    }
+    public OrderLineItemDiscountSetMessagePayloadImpl() {
+       
+    }
 
-   public void setLineItemId(final String lineItemId){
-      this.lineItemId = lineItemId;
-   }
-   
-   public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
-      this.discountedPricePerQuantity = discountedPricePerQuantity;
-   }
-   
-   public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice){
-      this.totalPrice = totalPrice;
-   }
-   
-   public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice){
-      this.taxedPrice = taxedPrice;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getLineItemId(){
+        return this.lineItemId;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
+        return this.discountedPricePerQuantity;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getTotalPrice(){
+        return this.totalPrice;
+    }
+    
+    
+    public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
+        return this.taxedPrice;
+    }
+
+    public void setLineItemId(final String lineItemId){
+        this.lineItemId = lineItemId;
+    }
+    
+    public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
+        this.discountedPricePerQuantity = discountedPricePerQuantity;
+    }
+    
+    public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice){
+        this.totalPrice = totalPrice;
+    }
+    
+    public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice){
+        this.taxedPrice = taxedPrice;
+    }
 
 }

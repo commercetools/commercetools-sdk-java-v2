@@ -25,79 +25,79 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAddTextLineItemAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString name;
-   
-   private com.commercetools.api.models.common.LocalizedString description;
-   
-   private Long quantity;
-   
-   private java.time.ZonedDateTime addedAt;
-   
-   private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString name;
+    
+    private com.commercetools.api.models.common.LocalizedString description;
+    
+    private Long quantity;
+    
+    private java.time.ZonedDateTime addedAt;
+    
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-   @JsonCreator
-   MyShoppingListAddTextLineItemActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("quantity") final Long quantity, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-      this.name = name;
-      this.description = description;
-      this.quantity = quantity;
-      this.addedAt = addedAt;
-      this.custom = custom;
-      this.action = "addTextLineItem";
-   }
-   public MyShoppingListAddTextLineItemActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
-   
-   
-   public Long getQuantity(){
-      return this.quantity;
-   }
-   
-   
-   public java.time.ZonedDateTime getAddedAt(){
-      return this.addedAt;
-   }
-   
-   
-   public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
-      return this.custom;
-   }
+    @JsonCreator
+    MyShoppingListAddTextLineItemActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("quantity") final Long quantity, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.name = name;
+        this.description = description;
+        this.quantity = quantity;
+        this.addedAt = addedAt;
+        this.custom = custom;
+        this.action = "addTextLineItem";
+    }
+    public MyShoppingListAddTextLineItemActionImpl() {
+       
+    }
 
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
-   }
-   
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
-   }
-   
-   public void setQuantity(final Long quantity){
-      this.quantity = quantity;
-   }
-   
-   public void setAddedAt(final java.time.ZonedDateTime addedAt){
-      this.addedAt = addedAt;
-   }
-   
-   public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
-      this.custom = custom;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
+        return this.name;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
+        return this.description;
+    }
+    
+    
+    public Long getQuantity(){
+        return this.quantity;
+    }
+    
+    
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
+    }
+    
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+        return this.custom;
+    }
+
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
+        this.name = name;
+    }
+    
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+        this.description = description;
+    }
+    
+    public void setQuantity(final Long quantity){
+        this.quantity = quantity;
+    }
+    
+    public void setAddedAt(final java.time.ZonedDateTime addedAt){
+        this.addedAt = addedAt;
+    }
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
+        this.custom = custom;
+    }
 
 }

@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerEmailChangedMessagePayloadImpl implements CustomerEmailChangedMessagePayload {
 
-   private String type;
-   
-   private String email;
+    private String type;
+    
+    private String email;
 
-   @JsonCreator
-   CustomerEmailChangedMessagePayloadImpl(@JsonProperty("email") final String email) {
-      this.email = email;
-      this.type = "CustomerEmailChanged";
-   }
-   public CustomerEmailChangedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getEmail(){
-      return this.email;
-   }
+    @JsonCreator
+    CustomerEmailChangedMessagePayloadImpl(@JsonProperty("email") final String email) {
+        this.email = email;
+        this.type = "CustomerEmailChanged";
+    }
+    public CustomerEmailChangedMessagePayloadImpl() {
+       
+    }
 
-   public void setEmail(final String email){
-      this.email = email;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getEmail(){
+        return this.email;
+    }
+
+    public void setEmail(final String email){
+        this.email = email;
+    }
 
 }

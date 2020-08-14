@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeSetCustomFieldActionImpl.class)
 public interface DiscountCodeSetCustomFieldAction extends DiscountCodeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
 
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public static DiscountCodeSetCustomFieldActionImpl of(){
-      return new DiscountCodeSetCustomFieldActionImpl();
-   }
-   
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
 
-   public static DiscountCodeSetCustomFieldActionImpl of(final DiscountCodeSetCustomFieldAction template) {
-      DiscountCodeSetCustomFieldActionImpl instance = new DiscountCodeSetCustomFieldActionImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static DiscountCodeSetCustomFieldActionImpl of(){
+        return new DiscountCodeSetCustomFieldActionImpl();
+    }
+    
+
+    public static DiscountCodeSetCustomFieldActionImpl of(final DiscountCodeSetCustomFieldAction template) {
+        DiscountCodeSetCustomFieldActionImpl instance = new DiscountCodeSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

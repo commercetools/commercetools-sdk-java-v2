@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryChangeNameActionImpl.class)
 public interface CategoryChangeNameAction extends CategoryUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
 
-   public void setName(final LocalizedString name);
-   
-   public static CategoryChangeNameActionImpl of(){
-      return new CategoryChangeNameActionImpl();
-   }
-   
+    public void setName(final LocalizedString name);
 
-   public static CategoryChangeNameActionImpl of(final CategoryChangeNameAction template) {
-      CategoryChangeNameActionImpl instance = new CategoryChangeNameActionImpl();
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static CategoryChangeNameActionImpl of(){
+        return new CategoryChangeNameActionImpl();
+    }
+    
+
+    public static CategoryChangeNameActionImpl of(final CategoryChangeNameAction template) {
+        CategoryChangeNameActionImpl instance = new CategoryChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

@@ -24,43 +24,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentSetAuthorizationActionImpl implements PaymentSetAuthorizationAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.Money amount;
-   
-   private java.time.ZonedDateTime until;
+    private String action;
+    
+    private com.commercetools.api.models.common.Money amount;
+    
+    private java.time.ZonedDateTime until;
 
-   @JsonCreator
-   PaymentSetAuthorizationActionImpl(@JsonProperty("amount") final com.commercetools.api.models.common.Money amount, @JsonProperty("until") final java.time.ZonedDateTime until) {
-      this.amount = amount;
-      this.until = until;
-      this.action = "setAuthorization";
-   }
-   public PaymentSetAuthorizationActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getAmount(){
-      return this.amount;
-   }
-   
-   
-   public java.time.ZonedDateTime getUntil(){
-      return this.until;
-   }
+    @JsonCreator
+    PaymentSetAuthorizationActionImpl(@JsonProperty("amount") final com.commercetools.api.models.common.Money amount, @JsonProperty("until") final java.time.ZonedDateTime until) {
+        this.amount = amount;
+        this.until = until;
+        this.action = "setAuthorization";
+    }
+    public PaymentSetAuthorizationActionImpl() {
+       
+    }
 
-   public void setAmount(final com.commercetools.api.models.common.Money amount){
-      this.amount = amount;
-   }
-   
-   public void setUntil(final java.time.ZonedDateTime until){
-      this.until = until;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getAmount(){
+        return this.amount;
+    }
+    
+    
+    public java.time.ZonedDateTime getUntil(){
+        return this.until;
+    }
+
+    public void setAmount(final com.commercetools.api.models.common.Money amount){
+        this.amount = amount;
+    }
+    
+    public void setUntil(final java.time.ZonedDateTime until){
+        this.until = until;
+    }
 
 }

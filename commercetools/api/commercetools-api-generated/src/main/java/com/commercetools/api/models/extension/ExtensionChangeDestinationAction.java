@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionChangeDestinationActionImpl.class)
 public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("destination")
-   public ExtensionDestination getDestination();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("destination")
+    public ExtensionDestination getDestination();
 
-   public void setDestination(final ExtensionDestination destination);
-   
-   public static ExtensionChangeDestinationActionImpl of(){
-      return new ExtensionChangeDestinationActionImpl();
-   }
-   
+    public void setDestination(final ExtensionDestination destination);
 
-   public static ExtensionChangeDestinationActionImpl of(final ExtensionChangeDestinationAction template) {
-      ExtensionChangeDestinationActionImpl instance = new ExtensionChangeDestinationActionImpl();
-      instance.setDestination(template.getDestination());
-      return instance;
-   }
+    public static ExtensionChangeDestinationActionImpl of(){
+        return new ExtensionChangeDestinationActionImpl();
+    }
+    
+
+    public static ExtensionChangeDestinationActionImpl of(final ExtensionChangeDestinationAction template) {
+        ExtensionChangeDestinationActionImpl instance = new ExtensionChangeDestinationActionImpl();
+        instance.setDestination(template.getDestination());
+        return instance;
+    }
 
 }

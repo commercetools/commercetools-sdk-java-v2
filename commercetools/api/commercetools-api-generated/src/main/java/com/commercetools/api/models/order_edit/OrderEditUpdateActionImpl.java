@@ -27,18 +27,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditUpdateActionImpl implements OrderEditUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   OrderEditUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    OrderEditUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

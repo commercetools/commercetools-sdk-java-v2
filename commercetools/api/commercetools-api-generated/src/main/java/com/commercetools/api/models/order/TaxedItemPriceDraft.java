@@ -21,31 +21,31 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxedItemPriceDraftImpl.class)
 public interface TaxedItemPriceDraft  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("totalNet")
-   public Money getTotalNet();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("totalGross")
-   public Money getTotalGross();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("totalNet")
+    public Money getTotalNet();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("totalGross")
+    public Money getTotalGross();
 
-   public void setTotalNet(final Money totalNet);
-   
-   public void setTotalGross(final Money totalGross);
-   
-   public static TaxedItemPriceDraftImpl of(){
-      return new TaxedItemPriceDraftImpl();
-   }
-   
+    public void setTotalNet(final Money totalNet);
+    
+    public void setTotalGross(final Money totalGross);
 
-   public static TaxedItemPriceDraftImpl of(final TaxedItemPriceDraft template) {
-      TaxedItemPriceDraftImpl instance = new TaxedItemPriceDraftImpl();
-      instance.setTotalNet(template.getTotalNet());
-      instance.setTotalGross(template.getTotalGross());
-      return instance;
-   }
+    public static TaxedItemPriceDraftImpl of(){
+        return new TaxedItemPriceDraftImpl();
+    }
+    
+
+    public static TaxedItemPriceDraftImpl of(final TaxedItemPriceDraft template) {
+        TaxedItemPriceDraftImpl instance = new TaxedItemPriceDraftImpl();
+        instance.setTotalNet(template.getTotalNet());
+        instance.setTotalGross(template.getTotalGross());
+        return instance;
+    }
 
 }

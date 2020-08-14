@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeAttributeOrderActionImpl implements ProductTypeChangeAttributeOrderAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
 
-   @JsonCreator
-   ProductTypeChangeAttributeOrderActionImpl(@JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
-      this.attributes = attributes;
-      this.action = "changeAttributeOrder";
-   }
-   public ProductTypeChangeAttributeOrderActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> getAttributes(){
-      return this.attributes;
-   }
+    @JsonCreator
+    ProductTypeChangeAttributeOrderActionImpl(@JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
+        this.attributes = attributes;
+        this.action = "changeAttributeOrder";
+    }
+    public ProductTypeChangeAttributeOrderActionImpl() {
+       
+    }
 
-   public void setAttributes(final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes){
-      this.attributes = attributes;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> getAttributes(){
+        return this.attributes;
+    }
+
+    public void setAttributes(final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes){
+        this.attributes = attributes;
+    }
 
 }

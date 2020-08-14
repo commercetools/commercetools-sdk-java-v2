@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionTriggerImpl.class)
 public interface ExtensionTrigger  {
 
-   
-   @NotNull
-   @JsonProperty("resourceTypeId")
-   public ExtensionResourceTypeId getResourceTypeId();
-   
-   @NotNull
-   @JsonProperty("actions")
-   public List<ExtensionAction> getActions();
+    
+    @NotNull
+    @JsonProperty("resourceTypeId")
+    public ExtensionResourceTypeId getResourceTypeId();
+    
+    @NotNull
+    @JsonProperty("actions")
+    public List<ExtensionAction> getActions();
 
-   public void setResourceTypeId(final ExtensionResourceTypeId resourceTypeId);
-   
-   public void setActions(final List<ExtensionAction> actions);
-   
-   public static ExtensionTriggerImpl of(){
-      return new ExtensionTriggerImpl();
-   }
-   
+    public void setResourceTypeId(final ExtensionResourceTypeId resourceTypeId);
+    
+    public void setActions(final List<ExtensionAction> actions);
 
-   public static ExtensionTriggerImpl of(final ExtensionTrigger template) {
-      ExtensionTriggerImpl instance = new ExtensionTriggerImpl();
-      instance.setResourceTypeId(template.getResourceTypeId());
-      instance.setActions(template.getActions());
-      return instance;
-   }
+    public static ExtensionTriggerImpl of(){
+        return new ExtensionTriggerImpl();
+    }
+    
+
+    public static ExtensionTriggerImpl of(final ExtensionTrigger template) {
+        ExtensionTriggerImpl instance = new ExtensionTriggerImpl();
+        instance.setResourceTypeId(template.getResourceTypeId());
+        instance.setActions(template.getActions());
+        return instance;
+    }
 
 }

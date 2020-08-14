@@ -22,40 +22,40 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderStateTransitionMessageImpl.class)
 public interface OrderStateTransitionMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("state")
-   public StateReference getState();
-   
-   @NotNull
-   @JsonProperty("force")
-   public Boolean getForce();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+    
+    @NotNull
+    @JsonProperty("force")
+    public Boolean getForce();
 
-   public void setState(final StateReference state);
-   
-   public void setForce(final Boolean force);
-   
-   public static OrderStateTransitionMessageImpl of(){
-      return new OrderStateTransitionMessageImpl();
-   }
-   
+    public void setState(final StateReference state);
+    
+    public void setForce(final Boolean force);
 
-   public static OrderStateTransitionMessageImpl of(final OrderStateTransitionMessage template) {
-      OrderStateTransitionMessageImpl instance = new OrderStateTransitionMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setState(template.getState());
-      instance.setForce(template.getForce());
-      return instance;
-   }
+    public static OrderStateTransitionMessageImpl of(){
+        return new OrderStateTransitionMessageImpl();
+    }
+    
+
+    public static OrderStateTransitionMessageImpl of(final OrderStateTransitionMessage template) {
+        OrderStateTransitionMessageImpl instance = new OrderStateTransitionMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
 
 }

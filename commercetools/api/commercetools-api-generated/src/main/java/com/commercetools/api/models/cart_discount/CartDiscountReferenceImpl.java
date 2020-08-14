@@ -24,43 +24,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountReferenceImpl implements CartDiscountReference {
 
-   private com.commercetools.api.models.common.ReferenceTypeId typeId;
-   
-   private String id;
-   
-   private com.commercetools.api.models.cart_discount.CartDiscount obj;
+    private com.commercetools.api.models.common.ReferenceTypeId typeId;
+    
+    private String id;
+    
+    private com.commercetools.api.models.cart_discount.CartDiscount obj;
 
-   @JsonCreator
-   CartDiscountReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.cart_discount.CartDiscount obj) {
-      this.id = id;
-      this.obj = obj;
-      this.typeId = ReferenceTypeId.findEnumViaJsonName("cart-discount").get();
-   }
-   public CartDiscountReferenceImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
-      return this.typeId;
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public com.commercetools.api.models.cart_discount.CartDiscount getObj(){
-      return this.obj;
-   }
+    @JsonCreator
+    CartDiscountReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.cart_discount.CartDiscount obj) {
+        this.id = id;
+        this.obj = obj;
+        this.typeId = ReferenceTypeId.findEnumViaJsonName("cart-discount").get();
+    }
+    public CartDiscountReferenceImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setObj(final com.commercetools.api.models.cart_discount.CartDiscount obj){
-      this.obj = obj;
-   }
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
+        return this.typeId;
+    }
+    
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public com.commercetools.api.models.cart_discount.CartDiscount getObj(){
+        return this.obj;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setObj(final com.commercetools.api.models.cart_discount.CartDiscount obj){
+        this.obj = obj;
+    }
 
 }

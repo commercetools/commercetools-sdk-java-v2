@@ -13,33 +13,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TaxMode {
 
-  
-  @JsonProperty("Platform")
-  PLATFORM("Platform"),
-  
-  
-  @JsonProperty("External")
-  EXTERNAL("External"),
-  
-  
-  @JsonProperty("ExternalAmount")
-  EXTERNAL_AMOUNT("ExternalAmount"),
-  
-  
-  @JsonProperty("Disabled")
-  DISABLED("Disabled");
+    
+    @JsonProperty("Platform")
+    PLATFORM("Platform"),
+    
+    
+    @JsonProperty("External")
+    EXTERNAL("External"),
+    
+    
+    @JsonProperty("ExternalAmount")
+    EXTERNAL_AMOUNT("ExternalAmount"),
+    
+    
+    @JsonProperty("Disabled")
+    DISABLED("Disabled");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private TaxMode(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private TaxMode(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<TaxMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<TaxMode> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

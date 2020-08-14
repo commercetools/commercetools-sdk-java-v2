@@ -24,57 +24,57 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantDraftImpl.class)
 public interface ProductVariantDraft  {
 
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   
-   @JsonProperty("key")
-   public String getKey();
-   
-   @Valid
-   @JsonProperty("prices")
-   public List<PriceDraft> getPrices();
-   
-   @Valid
-   @JsonProperty("attributes")
-   public List<Attribute> getAttributes();
-   
-   @Valid
-   @JsonProperty("images")
-   public List<Image> getImages();
-   
-   @Valid
-   @JsonProperty("assets")
-   public List<AssetDraft> getAssets();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    
+    @JsonProperty("key")
+    public String getKey();
+    
+    @Valid
+    @JsonProperty("prices")
+    public List<PriceDraft> getPrices();
+    
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
+    
+    @Valid
+    @JsonProperty("images")
+    public List<Image> getImages();
+    
+    @Valid
+    @JsonProperty("assets")
+    public List<AssetDraft> getAssets();
 
-   public void setSku(final String sku);
-   
-   public void setKey(final String key);
-   
-   public void setPrices(final List<PriceDraft> prices);
-   
-   public void setAttributes(final List<Attribute> attributes);
-   
-   public void setImages(final List<Image> images);
-   
-   public void setAssets(final List<AssetDraft> assets);
-   
-   public static ProductVariantDraftImpl of(){
-      return new ProductVariantDraftImpl();
-   }
-   
+    public void setSku(final String sku);
+    
+    public void setKey(final String key);
+    
+    public void setPrices(final List<PriceDraft> prices);
+    
+    public void setAttributes(final List<Attribute> attributes);
+    
+    public void setImages(final List<Image> images);
+    
+    public void setAssets(final List<AssetDraft> assets);
 
-   public static ProductVariantDraftImpl of(final ProductVariantDraft template) {
-      ProductVariantDraftImpl instance = new ProductVariantDraftImpl();
-      instance.setSku(template.getSku());
-      instance.setKey(template.getKey());
-      instance.setPrices(template.getPrices());
-      instance.setAttributes(template.getAttributes());
-      instance.setImages(template.getImages());
-      instance.setAssets(template.getAssets());
-      return instance;
-   }
+    public static ProductVariantDraftImpl of(){
+        return new ProductVariantDraftImpl();
+    }
+    
+
+    public static ProductVariantDraftImpl of(final ProductVariantDraft template) {
+        ProductVariantDraftImpl instance = new ProductVariantDraftImpl();
+        instance.setSku(template.getSku());
+        instance.setKey(template.getKey());
+        instance.setPrices(template.getPrices());
+        instance.setAttributes(template.getAttributes());
+        instance.setImages(template.getImages());
+        instance.setAssets(template.getAssets());
+        return instance;
+    }
 
 }

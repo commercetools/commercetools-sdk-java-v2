@@ -164,10 +164,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessageImpl.class, name = "CustomerEmailVerified")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = MessageImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = MessageImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -175,68 +175,68 @@ import java.io.IOException;
 )
 public interface Message extends BaseResource {
 
-   
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @JsonProperty("createdAt")
-   public ZonedDateTime getCreatedAt();
-   
-   @NotNull
-   @JsonProperty("lastModifiedAt")
-   public ZonedDateTime getLastModifiedAt();
-   
-   @Valid
-   @JsonProperty("lastModifiedBy")
-   public LastModifiedBy getLastModifiedBy();
-   
-   @Valid
-   @JsonProperty("createdBy")
-   public CreatedBy getCreatedBy();
-   
-   @NotNull
-   @JsonProperty("sequenceNumber")
-   public Long getSequenceNumber();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("resource")
-   public Reference getResource();
-   
-   @NotNull
-   @JsonProperty("resourceVersion")
-   public Long getResourceVersion();
-   
-   @Valid
-   @JsonProperty("resourceUserProvidedIdentifiers")
-   public UserProvidedIdentifiers getResourceUserProvidedIdentifiers();
+    
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @JsonProperty("createdAt")
+    public ZonedDateTime getCreatedAt();
+    
+    @NotNull
+    @JsonProperty("lastModifiedAt")
+    public ZonedDateTime getLastModifiedAt();
+    
+    @Valid
+    @JsonProperty("lastModifiedBy")
+    public LastModifiedBy getLastModifiedBy();
+    
+    @Valid
+    @JsonProperty("createdBy")
+    public CreatedBy getCreatedBy();
+    
+    @NotNull
+    @JsonProperty("sequenceNumber")
+    public Long getSequenceNumber();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("resource")
+    public Reference getResource();
+    
+    @NotNull
+    @JsonProperty("resourceVersion")
+    public Long getResourceVersion();
+    
+    @Valid
+    @JsonProperty("resourceUserProvidedIdentifiers")
+    public UserProvidedIdentifiers getResourceUserProvidedIdentifiers();
 
-   public void setId(final String id);
-   
-   public void setVersion(final Long version);
-   
-   public void setCreatedAt(final ZonedDateTime createdAt);
-   
-   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-   
-   public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-   
-   public void setCreatedBy(final CreatedBy createdBy);
-   
-   public void setSequenceNumber(final Long sequenceNumber);
-   
-   public void setResource(final Reference resource);
-   
-   public void setResourceVersion(final Long resourceVersion);
-   
-   public void setResourceUserProvidedIdentifiers(final UserProvidedIdentifiers resourceUserProvidedIdentifiers);
-   
+    public void setId(final String id);
+    
+    public void setVersion(final Long version);
+    
+    public void setCreatedAt(final ZonedDateTime createdAt);
+    
+    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+    
+    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+    
+    public void setCreatedBy(final CreatedBy createdBy);
+    
+    public void setSequenceNumber(final Long sequenceNumber);
+    
+    public void setResource(final Reference resource);
+    
+    public void setResourceVersion(final Long resourceVersion);
+    
+    public void setResourceUserProvidedIdentifiers(final UserProvidedIdentifiers resourceUserProvidedIdentifiers);
+
 
 
 }

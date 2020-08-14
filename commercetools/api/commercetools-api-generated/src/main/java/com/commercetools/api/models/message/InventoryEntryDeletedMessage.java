@@ -22,40 +22,40 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntryDeletedMessageImpl.class)
 public interface InventoryEntryDeletedMessage extends Message {
 
-   
-   @NotNull
-   @JsonProperty("sku")
-   public String getSku();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("supplyChannel")
-   public ChannelReference getSupplyChannel();
+    
+    @NotNull
+    @JsonProperty("sku")
+    public String getSku();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelReference getSupplyChannel();
 
-   public void setSku(final String sku);
-   
-   public void setSupplyChannel(final ChannelReference supplyChannel);
-   
-   public static InventoryEntryDeletedMessageImpl of(){
-      return new InventoryEntryDeletedMessageImpl();
-   }
-   
+    public void setSku(final String sku);
+    
+    public void setSupplyChannel(final ChannelReference supplyChannel);
 
-   public static InventoryEntryDeletedMessageImpl of(final InventoryEntryDeletedMessage template) {
-      InventoryEntryDeletedMessageImpl instance = new InventoryEntryDeletedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setSku(template.getSku());
-      instance.setSupplyChannel(template.getSupplyChannel());
-      return instance;
-   }
+    public static InventoryEntryDeletedMessageImpl of(){
+        return new InventoryEntryDeletedMessageImpl();
+    }
+    
+
+    public static InventoryEntryDeletedMessageImpl of(final InventoryEntryDeletedMessage template) {
+        InventoryEntryDeletedMessageImpl instance = new InventoryEntryDeletedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setSku(template.getSku());
+        instance.setSupplyChannel(template.getSupplyChannel());
+        return instance;
+    }
 
 }

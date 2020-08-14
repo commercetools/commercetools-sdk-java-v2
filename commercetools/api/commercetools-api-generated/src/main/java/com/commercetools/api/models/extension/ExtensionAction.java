@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ExtensionAction {
 
-  
-  @JsonProperty("Create")
-  CREATE("Create"),
-  
-  
-  @JsonProperty("Update")
-  UPDATE("Update");
+    
+    @JsonProperty("Create")
+    CREATE("Create"),
+    
+    
+    @JsonProperty("Update")
+    UPDATE("Update");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private ExtensionAction(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private ExtensionAction(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<ExtensionAction> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<ExtensionAction> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

@@ -21,36 +21,36 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySetAssetTagsActionImpl.class)
 public interface CategorySetAssetTagsAction extends CategoryUpdateAction {
 
-   
-   
-   @JsonProperty("assetId")
-   public String getAssetId();
-   
-   
-   @JsonProperty("assetKey")
-   public String getAssetKey();
-   
-   
-   @JsonProperty("tags")
-   public List<String> getTags();
+    
+    
+    @JsonProperty("assetId")
+    public String getAssetId();
+    
+    
+    @JsonProperty("assetKey")
+    public String getAssetKey();
+    
+    
+    @JsonProperty("tags")
+    public List<String> getTags();
 
-   public void setAssetId(final String assetId);
-   
-   public void setAssetKey(final String assetKey);
-   
-   public void setTags(final List<String> tags);
-   
-   public static CategorySetAssetTagsActionImpl of(){
-      return new CategorySetAssetTagsActionImpl();
-   }
-   
+    public void setAssetId(final String assetId);
+    
+    public void setAssetKey(final String assetKey);
+    
+    public void setTags(final List<String> tags);
 
-   public static CategorySetAssetTagsActionImpl of(final CategorySetAssetTagsAction template) {
-      CategorySetAssetTagsActionImpl instance = new CategorySetAssetTagsActionImpl();
-      instance.setAssetId(template.getAssetId());
-      instance.setAssetKey(template.getAssetKey());
-      instance.setTags(template.getTags());
-      return instance;
-   }
+    public static CategorySetAssetTagsActionImpl of(){
+        return new CategorySetAssetTagsActionImpl();
+    }
+    
+
+    public static CategorySetAssetTagsActionImpl of(final CategorySetAssetTagsAction template) {
+        CategorySetAssetTagsActionImpl instance = new CategorySetAssetTagsActionImpl();
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setTags(template.getTags());
+        return instance;
+    }
 
 }

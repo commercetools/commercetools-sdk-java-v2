@@ -23,29 +23,29 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetCustomTypeActionImpl.class)
 public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static StagedOrderSetCustomTypeActionImpl of(){
-      return new StagedOrderSetCustomTypeActionImpl();
-   }
-   
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static StagedOrderSetCustomTypeActionImpl of(final StagedOrderSetCustomTypeAction template) {
-      StagedOrderSetCustomTypeActionImpl instance = new StagedOrderSetCustomTypeActionImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static StagedOrderSetCustomTypeActionImpl of(){
+        return new StagedOrderSetCustomTypeActionImpl();
+    }
+    
+
+    public static StagedOrderSetCustomTypeActionImpl of(final StagedOrderSetCustomTypeAction template) {
+        StagedOrderSetCustomTypeActionImpl instance = new StagedOrderSetCustomTypeActionImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

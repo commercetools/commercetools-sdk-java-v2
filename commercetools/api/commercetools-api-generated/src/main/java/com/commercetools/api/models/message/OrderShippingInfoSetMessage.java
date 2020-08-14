@@ -22,39 +22,39 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderShippingInfoSetMessageImpl.class)
 public interface OrderShippingInfoSetMessage extends Message {
 
-   
-   @Valid
-   @JsonProperty("shippingInfo")
-   public ShippingInfo getShippingInfo();
-   
-   @Valid
-   @JsonProperty("oldShippingInfo")
-   public ShippingInfo getOldShippingInfo();
+    
+    @Valid
+    @JsonProperty("shippingInfo")
+    public ShippingInfo getShippingInfo();
+    
+    @Valid
+    @JsonProperty("oldShippingInfo")
+    public ShippingInfo getOldShippingInfo();
 
-   public void setShippingInfo(final ShippingInfo shippingInfo);
-   
-   public void setOldShippingInfo(final ShippingInfo oldShippingInfo);
-   
-   public static OrderShippingInfoSetMessageImpl of(){
-      return new OrderShippingInfoSetMessageImpl();
-   }
-   
+    public void setShippingInfo(final ShippingInfo shippingInfo);
+    
+    public void setOldShippingInfo(final ShippingInfo oldShippingInfo);
 
-   public static OrderShippingInfoSetMessageImpl of(final OrderShippingInfoSetMessage template) {
-      OrderShippingInfoSetMessageImpl instance = new OrderShippingInfoSetMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setShippingInfo(template.getShippingInfo());
-      instance.setOldShippingInfo(template.getOldShippingInfo());
-      return instance;
-   }
+    public static OrderShippingInfoSetMessageImpl of(){
+        return new OrderShippingInfoSetMessageImpl();
+    }
+    
+
+    public static OrderShippingInfoSetMessageImpl of(final OrderShippingInfoSetMessage template) {
+        OrderShippingInfoSetMessageImpl instance = new OrderShippingInfoSetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setShippingInfo(template.getShippingInfo());
+        instance.setOldShippingInfo(template.getOldShippingInfo());
+        return instance;
+    }
 
 }

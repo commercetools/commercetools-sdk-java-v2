@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeNestedTypeImpl.class)
 public interface AttributeNestedType extends AttributeType {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("typeReference")
-   public ProductTypeReference getTypeReference();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("typeReference")
+    public ProductTypeReference getTypeReference();
 
-   public void setTypeReference(final ProductTypeReference typeReference);
-   
-   public static AttributeNestedTypeImpl of(){
-      return new AttributeNestedTypeImpl();
-   }
-   
+    public void setTypeReference(final ProductTypeReference typeReference);
 
-   public static AttributeNestedTypeImpl of(final AttributeNestedType template) {
-      AttributeNestedTypeImpl instance = new AttributeNestedTypeImpl();
-      instance.setTypeReference(template.getTypeReference());
-      return instance;
-   }
+    public static AttributeNestedTypeImpl of(){
+        return new AttributeNestedTypeImpl();
+    }
+    
+
+    public static AttributeNestedTypeImpl of(final AttributeNestedType template) {
+        AttributeNestedTypeImpl instance = new AttributeNestedTypeImpl();
+        instance.setTypeReference(template.getTypeReference());
+        return instance;
+    }
 
 }

@@ -21,38 +21,38 @@ import java.io.IOException;
 @JsonDeserialize(as = ApiClientDraftImpl.class)
 public interface ApiClientDraft  {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   @NotNull
-   @JsonProperty("scope")
-   public String getScope();
-   /**
-   *  <p>If set, the client will be deleted after the specified amount of days.</p>
-   */
-   
-   @JsonProperty("deleteDaysAfterCreation")
-   public Long getDeleteDaysAfterCreation();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    @NotNull
+    @JsonProperty("scope")
+    public String getScope();
+    /**
+    *  <p>If set, the client will be deleted after the specified amount of days.</p>
+    */
+    
+    @JsonProperty("deleteDaysAfterCreation")
+    public Long getDeleteDaysAfterCreation();
 
-   public void setName(final String name);
-   
-   public void setScope(final String scope);
-   
-   public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation);
-   
-   public static ApiClientDraftImpl of(){
-      return new ApiClientDraftImpl();
-   }
-   
+    public void setName(final String name);
+    
+    public void setScope(final String scope);
+    
+    public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation);
 
-   public static ApiClientDraftImpl of(final ApiClientDraft template) {
-      ApiClientDraftImpl instance = new ApiClientDraftImpl();
-      instance.setName(template.getName());
-      instance.setScope(template.getScope());
-      instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
-      return instance;
-   }
+    public static ApiClientDraftImpl of(){
+        return new ApiClientDraftImpl();
+    }
+    
+
+    public static ApiClientDraftImpl of(final ApiClientDraft template) {
+        ApiClientDraftImpl instance = new ApiClientDraftImpl();
+        instance.setName(template.getName());
+        instance.setScope(template.getScope());
+        instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
+        return instance;
+    }
 
 }

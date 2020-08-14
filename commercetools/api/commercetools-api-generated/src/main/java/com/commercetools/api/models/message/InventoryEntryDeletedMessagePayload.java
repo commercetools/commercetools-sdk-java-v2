@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntryDeletedMessagePayloadImpl.class)
 public interface InventoryEntryDeletedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("sku")
-   public String getSku();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("supplyChannel")
-   public ChannelReference getSupplyChannel();
+    
+    @NotNull
+    @JsonProperty("sku")
+    public String getSku();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelReference getSupplyChannel();
 
-   public void setSku(final String sku);
-   
-   public void setSupplyChannel(final ChannelReference supplyChannel);
-   
-   public static InventoryEntryDeletedMessagePayloadImpl of(){
-      return new InventoryEntryDeletedMessagePayloadImpl();
-   }
-   
+    public void setSku(final String sku);
+    
+    public void setSupplyChannel(final ChannelReference supplyChannel);
 
-   public static InventoryEntryDeletedMessagePayloadImpl of(final InventoryEntryDeletedMessagePayload template) {
-      InventoryEntryDeletedMessagePayloadImpl instance = new InventoryEntryDeletedMessagePayloadImpl();
-      instance.setSku(template.getSku());
-      instance.setSupplyChannel(template.getSupplyChannel());
-      return instance;
-   }
+    public static InventoryEntryDeletedMessagePayloadImpl of(){
+        return new InventoryEntryDeletedMessagePayloadImpl();
+    }
+    
+
+    public static InventoryEntryDeletedMessagePayloadImpl of(final InventoryEntryDeletedMessagePayload template) {
+        InventoryEntryDeletedMessagePayloadImpl instance = new InventoryEntryDeletedMessagePayloadImpl();
+        instance.setSku(template.getSku());
+        instance.setSupplyChannel(template.getSupplyChannel());
+        return instance;
+    }
 
 }

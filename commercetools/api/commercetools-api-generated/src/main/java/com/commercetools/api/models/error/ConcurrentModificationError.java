@@ -21,23 +21,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ConcurrentModificationErrorImpl.class)
 public interface ConcurrentModificationError extends ErrorObject {
 
-   
-   
-   @JsonProperty("currentVersion")
-   public Long getCurrentVersion();
+    
+    
+    @JsonProperty("currentVersion")
+    public Long getCurrentVersion();
 
-   public void setCurrentVersion(final Long currentVersion);
-   
-   public static ConcurrentModificationErrorImpl of(){
-      return new ConcurrentModificationErrorImpl();
-   }
-   
+    public void setCurrentVersion(final Long currentVersion);
 
-   public static ConcurrentModificationErrorImpl of(final ConcurrentModificationError template) {
-      ConcurrentModificationErrorImpl instance = new ConcurrentModificationErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setCurrentVersion(template.getCurrentVersion());
-      return instance;
-   }
+    public static ConcurrentModificationErrorImpl of(){
+        return new ConcurrentModificationErrorImpl();
+    }
+    
+
+    public static ConcurrentModificationErrorImpl of(final ConcurrentModificationError template) {
+        ConcurrentModificationErrorImpl instance = new ConcurrentModificationErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setCurrentVersion(template.getCurrentVersion());
+        return instance;
+    }
 
 }

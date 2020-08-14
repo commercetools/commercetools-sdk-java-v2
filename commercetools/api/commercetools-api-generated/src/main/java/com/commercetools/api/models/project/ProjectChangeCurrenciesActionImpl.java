@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeCurrenciesActionImpl implements ProjectChangeCurrenciesAction {
 
-   private String action;
-   
-   private java.util.List<String> currencies;
+    private String action;
+    
+    private java.util.List<String> currencies;
 
-   @JsonCreator
-   ProjectChangeCurrenciesActionImpl(@JsonProperty("currencies") final java.util.List<String> currencies) {
-      this.currencies = currencies;
-      this.action = "changeCurrencies";
-   }
-   public ProjectChangeCurrenciesActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>A three-digit currency code as per currency code.</p>
-   */
-   public java.util.List<String> getCurrencies(){
-      return this.currencies;
-   }
+    @JsonCreator
+    ProjectChangeCurrenciesActionImpl(@JsonProperty("currencies") final java.util.List<String> currencies) {
+        this.currencies = currencies;
+        this.action = "changeCurrencies";
+    }
+    public ProjectChangeCurrenciesActionImpl() {
+       
+    }
 
-   public void setCurrencies(final java.util.List<String> currencies){
-      this.currencies = currencies;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>A three-digit currency code as per currency code.</p>
+    */
+    public java.util.List<String> getCurrencies(){
+        return this.currencies;
+    }
+
+    public void setCurrencies(final java.util.List<String> currencies){
+        this.currencies = currencies;
+    }
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentSetMethodInfoNameActionImpl implements MyPaymentSetMethodInfoNameAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString name;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString name;
 
-   @JsonCreator
-   MyPaymentSetMethodInfoNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
-      this.name = name;
-      this.action = "setMethodInfoName";
-   }
-   public MyPaymentSetMethodInfoNameActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
+    @JsonCreator
+    MyPaymentSetMethodInfoNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
+        this.name = name;
+        this.action = "setMethodInfoName";
+    }
+    public MyPaymentSetMethodInfoNameActionImpl() {
+       
+    }
 
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
+        return this.name;
+    }
+
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
+        this.name = name;
+    }
 
 }

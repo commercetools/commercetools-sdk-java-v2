@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetCustomLineItemShippingDetailsActionImpl implements StagedOrderSetCustomLineItemShippingDetailsAction {
 
-   private String action;
-   
-   private String customLineItemId;
-   
-   private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+    private String action;
+    
+    private String customLineItemId;
+    
+    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
-   @JsonCreator
-   StagedOrderSetCustomLineItemShippingDetailsActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
-      this.customLineItemId = customLineItemId;
-      this.shippingDetails = shippingDetails;
-      this.action = "setCustomLineItemShippingDetails";
-   }
-   public StagedOrderSetCustomLineItemShippingDetailsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getCustomLineItemId(){
-      return this.customLineItemId;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
-      return this.shippingDetails;
-   }
+    @JsonCreator
+    StagedOrderSetCustomLineItemShippingDetailsActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+        this.customLineItemId = customLineItemId;
+        this.shippingDetails = shippingDetails;
+        this.action = "setCustomLineItemShippingDetails";
+    }
+    public StagedOrderSetCustomLineItemShippingDetailsActionImpl() {
+       
+    }
 
-   public void setCustomLineItemId(final String customLineItemId){
-      this.customLineItemId = customLineItemId;
-   }
-   
-   public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
-      this.shippingDetails = shippingDetails;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getCustomLineItemId(){
+        return this.customLineItemId;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
+        return this.shippingDetails;
+    }
+
+    public void setCustomLineItemId(final String customLineItemId){
+        this.customLineItemId = customLineItemId;
+    }
+    
+    public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
+        this.shippingDetails = shippingDetails;
+    }
 
 }

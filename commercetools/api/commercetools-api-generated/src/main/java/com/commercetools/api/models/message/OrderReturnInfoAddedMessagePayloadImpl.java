@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturnInfoAddedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.order.ReturnInfo returnInfo;
+    private String type;
+    
+    private com.commercetools.api.models.order.ReturnInfo returnInfo;
 
-   @JsonCreator
-   OrderReturnInfoAddedMessagePayloadImpl(@JsonProperty("returnInfo") final com.commercetools.api.models.order.ReturnInfo returnInfo) {
-      this.returnInfo = returnInfo;
-      this.type = "ReturnInfoAdded";
-   }
-   public OrderReturnInfoAddedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.order.ReturnInfo getReturnInfo(){
-      return this.returnInfo;
-   }
+    @JsonCreator
+    OrderReturnInfoAddedMessagePayloadImpl(@JsonProperty("returnInfo") final com.commercetools.api.models.order.ReturnInfo returnInfo) {
+        this.returnInfo = returnInfo;
+        this.type = "ReturnInfoAdded";
+    }
+    public OrderReturnInfoAddedMessagePayloadImpl() {
+       
+    }
 
-   public void setReturnInfo(final com.commercetools.api.models.order.ReturnInfo returnInfo){
-      this.returnInfo = returnInfo;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.order.ReturnInfo getReturnInfo(){
+        return this.returnInfo;
+    }
+
+    public void setReturnInfo(final com.commercetools.api.models.order.ReturnInfo returnInfo){
+        this.returnInfo = returnInfo;
+    }
 
 }

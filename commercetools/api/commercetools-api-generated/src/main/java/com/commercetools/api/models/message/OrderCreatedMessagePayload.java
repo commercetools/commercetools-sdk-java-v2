@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderCreatedMessagePayloadImpl.class)
 public interface OrderCreatedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("order")
-   public Order getOrder();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("order")
+    public Order getOrder();
 
-   public void setOrder(final Order order);
-   
-   public static OrderCreatedMessagePayloadImpl of(){
-      return new OrderCreatedMessagePayloadImpl();
-   }
-   
+    public void setOrder(final Order order);
 
-   public static OrderCreatedMessagePayloadImpl of(final OrderCreatedMessagePayload template) {
-      OrderCreatedMessagePayloadImpl instance = new OrderCreatedMessagePayloadImpl();
-      instance.setOrder(template.getOrder());
-      return instance;
-   }
+    public static OrderCreatedMessagePayloadImpl of(){
+        return new OrderCreatedMessagePayloadImpl();
+    }
+    
+
+    public static OrderCreatedMessagePayloadImpl of(final OrderCreatedMessagePayload template) {
+        OrderCreatedMessagePayloadImpl instance = new OrderCreatedMessagePayloadImpl();
+        instance.setOrder(template.getOrder());
+        return instance;
+    }
 
 }

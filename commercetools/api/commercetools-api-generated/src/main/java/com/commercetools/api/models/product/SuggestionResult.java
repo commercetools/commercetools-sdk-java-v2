@@ -21,23 +21,23 @@ import java.io.IOException;
 @JsonDeserialize(as = SuggestionResultImpl.class)
 public interface SuggestionResult  {
 
-   
-   @NotNull
-   @Valid
-   @JsonAnyGetter
-   public Map<String, List<Suggestion>> values();
+    
+    @NotNull
+    @Valid
+    @JsonAnyGetter
+    public Map<String, List<Suggestion>> values();
 
-   @JsonAnySetter
-   public void setValue(String key, List<Suggestion> value);
-   
-   public static SuggestionResultImpl of(){
-      return new SuggestionResultImpl();
-   }
-   
+    @JsonAnySetter
+    public void setValue(String key, List<Suggestion> value);
 
-   public static SuggestionResultImpl of(final SuggestionResult template) {
-      SuggestionResultImpl instance = new SuggestionResultImpl();
-      return instance;
-   }
+    public static SuggestionResultImpl of(){
+        return new SuggestionResultImpl();
+    }
+    
+
+    public static SuggestionResultImpl of(final SuggestionResult template) {
+        SuggestionResultImpl instance = new SuggestionResultImpl();
+        return instance;
+    }
 
 }

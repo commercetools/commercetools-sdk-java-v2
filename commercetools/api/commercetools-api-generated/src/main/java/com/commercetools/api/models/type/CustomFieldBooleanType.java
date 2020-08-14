@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface CustomFieldBooleanType extends FieldType {
 
 
-   
-   public static CustomFieldBooleanTypeImpl of(){
-      return new CustomFieldBooleanTypeImpl();
-   }
-   
 
-   public static CustomFieldBooleanTypeImpl of(final CustomFieldBooleanType template) {
-      CustomFieldBooleanTypeImpl instance = new CustomFieldBooleanTypeImpl();
-      return instance;
-   }
+    public static CustomFieldBooleanTypeImpl of(){
+        return new CustomFieldBooleanTypeImpl();
+    }
+    
+
+    public static CustomFieldBooleanTypeImpl of(final CustomFieldBooleanType template) {
+        CustomFieldBooleanTypeImpl instance = new CustomFieldBooleanTypeImpl();
+        return instance;
+    }
 
 }

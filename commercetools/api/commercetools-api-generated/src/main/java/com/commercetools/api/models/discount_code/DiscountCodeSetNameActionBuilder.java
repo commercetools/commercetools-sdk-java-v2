@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class DiscountCodeSetNameActionBuilder {
-   
-   @Nullable
-   private com.commercetools.api.models.common.LocalizedString name;
-   
-   public DiscountCodeSetNameActionBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
-      this.name = name;
-      return this;
-   }
-   
-   @Nullable
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
 
-   public DiscountCodeSetNameAction build() {
-       return new DiscountCodeSetNameActionImpl(name);
-   }
-   
-   public static DiscountCodeSetNameActionBuilder of() {
-      return new DiscountCodeSetNameActionBuilder();
-   }
-   
-   public static DiscountCodeSetNameActionBuilder of(final DiscountCodeSetNameAction template) {
-      DiscountCodeSetNameActionBuilder builder = new DiscountCodeSetNameActionBuilder();
-      builder.name = template.getName();
-      return builder;
-   }
-   
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString name;
+
+    public DiscountCodeSetNameActionBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
+        this.name = name;
+        return this;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getName(){
+        return this.name;
+    }
+
+    public DiscountCodeSetNameAction build() {
+        return new DiscountCodeSetNameActionImpl(name);
+    }
+
+    public static DiscountCodeSetNameActionBuilder of() {
+        return new DiscountCodeSetNameActionBuilder();
+    }
+
+    public static DiscountCodeSetNameActionBuilder of(final DiscountCodeSetNameAction template) {
+        DiscountCodeSetNameActionBuilder builder = new DiscountCodeSetNameActionBuilder();
+        builder.name = template.getName();
+        return builder;
+    }
+
 }

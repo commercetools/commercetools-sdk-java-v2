@@ -154,10 +154,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderUpdateSyncInfoActionImpl.class, name = "updateSyncInfo")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "action",
-   defaultImpl = StagedOrderUpdateActionImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "action",
+    defaultImpl = StagedOrderUpdateActionImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -166,7 +166,7 @@ import java.io.IOException;
 public interface StagedOrderUpdateAction  {
 
 
-   
+
 
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountChangeIsActiveActionImpl.class)
 public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("isActive")
-   public Boolean getIsActive();
+    
+    @NotNull
+    @JsonProperty("isActive")
+    public Boolean getIsActive();
 
-   public void setIsActive(final Boolean isActive);
-   
-   public static ProductDiscountChangeIsActiveActionImpl of(){
-      return new ProductDiscountChangeIsActiveActionImpl();
-   }
-   
+    public void setIsActive(final Boolean isActive);
 
-   public static ProductDiscountChangeIsActiveActionImpl of(final ProductDiscountChangeIsActiveAction template) {
-      ProductDiscountChangeIsActiveActionImpl instance = new ProductDiscountChangeIsActiveActionImpl();
-      instance.setIsActive(template.getIsActive());
-      return instance;
-   }
+    public static ProductDiscountChangeIsActiveActionImpl of(){
+        return new ProductDiscountChangeIsActiveActionImpl();
+    }
+    
+
+    public static ProductDiscountChangeIsActiveActionImpl of(final ProductDiscountChangeIsActiveAction template) {
+        ProductDiscountChangeIsActiveActionImpl instance = new ProductDiscountChangeIsActiveActionImpl();
+        instance.setIsActive(template.getIsActive());
+        return instance;
+    }
 
 }

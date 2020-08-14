@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetCountryActionImpl implements StagedOrderSetCountryAction {
 
-   private String action;
-   
-   private String country;
+    private String action;
+    
+    private String country;
 
-   @JsonCreator
-   StagedOrderSetCountryActionImpl(@JsonProperty("country") final String country) {
-      this.country = country;
-      this.action = "setCountry";
-   }
-   public StagedOrderSetCountryActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getCountry(){
-      return this.country;
-   }
+    @JsonCreator
+    StagedOrderSetCountryActionImpl(@JsonProperty("country") final String country) {
+        this.country = country;
+        this.action = "setCountry";
+    }
+    public StagedOrderSetCountryActionImpl() {
+       
+    }
 
-   public void setCountry(final String country){
-      this.country = country;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getCountry(){
+        return this.country;
+    }
+
+    public void setCountry(final String country){
+        this.country = country;
+    }
 
 }

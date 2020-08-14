@@ -24,43 +24,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoreReferenceImpl implements StoreReference {
 
-   private com.commercetools.api.models.common.ReferenceTypeId typeId;
-   
-   private String id;
-   
-   private com.commercetools.api.models.store.Store obj;
+    private com.commercetools.api.models.common.ReferenceTypeId typeId;
+    
+    private String id;
+    
+    private com.commercetools.api.models.store.Store obj;
 
-   @JsonCreator
-   StoreReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.store.Store obj) {
-      this.id = id;
-      this.obj = obj;
-      this.typeId = ReferenceTypeId.findEnumViaJsonName("store").get();
-   }
-   public StoreReferenceImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
-      return this.typeId;
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public com.commercetools.api.models.store.Store getObj(){
-      return this.obj;
-   }
+    @JsonCreator
+    StoreReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.store.Store obj) {
+        this.id = id;
+        this.obj = obj;
+        this.typeId = ReferenceTypeId.findEnumViaJsonName("store").get();
+    }
+    public StoreReferenceImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setObj(final com.commercetools.api.models.store.Store obj){
-      this.obj = obj;
-   }
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
+        return this.typeId;
+    }
+    
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public com.commercetools.api.models.store.Store getObj(){
+        return this.obj;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setObj(final com.commercetools.api.models.store.Store obj){
+        this.obj = obj;
+    }
 
 }

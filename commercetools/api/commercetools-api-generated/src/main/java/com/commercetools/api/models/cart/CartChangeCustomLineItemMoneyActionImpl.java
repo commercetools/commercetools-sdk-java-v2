@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartChangeCustomLineItemMoneyActionImpl implements CartChangeCustomLineItemMoneyAction {
 
-   private String action;
-   
-   private String customLineItemId;
-   
-   private com.commercetools.api.models.common.Money money;
+    private String action;
+    
+    private String customLineItemId;
+    
+    private com.commercetools.api.models.common.Money money;
 
-   @JsonCreator
-   CartChangeCustomLineItemMoneyActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("money") final com.commercetools.api.models.common.Money money) {
-      this.customLineItemId = customLineItemId;
-      this.money = money;
-      this.action = "changeCustomLineItemMoney";
-   }
-   public CartChangeCustomLineItemMoneyActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getCustomLineItemId(){
-      return this.customLineItemId;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getMoney(){
-      return this.money;
-   }
+    @JsonCreator
+    CartChangeCustomLineItemMoneyActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("money") final com.commercetools.api.models.common.Money money) {
+        this.customLineItemId = customLineItemId;
+        this.money = money;
+        this.action = "changeCustomLineItemMoney";
+    }
+    public CartChangeCustomLineItemMoneyActionImpl() {
+       
+    }
 
-   public void setCustomLineItemId(final String customLineItemId){
-      this.customLineItemId = customLineItemId;
-   }
-   
-   public void setMoney(final com.commercetools.api.models.common.Money money){
-      this.money = money;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getCustomLineItemId(){
+        return this.customLineItemId;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getMoney(){
+        return this.money;
+    }
+
+    public void setCustomLineItemId(final String customLineItemId){
+        this.customLineItemId = customLineItemId;
+    }
+    
+    public void setMoney(final com.commercetools.api.models.common.Money money){
+        this.money = money;
+    }
 
 }

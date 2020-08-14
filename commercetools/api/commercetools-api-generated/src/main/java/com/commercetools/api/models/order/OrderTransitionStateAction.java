@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderTransitionStateActionImpl.class)
 public interface OrderTransitionStateAction extends OrderUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("state")
-   public StateResourceIdentifier getState();
-   
-   
-   @JsonProperty("force")
-   public Boolean getForce();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("state")
+    public StateResourceIdentifier getState();
+    
+    
+    @JsonProperty("force")
+    public Boolean getForce();
 
-   public void setState(final StateResourceIdentifier state);
-   
-   public void setForce(final Boolean force);
-   
-   public static OrderTransitionStateActionImpl of(){
-      return new OrderTransitionStateActionImpl();
-   }
-   
+    public void setState(final StateResourceIdentifier state);
+    
+    public void setForce(final Boolean force);
 
-   public static OrderTransitionStateActionImpl of(final OrderTransitionStateAction template) {
-      OrderTransitionStateActionImpl instance = new OrderTransitionStateActionImpl();
-      instance.setState(template.getState());
-      instance.setForce(template.getForce());
-      return instance;
-   }
+    public static OrderTransitionStateActionImpl of(){
+        return new OrderTransitionStateActionImpl();
+    }
+    
+
+    public static OrderTransitionStateActionImpl of(final OrderTransitionStateAction template) {
+        OrderTransitionStateActionImpl instance = new OrderTransitionStateActionImpl();
+        instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
 
 }

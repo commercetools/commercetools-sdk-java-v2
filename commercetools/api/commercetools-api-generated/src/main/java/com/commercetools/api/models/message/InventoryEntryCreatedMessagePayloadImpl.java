@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCreatedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.inventory.InventoryEntry inventoryEntry;
+    private String type;
+    
+    private com.commercetools.api.models.inventory.InventoryEntry inventoryEntry;
 
-   @JsonCreator
-   InventoryEntryCreatedMessagePayloadImpl(@JsonProperty("inventoryEntry") final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry) {
-      this.inventoryEntry = inventoryEntry;
-      this.type = "InventoryEntryCreated";
-   }
-   public InventoryEntryCreatedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry(){
-      return this.inventoryEntry;
-   }
+    @JsonCreator
+    InventoryEntryCreatedMessagePayloadImpl(@JsonProperty("inventoryEntry") final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry) {
+        this.inventoryEntry = inventoryEntry;
+        this.type = "InventoryEntryCreated";
+    }
+    public InventoryEntryCreatedMessagePayloadImpl() {
+       
+    }
 
-   public void setInventoryEntry(final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry){
-      this.inventoryEntry = inventoryEntry;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry(){
+        return this.inventoryEntry;
+    }
+
+    public void setInventoryEntry(final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry){
+        this.inventoryEntry = inventoryEntry;
+    }
 
 }

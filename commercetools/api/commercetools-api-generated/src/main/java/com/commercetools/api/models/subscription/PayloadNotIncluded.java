@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = PayloadNotIncludedImpl.class)
 public interface PayloadNotIncluded  {
 
-   
-   @NotNull
-   @JsonProperty("reason")
-   public String getReason();
-   
-   @NotNull
-   @JsonProperty("payloadType")
-   public String getPayloadType();
+    
+    @NotNull
+    @JsonProperty("reason")
+    public String getReason();
+    
+    @NotNull
+    @JsonProperty("payloadType")
+    public String getPayloadType();
 
-   public void setReason(final String reason);
-   
-   public void setPayloadType(final String payloadType);
-   
-   public static PayloadNotIncludedImpl of(){
-      return new PayloadNotIncludedImpl();
-   }
-   
+    public void setReason(final String reason);
+    
+    public void setPayloadType(final String payloadType);
 
-   public static PayloadNotIncludedImpl of(final PayloadNotIncluded template) {
-      PayloadNotIncludedImpl instance = new PayloadNotIncludedImpl();
-      instance.setReason(template.getReason());
-      instance.setPayloadType(template.getPayloadType());
-      return instance;
-   }
+    public static PayloadNotIncludedImpl of(){
+        return new PayloadNotIncludedImpl();
+    }
+    
+
+    public static PayloadNotIncludedImpl of(final PayloadNotIncluded template) {
+        PayloadNotIncludedImpl instance = new PayloadNotIncludedImpl();
+        instance.setReason(template.getReason());
+        instance.setPayloadType(template.getPayloadType());
+        return instance;
+    }
 
 }

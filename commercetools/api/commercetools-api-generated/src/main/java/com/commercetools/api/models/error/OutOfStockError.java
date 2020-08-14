@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = OutOfStockErrorImpl.class)
 public interface OutOfStockError extends ErrorObject {
 
-   
-   @NotNull
-   @JsonProperty("lineItems")
-   public List<String> getLineItems();
-   
-   @NotNull
-   @JsonProperty("skus")
-   public List<String> getSkus();
+    
+    @NotNull
+    @JsonProperty("lineItems")
+    public List<String> getLineItems();
+    
+    @NotNull
+    @JsonProperty("skus")
+    public List<String> getSkus();
 
-   public void setLineItems(final List<String> lineItems);
-   
-   public void setSkus(final List<String> skus);
-   
-   public static OutOfStockErrorImpl of(){
-      return new OutOfStockErrorImpl();
-   }
-   
+    public void setLineItems(final List<String> lineItems);
+    
+    public void setSkus(final List<String> skus);
 
-   public static OutOfStockErrorImpl of(final OutOfStockError template) {
-      OutOfStockErrorImpl instance = new OutOfStockErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setLineItems(template.getLineItems());
-      instance.setSkus(template.getSkus());
-      return instance;
-   }
+    public static OutOfStockErrorImpl of(){
+        return new OutOfStockErrorImpl();
+    }
+    
+
+    public static OutOfStockErrorImpl of(final OutOfStockError template) {
+        OutOfStockErrorImpl instance = new OutOfStockErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setLineItems(template.getLineItems());
+        instance.setSkus(template.getSkus());
+        return instance;
+    }
 
 }

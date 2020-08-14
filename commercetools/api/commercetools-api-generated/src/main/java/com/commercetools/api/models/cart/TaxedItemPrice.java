@@ -21,33 +21,33 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxedItemPriceImpl.class)
 public interface TaxedItemPrice  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("totalNet")
-   public TypedMoney getTotalNet();
-   /**
-   *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("totalGross")
-   public TypedMoney getTotalGross();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("totalNet")
+    public TypedMoney getTotalNet();
+    /**
+    *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("totalGross")
+    public TypedMoney getTotalGross();
 
-   public void setTotalNet(final TypedMoney totalNet);
-   
-   public void setTotalGross(final TypedMoney totalGross);
-   
-   public static TaxedItemPriceImpl of(){
-      return new TaxedItemPriceImpl();
-   }
-   
+    public void setTotalNet(final TypedMoney totalNet);
+    
+    public void setTotalGross(final TypedMoney totalGross);
 
-   public static TaxedItemPriceImpl of(final TaxedItemPrice template) {
-      TaxedItemPriceImpl instance = new TaxedItemPriceImpl();
-      instance.setTotalNet(template.getTotalNet());
-      instance.setTotalGross(template.getTotalGross());
-      return instance;
-   }
+    public static TaxedItemPriceImpl of(){
+        return new TaxedItemPriceImpl();
+    }
+    
+
+    public static TaxedItemPriceImpl of(final TaxedItemPrice template) {
+        TaxedItemPriceImpl instance = new TaxedItemPriceImpl();
+        instance.setTotalNet(template.getTotalNet());
+        instance.setTotalGross(template.getTotalGross());
+        return instance;
+    }
 
 }

@@ -23,17 +23,17 @@ import java.io.IOException;
 public interface CartDiscountResourceIdentifier extends ResourceIdentifier {
 
 
-   
-   public static CartDiscountResourceIdentifierImpl of(){
-      return new CartDiscountResourceIdentifierImpl();
-   }
-   
 
-   public static CartDiscountResourceIdentifierImpl of(final CartDiscountResourceIdentifier template) {
-      CartDiscountResourceIdentifierImpl instance = new CartDiscountResourceIdentifierImpl();
-      instance.setId(template.getId());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static CartDiscountResourceIdentifierImpl of(){
+        return new CartDiscountResourceIdentifierImpl();
+    }
+    
+
+    public static CartDiscountResourceIdentifierImpl of(final CartDiscountResourceIdentifier template) {
+        CartDiscountResourceIdentifierImpl instance = new CartDiscountResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

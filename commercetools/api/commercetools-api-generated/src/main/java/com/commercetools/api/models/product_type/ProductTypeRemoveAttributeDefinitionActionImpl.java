@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeRemoveAttributeDefinitionActionImpl implements ProductTypeRemoveAttributeDefinitionAction {
 
-   private String action;
-   
-   private String name;
+    private String action;
+    
+    private String name;
 
-   @JsonCreator
-   ProductTypeRemoveAttributeDefinitionActionImpl(@JsonProperty("name") final String name) {
-      this.name = name;
-      this.action = "removeAttributeDefinition";
-   }
-   public ProductTypeRemoveAttributeDefinitionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>The name of the attribute to remove.</p>
-   */
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    ProductTypeRemoveAttributeDefinitionActionImpl(@JsonProperty("name") final String name) {
+        this.name = name;
+        this.action = "removeAttributeDefinition";
+    }
+    public ProductTypeRemoveAttributeDefinitionActionImpl() {
+       
+    }
 
-   public void setName(final String name){
-      this.name = name;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>The name of the attribute to remove.</p>
+    */
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(final String name){
+        this.name = name;
+    }
 
 }

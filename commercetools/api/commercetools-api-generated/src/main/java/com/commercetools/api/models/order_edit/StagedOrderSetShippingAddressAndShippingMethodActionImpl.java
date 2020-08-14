@@ -25,55 +25,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl implements StagedOrderSetShippingAddressAndShippingMethodAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.Address address;
-   
-   private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
-   
-   private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+    private String action;
+    
+    private com.commercetools.api.models.common.Address address;
+    
+    private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
+    
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-   @JsonCreator
-   StagedOrderSetShippingAddressAndShippingMethodActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-      this.address = address;
-      this.shippingMethod = shippingMethod;
-      this.externalTaxRate = externalTaxRate;
-      this.action = "setShippingAddressAndShippingMethod";
-   }
-   public StagedOrderSetShippingAddressAndShippingMethodActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
-   }
-   
-   
-   public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
-      return this.shippingMethod;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
-      return this.externalTaxRate;
-   }
+    @JsonCreator
+    StagedOrderSetShippingAddressAndShippingMethodActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+        this.address = address;
+        this.shippingMethod = shippingMethod;
+        this.externalTaxRate = externalTaxRate;
+        this.action = "setShippingAddressAndShippingMethod";
+    }
+    public StagedOrderSetShippingAddressAndShippingMethodActionImpl() {
+       
+    }
 
-   public void setAddress(final com.commercetools.api.models.common.Address address){
-      this.address = address;
-   }
-   
-   public void setShippingMethod(final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod){
-      this.shippingMethod = shippingMethod;
-   }
-   
-   public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
-      this.externalTaxRate = externalTaxRate;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
+        return this.address;
+    }
+    
+    
+    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
+        return this.shippingMethod;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+        return this.externalTaxRate;
+    }
+
+    public void setAddress(final com.commercetools.api.models.common.Address address){
+        this.address = address;
+    }
+    
+    public void setShippingMethod(final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod){
+        this.shippingMethod = shippingMethod;
+    }
+    
+    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
+        this.externalTaxRate = externalTaxRate;
+    }
 
 }

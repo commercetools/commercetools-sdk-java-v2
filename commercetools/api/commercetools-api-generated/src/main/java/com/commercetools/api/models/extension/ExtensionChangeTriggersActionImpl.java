@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionChangeTriggersActionImpl implements ExtensionChangeTriggersAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
 
-   @JsonCreator
-   ExtensionChangeTriggersActionImpl(@JsonProperty("triggers") final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
-      this.triggers = triggers;
-      this.action = "changeTriggers";
-   }
-   public ExtensionChangeTriggersActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers(){
-      return this.triggers;
-   }
+    @JsonCreator
+    ExtensionChangeTriggersActionImpl(@JsonProperty("triggers") final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
+        this.triggers = triggers;
+        this.action = "changeTriggers";
+    }
+    public ExtensionChangeTriggersActionImpl() {
+       
+    }
 
-   public void setTriggers(final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers){
-      this.triggers = triggers;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers(){
+        return this.triggers;
+    }
+
+    public void setTriggers(final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers){
+        this.triggers = triggers;
+    }
 
 }

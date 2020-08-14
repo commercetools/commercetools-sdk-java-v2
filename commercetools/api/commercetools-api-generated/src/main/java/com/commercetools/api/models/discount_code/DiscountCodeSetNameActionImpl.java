@@ -23,33 +23,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeSetNameActionImpl implements DiscountCodeSetNameAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString name;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString name;
 
-   @JsonCreator
-   DiscountCodeSetNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
-      this.name = name;
-      this.action = "setName";
-   }
-   public DiscountCodeSetNameActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If the <code>name</code> parameter is not included, the field will be emptied.</p>
-   */
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
+    @JsonCreator
+    DiscountCodeSetNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
+        this.name = name;
+        this.action = "setName";
+    }
+    public DiscountCodeSetNameActionImpl() {
+       
+    }
 
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If the <code>name</code> parameter is not included, the field will be emptied.</p>
+    */
+    public com.commercetools.api.models.common.LocalizedString getName(){
+        return this.name;
+    }
+
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
+        this.name = name;
+    }
 
 }

@@ -24,43 +24,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentReferenceImpl implements PaymentReference {
 
-   private com.commercetools.api.models.common.ReferenceTypeId typeId;
-   
-   private String id;
-   
-   private com.commercetools.api.models.payment.Payment obj;
+    private com.commercetools.api.models.common.ReferenceTypeId typeId;
+    
+    private String id;
+    
+    private com.commercetools.api.models.payment.Payment obj;
 
-   @JsonCreator
-   PaymentReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.payment.Payment obj) {
-      this.id = id;
-      this.obj = obj;
-      this.typeId = ReferenceTypeId.findEnumViaJsonName("payment").get();
-   }
-   public PaymentReferenceImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
-      return this.typeId;
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public com.commercetools.api.models.payment.Payment getObj(){
-      return this.obj;
-   }
+    @JsonCreator
+    PaymentReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.payment.Payment obj) {
+        this.id = id;
+        this.obj = obj;
+        this.typeId = ReferenceTypeId.findEnumViaJsonName("payment").get();
+    }
+    public PaymentReferenceImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setObj(final com.commercetools.api.models.payment.Payment obj){
-      this.obj = obj;
-   }
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
+        return this.typeId;
+    }
+    
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public com.commercetools.api.models.payment.Payment getObj(){
+        return this.obj;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setObj(final com.commercetools.api.models.payment.Payment obj){
+        this.obj = obj;
+    }
 
 }

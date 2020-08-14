@@ -21,31 +21,31 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductRemovePriceActionImpl.class)
 public interface ProductRemovePriceAction extends ProductUpdateAction {
 
-   /**
-   *  <p>ID of the <a href="#price">Price</a></p>
-   */
-   @NotNull
-   @JsonProperty("priceId")
-   public String getPriceId();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    /**
+    *  <p>ID of the <a href="#price">Price</a></p>
+    */
+    @NotNull
+    @JsonProperty("priceId")
+    public String getPriceId();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setPriceId(final String priceId);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductRemovePriceActionImpl of(){
-      return new ProductRemovePriceActionImpl();
-   }
-   
+    public void setPriceId(final String priceId);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductRemovePriceActionImpl of(final ProductRemovePriceAction template) {
-      ProductRemovePriceActionImpl instance = new ProductRemovePriceActionImpl();
-      instance.setPriceId(template.getPriceId());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductRemovePriceActionImpl of(){
+        return new ProductRemovePriceActionImpl();
+    }
+    
+
+    public static ProductRemovePriceActionImpl of(final ProductRemovePriceAction template) {
+        ProductRemovePriceActionImpl instance = new ProductRemovePriceActionImpl();
+        instance.setPriceId(template.getPriceId());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

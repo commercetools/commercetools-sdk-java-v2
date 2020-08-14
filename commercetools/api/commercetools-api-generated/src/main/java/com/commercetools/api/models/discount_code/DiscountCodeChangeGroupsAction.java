@@ -21,25 +21,25 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeChangeGroupsActionImpl.class)
 public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction {
 
-   /**
-   *  <p>The groups to which this discount code shall belong to.
-   *  Use empty array to remove the code from all groups.</p>
-   */
-   @NotNull
-   @JsonProperty("groups")
-   public List<String> getGroups();
+    /**
+    *  <p>The groups to which this discount code shall belong to.
+    *  Use empty array to remove the code from all groups.</p>
+    */
+    @NotNull
+    @JsonProperty("groups")
+    public List<String> getGroups();
 
-   public void setGroups(final List<String> groups);
-   
-   public static DiscountCodeChangeGroupsActionImpl of(){
-      return new DiscountCodeChangeGroupsActionImpl();
-   }
-   
+    public void setGroups(final List<String> groups);
 
-   public static DiscountCodeChangeGroupsActionImpl of(final DiscountCodeChangeGroupsAction template) {
-      DiscountCodeChangeGroupsActionImpl instance = new DiscountCodeChangeGroupsActionImpl();
-      instance.setGroups(template.getGroups());
-      return instance;
-   }
+    public static DiscountCodeChangeGroupsActionImpl of(){
+        return new DiscountCodeChangeGroupsActionImpl();
+    }
+    
+
+    public static DiscountCodeChangeGroupsActionImpl of(final DiscountCodeChangeGroupsAction template) {
+        DiscountCodeChangeGroupsActionImpl instance = new DiscountCodeChangeGroupsActionImpl();
+        instance.setGroups(template.getGroups());
+        return instance;
+    }
 
 }

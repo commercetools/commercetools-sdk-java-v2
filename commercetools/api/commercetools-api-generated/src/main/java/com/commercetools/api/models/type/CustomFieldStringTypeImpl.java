@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldStringTypeImpl implements CustomFieldStringType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   CustomFieldStringTypeImpl() {
-      this.name = "String";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    CustomFieldStringTypeImpl() {
+        this.name = "String";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

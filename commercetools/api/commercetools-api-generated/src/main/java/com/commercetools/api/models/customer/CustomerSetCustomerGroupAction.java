@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetCustomerGroupActionImpl.class)
 public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
 
-   /**
-   *  <p>If not defined, the customer group is unset.</p>
-   */
-   @Valid
-   @JsonProperty("customerGroup")
-   public CustomerGroupResourceIdentifier getCustomerGroup();
+    /**
+    *  <p>If not defined, the customer group is unset.</p>
+    */
+    @Valid
+    @JsonProperty("customerGroup")
+    public CustomerGroupResourceIdentifier getCustomerGroup();
 
-   public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
-   
-   public static CustomerSetCustomerGroupActionImpl of(){
-      return new CustomerSetCustomerGroupActionImpl();
-   }
-   
+    public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
-   public static CustomerSetCustomerGroupActionImpl of(final CustomerSetCustomerGroupAction template) {
-      CustomerSetCustomerGroupActionImpl instance = new CustomerSetCustomerGroupActionImpl();
-      instance.setCustomerGroup(template.getCustomerGroup());
-      return instance;
-   }
+    public static CustomerSetCustomerGroupActionImpl of(){
+        return new CustomerSetCustomerGroupActionImpl();
+    }
+    
+
+    public static CustomerSetCustomerGroupActionImpl of(final CustomerSetCustomerGroupAction template) {
+        CustomerSetCustomerGroupActionImpl instance = new CustomerSetCustomerGroupActionImpl();
+        instance.setCustomerGroup(template.getCustomerGroup());
+        return instance;
+    }
 
 }

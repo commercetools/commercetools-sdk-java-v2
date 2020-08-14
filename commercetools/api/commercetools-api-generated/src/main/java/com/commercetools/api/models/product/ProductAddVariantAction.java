@@ -25,64 +25,64 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductAddVariantActionImpl.class)
 public interface ProductAddVariantAction extends ProductUpdateAction {
 
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   
-   @JsonProperty("key")
-   public String getKey();
-   
-   @Valid
-   @JsonProperty("prices")
-   public List<PriceDraft> getPrices();
-   
-   @Valid
-   @JsonProperty("images")
-   public List<Image> getImages();
-   
-   @Valid
-   @JsonProperty("attributes")
-   public List<Attribute> getAttributes();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
-   
-   @Valid
-   @JsonProperty("assets")
-   public List<Asset> getAssets();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    
+    @JsonProperty("key")
+    public String getKey();
+    
+    @Valid
+    @JsonProperty("prices")
+    public List<PriceDraft> getPrices();
+    
+    @Valid
+    @JsonProperty("images")
+    public List<Image> getImages();
+    
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
+    
+    @Valid
+    @JsonProperty("assets")
+    public List<Asset> getAssets();
 
-   public void setSku(final String sku);
-   
-   public void setKey(final String key);
-   
-   public void setPrices(final List<PriceDraft> prices);
-   
-   public void setImages(final List<Image> images);
-   
-   public void setAttributes(final List<Attribute> attributes);
-   
-   public void setStaged(final Boolean staged);
-   
-   public void setAssets(final List<Asset> assets);
-   
-   public static ProductAddVariantActionImpl of(){
-      return new ProductAddVariantActionImpl();
-   }
-   
+    public void setSku(final String sku);
+    
+    public void setKey(final String key);
+    
+    public void setPrices(final List<PriceDraft> prices);
+    
+    public void setImages(final List<Image> images);
+    
+    public void setAttributes(final List<Attribute> attributes);
+    
+    public void setStaged(final Boolean staged);
+    
+    public void setAssets(final List<Asset> assets);
 
-   public static ProductAddVariantActionImpl of(final ProductAddVariantAction template) {
-      ProductAddVariantActionImpl instance = new ProductAddVariantActionImpl();
-      instance.setSku(template.getSku());
-      instance.setKey(template.getKey());
-      instance.setPrices(template.getPrices());
-      instance.setImages(template.getImages());
-      instance.setAttributes(template.getAttributes());
-      instance.setStaged(template.getStaged());
-      instance.setAssets(template.getAssets());
-      return instance;
-   }
+    public static ProductAddVariantActionImpl of(){
+        return new ProductAddVariantActionImpl();
+    }
+    
+
+    public static ProductAddVariantActionImpl of(final ProductAddVariantAction template) {
+        ProductAddVariantActionImpl instance = new ProductAddVariantActionImpl();
+        instance.setSku(template.getSku());
+        instance.setKey(template.getKey());
+        instance.setPrices(template.getPrices());
+        instance.setImages(template.getImages());
+        instance.setAttributes(template.getAttributes());
+        instance.setStaged(template.getStaged());
+        instance.setAssets(template.getAssets());
+        return instance;
+    }
 
 }

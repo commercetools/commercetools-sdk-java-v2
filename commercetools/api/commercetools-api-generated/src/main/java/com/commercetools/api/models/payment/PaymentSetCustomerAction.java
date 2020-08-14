@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetCustomerActionImpl.class)
 public interface PaymentSetCustomerAction extends PaymentUpdateAction {
 
-   /**
-   *  <p>A reference to the customer this payment belongs to.</p>
-   */
-   @Valid
-   @JsonProperty("customer")
-   public CustomerResourceIdentifier getCustomer();
+    /**
+    *  <p>A reference to the customer this payment belongs to.</p>
+    */
+    @Valid
+    @JsonProperty("customer")
+    public CustomerResourceIdentifier getCustomer();
 
-   public void setCustomer(final CustomerResourceIdentifier customer);
-   
-   public static PaymentSetCustomerActionImpl of(){
-      return new PaymentSetCustomerActionImpl();
-   }
-   
+    public void setCustomer(final CustomerResourceIdentifier customer);
 
-   public static PaymentSetCustomerActionImpl of(final PaymentSetCustomerAction template) {
-      PaymentSetCustomerActionImpl instance = new PaymentSetCustomerActionImpl();
-      instance.setCustomer(template.getCustomer());
-      return instance;
-   }
+    public static PaymentSetCustomerActionImpl of(){
+        return new PaymentSetCustomerActionImpl();
+    }
+    
+
+    public static PaymentSetCustomerActionImpl of(final PaymentSetCustomerAction template) {
+        PaymentSetCustomerActionImpl instance = new PaymentSetCustomerActionImpl();
+        instance.setCustomer(template.getCustomer());
+        return instance;
+    }
 
 }

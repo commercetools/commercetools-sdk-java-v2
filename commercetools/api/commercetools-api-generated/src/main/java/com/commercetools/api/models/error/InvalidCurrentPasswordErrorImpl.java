@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPasswordError {
 
-   private String code;
-   
-   private String message;
+    private String code;
+    
+    private String message;
 
-   @JsonCreator
-   InvalidCurrentPasswordErrorImpl(@JsonProperty("message") final String message) {
-      this.message = message;
-      this.code = "InvalidCurrentPassword";
-   }
-   public InvalidCurrentPasswordErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
+    @JsonCreator
+    InvalidCurrentPasswordErrorImpl(@JsonProperty("message") final String message) {
+        this.message = message;
+        this.code = "InvalidCurrentPassword";
+    }
+    public InvalidCurrentPasswordErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
 
 }

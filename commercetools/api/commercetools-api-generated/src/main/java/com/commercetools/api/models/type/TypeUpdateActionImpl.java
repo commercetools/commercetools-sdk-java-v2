@@ -36,18 +36,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeUpdateActionImpl implements TypeUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   TypeUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    TypeUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ZoneAddLocationActionImpl.class)
 public interface ZoneAddLocationAction extends ZoneUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("location")
-   public Location getLocation();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("location")
+    public Location getLocation();
 
-   public void setLocation(final Location location);
-   
-   public static ZoneAddLocationActionImpl of(){
-      return new ZoneAddLocationActionImpl();
-   }
-   
+    public void setLocation(final Location location);
 
-   public static ZoneAddLocationActionImpl of(final ZoneAddLocationAction template) {
-      ZoneAddLocationActionImpl instance = new ZoneAddLocationActionImpl();
-      instance.setLocation(template.getLocation());
-      return instance;
-   }
+    public static ZoneAddLocationActionImpl of(){
+        return new ZoneAddLocationActionImpl();
+    }
+    
+
+    public static ZoneAddLocationActionImpl of(final ZoneAddLocationAction template) {
+        ZoneAddLocationActionImpl instance = new ZoneAddLocationActionImpl();
+        instance.setLocation(template.getLocation());
+        return instance;
+    }
 
 }

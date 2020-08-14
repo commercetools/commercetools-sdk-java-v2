@@ -32,18 +32,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodUpdateActionImpl implements ShippingMethodUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   ShippingMethodUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    ShippingMethodUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

@@ -22,39 +22,39 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxedPriceDraftImpl.class)
 public interface TaxedPriceDraft  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("totalNet")
-   public TypedMoneyDraft getTotalNet();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("totalGross")
-   public TypedMoneyDraft getTotalGross();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("taxPortions")
-   public List<TaxPortionDraft> getTaxPortions();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("totalNet")
+    public TypedMoneyDraft getTotalNet();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("totalGross")
+    public TypedMoneyDraft getTotalGross();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("taxPortions")
+    public List<TaxPortionDraft> getTaxPortions();
 
-   public void setTotalNet(final TypedMoneyDraft totalNet);
-   
-   public void setTotalGross(final TypedMoneyDraft totalGross);
-   
-   public void setTaxPortions(final List<TaxPortionDraft> taxPortions);
-   
-   public static TaxedPriceDraftImpl of(){
-      return new TaxedPriceDraftImpl();
-   }
-   
+    public void setTotalNet(final TypedMoneyDraft totalNet);
+    
+    public void setTotalGross(final TypedMoneyDraft totalGross);
+    
+    public void setTaxPortions(final List<TaxPortionDraft> taxPortions);
 
-   public static TaxedPriceDraftImpl of(final TaxedPriceDraft template) {
-      TaxedPriceDraftImpl instance = new TaxedPriceDraftImpl();
-      instance.setTotalNet(template.getTotalNet());
-      instance.setTotalGross(template.getTotalGross());
-      instance.setTaxPortions(template.getTaxPortions());
-      return instance;
-   }
+    public static TaxedPriceDraftImpl of(){
+        return new TaxedPriceDraftImpl();
+    }
+    
+
+    public static TaxedPriceDraftImpl of(final TaxedPriceDraft template) {
+        TaxedPriceDraftImpl instance = new TaxedPriceDraftImpl();
+        instance.setTotalNet(template.getTotalNet());
+        instance.setTotalGross(template.getTotalGross());
+        instance.setTaxPortions(template.getTaxPortions());
+        return instance;
+    }
 
 }

@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductStateTransitionMessagePayloadImpl.class)
 public interface ProductStateTransitionMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("state")
-   public StateReference getState();
-   
-   @NotNull
-   @JsonProperty("force")
-   public Boolean getForce();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+    
+    @NotNull
+    @JsonProperty("force")
+    public Boolean getForce();
 
-   public void setState(final StateReference state);
-   
-   public void setForce(final Boolean force);
-   
-   public static ProductStateTransitionMessagePayloadImpl of(){
-      return new ProductStateTransitionMessagePayloadImpl();
-   }
-   
+    public void setState(final StateReference state);
+    
+    public void setForce(final Boolean force);
 
-   public static ProductStateTransitionMessagePayloadImpl of(final ProductStateTransitionMessagePayload template) {
-      ProductStateTransitionMessagePayloadImpl instance = new ProductStateTransitionMessagePayloadImpl();
-      instance.setState(template.getState());
-      instance.setForce(template.getForce());
-      return instance;
-   }
+    public static ProductStateTransitionMessagePayloadImpl of(){
+        return new ProductStateTransitionMessagePayloadImpl();
+    }
+    
+
+    public static ProductStateTransitionMessagePayloadImpl of(final ProductStateTransitionMessagePayload template) {
+        ProductStateTransitionMessagePayloadImpl instance = new ProductStateTransitionMessagePayloadImpl();
+        instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
 
 }

@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction {
 
-   private String action;
-   
-   private String assetId;
-   
-   private String assetKey;
+    private String action;
+    
+    private String assetId;
+    
+    private String assetKey;
 
-   @JsonCreator
-   CategoryRemoveAssetActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey) {
-      this.assetId = assetId;
-      this.assetKey = assetKey;
-      this.action = "removeAsset";
-   }
-   public CategoryRemoveAssetActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAssetId(){
-      return this.assetId;
-   }
-   
-   
-   public String getAssetKey(){
-      return this.assetKey;
-   }
+    @JsonCreator
+    CategoryRemoveAssetActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey) {
+        this.assetId = assetId;
+        this.assetKey = assetKey;
+        this.action = "removeAsset";
+    }
+    public CategoryRemoveAssetActionImpl() {
+       
+    }
 
-   public void setAssetId(final String assetId){
-      this.assetId = assetId;
-   }
-   
-   public void setAssetKey(final String assetKey){
-      this.assetKey = assetKey;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAssetId(){
+        return this.assetId;
+    }
+    
+    
+    public String getAssetKey(){
+        return this.assetKey;
+    }
+
+    public void setAssetId(final String assetId){
+        this.assetId = assetId;
+    }
+    
+    public void setAssetKey(final String assetKey){
+        this.assetKey = assetKey;
+    }
 
 }

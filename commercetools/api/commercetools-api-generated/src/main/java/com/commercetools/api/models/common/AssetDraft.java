@@ -23,59 +23,59 @@ import java.io.IOException;
 @JsonDeserialize(as = AssetDraftImpl.class)
 public interface AssetDraft  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("sources")
-   public List<AssetSource> getSources();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
-   
-   @Valid
-   @JsonProperty("description")
-   public LocalizedString getDescription();
-   
-   
-   @JsonProperty("tags")
-   public List<String> getTags();
-   
-   @Valid
-   @JsonProperty("custom")
-   public CustomFieldsDraft getCustom();
-   
-   
-   @JsonProperty("key")
-   public String getKey();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("sources")
+    public List<AssetSource> getSources();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
+    
+    @Valid
+    @JsonProperty("description")
+    public LocalizedString getDescription();
+    
+    
+    @JsonProperty("tags")
+    public List<String> getTags();
+    
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+    
+    
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setSources(final List<AssetSource> sources);
-   
-   public void setName(final LocalizedString name);
-   
-   public void setDescription(final LocalizedString description);
-   
-   public void setTags(final List<String> tags);
-   
-   public void setCustom(final CustomFieldsDraft custom);
-   
-   public void setKey(final String key);
-   
-   public static AssetDraftImpl of(){
-      return new AssetDraftImpl();
-   }
-   
+    public void setSources(final List<AssetSource> sources);
+    
+    public void setName(final LocalizedString name);
+    
+    public void setDescription(final LocalizedString description);
+    
+    public void setTags(final List<String> tags);
+    
+    public void setCustom(final CustomFieldsDraft custom);
+    
+    public void setKey(final String key);
 
-   public static AssetDraftImpl of(final AssetDraft template) {
-      AssetDraftImpl instance = new AssetDraftImpl();
-      instance.setSources(template.getSources());
-      instance.setName(template.getName());
-      instance.setDescription(template.getDescription());
-      instance.setTags(template.getTags());
-      instance.setCustom(template.getCustom());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static AssetDraftImpl of(){
+        return new AssetDraftImpl();
+    }
+    
+
+    public static AssetDraftImpl of(final AssetDraft template) {
+        AssetDraftImpl instance = new AssetDraftImpl();
+        instance.setSources(template.getSources());
+        instance.setName(template.getName());
+        instance.setDescription(template.getDescription());
+        instance.setTags(template.getTags());
+        instance.setCustom(template.getCustom());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

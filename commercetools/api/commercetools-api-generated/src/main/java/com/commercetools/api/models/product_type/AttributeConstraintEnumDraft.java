@@ -13,21 +13,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum AttributeConstraintEnumDraft {
 
-  
-  @JsonProperty("None")
-  NONE("None");
+    
+    @JsonProperty("None")
+    NONE("None");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private AttributeConstraintEnumDraft(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private AttributeConstraintEnumDraft(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<AttributeConstraintEnumDraft> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<AttributeConstraintEnumDraft> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

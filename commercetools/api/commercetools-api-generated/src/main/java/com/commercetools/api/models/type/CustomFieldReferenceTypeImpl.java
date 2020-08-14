@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType {
 
-   private String name;
-   
-   private com.commercetools.api.models.common.ReferenceTypeId referenceTypeId;
+    private String name;
+    
+    private com.commercetools.api.models.common.ReferenceTypeId referenceTypeId;
 
-   @JsonCreator
-   CustomFieldReferenceTypeImpl(@JsonProperty("referenceTypeId") final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId) {
-      this.referenceTypeId = referenceTypeId;
-      this.name = "Reference";
-   }
-   public CustomFieldReferenceTypeImpl() {
-      
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public com.commercetools.api.models.common.ReferenceTypeId getReferenceTypeId(){
-      return this.referenceTypeId;
-   }
+    @JsonCreator
+    CustomFieldReferenceTypeImpl(@JsonProperty("referenceTypeId") final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId) {
+        this.referenceTypeId = referenceTypeId;
+        this.name = "Reference";
+    }
+    public CustomFieldReferenceTypeImpl() {
+       
+    }
 
-   public void setReferenceTypeId(final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId){
-      this.referenceTypeId = referenceTypeId;
-   }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getReferenceTypeId(){
+        return this.referenceTypeId;
+    }
+
+    public void setReferenceTypeId(final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId){
+        this.referenceTypeId = referenceTypeId;
+    }
 
 }

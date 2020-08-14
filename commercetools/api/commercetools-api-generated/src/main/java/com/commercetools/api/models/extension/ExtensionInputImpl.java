@@ -23,35 +23,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionInputImpl implements ExtensionInput {
 
-   private com.commercetools.api.models.extension.ExtensionAction action;
-   
-   private com.commercetools.api.models.common.Reference resource;
+    private com.commercetools.api.models.extension.ExtensionAction action;
+    
+    private com.commercetools.api.models.common.Reference resource;
 
-   @JsonCreator
-   ExtensionInputImpl(@JsonProperty("action") final com.commercetools.api.models.extension.ExtensionAction action, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource) {
-      this.action = action;
-      this.resource = resource;
-   }
-   public ExtensionInputImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.extension.ExtensionAction getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.Reference getResource(){
-      return this.resource;
-   }
+    @JsonCreator
+    ExtensionInputImpl(@JsonProperty("action") final com.commercetools.api.models.extension.ExtensionAction action, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource) {
+        this.action = action;
+        this.resource = resource;
+    }
+    public ExtensionInputImpl() {
+       
+    }
 
-   public void setAction(final com.commercetools.api.models.extension.ExtensionAction action){
-      this.action = action;
-   }
-   
-   public void setResource(final com.commercetools.api.models.common.Reference resource){
-      this.resource = resource;
-   }
+    
+    public com.commercetools.api.models.extension.ExtensionAction getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.Reference getResource(){
+        return this.resource;
+    }
+
+    public void setAction(final com.commercetools.api.models.extension.ExtensionAction action){
+        this.action = action;
+    }
+    
+    public void setResource(final com.commercetools.api.models.common.Reference resource){
+        this.resource = resource;
+    }
 
 }

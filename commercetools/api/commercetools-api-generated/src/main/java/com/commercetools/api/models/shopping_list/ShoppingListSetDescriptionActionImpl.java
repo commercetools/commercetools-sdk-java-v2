@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListSetDescriptionActionImpl implements ShoppingListSetDescriptionAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString description;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString description;
 
-   @JsonCreator
-   ShoppingListSetDescriptionActionImpl(@JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
-      this.description = description;
-      this.action = "setDescription";
-   }
-   public ShoppingListSetDescriptionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
+    @JsonCreator
+    ShoppingListSetDescriptionActionImpl(@JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
+        this.description = description;
+        this.action = "setDescription";
+    }
+    public ShoppingListSetDescriptionActionImpl() {
+       
+    }
 
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
+        return this.description;
+    }
+
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+        this.description = description;
+    }
 
 }

@@ -22,23 +22,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentInfoImpl implements PaymentInfo {
 
-   private java.util.List<com.commercetools.api.models.payment.PaymentReference> payments;
+    private java.util.List<com.commercetools.api.models.payment.PaymentReference> payments;
 
-   @JsonCreator
-   PaymentInfoImpl(@JsonProperty("payments") final java.util.List<com.commercetools.api.models.payment.PaymentReference> payments) {
-      this.payments = payments;
-   }
-   public PaymentInfoImpl() {
-      
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.payment.PaymentReference> getPayments(){
-      return this.payments;
-   }
+    @JsonCreator
+    PaymentInfoImpl(@JsonProperty("payments") final java.util.List<com.commercetools.api.models.payment.PaymentReference> payments) {
+        this.payments = payments;
+    }
+    public PaymentInfoImpl() {
+       
+    }
 
-   public void setPayments(final java.util.List<com.commercetools.api.models.payment.PaymentReference> payments){
-      this.payments = payments;
-   }
+    
+    public java.util.List<com.commercetools.api.models.payment.PaymentReference> getPayments(){
+        return this.payments;
+    }
+
+    public void setPayments(final java.util.List<com.commercetools.api.models.payment.PaymentReference> payments){
+        this.payments = payments;
+    }
 
 }

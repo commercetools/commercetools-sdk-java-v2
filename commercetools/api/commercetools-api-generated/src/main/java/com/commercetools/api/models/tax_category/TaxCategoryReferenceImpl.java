@@ -24,43 +24,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxCategoryReferenceImpl implements TaxCategoryReference {
 
-   private com.commercetools.api.models.common.ReferenceTypeId typeId;
-   
-   private String id;
-   
-   private com.commercetools.api.models.tax_category.TaxCategory obj;
+    private com.commercetools.api.models.common.ReferenceTypeId typeId;
+    
+    private String id;
+    
+    private com.commercetools.api.models.tax_category.TaxCategory obj;
 
-   @JsonCreator
-   TaxCategoryReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.tax_category.TaxCategory obj) {
-      this.id = id;
-      this.obj = obj;
-      this.typeId = ReferenceTypeId.findEnumViaJsonName("tax-category").get();
-   }
-   public TaxCategoryReferenceImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
-      return this.typeId;
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public com.commercetools.api.models.tax_category.TaxCategory getObj(){
-      return this.obj;
-   }
+    @JsonCreator
+    TaxCategoryReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.tax_category.TaxCategory obj) {
+        this.id = id;
+        this.obj = obj;
+        this.typeId = ReferenceTypeId.findEnumViaJsonName("tax-category").get();
+    }
+    public TaxCategoryReferenceImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setObj(final com.commercetools.api.models.tax_category.TaxCategory obj){
-      this.obj = obj;
-   }
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
+        return this.typeId;
+    }
+    
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public com.commercetools.api.models.tax_category.TaxCategory getObj(){
+        return this.obj;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setObj(final com.commercetools.api.models.tax_category.TaxCategory obj){
+        this.obj = obj;
+    }
 
 }

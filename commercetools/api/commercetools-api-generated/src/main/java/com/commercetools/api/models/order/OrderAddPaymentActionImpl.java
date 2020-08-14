@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderAddPaymentActionImpl implements OrderAddPaymentAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
+    private String action;
+    
+    private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
-   @JsonCreator
-   OrderAddPaymentActionImpl(@JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
-      this.payment = payment;
-      this.action = "addPayment";
-   }
-   public OrderAddPaymentActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment(){
-      return this.payment;
-   }
+    @JsonCreator
+    OrderAddPaymentActionImpl(@JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
+        this.payment = payment;
+        this.action = "addPayment";
+    }
+    public OrderAddPaymentActionImpl() {
+       
+    }
 
-   public void setPayment(final com.commercetools.api.models.payment.PaymentResourceIdentifier payment){
-      this.payment = payment;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment(){
+        return this.payment;
+    }
+
+    public void setPayment(final com.commercetools.api.models.payment.PaymentResourceIdentifier payment){
+        this.payment = payment;
+    }
 
 }

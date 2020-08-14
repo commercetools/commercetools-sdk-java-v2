@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryUpdateImpl.class)
 public interface CategoryUpdate  {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("actions")
-   public List<CategoryUpdateAction> getActions();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("actions")
+    public List<CategoryUpdateAction> getActions();
 
-   public void setVersion(final Long version);
-   
-   public void setActions(final List<CategoryUpdateAction> actions);
-   
-   public static CategoryUpdateImpl of(){
-      return new CategoryUpdateImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setActions(final List<CategoryUpdateAction> actions);
 
-   public static CategoryUpdateImpl of(final CategoryUpdate template) {
-      CategoryUpdateImpl instance = new CategoryUpdateImpl();
-      instance.setVersion(template.getVersion());
-      instance.setActions(template.getActions());
-      return instance;
-   }
+    public static CategoryUpdateImpl of(){
+        return new CategoryUpdateImpl();
+    }
+    
+
+    public static CategoryUpdateImpl of(final CategoryUpdate template) {
+        CategoryUpdateImpl instance = new CategoryUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(template.getActions());
+        return instance;
+    }
 
 }

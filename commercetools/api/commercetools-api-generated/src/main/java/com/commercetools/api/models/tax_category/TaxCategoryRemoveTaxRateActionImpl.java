@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxRateAction {
 
-   private String action;
-   
-   private String taxRateId;
+    private String action;
+    
+    private String taxRateId;
 
-   @JsonCreator
-   TaxCategoryRemoveTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId) {
-      this.taxRateId = taxRateId;
-      this.action = "removeTaxRate";
-   }
-   public TaxCategoryRemoveTaxRateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getTaxRateId(){
-      return this.taxRateId;
-   }
+    @JsonCreator
+    TaxCategoryRemoveTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId) {
+        this.taxRateId = taxRateId;
+        this.action = "removeTaxRate";
+    }
+    public TaxCategoryRemoveTaxRateActionImpl() {
+       
+    }
 
-   public void setTaxRateId(final String taxRateId){
-      this.taxRateId = taxRateId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getTaxRateId(){
+        return this.taxRateId;
+    }
+
+    public void setTaxRateId(final String taxRateId){
+        this.taxRateId = taxRateId;
+    }
 
 }

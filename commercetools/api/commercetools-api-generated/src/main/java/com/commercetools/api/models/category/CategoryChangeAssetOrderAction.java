@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryChangeAssetOrderActionImpl.class)
 public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("assetOrder")
-   public List<String> getAssetOrder();
+    
+    @NotNull
+    @JsonProperty("assetOrder")
+    public List<String> getAssetOrder();
 
-   public void setAssetOrder(final List<String> assetOrder);
-   
-   public static CategoryChangeAssetOrderActionImpl of(){
-      return new CategoryChangeAssetOrderActionImpl();
-   }
-   
+    public void setAssetOrder(final List<String> assetOrder);
 
-   public static CategoryChangeAssetOrderActionImpl of(final CategoryChangeAssetOrderAction template) {
-      CategoryChangeAssetOrderActionImpl instance = new CategoryChangeAssetOrderActionImpl();
-      instance.setAssetOrder(template.getAssetOrder());
-      return instance;
-   }
+    public static CategoryChangeAssetOrderActionImpl of(){
+        return new CategoryChangeAssetOrderActionImpl();
+    }
+    
+
+    public static CategoryChangeAssetOrderActionImpl of(final CategoryChangeAssetOrderAction template) {
+        CategoryChangeAssetOrderActionImpl instance = new CategoryChangeAssetOrderActionImpl();
+        instance.setAssetOrder(template.getAssetOrder());
+        return instance;
+    }
 
 }

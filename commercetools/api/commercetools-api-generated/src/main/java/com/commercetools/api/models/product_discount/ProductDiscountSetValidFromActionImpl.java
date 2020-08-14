@@ -23,34 +23,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountSetValidFromActionImpl implements ProductDiscountSetValidFromAction {
 
-   private String action;
-   
-   private java.time.ZonedDateTime validFrom;
+    private String action;
+    
+    private java.time.ZonedDateTime validFrom;
 
-   @JsonCreator
-   ProductDiscountSetValidFromActionImpl(@JsonProperty("validFrom") final java.time.ZonedDateTime validFrom) {
-      this.validFrom = validFrom;
-      this.action = "setValidFrom";
-   }
-   public ProductDiscountSetValidFromActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>The time from which the discount should be effective.
-   *  Please take Eventual Consistency into account for calculated product discount values.</p>
-   */
-   public java.time.ZonedDateTime getValidFrom(){
-      return this.validFrom;
-   }
+    @JsonCreator
+    ProductDiscountSetValidFromActionImpl(@JsonProperty("validFrom") final java.time.ZonedDateTime validFrom) {
+        this.validFrom = validFrom;
+        this.action = "setValidFrom";
+    }
+    public ProductDiscountSetValidFromActionImpl() {
+       
+    }
 
-   public void setValidFrom(final java.time.ZonedDateTime validFrom){
-      this.validFrom = validFrom;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>The time from which the discount should be effective.
+    *  Please take Eventual Consistency into account for calculated product discount values.</p>
+    */
+    public java.time.ZonedDateTime getValidFrom(){
+        return this.validFrom;
+    }
+
+    public void setValidFrom(final java.time.ZonedDateTime validFrom){
+        this.validFrom = validFrom;
+    }
 
 }

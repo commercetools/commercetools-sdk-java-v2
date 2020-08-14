@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentStatusInterfaceCodeSetMessagePayloadImpl implements PaymentStatusInterfaceCodeSetMessagePayload {
 
-   private String type;
-   
-   private String paymentId;
-   
-   private String interfaceCode;
+    private String type;
+    
+    private String paymentId;
+    
+    private String interfaceCode;
 
-   @JsonCreator
-   PaymentStatusInterfaceCodeSetMessagePayloadImpl(@JsonProperty("paymentId") final String paymentId, @JsonProperty("interfaceCode") final String interfaceCode) {
-      this.paymentId = paymentId;
-      this.interfaceCode = interfaceCode;
-      this.type = "PaymentStatusInterfaceCodeSet";
-   }
-   public PaymentStatusInterfaceCodeSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getPaymentId(){
-      return this.paymentId;
-   }
-   
-   
-   public String getInterfaceCode(){
-      return this.interfaceCode;
-   }
+    @JsonCreator
+    PaymentStatusInterfaceCodeSetMessagePayloadImpl(@JsonProperty("paymentId") final String paymentId, @JsonProperty("interfaceCode") final String interfaceCode) {
+        this.paymentId = paymentId;
+        this.interfaceCode = interfaceCode;
+        this.type = "PaymentStatusInterfaceCodeSet";
+    }
+    public PaymentStatusInterfaceCodeSetMessagePayloadImpl() {
+       
+    }
 
-   public void setPaymentId(final String paymentId){
-      this.paymentId = paymentId;
-   }
-   
-   public void setInterfaceCode(final String interfaceCode){
-      this.interfaceCode = interfaceCode;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getPaymentId(){
+        return this.paymentId;
+    }
+    
+    
+    public String getInterfaceCode(){
+        return this.interfaceCode;
+    }
+
+    public void setPaymentId(final String paymentId){
+        this.paymentId = paymentId;
+    }
+    
+    public void setInterfaceCode(final String interfaceCode){
+        this.interfaceCode = interfaceCode;
+    }
 
 }

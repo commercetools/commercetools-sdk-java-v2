@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface ProductUnpublishAction extends ProductUpdateAction {
 
 
-   
-   public static ProductUnpublishActionImpl of(){
-      return new ProductUnpublishActionImpl();
-   }
-   
 
-   public static ProductUnpublishActionImpl of(final ProductUnpublishAction template) {
-      ProductUnpublishActionImpl instance = new ProductUnpublishActionImpl();
-      return instance;
-   }
+    public static ProductUnpublishActionImpl of(){
+        return new ProductUnpublishActionImpl();
+    }
+    
+
+    public static ProductUnpublishActionImpl of(final ProductUnpublishAction template) {
+        ProductUnpublishActionImpl instance = new ProductUnpublishActionImpl();
+        return instance;
+    }
 
 }

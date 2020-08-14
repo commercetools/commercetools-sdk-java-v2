@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderReturnInfoAddedMessagePayloadImpl.class)
 public interface OrderReturnInfoAddedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("returnInfo")
-   public ReturnInfo getReturnInfo();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("returnInfo")
+    public ReturnInfo getReturnInfo();
 
-   public void setReturnInfo(final ReturnInfo returnInfo);
-   
-   public static OrderReturnInfoAddedMessagePayloadImpl of(){
-      return new OrderReturnInfoAddedMessagePayloadImpl();
-   }
-   
+    public void setReturnInfo(final ReturnInfo returnInfo);
 
-   public static OrderReturnInfoAddedMessagePayloadImpl of(final OrderReturnInfoAddedMessagePayload template) {
-      OrderReturnInfoAddedMessagePayloadImpl instance = new OrderReturnInfoAddedMessagePayloadImpl();
-      instance.setReturnInfo(template.getReturnInfo());
-      return instance;
-   }
+    public static OrderReturnInfoAddedMessagePayloadImpl of(){
+        return new OrderReturnInfoAddedMessagePayloadImpl();
+    }
+    
+
+    public static OrderReturnInfoAddedMessagePayloadImpl of(final OrderReturnInfoAddedMessagePayload template) {
+        OrderReturnInfoAddedMessagePayloadImpl instance = new OrderReturnInfoAddedMessagePayloadImpl();
+        instance.setReturnInfo(template.getReturnInfo());
+        return instance;
+    }
 
 }

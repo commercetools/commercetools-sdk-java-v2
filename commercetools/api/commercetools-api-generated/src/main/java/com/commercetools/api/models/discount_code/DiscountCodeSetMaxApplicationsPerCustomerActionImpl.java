@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeSetMaxApplicationsPerCustomerActionImpl implements DiscountCodeSetMaxApplicationsPerCustomerAction {
 
-   private String action;
-   
-   private Long maxApplicationsPerCustomer;
+    private String action;
+    
+    private Long maxApplicationsPerCustomer;
 
-   @JsonCreator
-   DiscountCodeSetMaxApplicationsPerCustomerActionImpl(@JsonProperty("maxApplicationsPerCustomer") final Long maxApplicationsPerCustomer) {
-      this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
-      this.action = "setMaxApplicationsPerCustomer";
-   }
-   public DiscountCodeSetMaxApplicationsPerCustomerActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If the <code>maxApplicationsPerCustomer</code> parameter is not included, the field will be emptied.</p>
-   */
-   public Long getMaxApplicationsPerCustomer(){
-      return this.maxApplicationsPerCustomer;
-   }
+    @JsonCreator
+    DiscountCodeSetMaxApplicationsPerCustomerActionImpl(@JsonProperty("maxApplicationsPerCustomer") final Long maxApplicationsPerCustomer) {
+        this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+        this.action = "setMaxApplicationsPerCustomer";
+    }
+    public DiscountCodeSetMaxApplicationsPerCustomerActionImpl() {
+       
+    }
 
-   public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer){
-      this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If the <code>maxApplicationsPerCustomer</code> parameter is not included, the field will be emptied.</p>
+    */
+    public Long getMaxApplicationsPerCustomer(){
+        return this.maxApplicationsPerCustomer;
+    }
+
+    public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer){
+        this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
+    }
 
 }

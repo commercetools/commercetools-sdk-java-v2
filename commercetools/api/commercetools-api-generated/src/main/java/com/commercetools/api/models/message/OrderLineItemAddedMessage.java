@@ -22,40 +22,40 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderLineItemAddedMessageImpl.class)
 public interface OrderLineItemAddedMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("lineItem")
-   public LineItem getLineItem();
-   
-   @NotNull
-   @JsonProperty("addedQuantity")
-   public Long getAddedQuantity();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("lineItem")
+    public LineItem getLineItem();
+    
+    @NotNull
+    @JsonProperty("addedQuantity")
+    public Long getAddedQuantity();
 
-   public void setLineItem(final LineItem lineItem);
-   
-   public void setAddedQuantity(final Long addedQuantity);
-   
-   public static OrderLineItemAddedMessageImpl of(){
-      return new OrderLineItemAddedMessageImpl();
-   }
-   
+    public void setLineItem(final LineItem lineItem);
+    
+    public void setAddedQuantity(final Long addedQuantity);
 
-   public static OrderLineItemAddedMessageImpl of(final OrderLineItemAddedMessage template) {
-      OrderLineItemAddedMessageImpl instance = new OrderLineItemAddedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setLineItem(template.getLineItem());
-      instance.setAddedQuantity(template.getAddedQuantity());
-      return instance;
-   }
+    public static OrderLineItemAddedMessageImpl of(){
+        return new OrderLineItemAddedMessageImpl();
+    }
+    
+
+    public static OrderLineItemAddedMessageImpl of(final OrderLineItemAddedMessage template) {
+        OrderLineItemAddedMessageImpl instance = new OrderLineItemAddedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setLineItem(template.getLineItem());
+        instance.setAddedQuantity(template.getAddedQuantity());
+        return instance;
+    }
 
 }

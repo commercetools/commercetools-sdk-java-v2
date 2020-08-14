@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySlugChangedMessagePayloadImpl implements CategorySlugChangedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.common.LocalizedString slug;
+    private String type;
+    
+    private com.commercetools.api.models.common.LocalizedString slug;
 
-   @JsonCreator
-   CategorySlugChangedMessagePayloadImpl(@JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
-      this.slug = slug;
-      this.type = "CategorySlugChanged";
-   }
-   public CategorySlugChangedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getSlug(){
-      return this.slug;
-   }
+    @JsonCreator
+    CategorySlugChangedMessagePayloadImpl(@JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
+        this.slug = slug;
+        this.type = "CategorySlugChanged";
+    }
+    public CategorySlugChangedMessagePayloadImpl() {
+       
+    }
 
-   public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
-      this.slug = slug;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
+        return this.slug;
+    }
+
+    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
+        this.slug = slug;
+    }
 
 }

@@ -23,36 +23,36 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetCustomLineItemCustomTypeActionImpl.class)
 public interface StagedOrderSetCustomLineItemCustomTypeAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("customLineItemId")
-   public String getCustomLineItemId();
-   
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+    
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setCustomLineItemId(final String customLineItemId);
-   
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static StagedOrderSetCustomLineItemCustomTypeActionImpl of(){
-      return new StagedOrderSetCustomLineItemCustomTypeActionImpl();
-   }
-   
+    public void setCustomLineItemId(final String customLineItemId);
+    
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static StagedOrderSetCustomLineItemCustomTypeActionImpl of(final StagedOrderSetCustomLineItemCustomTypeAction template) {
-      StagedOrderSetCustomLineItemCustomTypeActionImpl instance = new StagedOrderSetCustomLineItemCustomTypeActionImpl();
-      instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static StagedOrderSetCustomLineItemCustomTypeActionImpl of(){
+        return new StagedOrderSetCustomLineItemCustomTypeActionImpl();
+    }
+    
+
+    public static StagedOrderSetCustomLineItemCustomTypeActionImpl of(final StagedOrderSetCustomLineItemCustomTypeAction template) {
+        StagedOrderSetCustomLineItemCustomTypeActionImpl instance = new StagedOrderSetCustomLineItemCustomTypeActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangeDescriptionActionImpl.class)
 public interface ProductTypeChangeDescriptionAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("description")
-   public String getDescription();
+    
+    @NotNull
+    @JsonProperty("description")
+    public String getDescription();
 
-   public void setDescription(final String description);
-   
-   public static ProductTypeChangeDescriptionActionImpl of(){
-      return new ProductTypeChangeDescriptionActionImpl();
-   }
-   
+    public void setDescription(final String description);
 
-   public static ProductTypeChangeDescriptionActionImpl of(final ProductTypeChangeDescriptionAction template) {
-      ProductTypeChangeDescriptionActionImpl instance = new ProductTypeChangeDescriptionActionImpl();
-      instance.setDescription(template.getDescription());
-      return instance;
-   }
+    public static ProductTypeChangeDescriptionActionImpl of(){
+        return new ProductTypeChangeDescriptionActionImpl();
+    }
+    
+
+    public static ProductTypeChangeDescriptionActionImpl of(final ProductTypeChangeDescriptionAction template) {
+        ProductTypeChangeDescriptionActionImpl instance = new ProductTypeChangeDescriptionActionImpl();
+        instance.setDescription(template.getDescription());
+        return instance;
+    }
 
 }

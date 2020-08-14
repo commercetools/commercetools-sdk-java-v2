@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = GraphQLVariablesMapImpl.class)
 public interface GraphQLVariablesMap  {
 
-   
-   @NotNull
-   @JsonAnyGetter
-   public Map<String, JsonNode> values();
+    
+    @NotNull
+    @JsonAnyGetter
+    public Map<String, JsonNode> values();
 
-   @JsonAnySetter
-   public void setValue(String key, JsonNode value);
-   
-   public static GraphQLVariablesMapImpl of(){
-      return new GraphQLVariablesMapImpl();
-   }
-   
+    @JsonAnySetter
+    public void setValue(String key, JsonNode value);
 
-   public static GraphQLVariablesMapImpl of(final GraphQLVariablesMap template) {
-      GraphQLVariablesMapImpl instance = new GraphQLVariablesMapImpl();
-      return instance;
-   }
+    public static GraphQLVariablesMapImpl of(){
+        return new GraphQLVariablesMapImpl();
+    }
+    
+
+    public static GraphQLVariablesMapImpl of(final GraphQLVariablesMap template) {
+        GraphQLVariablesMapImpl instance = new GraphQLVariablesMapImpl();
+        return instance;
+    }
 
 }

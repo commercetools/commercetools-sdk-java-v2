@@ -22,16 +22,16 @@ import java.io.IOException;
 public interface InvalidSubjectError extends ErrorObject {
 
 
-   
-   public static InvalidSubjectErrorImpl of(){
-      return new InvalidSubjectErrorImpl();
-   }
-   
 
-   public static InvalidSubjectErrorImpl of(final InvalidSubjectError template) {
-      InvalidSubjectErrorImpl instance = new InvalidSubjectErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static InvalidSubjectErrorImpl of(){
+        return new InvalidSubjectErrorImpl();
+    }
+    
+
+    public static InvalidSubjectErrorImpl of(final InvalidSubjectError template) {
+        InvalidSubjectErrorImpl instance = new InvalidSubjectErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

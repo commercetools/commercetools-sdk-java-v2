@@ -21,31 +21,31 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetDefaultShippingAddressActionImpl.class)
 public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateAction {
 
-   /**
-   *  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>
-   */
-   
-   @JsonProperty("addressId")
-   public String getAddressId();
-   
-   
-   @JsonProperty("addressKey")
-   public String getAddressKey();
+    /**
+    *  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>
+    */
+    
+    @JsonProperty("addressId")
+    public String getAddressId();
+    
+    
+    @JsonProperty("addressKey")
+    public String getAddressKey();
 
-   public void setAddressId(final String addressId);
-   
-   public void setAddressKey(final String addressKey);
-   
-   public static CustomerSetDefaultShippingAddressActionImpl of(){
-      return new CustomerSetDefaultShippingAddressActionImpl();
-   }
-   
+    public void setAddressId(final String addressId);
+    
+    public void setAddressKey(final String addressKey);
 
-   public static CustomerSetDefaultShippingAddressActionImpl of(final CustomerSetDefaultShippingAddressAction template) {
-      CustomerSetDefaultShippingAddressActionImpl instance = new CustomerSetDefaultShippingAddressActionImpl();
-      instance.setAddressId(template.getAddressId());
-      instance.setAddressKey(template.getAddressKey());
-      return instance;
-   }
+    public static CustomerSetDefaultShippingAddressActionImpl of(){
+        return new CustomerSetDefaultShippingAddressActionImpl();
+    }
+    
+
+    public static CustomerSetDefaultShippingAddressActionImpl of(final CustomerSetDefaultShippingAddressAction template) {
+        CustomerSetDefaultShippingAddressActionImpl instance = new CustomerSetDefaultShippingAddressActionImpl();
+        instance.setAddressId(template.getAddressId());
+        instance.setAddressKey(template.getAddressKey());
+        return instance;
+    }
 
 }

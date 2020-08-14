@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoresRemoveSupplyChannelsActionImpl implements StoresRemoveSupplyChannelsAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
+    private String action;
+    
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
-   @JsonCreator
-   StoresRemoveSupplyChannelsActionImpl(@JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
-      this.supplyChannel = supplyChannel;
-      this.action = "removeSupplyChannel";
-   }
-   public StoresRemoveSupplyChannelsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
-      return this.supplyChannel;
-   }
+    @JsonCreator
+    StoresRemoveSupplyChannelsActionImpl(@JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
+        this.action = "removeSupplyChannel";
+    }
+    public StoresRemoveSupplyChannelsActionImpl() {
+       
+    }
 
-   public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
-      this.supplyChannel = supplyChannel;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
+        return this.supplyChannel;
+    }
+
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
+        this.supplyChannel = supplyChannel;
+    }
 
 }

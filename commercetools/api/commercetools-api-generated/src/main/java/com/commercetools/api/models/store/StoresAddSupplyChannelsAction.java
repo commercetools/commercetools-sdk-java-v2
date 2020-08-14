@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = StoresAddSupplyChannelsActionImpl.class)
 public interface StoresAddSupplyChannelsAction extends StoreUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("supplyChannel")
-   public ChannelResourceIdentifier getSupplyChannel();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
 
-   public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-   
-   public static StoresAddSupplyChannelsActionImpl of(){
-      return new StoresAddSupplyChannelsActionImpl();
-   }
-   
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
-   public static StoresAddSupplyChannelsActionImpl of(final StoresAddSupplyChannelsAction template) {
-      StoresAddSupplyChannelsActionImpl instance = new StoresAddSupplyChannelsActionImpl();
-      instance.setSupplyChannel(template.getSupplyChannel());
-      return instance;
-   }
+    public static StoresAddSupplyChannelsActionImpl of(){
+        return new StoresAddSupplyChannelsActionImpl();
+    }
+    
+
+    public static StoresAddSupplyChannelsActionImpl of(final StoresAddSupplyChannelsAction template) {
+        StoresAddSupplyChannelsActionImpl instance = new StoresAddSupplyChannelsActionImpl();
+        instance.setSupplyChannel(template.getSupplyChannel());
+        return instance;
+    }
 
 }

@@ -21,32 +21,32 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySetAssetKeyActionImpl.class)
 public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("assetId")
-   public String getAssetId();
-   /**
-   *  <p>User-defined identifier for the asset.
-   *  If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
-   */
-   
-   @JsonProperty("assetKey")
-   public String getAssetKey();
+    
+    @NotNull
+    @JsonProperty("assetId")
+    public String getAssetId();
+    /**
+    *  <p>User-defined identifier for the asset.
+    *  If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+    */
+    
+    @JsonProperty("assetKey")
+    public String getAssetKey();
 
-   public void setAssetId(final String assetId);
-   
-   public void setAssetKey(final String assetKey);
-   
-   public static CategorySetAssetKeyActionImpl of(){
-      return new CategorySetAssetKeyActionImpl();
-   }
-   
+    public void setAssetId(final String assetId);
+    
+    public void setAssetKey(final String assetKey);
 
-   public static CategorySetAssetKeyActionImpl of(final CategorySetAssetKeyAction template) {
-      CategorySetAssetKeyActionImpl instance = new CategorySetAssetKeyActionImpl();
-      instance.setAssetId(template.getAssetId());
-      instance.setAssetKey(template.getAssetKey());
-      return instance;
-   }
+    public static CategorySetAssetKeyActionImpl of(){
+        return new CategorySetAssetKeyActionImpl();
+    }
+    
+
+    public static CategorySetAssetKeyActionImpl of(final CategorySetAssetKeyAction template) {
+        CategorySetAssetKeyActionImpl instance = new CategorySetAssetKeyActionImpl();
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        return instance;
+    }
 
 }

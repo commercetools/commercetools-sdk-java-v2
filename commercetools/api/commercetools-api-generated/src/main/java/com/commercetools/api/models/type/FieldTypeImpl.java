@@ -33,18 +33,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FieldTypeImpl implements FieldType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   FieldTypeImpl() {
-      this.name = "null";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    FieldTypeImpl() {
+        this.name = "null";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

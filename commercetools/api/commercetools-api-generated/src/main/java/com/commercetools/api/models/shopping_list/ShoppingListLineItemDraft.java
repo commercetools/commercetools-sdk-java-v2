@@ -22,57 +22,57 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListLineItemDraftImpl.class)
 public interface ShoppingListLineItemDraft  {
 
-   
-   
-   @JsonProperty("addedAt")
-   public ZonedDateTime getAddedAt();
-   
-   @Valid
-   @JsonProperty("custom")
-   public CustomFieldsDraft getCustom();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   
-   @JsonProperty("productId")
-   public String getProductId();
-   
-   
-   @JsonProperty("quantity")
-   public Integer getQuantity();
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
+    
+    
+    @JsonProperty("addedAt")
+    public ZonedDateTime getAddedAt();
+    
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    
+    @JsonProperty("productId")
+    public String getProductId();
+    
+    
+    @JsonProperty("quantity")
+    public Integer getQuantity();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
 
-   public void setAddedAt(final ZonedDateTime addedAt);
-   
-   public void setCustom(final CustomFieldsDraft custom);
-   
-   public void setSku(final String sku);
-   
-   public void setProductId(final String productId);
-   
-   public void setQuantity(final Integer quantity);
-   
-   public void setVariantId(final Long variantId);
-   
-   public static ShoppingListLineItemDraftImpl of(){
-      return new ShoppingListLineItemDraftImpl();
-   }
-   
+    public void setAddedAt(final ZonedDateTime addedAt);
+    
+    public void setCustom(final CustomFieldsDraft custom);
+    
+    public void setSku(final String sku);
+    
+    public void setProductId(final String productId);
+    
+    public void setQuantity(final Integer quantity);
+    
+    public void setVariantId(final Long variantId);
 
-   public static ShoppingListLineItemDraftImpl of(final ShoppingListLineItemDraft template) {
-      ShoppingListLineItemDraftImpl instance = new ShoppingListLineItemDraftImpl();
-      instance.setAddedAt(template.getAddedAt());
-      instance.setCustom(template.getCustom());
-      instance.setSku(template.getSku());
-      instance.setProductId(template.getProductId());
-      instance.setQuantity(template.getQuantity());
-      instance.setVariantId(template.getVariantId());
-      return instance;
-   }
+    public static ShoppingListLineItemDraftImpl of(){
+        return new ShoppingListLineItemDraftImpl();
+    }
+    
+
+    public static ShoppingListLineItemDraftImpl of(final ShoppingListLineItemDraft template) {
+        ShoppingListLineItemDraftImpl instance = new ShoppingListLineItemDraftImpl();
+        instance.setAddedAt(template.getAddedAt());
+        instance.setCustom(template.getCustom());
+        instance.setSku(template.getSku());
+        instance.setProductId(template.getProductId());
+        instance.setQuantity(template.getQuantity());
+        instance.setVariantId(template.getVariantId());
+        return instance;
+    }
 
 }

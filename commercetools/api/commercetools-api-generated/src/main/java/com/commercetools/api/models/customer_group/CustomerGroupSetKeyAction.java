@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerGroupSetKeyActionImpl.class)
 public interface CustomerGroupSetKeyAction extends CustomerGroupUpdateAction {
 
-   /**
-   *  <p>User-specific unique identifier for the customer group.</p>
-   */
-   
-   @JsonProperty("key")
-   public String getKey();
+    /**
+    *  <p>User-specific unique identifier for the customer group.</p>
+    */
+    
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setKey(final String key);
-   
-   public static CustomerGroupSetKeyActionImpl of(){
-      return new CustomerGroupSetKeyActionImpl();
-   }
-   
+    public void setKey(final String key);
 
-   public static CustomerGroupSetKeyActionImpl of(final CustomerGroupSetKeyAction template) {
-      CustomerGroupSetKeyActionImpl instance = new CustomerGroupSetKeyActionImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static CustomerGroupSetKeyActionImpl of(){
+        return new CustomerGroupSetKeyActionImpl();
+    }
+    
+
+    public static CustomerGroupSetKeyActionImpl of(final CustomerGroupSetKeyAction template) {
+        CustomerGroupSetKeyActionImpl instance = new CustomerGroupSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeLocalizableTextTypeImpl implements AttributeLocalizableTextType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   AttributeLocalizableTextTypeImpl() {
-      this.name = "ltext";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    AttributeLocalizableTextTypeImpl() {
+        this.name = "ltext";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

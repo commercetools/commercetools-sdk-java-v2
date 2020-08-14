@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateSetTransitionsActionImpl implements StateSetTransitionsAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions;
 
-   @JsonCreator
-   StateSetTransitionsActionImpl(@JsonProperty("transitions") final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
-      this.transitions = transitions;
-      this.action = "setTransitions";
-   }
-   public StateSetTransitionsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> getTransitions(){
-      return this.transitions;
-   }
+    @JsonCreator
+    StateSetTransitionsActionImpl(@JsonProperty("transitions") final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
+        this.transitions = transitions;
+        this.action = "setTransitions";
+    }
+    public StateSetTransitionsActionImpl() {
+       
+    }
 
-   public void setTransitions(final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions){
-      this.transitions = transitions;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> getTransitions(){
+        return this.transitions;
+    }
+
+    public void setTransitions(final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions){
+        this.transitions = transitions;
+    }
 
 }

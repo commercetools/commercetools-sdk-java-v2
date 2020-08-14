@@ -22,25 +22,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountSetValidFromActionImpl.class)
 public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdateAction {
 
-   /**
-   *  <p>The time from which the discount should be effective.
-   *  Please take Eventual Consistency into account for calculated product discount values.</p>
-   */
-   
-   @JsonProperty("validFrom")
-   public ZonedDateTime getValidFrom();
+    /**
+    *  <p>The time from which the discount should be effective.
+    *  Please take Eventual Consistency into account for calculated product discount values.</p>
+    */
+    
+    @JsonProperty("validFrom")
+    public ZonedDateTime getValidFrom();
 
-   public void setValidFrom(final ZonedDateTime validFrom);
-   
-   public static ProductDiscountSetValidFromActionImpl of(){
-      return new ProductDiscountSetValidFromActionImpl();
-   }
-   
+    public void setValidFrom(final ZonedDateTime validFrom);
 
-   public static ProductDiscountSetValidFromActionImpl of(final ProductDiscountSetValidFromAction template) {
-      ProductDiscountSetValidFromActionImpl instance = new ProductDiscountSetValidFromActionImpl();
-      instance.setValidFrom(template.getValidFrom());
-      return instance;
-   }
+    public static ProductDiscountSetValidFromActionImpl of(){
+        return new ProductDiscountSetValidFromActionImpl();
+    }
+    
+
+    public static ProductDiscountSetValidFromActionImpl of(final ProductDiscountSetValidFromAction template) {
+        ProductDiscountSetValidFromActionImpl instance = new ProductDiscountSetValidFromActionImpl();
+        instance.setValidFrom(template.getValidFrom());
+        return instance;
+    }
 
 }

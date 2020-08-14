@@ -24,43 +24,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomObjectReferenceImpl implements CustomObjectReference {
 
-   private com.commercetools.api.models.common.ReferenceTypeId typeId;
-   
-   private String id;
-   
-   private com.commercetools.api.models.custom_object.CustomObject obj;
+    private com.commercetools.api.models.common.ReferenceTypeId typeId;
+    
+    private String id;
+    
+    private com.commercetools.api.models.custom_object.CustomObject obj;
 
-   @JsonCreator
-   CustomObjectReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.custom_object.CustomObject obj) {
-      this.id = id;
-      this.obj = obj;
-      this.typeId = ReferenceTypeId.findEnumViaJsonName("key-value-document").get();
-   }
-   public CustomObjectReferenceImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
-      return this.typeId;
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public com.commercetools.api.models.custom_object.CustomObject getObj(){
-      return this.obj;
-   }
+    @JsonCreator
+    CustomObjectReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.custom_object.CustomObject obj) {
+        this.id = id;
+        this.obj = obj;
+        this.typeId = ReferenceTypeId.findEnumViaJsonName("key-value-document").get();
+    }
+    public CustomObjectReferenceImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setObj(final com.commercetools.api.models.custom_object.CustomObject obj){
-      this.obj = obj;
-   }
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
+        return this.typeId;
+    }
+    
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public com.commercetools.api.models.custom_object.CustomObject getObj(){
+        return this.obj;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setObj(final com.commercetools.api.models.custom_object.CustomObject obj){
+        this.obj = obj;
+    }
 
 }

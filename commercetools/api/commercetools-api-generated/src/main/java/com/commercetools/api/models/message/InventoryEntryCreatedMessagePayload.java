@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntryCreatedMessagePayloadImpl.class)
 public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("inventoryEntry")
-   public InventoryEntry getInventoryEntry();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("inventoryEntry")
+    public InventoryEntry getInventoryEntry();
 
-   public void setInventoryEntry(final InventoryEntry inventoryEntry);
-   
-   public static InventoryEntryCreatedMessagePayloadImpl of(){
-      return new InventoryEntryCreatedMessagePayloadImpl();
-   }
-   
+    public void setInventoryEntry(final InventoryEntry inventoryEntry);
 
-   public static InventoryEntryCreatedMessagePayloadImpl of(final InventoryEntryCreatedMessagePayload template) {
-      InventoryEntryCreatedMessagePayloadImpl instance = new InventoryEntryCreatedMessagePayloadImpl();
-      instance.setInventoryEntry(template.getInventoryEntry());
-      return instance;
-   }
+    public static InventoryEntryCreatedMessagePayloadImpl of(){
+        return new InventoryEntryCreatedMessagePayloadImpl();
+    }
+    
+
+    public static InventoryEntryCreatedMessagePayloadImpl of(final InventoryEntryCreatedMessagePayload template) {
+        InventoryEntryCreatedMessagePayloadImpl instance = new InventoryEntryCreatedMessagePayloadImpl();
+        instance.setInventoryEntry(template.getInventoryEntry());
+        return instance;
+    }
 
 }

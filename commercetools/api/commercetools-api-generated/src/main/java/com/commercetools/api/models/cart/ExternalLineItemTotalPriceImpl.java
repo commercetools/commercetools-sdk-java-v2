@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPrice {
 
-   private com.commercetools.api.models.common.Money price;
-   
-   private com.commercetools.api.models.common.Money totalPrice;
+    private com.commercetools.api.models.common.Money price;
+    
+    private com.commercetools.api.models.common.Money totalPrice;
 
-   @JsonCreator
-   ExternalLineItemTotalPriceImpl(@JsonProperty("price") final com.commercetools.api.models.common.Money price, @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice) {
-      this.price = price;
-      this.totalPrice = totalPrice;
-   }
-   public ExternalLineItemTotalPriceImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getPrice(){
-      return this.price;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getTotalPrice(){
-      return this.totalPrice;
-   }
+    @JsonCreator
+    ExternalLineItemTotalPriceImpl(@JsonProperty("price") final com.commercetools.api.models.common.Money price, @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice) {
+        this.price = price;
+        this.totalPrice = totalPrice;
+    }
+    public ExternalLineItemTotalPriceImpl() {
+       
+    }
 
-   public void setPrice(final com.commercetools.api.models.common.Money price){
-      this.price = price;
-   }
-   
-   public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice){
-      this.totalPrice = totalPrice;
-   }
+    
+    public com.commercetools.api.models.common.Money getPrice(){
+        return this.price;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getTotalPrice(){
+        return this.totalPrice;
+    }
+
+    public void setPrice(final com.commercetools.api.models.common.Money price){
+        this.price = price;
+    }
+    
+    public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice){
+        this.totalPrice = totalPrice;
+    }
 
 }

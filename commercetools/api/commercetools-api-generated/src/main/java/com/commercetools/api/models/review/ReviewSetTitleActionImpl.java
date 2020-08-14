@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewSetTitleActionImpl implements ReviewSetTitleAction {
 
-   private String action;
-   
-   private String title;
+    private String action;
+    
+    private String title;
 
-   @JsonCreator
-   ReviewSetTitleActionImpl(@JsonProperty("title") final String title) {
-      this.title = title;
-      this.action = "setTitle";
-   }
-   public ReviewSetTitleActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   public String getTitle(){
-      return this.title;
-   }
+    @JsonCreator
+    ReviewSetTitleActionImpl(@JsonProperty("title") final String title) {
+        this.title = title;
+        this.action = "setTitle";
+    }
+    public ReviewSetTitleActionImpl() {
+       
+    }
 
-   public void setTitle(final String title){
-      this.title = title;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    public String getTitle(){
+        return this.title;
+    }
+
+    public void setTitle(final String title){
+        this.title = title;
+    }
 
 }

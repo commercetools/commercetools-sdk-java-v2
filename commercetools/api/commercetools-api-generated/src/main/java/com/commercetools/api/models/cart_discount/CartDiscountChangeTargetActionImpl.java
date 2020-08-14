@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountChangeTargetActionImpl implements CartDiscountChangeTargetAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
+    private String action;
+    
+    private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
-   @JsonCreator
-   CartDiscountChangeTargetActionImpl(@JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
-      this.target = target;
-      this.action = "changeTarget";
-   }
-   public CartDiscountChangeTargetActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget(){
-      return this.target;
-   }
+    @JsonCreator
+    CartDiscountChangeTargetActionImpl(@JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
+        this.target = target;
+        this.action = "changeTarget";
+    }
+    public CartDiscountChangeTargetActionImpl() {
+       
+    }
 
-   public void setTarget(final com.commercetools.api.models.cart_discount.CartDiscountTarget target){
-      this.target = target;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget(){
+        return this.target;
+    }
+
+    public void setTarget(final com.commercetools.api.models.cart_discount.CartDiscountTarget target){
+        this.target = target;
+    }
 
 }

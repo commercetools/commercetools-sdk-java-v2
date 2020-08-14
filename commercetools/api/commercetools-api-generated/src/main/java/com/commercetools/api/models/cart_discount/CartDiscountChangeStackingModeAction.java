@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountChangeStackingModeActionImpl.class)
 public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("stackingMode")
-   public StackingMode getStackingMode();
+    
+    @NotNull
+    @JsonProperty("stackingMode")
+    public StackingMode getStackingMode();
 
-   public void setStackingMode(final StackingMode stackingMode);
-   
-   public static CartDiscountChangeStackingModeActionImpl of(){
-      return new CartDiscountChangeStackingModeActionImpl();
-   }
-   
+    public void setStackingMode(final StackingMode stackingMode);
 
-   public static CartDiscountChangeStackingModeActionImpl of(final CartDiscountChangeStackingModeAction template) {
-      CartDiscountChangeStackingModeActionImpl instance = new CartDiscountChangeStackingModeActionImpl();
-      instance.setStackingMode(template.getStackingMode());
-      return instance;
-   }
+    public static CartDiscountChangeStackingModeActionImpl of(){
+        return new CartDiscountChangeStackingModeActionImpl();
+    }
+    
+
+    public static CartDiscountChangeStackingModeActionImpl of(final CartDiscountChangeStackingModeAction template) {
+        CartDiscountChangeStackingModeActionImpl instance = new CartDiscountChangeStackingModeActionImpl();
+        instance.setStackingMode(template.getStackingMode());
+        return instance;
+    }
 
 }

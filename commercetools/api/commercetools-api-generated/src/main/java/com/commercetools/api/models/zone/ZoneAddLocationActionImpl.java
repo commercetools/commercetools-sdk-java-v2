@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneAddLocationActionImpl implements ZoneAddLocationAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.zone.Location location;
+    private String action;
+    
+    private com.commercetools.api.models.zone.Location location;
 
-   @JsonCreator
-   ZoneAddLocationActionImpl(@JsonProperty("location") final com.commercetools.api.models.zone.Location location) {
-      this.location = location;
-      this.action = "addLocation";
-   }
-   public ZoneAddLocationActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.zone.Location getLocation(){
-      return this.location;
-   }
+    @JsonCreator
+    ZoneAddLocationActionImpl(@JsonProperty("location") final com.commercetools.api.models.zone.Location location) {
+        this.location = location;
+        this.action = "addLocation";
+    }
+    public ZoneAddLocationActionImpl() {
+       
+    }
 
-   public void setLocation(final com.commercetools.api.models.zone.Location location){
-      this.location = location;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.zone.Location getLocation(){
+        return this.location;
+    }
+
+    public void setLocation(final com.commercetools.api.models.zone.Location location){
+        this.location = location;
+    }
 
 }

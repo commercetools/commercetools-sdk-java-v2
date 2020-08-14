@@ -24,55 +24,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartValueTierImpl implements CartValueTier {
 
-   private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
-   
-   private Long minimumCentAmount;
-   
-   private com.commercetools.api.models.common.Money price;
-   
-   private Boolean isMatching;
+    private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
+    
+    private Long minimumCentAmount;
+    
+    private com.commercetools.api.models.common.Money price;
+    
+    private Boolean isMatching;
 
-   @JsonCreator
-   CartValueTierImpl(@JsonProperty("minimumCentAmount") final Long minimumCentAmount, @JsonProperty("price") final com.commercetools.api.models.common.Money price, @JsonProperty("isMatching") final Boolean isMatching) {
-      this.minimumCentAmount = minimumCentAmount;
-      this.price = price;
-      this.isMatching = isMatching;
-      this.type = ShippingRateTierType.findEnumViaJsonName("CartValue").get();
-   }
-   public CartValueTierImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
-      return this.type;
-   }
-   
-   
-   public Long getMinimumCentAmount(){
-      return this.minimumCentAmount;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getPrice(){
-      return this.price;
-   }
-   
-   
-   public Boolean getIsMatching(){
-      return this.isMatching;
-   }
+    @JsonCreator
+    CartValueTierImpl(@JsonProperty("minimumCentAmount") final Long minimumCentAmount, @JsonProperty("price") final com.commercetools.api.models.common.Money price, @JsonProperty("isMatching") final Boolean isMatching) {
+        this.minimumCentAmount = minimumCentAmount;
+        this.price = price;
+        this.isMatching = isMatching;
+        this.type = ShippingRateTierType.findEnumViaJsonName("CartValue").get();
+    }
+    public CartValueTierImpl() {
+       
+    }
 
-   public void setMinimumCentAmount(final Long minimumCentAmount){
-      this.minimumCentAmount = minimumCentAmount;
-   }
-   
-   public void setPrice(final com.commercetools.api.models.common.Money price){
-      this.price = price;
-   }
-   
-   public void setIsMatching(final Boolean isMatching){
-      this.isMatching = isMatching;
-   }
+    
+    public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
+        return this.type;
+    }
+    
+    
+    public Long getMinimumCentAmount(){
+        return this.minimumCentAmount;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getPrice(){
+        return this.price;
+    }
+    
+    
+    public Boolean getIsMatching(){
+        return this.isMatching;
+    }
+
+    public void setMinimumCentAmount(final Long minimumCentAmount){
+        this.minimumCentAmount = minimumCentAmount;
+    }
+    
+    public void setPrice(final com.commercetools.api.models.common.Money price){
+        this.price = price;
+    }
+    
+    public void setIsMatching(final Boolean isMatching){
+        this.isMatching = isMatching;
+    }
 
 }

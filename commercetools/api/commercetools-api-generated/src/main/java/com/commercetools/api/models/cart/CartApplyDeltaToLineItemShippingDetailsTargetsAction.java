@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl.class)
 public interface CartApplyDeltaToLineItemShippingDetailsTargetsAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("targetsDelta")
-   public List<ItemShippingTarget> getTargetsDelta();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("targetsDelta")
+    public List<ItemShippingTarget> getTargetsDelta();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setTargetsDelta(final List<ItemShippingTarget> targetsDelta);
-   
-   public static CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl of(){
-      return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setTargetsDelta(final List<ItemShippingTarget> targetsDelta);
 
-   public static CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl of(final CartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
-      CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setTargetsDelta(template.getTargetsDelta());
-      return instance;
-   }
+    public static CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl of(){
+        return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
+    }
+    
+
+    public static CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl of(final CartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
+        CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setTargetsDelta(template.getTargetsDelta());
+        return instance;
+    }
 
 }

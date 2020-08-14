@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeMoneyTypeImpl implements AttributeMoneyType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   AttributeMoneyTypeImpl() {
-      this.name = "money";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    AttributeMoneyTypeImpl() {
+        this.name = "money";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentAddTransactionActionImpl implements MyPaymentAddTransactionAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.payment.TransactionDraft transaction;
+    private String action;
+    
+    private com.commercetools.api.models.payment.TransactionDraft transaction;
 
-   @JsonCreator
-   MyPaymentAddTransactionActionImpl(@JsonProperty("transaction") final com.commercetools.api.models.payment.TransactionDraft transaction) {
-      this.transaction = transaction;
-      this.action = "addTransaction";
-   }
-   public MyPaymentAddTransactionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.payment.TransactionDraft getTransaction(){
-      return this.transaction;
-   }
+    @JsonCreator
+    MyPaymentAddTransactionActionImpl(@JsonProperty("transaction") final com.commercetools.api.models.payment.TransactionDraft transaction) {
+        this.transaction = transaction;
+        this.action = "addTransaction";
+    }
+    public MyPaymentAddTransactionActionImpl() {
+       
+    }
 
-   public void setTransaction(final com.commercetools.api.models.payment.TransactionDraft transaction){
-      this.transaction = transaction;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.payment.TransactionDraft getTransaction(){
+        return this.transaction;
+    }
+
+    public void setTransaction(final com.commercetools.api.models.payment.TransactionDraft transaction){
+        this.transaction = transaction;
+    }
 
 }

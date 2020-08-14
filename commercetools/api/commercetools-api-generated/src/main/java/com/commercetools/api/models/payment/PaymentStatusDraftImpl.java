@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentStatusDraftImpl implements PaymentStatusDraft {
 
-   private String interfaceCode;
-   
-   private String interfaceText;
-   
-   private com.commercetools.api.models.state.StateResourceIdentifier state;
+    private String interfaceCode;
+    
+    private String interfaceText;
+    
+    private com.commercetools.api.models.state.StateResourceIdentifier state;
 
-   @JsonCreator
-   PaymentStatusDraftImpl(@JsonProperty("interfaceCode") final String interfaceCode, @JsonProperty("interfaceText") final String interfaceText, @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state) {
-      this.interfaceCode = interfaceCode;
-      this.interfaceText = interfaceText;
-      this.state = state;
-   }
-   public PaymentStatusDraftImpl() {
-      
-   }
-   
-   
-   public String getInterfaceCode(){
-      return this.interfaceCode;
-   }
-   
-   
-   public String getInterfaceText(){
-      return this.interfaceText;
-   }
-   
-   
-   public com.commercetools.api.models.state.StateResourceIdentifier getState(){
-      return this.state;
-   }
+    @JsonCreator
+    PaymentStatusDraftImpl(@JsonProperty("interfaceCode") final String interfaceCode, @JsonProperty("interfaceText") final String interfaceText, @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state) {
+        this.interfaceCode = interfaceCode;
+        this.interfaceText = interfaceText;
+        this.state = state;
+    }
+    public PaymentStatusDraftImpl() {
+       
+    }
 
-   public void setInterfaceCode(final String interfaceCode){
-      this.interfaceCode = interfaceCode;
-   }
-   
-   public void setInterfaceText(final String interfaceText){
-      this.interfaceText = interfaceText;
-   }
-   
-   public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
-      this.state = state;
-   }
+    
+    public String getInterfaceCode(){
+        return this.interfaceCode;
+    }
+    
+    
+    public String getInterfaceText(){
+        return this.interfaceText;
+    }
+    
+    
+    public com.commercetools.api.models.state.StateResourceIdentifier getState(){
+        return this.state;
+    }
+
+    public void setInterfaceCode(final String interfaceCode){
+        this.interfaceCode = interfaceCode;
+    }
+    
+    public void setInterfaceText(final String interfaceText){
+        this.interfaceText = interfaceText;
+    }
+    
+    public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
+        this.state = state;
+    }
 
 }

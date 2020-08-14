@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class StateAddRolesActionBuilder {
-   
-   
-   private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
-   
-   public StateAddRolesActionBuilder roles( final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
-      this.roles = roles;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles(){
-      return this.roles;
-   }
 
-   public StateAddRolesAction build() {
-       return new StateAddRolesActionImpl(roles);
-   }
-   
-   public static StateAddRolesActionBuilder of() {
-      return new StateAddRolesActionBuilder();
-   }
-   
-   public static StateAddRolesActionBuilder of(final StateAddRolesAction template) {
-      StateAddRolesActionBuilder builder = new StateAddRolesActionBuilder();
-      builder.roles = template.getRoles();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
+
+    public StateAddRolesActionBuilder roles( final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
+        this.roles = roles;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles(){
+        return this.roles;
+    }
+
+    public StateAddRolesAction build() {
+        return new StateAddRolesActionImpl(roles);
+    }
+
+    public static StateAddRolesActionBuilder of() {
+        return new StateAddRolesActionBuilder();
+    }
+
+    public static StateAddRolesActionBuilder of(final StateAddRolesAction template) {
+        StateAddRolesActionBuilder builder = new StateAddRolesActionBuilder();
+        builder.roles = template.getRoles();
+        return builder;
+    }
+
 }

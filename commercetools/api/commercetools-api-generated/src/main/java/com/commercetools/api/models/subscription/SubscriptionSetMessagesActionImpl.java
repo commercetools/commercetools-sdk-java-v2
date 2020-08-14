@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessagesAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
 
-   @JsonCreator
-   SubscriptionSetMessagesActionImpl(@JsonProperty("messages") final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
-      this.messages = messages;
-      this.action = "setMessages";
-   }
-   public SubscriptionSetMessagesActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
-      return this.messages;
-   }
+    @JsonCreator
+    SubscriptionSetMessagesActionImpl(@JsonProperty("messages") final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
+        this.messages = messages;
+        this.action = "setMessages";
+    }
+    public SubscriptionSetMessagesActionImpl() {
+       
+    }
 
-   public void setMessages(final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages){
-      this.messages = messages;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
+        return this.messages;
+    }
+
+    public void setMessages(final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages){
+        this.messages = messages;
+    }
 
 }

@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetTaxCategoryActionImpl.class)
 public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
 
-   /**
-   *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
-   */
-   @Valid
-   @JsonProperty("taxCategory")
-   public TaxCategoryResourceIdentifier getTaxCategory();
+    /**
+    *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+    */
+    @Valid
+    @JsonProperty("taxCategory")
+    public TaxCategoryResourceIdentifier getTaxCategory();
 
-   public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-   
-   public static ProductSetTaxCategoryActionImpl of(){
-      return new ProductSetTaxCategoryActionImpl();
-   }
-   
+    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
-   public static ProductSetTaxCategoryActionImpl of(final ProductSetTaxCategoryAction template) {
-      ProductSetTaxCategoryActionImpl instance = new ProductSetTaxCategoryActionImpl();
-      instance.setTaxCategory(template.getTaxCategory());
-      return instance;
-   }
+    public static ProductSetTaxCategoryActionImpl of(){
+        return new ProductSetTaxCategoryActionImpl();
+    }
+    
+
+    public static ProductSetTaxCategoryActionImpl of(final ProductSetTaxCategoryAction template) {
+        ProductSetTaxCategoryActionImpl instance = new ProductSetTaxCategoryActionImpl();
+        instance.setTaxCategory(template.getTaxCategory());
+        return instance;
+    }
 
 }

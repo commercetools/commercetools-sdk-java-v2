@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum AnonymousCartSignInMode {
 
-  
-  @JsonProperty("MergeWithExistingCustomerCart")
-  MERGE_WITH_EXISTING_CUSTOMER_CART("MergeWithExistingCustomerCart"),
-  
-  
-  @JsonProperty("UseAsNewActiveCustomerCart")
-  USE_AS_NEW_ACTIVE_CUSTOMER_CART("UseAsNewActiveCustomerCart");
+    
+    @JsonProperty("MergeWithExistingCustomerCart")
+    MERGE_WITH_EXISTING_CUSTOMER_CART("MergeWithExistingCustomerCart"),
+    
+    
+    @JsonProperty("UseAsNewActiveCustomerCart")
+    USE_AS_NEW_ACTIVE_CUSTOMER_CART("UseAsNewActiveCustomerCart");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private AnonymousCartSignInMode(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private AnonymousCartSignInMode(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<AnonymousCartSignInMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<AnonymousCartSignInMode> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

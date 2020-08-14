@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeCountryTaxRateFallbackEnabledActionImpl implements ProjectChangeCountryTaxRateFallbackEnabledAction {
 
-   private String action;
-   
-   private Boolean countryTaxRateFallbackEnabled;
+    private String action;
+    
+    private Boolean countryTaxRateFallbackEnabled;
 
-   @JsonCreator
-   ProjectChangeCountryTaxRateFallbackEnabledActionImpl(@JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled) {
-      this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
-      this.action = "changeCountryTaxRateFallbackEnabled";
-   }
-   public ProjectChangeCountryTaxRateFallbackEnabledActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>default value is <code>false</code></p>
-   */
-   public Boolean getCountryTaxRateFallbackEnabled(){
-      return this.countryTaxRateFallbackEnabled;
-   }
+    @JsonCreator
+    ProjectChangeCountryTaxRateFallbackEnabledActionImpl(@JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled) {
+        this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+        this.action = "changeCountryTaxRateFallbackEnabled";
+    }
+    public ProjectChangeCountryTaxRateFallbackEnabledActionImpl() {
+       
+    }
 
-   public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled){
-      this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>default value is <code>false</code></p>
+    */
+    public Boolean getCountryTaxRateFallbackEnabled(){
+        return this.countryTaxRateFallbackEnabled;
+    }
+
+    public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled){
+        this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+    }
 
 }

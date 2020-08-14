@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListSetCustomerActionImpl implements ShoppingListSetCustomerAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
+    private String action;
+    
+    private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
-   @JsonCreator
-   ShoppingListSetCustomerActionImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
-      this.customer = customer;
-      this.action = "setCustomer";
-   }
-   public ShoppingListSetCustomerActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
-      return this.customer;
-   }
+    @JsonCreator
+    ShoppingListSetCustomerActionImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
+        this.customer = customer;
+        this.action = "setCustomer";
+    }
+    public ShoppingListSetCustomerActionImpl() {
+       
+    }
 
-   public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer){
-      this.customer = customer;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
+        return this.customer;
+    }
+
+    public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer){
+        this.customer = customer;
+    }
 
 }

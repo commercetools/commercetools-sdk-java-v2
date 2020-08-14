@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountCustomLineItemsTargetImpl.class)
 public interface CartDiscountCustomLineItemsTarget extends CartDiscountTarget {
 
-   
-   @NotNull
-   @JsonProperty("predicate")
-   public String getPredicate();
+    
+    @NotNull
+    @JsonProperty("predicate")
+    public String getPredicate();
 
-   public void setPredicate(final String predicate);
-   
-   public static CartDiscountCustomLineItemsTargetImpl of(){
-      return new CartDiscountCustomLineItemsTargetImpl();
-   }
-   
+    public void setPredicate(final String predicate);
 
-   public static CartDiscountCustomLineItemsTargetImpl of(final CartDiscountCustomLineItemsTarget template) {
-      CartDiscountCustomLineItemsTargetImpl instance = new CartDiscountCustomLineItemsTargetImpl();
-      instance.setPredicate(template.getPredicate());
-      return instance;
-   }
+    public static CartDiscountCustomLineItemsTargetImpl of(){
+        return new CartDiscountCustomLineItemsTargetImpl();
+    }
+    
+
+    public static CartDiscountCustomLineItemsTargetImpl of(final CartDiscountCustomLineItemsTarget template) {
+        CartDiscountCustomLineItemsTargetImpl instance = new CartDiscountCustomLineItemsTargetImpl();
+        instance.setPredicate(template.getPredicate());
+        return instance;
+    }
 
 }

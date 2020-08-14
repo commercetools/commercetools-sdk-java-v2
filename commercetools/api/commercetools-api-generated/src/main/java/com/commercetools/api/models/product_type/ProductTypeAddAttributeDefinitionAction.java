@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeAddAttributeDefinitionActionImpl.class)
 public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("attribute")
-   public AttributeDefinitionDraft getAttribute();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("attribute")
+    public AttributeDefinitionDraft getAttribute();
 
-   public void setAttribute(final AttributeDefinitionDraft attribute);
-   
-   public static ProductTypeAddAttributeDefinitionActionImpl of(){
-      return new ProductTypeAddAttributeDefinitionActionImpl();
-   }
-   
+    public void setAttribute(final AttributeDefinitionDraft attribute);
 
-   public static ProductTypeAddAttributeDefinitionActionImpl of(final ProductTypeAddAttributeDefinitionAction template) {
-      ProductTypeAddAttributeDefinitionActionImpl instance = new ProductTypeAddAttributeDefinitionActionImpl();
-      instance.setAttribute(template.getAttribute());
-      return instance;
-   }
+    public static ProductTypeAddAttributeDefinitionActionImpl of(){
+        return new ProductTypeAddAttributeDefinitionActionImpl();
+    }
+    
+
+    public static ProductTypeAddAttributeDefinitionActionImpl of(final ProductTypeAddAttributeDefinitionAction template) {
+        ProductTypeAddAttributeDefinitionActionImpl instance = new ProductTypeAddAttributeDefinitionActionImpl();
+        instance.setAttribute(template.getAttribute());
+        return instance;
+    }
 
 }

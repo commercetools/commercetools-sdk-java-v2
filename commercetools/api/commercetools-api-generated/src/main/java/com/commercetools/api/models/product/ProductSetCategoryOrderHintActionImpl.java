@@ -22,55 +22,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetCategoryOrderHintActionImpl implements ProductSetCategoryOrderHintAction {
 
-   private String action;
-   
-   private String categoryId;
-   
-   private String orderHint;
-   
-   private Boolean staged;
+    private String action;
+    
+    private String categoryId;
+    
+    private String orderHint;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductSetCategoryOrderHintActionImpl(@JsonProperty("categoryId") final String categoryId, @JsonProperty("orderHint") final String orderHint, @JsonProperty("staged") final Boolean staged) {
-      this.categoryId = categoryId;
-      this.orderHint = orderHint;
-      this.staged = staged;
-      this.action = "setCategoryOrderHint";
-   }
-   public ProductSetCategoryOrderHintActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getCategoryId(){
-      return this.categoryId;
-   }
-   
-   
-   public String getOrderHint(){
-      return this.orderHint;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductSetCategoryOrderHintActionImpl(@JsonProperty("categoryId") final String categoryId, @JsonProperty("orderHint") final String orderHint, @JsonProperty("staged") final Boolean staged) {
+        this.categoryId = categoryId;
+        this.orderHint = orderHint;
+        this.staged = staged;
+        this.action = "setCategoryOrderHint";
+    }
+    public ProductSetCategoryOrderHintActionImpl() {
+       
+    }
 
-   public void setCategoryId(final String categoryId){
-      this.categoryId = categoryId;
-   }
-   
-   public void setOrderHint(final String orderHint){
-      this.orderHint = orderHint;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getCategoryId(){
+        return this.categoryId;
+    }
+    
+    
+    public String getOrderHint(){
+        return this.orderHint;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setCategoryId(final String categoryId){
+        this.categoryId = categoryId;
+    }
+    
+    public void setOrderHint(final String orderHint){
+        this.orderHint = orderHint;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

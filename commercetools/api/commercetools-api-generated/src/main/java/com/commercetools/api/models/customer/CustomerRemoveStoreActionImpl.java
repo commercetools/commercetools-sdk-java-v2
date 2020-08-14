@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.store.StoreResourceIdentifier store;
+    private String action;
+    
+    private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
-   @JsonCreator
-   CustomerRemoveStoreActionImpl(@JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
-      this.store = store;
-      this.action = "removeStore";
-   }
-   public CustomerRemoveStoreActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.store.StoreResourceIdentifier getStore(){
-      return this.store;
-   }
+    @JsonCreator
+    CustomerRemoveStoreActionImpl(@JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+        this.store = store;
+        this.action = "removeStore";
+    }
+    public CustomerRemoveStoreActionImpl() {
+       
+    }
 
-   public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store){
-      this.store = store;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.store.StoreResourceIdentifier getStore(){
+        return this.store;
+    }
+
+    public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store){
+        this.store = store;
+    }
 
 }

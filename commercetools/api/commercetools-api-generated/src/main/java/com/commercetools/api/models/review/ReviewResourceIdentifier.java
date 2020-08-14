@@ -23,17 +23,17 @@ import java.io.IOException;
 public interface ReviewResourceIdentifier extends ResourceIdentifier {
 
 
-   
-   public static ReviewResourceIdentifierImpl of(){
-      return new ReviewResourceIdentifierImpl();
-   }
-   
 
-   public static ReviewResourceIdentifierImpl of(final ReviewResourceIdentifier template) {
-      ReviewResourceIdentifierImpl instance = new ReviewResourceIdentifierImpl();
-      instance.setId(template.getId());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ReviewResourceIdentifierImpl of(){
+        return new ReviewResourceIdentifierImpl();
+    }
+    
+
+    public static ReviewResourceIdentifierImpl of(final ReviewResourceIdentifier template) {
+        ReviewResourceIdentifierImpl instance = new ReviewResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

@@ -23,34 +23,34 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountSetCustomTypeActionImpl.class)
 public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateAction {
 
-   /**
-   *  <p>If absent, the custom type and any existing CustomFields are removed.</p>
-   */
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   /**
-   *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
-   *  Sets the custom fields to this value.</p>
-   */
-   @Valid
-   @JsonProperty("fields")
-   public JsonNode getFields();
+    /**
+    *  <p>If absent, the custom type and any existing CustomFields are removed.</p>
+    */
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    /**
+    *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
+    *  Sets the custom fields to this value.</p>
+    */
+    @Valid
+    @JsonProperty("fields")
+    public JsonNode getFields();
 
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final JsonNode fields);
-   
-   public static CartDiscountSetCustomTypeActionImpl of(){
-      return new CartDiscountSetCustomTypeActionImpl();
-   }
-   
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final JsonNode fields);
 
-   public static CartDiscountSetCustomTypeActionImpl of(final CartDiscountSetCustomTypeAction template) {
-      CartDiscountSetCustomTypeActionImpl instance = new CartDiscountSetCustomTypeActionImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static CartDiscountSetCustomTypeActionImpl of(){
+        return new CartDiscountSetCustomTypeActionImpl();
+    }
+    
+
+    public static CartDiscountSetCustomTypeActionImpl of(final CartDiscountSetCustomTypeAction template) {
+        CartDiscountSetCustomTypeActionImpl instance = new CartDiscountSetCustomTypeActionImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

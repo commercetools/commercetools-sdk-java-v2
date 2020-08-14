@@ -26,18 +26,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountTargetImpl implements CartDiscountTarget {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   CartDiscountTargetImpl() {
-      this.type = "null";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    CartDiscountTargetImpl() {
+        this.type = "null";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

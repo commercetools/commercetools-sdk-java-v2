@@ -22,45 +22,45 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductRemovePriceActionImpl implements ProductRemovePriceAction {
 
-   private String action;
-   
-   private String priceId;
-   
-   private Boolean staged;
+    private String action;
+    
+    private String priceId;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductRemovePriceActionImpl(@JsonProperty("priceId") final String priceId, @JsonProperty("staged") final Boolean staged) {
-      this.priceId = priceId;
-      this.staged = staged;
-      this.action = "removePrice";
-   }
-   public ProductRemovePriceActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>ID of the <a href="#price">Price</a></p>
-   */
-   public String getPriceId(){
-      return this.priceId;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductRemovePriceActionImpl(@JsonProperty("priceId") final String priceId, @JsonProperty("staged") final Boolean staged) {
+        this.priceId = priceId;
+        this.staged = staged;
+        this.action = "removePrice";
+    }
+    public ProductRemovePriceActionImpl() {
+       
+    }
 
-   public void setPriceId(final String priceId){
-      this.priceId = priceId;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>ID of the <a href="#price">Price</a></p>
+    */
+    public String getPriceId(){
+        return this.priceId;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setPriceId(final String priceId){
+        this.priceId = priceId;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

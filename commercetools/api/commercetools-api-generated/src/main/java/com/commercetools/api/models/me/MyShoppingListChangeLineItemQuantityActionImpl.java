@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListChangeLineItemQuantityActionImpl implements MyShoppingListChangeLineItemQuantityAction {
 
-   private String action;
-   
-   private String lineItemId;
-   
-   private Long quantity;
+    private String action;
+    
+    private String lineItemId;
+    
+    private Long quantity;
 
-   @JsonCreator
-   MyShoppingListChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Long quantity) {
-      this.lineItemId = lineItemId;
-      this.quantity = quantity;
-      this.action = "changeLineItemQuantity";
-   }
-   public MyShoppingListChangeLineItemQuantityActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-   
-   
-   public Long getQuantity(){
-      return this.quantity;
-   }
+    @JsonCreator
+    MyShoppingListChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Long quantity) {
+        this.lineItemId = lineItemId;
+        this.quantity = quantity;
+        this.action = "changeLineItemQuantity";
+    }
+    public MyShoppingListChangeLineItemQuantityActionImpl() {
+       
+    }
 
-   public void setLineItemId(final String lineItemId){
-      this.lineItemId = lineItemId;
-   }
-   
-   public void setQuantity(final Long quantity){
-      this.quantity = quantity;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLineItemId(){
+        return this.lineItemId;
+    }
+    
+    
+    public Long getQuantity(){
+        return this.quantity;
+    }
+
+    public void setLineItemId(final String lineItemId){
+        this.lineItemId = lineItemId;
+    }
+    
+    public void setQuantity(final Long quantity){
+        this.quantity = quantity;
+    }
 
 }

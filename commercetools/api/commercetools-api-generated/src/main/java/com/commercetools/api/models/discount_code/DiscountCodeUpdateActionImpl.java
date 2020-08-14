@@ -34,18 +34,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeUpdateActionImpl implements DiscountCodeUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   DiscountCodeUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    DiscountCodeUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

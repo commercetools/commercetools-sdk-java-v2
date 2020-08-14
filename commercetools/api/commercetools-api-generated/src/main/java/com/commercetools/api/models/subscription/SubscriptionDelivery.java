@@ -26,10 +26,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceUpdatedDeliveryImpl.class, name = "ResourceUpdated")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "notificationType",
-   defaultImpl = SubscriptionDeliveryImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "notificationType",
+    defaultImpl = SubscriptionDeliveryImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -37,26 +37,26 @@ import java.io.IOException;
 )
 public interface SubscriptionDelivery  {
 
-   
-   @NotNull
-   @JsonProperty("projectKey")
-   public String getProjectKey();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("resource")
-   public Reference getResource();
-   
-   @Valid
-   @JsonProperty("resourceUserProvidedIdentifiers")
-   public UserProvidedIdentifiers getResourceUserProvidedIdentifiers();
+    
+    @NotNull
+    @JsonProperty("projectKey")
+    public String getProjectKey();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("resource")
+    public Reference getResource();
+    
+    @Valid
+    @JsonProperty("resourceUserProvidedIdentifiers")
+    public UserProvidedIdentifiers getResourceUserProvidedIdentifiers();
 
-   public void setProjectKey(final String projectKey);
-   
-   public void setResource(final Reference resource);
-   
-   public void setResourceUserProvidedIdentifiers(final UserProvidedIdentifiers resourceUserProvidedIdentifiers);
-   
+    public void setProjectKey(final String projectKey);
+    
+    public void setResource(final Reference resource);
+    
+    public void setResourceUserProvidedIdentifiers(final UserProvidedIdentifiers resourceUserProvidedIdentifiers);
+
 
 
 }

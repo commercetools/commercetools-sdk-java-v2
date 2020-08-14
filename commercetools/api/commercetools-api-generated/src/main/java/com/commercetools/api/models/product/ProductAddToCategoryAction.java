@@ -22,37 +22,37 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductAddToCategoryActionImpl.class)
 public interface ProductAddToCategoryAction extends ProductUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("category")
-   public CategoryResourceIdentifier getCategory();
-   
-   
-   @JsonProperty("orderHint")
-   public String getOrderHint();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("category")
+    public CategoryResourceIdentifier getCategory();
+    
+    
+    @JsonProperty("orderHint")
+    public String getOrderHint();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setCategory(final CategoryResourceIdentifier category);
-   
-   public void setOrderHint(final String orderHint);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductAddToCategoryActionImpl of(){
-      return new ProductAddToCategoryActionImpl();
-   }
-   
+    public void setCategory(final CategoryResourceIdentifier category);
+    
+    public void setOrderHint(final String orderHint);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductAddToCategoryActionImpl of(final ProductAddToCategoryAction template) {
-      ProductAddToCategoryActionImpl instance = new ProductAddToCategoryActionImpl();
-      instance.setCategory(template.getCategory());
-      instance.setOrderHint(template.getOrderHint());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductAddToCategoryActionImpl of(){
+        return new ProductAddToCategoryActionImpl();
+    }
+    
+
+    public static ProductAddToCategoryActionImpl of(final ProductAddToCategoryAction template) {
+        ProductAddToCategoryActionImpl instance = new ProductAddToCategoryActionImpl();
+        instance.setCategory(template.getCategory());
+        instance.setOrderHint(template.getOrderHint());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

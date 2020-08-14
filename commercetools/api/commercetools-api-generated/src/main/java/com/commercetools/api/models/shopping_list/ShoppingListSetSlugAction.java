@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListSetSlugActionImpl.class)
 public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("slug")
-   public LocalizedString getSlug();
+    
+    @Valid
+    @JsonProperty("slug")
+    public LocalizedString getSlug();
 
-   public void setSlug(final LocalizedString slug);
-   
-   public static ShoppingListSetSlugActionImpl of(){
-      return new ShoppingListSetSlugActionImpl();
-   }
-   
+    public void setSlug(final LocalizedString slug);
 
-   public static ShoppingListSetSlugActionImpl of(final ShoppingListSetSlugAction template) {
-      ShoppingListSetSlugActionImpl instance = new ShoppingListSetSlugActionImpl();
-      instance.setSlug(template.getSlug());
-      return instance;
-   }
+    public static ShoppingListSetSlugActionImpl of(){
+        return new ShoppingListSetSlugActionImpl();
+    }
+    
+
+    public static ShoppingListSetSlugActionImpl of(final ShoppingListSetSlugAction template) {
+        ShoppingListSetSlugActionImpl instance = new ShoppingListSetSlugActionImpl();
+        instance.setSlug(template.getSlug());
+        return instance;
+    }
 
 }

@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerResetPasswordImpl implements CustomerResetPassword {
 
-   private String tokenValue;
-   
-   private String newPassword;
-   
-   private Long version;
+    private String tokenValue;
+    
+    private String newPassword;
+    
+    private Long version;
 
-   @JsonCreator
-   CustomerResetPasswordImpl(@JsonProperty("tokenValue") final String tokenValue, @JsonProperty("newPassword") final String newPassword, @JsonProperty("version") final Long version) {
-      this.tokenValue = tokenValue;
-      this.newPassword = newPassword;
-      this.version = version;
-   }
-   public CustomerResetPasswordImpl() {
-      
-   }
-   
-   
-   public String getTokenValue(){
-      return this.tokenValue;
-   }
-   
-   
-   public String getNewPassword(){
-      return this.newPassword;
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
-   }
+    @JsonCreator
+    CustomerResetPasswordImpl(@JsonProperty("tokenValue") final String tokenValue, @JsonProperty("newPassword") final String newPassword, @JsonProperty("version") final Long version) {
+        this.tokenValue = tokenValue;
+        this.newPassword = newPassword;
+        this.version = version;
+    }
+    public CustomerResetPasswordImpl() {
+       
+    }
 
-   public void setTokenValue(final String tokenValue){
-      this.tokenValue = tokenValue;
-   }
-   
-   public void setNewPassword(final String newPassword){
-      this.newPassword = newPassword;
-   }
-   
-   public void setVersion(final Long version){
-      this.version = version;
-   }
+    
+    public String getTokenValue(){
+        return this.tokenValue;
+    }
+    
+    
+    public String getNewPassword(){
+        return this.newPassword;
+    }
+    
+    
+    public Long getVersion(){
+        return this.version;
+    }
+
+    public void setTokenValue(final String tokenValue){
+        this.tokenValue = tokenValue;
+    }
+    
+    public void setNewPassword(final String newPassword){
+        this.newPassword = newPassword;
+    }
+    
+    public void setVersion(final Long version){
+        this.version = version;
+    }
 
 }

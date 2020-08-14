@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryChangeOrderHintActionImpl implements CategoryChangeOrderHintAction {
 
-   private String action;
-   
-   private String orderHint;
+    private String action;
+    
+    private String orderHint;
 
-   @JsonCreator
-   CategoryChangeOrderHintActionImpl(@JsonProperty("orderHint") final String orderHint) {
-      this.orderHint = orderHint;
-      this.action = "changeOrderHint";
-   }
-   public CategoryChangeOrderHintActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getOrderHint(){
-      return this.orderHint;
-   }
+    @JsonCreator
+    CategoryChangeOrderHintActionImpl(@JsonProperty("orderHint") final String orderHint) {
+        this.orderHint = orderHint;
+        this.action = "changeOrderHint";
+    }
+    public CategoryChangeOrderHintActionImpl() {
+       
+    }
 
-   public void setOrderHint(final String orderHint){
-      this.orderHint = orderHint;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getOrderHint(){
+        return this.orderHint;
+    }
+
+    public void setOrderHint(final String orderHint){
+        this.orderHint = orderHint;
+    }
 
 }

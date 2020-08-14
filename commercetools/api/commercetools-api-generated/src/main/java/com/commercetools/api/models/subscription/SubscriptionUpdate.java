@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = SubscriptionUpdateImpl.class)
 public interface SubscriptionUpdate  {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("actions")
-   public List<SubscriptionUpdateAction> getActions();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("actions")
+    public List<SubscriptionUpdateAction> getActions();
 
-   public void setVersion(final Long version);
-   
-   public void setActions(final List<SubscriptionUpdateAction> actions);
-   
-   public static SubscriptionUpdateImpl of(){
-      return new SubscriptionUpdateImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setActions(final List<SubscriptionUpdateAction> actions);
 
-   public static SubscriptionUpdateImpl of(final SubscriptionUpdate template) {
-      SubscriptionUpdateImpl instance = new SubscriptionUpdateImpl();
-      instance.setVersion(template.getVersion());
-      instance.setActions(template.getActions());
-      return instance;
-   }
+    public static SubscriptionUpdateImpl of(){
+        return new SubscriptionUpdateImpl();
+    }
+    
+
+    public static SubscriptionUpdateImpl of(final SubscriptionUpdate template) {
+        SubscriptionUpdateImpl instance = new SubscriptionUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(template.getActions());
+        return instance;
+    }
 
 }

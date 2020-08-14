@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeSetInputTipActionImpl.class)
 public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("attributeName")
-   public String getAttributeName();
-   
-   @Valid
-   @JsonProperty("inputTip")
-   public LocalizedString getInputTip();
+    
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+    
+    @Valid
+    @JsonProperty("inputTip")
+    public LocalizedString getInputTip();
 
-   public void setAttributeName(final String attributeName);
-   
-   public void setInputTip(final LocalizedString inputTip);
-   
-   public static ProductTypeSetInputTipActionImpl of(){
-      return new ProductTypeSetInputTipActionImpl();
-   }
-   
+    public void setAttributeName(final String attributeName);
+    
+    public void setInputTip(final LocalizedString inputTip);
 
-   public static ProductTypeSetInputTipActionImpl of(final ProductTypeSetInputTipAction template) {
-      ProductTypeSetInputTipActionImpl instance = new ProductTypeSetInputTipActionImpl();
-      instance.setAttributeName(template.getAttributeName());
-      instance.setInputTip(template.getInputTip());
-      return instance;
-   }
+    public static ProductTypeSetInputTipActionImpl of(){
+        return new ProductTypeSetInputTipActionImpl();
+    }
+    
+
+    public static ProductTypeSetInputTipActionImpl of(final ProductTypeSetInputTipAction template) {
+        ProductTypeSetInputTipActionImpl instance = new ProductTypeSetInputTipActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setInputTip(template.getInputTip());
+        return instance;
+    }
 
 }

@@ -14,21 +14,21 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartScoreTypeBuilder {
-   
-   
-   
 
-   public CartScoreType build() {
-       return new CartScoreTypeImpl();
-   }
-   
-   public static CartScoreTypeBuilder of() {
-      return new CartScoreTypeBuilder();
-   }
-   
-   public static CartScoreTypeBuilder of(final CartScoreType template) {
-      CartScoreTypeBuilder builder = new CartScoreTypeBuilder();
-      return builder;
-   }
-   
+
+
+
+    public CartScoreType build() {
+        return new CartScoreTypeImpl();
+    }
+
+    public static CartScoreTypeBuilder of() {
+        return new CartScoreTypeBuilder();
+    }
+
+    public static CartScoreTypeBuilder of(final CartScoreType template) {
+        CartScoreTypeBuilder builder = new CartScoreTypeBuilder();
+        return builder;
+    }
+
 }

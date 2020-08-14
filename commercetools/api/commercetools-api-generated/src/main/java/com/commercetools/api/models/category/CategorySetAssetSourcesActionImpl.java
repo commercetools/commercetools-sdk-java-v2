@@ -23,55 +23,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetAssetSourcesActionImpl implements CategorySetAssetSourcesAction {
 
-   private String action;
-   
-   private String assetId;
-   
-   private String assetKey;
-   
-   private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
+    private String action;
+    
+    private String assetId;
+    
+    private String assetKey;
+    
+    private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
-   @JsonCreator
-   CategorySetAssetSourcesActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("sources") final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
-      this.assetId = assetId;
-      this.assetKey = assetKey;
-      this.sources = sources;
-      this.action = "setAssetSources";
-   }
-   public CategorySetAssetSourcesActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAssetId(){
-      return this.assetId;
-   }
-   
-   
-   public String getAssetKey(){
-      return this.assetKey;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.common.AssetSource> getSources(){
-      return this.sources;
-   }
+    @JsonCreator
+    CategorySetAssetSourcesActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("sources") final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
+        this.assetId = assetId;
+        this.assetKey = assetKey;
+        this.sources = sources;
+        this.action = "setAssetSources";
+    }
+    public CategorySetAssetSourcesActionImpl() {
+       
+    }
 
-   public void setAssetId(final String assetId){
-      this.assetId = assetId;
-   }
-   
-   public void setAssetKey(final String assetKey){
-      this.assetKey = assetKey;
-   }
-   
-   public void setSources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources){
-      this.sources = sources;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAssetId(){
+        return this.assetId;
+    }
+    
+    
+    public String getAssetKey(){
+        return this.assetKey;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.common.AssetSource> getSources(){
+        return this.sources;
+    }
+
+    public void setAssetId(final String assetId){
+        this.assetId = assetId;
+    }
+    
+    public void setAssetKey(final String assetKey){
+        this.assetKey = assetKey;
+    }
+    
+    public void setSources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources){
+        this.sources = sources;
+    }
 
 }

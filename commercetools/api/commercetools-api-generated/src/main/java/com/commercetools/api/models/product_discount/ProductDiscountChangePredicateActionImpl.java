@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountChangePredicateActionImpl implements ProductDiscountChangePredicateAction {
 
-   private String action;
-   
-   private String predicate;
+    private String action;
+    
+    private String predicate;
 
-   @JsonCreator
-   ProductDiscountChangePredicateActionImpl(@JsonProperty("predicate") final String predicate) {
-      this.predicate = predicate;
-      this.action = "changePredicate";
-   }
-   public ProductDiscountChangePredicateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>A valid ProductDiscount Predicate.</p>
-   */
-   public String getPredicate(){
-      return this.predicate;
-   }
+    @JsonCreator
+    ProductDiscountChangePredicateActionImpl(@JsonProperty("predicate") final String predicate) {
+        this.predicate = predicate;
+        this.action = "changePredicate";
+    }
+    public ProductDiscountChangePredicateActionImpl() {
+       
+    }
 
-   public void setPredicate(final String predicate){
-      this.predicate = predicate;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>A valid ProductDiscount Predicate.</p>
+    */
+    public String getPredicate(){
+        return this.predicate;
+    }
+
+    public void setPredicate(final String predicate){
+        this.predicate = predicate;
+    }
 
 }

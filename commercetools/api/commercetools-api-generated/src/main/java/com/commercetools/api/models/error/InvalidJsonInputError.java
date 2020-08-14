@@ -22,16 +22,16 @@ import java.io.IOException;
 public interface InvalidJsonInputError extends ErrorObject {
 
 
-   
-   public static InvalidJsonInputErrorImpl of(){
-      return new InvalidJsonInputErrorImpl();
-   }
-   
 
-   public static InvalidJsonInputErrorImpl of(final InvalidJsonInputError template) {
-      InvalidJsonInputErrorImpl instance = new InvalidJsonInputErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static InvalidJsonInputErrorImpl of(){
+        return new InvalidJsonInputErrorImpl();
+    }
+    
+
+    public static InvalidJsonInputErrorImpl of(final InvalidJsonInputError template) {
+        InvalidJsonInputErrorImpl instance = new InvalidJsonInputErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

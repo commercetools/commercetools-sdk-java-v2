@@ -61,10 +61,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryResourceIdentifierImpl.class, name = "category")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "typeId",
-   defaultImpl = ResourceIdentifierImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "typeId",
+    defaultImpl = ResourceIdentifierImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -72,19 +72,19 @@ import java.io.IOException;
 )
 public interface ResourceIdentifier  {
 
-   
-   
-   @JsonProperty("id")
-   public String getId();
-   
-   
-   @JsonProperty("key")
-   public String getKey();
+    
+    
+    @JsonProperty("id")
+    public String getId();
+    
+    
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setId(final String id);
-   
-   public void setKey(final String key);
-   
+    public void setId(final String id);
+    
+    public void setKey(final String key);
+
 
 
 }

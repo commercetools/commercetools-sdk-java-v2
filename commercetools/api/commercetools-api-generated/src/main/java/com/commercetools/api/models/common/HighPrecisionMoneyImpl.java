@@ -23,69 +23,69 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class HighPrecisionMoneyImpl implements HighPrecisionMoney {
 
-   private com.commercetools.api.models.common.MoneyType type;
-   
-   private Integer fractionDigits;
-   
-   private Long centAmount;
-   
-   private String currencyCode;
-   
-   private Long preciseAmount;
+    private com.commercetools.api.models.common.MoneyType type;
+    
+    private Integer fractionDigits;
+    
+    private Long centAmount;
+    
+    private String currencyCode;
+    
+    private Long preciseAmount;
 
-   @JsonCreator
-   HighPrecisionMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("preciseAmount") final Long preciseAmount) {
-      this.fractionDigits = fractionDigits;
-      this.centAmount = centAmount;
-      this.currencyCode = currencyCode;
-      this.preciseAmount = preciseAmount;
-      this.type = MoneyType.findEnumViaJsonName("highPrecision").get();
-   }
-   public HighPrecisionMoneyImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.MoneyType getType(){
-      return this.type;
-   }
-   
-   
-   public Integer getFractionDigits(){
-      return this.fractionDigits;
-   }
-   
-   
-   public Long getCentAmount(){
-      return this.centAmount;
-   }
-   
-   /**
-   *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-   */
-   public String getCurrencyCode(){
-      return this.currencyCode;
-   }
-   
-   
-   public Long getPreciseAmount(){
-      return this.preciseAmount;
-   }
+    @JsonCreator
+    HighPrecisionMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("preciseAmount") final Long preciseAmount) {
+        this.fractionDigits = fractionDigits;
+        this.centAmount = centAmount;
+        this.currencyCode = currencyCode;
+        this.preciseAmount = preciseAmount;
+        this.type = MoneyType.findEnumViaJsonName("highPrecision").get();
+    }
+    public HighPrecisionMoneyImpl() {
+       
+    }
 
-   public void setFractionDigits(final Integer fractionDigits){
-      this.fractionDigits = fractionDigits;
-   }
-   
-   public void setCentAmount(final Long centAmount){
-      this.centAmount = centAmount;
-   }
-   
-   public void setCurrencyCode(final String currencyCode){
-      this.currencyCode = currencyCode;
-   }
-   
-   public void setPreciseAmount(final Long preciseAmount){
-      this.preciseAmount = preciseAmount;
-   }
+    
+    public com.commercetools.api.models.common.MoneyType getType(){
+        return this.type;
+    }
+    
+    
+    public Integer getFractionDigits(){
+        return this.fractionDigits;
+    }
+    
+    
+    public Long getCentAmount(){
+        return this.centAmount;
+    }
+    
+    /**
+    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    */
+    public String getCurrencyCode(){
+        return this.currencyCode;
+    }
+    
+    
+    public Long getPreciseAmount(){
+        return this.preciseAmount;
+    }
+
+    public void setFractionDigits(final Integer fractionDigits){
+        this.fractionDigits = fractionDigits;
+    }
+    
+    public void setCentAmount(final Long centAmount){
+        this.centAmount = centAmount;
+    }
+    
+    public void setCurrencyCode(final String currencyCode){
+        this.currencyCode = currencyCode;
+    }
+    
+    public void setPreciseAmount(final Long preciseAmount){
+        this.preciseAmount = preciseAmount;
+    }
 
 }

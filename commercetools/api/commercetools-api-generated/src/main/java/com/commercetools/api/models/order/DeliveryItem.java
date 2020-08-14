@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = DeliveryItemImpl.class)
 public interface DeliveryItem  {
 
-   
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
-   
-   @NotNull
-   @JsonProperty("quantity")
-   public Double getQuantity();
+    
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+    
+    @NotNull
+    @JsonProperty("quantity")
+    public Double getQuantity();
 
-   public void setId(final String id);
-   
-   public void setQuantity(final Double quantity);
-   
-   public static DeliveryItemImpl of(){
-      return new DeliveryItemImpl();
-   }
-   
+    public void setId(final String id);
+    
+    public void setQuantity(final Double quantity);
 
-   public static DeliveryItemImpl of(final DeliveryItem template) {
-      DeliveryItemImpl instance = new DeliveryItemImpl();
-      instance.setId(template.getId());
-      instance.setQuantity(template.getQuantity());
-      return instance;
-   }
+    public static DeliveryItemImpl of(){
+        return new DeliveryItemImpl();
+    }
+    
+
+    public static DeliveryItemImpl of(final DeliveryItem template) {
+        DeliveryItemImpl instance = new DeliveryItemImpl();
+        instance.setId(template.getId());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
 
 }

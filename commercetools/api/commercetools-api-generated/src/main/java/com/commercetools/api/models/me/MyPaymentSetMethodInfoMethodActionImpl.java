@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentSetMethodInfoMethodActionImpl implements MyPaymentSetMethodInfoMethodAction {
 
-   private String action;
-   
-   private String method;
+    private String action;
+    
+    private String method;
 
-   @JsonCreator
-   MyPaymentSetMethodInfoMethodActionImpl(@JsonProperty("method") final String method) {
-      this.method = method;
-      this.action = "setMethodInfoMethod";
-   }
-   public MyPaymentSetMethodInfoMethodActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getMethod(){
-      return this.method;
-   }
+    @JsonCreator
+    MyPaymentSetMethodInfoMethodActionImpl(@JsonProperty("method") final String method) {
+        this.method = method;
+        this.action = "setMethodInfoMethod";
+    }
+    public MyPaymentSetMethodInfoMethodActionImpl() {
+       
+    }
 
-   public void setMethod(final String method){
-      this.method = method;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getMethod(){
+        return this.method;
+    }
+
+    public void setMethod(final String method){
+        this.method = method;
+    }
 
 }

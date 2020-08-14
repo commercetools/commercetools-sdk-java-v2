@@ -23,29 +23,29 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCustomerSetCustomTypeActionImpl.class)
 public interface MyCustomerSetCustomTypeAction extends MyCustomerUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static MyCustomerSetCustomTypeActionImpl of(){
-      return new MyCustomerSetCustomTypeActionImpl();
-   }
-   
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static MyCustomerSetCustomTypeActionImpl of(final MyCustomerSetCustomTypeAction template) {
-      MyCustomerSetCustomTypeActionImpl instance = new MyCustomerSetCustomTypeActionImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static MyCustomerSetCustomTypeActionImpl of(){
+        return new MyCustomerSetCustomTypeActionImpl();
+    }
+    
+
+    public static MyCustomerSetCustomTypeActionImpl of(final MyCustomerSetCustomTypeAction template) {
+        MyCustomerSetCustomTypeActionImpl instance = new MyCustomerSetCustomTypeActionImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

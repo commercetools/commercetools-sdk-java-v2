@@ -23,55 +23,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMessagePayload {
 
-   private String type;
-   
-   private Long variantId;
-   
-   private com.commercetools.api.models.common.Image image;
-   
-   private Boolean staged;
+    private String type;
+    
+    private Long variantId;
+    
+    private com.commercetools.api.models.common.Image image;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductImageAddedMessagePayloadImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("image") final com.commercetools.api.models.common.Image image, @JsonProperty("staged") final Boolean staged) {
-      this.variantId = variantId;
-      this.image = image;
-      this.staged = staged;
-      this.type = "ProductImageAdded";
-   }
-   public ProductImageAddedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public Long getVariantId(){
-      return this.variantId;
-   }
-   
-   
-   public com.commercetools.api.models.common.Image getImage(){
-      return this.image;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductImageAddedMessagePayloadImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("image") final com.commercetools.api.models.common.Image image, @JsonProperty("staged") final Boolean staged) {
+        this.variantId = variantId;
+        this.image = image;
+        this.staged = staged;
+        this.type = "ProductImageAdded";
+    }
+    public ProductImageAddedMessagePayloadImpl() {
+       
+    }
 
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
-   
-   public void setImage(final com.commercetools.api.models.common.Image image){
-      this.image = image;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public Long getVariantId(){
+        return this.variantId;
+    }
+    
+    
+    public com.commercetools.api.models.common.Image getImage(){
+        return this.image;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setVariantId(final Long variantId){
+        this.variantId = variantId;
+    }
+    
+    public void setImage(final com.commercetools.api.models.common.Image image){
+        this.image = image;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

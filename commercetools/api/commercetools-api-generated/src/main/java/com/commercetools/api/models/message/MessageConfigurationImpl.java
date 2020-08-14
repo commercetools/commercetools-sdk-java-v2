@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MessageConfigurationImpl implements MessageConfiguration {
 
-   private Boolean enabled;
-   
-   private Integer deleteDaysAfterCreation;
+    private Boolean enabled;
+    
+    private Integer deleteDaysAfterCreation;
 
-   @JsonCreator
-   MessageConfigurationImpl(@JsonProperty("enabled") final Boolean enabled, @JsonProperty("deleteDaysAfterCreation") final Integer deleteDaysAfterCreation) {
-      this.enabled = enabled;
-      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
-   }
-   public MessageConfigurationImpl() {
-      
-   }
-   
-   
-   public Boolean getEnabled(){
-      return this.enabled;
-   }
-   
-   
-   public Integer getDeleteDaysAfterCreation(){
-      return this.deleteDaysAfterCreation;
-   }
+    @JsonCreator
+    MessageConfigurationImpl(@JsonProperty("enabled") final Boolean enabled, @JsonProperty("deleteDaysAfterCreation") final Integer deleteDaysAfterCreation) {
+        this.enabled = enabled;
+        this.deleteDaysAfterCreation = deleteDaysAfterCreation;
+    }
+    public MessageConfigurationImpl() {
+       
+    }
 
-   public void setEnabled(final Boolean enabled){
-      this.enabled = enabled;
-   }
-   
-   public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation){
-      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
-   }
+    
+    public Boolean getEnabled(){
+        return this.enabled;
+    }
+    
+    
+    public Integer getDeleteDaysAfterCreation(){
+        return this.deleteDaysAfterCreation;
+    }
+
+    public void setEnabled(final Boolean enabled){
+        this.enabled = enabled;
+    }
+    
+    public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation){
+        this.deleteDaysAfterCreation = deleteDaysAfterCreation;
+    }
 
 }

@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ZoneUpdateImpl.class)
 public interface ZoneUpdate  {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("actions")
-   public List<ZoneUpdateAction> getActions();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("actions")
+    public List<ZoneUpdateAction> getActions();
 
-   public void setVersion(final Long version);
-   
-   public void setActions(final List<ZoneUpdateAction> actions);
-   
-   public static ZoneUpdateImpl of(){
-      return new ZoneUpdateImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setActions(final List<ZoneUpdateAction> actions);
 
-   public static ZoneUpdateImpl of(final ZoneUpdate template) {
-      ZoneUpdateImpl instance = new ZoneUpdateImpl();
-      instance.setVersion(template.getVersion());
-      instance.setActions(template.getActions());
-      return instance;
-   }
+    public static ZoneUpdateImpl of(){
+        return new ZoneUpdateImpl();
+    }
+    
+
+    public static ZoneUpdateImpl of(final ZoneUpdate template) {
+        ZoneUpdateImpl instance = new ZoneUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(template.getActions());
+        return instance;
+    }
 
 }

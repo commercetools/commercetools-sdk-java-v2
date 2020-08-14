@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetSearchKeywordsActionImpl.class)
 public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("searchKeywords")
-   public SearchKeywords getSearchKeywords();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("searchKeywords")
+    public SearchKeywords getSearchKeywords();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setSearchKeywords(final SearchKeywords searchKeywords);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductSetSearchKeywordsActionImpl of(){
-      return new ProductSetSearchKeywordsActionImpl();
-   }
-   
+    public void setSearchKeywords(final SearchKeywords searchKeywords);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductSetSearchKeywordsActionImpl of(final ProductSetSearchKeywordsAction template) {
-      ProductSetSearchKeywordsActionImpl instance = new ProductSetSearchKeywordsActionImpl();
-      instance.setSearchKeywords(template.getSearchKeywords());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductSetSearchKeywordsActionImpl of(){
+        return new ProductSetSearchKeywordsActionImpl();
+    }
+    
+
+    public static ProductSetSearchKeywordsActionImpl of(final ProductSetSearchKeywordsAction template) {
+        ProductSetSearchKeywordsActionImpl instance = new ProductSetSearchKeywordsActionImpl();
+        instance.setSearchKeywords(template.getSearchKeywords());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

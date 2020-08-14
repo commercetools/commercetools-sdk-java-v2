@@ -20,10 +20,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.cart.ClassificationShippingRateInputDraftImpl.class, name = "Classification")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = ShippingRateInputDraftImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = ShippingRateInputDraftImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -32,7 +32,7 @@ import java.io.IOException;
 public interface ShippingRateInputDraft  {
 
 
-   
+
 
 
 }

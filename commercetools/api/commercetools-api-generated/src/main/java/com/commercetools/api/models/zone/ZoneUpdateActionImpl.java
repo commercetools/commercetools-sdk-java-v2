@@ -26,18 +26,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneUpdateActionImpl implements ZoneUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   ZoneUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    ZoneUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

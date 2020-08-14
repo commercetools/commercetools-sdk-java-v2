@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetCustomLineItemTaxRateActionImpl.class)
 public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("customLineItemId")
-   public String getCustomLineItemId();
-   
-   @Valid
-   @JsonProperty("externalTaxRate")
-   public ExternalTaxRateDraft getExternalTaxRate();
+    
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+    
+    @Valid
+    @JsonProperty("externalTaxRate")
+    public ExternalTaxRateDraft getExternalTaxRate();
 
-   public void setCustomLineItemId(final String customLineItemId);
-   
-   public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-   
-   public static CartSetCustomLineItemTaxRateActionImpl of(){
-      return new CartSetCustomLineItemTaxRateActionImpl();
-   }
-   
+    public void setCustomLineItemId(final String customLineItemId);
+    
+    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-   public static CartSetCustomLineItemTaxRateActionImpl of(final CartSetCustomLineItemTaxRateAction template) {
-      CartSetCustomLineItemTaxRateActionImpl instance = new CartSetCustomLineItemTaxRateActionImpl();
-      instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setExternalTaxRate(template.getExternalTaxRate());
-      return instance;
-   }
+    public static CartSetCustomLineItemTaxRateActionImpl of(){
+        return new CartSetCustomLineItemTaxRateActionImpl();
+    }
+    
+
+    public static CartSetCustomLineItemTaxRateActionImpl of(final CartSetCustomLineItemTaxRateAction template) {
+        CartSetCustomLineItemTaxRateActionImpl instance = new CartSetCustomLineItemTaxRateActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setExternalTaxRate(template.getExternalTaxRate());
+        return instance;
+    }
 
 }

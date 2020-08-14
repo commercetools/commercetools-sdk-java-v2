@@ -21,37 +21,37 @@ import java.io.IOException;
 @JsonDeserialize(as = ImageImpl.class)
 public interface Image  {
 
-   
-   @NotNull
-   @JsonProperty("url")
-   public String getUrl();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("dimensions")
-   public ImageDimensions getDimensions();
-   
-   
-   @JsonProperty("label")
-   public String getLabel();
+    
+    @NotNull
+    @JsonProperty("url")
+    public String getUrl();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("dimensions")
+    public ImageDimensions getDimensions();
+    
+    
+    @JsonProperty("label")
+    public String getLabel();
 
-   public void setUrl(final String url);
-   
-   public void setDimensions(final ImageDimensions dimensions);
-   
-   public void setLabel(final String label);
-   
-   public static ImageImpl of(){
-      return new ImageImpl();
-   }
-   
+    public void setUrl(final String url);
+    
+    public void setDimensions(final ImageDimensions dimensions);
+    
+    public void setLabel(final String label);
 
-   public static ImageImpl of(final Image template) {
-      ImageImpl instance = new ImageImpl();
-      instance.setUrl(template.getUrl());
-      instance.setDimensions(template.getDimensions());
-      instance.setLabel(template.getLabel());
-      return instance;
-   }
+    public static ImageImpl of(){
+        return new ImageImpl();
+    }
+    
+
+    public static ImageImpl of(final Image template) {
+        ImageImpl instance = new ImageImpl();
+        instance.setUrl(template.getUrl());
+        instance.setDimensions(template.getDimensions());
+        instance.setLabel(template.getLabel());
+        return instance;
+    }
 
 }

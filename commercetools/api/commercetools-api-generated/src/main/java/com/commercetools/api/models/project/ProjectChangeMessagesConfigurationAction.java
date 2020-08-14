@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectChangeMessagesConfigurationActionImpl.class)
 public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("messagesConfiguration")
-   public MessageConfigurationDraft getMessagesConfiguration();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("messagesConfiguration")
+    public MessageConfigurationDraft getMessagesConfiguration();
 
-   public void setMessagesConfiguration(final MessageConfigurationDraft messagesConfiguration);
-   
-   public static ProjectChangeMessagesConfigurationActionImpl of(){
-      return new ProjectChangeMessagesConfigurationActionImpl();
-   }
-   
+    public void setMessagesConfiguration(final MessageConfigurationDraft messagesConfiguration);
 
-   public static ProjectChangeMessagesConfigurationActionImpl of(final ProjectChangeMessagesConfigurationAction template) {
-      ProjectChangeMessagesConfigurationActionImpl instance = new ProjectChangeMessagesConfigurationActionImpl();
-      instance.setMessagesConfiguration(template.getMessagesConfiguration());
-      return instance;
-   }
+    public static ProjectChangeMessagesConfigurationActionImpl of(){
+        return new ProjectChangeMessagesConfigurationActionImpl();
+    }
+    
+
+    public static ProjectChangeMessagesConfigurationActionImpl of(final ProjectChangeMessagesConfigurationAction template) {
+        ProjectChangeMessagesConfigurationActionImpl instance = new ProjectChangeMessagesConfigurationActionImpl();
+        instance.setMessagesConfiguration(template.getMessagesConfiguration());
+        return instance;
+    }
 
 }

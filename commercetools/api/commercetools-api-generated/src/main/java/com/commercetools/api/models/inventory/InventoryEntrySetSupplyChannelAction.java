@@ -22,25 +22,25 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntrySetSupplyChannelActionImpl.class)
 public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpdateAction {
 
-   /**
-   *  <p>If absent, the supply channel is removed.
-   *  This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
-   */
-   @Valid
-   @JsonProperty("supplyChannel")
-   public ChannelResourceIdentifier getSupplyChannel();
+    /**
+    *  <p>If absent, the supply channel is removed.
+    *  This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+    */
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
 
-   public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-   
-   public static InventoryEntrySetSupplyChannelActionImpl of(){
-      return new InventoryEntrySetSupplyChannelActionImpl();
-   }
-   
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
-   public static InventoryEntrySetSupplyChannelActionImpl of(final InventoryEntrySetSupplyChannelAction template) {
-      InventoryEntrySetSupplyChannelActionImpl instance = new InventoryEntrySetSupplyChannelActionImpl();
-      instance.setSupplyChannel(template.getSupplyChannel());
-      return instance;
-   }
+    public static InventoryEntrySetSupplyChannelActionImpl of(){
+        return new InventoryEntrySetSupplyChannelActionImpl();
+    }
+    
+
+    public static InventoryEntrySetSupplyChannelActionImpl of(final InventoryEntrySetSupplyChannelAction template) {
+        InventoryEntrySetSupplyChannelActionImpl instance = new InventoryEntrySetSupplyChannelActionImpl();
+        instance.setSupplyChannel(template.getSupplyChannel());
+        return instance;
+    }
 
 }

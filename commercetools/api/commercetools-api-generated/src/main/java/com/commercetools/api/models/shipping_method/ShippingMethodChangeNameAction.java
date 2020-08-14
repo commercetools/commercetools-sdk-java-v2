@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodChangeNameActionImpl.class)
 public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
 
-   public void setName(final String name);
-   
-   public static ShippingMethodChangeNameActionImpl of(){
-      return new ShippingMethodChangeNameActionImpl();
-   }
-   
+    public void setName(final String name);
 
-   public static ShippingMethodChangeNameActionImpl of(final ShippingMethodChangeNameAction template) {
-      ShippingMethodChangeNameActionImpl instance = new ShippingMethodChangeNameActionImpl();
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static ShippingMethodChangeNameActionImpl of(){
+        return new ShippingMethodChangeNameActionImpl();
+    }
+    
+
+    public static ShippingMethodChangeNameActionImpl of(final ShippingMethodChangeNameAction template) {
+        ShippingMethodChangeNameActionImpl instance = new ShippingMethodChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

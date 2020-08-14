@@ -23,37 +23,37 @@ import java.io.IOException;
 @JsonDeserialize(as = CartAddShoppingListActionImpl.class)
 public interface CartAddShoppingListAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("shoppingList")
-   public ShoppingListResourceIdentifier getShoppingList();
-   
-   @Valid
-   @JsonProperty("supplyChannel")
-   public ChannelResourceIdentifier getSupplyChannel();
-   
-   @Valid
-   @JsonProperty("distributionChannel")
-   public ChannelResourceIdentifier getDistributionChannel();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("shoppingList")
+    public ShoppingListResourceIdentifier getShoppingList();
+    
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
+    
+    @Valid
+    @JsonProperty("distributionChannel")
+    public ChannelResourceIdentifier getDistributionChannel();
 
-   public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
-   
-   public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-   
-   public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
-   
-   public static CartAddShoppingListActionImpl of(){
-      return new CartAddShoppingListActionImpl();
-   }
-   
+    public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
+    
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
+    
+    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
-   public static CartAddShoppingListActionImpl of(final CartAddShoppingListAction template) {
-      CartAddShoppingListActionImpl instance = new CartAddShoppingListActionImpl();
-      instance.setShoppingList(template.getShoppingList());
-      instance.setSupplyChannel(template.getSupplyChannel());
-      instance.setDistributionChannel(template.getDistributionChannel());
-      return instance;
-   }
+    public static CartAddShoppingListActionImpl of(){
+        return new CartAddShoppingListActionImpl();
+    }
+    
+
+    public static CartAddShoppingListActionImpl of(final CartAddShoppingListAction template) {
+        CartAddShoppingListActionImpl instance = new CartAddShoppingListActionImpl();
+        instance.setShoppingList(template.getShoppingList());
+        instance.setSupplyChannel(template.getSupplyChannel());
+        instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
 
 }

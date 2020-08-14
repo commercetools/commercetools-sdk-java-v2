@@ -23,34 +23,34 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditSetCustomTypeActionImpl.class)
 public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
 
-   /**
-   *  <p>If set, the custom type is set to this new value.
-   *  If absent, the custom type and any existing custom fields are removed.</p>
-   */
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   /**
-   *  <p>If set, the custom fields are set to this new value.</p>
-   */
-   @Valid
-   @JsonProperty("fields")
-   public JsonNode getFields();
+    /**
+    *  <p>If set, the custom type is set to this new value.
+    *  If absent, the custom type and any existing custom fields are removed.</p>
+    */
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    /**
+    *  <p>If set, the custom fields are set to this new value.</p>
+    */
+    @Valid
+    @JsonProperty("fields")
+    public JsonNode getFields();
 
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final JsonNode fields);
-   
-   public static OrderEditSetCustomTypeActionImpl of(){
-      return new OrderEditSetCustomTypeActionImpl();
-   }
-   
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final JsonNode fields);
 
-   public static OrderEditSetCustomTypeActionImpl of(final OrderEditSetCustomTypeAction template) {
-      OrderEditSetCustomTypeActionImpl instance = new OrderEditSetCustomTypeActionImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static OrderEditSetCustomTypeActionImpl of(){
+        return new OrderEditSetCustomTypeActionImpl();
+    }
+    
+
+    public static OrderEditSetCustomTypeActionImpl of(final OrderEditSetCustomTypeAction template) {
+        OrderEditSetCustomTypeActionImpl instance = new OrderEditSetCustomTypeActionImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

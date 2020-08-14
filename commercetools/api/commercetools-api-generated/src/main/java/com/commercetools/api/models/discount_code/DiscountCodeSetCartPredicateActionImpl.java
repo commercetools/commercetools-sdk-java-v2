@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeSetCartPredicateActionImpl implements DiscountCodeSetCartPredicateAction {
 
-   private String action;
-   
-   private String cartPredicate;
+    private String action;
+    
+    private String cartPredicate;
 
-   @JsonCreator
-   DiscountCodeSetCartPredicateActionImpl(@JsonProperty("cartPredicate") final String cartPredicate) {
-      this.cartPredicate = cartPredicate;
-      this.action = "setCartPredicate";
-   }
-   public DiscountCodeSetCartPredicateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If the <code>cartPredicate</code> parameter is not included, the field will be emptied.</p>
-   */
-   public String getCartPredicate(){
-      return this.cartPredicate;
-   }
+    @JsonCreator
+    DiscountCodeSetCartPredicateActionImpl(@JsonProperty("cartPredicate") final String cartPredicate) {
+        this.cartPredicate = cartPredicate;
+        this.action = "setCartPredicate";
+    }
+    public DiscountCodeSetCartPredicateActionImpl() {
+       
+    }
 
-   public void setCartPredicate(final String cartPredicate){
-      this.cartPredicate = cartPredicate;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If the <code>cartPredicate</code> parameter is not included, the field will be emptied.</p>
+    */
+    public String getCartPredicate(){
+        return this.cartPredicate;
+    }
+
+    public void setCartPredicate(final String cartPredicate){
+        this.cartPredicate = cartPredicate;
+    }
 
 }

@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PayloadNotIncludedImpl implements PayloadNotIncluded {
 
-   private String reason;
-   
-   private String payloadType;
+    private String reason;
+    
+    private String payloadType;
 
-   @JsonCreator
-   PayloadNotIncludedImpl(@JsonProperty("reason") final String reason, @JsonProperty("payloadType") final String payloadType) {
-      this.reason = reason;
-      this.payloadType = payloadType;
-   }
-   public PayloadNotIncludedImpl() {
-      
-   }
-   
-   
-   public String getReason(){
-      return this.reason;
-   }
-   
-   
-   public String getPayloadType(){
-      return this.payloadType;
-   }
+    @JsonCreator
+    PayloadNotIncludedImpl(@JsonProperty("reason") final String reason, @JsonProperty("payloadType") final String payloadType) {
+        this.reason = reason;
+        this.payloadType = payloadType;
+    }
+    public PayloadNotIncludedImpl() {
+       
+    }
 
-   public void setReason(final String reason){
-      this.reason = reason;
-   }
-   
-   public void setPayloadType(final String payloadType){
-      this.payloadType = payloadType;
-   }
+    
+    public String getReason(){
+        return this.reason;
+    }
+    
+    
+    public String getPayloadType(){
+        return this.payloadType;
+    }
+
+    public void setReason(final String reason){
+        this.reason = reason;
+    }
+    
+    public void setPayloadType(final String payloadType){
+        this.payloadType = payloadType;
+    }
 
 }

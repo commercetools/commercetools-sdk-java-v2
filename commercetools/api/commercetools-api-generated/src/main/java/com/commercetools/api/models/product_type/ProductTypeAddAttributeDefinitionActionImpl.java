@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeAddAttributeDefinitionActionImpl implements ProductTypeAddAttributeDefinitionAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute;
+    private String action;
+    
+    private com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute;
 
-   @JsonCreator
-   ProductTypeAddAttributeDefinitionActionImpl(@JsonProperty("attribute") final com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute) {
-      this.attribute = attribute;
-      this.action = "addAttributeDefinition";
-   }
-   public ProductTypeAddAttributeDefinitionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.product_type.AttributeDefinitionDraft getAttribute(){
-      return this.attribute;
-   }
+    @JsonCreator
+    ProductTypeAddAttributeDefinitionActionImpl(@JsonProperty("attribute") final com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute) {
+        this.attribute = attribute;
+        this.action = "addAttributeDefinition";
+    }
+    public ProductTypeAddAttributeDefinitionActionImpl() {
+       
+    }
 
-   public void setAttribute(final com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute){
-      this.attribute = attribute;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.product_type.AttributeDefinitionDraft getAttribute(){
+        return this.attribute;
+    }
+
+    public void setAttribute(final com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute){
+        this.attribute = attribute;
+    }
 
 }

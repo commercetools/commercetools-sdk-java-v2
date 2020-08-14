@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ClassificationShippingRateInputDraftImpl implements ClassificationShippingRateInputDraft {
 
-   private String type;
-   
-   private String key;
+    private String type;
+    
+    private String key;
 
-   @JsonCreator
-   ClassificationShippingRateInputDraftImpl(@JsonProperty("key") final String key) {
-      this.key = key;
-      this.type = "Classification";
-   }
-   public ClassificationShippingRateInputDraftImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    ClassificationShippingRateInputDraftImpl(@JsonProperty("key") final String key) {
+        this.key = key;
+        this.type = "Classification";
+    }
+    public ClassificationShippingRateInputDraftImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

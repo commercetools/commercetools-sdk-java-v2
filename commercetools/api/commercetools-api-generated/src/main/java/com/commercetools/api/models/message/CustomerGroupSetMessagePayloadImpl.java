@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSetMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
+    private String type;
+    
+    private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
-   @JsonCreator
-   CustomerGroupSetMessagePayloadImpl(@JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
-      this.customerGroup = customerGroup;
-      this.type = "CustomerGroupSet";
-   }
-   public CustomerGroupSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
-      return this.customerGroup;
-   }
+    @JsonCreator
+    CustomerGroupSetMessagePayloadImpl(@JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+        this.customerGroup = customerGroup;
+        this.type = "CustomerGroupSet";
+    }
+    public CustomerGroupSetMessagePayloadImpl() {
+       
+    }
 
-   public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup){
-      this.customerGroup = customerGroup;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
+        return this.customerGroup;
+    }
+
+    public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup){
+        this.customerGroup = customerGroup;
+    }
 
 }

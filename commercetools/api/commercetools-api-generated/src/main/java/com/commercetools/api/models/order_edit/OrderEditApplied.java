@@ -23,38 +23,38 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditAppliedImpl.class)
 public interface OrderEditApplied extends OrderEditResult {
 
-   
-   @NotNull
-   @JsonProperty("appliedAt")
-   public ZonedDateTime getAppliedAt();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("excerptBeforeEdit")
-   public OrderExcerpt getExcerptBeforeEdit();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("excerptAfterEdit")
-   public OrderExcerpt getExcerptAfterEdit();
+    
+    @NotNull
+    @JsonProperty("appliedAt")
+    public ZonedDateTime getAppliedAt();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("excerptBeforeEdit")
+    public OrderExcerpt getExcerptBeforeEdit();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("excerptAfterEdit")
+    public OrderExcerpt getExcerptAfterEdit();
 
-   public void setAppliedAt(final ZonedDateTime appliedAt);
-   
-   public void setExcerptBeforeEdit(final OrderExcerpt excerptBeforeEdit);
-   
-   public void setExcerptAfterEdit(final OrderExcerpt excerptAfterEdit);
-   
-   public static OrderEditAppliedImpl of(){
-      return new OrderEditAppliedImpl();
-   }
-   
+    public void setAppliedAt(final ZonedDateTime appliedAt);
+    
+    public void setExcerptBeforeEdit(final OrderExcerpt excerptBeforeEdit);
+    
+    public void setExcerptAfterEdit(final OrderExcerpt excerptAfterEdit);
 
-   public static OrderEditAppliedImpl of(final OrderEditApplied template) {
-      OrderEditAppliedImpl instance = new OrderEditAppliedImpl();
-      instance.setAppliedAt(template.getAppliedAt());
-      instance.setExcerptBeforeEdit(template.getExcerptBeforeEdit());
-      instance.setExcerptAfterEdit(template.getExcerptAfterEdit());
-      return instance;
-   }
+    public static OrderEditAppliedImpl of(){
+        return new OrderEditAppliedImpl();
+    }
+    
+
+    public static OrderEditAppliedImpl of(final OrderEditApplied template) {
+        OrderEditAppliedImpl instance = new OrderEditAppliedImpl();
+        instance.setAppliedAt(template.getAppliedAt());
+        instance.setExcerptBeforeEdit(template.getExcerptBeforeEdit());
+        instance.setExcerptAfterEdit(template.getExcerptAfterEdit());
+        return instance;
+    }
 
 }

@@ -22,83 +22,83 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerTokenImpl implements CustomerToken {
 
-   private String id;
-   
-   private java.time.ZonedDateTime createdAt;
-   
-   private java.time.ZonedDateTime lastModifiedAt;
-   
-   private String customerId;
-   
-   private java.time.ZonedDateTime expiresAt;
-   
-   private String value;
+    private String id;
+    
+    private java.time.ZonedDateTime createdAt;
+    
+    private java.time.ZonedDateTime lastModifiedAt;
+    
+    private String customerId;
+    
+    private java.time.ZonedDateTime expiresAt;
+    
+    private String value;
 
-   @JsonCreator
-   CustomerTokenImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("customerId") final String customerId, @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt, @JsonProperty("value") final String value) {
-      this.id = id;
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
-      this.customerId = customerId;
-      this.expiresAt = expiresAt;
-      this.value = value;
-   }
-   public CustomerTokenImpl() {
-      
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
-   
-   
-   public String getCustomerId(){
-      return this.customerId;
-   }
-   
-   
-   public java.time.ZonedDateTime getExpiresAt(){
-      return this.expiresAt;
-   }
-   
-   
-   public String getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    CustomerTokenImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("customerId") final String customerId, @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt, @JsonProperty("value") final String value) {
+        this.id = id;
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.customerId = customerId;
+        this.expiresAt = expiresAt;
+        this.value = value;
+    }
+    public CustomerTokenImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-   
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
-   
-   public void setCustomerId(final String customerId){
-      this.customerId = customerId;
-   }
-   
-   public void setExpiresAt(final java.time.ZonedDateTime expiresAt){
-      this.expiresAt = expiresAt;
-   }
-   
-   public void setValue(final String value){
-      this.value = value;
-   }
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
+        return this.createdAt;
+    }
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
+        return this.lastModifiedAt;
+    }
+    
+    
+    public String getCustomerId(){
+        return this.customerId;
+    }
+    
+    
+    public java.time.ZonedDateTime getExpiresAt(){
+        return this.expiresAt;
+    }
+    
+    
+    public String getValue(){
+        return this.value;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+        this.createdAt = createdAt;
+    }
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+        this.lastModifiedAt = lastModifiedAt;
+    }
+    
+    public void setCustomerId(final String customerId){
+        this.customerId = customerId;
+    }
+    
+    public void setExpiresAt(final java.time.ZonedDateTime expiresAt){
+        this.expiresAt = expiresAt;
+    }
+    
+    public void setValue(final String value){
+        this.value = value;
+    }
 
 }

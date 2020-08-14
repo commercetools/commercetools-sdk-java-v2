@@ -21,23 +21,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantChannelAvailabilityMapImpl.class)
 public interface ProductVariantChannelAvailabilityMap  {
 
-   
-   @NotNull
-   @Valid
-   @JsonAnyGetter
-   public Map<String, ProductVariantChannelAvailability> values();
+    
+    @NotNull
+    @Valid
+    @JsonAnyGetter
+    public Map<String, ProductVariantChannelAvailability> values();
 
-   @JsonAnySetter
-   public void setValue(String key, ProductVariantChannelAvailability value);
-   
-   public static ProductVariantChannelAvailabilityMapImpl of(){
-      return new ProductVariantChannelAvailabilityMapImpl();
-   }
-   
+    @JsonAnySetter
+    public void setValue(String key, ProductVariantChannelAvailability value);
 
-   public static ProductVariantChannelAvailabilityMapImpl of(final ProductVariantChannelAvailabilityMap template) {
-      ProductVariantChannelAvailabilityMapImpl instance = new ProductVariantChannelAvailabilityMapImpl();
-      return instance;
-   }
+    public static ProductVariantChannelAvailabilityMapImpl of(){
+        return new ProductVariantChannelAvailabilityMapImpl();
+    }
+    
+
+    public static ProductVariantChannelAvailabilityMapImpl of(final ProductVariantChannelAvailabilityMap template) {
+        ProductVariantChannelAvailabilityMapImpl instance = new ProductVariantChannelAvailabilityMapImpl();
+        return instance;
+    }
 
 }

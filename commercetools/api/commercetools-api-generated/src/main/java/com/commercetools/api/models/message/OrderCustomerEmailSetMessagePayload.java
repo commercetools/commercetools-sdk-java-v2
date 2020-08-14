@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderCustomerEmailSetMessagePayloadImpl.class)
 public interface OrderCustomerEmailSetMessagePayload extends MessagePayload {
 
-   
-   
-   @JsonProperty("email")
-   public String getEmail();
-   
-   
-   @JsonProperty("oldEmail")
-   public String getOldEmail();
+    
+    
+    @JsonProperty("email")
+    public String getEmail();
+    
+    
+    @JsonProperty("oldEmail")
+    public String getOldEmail();
 
-   public void setEmail(final String email);
-   
-   public void setOldEmail(final String oldEmail);
-   
-   public static OrderCustomerEmailSetMessagePayloadImpl of(){
-      return new OrderCustomerEmailSetMessagePayloadImpl();
-   }
-   
+    public void setEmail(final String email);
+    
+    public void setOldEmail(final String oldEmail);
 
-   public static OrderCustomerEmailSetMessagePayloadImpl of(final OrderCustomerEmailSetMessagePayload template) {
-      OrderCustomerEmailSetMessagePayloadImpl instance = new OrderCustomerEmailSetMessagePayloadImpl();
-      instance.setEmail(template.getEmail());
-      instance.setOldEmail(template.getOldEmail());
-      return instance;
-   }
+    public static OrderCustomerEmailSetMessagePayloadImpl of(){
+        return new OrderCustomerEmailSetMessagePayloadImpl();
+    }
+    
+
+    public static OrderCustomerEmailSetMessagePayloadImpl of(final OrderCustomerEmailSetMessagePayload template) {
+        OrderCustomerEmailSetMessagePayloadImpl instance = new OrderCustomerEmailSetMessagePayloadImpl();
+        instance.setEmail(template.getEmail());
+        instance.setOldEmail(template.getOldEmail());
+        return instance;
+    }
 
 }

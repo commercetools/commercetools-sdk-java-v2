@@ -24,45 +24,45 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderLineItemDiscountSetMessagePayloadImpl.class)
 public interface OrderLineItemDiscountSetMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("discountedPricePerQuantity")
-   public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("totalPrice")
-   public Money getTotalPrice();
-   
-   @Valid
-   @JsonProperty("taxedPrice")
-   public TaxedItemPrice getTaxedPrice();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("discountedPricePerQuantity")
+    public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("totalPrice")
+    public Money getTotalPrice();
+    
+    @Valid
+    @JsonProperty("taxedPrice")
+    public TaxedItemPrice getTaxedPrice();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
-   
-   public void setTotalPrice(final Money totalPrice);
-   
-   public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-   
-   public static OrderLineItemDiscountSetMessagePayloadImpl of(){
-      return new OrderLineItemDiscountSetMessagePayloadImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
+    
+    public void setTotalPrice(final Money totalPrice);
+    
+    public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
-   public static OrderLineItemDiscountSetMessagePayloadImpl of(final OrderLineItemDiscountSetMessagePayload template) {
-      OrderLineItemDiscountSetMessagePayloadImpl instance = new OrderLineItemDiscountSetMessagePayloadImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
-      instance.setTotalPrice(template.getTotalPrice());
-      instance.setTaxedPrice(template.getTaxedPrice());
-      return instance;
-   }
+    public static OrderLineItemDiscountSetMessagePayloadImpl of(){
+        return new OrderLineItemDiscountSetMessagePayloadImpl();
+    }
+    
+
+    public static OrderLineItemDiscountSetMessagePayloadImpl of(final OrderLineItemDiscountSetMessagePayload template) {
+        OrderLineItemDiscountSetMessagePayloadImpl instance = new OrderLineItemDiscountSetMessagePayloadImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
+        instance.setTotalPrice(template.getTotalPrice());
+        instance.setTaxedPrice(template.getTaxedPrice());
+        return instance;
+    }
 
 }

@@ -23,29 +23,29 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartSetShippingMethodActionImpl.class)
 public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("shippingMethod")
-   public ShippingMethodResourceIdentifier getShippingMethod();
-   
-   @Valid
-   @JsonProperty("externalTaxRate")
-   public ExternalTaxRateDraft getExternalTaxRate();
+    
+    @Valid
+    @JsonProperty("shippingMethod")
+    public ShippingMethodResourceIdentifier getShippingMethod();
+    
+    @Valid
+    @JsonProperty("externalTaxRate")
+    public ExternalTaxRateDraft getExternalTaxRate();
 
-   public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
-   
-   public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-   
-   public static MyCartSetShippingMethodActionImpl of(){
-      return new MyCartSetShippingMethodActionImpl();
-   }
-   
+    public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
+    
+    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-   public static MyCartSetShippingMethodActionImpl of(final MyCartSetShippingMethodAction template) {
-      MyCartSetShippingMethodActionImpl instance = new MyCartSetShippingMethodActionImpl();
-      instance.setShippingMethod(template.getShippingMethod());
-      instance.setExternalTaxRate(template.getExternalTaxRate());
-      return instance;
-   }
+    public static MyCartSetShippingMethodActionImpl of(){
+        return new MyCartSetShippingMethodActionImpl();
+    }
+    
+
+    public static MyCartSetShippingMethodActionImpl of(final MyCartSetShippingMethodAction template) {
+        MyCartSetShippingMethodActionImpl instance = new MyCartSetShippingMethodActionImpl();
+        instance.setShippingMethod(template.getShippingMethod());
+        instance.setExternalTaxRate(template.getExternalTaxRate());
+        return instance;
+    }
 
 }

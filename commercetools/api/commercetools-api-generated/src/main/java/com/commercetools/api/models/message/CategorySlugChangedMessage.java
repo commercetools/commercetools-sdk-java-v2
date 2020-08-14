@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySlugChangedMessageImpl.class)
 public interface CategorySlugChangedMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("slug")
-   public LocalizedString getSlug();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("slug")
+    public LocalizedString getSlug();
 
-   public void setSlug(final LocalizedString slug);
-   
-   public static CategorySlugChangedMessageImpl of(){
-      return new CategorySlugChangedMessageImpl();
-   }
-   
+    public void setSlug(final LocalizedString slug);
 
-   public static CategorySlugChangedMessageImpl of(final CategorySlugChangedMessage template) {
-      CategorySlugChangedMessageImpl instance = new CategorySlugChangedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setSlug(template.getSlug());
-      return instance;
-   }
+    public static CategorySlugChangedMessageImpl of(){
+        return new CategorySlugChangedMessageImpl();
+    }
+    
+
+    public static CategorySlugChangedMessageImpl of(final CategorySlugChangedMessage template) {
+        CategorySlugChangedMessageImpl instance = new CategorySlugChangedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setSlug(template.getSlug());
+        return instance;
+    }
 
 }

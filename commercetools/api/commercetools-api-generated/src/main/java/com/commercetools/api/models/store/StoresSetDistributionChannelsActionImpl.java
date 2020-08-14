@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoresSetDistributionChannelsActionImpl implements StoresSetDistributionChannelsAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
 
-   @JsonCreator
-   StoresSetDistributionChannelsActionImpl(@JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
-      this.distributionChannels = distributionChannels;
-      this.action = "setDistributionChannels";
-   }
-   public StoresSetDistributionChannelsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels(){
-      return this.distributionChannels;
-   }
+    @JsonCreator
+    StoresSetDistributionChannelsActionImpl(@JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
+        this.distributionChannels = distributionChannels;
+        this.action = "setDistributionChannels";
+    }
+    public StoresSetDistributionChannelsActionImpl() {
+       
+    }
 
-   public void setDistributionChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels){
-      this.distributionChannels = distributionChannels;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels(){
+        return this.distributionChannels;
+    }
+
+    public void setDistributionChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels){
+        this.distributionChannels = distributionChannels;
+    }
 
 }

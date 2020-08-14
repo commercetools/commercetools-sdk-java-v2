@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetCustomFieldActionImpl.class)
 public interface StagedOrderSetCustomFieldAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
 
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public static StagedOrderSetCustomFieldActionImpl of(){
-      return new StagedOrderSetCustomFieldActionImpl();
-   }
-   
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
 
-   public static StagedOrderSetCustomFieldActionImpl of(final StagedOrderSetCustomFieldAction template) {
-      StagedOrderSetCustomFieldActionImpl instance = new StagedOrderSetCustomFieldActionImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static StagedOrderSetCustomFieldActionImpl of(){
+        return new StagedOrderSetCustomFieldActionImpl();
+    }
+    
+
+    public static StagedOrderSetCustomFieldActionImpl of(final StagedOrderSetCustomFieldAction template) {
+        StagedOrderSetCustomFieldActionImpl instance = new StagedOrderSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

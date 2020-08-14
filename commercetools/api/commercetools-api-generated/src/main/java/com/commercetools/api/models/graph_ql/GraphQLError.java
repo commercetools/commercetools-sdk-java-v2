@@ -22,37 +22,37 @@ import java.io.IOException;
 @JsonDeserialize(as = GraphQLErrorImpl.class)
 public interface GraphQLError  {
 
-   
-   @NotNull
-   @JsonProperty("message")
-   public String getMessage();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("locations")
-   public List<GraphQLErrorLocation> getLocations();
-   
-   @NotNull
-   @JsonProperty("path")
-   public List<JsonNode> getPath();
+    
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("locations")
+    public List<GraphQLErrorLocation> getLocations();
+    
+    @NotNull
+    @JsonProperty("path")
+    public List<JsonNode> getPath();
 
-   public void setMessage(final String message);
-   
-   public void setLocations(final List<GraphQLErrorLocation> locations);
-   
-   public void setPath(final List<JsonNode> path);
-   
-   public static GraphQLErrorImpl of(){
-      return new GraphQLErrorImpl();
-   }
-   
+    public void setMessage(final String message);
+    
+    public void setLocations(final List<GraphQLErrorLocation> locations);
+    
+    public void setPath(final List<JsonNode> path);
 
-   public static GraphQLErrorImpl of(final GraphQLError template) {
-      GraphQLErrorImpl instance = new GraphQLErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setLocations(template.getLocations());
-      instance.setPath(template.getPath());
-      return instance;
-   }
+    public static GraphQLErrorImpl of(){
+        return new GraphQLErrorImpl();
+    }
+    
+
+    public static GraphQLErrorImpl of(final GraphQLError template) {
+        GraphQLErrorImpl instance = new GraphQLErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setLocations(template.getLocations());
+        instance.setPath(template.getPath());
+        return instance;
+    }
 
 }

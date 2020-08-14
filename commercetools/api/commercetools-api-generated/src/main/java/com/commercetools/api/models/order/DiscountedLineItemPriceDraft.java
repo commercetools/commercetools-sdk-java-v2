@@ -22,31 +22,31 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountedLineItemPriceDraftImpl.class)
 public interface DiscountedLineItemPriceDraft  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public Money getValue();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("includedDiscounts")
-   public List<DiscountedLineItemPortion> getIncludedDiscounts();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public Money getValue();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("includedDiscounts")
+    public List<DiscountedLineItemPortion> getIncludedDiscounts();
 
-   public void setValue(final Money value);
-   
-   public void setIncludedDiscounts(final List<DiscountedLineItemPortion> includedDiscounts);
-   
-   public static DiscountedLineItemPriceDraftImpl of(){
-      return new DiscountedLineItemPriceDraftImpl();
-   }
-   
+    public void setValue(final Money value);
+    
+    public void setIncludedDiscounts(final List<DiscountedLineItemPortion> includedDiscounts);
 
-   public static DiscountedLineItemPriceDraftImpl of(final DiscountedLineItemPriceDraft template) {
-      DiscountedLineItemPriceDraftImpl instance = new DiscountedLineItemPriceDraftImpl();
-      instance.setValue(template.getValue());
-      instance.setIncludedDiscounts(template.getIncludedDiscounts());
-      return instance;
-   }
+    public static DiscountedLineItemPriceDraftImpl of(){
+        return new DiscountedLineItemPriceDraftImpl();
+    }
+    
+
+    public static DiscountedLineItemPriceDraftImpl of(final DiscountedLineItemPriceDraft template) {
+        DiscountedLineItemPriceDraftImpl instance = new DiscountedLineItemPriceDraftImpl();
+        instance.setValue(template.getValue());
+        instance.setIncludedDiscounts(template.getIncludedDiscounts());
+        return instance;
+    }
 
 }

@@ -29,18 +29,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntryUpdateActionImpl implements InventoryEntryUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   InventoryEntryUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    InventoryEntryUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

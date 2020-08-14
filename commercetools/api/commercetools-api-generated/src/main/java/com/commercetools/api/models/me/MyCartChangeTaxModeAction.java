@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartChangeTaxModeActionImpl.class)
 public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("taxMode")
-   public TaxMode getTaxMode();
+    
+    @NotNull
+    @JsonProperty("taxMode")
+    public TaxMode getTaxMode();
 
-   public void setTaxMode(final TaxMode taxMode);
-   
-   public static MyCartChangeTaxModeActionImpl of(){
-      return new MyCartChangeTaxModeActionImpl();
-   }
-   
+    public void setTaxMode(final TaxMode taxMode);
 
-   public static MyCartChangeTaxModeActionImpl of(final MyCartChangeTaxModeAction template) {
-      MyCartChangeTaxModeActionImpl instance = new MyCartChangeTaxModeActionImpl();
-      instance.setTaxMode(template.getTaxMode());
-      return instance;
-   }
+    public static MyCartChangeTaxModeActionImpl of(){
+        return new MyCartChangeTaxModeActionImpl();
+    }
+    
+
+    public static MyCartChangeTaxModeActionImpl of(final MyCartChangeTaxModeAction template) {
+        MyCartChangeTaxModeActionImpl instance = new MyCartChangeTaxModeActionImpl();
+        instance.setTaxMode(template.getTaxMode());
+        return instance;
+    }
 
 }

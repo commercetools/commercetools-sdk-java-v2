@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class GraphQLRequestImpl implements GraphQLRequest {
 
-   private String query;
-   
-   private String operationName;
-   
-   private com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables;
+    private String query;
+    
+    private String operationName;
+    
+    private com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables;
 
-   @JsonCreator
-   GraphQLRequestImpl(@JsonProperty("query") final String query, @JsonProperty("operationName") final String operationName, @JsonProperty("variables") final com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables) {
-      this.query = query;
-      this.operationName = operationName;
-      this.variables = variables;
-   }
-   public GraphQLRequestImpl() {
-      
-   }
-   
-   
-   public String getQuery(){
-      return this.query;
-   }
-   
-   
-   public String getOperationName(){
-      return this.operationName;
-   }
-   
-   
-   public com.commercetools.api.models.graph_ql.GraphQLVariablesMap getVariables(){
-      return this.variables;
-   }
+    @JsonCreator
+    GraphQLRequestImpl(@JsonProperty("query") final String query, @JsonProperty("operationName") final String operationName, @JsonProperty("variables") final com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables) {
+        this.query = query;
+        this.operationName = operationName;
+        this.variables = variables;
+    }
+    public GraphQLRequestImpl() {
+       
+    }
 
-   public void setQuery(final String query){
-      this.query = query;
-   }
-   
-   public void setOperationName(final String operationName){
-      this.operationName = operationName;
-   }
-   
-   public void setVariables(final com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables){
-      this.variables = variables;
-   }
+    
+    public String getQuery(){
+        return this.query;
+    }
+    
+    
+    public String getOperationName(){
+        return this.operationName;
+    }
+    
+    
+    public com.commercetools.api.models.graph_ql.GraphQLVariablesMap getVariables(){
+        return this.variables;
+    }
+
+    public void setQuery(final String query){
+        this.query = query;
+    }
+    
+    public void setOperationName(final String operationName){
+        this.operationName = operationName;
+    }
+    
+    public void setVariables(final com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables){
+        this.variables = variables;
+    }
 
 }

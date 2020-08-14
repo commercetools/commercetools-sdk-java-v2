@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewSetAuthorNameActionImpl.class)
 public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
 
-   /**
-   *  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   
-   @JsonProperty("authorName")
-   public String getAuthorName();
+    /**
+    *  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    
+    @JsonProperty("authorName")
+    public String getAuthorName();
 
-   public void setAuthorName(final String authorName);
-   
-   public static ReviewSetAuthorNameActionImpl of(){
-      return new ReviewSetAuthorNameActionImpl();
-   }
-   
+    public void setAuthorName(final String authorName);
 
-   public static ReviewSetAuthorNameActionImpl of(final ReviewSetAuthorNameAction template) {
-      ReviewSetAuthorNameActionImpl instance = new ReviewSetAuthorNameActionImpl();
-      instance.setAuthorName(template.getAuthorName());
-      return instance;
-   }
+    public static ReviewSetAuthorNameActionImpl of(){
+        return new ReviewSetAuthorNameActionImpl();
+    }
+    
+
+    public static ReviewSetAuthorNameActionImpl of(final ReviewSetAuthorNameAction template) {
+        ReviewSetAuthorNameActionImpl instance = new ReviewSetAuthorNameActionImpl();
+        instance.setAuthorName(template.getAuthorName());
+        return instance;
+    }
 
 }

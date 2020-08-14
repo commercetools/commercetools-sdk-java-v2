@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartRemoveItemShippingAddressActionImpl implements MyCartRemoveItemShippingAddressAction {
 
-   private String action;
-   
-   private String addressKey;
+    private String action;
+    
+    private String addressKey;
 
-   @JsonCreator
-   MyCartRemoveItemShippingAddressActionImpl(@JsonProperty("addressKey") final String addressKey) {
-      this.addressKey = addressKey;
-      this.action = "removeItemShippingAddress";
-   }
-   public MyCartRemoveItemShippingAddressActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAddressKey(){
-      return this.addressKey;
-   }
+    @JsonCreator
+    MyCartRemoveItemShippingAddressActionImpl(@JsonProperty("addressKey") final String addressKey) {
+        this.addressKey = addressKey;
+        this.action = "removeItemShippingAddress";
+    }
+    public MyCartRemoveItemShippingAddressActionImpl() {
+       
+    }
 
-   public void setAddressKey(final String addressKey){
-      this.addressKey = addressKey;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAddressKey(){
+        return this.addressKey;
+    }
+
+    public void setAddressKey(final String addressKey){
+        this.addressKey = addressKey;
+    }
 
 }

@@ -22,31 +22,31 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountedLineItemPortionImpl.class)
 public interface DiscountedLineItemPortion  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("discount")
-   public CartDiscountReference getDiscount();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("discountedAmount")
-   public TypedMoney getDiscountedAmount();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("discount")
+    public CartDiscountReference getDiscount();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("discountedAmount")
+    public TypedMoney getDiscountedAmount();
 
-   public void setDiscount(final CartDiscountReference discount);
-   
-   public void setDiscountedAmount(final TypedMoney discountedAmount);
-   
-   public static DiscountedLineItemPortionImpl of(){
-      return new DiscountedLineItemPortionImpl();
-   }
-   
+    public void setDiscount(final CartDiscountReference discount);
+    
+    public void setDiscountedAmount(final TypedMoney discountedAmount);
 
-   public static DiscountedLineItemPortionImpl of(final DiscountedLineItemPortion template) {
-      DiscountedLineItemPortionImpl instance = new DiscountedLineItemPortionImpl();
-      instance.setDiscount(template.getDiscount());
-      instance.setDiscountedAmount(template.getDiscountedAmount());
-      return instance;
-   }
+    public static DiscountedLineItemPortionImpl of(){
+        return new DiscountedLineItemPortionImpl();
+    }
+    
+
+    public static DiscountedLineItemPortionImpl of(final DiscountedLineItemPortion template) {
+        DiscountedLineItemPortionImpl instance = new DiscountedLineItemPortionImpl();
+        instance.setDiscount(template.getDiscount());
+        instance.setDiscountedAmount(template.getDiscountedAmount());
+        return instance;
+    }
 
 }

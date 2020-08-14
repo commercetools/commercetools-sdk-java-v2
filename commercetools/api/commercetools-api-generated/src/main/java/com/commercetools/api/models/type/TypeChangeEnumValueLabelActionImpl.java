@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumValueLabelAction {
 
-   private String action;
-   
-   private String fieldName;
-   
-   private com.commercetools.api.models.type.CustomFieldEnumValue value;
+    private String action;
+    
+    private String fieldName;
+    
+    private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
-   @JsonCreator
-   TypeChangeEnumValueLabelActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldEnumValue value) {
-      this.fieldName = fieldName;
-      this.value = value;
-      this.action = "changeEnumValueLabel";
-   }
-   public TypeChangeEnumValueLabelActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getFieldName(){
-      return this.fieldName;
-   }
-   
-   
-   public com.commercetools.api.models.type.CustomFieldEnumValue getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    TypeChangeEnumValueLabelActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldEnumValue value) {
+        this.fieldName = fieldName;
+        this.value = value;
+        this.action = "changeEnumValueLabel";
+    }
+    public TypeChangeEnumValueLabelActionImpl() {
+       
+    }
 
-   public void setFieldName(final String fieldName){
-      this.fieldName = fieldName;
-   }
-   
-   public void setValue(final com.commercetools.api.models.type.CustomFieldEnumValue value){
-      this.value = value;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getFieldName(){
+        return this.fieldName;
+    }
+    
+    
+    public com.commercetools.api.models.type.CustomFieldEnumValue getValue(){
+        return this.value;
+    }
+
+    public void setFieldName(final String fieldName){
+        this.fieldName = fieldName;
+    }
+    
+    public void setValue(final com.commercetools.api.models.type.CustomFieldEnumValue value){
+        this.value = value;
+    }
 
 }

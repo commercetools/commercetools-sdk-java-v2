@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartChangeTaxModeActionImpl implements MyCartChangeTaxModeAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.cart.TaxMode taxMode;
+    private String action;
+    
+    private com.commercetools.api.models.cart.TaxMode taxMode;
 
-   @JsonCreator
-   MyCartChangeTaxModeActionImpl(@JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode) {
-      this.taxMode = taxMode;
-      this.action = "changeTaxMode";
-   }
-   public MyCartChangeTaxModeActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.cart.TaxMode getTaxMode(){
-      return this.taxMode;
-   }
+    @JsonCreator
+    MyCartChangeTaxModeActionImpl(@JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode) {
+        this.taxMode = taxMode;
+        this.action = "changeTaxMode";
+    }
+    public MyCartChangeTaxModeActionImpl() {
+       
+    }
 
-   public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode){
-      this.taxMode = taxMode;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.cart.TaxMode getTaxMode(){
+        return this.taxMode;
+    }
+
+    public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode){
+        this.taxMode = taxMode;
+    }
 
 }

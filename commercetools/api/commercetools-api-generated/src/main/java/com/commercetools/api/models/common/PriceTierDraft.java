@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = PriceTierDraftImpl.class)
 public interface PriceTierDraft  {
 
-   
-   @NotNull
-   @JsonProperty("minimumQuantity")
-   public Long getMinimumQuantity();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public Money getValue();
+    
+    @NotNull
+    @JsonProperty("minimumQuantity")
+    public Long getMinimumQuantity();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public Money getValue();
 
-   public void setMinimumQuantity(final Long minimumQuantity);
-   
-   public void setValue(final Money value);
-   
-   public static PriceTierDraftImpl of(){
-      return new PriceTierDraftImpl();
-   }
-   
+    public void setMinimumQuantity(final Long minimumQuantity);
+    
+    public void setValue(final Money value);
 
-   public static PriceTierDraftImpl of(final PriceTierDraft template) {
-      PriceTierDraftImpl instance = new PriceTierDraftImpl();
-      instance.setMinimumQuantity(template.getMinimumQuantity());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static PriceTierDraftImpl of(){
+        return new PriceTierDraftImpl();
+    }
+    
+
+    public static PriceTierDraftImpl of(final PriceTierDraft template) {
+        PriceTierDraftImpl instance = new PriceTierDraftImpl();
+        instance.setMinimumQuantity(template.getMinimumQuantity());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

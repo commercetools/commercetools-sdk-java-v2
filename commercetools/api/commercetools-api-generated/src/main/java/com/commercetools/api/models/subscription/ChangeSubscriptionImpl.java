@@ -22,23 +22,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChangeSubscriptionImpl implements ChangeSubscription {
 
-   private String resourceTypeId;
+    private String resourceTypeId;
 
-   @JsonCreator
-   ChangeSubscriptionImpl(@JsonProperty("resourceTypeId") final String resourceTypeId) {
-      this.resourceTypeId = resourceTypeId;
-   }
-   public ChangeSubscriptionImpl() {
-      
-   }
-   
-   
-   public String getResourceTypeId(){
-      return this.resourceTypeId;
-   }
+    @JsonCreator
+    ChangeSubscriptionImpl(@JsonProperty("resourceTypeId") final String resourceTypeId) {
+        this.resourceTypeId = resourceTypeId;
+    }
+    public ChangeSubscriptionImpl() {
+       
+    }
 
-   public void setResourceTypeId(final String resourceTypeId){
-      this.resourceTypeId = resourceTypeId;
-   }
+    
+    public String getResourceTypeId(){
+        return this.resourceTypeId;
+    }
+
+    public void setResourceTypeId(final String resourceTypeId){
+        this.resourceTypeId = resourceTypeId;
+    }
 
 }

@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntryCreatedMessageImpl.class)
 public interface InventoryEntryCreatedMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("inventoryEntry")
-   public InventoryEntry getInventoryEntry();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("inventoryEntry")
+    public InventoryEntry getInventoryEntry();
 
-   public void setInventoryEntry(final InventoryEntry inventoryEntry);
-   
-   public static InventoryEntryCreatedMessageImpl of(){
-      return new InventoryEntryCreatedMessageImpl();
-   }
-   
+    public void setInventoryEntry(final InventoryEntry inventoryEntry);
 
-   public static InventoryEntryCreatedMessageImpl of(final InventoryEntryCreatedMessage template) {
-      InventoryEntryCreatedMessageImpl instance = new InventoryEntryCreatedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setInventoryEntry(template.getInventoryEntry());
-      return instance;
-   }
+    public static InventoryEntryCreatedMessageImpl of(){
+        return new InventoryEntryCreatedMessageImpl();
+    }
+    
+
+    public static InventoryEntryCreatedMessageImpl of(final InventoryEntryCreatedMessage template) {
+        InventoryEntryCreatedMessageImpl instance = new InventoryEntryCreatedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setInventoryEntry(template.getInventoryEntry());
+        return instance;
+    }
 
 }

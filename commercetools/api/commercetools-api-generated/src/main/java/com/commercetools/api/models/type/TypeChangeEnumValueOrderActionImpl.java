@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOrderAction {
 
-   private String action;
-   
-   private String fieldName;
-   
-   private java.util.List<String> keys;
+    private String action;
+    
+    private String fieldName;
+    
+    private java.util.List<String> keys;
 
-   @JsonCreator
-   TypeChangeEnumValueOrderActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("keys") final java.util.List<String> keys) {
-      this.fieldName = fieldName;
-      this.keys = keys;
-      this.action = "changeEnumValueOrder";
-   }
-   public TypeChangeEnumValueOrderActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getFieldName(){
-      return this.fieldName;
-   }
-   
-   
-   public java.util.List<String> getKeys(){
-      return this.keys;
-   }
+    @JsonCreator
+    TypeChangeEnumValueOrderActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("keys") final java.util.List<String> keys) {
+        this.fieldName = fieldName;
+        this.keys = keys;
+        this.action = "changeEnumValueOrder";
+    }
+    public TypeChangeEnumValueOrderActionImpl() {
+       
+    }
 
-   public void setFieldName(final String fieldName){
-      this.fieldName = fieldName;
-   }
-   
-   public void setKeys(final java.util.List<String> keys){
-      this.keys = keys;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getFieldName(){
+        return this.fieldName;
+    }
+    
+    
+    public java.util.List<String> getKeys(){
+        return this.keys;
+    }
+
+    public void setFieldName(final String fieldName){
+        this.fieldName = fieldName;
+    }
+    
+    public void setKeys(final java.util.List<String> keys){
+        this.keys = keys;
+    }
 
 }

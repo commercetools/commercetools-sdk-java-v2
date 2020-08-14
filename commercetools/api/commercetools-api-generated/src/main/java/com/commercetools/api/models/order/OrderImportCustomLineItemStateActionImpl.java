@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderImportCustomLineItemStateActionImpl implements OrderImportCustomLineItemStateAction {
 
-   private String action;
-   
-   private String customLineItemId;
-   
-   private java.util.List<com.commercetools.api.models.order.ItemState> state;
+    private String action;
+    
+    private String customLineItemId;
+    
+    private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
-   @JsonCreator
-   OrderImportCustomLineItemStateActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state) {
-      this.customLineItemId = customLineItemId;
-      this.state = state;
-      this.action = "importCustomLineItemState";
-   }
-   public OrderImportCustomLineItemStateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getCustomLineItemId(){
-      return this.customLineItemId;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.order.ItemState> getState(){
-      return this.state;
-   }
+    @JsonCreator
+    OrderImportCustomLineItemStateActionImpl(@JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state) {
+        this.customLineItemId = customLineItemId;
+        this.state = state;
+        this.action = "importCustomLineItemState";
+    }
+    public OrderImportCustomLineItemStateActionImpl() {
+       
+    }
 
-   public void setCustomLineItemId(final String customLineItemId){
-      this.customLineItemId = customLineItemId;
-   }
-   
-   public void setState(final java.util.List<com.commercetools.api.models.order.ItemState> state){
-      this.state = state;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getCustomLineItemId(){
+        return this.customLineItemId;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.order.ItemState> getState(){
+        return this.state;
+    }
+
+    public void setCustomLineItemId(final String customLineItemId){
+        this.customLineItemId = customLineItemId;
+    }
+    
+    public void setState(final java.util.List<com.commercetools.api.models.order.ItemState> state){
+        this.state = state;
+    }
 
 }

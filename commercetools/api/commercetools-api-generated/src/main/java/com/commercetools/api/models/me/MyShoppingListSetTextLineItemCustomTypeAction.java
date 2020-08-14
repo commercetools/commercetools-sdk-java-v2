@@ -23,36 +23,36 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListSetTextLineItemCustomTypeActionImpl.class)
 public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppingListUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("textLineItemId")
-   public String getTextLineItemId();
-   
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    
+    @NotNull
+    @JsonProperty("textLineItemId")
+    public String getTextLineItemId();
+    
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setTextLineItemId(final String textLineItemId);
-   
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static MyShoppingListSetTextLineItemCustomTypeActionImpl of(){
-      return new MyShoppingListSetTextLineItemCustomTypeActionImpl();
-   }
-   
+    public void setTextLineItemId(final String textLineItemId);
+    
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static MyShoppingListSetTextLineItemCustomTypeActionImpl of(final MyShoppingListSetTextLineItemCustomTypeAction template) {
-      MyShoppingListSetTextLineItemCustomTypeActionImpl instance = new MyShoppingListSetTextLineItemCustomTypeActionImpl();
-      instance.setTextLineItemId(template.getTextLineItemId());
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static MyShoppingListSetTextLineItemCustomTypeActionImpl of(){
+        return new MyShoppingListSetTextLineItemCustomTypeActionImpl();
+    }
+    
+
+    public static MyShoppingListSetTextLineItemCustomTypeActionImpl of(final MyShoppingListSetTextLineItemCustomTypeAction template) {
+        MyShoppingListSetTextLineItemCustomTypeActionImpl instance = new MyShoppingListSetTextLineItemCustomTypeActionImpl();
+        instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

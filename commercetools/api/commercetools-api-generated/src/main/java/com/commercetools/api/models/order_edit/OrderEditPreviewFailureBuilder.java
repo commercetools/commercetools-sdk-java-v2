@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderEditPreviewFailureBuilder {
-   
-   
-   private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
-   
-   public OrderEditPreviewFailureBuilder errors( final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
-      this.errors = errors;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors(){
-      return this.errors;
-   }
 
-   public OrderEditPreviewFailure build() {
-       return new OrderEditPreviewFailureImpl(errors);
-   }
-   
-   public static OrderEditPreviewFailureBuilder of() {
-      return new OrderEditPreviewFailureBuilder();
-   }
-   
-   public static OrderEditPreviewFailureBuilder of(final OrderEditPreviewFailure template) {
-      OrderEditPreviewFailureBuilder builder = new OrderEditPreviewFailureBuilder();
-      builder.errors = template.getErrors();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
+
+    public OrderEditPreviewFailureBuilder errors( final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
+        this.errors = errors;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors(){
+        return this.errors;
+    }
+
+    public OrderEditPreviewFailure build() {
+        return new OrderEditPreviewFailureImpl(errors);
+    }
+
+    public static OrderEditPreviewFailureBuilder of() {
+        return new OrderEditPreviewFailureBuilder();
+    }
+
+    public static OrderEditPreviewFailureBuilder of(final OrderEditPreviewFailure template) {
+        OrderEditPreviewFailureBuilder builder = new OrderEditPreviewFailureBuilder();
+        builder.errors = template.getErrors();
+        return builder;
+    }
+
 }

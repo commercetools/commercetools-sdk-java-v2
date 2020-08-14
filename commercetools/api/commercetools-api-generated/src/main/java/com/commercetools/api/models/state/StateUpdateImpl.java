@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateUpdateImpl implements StateUpdate {
 
-   private Long version;
-   
-   private java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions;
+    private Long version;
+    
+    private java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions;
 
-   @JsonCreator
-   StateUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions) {
-      this.version = version;
-      this.actions = actions;
-   }
-   public StateUpdateImpl() {
-      
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.state.StateUpdateAction> getActions(){
-      return this.actions;
-   }
+    @JsonCreator
+    StateUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions) {
+        this.version = version;
+        this.actions = actions;
+    }
+    public StateUpdateImpl() {
+       
+    }
 
-   public void setVersion(final Long version){
-      this.version = version;
-   }
-   
-   public void setActions(final java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions){
-      this.actions = actions;
-   }
+    
+    public Long getVersion(){
+        return this.version;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.state.StateUpdateAction> getActions(){
+        return this.actions;
+    }
+
+    public void setVersion(final Long version){
+        this.version = version;
+    }
+    
+    public void setActions(final java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions){
+        this.actions = actions;
+    }
 
 }

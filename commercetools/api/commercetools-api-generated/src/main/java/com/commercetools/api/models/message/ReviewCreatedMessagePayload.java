@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewCreatedMessagePayloadImpl.class)
 public interface ReviewCreatedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("review")
-   public Review getReview();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("review")
+    public Review getReview();
 
-   public void setReview(final Review review);
-   
-   public static ReviewCreatedMessagePayloadImpl of(){
-      return new ReviewCreatedMessagePayloadImpl();
-   }
-   
+    public void setReview(final Review review);
 
-   public static ReviewCreatedMessagePayloadImpl of(final ReviewCreatedMessagePayload template) {
-      ReviewCreatedMessagePayloadImpl instance = new ReviewCreatedMessagePayloadImpl();
-      instance.setReview(template.getReview());
-      return instance;
-   }
+    public static ReviewCreatedMessagePayloadImpl of(){
+        return new ReviewCreatedMessagePayloadImpl();
+    }
+    
+
+    public static ReviewCreatedMessagePayloadImpl of(final ReviewCreatedMessagePayload template) {
+        ReviewCreatedMessagePayloadImpl instance = new ReviewCreatedMessagePayloadImpl();
+        instance.setReview(template.getReview());
+        return instance;
+    }
 
 }

@@ -21,40 +21,40 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentStatusImpl.class)
 public interface PaymentStatus  {
 
-   /**
-   *  <p>A code describing the current status returned by the interface that processes the payment.</p>
-   */
-   
-   @JsonProperty("interfaceCode")
-   public String getInterfaceCode();
-   /**
-   *  <p>A text describing the current status returned by the interface that processes the payment.</p>
-   */
-   
-   @JsonProperty("interfaceText")
-   public String getInterfaceText();
-   
-   @Valid
-   @JsonProperty("state")
-   public StateReference getState();
+    /**
+    *  <p>A code describing the current status returned by the interface that processes the payment.</p>
+    */
+    
+    @JsonProperty("interfaceCode")
+    public String getInterfaceCode();
+    /**
+    *  <p>A text describing the current status returned by the interface that processes the payment.</p>
+    */
+    
+    @JsonProperty("interfaceText")
+    public String getInterfaceText();
+    
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
 
-   public void setInterfaceCode(final String interfaceCode);
-   
-   public void setInterfaceText(final String interfaceText);
-   
-   public void setState(final StateReference state);
-   
-   public static PaymentStatusImpl of(){
-      return new PaymentStatusImpl();
-   }
-   
+    public void setInterfaceCode(final String interfaceCode);
+    
+    public void setInterfaceText(final String interfaceText);
+    
+    public void setState(final StateReference state);
 
-   public static PaymentStatusImpl of(final PaymentStatus template) {
-      PaymentStatusImpl instance = new PaymentStatusImpl();
-      instance.setInterfaceCode(template.getInterfaceCode());
-      instance.setInterfaceText(template.getInterfaceText());
-      instance.setState(template.getState());
-      return instance;
-   }
+    public static PaymentStatusImpl of(){
+        return new PaymentStatusImpl();
+    }
+    
+
+    public static PaymentStatusImpl of(final PaymentStatus template) {
+        PaymentStatusImpl instance = new PaymentStatusImpl();
+        instance.setInterfaceCode(template.getInterfaceCode());
+        instance.setInterfaceText(template.getInterfaceText());
+        instance.setState(template.getState());
+        return instance;
+    }
 
 }

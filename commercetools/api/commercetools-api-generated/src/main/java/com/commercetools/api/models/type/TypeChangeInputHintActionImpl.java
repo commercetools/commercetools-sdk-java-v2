@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeChangeInputHintActionImpl implements TypeChangeInputHintAction {
 
-   private String action;
-   
-   private String fieldName;
-   
-   private com.commercetools.api.models.type.TypeTextInputHint inputHint;
+    private String action;
+    
+    private String fieldName;
+    
+    private com.commercetools.api.models.type.TypeTextInputHint inputHint;
 
-   @JsonCreator
-   TypeChangeInputHintActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("inputHint") final com.commercetools.api.models.type.TypeTextInputHint inputHint) {
-      this.fieldName = fieldName;
-      this.inputHint = inputHint;
-      this.action = "changeInputHint";
-   }
-   public TypeChangeInputHintActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getFieldName(){
-      return this.fieldName;
-   }
-   
-   
-   public com.commercetools.api.models.type.TypeTextInputHint getInputHint(){
-      return this.inputHint;
-   }
+    @JsonCreator
+    TypeChangeInputHintActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("inputHint") final com.commercetools.api.models.type.TypeTextInputHint inputHint) {
+        this.fieldName = fieldName;
+        this.inputHint = inputHint;
+        this.action = "changeInputHint";
+    }
+    public TypeChangeInputHintActionImpl() {
+       
+    }
 
-   public void setFieldName(final String fieldName){
-      this.fieldName = fieldName;
-   }
-   
-   public void setInputHint(final com.commercetools.api.models.type.TypeTextInputHint inputHint){
-      this.inputHint = inputHint;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getFieldName(){
+        return this.fieldName;
+    }
+    
+    
+    public com.commercetools.api.models.type.TypeTextInputHint getInputHint(){
+        return this.inputHint;
+    }
+
+    public void setFieldName(final String fieldName){
+        this.fieldName = fieldName;
+    }
+    
+    public void setInputHint(final com.commercetools.api.models.type.TypeTextInputHint inputHint){
+        this.inputHint = inputHint;
+    }
 
 }

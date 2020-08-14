@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum MoneyType {
 
-  
-  @JsonProperty("centPrecision")
-  CENT_PRECISION("centPrecision"),
-  
-  
-  @JsonProperty("highPrecision")
-  HIGH_PRECISION("highPrecision");
+    
+    @JsonProperty("centPrecision")
+    CENT_PRECISION("centPrecision"),
+    
+    
+    @JsonProperty("highPrecision")
+    HIGH_PRECISION("highPrecision");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private MoneyType(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private MoneyType(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<MoneyType> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<MoneyType> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

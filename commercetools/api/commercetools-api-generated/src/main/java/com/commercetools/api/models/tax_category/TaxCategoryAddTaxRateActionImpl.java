@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
+    private String action;
+    
+    private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
-   @JsonCreator
-   TaxCategoryAddTaxRateActionImpl(@JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
-      this.taxRate = taxRate;
-      this.action = "addTaxRate";
-   }
-   public TaxCategoryAddTaxRateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate(){
-      return this.taxRate;
-   }
+    @JsonCreator
+    TaxCategoryAddTaxRateActionImpl(@JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
+        this.taxRate = taxRate;
+        this.action = "addTaxRate";
+    }
+    public TaxCategoryAddTaxRateActionImpl() {
+       
+    }
 
-   public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRateDraft taxRate){
-      this.taxRate = taxRate;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate(){
+        return this.taxRate;
+    }
+
+    public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRateDraft taxRate){
+        this.taxRate = taxRate;
+    }
 
 }

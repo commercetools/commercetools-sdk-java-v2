@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeDateTypeImpl implements AttributeDateType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   AttributeDateTypeImpl() {
-      this.name = "date";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    AttributeDateTypeImpl() {
+        this.name = "date";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

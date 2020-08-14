@@ -22,25 +22,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartsConfigurationImpl implements CartsConfiguration {
 
-   private Boolean countryTaxRateFallbackEnabled;
+    private Boolean countryTaxRateFallbackEnabled;
 
-   @JsonCreator
-   CartsConfigurationImpl(@JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled) {
-      this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
-   }
-   public CartsConfigurationImpl() {
-      
-   }
-   
-   /**
-   *  <p>if country - no state tax rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all tax categories of a cart line items. Default value 'false'</p>
-   */
-   public Boolean getCountryTaxRateFallbackEnabled(){
-      return this.countryTaxRateFallbackEnabled;
-   }
+    @JsonCreator
+    CartsConfigurationImpl(@JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled) {
+        this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+    }
+    public CartsConfigurationImpl() {
+       
+    }
 
-   public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled){
-      this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
-   }
+    /**
+    *  <p>if country - no state tax rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all tax categories of a cart line items. Default value 'false'</p>
+    */
+    public Boolean getCountryTaxRateFallbackEnabled(){
+        return this.countryTaxRateFallbackEnabled;
+    }
+
+    public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled){
+        this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+    }
 
 }

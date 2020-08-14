@@ -23,23 +23,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodReferenceImpl.class)
 public interface ShippingMethodReference extends Reference {
 
-   
-   @Valid
-   @JsonProperty("obj")
-   public ShippingMethod getObj();
+    
+    @Valid
+    @JsonProperty("obj")
+    public ShippingMethod getObj();
 
-   public void setObj(final ShippingMethod obj);
-   
-   public static ShippingMethodReferenceImpl of(){
-      return new ShippingMethodReferenceImpl();
-   }
-   
+    public void setObj(final ShippingMethod obj);
 
-   public static ShippingMethodReferenceImpl of(final ShippingMethodReference template) {
-      ShippingMethodReferenceImpl instance = new ShippingMethodReferenceImpl();
-      instance.setId(template.getId());
-      instance.setObj(template.getObj());
-      return instance;
-   }
+    public static ShippingMethodReferenceImpl of(){
+        return new ShippingMethodReferenceImpl();
+    }
+    
+
+    public static ShippingMethodReferenceImpl of(final ShippingMethodReference template) {
+        ShippingMethodReferenceImpl instance = new ShippingMethodReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(template.getObj());
+        return instance;
+    }
 
 }

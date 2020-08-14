@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxCategorySetKeyActionImpl implements TaxCategorySetKeyAction {
 
-   private String action;
-   
-   private String key;
+    private String action;
+    
+    private String key;
 
-   @JsonCreator
-   TaxCategorySetKeyActionImpl(@JsonProperty("key") final String key) {
-      this.key = key;
-      this.action = "setKey";
-   }
-   public TaxCategorySetKeyActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    TaxCategorySetKeyActionImpl(@JsonProperty("key") final String key) {
+        this.key = key;
+        this.action = "setKey";
+    }
+    public TaxCategorySetKeyActionImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
+    */
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectChangeCurrenciesActionImpl.class)
 public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
 
-   /**
-   *  <p>A three-digit currency code as per currency code.</p>
-   */
-   @NotNull
-   @JsonProperty("currencies")
-   public List<String> getCurrencies();
+    /**
+    *  <p>A three-digit currency code as per currency code.</p>
+    */
+    @NotNull
+    @JsonProperty("currencies")
+    public List<String> getCurrencies();
 
-   public void setCurrencies(final List<String> currencies);
-   
-   public static ProjectChangeCurrenciesActionImpl of(){
-      return new ProjectChangeCurrenciesActionImpl();
-   }
-   
+    public void setCurrencies(final List<String> currencies);
 
-   public static ProjectChangeCurrenciesActionImpl of(final ProjectChangeCurrenciesAction template) {
-      ProjectChangeCurrenciesActionImpl instance = new ProjectChangeCurrenciesActionImpl();
-      instance.setCurrencies(template.getCurrencies());
-      return instance;
-   }
+    public static ProjectChangeCurrenciesActionImpl of(){
+        return new ProjectChangeCurrenciesActionImpl();
+    }
+    
+
+    public static ProjectChangeCurrenciesActionImpl of(final ProjectChangeCurrenciesAction template) {
+        ProjectChangeCurrenciesActionImpl instance = new ProjectChangeCurrenciesActionImpl();
+        instance.setCurrencies(template.getCurrencies());
+        return instance;
+    }
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderSetLocaleActionImpl.class)
 public interface OrderSetLocaleAction extends OrderUpdateAction {
 
-   
-   
-   @JsonProperty("locale")
-   public String getLocale();
+    
+    
+    @JsonProperty("locale")
+    public String getLocale();
 
-   public void setLocale(final String locale);
-   
-   public static OrderSetLocaleActionImpl of(){
-      return new OrderSetLocaleActionImpl();
-   }
-   
+    public void setLocale(final String locale);
 
-   public static OrderSetLocaleActionImpl of(final OrderSetLocaleAction template) {
-      OrderSetLocaleActionImpl instance = new OrderSetLocaleActionImpl();
-      instance.setLocale(template.getLocale());
-      return instance;
-   }
+    public static OrderSetLocaleActionImpl of(){
+        return new OrderSetLocaleActionImpl();
+    }
+    
+
+    public static OrderSetLocaleActionImpl of(final OrderSetLocaleAction template) {
+        OrderSetLocaleActionImpl instance = new OrderSetLocaleActionImpl();
+        instance.setLocale(template.getLocale());
+        return instance;
+    }
 
 }

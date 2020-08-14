@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetStoresActionImpl.class)
 public interface CustomerSetStoresAction extends CustomerUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("stores")
-   public List<StoreResourceIdentifier> getStores();
+    
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreResourceIdentifier> getStores();
 
-   public void setStores(final List<StoreResourceIdentifier> stores);
-   
-   public static CustomerSetStoresActionImpl of(){
-      return new CustomerSetStoresActionImpl();
-   }
-   
+    public void setStores(final List<StoreResourceIdentifier> stores);
 
-   public static CustomerSetStoresActionImpl of(final CustomerSetStoresAction template) {
-      CustomerSetStoresActionImpl instance = new CustomerSetStoresActionImpl();
-      instance.setStores(template.getStores());
-      return instance;
-   }
+    public static CustomerSetStoresActionImpl of(){
+        return new CustomerSetStoresActionImpl();
+    }
+    
+
+    public static CustomerSetStoresActionImpl of(final CustomerSetStoresAction template) {
+        CustomerSetStoresActionImpl instance = new CustomerSetStoresActionImpl();
+        instance.setStores(template.getStores());
+        return instance;
+    }
 
 }

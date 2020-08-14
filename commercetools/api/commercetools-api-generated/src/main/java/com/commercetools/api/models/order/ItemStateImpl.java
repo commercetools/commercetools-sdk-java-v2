@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ItemStateImpl implements ItemState {
 
-   private Double quantity;
-   
-   private com.commercetools.api.models.state.StateReference state;
+    private Double quantity;
+    
+    private com.commercetools.api.models.state.StateReference state;
 
-   @JsonCreator
-   ItemStateImpl(@JsonProperty("quantity") final Double quantity, @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
-      this.quantity = quantity;
-      this.state = state;
-   }
-   public ItemStateImpl() {
-      
-   }
-   
-   
-   public Double getQuantity(){
-      return this.quantity;
-   }
-   
-   
-   public com.commercetools.api.models.state.StateReference getState(){
-      return this.state;
-   }
+    @JsonCreator
+    ItemStateImpl(@JsonProperty("quantity") final Double quantity, @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
+        this.quantity = quantity;
+        this.state = state;
+    }
+    public ItemStateImpl() {
+       
+    }
 
-   public void setQuantity(final Double quantity){
-      this.quantity = quantity;
-   }
-   
-   public void setState(final com.commercetools.api.models.state.StateReference state){
-      this.state = state;
-   }
+    
+    public Double getQuantity(){
+        return this.quantity;
+    }
+    
+    
+    public com.commercetools.api.models.state.StateReference getState(){
+        return this.state;
+    }
+
+    public void setQuantity(final Double quantity){
+        this.quantity = quantity;
+    }
+    
+    public void setState(final com.commercetools.api.models.state.StateReference state){
+        this.state = state;
+    }
 
 }

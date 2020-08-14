@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubscriptionChangeDestinationActionImpl implements SubscriptionChangeDestinationAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.subscription.Destination destination;
+    private String action;
+    
+    private com.commercetools.api.models.subscription.Destination destination;
 
-   @JsonCreator
-   SubscriptionChangeDestinationActionImpl(@JsonProperty("destination") final com.commercetools.api.models.subscription.Destination destination) {
-      this.destination = destination;
-      this.action = "changeDestination";
-   }
-   public SubscriptionChangeDestinationActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.subscription.Destination getDestination(){
-      return this.destination;
-   }
+    @JsonCreator
+    SubscriptionChangeDestinationActionImpl(@JsonProperty("destination") final com.commercetools.api.models.subscription.Destination destination) {
+        this.destination = destination;
+        this.action = "changeDestination";
+    }
+    public SubscriptionChangeDestinationActionImpl() {
+       
+    }
 
-   public void setDestination(final com.commercetools.api.models.subscription.Destination destination){
-      this.destination = destination;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.subscription.Destination getDestination(){
+        return this.destination;
+    }
+
+    public void setDestination(final com.commercetools.api.models.subscription.Destination destination){
+        this.destination = destination;
+    }
 
 }

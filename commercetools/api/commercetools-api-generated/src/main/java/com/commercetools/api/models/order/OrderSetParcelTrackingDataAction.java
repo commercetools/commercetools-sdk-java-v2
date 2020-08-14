@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderSetParcelTrackingDataActionImpl.class)
 public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("parcelId")
-   public String getParcelId();
-   
-   @Valid
-   @JsonProperty("trackingData")
-   public TrackingData getTrackingData();
+    
+    @NotNull
+    @JsonProperty("parcelId")
+    public String getParcelId();
+    
+    @Valid
+    @JsonProperty("trackingData")
+    public TrackingData getTrackingData();
 
-   public void setParcelId(final String parcelId);
-   
-   public void setTrackingData(final TrackingData trackingData);
-   
-   public static OrderSetParcelTrackingDataActionImpl of(){
-      return new OrderSetParcelTrackingDataActionImpl();
-   }
-   
+    public void setParcelId(final String parcelId);
+    
+    public void setTrackingData(final TrackingData trackingData);
 
-   public static OrderSetParcelTrackingDataActionImpl of(final OrderSetParcelTrackingDataAction template) {
-      OrderSetParcelTrackingDataActionImpl instance = new OrderSetParcelTrackingDataActionImpl();
-      instance.setParcelId(template.getParcelId());
-      instance.setTrackingData(template.getTrackingData());
-      return instance;
-   }
+    public static OrderSetParcelTrackingDataActionImpl of(){
+        return new OrderSetParcelTrackingDataActionImpl();
+    }
+    
+
+    public static OrderSetParcelTrackingDataActionImpl of(final OrderSetParcelTrackingDataAction template) {
+        OrderSetParcelTrackingDataActionImpl instance = new OrderSetParcelTrackingDataActionImpl();
+        instance.setParcelId(template.getParcelId());
+        instance.setTrackingData(template.getTrackingData());
+        return instance;
+    }
 
 }

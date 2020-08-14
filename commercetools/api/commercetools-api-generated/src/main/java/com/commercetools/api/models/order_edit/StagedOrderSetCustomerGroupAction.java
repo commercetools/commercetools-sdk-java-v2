@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetCustomerGroupActionImpl.class)
 public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("customerGroup")
-   public CustomerGroupResourceIdentifier getCustomerGroup();
+    
+    @Valid
+    @JsonProperty("customerGroup")
+    public CustomerGroupResourceIdentifier getCustomerGroup();
 
-   public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
-   
-   public static StagedOrderSetCustomerGroupActionImpl of(){
-      return new StagedOrderSetCustomerGroupActionImpl();
-   }
-   
+    public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
-   public static StagedOrderSetCustomerGroupActionImpl of(final StagedOrderSetCustomerGroupAction template) {
-      StagedOrderSetCustomerGroupActionImpl instance = new StagedOrderSetCustomerGroupActionImpl();
-      instance.setCustomerGroup(template.getCustomerGroup());
-      return instance;
-   }
+    public static StagedOrderSetCustomerGroupActionImpl of(){
+        return new StagedOrderSetCustomerGroupActionImpl();
+    }
+    
+
+    public static StagedOrderSetCustomerGroupActionImpl of(final StagedOrderSetCustomerGroupAction template) {
+        StagedOrderSetCustomerGroupActionImpl instance = new StagedOrderSetCustomerGroupActionImpl();
+        instance.setCustomerGroup(template.getCustomerGroup());
+        return instance;
+    }
 
 }

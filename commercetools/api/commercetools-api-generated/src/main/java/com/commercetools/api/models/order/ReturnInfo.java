@@ -22,39 +22,39 @@ import java.io.IOException;
 @JsonDeserialize(as = ReturnInfoImpl.class)
 public interface ReturnInfo  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("items")
-   public List<ReturnItem> getItems();
-   /**
-   *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
-   */
-   
-   @JsonProperty("returnTrackingId")
-   public String getReturnTrackingId();
-   
-   
-   @JsonProperty("returnDate")
-   public ZonedDateTime getReturnDate();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("items")
+    public List<ReturnItem> getItems();
+    /**
+    *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+    */
+    
+    @JsonProperty("returnTrackingId")
+    public String getReturnTrackingId();
+    
+    
+    @JsonProperty("returnDate")
+    public ZonedDateTime getReturnDate();
 
-   public void setItems(final List<ReturnItem> items);
-   
-   public void setReturnTrackingId(final String returnTrackingId);
-   
-   public void setReturnDate(final ZonedDateTime returnDate);
-   
-   public static ReturnInfoImpl of(){
-      return new ReturnInfoImpl();
-   }
-   
+    public void setItems(final List<ReturnItem> items);
+    
+    public void setReturnTrackingId(final String returnTrackingId);
+    
+    public void setReturnDate(final ZonedDateTime returnDate);
 
-   public static ReturnInfoImpl of(final ReturnInfo template) {
-      ReturnInfoImpl instance = new ReturnInfoImpl();
-      instance.setItems(template.getItems());
-      instance.setReturnTrackingId(template.getReturnTrackingId());
-      instance.setReturnDate(template.getReturnDate());
-      return instance;
-   }
+    public static ReturnInfoImpl of(){
+        return new ReturnInfoImpl();
+    }
+    
+
+    public static ReturnInfoImpl of(final ReturnInfo template) {
+        ReturnInfoImpl instance = new ReturnInfoImpl();
+        instance.setItems(template.getItems());
+        instance.setReturnTrackingId(template.getReturnTrackingId());
+        instance.setReturnDate(template.getReturnDate());
+        return instance;
+    }
 
 }

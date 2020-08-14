@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListChangeTextLineItemQuantityActionImpl implements ShoppingListChangeTextLineItemQuantityAction {
 
-   private String action;
-   
-   private String textLineItemId;
-   
-   private Long quantity;
+    private String action;
+    
+    private String textLineItemId;
+    
+    private Long quantity;
 
-   @JsonCreator
-   ShoppingListChangeTextLineItemQuantityActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("quantity") final Long quantity) {
-      this.textLineItemId = textLineItemId;
-      this.quantity = quantity;
-      this.action = "changeTextLineItemQuantity";
-   }
-   public ShoppingListChangeTextLineItemQuantityActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getTextLineItemId(){
-      return this.textLineItemId;
-   }
-   
-   
-   public Long getQuantity(){
-      return this.quantity;
-   }
+    @JsonCreator
+    ShoppingListChangeTextLineItemQuantityActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("quantity") final Long quantity) {
+        this.textLineItemId = textLineItemId;
+        this.quantity = quantity;
+        this.action = "changeTextLineItemQuantity";
+    }
+    public ShoppingListChangeTextLineItemQuantityActionImpl() {
+       
+    }
 
-   public void setTextLineItemId(final String textLineItemId){
-      this.textLineItemId = textLineItemId;
-   }
-   
-   public void setQuantity(final Long quantity){
-      this.quantity = quantity;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getTextLineItemId(){
+        return this.textLineItemId;
+    }
+    
+    
+    public Long getQuantity(){
+        return this.quantity;
+    }
+
+    public void setTextLineItemId(final String textLineItemId){
+        this.textLineItemId = textLineItemId;
+    }
+    
+    public void setQuantity(final Long quantity){
+        this.quantity = quantity;
+    }
 
 }

@@ -22,58 +22,58 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetSkuActionImpl implements ProductSetSkuAction {
 
-   private String action;
-   
-   private Long variantId;
-   
-   private String sku;
-   
-   private Boolean staged;
+    private String action;
+    
+    private Long variantId;
+    
+    private String sku;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductSetSkuActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged) {
-      this.variantId = variantId;
-      this.sku = sku;
-      this.staged = staged;
-      this.action = "setSku";
-   }
-   public ProductSetSkuActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Long getVariantId(){
-      return this.variantId;
-   }
-   
-   /**
-   *  <p>SKU must be unique.
-   *  If left blank or set to <code>null</code>, the sku is unset/removed.</p>
-   */
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductSetSkuActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged) {
+        this.variantId = variantId;
+        this.sku = sku;
+        this.staged = staged;
+        this.action = "setSku";
+    }
+    public ProductSetSkuActionImpl() {
+       
+    }
 
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
-   
-   public void setSku(final String sku){
-      this.sku = sku;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Long getVariantId(){
+        return this.variantId;
+    }
+    
+    /**
+    *  <p>SKU must be unique.
+    *  If left blank or set to <code>null</code>, the sku is unset/removed.</p>
+    */
+    public String getSku(){
+        return this.sku;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setVariantId(final Long variantId){
+        this.variantId = variantId;
+    }
+    
+    public void setSku(final String sku){
+        this.sku = sku;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

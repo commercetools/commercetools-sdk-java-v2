@@ -23,67 +23,67 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductAddPriceActionImpl implements ProductAddPriceAction {
 
-   private String action;
-   
-   private Long variantId;
-   
-   private String sku;
-   
-   private com.commercetools.api.models.common.PriceDraft price;
-   
-   private Boolean staged;
+    private String action;
+    
+    private Long variantId;
+    
+    private String sku;
+    
+    private com.commercetools.api.models.common.PriceDraft price;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductAddPriceActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price, @JsonProperty("staged") final Boolean staged) {
-      this.variantId = variantId;
-      this.sku = sku;
-      this.price = price;
-      this.staged = staged;
-      this.action = "addPrice";
-   }
-   public ProductAddPriceActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Long getVariantId(){
-      return this.variantId;
-   }
-   
-   
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public com.commercetools.api.models.common.PriceDraft getPrice(){
-      return this.price;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductAddPriceActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price, @JsonProperty("staged") final Boolean staged) {
+        this.variantId = variantId;
+        this.sku = sku;
+        this.price = price;
+        this.staged = staged;
+        this.action = "addPrice";
+    }
+    public ProductAddPriceActionImpl() {
+       
+    }
 
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
-   
-   public void setSku(final String sku){
-      this.sku = sku;
-   }
-   
-   public void setPrice(final com.commercetools.api.models.common.PriceDraft price){
-      this.price = price;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Long getVariantId(){
+        return this.variantId;
+    }
+    
+    
+    public String getSku(){
+        return this.sku;
+    }
+    
+    
+    public com.commercetools.api.models.common.PriceDraft getPrice(){
+        return this.price;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setVariantId(final Long variantId){
+        this.variantId = variantId;
+    }
+    
+    public void setSku(final String sku){
+        this.sku = sku;
+    }
+    
+    public void setPrice(final com.commercetools.api.models.common.PriceDraft price){
+        this.price = price;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ShoppingListSetDescriptionActionBuilder {
-   
-   @Nullable
-   private com.commercetools.api.models.common.LocalizedString description;
-   
-   public ShoppingListSetDescriptionActionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
-      this.description = description;
-      return this;
-   }
-   
-   @Nullable
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
 
-   public ShoppingListSetDescriptionAction build() {
-       return new ShoppingListSetDescriptionActionImpl(description);
-   }
-   
-   public static ShoppingListSetDescriptionActionBuilder of() {
-      return new ShoppingListSetDescriptionActionBuilder();
-   }
-   
-   public static ShoppingListSetDescriptionActionBuilder of(final ShoppingListSetDescriptionAction template) {
-      ShoppingListSetDescriptionActionBuilder builder = new ShoppingListSetDescriptionActionBuilder();
-      builder.description = template.getDescription();
-      return builder;
-   }
-   
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString description;
+
+    public ShoppingListSetDescriptionActionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+        this.description = description;
+        return this;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
+        return this.description;
+    }
+
+    public ShoppingListSetDescriptionAction build() {
+        return new ShoppingListSetDescriptionActionImpl(description);
+    }
+
+    public static ShoppingListSetDescriptionActionBuilder of() {
+        return new ShoppingListSetDescriptionActionBuilder();
+    }
+
+    public static ShoppingListSetDescriptionActionBuilder of(final ShoppingListSetDescriptionAction template) {
+        ShoppingListSetDescriptionActionBuilder builder = new ShoppingListSetDescriptionActionBuilder();
+        builder.description = template.getDescription();
+        return builder;
+    }
+
 }

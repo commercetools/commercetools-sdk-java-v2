@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.review.Review review;
+    private String type;
+    
+    private com.commercetools.api.models.review.Review review;
 
-   @JsonCreator
-   ReviewCreatedMessagePayloadImpl(@JsonProperty("review") final com.commercetools.api.models.review.Review review) {
-      this.review = review;
-      this.type = "ReviewCreated";
-   }
-   public ReviewCreatedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.review.Review getReview(){
-      return this.review;
-   }
+    @JsonCreator
+    ReviewCreatedMessagePayloadImpl(@JsonProperty("review") final com.commercetools.api.models.review.Review review) {
+        this.review = review;
+        this.type = "ReviewCreated";
+    }
+    public ReviewCreatedMessagePayloadImpl() {
+       
+    }
 
-   public void setReview(final com.commercetools.api.models.review.Review review){
-      this.review = review;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.review.Review getReview(){
+        return this.review;
+    }
+
+    public void setReview(final com.commercetools.api.models.review.Review review){
+        this.review = review;
+    }
 
 }

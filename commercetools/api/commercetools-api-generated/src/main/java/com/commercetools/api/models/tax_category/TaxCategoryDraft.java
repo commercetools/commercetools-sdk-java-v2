@@ -21,44 +21,44 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxCategoryDraftImpl.class)
 public interface TaxCategoryDraft  {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   
-   @JsonProperty("description")
-   public String getDescription();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("rates")
-   public List<TaxRateDraft> getRates();
-   
-   
-   @JsonProperty("key")
-   public String getKey();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    
+    @JsonProperty("description")
+    public String getDescription();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("rates")
+    public List<TaxRateDraft> getRates();
+    
+    
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setName(final String name);
-   
-   public void setDescription(final String description);
-   
-   public void setRates(final List<TaxRateDraft> rates);
-   
-   public void setKey(final String key);
-   
-   public static TaxCategoryDraftImpl of(){
-      return new TaxCategoryDraftImpl();
-   }
-   
+    public void setName(final String name);
+    
+    public void setDescription(final String description);
+    
+    public void setRates(final List<TaxRateDraft> rates);
+    
+    public void setKey(final String key);
 
-   public static TaxCategoryDraftImpl of(final TaxCategoryDraft template) {
-      TaxCategoryDraftImpl instance = new TaxCategoryDraftImpl();
-      instance.setName(template.getName());
-      instance.setDescription(template.getDescription());
-      instance.setRates(template.getRates());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static TaxCategoryDraftImpl of(){
+        return new TaxCategoryDraftImpl();
+    }
+    
+
+    public static TaxCategoryDraftImpl of(final TaxCategoryDraft template) {
+        TaxCategoryDraftImpl instance = new TaxCategoryDraftImpl();
+        instance.setName(template.getName());
+        instance.setDescription(template.getDescription());
+        instance.setRates(template.getRates());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

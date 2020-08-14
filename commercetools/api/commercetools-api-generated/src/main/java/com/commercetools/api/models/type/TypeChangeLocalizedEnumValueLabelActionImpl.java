@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeChangeLocalizedEnumValueLabelAction {
 
-   private String action;
-   
-   private String fieldName;
-   
-   private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
+    private String action;
+    
+    private String fieldName;
+    
+    private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
-   @JsonCreator
-   TypeChangeLocalizedEnumValueLabelActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
-      this.fieldName = fieldName;
-      this.value = value;
-      this.action = "changeLocalizedEnumValueLabel";
-   }
-   public TypeChangeLocalizedEnumValueLabelActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getFieldName(){
-      return this.fieldName;
-   }
-   
-   
-   public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    TypeChangeLocalizedEnumValueLabelActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
+        this.fieldName = fieldName;
+        this.value = value;
+        this.action = "changeLocalizedEnumValueLabel";
+    }
+    public TypeChangeLocalizedEnumValueLabelActionImpl() {
+       
+    }
 
-   public void setFieldName(final String fieldName){
-      this.fieldName = fieldName;
-   }
-   
-   public void setValue(final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value){
-      this.value = value;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getFieldName(){
+        return this.fieldName;
+    }
+    
+    
+    public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue(){
+        return this.value;
+    }
+
+    public void setFieldName(final String fieldName){
+        this.fieldName = fieldName;
+    }
+    
+    public void setValue(final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value){
+        this.value = value;
+    }
 
 }

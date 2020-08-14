@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryUpdateImpl implements CategoryUpdate {
 
-   private Long version;
-   
-   private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
+    private Long version;
+    
+    private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
 
-   @JsonCreator
-   CategoryUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
-      this.version = version;
-      this.actions = actions;
-   }
-   public CategoryUpdateImpl() {
-      
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions(){
-      return this.actions;
-   }
+    @JsonCreator
+    CategoryUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
+        this.version = version;
+        this.actions = actions;
+    }
+    public CategoryUpdateImpl() {
+       
+    }
 
-   public void setVersion(final Long version){
-      this.version = version;
-   }
-   
-   public void setActions(final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions){
-      this.actions = actions;
-   }
+    
+    public Long getVersion(){
+        return this.version;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions(){
+        return this.actions;
+    }
+
+    public void setVersion(final Long version){
+        this.version = version;
+    }
+    
+    public void setActions(final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions){
+        this.actions = actions;
+    }
 
 }

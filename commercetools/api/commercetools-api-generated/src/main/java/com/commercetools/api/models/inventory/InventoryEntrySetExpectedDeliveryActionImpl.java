@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntrySetExpectedDeliveryActionImpl implements InventoryEntrySetExpectedDeliveryAction {
 
-   private String action;
-   
-   private java.time.ZonedDateTime expectedDelivery;
+    private String action;
+    
+    private java.time.ZonedDateTime expectedDelivery;
 
-   @JsonCreator
-   InventoryEntrySetExpectedDeliveryActionImpl(@JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery) {
-      this.expectedDelivery = expectedDelivery;
-      this.action = "setExpectedDelivery";
-   }
-   public InventoryEntrySetExpectedDeliveryActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.time.ZonedDateTime getExpectedDelivery(){
-      return this.expectedDelivery;
-   }
+    @JsonCreator
+    InventoryEntrySetExpectedDeliveryActionImpl(@JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery) {
+        this.expectedDelivery = expectedDelivery;
+        this.action = "setExpectedDelivery";
+    }
+    public InventoryEntrySetExpectedDeliveryActionImpl() {
+       
+    }
 
-   public void setExpectedDelivery(final java.time.ZonedDateTime expectedDelivery){
-      this.expectedDelivery = expectedDelivery;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.time.ZonedDateTime getExpectedDelivery(){
+        return this.expectedDelivery;
+    }
+
+    public void setExpectedDelivery(final java.time.ZonedDateTime expectedDelivery){
+        this.expectedDelivery = expectedDelivery;
+    }
 
 }

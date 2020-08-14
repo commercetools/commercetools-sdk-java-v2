@@ -13,21 +13,21 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderEditNotProcessedBuilder {
-   
-   
-   
 
-   public OrderEditNotProcessed build() {
-       return new OrderEditNotProcessedImpl();
-   }
-   
-   public static OrderEditNotProcessedBuilder of() {
-      return new OrderEditNotProcessedBuilder();
-   }
-   
-   public static OrderEditNotProcessedBuilder of(final OrderEditNotProcessed template) {
-      OrderEditNotProcessedBuilder builder = new OrderEditNotProcessedBuilder();
-      return builder;
-   }
-   
+
+
+
+    public OrderEditNotProcessed build() {
+        return new OrderEditNotProcessedImpl();
+    }
+
+    public static OrderEditNotProcessedBuilder of() {
+        return new OrderEditNotProcessedBuilder();
+    }
+
+    public static OrderEditNotProcessedBuilder of(final OrderEditNotProcessed template) {
+        OrderEditNotProcessedBuilder builder = new OrderEditNotProcessedBuilder();
+        return builder;
+    }
+
 }

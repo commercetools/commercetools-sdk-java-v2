@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeliveryItemsAction {
 
-   private String action;
-   
-   private String deliveryId;
-   
-   private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
+    private String action;
+    
+    private String deliveryId;
+    
+    private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
-   @JsonCreator
-   StagedOrderSetDeliveryItemsActionImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
-      this.deliveryId = deliveryId;
-      this.items = items;
-      this.action = "setDeliveryItems";
-   }
-   public StagedOrderSetDeliveryItemsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getDeliveryId(){
-      return this.deliveryId;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
-      return this.items;
-   }
+    @JsonCreator
+    StagedOrderSetDeliveryItemsActionImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+        this.deliveryId = deliveryId;
+        this.items = items;
+        this.action = "setDeliveryItems";
+    }
+    public StagedOrderSetDeliveryItemsActionImpl() {
+       
+    }
 
-   public void setDeliveryId(final String deliveryId){
-      this.deliveryId = deliveryId;
-   }
-   
-   public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
-      this.items = items;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getDeliveryId(){
+        return this.deliveryId;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
+        return this.items;
+    }
+
+    public void setDeliveryId(final String deliveryId){
+        this.deliveryId = deliveryId;
+    }
+    
+    public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
+        this.items = items;
+    }
 
 }

@@ -25,67 +25,67 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartScoreTierImpl implements CartScoreTier {
 
-   private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
-   
-   private Double score;
-   
-   private com.commercetools.api.models.common.Money price;
-   
-   private com.commercetools.api.models.shipping_method.PriceFunction priceFunction;
-   
-   private Boolean isMatching;
+    private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
+    
+    private Double score;
+    
+    private com.commercetools.api.models.common.Money price;
+    
+    private com.commercetools.api.models.shipping_method.PriceFunction priceFunction;
+    
+    private Boolean isMatching;
 
-   @JsonCreator
-   CartScoreTierImpl(@JsonProperty("score") final Double score, @JsonProperty("price") final com.commercetools.api.models.common.Money price, @JsonProperty("priceFunction") final com.commercetools.api.models.shipping_method.PriceFunction priceFunction, @JsonProperty("isMatching") final Boolean isMatching) {
-      this.score = score;
-      this.price = price;
-      this.priceFunction = priceFunction;
-      this.isMatching = isMatching;
-      this.type = ShippingRateTierType.findEnumViaJsonName("CartScore").get();
-   }
-   public CartScoreTierImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
-      return this.type;
-   }
-   
-   
-   public Double getScore(){
-      return this.score;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getPrice(){
-      return this.price;
-   }
-   
-   
-   public com.commercetools.api.models.shipping_method.PriceFunction getPriceFunction(){
-      return this.priceFunction;
-   }
-   
-   
-   public Boolean getIsMatching(){
-      return this.isMatching;
-   }
+    @JsonCreator
+    CartScoreTierImpl(@JsonProperty("score") final Double score, @JsonProperty("price") final com.commercetools.api.models.common.Money price, @JsonProperty("priceFunction") final com.commercetools.api.models.shipping_method.PriceFunction priceFunction, @JsonProperty("isMatching") final Boolean isMatching) {
+        this.score = score;
+        this.price = price;
+        this.priceFunction = priceFunction;
+        this.isMatching = isMatching;
+        this.type = ShippingRateTierType.findEnumViaJsonName("CartScore").get();
+    }
+    public CartScoreTierImpl() {
+       
+    }
 
-   public void setScore(final Double score){
-      this.score = score;
-   }
-   
-   public void setPrice(final com.commercetools.api.models.common.Money price){
-      this.price = price;
-   }
-   
-   public void setPriceFunction(final com.commercetools.api.models.shipping_method.PriceFunction priceFunction){
-      this.priceFunction = priceFunction;
-   }
-   
-   public void setIsMatching(final Boolean isMatching){
-      this.isMatching = isMatching;
-   }
+    
+    public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
+        return this.type;
+    }
+    
+    
+    public Double getScore(){
+        return this.score;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getPrice(){
+        return this.price;
+    }
+    
+    
+    public com.commercetools.api.models.shipping_method.PriceFunction getPriceFunction(){
+        return this.priceFunction;
+    }
+    
+    
+    public Boolean getIsMatching(){
+        return this.isMatching;
+    }
+
+    public void setScore(final Double score){
+        this.score = score;
+    }
+    
+    public void setPrice(final com.commercetools.api.models.common.Money price){
+        this.price = price;
+    }
+    
+    public void setPriceFunction(final com.commercetools.api.models.shipping_method.PriceFunction priceFunction){
+        this.priceFunction = priceFunction;
+    }
+    
+    public void setIsMatching(final Boolean isMatching){
+        this.isMatching = isMatching;
+    }
 
 }

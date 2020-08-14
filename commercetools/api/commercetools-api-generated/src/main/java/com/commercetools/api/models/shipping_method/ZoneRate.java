@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = ZoneRateImpl.class)
 public interface ZoneRate  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("zone")
-   public ZoneReference getZone();
-   /**
-   *  <p>The array does not contain two shipping rates with the same currency.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("shippingRates")
-   public List<ShippingRate> getShippingRates();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("zone")
+    public ZoneReference getZone();
+    /**
+    *  <p>The array does not contain two shipping rates with the same currency.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("shippingRates")
+    public List<ShippingRate> getShippingRates();
 
-   public void setZone(final ZoneReference zone);
-   
-   public void setShippingRates(final List<ShippingRate> shippingRates);
-   
-   public static ZoneRateImpl of(){
-      return new ZoneRateImpl();
-   }
-   
+    public void setZone(final ZoneReference zone);
+    
+    public void setShippingRates(final List<ShippingRate> shippingRates);
 
-   public static ZoneRateImpl of(final ZoneRate template) {
-      ZoneRateImpl instance = new ZoneRateImpl();
-      instance.setZone(template.getZone());
-      instance.setShippingRates(template.getShippingRates());
-      return instance;
-   }
+    public static ZoneRateImpl of(){
+        return new ZoneRateImpl();
+    }
+    
+
+    public static ZoneRateImpl of(final ZoneRate template) {
+        ZoneRateImpl instance = new ZoneRateImpl();
+        instance.setZone(template.getZone());
+        instance.setShippingRates(template.getShippingRates());
+        return instance;
+    }
 
 }

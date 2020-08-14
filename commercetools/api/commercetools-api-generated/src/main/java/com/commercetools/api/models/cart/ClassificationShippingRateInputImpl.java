@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ClassificationShippingRateInputImpl implements ClassificationShippingRateInput {
 
-   private String type;
-   
-   private String key;
-   
-   private com.commercetools.api.models.common.LocalizedString label;
+    private String type;
+    
+    private String key;
+    
+    private com.commercetools.api.models.common.LocalizedString label;
 
-   @JsonCreator
-   ClassificationShippingRateInputImpl(@JsonProperty("key") final String key, @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
-      this.key = key;
-      this.label = label;
-      this.type = "Classification";
-   }
-   public ClassificationShippingRateInputImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getLabel(){
-      return this.label;
-   }
+    @JsonCreator
+    ClassificationShippingRateInputImpl(@JsonProperty("key") final String key, @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
+        this.key = key;
+        this.label = label;
+        this.type = "Classification";
+    }
+    public ClassificationShippingRateInputImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setLabel(final com.commercetools.api.models.common.LocalizedString label){
-      this.label = label;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getKey(){
+        return this.key;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getLabel(){
+        return this.label;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
+    public void setLabel(final com.commercetools.api.models.common.LocalizedString label){
+        this.label = label;
+    }
 
 }

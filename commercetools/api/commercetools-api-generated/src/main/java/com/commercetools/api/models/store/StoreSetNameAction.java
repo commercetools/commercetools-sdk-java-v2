@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = StoreSetNameActionImpl.class)
 public interface StoreSetNameAction extends StoreUpdateAction {
 
-   /**
-   *  <p>The updated name of the store</p>
-   */
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
+    /**
+    *  <p>The updated name of the store</p>
+    */
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
 
-   public void setName(final LocalizedString name);
-   
-   public static StoreSetNameActionImpl of(){
-      return new StoreSetNameActionImpl();
-   }
-   
+    public void setName(final LocalizedString name);
 
-   public static StoreSetNameActionImpl of(final StoreSetNameAction template) {
-      StoreSetNameActionImpl instance = new StoreSetNameActionImpl();
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static StoreSetNameActionImpl of(){
+        return new StoreSetNameActionImpl();
+    }
+    
+
+    public static StoreSetNameActionImpl of(final StoreSetNameAction template) {
+        StoreSetNameActionImpl instance = new StoreSetNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

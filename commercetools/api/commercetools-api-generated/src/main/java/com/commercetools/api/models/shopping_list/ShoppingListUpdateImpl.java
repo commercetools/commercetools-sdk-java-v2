@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListUpdateImpl implements ShoppingListUpdate {
 
-   private Long version;
-   
-   private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions;
+    private Long version;
+    
+    private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions;
 
-   @JsonCreator
-   ShoppingListUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions) {
-      this.version = version;
-      this.actions = actions;
-   }
-   public ShoppingListUpdateImpl() {
-      
-   }
-   
-   
-   public Long getVersion(){
-      return this.version;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> getActions(){
-      return this.actions;
-   }
+    @JsonCreator
+    ShoppingListUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions) {
+        this.version = version;
+        this.actions = actions;
+    }
+    public ShoppingListUpdateImpl() {
+       
+    }
 
-   public void setVersion(final Long version){
-      this.version = version;
-   }
-   
-   public void setActions(final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions){
-      this.actions = actions;
-   }
+    
+    public Long getVersion(){
+        return this.version;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> getActions(){
+        return this.actions;
+    }
+
+    public void setVersion(final Long version){
+        this.version = version;
+    }
+    
+    public void setActions(final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions){
+        this.actions = actions;
+    }
 
 }

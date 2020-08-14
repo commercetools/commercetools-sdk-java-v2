@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class SubscriptionSetChangesActionBuilder {
-   
-   @Nullable
-   private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
-   
-   public SubscriptionSetChangesActionBuilder changes(@Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
-      this.changes = changes;
-      return this;
-   }
-   
-   @Nullable
-   public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges(){
-      return this.changes;
-   }
 
-   public SubscriptionSetChangesAction build() {
-       return new SubscriptionSetChangesActionImpl(changes);
-   }
-   
-   public static SubscriptionSetChangesActionBuilder of() {
-      return new SubscriptionSetChangesActionBuilder();
-   }
-   
-   public static SubscriptionSetChangesActionBuilder of(final SubscriptionSetChangesAction template) {
-      SubscriptionSetChangesActionBuilder builder = new SubscriptionSetChangesActionBuilder();
-      builder.changes = template.getChanges();
-      return builder;
-   }
-   
+    @Nullable
+    private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
+
+    public SubscriptionSetChangesActionBuilder changes(@Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
+        this.changes = changes;
+        return this;
+    }
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges(){
+        return this.changes;
+    }
+
+    public SubscriptionSetChangesAction build() {
+        return new SubscriptionSetChangesActionImpl(changes);
+    }
+
+    public static SubscriptionSetChangesActionBuilder of() {
+        return new SubscriptionSetChangesActionBuilder();
+    }
+
+    public static SubscriptionSetChangesActionBuilder of(final SubscriptionSetChangesAction template) {
+        SubscriptionSetChangesActionBuilder builder = new SubscriptionSetChangesActionBuilder();
+        builder.changes = template.getChanges();
+        return builder;
+    }
+
 }

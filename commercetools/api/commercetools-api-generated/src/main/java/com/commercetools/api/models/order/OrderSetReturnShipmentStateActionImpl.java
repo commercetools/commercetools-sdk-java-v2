@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShipmentStateAction {
 
-   private String action;
-   
-   private String returnItemId;
-   
-   private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
+    private String action;
+    
+    private String returnItemId;
+    
+    private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
-   @JsonCreator
-   OrderSetReturnShipmentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
-      this.returnItemId = returnItemId;
-      this.shipmentState = shipmentState;
-      this.action = "setReturnShipmentState";
-   }
-   public OrderSetReturnShipmentStateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getReturnItemId(){
-      return this.returnItemId;
-   }
-   
-   
-   public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
-      return this.shipmentState;
-   }
+    @JsonCreator
+    OrderSetReturnShipmentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
+        this.returnItemId = returnItemId;
+        this.shipmentState = shipmentState;
+        this.action = "setReturnShipmentState";
+    }
+    public OrderSetReturnShipmentStateActionImpl() {
+       
+    }
 
-   public void setReturnItemId(final String returnItemId){
-      this.returnItemId = returnItemId;
-   }
-   
-   public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
-      this.shipmentState = shipmentState;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getReturnItemId(){
+        return this.returnItemId;
+    }
+    
+    
+    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
+        return this.shipmentState;
+    }
+
+    public void setReturnItemId(final String returnItemId){
+        this.returnItemId = returnItemId;
+    }
+    
+    public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
+        this.shipmentState = shipmentState;
+    }
 
 }

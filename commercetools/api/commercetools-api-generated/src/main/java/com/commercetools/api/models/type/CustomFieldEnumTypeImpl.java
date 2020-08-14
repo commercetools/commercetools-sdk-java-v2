@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldEnumTypeImpl implements CustomFieldEnumType {
 
-   private String name;
-   
-   private java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values;
+    private String name;
+    
+    private java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values;
 
-   @JsonCreator
-   CustomFieldEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values) {
-      this.values = values;
-      this.name = "Enum";
-   }
-   public CustomFieldEnumTypeImpl() {
-      
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> getValues(){
-      return this.values;
-   }
+    @JsonCreator
+    CustomFieldEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values) {
+        this.values = values;
+        this.name = "Enum";
+    }
+    public CustomFieldEnumTypeImpl() {
+       
+    }
 
-   public void setValues(final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values){
-      this.values = values;
-   }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> getValues(){
+        return this.values;
+    }
+
+    public void setValues(final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values){
+        this.values = values;
+    }
 
 }

@@ -22,39 +22,39 @@ import java.io.IOException;
 @JsonDeserialize(as = ResourceUpdatedDeliveryImpl.class)
 public interface ResourceUpdatedDelivery extends SubscriptionDelivery {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @JsonProperty("oldVersion")
-   public Long getOldVersion();
-   
-   @NotNull
-   @JsonProperty("modifiedAt")
-   public ZonedDateTime getModifiedAt();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @JsonProperty("oldVersion")
+    public Long getOldVersion();
+    
+    @NotNull
+    @JsonProperty("modifiedAt")
+    public ZonedDateTime getModifiedAt();
 
-   public void setVersion(final Long version);
-   
-   public void setOldVersion(final Long oldVersion);
-   
-   public void setModifiedAt(final ZonedDateTime modifiedAt);
-   
-   public static ResourceUpdatedDeliveryImpl of(){
-      return new ResourceUpdatedDeliveryImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setOldVersion(final Long oldVersion);
+    
+    public void setModifiedAt(final ZonedDateTime modifiedAt);
 
-   public static ResourceUpdatedDeliveryImpl of(final ResourceUpdatedDelivery template) {
-      ResourceUpdatedDeliveryImpl instance = new ResourceUpdatedDeliveryImpl();
-      instance.setProjectKey(template.getProjectKey());
-      instance.setResource(template.getResource());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setVersion(template.getVersion());
-      instance.setOldVersion(template.getOldVersion());
-      instance.setModifiedAt(template.getModifiedAt());
-      return instance;
-   }
+    public static ResourceUpdatedDeliveryImpl of(){
+        return new ResourceUpdatedDeliveryImpl();
+    }
+    
+
+    public static ResourceUpdatedDeliveryImpl of(final ResourceUpdatedDelivery template) {
+        ResourceUpdatedDeliveryImpl instance = new ResourceUpdatedDeliveryImpl();
+        instance.setProjectKey(template.getProjectKey());
+        instance.setResource(template.getResource());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setVersion(template.getVersion());
+        instance.setOldVersion(template.getOldVersion());
+        instance.setModifiedAt(template.getModifiedAt());
+        return instance;
+    }
 
 }

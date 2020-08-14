@@ -22,41 +22,41 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxedPriceImpl.class)
 public interface TaxedPrice  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("totalNet")
-   public TypedMoney getTotalNet();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("totalGross")
-   public TypedMoney getTotalGross();
-   /**
-   *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("taxPortions")
-   public List<TaxPortion> getTaxPortions();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("totalNet")
+    public TypedMoney getTotalNet();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("totalGross")
+    public TypedMoney getTotalGross();
+    /**
+    *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("taxPortions")
+    public List<TaxPortion> getTaxPortions();
 
-   public void setTotalNet(final TypedMoney totalNet);
-   
-   public void setTotalGross(final TypedMoney totalGross);
-   
-   public void setTaxPortions(final List<TaxPortion> taxPortions);
-   
-   public static TaxedPriceImpl of(){
-      return new TaxedPriceImpl();
-   }
-   
+    public void setTotalNet(final TypedMoney totalNet);
+    
+    public void setTotalGross(final TypedMoney totalGross);
+    
+    public void setTaxPortions(final List<TaxPortion> taxPortions);
 
-   public static TaxedPriceImpl of(final TaxedPrice template) {
-      TaxedPriceImpl instance = new TaxedPriceImpl();
-      instance.setTotalNet(template.getTotalNet());
-      instance.setTotalGross(template.getTotalGross());
-      instance.setTaxPortions(template.getTaxPortions());
-      return instance;
-   }
+    public static TaxedPriceImpl of(){
+        return new TaxedPriceImpl();
+    }
+    
+
+    public static TaxedPriceImpl of(final TaxedPrice template) {
+        TaxedPriceImpl instance = new TaxedPriceImpl();
+        instance.setTotalNet(template.getTotalNet());
+        instance.setTotalGross(template.getTotalGross());
+        instance.setTaxPortions(template.getTaxPortions());
+        return instance;
+    }
 
 }

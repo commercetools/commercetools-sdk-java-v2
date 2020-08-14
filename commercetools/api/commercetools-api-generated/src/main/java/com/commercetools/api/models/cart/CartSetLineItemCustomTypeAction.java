@@ -23,36 +23,36 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetLineItemCustomTypeActionImpl.class)
 public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static CartSetLineItemCustomTypeActionImpl of(){
-      return new CartSetLineItemCustomTypeActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static CartSetLineItemCustomTypeActionImpl of(final CartSetLineItemCustomTypeAction template) {
-      CartSetLineItemCustomTypeActionImpl instance = new CartSetLineItemCustomTypeActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static CartSetLineItemCustomTypeActionImpl of(){
+        return new CartSetLineItemCustomTypeActionImpl();
+    }
+    
+
+    public static CartSetLineItemCustomTypeActionImpl of(final CartSetLineItemCustomTypeAction template) {
+        CartSetLineItemCustomTypeActionImpl instance = new CartSetLineItemCustomTypeActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

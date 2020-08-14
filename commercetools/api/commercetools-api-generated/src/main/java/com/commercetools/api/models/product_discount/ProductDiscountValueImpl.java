@@ -24,18 +24,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountValueImpl implements ProductDiscountValue {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   ProductDiscountValueImpl() {
-      this.type = "null";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    ProductDiscountValueImpl() {
+        this.type = "null";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = IronMqDestinationImpl.class)
 public interface IronMqDestination extends Destination {
 
-   
-   @NotNull
-   @JsonProperty("uri")
-   public String getUri();
+    
+    @NotNull
+    @JsonProperty("uri")
+    public String getUri();
 
-   public void setUri(final String uri);
-   
-   public static IronMqDestinationImpl of(){
-      return new IronMqDestinationImpl();
-   }
-   
+    public void setUri(final String uri);
 
-   public static IronMqDestinationImpl of(final IronMqDestination template) {
-      IronMqDestinationImpl instance = new IronMqDestinationImpl();
-      instance.setUri(template.getUri());
-      return instance;
-   }
+    public static IronMqDestinationImpl of(){
+        return new IronMqDestinationImpl();
+    }
+    
+
+    public static IronMqDestinationImpl of(final IronMqDestination template) {
+        IronMqDestinationImpl instance = new IronMqDestinationImpl();
+        instance.setUri(template.getUri());
+        return instance;
+    }
 
 }

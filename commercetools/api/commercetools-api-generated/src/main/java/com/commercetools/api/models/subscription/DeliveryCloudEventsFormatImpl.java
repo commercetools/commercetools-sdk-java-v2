@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DeliveryCloudEventsFormatImpl implements DeliveryCloudEventsFormat {
 
-   private String type;
-   
-   private String cloudEventsVersion;
+    private String type;
+    
+    private String cloudEventsVersion;
 
-   @JsonCreator
-   DeliveryCloudEventsFormatImpl(@JsonProperty("cloudEventsVersion") final String cloudEventsVersion) {
-      this.cloudEventsVersion = cloudEventsVersion;
-      this.type = "CloudEvents";
-   }
-   public DeliveryCloudEventsFormatImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getCloudEventsVersion(){
-      return this.cloudEventsVersion;
-   }
+    @JsonCreator
+    DeliveryCloudEventsFormatImpl(@JsonProperty("cloudEventsVersion") final String cloudEventsVersion) {
+        this.cloudEventsVersion = cloudEventsVersion;
+        this.type = "CloudEvents";
+    }
+    public DeliveryCloudEventsFormatImpl() {
+       
+    }
 
-   public void setCloudEventsVersion(final String cloudEventsVersion){
-      this.cloudEventsVersion = cloudEventsVersion;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getCloudEventsVersion(){
+        return this.cloudEventsVersion;
+    }
+
+    public void setCloudEventsVersion(final String cloudEventsVersion){
+        this.cloudEventsVersion = cloudEventsVersion;
+    }
 
 }

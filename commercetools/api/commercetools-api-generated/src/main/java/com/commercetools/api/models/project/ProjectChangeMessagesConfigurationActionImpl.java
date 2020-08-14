@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeMessagesConfigurationActionImpl implements ProjectChangeMessagesConfigurationAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration;
+    private String action;
+    
+    private com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration;
 
-   @JsonCreator
-   ProjectChangeMessagesConfigurationActionImpl(@JsonProperty("messagesConfiguration") final com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration) {
-      this.messagesConfiguration = messagesConfiguration;
-      this.action = "changeMessagesConfiguration";
-   }
-   public ProjectChangeMessagesConfigurationActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.message.MessageConfigurationDraft getMessagesConfiguration(){
-      return this.messagesConfiguration;
-   }
+    @JsonCreator
+    ProjectChangeMessagesConfigurationActionImpl(@JsonProperty("messagesConfiguration") final com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration) {
+        this.messagesConfiguration = messagesConfiguration;
+        this.action = "changeMessagesConfiguration";
+    }
+    public ProjectChangeMessagesConfigurationActionImpl() {
+       
+    }
 
-   public void setMessagesConfiguration(final com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration){
-      this.messagesConfiguration = messagesConfiguration;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.message.MessageConfigurationDraft getMessagesConfiguration(){
+        return this.messagesConfiguration;
+    }
+
+    public void setMessagesConfiguration(final com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration){
+        this.messagesConfiguration = messagesConfiguration;
+    }
 
 }

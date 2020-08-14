@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldMoneyTypeImpl implements CustomFieldMoneyType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   CustomFieldMoneyTypeImpl() {
-      this.name = "Money";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    CustomFieldMoneyTypeImpl() {
+        this.name = "Money";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

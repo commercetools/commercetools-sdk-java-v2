@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartRecalculateActionImpl.class)
 public interface MyCartRecalculateAction extends MyCartUpdateAction {
 
-   
-   
-   @JsonProperty("updateProductData")
-   public Boolean getUpdateProductData();
+    
+    
+    @JsonProperty("updateProductData")
+    public Boolean getUpdateProductData();
 
-   public void setUpdateProductData(final Boolean updateProductData);
-   
-   public static MyCartRecalculateActionImpl of(){
-      return new MyCartRecalculateActionImpl();
-   }
-   
+    public void setUpdateProductData(final Boolean updateProductData);
 
-   public static MyCartRecalculateActionImpl of(final MyCartRecalculateAction template) {
-      MyCartRecalculateActionImpl instance = new MyCartRecalculateActionImpl();
-      instance.setUpdateProductData(template.getUpdateProductData());
-      return instance;
-   }
+    public static MyCartRecalculateActionImpl of(){
+        return new MyCartRecalculateActionImpl();
+    }
+    
+
+    public static MyCartRecalculateActionImpl of(final MyCartRecalculateAction template) {
+        MyCartRecalculateActionImpl instance = new MyCartRecalculateActionImpl();
+        instance.setUpdateProductData(template.getUpdateProductData());
+        return instance;
+    }
 
 }

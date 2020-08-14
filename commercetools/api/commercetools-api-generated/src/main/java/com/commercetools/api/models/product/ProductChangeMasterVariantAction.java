@@ -21,36 +21,36 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductChangeMasterVariantActionImpl.class)
 public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
 
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setSku(final String sku);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductChangeMasterVariantActionImpl of(){
-      return new ProductChangeMasterVariantActionImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setSku(final String sku);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductChangeMasterVariantActionImpl of(final ProductChangeMasterVariantAction template) {
-      ProductChangeMasterVariantActionImpl instance = new ProductChangeMasterVariantActionImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductChangeMasterVariantActionImpl of(){
+        return new ProductChangeMasterVariantActionImpl();
+    }
+    
+
+    public static ProductChangeMasterVariantActionImpl of(final ProductChangeMasterVariantAction template) {
+        ProductChangeMasterVariantActionImpl instance = new ProductChangeMasterVariantActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

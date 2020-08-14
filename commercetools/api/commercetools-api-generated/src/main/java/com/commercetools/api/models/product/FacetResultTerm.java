@@ -21,36 +21,36 @@ import java.io.IOException;
 @JsonDeserialize(as = FacetResultTermImpl.class)
 public interface FacetResultTerm  {
 
-   
-   @NotNull
-   @JsonProperty("term")
-   public JsonNode getTerm();
-   
-   @NotNull
-   @JsonProperty("count")
-   public Long getCount();
-   
-   
-   @JsonProperty("productCount")
-   public Long getProductCount();
+    
+    @NotNull
+    @JsonProperty("term")
+    public JsonNode getTerm();
+    
+    @NotNull
+    @JsonProperty("count")
+    public Long getCount();
+    
+    
+    @JsonProperty("productCount")
+    public Long getProductCount();
 
-   public void setTerm(final JsonNode term);
-   
-   public void setCount(final Long count);
-   
-   public void setProductCount(final Long productCount);
-   
-   public static FacetResultTermImpl of(){
-      return new FacetResultTermImpl();
-   }
-   
+    public void setTerm(final JsonNode term);
+    
+    public void setCount(final Long count);
+    
+    public void setProductCount(final Long productCount);
 
-   public static FacetResultTermImpl of(final FacetResultTerm template) {
-      FacetResultTermImpl instance = new FacetResultTermImpl();
-      instance.setTerm(template.getTerm());
-      instance.setCount(template.getCount());
-      instance.setProductCount(template.getProductCount());
-      return instance;
-   }
+    public static FacetResultTermImpl of(){
+        return new FacetResultTermImpl();
+    }
+    
+
+    public static FacetResultTermImpl of(final FacetResultTerm template) {
+        FacetResultTermImpl instance = new FacetResultTermImpl();
+        instance.setTerm(template.getTerm());
+        instance.setCount(template.getCount());
+        instance.setProductCount(template.getProductCount());
+        return instance;
+    }
 
 }

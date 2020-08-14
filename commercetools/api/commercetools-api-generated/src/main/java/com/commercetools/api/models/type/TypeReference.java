@@ -23,23 +23,23 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeReferenceImpl.class)
 public interface TypeReference extends Reference {
 
-   
-   @Valid
-   @JsonProperty("obj")
-   public Type getObj();
+    
+    @Valid
+    @JsonProperty("obj")
+    public Type getObj();
 
-   public void setObj(final Type obj);
-   
-   public static TypeReferenceImpl of(){
-      return new TypeReferenceImpl();
-   }
-   
+    public void setObj(final Type obj);
 
-   public static TypeReferenceImpl of(final TypeReference template) {
-      TypeReferenceImpl instance = new TypeReferenceImpl();
-      instance.setId(template.getId());
-      instance.setObj(template.getObj());
-      return instance;
-   }
+    public static TypeReferenceImpl of(){
+        return new TypeReferenceImpl();
+    }
+    
+
+    public static TypeReferenceImpl of(final TypeReference template) {
+        TypeReferenceImpl instance = new TypeReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(template.getObj());
+        return instance;
+    }
 
 }

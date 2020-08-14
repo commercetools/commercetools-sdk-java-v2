@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountedLineItemPriceForQuantityImpl.class)
 public interface DiscountedLineItemPriceForQuantity  {
 
-   
-   @NotNull
-   @JsonProperty("quantity")
-   public Double getQuantity();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("discountedPrice")
-   public DiscountedLineItemPrice getDiscountedPrice();
+    
+    @NotNull
+    @JsonProperty("quantity")
+    public Double getQuantity();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("discountedPrice")
+    public DiscountedLineItemPrice getDiscountedPrice();
 
-   public void setQuantity(final Double quantity);
-   
-   public void setDiscountedPrice(final DiscountedLineItemPrice discountedPrice);
-   
-   public static DiscountedLineItemPriceForQuantityImpl of(){
-      return new DiscountedLineItemPriceForQuantityImpl();
-   }
-   
+    public void setQuantity(final Double quantity);
+    
+    public void setDiscountedPrice(final DiscountedLineItemPrice discountedPrice);
 
-   public static DiscountedLineItemPriceForQuantityImpl of(final DiscountedLineItemPriceForQuantity template) {
-      DiscountedLineItemPriceForQuantityImpl instance = new DiscountedLineItemPriceForQuantityImpl();
-      instance.setQuantity(template.getQuantity());
-      instance.setDiscountedPrice(template.getDiscountedPrice());
-      return instance;
-   }
+    public static DiscountedLineItemPriceForQuantityImpl of(){
+        return new DiscountedLineItemPriceForQuantityImpl();
+    }
+    
+
+    public static DiscountedLineItemPriceForQuantityImpl of(final DiscountedLineItemPriceForQuantity template) {
+        DiscountedLineItemPriceForQuantityImpl instance = new DiscountedLineItemPriceForQuantityImpl();
+        instance.setQuantity(template.getQuantity());
+        instance.setDiscountedPrice(template.getDiscountedPrice());
+        return instance;
+    }
 
 }

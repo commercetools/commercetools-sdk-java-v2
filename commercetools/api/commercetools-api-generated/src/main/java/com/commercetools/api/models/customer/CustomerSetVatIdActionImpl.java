@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSetVatIdActionImpl implements CustomerSetVatIdAction {
 
-   private String action;
-   
-   private String vatId;
+    private String action;
+    
+    private String vatId;
 
-   @JsonCreator
-   CustomerSetVatIdActionImpl(@JsonProperty("vatId") final String vatId) {
-      this.vatId = vatId;
-      this.action = "setVatId";
-   }
-   public CustomerSetVatIdActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If not defined, the vat Id is unset.</p>
-   */
-   public String getVatId(){
-      return this.vatId;
-   }
+    @JsonCreator
+    CustomerSetVatIdActionImpl(@JsonProperty("vatId") final String vatId) {
+        this.vatId = vatId;
+        this.action = "setVatId";
+    }
+    public CustomerSetVatIdActionImpl() {
+       
+    }
 
-   public void setVatId(final String vatId){
-      this.vatId = vatId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If not defined, the vat Id is unset.</p>
+    */
+    public String getVatId(){
+        return this.vatId;
+    }
+
+    public void setVatId(final String vatId){
+        this.vatId = vatId;
+    }
 
 }

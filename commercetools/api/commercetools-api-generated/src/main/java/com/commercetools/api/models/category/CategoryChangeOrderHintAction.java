@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryChangeOrderHintActionImpl.class)
 public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("orderHint")
-   public String getOrderHint();
+    
+    @NotNull
+    @JsonProperty("orderHint")
+    public String getOrderHint();
 
-   public void setOrderHint(final String orderHint);
-   
-   public static CategoryChangeOrderHintActionImpl of(){
-      return new CategoryChangeOrderHintActionImpl();
-   }
-   
+    public void setOrderHint(final String orderHint);
 
-   public static CategoryChangeOrderHintActionImpl of(final CategoryChangeOrderHintAction template) {
-      CategoryChangeOrderHintActionImpl instance = new CategoryChangeOrderHintActionImpl();
-      instance.setOrderHint(template.getOrderHint());
-      return instance;
-   }
+    public static CategoryChangeOrderHintActionImpl of(){
+        return new CategoryChangeOrderHintActionImpl();
+    }
+    
+
+    public static CategoryChangeOrderHintActionImpl of(final CategoryChangeOrderHintAction template) {
+        CategoryChangeOrderHintActionImpl instance = new CategoryChangeOrderHintActionImpl();
+        instance.setOrderHint(template.getOrderHint());
+        return instance;
+    }
 
 }

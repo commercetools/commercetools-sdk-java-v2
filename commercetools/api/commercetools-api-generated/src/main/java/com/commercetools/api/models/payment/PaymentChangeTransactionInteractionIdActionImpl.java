@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PaymentChangeTransactionInteractionIdActionImpl implements PaymentChangeTransactionInteractionIdAction {
 
-   private String action;
-   
-   private String transactionId;
-   
-   private String interactionId;
+    private String action;
+    
+    private String transactionId;
+    
+    private String interactionId;
 
-   @JsonCreator
-   PaymentChangeTransactionInteractionIdActionImpl(@JsonProperty("transactionId") final String transactionId, @JsonProperty("interactionId") final String interactionId) {
-      this.transactionId = transactionId;
-      this.interactionId = interactionId;
-      this.action = "changeTransactionInteractionId";
-   }
-   public PaymentChangeTransactionInteractionIdActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getTransactionId(){
-      return this.transactionId;
-   }
-   
-   
-   public String getInteractionId(){
-      return this.interactionId;
-   }
+    @JsonCreator
+    PaymentChangeTransactionInteractionIdActionImpl(@JsonProperty("transactionId") final String transactionId, @JsonProperty("interactionId") final String interactionId) {
+        this.transactionId = transactionId;
+        this.interactionId = interactionId;
+        this.action = "changeTransactionInteractionId";
+    }
+    public PaymentChangeTransactionInteractionIdActionImpl() {
+       
+    }
 
-   public void setTransactionId(final String transactionId){
-      this.transactionId = transactionId;
-   }
-   
-   public void setInteractionId(final String interactionId){
-      this.interactionId = interactionId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getTransactionId(){
+        return this.transactionId;
+    }
+    
+    
+    public String getInteractionId(){
+        return this.interactionId;
+    }
+
+    public void setTransactionId(final String transactionId){
+        this.transactionId = transactionId;
+    }
+    
+    public void setInteractionId(final String interactionId){
+        this.interactionId = interactionId;
+    }
 
 }

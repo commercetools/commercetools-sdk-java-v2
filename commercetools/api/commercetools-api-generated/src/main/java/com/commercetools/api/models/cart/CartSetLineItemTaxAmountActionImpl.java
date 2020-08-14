@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmountAction {
 
-   private String action;
-   
-   private String lineItemId;
-   
-   private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
+    private String action;
+    
+    private String lineItemId;
+    
+    private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
-   @JsonCreator
-   CartSetLineItemTaxAmountActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
-      this.lineItemId = lineItemId;
-      this.externalTaxAmount = externalTaxAmount;
-      this.action = "setLineItemTaxAmount";
-   }
-   public CartSetLineItemTaxAmountActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
-      return this.externalTaxAmount;
-   }
+    @JsonCreator
+    CartSetLineItemTaxAmountActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
+        this.lineItemId = lineItemId;
+        this.externalTaxAmount = externalTaxAmount;
+        this.action = "setLineItemTaxAmount";
+    }
+    public CartSetLineItemTaxAmountActionImpl() {
+       
+    }
 
-   public void setLineItemId(final String lineItemId){
-      this.lineItemId = lineItemId;
-   }
-   
-   public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount){
-      this.externalTaxAmount = externalTaxAmount;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLineItemId(){
+        return this.lineItemId;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
+        return this.externalTaxAmount;
+    }
+
+    public void setLineItemId(final String lineItemId){
+        this.lineItemId = lineItemId;
+    }
+    
+    public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount){
+        this.externalTaxAmount = externalTaxAmount;
+    }
 
 }

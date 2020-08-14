@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetLocaleActionImpl implements StagedOrderSetLocaleAction {
 
-   private String action;
-   
-   private String locale;
+    private String action;
+    
+    private String locale;
 
-   @JsonCreator
-   StagedOrderSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
-      this.locale = locale;
-      this.action = "setLocale";
-   }
-   public StagedOrderSetLocaleActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLocale(){
-      return this.locale;
-   }
+    @JsonCreator
+    StagedOrderSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
+        this.locale = locale;
+        this.action = "setLocale";
+    }
+    public StagedOrderSetLocaleActionImpl() {
+       
+    }
 
-   public void setLocale(final String locale){
-      this.locale = locale;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLocale(){
+        return this.locale;
+    }
+
+    public void setLocale(final String locale){
+        this.locale = locale;
+    }
 
 }

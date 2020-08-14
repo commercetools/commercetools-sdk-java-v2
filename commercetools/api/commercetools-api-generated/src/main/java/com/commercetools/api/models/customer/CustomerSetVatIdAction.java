@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetVatIdActionImpl.class)
 public interface CustomerSetVatIdAction extends CustomerUpdateAction {
 
-   /**
-   *  <p>If not defined, the vat Id is unset.</p>
-   */
-   
-   @JsonProperty("vatId")
-   public String getVatId();
+    /**
+    *  <p>If not defined, the vat Id is unset.</p>
+    */
+    
+    @JsonProperty("vatId")
+    public String getVatId();
 
-   public void setVatId(final String vatId);
-   
-   public static CustomerSetVatIdActionImpl of(){
-      return new CustomerSetVatIdActionImpl();
-   }
-   
+    public void setVatId(final String vatId);
 
-   public static CustomerSetVatIdActionImpl of(final CustomerSetVatIdAction template) {
-      CustomerSetVatIdActionImpl instance = new CustomerSetVatIdActionImpl();
-      instance.setVatId(template.getVatId());
-      return instance;
-   }
+    public static CustomerSetVatIdActionImpl of(){
+        return new CustomerSetVatIdActionImpl();
+    }
+    
+
+    public static CustomerSetVatIdActionImpl of(final CustomerSetVatIdAction template) {
+        CustomerSetVatIdActionImpl instance = new CustomerSetVatIdActionImpl();
+        instance.setVatId(template.getVatId());
+        return instance;
+    }
 
 }

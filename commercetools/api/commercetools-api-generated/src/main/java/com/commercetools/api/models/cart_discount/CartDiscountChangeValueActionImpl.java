@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountChangeValueActionImpl implements CartDiscountChangeValueAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
+    private String action;
+    
+    private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
 
-   @JsonCreator
-   CartDiscountChangeValueActionImpl(@JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
-      this.value = value;
-      this.action = "changeValue";
-   }
-   public CartDiscountChangeValueActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    CartDiscountChangeValueActionImpl(@JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
+        this.value = value;
+        this.action = "changeValue";
+    }
+    public CartDiscountChangeValueActionImpl() {
+       
+    }
 
-   public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value){
-      this.value = value;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue(){
+        return this.value;
+    }
+
+    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value){
+        this.value = value;
+    }
 
 }

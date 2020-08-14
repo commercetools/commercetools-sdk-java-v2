@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeNameActionImpl implements ProductTypeChangeNameAction {
 
-   private String action;
-   
-   private String name;
+    private String action;
+    
+    private String name;
 
-   @JsonCreator
-   ProductTypeChangeNameActionImpl(@JsonProperty("name") final String name) {
-      this.name = name;
-      this.action = "changeName";
-   }
-   public ProductTypeChangeNameActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    ProductTypeChangeNameActionImpl(@JsonProperty("name") final String name) {
+        this.name = name;
+        this.action = "changeName";
+    }
+    public ProductTypeChangeNameActionImpl() {
+       
+    }
 
-   public void setName(final String name){
-      this.name = name;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(final String name){
+        this.name = name;
+    }
 
 }

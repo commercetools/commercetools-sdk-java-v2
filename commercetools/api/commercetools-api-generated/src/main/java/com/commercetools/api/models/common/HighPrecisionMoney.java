@@ -22,25 +22,25 @@ import java.io.IOException;
 @JsonDeserialize(as = HighPrecisionMoneyImpl.class)
 public interface HighPrecisionMoney extends TypedMoney {
 
-   
-   @NotNull
-   @JsonProperty("preciseAmount")
-   public Long getPreciseAmount();
+    
+    @NotNull
+    @JsonProperty("preciseAmount")
+    public Long getPreciseAmount();
 
-   public void setPreciseAmount(final Long preciseAmount);
-   
-   public static HighPrecisionMoneyImpl of(){
-      return new HighPrecisionMoneyImpl();
-   }
-   
+    public void setPreciseAmount(final Long preciseAmount);
 
-   public static HighPrecisionMoneyImpl of(final HighPrecisionMoney template) {
-      HighPrecisionMoneyImpl instance = new HighPrecisionMoneyImpl();
-      instance.setFractionDigits(template.getFractionDigits());
-      instance.setCentAmount(template.getCentAmount());
-      instance.setCurrencyCode(template.getCurrencyCode());
-      instance.setPreciseAmount(template.getPreciseAmount());
-      return instance;
-   }
+    public static HighPrecisionMoneyImpl of(){
+        return new HighPrecisionMoneyImpl();
+    }
+    
+
+    public static HighPrecisionMoneyImpl of(final HighPrecisionMoney template) {
+        HighPrecisionMoneyImpl instance = new HighPrecisionMoneyImpl();
+        instance.setFractionDigits(template.getFractionDigits());
+        instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setPreciseAmount(template.getPreciseAmount());
+        return instance;
+    }
 
 }

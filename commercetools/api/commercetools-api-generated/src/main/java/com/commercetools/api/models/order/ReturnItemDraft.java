@@ -21,50 +21,50 @@ import java.io.IOException;
 @JsonDeserialize(as = ReturnItemDraftImpl.class)
 public interface ReturnItemDraft  {
 
-   
-   @NotNull
-   @JsonProperty("quantity")
-   public Long getQuantity();
-   
-   
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   
-   @JsonProperty("customLineItemId")
-   public String getCustomLineItemId();
-   
-   
-   @JsonProperty("comment")
-   public String getComment();
-   
-   @NotNull
-   @JsonProperty("shipmentState")
-   public ReturnShipmentState getShipmentState();
+    
+    @NotNull
+    @JsonProperty("quantity")
+    public Long getQuantity();
+    
+    
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+    
+    
+    @JsonProperty("comment")
+    public String getComment();
+    
+    @NotNull
+    @JsonProperty("shipmentState")
+    public ReturnShipmentState getShipmentState();
 
-   public void setQuantity(final Long quantity);
-   
-   public void setLineItemId(final String lineItemId);
-   
-   public void setCustomLineItemId(final String customLineItemId);
-   
-   public void setComment(final String comment);
-   
-   public void setShipmentState(final ReturnShipmentState shipmentState);
-   
-   public static ReturnItemDraftImpl of(){
-      return new ReturnItemDraftImpl();
-   }
-   
+    public void setQuantity(final Long quantity);
+    
+    public void setLineItemId(final String lineItemId);
+    
+    public void setCustomLineItemId(final String customLineItemId);
+    
+    public void setComment(final String comment);
+    
+    public void setShipmentState(final ReturnShipmentState shipmentState);
 
-   public static ReturnItemDraftImpl of(final ReturnItemDraft template) {
-      ReturnItemDraftImpl instance = new ReturnItemDraftImpl();
-      instance.setQuantity(template.getQuantity());
-      instance.setLineItemId(template.getLineItemId());
-      instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setComment(template.getComment());
-      instance.setShipmentState(template.getShipmentState());
-      return instance;
-   }
+    public static ReturnItemDraftImpl of(){
+        return new ReturnItemDraftImpl();
+    }
+    
+
+    public static ReturnItemDraftImpl of(final ReturnItemDraft template) {
+        ReturnItemDraftImpl instance = new ReturnItemDraftImpl();
+        instance.setQuantity(template.getQuantity());
+        instance.setLineItemId(template.getLineItemId());
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setComment(template.getComment());
+        instance.setShipmentState(template.getShipmentState());
+        return instance;
+    }
 
 }

@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = InvalidItemShippingDetailsErrorImpl.class)
 public interface InvalidItemShippingDetailsError extends ErrorObject {
 
-   
-   @NotNull
-   @JsonProperty("subject")
-   public String getSubject();
-   
-   @NotNull
-   @JsonProperty("itemId")
-   public String getItemId();
+    
+    @NotNull
+    @JsonProperty("subject")
+    public String getSubject();
+    
+    @NotNull
+    @JsonProperty("itemId")
+    public String getItemId();
 
-   public void setSubject(final String subject);
-   
-   public void setItemId(final String itemId);
-   
-   public static InvalidItemShippingDetailsErrorImpl of(){
-      return new InvalidItemShippingDetailsErrorImpl();
-   }
-   
+    public void setSubject(final String subject);
+    
+    public void setItemId(final String itemId);
 
-   public static InvalidItemShippingDetailsErrorImpl of(final InvalidItemShippingDetailsError template) {
-      InvalidItemShippingDetailsErrorImpl instance = new InvalidItemShippingDetailsErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setSubject(template.getSubject());
-      instance.setItemId(template.getItemId());
-      return instance;
-   }
+    public static InvalidItemShippingDetailsErrorImpl of(){
+        return new InvalidItemShippingDetailsErrorImpl();
+    }
+    
+
+    public static InvalidItemShippingDetailsErrorImpl of(final InvalidItemShippingDetailsError template) {
+        InvalidItemShippingDetailsErrorImpl instance = new InvalidItemShippingDetailsErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setSubject(template.getSubject());
+        instance.setItemId(template.getItemId());
+        return instance;
+    }
 
 }

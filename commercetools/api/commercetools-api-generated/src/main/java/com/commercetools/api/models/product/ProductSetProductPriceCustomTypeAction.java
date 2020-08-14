@@ -23,43 +23,43 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetProductPriceCustomTypeActionImpl.class)
 public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("priceId")
-   public String getPriceId();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
-   
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    
+    @NotNull
+    @JsonProperty("priceId")
+    public String getPriceId();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
+    
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setPriceId(final String priceId);
-   
-   public void setStaged(final Boolean staged);
-   
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static ProductSetProductPriceCustomTypeActionImpl of(){
-      return new ProductSetProductPriceCustomTypeActionImpl();
-   }
-   
+    public void setPriceId(final String priceId);
+    
+    public void setStaged(final Boolean staged);
+    
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static ProductSetProductPriceCustomTypeActionImpl of(final ProductSetProductPriceCustomTypeAction template) {
-      ProductSetProductPriceCustomTypeActionImpl instance = new ProductSetProductPriceCustomTypeActionImpl();
-      instance.setPriceId(template.getPriceId());
-      instance.setStaged(template.getStaged());
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static ProductSetProductPriceCustomTypeActionImpl of(){
+        return new ProductSetProductPriceCustomTypeActionImpl();
+    }
+    
+
+    public static ProductSetProductPriceCustomTypeActionImpl of(final ProductSetProductPriceCustomTypeAction template) {
+        ProductSetProductPriceCustomTypeActionImpl instance = new ProductSetProductPriceCustomTypeActionImpl();
+        instance.setPriceId(template.getPriceId());
+        instance.setStaged(template.getStaged());
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

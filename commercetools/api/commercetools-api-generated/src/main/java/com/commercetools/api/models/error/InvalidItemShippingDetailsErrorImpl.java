@@ -22,55 +22,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingDetailsError {
 
-   private String code;
-   
-   private String message;
-   
-   private String subject;
-   
-   private String itemId;
+    private String code;
+    
+    private String message;
+    
+    private String subject;
+    
+    private String itemId;
 
-   @JsonCreator
-   InvalidItemShippingDetailsErrorImpl(@JsonProperty("message") final String message, @JsonProperty("subject") final String subject, @JsonProperty("itemId") final String itemId) {
-      this.message = message;
-      this.subject = subject;
-      this.itemId = itemId;
-      this.code = "InvalidItemShippingDetails";
-   }
-   public InvalidItemShippingDetailsErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
-   
-   
-   public String getSubject(){
-      return this.subject;
-   }
-   
-   
-   public String getItemId(){
-      return this.itemId;
-   }
+    @JsonCreator
+    InvalidItemShippingDetailsErrorImpl(@JsonProperty("message") final String message, @JsonProperty("subject") final String subject, @JsonProperty("itemId") final String itemId) {
+        this.message = message;
+        this.subject = subject;
+        this.itemId = itemId;
+        this.code = "InvalidItemShippingDetails";
+    }
+    public InvalidItemShippingDetailsErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setSubject(final String subject){
-      this.subject = subject;
-   }
-   
-   public void setItemId(final String itemId){
-      this.itemId = itemId;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+    
+    
+    public String getSubject(){
+        return this.subject;
+    }
+    
+    
+    public String getItemId(){
+        return this.itemId;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setSubject(final String subject){
+        this.subject = subject;
+    }
+    
+    public void setItemId(final String itemId){
+        this.itemId = itemId;
+    }
 
 }

@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippingRateInputSetMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
-   
-   private com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput;
+    private String type;
+    
+    private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
+    
+    private com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput;
 
-   @JsonCreator
-   OrderShippingRateInputSetMessagePayloadImpl(@JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("oldShippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput) {
-      this.shippingRateInput = shippingRateInput;
-      this.oldShippingRateInput = oldShippingRateInput;
-      this.type = "OrderShippingRateInputSet";
-   }
-   public OrderShippingRateInputSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput(){
-      return this.shippingRateInput;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ShippingRateInput getOldShippingRateInput(){
-      return this.oldShippingRateInput;
-   }
+    @JsonCreator
+    OrderShippingRateInputSetMessagePayloadImpl(@JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("oldShippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput) {
+        this.shippingRateInput = shippingRateInput;
+        this.oldShippingRateInput = oldShippingRateInput;
+        this.type = "OrderShippingRateInputSet";
+    }
+    public OrderShippingRateInputSetMessagePayloadImpl() {
+       
+    }
 
-   public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput){
-      this.shippingRateInput = shippingRateInput;
-   }
-   
-   public void setOldShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput){
-      this.oldShippingRateInput = oldShippingRateInput;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput(){
+        return this.shippingRateInput;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ShippingRateInput getOldShippingRateInput(){
+        return this.oldShippingRateInput;
+    }
+
+    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput){
+        this.shippingRateInput = shippingRateInput;
+    }
+    
+    public void setOldShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput){
+        this.oldShippingRateInput = oldShippingRateInput;
+    }
 
 }

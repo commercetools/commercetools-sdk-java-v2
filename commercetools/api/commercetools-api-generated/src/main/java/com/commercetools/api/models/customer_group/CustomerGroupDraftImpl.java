@@ -22,49 +22,49 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
 
-   private String key;
-   
-   private String groupName;
-   
-   private com.commercetools.api.models.type.CustomFields custom;
+    private String key;
+    
+    private String groupName;
+    
+    private com.commercetools.api.models.type.CustomFields custom;
 
-   @JsonCreator
-   CustomerGroupDraftImpl(@JsonProperty("key") final String key, @JsonProperty("groupName") final String groupName, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
-      this.key = key;
-      this.groupName = groupName;
-      this.custom = custom;
-   }
-   public CustomerGroupDraftImpl() {
-      
-   }
-   
-   /**
-   *  <p>User-specific unique identifier for the customer group.</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
-   
-   
-   public String getGroupName(){
-      return this.groupName;
-   }
-   
-   
-   public com.commercetools.api.models.type.CustomFields getCustom(){
-      return this.custom;
-   }
+    @JsonCreator
+    CustomerGroupDraftImpl(@JsonProperty("key") final String key, @JsonProperty("groupName") final String groupName, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+        this.key = key;
+        this.groupName = groupName;
+        this.custom = custom;
+    }
+    public CustomerGroupDraftImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setGroupName(final String groupName){
-      this.groupName = groupName;
-   }
-   
-   public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
-      this.custom = custom;
-   }
+    /**
+    *  <p>User-specific unique identifier for the customer group.</p>
+    */
+    public String getKey(){
+        return this.key;
+    }
+    
+    
+    public String getGroupName(){
+        return this.groupName;
+    }
+    
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
+        return this.custom;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
+    public void setGroupName(final String groupName){
+        this.groupName = groupName;
+    }
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
+        this.custom = custom;
+    }
 
 }

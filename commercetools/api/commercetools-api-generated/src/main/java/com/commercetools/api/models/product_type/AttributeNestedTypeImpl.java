@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeNestedTypeImpl implements AttributeNestedType {
 
-   private String name;
-   
-   private com.commercetools.api.models.product_type.ProductTypeReference typeReference;
+    private String name;
+    
+    private com.commercetools.api.models.product_type.ProductTypeReference typeReference;
 
-   @JsonCreator
-   AttributeNestedTypeImpl(@JsonProperty("typeReference") final com.commercetools.api.models.product_type.ProductTypeReference typeReference) {
-      this.typeReference = typeReference;
-      this.name = "nested";
-   }
-   public AttributeNestedTypeImpl() {
-      
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public com.commercetools.api.models.product_type.ProductTypeReference getTypeReference(){
-      return this.typeReference;
-   }
+    @JsonCreator
+    AttributeNestedTypeImpl(@JsonProperty("typeReference") final com.commercetools.api.models.product_type.ProductTypeReference typeReference) {
+        this.typeReference = typeReference;
+        this.name = "nested";
+    }
+    public AttributeNestedTypeImpl() {
+       
+    }
 
-   public void setTypeReference(final com.commercetools.api.models.product_type.ProductTypeReference typeReference){
-      this.typeReference = typeReference;
-   }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public com.commercetools.api.models.product_type.ProductTypeReference getTypeReference(){
+        return this.typeReference;
+    }
+
+    public void setTypeReference(final com.commercetools.api.models.product_type.ProductTypeReference typeReference){
+        this.typeReference = typeReference;
+    }
 
 }

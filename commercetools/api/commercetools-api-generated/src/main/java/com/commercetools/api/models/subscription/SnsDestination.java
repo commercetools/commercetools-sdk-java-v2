@@ -21,36 +21,36 @@ import java.io.IOException;
 @JsonDeserialize(as = SnsDestinationImpl.class)
 public interface SnsDestination extends Destination {
 
-   
-   @NotNull
-   @JsonProperty("accessKey")
-   public String getAccessKey();
-   
-   @NotNull
-   @JsonProperty("accessSecret")
-   public String getAccessSecret();
-   
-   @NotNull
-   @JsonProperty("topicArn")
-   public String getTopicArn();
+    
+    @NotNull
+    @JsonProperty("accessKey")
+    public String getAccessKey();
+    
+    @NotNull
+    @JsonProperty("accessSecret")
+    public String getAccessSecret();
+    
+    @NotNull
+    @JsonProperty("topicArn")
+    public String getTopicArn();
 
-   public void setAccessKey(final String accessKey);
-   
-   public void setAccessSecret(final String accessSecret);
-   
-   public void setTopicArn(final String topicArn);
-   
-   public static SnsDestinationImpl of(){
-      return new SnsDestinationImpl();
-   }
-   
+    public void setAccessKey(final String accessKey);
+    
+    public void setAccessSecret(final String accessSecret);
+    
+    public void setTopicArn(final String topicArn);
 
-   public static SnsDestinationImpl of(final SnsDestination template) {
-      SnsDestinationImpl instance = new SnsDestinationImpl();
-      instance.setAccessKey(template.getAccessKey());
-      instance.setAccessSecret(template.getAccessSecret());
-      instance.setTopicArn(template.getTopicArn());
-      return instance;
-   }
+    public static SnsDestinationImpl of(){
+        return new SnsDestinationImpl();
+    }
+    
+
+    public static SnsDestinationImpl of(final SnsDestination template) {
+        SnsDestinationImpl instance = new SnsDestinationImpl();
+        instance.setAccessKey(template.getAccessKey());
+        instance.setAccessSecret(template.getAccessSecret());
+        instance.setTopicArn(template.getTopicArn());
+        return instance;
+    }
 
 }

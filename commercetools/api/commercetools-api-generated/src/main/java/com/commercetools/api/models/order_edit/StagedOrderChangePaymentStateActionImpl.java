@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderChangePaymentStateActionImpl implements StagedOrderChangePaymentStateAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.order.PaymentState paymentState;
+    private String action;
+    
+    private com.commercetools.api.models.order.PaymentState paymentState;
 
-   @JsonCreator
-   StagedOrderChangePaymentStateActionImpl(@JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState) {
-      this.paymentState = paymentState;
-      this.action = "changePaymentState";
-   }
-   public StagedOrderChangePaymentStateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.order.PaymentState getPaymentState(){
-      return this.paymentState;
-   }
+    @JsonCreator
+    StagedOrderChangePaymentStateActionImpl(@JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState) {
+        this.paymentState = paymentState;
+        this.action = "changePaymentState";
+    }
+    public StagedOrderChangePaymentStateActionImpl() {
+       
+    }
 
-   public void setPaymentState(final com.commercetools.api.models.order.PaymentState paymentState){
-      this.paymentState = paymentState;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.order.PaymentState getPaymentState(){
+        return this.paymentState;
+    }
+
+    public void setPaymentState(final com.commercetools.api.models.order.PaymentState paymentState){
+        this.paymentState = paymentState;
+    }
 
 }

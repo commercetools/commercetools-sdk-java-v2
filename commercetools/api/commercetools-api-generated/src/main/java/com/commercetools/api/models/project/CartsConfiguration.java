@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = CartsConfigurationImpl.class)
 public interface CartsConfiguration  {
 
-   /**
-   *  <p>if country - no state tax rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all tax categories of a cart line items. Default value 'false'</p>
-   */
-   
-   @JsonProperty("countryTaxRateFallbackEnabled")
-   public Boolean getCountryTaxRateFallbackEnabled();
+    /**
+    *  <p>if country - no state tax rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all tax categories of a cart line items. Default value 'false'</p>
+    */
+    
+    @JsonProperty("countryTaxRateFallbackEnabled")
+    public Boolean getCountryTaxRateFallbackEnabled();
 
-   public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
-   
-   public static CartsConfigurationImpl of(){
-      return new CartsConfigurationImpl();
-   }
-   
+    public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
 
-   public static CartsConfigurationImpl of(final CartsConfiguration template) {
-      CartsConfigurationImpl instance = new CartsConfigurationImpl();
-      instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
-      return instance;
-   }
+    public static CartsConfigurationImpl of(){
+        return new CartsConfigurationImpl();
+    }
+    
+
+    public static CartsConfigurationImpl of(final CartsConfiguration template) {
+        CartsConfigurationImpl instance = new CartsConfigurationImpl();
+        instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
+        return instance;
+    }
 
 }

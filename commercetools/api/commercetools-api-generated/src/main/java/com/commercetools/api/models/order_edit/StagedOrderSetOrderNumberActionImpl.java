@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetOrderNumberActionImpl implements StagedOrderSetOrderNumberAction {
 
-   private String action;
-   
-   private String orderNumber;
+    private String action;
+    
+    private String orderNumber;
 
-   @JsonCreator
-   StagedOrderSetOrderNumberActionImpl(@JsonProperty("orderNumber") final String orderNumber) {
-      this.orderNumber = orderNumber;
-      this.action = "setOrderNumber";
-   }
-   public StagedOrderSetOrderNumberActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getOrderNumber(){
-      return this.orderNumber;
-   }
+    @JsonCreator
+    StagedOrderSetOrderNumberActionImpl(@JsonProperty("orderNumber") final String orderNumber) {
+        this.orderNumber = orderNumber;
+        this.action = "setOrderNumber";
+    }
+    public StagedOrderSetOrderNumberActionImpl() {
+       
+    }
 
-   public void setOrderNumber(final String orderNumber){
-      this.orderNumber = orderNumber;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getOrderNumber(){
+        return this.orderNumber;
+    }
+
+    public void setOrderNumber(final String orderNumber){
+        this.orderNumber = orderNumber;
+    }
 
 }

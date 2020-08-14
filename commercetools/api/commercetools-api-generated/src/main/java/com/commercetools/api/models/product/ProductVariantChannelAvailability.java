@@ -21,36 +21,36 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantChannelAvailabilityImpl.class)
 public interface ProductVariantChannelAvailability  {
 
-   
-   
-   @JsonProperty("isOnStock")
-   public Boolean getIsOnStock();
-   
-   
-   @JsonProperty("restockableInDays")
-   public Long getRestockableInDays();
-   
-   
-   @JsonProperty("availableQuantity")
-   public Long getAvailableQuantity();
+    
+    
+    @JsonProperty("isOnStock")
+    public Boolean getIsOnStock();
+    
+    
+    @JsonProperty("restockableInDays")
+    public Long getRestockableInDays();
+    
+    
+    @JsonProperty("availableQuantity")
+    public Long getAvailableQuantity();
 
-   public void setIsOnStock(final Boolean isOnStock);
-   
-   public void setRestockableInDays(final Long restockableInDays);
-   
-   public void setAvailableQuantity(final Long availableQuantity);
-   
-   public static ProductVariantChannelAvailabilityImpl of(){
-      return new ProductVariantChannelAvailabilityImpl();
-   }
-   
+    public void setIsOnStock(final Boolean isOnStock);
+    
+    public void setRestockableInDays(final Long restockableInDays);
+    
+    public void setAvailableQuantity(final Long availableQuantity);
 
-   public static ProductVariantChannelAvailabilityImpl of(final ProductVariantChannelAvailability template) {
-      ProductVariantChannelAvailabilityImpl instance = new ProductVariantChannelAvailabilityImpl();
-      instance.setIsOnStock(template.getIsOnStock());
-      instance.setRestockableInDays(template.getRestockableInDays());
-      instance.setAvailableQuantity(template.getAvailableQuantity());
-      return instance;
-   }
+    public static ProductVariantChannelAvailabilityImpl of(){
+        return new ProductVariantChannelAvailabilityImpl();
+    }
+    
+
+    public static ProductVariantChannelAvailabilityImpl of(final ProductVariantChannelAvailability template) {
+        ProductVariantChannelAvailabilityImpl instance = new ProductVariantChannelAvailabilityImpl();
+        instance.setIsOnStock(template.getIsOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
+        instance.setAvailableQuantity(template.getAvailableQuantity());
+        return instance;
+    }
 
 }

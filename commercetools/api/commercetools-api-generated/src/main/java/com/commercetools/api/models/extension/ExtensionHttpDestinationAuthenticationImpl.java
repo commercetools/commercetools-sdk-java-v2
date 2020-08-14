@@ -23,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionHttpDestinationAuthenticationImpl implements ExtensionHttpDestinationAuthentication {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   ExtensionHttpDestinationAuthenticationImpl() {
-      this.type = "null";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    ExtensionHttpDestinationAuthenticationImpl() {
+        this.type = "null";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

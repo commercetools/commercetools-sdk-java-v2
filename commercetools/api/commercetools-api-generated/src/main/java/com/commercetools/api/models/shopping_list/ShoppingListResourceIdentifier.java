@@ -23,17 +23,17 @@ import java.io.IOException;
 public interface ShoppingListResourceIdentifier extends ResourceIdentifier {
 
 
-   
-   public static ShoppingListResourceIdentifierImpl of(){
-      return new ShoppingListResourceIdentifierImpl();
-   }
-   
 
-   public static ShoppingListResourceIdentifierImpl of(final ShoppingListResourceIdentifier template) {
-      ShoppingListResourceIdentifierImpl instance = new ShoppingListResourceIdentifierImpl();
-      instance.setId(template.getId());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ShoppingListResourceIdentifierImpl of(){
+        return new ShoppingListResourceIdentifierImpl();
+    }
+    
+
+    public static ShoppingListResourceIdentifierImpl of(final ShoppingListResourceIdentifier template) {
+        ShoppingListResourceIdentifierImpl instance = new ShoppingListResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

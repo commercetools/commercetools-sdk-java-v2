@@ -23,62 +23,62 @@ import java.io.IOException;
 @JsonDeserialize(as = TextLineItemImpl.class)
 public interface TextLineItem  {
 
-   /**
-   *  <p>When the text line item was added to the shopping list.</p>
-   */
-   @NotNull
-   @JsonProperty("addedAt")
-   public ZonedDateTime getAddedAt();
-   
-   @Valid
-   @JsonProperty("custom")
-   public CustomFields getCustom();
-   
-   @Valid
-   @JsonProperty("description")
-   public LocalizedString getDescription();
-   /**
-   *  <p>The unique ID of this TextLineItem.</p>
-   */
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
-   
-   @NotNull
-   @JsonProperty("quantity")
-   public Integer getQuantity();
+    /**
+    *  <p>When the text line item was added to the shopping list.</p>
+    */
+    @NotNull
+    @JsonProperty("addedAt")
+    public ZonedDateTime getAddedAt();
+    
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+    
+    @Valid
+    @JsonProperty("description")
+    public LocalizedString getDescription();
+    /**
+    *  <p>The unique ID of this TextLineItem.</p>
+    */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
+    
+    @NotNull
+    @JsonProperty("quantity")
+    public Integer getQuantity();
 
-   public void setAddedAt(final ZonedDateTime addedAt);
-   
-   public void setCustom(final CustomFields custom);
-   
-   public void setDescription(final LocalizedString description);
-   
-   public void setId(final String id);
-   
-   public void setName(final LocalizedString name);
-   
-   public void setQuantity(final Integer quantity);
-   
-   public static TextLineItemImpl of(){
-      return new TextLineItemImpl();
-   }
-   
+    public void setAddedAt(final ZonedDateTime addedAt);
+    
+    public void setCustom(final CustomFields custom);
+    
+    public void setDescription(final LocalizedString description);
+    
+    public void setId(final String id);
+    
+    public void setName(final LocalizedString name);
+    
+    public void setQuantity(final Integer quantity);
 
-   public static TextLineItemImpl of(final TextLineItem template) {
-      TextLineItemImpl instance = new TextLineItemImpl();
-      instance.setAddedAt(template.getAddedAt());
-      instance.setCustom(template.getCustom());
-      instance.setDescription(template.getDescription());
-      instance.setId(template.getId());
-      instance.setName(template.getName());
-      instance.setQuantity(template.getQuantity());
-      return instance;
-   }
+    public static TextLineItemImpl of(){
+        return new TextLineItemImpl();
+    }
+    
+
+    public static TextLineItemImpl of(final TextLineItem template) {
+        TextLineItemImpl instance = new TextLineItemImpl();
+        instance.setAddedAt(template.getAddedAt());
+        instance.setCustom(template.getCustom());
+        instance.setDescription(template.getDescription());
+        instance.setId(template.getId());
+        instance.setName(template.getName());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
 
 }

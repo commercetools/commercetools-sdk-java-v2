@@ -23,17 +23,17 @@ import java.io.IOException;
 public interface TypeResourceIdentifier extends ResourceIdentifier {
 
 
-   
-   public static TypeResourceIdentifierImpl of(){
-      return new TypeResourceIdentifierImpl();
-   }
-   
 
-   public static TypeResourceIdentifierImpl of(final TypeResourceIdentifier template) {
-      TypeResourceIdentifierImpl instance = new TypeResourceIdentifierImpl();
-      instance.setId(template.getId());
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static TypeResourceIdentifierImpl of(){
+        return new TypeResourceIdentifierImpl();
+    }
+    
+
+    public static TypeResourceIdentifierImpl of(final TypeResourceIdentifier template) {
+        TypeResourceIdentifierImpl instance = new TypeResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

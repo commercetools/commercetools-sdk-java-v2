@@ -22,37 +22,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxedItemPriceImpl implements TaxedItemPrice {
 
-   private com.commercetools.api.models.common.TypedMoney totalNet;
-   
-   private com.commercetools.api.models.common.TypedMoney totalGross;
+    private com.commercetools.api.models.common.TypedMoney totalNet;
+    
+    private com.commercetools.api.models.common.TypedMoney totalGross;
 
-   @JsonCreator
-   TaxedItemPriceImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.TypedMoney totalNet, @JsonProperty("totalGross") final com.commercetools.api.models.common.TypedMoney totalGross) {
-      this.totalNet = totalNet;
-      this.totalGross = totalGross;
-   }
-   public TaxedItemPriceImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.common.TypedMoney getTotalNet(){
-      return this.totalNet;
-   }
-   
-   /**
-   *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
-   */
-   public com.commercetools.api.models.common.TypedMoney getTotalGross(){
-      return this.totalGross;
-   }
+    @JsonCreator
+    TaxedItemPriceImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.TypedMoney totalNet, @JsonProperty("totalGross") final com.commercetools.api.models.common.TypedMoney totalGross) {
+        this.totalNet = totalNet;
+        this.totalGross = totalGross;
+    }
+    public TaxedItemPriceImpl() {
+       
+    }
 
-   public void setTotalNet(final com.commercetools.api.models.common.TypedMoney totalNet){
-      this.totalNet = totalNet;
-   }
-   
-   public void setTotalGross(final com.commercetools.api.models.common.TypedMoney totalGross){
-      this.totalGross = totalGross;
-   }
+    
+    public com.commercetools.api.models.common.TypedMoney getTotalNet(){
+        return this.totalNet;
+    }
+    
+    /**
+    *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
+    */
+    public com.commercetools.api.models.common.TypedMoney getTotalGross(){
+        return this.totalGross;
+    }
+
+    public void setTotalNet(final com.commercetools.api.models.common.TypedMoney totalNet){
+        this.totalNet = totalNet;
+    }
+    
+    public void setTotalGross(final com.commercetools.api.models.common.TypedMoney totalGross){
+        this.totalGross = totalGross;
+    }
 
 }

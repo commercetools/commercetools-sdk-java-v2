@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyShoppingListRemoveTextLineItemActionImpl implements MyShoppingListRemoveTextLineItemAction {
 
-   private String action;
-   
-   private String textLineItemId;
-   
-   private Long quantity;
+    private String action;
+    
+    private String textLineItemId;
+    
+    private Long quantity;
 
-   @JsonCreator
-   MyShoppingListRemoveTextLineItemActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("quantity") final Long quantity) {
-      this.textLineItemId = textLineItemId;
-      this.quantity = quantity;
-      this.action = "removeTextLineItem";
-   }
-   public MyShoppingListRemoveTextLineItemActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getTextLineItemId(){
-      return this.textLineItemId;
-   }
-   
-   
-   public Long getQuantity(){
-      return this.quantity;
-   }
+    @JsonCreator
+    MyShoppingListRemoveTextLineItemActionImpl(@JsonProperty("textLineItemId") final String textLineItemId, @JsonProperty("quantity") final Long quantity) {
+        this.textLineItemId = textLineItemId;
+        this.quantity = quantity;
+        this.action = "removeTextLineItem";
+    }
+    public MyShoppingListRemoveTextLineItemActionImpl() {
+       
+    }
 
-   public void setTextLineItemId(final String textLineItemId){
-      this.textLineItemId = textLineItemId;
-   }
-   
-   public void setQuantity(final Long quantity){
-      this.quantity = quantity;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getTextLineItemId(){
+        return this.textLineItemId;
+    }
+    
+    
+    public Long getQuantity(){
+        return this.quantity;
+    }
+
+    public void setTextLineItemId(final String textLineItemId){
+        this.textLineItemId = textLineItemId;
+    }
+    
+    public void setQuantity(final Long quantity){
+        this.quantity = quantity;
+    }
 
 }

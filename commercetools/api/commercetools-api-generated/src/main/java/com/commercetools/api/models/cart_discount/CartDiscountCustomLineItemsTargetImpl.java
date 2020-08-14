@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountCustomLineItemsTargetImpl implements CartDiscountCustomLineItemsTarget {
 
-   private String type;
-   
-   private String predicate;
+    private String type;
+    
+    private String predicate;
 
-   @JsonCreator
-   CartDiscountCustomLineItemsTargetImpl(@JsonProperty("predicate") final String predicate) {
-      this.predicate = predicate;
-      this.type = "customLineItems";
-   }
-   public CartDiscountCustomLineItemsTargetImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getPredicate(){
-      return this.predicate;
-   }
+    @JsonCreator
+    CartDiscountCustomLineItemsTargetImpl(@JsonProperty("predicate") final String predicate) {
+        this.predicate = predicate;
+        this.type = "customLineItems";
+    }
+    public CartDiscountCustomLineItemsTargetImpl() {
+       
+    }
 
-   public void setPredicate(final String predicate){
-      this.predicate = predicate;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getPredicate(){
+        return this.predicate;
+    }
+
+    public void setPredicate(final String predicate){
+        this.predicate = predicate;
+    }
 
 }

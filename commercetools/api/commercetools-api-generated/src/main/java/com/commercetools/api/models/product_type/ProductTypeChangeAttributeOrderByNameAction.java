@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangeAttributeOrderByNameActionImpl.class)
 public interface ProductTypeChangeAttributeOrderByNameAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("attributeNames")
-   public List<String> getAttributeNames();
+    
+    @NotNull
+    @JsonProperty("attributeNames")
+    public List<String> getAttributeNames();
 
-   public void setAttributeNames(final List<String> attributeNames);
-   
-   public static ProductTypeChangeAttributeOrderByNameActionImpl of(){
-      return new ProductTypeChangeAttributeOrderByNameActionImpl();
-   }
-   
+    public void setAttributeNames(final List<String> attributeNames);
 
-   public static ProductTypeChangeAttributeOrderByNameActionImpl of(final ProductTypeChangeAttributeOrderByNameAction template) {
-      ProductTypeChangeAttributeOrderByNameActionImpl instance = new ProductTypeChangeAttributeOrderByNameActionImpl();
-      instance.setAttributeNames(template.getAttributeNames());
-      return instance;
-   }
+    public static ProductTypeChangeAttributeOrderByNameActionImpl of(){
+        return new ProductTypeChangeAttributeOrderByNameActionImpl();
+    }
+    
+
+    public static ProductTypeChangeAttributeOrderByNameActionImpl of(final ProductTypeChangeAttributeOrderByNameAction template) {
+        ProductTypeChangeAttributeOrderByNameActionImpl instance = new ProductTypeChangeAttributeOrderByNameActionImpl();
+        instance.setAttributeNames(template.getAttributeNames());
+        return instance;
+    }
 
 }

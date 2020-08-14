@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = MessageConfigurationDraftImpl.class)
 public interface MessageConfigurationDraft  {
 
-   
-   @NotNull
-   @JsonProperty("enabled")
-   public Boolean getEnabled();
-   
-   @NotNull
-   @JsonProperty("deleteDaysAfterCreation")
-   public Integer getDeleteDaysAfterCreation();
+    
+    @NotNull
+    @JsonProperty("enabled")
+    public Boolean getEnabled();
+    
+    @NotNull
+    @JsonProperty("deleteDaysAfterCreation")
+    public Integer getDeleteDaysAfterCreation();
 
-   public void setEnabled(final Boolean enabled);
-   
-   public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation);
-   
-   public static MessageConfigurationDraftImpl of(){
-      return new MessageConfigurationDraftImpl();
-   }
-   
+    public void setEnabled(final Boolean enabled);
+    
+    public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation);
 
-   public static MessageConfigurationDraftImpl of(final MessageConfigurationDraft template) {
-      MessageConfigurationDraftImpl instance = new MessageConfigurationDraftImpl();
-      instance.setEnabled(template.getEnabled());
-      instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
-      return instance;
-   }
+    public static MessageConfigurationDraftImpl of(){
+        return new MessageConfigurationDraftImpl();
+    }
+    
+
+    public static MessageConfigurationDraftImpl of(final MessageConfigurationDraft template) {
+        MessageConfigurationDraftImpl instance = new MessageConfigurationDraftImpl();
+        instance.setEnabled(template.getEnabled());
+        instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
+        return instance;
+    }
 
 }

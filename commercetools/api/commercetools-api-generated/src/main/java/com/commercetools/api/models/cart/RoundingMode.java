@@ -13,29 +13,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum RoundingMode {
 
-  
-  @JsonProperty("HalfEven")
-  HALF_EVEN("HalfEven"),
-  
-  
-  @JsonProperty("HalfUp")
-  HALF_UP("HalfUp"),
-  
-  
-  @JsonProperty("HalfDown")
-  HALF_DOWN("HalfDown");
+    
+    @JsonProperty("HalfEven")
+    HALF_EVEN("HalfEven"),
+    
+    
+    @JsonProperty("HalfUp")
+    HALF_UP("HalfUp"),
+    
+    
+    @JsonProperty("HalfDown")
+    HALF_DOWN("HalfDown");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private RoundingMode(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private RoundingMode(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<RoundingMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<RoundingMode> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

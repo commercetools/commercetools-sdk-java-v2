@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString slug;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString slug;
 
-   @JsonCreator
-   ShoppingListSetSlugActionImpl(@JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
-      this.slug = slug;
-      this.action = "setSlug";
-   }
-   public ShoppingListSetSlugActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getSlug(){
-      return this.slug;
-   }
+    @JsonCreator
+    ShoppingListSetSlugActionImpl(@JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
+        this.slug = slug;
+        this.action = "setSlug";
+    }
+    public ShoppingListSetSlugActionImpl() {
+       
+    }
 
-   public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
-      this.slug = slug;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
+        return this.slug;
+    }
+
+    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
+        this.slug = slug;
+    }
 
 }

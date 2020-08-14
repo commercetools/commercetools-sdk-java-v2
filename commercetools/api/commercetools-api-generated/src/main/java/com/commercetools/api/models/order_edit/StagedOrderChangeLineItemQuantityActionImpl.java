@@ -24,67 +24,67 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderChangeLineItemQuantityAction {
 
-   private String action;
-   
-   private String lineItemId;
-   
-   private Double quantity;
-   
-   private com.commercetools.api.models.common.Money externalPrice;
-   
-   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
+    private String action;
+    
+    private String lineItemId;
+    
+    private Double quantity;
+    
+    private com.commercetools.api.models.common.Money externalPrice;
+    
+    private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
-   @JsonCreator
-   StagedOrderChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Double quantity, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-      this.lineItemId = lineItemId;
-      this.quantity = quantity;
-      this.externalPrice = externalPrice;
-      this.externalTotalPrice = externalTotalPrice;
-      this.action = "changeLineItemQuantity";
-   }
-   public StagedOrderChangeLineItemQuantityActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-   
-   
-   public Double getQuantity(){
-      return this.quantity;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getExternalPrice(){
-      return this.externalPrice;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
-      return this.externalTotalPrice;
-   }
+    @JsonCreator
+    StagedOrderChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Double quantity, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+        this.lineItemId = lineItemId;
+        this.quantity = quantity;
+        this.externalPrice = externalPrice;
+        this.externalTotalPrice = externalTotalPrice;
+        this.action = "changeLineItemQuantity";
+    }
+    public StagedOrderChangeLineItemQuantityActionImpl() {
+       
+    }
 
-   public void setLineItemId(final String lineItemId){
-      this.lineItemId = lineItemId;
-   }
-   
-   public void setQuantity(final Double quantity){
-      this.quantity = quantity;
-   }
-   
-   public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice){
-      this.externalPrice = externalPrice;
-   }
-   
-   public void setExternalTotalPrice(final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
-      this.externalTotalPrice = externalTotalPrice;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLineItemId(){
+        return this.lineItemId;
+    }
+    
+    
+    public Double getQuantity(){
+        return this.quantity;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getExternalPrice(){
+        return this.externalPrice;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+        return this.externalTotalPrice;
+    }
+
+    public void setLineItemId(final String lineItemId){
+        this.lineItemId = lineItemId;
+    }
+    
+    public void setQuantity(final Double quantity){
+        this.quantity = quantity;
+    }
+    
+    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice){
+        this.externalPrice = externalPrice;
+    }
+    
+    public void setExternalTotalPrice(final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
+        this.externalTotalPrice = externalTotalPrice;
+    }
 
 }

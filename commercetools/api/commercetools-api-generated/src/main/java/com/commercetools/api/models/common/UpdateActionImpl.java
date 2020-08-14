@@ -22,23 +22,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class UpdateActionImpl implements UpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   UpdateActionImpl(@JsonProperty("action") final String action) {
-      this.action = action;
-   }
-   public UpdateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    UpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
+    }
+    public UpdateActionImpl() {
+       
+    }
 
-   public void setAction(final String action){
-      this.action = action;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+
+    public void setAction(final String action){
+        this.action = action;
+    }
 
 }

@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = SubscriptionChangeDestinationActionImpl.class)
 public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("destination")
-   public Destination getDestination();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("destination")
+    public Destination getDestination();
 
-   public void setDestination(final Destination destination);
-   
-   public static SubscriptionChangeDestinationActionImpl of(){
-      return new SubscriptionChangeDestinationActionImpl();
-   }
-   
+    public void setDestination(final Destination destination);
 
-   public static SubscriptionChangeDestinationActionImpl of(final SubscriptionChangeDestinationAction template) {
-      SubscriptionChangeDestinationActionImpl instance = new SubscriptionChangeDestinationActionImpl();
-      instance.setDestination(template.getDestination());
-      return instance;
-   }
+    public static SubscriptionChangeDestinationActionImpl of(){
+        return new SubscriptionChangeDestinationActionImpl();
+    }
+    
+
+    public static SubscriptionChangeDestinationActionImpl of(final SubscriptionChangeDestinationAction template) {
+        SubscriptionChangeDestinationActionImpl instance = new SubscriptionChangeDestinationActionImpl();
+        instance.setDestination(template.getDestination());
+        return instance;
+    }
 
 }

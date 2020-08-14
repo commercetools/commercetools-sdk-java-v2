@@ -13,21 +13,21 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CustomFieldBooleanTypeBuilder {
-   
-   
-   
 
-   public CustomFieldBooleanType build() {
-       return new CustomFieldBooleanTypeImpl();
-   }
-   
-   public static CustomFieldBooleanTypeBuilder of() {
-      return new CustomFieldBooleanTypeBuilder();
-   }
-   
-   public static CustomFieldBooleanTypeBuilder of(final CustomFieldBooleanType template) {
-      CustomFieldBooleanTypeBuilder builder = new CustomFieldBooleanTypeBuilder();
-      return builder;
-   }
-   
+
+
+
+    public CustomFieldBooleanType build() {
+        return new CustomFieldBooleanTypeImpl();
+    }
+
+    public static CustomFieldBooleanTypeBuilder of() {
+        return new CustomFieldBooleanTypeBuilder();
+    }
+
+    public static CustomFieldBooleanTypeBuilder of(final CustomFieldBooleanType template) {
+        CustomFieldBooleanTypeBuilder builder = new CustomFieldBooleanTypeBuilder();
+        return builder;
+    }
+
 }

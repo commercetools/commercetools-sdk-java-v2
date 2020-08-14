@@ -24,36 +24,36 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderAddDeliveryActionImpl.class)
 public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("items")
-   public List<DeliveryItem> getItems();
-   
-   @Valid
-   @JsonProperty("address")
-   public Address getAddress();
-   
-   @Valid
-   @JsonProperty("parcels")
-   public List<ParcelDraft> getParcels();
+    
+    @Valid
+    @JsonProperty("items")
+    public List<DeliveryItem> getItems();
+    
+    @Valid
+    @JsonProperty("address")
+    public Address getAddress();
+    
+    @Valid
+    @JsonProperty("parcels")
+    public List<ParcelDraft> getParcels();
 
-   public void setItems(final List<DeliveryItem> items);
-   
-   public void setAddress(final Address address);
-   
-   public void setParcels(final List<ParcelDraft> parcels);
-   
-   public static StagedOrderAddDeliveryActionImpl of(){
-      return new StagedOrderAddDeliveryActionImpl();
-   }
-   
+    public void setItems(final List<DeliveryItem> items);
+    
+    public void setAddress(final Address address);
+    
+    public void setParcels(final List<ParcelDraft> parcels);
 
-   public static StagedOrderAddDeliveryActionImpl of(final StagedOrderAddDeliveryAction template) {
-      StagedOrderAddDeliveryActionImpl instance = new StagedOrderAddDeliveryActionImpl();
-      instance.setItems(template.getItems());
-      instance.setAddress(template.getAddress());
-      instance.setParcels(template.getParcels());
-      return instance;
-   }
+    public static StagedOrderAddDeliveryActionImpl of(){
+        return new StagedOrderAddDeliveryActionImpl();
+    }
+    
+
+    public static StagedOrderAddDeliveryActionImpl of(final StagedOrderAddDeliveryAction template) {
+        StagedOrderAddDeliveryActionImpl instance = new StagedOrderAddDeliveryActionImpl();
+        instance.setItems(template.getItems());
+        instance.setAddress(template.getAddress());
+        instance.setParcels(template.getParcels());
+        return instance;
+    }
 
 }

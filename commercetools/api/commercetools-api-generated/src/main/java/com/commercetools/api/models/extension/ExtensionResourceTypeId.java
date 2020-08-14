@@ -13,33 +13,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ExtensionResourceTypeId {
 
-  
-  @JsonProperty("cart")
-  CART("cart"),
-  
-  
-  @JsonProperty("order")
-  ORDER("order"),
-  
-  
-  @JsonProperty("payment")
-  PAYMENT("payment"),
-  
-  
-  @JsonProperty("customer")
-  CUSTOMER("customer");
+    
+    @JsonProperty("cart")
+    CART("cart"),
+    
+    
+    @JsonProperty("order")
+    ORDER("order"),
+    
+    
+    @JsonProperty("payment")
+    PAYMENT("payment"),
+    
+    
+    @JsonProperty("customer")
+    CUSTOMER("customer");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private ExtensionResourceTypeId(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private ExtensionResourceTypeId(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<ExtensionResourceTypeId> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<ExtensionResourceTypeId> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

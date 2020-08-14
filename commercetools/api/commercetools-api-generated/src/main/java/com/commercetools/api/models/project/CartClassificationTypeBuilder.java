@@ -15,32 +15,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartClassificationTypeBuilder {
-   
-   
-   private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
-   
-   public CartClassificationTypeBuilder values( final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
-      this.values = values;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues(){
-      return this.values;
-   }
 
-   public CartClassificationType build() {
-       return new CartClassificationTypeImpl(values);
-   }
-   
-   public static CartClassificationTypeBuilder of() {
-      return new CartClassificationTypeBuilder();
-   }
-   
-   public static CartClassificationTypeBuilder of(final CartClassificationType template) {
-      CartClassificationTypeBuilder builder = new CartClassificationTypeBuilder();
-      builder.values = template.getValues();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
+
+    public CartClassificationTypeBuilder values( final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
+        this.values = values;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues(){
+        return this.values;
+    }
+
+    public CartClassificationType build() {
+        return new CartClassificationTypeImpl(values);
+    }
+
+    public static CartClassificationTypeBuilder of() {
+        return new CartClassificationTypeBuilder();
+    }
+
+    public static CartClassificationTypeBuilder of(final CartClassificationType template) {
+        CartClassificationTypeBuilder builder = new CartClassificationTypeBuilder();
+        builder.values = template.getValues();
+        return builder;
+    }
+
 }

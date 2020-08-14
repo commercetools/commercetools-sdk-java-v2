@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetMetaTitleActionImpl implements CategorySetMetaTitleAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString metaTitle;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString metaTitle;
 
-   @JsonCreator
-   CategorySetMetaTitleActionImpl(@JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle) {
-      this.metaTitle = metaTitle;
-      this.action = "setMetaTitle";
-   }
-   public CategorySetMetaTitleActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
-      return this.metaTitle;
-   }
+    @JsonCreator
+    CategorySetMetaTitleActionImpl(@JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle) {
+        this.metaTitle = metaTitle;
+        this.action = "setMetaTitle";
+    }
+    public CategorySetMetaTitleActionImpl() {
+       
+    }
 
-   public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle){
-      this.metaTitle = metaTitle;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
+        return this.metaTitle;
+    }
+
+    public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle){
+        this.metaTitle = metaTitle;
+    }
 
 }

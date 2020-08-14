@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductPublishActionImpl implements ProductPublishAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.cart.ProductPublishScope scope;
+    private String action;
+    
+    private com.commercetools.api.models.cart.ProductPublishScope scope;
 
-   @JsonCreator
-   ProductPublishActionImpl(@JsonProperty("scope") final com.commercetools.api.models.cart.ProductPublishScope scope) {
-      this.scope = scope;
-      this.action = "publish";
-   }
-   public ProductPublishActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ProductPublishScope getScope(){
-      return this.scope;
-   }
+    @JsonCreator
+    ProductPublishActionImpl(@JsonProperty("scope") final com.commercetools.api.models.cart.ProductPublishScope scope) {
+        this.scope = scope;
+        this.action = "publish";
+    }
+    public ProductPublishActionImpl() {
+       
+    }
 
-   public void setScope(final com.commercetools.api.models.cart.ProductPublishScope scope){
-      this.scope = scope;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ProductPublishScope getScope(){
+        return this.scope;
+    }
+
+    public void setScope(final com.commercetools.api.models.cart.ProductPublishScope scope){
+        this.scope = scope;
+    }
 
 }

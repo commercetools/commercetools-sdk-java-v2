@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface AttributeBooleanType extends AttributeType {
 
 
-   
-   public static AttributeBooleanTypeImpl of(){
-      return new AttributeBooleanTypeImpl();
-   }
-   
 
-   public static AttributeBooleanTypeImpl of(final AttributeBooleanType template) {
-      AttributeBooleanTypeImpl instance = new AttributeBooleanTypeImpl();
-      return instance;
-   }
+    public static AttributeBooleanTypeImpl of(){
+        return new AttributeBooleanTypeImpl();
+    }
+    
+
+    public static AttributeBooleanTypeImpl of(final AttributeBooleanType template) {
+        AttributeBooleanTypeImpl instance = new AttributeBooleanTypeImpl();
+        return instance;
+    }
 
 }

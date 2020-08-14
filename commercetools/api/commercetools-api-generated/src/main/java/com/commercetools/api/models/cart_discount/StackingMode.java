@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum StackingMode {
 
-  
-  @JsonProperty("Stacking")
-  STACKING("Stacking"),
-  
-  
-  @JsonProperty("StopAfterThisDiscount")
-  STOP_AFTER_THIS_DISCOUNT("StopAfterThisDiscount");
+    
+    @JsonProperty("Stacking")
+    STACKING("Stacking"),
+    
+    
+    @JsonProperty("StopAfterThisDiscount")
+    STOP_AFTER_THIS_DISCOUNT("StopAfterThisDiscount");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private StackingMode(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private StackingMode(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<StackingMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<StackingMode> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

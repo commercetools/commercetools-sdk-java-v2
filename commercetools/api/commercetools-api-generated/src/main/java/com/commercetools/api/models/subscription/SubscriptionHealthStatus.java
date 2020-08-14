@@ -13,33 +13,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum SubscriptionHealthStatus {
 
-  
-  @JsonProperty("Healthy")
-  HEALTHY("Healthy"),
-  
-  
-  @JsonProperty("ConfigurationError")
-  CONFIGURATION_ERROR("ConfigurationError"),
-  
-  
-  @JsonProperty("ConfigurationErrorDeliveryStopped")
-  CONFIGURATION_ERROR_DELIVERY_STOPPED("ConfigurationErrorDeliveryStopped"),
-  
-  
-  @JsonProperty("TemporaryError")
-  TEMPORARY_ERROR("TemporaryError");
+    
+    @JsonProperty("Healthy")
+    HEALTHY("Healthy"),
+    
+    
+    @JsonProperty("ConfigurationError")
+    CONFIGURATION_ERROR("ConfigurationError"),
+    
+    
+    @JsonProperty("ConfigurationErrorDeliveryStopped")
+    CONFIGURATION_ERROR_DELIVERY_STOPPED("ConfigurationErrorDeliveryStopped"),
+    
+    
+    @JsonProperty("TemporaryError")
+    TEMPORARY_ERROR("TemporaryError");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private SubscriptionHealthStatus(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private SubscriptionHealthStatus(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<SubscriptionHealthStatus> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<SubscriptionHealthStatus> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

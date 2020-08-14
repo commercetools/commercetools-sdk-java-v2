@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAction {
 
-   private String action;
-   
-   private String anonymousId;
+    private String action;
+    
+    private String anonymousId;
 
-   @JsonCreator
-   CartSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
-      this.anonymousId = anonymousId;
-      this.action = "setAnonymousId";
-   }
-   public CartSetAnonymousIdActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If not set, any existing anonymous ID will be removed.</p>
-   */
-   public String getAnonymousId(){
-      return this.anonymousId;
-   }
+    @JsonCreator
+    CartSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
+        this.anonymousId = anonymousId;
+        this.action = "setAnonymousId";
+    }
+    public CartSetAnonymousIdActionImpl() {
+       
+    }
 
-   public void setAnonymousId(final String anonymousId){
-      this.anonymousId = anonymousId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If not set, any existing anonymous ID will be removed.</p>
+    */
+    public String getAnonymousId(){
+        return this.anonymousId;
+    }
+
+    public void setAnonymousId(final String anonymousId){
+        this.anonymousId = anonymousId;
+    }
 
 }

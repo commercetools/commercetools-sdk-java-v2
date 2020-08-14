@@ -24,61 +24,61 @@ import java.io.IOException;
 @JsonDeserialize(as = TransactionDraftImpl.class)
 public interface TransactionDraft  {
 
-   /**
-   *  <p>The time at which the transaction took place.</p>
-   */
-   
-   @JsonProperty("timestamp")
-   public ZonedDateTime getTimestamp();
-   /**
-   *  <p>The type of this transaction.</p>
-   */
-   @NotNull
-   @JsonProperty("type")
-   public TransactionType getType();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("amount")
-   public Money getAmount();
-   /**
-   *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
-   *  If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
-   */
-   
-   @JsonProperty("interactionId")
-   public String getInteractionId();
-   /**
-   *  <p>The state of this transaction.
-   *  If not set, defaults to <code>Initial</code>.</p>
-   */
-   
-   @JsonProperty("state")
-   public TransactionState getState();
+    /**
+    *  <p>The time at which the transaction took place.</p>
+    */
+    
+    @JsonProperty("timestamp")
+    public ZonedDateTime getTimestamp();
+    /**
+    *  <p>The type of this transaction.</p>
+    */
+    @NotNull
+    @JsonProperty("type")
+    public TransactionType getType();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("amount")
+    public Money getAmount();
+    /**
+    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
+    *  If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+    */
+    
+    @JsonProperty("interactionId")
+    public String getInteractionId();
+    /**
+    *  <p>The state of this transaction.
+    *  If not set, defaults to <code>Initial</code>.</p>
+    */
+    
+    @JsonProperty("state")
+    public TransactionState getState();
 
-   public void setTimestamp(final ZonedDateTime timestamp);
-   
-   public void setType(final TransactionType type);
-   
-   public void setAmount(final Money amount);
-   
-   public void setInteractionId(final String interactionId);
-   
-   public void setState(final TransactionState state);
-   
-   public static TransactionDraftImpl of(){
-      return new TransactionDraftImpl();
-   }
-   
+    public void setTimestamp(final ZonedDateTime timestamp);
+    
+    public void setType(final TransactionType type);
+    
+    public void setAmount(final Money amount);
+    
+    public void setInteractionId(final String interactionId);
+    
+    public void setState(final TransactionState state);
 
-   public static TransactionDraftImpl of(final TransactionDraft template) {
-      TransactionDraftImpl instance = new TransactionDraftImpl();
-      instance.setTimestamp(template.getTimestamp());
-      instance.setType(template.getType());
-      instance.setAmount(template.getAmount());
-      instance.setInteractionId(template.getInteractionId());
-      instance.setState(template.getState());
-      return instance;
-   }
+    public static TransactionDraftImpl of(){
+        return new TransactionDraftImpl();
+    }
+    
+
+    public static TransactionDraftImpl of(final TransactionDraft template) {
+        TransactionDraftImpl instance = new TransactionDraftImpl();
+        instance.setTimestamp(template.getTimestamp());
+        instance.setType(template.getType());
+        instance.setAmount(template.getAmount());
+        instance.setInteractionId(template.getInteractionId());
+        instance.setState(template.getState());
+        return instance;
+    }
 
 }

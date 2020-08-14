@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ScoreShippingRateInputImpl.class)
 public interface ScoreShippingRateInput extends ShippingRateInput {
 
-   
-   @NotNull
-   @JsonProperty("score")
-   public Double getScore();
+    
+    @NotNull
+    @JsonProperty("score")
+    public Double getScore();
 
-   public void setScore(final Double score);
-   
-   public static ScoreShippingRateInputImpl of(){
-      return new ScoreShippingRateInputImpl();
-   }
-   
+    public void setScore(final Double score);
 
-   public static ScoreShippingRateInputImpl of(final ScoreShippingRateInput template) {
-      ScoreShippingRateInputImpl instance = new ScoreShippingRateInputImpl();
-      instance.setScore(template.getScore());
-      return instance;
-   }
+    public static ScoreShippingRateInputImpl of(){
+        return new ScoreShippingRateInputImpl();
+    }
+    
+
+    public static ScoreShippingRateInputImpl of(final ScoreShippingRateInput template) {
+        ScoreShippingRateInputImpl instance = new ScoreShippingRateInputImpl();
+        instance.setScore(template.getScore());
+        return instance;
+    }
 
 }

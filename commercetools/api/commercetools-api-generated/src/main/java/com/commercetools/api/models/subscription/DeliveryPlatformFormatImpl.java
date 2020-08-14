@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DeliveryPlatformFormatImpl implements DeliveryPlatformFormat {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   DeliveryPlatformFormatImpl() {
-      this.type = "Platform";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    DeliveryPlatformFormatImpl() {
+        this.type = "Platform";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

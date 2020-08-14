@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSetCompanyNameActionImpl implements CustomerSetCompanyNameAction {
 
-   private String action;
-   
-   private String companyName;
+    private String action;
+    
+    private String companyName;
 
-   @JsonCreator
-   CustomerSetCompanyNameActionImpl(@JsonProperty("companyName") final String companyName) {
-      this.companyName = companyName;
-      this.action = "setCompanyName";
-   }
-   public CustomerSetCompanyNameActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If not defined, the company name is unset.</p>
-   */
-   public String getCompanyName(){
-      return this.companyName;
-   }
+    @JsonCreator
+    CustomerSetCompanyNameActionImpl(@JsonProperty("companyName") final String companyName) {
+        this.companyName = companyName;
+        this.action = "setCompanyName";
+    }
+    public CustomerSetCompanyNameActionImpl() {
+       
+    }
 
-   public void setCompanyName(final String companyName){
-      this.companyName = companyName;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If not defined, the company name is unset.</p>
+    */
+    public String getCompanyName(){
+        return this.companyName;
+    }
+
+    public void setCompanyName(final String companyName){
+        this.companyName = companyName;
+    }
 
 }

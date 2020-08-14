@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CustomerSetTitleActionBuilder {
-   
-   @Nullable
-   private String title;
-   
-   public CustomerSetTitleActionBuilder title(@Nullable final String title) {
-      this.title = title;
-      return this;
-   }
-   
-   @Nullable
-   public String getTitle(){
-      return this.title;
-   }
 
-   public CustomerSetTitleAction build() {
-       return new CustomerSetTitleActionImpl(title);
-   }
-   
-   public static CustomerSetTitleActionBuilder of() {
-      return new CustomerSetTitleActionBuilder();
-   }
-   
-   public static CustomerSetTitleActionBuilder of(final CustomerSetTitleAction template) {
-      CustomerSetTitleActionBuilder builder = new CustomerSetTitleActionBuilder();
-      builder.title = template.getTitle();
-      return builder;
-   }
-   
+    @Nullable
+    private String title;
+
+    public CustomerSetTitleActionBuilder title(@Nullable final String title) {
+        this.title = title;
+        return this;
+    }
+
+    @Nullable
+    public String getTitle(){
+        return this.title;
+    }
+
+    public CustomerSetTitleAction build() {
+        return new CustomerSetTitleActionImpl(title);
+    }
+
+    public static CustomerSetTitleActionBuilder of() {
+        return new CustomerSetTitleActionBuilder();
+    }
+
+    public static CustomerSetTitleActionBuilder of(final CustomerSetTitleAction template) {
+        CustomerSetTitleActionBuilder builder = new CustomerSetTitleActionBuilder();
+        builder.title = template.getTitle();
+        return builder;
+    }
+
 }

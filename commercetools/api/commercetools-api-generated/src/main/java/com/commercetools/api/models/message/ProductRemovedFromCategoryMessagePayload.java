@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductRemovedFromCategoryMessagePayloadImpl.class)
 public interface ProductRemovedFromCategoryMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("category")
-   public CategoryReference getCategory();
-   
-   @NotNull
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("category")
+    public CategoryReference getCategory();
+    
+    @NotNull
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setCategory(final CategoryReference category);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductRemovedFromCategoryMessagePayloadImpl of(){
-      return new ProductRemovedFromCategoryMessagePayloadImpl();
-   }
-   
+    public void setCategory(final CategoryReference category);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductRemovedFromCategoryMessagePayloadImpl of(final ProductRemovedFromCategoryMessagePayload template) {
-      ProductRemovedFromCategoryMessagePayloadImpl instance = new ProductRemovedFromCategoryMessagePayloadImpl();
-      instance.setCategory(template.getCategory());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductRemovedFromCategoryMessagePayloadImpl of(){
+        return new ProductRemovedFromCategoryMessagePayloadImpl();
+    }
+    
+
+    public static ProductRemovedFromCategoryMessagePayloadImpl of(final ProductRemovedFromCategoryMessagePayload template) {
+        ProductRemovedFromCategoryMessagePayloadImpl instance = new ProductRemovedFromCategoryMessagePayloadImpl();
+        instance.setCategory(template.getCategory());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderStoreSetMessageImpl.class)
 public interface OrderStoreSetMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("store")
-   public StoreKeyReference getStore();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("store")
+    public StoreKeyReference getStore();
 
-   public void setStore(final StoreKeyReference store);
-   
-   public static OrderStoreSetMessageImpl of(){
-      return new OrderStoreSetMessageImpl();
-   }
-   
+    public void setStore(final StoreKeyReference store);
 
-   public static OrderStoreSetMessageImpl of(final OrderStoreSetMessage template) {
-      OrderStoreSetMessageImpl instance = new OrderStoreSetMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setStore(template.getStore());
-      return instance;
-   }
+    public static OrderStoreSetMessageImpl of(){
+        return new OrderStoreSetMessageImpl();
+    }
+    
+
+    public static OrderStoreSetMessageImpl of(final OrderStoreSetMessage template) {
+        OrderStoreSetMessageImpl instance = new OrderStoreSetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setStore(template.getStore());
+        return instance;
+    }
 
 }

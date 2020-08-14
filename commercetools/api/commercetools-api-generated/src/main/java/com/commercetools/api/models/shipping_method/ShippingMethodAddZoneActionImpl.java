@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodAddZoneActionImpl implements ShippingMethodAddZoneAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
+    private String action;
+    
+    private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
-   @JsonCreator
-   ShippingMethodAddZoneActionImpl(@JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
-      this.zone = zone;
-      this.action = "addZone";
-   }
-   public ShippingMethodAddZoneActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone(){
-      return this.zone;
-   }
+    @JsonCreator
+    ShippingMethodAddZoneActionImpl(@JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
+        this.zone = zone;
+        this.action = "addZone";
+    }
+    public ShippingMethodAddZoneActionImpl() {
+       
+    }
 
-   public void setZone(final com.commercetools.api.models.zone.ZoneResourceIdentifier zone){
-      this.zone = zone;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone(){
+        return this.zone;
+    }
+
+    public void setZone(final com.commercetools.api.models.zone.ZoneResourceIdentifier zone){
+        this.zone = zone;
+    }
 
 }

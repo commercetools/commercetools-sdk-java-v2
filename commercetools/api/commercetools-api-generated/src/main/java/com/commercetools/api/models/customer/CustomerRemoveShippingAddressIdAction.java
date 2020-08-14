@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerRemoveShippingAddressIdActionImpl.class)
 public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAction {
 
-   
-   
-   @JsonProperty("addressId")
-   public String getAddressId();
-   
-   
-   @JsonProperty("addressKey")
-   public String getAddressKey();
+    
+    
+    @JsonProperty("addressId")
+    public String getAddressId();
+    
+    
+    @JsonProperty("addressKey")
+    public String getAddressKey();
 
-   public void setAddressId(final String addressId);
-   
-   public void setAddressKey(final String addressKey);
-   
-   public static CustomerRemoveShippingAddressIdActionImpl of(){
-      return new CustomerRemoveShippingAddressIdActionImpl();
-   }
-   
+    public void setAddressId(final String addressId);
+    
+    public void setAddressKey(final String addressKey);
 
-   public static CustomerRemoveShippingAddressIdActionImpl of(final CustomerRemoveShippingAddressIdAction template) {
-      CustomerRemoveShippingAddressIdActionImpl instance = new CustomerRemoveShippingAddressIdActionImpl();
-      instance.setAddressId(template.getAddressId());
-      instance.setAddressKey(template.getAddressKey());
-      return instance;
-   }
+    public static CustomerRemoveShippingAddressIdActionImpl of(){
+        return new CustomerRemoveShippingAddressIdActionImpl();
+    }
+    
+
+    public static CustomerRemoveShippingAddressIdActionImpl of(final CustomerRemoveShippingAddressIdAction template) {
+        CustomerRemoveShippingAddressIdActionImpl instance = new CustomerRemoveShippingAddressIdActionImpl();
+        instance.setAddressId(template.getAddressId());
+        instance.setAddressKey(template.getAddressKey());
+        return instance;
+    }
 
 }

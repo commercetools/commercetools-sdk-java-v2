@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionChangeDestinationActionImpl implements ExtensionChangeDestinationAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.extension.ExtensionDestination destination;
+    private String action;
+    
+    private com.commercetools.api.models.extension.ExtensionDestination destination;
 
-   @JsonCreator
-   ExtensionChangeDestinationActionImpl(@JsonProperty("destination") final com.commercetools.api.models.extension.ExtensionDestination destination) {
-      this.destination = destination;
-      this.action = "changeDestination";
-   }
-   public ExtensionChangeDestinationActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.extension.ExtensionDestination getDestination(){
-      return this.destination;
-   }
+    @JsonCreator
+    ExtensionChangeDestinationActionImpl(@JsonProperty("destination") final com.commercetools.api.models.extension.ExtensionDestination destination) {
+        this.destination = destination;
+        this.action = "changeDestination";
+    }
+    public ExtensionChangeDestinationActionImpl() {
+       
+    }
 
-   public void setDestination(final com.commercetools.api.models.extension.ExtensionDestination destination){
-      this.destination = destination;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.extension.ExtensionDestination getDestination(){
+        return this.destination;
+    }
+
+    public void setDestination(final com.commercetools.api.models.extension.ExtensionDestination destination){
+        this.destination = destination;
+    }
 
 }

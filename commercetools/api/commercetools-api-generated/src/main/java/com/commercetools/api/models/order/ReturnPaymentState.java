@@ -13,33 +13,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ReturnPaymentState {
 
-  
-  @JsonProperty("NonRefundable")
-  NON_REFUNDABLE("NonRefundable"),
-  
-  
-  @JsonProperty("Initial")
-  INITIAL("Initial"),
-  
-  
-  @JsonProperty("Refunded")
-  REFUNDED("Refunded"),
-  
-  
-  @JsonProperty("NotRefunded")
-  NOT_REFUNDED("NotRefunded");
+    
+    @JsonProperty("NonRefundable")
+    NON_REFUNDABLE("NonRefundable"),
+    
+    
+    @JsonProperty("Initial")
+    INITIAL("Initial"),
+    
+    
+    @JsonProperty("Refunded")
+    REFUNDED("Refunded"),
+    
+    
+    @JsonProperty("NotRefunded")
+    NOT_REFUNDED("NotRefunded");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private ReturnPaymentState(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private ReturnPaymentState(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<ReturnPaymentState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<ReturnPaymentState> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

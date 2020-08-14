@@ -23,43 +23,43 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderCustomerSetMessagePayloadImpl.class)
 public interface OrderCustomerSetMessagePayload extends MessagePayload {
 
-   
-   @Valid
-   @JsonProperty("customer")
-   public CustomerReference getCustomer();
-   
-   @Valid
-   @JsonProperty("customerGroup")
-   public CustomerGroupReference getCustomerGroup();
-   
-   @Valid
-   @JsonProperty("oldCustomer")
-   public CustomerReference getOldCustomer();
-   
-   @Valid
-   @JsonProperty("oldCustomerGroup")
-   public CustomerGroupReference getOldCustomerGroup();
+    
+    @Valid
+    @JsonProperty("customer")
+    public CustomerReference getCustomer();
+    
+    @Valid
+    @JsonProperty("customerGroup")
+    public CustomerGroupReference getCustomerGroup();
+    
+    @Valid
+    @JsonProperty("oldCustomer")
+    public CustomerReference getOldCustomer();
+    
+    @Valid
+    @JsonProperty("oldCustomerGroup")
+    public CustomerGroupReference getOldCustomerGroup();
 
-   public void setCustomer(final CustomerReference customer);
-   
-   public void setCustomerGroup(final CustomerGroupReference customerGroup);
-   
-   public void setOldCustomer(final CustomerReference oldCustomer);
-   
-   public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
-   
-   public static OrderCustomerSetMessagePayloadImpl of(){
-      return new OrderCustomerSetMessagePayloadImpl();
-   }
-   
+    public void setCustomer(final CustomerReference customer);
+    
+    public void setCustomerGroup(final CustomerGroupReference customerGroup);
+    
+    public void setOldCustomer(final CustomerReference oldCustomer);
+    
+    public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
 
-   public static OrderCustomerSetMessagePayloadImpl of(final OrderCustomerSetMessagePayload template) {
-      OrderCustomerSetMessagePayloadImpl instance = new OrderCustomerSetMessagePayloadImpl();
-      instance.setCustomer(template.getCustomer());
-      instance.setCustomerGroup(template.getCustomerGroup());
-      instance.setOldCustomer(template.getOldCustomer());
-      instance.setOldCustomerGroup(template.getOldCustomerGroup());
-      return instance;
-   }
+    public static OrderCustomerSetMessagePayloadImpl of(){
+        return new OrderCustomerSetMessagePayloadImpl();
+    }
+    
+
+    public static OrderCustomerSetMessagePayloadImpl of(final OrderCustomerSetMessagePayload template) {
+        OrderCustomerSetMessagePayloadImpl instance = new OrderCustomerSetMessagePayloadImpl();
+        instance.setCustomer(template.getCustomer());
+        instance.setCustomerGroup(template.getCustomerGroup());
+        instance.setOldCustomer(template.getOldCustomer());
+        instance.setOldCustomerGroup(template.getOldCustomerGroup());
+        return instance;
+    }
 
 }

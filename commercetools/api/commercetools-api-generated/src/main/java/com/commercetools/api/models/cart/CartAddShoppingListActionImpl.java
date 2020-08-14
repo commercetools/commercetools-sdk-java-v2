@@ -24,55 +24,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartAddShoppingListActionImpl implements CartAddShoppingListAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
-   
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-   
-   private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+    private String action;
+    
+    private com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
+    
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
+    
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
-   @JsonCreator
-   CartAddShoppingListActionImpl(@JsonProperty("shoppingList") final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
-      this.shoppingList = shoppingList;
-      this.supplyChannel = supplyChannel;
-      this.distributionChannel = distributionChannel;
-      this.action = "addShoppingList";
-   }
-   public CartAddShoppingListActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList(){
-      return this.shoppingList;
-   }
-   
-   
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
-      return this.supplyChannel;
-   }
-   
-   
-   public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
-      return this.distributionChannel;
-   }
+    @JsonCreator
+    CartAddShoppingListActionImpl(@JsonProperty("shoppingList") final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+        this.shoppingList = shoppingList;
+        this.supplyChannel = supplyChannel;
+        this.distributionChannel = distributionChannel;
+        this.action = "addShoppingList";
+    }
+    public CartAddShoppingListActionImpl() {
+       
+    }
 
-   public void setShoppingList(final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList){
-      this.shoppingList = shoppingList;
-   }
-   
-   public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
-      this.supplyChannel = supplyChannel;
-   }
-   
-   public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
-      this.distributionChannel = distributionChannel;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList(){
+        return this.shoppingList;
+    }
+    
+    
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
+        return this.supplyChannel;
+    }
+    
+    
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
+        return this.distributionChannel;
+    }
+
+    public void setShoppingList(final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList){
+        this.shoppingList = shoppingList;
+    }
+    
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
+        this.supplyChannel = supplyChannel;
+    }
+    
+    public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
+        this.distributionChannel = distributionChannel;
+    }
 
 }

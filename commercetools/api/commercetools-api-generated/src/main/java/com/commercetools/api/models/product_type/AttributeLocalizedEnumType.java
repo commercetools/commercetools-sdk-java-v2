@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeLocalizedEnumTypeImpl.class)
 public interface AttributeLocalizedEnumType extends AttributeType {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("values")
-   public List<AttributeLocalizedEnumValue> getValues();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("values")
+    public List<AttributeLocalizedEnumValue> getValues();
 
-   public void setValues(final List<AttributeLocalizedEnumValue> values);
-   
-   public static AttributeLocalizedEnumTypeImpl of(){
-      return new AttributeLocalizedEnumTypeImpl();
-   }
-   
+    public void setValues(final List<AttributeLocalizedEnumValue> values);
 
-   public static AttributeLocalizedEnumTypeImpl of(final AttributeLocalizedEnumType template) {
-      AttributeLocalizedEnumTypeImpl instance = new AttributeLocalizedEnumTypeImpl();
-      instance.setValues(template.getValues());
-      return instance;
-   }
+    public static AttributeLocalizedEnumTypeImpl of(){
+        return new AttributeLocalizedEnumTypeImpl();
+    }
+    
+
+    public static AttributeLocalizedEnumTypeImpl of(final AttributeLocalizedEnumType template) {
+        AttributeLocalizedEnumTypeImpl instance = new AttributeLocalizedEnumTypeImpl();
+        instance.setValues(template.getValues());
+        return instance;
+    }
 
 }

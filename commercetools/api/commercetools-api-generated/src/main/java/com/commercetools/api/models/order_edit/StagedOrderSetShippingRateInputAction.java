@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetShippingRateInputActionImpl.class)
 public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("shippingRateInput")
-   public ShippingRateInputDraft getShippingRateInput();
+    
+    @Valid
+    @JsonProperty("shippingRateInput")
+    public ShippingRateInputDraft getShippingRateInput();
 
-   public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
-   
-   public static StagedOrderSetShippingRateInputActionImpl of(){
-      return new StagedOrderSetShippingRateInputActionImpl();
-   }
-   
+    public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
 
-   public static StagedOrderSetShippingRateInputActionImpl of(final StagedOrderSetShippingRateInputAction template) {
-      StagedOrderSetShippingRateInputActionImpl instance = new StagedOrderSetShippingRateInputActionImpl();
-      instance.setShippingRateInput(template.getShippingRateInput());
-      return instance;
-   }
+    public static StagedOrderSetShippingRateInputActionImpl of(){
+        return new StagedOrderSetShippingRateInputActionImpl();
+    }
+    
+
+    public static StagedOrderSetShippingRateInputActionImpl of(final StagedOrderSetShippingRateInputAction template) {
+        StagedOrderSetShippingRateInputActionImpl instance = new StagedOrderSetShippingRateInputActionImpl();
+        instance.setShippingRateInput(template.getShippingRateInput());
+        return instance;
+    }
 
 }

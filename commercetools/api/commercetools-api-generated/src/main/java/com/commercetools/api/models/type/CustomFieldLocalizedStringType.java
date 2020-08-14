@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface CustomFieldLocalizedStringType extends FieldType {
 
 
-   
-   public static CustomFieldLocalizedStringTypeImpl of(){
-      return new CustomFieldLocalizedStringTypeImpl();
-   }
-   
 
-   public static CustomFieldLocalizedStringTypeImpl of(final CustomFieldLocalizedStringType template) {
-      CustomFieldLocalizedStringTypeImpl instance = new CustomFieldLocalizedStringTypeImpl();
-      return instance;
-   }
+    public static CustomFieldLocalizedStringTypeImpl of(){
+        return new CustomFieldLocalizedStringTypeImpl();
+    }
+    
+
+    public static CustomFieldLocalizedStringTypeImpl of(final CustomFieldLocalizedStringType template) {
+        CustomFieldLocalizedStringTypeImpl instance = new CustomFieldLocalizedStringTypeImpl();
+        return instance;
+    }
 
 }

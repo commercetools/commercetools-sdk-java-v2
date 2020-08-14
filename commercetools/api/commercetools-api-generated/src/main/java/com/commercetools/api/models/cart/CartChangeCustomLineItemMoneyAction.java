@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = CartChangeCustomLineItemMoneyActionImpl.class)
 public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("customLineItemId")
-   public String getCustomLineItemId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("money")
-   public Money getMoney();
+    
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("money")
+    public Money getMoney();
 
-   public void setCustomLineItemId(final String customLineItemId);
-   
-   public void setMoney(final Money money);
-   
-   public static CartChangeCustomLineItemMoneyActionImpl of(){
-      return new CartChangeCustomLineItemMoneyActionImpl();
-   }
-   
+    public void setCustomLineItemId(final String customLineItemId);
+    
+    public void setMoney(final Money money);
 
-   public static CartChangeCustomLineItemMoneyActionImpl of(final CartChangeCustomLineItemMoneyAction template) {
-      CartChangeCustomLineItemMoneyActionImpl instance = new CartChangeCustomLineItemMoneyActionImpl();
-      instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setMoney(template.getMoney());
-      return instance;
-   }
+    public static CartChangeCustomLineItemMoneyActionImpl of(){
+        return new CartChangeCustomLineItemMoneyActionImpl();
+    }
+    
+
+    public static CartChangeCustomLineItemMoneyActionImpl of(final CartChangeCustomLineItemMoneyAction template) {
+        CartChangeCustomLineItemMoneyActionImpl instance = new CartChangeCustomLineItemMoneyActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setMoney(template.getMoney());
+        return instance;
+    }
 
 }

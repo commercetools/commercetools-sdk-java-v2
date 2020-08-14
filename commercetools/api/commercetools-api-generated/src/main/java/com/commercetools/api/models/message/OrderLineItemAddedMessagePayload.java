@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderLineItemAddedMessagePayloadImpl.class)
 public interface OrderLineItemAddedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("lineItem")
-   public LineItem getLineItem();
-   
-   @NotNull
-   @JsonProperty("addedQuantity")
-   public Long getAddedQuantity();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("lineItem")
+    public LineItem getLineItem();
+    
+    @NotNull
+    @JsonProperty("addedQuantity")
+    public Long getAddedQuantity();
 
-   public void setLineItem(final LineItem lineItem);
-   
-   public void setAddedQuantity(final Long addedQuantity);
-   
-   public static OrderLineItemAddedMessagePayloadImpl of(){
-      return new OrderLineItemAddedMessagePayloadImpl();
-   }
-   
+    public void setLineItem(final LineItem lineItem);
+    
+    public void setAddedQuantity(final Long addedQuantity);
 
-   public static OrderLineItemAddedMessagePayloadImpl of(final OrderLineItemAddedMessagePayload template) {
-      OrderLineItemAddedMessagePayloadImpl instance = new OrderLineItemAddedMessagePayloadImpl();
-      instance.setLineItem(template.getLineItem());
-      instance.setAddedQuantity(template.getAddedQuantity());
-      return instance;
-   }
+    public static OrderLineItemAddedMessagePayloadImpl of(){
+        return new OrderLineItemAddedMessagePayloadImpl();
+    }
+    
+
+    public static OrderLineItemAddedMessagePayloadImpl of(final OrderLineItemAddedMessagePayload template) {
+        OrderLineItemAddedMessagePayloadImpl instance = new OrderLineItemAddedMessagePayloadImpl();
+        instance.setLineItem(template.getLineItem());
+        instance.setAddedQuantity(template.getAddedQuantity());
+        return instance;
+    }
 
 }

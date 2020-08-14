@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountUpdateImpl.class)
 public interface CartDiscountUpdate  {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("actions")
-   public List<CartDiscountUpdateAction> getActions();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("actions")
+    public List<CartDiscountUpdateAction> getActions();
 
-   public void setVersion(final Long version);
-   
-   public void setActions(final List<CartDiscountUpdateAction> actions);
-   
-   public static CartDiscountUpdateImpl of(){
-      return new CartDiscountUpdateImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setActions(final List<CartDiscountUpdateAction> actions);
 
-   public static CartDiscountUpdateImpl of(final CartDiscountUpdate template) {
-      CartDiscountUpdateImpl instance = new CartDiscountUpdateImpl();
-      instance.setVersion(template.getVersion());
-      instance.setActions(template.getActions());
-      return instance;
-   }
+    public static CartDiscountUpdateImpl of(){
+        return new CartDiscountUpdateImpl();
+    }
+    
+
+    public static CartDiscountUpdateImpl of(final CartDiscountUpdate template) {
+        CartDiscountUpdateImpl instance = new CartDiscountUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(template.getActions());
+        return instance;
+    }
 
 }

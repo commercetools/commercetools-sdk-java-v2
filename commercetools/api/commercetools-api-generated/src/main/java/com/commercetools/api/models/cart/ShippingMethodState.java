@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ShippingMethodState {
 
-  
-  @JsonProperty("DoesNotMatchCart")
-  DOES_NOT_MATCH_CART("DoesNotMatchCart"),
-  
-  
-  @JsonProperty("MatchesCart")
-  MATCHES_CART("MatchesCart");
+    
+    @JsonProperty("DoesNotMatchCart")
+    DOES_NOT_MATCH_CART("DoesNotMatchCart"),
+    
+    
+    @JsonProperty("MatchesCart")
+    MATCHES_CART("MatchesCart");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private ShippingMethodState(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private ShippingMethodState(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<ShippingMethodState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<ShippingMethodState> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

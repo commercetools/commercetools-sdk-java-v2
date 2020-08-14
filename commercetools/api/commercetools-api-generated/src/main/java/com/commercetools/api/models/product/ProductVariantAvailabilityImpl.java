@@ -22,59 +22,59 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantAvailabilityImpl implements ProductVariantAvailability {
 
-   private Boolean isOnStock;
-   
-   private Long restockableInDays;
-   
-   private Long availableQuantity;
-   
-   private com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels;
+    private Boolean isOnStock;
+    
+    private Long restockableInDays;
+    
+    private Long availableQuantity;
+    
+    private com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels;
 
-   @JsonCreator
-   ProductVariantAvailabilityImpl(@JsonProperty("isOnStock") final Boolean isOnStock, @JsonProperty("restockableInDays") final Long restockableInDays, @JsonProperty("availableQuantity") final Long availableQuantity, @JsonProperty("channels") final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels) {
-      this.isOnStock = isOnStock;
-      this.restockableInDays = restockableInDays;
-      this.availableQuantity = availableQuantity;
-      this.channels = channels;
-   }
-   public ProductVariantAvailabilityImpl() {
-      
-   }
-   
-   
-   public Boolean getIsOnStock(){
-      return this.isOnStock;
-   }
-   
-   
-   public Long getRestockableInDays(){
-      return this.restockableInDays;
-   }
-   
-   
-   public Long getAvailableQuantity(){
-      return this.availableQuantity;
-   }
-   
-   
-   public com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap getChannels(){
-      return this.channels;
-   }
+    @JsonCreator
+    ProductVariantAvailabilityImpl(@JsonProperty("isOnStock") final Boolean isOnStock, @JsonProperty("restockableInDays") final Long restockableInDays, @JsonProperty("availableQuantity") final Long availableQuantity, @JsonProperty("channels") final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels) {
+        this.isOnStock = isOnStock;
+        this.restockableInDays = restockableInDays;
+        this.availableQuantity = availableQuantity;
+        this.channels = channels;
+    }
+    public ProductVariantAvailabilityImpl() {
+       
+    }
 
-   public void setIsOnStock(final Boolean isOnStock){
-      this.isOnStock = isOnStock;
-   }
-   
-   public void setRestockableInDays(final Long restockableInDays){
-      this.restockableInDays = restockableInDays;
-   }
-   
-   public void setAvailableQuantity(final Long availableQuantity){
-      this.availableQuantity = availableQuantity;
-   }
-   
-   public void setChannels(final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels){
-      this.channels = channels;
-   }
+    
+    public Boolean getIsOnStock(){
+        return this.isOnStock;
+    }
+    
+    
+    public Long getRestockableInDays(){
+        return this.restockableInDays;
+    }
+    
+    
+    public Long getAvailableQuantity(){
+        return this.availableQuantity;
+    }
+    
+    
+    public com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap getChannels(){
+        return this.channels;
+    }
+
+    public void setIsOnStock(final Boolean isOnStock){
+        this.isOnStock = isOnStock;
+    }
+    
+    public void setRestockableInDays(final Long restockableInDays){
+        this.restockableInDays = restockableInDays;
+    }
+    
+    public void setAvailableQuantity(final Long availableQuantity){
+        this.availableQuantity = availableQuantity;
+    }
+    
+    public void setChannels(final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels){
+        this.channels = channels;
+    }
 
 }

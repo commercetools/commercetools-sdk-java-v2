@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangeAttributeConstraintActionImpl.class)
 public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("attributeName")
-   public String getAttributeName();
-   
-   @NotNull
-   @JsonProperty("newValue")
-   public AttributeConstraintEnumDraft getNewValue();
+    
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+    
+    @NotNull
+    @JsonProperty("newValue")
+    public AttributeConstraintEnumDraft getNewValue();
 
-   public void setAttributeName(final String attributeName);
-   
-   public void setNewValue(final AttributeConstraintEnumDraft newValue);
-   
-   public static ProductTypeChangeAttributeConstraintActionImpl of(){
-      return new ProductTypeChangeAttributeConstraintActionImpl();
-   }
-   
+    public void setAttributeName(final String attributeName);
+    
+    public void setNewValue(final AttributeConstraintEnumDraft newValue);
 
-   public static ProductTypeChangeAttributeConstraintActionImpl of(final ProductTypeChangeAttributeConstraintAction template) {
-      ProductTypeChangeAttributeConstraintActionImpl instance = new ProductTypeChangeAttributeConstraintActionImpl();
-      instance.setAttributeName(template.getAttributeName());
-      instance.setNewValue(template.getNewValue());
-      return instance;
-   }
+    public static ProductTypeChangeAttributeConstraintActionImpl of(){
+        return new ProductTypeChangeAttributeConstraintActionImpl();
+    }
+    
+
+    public static ProductTypeChangeAttributeConstraintActionImpl of(final ProductTypeChangeAttributeConstraintAction template) {
+        ProductTypeChangeAttributeConstraintActionImpl instance = new ProductTypeChangeAttributeConstraintActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNewValue(template.getNewValue());
+        return instance;
+    }
 
 }

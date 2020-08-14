@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerEmailVerifyImpl.class)
 public interface CustomerEmailVerify  {
 
-   
-   
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @JsonProperty("tokenValue")
-   public String getTokenValue();
+    
+    
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @JsonProperty("tokenValue")
+    public String getTokenValue();
 
-   public void setVersion(final Long version);
-   
-   public void setTokenValue(final String tokenValue);
-   
-   public static CustomerEmailVerifyImpl of(){
-      return new CustomerEmailVerifyImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setTokenValue(final String tokenValue);
 
-   public static CustomerEmailVerifyImpl of(final CustomerEmailVerify template) {
-      CustomerEmailVerifyImpl instance = new CustomerEmailVerifyImpl();
-      instance.setVersion(template.getVersion());
-      instance.setTokenValue(template.getTokenValue());
-      return instance;
-   }
+    public static CustomerEmailVerifyImpl of(){
+        return new CustomerEmailVerifyImpl();
+    }
+    
+
+    public static CustomerEmailVerifyImpl of(final CustomerEmailVerify template) {
+        CustomerEmailVerifyImpl instance = new CustomerEmailVerifyImpl();
+        instance.setVersion(template.getVersion());
+        instance.setTokenValue(template.getTokenValue());
+        return instance;
+    }
 
 }

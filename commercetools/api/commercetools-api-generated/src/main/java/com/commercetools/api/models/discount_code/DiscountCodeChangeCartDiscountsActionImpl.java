@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeChangeCartDiscountsAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
 
-   @JsonCreator
-   DiscountCodeChangeCartDiscountsActionImpl(@JsonProperty("cartDiscounts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
-      this.cartDiscounts = cartDiscounts;
-      this.action = "changeCartDiscounts";
-   }
-   public DiscountCodeChangeCartDiscountsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts(){
-      return this.cartDiscounts;
-   }
+    @JsonCreator
+    DiscountCodeChangeCartDiscountsActionImpl(@JsonProperty("cartDiscounts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
+        this.cartDiscounts = cartDiscounts;
+        this.action = "changeCartDiscounts";
+    }
+    public DiscountCodeChangeCartDiscountsActionImpl() {
+       
+    }
 
-   public void setCartDiscounts(final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts){
-      this.cartDiscounts = cartDiscounts;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts(){
+        return this.cartDiscounts;
+    }
+
+    public void setCartDiscounts(final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts){
+        this.cartDiscounts = cartDiscounts;
+    }
 
 }

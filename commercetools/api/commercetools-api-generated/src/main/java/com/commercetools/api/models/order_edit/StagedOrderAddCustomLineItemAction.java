@@ -26,66 +26,66 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderAddCustomLineItemActionImpl.class)
 public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("money")
-   public Money getMoney();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
-   
-   
-   @JsonProperty("quantity")
-   public Double getQuantity();
-   
-   @NotNull
-   @JsonProperty("slug")
-   public String getSlug();
-   
-   @Valid
-   @JsonProperty("taxCategory")
-   public TaxCategoryResourceIdentifier getTaxCategory();
-   
-   @Valid
-   @JsonProperty("custom")
-   public CustomFieldsDraft getCustom();
-   
-   @Valid
-   @JsonProperty("externalTaxRate")
-   public ExternalTaxRateDraft getExternalTaxRate();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("money")
+    public Money getMoney();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
+    
+    
+    @JsonProperty("quantity")
+    public Double getQuantity();
+    
+    @NotNull
+    @JsonProperty("slug")
+    public String getSlug();
+    
+    @Valid
+    @JsonProperty("taxCategory")
+    public TaxCategoryResourceIdentifier getTaxCategory();
+    
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+    
+    @Valid
+    @JsonProperty("externalTaxRate")
+    public ExternalTaxRateDraft getExternalTaxRate();
 
-   public void setMoney(final Money money);
-   
-   public void setName(final LocalizedString name);
-   
-   public void setQuantity(final Double quantity);
-   
-   public void setSlug(final String slug);
-   
-   public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-   
-   public void setCustom(final CustomFieldsDraft custom);
-   
-   public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-   
-   public static StagedOrderAddCustomLineItemActionImpl of(){
-      return new StagedOrderAddCustomLineItemActionImpl();
-   }
-   
+    public void setMoney(final Money money);
+    
+    public void setName(final LocalizedString name);
+    
+    public void setQuantity(final Double quantity);
+    
+    public void setSlug(final String slug);
+    
+    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
+    
+    public void setCustom(final CustomFieldsDraft custom);
+    
+    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-   public static StagedOrderAddCustomLineItemActionImpl of(final StagedOrderAddCustomLineItemAction template) {
-      StagedOrderAddCustomLineItemActionImpl instance = new StagedOrderAddCustomLineItemActionImpl();
-      instance.setMoney(template.getMoney());
-      instance.setName(template.getName());
-      instance.setQuantity(template.getQuantity());
-      instance.setSlug(template.getSlug());
-      instance.setTaxCategory(template.getTaxCategory());
-      instance.setCustom(template.getCustom());
-      instance.setExternalTaxRate(template.getExternalTaxRate());
-      return instance;
-   }
+    public static StagedOrderAddCustomLineItemActionImpl of(){
+        return new StagedOrderAddCustomLineItemActionImpl();
+    }
+    
+
+    public static StagedOrderAddCustomLineItemActionImpl of(final StagedOrderAddCustomLineItemAction template) {
+        StagedOrderAddCustomLineItemActionImpl instance = new StagedOrderAddCustomLineItemActionImpl();
+        instance.setMoney(template.getMoney());
+        instance.setName(template.getName());
+        instance.setQuantity(template.getQuantity());
+        instance.setSlug(template.getSlug());
+        instance.setTaxCategory(template.getTaxCategory());
+        instance.setCustom(template.getCustom());
+        instance.setExternalTaxRate(template.getExternalTaxRate());
+        return instance;
+    }
 
 }

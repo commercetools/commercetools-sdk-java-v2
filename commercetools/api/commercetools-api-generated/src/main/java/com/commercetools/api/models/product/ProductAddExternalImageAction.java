@@ -22,44 +22,44 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductAddExternalImageActionImpl.class)
 public interface ProductAddExternalImageAction extends ProductUpdateAction {
 
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("image")
-   public Image getImage();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("image")
+    public Image getImage();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setSku(final String sku);
-   
-   public void setImage(final Image image);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductAddExternalImageActionImpl of(){
-      return new ProductAddExternalImageActionImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setSku(final String sku);
+    
+    public void setImage(final Image image);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductAddExternalImageActionImpl of(final ProductAddExternalImageAction template) {
-      ProductAddExternalImageActionImpl instance = new ProductAddExternalImageActionImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
-      instance.setImage(template.getImage());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductAddExternalImageActionImpl of(){
+        return new ProductAddExternalImageActionImpl();
+    }
+    
+
+    public static ProductAddExternalImageActionImpl of(final ProductAddExternalImageAction template) {
+        ProductAddExternalImageActionImpl instance = new ProductAddExternalImageActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setImage(template.getImage());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

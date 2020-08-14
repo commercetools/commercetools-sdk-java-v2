@@ -22,37 +22,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MoneyImpl implements Money {
 
-   private Long centAmount;
-   
-   private String currencyCode;
+    private Long centAmount;
+    
+    private String currencyCode;
 
-   @JsonCreator
-   MoneyImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
-      this.centAmount = centAmount;
-      this.currencyCode = currencyCode;
-   }
-   public MoneyImpl() {
-      
-   }
-   
-   
-   public Long getCentAmount(){
-      return this.centAmount;
-   }
-   
-   /**
-   *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-   */
-   public String getCurrencyCode(){
-      return this.currencyCode;
-   }
+    @JsonCreator
+    MoneyImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
+        this.centAmount = centAmount;
+        this.currencyCode = currencyCode;
+    }
+    public MoneyImpl() {
+       
+    }
 
-   public void setCentAmount(final Long centAmount){
-      this.centAmount = centAmount;
-   }
-   
-   public void setCurrencyCode(final String currencyCode){
-      this.currencyCode = currencyCode;
-   }
+    
+    public Long getCentAmount(){
+        return this.centAmount;
+    }
+    
+    /**
+    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    */
+    public String getCurrencyCode(){
+        return this.currencyCode;
+    }
+
+    public void setCentAmount(final Long centAmount){
+        this.centAmount = centAmount;
+    }
+    
+    public void setCurrencyCode(final String currencyCode){
+        this.currencyCode = currencyCode;
+    }
 
 }

@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FilteredFacetResultImpl implements FilteredFacetResult {
 
-   private com.commercetools.api.models.product.FacetTypes type;
-   
-   private Long count;
-   
-   private Long productCount;
+    private com.commercetools.api.models.product.FacetTypes type;
+    
+    private Long count;
+    
+    private Long productCount;
 
-   @JsonCreator
-   FilteredFacetResultImpl(@JsonProperty("count") final Long count, @JsonProperty("productCount") final Long productCount) {
-      this.count = count;
-      this.productCount = productCount;
-      this.type = FacetTypes.findEnumViaJsonName("filter").get();
-   }
-   public FilteredFacetResultImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.product.FacetTypes getType(){
-      return this.type;
-   }
-   
-   
-   public Long getCount(){
-      return this.count;
-   }
-   
-   
-   public Long getProductCount(){
-      return this.productCount;
-   }
+    @JsonCreator
+    FilteredFacetResultImpl(@JsonProperty("count") final Long count, @JsonProperty("productCount") final Long productCount) {
+        this.count = count;
+        this.productCount = productCount;
+        this.type = FacetTypes.findEnumViaJsonName("filter").get();
+    }
+    public FilteredFacetResultImpl() {
+       
+    }
 
-   public void setCount(final Long count){
-      this.count = count;
-   }
-   
-   public void setProductCount(final Long productCount){
-      this.productCount = productCount;
-   }
+    
+    public com.commercetools.api.models.product.FacetTypes getType(){
+        return this.type;
+    }
+    
+    
+    public Long getCount(){
+        return this.count;
+    }
+    
+    
+    public Long getProductCount(){
+        return this.productCount;
+    }
+
+    public void setCount(final Long count){
+        this.count = count;
+    }
+    
+    public void setProductCount(final Long productCount){
+        this.productCount = productCount;
+    }
 
 }

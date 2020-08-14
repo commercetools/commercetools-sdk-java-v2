@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntryUpdateImpl.class)
 public interface InventoryEntryUpdate  {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("actions")
-   public List<InventoryEntryUpdateAction> getActions();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("actions")
+    public List<InventoryEntryUpdateAction> getActions();
 
-   public void setVersion(final Long version);
-   
-   public void setActions(final List<InventoryEntryUpdateAction> actions);
-   
-   public static InventoryEntryUpdateImpl of(){
-      return new InventoryEntryUpdateImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setActions(final List<InventoryEntryUpdateAction> actions);
 
-   public static InventoryEntryUpdateImpl of(final InventoryEntryUpdate template) {
-      InventoryEntryUpdateImpl instance = new InventoryEntryUpdateImpl();
-      instance.setVersion(template.getVersion());
-      instance.setActions(template.getActions());
-      return instance;
-   }
+    public static InventoryEntryUpdateImpl of(){
+        return new InventoryEntryUpdateImpl();
+    }
+    
+
+    public static InventoryEntryUpdateImpl of(final InventoryEntryUpdate template) {
+        InventoryEntryUpdateImpl instance = new InventoryEntryUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(template.getActions());
+        return instance;
+    }
 
 }

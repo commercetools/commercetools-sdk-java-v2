@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = GraphQLErrorLocationImpl.class)
 public interface GraphQLErrorLocation  {
 
-   
-   @NotNull
-   @JsonProperty("line")
-   public Integer getLine();
-   
-   @NotNull
-   @JsonProperty("column")
-   public Integer getColumn();
+    
+    @NotNull
+    @JsonProperty("line")
+    public Integer getLine();
+    
+    @NotNull
+    @JsonProperty("column")
+    public Integer getColumn();
 
-   public void setLine(final Integer line);
-   
-   public void setColumn(final Integer column);
-   
-   public static GraphQLErrorLocationImpl of(){
-      return new GraphQLErrorLocationImpl();
-   }
-   
+    public void setLine(final Integer line);
+    
+    public void setColumn(final Integer column);
 
-   public static GraphQLErrorLocationImpl of(final GraphQLErrorLocation template) {
-      GraphQLErrorLocationImpl instance = new GraphQLErrorLocationImpl();
-      instance.setLine(template.getLine());
-      instance.setColumn(template.getColumn());
-      return instance;
-   }
+    public static GraphQLErrorLocationImpl of(){
+        return new GraphQLErrorLocationImpl();
+    }
+    
+
+    public static GraphQLErrorLocationImpl of(final GraphQLErrorLocation template) {
+        GraphQLErrorLocationImpl instance = new GraphQLErrorLocationImpl();
+        instance.setLine(template.getLine());
+        instance.setColumn(template.getColumn());
+        return instance;
+    }
 
 }

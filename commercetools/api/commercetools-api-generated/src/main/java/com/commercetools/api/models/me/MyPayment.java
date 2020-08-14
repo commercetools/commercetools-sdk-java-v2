@@ -25,84 +25,84 @@ import java.io.IOException;
 @JsonDeserialize(as = MyPaymentImpl.class)
 public interface MyPayment  {
 
-   
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   /**
-   *  <p>A reference to the customer this payment belongs to.</p>
-   */
-   @Valid
-   @JsonProperty("customer")
-   public CustomerReference getCustomer();
-   /**
-   *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
-   */
-   
-   @JsonProperty("anonymousId")
-   public String getAnonymousId();
-   /**
-   *  <p>How much money this payment intends to receive from the customer.
-   *  The value usually matches the cart or order gross total.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("amountPlanned")
-   public TypedMoney getAmountPlanned();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("paymentMethodInfo")
-   public PaymentMethodInfo getPaymentMethodInfo();
-   /**
-   *  <p>A list of financial transactions of different TransactionTypes
-   *  with different TransactionStates.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("transactions")
-   public List<Transaction> getTransactions();
-   
-   @Valid
-   @JsonProperty("custom")
-   public CustomFields getCustom();
+    
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    /**
+    *  <p>A reference to the customer this payment belongs to.</p>
+    */
+    @Valid
+    @JsonProperty("customer")
+    public CustomerReference getCustomer();
+    /**
+    *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+    */
+    
+    @JsonProperty("anonymousId")
+    public String getAnonymousId();
+    /**
+    *  <p>How much money this payment intends to receive from the customer.
+    *  The value usually matches the cart or order gross total.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("amountPlanned")
+    public TypedMoney getAmountPlanned();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("paymentMethodInfo")
+    public PaymentMethodInfo getPaymentMethodInfo();
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes
+    *  with different TransactionStates.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("transactions")
+    public List<Transaction> getTransactions();
+    
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
 
-   public void setId(final String id);
-   
-   public void setVersion(final Long version);
-   
-   public void setCustomer(final CustomerReference customer);
-   
-   public void setAnonymousId(final String anonymousId);
-   
-   public void setAmountPlanned(final TypedMoney amountPlanned);
-   
-   public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
-   
-   public void setTransactions(final List<Transaction> transactions);
-   
-   public void setCustom(final CustomFields custom);
-   
-   public static MyPaymentImpl of(){
-      return new MyPaymentImpl();
-   }
-   
+    public void setId(final String id);
+    
+    public void setVersion(final Long version);
+    
+    public void setCustomer(final CustomerReference customer);
+    
+    public void setAnonymousId(final String anonymousId);
+    
+    public void setAmountPlanned(final TypedMoney amountPlanned);
+    
+    public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
+    
+    public void setTransactions(final List<Transaction> transactions);
+    
+    public void setCustom(final CustomFields custom);
 
-   public static MyPaymentImpl of(final MyPayment template) {
-      MyPaymentImpl instance = new MyPaymentImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCustomer(template.getCustomer());
-      instance.setAnonymousId(template.getAnonymousId());
-      instance.setAmountPlanned(template.getAmountPlanned());
-      instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
-      instance.setTransactions(template.getTransactions());
-      instance.setCustom(template.getCustom());
-      return instance;
-   }
+    public static MyPaymentImpl of(){
+        return new MyPaymentImpl();
+    }
+    
+
+    public static MyPaymentImpl of(final MyPayment template) {
+        MyPaymentImpl instance = new MyPaymentImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCustomer(template.getCustomer());
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setAmountPlanned(template.getAmountPlanned());
+        instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
+        instance.setTransactions(template.getTransactions());
+        instance.setCustom(template.getCustom());
+        return instance;
+    }
 
 }

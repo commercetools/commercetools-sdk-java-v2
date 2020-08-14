@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = LineItemReturnItemImpl.class)
 public interface LineItemReturnItem extends ReturnItem {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public static LineItemReturnItemImpl of(){
-      return new LineItemReturnItemImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
 
-   public static LineItemReturnItemImpl of(final LineItemReturnItem template) {
-      LineItemReturnItemImpl instance = new LineItemReturnItemImpl();
-      instance.setId(template.getId());
-      instance.setQuantity(template.getQuantity());
-      instance.setComment(template.getComment());
-      instance.setShipmentState(template.getShipmentState());
-      instance.setPaymentState(template.getPaymentState());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLineItemId(template.getLineItemId());
-      return instance;
-   }
+    public static LineItemReturnItemImpl of(){
+        return new LineItemReturnItemImpl();
+    }
+    
+
+    public static LineItemReturnItemImpl of(final LineItemReturnItem template) {
+        LineItemReturnItemImpl instance = new LineItemReturnItemImpl();
+        instance.setId(template.getId());
+        instance.setQuantity(template.getQuantity());
+        instance.setComment(template.getComment());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLineItemId(template.getLineItemId());
+        return instance;
+    }
 
 }

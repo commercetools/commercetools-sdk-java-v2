@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CartChangeTaxRoundingModeActionImpl.class)
 public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("taxRoundingMode")
-   public RoundingMode getTaxRoundingMode();
+    
+    @NotNull
+    @JsonProperty("taxRoundingMode")
+    public RoundingMode getTaxRoundingMode();
 
-   public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
-   
-   public static CartChangeTaxRoundingModeActionImpl of(){
-      return new CartChangeTaxRoundingModeActionImpl();
-   }
-   
+    public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
-   public static CartChangeTaxRoundingModeActionImpl of(final CartChangeTaxRoundingModeAction template) {
-      CartChangeTaxRoundingModeActionImpl instance = new CartChangeTaxRoundingModeActionImpl();
-      instance.setTaxRoundingMode(template.getTaxRoundingMode());
-      return instance;
-   }
+    public static CartChangeTaxRoundingModeActionImpl of(){
+        return new CartChangeTaxRoundingModeActionImpl();
+    }
+    
+
+    public static CartChangeTaxRoundingModeActionImpl of(final CartChangeTaxRoundingModeAction template) {
+        CartChangeTaxRoundingModeActionImpl instance = new CartChangeTaxRoundingModeActionImpl();
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        return instance;
+    }
 
 }

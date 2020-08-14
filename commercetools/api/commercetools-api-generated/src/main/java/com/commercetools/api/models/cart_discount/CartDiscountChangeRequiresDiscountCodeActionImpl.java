@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountChangeRequiresDiscountCodeActionImpl implements CartDiscountChangeRequiresDiscountCodeAction {
 
-   private String action;
-   
-   private Boolean requiresDiscountCode;
+    private String action;
+    
+    private Boolean requiresDiscountCode;
 
-   @JsonCreator
-   CartDiscountChangeRequiresDiscountCodeActionImpl(@JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode) {
-      this.requiresDiscountCode = requiresDiscountCode;
-      this.action = "changeRequiresDiscountCode";
-   }
-   public CartDiscountChangeRequiresDiscountCodeActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Boolean getRequiresDiscountCode(){
-      return this.requiresDiscountCode;
-   }
+    @JsonCreator
+    CartDiscountChangeRequiresDiscountCodeActionImpl(@JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode) {
+        this.requiresDiscountCode = requiresDiscountCode;
+        this.action = "changeRequiresDiscountCode";
+    }
+    public CartDiscountChangeRequiresDiscountCodeActionImpl() {
+       
+    }
 
-   public void setRequiresDiscountCode(final Boolean requiresDiscountCode){
-      this.requiresDiscountCode = requiresDiscountCode;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Boolean getRequiresDiscountCode(){
+        return this.requiresDiscountCode;
+    }
+
+    public void setRequiresDiscountCode(final Boolean requiresDiscountCode){
+        this.requiresDiscountCode = requiresDiscountCode;
+    }
 
 }

@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeChangeFieldDefinitionLabelActionImpl implements TypeChangeFieldDefinitionLabelAction {
 
-   private String action;
-   
-   private String fieldName;
-   
-   private com.commercetools.api.models.common.LocalizedString label;
+    private String action;
+    
+    private String fieldName;
+    
+    private com.commercetools.api.models.common.LocalizedString label;
 
-   @JsonCreator
-   TypeChangeFieldDefinitionLabelActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
-      this.fieldName = fieldName;
-      this.label = label;
-      this.action = "changeFieldDefinitionLabel";
-   }
-   public TypeChangeFieldDefinitionLabelActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getFieldName(){
-      return this.fieldName;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getLabel(){
-      return this.label;
-   }
+    @JsonCreator
+    TypeChangeFieldDefinitionLabelActionImpl(@JsonProperty("fieldName") final String fieldName, @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
+        this.fieldName = fieldName;
+        this.label = label;
+        this.action = "changeFieldDefinitionLabel";
+    }
+    public TypeChangeFieldDefinitionLabelActionImpl() {
+       
+    }
 
-   public void setFieldName(final String fieldName){
-      this.fieldName = fieldName;
-   }
-   
-   public void setLabel(final com.commercetools.api.models.common.LocalizedString label){
-      this.label = label;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getFieldName(){
+        return this.fieldName;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getLabel(){
+        return this.label;
+    }
+
+    public void setFieldName(final String fieldName){
+        this.fieldName = fieldName;
+    }
+    
+    public void setLabel(final com.commercetools.api.models.common.LocalizedString label){
+        this.label = label;
+    }
 
 }

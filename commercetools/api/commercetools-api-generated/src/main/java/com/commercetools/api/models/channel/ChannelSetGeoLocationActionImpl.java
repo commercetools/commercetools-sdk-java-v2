@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocationAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.GeoJson geoLocation;
+    private String action;
+    
+    private com.commercetools.api.models.common.GeoJson geoLocation;
 
-   @JsonCreator
-   ChannelSetGeoLocationActionImpl(@JsonProperty("geoLocation") final com.commercetools.api.models.common.GeoJson geoLocation) {
-      this.geoLocation = geoLocation;
-      this.action = "setGeoLocation";
-   }
-   public ChannelSetGeoLocationActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.GeoJson getGeoLocation(){
-      return this.geoLocation;
-   }
+    @JsonCreator
+    ChannelSetGeoLocationActionImpl(@JsonProperty("geoLocation") final com.commercetools.api.models.common.GeoJson geoLocation) {
+        this.geoLocation = geoLocation;
+        this.action = "setGeoLocation";
+    }
+    public ChannelSetGeoLocationActionImpl() {
+       
+    }
 
-   public void setGeoLocation(final com.commercetools.api.models.common.GeoJson geoLocation){
-      this.geoLocation = geoLocation;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.GeoJson getGeoLocation(){
+        return this.geoLocation;
+    }
+
+    public void setGeoLocation(final com.commercetools.api.models.common.GeoJson geoLocation){
+        this.geoLocation = geoLocation;
+    }
 
 }

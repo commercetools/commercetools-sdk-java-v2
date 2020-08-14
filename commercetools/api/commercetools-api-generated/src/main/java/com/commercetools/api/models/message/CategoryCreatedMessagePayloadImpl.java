@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.category.Category category;
+    private String type;
+    
+    private com.commercetools.api.models.category.Category category;
 
-   @JsonCreator
-   CategoryCreatedMessagePayloadImpl(@JsonProperty("category") final com.commercetools.api.models.category.Category category) {
-      this.category = category;
-      this.type = "CategoryCreated";
-   }
-   public CategoryCreatedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.category.Category getCategory(){
-      return this.category;
-   }
+    @JsonCreator
+    CategoryCreatedMessagePayloadImpl(@JsonProperty("category") final com.commercetools.api.models.category.Category category) {
+        this.category = category;
+        this.type = "CategoryCreated";
+    }
+    public CategoryCreatedMessagePayloadImpl() {
+       
+    }
 
-   public void setCategory(final com.commercetools.api.models.category.Category category){
-      this.category = category;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.category.Category getCategory(){
+        return this.category;
+    }
+
+    public void setCategory(final com.commercetools.api.models.category.Category category){
+        this.category = category;
+    }
 
 }

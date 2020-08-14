@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditApplyImpl implements OrderEditApply {
 
-   private Integer editVersion;
-   
-   private Integer resourceVersion;
+    private Integer editVersion;
+    
+    private Integer resourceVersion;
 
-   @JsonCreator
-   OrderEditApplyImpl(@JsonProperty("editVersion") final Integer editVersion, @JsonProperty("resourceVersion") final Integer resourceVersion) {
-      this.editVersion = editVersion;
-      this.resourceVersion = resourceVersion;
-   }
-   public OrderEditApplyImpl() {
-      
-   }
-   
-   
-   public Integer getEditVersion(){
-      return this.editVersion;
-   }
-   
-   
-   public Integer getResourceVersion(){
-      return this.resourceVersion;
-   }
+    @JsonCreator
+    OrderEditApplyImpl(@JsonProperty("editVersion") final Integer editVersion, @JsonProperty("resourceVersion") final Integer resourceVersion) {
+        this.editVersion = editVersion;
+        this.resourceVersion = resourceVersion;
+    }
+    public OrderEditApplyImpl() {
+       
+    }
 
-   public void setEditVersion(final Integer editVersion){
-      this.editVersion = editVersion;
-   }
-   
-   public void setResourceVersion(final Integer resourceVersion){
-      this.resourceVersion = resourceVersion;
-   }
+    
+    public Integer getEditVersion(){
+        return this.editVersion;
+    }
+    
+    
+    public Integer getResourceVersion(){
+        return this.resourceVersion;
+    }
+
+    public void setEditVersion(final Integer editVersion){
+        this.editVersion = editVersion;
+    }
+    
+    public void setResourceVersion(final Integer resourceVersion){
+        this.resourceVersion = resourceVersion;
+    }
 
 }

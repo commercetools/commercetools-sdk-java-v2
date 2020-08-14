@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSetLineItemTotalPriceAction {
 
-   private String action;
-   
-   private String lineItemId;
-   
-   private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
+    private String action;
+    
+    private String lineItemId;
+    
+    private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
-   @JsonCreator
-   StagedOrderSetLineItemTotalPriceActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-      this.lineItemId = lineItemId;
-      this.externalTotalPrice = externalTotalPrice;
-      this.action = "setLineItemTotalPrice";
-   }
-   public StagedOrderSetLineItemTotalPriceActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getLineItemId(){
-      return this.lineItemId;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
-      return this.externalTotalPrice;
-   }
+    @JsonCreator
+    StagedOrderSetLineItemTotalPriceActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+        this.lineItemId = lineItemId;
+        this.externalTotalPrice = externalTotalPrice;
+        this.action = "setLineItemTotalPrice";
+    }
+    public StagedOrderSetLineItemTotalPriceActionImpl() {
+       
+    }
 
-   public void setLineItemId(final String lineItemId){
-      this.lineItemId = lineItemId;
-   }
-   
-   public void setExternalTotalPrice(final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
-      this.externalTotalPrice = externalTotalPrice;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getLineItemId(){
+        return this.lineItemId;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
+        return this.externalTotalPrice;
+    }
+
+    public void setLineItemId(final String lineItemId){
+        this.lineItemId = lineItemId;
+    }
+    
+    public void setExternalTotalPrice(final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
+        this.externalTotalPrice = externalTotalPrice;
+    }
 
 }

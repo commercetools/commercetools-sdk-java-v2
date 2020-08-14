@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCartRecalculateActionImpl implements MyCartRecalculateAction {
 
-   private String action;
-   
-   private Boolean updateProductData;
+    private String action;
+    
+    private Boolean updateProductData;
 
-   @JsonCreator
-   MyCartRecalculateActionImpl(@JsonProperty("updateProductData") final Boolean updateProductData) {
-      this.updateProductData = updateProductData;
-      this.action = "recalculate";
-   }
-   public MyCartRecalculateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Boolean getUpdateProductData(){
-      return this.updateProductData;
-   }
+    @JsonCreator
+    MyCartRecalculateActionImpl(@JsonProperty("updateProductData") final Boolean updateProductData) {
+        this.updateProductData = updateProductData;
+        this.action = "recalculate";
+    }
+    public MyCartRecalculateActionImpl() {
+       
+    }
 
-   public void setUpdateProductData(final Boolean updateProductData){
-      this.updateProductData = updateProductData;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Boolean getUpdateProductData(){
+        return this.updateProductData;
+    }
+
+    public void setUpdateProductData(final Boolean updateProductData){
+        this.updateProductData = updateProductData;
+    }
 
 }

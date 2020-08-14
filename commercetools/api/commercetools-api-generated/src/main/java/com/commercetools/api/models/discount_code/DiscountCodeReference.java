@@ -23,23 +23,23 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeReferenceImpl.class)
 public interface DiscountCodeReference extends Reference {
 
-   
-   @Valid
-   @JsonProperty("obj")
-   public DiscountCode getObj();
+    
+    @Valid
+    @JsonProperty("obj")
+    public DiscountCode getObj();
 
-   public void setObj(final DiscountCode obj);
-   
-   public static DiscountCodeReferenceImpl of(){
-      return new DiscountCodeReferenceImpl();
-   }
-   
+    public void setObj(final DiscountCode obj);
 
-   public static DiscountCodeReferenceImpl of(final DiscountCodeReference template) {
-      DiscountCodeReferenceImpl instance = new DiscountCodeReferenceImpl();
-      instance.setId(template.getId());
-      instance.setObj(template.getObj());
-      return instance;
-   }
+    public static DiscountCodeReferenceImpl of(){
+        return new DiscountCodeReferenceImpl();
+    }
+    
+
+    public static DiscountCodeReferenceImpl of(final DiscountCodeReference template) {
+        DiscountCodeReferenceImpl instance = new DiscountCodeReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(template.getObj());
+        return instance;
+    }
 
 }

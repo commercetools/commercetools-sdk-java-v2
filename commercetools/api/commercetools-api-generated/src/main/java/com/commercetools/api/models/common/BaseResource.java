@@ -51,31 +51,31 @@ import java.io.IOException;
 )
 public interface BaseResource  {
 
-   
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @JsonProperty("createdAt")
-   public ZonedDateTime getCreatedAt();
-   
-   @NotNull
-   @JsonProperty("lastModifiedAt")
-   public ZonedDateTime getLastModifiedAt();
+    
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @JsonProperty("createdAt")
+    public ZonedDateTime getCreatedAt();
+    
+    @NotNull
+    @JsonProperty("lastModifiedAt")
+    public ZonedDateTime getLastModifiedAt();
 
-   public void setId(final String id);
-   
-   public void setVersion(final Long version);
-   
-   public void setCreatedAt(final ZonedDateTime createdAt);
-   
-   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-   
+    public void setId(final String id);
+    
+    public void setVersion(final Long version);
+    
+    public void setCreatedAt(final ZonedDateTime createdAt);
+    
+    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+
 
 
 }

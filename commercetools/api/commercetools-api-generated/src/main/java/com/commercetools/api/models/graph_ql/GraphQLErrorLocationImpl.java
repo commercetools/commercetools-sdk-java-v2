@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class GraphQLErrorLocationImpl implements GraphQLErrorLocation {
 
-   private Integer line;
-   
-   private Integer column;
+    private Integer line;
+    
+    private Integer column;
 
-   @JsonCreator
-   GraphQLErrorLocationImpl(@JsonProperty("line") final Integer line, @JsonProperty("column") final Integer column) {
-      this.line = line;
-      this.column = column;
-   }
-   public GraphQLErrorLocationImpl() {
-      
-   }
-   
-   
-   public Integer getLine(){
-      return this.line;
-   }
-   
-   
-   public Integer getColumn(){
-      return this.column;
-   }
+    @JsonCreator
+    GraphQLErrorLocationImpl(@JsonProperty("line") final Integer line, @JsonProperty("column") final Integer column) {
+        this.line = line;
+        this.column = column;
+    }
+    public GraphQLErrorLocationImpl() {
+       
+    }
 
-   public void setLine(final Integer line){
-      this.line = line;
-   }
-   
-   public void setColumn(final Integer column){
-      this.column = column;
-   }
+    
+    public Integer getLine(){
+        return this.line;
+    }
+    
+    
+    public Integer getColumn(){
+        return this.column;
+    }
+
+    public void setLine(final Integer line){
+        this.line = line;
+    }
+    
+    public void setColumn(final Integer column){
+        this.column = column;
+    }
 
 }

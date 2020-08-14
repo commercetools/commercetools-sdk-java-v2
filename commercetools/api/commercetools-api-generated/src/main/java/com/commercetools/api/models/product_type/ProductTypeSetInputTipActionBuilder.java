@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductTypeSetInputTipActionBuilder {
-   
-   
-   private String attributeName;
-   
-   @Nullable
-   private com.commercetools.api.models.common.LocalizedString inputTip;
-   
-   public ProductTypeSetInputTipActionBuilder attributeName( final String attributeName) {
-      this.attributeName = attributeName;
-      return this;
-   }
-   
-   public ProductTypeSetInputTipActionBuilder inputTip(@Nullable final com.commercetools.api.models.common.LocalizedString inputTip) {
-      this.inputTip = inputTip;
-      return this;
-   }
-   
-   
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-   
-   @Nullable
-   public com.commercetools.api.models.common.LocalizedString getInputTip(){
-      return this.inputTip;
-   }
 
-   public ProductTypeSetInputTipAction build() {
-       return new ProductTypeSetInputTipActionImpl(attributeName, inputTip);
-   }
-   
-   public static ProductTypeSetInputTipActionBuilder of() {
-      return new ProductTypeSetInputTipActionBuilder();
-   }
-   
-   public static ProductTypeSetInputTipActionBuilder of(final ProductTypeSetInputTipAction template) {
-      ProductTypeSetInputTipActionBuilder builder = new ProductTypeSetInputTipActionBuilder();
-      builder.attributeName = template.getAttributeName();
-      builder.inputTip = template.getInputTip();
-      return builder;
-   }
-   
+    
+    private String attributeName;
+    
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString inputTip;
+
+    public ProductTypeSetInputTipActionBuilder attributeName( final String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+    
+    public ProductTypeSetInputTipActionBuilder inputTip(@Nullable final com.commercetools.api.models.common.LocalizedString inputTip) {
+        this.inputTip = inputTip;
+        return this;
+    }
+
+    
+    public String getAttributeName(){
+        return this.attributeName;
+    }
+    
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getInputTip(){
+        return this.inputTip;
+    }
+
+    public ProductTypeSetInputTipAction build() {
+        return new ProductTypeSetInputTipActionImpl(attributeName, inputTip);
+    }
+
+    public static ProductTypeSetInputTipActionBuilder of() {
+        return new ProductTypeSetInputTipActionBuilder();
+    }
+
+    public static ProductTypeSetInputTipActionBuilder of(final ProductTypeSetInputTipAction template) {
+        ProductTypeSetInputTipActionBuilder builder = new ProductTypeSetInputTipActionBuilder();
+        builder.attributeName = template.getAttributeName();
+        builder.inputTip = template.getInputTip();
+        return builder;
+    }
+
 }

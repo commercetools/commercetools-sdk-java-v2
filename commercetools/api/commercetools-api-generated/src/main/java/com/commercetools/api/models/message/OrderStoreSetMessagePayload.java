@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderStoreSetMessagePayloadImpl.class)
 public interface OrderStoreSetMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("store")
-   public StoreKeyReference getStore();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("store")
+    public StoreKeyReference getStore();
 
-   public void setStore(final StoreKeyReference store);
-   
-   public static OrderStoreSetMessagePayloadImpl of(){
-      return new OrderStoreSetMessagePayloadImpl();
-   }
-   
+    public void setStore(final StoreKeyReference store);
 
-   public static OrderStoreSetMessagePayloadImpl of(final OrderStoreSetMessagePayload template) {
-      OrderStoreSetMessagePayloadImpl instance = new OrderStoreSetMessagePayloadImpl();
-      instance.setStore(template.getStore());
-      return instance;
-   }
+    public static OrderStoreSetMessagePayloadImpl of(){
+        return new OrderStoreSetMessagePayloadImpl();
+    }
+    
+
+    public static OrderStoreSetMessagePayloadImpl of(final OrderStoreSetMessagePayload template) {
+        OrderStoreSetMessagePayloadImpl instance = new OrderStoreSetMessagePayloadImpl();
+        instance.setStore(template.getStore());
+        return instance;
+    }
 
 }

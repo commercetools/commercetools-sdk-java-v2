@@ -22,26 +22,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SuggestionResultImpl implements SuggestionResult {
 
-   private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values;
+    private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values;
 
-   @JsonCreator
-   SuggestionResultImpl(@JsonProperty("values") final Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values) {
-      this.values = values;
-   }
-   public SuggestionResultImpl() {
-      
-   }
-   
-   
-   public Map<String,java.util.List<com.commercetools.api.models.product.Suggestion>> values() {
-       return values;
-   }
+    @JsonCreator
+    SuggestionResultImpl(@JsonProperty("values") final Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values) {
+        this.values = values;
+    }
+    public SuggestionResultImpl() {
+       
+    }
 
-   public void setValue(String key, java.util.List<com.commercetools.api.models.product.Suggestion> value) {
-       if (values == null) {
-           values = new HashMap<>();
-       }
-       values.put(key, value);
-   }
+    
+    public Map<String,java.util.List<com.commercetools.api.models.product.Suggestion>> values() {
+        return values;
+    }
+
+    public void setValue(String key, java.util.List<com.commercetools.api.models.product.Suggestion> value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+    }
 
 }

@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderReturnInfoAddedMessageImpl.class)
 public interface OrderReturnInfoAddedMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("returnInfo")
-   public ReturnInfo getReturnInfo();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("returnInfo")
+    public ReturnInfo getReturnInfo();
 
-   public void setReturnInfo(final ReturnInfo returnInfo);
-   
-   public static OrderReturnInfoAddedMessageImpl of(){
-      return new OrderReturnInfoAddedMessageImpl();
-   }
-   
+    public void setReturnInfo(final ReturnInfo returnInfo);
 
-   public static OrderReturnInfoAddedMessageImpl of(final OrderReturnInfoAddedMessage template) {
-      OrderReturnInfoAddedMessageImpl instance = new OrderReturnInfoAddedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setReturnInfo(template.getReturnInfo());
-      return instance;
-   }
+    public static OrderReturnInfoAddedMessageImpl of(){
+        return new OrderReturnInfoAddedMessageImpl();
+    }
+    
+
+    public static OrderReturnInfoAddedMessageImpl of(final OrderReturnInfoAddedMessage template) {
+        OrderReturnInfoAddedMessageImpl instance = new OrderReturnInfoAddedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setReturnInfo(template.getReturnInfo());
+        return instance;
+    }
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderUpdateItemShippingAddressActionImpl implements StagedOrderUpdateItemShippingAddressAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.Address address;
+    private String action;
+    
+    private com.commercetools.api.models.common.Address address;
 
-   @JsonCreator
-   StagedOrderUpdateItemShippingAddressActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address) {
-      this.address = address;
-      this.action = "updateItemShippingAddress";
-   }
-   public StagedOrderUpdateItemShippingAddressActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
-   }
+    @JsonCreator
+    StagedOrderUpdateItemShippingAddressActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+        this.address = address;
+        this.action = "updateItemShippingAddress";
+    }
+    public StagedOrderUpdateItemShippingAddressActionImpl() {
+       
+    }
 
-   public void setAddress(final com.commercetools.api.models.common.Address address){
-      this.address = address;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
+        return this.address;
+    }
+
+    public void setAddress(final com.commercetools.api.models.common.Address address){
+        this.address = address;
+    }
 
 }

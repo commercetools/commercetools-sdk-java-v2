@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeAddLocalizedEnumValueActionImpl.class)
 public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("fieldName")
-   public String getFieldName();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public CustomFieldLocalizedEnumValue getValue();
+    
+    @NotNull
+    @JsonProperty("fieldName")
+    public String getFieldName();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public CustomFieldLocalizedEnumValue getValue();
 
-   public void setFieldName(final String fieldName);
-   
-   public void setValue(final CustomFieldLocalizedEnumValue value);
-   
-   public static TypeAddLocalizedEnumValueActionImpl of(){
-      return new TypeAddLocalizedEnumValueActionImpl();
-   }
-   
+    public void setFieldName(final String fieldName);
+    
+    public void setValue(final CustomFieldLocalizedEnumValue value);
 
-   public static TypeAddLocalizedEnumValueActionImpl of(final TypeAddLocalizedEnumValueAction template) {
-      TypeAddLocalizedEnumValueActionImpl instance = new TypeAddLocalizedEnumValueActionImpl();
-      instance.setFieldName(template.getFieldName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static TypeAddLocalizedEnumValueActionImpl of(){
+        return new TypeAddLocalizedEnumValueActionImpl();
+    }
+    
+
+    public static TypeAddLocalizedEnumValueActionImpl of(final TypeAddLocalizedEnumValueAction template) {
+        TypeAddLocalizedEnumValueActionImpl instance = new TypeAddLocalizedEnumValueActionImpl();
+        instance.setFieldName(template.getFieldName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

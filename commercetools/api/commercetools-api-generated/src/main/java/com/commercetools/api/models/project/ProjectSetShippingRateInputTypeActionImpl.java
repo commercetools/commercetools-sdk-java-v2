@@ -23,33 +23,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectSetShippingRateInputTypeAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;
+    private String action;
+    
+    private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;
 
-   @JsonCreator
-   ProjectSetShippingRateInputTypeActionImpl(@JsonProperty("shippingRateInputType") final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {
-      this.shippingRateInputType = shippingRateInputType;
-      this.action = "setShippingRateInputType";
-   }
-   public ProjectSetShippingRateInputTypeActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If not set, removes existing shippingRateInputType.</p>
-   */
-   public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType(){
-      return this.shippingRateInputType;
-   }
+    @JsonCreator
+    ProjectSetShippingRateInputTypeActionImpl(@JsonProperty("shippingRateInputType") final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {
+        this.shippingRateInputType = shippingRateInputType;
+        this.action = "setShippingRateInputType";
+    }
+    public ProjectSetShippingRateInputTypeActionImpl() {
+       
+    }
 
-   public void setShippingRateInputType(final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType){
-      this.shippingRateInputType = shippingRateInputType;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If not set, removes existing shippingRateInputType.</p>
+    */
+    public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType(){
+        return this.shippingRateInputType;
+    }
+
+    public void setShippingRateInputType(final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType){
+        this.shippingRateInputType = shippingRateInputType;
+    }
 
 }

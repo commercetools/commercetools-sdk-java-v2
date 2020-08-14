@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ImageImpl implements Image {
 
-   private String url;
-   
-   private com.commercetools.api.models.common.ImageDimensions dimensions;
-   
-   private String label;
+    private String url;
+    
+    private com.commercetools.api.models.common.ImageDimensions dimensions;
+    
+    private String label;
 
-   @JsonCreator
-   ImageImpl(@JsonProperty("url") final String url, @JsonProperty("dimensions") final com.commercetools.api.models.common.ImageDimensions dimensions, @JsonProperty("label") final String label) {
-      this.url = url;
-      this.dimensions = dimensions;
-      this.label = label;
-   }
-   public ImageImpl() {
-      
-   }
-   
-   
-   public String getUrl(){
-      return this.url;
-   }
-   
-   
-   public com.commercetools.api.models.common.ImageDimensions getDimensions(){
-      return this.dimensions;
-   }
-   
-   
-   public String getLabel(){
-      return this.label;
-   }
+    @JsonCreator
+    ImageImpl(@JsonProperty("url") final String url, @JsonProperty("dimensions") final com.commercetools.api.models.common.ImageDimensions dimensions, @JsonProperty("label") final String label) {
+        this.url = url;
+        this.dimensions = dimensions;
+        this.label = label;
+    }
+    public ImageImpl() {
+       
+    }
 
-   public void setUrl(final String url){
-      this.url = url;
-   }
-   
-   public void setDimensions(final com.commercetools.api.models.common.ImageDimensions dimensions){
-      this.dimensions = dimensions;
-   }
-   
-   public void setLabel(final String label){
-      this.label = label;
-   }
+    
+    public String getUrl(){
+        return this.url;
+    }
+    
+    
+    public com.commercetools.api.models.common.ImageDimensions getDimensions(){
+        return this.dimensions;
+    }
+    
+    
+    public String getLabel(){
+        return this.label;
+    }
+
+    public void setUrl(final String url){
+        this.url = url;
+    }
+    
+    public void setDimensions(final com.commercetools.api.models.common.ImageDimensions dimensions){
+        this.dimensions = dimensions;
+    }
+    
+    public void setLabel(final String label){
+        this.label = label;
+    }
 
 }

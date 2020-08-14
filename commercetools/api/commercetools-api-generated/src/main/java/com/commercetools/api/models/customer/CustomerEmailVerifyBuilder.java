@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CustomerEmailVerifyBuilder {
-   
-   @Nullable
-   private Long version;
-   
-   
-   private String tokenValue;
-   
-   public CustomerEmailVerifyBuilder version(@Nullable final Long version) {
-      this.version = version;
-      return this;
-   }
-   
-   public CustomerEmailVerifyBuilder tokenValue( final String tokenValue) {
-      this.tokenValue = tokenValue;
-      return this;
-   }
-   
-   @Nullable
-   public Long getVersion(){
-      return this.version;
-   }
-   
-   
-   public String getTokenValue(){
-      return this.tokenValue;
-   }
 
-   public CustomerEmailVerify build() {
-       return new CustomerEmailVerifyImpl(version, tokenValue);
-   }
-   
-   public static CustomerEmailVerifyBuilder of() {
-      return new CustomerEmailVerifyBuilder();
-   }
-   
-   public static CustomerEmailVerifyBuilder of(final CustomerEmailVerify template) {
-      CustomerEmailVerifyBuilder builder = new CustomerEmailVerifyBuilder();
-      builder.version = template.getVersion();
-      builder.tokenValue = template.getTokenValue();
-      return builder;
-   }
-   
+    @Nullable
+    private Long version;
+    
+    
+    private String tokenValue;
+
+    public CustomerEmailVerifyBuilder version(@Nullable final Long version) {
+        this.version = version;
+        return this;
+    }
+    
+    public CustomerEmailVerifyBuilder tokenValue( final String tokenValue) {
+        this.tokenValue = tokenValue;
+        return this;
+    }
+
+    @Nullable
+    public Long getVersion(){
+        return this.version;
+    }
+    
+    
+    public String getTokenValue(){
+        return this.tokenValue;
+    }
+
+    public CustomerEmailVerify build() {
+        return new CustomerEmailVerifyImpl(version, tokenValue);
+    }
+
+    public static CustomerEmailVerifyBuilder of() {
+        return new CustomerEmailVerifyBuilder();
+    }
+
+    public static CustomerEmailVerifyBuilder of(final CustomerEmailVerify template) {
+        CustomerEmailVerifyBuilder builder = new CustomerEmailVerifyBuilder();
+        builder.version = template.getVersion();
+        builder.tokenValue = template.getTokenValue();
+        return builder;
+    }
+
 }

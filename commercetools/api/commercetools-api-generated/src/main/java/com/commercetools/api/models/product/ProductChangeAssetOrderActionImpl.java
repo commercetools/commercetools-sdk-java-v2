@@ -22,67 +22,67 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrderAction {
 
-   private String action;
-   
-   private Long variantId;
-   
-   private String sku;
-   
-   private Boolean staged;
-   
-   private java.util.List<String> assetOrder;
+    private String action;
+    
+    private Long variantId;
+    
+    private String sku;
+    
+    private Boolean staged;
+    
+    private java.util.List<String> assetOrder;
 
-   @JsonCreator
-   ProductChangeAssetOrderActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged, @JsonProperty("assetOrder") final java.util.List<String> assetOrder) {
-      this.variantId = variantId;
-      this.sku = sku;
-      this.staged = staged;
-      this.assetOrder = assetOrder;
-      this.action = "changeAssetOrder";
-   }
-   public ProductChangeAssetOrderActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Long getVariantId(){
-      return this.variantId;
-   }
-   
-   
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
-   
-   
-   public java.util.List<String> getAssetOrder(){
-      return this.assetOrder;
-   }
+    @JsonCreator
+    ProductChangeAssetOrderActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged, @JsonProperty("assetOrder") final java.util.List<String> assetOrder) {
+        this.variantId = variantId;
+        this.sku = sku;
+        this.staged = staged;
+        this.assetOrder = assetOrder;
+        this.action = "changeAssetOrder";
+    }
+    public ProductChangeAssetOrderActionImpl() {
+       
+    }
 
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
-   
-   public void setSku(final String sku){
-      this.sku = sku;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
-   
-   public void setAssetOrder(final java.util.List<String> assetOrder){
-      this.assetOrder = assetOrder;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Long getVariantId(){
+        return this.variantId;
+    }
+    
+    
+    public String getSku(){
+        return this.sku;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+    
+    
+    public java.util.List<String> getAssetOrder(){
+        return this.assetOrder;
+    }
+
+    public void setVariantId(final Long variantId){
+        this.variantId = variantId;
+    }
+    
+    public void setSku(final String sku){
+        this.sku = sku;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
+    
+    public void setAssetOrder(final java.util.List<String> assetOrder){
+        this.assetOrder = assetOrder;
+    }
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderRemovePaymentActionImpl implements StagedOrderRemovePaymentAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
+    private String action;
+    
+    private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
-   @JsonCreator
-   StagedOrderRemovePaymentActionImpl(@JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
-      this.payment = payment;
-      this.action = "removePayment";
-   }
-   public StagedOrderRemovePaymentActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment(){
-      return this.payment;
-   }
+    @JsonCreator
+    StagedOrderRemovePaymentActionImpl(@JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
+        this.payment = payment;
+        this.action = "removePayment";
+    }
+    public StagedOrderRemovePaymentActionImpl() {
+       
+    }
 
-   public void setPayment(final com.commercetools.api.models.payment.PaymentResourceIdentifier payment){
-      this.payment = payment;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment(){
+        return this.payment;
+    }
+
+    public void setPayment(final com.commercetools.api.models.payment.PaymentResourceIdentifier payment){
+        this.payment = payment;
+    }
 
 }

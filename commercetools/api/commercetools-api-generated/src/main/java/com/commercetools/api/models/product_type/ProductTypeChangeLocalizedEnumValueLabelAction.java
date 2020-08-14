@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeChangeLocalizedEnumValueLabelActionImpl.class)
 public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductTypeUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("attributeName")
-   public String getAttributeName();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("newValue")
-   public AttributeLocalizedEnumValue getNewValue();
+    
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("newValue")
+    public AttributeLocalizedEnumValue getNewValue();
 
-   public void setAttributeName(final String attributeName);
-   
-   public void setNewValue(final AttributeLocalizedEnumValue newValue);
-   
-   public static ProductTypeChangeLocalizedEnumValueLabelActionImpl of(){
-      return new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
-   }
-   
+    public void setAttributeName(final String attributeName);
+    
+    public void setNewValue(final AttributeLocalizedEnumValue newValue);
 
-   public static ProductTypeChangeLocalizedEnumValueLabelActionImpl of(final ProductTypeChangeLocalizedEnumValueLabelAction template) {
-      ProductTypeChangeLocalizedEnumValueLabelActionImpl instance = new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
-      instance.setAttributeName(template.getAttributeName());
-      instance.setNewValue(template.getNewValue());
-      return instance;
-   }
+    public static ProductTypeChangeLocalizedEnumValueLabelActionImpl of(){
+        return new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
+    }
+    
+
+    public static ProductTypeChangeLocalizedEnumValueLabelActionImpl of(final ProductTypeChangeLocalizedEnumValueLabelAction template) {
+        ProductTypeChangeLocalizedEnumValueLabelActionImpl instance = new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNewValue(template.getNewValue());
+        return instance;
+    }
 
 }

@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesAction {
 
-   private String action;
-   
-   private java.util.List<String> languages;
+    private String action;
+    
+    private java.util.List<String> languages;
 
-   @JsonCreator
-   ProjectChangeLanguagesActionImpl(@JsonProperty("languages") final java.util.List<String> languages) {
-      this.languages = languages;
-      this.action = "changeLanguages";
-   }
-   public ProjectChangeLanguagesActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>.</p>
-   */
-   public java.util.List<String> getLanguages(){
-      return this.languages;
-   }
+    @JsonCreator
+    ProjectChangeLanguagesActionImpl(@JsonProperty("languages") final java.util.List<String> languages) {
+        this.languages = languages;
+        this.action = "changeLanguages";
+    }
+    public ProjectChangeLanguagesActionImpl() {
+       
+    }
 
-   public void setLanguages(final java.util.List<String> languages){
-      this.languages = languages;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>.</p>
+    */
+    public java.util.List<String> getLanguages(){
+        return this.languages;
+    }
+
+    public void setLanguages(final java.util.List<String> languages){
+        this.languages = languages;
+    }
 
 }

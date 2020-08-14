@@ -24,18 +24,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountValueDraftImpl implements CartDiscountValueDraft {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   CartDiscountValueDraftImpl() {
-      this.type = "null";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    CartDiscountValueDraftImpl() {
+        this.type = "null";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

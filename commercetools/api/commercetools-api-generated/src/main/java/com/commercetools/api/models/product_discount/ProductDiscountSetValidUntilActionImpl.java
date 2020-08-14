@@ -23,34 +23,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountSetValidUntilActionImpl implements ProductDiscountSetValidUntilAction {
 
-   private String action;
-   
-   private java.time.ZonedDateTime validUntil;
+    private String action;
+    
+    private java.time.ZonedDateTime validUntil;
 
-   @JsonCreator
-   ProductDiscountSetValidUntilActionImpl(@JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
-      this.validUntil = validUntil;
-      this.action = "setValidUntil";
-   }
-   public ProductDiscountSetValidUntilActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>The time from which the discount should be ineffective.
-   *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
-   */
-   public java.time.ZonedDateTime getValidUntil(){
-      return this.validUntil;
-   }
+    @JsonCreator
+    ProductDiscountSetValidUntilActionImpl(@JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
+        this.validUntil = validUntil;
+        this.action = "setValidUntil";
+    }
+    public ProductDiscountSetValidUntilActionImpl() {
+       
+    }
 
-   public void setValidUntil(final java.time.ZonedDateTime validUntil){
-      this.validUntil = validUntil;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>The time from which the discount should be ineffective.
+    *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
+    */
+    public java.time.ZonedDateTime getValidUntil(){
+        return this.validUntil;
+    }
+
+    public void setValidUntil(final java.time.ZonedDateTime validUntil){
+        this.validUntil = validUntil;
+    }
 
 }

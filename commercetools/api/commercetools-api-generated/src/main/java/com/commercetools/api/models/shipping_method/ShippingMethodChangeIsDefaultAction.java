@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodChangeIsDefaultActionImpl.class)
 public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdateAction {
 
-   /**
-   *  <p>Only one ShippingMethod in a project can be default.</p>
-   */
-   @NotNull
-   @JsonProperty("isDefault")
-   public Boolean getIsDefault();
+    /**
+    *  <p>Only one ShippingMethod in a project can be default.</p>
+    */
+    @NotNull
+    @JsonProperty("isDefault")
+    public Boolean getIsDefault();
 
-   public void setIsDefault(final Boolean isDefault);
-   
-   public static ShippingMethodChangeIsDefaultActionImpl of(){
-      return new ShippingMethodChangeIsDefaultActionImpl();
-   }
-   
+    public void setIsDefault(final Boolean isDefault);
 
-   public static ShippingMethodChangeIsDefaultActionImpl of(final ShippingMethodChangeIsDefaultAction template) {
-      ShippingMethodChangeIsDefaultActionImpl instance = new ShippingMethodChangeIsDefaultActionImpl();
-      instance.setIsDefault(template.getIsDefault());
-      return instance;
-   }
+    public static ShippingMethodChangeIsDefaultActionImpl of(){
+        return new ShippingMethodChangeIsDefaultActionImpl();
+    }
+    
+
+    public static ShippingMethodChangeIsDefaultActionImpl of(final ShippingMethodChangeIsDefaultAction template) {
+        ShippingMethodChangeIsDefaultActionImpl instance = new ShippingMethodChangeIsDefaultActionImpl();
+        instance.setIsDefault(template.getIsDefault());
+        return instance;
+    }
 
 }

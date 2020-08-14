@@ -22,43 +22,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChangeIsSearchableAction {
 
-   private String action;
-   
-   private String attributeName;
-   
-   private Boolean isSearchable;
+    private String action;
+    
+    private String attributeName;
+    
+    private Boolean isSearchable;
 
-   @JsonCreator
-   ProductTypeChangeIsSearchableActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("isSearchable") final Boolean isSearchable) {
-      this.attributeName = attributeName;
-      this.isSearchable = isSearchable;
-      this.action = "changeIsSearchable";
-   }
-   public ProductTypeChangeIsSearchableActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAttributeName(){
-      return this.attributeName;
-   }
-   
-   
-   public Boolean getIsSearchable(){
-      return this.isSearchable;
-   }
+    @JsonCreator
+    ProductTypeChangeIsSearchableActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("isSearchable") final Boolean isSearchable) {
+        this.attributeName = attributeName;
+        this.isSearchable = isSearchable;
+        this.action = "changeIsSearchable";
+    }
+    public ProductTypeChangeIsSearchableActionImpl() {
+       
+    }
 
-   public void setAttributeName(final String attributeName){
-      this.attributeName = attributeName;
-   }
-   
-   public void setIsSearchable(final Boolean isSearchable){
-      this.isSearchable = isSearchable;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAttributeName(){
+        return this.attributeName;
+    }
+    
+    
+    public Boolean getIsSearchable(){
+        return this.isSearchable;
+    }
+
+    public void setAttributeName(final String attributeName){
+        this.attributeName = attributeName;
+    }
+    
+    public void setIsSearchable(final Boolean isSearchable){
+        this.isSearchable = isSearchable;
+    }
 
 }

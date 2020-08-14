@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerDateOfBirthSetMessagePayloadImpl.class)
 public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("dateOfBirth")
-   public LocalDate getDateOfBirth();
+    
+    @NotNull
+    @JsonProperty("dateOfBirth")
+    public LocalDate getDateOfBirth();
 
-   public void setDateOfBirth(final LocalDate dateOfBirth);
-   
-   public static CustomerDateOfBirthSetMessagePayloadImpl of(){
-      return new CustomerDateOfBirthSetMessagePayloadImpl();
-   }
-   
+    public void setDateOfBirth(final LocalDate dateOfBirth);
 
-   public static CustomerDateOfBirthSetMessagePayloadImpl of(final CustomerDateOfBirthSetMessagePayload template) {
-      CustomerDateOfBirthSetMessagePayloadImpl instance = new CustomerDateOfBirthSetMessagePayloadImpl();
-      instance.setDateOfBirth(template.getDateOfBirth());
-      return instance;
-   }
+    public static CustomerDateOfBirthSetMessagePayloadImpl of(){
+        return new CustomerDateOfBirthSetMessagePayloadImpl();
+    }
+    
+
+    public static CustomerDateOfBirthSetMessagePayloadImpl of(final CustomerDateOfBirthSetMessagePayload template) {
+        CustomerDateOfBirthSetMessagePayloadImpl instance = new CustomerDateOfBirthSetMessagePayloadImpl();
+        instance.setDateOfBirth(template.getDateOfBirth());
+        return instance;
+    }
 
 }

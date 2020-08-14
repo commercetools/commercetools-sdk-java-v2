@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodChangeTaxCategoryActionImpl implements ShippingMethodChangeTaxCategoryAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
+    private String action;
+    
+    private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
-   @JsonCreator
-   ShippingMethodChangeTaxCategoryActionImpl(@JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
-      this.taxCategory = taxCategory;
-      this.action = "changeTaxCategory";
-   }
-   public ShippingMethodChangeTaxCategoryActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
-      return this.taxCategory;
-   }
+    @JsonCreator
+    ShippingMethodChangeTaxCategoryActionImpl(@JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
+        this.taxCategory = taxCategory;
+        this.action = "changeTaxCategory";
+    }
+    public ShippingMethodChangeTaxCategoryActionImpl() {
+       
+    }
 
-   public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory){
-      this.taxCategory = taxCategory;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
+        return this.taxCategory;
+    }
+
+    public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory){
+        this.taxCategory = taxCategory;
+    }
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelSetRolesActionImpl implements ChannelSetRolesAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
-   @JsonCreator
-   ChannelSetRolesActionImpl(@JsonProperty("roles") final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
-      this.roles = roles;
-      this.action = "setRoles";
-   }
-   public ChannelSetRolesActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles(){
-      return this.roles;
-   }
+    @JsonCreator
+    ChannelSetRolesActionImpl(@JsonProperty("roles") final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
+        this.roles = roles;
+        this.action = "setRoles";
+    }
+    public ChannelSetRolesActionImpl() {
+       
+    }
 
-   public void setRoles(final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles){
-      this.roles = roles;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles(){
+        return this.roles;
+    }
+
+    public void setRoles(final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles){
+        this.roles = roles;
+    }
 
 }

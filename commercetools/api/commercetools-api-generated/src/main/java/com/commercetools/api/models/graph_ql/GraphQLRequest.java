@@ -21,36 +21,36 @@ import java.io.IOException;
 @JsonDeserialize(as = GraphQLRequestImpl.class)
 public interface GraphQLRequest  {
 
-   
-   @NotNull
-   @JsonProperty("query")
-   public String getQuery();
-   
-   
-   @JsonProperty("operationName")
-   public String getOperationName();
-   
-   @Valid
-   @JsonProperty("variables")
-   public GraphQLVariablesMap getVariables();
+    
+    @NotNull
+    @JsonProperty("query")
+    public String getQuery();
+    
+    
+    @JsonProperty("operationName")
+    public String getOperationName();
+    
+    @Valid
+    @JsonProperty("variables")
+    public GraphQLVariablesMap getVariables();
 
-   public void setQuery(final String query);
-   
-   public void setOperationName(final String operationName);
-   
-   public void setVariables(final GraphQLVariablesMap variables);
-   
-   public static GraphQLRequestImpl of(){
-      return new GraphQLRequestImpl();
-   }
-   
+    public void setQuery(final String query);
+    
+    public void setOperationName(final String operationName);
+    
+    public void setVariables(final GraphQLVariablesMap variables);
 
-   public static GraphQLRequestImpl of(final GraphQLRequest template) {
-      GraphQLRequestImpl instance = new GraphQLRequestImpl();
-      instance.setQuery(template.getQuery());
-      instance.setOperationName(template.getOperationName());
-      instance.setVariables(template.getVariables());
-      return instance;
-   }
+    public static GraphQLRequestImpl of(){
+        return new GraphQLRequestImpl();
+    }
+    
+
+    public static GraphQLRequestImpl of(final GraphQLRequest template) {
+        GraphQLRequestImpl instance = new GraphQLRequestImpl();
+        instance.setQuery(template.getQuery());
+        instance.setOperationName(template.getOperationName());
+        instance.setVariables(template.getVariables());
+        return instance;
+    }
 
 }

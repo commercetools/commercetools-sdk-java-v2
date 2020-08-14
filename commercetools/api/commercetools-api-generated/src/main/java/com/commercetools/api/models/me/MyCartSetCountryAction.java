@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCartSetCountryActionImpl.class)
 public interface MyCartSetCountryAction extends MyCartUpdateAction {
 
-   /**
-   *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-   */
-   
-   @JsonProperty("country")
-   public String getCountry();
+    /**
+    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    */
+    
+    @JsonProperty("country")
+    public String getCountry();
 
-   public void setCountry(final String country);
-   
-   public static MyCartSetCountryActionImpl of(){
-      return new MyCartSetCountryActionImpl();
-   }
-   
+    public void setCountry(final String country);
 
-   public static MyCartSetCountryActionImpl of(final MyCartSetCountryAction template) {
-      MyCartSetCountryActionImpl instance = new MyCartSetCountryActionImpl();
-      instance.setCountry(template.getCountry());
-      return instance;
-   }
+    public static MyCartSetCountryActionImpl of(){
+        return new MyCartSetCountryActionImpl();
+    }
+    
+
+    public static MyCartSetCountryActionImpl of(final MyCartSetCountryAction template) {
+        MyCartSetCountryActionImpl instance = new MyCartSetCountryActionImpl();
+        instance.setCountry(template.getCountry());
+        return instance;
+    }
 
 }

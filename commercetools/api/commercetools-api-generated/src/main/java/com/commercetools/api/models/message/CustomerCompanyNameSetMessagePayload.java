@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerCompanyNameSetMessagePayloadImpl.class)
 public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("companyName")
-   public String getCompanyName();
+    
+    @NotNull
+    @JsonProperty("companyName")
+    public String getCompanyName();
 
-   public void setCompanyName(final String companyName);
-   
-   public static CustomerCompanyNameSetMessagePayloadImpl of(){
-      return new CustomerCompanyNameSetMessagePayloadImpl();
-   }
-   
+    public void setCompanyName(final String companyName);
 
-   public static CustomerCompanyNameSetMessagePayloadImpl of(final CustomerCompanyNameSetMessagePayload template) {
-      CustomerCompanyNameSetMessagePayloadImpl instance = new CustomerCompanyNameSetMessagePayloadImpl();
-      instance.setCompanyName(template.getCompanyName());
-      return instance;
-   }
+    public static CustomerCompanyNameSetMessagePayloadImpl of(){
+        return new CustomerCompanyNameSetMessagePayloadImpl();
+    }
+    
+
+    public static CustomerCompanyNameSetMessagePayloadImpl of(final CustomerCompanyNameSetMessagePayload template) {
+        CustomerCompanyNameSetMessagePayloadImpl instance = new CustomerCompanyNameSetMessagePayloadImpl();
+        instance.setCompanyName(template.getCompanyName());
+        return instance;
+    }
 
 }

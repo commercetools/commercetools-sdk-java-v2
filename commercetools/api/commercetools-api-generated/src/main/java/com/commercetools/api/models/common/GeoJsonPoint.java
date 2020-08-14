@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = GeoJsonPointImpl.class)
 public interface GeoJsonPoint extends GeoJson {
 
-   
-   @NotNull
-   @JsonProperty("coordinates")
-   public List<Double> getCoordinates();
+    
+    @NotNull
+    @JsonProperty("coordinates")
+    public List<Double> getCoordinates();
 
-   public void setCoordinates(final List<Double> coordinates);
-   
-   public static GeoJsonPointImpl of(){
-      return new GeoJsonPointImpl();
-   }
-   
+    public void setCoordinates(final List<Double> coordinates);
 
-   public static GeoJsonPointImpl of(final GeoJsonPoint template) {
-      GeoJsonPointImpl instance = new GeoJsonPointImpl();
-      instance.setCoordinates(template.getCoordinates());
-      return instance;
-   }
+    public static GeoJsonPointImpl of(){
+        return new GeoJsonPointImpl();
+    }
+    
+
+    public static GeoJsonPointImpl of(final GeoJsonPoint template) {
+        GeoJsonPointImpl instance = new GeoJsonPointImpl();
+        instance.setCoordinates(template.getCoordinates());
+        return instance;
+    }
 
 }

@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderStateChangedMessagePayloadImpl.class)
 public interface OrderStateChangedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("orderState")
-   public OrderState getOrderState();
-   
-   @NotNull
-   @JsonProperty("oldOrderState")
-   public OrderState getOldOrderState();
+    
+    @NotNull
+    @JsonProperty("orderState")
+    public OrderState getOrderState();
+    
+    @NotNull
+    @JsonProperty("oldOrderState")
+    public OrderState getOldOrderState();
 
-   public void setOrderState(final OrderState orderState);
-   
-   public void setOldOrderState(final OrderState oldOrderState);
-   
-   public static OrderStateChangedMessagePayloadImpl of(){
-      return new OrderStateChangedMessagePayloadImpl();
-   }
-   
+    public void setOrderState(final OrderState orderState);
+    
+    public void setOldOrderState(final OrderState oldOrderState);
 
-   public static OrderStateChangedMessagePayloadImpl of(final OrderStateChangedMessagePayload template) {
-      OrderStateChangedMessagePayloadImpl instance = new OrderStateChangedMessagePayloadImpl();
-      instance.setOrderState(template.getOrderState());
-      instance.setOldOrderState(template.getOldOrderState());
-      return instance;
-   }
+    public static OrderStateChangedMessagePayloadImpl of(){
+        return new OrderStateChangedMessagePayloadImpl();
+    }
+    
+
+    public static OrderStateChangedMessagePayloadImpl of(final OrderStateChangedMessagePayload template) {
+        OrderStateChangedMessagePayloadImpl instance = new OrderStateChangedMessagePayloadImpl();
+        instance.setOrderState(template.getOrderState());
+        instance.setOldOrderState(template.getOldOrderState());
+        return instance;
+    }
 
 }

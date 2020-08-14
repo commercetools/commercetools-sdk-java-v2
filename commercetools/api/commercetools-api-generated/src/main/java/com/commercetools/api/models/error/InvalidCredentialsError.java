@@ -22,16 +22,16 @@ import java.io.IOException;
 public interface InvalidCredentialsError extends ErrorObject {
 
 
-   
-   public static InvalidCredentialsErrorImpl of(){
-      return new InvalidCredentialsErrorImpl();
-   }
-   
 
-   public static InvalidCredentialsErrorImpl of(final InvalidCredentialsError template) {
-      InvalidCredentialsErrorImpl instance = new InvalidCredentialsErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static InvalidCredentialsErrorImpl of(){
+        return new InvalidCredentialsErrorImpl();
+    }
+    
+
+    public static InvalidCredentialsErrorImpl of(final InvalidCredentialsError template) {
+        InvalidCredentialsErrorImpl instance = new InvalidCredentialsErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

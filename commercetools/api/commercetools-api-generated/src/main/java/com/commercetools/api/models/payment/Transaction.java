@@ -24,69 +24,69 @@ import java.io.IOException;
 @JsonDeserialize(as = TransactionImpl.class)
 public interface Transaction  {
 
-   /**
-   *  <p>The unique ID of this object.</p>
-   */
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
-   /**
-   *  <p>The time at which the transaction took place.</p>
-   */
-   
-   @JsonProperty("timestamp")
-   public ZonedDateTime getTimestamp();
-   /**
-   *  <p>The type of this transaction.</p>
-   */
-   @NotNull
-   @JsonProperty("type")
-   public TransactionType getType();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("amount")
-   public TypedMoney getAmount();
-   /**
-   *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
-   *  If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
-   */
-   
-   @JsonProperty("interactionId")
-   public String getInteractionId();
-   /**
-   *  <p>The state of this transaction.</p>
-   */
-   
-   @JsonProperty("state")
-   public TransactionState getState();
+    /**
+    *  <p>The unique ID of this object.</p>
+    */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+    /**
+    *  <p>The time at which the transaction took place.</p>
+    */
+    
+    @JsonProperty("timestamp")
+    public ZonedDateTime getTimestamp();
+    /**
+    *  <p>The type of this transaction.</p>
+    */
+    @NotNull
+    @JsonProperty("type")
+    public TransactionType getType();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("amount")
+    public TypedMoney getAmount();
+    /**
+    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
+    *  If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+    */
+    
+    @JsonProperty("interactionId")
+    public String getInteractionId();
+    /**
+    *  <p>The state of this transaction.</p>
+    */
+    
+    @JsonProperty("state")
+    public TransactionState getState();
 
-   public void setId(final String id);
-   
-   public void setTimestamp(final ZonedDateTime timestamp);
-   
-   public void setType(final TransactionType type);
-   
-   public void setAmount(final TypedMoney amount);
-   
-   public void setInteractionId(final String interactionId);
-   
-   public void setState(final TransactionState state);
-   
-   public static TransactionImpl of(){
-      return new TransactionImpl();
-   }
-   
+    public void setId(final String id);
+    
+    public void setTimestamp(final ZonedDateTime timestamp);
+    
+    public void setType(final TransactionType type);
+    
+    public void setAmount(final TypedMoney amount);
+    
+    public void setInteractionId(final String interactionId);
+    
+    public void setState(final TransactionState state);
 
-   public static TransactionImpl of(final Transaction template) {
-      TransactionImpl instance = new TransactionImpl();
-      instance.setId(template.getId());
-      instance.setTimestamp(template.getTimestamp());
-      instance.setType(template.getType());
-      instance.setAmount(template.getAmount());
-      instance.setInteractionId(template.getInteractionId());
-      instance.setState(template.getState());
-      return instance;
-   }
+    public static TransactionImpl of(){
+        return new TransactionImpl();
+    }
+    
+
+    public static TransactionImpl of(final Transaction template) {
+        TransactionImpl instance = new TransactionImpl();
+        instance.setId(template.getId());
+        instance.setTimestamp(template.getTimestamp());
+        instance.setType(template.getType());
+        instance.setAmount(template.getAmount());
+        instance.setInteractionId(template.getInteractionId());
+        instance.setState(template.getState());
+        return instance;
+    }
 
 }

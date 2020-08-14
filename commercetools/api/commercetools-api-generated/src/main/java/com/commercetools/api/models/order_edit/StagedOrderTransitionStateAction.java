@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderTransitionStateActionImpl.class)
 public interface StagedOrderTransitionStateAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("state")
-   public StateResourceIdentifier getState();
-   
-   
-   @JsonProperty("force")
-   public Boolean getForce();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("state")
+    public StateResourceIdentifier getState();
+    
+    
+    @JsonProperty("force")
+    public Boolean getForce();
 
-   public void setState(final StateResourceIdentifier state);
-   
-   public void setForce(final Boolean force);
-   
-   public static StagedOrderTransitionStateActionImpl of(){
-      return new StagedOrderTransitionStateActionImpl();
-   }
-   
+    public void setState(final StateResourceIdentifier state);
+    
+    public void setForce(final Boolean force);
 
-   public static StagedOrderTransitionStateActionImpl of(final StagedOrderTransitionStateAction template) {
-      StagedOrderTransitionStateActionImpl instance = new StagedOrderTransitionStateActionImpl();
-      instance.setState(template.getState());
-      instance.setForce(template.getForce());
-      return instance;
-   }
+    public static StagedOrderTransitionStateActionImpl of(){
+        return new StagedOrderTransitionStateActionImpl();
+    }
+    
+
+    public static StagedOrderTransitionStateActionImpl of(final StagedOrderTransitionStateAction template) {
+        StagedOrderTransitionStateActionImpl instance = new StagedOrderTransitionStateActionImpl();
+        instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
 
 }

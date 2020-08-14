@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountCodeSetValidFromAndUntilActionImpl.class)
 public interface DiscountCodeSetValidFromAndUntilAction extends DiscountCodeUpdateAction {
 
-   /**
-   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
-   */
-   
-   @JsonProperty("validFrom")
-   public ZonedDateTime getValidFrom();
-   /**
-   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
-   */
-   
-   @JsonProperty("validUntil")
-   public ZonedDateTime getValidUntil();
+    /**
+    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    */
+    
+    @JsonProperty("validFrom")
+    public ZonedDateTime getValidFrom();
+    /**
+    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    */
+    
+    @JsonProperty("validUntil")
+    public ZonedDateTime getValidUntil();
 
-   public void setValidFrom(final ZonedDateTime validFrom);
-   
-   public void setValidUntil(final ZonedDateTime validUntil);
-   
-   public static DiscountCodeSetValidFromAndUntilActionImpl of(){
-      return new DiscountCodeSetValidFromAndUntilActionImpl();
-   }
-   
+    public void setValidFrom(final ZonedDateTime validFrom);
+    
+    public void setValidUntil(final ZonedDateTime validUntil);
 
-   public static DiscountCodeSetValidFromAndUntilActionImpl of(final DiscountCodeSetValidFromAndUntilAction template) {
-      DiscountCodeSetValidFromAndUntilActionImpl instance = new DiscountCodeSetValidFromAndUntilActionImpl();
-      instance.setValidFrom(template.getValidFrom());
-      instance.setValidUntil(template.getValidUntil());
-      return instance;
-   }
+    public static DiscountCodeSetValidFromAndUntilActionImpl of(){
+        return new DiscountCodeSetValidFromAndUntilActionImpl();
+    }
+    
+
+    public static DiscountCodeSetValidFromAndUntilActionImpl of(final DiscountCodeSetValidFromAndUntilAction template) {
+        DiscountCodeSetValidFromAndUntilActionImpl instance = new DiscountCodeSetValidFromAndUntilActionImpl();
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        return instance;
+    }
 
 }

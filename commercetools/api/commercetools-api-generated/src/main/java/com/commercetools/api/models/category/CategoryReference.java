@@ -23,23 +23,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryReferenceImpl.class)
 public interface CategoryReference extends Reference {
 
-   
-   @Valid
-   @JsonProperty("obj")
-   public Category getObj();
+    
+    @Valid
+    @JsonProperty("obj")
+    public Category getObj();
 
-   public void setObj(final Category obj);
-   
-   public static CategoryReferenceImpl of(){
-      return new CategoryReferenceImpl();
-   }
-   
+    public void setObj(final Category obj);
 
-   public static CategoryReferenceImpl of(final CategoryReference template) {
-      CategoryReferenceImpl instance = new CategoryReferenceImpl();
-      instance.setId(template.getId());
-      instance.setObj(template.getObj());
-      return instance;
-   }
+    public static CategoryReferenceImpl of(){
+        return new CategoryReferenceImpl();
+    }
+    
+
+    public static CategoryReferenceImpl of(final CategoryReference template) {
+        CategoryReferenceImpl instance = new CategoryReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(template.getObj());
+        return instance;
+    }
 
 }

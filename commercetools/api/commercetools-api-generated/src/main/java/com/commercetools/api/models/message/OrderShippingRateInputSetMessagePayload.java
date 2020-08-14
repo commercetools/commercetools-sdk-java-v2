@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderShippingRateInputSetMessagePayloadImpl.class)
 public interface OrderShippingRateInputSetMessagePayload extends MessagePayload {
 
-   
-   @Valid
-   @JsonProperty("shippingRateInput")
-   public ShippingRateInput getShippingRateInput();
-   
-   @Valid
-   @JsonProperty("oldShippingRateInput")
-   public ShippingRateInput getOldShippingRateInput();
+    
+    @Valid
+    @JsonProperty("shippingRateInput")
+    public ShippingRateInput getShippingRateInput();
+    
+    @Valid
+    @JsonProperty("oldShippingRateInput")
+    public ShippingRateInput getOldShippingRateInput();
 
-   public void setShippingRateInput(final ShippingRateInput shippingRateInput);
-   
-   public void setOldShippingRateInput(final ShippingRateInput oldShippingRateInput);
-   
-   public static OrderShippingRateInputSetMessagePayloadImpl of(){
-      return new OrderShippingRateInputSetMessagePayloadImpl();
-   }
-   
+    public void setShippingRateInput(final ShippingRateInput shippingRateInput);
+    
+    public void setOldShippingRateInput(final ShippingRateInput oldShippingRateInput);
 
-   public static OrderShippingRateInputSetMessagePayloadImpl of(final OrderShippingRateInputSetMessagePayload template) {
-      OrderShippingRateInputSetMessagePayloadImpl instance = new OrderShippingRateInputSetMessagePayloadImpl();
-      instance.setShippingRateInput(template.getShippingRateInput());
-      instance.setOldShippingRateInput(template.getOldShippingRateInput());
-      return instance;
-   }
+    public static OrderShippingRateInputSetMessagePayloadImpl of(){
+        return new OrderShippingRateInputSetMessagePayloadImpl();
+    }
+    
+
+    public static OrderShippingRateInputSetMessagePayloadImpl of(final OrderShippingRateInputSetMessagePayload template) {
+        OrderShippingRateInputSetMessagePayloadImpl instance = new OrderShippingRateInputSetMessagePayloadImpl();
+        instance.setShippingRateInput(template.getShippingRateInput());
+        instance.setOldShippingRateInput(template.getOldShippingRateInput());
+        return instance;
+    }
 
 }

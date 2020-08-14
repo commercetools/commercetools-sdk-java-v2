@@ -23,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SuggestTokenizerImpl implements SuggestTokenizer {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   SuggestTokenizerImpl() {
-      this.type = "null";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    SuggestTokenizerImpl() {
+        this.type = "null";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

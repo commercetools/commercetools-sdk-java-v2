@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = ZoneRateDraftImpl.class)
 public interface ZoneRateDraft  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("zone")
-   public ZoneResourceIdentifier getZone();
-   /**
-   *  <p>The array must not contain two shipping rates with the same currency.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("shippingRates")
-   public List<ShippingRateDraft> getShippingRates();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("zone")
+    public ZoneResourceIdentifier getZone();
+    /**
+    *  <p>The array must not contain two shipping rates with the same currency.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("shippingRates")
+    public List<ShippingRateDraft> getShippingRates();
 
-   public void setZone(final ZoneResourceIdentifier zone);
-   
-   public void setShippingRates(final List<ShippingRateDraft> shippingRates);
-   
-   public static ZoneRateDraftImpl of(){
-      return new ZoneRateDraftImpl();
-   }
-   
+    public void setZone(final ZoneResourceIdentifier zone);
+    
+    public void setShippingRates(final List<ShippingRateDraft> shippingRates);
 
-   public static ZoneRateDraftImpl of(final ZoneRateDraft template) {
-      ZoneRateDraftImpl instance = new ZoneRateDraftImpl();
-      instance.setZone(template.getZone());
-      instance.setShippingRates(template.getShippingRates());
-      return instance;
-   }
+    public static ZoneRateDraftImpl of(){
+        return new ZoneRateDraftImpl();
+    }
+    
+
+    public static ZoneRateDraftImpl of(final ZoneRateDraft template) {
+        ZoneRateDraftImpl instance = new ZoneRateDraftImpl();
+        instance.setZone(template.getZone());
+        instance.setShippingRates(template.getShippingRates());
+        return instance;
+    }
 
 }

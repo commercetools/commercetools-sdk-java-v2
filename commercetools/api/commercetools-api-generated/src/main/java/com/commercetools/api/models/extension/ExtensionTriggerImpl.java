@@ -23,35 +23,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionTriggerImpl implements ExtensionTrigger {
 
-   private com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId;
-   
-   private java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions;
+    private com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId;
+    
+    private java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions;
 
-   @JsonCreator
-   ExtensionTriggerImpl(@JsonProperty("resourceTypeId") final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions) {
-      this.resourceTypeId = resourceTypeId;
-      this.actions = actions;
-   }
-   public ExtensionTriggerImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId(){
-      return this.resourceTypeId;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.extension.ExtensionAction> getActions(){
-      return this.actions;
-   }
+    @JsonCreator
+    ExtensionTriggerImpl(@JsonProperty("resourceTypeId") final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions) {
+        this.resourceTypeId = resourceTypeId;
+        this.actions = actions;
+    }
+    public ExtensionTriggerImpl() {
+       
+    }
 
-   public void setResourceTypeId(final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId){
-      this.resourceTypeId = resourceTypeId;
-   }
-   
-   public void setActions(final java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions){
-      this.actions = actions;
-   }
+    
+    public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId(){
+        return this.resourceTypeId;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.extension.ExtensionAction> getActions(){
+        return this.actions;
+    }
+
+    public void setResourceTypeId(final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId){
+        this.resourceTypeId = resourceTypeId;
+    }
+    
+    public void setActions(final java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions){
+        this.actions = actions;
+    }
 
 }

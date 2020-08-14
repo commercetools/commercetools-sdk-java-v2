@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListSetKeyActionImpl.class)
 public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
 
-   /**
-   *  <p>User-specific unique identifier for the shopping list.</p>
-   */
-   
-   @JsonProperty("key")
-   public String getKey();
+    /**
+    *  <p>User-specific unique identifier for the shopping list.</p>
+    */
+    
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setKey(final String key);
-   
-   public static ShoppingListSetKeyActionImpl of(){
-      return new ShoppingListSetKeyActionImpl();
-   }
-   
+    public void setKey(final String key);
 
-   public static ShoppingListSetKeyActionImpl of(final ShoppingListSetKeyAction template) {
-      ShoppingListSetKeyActionImpl instance = new ShoppingListSetKeyActionImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ShoppingListSetKeyActionImpl of(){
+        return new ShoppingListSetKeyActionImpl();
+    }
+    
+
+    public static ShoppingListSetKeyActionImpl of(final ShoppingListSetKeyAction template) {
+        ShoppingListSetKeyActionImpl instance = new ShoppingListSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

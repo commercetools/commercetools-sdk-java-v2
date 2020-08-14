@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSetShippingRateInputAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
+    private String action;
+    
+    private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
-   @JsonCreator
-   StagedOrderSetShippingRateInputActionImpl(@JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
-      this.shippingRateInput = shippingRateInput;
-      this.action = "setShippingRateInput";
-   }
-   public StagedOrderSetShippingRateInputActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput(){
-      return this.shippingRateInput;
-   }
+    @JsonCreator
+    StagedOrderSetShippingRateInputActionImpl(@JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
+        this.shippingRateInput = shippingRateInput;
+        this.action = "setShippingRateInput";
+    }
+    public StagedOrderSetShippingRateInputActionImpl() {
+       
+    }
 
-   public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput){
-      this.shippingRateInput = shippingRateInput;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput(){
+        return this.shippingRateInput;
+    }
+
+    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput){
+        this.shippingRateInput = shippingRateInput;
+    }
 
 }

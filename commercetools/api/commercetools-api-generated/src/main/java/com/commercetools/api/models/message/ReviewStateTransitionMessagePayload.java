@@ -23,60 +23,60 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewStateTransitionMessagePayloadImpl.class)
 public interface ReviewStateTransitionMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("oldState")
-   public StateReference getOldState();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("newState")
-   public StateReference getNewState();
-   
-   @NotNull
-   @JsonProperty("oldIncludedInStatistics")
-   public Boolean getOldIncludedInStatistics();
-   
-   @NotNull
-   @JsonProperty("newIncludedInStatistics")
-   public Boolean getNewIncludedInStatistics();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("target")
-   public Reference getTarget();
-   
-   @NotNull
-   @JsonProperty("force")
-   public Boolean getForce();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("oldState")
+    public StateReference getOldState();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("newState")
+    public StateReference getNewState();
+    
+    @NotNull
+    @JsonProperty("oldIncludedInStatistics")
+    public Boolean getOldIncludedInStatistics();
+    
+    @NotNull
+    @JsonProperty("newIncludedInStatistics")
+    public Boolean getNewIncludedInStatistics();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("target")
+    public Reference getTarget();
+    
+    @NotNull
+    @JsonProperty("force")
+    public Boolean getForce();
 
-   public void setOldState(final StateReference oldState);
-   
-   public void setNewState(final StateReference newState);
-   
-   public void setOldIncludedInStatistics(final Boolean oldIncludedInStatistics);
-   
-   public void setNewIncludedInStatistics(final Boolean newIncludedInStatistics);
-   
-   public void setTarget(final Reference target);
-   
-   public void setForce(final Boolean force);
-   
-   public static ReviewStateTransitionMessagePayloadImpl of(){
-      return new ReviewStateTransitionMessagePayloadImpl();
-   }
-   
+    public void setOldState(final StateReference oldState);
+    
+    public void setNewState(final StateReference newState);
+    
+    public void setOldIncludedInStatistics(final Boolean oldIncludedInStatistics);
+    
+    public void setNewIncludedInStatistics(final Boolean newIncludedInStatistics);
+    
+    public void setTarget(final Reference target);
+    
+    public void setForce(final Boolean force);
 
-   public static ReviewStateTransitionMessagePayloadImpl of(final ReviewStateTransitionMessagePayload template) {
-      ReviewStateTransitionMessagePayloadImpl instance = new ReviewStateTransitionMessagePayloadImpl();
-      instance.setOldState(template.getOldState());
-      instance.setNewState(template.getNewState());
-      instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
-      instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
-      instance.setTarget(template.getTarget());
-      instance.setForce(template.getForce());
-      return instance;
-   }
+    public static ReviewStateTransitionMessagePayloadImpl of(){
+        return new ReviewStateTransitionMessagePayloadImpl();
+    }
+    
+
+    public static ReviewStateTransitionMessagePayloadImpl of(final ReviewStateTransitionMessagePayload template) {
+        ReviewStateTransitionMessagePayloadImpl instance = new ReviewStateTransitionMessagePayloadImpl();
+        instance.setOldState(template.getOldState());
+        instance.setNewState(template.getNewState());
+        instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
+        instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
+        instance.setTarget(template.getTarget());
+        instance.setForce(template.getForce());
+        return instance;
+    }
 
 }

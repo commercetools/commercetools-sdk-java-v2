@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerSetDateOfBirthActionImpl.class)
 public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
 
-   /**
-   *  <p>If not defined, the date of birth is unset.</p>
-   */
-   
-   @JsonProperty("dateOfBirth")
-   public LocalDate getDateOfBirth();
+    /**
+    *  <p>If not defined, the date of birth is unset.</p>
+    */
+    
+    @JsonProperty("dateOfBirth")
+    public LocalDate getDateOfBirth();
 
-   public void setDateOfBirth(final LocalDate dateOfBirth);
-   
-   public static CustomerSetDateOfBirthActionImpl of(){
-      return new CustomerSetDateOfBirthActionImpl();
-   }
-   
+    public void setDateOfBirth(final LocalDate dateOfBirth);
 
-   public static CustomerSetDateOfBirthActionImpl of(final CustomerSetDateOfBirthAction template) {
-      CustomerSetDateOfBirthActionImpl instance = new CustomerSetDateOfBirthActionImpl();
-      instance.setDateOfBirth(template.getDateOfBirth());
-      return instance;
-   }
+    public static CustomerSetDateOfBirthActionImpl of(){
+        return new CustomerSetDateOfBirthActionImpl();
+    }
+    
+
+    public static CustomerSetDateOfBirthActionImpl of(final CustomerSetDateOfBirthAction template) {
+        CustomerSetDateOfBirthActionImpl instance = new CustomerSetDateOfBirthActionImpl();
+        instance.setDateOfBirth(template.getDateOfBirth());
+        return instance;
+    }
 
 }

@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderChangeTaxModeActionImpl.class)
 public interface StagedOrderChangeTaxModeAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("taxMode")
-   public TaxMode getTaxMode();
+    
+    @NotNull
+    @JsonProperty("taxMode")
+    public TaxMode getTaxMode();
 
-   public void setTaxMode(final TaxMode taxMode);
-   
-   public static StagedOrderChangeTaxModeActionImpl of(){
-      return new StagedOrderChangeTaxModeActionImpl();
-   }
-   
+    public void setTaxMode(final TaxMode taxMode);
 
-   public static StagedOrderChangeTaxModeActionImpl of(final StagedOrderChangeTaxModeAction template) {
-      StagedOrderChangeTaxModeActionImpl instance = new StagedOrderChangeTaxModeActionImpl();
-      instance.setTaxMode(template.getTaxMode());
-      return instance;
-   }
+    public static StagedOrderChangeTaxModeActionImpl of(){
+        return new StagedOrderChangeTaxModeActionImpl();
+    }
+    
+
+    public static StagedOrderChangeTaxModeActionImpl of(final StagedOrderChangeTaxModeAction template) {
+        StagedOrderChangeTaxModeActionImpl instance = new StagedOrderChangeTaxModeActionImpl();
+        instance.setTaxMode(template.getTaxMode());
+        return instance;
+    }
 
 }

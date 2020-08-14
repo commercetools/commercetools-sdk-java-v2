@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryOrderHintsImpl.class)
 public interface CategoryOrderHints  {
 
-   
-   @NotNull
-   @JsonAnyGetter
-   public Map<String, String> values();
+    
+    @NotNull
+    @JsonAnyGetter
+    public Map<String, String> values();
 
-   @JsonAnySetter
-   public void setValue(String key, String value);
-   
-   public static CategoryOrderHintsImpl of(){
-      return new CategoryOrderHintsImpl();
-   }
-   
+    @JsonAnySetter
+    public void setValue(String key, String value);
 
-   public static CategoryOrderHintsImpl of(final CategoryOrderHints template) {
-      CategoryOrderHintsImpl instance = new CategoryOrderHintsImpl();
-      return instance;
-   }
+    public static CategoryOrderHintsImpl of(){
+        return new CategoryOrderHintsImpl();
+    }
+    
+
+    public static CategoryOrderHintsImpl of(final CategoryOrderHints template) {
+        CategoryOrderHintsImpl instance = new CategoryOrderHintsImpl();
+        return instance;
+    }
 
 }

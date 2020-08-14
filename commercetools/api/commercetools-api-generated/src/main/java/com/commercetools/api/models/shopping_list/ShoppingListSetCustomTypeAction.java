@@ -23,34 +23,34 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListSetCustomTypeActionImpl.class)
 public interface ShoppingListSetCustomTypeAction extends ShoppingListUpdateAction {
 
-   /**
-   *  <p>If set, the custom type is set to this new value.
-   *  If absent, the custom type and any existing custom fields are removed.</p>
-   */
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   /**
-   *  <p>If set, the custom fields are set to this new value.</p>
-   */
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    /**
+    *  <p>If set, the custom type is set to this new value.
+    *  If absent, the custom type and any existing custom fields are removed.</p>
+    */
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    /**
+    *  <p>If set, the custom fields are set to this new value.</p>
+    */
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static ShoppingListSetCustomTypeActionImpl of(){
-      return new ShoppingListSetCustomTypeActionImpl();
-   }
-   
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static ShoppingListSetCustomTypeActionImpl of(final ShoppingListSetCustomTypeAction template) {
-      ShoppingListSetCustomTypeActionImpl instance = new ShoppingListSetCustomTypeActionImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static ShoppingListSetCustomTypeActionImpl of(){
+        return new ShoppingListSetCustomTypeActionImpl();
+    }
+    
+
+    public static ShoppingListSetCustomTypeActionImpl of(final ShoppingListSetCustomTypeAction template) {
+        ShoppingListSetCustomTypeActionImpl instance = new ShoppingListSetCustomTypeActionImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

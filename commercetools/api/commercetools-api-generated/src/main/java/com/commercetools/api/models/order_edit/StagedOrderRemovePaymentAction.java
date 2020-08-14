@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderRemovePaymentActionImpl.class)
 public interface StagedOrderRemovePaymentAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("payment")
-   public PaymentResourceIdentifier getPayment();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("payment")
+    public PaymentResourceIdentifier getPayment();
 
-   public void setPayment(final PaymentResourceIdentifier payment);
-   
-   public static StagedOrderRemovePaymentActionImpl of(){
-      return new StagedOrderRemovePaymentActionImpl();
-   }
-   
+    public void setPayment(final PaymentResourceIdentifier payment);
 
-   public static StagedOrderRemovePaymentActionImpl of(final StagedOrderRemovePaymentAction template) {
-      StagedOrderRemovePaymentActionImpl instance = new StagedOrderRemovePaymentActionImpl();
-      instance.setPayment(template.getPayment());
-      return instance;
-   }
+    public static StagedOrderRemovePaymentActionImpl of(){
+        return new StagedOrderRemovePaymentActionImpl();
+    }
+    
+
+    public static StagedOrderRemovePaymentActionImpl of(final StagedOrderRemovePaymentAction template) {
+        StagedOrderRemovePaymentActionImpl instance = new StagedOrderRemovePaymentActionImpl();
+        instance.setPayment(template.getPayment());
+        return instance;
+    }
 
 }

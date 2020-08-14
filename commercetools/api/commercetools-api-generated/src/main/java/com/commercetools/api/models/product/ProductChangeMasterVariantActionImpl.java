@@ -22,55 +22,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductChangeMasterVariantActionImpl implements ProductChangeMasterVariantAction {
 
-   private String action;
-   
-   private Long variantId;
-   
-   private String sku;
-   
-   private Boolean staged;
+    private String action;
+    
+    private Long variantId;
+    
+    private String sku;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductChangeMasterVariantActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged) {
-      this.variantId = variantId;
-      this.sku = sku;
-      this.staged = staged;
-      this.action = "changeMasterVariant";
-   }
-   public ProductChangeMasterVariantActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Long getVariantId(){
-      return this.variantId;
-   }
-   
-   
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductChangeMasterVariantActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged) {
+        this.variantId = variantId;
+        this.sku = sku;
+        this.staged = staged;
+        this.action = "changeMasterVariant";
+    }
+    public ProductChangeMasterVariantActionImpl() {
+       
+    }
 
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
-   
-   public void setSku(final String sku){
-      this.sku = sku;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Long getVariantId(){
+        return this.variantId;
+    }
+    
+    
+    public String getSku(){
+        return this.sku;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setVariantId(final Long variantId){
+        this.variantId = variantId;
+    }
+    
+    public void setSku(final String sku){
+        this.sku = sku;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

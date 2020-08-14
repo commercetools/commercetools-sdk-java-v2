@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAction {
 
-   private String action;
-   
-   private String description;
+    private String action;
+    
+    private String description;
 
-   @JsonCreator
-   ZoneSetDescriptionActionImpl(@JsonProperty("description") final String description) {
-      this.description = description;
-      this.action = "setDescription";
-   }
-   public ZoneSetDescriptionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getDescription(){
-      return this.description;
-   }
+    @JsonCreator
+    ZoneSetDescriptionActionImpl(@JsonProperty("description") final String description) {
+        this.description = description;
+        this.action = "setDescription";
+    }
+    public ZoneSetDescriptionActionImpl() {
+       
+    }
 
-   public void setDescription(final String description){
-      this.description = description;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getDescription(){
+        return this.description;
+    }
+
+    public void setDescription(final String description){
+        this.description = description;
+    }
 
 }

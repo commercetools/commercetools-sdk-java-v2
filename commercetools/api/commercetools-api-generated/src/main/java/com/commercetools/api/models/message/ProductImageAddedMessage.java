@@ -22,47 +22,47 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductImageAddedMessageImpl.class)
 public interface ProductImageAddedMessage extends Message {
 
-   
-   @NotNull
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("image")
-   public Image getImage();
-   
-   @NotNull
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @NotNull
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("image")
+    public Image getImage();
+    
+    @NotNull
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setImage(final Image image);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductImageAddedMessageImpl of(){
-      return new ProductImageAddedMessageImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setImage(final Image image);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductImageAddedMessageImpl of(final ProductImageAddedMessage template) {
-      ProductImageAddedMessageImpl instance = new ProductImageAddedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setVariantId(template.getVariantId());
-      instance.setImage(template.getImage());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductImageAddedMessageImpl of(){
+        return new ProductImageAddedMessageImpl();
+    }
+    
+
+    public static ProductImageAddedMessageImpl of(final ProductImageAddedMessage template) {
+        ProductImageAddedMessageImpl instance = new ProductImageAddedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setVariantId(template.getVariantId());
+        instance.setImage(template.getImage());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

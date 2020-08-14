@@ -23,23 +23,23 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntryReferenceImpl.class)
 public interface InventoryEntryReference extends Reference {
 
-   
-   @Valid
-   @JsonProperty("obj")
-   public InventoryEntry getObj();
+    
+    @Valid
+    @JsonProperty("obj")
+    public InventoryEntry getObj();
 
-   public void setObj(final InventoryEntry obj);
-   
-   public static InventoryEntryReferenceImpl of(){
-      return new InventoryEntryReferenceImpl();
-   }
-   
+    public void setObj(final InventoryEntry obj);
 
-   public static InventoryEntryReferenceImpl of(final InventoryEntryReference template) {
-      InventoryEntryReferenceImpl instance = new InventoryEntryReferenceImpl();
-      instance.setId(template.getId());
-      instance.setObj(template.getObj());
-      return instance;
-   }
+    public static InventoryEntryReferenceImpl of(){
+        return new InventoryEntryReferenceImpl();
+    }
+    
+
+    public static InventoryEntryReferenceImpl of(final InventoryEntryReference template) {
+        InventoryEntryReferenceImpl instance = new InventoryEntryReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(template.getObj());
+        return instance;
+    }
 
 }

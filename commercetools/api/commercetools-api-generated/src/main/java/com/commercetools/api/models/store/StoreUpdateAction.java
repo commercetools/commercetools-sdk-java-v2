@@ -32,10 +32,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoresSetSupplyChannelsActionImpl.class, name = "setSupplyChannels")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "action",
-   defaultImpl = StoreUpdateActionImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "action",
+    defaultImpl = StoreUpdateActionImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -44,7 +44,7 @@ import java.io.IOException;
 public interface StoreUpdateAction  {
 
 
-   
+
 
 
 }

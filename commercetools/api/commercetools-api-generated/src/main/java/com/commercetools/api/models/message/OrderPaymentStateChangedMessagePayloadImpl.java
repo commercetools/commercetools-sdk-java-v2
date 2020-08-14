@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentStateChangedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.order.PaymentState paymentState;
-   
-   private com.commercetools.api.models.order.PaymentState oldPaymentState;
+    private String type;
+    
+    private com.commercetools.api.models.order.PaymentState paymentState;
+    
+    private com.commercetools.api.models.order.PaymentState oldPaymentState;
 
-   @JsonCreator
-   OrderPaymentStateChangedMessagePayloadImpl(@JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState, @JsonProperty("oldPaymentState") final com.commercetools.api.models.order.PaymentState oldPaymentState) {
-      this.paymentState = paymentState;
-      this.oldPaymentState = oldPaymentState;
-      this.type = "OrderPaymentStateChanged";
-   }
-   public OrderPaymentStateChangedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.order.PaymentState getPaymentState(){
-      return this.paymentState;
-   }
-   
-   
-   public com.commercetools.api.models.order.PaymentState getOldPaymentState(){
-      return this.oldPaymentState;
-   }
+    @JsonCreator
+    OrderPaymentStateChangedMessagePayloadImpl(@JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState, @JsonProperty("oldPaymentState") final com.commercetools.api.models.order.PaymentState oldPaymentState) {
+        this.paymentState = paymentState;
+        this.oldPaymentState = oldPaymentState;
+        this.type = "OrderPaymentStateChanged";
+    }
+    public OrderPaymentStateChangedMessagePayloadImpl() {
+       
+    }
 
-   public void setPaymentState(final com.commercetools.api.models.order.PaymentState paymentState){
-      this.paymentState = paymentState;
-   }
-   
-   public void setOldPaymentState(final com.commercetools.api.models.order.PaymentState oldPaymentState){
-      this.oldPaymentState = oldPaymentState;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.order.PaymentState getPaymentState(){
+        return this.paymentState;
+    }
+    
+    
+    public com.commercetools.api.models.order.PaymentState getOldPaymentState(){
+        return this.oldPaymentState;
+    }
+
+    public void setPaymentState(final com.commercetools.api.models.order.PaymentState paymentState){
+        this.paymentState = paymentState;
+    }
+    
+    public void setOldPaymentState(final com.commercetools.api.models.order.PaymentState oldPaymentState){
+        this.oldPaymentState = oldPaymentState;
+    }
 
 }

@@ -22,25 +22,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewSetCustomerActionImpl.class)
 public interface ReviewSetCustomerAction extends ReviewUpdateAction {
 
-   /**
-   *  <p>The customer who created the review.
-   *  If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   @Valid
-   @JsonProperty("customer")
-   public CustomerResourceIdentifier getCustomer();
+    /**
+    *  <p>The customer who created the review.
+    *  If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    @Valid
+    @JsonProperty("customer")
+    public CustomerResourceIdentifier getCustomer();
 
-   public void setCustomer(final CustomerResourceIdentifier customer);
-   
-   public static ReviewSetCustomerActionImpl of(){
-      return new ReviewSetCustomerActionImpl();
-   }
-   
+    public void setCustomer(final CustomerResourceIdentifier customer);
 
-   public static ReviewSetCustomerActionImpl of(final ReviewSetCustomerAction template) {
-      ReviewSetCustomerActionImpl instance = new ReviewSetCustomerActionImpl();
-      instance.setCustomer(template.getCustomer());
-      return instance;
-   }
+    public static ReviewSetCustomerActionImpl of(){
+        return new ReviewSetCustomerActionImpl();
+    }
+    
+
+    public static ReviewSetCustomerActionImpl of(final ReviewSetCustomerAction template) {
+        ReviewSetCustomerActionImpl instance = new ReviewSetCustomerActionImpl();
+        instance.setCustomer(template.getCustomer());
+        return instance;
+    }
 
 }

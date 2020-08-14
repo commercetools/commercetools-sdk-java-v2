@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = SubscriptionSetMessagesActionImpl.class)
 public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("messages")
-   public List<MessageSubscription> getMessages();
+    
+    @Valid
+    @JsonProperty("messages")
+    public List<MessageSubscription> getMessages();
 
-   public void setMessages(final List<MessageSubscription> messages);
-   
-   public static SubscriptionSetMessagesActionImpl of(){
-      return new SubscriptionSetMessagesActionImpl();
-   }
-   
+    public void setMessages(final List<MessageSubscription> messages);
 
-   public static SubscriptionSetMessagesActionImpl of(final SubscriptionSetMessagesAction template) {
-      SubscriptionSetMessagesActionImpl instance = new SubscriptionSetMessagesActionImpl();
-      instance.setMessages(template.getMessages());
-      return instance;
-   }
+    public static SubscriptionSetMessagesActionImpl of(){
+        return new SubscriptionSetMessagesActionImpl();
+    }
+    
+
+    public static SubscriptionSetMessagesActionImpl of(final SubscriptionSetMessagesAction template) {
+        SubscriptionSetMessagesActionImpl instance = new SubscriptionSetMessagesActionImpl();
+        instance.setMessages(template.getMessages());
+        return instance;
+    }
 
 }

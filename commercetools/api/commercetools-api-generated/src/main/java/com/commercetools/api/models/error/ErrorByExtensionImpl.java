@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ErrorByExtensionImpl implements ErrorByExtension {
 
-   private String id;
-   
-   private String key;
+    private String id;
+    
+    private String key;
 
-   @JsonCreator
-   ErrorByExtensionImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
-      this.id = id;
-      this.key = key;
-   }
-   public ErrorByExtensionImpl() {
-      
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    ErrorByExtensionImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
+        this.id = id;
+        this.key = key;
+    }
+    public ErrorByExtensionImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
-   
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public String getId(){
+        return this.id;
+    }
+    
+    
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
+    
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountChangeNameActionImpl implements CartDiscountChangeNameAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString name;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString name;
 
-   @JsonCreator
-   CartDiscountChangeNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
-      this.name = name;
-      this.action = "changeName";
-   }
-   public CartDiscountChangeNameActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getName(){
-      return this.name;
-   }
+    @JsonCreator
+    CartDiscountChangeNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
+        this.name = name;
+        this.action = "changeName";
+    }
+    public CartDiscountChangeNameActionImpl() {
+       
+    }
 
-   public void setName(final com.commercetools.api.models.common.LocalizedString name){
-      this.name = name;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
+        return this.name;
+    }
+
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
+        this.name = name;
+    }
 
 }

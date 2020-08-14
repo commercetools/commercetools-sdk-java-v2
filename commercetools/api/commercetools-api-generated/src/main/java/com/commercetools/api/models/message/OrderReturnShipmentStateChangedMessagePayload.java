@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderReturnShipmentStateChangedMessagePayloadImpl.class)
 public interface OrderReturnShipmentStateChangedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("returnItemId")
-   public String getReturnItemId();
-   
-   @NotNull
-   @JsonProperty("returnShipmentState")
-   public ReturnShipmentState getReturnShipmentState();
+    
+    @NotNull
+    @JsonProperty("returnItemId")
+    public String getReturnItemId();
+    
+    @NotNull
+    @JsonProperty("returnShipmentState")
+    public ReturnShipmentState getReturnShipmentState();
 
-   public void setReturnItemId(final String returnItemId);
-   
-   public void setReturnShipmentState(final ReturnShipmentState returnShipmentState);
-   
-   public static OrderReturnShipmentStateChangedMessagePayloadImpl of(){
-      return new OrderReturnShipmentStateChangedMessagePayloadImpl();
-   }
-   
+    public void setReturnItemId(final String returnItemId);
+    
+    public void setReturnShipmentState(final ReturnShipmentState returnShipmentState);
 
-   public static OrderReturnShipmentStateChangedMessagePayloadImpl of(final OrderReturnShipmentStateChangedMessagePayload template) {
-      OrderReturnShipmentStateChangedMessagePayloadImpl instance = new OrderReturnShipmentStateChangedMessagePayloadImpl();
-      instance.setReturnItemId(template.getReturnItemId());
-      instance.setReturnShipmentState(template.getReturnShipmentState());
-      return instance;
-   }
+    public static OrderReturnShipmentStateChangedMessagePayloadImpl of(){
+        return new OrderReturnShipmentStateChangedMessagePayloadImpl();
+    }
+    
+
+    public static OrderReturnShipmentStateChangedMessagePayloadImpl of(final OrderReturnShipmentStateChangedMessagePayload template) {
+        OrderReturnShipmentStateChangedMessagePayloadImpl instance = new OrderReturnShipmentStateChangedMessagePayloadImpl();
+        instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnShipmentState(template.getReturnShipmentState());
+        return instance;
+    }
 
 }

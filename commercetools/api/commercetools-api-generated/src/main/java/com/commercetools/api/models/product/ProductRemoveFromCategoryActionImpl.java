@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCategoryAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.category.CategoryResourceIdentifier category;
-   
-   private Boolean staged;
+    private String action;
+    
+    private com.commercetools.api.models.category.CategoryResourceIdentifier category;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductRemoveFromCategoryActionImpl(@JsonProperty("category") final com.commercetools.api.models.category.CategoryResourceIdentifier category, @JsonProperty("staged") final Boolean staged) {
-      this.category = category;
-      this.staged = staged;
-      this.action = "removeFromCategory";
-   }
-   public ProductRemoveFromCategoryActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
-      return this.category;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductRemoveFromCategoryActionImpl(@JsonProperty("category") final com.commercetools.api.models.category.CategoryResourceIdentifier category, @JsonProperty("staged") final Boolean staged) {
+        this.category = category;
+        this.staged = staged;
+        this.action = "removeFromCategory";
+    }
+    public ProductRemoveFromCategoryActionImpl() {
+       
+    }
 
-   public void setCategory(final com.commercetools.api.models.category.CategoryResourceIdentifier category){
-      this.category = category;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
+        return this.category;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setCategory(final com.commercetools.api.models.category.CategoryResourceIdentifier category){
+        this.category = category;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

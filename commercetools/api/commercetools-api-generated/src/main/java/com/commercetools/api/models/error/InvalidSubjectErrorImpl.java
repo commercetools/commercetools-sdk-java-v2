@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InvalidSubjectErrorImpl implements InvalidSubjectError {
 
-   private String code;
-   
-   private String message;
+    private String code;
+    
+    private String message;
 
-   @JsonCreator
-   InvalidSubjectErrorImpl(@JsonProperty("message") final String message) {
-      this.message = message;
-      this.code = "InvalidSubject";
-   }
-   public InvalidSubjectErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
+    @JsonCreator
+    InvalidSubjectErrorImpl(@JsonProperty("message") final String message) {
+        this.message = message;
+        this.code = "InvalidSubject";
+    }
+    public InvalidSubjectErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
 
 }

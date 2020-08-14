@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxCategorySetDescriptionActionImpl.class)
 public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction {
 
-   
-   
-   @JsonProperty("description")
-   public String getDescription();
+    
+    
+    @JsonProperty("description")
+    public String getDescription();
 
-   public void setDescription(final String description);
-   
-   public static TaxCategorySetDescriptionActionImpl of(){
-      return new TaxCategorySetDescriptionActionImpl();
-   }
-   
+    public void setDescription(final String description);
 
-   public static TaxCategorySetDescriptionActionImpl of(final TaxCategorySetDescriptionAction template) {
-      TaxCategorySetDescriptionActionImpl instance = new TaxCategorySetDescriptionActionImpl();
-      instance.setDescription(template.getDescription());
-      return instance;
-   }
+    public static TaxCategorySetDescriptionActionImpl of(){
+        return new TaxCategorySetDescriptionActionImpl();
+    }
+    
+
+    public static TaxCategorySetDescriptionActionImpl of(final TaxCategorySetDescriptionAction template) {
+        TaxCategorySetDescriptionActionImpl instance = new TaxCategorySetDescriptionActionImpl();
+        instance.setDescription(template.getDescription());
+        return instance;
+    }
 
 }

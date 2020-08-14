@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineItemPriceForQuantity {
 
-   private Double quantity;
-   
-   private com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice;
+    private Double quantity;
+    
+    private com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice;
 
-   @JsonCreator
-   DiscountedLineItemPriceForQuantityImpl(@JsonProperty("quantity") final Double quantity, @JsonProperty("discountedPrice") final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice) {
-      this.quantity = quantity;
-      this.discountedPrice = discountedPrice;
-   }
-   public DiscountedLineItemPriceForQuantityImpl() {
-      
-   }
-   
-   
-   public Double getQuantity(){
-      return this.quantity;
-   }
-   
-   
-   public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice(){
-      return this.discountedPrice;
-   }
+    @JsonCreator
+    DiscountedLineItemPriceForQuantityImpl(@JsonProperty("quantity") final Double quantity, @JsonProperty("discountedPrice") final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice) {
+        this.quantity = quantity;
+        this.discountedPrice = discountedPrice;
+    }
+    public DiscountedLineItemPriceForQuantityImpl() {
+       
+    }
 
-   public void setQuantity(final Double quantity){
-      this.quantity = quantity;
-   }
-   
-   public void setDiscountedPrice(final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice){
-      this.discountedPrice = discountedPrice;
-   }
+    
+    public Double getQuantity(){
+        return this.quantity;
+    }
+    
+    
+    public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice(){
+        return this.discountedPrice;
+    }
+
+    public void setQuantity(final Double quantity){
+        this.quantity = quantity;
+    }
+    
+    public void setDiscountedPrice(final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice){
+        this.discountedPrice = discountedPrice;
+    }
 
 }

@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditPreviewFailureImpl.class)
 public interface OrderEditPreviewFailure extends OrderEditResult {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("errors")
-   public List<ErrorObject> getErrors();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("errors")
+    public List<ErrorObject> getErrors();
 
-   public void setErrors(final List<ErrorObject> errors);
-   
-   public static OrderEditPreviewFailureImpl of(){
-      return new OrderEditPreviewFailureImpl();
-   }
-   
+    public void setErrors(final List<ErrorObject> errors);
 
-   public static OrderEditPreviewFailureImpl of(final OrderEditPreviewFailure template) {
-      OrderEditPreviewFailureImpl instance = new OrderEditPreviewFailureImpl();
-      instance.setErrors(template.getErrors());
-      return instance;
-   }
+    public static OrderEditPreviewFailureImpl of(){
+        return new OrderEditPreviewFailureImpl();
+    }
+    
+
+    public static OrderEditPreviewFailureImpl of(final OrderEditPreviewFailure template) {
+        OrderEditPreviewFailureImpl instance = new OrderEditPreviewFailureImpl();
+        instance.setErrors(template.getErrors());
+        return instance;
+    }
 
 }

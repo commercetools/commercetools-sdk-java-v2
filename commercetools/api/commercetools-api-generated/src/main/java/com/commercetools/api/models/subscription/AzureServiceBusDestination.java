@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = AzureServiceBusDestinationImpl.class)
 public interface AzureServiceBusDestination extends Destination {
 
-   
-   @NotNull
-   @JsonProperty("connectionString")
-   public String getConnectionString();
+    
+    @NotNull
+    @JsonProperty("connectionString")
+    public String getConnectionString();
 
-   public void setConnectionString(final String connectionString);
-   
-   public static AzureServiceBusDestinationImpl of(){
-      return new AzureServiceBusDestinationImpl();
-   }
-   
+    public void setConnectionString(final String connectionString);
 
-   public static AzureServiceBusDestinationImpl of(final AzureServiceBusDestination template) {
-      AzureServiceBusDestinationImpl instance = new AzureServiceBusDestinationImpl();
-      instance.setConnectionString(template.getConnectionString());
-      return instance;
-   }
+    public static AzureServiceBusDestinationImpl of(){
+        return new AzureServiceBusDestinationImpl();
+    }
+    
+
+    public static AzureServiceBusDestinationImpl of(final AzureServiceBusDestination template) {
+        AzureServiceBusDestinationImpl instance = new AzureServiceBusDestinationImpl();
+        instance.setConnectionString(template.getConnectionString());
+        return instance;
+    }
 
 }

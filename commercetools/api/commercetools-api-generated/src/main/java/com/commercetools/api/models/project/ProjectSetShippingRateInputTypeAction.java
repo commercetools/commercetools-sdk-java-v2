@@ -22,24 +22,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectSetShippingRateInputTypeActionImpl.class)
 public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateAction {
 
-   /**
-   *  <p>If not set, removes existing shippingRateInputType.</p>
-   */
-   @Valid
-   @JsonProperty("shippingRateInputType")
-   public ShippingRateInputType getShippingRateInputType();
+    /**
+    *  <p>If not set, removes existing shippingRateInputType.</p>
+    */
+    @Valid
+    @JsonProperty("shippingRateInputType")
+    public ShippingRateInputType getShippingRateInputType();
 
-   public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
-   
-   public static ProjectSetShippingRateInputTypeActionImpl of(){
-      return new ProjectSetShippingRateInputTypeActionImpl();
-   }
-   
+    public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
 
-   public static ProjectSetShippingRateInputTypeActionImpl of(final ProjectSetShippingRateInputTypeAction template) {
-      ProjectSetShippingRateInputTypeActionImpl instance = new ProjectSetShippingRateInputTypeActionImpl();
-      instance.setShippingRateInputType(template.getShippingRateInputType());
-      return instance;
-   }
+    public static ProjectSetShippingRateInputTypeActionImpl of(){
+        return new ProjectSetShippingRateInputTypeActionImpl();
+    }
+    
+
+    public static ProjectSetShippingRateInputTypeActionImpl of(final ProjectSetShippingRateInputTypeAction template) {
+        ProjectSetShippingRateInputTypeActionImpl instance = new ProjectSetShippingRateInputTypeActionImpl();
+        instance.setShippingRateInputType(template.getShippingRateInputType());
+        return instance;
+    }
 
 }

@@ -23,33 +23,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartDiscountSetDescriptionActionImpl implements CartDiscountSetDescriptionAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.LocalizedString description;
+    private String action;
+    
+    private com.commercetools.api.models.common.LocalizedString description;
 
-   @JsonCreator
-   CartDiscountSetDescriptionActionImpl(@JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
-      this.description = description;
-      this.action = "setDescription";
-   }
-   public CartDiscountSetDescriptionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If the <code>description</code> parameter is not included, the field will be emptied.</p>
-   */
-   public com.commercetools.api.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
+    @JsonCreator
+    CartDiscountSetDescriptionActionImpl(@JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
+        this.description = description;
+        this.action = "setDescription";
+    }
+    public CartDiscountSetDescriptionActionImpl() {
+       
+    }
 
-   public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
-      this.description = description;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If the <code>description</code> parameter is not included, the field will be emptied.</p>
+    */
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
+        return this.description;
+    }
+
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
+        this.description = description;
+    }
 
 }

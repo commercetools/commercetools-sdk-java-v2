@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDateOfBirthAction {
 
-   private String action;
-   
-   private java.time.LocalDate dateOfBirth;
+    private String action;
+    
+    private java.time.LocalDate dateOfBirth;
 
-   @JsonCreator
-   MyCustomerSetDateOfBirthActionImpl(@JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth) {
-      this.dateOfBirth = dateOfBirth;
-      this.action = "setDateOfBirth";
-   }
-   public MyCustomerSetDateOfBirthActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.time.LocalDate getDateOfBirth(){
-      return this.dateOfBirth;
-   }
+    @JsonCreator
+    MyCustomerSetDateOfBirthActionImpl(@JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        this.action = "setDateOfBirth";
+    }
+    public MyCustomerSetDateOfBirthActionImpl() {
+       
+    }
 
-   public void setDateOfBirth(final java.time.LocalDate dateOfBirth){
-      this.dateOfBirth = dateOfBirth;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.time.LocalDate getDateOfBirth(){
+        return this.dateOfBirth;
+    }
+
+    public void setDateOfBirth(final java.time.LocalDate dateOfBirth){
+        this.dateOfBirth = dateOfBirth;
+    }
 
 }

@@ -21,36 +21,36 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionAWSLambdaDestinationImpl.class)
 public interface ExtensionAWSLambdaDestination extends ExtensionDestination {
 
-   
-   @NotNull
-   @JsonProperty("arn")
-   public String getArn();
-   
-   @NotNull
-   @JsonProperty("accessKey")
-   public String getAccessKey();
-   
-   @NotNull
-   @JsonProperty("accessSecret")
-   public String getAccessSecret();
+    
+    @NotNull
+    @JsonProperty("arn")
+    public String getArn();
+    
+    @NotNull
+    @JsonProperty("accessKey")
+    public String getAccessKey();
+    
+    @NotNull
+    @JsonProperty("accessSecret")
+    public String getAccessSecret();
 
-   public void setArn(final String arn);
-   
-   public void setAccessKey(final String accessKey);
-   
-   public void setAccessSecret(final String accessSecret);
-   
-   public static ExtensionAWSLambdaDestinationImpl of(){
-      return new ExtensionAWSLambdaDestinationImpl();
-   }
-   
+    public void setArn(final String arn);
+    
+    public void setAccessKey(final String accessKey);
+    
+    public void setAccessSecret(final String accessSecret);
 
-   public static ExtensionAWSLambdaDestinationImpl of(final ExtensionAWSLambdaDestination template) {
-      ExtensionAWSLambdaDestinationImpl instance = new ExtensionAWSLambdaDestinationImpl();
-      instance.setArn(template.getArn());
-      instance.setAccessKey(template.getAccessKey());
-      instance.setAccessSecret(template.getAccessSecret());
-      return instance;
-   }
+    public static ExtensionAWSLambdaDestinationImpl of(){
+        return new ExtensionAWSLambdaDestinationImpl();
+    }
+    
+
+    public static ExtensionAWSLambdaDestinationImpl of(final ExtensionAWSLambdaDestination template) {
+        ExtensionAWSLambdaDestinationImpl instance = new ExtensionAWSLambdaDestinationImpl();
+        instance.setArn(template.getArn());
+        instance.setAccessKey(template.getAccessKey());
+        instance.setAccessSecret(template.getAccessSecret());
+        return instance;
+    }
 
 }

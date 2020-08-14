@@ -22,49 +22,49 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ApiClientDraftImpl implements ApiClientDraft {
 
-   private String name;
-   
-   private String scope;
-   
-   private Long deleteDaysAfterCreation;
+    private String name;
+    
+    private String scope;
+    
+    private Long deleteDaysAfterCreation;
 
-   @JsonCreator
-   ApiClientDraftImpl(@JsonProperty("name") final String name, @JsonProperty("scope") final String scope, @JsonProperty("deleteDaysAfterCreation") final Long deleteDaysAfterCreation) {
-      this.name = name;
-      this.scope = scope;
-      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
-   }
-   public ApiClientDraftImpl() {
-      
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public String getScope(){
-      return this.scope;
-   }
-   
-   /**
-   *  <p>If set, the client will be deleted after the specified amount of days.</p>
-   */
-   public Long getDeleteDaysAfterCreation(){
-      return this.deleteDaysAfterCreation;
-   }
+    @JsonCreator
+    ApiClientDraftImpl(@JsonProperty("name") final String name, @JsonProperty("scope") final String scope, @JsonProperty("deleteDaysAfterCreation") final Long deleteDaysAfterCreation) {
+        this.name = name;
+        this.scope = scope;
+        this.deleteDaysAfterCreation = deleteDaysAfterCreation;
+    }
+    public ApiClientDraftImpl() {
+       
+    }
 
-   public void setName(final String name){
-      this.name = name;
-   }
-   
-   public void setScope(final String scope){
-      this.scope = scope;
-   }
-   
-   public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation){
-      this.deleteDaysAfterCreation = deleteDaysAfterCreation;
-   }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public String getScope(){
+        return this.scope;
+    }
+    
+    /**
+    *  <p>If set, the client will be deleted after the specified amount of days.</p>
+    */
+    public Long getDeleteDaysAfterCreation(){
+        return this.deleteDaysAfterCreation;
+    }
+
+    public void setName(final String name){
+        this.name = name;
+    }
+    
+    public void setScope(final String scope){
+        this.scope = scope;
+    }
+    
+    public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation){
+        this.deleteDaysAfterCreation = deleteDaysAfterCreation;
+    }
 
 }

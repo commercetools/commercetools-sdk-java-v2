@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ClassificationShippingRateInputDraftImpl.class)
 public interface ClassificationShippingRateInputDraft extends ShippingRateInputDraft {
 
-   
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
+    
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setKey(final String key);
-   
-   public static ClassificationShippingRateInputDraftImpl of(){
-      return new ClassificationShippingRateInputDraftImpl();
-   }
-   
+    public void setKey(final String key);
 
-   public static ClassificationShippingRateInputDraftImpl of(final ClassificationShippingRateInputDraft template) {
-      ClassificationShippingRateInputDraftImpl instance = new ClassificationShippingRateInputDraftImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ClassificationShippingRateInputDraftImpl of(){
+        return new ClassificationShippingRateInputDraftImpl();
+    }
+    
+
+    public static ClassificationShippingRateInputDraftImpl of(final ClassificationShippingRateInputDraft template) {
+        ClassificationShippingRateInputDraftImpl instance = new ClassificationShippingRateInputDraftImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

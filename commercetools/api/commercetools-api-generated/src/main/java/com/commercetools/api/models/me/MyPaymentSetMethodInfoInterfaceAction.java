@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = MyPaymentSetMethodInfoInterfaceActionImpl.class)
 public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("interface")
-   public String getInterface();
+    
+    @NotNull
+    @JsonProperty("interface")
+    public String getInterface();
 
-   public void setInterface(final String _interface);
-   
-   public static MyPaymentSetMethodInfoInterfaceActionImpl of(){
-      return new MyPaymentSetMethodInfoInterfaceActionImpl();
-   }
-   
+    public void setInterface(final String _interface);
 
-   public static MyPaymentSetMethodInfoInterfaceActionImpl of(final MyPaymentSetMethodInfoInterfaceAction template) {
-      MyPaymentSetMethodInfoInterfaceActionImpl instance = new MyPaymentSetMethodInfoInterfaceActionImpl();
-      instance.setInterface(template.getInterface());
-      return instance;
-   }
+    public static MyPaymentSetMethodInfoInterfaceActionImpl of(){
+        return new MyPaymentSetMethodInfoInterfaceActionImpl();
+    }
+    
+
+    public static MyPaymentSetMethodInfoInterfaceActionImpl of(final MyPaymentSetMethodInfoInterfaceAction template) {
+        MyPaymentSetMethodInfoInterfaceActionImpl instance = new MyPaymentSetMethodInfoInterfaceActionImpl();
+        instance.setInterface(template.getInterface());
+        return instance;
+    }
 
 }

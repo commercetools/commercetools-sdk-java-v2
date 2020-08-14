@@ -23,29 +23,29 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetCustomTypeActionImpl.class)
 public interface CartSetCustomTypeAction extends CartUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static CartSetCustomTypeActionImpl of(){
-      return new CartSetCustomTypeActionImpl();
-   }
-   
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static CartSetCustomTypeActionImpl of(final CartSetCustomTypeAction template) {
-      CartSetCustomTypeActionImpl instance = new CartSetCustomTypeActionImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static CartSetCustomTypeActionImpl of(){
+        return new CartSetCustomTypeActionImpl();
+    }
+    
+
+    public static CartSetCustomTypeActionImpl of(final CartSetCustomTypeAction template) {
+        CartSetCustomTypeActionImpl instance = new CartSetCustomTypeActionImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

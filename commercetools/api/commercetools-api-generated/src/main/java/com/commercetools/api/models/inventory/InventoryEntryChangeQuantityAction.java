@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntryChangeQuantityActionImpl.class)
 public interface InventoryEntryChangeQuantityAction extends InventoryEntryUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("quantity")
-   public Long getQuantity();
+    
+    @NotNull
+    @JsonProperty("quantity")
+    public Long getQuantity();
 
-   public void setQuantity(final Long quantity);
-   
-   public static InventoryEntryChangeQuantityActionImpl of(){
-      return new InventoryEntryChangeQuantityActionImpl();
-   }
-   
+    public void setQuantity(final Long quantity);
 
-   public static InventoryEntryChangeQuantityActionImpl of(final InventoryEntryChangeQuantityAction template) {
-      InventoryEntryChangeQuantityActionImpl instance = new InventoryEntryChangeQuantityActionImpl();
-      instance.setQuantity(template.getQuantity());
-      return instance;
-   }
+    public static InventoryEntryChangeQuantityActionImpl of(){
+        return new InventoryEntryChangeQuantityActionImpl();
+    }
+    
+
+    public static InventoryEntryChangeQuantityActionImpl of(final InventoryEntryChangeQuantityAction template) {
+        InventoryEntryChangeQuantityActionImpl instance = new InventoryEntryChangeQuantityActionImpl();
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
 
 }

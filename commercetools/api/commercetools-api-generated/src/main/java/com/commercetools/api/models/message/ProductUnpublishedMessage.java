@@ -22,25 +22,25 @@ import java.io.IOException;
 public interface ProductUnpublishedMessage extends Message {
 
 
-   
-   public static ProductUnpublishedMessageImpl of(){
-      return new ProductUnpublishedMessageImpl();
-   }
-   
 
-   public static ProductUnpublishedMessageImpl of(final ProductUnpublishedMessage template) {
-      ProductUnpublishedMessageImpl instance = new ProductUnpublishedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      return instance;
-   }
+    public static ProductUnpublishedMessageImpl of(){
+        return new ProductUnpublishedMessageImpl();
+    }
+    
+
+    public static ProductUnpublishedMessageImpl of(final ProductUnpublishedMessage template) {
+        ProductUnpublishedMessageImpl instance = new ProductUnpublishedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        return instance;
+    }
 
 }

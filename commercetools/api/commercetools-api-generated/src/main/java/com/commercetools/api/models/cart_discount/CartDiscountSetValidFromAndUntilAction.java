@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountSetValidFromAndUntilActionImpl.class)
 public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpdateAction {
 
-   /**
-   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
-   */
-   
-   @JsonProperty("validFrom")
-   public ZonedDateTime getValidFrom();
-   /**
-   *  <p>If absent, the field with the value is removed in case a value was set before.</p>
-   */
-   
-   @JsonProperty("validUntil")
-   public ZonedDateTime getValidUntil();
+    /**
+    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    */
+    
+    @JsonProperty("validFrom")
+    public ZonedDateTime getValidFrom();
+    /**
+    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    */
+    
+    @JsonProperty("validUntil")
+    public ZonedDateTime getValidUntil();
 
-   public void setValidFrom(final ZonedDateTime validFrom);
-   
-   public void setValidUntil(final ZonedDateTime validUntil);
-   
-   public static CartDiscountSetValidFromAndUntilActionImpl of(){
-      return new CartDiscountSetValidFromAndUntilActionImpl();
-   }
-   
+    public void setValidFrom(final ZonedDateTime validFrom);
+    
+    public void setValidUntil(final ZonedDateTime validUntil);
 
-   public static CartDiscountSetValidFromAndUntilActionImpl of(final CartDiscountSetValidFromAndUntilAction template) {
-      CartDiscountSetValidFromAndUntilActionImpl instance = new CartDiscountSetValidFromAndUntilActionImpl();
-      instance.setValidFrom(template.getValidFrom());
-      instance.setValidUntil(template.getValidUntil());
-      return instance;
-   }
+    public static CartDiscountSetValidFromAndUntilActionImpl of(){
+        return new CartDiscountSetValidFromAndUntilActionImpl();
+    }
+    
+
+    public static CartDiscountSetValidFromAndUntilActionImpl of(final CartDiscountSetValidFromAndUntilAction template) {
+        CartDiscountSetValidFromAndUntilActionImpl instance = new CartDiscountSetValidFromAndUntilActionImpl();
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        return instance;
+    }
 
 }

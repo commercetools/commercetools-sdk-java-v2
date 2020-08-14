@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface CustomFieldStringType extends FieldType {
 
 
-   
-   public static CustomFieldStringTypeImpl of(){
-      return new CustomFieldStringTypeImpl();
-   }
-   
 
-   public static CustomFieldStringTypeImpl of(final CustomFieldStringType template) {
-      CustomFieldStringTypeImpl instance = new CustomFieldStringTypeImpl();
-      return instance;
-   }
+    public static CustomFieldStringTypeImpl of(){
+        return new CustomFieldStringTypeImpl();
+    }
+    
+
+    public static CustomFieldStringTypeImpl of(final CustomFieldStringType template) {
+        CustomFieldStringTypeImpl instance = new CustomFieldStringTypeImpl();
+        return instance;
+    }
 
 }

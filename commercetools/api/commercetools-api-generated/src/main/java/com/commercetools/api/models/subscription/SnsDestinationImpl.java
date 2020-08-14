@@ -22,55 +22,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SnsDestinationImpl implements SnsDestination {
 
-   private String type;
-   
-   private String accessKey;
-   
-   private String accessSecret;
-   
-   private String topicArn;
+    private String type;
+    
+    private String accessKey;
+    
+    private String accessSecret;
+    
+    private String topicArn;
 
-   @JsonCreator
-   SnsDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("accessSecret") final String accessSecret, @JsonProperty("topicArn") final String topicArn) {
-      this.accessKey = accessKey;
-      this.accessSecret = accessSecret;
-      this.topicArn = topicArn;
-      this.type = "SNS";
-   }
-   public SnsDestinationImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getAccessKey(){
-      return this.accessKey;
-   }
-   
-   
-   public String getAccessSecret(){
-      return this.accessSecret;
-   }
-   
-   
-   public String getTopicArn(){
-      return this.topicArn;
-   }
+    @JsonCreator
+    SnsDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("accessSecret") final String accessSecret, @JsonProperty("topicArn") final String topicArn) {
+        this.accessKey = accessKey;
+        this.accessSecret = accessSecret;
+        this.topicArn = topicArn;
+        this.type = "SNS";
+    }
+    public SnsDestinationImpl() {
+       
+    }
 
-   public void setAccessKey(final String accessKey){
-      this.accessKey = accessKey;
-   }
-   
-   public void setAccessSecret(final String accessSecret){
-      this.accessSecret = accessSecret;
-   }
-   
-   public void setTopicArn(final String topicArn){
-      this.topicArn = topicArn;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getAccessKey(){
+        return this.accessKey;
+    }
+    
+    
+    public String getAccessSecret(){
+        return this.accessSecret;
+    }
+    
+    
+    public String getTopicArn(){
+        return this.topicArn;
+    }
+
+    public void setAccessKey(final String accessKey){
+        this.accessKey = accessKey;
+    }
+    
+    public void setAccessSecret(final String accessSecret){
+        this.accessSecret = accessSecret;
+    }
+    
+    public void setTopicArn(final String topicArn){
+        this.topicArn = topicArn;
+    }
 
 }

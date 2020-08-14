@@ -23,33 +23,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
+    private String action;
+    
+    private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
-   @JsonCreator
-   ProductSetTaxCategoryActionImpl(@JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
-      this.taxCategory = taxCategory;
-      this.action = "setTaxCategory";
-   }
-   public ProductSetTaxCategoryActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
-   */
-   public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
-      return this.taxCategory;
-   }
+    @JsonCreator
+    ProductSetTaxCategoryActionImpl(@JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
+        this.taxCategory = taxCategory;
+        this.action = "setTaxCategory";
+    }
+    public ProductSetTaxCategoryActionImpl() {
+       
+    }
 
-   public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory){
-      this.taxCategory = taxCategory;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+    */
+    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
+        return this.taxCategory;
+    }
+
+    public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory){
+        this.taxCategory = taxCategory;
+    }
 
 }

@@ -21,43 +21,43 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelMeasurementsImpl.class)
 public interface ParcelMeasurements  {
 
-   
-   
-   @JsonProperty("heightInMillimeter")
-   public Double getHeightInMillimeter();
-   
-   
-   @JsonProperty("lengthInMillimeter")
-   public Double getLengthInMillimeter();
-   
-   
-   @JsonProperty("widthInMillimeter")
-   public Double getWidthInMillimeter();
-   
-   
-   @JsonProperty("weightInGram")
-   public Double getWeightInGram();
+    
+    
+    @JsonProperty("heightInMillimeter")
+    public Double getHeightInMillimeter();
+    
+    
+    @JsonProperty("lengthInMillimeter")
+    public Double getLengthInMillimeter();
+    
+    
+    @JsonProperty("widthInMillimeter")
+    public Double getWidthInMillimeter();
+    
+    
+    @JsonProperty("weightInGram")
+    public Double getWeightInGram();
 
-   public void setHeightInMillimeter(final Double heightInMillimeter);
-   
-   public void setLengthInMillimeter(final Double lengthInMillimeter);
-   
-   public void setWidthInMillimeter(final Double widthInMillimeter);
-   
-   public void setWeightInGram(final Double weightInGram);
-   
-   public static ParcelMeasurementsImpl of(){
-      return new ParcelMeasurementsImpl();
-   }
-   
+    public void setHeightInMillimeter(final Double heightInMillimeter);
+    
+    public void setLengthInMillimeter(final Double lengthInMillimeter);
+    
+    public void setWidthInMillimeter(final Double widthInMillimeter);
+    
+    public void setWeightInGram(final Double weightInGram);
 
-   public static ParcelMeasurementsImpl of(final ParcelMeasurements template) {
-      ParcelMeasurementsImpl instance = new ParcelMeasurementsImpl();
-      instance.setHeightInMillimeter(template.getHeightInMillimeter());
-      instance.setLengthInMillimeter(template.getLengthInMillimeter());
-      instance.setWidthInMillimeter(template.getWidthInMillimeter());
-      instance.setWeightInGram(template.getWeightInGram());
-      return instance;
-   }
+    public static ParcelMeasurementsImpl of(){
+        return new ParcelMeasurementsImpl();
+    }
+    
+
+    public static ParcelMeasurementsImpl of(final ParcelMeasurements template) {
+        ParcelMeasurementsImpl instance = new ParcelMeasurementsImpl();
+        instance.setHeightInMillimeter(template.getHeightInMillimeter());
+        instance.setLengthInMillimeter(template.getLengthInMillimeter());
+        instance.setWidthInMillimeter(template.getWidthInMillimeter());
+        instance.setWeightInGram(template.getWeightInGram());
+        return instance;
+    }
 
 }

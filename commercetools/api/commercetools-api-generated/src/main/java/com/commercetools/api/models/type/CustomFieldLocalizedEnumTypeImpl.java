@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocalizedEnumType {
 
-   private String name;
-   
-   private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
+    private String name;
+    
+    private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
-   @JsonCreator
-   CustomFieldLocalizedEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
-      this.values = values;
-      this.name = "LocalizedEnum";
-   }
-   public CustomFieldLocalizedEnumTypeImpl() {
-      
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues(){
-      return this.values;
-   }
+    @JsonCreator
+    CustomFieldLocalizedEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
+        this.values = values;
+        this.name = "LocalizedEnum";
+    }
+    public CustomFieldLocalizedEnumTypeImpl() {
+       
+    }
 
-   public void setValues(final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values){
-      this.values = values;
-   }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues(){
+        return this.values;
+    }
+
+    public void setValues(final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values){
+        this.values = values;
+    }
 
 }

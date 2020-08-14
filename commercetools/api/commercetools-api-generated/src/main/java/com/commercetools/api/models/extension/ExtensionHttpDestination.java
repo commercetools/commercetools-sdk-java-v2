@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionHttpDestinationImpl.class)
 public interface ExtensionHttpDestination extends ExtensionDestination {
 
-   
-   @NotNull
-   @JsonProperty("url")
-   public String getUrl();
-   
-   @Valid
-   @JsonProperty("authentication")
-   public ExtensionHttpDestinationAuthentication getAuthentication();
+    
+    @NotNull
+    @JsonProperty("url")
+    public String getUrl();
+    
+    @Valid
+    @JsonProperty("authentication")
+    public ExtensionHttpDestinationAuthentication getAuthentication();
 
-   public void setUrl(final String url);
-   
-   public void setAuthentication(final ExtensionHttpDestinationAuthentication authentication);
-   
-   public static ExtensionHttpDestinationImpl of(){
-      return new ExtensionHttpDestinationImpl();
-   }
-   
+    public void setUrl(final String url);
+    
+    public void setAuthentication(final ExtensionHttpDestinationAuthentication authentication);
 
-   public static ExtensionHttpDestinationImpl of(final ExtensionHttpDestination template) {
-      ExtensionHttpDestinationImpl instance = new ExtensionHttpDestinationImpl();
-      instance.setUrl(template.getUrl());
-      instance.setAuthentication(template.getAuthentication());
-      return instance;
-   }
+    public static ExtensionHttpDestinationImpl of(){
+        return new ExtensionHttpDestinationImpl();
+    }
+    
+
+    public static ExtensionHttpDestinationImpl of(final ExtensionHttpDestination template) {
+        ExtensionHttpDestinationImpl instance = new ExtensionHttpDestinationImpl();
+        instance.setUrl(template.getUrl());
+        instance.setAuthentication(template.getAuthentication());
+        return instance;
+    }
 
 }

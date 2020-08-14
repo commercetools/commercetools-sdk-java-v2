@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ChannelUpdateImpl.class)
 public interface ChannelUpdate  {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("actions")
-   public List<ChannelUpdateAction> getActions();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("actions")
+    public List<ChannelUpdateAction> getActions();
 
-   public void setVersion(final Long version);
-   
-   public void setActions(final List<ChannelUpdateAction> actions);
-   
-   public static ChannelUpdateImpl of(){
-      return new ChannelUpdateImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setActions(final List<ChannelUpdateAction> actions);
 
-   public static ChannelUpdateImpl of(final ChannelUpdate template) {
-      ChannelUpdateImpl instance = new ChannelUpdateImpl();
-      instance.setVersion(template.getVersion());
-      instance.setActions(template.getActions());
-      return instance;
-   }
+    public static ChannelUpdateImpl of(){
+        return new ChannelUpdateImpl();
+    }
+    
+
+    public static ChannelUpdateImpl of(final ChannelUpdate template) {
+        ChannelUpdateImpl instance = new ChannelUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(template.getActions());
+        return instance;
+    }
 
 }

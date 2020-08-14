@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentChangeTransactionInteractionIdActionImpl.class)
 public interface PaymentChangeTransactionInteractionIdAction extends PaymentUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("transactionId")
-   public String getTransactionId();
-   
-   @NotNull
-   @JsonProperty("interactionId")
-   public String getInteractionId();
+    
+    @NotNull
+    @JsonProperty("transactionId")
+    public String getTransactionId();
+    
+    @NotNull
+    @JsonProperty("interactionId")
+    public String getInteractionId();
 
-   public void setTransactionId(final String transactionId);
-   
-   public void setInteractionId(final String interactionId);
-   
-   public static PaymentChangeTransactionInteractionIdActionImpl of(){
-      return new PaymentChangeTransactionInteractionIdActionImpl();
-   }
-   
+    public void setTransactionId(final String transactionId);
+    
+    public void setInteractionId(final String interactionId);
 
-   public static PaymentChangeTransactionInteractionIdActionImpl of(final PaymentChangeTransactionInteractionIdAction template) {
-      PaymentChangeTransactionInteractionIdActionImpl instance = new PaymentChangeTransactionInteractionIdActionImpl();
-      instance.setTransactionId(template.getTransactionId());
-      instance.setInteractionId(template.getInteractionId());
-      return instance;
-   }
+    public static PaymentChangeTransactionInteractionIdActionImpl of(){
+        return new PaymentChangeTransactionInteractionIdActionImpl();
+    }
+    
+
+    public static PaymentChangeTransactionInteractionIdActionImpl of(final PaymentChangeTransactionInteractionIdAction template) {
+        PaymentChangeTransactionInteractionIdActionImpl instance = new PaymentChangeTransactionInteractionIdActionImpl();
+        instance.setTransactionId(template.getTransactionId());
+        instance.setInteractionId(template.getInteractionId());
+        return instance;
+    }
 
 }

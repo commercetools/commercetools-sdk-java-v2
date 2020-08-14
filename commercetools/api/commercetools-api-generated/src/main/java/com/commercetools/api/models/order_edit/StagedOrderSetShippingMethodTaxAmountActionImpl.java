@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetShippingMethodTaxAmountActionImpl implements StagedOrderSetShippingMethodTaxAmountAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
+    private String action;
+    
+    private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
-   @JsonCreator
-   StagedOrderSetShippingMethodTaxAmountActionImpl(@JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
-      this.externalTaxAmount = externalTaxAmount;
-      this.action = "setShippingMethodTaxAmount";
-   }
-   public StagedOrderSetShippingMethodTaxAmountActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
-      return this.externalTaxAmount;
-   }
+    @JsonCreator
+    StagedOrderSetShippingMethodTaxAmountActionImpl(@JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
+        this.externalTaxAmount = externalTaxAmount;
+        this.action = "setShippingMethodTaxAmount";
+    }
+    public StagedOrderSetShippingMethodTaxAmountActionImpl() {
+       
+    }
 
-   public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount){
-      this.externalTaxAmount = externalTaxAmount;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
+        return this.externalTaxAmount;
+    }
+
+    public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount){
+        this.externalTaxAmount = externalTaxAmount;
+    }
 
 }

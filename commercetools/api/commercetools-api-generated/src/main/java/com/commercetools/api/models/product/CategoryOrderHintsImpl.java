@@ -22,26 +22,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryOrderHintsImpl implements CategoryOrderHints {
 
-   private Map<String, String> values;
+    private Map<String, String> values;
 
-   @JsonCreator
-   CategoryOrderHintsImpl(@JsonProperty("values") final Map<String, String> values) {
-      this.values = values;
-   }
-   public CategoryOrderHintsImpl() {
-      
-   }
-   
-   
-   public Map<String,String> values() {
-       return values;
-   }
+    @JsonCreator
+    CategoryOrderHintsImpl(@JsonProperty("values") final Map<String, String> values) {
+        this.values = values;
+    }
+    public CategoryOrderHintsImpl() {
+       
+    }
 
-   public void setValue(String key, String value) {
-       if (values == null) {
-           values = new HashMap<>();
-       }
-       values.put(key, value);
-   }
+    
+    public Map<String,String> values() {
+        return values;
+    }
+
+    public void setValue(String key, String value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+    }
 
 }

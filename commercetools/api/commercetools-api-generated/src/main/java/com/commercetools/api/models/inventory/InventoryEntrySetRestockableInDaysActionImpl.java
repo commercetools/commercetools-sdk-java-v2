@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InventoryEntrySetRestockableInDaysActionImpl implements InventoryEntrySetRestockableInDaysAction {
 
-   private String action;
-   
-   private Long restockableInDays;
+    private String action;
+    
+    private Long restockableInDays;
 
-   @JsonCreator
-   InventoryEntrySetRestockableInDaysActionImpl(@JsonProperty("restockableInDays") final Long restockableInDays) {
-      this.restockableInDays = restockableInDays;
-      this.action = "setRestockableInDays";
-   }
-   public InventoryEntrySetRestockableInDaysActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public Long getRestockableInDays(){
-      return this.restockableInDays;
-   }
+    @JsonCreator
+    InventoryEntrySetRestockableInDaysActionImpl(@JsonProperty("restockableInDays") final Long restockableInDays) {
+        this.restockableInDays = restockableInDays;
+        this.action = "setRestockableInDays";
+    }
+    public InventoryEntrySetRestockableInDaysActionImpl() {
+       
+    }
 
-   public void setRestockableInDays(final Long restockableInDays){
-      this.restockableInDays = restockableInDays;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public Long getRestockableInDays(){
+        return this.restockableInDays;
+    }
+
+    public void setRestockableInDays(final Long restockableInDays){
+        this.restockableInDays = restockableInDays;
+    }
 
 }

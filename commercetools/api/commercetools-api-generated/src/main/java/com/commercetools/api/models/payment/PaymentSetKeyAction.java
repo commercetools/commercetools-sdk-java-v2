@@ -21,26 +21,26 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentSetKeyActionImpl.class)
 public interface PaymentSetKeyAction extends PaymentUpdateAction {
 
-   /**
-   *  <p>User-specific unique identifier for the payment (max.
-   *  256 characters).
-   *  If not provided an existing key will be removed.</p>
-   */
-   
-   @JsonProperty("key")
-   public String getKey();
+    /**
+    *  <p>User-specific unique identifier for the payment (max.
+    *  256 characters).
+    *  If not provided an existing key will be removed.</p>
+    */
+    
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setKey(final String key);
-   
-   public static PaymentSetKeyActionImpl of(){
-      return new PaymentSetKeyActionImpl();
-   }
-   
+    public void setKey(final String key);
 
-   public static PaymentSetKeyActionImpl of(final PaymentSetKeyAction template) {
-      PaymentSetKeyActionImpl instance = new PaymentSetKeyActionImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static PaymentSetKeyActionImpl of(){
+        return new PaymentSetKeyActionImpl();
+    }
+    
+
+    public static PaymentSetKeyActionImpl of(final PaymentSetKeyAction template) {
+        PaymentSetKeyActionImpl instance = new PaymentSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

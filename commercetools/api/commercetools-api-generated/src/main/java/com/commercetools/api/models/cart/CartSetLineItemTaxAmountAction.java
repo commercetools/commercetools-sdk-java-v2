@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetLineItemTaxAmountActionImpl.class)
 public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @Valid
-   @JsonProperty("externalTaxAmount")
-   public ExternalTaxAmountDraft getExternalTaxAmount();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @Valid
+    @JsonProperty("externalTaxAmount")
+    public ExternalTaxAmountDraft getExternalTaxAmount();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
-   
-   public static CartSetLineItemTaxAmountActionImpl of(){
-      return new CartSetLineItemTaxAmountActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
 
-   public static CartSetLineItemTaxAmountActionImpl of(final CartSetLineItemTaxAmountAction template) {
-      CartSetLineItemTaxAmountActionImpl instance = new CartSetLineItemTaxAmountActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setExternalTaxAmount(template.getExternalTaxAmount());
-      return instance;
-   }
+    public static CartSetLineItemTaxAmountActionImpl of(){
+        return new CartSetLineItemTaxAmountActionImpl();
+    }
+    
+
+    public static CartSetLineItemTaxAmountActionImpl of(final CartSetLineItemTaxAmountAction template) {
+        CartSetLineItemTaxAmountActionImpl instance = new CartSetLineItemTaxAmountActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setExternalTaxAmount(template.getExternalTaxAmount());
+        return instance;
+    }
 
 }

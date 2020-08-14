@@ -23,37 +23,37 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderAddShoppingListActionImpl.class)
 public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("shoppingList")
-   public ShoppingListResourceIdentifier getShoppingList();
-   
-   @Valid
-   @JsonProperty("supplyChannel")
-   public ChannelResourceIdentifier getSupplyChannel();
-   
-   @Valid
-   @JsonProperty("distributionChannel")
-   public ChannelResourceIdentifier getDistributionChannel();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("shoppingList")
+    public ShoppingListResourceIdentifier getShoppingList();
+    
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
+    
+    @Valid
+    @JsonProperty("distributionChannel")
+    public ChannelResourceIdentifier getDistributionChannel();
 
-   public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
-   
-   public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-   
-   public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
-   
-   public static StagedOrderAddShoppingListActionImpl of(){
-      return new StagedOrderAddShoppingListActionImpl();
-   }
-   
+    public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
+    
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
+    
+    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
-   public static StagedOrderAddShoppingListActionImpl of(final StagedOrderAddShoppingListAction template) {
-      StagedOrderAddShoppingListActionImpl instance = new StagedOrderAddShoppingListActionImpl();
-      instance.setShoppingList(template.getShoppingList());
-      instance.setSupplyChannel(template.getSupplyChannel());
-      instance.setDistributionChannel(template.getDistributionChannel());
-      return instance;
-   }
+    public static StagedOrderAddShoppingListActionImpl of(){
+        return new StagedOrderAddShoppingListActionImpl();
+    }
+    
+
+    public static StagedOrderAddShoppingListActionImpl of(final StagedOrderAddShoppingListAction template) {
+        StagedOrderAddShoppingListActionImpl instance = new StagedOrderAddShoppingListActionImpl();
+        instance.setShoppingList(template.getShoppingList());
+        instance.setSupplyChannel(template.getSupplyChannel());
+        instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
 
 }

@@ -22,39 +22,39 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderStateChangedMessageImpl.class)
 public interface OrderStateChangedMessage extends Message {
 
-   
-   @NotNull
-   @JsonProperty("orderState")
-   public OrderState getOrderState();
-   
-   @NotNull
-   @JsonProperty("oldOrderState")
-   public OrderState getOldOrderState();
+    
+    @NotNull
+    @JsonProperty("orderState")
+    public OrderState getOrderState();
+    
+    @NotNull
+    @JsonProperty("oldOrderState")
+    public OrderState getOldOrderState();
 
-   public void setOrderState(final OrderState orderState);
-   
-   public void setOldOrderState(final OrderState oldOrderState);
-   
-   public static OrderStateChangedMessageImpl of(){
-      return new OrderStateChangedMessageImpl();
-   }
-   
+    public void setOrderState(final OrderState orderState);
+    
+    public void setOldOrderState(final OrderState oldOrderState);
 
-   public static OrderStateChangedMessageImpl of(final OrderStateChangedMessage template) {
-      OrderStateChangedMessageImpl instance = new OrderStateChangedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setOrderState(template.getOrderState());
-      instance.setOldOrderState(template.getOldOrderState());
-      return instance;
-   }
+    public static OrderStateChangedMessageImpl of(){
+        return new OrderStateChangedMessageImpl();
+    }
+    
+
+    public static OrderStateChangedMessageImpl of(final OrderStateChangedMessage template) {
+        OrderStateChangedMessageImpl instance = new OrderStateChangedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setOrderState(template.getOrderState());
+        instance.setOldOrderState(template.getOldOrderState());
+        return instance;
+    }
 
 }

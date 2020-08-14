@@ -13,41 +13,41 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TermFacetResultType {
 
-  
-  @JsonProperty("text")
-  TEXT("text"),
-  
-  
-  @JsonProperty("date")
-  DATE("date"),
-  
-  
-  @JsonProperty("time")
-  TIME("time"),
-  
-  
-  @JsonProperty("datetime")
-  DATETIME("datetime"),
-  
-  
-  @JsonProperty("boolean")
-  BOOLEAN("boolean"),
-  
-  
-  @JsonProperty("number")
-  NUMBER("number");
+    
+    @JsonProperty("text")
+    TEXT("text"),
+    
+    
+    @JsonProperty("date")
+    DATE("date"),
+    
+    
+    @JsonProperty("time")
+    TIME("time"),
+    
+    
+    @JsonProperty("datetime")
+    DATETIME("datetime"),
+    
+    
+    @JsonProperty("boolean")
+    BOOLEAN("boolean"),
+    
+    
+    @JsonProperty("number")
+    NUMBER("number");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private TermFacetResultType(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private TermFacetResultType(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<TermFacetResultType> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<TermFacetResultType> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

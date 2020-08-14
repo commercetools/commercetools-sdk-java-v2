@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMethodDoesNotMatchCartError {
 
-   private String code;
-   
-   private String message;
+    private String code;
+    
+    private String message;
 
-   @JsonCreator
-   ShippingMethodDoesNotMatchCartErrorImpl(@JsonProperty("message") final String message) {
-      this.message = message;
-      this.code = "ShippingMethodDoesNotMatchCart";
-   }
-   public ShippingMethodDoesNotMatchCartErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
+    @JsonCreator
+    ShippingMethodDoesNotMatchCartErrorImpl(@JsonProperty("message") final String message) {
+        this.message = message;
+        this.code = "ShippingMethodDoesNotMatchCart";
+    }
+    public ShippingMethodDoesNotMatchCartErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
 
 }

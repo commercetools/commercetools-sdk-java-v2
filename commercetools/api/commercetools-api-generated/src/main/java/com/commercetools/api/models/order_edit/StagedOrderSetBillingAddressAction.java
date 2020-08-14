@@ -22,22 +22,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetBillingAddressActionImpl.class)
 public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("address")
-   public Address getAddress();
+    
+    @Valid
+    @JsonProperty("address")
+    public Address getAddress();
 
-   public void setAddress(final Address address);
-   
-   public static StagedOrderSetBillingAddressActionImpl of(){
-      return new StagedOrderSetBillingAddressActionImpl();
-   }
-   
+    public void setAddress(final Address address);
 
-   public static StagedOrderSetBillingAddressActionImpl of(final StagedOrderSetBillingAddressAction template) {
-      StagedOrderSetBillingAddressActionImpl instance = new StagedOrderSetBillingAddressActionImpl();
-      instance.setAddress(template.getAddress());
-      return instance;
-   }
+    public static StagedOrderSetBillingAddressActionImpl of(){
+        return new StagedOrderSetBillingAddressActionImpl();
+    }
+    
+
+    public static StagedOrderSetBillingAddressActionImpl of(final StagedOrderSetBillingAddressAction template) {
+        StagedOrderSetBillingAddressActionImpl instance = new StagedOrderSetBillingAddressActionImpl();
+        instance.setAddress(template.getAddress());
+        return instance;
+    }
 
 }

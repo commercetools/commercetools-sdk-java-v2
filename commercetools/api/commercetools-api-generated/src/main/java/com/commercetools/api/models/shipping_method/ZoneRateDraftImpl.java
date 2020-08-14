@@ -23,37 +23,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ZoneRateDraftImpl implements ZoneRateDraft {
 
-   private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
-   
-   private java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates;
+    private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
+    
+    private java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates;
 
-   @JsonCreator
-   ZoneRateDraftImpl(@JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone, @JsonProperty("shippingRates") final java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates) {
-      this.zone = zone;
-      this.shippingRates = shippingRates;
-   }
-   public ZoneRateDraftImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone(){
-      return this.zone;
-   }
-   
-   /**
-   *  <p>The array must not contain two shipping rates with the same currency.</p>
-   */
-   public java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> getShippingRates(){
-      return this.shippingRates;
-   }
+    @JsonCreator
+    ZoneRateDraftImpl(@JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone, @JsonProperty("shippingRates") final java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates) {
+        this.zone = zone;
+        this.shippingRates = shippingRates;
+    }
+    public ZoneRateDraftImpl() {
+       
+    }
 
-   public void setZone(final com.commercetools.api.models.zone.ZoneResourceIdentifier zone){
-      this.zone = zone;
-   }
-   
-   public void setShippingRates(final java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates){
-      this.shippingRates = shippingRates;
-   }
+    
+    public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone(){
+        return this.zone;
+    }
+    
+    /**
+    *  <p>The array must not contain two shipping rates with the same currency.</p>
+    */
+    public java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> getShippingRates(){
+        return this.shippingRates;
+    }
+
+    public void setZone(final com.commercetools.api.models.zone.ZoneResourceIdentifier zone){
+        this.zone = zone;
+    }
+    
+    public void setShippingRates(final java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates){
+        this.shippingRates = shippingRates;
+    }
 
 }

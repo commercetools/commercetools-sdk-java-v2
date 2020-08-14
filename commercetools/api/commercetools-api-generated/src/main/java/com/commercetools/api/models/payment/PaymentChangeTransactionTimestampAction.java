@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentChangeTransactionTimestampActionImpl.class)
 public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("transactionId")
-   public String getTransactionId();
-   
-   @NotNull
-   @JsonProperty("timestamp")
-   public ZonedDateTime getTimestamp();
+    
+    @NotNull
+    @JsonProperty("transactionId")
+    public String getTransactionId();
+    
+    @NotNull
+    @JsonProperty("timestamp")
+    public ZonedDateTime getTimestamp();
 
-   public void setTransactionId(final String transactionId);
-   
-   public void setTimestamp(final ZonedDateTime timestamp);
-   
-   public static PaymentChangeTransactionTimestampActionImpl of(){
-      return new PaymentChangeTransactionTimestampActionImpl();
-   }
-   
+    public void setTransactionId(final String transactionId);
+    
+    public void setTimestamp(final ZonedDateTime timestamp);
 
-   public static PaymentChangeTransactionTimestampActionImpl of(final PaymentChangeTransactionTimestampAction template) {
-      PaymentChangeTransactionTimestampActionImpl instance = new PaymentChangeTransactionTimestampActionImpl();
-      instance.setTransactionId(template.getTransactionId());
-      instance.setTimestamp(template.getTimestamp());
-      return instance;
-   }
+    public static PaymentChangeTransactionTimestampActionImpl of(){
+        return new PaymentChangeTransactionTimestampActionImpl();
+    }
+    
+
+    public static PaymentChangeTransactionTimestampActionImpl of(final PaymentChangeTransactionTimestampAction template) {
+        PaymentChangeTransactionTimestampActionImpl instance = new PaymentChangeTransactionTimestampActionImpl();
+        instance.setTransactionId(template.getTransactionId());
+        instance.setTimestamp(template.getTimestamp());
+        return instance;
+    }
 
 }

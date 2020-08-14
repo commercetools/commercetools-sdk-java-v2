@@ -22,34 +22,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeChangeGroupsActionImpl implements DiscountCodeChangeGroupsAction {
 
-   private String action;
-   
-   private java.util.List<String> groups;
+    private String action;
+    
+    private java.util.List<String> groups;
 
-   @JsonCreator
-   DiscountCodeChangeGroupsActionImpl(@JsonProperty("groups") final java.util.List<String> groups) {
-      this.groups = groups;
-      this.action = "changeGroups";
-   }
-   public DiscountCodeChangeGroupsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>The groups to which this discount code shall belong to.
-   *  Use empty array to remove the code from all groups.</p>
-   */
-   public java.util.List<String> getGroups(){
-      return this.groups;
-   }
+    @JsonCreator
+    DiscountCodeChangeGroupsActionImpl(@JsonProperty("groups") final java.util.List<String> groups) {
+        this.groups = groups;
+        this.action = "changeGroups";
+    }
+    public DiscountCodeChangeGroupsActionImpl() {
+       
+    }
 
-   public void setGroups(final java.util.List<String> groups){
-      this.groups = groups;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>The groups to which this discount code shall belong to.
+    *  Use empty array to remove the code from all groups.</p>
+    */
+    public java.util.List<String> getGroups(){
+        return this.groups;
+    }
+
+    public void setGroups(final java.util.List<String> groups){
+        this.groups = groups;
+    }
 
 }

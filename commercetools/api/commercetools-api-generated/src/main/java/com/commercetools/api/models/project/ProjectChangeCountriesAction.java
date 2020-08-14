@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectChangeCountriesActionImpl.class)
 public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
 
-   /**
-   *  <p>A two-digit country code as per country code.</p>
-   */
-   @NotNull
-   @JsonProperty("countries")
-   public List<String> getCountries();
+    /**
+    *  <p>A two-digit country code as per country code.</p>
+    */
+    @NotNull
+    @JsonProperty("countries")
+    public List<String> getCountries();
 
-   public void setCountries(final List<String> countries);
-   
-   public static ProjectChangeCountriesActionImpl of(){
-      return new ProjectChangeCountriesActionImpl();
-   }
-   
+    public void setCountries(final List<String> countries);
 
-   public static ProjectChangeCountriesActionImpl of(final ProjectChangeCountriesAction template) {
-      ProjectChangeCountriesActionImpl instance = new ProjectChangeCountriesActionImpl();
-      instance.setCountries(template.getCountries());
-      return instance;
-   }
+    public static ProjectChangeCountriesActionImpl of(){
+        return new ProjectChangeCountriesActionImpl();
+    }
+    
+
+    public static ProjectChangeCountriesActionImpl of(final ProjectChangeCountriesAction template) {
+        ProjectChangeCountriesActionImpl instance = new ProjectChangeCountriesActionImpl();
+        instance.setCountries(template.getCountries());
+        return instance;
+    }
 
 }

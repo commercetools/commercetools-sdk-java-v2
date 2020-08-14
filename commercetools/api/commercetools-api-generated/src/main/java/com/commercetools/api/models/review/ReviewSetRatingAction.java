@@ -21,25 +21,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ReviewSetRatingActionImpl.class)
 public interface ReviewSetRatingAction extends ReviewUpdateAction {
 
-   /**
-   *  <p>Number between -100 and 100 included.
-   *  If <code>rating</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   
-   @JsonProperty("rating")
-   public Integer getRating();
+    /**
+    *  <p>Number between -100 and 100 included.
+    *  If <code>rating</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    
+    @JsonProperty("rating")
+    public Integer getRating();
 
-   public void setRating(final Integer rating);
-   
-   public static ReviewSetRatingActionImpl of(){
-      return new ReviewSetRatingActionImpl();
-   }
-   
+    public void setRating(final Integer rating);
 
-   public static ReviewSetRatingActionImpl of(final ReviewSetRatingAction template) {
-      ReviewSetRatingActionImpl instance = new ReviewSetRatingActionImpl();
-      instance.setRating(template.getRating());
-      return instance;
-   }
+    public static ReviewSetRatingActionImpl of(){
+        return new ReviewSetRatingActionImpl();
+    }
+    
+
+    public static ReviewSetRatingActionImpl of(final ReviewSetRatingAction template) {
+        ReviewSetRatingActionImpl instance = new ReviewSetRatingActionImpl();
+        instance.setRating(template.getRating());
+        return instance;
+    }
 
 }

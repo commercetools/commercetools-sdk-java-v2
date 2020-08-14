@@ -23,35 +23,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountCodeInfoImpl implements DiscountCodeInfo {
 
-   private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
-   
-   private com.commercetools.api.models.cart.DiscountCodeState state;
+    private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
+    
+    private com.commercetools.api.models.cart.DiscountCodeState state;
 
-   @JsonCreator
-   DiscountCodeInfoImpl(@JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode, @JsonProperty("state") final com.commercetools.api.models.cart.DiscountCodeState state) {
-      this.discountCode = discountCode;
-      this.state = state;
-   }
-   public DiscountCodeInfoImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
-      return this.discountCode;
-   }
-   
-   
-   public com.commercetools.api.models.cart.DiscountCodeState getState(){
-      return this.state;
-   }
+    @JsonCreator
+    DiscountCodeInfoImpl(@JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode, @JsonProperty("state") final com.commercetools.api.models.cart.DiscountCodeState state) {
+        this.discountCode = discountCode;
+        this.state = state;
+    }
+    public DiscountCodeInfoImpl() {
+       
+    }
 
-   public void setDiscountCode(final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode){
-      this.discountCode = discountCode;
-   }
-   
-   public void setState(final com.commercetools.api.models.cart.DiscountCodeState state){
-      this.state = state;
-   }
+    
+    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
+        return this.discountCode;
+    }
+    
+    
+    public com.commercetools.api.models.cart.DiscountCodeState getState(){
+        return this.state;
+    }
+
+    public void setDiscountCode(final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode){
+        this.discountCode = discountCode;
+    }
+    
+    public void setState(final com.commercetools.api.models.cart.DiscountCodeState state){
+        this.state = state;
+    }
 
 }

@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfoSetMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
-   
-   private com.commercetools.api.models.cart.ShippingInfo oldShippingInfo;
+    private String type;
+    
+    private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
+    
+    private com.commercetools.api.models.cart.ShippingInfo oldShippingInfo;
 
-   @JsonCreator
-   OrderShippingInfoSetMessagePayloadImpl(@JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo, @JsonProperty("oldShippingInfo") final com.commercetools.api.models.cart.ShippingInfo oldShippingInfo) {
-      this.shippingInfo = shippingInfo;
-      this.oldShippingInfo = oldShippingInfo;
-      this.type = "OrderShippingInfoSet";
-   }
-   public OrderShippingInfoSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ShippingInfo getShippingInfo(){
-      return this.shippingInfo;
-   }
-   
-   
-   public com.commercetools.api.models.cart.ShippingInfo getOldShippingInfo(){
-      return this.oldShippingInfo;
-   }
+    @JsonCreator
+    OrderShippingInfoSetMessagePayloadImpl(@JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo, @JsonProperty("oldShippingInfo") final com.commercetools.api.models.cart.ShippingInfo oldShippingInfo) {
+        this.shippingInfo = shippingInfo;
+        this.oldShippingInfo = oldShippingInfo;
+        this.type = "OrderShippingInfoSet";
+    }
+    public OrderShippingInfoSetMessagePayloadImpl() {
+       
+    }
 
-   public void setShippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo){
-      this.shippingInfo = shippingInfo;
-   }
-   
-   public void setOldShippingInfo(final com.commercetools.api.models.cart.ShippingInfo oldShippingInfo){
-      this.oldShippingInfo = oldShippingInfo;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ShippingInfo getShippingInfo(){
+        return this.shippingInfo;
+    }
+    
+    
+    public com.commercetools.api.models.cart.ShippingInfo getOldShippingInfo(){
+        return this.oldShippingInfo;
+    }
+
+    public void setShippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo){
+        this.shippingInfo = shippingInfo;
+    }
+    
+    public void setOldShippingInfo(final com.commercetools.api.models.cart.ShippingInfo oldShippingInfo){
+        this.oldShippingInfo = oldShippingInfo;
+    }
 
 }

@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetDeliveryItemsActionImpl.class)
 public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("deliveryId")
-   public String getDeliveryId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("items")
-   public List<DeliveryItem> getItems();
+    
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("items")
+    public List<DeliveryItem> getItems();
 
-   public void setDeliveryId(final String deliveryId);
-   
-   public void setItems(final List<DeliveryItem> items);
-   
-   public static StagedOrderSetDeliveryItemsActionImpl of(){
-      return new StagedOrderSetDeliveryItemsActionImpl();
-   }
-   
+    public void setDeliveryId(final String deliveryId);
+    
+    public void setItems(final List<DeliveryItem> items);
 
-   public static StagedOrderSetDeliveryItemsActionImpl of(final StagedOrderSetDeliveryItemsAction template) {
-      StagedOrderSetDeliveryItemsActionImpl instance = new StagedOrderSetDeliveryItemsActionImpl();
-      instance.setDeliveryId(template.getDeliveryId());
-      instance.setItems(template.getItems());
-      return instance;
-   }
+    public static StagedOrderSetDeliveryItemsActionImpl of(){
+        return new StagedOrderSetDeliveryItemsActionImpl();
+    }
+    
+
+    public static StagedOrderSetDeliveryItemsActionImpl of(final StagedOrderSetDeliveryItemsAction template) {
+        StagedOrderSetDeliveryItemsActionImpl instance = new StagedOrderSetDeliveryItemsActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setItems(template.getItems());
+        return instance;
+    }
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDiscountCodeAddedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
+    private String type;
+    
+    private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
-   @JsonCreator
-   OrderDiscountCodeAddedMessagePayloadImpl(@JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
-      this.discountCode = discountCode;
-      this.type = "OrderDiscountCodeAdded";
-   }
-   public OrderDiscountCodeAddedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
-      return this.discountCode;
-   }
+    @JsonCreator
+    OrderDiscountCodeAddedMessagePayloadImpl(@JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
+        this.discountCode = discountCode;
+        this.type = "OrderDiscountCodeAdded";
+    }
+    public OrderDiscountCodeAddedMessagePayloadImpl() {
+       
+    }
 
-   public void setDiscountCode(final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode){
-      this.discountCode = discountCode;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
+        return this.discountCode;
+    }
+
+    public void setDiscountCode(final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode){
+        this.discountCode = discountCode;
+    }
 
 }

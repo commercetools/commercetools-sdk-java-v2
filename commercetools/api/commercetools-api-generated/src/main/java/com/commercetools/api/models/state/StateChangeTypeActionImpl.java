@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateChangeTypeActionImpl implements StateChangeTypeAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.state.StateTypeEnum type;
+    private String action;
+    
+    private com.commercetools.api.models.state.StateTypeEnum type;
 
-   @JsonCreator
-   StateChangeTypeActionImpl(@JsonProperty("type") final com.commercetools.api.models.state.StateTypeEnum type) {
-      this.type = type;
-      this.action = "changeType";
-   }
-   public StateChangeTypeActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.state.StateTypeEnum getType(){
-      return this.type;
-   }
+    @JsonCreator
+    StateChangeTypeActionImpl(@JsonProperty("type") final com.commercetools.api.models.state.StateTypeEnum type) {
+        this.type = type;
+        this.action = "changeType";
+    }
+    public StateChangeTypeActionImpl() {
+       
+    }
 
-   public void setType(final com.commercetools.api.models.state.StateTypeEnum type){
-      this.type = type;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.state.StateTypeEnum getType(){
+        return this.type;
+    }
+
+    public void setType(final com.commercetools.api.models.state.StateTypeEnum type){
+        this.type = type;
+    }
 
 }

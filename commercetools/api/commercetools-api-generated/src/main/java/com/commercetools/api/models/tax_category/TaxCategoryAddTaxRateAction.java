@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxCategoryAddTaxRateActionImpl.class)
 public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("taxRate")
-   public TaxRateDraft getTaxRate();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("taxRate")
+    public TaxRateDraft getTaxRate();
 
-   public void setTaxRate(final TaxRateDraft taxRate);
-   
-   public static TaxCategoryAddTaxRateActionImpl of(){
-      return new TaxCategoryAddTaxRateActionImpl();
-   }
-   
+    public void setTaxRate(final TaxRateDraft taxRate);
 
-   public static TaxCategoryAddTaxRateActionImpl of(final TaxCategoryAddTaxRateAction template) {
-      TaxCategoryAddTaxRateActionImpl instance = new TaxCategoryAddTaxRateActionImpl();
-      instance.setTaxRate(template.getTaxRate());
-      return instance;
-   }
+    public static TaxCategoryAddTaxRateActionImpl of(){
+        return new TaxCategoryAddTaxRateActionImpl();
+    }
+    
+
+    public static TaxCategoryAddTaxRateActionImpl of(final TaxCategoryAddTaxRateAction template) {
+        TaxCategoryAddTaxRateActionImpl instance = new TaxCategoryAddTaxRateActionImpl();
+        instance.setTaxRate(template.getTaxRate());
+        return instance;
+    }
 
 }

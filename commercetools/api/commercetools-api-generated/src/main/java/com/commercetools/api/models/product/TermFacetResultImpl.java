@@ -25,79 +25,79 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TermFacetResultImpl implements TermFacetResult {
 
-   private com.commercetools.api.models.product.FacetTypes type;
-   
-   private com.commercetools.api.models.product.TermFacetResultType dataType;
-   
-   private Long missing;
-   
-   private Long total;
-   
-   private Long other;
-   
-   private java.util.List<com.commercetools.api.models.product.FacetResultTerm> terms;
+    private com.commercetools.api.models.product.FacetTypes type;
+    
+    private com.commercetools.api.models.product.TermFacetResultType dataType;
+    
+    private Long missing;
+    
+    private Long total;
+    
+    private Long other;
+    
+    private java.util.List<com.commercetools.api.models.product.FacetResultTerm> terms;
 
-   @JsonCreator
-   TermFacetResultImpl(@JsonProperty("dataType") final com.commercetools.api.models.product.TermFacetResultType dataType, @JsonProperty("missing") final Long missing, @JsonProperty("total") final Long total, @JsonProperty("other") final Long other, @JsonProperty("terms") final java.util.List<com.commercetools.api.models.product.FacetResultTerm> terms) {
-      this.dataType = dataType;
-      this.missing = missing;
-      this.total = total;
-      this.other = other;
-      this.terms = terms;
-      this.type = FacetTypes.findEnumViaJsonName("terms").get();
-   }
-   public TermFacetResultImpl() {
-      
-   }
-   
-   
-   public com.commercetools.api.models.product.FacetTypes getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.product.TermFacetResultType getDataType(){
-      return this.dataType;
-   }
-   
-   
-   public Long getMissing(){
-      return this.missing;
-   }
-   
-   
-   public Long getTotal(){
-      return this.total;
-   }
-   
-   
-   public Long getOther(){
-      return this.other;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.product.FacetResultTerm> getTerms(){
-      return this.terms;
-   }
+    @JsonCreator
+    TermFacetResultImpl(@JsonProperty("dataType") final com.commercetools.api.models.product.TermFacetResultType dataType, @JsonProperty("missing") final Long missing, @JsonProperty("total") final Long total, @JsonProperty("other") final Long other, @JsonProperty("terms") final java.util.List<com.commercetools.api.models.product.FacetResultTerm> terms) {
+        this.dataType = dataType;
+        this.missing = missing;
+        this.total = total;
+        this.other = other;
+        this.terms = terms;
+        this.type = FacetTypes.findEnumViaJsonName("terms").get();
+    }
+    public TermFacetResultImpl() {
+       
+    }
 
-   public void setDataType(final com.commercetools.api.models.product.TermFacetResultType dataType){
-      this.dataType = dataType;
-   }
-   
-   public void setMissing(final Long missing){
-      this.missing = missing;
-   }
-   
-   public void setTotal(final Long total){
-      this.total = total;
-   }
-   
-   public void setOther(final Long other){
-      this.other = other;
-   }
-   
-   public void setTerms(final java.util.List<com.commercetools.api.models.product.FacetResultTerm> terms){
-      this.terms = terms;
-   }
+    
+    public com.commercetools.api.models.product.FacetTypes getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.product.TermFacetResultType getDataType(){
+        return this.dataType;
+    }
+    
+    
+    public Long getMissing(){
+        return this.missing;
+    }
+    
+    
+    public Long getTotal(){
+        return this.total;
+    }
+    
+    
+    public Long getOther(){
+        return this.other;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.product.FacetResultTerm> getTerms(){
+        return this.terms;
+    }
+
+    public void setDataType(final com.commercetools.api.models.product.TermFacetResultType dataType){
+        this.dataType = dataType;
+    }
+    
+    public void setMissing(final Long missing){
+        this.missing = missing;
+    }
+    
+    public void setTotal(final Long total){
+        this.total = total;
+    }
+    
+    public void setOther(final Long other){
+        this.other = other;
+    }
+    
+    public void setTerms(final java.util.List<com.commercetools.api.models.product.FacetResultTerm> terms){
+        this.terms = terms;
+    }
 
 }

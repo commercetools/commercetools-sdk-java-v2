@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListUpdateImpl.class)
 public interface MyShoppingListUpdate  {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("actions")
-   public List<MyShoppingListUpdateAction> getActions();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("actions")
+    public List<MyShoppingListUpdateAction> getActions();
 
-   public void setVersion(final Long version);
-   
-   public void setActions(final List<MyShoppingListUpdateAction> actions);
-   
-   public static MyShoppingListUpdateImpl of(){
-      return new MyShoppingListUpdateImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setActions(final List<MyShoppingListUpdateAction> actions);
 
-   public static MyShoppingListUpdateImpl of(final MyShoppingListUpdate template) {
-      MyShoppingListUpdateImpl instance = new MyShoppingListUpdateImpl();
-      instance.setVersion(template.getVersion());
-      instance.setActions(template.getActions());
-      return instance;
-   }
+    public static MyShoppingListUpdateImpl of(){
+        return new MyShoppingListUpdateImpl();
+    }
+    
+
+    public static MyShoppingListUpdateImpl of(final MyShoppingListUpdate template) {
+        MyShoppingListUpdateImpl instance = new MyShoppingListUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(template.getActions());
+        return instance;
+    }
 
 }

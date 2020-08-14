@@ -21,24 +21,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionSetKeyActionImpl.class)
 public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
 
-   /**
-   *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-   */
-   
-   @JsonProperty("key")
-   public String getKey();
+    /**
+    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+    
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setKey(final String key);
-   
-   public static ExtensionSetKeyActionImpl of(){
-      return new ExtensionSetKeyActionImpl();
-   }
-   
+    public void setKey(final String key);
 
-   public static ExtensionSetKeyActionImpl of(final ExtensionSetKeyAction template) {
-      ExtensionSetKeyActionImpl instance = new ExtensionSetKeyActionImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ExtensionSetKeyActionImpl of(){
+        return new ExtensionSetKeyActionImpl();
+    }
+    
+
+    public static ExtensionSetKeyActionImpl of(final ExtensionSetKeyAction template) {
+        ExtensionSetKeyActionImpl instance = new ExtensionSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

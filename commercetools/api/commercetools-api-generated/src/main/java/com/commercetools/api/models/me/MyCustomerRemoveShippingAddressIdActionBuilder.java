@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MyCustomerRemoveShippingAddressIdActionBuilder {
-   
-   
-   private String addressId;
-   
-   public MyCustomerRemoveShippingAddressIdActionBuilder addressId( final String addressId) {
-      this.addressId = addressId;
-      return this;
-   }
-   
-   
-   public String getAddressId(){
-      return this.addressId;
-   }
 
-   public MyCustomerRemoveShippingAddressIdAction build() {
-       return new MyCustomerRemoveShippingAddressIdActionImpl(addressId);
-   }
-   
-   public static MyCustomerRemoveShippingAddressIdActionBuilder of() {
-      return new MyCustomerRemoveShippingAddressIdActionBuilder();
-   }
-   
-   public static MyCustomerRemoveShippingAddressIdActionBuilder of(final MyCustomerRemoveShippingAddressIdAction template) {
-      MyCustomerRemoveShippingAddressIdActionBuilder builder = new MyCustomerRemoveShippingAddressIdActionBuilder();
-      builder.addressId = template.getAddressId();
-      return builder;
-   }
-   
+    
+    private String addressId;
+
+    public MyCustomerRemoveShippingAddressIdActionBuilder addressId( final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    
+    public String getAddressId(){
+        return this.addressId;
+    }
+
+    public MyCustomerRemoveShippingAddressIdAction build() {
+        return new MyCustomerRemoveShippingAddressIdActionImpl(addressId);
+    }
+
+    public static MyCustomerRemoveShippingAddressIdActionBuilder of() {
+        return new MyCustomerRemoveShippingAddressIdActionBuilder();
+    }
+
+    public static MyCustomerRemoveShippingAddressIdActionBuilder of(final MyCustomerRemoveShippingAddressIdAction template) {
+        MyCustomerRemoveShippingAddressIdActionBuilder builder = new MyCustomerRemoveShippingAddressIdActionBuilder();
+        builder.addressId = template.getAddressId();
+        return builder;
+    }
+
 }

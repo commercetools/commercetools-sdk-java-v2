@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ShoppingListSetDeleteDaysAfterLastModificationActionImpl.class)
 public interface ShoppingListSetDeleteDaysAfterLastModificationAction extends ShoppingListUpdateAction {
 
-   
-   
-   @JsonProperty("deleteDaysAfterLastModification")
-   public Long getDeleteDaysAfterLastModification();
+    
+    
+    @JsonProperty("deleteDaysAfterLastModification")
+    public Long getDeleteDaysAfterLastModification();
 
-   public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
-   
-   public static ShoppingListSetDeleteDaysAfterLastModificationActionImpl of(){
-      return new ShoppingListSetDeleteDaysAfterLastModificationActionImpl();
-   }
-   
+    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
 
-   public static ShoppingListSetDeleteDaysAfterLastModificationActionImpl of(final ShoppingListSetDeleteDaysAfterLastModificationAction template) {
-      ShoppingListSetDeleteDaysAfterLastModificationActionImpl instance = new ShoppingListSetDeleteDaysAfterLastModificationActionImpl();
-      instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
-      return instance;
-   }
+    public static ShoppingListSetDeleteDaysAfterLastModificationActionImpl of(){
+        return new ShoppingListSetDeleteDaysAfterLastModificationActionImpl();
+    }
+    
+
+    public static ShoppingListSetDeleteDaysAfterLastModificationActionImpl of(final ShoppingListSetDeleteDaysAfterLastModificationAction template) {
+        ShoppingListSetDeleteDaysAfterLastModificationActionImpl instance = new ShoppingListSetDeleteDaysAfterLastModificationActionImpl();
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        return instance;
+    }
 
 }

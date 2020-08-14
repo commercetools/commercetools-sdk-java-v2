@@ -22,36 +22,36 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelTrackingDataUpdatedMessagePayloadImpl.class)
 public interface ParcelTrackingDataUpdatedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("deliveryId")
-   public String getDeliveryId();
-   
-   @NotNull
-   @JsonProperty("parcelId")
-   public String getParcelId();
-   
-   @Valid
-   @JsonProperty("trackingData")
-   public TrackingData getTrackingData();
+    
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+    
+    @NotNull
+    @JsonProperty("parcelId")
+    public String getParcelId();
+    
+    @Valid
+    @JsonProperty("trackingData")
+    public TrackingData getTrackingData();
 
-   public void setDeliveryId(final String deliveryId);
-   
-   public void setParcelId(final String parcelId);
-   
-   public void setTrackingData(final TrackingData trackingData);
-   
-   public static ParcelTrackingDataUpdatedMessagePayloadImpl of(){
-      return new ParcelTrackingDataUpdatedMessagePayloadImpl();
-   }
-   
+    public void setDeliveryId(final String deliveryId);
+    
+    public void setParcelId(final String parcelId);
+    
+    public void setTrackingData(final TrackingData trackingData);
 
-   public static ParcelTrackingDataUpdatedMessagePayloadImpl of(final ParcelTrackingDataUpdatedMessagePayload template) {
-      ParcelTrackingDataUpdatedMessagePayloadImpl instance = new ParcelTrackingDataUpdatedMessagePayloadImpl();
-      instance.setDeliveryId(template.getDeliveryId());
-      instance.setParcelId(template.getParcelId());
-      instance.setTrackingData(template.getTrackingData());
-      return instance;
-   }
+    public static ParcelTrackingDataUpdatedMessagePayloadImpl of(){
+        return new ParcelTrackingDataUpdatedMessagePayloadImpl();
+    }
+    
+
+    public static ParcelTrackingDataUpdatedMessagePayloadImpl of(final ParcelTrackingDataUpdatedMessagePayload template) {
+        ParcelTrackingDataUpdatedMessagePayloadImpl instance = new ParcelTrackingDataUpdatedMessagePayloadImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setParcelId(template.getParcelId());
+        instance.setTrackingData(template.getTrackingData());
+        return instance;
+    }
 
 }

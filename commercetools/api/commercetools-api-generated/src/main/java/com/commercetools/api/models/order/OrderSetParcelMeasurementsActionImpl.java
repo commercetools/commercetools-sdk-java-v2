@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasurementsAction {
 
-   private String action;
-   
-   private String parcelId;
-   
-   private com.commercetools.api.models.order.ParcelMeasurements measurements;
+    private String action;
+    
+    private String parcelId;
+    
+    private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
-   @JsonCreator
-   OrderSetParcelMeasurementsActionImpl(@JsonProperty("parcelId") final String parcelId, @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
-      this.parcelId = parcelId;
-      this.measurements = measurements;
-      this.action = "setParcelMeasurements";
-   }
-   public OrderSetParcelMeasurementsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getParcelId(){
-      return this.parcelId;
-   }
-   
-   
-   public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
-      return this.measurements;
-   }
+    @JsonCreator
+    OrderSetParcelMeasurementsActionImpl(@JsonProperty("parcelId") final String parcelId, @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
+        this.parcelId = parcelId;
+        this.measurements = measurements;
+        this.action = "setParcelMeasurements";
+    }
+    public OrderSetParcelMeasurementsActionImpl() {
+       
+    }
 
-   public void setParcelId(final String parcelId){
-      this.parcelId = parcelId;
-   }
-   
-   public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements){
-      this.measurements = measurements;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getParcelId(){
+        return this.parcelId;
+    }
+    
+    
+    public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
+        return this.measurements;
+    }
+
+    public void setParcelId(final String parcelId){
+        this.parcelId = parcelId;
+    }
+    
+    public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements){
+        this.measurements = measurements;
+    }
 
 }

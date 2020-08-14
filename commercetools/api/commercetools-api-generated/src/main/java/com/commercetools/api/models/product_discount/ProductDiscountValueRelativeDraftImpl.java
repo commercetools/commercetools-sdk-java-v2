@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountValueRelativeDraftImpl implements ProductDiscountValueRelativeDraft {
 
-   private String type;
-   
-   private Long permyriad;
+    private String type;
+    
+    private Long permyriad;
 
-   @JsonCreator
-   ProductDiscountValueRelativeDraftImpl(@JsonProperty("permyriad") final Long permyriad) {
-      this.permyriad = permyriad;
-      this.type = "relative";
-   }
-   public ProductDiscountValueRelativeDraftImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public Long getPermyriad(){
-      return this.permyriad;
-   }
+    @JsonCreator
+    ProductDiscountValueRelativeDraftImpl(@JsonProperty("permyriad") final Long permyriad) {
+        this.permyriad = permyriad;
+        this.type = "relative";
+    }
+    public ProductDiscountValueRelativeDraftImpl() {
+       
+    }
 
-   public void setPermyriad(final Long permyriad){
-      this.permyriad = permyriad;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public Long getPermyriad(){
+        return this.permyriad;
+    }
+
+    public void setPermyriad(final Long permyriad){
+        this.permyriad = permyriad;
+    }
 
 }

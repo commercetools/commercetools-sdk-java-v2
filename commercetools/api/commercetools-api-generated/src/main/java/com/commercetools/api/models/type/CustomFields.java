@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomFieldsImpl.class)
 public interface CustomFields  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("type")
-   public TypeReference getType();
-   /**
-   *  <p>A valid JSON object, based on FieldDefinition.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("type")
+    public TypeReference getType();
+    /**
+    *  <p>A valid JSON object, based on FieldDefinition.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setType(final TypeReference type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static CustomFieldsImpl of(){
-      return new CustomFieldsImpl();
-   }
-   
+    public void setType(final TypeReference type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static CustomFieldsImpl of(final CustomFields template) {
-      CustomFieldsImpl instance = new CustomFieldsImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static CustomFieldsImpl of(){
+        return new CustomFieldsImpl();
+    }
+    
+
+    public static CustomFieldsImpl of(final CustomFields template) {
+        CustomFieldsImpl instance = new CustomFieldsImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

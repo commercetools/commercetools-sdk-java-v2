@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class FieldContainerBuilder {
-   
-   
-   private Map<String, com.fasterxml.jackson.databind.JsonNode> values;
-   
-   public FieldContainerBuilder values( final Map<String, com.fasterxml.jackson.databind.JsonNode> values){
-      this.values = values;
-      return this;
-   }
-   
-   
-   public Map<String, com.fasterxml.jackson.databind.JsonNode> getValues(){
-      return this.values;
-   }
 
-   public FieldContainer build() {
-       return new FieldContainerImpl(values);
-   }
-   
-   public static FieldContainerBuilder of() {
-      return new FieldContainerBuilder();
-   }
-   
-   public static FieldContainerBuilder of(final FieldContainer template) {
-      FieldContainerBuilder builder = new FieldContainerBuilder();
-      builder.values = template.values();
-      return builder;
-   }
-   
+    
+    private Map<String, com.fasterxml.jackson.databind.JsonNode> values;
+
+    public FieldContainerBuilder values( final Map<String, com.fasterxml.jackson.databind.JsonNode> values){
+        this.values = values;
+        return this;
+    }
+
+    
+    public Map<String, com.fasterxml.jackson.databind.JsonNode> getValues(){
+        return this.values;
+    }
+
+    public FieldContainer build() {
+        return new FieldContainerImpl(values);
+    }
+
+    public static FieldContainerBuilder of() {
+        return new FieldContainerBuilder();
+    }
+
+    public static FieldContainerBuilder of(final FieldContainer template) {
+        FieldContainerBuilder builder = new FieldContainerBuilder();
+        builder.values = template.values();
+        return builder;
+    }
+
 }

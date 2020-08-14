@@ -21,31 +21,31 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeImpl.class)
 public interface Attribute  {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   /**
-   *  <p>A valid JSON value, based on an AttributeDefinition.</p>
-   */
-   @NotNull
-   @JsonProperty("value")
-   public JsonNode getValue();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    /**
+    *  <p>A valid JSON value, based on an AttributeDefinition.</p>
+    */
+    @NotNull
+    @JsonProperty("value")
+    public JsonNode getValue();
 
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public static AttributeImpl of(){
-      return new AttributeImpl();
-   }
-   
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
 
-   public static AttributeImpl of(final Attribute template) {
-      AttributeImpl instance = new AttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static AttributeImpl of(){
+        return new AttributeImpl();
+    }
+    
+
+    public static AttributeImpl of(final Attribute template) {
+        AttributeImpl instance = new AttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

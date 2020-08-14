@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartRecalculateActionBuilder {
-   
-   @Nullable
-   private Boolean updateProductData;
-   
-   public CartRecalculateActionBuilder updateProductData(@Nullable final Boolean updateProductData) {
-      this.updateProductData = updateProductData;
-      return this;
-   }
-   
-   @Nullable
-   public Boolean getUpdateProductData(){
-      return this.updateProductData;
-   }
 
-   public CartRecalculateAction build() {
-       return new CartRecalculateActionImpl(updateProductData);
-   }
-   
-   public static CartRecalculateActionBuilder of() {
-      return new CartRecalculateActionBuilder();
-   }
-   
-   public static CartRecalculateActionBuilder of(final CartRecalculateAction template) {
-      CartRecalculateActionBuilder builder = new CartRecalculateActionBuilder();
-      builder.updateProductData = template.getUpdateProductData();
-      return builder;
-   }
-   
+    @Nullable
+    private Boolean updateProductData;
+
+    public CartRecalculateActionBuilder updateProductData(@Nullable final Boolean updateProductData) {
+        this.updateProductData = updateProductData;
+        return this;
+    }
+
+    @Nullable
+    public Boolean getUpdateProductData(){
+        return this.updateProductData;
+    }
+
+    public CartRecalculateAction build() {
+        return new CartRecalculateActionImpl(updateProductData);
+    }
+
+    public static CartRecalculateActionBuilder of() {
+        return new CartRecalculateActionBuilder();
+    }
+
+    public static CartRecalculateActionBuilder of(final CartRecalculateAction template) {
+        CartRecalculateActionBuilder builder = new CartRecalculateActionBuilder();
+        builder.updateProductData = template.getUpdateProductData();
+        return builder;
+    }
+
 }

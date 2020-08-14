@@ -23,55 +23,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductAddToCategoryActionImpl implements ProductAddToCategoryAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.category.CategoryResourceIdentifier category;
-   
-   private String orderHint;
-   
-   private Boolean staged;
+    private String action;
+    
+    private com.commercetools.api.models.category.CategoryResourceIdentifier category;
+    
+    private String orderHint;
+    
+    private Boolean staged;
 
-   @JsonCreator
-   ProductAddToCategoryActionImpl(@JsonProperty("category") final com.commercetools.api.models.category.CategoryResourceIdentifier category, @JsonProperty("orderHint") final String orderHint, @JsonProperty("staged") final Boolean staged) {
-      this.category = category;
-      this.orderHint = orderHint;
-      this.staged = staged;
-      this.action = "addToCategory";
-   }
-   public ProductAddToCategoryActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
-      return this.category;
-   }
-   
-   
-   public String getOrderHint(){
-      return this.orderHint;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
+    @JsonCreator
+    ProductAddToCategoryActionImpl(@JsonProperty("category") final com.commercetools.api.models.category.CategoryResourceIdentifier category, @JsonProperty("orderHint") final String orderHint, @JsonProperty("staged") final Boolean staged) {
+        this.category = category;
+        this.orderHint = orderHint;
+        this.staged = staged;
+        this.action = "addToCategory";
+    }
+    public ProductAddToCategoryActionImpl() {
+       
+    }
 
-   public void setCategory(final com.commercetools.api.models.category.CategoryResourceIdentifier category){
-      this.category = category;
-   }
-   
-   public void setOrderHint(final String orderHint){
-      this.orderHint = orderHint;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
+        return this.category;
+    }
+    
+    
+    public String getOrderHint(){
+        return this.orderHint;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+
+    public void setCategory(final com.commercetools.api.models.category.CategoryResourceIdentifier category){
+        this.category = category;
+    }
+    
+    public void setOrderHint(final String orderHint){
+        this.orderHint = orderHint;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
 
 }

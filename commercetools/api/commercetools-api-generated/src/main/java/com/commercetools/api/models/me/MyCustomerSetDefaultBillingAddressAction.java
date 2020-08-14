@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = MyCustomerSetDefaultBillingAddressActionImpl.class)
 public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpdateAction {
 
-   
-   
-   @JsonProperty("addressId")
-   public String getAddressId();
+    
+    
+    @JsonProperty("addressId")
+    public String getAddressId();
 
-   public void setAddressId(final String addressId);
-   
-   public static MyCustomerSetDefaultBillingAddressActionImpl of(){
-      return new MyCustomerSetDefaultBillingAddressActionImpl();
-   }
-   
+    public void setAddressId(final String addressId);
 
-   public static MyCustomerSetDefaultBillingAddressActionImpl of(final MyCustomerSetDefaultBillingAddressAction template) {
-      MyCustomerSetDefaultBillingAddressActionImpl instance = new MyCustomerSetDefaultBillingAddressActionImpl();
-      instance.setAddressId(template.getAddressId());
-      return instance;
-   }
+    public static MyCustomerSetDefaultBillingAddressActionImpl of(){
+        return new MyCustomerSetDefaultBillingAddressActionImpl();
+    }
+    
+
+    public static MyCustomerSetDefaultBillingAddressActionImpl of(final MyCustomerSetDefaultBillingAddressAction template) {
+        MyCustomerSetDefaultBillingAddressActionImpl instance = new MyCustomerSetDefaultBillingAddressActionImpl();
+        instance.setAddressId(template.getAddressId());
+        return instance;
+    }
 
 }

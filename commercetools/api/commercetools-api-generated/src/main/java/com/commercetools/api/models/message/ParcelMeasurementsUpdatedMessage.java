@@ -22,46 +22,46 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelMeasurementsUpdatedMessageImpl.class)
 public interface ParcelMeasurementsUpdatedMessage extends Message {
 
-   
-   @NotNull
-   @JsonProperty("deliveryId")
-   public String getDeliveryId();
-   
-   @NotNull
-   @JsonProperty("parcelId")
-   public String getParcelId();
-   
-   @Valid
-   @JsonProperty("measurements")
-   public ParcelMeasurements getMeasurements();
+    
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+    
+    @NotNull
+    @JsonProperty("parcelId")
+    public String getParcelId();
+    
+    @Valid
+    @JsonProperty("measurements")
+    public ParcelMeasurements getMeasurements();
 
-   public void setDeliveryId(final String deliveryId);
-   
-   public void setParcelId(final String parcelId);
-   
-   public void setMeasurements(final ParcelMeasurements measurements);
-   
-   public static ParcelMeasurementsUpdatedMessageImpl of(){
-      return new ParcelMeasurementsUpdatedMessageImpl();
-   }
-   
+    public void setDeliveryId(final String deliveryId);
+    
+    public void setParcelId(final String parcelId);
+    
+    public void setMeasurements(final ParcelMeasurements measurements);
 
-   public static ParcelMeasurementsUpdatedMessageImpl of(final ParcelMeasurementsUpdatedMessage template) {
-      ParcelMeasurementsUpdatedMessageImpl instance = new ParcelMeasurementsUpdatedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setDeliveryId(template.getDeliveryId());
-      instance.setParcelId(template.getParcelId());
-      instance.setMeasurements(template.getMeasurements());
-      return instance;
-   }
+    public static ParcelMeasurementsUpdatedMessageImpl of(){
+        return new ParcelMeasurementsUpdatedMessageImpl();
+    }
+    
+
+    public static ParcelMeasurementsUpdatedMessageImpl of(final ParcelMeasurementsUpdatedMessage template) {
+        ParcelMeasurementsUpdatedMessageImpl instance = new ParcelMeasurementsUpdatedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setParcelId(template.getParcelId());
+        instance.setMeasurements(template.getMeasurements());
+        return instance;
+    }
 
 }

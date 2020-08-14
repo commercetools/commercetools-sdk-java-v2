@@ -23,15 +23,15 @@ import java.io.IOException;
 public interface CartValueType extends ShippingRateInputType {
 
 
-   
-   public static CartValueTypeImpl of(){
-      return new CartValueTypeImpl();
-   }
-   
 
-   public static CartValueTypeImpl of(final CartValueType template) {
-      CartValueTypeImpl instance = new CartValueTypeImpl();
-      return instance;
-   }
+    public static CartValueTypeImpl of(){
+        return new CartValueTypeImpl();
+    }
+    
+
+    public static CartValueTypeImpl of(final CartValueType template) {
+        CartValueTypeImpl instance = new CartValueTypeImpl();
+        return instance;
+    }
 
 }

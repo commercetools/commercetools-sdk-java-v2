@@ -22,55 +22,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionAWSLambdaDestinationImpl implements ExtensionAWSLambdaDestination {
 
-   private String type;
-   
-   private String arn;
-   
-   private String accessKey;
-   
-   private String accessSecret;
+    private String type;
+    
+    private String arn;
+    
+    private String accessKey;
+    
+    private String accessSecret;
 
-   @JsonCreator
-   ExtensionAWSLambdaDestinationImpl(@JsonProperty("arn") final String arn, @JsonProperty("accessKey") final String accessKey, @JsonProperty("accessSecret") final String accessSecret) {
-      this.arn = arn;
-      this.accessKey = accessKey;
-      this.accessSecret = accessSecret;
-      this.type = "AWSLambda";
-   }
-   public ExtensionAWSLambdaDestinationImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getArn(){
-      return this.arn;
-   }
-   
-   
-   public String getAccessKey(){
-      return this.accessKey;
-   }
-   
-   
-   public String getAccessSecret(){
-      return this.accessSecret;
-   }
+    @JsonCreator
+    ExtensionAWSLambdaDestinationImpl(@JsonProperty("arn") final String arn, @JsonProperty("accessKey") final String accessKey, @JsonProperty("accessSecret") final String accessSecret) {
+        this.arn = arn;
+        this.accessKey = accessKey;
+        this.accessSecret = accessSecret;
+        this.type = "AWSLambda";
+    }
+    public ExtensionAWSLambdaDestinationImpl() {
+       
+    }
 
-   public void setArn(final String arn){
-      this.arn = arn;
-   }
-   
-   public void setAccessKey(final String accessKey){
-      this.accessKey = accessKey;
-   }
-   
-   public void setAccessSecret(final String accessSecret){
-      this.accessSecret = accessSecret;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getArn(){
+        return this.arn;
+    }
+    
+    
+    public String getAccessKey(){
+        return this.accessKey;
+    }
+    
+    
+    public String getAccessSecret(){
+        return this.accessSecret;
+    }
+
+    public void setArn(final String arn){
+        this.arn = arn;
+    }
+    
+    public void setAccessKey(final String accessKey){
+        this.accessKey = accessKey;
+    }
+    
+    public void setAccessSecret(final String accessSecret){
+        this.accessSecret = accessSecret;
+    }
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.customer.Customer customer;
+    private String type;
+    
+    private com.commercetools.api.models.customer.Customer customer;
 
-   @JsonCreator
-   CustomerCreatedMessagePayloadImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.Customer customer) {
-      this.customer = customer;
-      this.type = "CustomerCreated";
-   }
-   public CustomerCreatedMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.customer.Customer getCustomer(){
-      return this.customer;
-   }
+    @JsonCreator
+    CustomerCreatedMessagePayloadImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.Customer customer) {
+        this.customer = customer;
+        this.type = "CustomerCreated";
+    }
+    public CustomerCreatedMessagePayloadImpl() {
+       
+    }
 
-   public void setCustomer(final com.commercetools.api.models.customer.Customer customer){
-      this.customer = customer;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.customer.Customer getCustomer(){
+        return this.customer;
+    }
+
+    public void setCustomer(final com.commercetools.api.models.customer.Customer customer){
+        this.customer = customer;
+    }
 
 }

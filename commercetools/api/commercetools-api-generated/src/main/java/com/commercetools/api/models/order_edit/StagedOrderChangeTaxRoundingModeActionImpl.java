@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderChangeTaxRoundingModeActionImpl implements StagedOrderChangeTaxRoundingModeAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
+    private String action;
+    
+    private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
-   @JsonCreator
-   StagedOrderChangeTaxRoundingModeActionImpl(@JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
-      this.taxRoundingMode = taxRoundingMode;
-      this.action = "changeTaxRoundingMode";
-   }
-   public StagedOrderChangeTaxRoundingModeActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode(){
-      return this.taxRoundingMode;
-   }
+    @JsonCreator
+    StagedOrderChangeTaxRoundingModeActionImpl(@JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
+        this.taxRoundingMode = taxRoundingMode;
+        this.action = "changeTaxRoundingMode";
+    }
+    public StagedOrderChangeTaxRoundingModeActionImpl() {
+       
+    }
 
-   public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode){
-      this.taxRoundingMode = taxRoundingMode;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode(){
+        return this.taxRoundingMode;
+    }
+
+    public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode){
+        this.taxRoundingMode = taxRoundingMode;
+    }
 
 }

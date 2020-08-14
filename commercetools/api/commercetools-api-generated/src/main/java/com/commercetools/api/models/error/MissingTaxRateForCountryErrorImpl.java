@@ -22,67 +22,67 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCountryError {
 
-   private String code;
-   
-   private String message;
-   
-   private String taxCategoryId;
-   
-   private String country;
-   
-   private String state;
+    private String code;
+    
+    private String message;
+    
+    private String taxCategoryId;
+    
+    private String country;
+    
+    private String state;
 
-   @JsonCreator
-   MissingTaxRateForCountryErrorImpl(@JsonProperty("message") final String message, @JsonProperty("taxCategoryId") final String taxCategoryId, @JsonProperty("country") final String country, @JsonProperty("state") final String state) {
-      this.message = message;
-      this.taxCategoryId = taxCategoryId;
-      this.country = country;
-      this.state = state;
-      this.code = "MissingTaxRateForCountry";
-   }
-   public MissingTaxRateForCountryErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
-   
-   
-   public String getTaxCategoryId(){
-      return this.taxCategoryId;
-   }
-   
-   
-   public String getCountry(){
-      return this.country;
-   }
-   
-   
-   public String getState(){
-      return this.state;
-   }
+    @JsonCreator
+    MissingTaxRateForCountryErrorImpl(@JsonProperty("message") final String message, @JsonProperty("taxCategoryId") final String taxCategoryId, @JsonProperty("country") final String country, @JsonProperty("state") final String state) {
+        this.message = message;
+        this.taxCategoryId = taxCategoryId;
+        this.country = country;
+        this.state = state;
+        this.code = "MissingTaxRateForCountry";
+    }
+    public MissingTaxRateForCountryErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setTaxCategoryId(final String taxCategoryId){
-      this.taxCategoryId = taxCategoryId;
-   }
-   
-   public void setCountry(final String country){
-      this.country = country;
-   }
-   
-   public void setState(final String state){
-      this.state = state;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+    
+    
+    public String getTaxCategoryId(){
+        return this.taxCategoryId;
+    }
+    
+    
+    public String getCountry(){
+        return this.country;
+    }
+    
+    
+    public String getState(){
+        return this.state;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setTaxCategoryId(final String taxCategoryId){
+        this.taxCategoryId = taxCategoryId;
+    }
+    
+    public void setCountry(final String country){
+        this.country = country;
+    }
+    
+    public void setState(final String state){
+        this.state = state;
+    }
 
 }

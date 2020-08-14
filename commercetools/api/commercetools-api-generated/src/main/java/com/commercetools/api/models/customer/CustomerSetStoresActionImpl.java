@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomerSetStoresActionImpl implements CustomerSetStoresAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
-   @JsonCreator
-   CustomerSetStoresActionImpl(@JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
-      this.stores = stores;
-      this.action = "setStores";
-   }
-   public CustomerSetStoresActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores(){
-      return this.stores;
-   }
+    @JsonCreator
+    CustomerSetStoresActionImpl(@JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+        this.stores = stores;
+        this.action = "setStores";
+    }
+    public CustomerSetStoresActionImpl() {
+       
+    }
 
-   public void setStores(final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores){
-      this.stores = stores;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores(){
+        return this.stores;
+    }
+
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores){
+        this.stores = stores;
+    }
 
 }

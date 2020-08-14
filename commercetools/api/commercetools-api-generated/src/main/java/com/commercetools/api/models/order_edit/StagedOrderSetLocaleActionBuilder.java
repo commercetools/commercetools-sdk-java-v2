@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class StagedOrderSetLocaleActionBuilder {
-   
-   @Nullable
-   private String locale;
-   
-   public StagedOrderSetLocaleActionBuilder locale(@Nullable final String locale) {
-      this.locale = locale;
-      return this;
-   }
-   
-   @Nullable
-   public String getLocale(){
-      return this.locale;
-   }
 
-   public StagedOrderSetLocaleAction build() {
-       return new StagedOrderSetLocaleActionImpl(locale);
-   }
-   
-   public static StagedOrderSetLocaleActionBuilder of() {
-      return new StagedOrderSetLocaleActionBuilder();
-   }
-   
-   public static StagedOrderSetLocaleActionBuilder of(final StagedOrderSetLocaleAction template) {
-      StagedOrderSetLocaleActionBuilder builder = new StagedOrderSetLocaleActionBuilder();
-      builder.locale = template.getLocale();
-      return builder;
-   }
-   
+    @Nullable
+    private String locale;
+
+    public StagedOrderSetLocaleActionBuilder locale(@Nullable final String locale) {
+        this.locale = locale;
+        return this;
+    }
+
+    @Nullable
+    public String getLocale(){
+        return this.locale;
+    }
+
+    public StagedOrderSetLocaleAction build() {
+        return new StagedOrderSetLocaleActionImpl(locale);
+    }
+
+    public static StagedOrderSetLocaleActionBuilder of() {
+        return new StagedOrderSetLocaleActionBuilder();
+    }
+
+    public static StagedOrderSetLocaleActionBuilder of(final StagedOrderSetLocaleAction template) {
+        StagedOrderSetLocaleActionBuilder builder = new StagedOrderSetLocaleActionBuilder();
+        builder.locale = template.getLocale();
+        return builder;
+    }
+
 }

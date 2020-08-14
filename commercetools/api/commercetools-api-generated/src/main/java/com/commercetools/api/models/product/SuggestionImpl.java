@@ -22,25 +22,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SuggestionImpl implements Suggestion {
 
-   private String text;
+    private String text;
 
-   @JsonCreator
-   SuggestionImpl(@JsonProperty("text") final String text) {
-      this.text = text;
-   }
-   public SuggestionImpl() {
-      
-   }
-   
-   /**
-   *  <p>The suggested text.</p>
-   */
-   public String getText(){
-      return this.text;
-   }
+    @JsonCreator
+    SuggestionImpl(@JsonProperty("text") final String text) {
+        this.text = text;
+    }
+    public SuggestionImpl() {
+       
+    }
 
-   public void setText(final String text){
-      this.text = text;
-   }
+    /**
+    *  <p>The suggested text.</p>
+    */
+    public String getText(){
+        return this.text;
+    }
+
+    public void setText(final String text){
+        this.text = text;
+    }
 
 }

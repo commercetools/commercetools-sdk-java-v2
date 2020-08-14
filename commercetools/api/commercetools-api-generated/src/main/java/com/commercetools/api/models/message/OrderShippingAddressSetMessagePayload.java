@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderShippingAddressSetMessagePayloadImpl.class)
 public interface OrderShippingAddressSetMessagePayload extends MessagePayload {
 
-   
-   @Valid
-   @JsonProperty("address")
-   public Address getAddress();
-   
-   @Valid
-   @JsonProperty("oldAddress")
-   public Address getOldAddress();
+    
+    @Valid
+    @JsonProperty("address")
+    public Address getAddress();
+    
+    @Valid
+    @JsonProperty("oldAddress")
+    public Address getOldAddress();
 
-   public void setAddress(final Address address);
-   
-   public void setOldAddress(final Address oldAddress);
-   
-   public static OrderShippingAddressSetMessagePayloadImpl of(){
-      return new OrderShippingAddressSetMessagePayloadImpl();
-   }
-   
+    public void setAddress(final Address address);
+    
+    public void setOldAddress(final Address oldAddress);
 
-   public static OrderShippingAddressSetMessagePayloadImpl of(final OrderShippingAddressSetMessagePayload template) {
-      OrderShippingAddressSetMessagePayloadImpl instance = new OrderShippingAddressSetMessagePayloadImpl();
-      instance.setAddress(template.getAddress());
-      instance.setOldAddress(template.getOldAddress());
-      return instance;
-   }
+    public static OrderShippingAddressSetMessagePayloadImpl of(){
+        return new OrderShippingAddressSetMessagePayloadImpl();
+    }
+    
+
+    public static OrderShippingAddressSetMessagePayloadImpl of(final OrderShippingAddressSetMessagePayload template) {
+        OrderShippingAddressSetMessagePayloadImpl instance = new OrderShippingAddressSetMessagePayloadImpl();
+        instance.setAddress(template.getAddress());
+        instance.setOldAddress(template.getOldAddress());
+        return instance;
+    }
 
 }

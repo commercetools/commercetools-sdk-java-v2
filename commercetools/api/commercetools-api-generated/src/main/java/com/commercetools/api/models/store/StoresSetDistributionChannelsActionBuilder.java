@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class StoresSetDistributionChannelsActionBuilder {
-   
-   @Nullable
-   private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
-   
-   public StoresSetDistributionChannelsActionBuilder distributionChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
-      this.distributionChannels = distributionChannels;
-      return this;
-   }
-   
-   @Nullable
-   public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels(){
-      return this.distributionChannels;
-   }
 
-   public StoresSetDistributionChannelsAction build() {
-       return new StoresSetDistributionChannelsActionImpl(distributionChannels);
-   }
-   
-   public static StoresSetDistributionChannelsActionBuilder of() {
-      return new StoresSetDistributionChannelsActionBuilder();
-   }
-   
-   public static StoresSetDistributionChannelsActionBuilder of(final StoresSetDistributionChannelsAction template) {
-      StoresSetDistributionChannelsActionBuilder builder = new StoresSetDistributionChannelsActionBuilder();
-      builder.distributionChannels = template.getDistributionChannels();
-      return builder;
-   }
-   
+    @Nullable
+    private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
+
+    public StoresSetDistributionChannelsActionBuilder distributionChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
+        this.distributionChannels = distributionChannels;
+        return this;
+    }
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels(){
+        return this.distributionChannels;
+    }
+
+    public StoresSetDistributionChannelsAction build() {
+        return new StoresSetDistributionChannelsActionImpl(distributionChannels);
+    }
+
+    public static StoresSetDistributionChannelsActionBuilder of() {
+        return new StoresSetDistributionChannelsActionBuilder();
+    }
+
+    public static StoresSetDistributionChannelsActionBuilder of(final StoresSetDistributionChannelsAction template) {
+        StoresSetDistributionChannelsActionBuilder builder = new StoresSetDistributionChannelsActionBuilder();
+        builder.distributionChannels = template.getDistributionChannels();
+        return builder;
+    }
+
 }

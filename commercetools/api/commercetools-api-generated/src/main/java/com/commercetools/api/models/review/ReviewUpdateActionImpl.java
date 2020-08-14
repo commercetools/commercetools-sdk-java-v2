@@ -32,18 +32,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReviewUpdateActionImpl implements ReviewUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   ReviewUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    ReviewUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

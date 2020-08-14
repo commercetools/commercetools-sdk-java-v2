@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShippingMethodSetDescriptionActionImpl implements ShippingMethodSetDescriptionAction {
 
-   private String action;
-   
-   private String description;
+    private String action;
+    
+    private String description;
 
-   @JsonCreator
-   ShippingMethodSetDescriptionActionImpl(@JsonProperty("description") final String description) {
-      this.description = description;
-      this.action = "setDescription";
-   }
-   public ShippingMethodSetDescriptionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getDescription(){
-      return this.description;
-   }
+    @JsonCreator
+    ShippingMethodSetDescriptionActionImpl(@JsonProperty("description") final String description) {
+        this.description = description;
+        this.action = "setDescription";
+    }
+    public ShippingMethodSetDescriptionActionImpl() {
+       
+    }
 
-   public void setDescription(final String description){
-      this.description = description;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getDescription(){
+        return this.description;
+    }
+
+    public void setDescription(final String description){
+        this.description = description;
+    }
 
 }

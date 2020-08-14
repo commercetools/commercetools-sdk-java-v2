@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AzureServiceBusDestinationImpl implements AzureServiceBusDestination {
 
-   private String type;
-   
-   private String connectionString;
+    private String type;
+    
+    private String connectionString;
 
-   @JsonCreator
-   AzureServiceBusDestinationImpl(@JsonProperty("connectionString") final String connectionString) {
-      this.connectionString = connectionString;
-      this.type = "AzureServiceBus";
-   }
-   public AzureServiceBusDestinationImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getConnectionString(){
-      return this.connectionString;
-   }
+    @JsonCreator
+    AzureServiceBusDestinationImpl(@JsonProperty("connectionString") final String connectionString) {
+        this.connectionString = connectionString;
+        this.type = "AzureServiceBus";
+    }
+    public AzureServiceBusDestinationImpl() {
+       
+    }
 
-   public void setConnectionString(final String connectionString){
-      this.connectionString = connectionString;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getConnectionString(){
+        return this.connectionString;
+    }
+
+    public void setConnectionString(final String connectionString){
+        this.connectionString = connectionString;
+    }
 
 }

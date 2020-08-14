@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomerAddStoreActionImpl.class)
 public interface CustomerAddStoreAction extends CustomerUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("store")
-   public StoreResourceIdentifier getStore();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("store")
+    public StoreResourceIdentifier getStore();
 
-   public void setStore(final StoreResourceIdentifier store);
-   
-   public static CustomerAddStoreActionImpl of(){
-      return new CustomerAddStoreActionImpl();
-   }
-   
+    public void setStore(final StoreResourceIdentifier store);
 
-   public static CustomerAddStoreActionImpl of(final CustomerAddStoreAction template) {
-      CustomerAddStoreActionImpl instance = new CustomerAddStoreActionImpl();
-      instance.setStore(template.getStore());
-      return instance;
-   }
+    public static CustomerAddStoreActionImpl of(){
+        return new CustomerAddStoreActionImpl();
+    }
+    
+
+    public static CustomerAddStoreActionImpl of(final CustomerAddStoreAction template) {
+        CustomerAddStoreActionImpl instance = new CustomerAddStoreActionImpl();
+        instance.setStore(template.getStore());
+        return instance;
+    }
 
 }

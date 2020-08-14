@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantDeletedMessagePayloadImpl.class)
 public interface ProductVariantDeletedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("variant")
-   public ProductVariant getVariant();
-   
-   @NotNull
-   @JsonProperty("removedImageUrls")
-   public List<String> getRemovedImageUrls();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("variant")
+    public ProductVariant getVariant();
+    
+    @NotNull
+    @JsonProperty("removedImageUrls")
+    public List<String> getRemovedImageUrls();
 
-   public void setVariant(final ProductVariant variant);
-   
-   public void setRemovedImageUrls(final List<String> removedImageUrls);
-   
-   public static ProductVariantDeletedMessagePayloadImpl of(){
-      return new ProductVariantDeletedMessagePayloadImpl();
-   }
-   
+    public void setVariant(final ProductVariant variant);
+    
+    public void setRemovedImageUrls(final List<String> removedImageUrls);
 
-   public static ProductVariantDeletedMessagePayloadImpl of(final ProductVariantDeletedMessagePayload template) {
-      ProductVariantDeletedMessagePayloadImpl instance = new ProductVariantDeletedMessagePayloadImpl();
-      instance.setVariant(template.getVariant());
-      instance.setRemovedImageUrls(template.getRemovedImageUrls());
-      return instance;
-   }
+    public static ProductVariantDeletedMessagePayloadImpl of(){
+        return new ProductVariantDeletedMessagePayloadImpl();
+    }
+    
+
+    public static ProductVariantDeletedMessagePayloadImpl of(final ProductVariantDeletedMessagePayload template) {
+        ProductVariantDeletedMessagePayloadImpl instance = new ProductVariantDeletedMessagePayloadImpl();
+        instance.setVariant(template.getVariant());
+        instance.setRemovedImageUrls(template.getRemovedImageUrls());
+        return instance;
+    }
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductRevertedStagedChangesMessagePayloadImpl.class)
 public interface ProductRevertedStagedChangesMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @JsonProperty("removedImageUrls")
-   public List<String> getRemovedImageUrls();
+    
+    @NotNull
+    @JsonProperty("removedImageUrls")
+    public List<String> getRemovedImageUrls();
 
-   public void setRemovedImageUrls(final List<String> removedImageUrls);
-   
-   public static ProductRevertedStagedChangesMessagePayloadImpl of(){
-      return new ProductRevertedStagedChangesMessagePayloadImpl();
-   }
-   
+    public void setRemovedImageUrls(final List<String> removedImageUrls);
 
-   public static ProductRevertedStagedChangesMessagePayloadImpl of(final ProductRevertedStagedChangesMessagePayload template) {
-      ProductRevertedStagedChangesMessagePayloadImpl instance = new ProductRevertedStagedChangesMessagePayloadImpl();
-      instance.setRemovedImageUrls(template.getRemovedImageUrls());
-      return instance;
-   }
+    public static ProductRevertedStagedChangesMessagePayloadImpl of(){
+        return new ProductRevertedStagedChangesMessagePayloadImpl();
+    }
+    
+
+    public static ProductRevertedStagedChangesMessagePayloadImpl of(final ProductRevertedStagedChangesMessagePayload template) {
+        ProductRevertedStagedChangesMessagePayloadImpl instance = new ProductRevertedStagedChangesMessagePayloadImpl();
+        instance.setRemovedImageUrls(template.getRemovedImageUrls());
+        return instance;
+    }
 
 }

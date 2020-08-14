@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ShippingMethodChangeTaxCategoryActionImpl.class)
 public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("taxCategory")
-   public TaxCategoryResourceIdentifier getTaxCategory();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("taxCategory")
+    public TaxCategoryResourceIdentifier getTaxCategory();
 
-   public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-   
-   public static ShippingMethodChangeTaxCategoryActionImpl of(){
-      return new ShippingMethodChangeTaxCategoryActionImpl();
-   }
-   
+    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
-   public static ShippingMethodChangeTaxCategoryActionImpl of(final ShippingMethodChangeTaxCategoryAction template) {
-      ShippingMethodChangeTaxCategoryActionImpl instance = new ShippingMethodChangeTaxCategoryActionImpl();
-      instance.setTaxCategory(template.getTaxCategory());
-      return instance;
-   }
+    public static ShippingMethodChangeTaxCategoryActionImpl of(){
+        return new ShippingMethodChangeTaxCategoryActionImpl();
+    }
+    
+
+    public static ShippingMethodChangeTaxCategoryActionImpl of(final ShippingMethodChangeTaxCategoryAction template) {
+        ShippingMethodChangeTaxCategoryActionImpl instance = new ShippingMethodChangeTaxCategoryActionImpl();
+        instance.setTaxCategory(template.getTaxCategory());
+        return instance;
+    }
 
 }

@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetParcelMeasurementsActionImpl.class)
 public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("parcelId")
-   public String getParcelId();
-   
-   @Valid
-   @JsonProperty("measurements")
-   public ParcelMeasurements getMeasurements();
+    
+    @NotNull
+    @JsonProperty("parcelId")
+    public String getParcelId();
+    
+    @Valid
+    @JsonProperty("measurements")
+    public ParcelMeasurements getMeasurements();
 
-   public void setParcelId(final String parcelId);
-   
-   public void setMeasurements(final ParcelMeasurements measurements);
-   
-   public static StagedOrderSetParcelMeasurementsActionImpl of(){
-      return new StagedOrderSetParcelMeasurementsActionImpl();
-   }
-   
+    public void setParcelId(final String parcelId);
+    
+    public void setMeasurements(final ParcelMeasurements measurements);
 
-   public static StagedOrderSetParcelMeasurementsActionImpl of(final StagedOrderSetParcelMeasurementsAction template) {
-      StagedOrderSetParcelMeasurementsActionImpl instance = new StagedOrderSetParcelMeasurementsActionImpl();
-      instance.setParcelId(template.getParcelId());
-      instance.setMeasurements(template.getMeasurements());
-      return instance;
-   }
+    public static StagedOrderSetParcelMeasurementsActionImpl of(){
+        return new StagedOrderSetParcelMeasurementsActionImpl();
+    }
+    
+
+    public static StagedOrderSetParcelMeasurementsActionImpl of(final StagedOrderSetParcelMeasurementsAction template) {
+        StagedOrderSetParcelMeasurementsActionImpl instance = new StagedOrderSetParcelMeasurementsActionImpl();
+        instance.setParcelId(template.getParcelId());
+        instance.setMeasurements(template.getMeasurements());
+        return instance;
+    }
 
 }

@@ -22,25 +22,25 @@ import java.io.IOException;
 public interface CustomerEmailVerifiedMessage extends Message {
 
 
-   
-   public static CustomerEmailVerifiedMessageImpl of(){
-      return new CustomerEmailVerifiedMessageImpl();
-   }
-   
 
-   public static CustomerEmailVerifiedMessageImpl of(final CustomerEmailVerifiedMessage template) {
-      CustomerEmailVerifiedMessageImpl instance = new CustomerEmailVerifiedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      return instance;
-   }
+    public static CustomerEmailVerifiedMessageImpl of(){
+        return new CustomerEmailVerifiedMessageImpl();
+    }
+    
+
+    public static CustomerEmailVerifiedMessageImpl of(final CustomerEmailVerifiedMessage template) {
+        CustomerEmailVerifiedMessageImpl instance = new CustomerEmailVerifiedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        return instance;
+    }
 
 }

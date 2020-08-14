@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TaxCalculationMode {
 
-  
-  @JsonProperty("LineItemLevel")
-  LINE_ITEM_LEVEL("LineItemLevel"),
-  
-  
-  @JsonProperty("UnitPriceLevel")
-  UNIT_PRICE_LEVEL("UnitPriceLevel");
+    
+    @JsonProperty("LineItemLevel")
+    LINE_ITEM_LEVEL("LineItemLevel"),
+    
+    
+    @JsonProperty("UnitPriceLevel")
+    UNIT_PRICE_LEVEL("UnitPriceLevel");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private TaxCalculationMode(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private TaxCalculationMode(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<TaxCalculationMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<TaxCalculationMode> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

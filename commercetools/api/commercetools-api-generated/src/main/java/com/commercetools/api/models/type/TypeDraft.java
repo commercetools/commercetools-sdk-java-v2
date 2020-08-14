@@ -23,53 +23,53 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeDraftImpl.class)
 public interface TypeDraft  {
 
-   
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
-   
-   @Valid
-   @JsonProperty("description")
-   public LocalizedString getDescription();
-   /**
-   *  <p>The IDs of the resources that can be customized with this type.</p>
-   */
-   @NotNull
-   @JsonProperty("resourceTypeIds")
-   public List<ResourceTypeId> getResourceTypeIds();
-   
-   @Valid
-   @JsonProperty("fieldDefinitions")
-   public List<FieldDefinition> getFieldDefinitions();
+    
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
+    
+    @Valid
+    @JsonProperty("description")
+    public LocalizedString getDescription();
+    /**
+    *  <p>The IDs of the resources that can be customized with this type.</p>
+    */
+    @NotNull
+    @JsonProperty("resourceTypeIds")
+    public List<ResourceTypeId> getResourceTypeIds();
+    
+    @Valid
+    @JsonProperty("fieldDefinitions")
+    public List<FieldDefinition> getFieldDefinitions();
 
-   public void setKey(final String key);
-   
-   public void setName(final LocalizedString name);
-   
-   public void setDescription(final LocalizedString description);
-   
-   public void setResourceTypeIds(final List<ResourceTypeId> resourceTypeIds);
-   
-   public void setFieldDefinitions(final List<FieldDefinition> fieldDefinitions);
-   
-   public static TypeDraftImpl of(){
-      return new TypeDraftImpl();
-   }
-   
+    public void setKey(final String key);
+    
+    public void setName(final LocalizedString name);
+    
+    public void setDescription(final LocalizedString description);
+    
+    public void setResourceTypeIds(final List<ResourceTypeId> resourceTypeIds);
+    
+    public void setFieldDefinitions(final List<FieldDefinition> fieldDefinitions);
 
-   public static TypeDraftImpl of(final TypeDraft template) {
-      TypeDraftImpl instance = new TypeDraftImpl();
-      instance.setKey(template.getKey());
-      instance.setName(template.getName());
-      instance.setDescription(template.getDescription());
-      instance.setResourceTypeIds(template.getResourceTypeIds());
-      instance.setFieldDefinitions(template.getFieldDefinitions());
-      return instance;
-   }
+    public static TypeDraftImpl of(){
+        return new TypeDraftImpl();
+    }
+    
+
+    public static TypeDraftImpl of(final TypeDraft template) {
+        TypeDraftImpl instance = new TypeDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setName(template.getName());
+        instance.setDescription(template.getDescription());
+        instance.setResourceTypeIds(template.getResourceTypeIds());
+        instance.setFieldDefinitions(template.getFieldDefinitions());
+        return instance;
+    }
 
 }

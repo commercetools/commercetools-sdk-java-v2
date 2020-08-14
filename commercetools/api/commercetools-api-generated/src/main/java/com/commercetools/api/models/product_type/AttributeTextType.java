@@ -22,15 +22,15 @@ import java.io.IOException;
 public interface AttributeTextType extends AttributeType {
 
 
-   
-   public static AttributeTextTypeImpl of(){
-      return new AttributeTextTypeImpl();
-   }
-   
 
-   public static AttributeTextTypeImpl of(final AttributeTextType template) {
-      AttributeTextTypeImpl instance = new AttributeTextTypeImpl();
-      return instance;
-   }
+    public static AttributeTextTypeImpl of(){
+        return new AttributeTextTypeImpl();
+    }
+    
+
+    public static AttributeTextTypeImpl of(final AttributeTextType template) {
+        AttributeTextTypeImpl instance = new AttributeTextTypeImpl();
+        return instance;
+    }
 
 }

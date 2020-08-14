@@ -54,31 +54,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ErrorObjectImpl implements ErrorObject {
 
-   private String code;
-   
-   private String message;
+    private String code;
+    
+    private String message;
 
-   @JsonCreator
-   ErrorObjectImpl(@JsonProperty("message") final String message) {
-      this.message = message;
-      this.code = "null";
-   }
-   public ErrorObjectImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
+    @JsonCreator
+    ErrorObjectImpl(@JsonProperty("message") final String message) {
+        this.message = message;
+        this.code = "null";
+    }
+    public ErrorObjectImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
 
 }

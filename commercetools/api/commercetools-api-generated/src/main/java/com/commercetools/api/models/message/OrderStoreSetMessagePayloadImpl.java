@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessagePayload {
 
-   private String type;
-   
-   private com.commercetools.api.models.store.StoreKeyReference store;
+    private String type;
+    
+    private com.commercetools.api.models.store.StoreKeyReference store;
 
-   @JsonCreator
-   OrderStoreSetMessagePayloadImpl(@JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store) {
-      this.store = store;
-      this.type = "OrderStoreSet";
-   }
-   public OrderStoreSetMessagePayloadImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.api.models.store.StoreKeyReference getStore(){
-      return this.store;
-   }
+    @JsonCreator
+    OrderStoreSetMessagePayloadImpl(@JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store) {
+        this.store = store;
+        this.type = "OrderStoreSet";
+    }
+    public OrderStoreSetMessagePayloadImpl() {
+       
+    }
 
-   public void setStore(final com.commercetools.api.models.store.StoreKeyReference store){
-      this.store = store;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.api.models.store.StoreKeyReference getStore(){
+        return this.store;
+    }
+
+    public void setStore(final com.commercetools.api.models.store.StoreKeyReference store){
+        this.store = store;
+    }
 
 }

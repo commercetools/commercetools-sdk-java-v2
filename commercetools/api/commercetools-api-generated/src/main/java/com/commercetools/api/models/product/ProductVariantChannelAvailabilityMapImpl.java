@@ -22,26 +22,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantChannelAvailabilityMapImpl implements ProductVariantChannelAvailabilityMap {
 
-   private Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values;
+    private Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values;
 
-   @JsonCreator
-   ProductVariantChannelAvailabilityMapImpl(@JsonProperty("values") final Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values) {
-      this.values = values;
-   }
-   public ProductVariantChannelAvailabilityMapImpl() {
-      
-   }
-   
-   
-   public Map<String,com.commercetools.api.models.product.ProductVariantChannelAvailability> values() {
-       return values;
-   }
+    @JsonCreator
+    ProductVariantChannelAvailabilityMapImpl(@JsonProperty("values") final Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values) {
+        this.values = values;
+    }
+    public ProductVariantChannelAvailabilityMapImpl() {
+       
+    }
 
-   public void setValue(String key, com.commercetools.api.models.product.ProductVariantChannelAvailability value) {
-       if (values == null) {
-           values = new HashMap<>();
-       }
-       values.put(key, value);
-   }
+    
+    public Map<String,com.commercetools.api.models.product.ProductVariantChannelAvailability> values() {
+        return values;
+    }
+
+    public void setValue(String key, com.commercetools.api.models.product.ProductVariantChannelAvailability value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+    }
 
 }

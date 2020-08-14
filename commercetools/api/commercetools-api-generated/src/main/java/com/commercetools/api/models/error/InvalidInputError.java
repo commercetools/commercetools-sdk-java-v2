@@ -22,16 +22,16 @@ import java.io.IOException;
 public interface InvalidInputError extends ErrorObject {
 
 
-   
-   public static InvalidInputErrorImpl of(){
-      return new InvalidInputErrorImpl();
-   }
-   
 
-   public static InvalidInputErrorImpl of(final InvalidInputError template) {
-      InvalidInputErrorImpl instance = new InvalidInputErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static InvalidInputErrorImpl of(){
+        return new InvalidInputErrorImpl();
+    }
+    
+
+    public static InvalidInputErrorImpl of(final InvalidInputError template) {
+        InvalidInputErrorImpl instance = new InvalidInputErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

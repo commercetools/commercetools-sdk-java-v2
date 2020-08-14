@@ -21,52 +21,52 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductMoveImageToPositionActionImpl.class)
 public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
 
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   /**
-   *  <p>The URL of the image</p>
-   */
-   @NotNull
-   @JsonProperty("imageUrl")
-   public String getImageUrl();
-   
-   @NotNull
-   @JsonProperty("position")
-   public Long getPosition();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    /**
+    *  <p>The URL of the image</p>
+    */
+    @NotNull
+    @JsonProperty("imageUrl")
+    public String getImageUrl();
+    
+    @NotNull
+    @JsonProperty("position")
+    public Long getPosition();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setSku(final String sku);
-   
-   public void setImageUrl(final String imageUrl);
-   
-   public void setPosition(final Long position);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductMoveImageToPositionActionImpl of(){
-      return new ProductMoveImageToPositionActionImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setSku(final String sku);
+    
+    public void setImageUrl(final String imageUrl);
+    
+    public void setPosition(final Long position);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductMoveImageToPositionActionImpl of(final ProductMoveImageToPositionAction template) {
-      ProductMoveImageToPositionActionImpl instance = new ProductMoveImageToPositionActionImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
-      instance.setImageUrl(template.getImageUrl());
-      instance.setPosition(template.getPosition());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductMoveImageToPositionActionImpl of(){
+        return new ProductMoveImageToPositionActionImpl();
+    }
+    
+
+    public static ProductMoveImageToPositionActionImpl of(final ProductMoveImageToPositionAction template) {
+        ProductMoveImageToPositionActionImpl instance = new ProductMoveImageToPositionActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setImageUrl(template.getImageUrl());
+        instance.setPosition(template.getPosition());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

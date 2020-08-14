@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldEnumValueImpl implements CustomFieldEnumValue {
 
-   private String key;
-   
-   private String label;
+    private String key;
+    
+    private String label;
 
-   @JsonCreator
-   CustomFieldEnumValueImpl(@JsonProperty("key") final String key, @JsonProperty("label") final String label) {
-      this.key = key;
-      this.label = label;
-   }
-   public CustomFieldEnumValueImpl() {
-      
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
-   
-   
-   public String getLabel(){
-      return this.label;
-   }
+    @JsonCreator
+    CustomFieldEnumValueImpl(@JsonProperty("key") final String key, @JsonProperty("label") final String label) {
+        this.key = key;
+        this.label = label;
+    }
+    public CustomFieldEnumValueImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setLabel(final String label){
-      this.label = label;
-   }
+    
+    public String getKey(){
+        return this.key;
+    }
+    
+    
+    public String getLabel(){
+        return this.label;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
+    public void setLabel(final String label){
+        this.label = label;
+    }
 
 }

@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MyPaymentChangeAmountPlannedActionImpl implements MyPaymentChangeAmountPlannedAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.common.Money amount;
+    private String action;
+    
+    private com.commercetools.api.models.common.Money amount;
 
-   @JsonCreator
-   MyPaymentChangeAmountPlannedActionImpl(@JsonProperty("amount") final com.commercetools.api.models.common.Money amount) {
-      this.amount = amount;
-      this.action = "changeAmountPlanned";
-   }
-   public MyPaymentChangeAmountPlannedActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.common.Money getAmount(){
-      return this.amount;
-   }
+    @JsonCreator
+    MyPaymentChangeAmountPlannedActionImpl(@JsonProperty("amount") final com.commercetools.api.models.common.Money amount) {
+        this.amount = amount;
+        this.action = "changeAmountPlanned";
+    }
+    public MyPaymentChangeAmountPlannedActionImpl() {
+       
+    }
 
-   public void setAmount(final com.commercetools.api.models.common.Money amount){
-      this.amount = amount;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.common.Money getAmount(){
+        return this.amount;
+    }
+
+    public void setAmount(final com.commercetools.api.models.common.Money amount){
+        this.amount = amount;
+    }
 
 }

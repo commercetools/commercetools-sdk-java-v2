@@ -21,37 +21,37 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderEditUpdateImpl.class)
 public interface OrderEditUpdate  {
 
-   
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("actions")
-   public List<OrderEditUpdateAction> getActions();
-   
-   
-   @JsonProperty("dryRun")
-   public Boolean getDryRun();
+    
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("actions")
+    public List<OrderEditUpdateAction> getActions();
+    
+    
+    @JsonProperty("dryRun")
+    public Boolean getDryRun();
 
-   public void setVersion(final Long version);
-   
-   public void setActions(final List<OrderEditUpdateAction> actions);
-   
-   public void setDryRun(final Boolean dryRun);
-   
-   public static OrderEditUpdateImpl of(){
-      return new OrderEditUpdateImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setActions(final List<OrderEditUpdateAction> actions);
+    
+    public void setDryRun(final Boolean dryRun);
 
-   public static OrderEditUpdateImpl of(final OrderEditUpdate template) {
-      OrderEditUpdateImpl instance = new OrderEditUpdateImpl();
-      instance.setVersion(template.getVersion());
-      instance.setActions(template.getActions());
-      instance.setDryRun(template.getDryRun());
-      return instance;
-   }
+    public static OrderEditUpdateImpl of(){
+        return new OrderEditUpdateImpl();
+    }
+    
+
+    public static OrderEditUpdateImpl of(final OrderEditUpdate template) {
+        OrderEditUpdateImpl instance = new OrderEditUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(template.getActions());
+        instance.setDryRun(template.getDryRun());
+        return instance;
+    }
 
 }

@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = CartSetCustomFieldActionImpl.class)
 public interface CartSetCustomFieldAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
 
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public static CartSetCustomFieldActionImpl of(){
-      return new CartSetCustomFieldActionImpl();
-   }
-   
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
 
-   public static CartSetCustomFieldActionImpl of(final CartSetCustomFieldAction template) {
-      CartSetCustomFieldActionImpl instance = new CartSetCustomFieldActionImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static CartSetCustomFieldActionImpl of(){
+        return new CartSetCustomFieldActionImpl();
+    }
+    
+
+    public static CartSetCustomFieldActionImpl of(final CartSetCustomFieldAction template) {
+        CartSetCustomFieldActionImpl instance = new CartSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

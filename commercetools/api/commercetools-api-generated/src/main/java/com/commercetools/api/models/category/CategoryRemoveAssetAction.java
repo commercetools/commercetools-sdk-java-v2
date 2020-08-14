@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryRemoveAssetActionImpl.class)
 public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
 
-   
-   
-   @JsonProperty("assetId")
-   public String getAssetId();
-   
-   
-   @JsonProperty("assetKey")
-   public String getAssetKey();
+    
+    
+    @JsonProperty("assetId")
+    public String getAssetId();
+    
+    
+    @JsonProperty("assetKey")
+    public String getAssetKey();
 
-   public void setAssetId(final String assetId);
-   
-   public void setAssetKey(final String assetKey);
-   
-   public static CategoryRemoveAssetActionImpl of(){
-      return new CategoryRemoveAssetActionImpl();
-   }
-   
+    public void setAssetId(final String assetId);
+    
+    public void setAssetKey(final String assetKey);
 
-   public static CategoryRemoveAssetActionImpl of(final CategoryRemoveAssetAction template) {
-      CategoryRemoveAssetActionImpl instance = new CategoryRemoveAssetActionImpl();
-      instance.setAssetId(template.getAssetId());
-      instance.setAssetKey(template.getAssetKey());
-      return instance;
-   }
+    public static CategoryRemoveAssetActionImpl of(){
+        return new CategoryRemoveAssetActionImpl();
+    }
+    
+
+    public static CategoryRemoveAssetActionImpl of(final CategoryRemoveAssetAction template) {
+        CategoryRemoveAssetActionImpl instance = new CategoryRemoveAssetActionImpl();
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        return instance;
+    }
 
 }

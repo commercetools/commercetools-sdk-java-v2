@@ -21,55 +21,55 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetImageLabelActionImpl.class)
 public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   /**
-   *  <p>The URL of the image.</p>
-   */
-   @NotNull
-   @JsonProperty("imageUrl")
-   public String getImageUrl();
-   /**
-   *  <p>The new image label.
-   *  If left blank or set to null, the label is removed.</p>
-   */
-   
-   @JsonProperty("label")
-   public String getLabel();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    /**
+    *  <p>The URL of the image.</p>
+    */
+    @NotNull
+    @JsonProperty("imageUrl")
+    public String getImageUrl();
+    /**
+    *  <p>The new image label.
+    *  If left blank or set to null, the label is removed.</p>
+    */
+    
+    @JsonProperty("label")
+    public String getLabel();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setSku(final String sku);
-   
-   public void setVariantId(final Long variantId);
-   
-   public void setImageUrl(final String imageUrl);
-   
-   public void setLabel(final String label);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductSetImageLabelActionImpl of(){
-      return new ProductSetImageLabelActionImpl();
-   }
-   
+    public void setSku(final String sku);
+    
+    public void setVariantId(final Long variantId);
+    
+    public void setImageUrl(final String imageUrl);
+    
+    public void setLabel(final String label);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductSetImageLabelActionImpl of(final ProductSetImageLabelAction template) {
-      ProductSetImageLabelActionImpl instance = new ProductSetImageLabelActionImpl();
-      instance.setSku(template.getSku());
-      instance.setVariantId(template.getVariantId());
-      instance.setImageUrl(template.getImageUrl());
-      instance.setLabel(template.getLabel());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductSetImageLabelActionImpl of(){
+        return new ProductSetImageLabelActionImpl();
+    }
+    
+
+    public static ProductSetImageLabelActionImpl of(final ProductSetImageLabelAction template) {
+        ProductSetImageLabelActionImpl instance = new ProductSetImageLabelActionImpl();
+        instance.setSku(template.getSku());
+        instance.setVariantId(template.getVariantId());
+        instance.setImageUrl(template.getImageUrl());
+        instance.setLabel(template.getLabel());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

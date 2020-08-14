@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CartUpdateItemShippingAddressActionImpl.class)
 public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("address")
-   public Address getAddress();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("address")
+    public Address getAddress();
 
-   public void setAddress(final Address address);
-   
-   public static CartUpdateItemShippingAddressActionImpl of(){
-      return new CartUpdateItemShippingAddressActionImpl();
-   }
-   
+    public void setAddress(final Address address);
 
-   public static CartUpdateItemShippingAddressActionImpl of(final CartUpdateItemShippingAddressAction template) {
-      CartUpdateItemShippingAddressActionImpl instance = new CartUpdateItemShippingAddressActionImpl();
-      instance.setAddress(template.getAddress());
-      return instance;
-   }
+    public static CartUpdateItemShippingAddressActionImpl of(){
+        return new CartUpdateItemShippingAddressActionImpl();
+    }
+    
+
+    public static CartUpdateItemShippingAddressActionImpl of(final CartUpdateItemShippingAddressAction template) {
+        CartUpdateItemShippingAddressActionImpl instance = new CartUpdateItemShippingAddressActionImpl();
+        instance.setAddress(template.getAddress());
+        return instance;
+    }
 
 }

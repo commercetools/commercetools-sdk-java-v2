@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDeliveryAddressAction {
 
-   private String action;
-   
-   private String deliveryId;
-   
-   private com.commercetools.api.models.common.Address address;
+    private String action;
+    
+    private String deliveryId;
+    
+    private com.commercetools.api.models.common.Address address;
 
-   @JsonCreator
-   StagedOrderSetDeliveryAddressActionImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
-      this.deliveryId = deliveryId;
-      this.address = address;
-      this.action = "setDeliveryAddress";
-   }
-   public StagedOrderSetDeliveryAddressActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getDeliveryId(){
-      return this.deliveryId;
-   }
-   
-   
-   public com.commercetools.api.models.common.Address getAddress(){
-      return this.address;
-   }
+    @JsonCreator
+    StagedOrderSetDeliveryAddressActionImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+        this.deliveryId = deliveryId;
+        this.address = address;
+        this.action = "setDeliveryAddress";
+    }
+    public StagedOrderSetDeliveryAddressActionImpl() {
+       
+    }
 
-   public void setDeliveryId(final String deliveryId){
-      this.deliveryId = deliveryId;
-   }
-   
-   public void setAddress(final com.commercetools.api.models.common.Address address){
-      this.address = address;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getDeliveryId(){
+        return this.deliveryId;
+    }
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
+        return this.address;
+    }
+
+    public void setDeliveryId(final String deliveryId){
+        this.deliveryId = deliveryId;
+    }
+    
+    public void setAddress(final com.commercetools.api.models.common.Address address){
+        this.address = address;
+    }
 
 }

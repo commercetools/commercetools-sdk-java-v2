@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetDescriptionActionImpl.class)
 public interface ProductSetDescriptionAction extends ProductUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("description")
-   public LocalizedString getDescription();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @Valid
+    @JsonProperty("description")
+    public LocalizedString getDescription();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setDescription(final LocalizedString description);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductSetDescriptionActionImpl of(){
-      return new ProductSetDescriptionActionImpl();
-   }
-   
+    public void setDescription(final LocalizedString description);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductSetDescriptionActionImpl of(final ProductSetDescriptionAction template) {
-      ProductSetDescriptionActionImpl instance = new ProductSetDescriptionActionImpl();
-      instance.setDescription(template.getDescription());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductSetDescriptionActionImpl of(){
+        return new ProductSetDescriptionActionImpl();
+    }
+    
+
+    public static ProductSetDescriptionActionImpl of(final ProductSetDescriptionAction template) {
+        ProductSetDescriptionActionImpl instance = new ProductSetDescriptionActionImpl();
+        instance.setDescription(template.getDescription());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

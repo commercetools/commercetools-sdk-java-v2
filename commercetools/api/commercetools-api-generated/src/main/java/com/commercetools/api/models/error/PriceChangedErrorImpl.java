@@ -22,55 +22,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PriceChangedErrorImpl implements PriceChangedError {
 
-   private String code;
-   
-   private String message;
-   
-   private java.util.List<String> lineItems;
-   
-   private Boolean shipping;
+    private String code;
+    
+    private String message;
+    
+    private java.util.List<String> lineItems;
+    
+    private Boolean shipping;
 
-   @JsonCreator
-   PriceChangedErrorImpl(@JsonProperty("message") final String message, @JsonProperty("lineItems") final java.util.List<String> lineItems, @JsonProperty("shipping") final Boolean shipping) {
-      this.message = message;
-      this.lineItems = lineItems;
-      this.shipping = shipping;
-      this.code = "PriceChanged";
-   }
-   public PriceChangedErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
-   
-   
-   public java.util.List<String> getLineItems(){
-      return this.lineItems;
-   }
-   
-   
-   public Boolean getShipping(){
-      return this.shipping;
-   }
+    @JsonCreator
+    PriceChangedErrorImpl(@JsonProperty("message") final String message, @JsonProperty("lineItems") final java.util.List<String> lineItems, @JsonProperty("shipping") final Boolean shipping) {
+        this.message = message;
+        this.lineItems = lineItems;
+        this.shipping = shipping;
+        this.code = "PriceChanged";
+    }
+    public PriceChangedErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setLineItems(final java.util.List<String> lineItems){
-      this.lineItems = lineItems;
-   }
-   
-   public void setShipping(final Boolean shipping){
-      this.shipping = shipping;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+    
+    
+    public java.util.List<String> getLineItems(){
+        return this.lineItems;
+    }
+    
+    
+    public Boolean getShipping(){
+        return this.shipping;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setLineItems(final java.util.List<String> lineItems){
+        this.lineItems = lineItems;
+    }
+    
+    public void setShipping(final Boolean shipping){
+        this.shipping = shipping;
+    }
 
 }

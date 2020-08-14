@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError {
 
-   private String code;
-   
-   private String message;
-   
-   private java.util.List<com.commercetools.api.models.common.Price> conflictingPrices;
+    private String code;
+    
+    private String message;
+    
+    private java.util.List<com.commercetools.api.models.common.Price> conflictingPrices;
 
-   @JsonCreator
-   DuplicatePriceScopeErrorImpl(@JsonProperty("message") final String message, @JsonProperty("conflictingPrices") final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices) {
-      this.message = message;
-      this.conflictingPrices = conflictingPrices;
-      this.code = "DuplicatePriceScope";
-   }
-   public DuplicatePriceScopeErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.common.Price> getConflictingPrices(){
-      return this.conflictingPrices;
-   }
+    @JsonCreator
+    DuplicatePriceScopeErrorImpl(@JsonProperty("message") final String message, @JsonProperty("conflictingPrices") final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices) {
+        this.message = message;
+        this.conflictingPrices = conflictingPrices;
+        this.code = "DuplicatePriceScope";
+    }
+    public DuplicatePriceScopeErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setConflictingPrices(final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices){
-      this.conflictingPrices = conflictingPrices;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    
+    public String getMessage(){
+        return this.message;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.common.Price> getConflictingPrices(){
+        return this.conflictingPrices;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setConflictingPrices(final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices){
+        this.conflictingPrices = conflictingPrices;
+    }
 
 }

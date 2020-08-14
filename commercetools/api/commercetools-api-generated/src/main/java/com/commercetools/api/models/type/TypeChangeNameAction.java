@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = TypeChangeNameActionImpl.class)
 public interface TypeChangeNameAction extends TypeUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
 
-   public void setName(final LocalizedString name);
-   
-   public static TypeChangeNameActionImpl of(){
-      return new TypeChangeNameActionImpl();
-   }
-   
+    public void setName(final LocalizedString name);
 
-   public static TypeChangeNameActionImpl of(final TypeChangeNameAction template) {
-      TypeChangeNameActionImpl instance = new TypeChangeNameActionImpl();
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static TypeChangeNameActionImpl of(){
+        return new TypeChangeNameActionImpl();
+    }
+    
+
+    public static TypeChangeNameActionImpl of(final TypeChangeNameAction template) {
+        TypeChangeNameActionImpl instance = new TypeChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

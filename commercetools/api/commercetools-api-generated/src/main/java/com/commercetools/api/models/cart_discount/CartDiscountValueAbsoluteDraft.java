@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = CartDiscountValueAbsoluteDraftImpl.class)
 public interface CartDiscountValueAbsoluteDraft extends CartDiscountValueDraft {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("money")
-   public List<Money> getMoney();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("money")
+    public List<Money> getMoney();
 
-   public void setMoney(final List<Money> money);
-   
-   public static CartDiscountValueAbsoluteDraftImpl of(){
-      return new CartDiscountValueAbsoluteDraftImpl();
-   }
-   
+    public void setMoney(final List<Money> money);
 
-   public static CartDiscountValueAbsoluteDraftImpl of(final CartDiscountValueAbsoluteDraft template) {
-      CartDiscountValueAbsoluteDraftImpl instance = new CartDiscountValueAbsoluteDraftImpl();
-      instance.setMoney(template.getMoney());
-      return instance;
-   }
+    public static CartDiscountValueAbsoluteDraftImpl of(){
+        return new CartDiscountValueAbsoluteDraftImpl();
+    }
+    
+
+    public static CartDiscountValueAbsoluteDraftImpl of(final CartDiscountValueAbsoluteDraft template) {
+        CartDiscountValueAbsoluteDraftImpl instance = new CartDiscountValueAbsoluteDraftImpl();
+        instance.setMoney(template.getMoney());
+        return instance;
+    }
 
 }

@@ -22,40 +22,40 @@ import java.io.IOException;
 @JsonDeserialize(as = ParcelRemovedFromDeliveryMessageImpl.class)
 public interface ParcelRemovedFromDeliveryMessage extends Message {
 
-   
-   @NotNull
-   @JsonProperty("deliveryId")
-   public String getDeliveryId();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("parcel")
-   public Parcel getParcel();
+    
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("parcel")
+    public Parcel getParcel();
 
-   public void setDeliveryId(final String deliveryId);
-   
-   public void setParcel(final Parcel parcel);
-   
-   public static ParcelRemovedFromDeliveryMessageImpl of(){
-      return new ParcelRemovedFromDeliveryMessageImpl();
-   }
-   
+    public void setDeliveryId(final String deliveryId);
+    
+    public void setParcel(final Parcel parcel);
 
-   public static ParcelRemovedFromDeliveryMessageImpl of(final ParcelRemovedFromDeliveryMessage template) {
-      ParcelRemovedFromDeliveryMessageImpl instance = new ParcelRemovedFromDeliveryMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setDeliveryId(template.getDeliveryId());
-      instance.setParcel(template.getParcel());
-      return instance;
-   }
+    public static ParcelRemovedFromDeliveryMessageImpl of(){
+        return new ParcelRemovedFromDeliveryMessageImpl();
+    }
+    
+
+    public static ParcelRemovedFromDeliveryMessageImpl of(final ParcelRemovedFromDeliveryMessage template) {
+        ParcelRemovedFromDeliveryMessageImpl instance = new ParcelRemovedFromDeliveryMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setParcel(template.getParcel());
+        return instance;
+    }
 
 }

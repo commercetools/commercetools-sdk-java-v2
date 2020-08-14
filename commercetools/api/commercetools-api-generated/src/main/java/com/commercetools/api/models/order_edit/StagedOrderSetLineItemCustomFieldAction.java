@@ -22,36 +22,36 @@ import java.io.IOException;
 @JsonDeserialize(as = StagedOrderSetLineItemCustomFieldActionImpl.class)
 public interface StagedOrderSetLineItemCustomFieldAction extends StagedOrderUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("lineItemId")
-   public String getLineItemId();
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
-   
-   
-   @JsonProperty("value")
-   public JsonNode getValue();
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+    
+    
+    @JsonProperty("value")
+    public JsonNode getValue();
 
-   public void setLineItemId(final String lineItemId);
-   
-   public void setName(final String name);
-   
-   public void setValue(final JsonNode value);
-   
-   public static StagedOrderSetLineItemCustomFieldActionImpl of(){
-      return new StagedOrderSetLineItemCustomFieldActionImpl();
-   }
-   
+    public void setLineItemId(final String lineItemId);
+    
+    public void setName(final String name);
+    
+    public void setValue(final JsonNode value);
 
-   public static StagedOrderSetLineItemCustomFieldActionImpl of(final StagedOrderSetLineItemCustomFieldAction template) {
-      StagedOrderSetLineItemCustomFieldActionImpl instance = new StagedOrderSetLineItemCustomFieldActionImpl();
-      instance.setLineItemId(template.getLineItemId());
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static StagedOrderSetLineItemCustomFieldActionImpl of(){
+        return new StagedOrderSetLineItemCustomFieldActionImpl();
+    }
+    
+
+    public static StagedOrderSetLineItemCustomFieldActionImpl of(final StagedOrderSetLineItemCustomFieldAction template) {
+        StagedOrderSetLineItemCustomFieldActionImpl instance = new StagedOrderSetLineItemCustomFieldActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

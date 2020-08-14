@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TypeRemoveFieldDefinitionActionImpl implements TypeRemoveFieldDefinitionAction {
 
-   private String action;
-   
-   private String fieldName;
+    private String action;
+    
+    private String fieldName;
 
-   @JsonCreator
-   TypeRemoveFieldDefinitionActionImpl(@JsonProperty("fieldName") final String fieldName) {
-      this.fieldName = fieldName;
-      this.action = "removeFieldDefinition";
-   }
-   public TypeRemoveFieldDefinitionActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getFieldName(){
-      return this.fieldName;
-   }
+    @JsonCreator
+    TypeRemoveFieldDefinitionActionImpl(@JsonProperty("fieldName") final String fieldName) {
+        this.fieldName = fieldName;
+        this.action = "removeFieldDefinition";
+    }
+    public TypeRemoveFieldDefinitionActionImpl() {
+       
+    }
 
-   public void setFieldName(final String fieldName){
-      this.fieldName = fieldName;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getFieldName(){
+        return this.fieldName;
+    }
+
+    public void setFieldName(final String fieldName){
+        this.fieldName = fieldName;
+    }
 
 }

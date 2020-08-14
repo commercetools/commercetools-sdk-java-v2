@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CartDiscountValueAbsoluteDraftBuilder {
-   
-   
-   private java.util.List<com.commercetools.api.models.common.Money> money;
-   
-   public CartDiscountValueAbsoluteDraftBuilder money( final java.util.List<com.commercetools.api.models.common.Money> money) {
-      this.money = money;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.common.Money> getMoney(){
-      return this.money;
-   }
 
-   public CartDiscountValueAbsoluteDraft build() {
-       return new CartDiscountValueAbsoluteDraftImpl(money);
-   }
-   
-   public static CartDiscountValueAbsoluteDraftBuilder of() {
-      return new CartDiscountValueAbsoluteDraftBuilder();
-   }
-   
-   public static CartDiscountValueAbsoluteDraftBuilder of(final CartDiscountValueAbsoluteDraft template) {
-      CartDiscountValueAbsoluteDraftBuilder builder = new CartDiscountValueAbsoluteDraftBuilder();
-      builder.money = template.getMoney();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.api.models.common.Money> money;
+
+    public CartDiscountValueAbsoluteDraftBuilder money( final java.util.List<com.commercetools.api.models.common.Money> money) {
+        this.money = money;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.api.models.common.Money> getMoney(){
+        return this.money;
+    }
+
+    public CartDiscountValueAbsoluteDraft build() {
+        return new CartDiscountValueAbsoluteDraftImpl(money);
+    }
+
+    public static CartDiscountValueAbsoluteDraftBuilder of() {
+        return new CartDiscountValueAbsoluteDraftBuilder();
+    }
+
+    public static CartDiscountValueAbsoluteDraftBuilder of(final CartDiscountValueAbsoluteDraft template) {
+        CartDiscountValueAbsoluteDraftBuilder builder = new CartDiscountValueAbsoluteDraftBuilder();
+        builder.money = template.getMoney();
+        return builder;
+    }
+
 }

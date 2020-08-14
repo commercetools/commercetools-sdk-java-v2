@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SubscriptionSetChangesActionImpl implements SubscriptionSetChangesAction {
 
-   private String action;
-   
-   private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
+    private String action;
+    
+    private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
 
-   @JsonCreator
-   SubscriptionSetChangesActionImpl(@JsonProperty("changes") final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
-      this.changes = changes;
-      this.action = "setChanges";
-   }
-   public SubscriptionSetChangesActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges(){
-      return this.changes;
-   }
+    @JsonCreator
+    SubscriptionSetChangesActionImpl(@JsonProperty("changes") final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
+        this.changes = changes;
+        this.action = "setChanges";
+    }
+    public SubscriptionSetChangesActionImpl() {
+       
+    }
 
-   public void setChanges(final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes){
-      this.changes = changes;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges(){
+        return this.changes;
+    }
+
+    public void setChanges(final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes){
+        this.changes = changes;
+    }
 
 }

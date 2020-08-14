@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = CartChangeCustomLineItemQuantityActionImpl.class)
 public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("customLineItemId")
-   public String getCustomLineItemId();
-   
-   @NotNull
-   @JsonProperty("quantity")
-   public Double getQuantity();
+    
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+    
+    @NotNull
+    @JsonProperty("quantity")
+    public Double getQuantity();
 
-   public void setCustomLineItemId(final String customLineItemId);
-   
-   public void setQuantity(final Double quantity);
-   
-   public static CartChangeCustomLineItemQuantityActionImpl of(){
-      return new CartChangeCustomLineItemQuantityActionImpl();
-   }
-   
+    public void setCustomLineItemId(final String customLineItemId);
+    
+    public void setQuantity(final Double quantity);
 
-   public static CartChangeCustomLineItemQuantityActionImpl of(final CartChangeCustomLineItemQuantityAction template) {
-      CartChangeCustomLineItemQuantityActionImpl instance = new CartChangeCustomLineItemQuantityActionImpl();
-      instance.setCustomLineItemId(template.getCustomLineItemId());
-      instance.setQuantity(template.getQuantity());
-      return instance;
-   }
+    public static CartChangeCustomLineItemQuantityActionImpl of(){
+        return new CartChangeCustomLineItemQuantityActionImpl();
+    }
+    
+
+    public static CartChangeCustomLineItemQuantityActionImpl of(final CartChangeCustomLineItemQuantityAction template) {
+        CartChangeCustomLineItemQuantityActionImpl instance = new CartChangeCustomLineItemQuantityActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
 
 }

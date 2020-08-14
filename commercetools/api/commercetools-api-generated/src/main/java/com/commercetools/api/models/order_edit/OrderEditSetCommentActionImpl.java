@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderEditSetCommentActionImpl implements OrderEditSetCommentAction {
 
-   private String action;
-   
-   private String comment;
+    private String action;
+    
+    private String comment;
 
-   @JsonCreator
-   OrderEditSetCommentActionImpl(@JsonProperty("comment") final String comment) {
-      this.comment = comment;
-      this.action = "setComment";
-   }
-   public OrderEditSetCommentActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getComment(){
-      return this.comment;
-   }
+    @JsonCreator
+    OrderEditSetCommentActionImpl(@JsonProperty("comment") final String comment) {
+        this.comment = comment;
+        this.action = "setComment";
+    }
+    public OrderEditSetCommentActionImpl() {
+       
+    }
 
-   public void setComment(final String comment){
-      this.comment = comment;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getComment(){
+        return this.comment;
+    }
+
+    public void setComment(final String comment){
+        this.comment = comment;
+    }
 
 }

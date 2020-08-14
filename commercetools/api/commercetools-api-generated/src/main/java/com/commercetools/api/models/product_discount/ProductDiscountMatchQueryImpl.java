@@ -22,59 +22,59 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery {
 
-   private String productId;
-   
-   private Integer variantId;
-   
-   private Boolean staged;
-   
-   private com.commercetools.api.models.common.QueryPrice price;
+    private String productId;
+    
+    private Integer variantId;
+    
+    private Boolean staged;
+    
+    private com.commercetools.api.models.common.QueryPrice price;
 
-   @JsonCreator
-   ProductDiscountMatchQueryImpl(@JsonProperty("productId") final String productId, @JsonProperty("variantId") final Integer variantId, @JsonProperty("staged") final Boolean staged, @JsonProperty("price") final com.commercetools.api.models.common.QueryPrice price) {
-      this.productId = productId;
-      this.variantId = variantId;
-      this.staged = staged;
-      this.price = price;
-   }
-   public ProductDiscountMatchQueryImpl() {
-      
-   }
-   
-   
-   public String getProductId(){
-      return this.productId;
-   }
-   
-   
-   public Integer getVariantId(){
-      return this.variantId;
-   }
-   
-   
-   public Boolean getStaged(){
-      return this.staged;
-   }
-   
-   
-   public com.commercetools.api.models.common.QueryPrice getPrice(){
-      return this.price;
-   }
+    @JsonCreator
+    ProductDiscountMatchQueryImpl(@JsonProperty("productId") final String productId, @JsonProperty("variantId") final Integer variantId, @JsonProperty("staged") final Boolean staged, @JsonProperty("price") final com.commercetools.api.models.common.QueryPrice price) {
+        this.productId = productId;
+        this.variantId = variantId;
+        this.staged = staged;
+        this.price = price;
+    }
+    public ProductDiscountMatchQueryImpl() {
+       
+    }
 
-   public void setProductId(final String productId){
-      this.productId = productId;
-   }
-   
-   public void setVariantId(final Integer variantId){
-      this.variantId = variantId;
-   }
-   
-   public void setStaged(final Boolean staged){
-      this.staged = staged;
-   }
-   
-   public void setPrice(final com.commercetools.api.models.common.QueryPrice price){
-      this.price = price;
-   }
+    
+    public String getProductId(){
+        return this.productId;
+    }
+    
+    
+    public Integer getVariantId(){
+        return this.variantId;
+    }
+    
+    
+    public Boolean getStaged(){
+        return this.staged;
+    }
+    
+    
+    public com.commercetools.api.models.common.QueryPrice getPrice(){
+        return this.price;
+    }
+
+    public void setProductId(final String productId){
+        this.productId = productId;
+    }
+    
+    public void setVariantId(final Integer variantId){
+        this.variantId = variantId;
+    }
+    
+    public void setStaged(final Boolean staged){
+        this.staged = staged;
+    }
+    
+    public void setPrice(final com.commercetools.api.models.common.QueryPrice price){
+        this.price = price;
+    }
 
 }

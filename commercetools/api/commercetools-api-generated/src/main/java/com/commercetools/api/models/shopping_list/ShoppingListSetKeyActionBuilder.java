@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ShoppingListSetKeyActionBuilder {
-   
-   @Nullable
-   private String key;
-   
-   public ShoppingListSetKeyActionBuilder key(@Nullable final String key) {
-      this.key = key;
-      return this;
-   }
-   
-   @Nullable
-   public String getKey(){
-      return this.key;
-   }
 
-   public ShoppingListSetKeyAction build() {
-       return new ShoppingListSetKeyActionImpl(key);
-   }
-   
-   public static ShoppingListSetKeyActionBuilder of() {
-      return new ShoppingListSetKeyActionBuilder();
-   }
-   
-   public static ShoppingListSetKeyActionBuilder of(final ShoppingListSetKeyAction template) {
-      ShoppingListSetKeyActionBuilder builder = new ShoppingListSetKeyActionBuilder();
-      builder.key = template.getKey();
-      return builder;
-   }
-   
+    @Nullable
+    private String key;
+
+    public ShoppingListSetKeyActionBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    @Nullable
+    public String getKey(){
+        return this.key;
+    }
+
+    public ShoppingListSetKeyAction build() {
+        return new ShoppingListSetKeyActionImpl(key);
+    }
+
+    public static ShoppingListSetKeyActionBuilder of() {
+        return new ShoppingListSetKeyActionBuilder();
+    }
+
+    public static ShoppingListSetKeyActionBuilder of(final ShoppingListSetKeyAction template) {
+        ShoppingListSetKeyActionBuilder builder = new ShoppingListSetKeyActionBuilder();
+        builder.key = template.getKey();
+        return builder;
+    }
+
 }

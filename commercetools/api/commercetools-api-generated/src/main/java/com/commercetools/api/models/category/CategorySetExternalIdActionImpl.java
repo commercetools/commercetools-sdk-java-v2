@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetExternalIdActionImpl implements CategorySetExternalIdAction {
 
-   private String action;
-   
-   private String externalId;
+    private String action;
+    
+    private String externalId;
 
-   @JsonCreator
-   CategorySetExternalIdActionImpl(@JsonProperty("externalId") final String externalId) {
-      this.externalId = externalId;
-      this.action = "setExternalId";
-   }
-   public CategorySetExternalIdActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If not defined, the external ID is unset.</p>
-   */
-   public String getExternalId(){
-      return this.externalId;
-   }
+    @JsonCreator
+    CategorySetExternalIdActionImpl(@JsonProperty("externalId") final String externalId) {
+        this.externalId = externalId;
+        this.action = "setExternalId";
+    }
+    public CategorySetExternalIdActionImpl() {
+       
+    }
 
-   public void setExternalId(final String externalId){
-      this.externalId = externalId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If not defined, the external ID is unset.</p>
+    */
+    public String getExternalId(){
+        return this.externalId;
+    }
+
+    public void setExternalId(final String externalId){
+        this.externalId = externalId;
+    }
 
 }

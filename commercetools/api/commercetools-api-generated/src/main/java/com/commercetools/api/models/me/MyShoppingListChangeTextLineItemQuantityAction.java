@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = MyShoppingListChangeTextLineItemQuantityActionImpl.class)
 public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppingListUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("textLineItemId")
-   public String getTextLineItemId();
-   
-   @NotNull
-   @JsonProperty("quantity")
-   public Long getQuantity();
+    
+    @NotNull
+    @JsonProperty("textLineItemId")
+    public String getTextLineItemId();
+    
+    @NotNull
+    @JsonProperty("quantity")
+    public Long getQuantity();
 
-   public void setTextLineItemId(final String textLineItemId);
-   
-   public void setQuantity(final Long quantity);
-   
-   public static MyShoppingListChangeTextLineItemQuantityActionImpl of(){
-      return new MyShoppingListChangeTextLineItemQuantityActionImpl();
-   }
-   
+    public void setTextLineItemId(final String textLineItemId);
+    
+    public void setQuantity(final Long quantity);
 
-   public static MyShoppingListChangeTextLineItemQuantityActionImpl of(final MyShoppingListChangeTextLineItemQuantityAction template) {
-      MyShoppingListChangeTextLineItemQuantityActionImpl instance = new MyShoppingListChangeTextLineItemQuantityActionImpl();
-      instance.setTextLineItemId(template.getTextLineItemId());
-      instance.setQuantity(template.getQuantity());
-      return instance;
-   }
+    public static MyShoppingListChangeTextLineItemQuantityActionImpl of(){
+        return new MyShoppingListChangeTextLineItemQuantityActionImpl();
+    }
+    
+
+    public static MyShoppingListChangeTextLineItemQuantityActionImpl of(final MyShoppingListChangeTextLineItemQuantityAction template) {
+        MyShoppingListChangeTextLineItemQuantityActionImpl instance = new MyShoppingListChangeTextLineItemQuantityActionImpl();
+        instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
 
 }

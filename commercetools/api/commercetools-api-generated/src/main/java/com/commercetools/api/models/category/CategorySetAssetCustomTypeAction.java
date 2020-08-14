@@ -23,48 +23,48 @@ import java.io.IOException;
 @JsonDeserialize(as = CategorySetAssetCustomTypeActionImpl.class)
 public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
 
-   
-   
-   @JsonProperty("assetId")
-   public String getAssetId();
-   
-   
-   @JsonProperty("assetKey")
-   public String getAssetKey();
-   /**
-   *  <p>If set, the custom type is set to this new value.
-   *  If absent, the custom type and any existing custom fields are removed.</p>
-   */
-   @Valid
-   @JsonProperty("type")
-   public TypeResourceIdentifier getType();
-   /**
-   *  <p>If set, the custom fields are set to this new value.</p>
-   */
-   @Valid
-   @JsonProperty("fields")
-   public JsonNode getFields();
+    
+    
+    @JsonProperty("assetId")
+    public String getAssetId();
+    
+    
+    @JsonProperty("assetKey")
+    public String getAssetKey();
+    /**
+    *  <p>If set, the custom type is set to this new value.
+    *  If absent, the custom type and any existing custom fields are removed.</p>
+    */
+    @Valid
+    @JsonProperty("type")
+    public TypeResourceIdentifier getType();
+    /**
+    *  <p>If set, the custom fields are set to this new value.</p>
+    */
+    @Valid
+    @JsonProperty("fields")
+    public JsonNode getFields();
 
-   public void setAssetId(final String assetId);
-   
-   public void setAssetKey(final String assetKey);
-   
-   public void setType(final TypeResourceIdentifier type);
-   
-   public void setFields(final JsonNode fields);
-   
-   public static CategorySetAssetCustomTypeActionImpl of(){
-      return new CategorySetAssetCustomTypeActionImpl();
-   }
-   
+    public void setAssetId(final String assetId);
+    
+    public void setAssetKey(final String assetKey);
+    
+    public void setType(final TypeResourceIdentifier type);
+    
+    public void setFields(final JsonNode fields);
 
-   public static CategorySetAssetCustomTypeActionImpl of(final CategorySetAssetCustomTypeAction template) {
-      CategorySetAssetCustomTypeActionImpl instance = new CategorySetAssetCustomTypeActionImpl();
-      instance.setAssetId(template.getAssetId());
-      instance.setAssetKey(template.getAssetKey());
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static CategorySetAssetCustomTypeActionImpl of(){
+        return new CategorySetAssetCustomTypeActionImpl();
+    }
+    
+
+    public static CategorySetAssetCustomTypeActionImpl of(final CategorySetAssetCustomTypeAction template) {
+        CategorySetAssetCustomTypeActionImpl instance = new CategorySetAssetCustomTypeActionImpl();
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

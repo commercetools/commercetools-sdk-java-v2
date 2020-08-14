@@ -22,33 +22,33 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderDiscountCodeAddedMessageImpl.class)
 public interface OrderDiscountCodeAddedMessage extends Message {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("discountCode")
-   public DiscountCodeReference getDiscountCode();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("discountCode")
+    public DiscountCodeReference getDiscountCode();
 
-   public void setDiscountCode(final DiscountCodeReference discountCode);
-   
-   public static OrderDiscountCodeAddedMessageImpl of(){
-      return new OrderDiscountCodeAddedMessageImpl();
-   }
-   
+    public void setDiscountCode(final DiscountCodeReference discountCode);
 
-   public static OrderDiscountCodeAddedMessageImpl of(final OrderDiscountCodeAddedMessage template) {
-      OrderDiscountCodeAddedMessageImpl instance = new OrderDiscountCodeAddedMessageImpl();
-      instance.setId(template.getId());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setLastModifiedBy(template.getLastModifiedBy());
-      instance.setCreatedBy(template.getCreatedBy());
-      instance.setSequenceNumber(template.getSequenceNumber());
-      instance.setResource(template.getResource());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-      instance.setDiscountCode(template.getDiscountCode());
-      return instance;
-   }
+    public static OrderDiscountCodeAddedMessageImpl of(){
+        return new OrderDiscountCodeAddedMessageImpl();
+    }
+    
+
+    public static OrderDiscountCodeAddedMessageImpl of(final OrderDiscountCodeAddedMessage template) {
+        OrderDiscountCodeAddedMessageImpl instance = new OrderDiscountCodeAddedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(template.getResource());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setDiscountCode(template.getDiscountCode());
+        return instance;
+    }
 
 }

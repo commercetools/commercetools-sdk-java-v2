@@ -23,18 +23,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartValueTypeImpl implements CartValueType {
 
-   private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
+    private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
 
-   @JsonCreator
-   CartValueTypeImpl() {
-      this.type = ShippingRateTierType.findEnumViaJsonName("CartValue").get();
-   }
-   
-   
-   
-   public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
-      return this.type;
-   }
+    @JsonCreator
+    CartValueTypeImpl() {
+        this.type = ShippingRateTierType.findEnumViaJsonName("CartValue").get();
+    }
+    
+
+    
+    public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){
+        return this.type;
+    }
 
 
 }

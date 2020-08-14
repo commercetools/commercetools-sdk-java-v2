@@ -22,26 +22,26 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryChangeSlugActionImpl.class)
 public interface CategoryChangeSlugAction extends CategoryUpdateAction {
 
-   /**
-   *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.
-   *  Maximum size is {{ site.data.api-limits.slugLength }}.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("slug")
-   public LocalizedString getSlug();
+    /**
+    *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.
+    *  Maximum size is {{ site.data.api-limits.slugLength }}.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("slug")
+    public LocalizedString getSlug();
 
-   public void setSlug(final LocalizedString slug);
-   
-   public static CategoryChangeSlugActionImpl of(){
-      return new CategoryChangeSlugActionImpl();
-   }
-   
+    public void setSlug(final LocalizedString slug);
 
-   public static CategoryChangeSlugActionImpl of(final CategoryChangeSlugAction template) {
-      CategoryChangeSlugActionImpl instance = new CategoryChangeSlugActionImpl();
-      instance.setSlug(template.getSlug());
-      return instance;
-   }
+    public static CategoryChangeSlugActionImpl of(){
+        return new CategoryChangeSlugActionImpl();
+    }
+    
+
+    public static CategoryChangeSlugActionImpl of(final CategoryChangeSlugAction template) {
+        CategoryChangeSlugActionImpl instance = new CategoryChangeSlugActionImpl();
+        instance.setSlug(template.getSlug());
+        return instance;
+    }
 
 }

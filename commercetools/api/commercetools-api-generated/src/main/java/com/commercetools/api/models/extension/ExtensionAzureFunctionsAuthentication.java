@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ExtensionAzureFunctionsAuthenticationImpl.class)
 public interface ExtensionAzureFunctionsAuthentication extends ExtensionHttpDestinationAuthentication {
 
-   
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
+    
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setKey(final String key);
-   
-   public static ExtensionAzureFunctionsAuthenticationImpl of(){
-      return new ExtensionAzureFunctionsAuthenticationImpl();
-   }
-   
+    public void setKey(final String key);
 
-   public static ExtensionAzureFunctionsAuthenticationImpl of(final ExtensionAzureFunctionsAuthentication template) {
-      ExtensionAzureFunctionsAuthenticationImpl instance = new ExtensionAzureFunctionsAuthenticationImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ExtensionAzureFunctionsAuthenticationImpl of(){
+        return new ExtensionAzureFunctionsAuthenticationImpl();
+    }
+    
+
+    public static ExtensionAzureFunctionsAuthenticationImpl of(final ExtensionAzureFunctionsAuthentication template) {
+        ExtensionAzureFunctionsAuthenticationImpl instance = new ExtensionAzureFunctionsAuthenticationImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

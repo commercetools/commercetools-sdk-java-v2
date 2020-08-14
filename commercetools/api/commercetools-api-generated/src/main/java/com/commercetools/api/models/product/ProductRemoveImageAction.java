@@ -21,45 +21,45 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductRemoveImageActionImpl.class)
 public interface ProductRemoveImageAction extends ProductUpdateAction {
 
-   
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   /**
-   *  <p>The URL of the image.</p>
-   */
-   @NotNull
-   @JsonProperty("imageUrl")
-   public String getImageUrl();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    /**
+    *  <p>The URL of the image.</p>
+    */
+    @NotNull
+    @JsonProperty("imageUrl")
+    public String getImageUrl();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setVariantId(final Long variantId);
-   
-   public void setSku(final String sku);
-   
-   public void setImageUrl(final String imageUrl);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductRemoveImageActionImpl of(){
-      return new ProductRemoveImageActionImpl();
-   }
-   
+    public void setVariantId(final Long variantId);
+    
+    public void setSku(final String sku);
+    
+    public void setImageUrl(final String imageUrl);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductRemoveImageActionImpl of(final ProductRemoveImageAction template) {
-      ProductRemoveImageActionImpl instance = new ProductRemoveImageActionImpl();
-      instance.setVariantId(template.getVariantId());
-      instance.setSku(template.getSku());
-      instance.setImageUrl(template.getImageUrl());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductRemoveImageActionImpl of(){
+        return new ProductRemoveImageActionImpl();
+    }
+    
+
+    public static ProductRemoveImageActionImpl of(final ProductRemoveImageAction template) {
+        ProductRemoveImageActionImpl instance = new ProductRemoveImageActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setImageUrl(template.getImageUrl());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

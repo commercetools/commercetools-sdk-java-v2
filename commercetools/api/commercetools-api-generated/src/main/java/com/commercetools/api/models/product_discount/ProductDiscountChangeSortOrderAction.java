@@ -21,25 +21,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductDiscountChangeSortOrderActionImpl.class)
 public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpdateAction {
 
-   /**
-   *  <p>The string must contain a number between 0 and 1.
-   *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>
-   */
-   @NotNull
-   @JsonProperty("sortOrder")
-   public String getSortOrder();
+    /**
+    *  <p>The string must contain a number between 0 and 1.
+    *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>
+    */
+    @NotNull
+    @JsonProperty("sortOrder")
+    public String getSortOrder();
 
-   public void setSortOrder(final String sortOrder);
-   
-   public static ProductDiscountChangeSortOrderActionImpl of(){
-      return new ProductDiscountChangeSortOrderActionImpl();
-   }
-   
+    public void setSortOrder(final String sortOrder);
 
-   public static ProductDiscountChangeSortOrderActionImpl of(final ProductDiscountChangeSortOrderAction template) {
-      ProductDiscountChangeSortOrderActionImpl instance = new ProductDiscountChangeSortOrderActionImpl();
-      instance.setSortOrder(template.getSortOrder());
-      return instance;
-   }
+    public static ProductDiscountChangeSortOrderActionImpl of(){
+        return new ProductDiscountChangeSortOrderActionImpl();
+    }
+    
+
+    public static ProductDiscountChangeSortOrderActionImpl of(final ProductDiscountChangeSortOrderAction template) {
+        ProductDiscountChangeSortOrderActionImpl instance = new ProductDiscountChangeSortOrderActionImpl();
+        instance.setSortOrder(template.getSortOrder());
+        return instance;
+    }
 
 }

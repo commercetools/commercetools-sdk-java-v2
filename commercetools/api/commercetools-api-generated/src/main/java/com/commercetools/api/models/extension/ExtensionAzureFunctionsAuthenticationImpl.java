@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ExtensionAzureFunctionsAuthenticationImpl implements ExtensionAzureFunctionsAuthentication {
 
-   private String type;
-   
-   private String key;
+    private String type;
+    
+    private String key;
 
-   @JsonCreator
-   ExtensionAzureFunctionsAuthenticationImpl(@JsonProperty("key") final String key) {
-      this.key = key;
-      this.type = "AzureFunctions";
-   }
-   public ExtensionAzureFunctionsAuthenticationImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    ExtensionAzureFunctionsAuthenticationImpl(@JsonProperty("key") final String key) {
+        this.key = key;
+        this.type = "AzureFunctions";
+    }
+    public ExtensionAzureFunctionsAuthenticationImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

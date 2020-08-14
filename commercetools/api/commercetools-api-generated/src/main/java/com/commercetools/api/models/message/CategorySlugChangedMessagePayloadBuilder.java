@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class CategorySlugChangedMessagePayloadBuilder {
-   
-   
-   private com.commercetools.api.models.common.LocalizedString slug;
-   
-   public CategorySlugChangedMessagePayloadBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
-      this.slug = slug;
-      return this;
-   }
-   
-   
-   public com.commercetools.api.models.common.LocalizedString getSlug(){
-      return this.slug;
-   }
 
-   public CategorySlugChangedMessagePayload build() {
-       return new CategorySlugChangedMessagePayloadImpl(slug);
-   }
-   
-   public static CategorySlugChangedMessagePayloadBuilder of() {
-      return new CategorySlugChangedMessagePayloadBuilder();
-   }
-   
-   public static CategorySlugChangedMessagePayloadBuilder of(final CategorySlugChangedMessagePayload template) {
-      CategorySlugChangedMessagePayloadBuilder builder = new CategorySlugChangedMessagePayloadBuilder();
-      builder.slug = template.getSlug();
-      return builder;
-   }
-   
+    
+    private com.commercetools.api.models.common.LocalizedString slug;
+
+    public CategorySlugChangedMessagePayloadBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
+        this.slug = slug;
+        return this;
+    }
+
+    
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
+        return this.slug;
+    }
+
+    public CategorySlugChangedMessagePayload build() {
+        return new CategorySlugChangedMessagePayloadImpl(slug);
+    }
+
+    public static CategorySlugChangedMessagePayloadBuilder of() {
+        return new CategorySlugChangedMessagePayloadBuilder();
+    }
+
+    public static CategorySlugChangedMessagePayloadBuilder of(final CategorySlugChangedMessagePayload template) {
+        CategorySlugChangedMessagePayloadBuilder builder = new CategorySlugChangedMessagePayloadBuilder();
+        builder.slug = template.getSlug();
+        return builder;
+    }
+
 }

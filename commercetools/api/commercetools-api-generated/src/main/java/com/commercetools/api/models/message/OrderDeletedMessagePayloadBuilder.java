@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class OrderDeletedMessagePayloadBuilder {
-   
-   
-   private com.commercetools.api.models.order.Order order;
-   
-   public OrderDeletedMessagePayloadBuilder order( final com.commercetools.api.models.order.Order order) {
-      this.order = order;
-      return this;
-   }
-   
-   
-   public com.commercetools.api.models.order.Order getOrder(){
-      return this.order;
-   }
 
-   public OrderDeletedMessagePayload build() {
-       return new OrderDeletedMessagePayloadImpl(order);
-   }
-   
-   public static OrderDeletedMessagePayloadBuilder of() {
-      return new OrderDeletedMessagePayloadBuilder();
-   }
-   
-   public static OrderDeletedMessagePayloadBuilder of(final OrderDeletedMessagePayload template) {
-      OrderDeletedMessagePayloadBuilder builder = new OrderDeletedMessagePayloadBuilder();
-      builder.order = template.getOrder();
-      return builder;
-   }
-   
+    
+    private com.commercetools.api.models.order.Order order;
+
+    public OrderDeletedMessagePayloadBuilder order( final com.commercetools.api.models.order.Order order) {
+        this.order = order;
+        return this;
+    }
+
+    
+    public com.commercetools.api.models.order.Order getOrder(){
+        return this.order;
+    }
+
+    public OrderDeletedMessagePayload build() {
+        return new OrderDeletedMessagePayloadImpl(order);
+    }
+
+    public static OrderDeletedMessagePayloadBuilder of() {
+        return new OrderDeletedMessagePayloadBuilder();
+    }
+
+    public static OrderDeletedMessagePayloadBuilder of(final OrderDeletedMessagePayload template) {
+        OrderDeletedMessagePayloadBuilder builder = new OrderDeletedMessagePayloadBuilder();
+        builder.order = template.getOrder();
+        return builder;
+    }
+
 }

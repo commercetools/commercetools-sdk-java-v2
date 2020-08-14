@@ -21,57 +21,57 @@ import java.io.IOException;
 @JsonDeserialize(as = UserProvidedIdentifiersImpl.class)
 public interface UserProvidedIdentifiers  {
 
-   
-   
-   @JsonProperty("key")
-   public String getKey();
-   
-   
-   @JsonProperty("externalId")
-   public String getExternalId();
-   
-   
-   @JsonProperty("orderNumber")
-   public String getOrderNumber();
-   
-   
-   @JsonProperty("customerNumber")
-   public String getCustomerNumber();
-   
-   
-   @JsonProperty("sku")
-   public String getSku();
-   
-   @Valid
-   @JsonProperty("slug")
-   public LocalizedString getSlug();
+    
+    
+    @JsonProperty("key")
+    public String getKey();
+    
+    
+    @JsonProperty("externalId")
+    public String getExternalId();
+    
+    
+    @JsonProperty("orderNumber")
+    public String getOrderNumber();
+    
+    
+    @JsonProperty("customerNumber")
+    public String getCustomerNumber();
+    
+    
+    @JsonProperty("sku")
+    public String getSku();
+    
+    @Valid
+    @JsonProperty("slug")
+    public LocalizedString getSlug();
 
-   public void setKey(final String key);
-   
-   public void setExternalId(final String externalId);
-   
-   public void setOrderNumber(final String orderNumber);
-   
-   public void setCustomerNumber(final String customerNumber);
-   
-   public void setSku(final String sku);
-   
-   public void setSlug(final LocalizedString slug);
-   
-   public static UserProvidedIdentifiersImpl of(){
-      return new UserProvidedIdentifiersImpl();
-   }
-   
+    public void setKey(final String key);
+    
+    public void setExternalId(final String externalId);
+    
+    public void setOrderNumber(final String orderNumber);
+    
+    public void setCustomerNumber(final String customerNumber);
+    
+    public void setSku(final String sku);
+    
+    public void setSlug(final LocalizedString slug);
 
-   public static UserProvidedIdentifiersImpl of(final UserProvidedIdentifiers template) {
-      UserProvidedIdentifiersImpl instance = new UserProvidedIdentifiersImpl();
-      instance.setKey(template.getKey());
-      instance.setExternalId(template.getExternalId());
-      instance.setOrderNumber(template.getOrderNumber());
-      instance.setCustomerNumber(template.getCustomerNumber());
-      instance.setSku(template.getSku());
-      instance.setSlug(template.getSlug());
-      return instance;
-   }
+    public static UserProvidedIdentifiersImpl of(){
+        return new UserProvidedIdentifiersImpl();
+    }
+    
+
+    public static UserProvidedIdentifiersImpl of(final UserProvidedIdentifiers template) {
+        UserProvidedIdentifiersImpl instance = new UserProvidedIdentifiersImpl();
+        instance.setKey(template.getKey());
+        instance.setExternalId(template.getExternalId());
+        instance.setOrderNumber(template.getOrderNumber());
+        instance.setCustomerNumber(template.getCustomerNumber());
+        instance.setSku(template.getSku());
+        instance.setSlug(template.getSlug());
+        return instance;
+    }
 
 }

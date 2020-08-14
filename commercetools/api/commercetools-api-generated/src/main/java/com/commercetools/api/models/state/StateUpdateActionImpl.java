@@ -30,18 +30,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StateUpdateActionImpl implements StateUpdateAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   StateUpdateActionImpl() {
-      this.action = "null";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    StateUpdateActionImpl() {
+        this.action = "null";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

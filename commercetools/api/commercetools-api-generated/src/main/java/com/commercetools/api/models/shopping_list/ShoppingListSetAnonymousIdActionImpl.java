@@ -22,34 +22,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ShoppingListSetAnonymousIdActionImpl implements ShoppingListSetAnonymousIdAction {
 
-   private String action;
-   
-   private String anonymousId;
+    private String action;
+    
+    private String anonymousId;
 
-   @JsonCreator
-   ShoppingListSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
-      this.anonymousId = anonymousId;
-      this.action = "setAnonymousId";
-   }
-   public ShoppingListSetAnonymousIdActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to.
-   *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
-   */
-   public String getAnonymousId(){
-      return this.anonymousId;
-   }
+    @JsonCreator
+    ShoppingListSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
+        this.anonymousId = anonymousId;
+        this.action = "setAnonymousId";
+    }
+    public ShoppingListSetAnonymousIdActionImpl() {
+       
+    }
 
-   public void setAnonymousId(final String anonymousId){
-      this.anonymousId = anonymousId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to.
+    *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
+    */
+    public String getAnonymousId(){
+        return this.anonymousId;
+    }
+
+    public void setAnonymousId(final String anonymousId){
+        this.anonymousId = anonymousId;
+    }
 
 }

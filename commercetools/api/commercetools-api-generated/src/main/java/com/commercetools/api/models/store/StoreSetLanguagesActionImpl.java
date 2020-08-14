@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction {
 
-   private String action;
-   
-   private java.util.List<String> languages;
+    private String action;
+    
+    private java.util.List<String> languages;
 
-   @JsonCreator
-   StoreSetLanguagesActionImpl(@JsonProperty("languages") final java.util.List<String> languages) {
-      this.languages = languages;
-      this.action = "setLanguages";
-   }
-   public StoreSetLanguagesActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public java.util.List<String> getLanguages(){
-      return this.languages;
-   }
+    @JsonCreator
+    StoreSetLanguagesActionImpl(@JsonProperty("languages") final java.util.List<String> languages) {
+        this.languages = languages;
+        this.action = "setLanguages";
+    }
+    public StoreSetLanguagesActionImpl() {
+       
+    }
 
-   public void setLanguages(final java.util.List<String> languages){
-      this.languages = languages;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public java.util.List<String> getLanguages(){
+        return this.languages;
+    }
+
+    public void setLanguages(final java.util.List<String> languages){
+        this.languages = languages;
+    }
 
 }

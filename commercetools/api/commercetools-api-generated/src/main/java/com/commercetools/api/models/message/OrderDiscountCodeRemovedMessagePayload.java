@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = OrderDiscountCodeRemovedMessagePayloadImpl.class)
 public interface OrderDiscountCodeRemovedMessagePayload extends MessagePayload {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("discountCode")
-   public DiscountCodeReference getDiscountCode();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("discountCode")
+    public DiscountCodeReference getDiscountCode();
 
-   public void setDiscountCode(final DiscountCodeReference discountCode);
-   
-   public static OrderDiscountCodeRemovedMessagePayloadImpl of(){
-      return new OrderDiscountCodeRemovedMessagePayloadImpl();
-   }
-   
+    public void setDiscountCode(final DiscountCodeReference discountCode);
 
-   public static OrderDiscountCodeRemovedMessagePayloadImpl of(final OrderDiscountCodeRemovedMessagePayload template) {
-      OrderDiscountCodeRemovedMessagePayloadImpl instance = new OrderDiscountCodeRemovedMessagePayloadImpl();
-      instance.setDiscountCode(template.getDiscountCode());
-      return instance;
-   }
+    public static OrderDiscountCodeRemovedMessagePayloadImpl of(){
+        return new OrderDiscountCodeRemovedMessagePayloadImpl();
+    }
+    
+
+    public static OrderDiscountCodeRemovedMessagePayloadImpl of(final OrderDiscountCodeRemovedMessagePayload template) {
+        OrderDiscountCodeRemovedMessagePayloadImpl instance = new OrderDiscountCodeRemovedMessagePayloadImpl();
+        instance.setDiscountCode(template.getDiscountCode());
+        return instance;
+    }
 
 }

@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum LineItemMode {
 
-  
-  @JsonProperty("Standard")
-  STANDARD("Standard"),
-  
-  
-  @JsonProperty("GiftLineItem")
-  GIFT_LINE_ITEM("GiftLineItem");
+    
+    @JsonProperty("Standard")
+    STANDARD("Standard"),
+    
+    
+    @JsonProperty("GiftLineItem")
+    GIFT_LINE_ITEM("GiftLineItem");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private LineItemMode(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private LineItemMode(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<LineItemMode> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<LineItemMode> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

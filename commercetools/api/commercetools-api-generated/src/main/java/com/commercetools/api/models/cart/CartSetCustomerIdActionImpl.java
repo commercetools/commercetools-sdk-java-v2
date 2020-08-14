@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction {
 
-   private String action;
-   
-   private String customerId;
+    private String action;
+    
+    private String customerId;
 
-   @JsonCreator
-   CartSetCustomerIdActionImpl(@JsonProperty("customerId") final String customerId) {
-      this.customerId = customerId;
-      this.action = "setCustomerId";
-   }
-   public CartSetCustomerIdActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   /**
-   *  <p>If set, a customer with the given ID must exist in the project.</p>
-   */
-   public String getCustomerId(){
-      return this.customerId;
-   }
+    @JsonCreator
+    CartSetCustomerIdActionImpl(@JsonProperty("customerId") final String customerId) {
+        this.customerId = customerId;
+        this.action = "setCustomerId";
+    }
+    public CartSetCustomerIdActionImpl() {
+       
+    }
 
-   public void setCustomerId(final String customerId){
-      this.customerId = customerId;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    /**
+    *  <p>If set, a customer with the given ID must exist in the project.</p>
+    */
+    public String getCustomerId(){
+        return this.customerId;
+    }
+
+    public void setCustomerId(final String customerId){
+        this.customerId = customerId;
+    }
 
 }

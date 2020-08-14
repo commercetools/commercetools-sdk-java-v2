@@ -24,51 +24,51 @@ import java.io.IOException;
 @JsonDeserialize(as = TermFacetResultImpl.class)
 public interface TermFacetResult extends FacetResult {
 
-   
-   @NotNull
-   @JsonProperty("dataType")
-   public TermFacetResultType getDataType();
-   
-   @NotNull
-   @JsonProperty("missing")
-   public Long getMissing();
-   
-   @NotNull
-   @JsonProperty("total")
-   public Long getTotal();
-   
-   @NotNull
-   @JsonProperty("other")
-   public Long getOther();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("terms")
-   public List<FacetResultTerm> getTerms();
+    
+    @NotNull
+    @JsonProperty("dataType")
+    public TermFacetResultType getDataType();
+    
+    @NotNull
+    @JsonProperty("missing")
+    public Long getMissing();
+    
+    @NotNull
+    @JsonProperty("total")
+    public Long getTotal();
+    
+    @NotNull
+    @JsonProperty("other")
+    public Long getOther();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("terms")
+    public List<FacetResultTerm> getTerms();
 
-   public void setDataType(final TermFacetResultType dataType);
-   
-   public void setMissing(final Long missing);
-   
-   public void setTotal(final Long total);
-   
-   public void setOther(final Long other);
-   
-   public void setTerms(final List<FacetResultTerm> terms);
-   
-   public static TermFacetResultImpl of(){
-      return new TermFacetResultImpl();
-   }
-   
+    public void setDataType(final TermFacetResultType dataType);
+    
+    public void setMissing(final Long missing);
+    
+    public void setTotal(final Long total);
+    
+    public void setOther(final Long other);
+    
+    public void setTerms(final List<FacetResultTerm> terms);
 
-   public static TermFacetResultImpl of(final TermFacetResult template) {
-      TermFacetResultImpl instance = new TermFacetResultImpl();
-      instance.setDataType(template.getDataType());
-      instance.setMissing(template.getMissing());
-      instance.setTotal(template.getTotal());
-      instance.setOther(template.getOther());
-      instance.setTerms(template.getTerms());
-      return instance;
-   }
+    public static TermFacetResultImpl of(){
+        return new TermFacetResultImpl();
+    }
+    
+
+    public static TermFacetResultImpl of(final TermFacetResult template) {
+        TermFacetResultImpl instance = new TermFacetResultImpl();
+        instance.setDataType(template.getDataType());
+        instance.setMissing(template.getMissing());
+        instance.setTotal(template.getTotal());
+        instance.setOther(template.getOther());
+        instance.setTerms(template.getTerms());
+        return instance;
+    }
 
 }

@@ -22,30 +22,30 @@ import java.io.IOException;
 @JsonDeserialize(as = PaymentTransitionStateActionImpl.class)
 public interface PaymentTransitionStateAction extends PaymentUpdateAction {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("state")
-   public StateResourceIdentifier getState();
-   
-   
-   @JsonProperty("force")
-   public Boolean getForce();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("state")
+    public StateResourceIdentifier getState();
+    
+    
+    @JsonProperty("force")
+    public Boolean getForce();
 
-   public void setState(final StateResourceIdentifier state);
-   
-   public void setForce(final Boolean force);
-   
-   public static PaymentTransitionStateActionImpl of(){
-      return new PaymentTransitionStateActionImpl();
-   }
-   
+    public void setState(final StateResourceIdentifier state);
+    
+    public void setForce(final Boolean force);
 
-   public static PaymentTransitionStateActionImpl of(final PaymentTransitionStateAction template) {
-      PaymentTransitionStateActionImpl instance = new PaymentTransitionStateActionImpl();
-      instance.setState(template.getState());
-      instance.setForce(template.getForce());
-      return instance;
-   }
+    public static PaymentTransitionStateActionImpl of(){
+        return new PaymentTransitionStateActionImpl();
+    }
+    
+
+    public static PaymentTransitionStateActionImpl of(final PaymentTransitionStateAction template) {
+        PaymentTransitionStateActionImpl instance = new PaymentTransitionStateActionImpl();
+        instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
 
 }

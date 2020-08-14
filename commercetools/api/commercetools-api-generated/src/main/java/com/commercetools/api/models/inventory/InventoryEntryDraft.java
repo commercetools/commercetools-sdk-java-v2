@@ -23,59 +23,59 @@ import java.io.IOException;
 @JsonDeserialize(as = InventoryEntryDraftImpl.class)
 public interface InventoryEntryDraft  {
 
-   
-   @NotNull
-   @JsonProperty("sku")
-   public String getSku();
-   
-   @Valid
-   @JsonProperty("supplyChannel")
-   public ChannelResourceIdentifier getSupplyChannel();
-   
-   @NotNull
-   @JsonProperty("quantityOnStock")
-   public Long getQuantityOnStock();
-   
-   
-   @JsonProperty("restockableInDays")
-   public Long getRestockableInDays();
-   
-   
-   @JsonProperty("expectedDelivery")
-   public ZonedDateTime getExpectedDelivery();
-   /**
-   *  <p>The custom fields.</p>
-   */
-   @Valid
-   @JsonProperty("custom")
-   public CustomFieldsDraft getCustom();
+    
+    @NotNull
+    @JsonProperty("sku")
+    public String getSku();
+    
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
+    
+    @NotNull
+    @JsonProperty("quantityOnStock")
+    public Long getQuantityOnStock();
+    
+    
+    @JsonProperty("restockableInDays")
+    public Long getRestockableInDays();
+    
+    
+    @JsonProperty("expectedDelivery")
+    public ZonedDateTime getExpectedDelivery();
+    /**
+    *  <p>The custom fields.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
 
-   public void setSku(final String sku);
-   
-   public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-   
-   public void setQuantityOnStock(final Long quantityOnStock);
-   
-   public void setRestockableInDays(final Long restockableInDays);
-   
-   public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
-   
-   public void setCustom(final CustomFieldsDraft custom);
-   
-   public static InventoryEntryDraftImpl of(){
-      return new InventoryEntryDraftImpl();
-   }
-   
+    public void setSku(final String sku);
+    
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
+    
+    public void setQuantityOnStock(final Long quantityOnStock);
+    
+    public void setRestockableInDays(final Long restockableInDays);
+    
+    public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
+    
+    public void setCustom(final CustomFieldsDraft custom);
 
-   public static InventoryEntryDraftImpl of(final InventoryEntryDraft template) {
-      InventoryEntryDraftImpl instance = new InventoryEntryDraftImpl();
-      instance.setSku(template.getSku());
-      instance.setSupplyChannel(template.getSupplyChannel());
-      instance.setQuantityOnStock(template.getQuantityOnStock());
-      instance.setRestockableInDays(template.getRestockableInDays());
-      instance.setExpectedDelivery(template.getExpectedDelivery());
-      instance.setCustom(template.getCustom());
-      return instance;
-   }
+    public static InventoryEntryDraftImpl of(){
+        return new InventoryEntryDraftImpl();
+    }
+    
+
+    public static InventoryEntryDraftImpl of(final InventoryEntryDraft template) {
+        InventoryEntryDraftImpl instance = new InventoryEntryDraftImpl();
+        instance.setSku(template.getSku());
+        instance.setSupplyChannel(template.getSupplyChannel());
+        instance.setQuantityOnStock(template.getQuantityOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
+        instance.setExpectedDelivery(template.getExpectedDelivery());
+        instance.setCustom(template.getCustom());
+        return instance;
+    }
 
 }

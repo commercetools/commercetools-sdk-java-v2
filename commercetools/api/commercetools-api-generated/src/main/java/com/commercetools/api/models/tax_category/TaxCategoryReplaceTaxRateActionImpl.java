@@ -23,43 +23,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTaxRateAction {
 
-   private String action;
-   
-   private String taxRateId;
-   
-   private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
+    private String action;
+    
+    private String taxRateId;
+    
+    private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
-   @JsonCreator
-   TaxCategoryReplaceTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
-      this.taxRateId = taxRateId;
-      this.taxRate = taxRate;
-      this.action = "replaceTaxRate";
-   }
-   public TaxCategoryReplaceTaxRateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getTaxRateId(){
-      return this.taxRateId;
-   }
-   
-   
-   public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate(){
-      return this.taxRate;
-   }
+    @JsonCreator
+    TaxCategoryReplaceTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
+        this.taxRateId = taxRateId;
+        this.taxRate = taxRate;
+        this.action = "replaceTaxRate";
+    }
+    public TaxCategoryReplaceTaxRateActionImpl() {
+       
+    }
 
-   public void setTaxRateId(final String taxRateId){
-      this.taxRateId = taxRateId;
-   }
-   
-   public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRateDraft taxRate){
-      this.taxRate = taxRate;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getTaxRateId(){
+        return this.taxRateId;
+    }
+    
+    
+    public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate(){
+        return this.taxRate;
+    }
+
+    public void setTaxRateId(final String taxRateId){
+        this.taxRateId = taxRateId;
+    }
+    
+    public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRateDraft taxRate){
+        this.taxRate = taxRate;
+    }
 
 }

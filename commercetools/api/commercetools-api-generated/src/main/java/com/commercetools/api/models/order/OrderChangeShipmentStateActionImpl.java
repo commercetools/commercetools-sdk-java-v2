@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OrderChangeShipmentStateActionImpl implements OrderChangeShipmentStateAction {
 
-   private String action;
-   
-   private com.commercetools.api.models.order.ShipmentState shipmentState;
+    private String action;
+    
+    private com.commercetools.api.models.order.ShipmentState shipmentState;
 
-   @JsonCreator
-   OrderChangeShipmentStateActionImpl(@JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState) {
-      this.shipmentState = shipmentState;
-      this.action = "changeShipmentState";
-   }
-   public OrderChangeShipmentStateActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public com.commercetools.api.models.order.ShipmentState getShipmentState(){
-      return this.shipmentState;
-   }
+    @JsonCreator
+    OrderChangeShipmentStateActionImpl(@JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState) {
+        this.shipmentState = shipmentState;
+        this.action = "changeShipmentState";
+    }
+    public OrderChangeShipmentStateActionImpl() {
+       
+    }
 
-   public void setShipmentState(final com.commercetools.api.models.order.ShipmentState shipmentState){
-      this.shipmentState = shipmentState;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public com.commercetools.api.models.order.ShipmentState getShipmentState(){
+        return this.shipmentState;
+    }
+
+    public void setShipmentState(final com.commercetools.api.models.order.ShipmentState shipmentState){
+        this.shipmentState = shipmentState;
+    }
 
 }

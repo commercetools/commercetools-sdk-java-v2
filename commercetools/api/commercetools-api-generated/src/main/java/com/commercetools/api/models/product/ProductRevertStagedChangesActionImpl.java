@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductRevertStagedChangesActionImpl implements ProductRevertStagedChangesAction {
 
-   private String action;
+    private String action;
 
-   @JsonCreator
-   ProductRevertStagedChangesActionImpl() {
-      this.action = "revertStagedChanges";
-   }
-   
-   
-   
-   public String getAction(){
-      return this.action;
-   }
+    @JsonCreator
+    ProductRevertStagedChangesActionImpl() {
+        this.action = "revertStagedChanges";
+    }
+    
+
+    
+    public String getAction(){
+        return this.action;
+    }
 
 
 }

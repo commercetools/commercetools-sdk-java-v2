@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ChannelChangeKeyActionImpl implements ChannelChangeKeyAction {
 
-   private String action;
-   
-   private String key;
+    private String action;
+    
+    private String key;
 
-   @JsonCreator
-   ChannelChangeKeyActionImpl(@JsonProperty("key") final String key) {
-      this.key = key;
-      this.action = "changeKey";
-   }
-   public ChannelChangeKeyActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    ChannelChangeKeyActionImpl(@JsonProperty("key") final String key) {
+        this.key = key;
+        this.action = "changeKey";
+    }
+    public ChannelChangeKeyActionImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

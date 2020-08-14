@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetMetaTitleActionImpl.class)
 public interface ProductSetMetaTitleAction extends ProductUpdateAction {
 
-   
-   @Valid
-   @JsonProperty("metaTitle")
-   public LocalizedString getMetaTitle();
-   
-   
-   @JsonProperty("staged")
-   public Boolean getStaged();
+    
+    @Valid
+    @JsonProperty("metaTitle")
+    public LocalizedString getMetaTitle();
+    
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
-   public void setMetaTitle(final LocalizedString metaTitle);
-   
-   public void setStaged(final Boolean staged);
-   
-   public static ProductSetMetaTitleActionImpl of(){
-      return new ProductSetMetaTitleActionImpl();
-   }
-   
+    public void setMetaTitle(final LocalizedString metaTitle);
+    
+    public void setStaged(final Boolean staged);
 
-   public static ProductSetMetaTitleActionImpl of(final ProductSetMetaTitleAction template) {
-      ProductSetMetaTitleActionImpl instance = new ProductSetMetaTitleActionImpl();
-      instance.setMetaTitle(template.getMetaTitle());
-      instance.setStaged(template.getStaged());
-      return instance;
-   }
+    public static ProductSetMetaTitleActionImpl of(){
+        return new ProductSetMetaTitleActionImpl();
+    }
+    
+
+    public static ProductSetMetaTitleActionImpl of(final ProductSetMetaTitleAction template) {
+        ProductSetMetaTitleActionImpl instance = new ProductSetMetaTitleActionImpl();
+        instance.setMetaTitle(template.getMetaTitle());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
 
 }

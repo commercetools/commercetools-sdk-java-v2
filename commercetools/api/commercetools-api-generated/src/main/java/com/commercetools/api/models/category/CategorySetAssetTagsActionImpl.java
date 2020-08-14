@@ -22,55 +22,55 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsAction {
 
-   private String action;
-   
-   private String assetId;
-   
-   private String assetKey;
-   
-   private java.util.List<String> tags;
+    private String action;
+    
+    private String assetId;
+    
+    private String assetKey;
+    
+    private java.util.List<String> tags;
 
-   @JsonCreator
-   CategorySetAssetTagsActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("tags") final java.util.List<String> tags) {
-      this.assetId = assetId;
-      this.assetKey = assetKey;
-      this.tags = tags;
-      this.action = "setAssetTags";
-   }
-   public CategorySetAssetTagsActionImpl() {
-      
-   }
-   
-   
-   public String getAction(){
-      return this.action;
-   }
-   
-   
-   public String getAssetId(){
-      return this.assetId;
-   }
-   
-   
-   public String getAssetKey(){
-      return this.assetKey;
-   }
-   
-   
-   public java.util.List<String> getTags(){
-      return this.tags;
-   }
+    @JsonCreator
+    CategorySetAssetTagsActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("tags") final java.util.List<String> tags) {
+        this.assetId = assetId;
+        this.assetKey = assetKey;
+        this.tags = tags;
+        this.action = "setAssetTags";
+    }
+    public CategorySetAssetTagsActionImpl() {
+       
+    }
 
-   public void setAssetId(final String assetId){
-      this.assetId = assetId;
-   }
-   
-   public void setAssetKey(final String assetKey){
-      this.assetKey = assetKey;
-   }
-   
-   public void setTags(final java.util.List<String> tags){
-      this.tags = tags;
-   }
+    
+    public String getAction(){
+        return this.action;
+    }
+    
+    
+    public String getAssetId(){
+        return this.assetId;
+    }
+    
+    
+    public String getAssetKey(){
+        return this.assetKey;
+    }
+    
+    
+    public java.util.List<String> getTags(){
+        return this.tags;
+    }
+
+    public void setAssetId(final String assetId){
+        this.assetId = assetId;
+    }
+    
+    public void setAssetKey(final String assetKey){
+        this.assetKey = assetKey;
+    }
+    
+    public void setTags(final java.util.List<String> tags){
+        this.tags = tags;
+    }
 
 }

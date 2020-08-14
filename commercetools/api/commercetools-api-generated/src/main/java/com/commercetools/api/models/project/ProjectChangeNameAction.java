@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectChangeNameActionImpl.class)
 public interface ProjectChangeNameAction extends ProjectUpdateAction {
 
-   
-   @NotNull
-   @JsonProperty("name")
-   public String getName();
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
 
-   public void setName(final String name);
-   
-   public static ProjectChangeNameActionImpl of(){
-      return new ProjectChangeNameActionImpl();
-   }
-   
+    public void setName(final String name);
 
-   public static ProjectChangeNameActionImpl of(final ProjectChangeNameAction template) {
-      ProjectChangeNameActionImpl instance = new ProjectChangeNameActionImpl();
-      instance.setName(template.getName());
-      return instance;
-   }
+    public static ProjectChangeNameActionImpl of(){
+        return new ProjectChangeNameActionImpl();
+    }
+    
+
+    public static ProjectChangeNameActionImpl of(final ProjectChangeNameAction template) {
+        ProjectChangeNameActionImpl instance = new ProjectChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
 }

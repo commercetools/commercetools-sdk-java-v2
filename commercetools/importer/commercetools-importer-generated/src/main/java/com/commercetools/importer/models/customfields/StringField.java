@@ -24,22 +24,22 @@ import java.io.IOException;
 @JsonDeserialize(as = StringFieldImpl.class)
 public interface StringField extends CustomField {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public String getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public String getValue();
 
-   public void setValue(final String value);
-   
-   public static StringFieldImpl of(){
-      return new StringFieldImpl();
-   }
-   
+    public void setValue(final String value);
 
-   public static StringFieldImpl of(final StringField template) {
-      StringFieldImpl instance = new StringFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static StringFieldImpl of(){
+        return new StringFieldImpl();
+    }
+    
+
+    public static StringFieldImpl of(final StringField template) {
+        StringFieldImpl instance = new StringFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

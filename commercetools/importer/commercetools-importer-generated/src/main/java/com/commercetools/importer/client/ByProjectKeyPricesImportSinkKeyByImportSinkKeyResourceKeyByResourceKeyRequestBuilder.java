@@ -7,22 +7,22 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder {
-   
-   private final ApiHttpClient apiHttpClient;
-   private final String projectKey;
-   private final String importSinkKey;
-   private final String resourceKey;
-   
-   
-   public ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey,final String resourceKey) {
-      this.apiHttpClient = apiHttpClient;
-      this.projectKey = projectKey;
-      this.importSinkKey = importSinkKey;
-      this.resourceKey = resourceKey;
-   }
-   
-   public ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete delete() {
-      return new ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete(apiHttpClient, projectKey, importSinkKey, resourceKey);
-   }
-   
+
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+    private final String importSinkKey;
+    private final String resourceKey;
+    
+
+    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey,final String resourceKey) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+        this.importSinkKey = importSinkKey;
+        this.resourceKey = resourceKey;
+    }
+
+    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete delete() {
+        return new ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete(apiHttpClient, projectKey, importSinkKey, resourceKey);
+    }
+
 }

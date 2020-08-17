@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomTokenizerImpl implements CustomTokenizer {
 
-   private String type;
-   
-   private java.util.List<String> inputs;
+    private String type;
+    
+    private java.util.List<String> inputs;
 
-   @JsonCreator
-   CustomTokenizerImpl(@JsonProperty("inputs") final java.util.List<String> inputs) {
-      this.inputs = inputs;
-      this.type = "custom";
-   }
-   public CustomTokenizerImpl() {
-      
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<String> getInputs(){
-      return this.inputs;
-   }
+    @JsonCreator
+    CustomTokenizerImpl(@JsonProperty("inputs") final java.util.List<String> inputs) {
+        this.inputs = inputs;
+        this.type = "custom";
+    }
+    public CustomTokenizerImpl() {
+       
+    }
 
-   public void setInputs(final java.util.List<String> inputs){
-      this.inputs = inputs;
-   }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<String> getInputs(){
+        return this.inputs;
+    }
+
+    public void setInputs(final java.util.List<String> inputs){
+        this.inputs = inputs;
+    }
 
 }

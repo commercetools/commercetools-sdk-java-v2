@@ -22,16 +22,16 @@ import java.io.IOException;
 public interface GenericError extends ErrorObject {
 
 
-   
-   public static GenericErrorImpl of(){
-      return new GenericErrorImpl();
-   }
-   
 
-   public static GenericErrorImpl of(final GenericError template) {
-      GenericErrorImpl instance = new GenericErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static GenericErrorImpl of(){
+        return new GenericErrorImpl();
+    }
+    
+
+    public static GenericErrorImpl of(final GenericError template) {
+        GenericErrorImpl instance = new GenericErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

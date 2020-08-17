@@ -24,23 +24,23 @@ import java.io.IOException;
 @JsonDeserialize(as = TextAttributeImpl.class)
 public interface TextAttribute extends Attribute {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public String getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public String getValue();
 
-   public void setValue(final String value);
-   
-   public static TextAttributeImpl of(){
-      return new TextAttributeImpl();
-   }
-   
+    public void setValue(final String value);
 
-   public static TextAttributeImpl of(final TextAttribute template) {
-      TextAttributeImpl instance = new TextAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static TextAttributeImpl of(){
+        return new TextAttributeImpl();
+    }
+    
+
+    public static TextAttributeImpl of(final TextAttribute template) {
+        TextAttributeImpl instance = new TextAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

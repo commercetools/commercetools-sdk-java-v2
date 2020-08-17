@@ -27,16 +27,16 @@ import java.io.IOException;
 public interface InvalidJsonInput extends ErrorObject {
 
 
-   
-   public static InvalidJsonInputImpl of(){
-      return new InvalidJsonInputImpl();
-   }
-   
 
-   public static InvalidJsonInputImpl of(final InvalidJsonInput template) {
-      InvalidJsonInputImpl instance = new InvalidJsonInputImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static InvalidJsonInputImpl of(){
+        return new InvalidJsonInputImpl();
+    }
+    
+
+    public static InvalidJsonInputImpl of(final InvalidJsonInput template) {
+        InvalidJsonInputImpl instance = new InvalidJsonInputImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

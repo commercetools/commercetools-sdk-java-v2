@@ -25,23 +25,23 @@ import java.io.IOException;
 @JsonDeserialize(as = TimeAttributeImpl.class)
 public interface TimeAttribute extends Attribute {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public LocalTime getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public LocalTime getValue();
 
-   public void setValue(final LocalTime value);
-   
-   public static TimeAttributeImpl of(){
-      return new TimeAttributeImpl();
-   }
-   
+    public void setValue(final LocalTime value);
 
-   public static TimeAttributeImpl of(final TimeAttribute template) {
-      TimeAttributeImpl instance = new TimeAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static TimeAttributeImpl of(){
+        return new TimeAttributeImpl();
+    }
+    
+
+    public static TimeAttributeImpl of(final TimeAttribute template) {
+        TimeAttributeImpl instance = new TimeAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

@@ -25,23 +25,23 @@ import java.io.IOException;
 @JsonDeserialize(as = LocalizableEnumAttributeImpl.class)
 public interface LocalizableEnumAttribute extends Attribute {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public String getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public String getValue();
 
-   public void setValue(final String value);
-   
-   public static LocalizableEnumAttributeImpl of(){
-      return new LocalizableEnumAttributeImpl();
-   }
-   
+    public void setValue(final String value);
 
-   public static LocalizableEnumAttributeImpl of(final LocalizableEnumAttribute template) {
-      LocalizableEnumAttributeImpl instance = new LocalizableEnumAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static LocalizableEnumAttributeImpl of(){
+        return new LocalizableEnumAttributeImpl();
+    }
+    
+
+    public static LocalizableEnumAttributeImpl of(final LocalizableEnumAttribute template) {
+        LocalizableEnumAttributeImpl instance = new LocalizableEnumAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

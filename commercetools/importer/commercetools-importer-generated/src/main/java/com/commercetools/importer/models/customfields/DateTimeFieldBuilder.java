@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class DateTimeFieldBuilder {
-   
-   
-   private java.time.ZonedDateTime value;
-   
-   public DateTimeFieldBuilder value( final java.time.ZonedDateTime value) {
-      this.value = value;
-      return this;
-   }
-   
-   
-   public java.time.ZonedDateTime getValue(){
-      return this.value;
-   }
 
-   public DateTimeField build() {
-       return new DateTimeFieldImpl(value);
-   }
-   
-   public static DateTimeFieldBuilder of() {
-      return new DateTimeFieldBuilder();
-   }
-   
-   public static DateTimeFieldBuilder of(final DateTimeField template) {
-      DateTimeFieldBuilder builder = new DateTimeFieldBuilder();
-      builder.value = template.getValue();
-      return builder;
-   }
-   
+    
+    private java.time.ZonedDateTime value;
+
+    public DateTimeFieldBuilder value( final java.time.ZonedDateTime value) {
+        this.value = value;
+        return this;
+    }
+
+    
+    public java.time.ZonedDateTime getValue(){
+        return this.value;
+    }
+
+    public DateTimeField build() {
+        return new DateTimeFieldImpl(value);
+    }
+
+    public static DateTimeFieldBuilder of() {
+        return new DateTimeFieldBuilder();
+    }
+
+    public static DateTimeFieldBuilder of(final DateTimeField template) {
+        DateTimeFieldBuilder builder = new DateTimeFieldBuilder();
+        builder.value = template.getValue();
+        return builder;
+    }
+
 }

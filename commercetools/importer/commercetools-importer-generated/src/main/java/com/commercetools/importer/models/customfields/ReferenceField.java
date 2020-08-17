@@ -25,25 +25,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ReferenceFieldImpl.class)
 public interface ReferenceField extends CustomField {
 
-   /**
-   *  <p>References a resource by its key.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public KeyReference getValue();
+    /**
+    *  <p>References a resource by its key.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public KeyReference getValue();
 
-   public void setValue(final KeyReference value);
-   
-   public static ReferenceFieldImpl of(){
-      return new ReferenceFieldImpl();
-   }
-   
+    public void setValue(final KeyReference value);
 
-   public static ReferenceFieldImpl of(final ReferenceField template) {
-      ReferenceFieldImpl instance = new ReferenceFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static ReferenceFieldImpl of(){
+        return new ReferenceFieldImpl();
+    }
+    
+
+    public static ReferenceFieldImpl of(final ReferenceField template) {
+        ReferenceFieldImpl instance = new ReferenceFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

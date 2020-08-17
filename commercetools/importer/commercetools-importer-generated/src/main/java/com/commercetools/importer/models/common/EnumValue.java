@@ -21,29 +21,29 @@ import java.io.IOException;
 @JsonDeserialize(as = EnumValueImpl.class)
 public interface EnumValue  {
 
-   
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
-   
-   @NotNull
-   @JsonProperty("label")
-   public String getLabel();
+    
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+    
+    @NotNull
+    @JsonProperty("label")
+    public String getLabel();
 
-   public void setKey(final String key);
-   
-   public void setLabel(final String label);
-   
-   public static EnumValueImpl of(){
-      return new EnumValueImpl();
-   }
-   
+    public void setKey(final String key);
+    
+    public void setLabel(final String label);
 
-   public static EnumValueImpl of(final EnumValue template) {
-      EnumValueImpl instance = new EnumValueImpl();
-      instance.setKey(template.getKey());
-      instance.setLabel(template.getLabel());
-      return instance;
-   }
+    public static EnumValueImpl of(){
+        return new EnumValueImpl();
+    }
+    
+
+    public static EnumValueImpl of(final EnumValue template) {
+        EnumValueImpl instance = new EnumValueImpl();
+        instance.setKey(template.getKey());
+        instance.setLabel(template.getLabel());
+        return instance;
+    }
 
 }

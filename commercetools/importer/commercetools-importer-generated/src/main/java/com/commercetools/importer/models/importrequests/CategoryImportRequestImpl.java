@@ -27,35 +27,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryImportRequestImpl implements CategoryImportRequest {
 
-   private com.commercetools.importer.models.common.ImportResourceType type;
-   
-   private java.util.List<com.commercetools.importer.models.categories.CategoryImport> resources;
+    private com.commercetools.importer.models.common.ImportResourceType type;
+    
+    private java.util.List<com.commercetools.importer.models.categories.CategoryImport> resources;
 
-   @JsonCreator
-   CategoryImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importer.models.categories.CategoryImport> resources) {
-      this.resources = resources;
-      this.type = ImportResourceType.findEnumViaJsonName("category").get();
-   }
-   public CategoryImportRequestImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of the import resource.</p>
-   */
-   public com.commercetools.importer.models.common.ImportResourceType getType(){
-      return this.type;
-   }
-   
-   /**
-   *  <p>The category import resources of this request.</p>
-   */
-   public java.util.List<com.commercetools.importer.models.categories.CategoryImport> getResources(){
-      return this.resources;
-   }
+    @JsonCreator
+    CategoryImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importer.models.categories.CategoryImport> resources) {
+        this.resources = resources;
+        this.type = ImportResourceType.findEnumViaJsonName("category").get();
+    }
+    public CategoryImportRequestImpl() {
+       
+    }
 
-   public void setResources(final java.util.List<com.commercetools.importer.models.categories.CategoryImport> resources){
-      this.resources = resources;
-   }
+    /**
+    *  <p>The type of the import resource.</p>
+    */
+    public com.commercetools.importer.models.common.ImportResourceType getType(){
+        return this.type;
+    }
+    
+    /**
+    *  <p>The category import resources of this request.</p>
+    */
+    public java.util.List<com.commercetools.importer.models.categories.CategoryImport> getResources(){
+        return this.resources;
+    }
+
+    public void setResources(final java.util.List<com.commercetools.importer.models.categories.CategoryImport> resources){
+        this.resources = resources;
+    }
 
 }

@@ -25,22 +25,22 @@ import java.io.IOException;
 @JsonDeserialize(as = TimeSetFieldImpl.class)
 public interface TimeSetField extends CustomField {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public List<LocalTime> getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public List<LocalTime> getValue();
 
-   public void setValue(final List<LocalTime> value);
-   
-   public static TimeSetFieldImpl of(){
-      return new TimeSetFieldImpl();
-   }
-   
+    public void setValue(final List<LocalTime> value);
 
-   public static TimeSetFieldImpl of(final TimeSetField template) {
-      TimeSetFieldImpl instance = new TimeSetFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static TimeSetFieldImpl of(){
+        return new TimeSetFieldImpl();
+    }
+    
+
+    public static TimeSetFieldImpl of(final TimeSetField template) {
+        TimeSetFieldImpl instance = new TimeSetFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

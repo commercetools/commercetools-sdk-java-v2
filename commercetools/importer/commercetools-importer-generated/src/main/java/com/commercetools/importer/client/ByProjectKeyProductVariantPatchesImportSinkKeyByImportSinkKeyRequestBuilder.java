@@ -7,23 +7,23 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyRequestBuilder {
-   
-   private final ApiHttpClient apiHttpClient;
-   private final String projectKey;
-   private final String importSinkKey;
-   
-   
-   public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey) {
-      this.apiHttpClient = apiHttpClient;
-      this.projectKey = projectKey;
-      this.importSinkKey = importSinkKey;
-   }
-   
-   public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost post(com.commercetools.importer.models.importrequests.ProductVariantPatchRequest productVariantPatchRequest) {
-      return new ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost(apiHttpClient, projectKey, importSinkKey, productVariantPatchRequest);
-   }
-   
-   public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder importOperations() {
-      return new ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder(apiHttpClient, projectKey, importSinkKey);
-   }
+
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+    private final String importSinkKey;
+    
+
+    public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+        this.importSinkKey = importSinkKey;
+    }
+
+    public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost post(com.commercetools.importer.models.importrequests.ProductVariantPatchRequest productVariantPatchRequest) {
+        return new ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost(apiHttpClient, projectKey, importSinkKey, productVariantPatchRequest);
+    }
+
+    public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder importOperations() {
+        return new ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder(apiHttpClient, projectKey, importSinkKey);
+    }
 }

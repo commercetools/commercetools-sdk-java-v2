@@ -27,35 +27,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantPatchRequestImpl implements ProductVariantPatchRequest {
 
-   private com.commercetools.importer.models.common.ImportResourceType type;
-   
-   private java.util.List<com.commercetools.importer.models.productvariants.ProductVariantPatch> patches;
+    private com.commercetools.importer.models.common.ImportResourceType type;
+    
+    private java.util.List<com.commercetools.importer.models.productvariants.ProductVariantPatch> patches;
 
-   @JsonCreator
-   ProductVariantPatchRequestImpl(@JsonProperty("patches") final java.util.List<com.commercetools.importer.models.productvariants.ProductVariantPatch> patches) {
-      this.patches = patches;
-      this.type = ImportResourceType.findEnumViaJsonName("product-variant-patch").get();
-   }
-   public ProductVariantPatchRequestImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of the import resource.</p>
-   */
-   public com.commercetools.importer.models.common.ImportResourceType getType(){
-      return this.type;
-   }
-   
-   /**
-   *  <p>The product variant patches of this request.</p>
-   */
-   public java.util.List<com.commercetools.importer.models.productvariants.ProductVariantPatch> getPatches(){
-      return this.patches;
-   }
+    @JsonCreator
+    ProductVariantPatchRequestImpl(@JsonProperty("patches") final java.util.List<com.commercetools.importer.models.productvariants.ProductVariantPatch> patches) {
+        this.patches = patches;
+        this.type = ImportResourceType.findEnumViaJsonName("product-variant-patch").get();
+    }
+    public ProductVariantPatchRequestImpl() {
+       
+    }
 
-   public void setPatches(final java.util.List<com.commercetools.importer.models.productvariants.ProductVariantPatch> patches){
-      this.patches = patches;
-   }
+    /**
+    *  <p>The type of the import resource.</p>
+    */
+    public com.commercetools.importer.models.common.ImportResourceType getType(){
+        return this.type;
+    }
+    
+    /**
+    *  <p>The product variant patches of this request.</p>
+    */
+    public java.util.List<com.commercetools.importer.models.productvariants.ProductVariantPatch> getPatches(){
+        return this.patches;
+    }
+
+    public void setPatches(final java.util.List<com.commercetools.importer.models.productvariants.ProductVariantPatch> patches){
+        this.patches = patches;
+    }
 
 }

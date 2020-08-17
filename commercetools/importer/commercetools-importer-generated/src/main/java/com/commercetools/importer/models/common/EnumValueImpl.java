@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class EnumValueImpl implements EnumValue {
 
-   private String key;
-   
-   private String label;
+    private String key;
+    
+    private String label;
 
-   @JsonCreator
-   EnumValueImpl(@JsonProperty("key") final String key, @JsonProperty("label") final String label) {
-      this.key = key;
-      this.label = label;
-   }
-   public EnumValueImpl() {
-      
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
-   
-   
-   public String getLabel(){
-      return this.label;
-   }
+    @JsonCreator
+    EnumValueImpl(@JsonProperty("key") final String key, @JsonProperty("label") final String label) {
+        this.key = key;
+        this.label = label;
+    }
+    public EnumValueImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setLabel(final String label){
-      this.label = label;
-   }
+    
+    public String getKey(){
+        return this.key;
+    }
+    
+    
+    public String getLabel(){
+        return this.label;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
+    public void setLabel(final String label){
+        this.label = label;
+    }
 
 }

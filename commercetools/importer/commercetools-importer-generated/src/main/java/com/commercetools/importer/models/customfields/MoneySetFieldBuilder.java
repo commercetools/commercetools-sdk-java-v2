@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MoneySetFieldBuilder {
-   
-   
-   private java.util.List<com.commercetools.importer.models.common.Money> value;
-   
-   public MoneySetFieldBuilder value( final java.util.List<com.commercetools.importer.models.common.Money> value) {
-      this.value = value;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.common.Money> getValue(){
-      return this.value;
-   }
 
-   public MoneySetField build() {
-       return new MoneySetFieldImpl(value);
-   }
-   
-   public static MoneySetFieldBuilder of() {
-      return new MoneySetFieldBuilder();
-   }
-   
-   public static MoneySetFieldBuilder of(final MoneySetField template) {
-      MoneySetFieldBuilder builder = new MoneySetFieldBuilder();
-      builder.value = template.getValue();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.importer.models.common.Money> value;
+
+    public MoneySetFieldBuilder value( final java.util.List<com.commercetools.importer.models.common.Money> value) {
+        this.value = value;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.importer.models.common.Money> getValue(){
+        return this.value;
+    }
+
+    public MoneySetField build() {
+        return new MoneySetFieldImpl(value);
+    }
+
+    public static MoneySetFieldBuilder of() {
+        return new MoneySetFieldBuilder();
+    }
+
+    public static MoneySetFieldBuilder of(final MoneySetField template) {
+        MoneySetFieldBuilder builder = new MoneySetFieldBuilder();
+        builder.value = template.getValue();
+        return builder;
+    }
+
 }

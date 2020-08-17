@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomTokenizerImpl.class)
 public interface CustomTokenizer extends SuggestTokenizer {
 
-   
-   @NotNull
-   @JsonProperty("inputs")
-   public List<String> getInputs();
+    
+    @NotNull
+    @JsonProperty("inputs")
+    public List<String> getInputs();
 
-   public void setInputs(final List<String> inputs);
-   
-   public static CustomTokenizerImpl of(){
-      return new CustomTokenizerImpl();
-   }
-   
+    public void setInputs(final List<String> inputs);
 
-   public static CustomTokenizerImpl of(final CustomTokenizer template) {
-      CustomTokenizerImpl instance = new CustomTokenizerImpl();
-      instance.setInputs(template.getInputs());
-      return instance;
-   }
+    public static CustomTokenizerImpl of(){
+        return new CustomTokenizerImpl();
+    }
+    
+
+    public static CustomTokenizerImpl of(final CustomTokenizer template) {
+        CustomTokenizerImpl instance = new CustomTokenizerImpl();
+        instance.setInputs(template.getInputs());
+        return instance;
+    }
 
 }

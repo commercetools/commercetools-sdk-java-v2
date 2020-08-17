@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class AttributeEnumTypeBuilder {
-   
-   
-   private java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> values;
-   
-   public AttributeEnumTypeBuilder values( final java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> values) {
-      this.values = values;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> getValues(){
-      return this.values;
-   }
 
-   public AttributeEnumType build() {
-       return new AttributeEnumTypeImpl(values);
-   }
-   
-   public static AttributeEnumTypeBuilder of() {
-      return new AttributeEnumTypeBuilder();
-   }
-   
-   public static AttributeEnumTypeBuilder of(final AttributeEnumType template) {
-      AttributeEnumTypeBuilder builder = new AttributeEnumTypeBuilder();
-      builder.values = template.getValues();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> values;
+
+    public AttributeEnumTypeBuilder values( final java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> values) {
+        this.values = values;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> getValues(){
+        return this.values;
+    }
+
+    public AttributeEnumType build() {
+        return new AttributeEnumTypeImpl(values);
+    }
+
+    public static AttributeEnumTypeBuilder of() {
+        return new AttributeEnumTypeBuilder();
+    }
+
+    public static AttributeEnumTypeBuilder of(final AttributeEnumType template) {
+        AttributeEnumTypeBuilder builder = new AttributeEnumTypeBuilder();
+        builder.values = template.getValues();
+        return builder;
+    }
+
 }

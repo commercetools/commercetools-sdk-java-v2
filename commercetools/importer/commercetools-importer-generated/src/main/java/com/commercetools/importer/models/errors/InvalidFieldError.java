@@ -25,43 +25,43 @@ import java.io.IOException;
 @JsonDeserialize(as = InvalidFieldErrorImpl.class)
 public interface InvalidFieldError extends ErrorObject {
 
-   /**
-   *  <p>The name of the field.</p>
-   */
-   @NotNull
-   @JsonProperty("field")
-   public String getField();
-   /**
-   *  <p>The invalid value.</p>
-   */
-   @NotNull
-   @JsonProperty("invalidValue")
-   public JsonNode getInvalidValue();
-   /**
-   *  <p>A fixed set of allowed values for the field, if any.</p>
-   */
-   
-   @JsonProperty("allowedValues")
-   public List<JsonNode> getAllowedValues();
+    /**
+    *  <p>The name of the field.</p>
+    */
+    @NotNull
+    @JsonProperty("field")
+    public String getField();
+    /**
+    *  <p>The invalid value.</p>
+    */
+    @NotNull
+    @JsonProperty("invalidValue")
+    public JsonNode getInvalidValue();
+    /**
+    *  <p>A fixed set of allowed values for the field, if any.</p>
+    */
+    
+    @JsonProperty("allowedValues")
+    public List<JsonNode> getAllowedValues();
 
-   public void setField(final String field);
-   
-   public void setInvalidValue(final JsonNode invalidValue);
-   
-   public void setAllowedValues(final List<JsonNode> allowedValues);
-   
-   public static InvalidFieldErrorImpl of(){
-      return new InvalidFieldErrorImpl();
-   }
-   
+    public void setField(final String field);
+    
+    public void setInvalidValue(final JsonNode invalidValue);
+    
+    public void setAllowedValues(final List<JsonNode> allowedValues);
 
-   public static InvalidFieldErrorImpl of(final InvalidFieldError template) {
-      InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setField(template.getField());
-      instance.setInvalidValue(template.getInvalidValue());
-      instance.setAllowedValues(template.getAllowedValues());
-      return instance;
-   }
+    public static InvalidFieldErrorImpl of(){
+        return new InvalidFieldErrorImpl();
+    }
+    
+
+    public static InvalidFieldErrorImpl of(final InvalidFieldError template) {
+        InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setField(template.getField());
+        instance.setInvalidValue(template.getInvalidValue());
+        instance.setAllowedValues(template.getAllowedValues());
+        return instance;
+    }
 
 }

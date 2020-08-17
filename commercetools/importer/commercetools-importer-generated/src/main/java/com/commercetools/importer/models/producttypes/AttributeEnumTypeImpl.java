@@ -23,31 +23,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeEnumTypeImpl implements AttributeEnumType {
 
-   private String name;
-   
-   private java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> values;
+    private String name;
+    
+    private java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> values;
 
-   @JsonCreator
-   AttributeEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> values) {
-      this.values = values;
-      this.name = "enum";
-   }
-   public AttributeEnumTypeImpl() {
-      
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> getValues(){
-      return this.values;
-   }
+    @JsonCreator
+    AttributeEnumTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> values) {
+        this.values = values;
+        this.name = "enum";
+    }
+    public AttributeEnumTypeImpl() {
+       
+    }
 
-   public void setValues(final java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> values){
-      this.values = values;
-   }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> getValues(){
+        return this.values;
+    }
+
+    public void setValues(final java.util.List<com.commercetools.importer.models.producttypes.AttributePlainEnumValue> values){
+        this.values = values;
+    }
 
 }

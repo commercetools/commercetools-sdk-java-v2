@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TimeFieldImpl implements TimeField {
 
-   private String type;
-   
-   private java.time.LocalTime value;
+    private String type;
+    
+    private java.time.LocalTime value;
 
-   @JsonCreator
-   TimeFieldImpl(@JsonProperty("value") final java.time.LocalTime value) {
-      this.value = value;
-      this.type = "Time";
-   }
-   public TimeFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.time.LocalTime getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    TimeFieldImpl(@JsonProperty("value") final java.time.LocalTime value) {
+        this.value = value;
+        this.type = "Time";
+    }
+    public TimeFieldImpl() {
+       
+    }
 
-   public void setValue(final java.time.LocalTime value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.time.LocalTime getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.time.LocalTime value){
+        this.value = value;
+    }
 
 }

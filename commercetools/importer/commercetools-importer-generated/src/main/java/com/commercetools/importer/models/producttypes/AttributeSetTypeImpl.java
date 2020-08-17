@@ -22,31 +22,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeSetTypeImpl implements AttributeSetType {
 
-   private String name;
-   
-   private com.commercetools.importer.models.producttypes.AttributeType elementType;
+    private String name;
+    
+    private com.commercetools.importer.models.producttypes.AttributeType elementType;
 
-   @JsonCreator
-   AttributeSetTypeImpl(@JsonProperty("elementType") final com.commercetools.importer.models.producttypes.AttributeType elementType) {
-      this.elementType = elementType;
-      this.name = "set";
-   }
-   public AttributeSetTypeImpl() {
-      
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public com.commercetools.importer.models.producttypes.AttributeType getElementType(){
-      return this.elementType;
-   }
+    @JsonCreator
+    AttributeSetTypeImpl(@JsonProperty("elementType") final com.commercetools.importer.models.producttypes.AttributeType elementType) {
+        this.elementType = elementType;
+        this.name = "set";
+    }
+    public AttributeSetTypeImpl() {
+       
+    }
 
-   public void setElementType(final com.commercetools.importer.models.producttypes.AttributeType elementType){
-      this.elementType = elementType;
-   }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public com.commercetools.importer.models.producttypes.AttributeType getElementType(){
+        return this.elementType;
+    }
+
+    public void setElementType(final com.commercetools.importer.models.producttypes.AttributeType elementType){
+        this.elementType = elementType;
+    }
 
 }

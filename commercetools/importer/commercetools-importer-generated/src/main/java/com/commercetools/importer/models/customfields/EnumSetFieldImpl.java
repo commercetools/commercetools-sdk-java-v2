@@ -25,33 +25,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class EnumSetFieldImpl implements EnumSetField {
 
-   private String type;
-   
-   private java.util.List<String> value;
+    private String type;
+    
+    private java.util.List<String> value;
 
-   @JsonCreator
-   EnumSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
-      this.value = value;
-      this.type = "EnumSet";
-   }
-   public EnumSetFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<String> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    EnumSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
+        this.value = value;
+        this.type = "EnumSet";
+    }
+    public EnumSetFieldImpl() {
+       
+    }
 
-   public void setValue(final java.util.List<String> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<String> getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.util.List<String> value){
+        this.value = value;
+    }
 
 }

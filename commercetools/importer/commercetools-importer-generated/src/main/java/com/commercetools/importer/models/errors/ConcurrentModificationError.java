@@ -27,43 +27,43 @@ import java.io.IOException;
 @JsonDeserialize(as = ConcurrentModificationErrorImpl.class)
 public interface ConcurrentModificationError extends ErrorObject {
 
-   /**
-   *  <p>The version specified in the failed request.</p>
-   */
-   
-   @JsonProperty("specifiedVersion")
-   public Long getSpecifiedVersion();
-   /**
-   *  <p>The current version of the resource.</p>
-   */
-   @NotNull
-   @JsonProperty("currentVersion")
-   public Long getCurrentVersion();
-   /**
-   *  <p>The conflicted resource.</p>
-   */
-   
-   @JsonProperty("conflictedResource")
-   public JsonNode getConflictedResource();
+    /**
+    *  <p>The version specified in the failed request.</p>
+    */
+    
+    @JsonProperty("specifiedVersion")
+    public Long getSpecifiedVersion();
+    /**
+    *  <p>The current version of the resource.</p>
+    */
+    @NotNull
+    @JsonProperty("currentVersion")
+    public Long getCurrentVersion();
+    /**
+    *  <p>The conflicted resource.</p>
+    */
+    
+    @JsonProperty("conflictedResource")
+    public JsonNode getConflictedResource();
 
-   public void setSpecifiedVersion(final Long specifiedVersion);
-   
-   public void setCurrentVersion(final Long currentVersion);
-   
-   public void setConflictedResource(final JsonNode conflictedResource);
-   
-   public static ConcurrentModificationErrorImpl of(){
-      return new ConcurrentModificationErrorImpl();
-   }
-   
+    public void setSpecifiedVersion(final Long specifiedVersion);
+    
+    public void setCurrentVersion(final Long currentVersion);
+    
+    public void setConflictedResource(final JsonNode conflictedResource);
 
-   public static ConcurrentModificationErrorImpl of(final ConcurrentModificationError template) {
-      ConcurrentModificationErrorImpl instance = new ConcurrentModificationErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setSpecifiedVersion(template.getSpecifiedVersion());
-      instance.setCurrentVersion(template.getCurrentVersion());
-      instance.setConflictedResource(template.getConflictedResource());
-      return instance;
-   }
+    public static ConcurrentModificationErrorImpl of(){
+        return new ConcurrentModificationErrorImpl();
+    }
+    
+
+    public static ConcurrentModificationErrorImpl of(final ConcurrentModificationError template) {
+        ConcurrentModificationErrorImpl instance = new ConcurrentModificationErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setSpecifiedVersion(template.getSpecifiedVersion());
+        instance.setCurrentVersion(template.getCurrentVersion());
+        instance.setConflictedResource(template.getConflictedResource());
+        return instance;
+    }
 
 }

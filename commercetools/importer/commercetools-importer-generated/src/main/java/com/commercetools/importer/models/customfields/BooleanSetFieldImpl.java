@@ -25,33 +25,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class BooleanSetFieldImpl implements BooleanSetField {
 
-   private String type;
-   
-   private java.util.List<Boolean> value;
+    private String type;
+    
+    private java.util.List<Boolean> value;
 
-   @JsonCreator
-   BooleanSetFieldImpl(@JsonProperty("value") final java.util.List<Boolean> value) {
-      this.value = value;
-      this.type = "BooleanSet";
-   }
-   public BooleanSetFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<Boolean> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    BooleanSetFieldImpl(@JsonProperty("value") final java.util.List<Boolean> value) {
+        this.value = value;
+        this.type = "BooleanSet";
+    }
+    public BooleanSetFieldImpl() {
+       
+    }
 
-   public void setValue(final java.util.List<Boolean> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<Boolean> getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.util.List<Boolean> value){
+        this.value = value;
+    }
 
 }

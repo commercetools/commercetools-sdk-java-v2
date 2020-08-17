@@ -26,47 +26,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValueError {
 
-   private String code;
-   
-   private String message;
-   
-   private com.commercetools.importer.models.productvariants.Attribute attribute;
+    private String code;
+    
+    private String message;
+    
+    private com.commercetools.importer.models.productvariants.Attribute attribute;
 
-   @JsonCreator
-   DuplicateAttributeValueErrorImpl(@JsonProperty("message") final String message, @JsonProperty("attribute") final com.commercetools.importer.models.productvariants.Attribute attribute) {
-      this.message = message;
-      this.attribute = attribute;
-      this.code = "DuplicateAttributeValue";
-   }
-   public DuplicateAttributeValueErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   /**
-   *  <p>The error's description.</p>
-   */
-   public String getMessage(){
-      return this.message;
-   }
-   
-   /**
-   *  <p>The conflicting attribute.</p>
-   */
-   public com.commercetools.importer.models.productvariants.Attribute getAttribute(){
-      return this.attribute;
-   }
+    @JsonCreator
+    DuplicateAttributeValueErrorImpl(@JsonProperty("message") final String message, @JsonProperty("attribute") final com.commercetools.importer.models.productvariants.Attribute attribute) {
+        this.message = message;
+        this.attribute = attribute;
+        this.code = "DuplicateAttributeValue";
+    }
+    public DuplicateAttributeValueErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setAttribute(final com.commercetools.importer.models.productvariants.Attribute attribute){
-      this.attribute = attribute;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    /**
+    *  <p>The error's description.</p>
+    */
+    public String getMessage(){
+        return this.message;
+    }
+    
+    /**
+    *  <p>The conflicting attribute.</p>
+    */
+    public com.commercetools.importer.models.productvariants.Attribute getAttribute(){
+        return this.attribute;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setAttribute(final com.commercetools.importer.models.productvariants.Attribute attribute){
+        this.attribute = attribute;
+    }
 
 }

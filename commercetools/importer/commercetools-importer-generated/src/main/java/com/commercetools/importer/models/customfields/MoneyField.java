@@ -25,23 +25,23 @@ import java.io.IOException;
 @JsonDeserialize(as = MoneyFieldImpl.class)
 public interface MoneyField extends CustomField {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public Money getValue();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public Money getValue();
 
-   public void setValue(final Money value);
-   
-   public static MoneyFieldImpl of(){
-      return new MoneyFieldImpl();
-   }
-   
+    public void setValue(final Money value);
 
-   public static MoneyFieldImpl of(final MoneyField template) {
-      MoneyFieldImpl instance = new MoneyFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static MoneyFieldImpl of(){
+        return new MoneyFieldImpl();
+    }
+    
+
+    public static MoneyFieldImpl of(final MoneyField template) {
+        MoneyFieldImpl instance = new MoneyFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

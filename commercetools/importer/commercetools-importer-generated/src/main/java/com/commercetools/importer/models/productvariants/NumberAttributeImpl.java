@@ -25,47 +25,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class NumberAttributeImpl implements NumberAttribute {
 
-   private String name;
-   
-   private String type;
-   
-   private Integer value;
+    private String name;
+    
+    private String type;
+    
+    private Double value;
 
-   @JsonCreator
-   NumberAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Integer value) {
-      this.name = name;
-      this.value = value;
-      this.type = "number";
-   }
-   public NumberAttributeImpl() {
-      
-   }
-   
-   /**
-   *  <p>The name of this attribute must match a name of the product types attribute definitions.
-   *  The name is required if this type is used in a product variant and must not be set when
-   *  used in a product variant patch.</p>
-   */
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public Integer getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    NumberAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Double value) {
+        this.name = name;
+        this.value = value;
+        this.type = "number";
+    }
+    public NumberAttributeImpl() {
+       
+    }
 
-   public void setName(final String name){
-      this.name = name;
-   }
-   
-   public void setValue(final Integer value){
-      this.value = value;
-   }
+    /**
+    *  <p>The name of this attribute must match a name of the product types attribute definitions.
+    *  The name is required if this type is used in a product variant and must not be set when
+    *  used in a product variant patch.</p>
+    */
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public Double getValue(){
+        return this.value;
+    }
+
+    public void setName(final String name){
+        this.name = name;
+    }
+    
+    public void setValue(final Double value){
+        this.value = value;
+    }
 
 }

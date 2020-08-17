@@ -28,75 +28,75 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ConcurrentModificationErrorImpl implements ConcurrentModificationError {
 
-   private String code;
-   
-   private String message;
-   
-   private Long specifiedVersion;
-   
-   private Long currentVersion;
-   
-   private com.fasterxml.jackson.databind.JsonNode conflictedResource;
+    private String code;
+    
+    private String message;
+    
+    private Long specifiedVersion;
+    
+    private Long currentVersion;
+    
+    private com.fasterxml.jackson.databind.JsonNode conflictedResource;
 
-   @JsonCreator
-   ConcurrentModificationErrorImpl(@JsonProperty("message") final String message, @JsonProperty("specifiedVersion") final Long specifiedVersion, @JsonProperty("currentVersion") final Long currentVersion, @JsonProperty("conflictedResource") final com.fasterxml.jackson.databind.JsonNode conflictedResource) {
-      this.message = message;
-      this.specifiedVersion = specifiedVersion;
-      this.currentVersion = currentVersion;
-      this.conflictedResource = conflictedResource;
-      this.code = "ConcurrentModification";
-   }
-   public ConcurrentModificationErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   /**
-   *  <p>The error's description.</p>
-   */
-   public String getMessage(){
-      return this.message;
-   }
-   
-   /**
-   *  <p>The version specified in the failed request.</p>
-   */
-   public Long getSpecifiedVersion(){
-      return this.specifiedVersion;
-   }
-   
-   /**
-   *  <p>The current version of the resource.</p>
-   */
-   public Long getCurrentVersion(){
-      return this.currentVersion;
-   }
-   
-   /**
-   *  <p>The conflicted resource.</p>
-   */
-   public com.fasterxml.jackson.databind.JsonNode getConflictedResource(){
-      return this.conflictedResource;
-   }
+    @JsonCreator
+    ConcurrentModificationErrorImpl(@JsonProperty("message") final String message, @JsonProperty("specifiedVersion") final Long specifiedVersion, @JsonProperty("currentVersion") final Long currentVersion, @JsonProperty("conflictedResource") final com.fasterxml.jackson.databind.JsonNode conflictedResource) {
+        this.message = message;
+        this.specifiedVersion = specifiedVersion;
+        this.currentVersion = currentVersion;
+        this.conflictedResource = conflictedResource;
+        this.code = "ConcurrentModification";
+    }
+    public ConcurrentModificationErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setSpecifiedVersion(final Long specifiedVersion){
-      this.specifiedVersion = specifiedVersion;
-   }
-   
-   public void setCurrentVersion(final Long currentVersion){
-      this.currentVersion = currentVersion;
-   }
-   
-   public void setConflictedResource(final com.fasterxml.jackson.databind.JsonNode conflictedResource){
-      this.conflictedResource = conflictedResource;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    /**
+    *  <p>The error's description.</p>
+    */
+    public String getMessage(){
+        return this.message;
+    }
+    
+    /**
+    *  <p>The version specified in the failed request.</p>
+    */
+    public Long getSpecifiedVersion(){
+        return this.specifiedVersion;
+    }
+    
+    /**
+    *  <p>The current version of the resource.</p>
+    */
+    public Long getCurrentVersion(){
+        return this.currentVersion;
+    }
+    
+    /**
+    *  <p>The conflicted resource.</p>
+    */
+    public com.fasterxml.jackson.databind.JsonNode getConflictedResource(){
+        return this.conflictedResource;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setSpecifiedVersion(final Long specifiedVersion){
+        this.specifiedVersion = specifiedVersion;
+    }
+    
+    public void setCurrentVersion(final Long currentVersion){
+        this.currentVersion = currentVersion;
+    }
+    
+    public void setConflictedResource(final com.fasterxml.jackson.databind.JsonNode conflictedResource){
+        this.conflictedResource = conflictedResource;
+    }
 
 }

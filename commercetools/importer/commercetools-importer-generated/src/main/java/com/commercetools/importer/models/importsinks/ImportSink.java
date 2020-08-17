@@ -28,61 +28,61 @@ import java.io.IOException;
 @JsonDeserialize(as = ImportSinkImpl.class)
 public interface ImportSink  {
 
-   /**
-   *  <p>The unique key of the import sink.</p>
-   */
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
-   /**
-   *  <p>The type of import resource sent to this import sink.
-   *  You can only send one resource type per import sink.</p>
-   */
-   @NotNull
-   @JsonProperty("resourceType")
-   public ImportResourceType getResourceType();
-   /**
-   *  <p>The version of this resource.</p>
-   */
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   /**
-   *  <p>When the import sink was created.</p>
-   */
-   @NotNull
-   @JsonProperty("createdAt")
-   public ZonedDateTime getCreatedAt();
-   /**
-   *  <p>When the import sink was modified.</p>
-   */
-   @NotNull
-   @JsonProperty("lastModifiedAt")
-   public ZonedDateTime getLastModifiedAt();
+    /**
+    *  <p>The unique key of the import sink.</p>
+    */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+    /**
+    *  <p>The type of import resource sent to this import sink.
+    *  You can only send one resource type per import sink.</p>
+    */
+    @NotNull
+    @JsonProperty("resourceType")
+    public ImportResourceType getResourceType();
+    /**
+    *  <p>The version of this resource.</p>
+    */
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    /**
+    *  <p>When the import sink was created.</p>
+    */
+    @NotNull
+    @JsonProperty("createdAt")
+    public ZonedDateTime getCreatedAt();
+    /**
+    *  <p>When the import sink was modified.</p>
+    */
+    @NotNull
+    @JsonProperty("lastModifiedAt")
+    public ZonedDateTime getLastModifiedAt();
 
-   public void setKey(final String key);
-   
-   public void setResourceType(final ImportResourceType resourceType);
-   
-   public void setVersion(final Long version);
-   
-   public void setCreatedAt(final ZonedDateTime createdAt);
-   
-   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-   
-   public static ImportSinkImpl of(){
-      return new ImportSinkImpl();
-   }
-   
+    public void setKey(final String key);
+    
+    public void setResourceType(final ImportResourceType resourceType);
+    
+    public void setVersion(final Long version);
+    
+    public void setCreatedAt(final ZonedDateTime createdAt);
+    
+    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
-   public static ImportSinkImpl of(final ImportSink template) {
-      ImportSinkImpl instance = new ImportSinkImpl();
-      instance.setKey(template.getKey());
-      instance.setResourceType(template.getResourceType());
-      instance.setVersion(template.getVersion());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      return instance;
-   }
+    public static ImportSinkImpl of(){
+        return new ImportSinkImpl();
+    }
+    
+
+    public static ImportSinkImpl of(final ImportSink template) {
+        ImportSinkImpl instance = new ImportSinkImpl();
+        instance.setKey(template.getKey());
+        instance.setResourceType(template.getResourceType());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        return instance;
+    }
 
 }

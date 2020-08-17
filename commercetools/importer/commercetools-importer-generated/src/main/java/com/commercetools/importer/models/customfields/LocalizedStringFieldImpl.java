@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LocalizedStringFieldImpl implements LocalizedStringField {
 
-   private String type;
-   
-   private com.commercetools.importer.models.common.LocalizedString value;
+    private String type;
+    
+    private com.commercetools.importer.models.common.LocalizedString value;
 
-   @JsonCreator
-   LocalizedStringFieldImpl(@JsonProperty("value") final com.commercetools.importer.models.common.LocalizedString value) {
-      this.value = value;
-      this.type = "LocalizedString";
-   }
-   public LocalizedStringFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.importer.models.common.LocalizedString getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    LocalizedStringFieldImpl(@JsonProperty("value") final com.commercetools.importer.models.common.LocalizedString value) {
+        this.value = value;
+        this.type = "LocalizedString";
+    }
+    public LocalizedStringFieldImpl() {
+       
+    }
 
-   public void setValue(final com.commercetools.importer.models.common.LocalizedString value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.importer.models.common.LocalizedString getValue(){
+        return this.value;
+    }
+
+    public void setValue(final com.commercetools.importer.models.common.LocalizedString value){
+        this.value = value;
+    }
 
 }

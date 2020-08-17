@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ResourceDeletionErrorImpl.class)
 public interface ResourceDeletionError extends ErrorObject {
 
-   
-   
-   @JsonProperty("resource")
-   public JsonNode getResource();
+    
+    
+    @JsonProperty("resource")
+    public JsonNode getResource();
 
-   public void setResource(final JsonNode resource);
-   
-   public static ResourceDeletionErrorImpl of(){
-      return new ResourceDeletionErrorImpl();
-   }
-   
+    public void setResource(final JsonNode resource);
 
-   public static ResourceDeletionErrorImpl of(final ResourceDeletionError template) {
-      ResourceDeletionErrorImpl instance = new ResourceDeletionErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setResource(template.getResource());
-      return instance;
-   }
+    public static ResourceDeletionErrorImpl of(){
+        return new ResourceDeletionErrorImpl();
+    }
+    
+
+    public static ResourceDeletionErrorImpl of(final ResourceDeletionError template) {
+        ResourceDeletionErrorImpl instance = new ResourceDeletionErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setResource(template.getResource());
+        return instance;
+    }
 
 }

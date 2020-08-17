@@ -25,23 +25,23 @@ import java.io.IOException;
 @JsonDeserialize(as = LocalizedStringSetFieldImpl.class)
 public interface LocalizedStringSetField extends CustomField {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public List<LocalizedString> getValue();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public List<LocalizedString> getValue();
 
-   public void setValue(final List<LocalizedString> value);
-   
-   public static LocalizedStringSetFieldImpl of(){
-      return new LocalizedStringSetFieldImpl();
-   }
-   
+    public void setValue(final List<LocalizedString> value);
 
-   public static LocalizedStringSetFieldImpl of(final LocalizedStringSetField template) {
-      LocalizedStringSetFieldImpl instance = new LocalizedStringSetFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static LocalizedStringSetFieldImpl of(){
+        return new LocalizedStringSetFieldImpl();
+    }
+    
+
+    public static LocalizedStringSetFieldImpl of(final LocalizedStringSetField template) {
+        LocalizedStringSetFieldImpl instance = new LocalizedStringSetFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

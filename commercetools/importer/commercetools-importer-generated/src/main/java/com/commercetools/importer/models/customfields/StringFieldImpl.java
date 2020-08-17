@@ -25,33 +25,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StringFieldImpl implements StringField {
 
-   private String type;
-   
-   private String value;
+    private String type;
+    
+    private String value;
 
-   @JsonCreator
-   StringFieldImpl(@JsonProperty("value") final String value) {
-      this.value = value;
-      this.type = "String";
-   }
-   public StringFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    StringFieldImpl(@JsonProperty("value") final String value) {
+        this.value = value;
+        this.type = "String";
+    }
+    public StringFieldImpl() {
+       
+    }
 
-   public void setValue(final String value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getValue(){
+        return this.value;
+    }
+
+    public void setValue(final String value){
+        this.value = value;
+    }
 
 }

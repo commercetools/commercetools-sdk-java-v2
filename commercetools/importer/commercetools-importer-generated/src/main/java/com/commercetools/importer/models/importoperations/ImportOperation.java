@@ -26,115 +26,115 @@ import java.io.IOException;
 @JsonDeserialize(as = ImportOperationImpl.class)
 public interface ImportOperation  {
 
-   /**
-   *  <p>The import operation version.</p>
-   */
-   @NotNull
-   @JsonProperty("version")
-   public Long getVersion();
-   /**
-   *  <p>The key of the import sink.</p>
-   */
-   @NotNull
-   @JsonProperty("importSinkKey")
-   public String getImportSinkKey();
-   /**
-   *  <p>The key of the import resource.</p>
-   */
-   @NotNull
-   @JsonProperty("resourceKey")
-   public String getResourceKey();
-   /**
-   *  <p>The identifier of the operaton that is to be commited</p>
-   */
-   @NotNull
-   @JsonProperty("id")
-   public String getId();
-   /**
-   *  <p>The status of the import resource.</p>
-   */
-   @NotNull
-   @JsonProperty("state")
-   public ProcessingState getState();
-   /**
-   *  <p>When the resource is successfully imported, this represents the imported resource version</p>
-   */
-   
-   @JsonProperty("resourceVersion")
-   public Long getResourceVersion();
-   /**
-   *  <p>The number of request retries for processing the import resource.</p>
-   */
-   @NotNull
-   @JsonProperty("retryCount")
-   public Integer getRetryCount();
-   /**
-   *  <p>If an import resource does not import correctly, the state is set to <code>Rejected</code> or <code>ValidationFailed</code>
-   *  and this property contains the errors.</p>
-   */
-   @Valid
-   @JsonProperty("errors")
-   public List<ErrorObject> getErrors();
-   /**
-   *  <p>When the import operation was created.</p>
-   */
-   @NotNull
-   @JsonProperty("createdAt")
-   public ZonedDateTime getCreatedAt();
-   /**
-   *  <p>When the import operation was modified.</p>
-   */
-   @NotNull
-   @JsonProperty("lastModifiedAt")
-   public ZonedDateTime getLastModifiedAt();
-   /**
-   *  <p>When the import operation expires.</p>
-   */
-   
-   @JsonProperty("expiresAt")
-   public ZonedDateTime getExpiresAt();
+    /**
+    *  <p>The import operation version.</p>
+    */
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+    /**
+    *  <p>The key of the import sink.</p>
+    */
+    @NotNull
+    @JsonProperty("importSinkKey")
+    public String getImportSinkKey();
+    /**
+    *  <p>The key of the import resource.</p>
+    */
+    @NotNull
+    @JsonProperty("resourceKey")
+    public String getResourceKey();
+    /**
+    *  <p>The identifier of the operaton that is to be commited</p>
+    */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+    /**
+    *  <p>The status of the import resource.</p>
+    */
+    @NotNull
+    @JsonProperty("state")
+    public ProcessingState getState();
+    /**
+    *  <p>When the resource is successfully imported, this represents the imported resource version</p>
+    */
+    
+    @JsonProperty("resourceVersion")
+    public Long getResourceVersion();
+    /**
+    *  <p>The number of request retries for processing the import resource.</p>
+    */
+    @NotNull
+    @JsonProperty("retryCount")
+    public Double getRetryCount();
+    /**
+    *  <p>If an import resource does not import correctly, the state is set to <code>Rejected</code> or <code>ValidationFailed</code>
+    *  and this property contains the errors.</p>
+    */
+    @Valid
+    @JsonProperty("errors")
+    public List<ErrorObject> getErrors();
+    /**
+    *  <p>When the import operation was created.</p>
+    */
+    @NotNull
+    @JsonProperty("createdAt")
+    public ZonedDateTime getCreatedAt();
+    /**
+    *  <p>When the import operation was modified.</p>
+    */
+    @NotNull
+    @JsonProperty("lastModifiedAt")
+    public ZonedDateTime getLastModifiedAt();
+    /**
+    *  <p>When the import operation expires.</p>
+    */
+    
+    @JsonProperty("expiresAt")
+    public ZonedDateTime getExpiresAt();
 
-   public void setVersion(final Long version);
-   
-   public void setImportSinkKey(final String importSinkKey);
-   
-   public void setResourceKey(final String resourceKey);
-   
-   public void setId(final String id);
-   
-   public void setState(final ProcessingState state);
-   
-   public void setResourceVersion(final Long resourceVersion);
-   
-   public void setRetryCount(final Integer retryCount);
-   
-   public void setErrors(final List<ErrorObject> errors);
-   
-   public void setCreatedAt(final ZonedDateTime createdAt);
-   
-   public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-   
-   public void setExpiresAt(final ZonedDateTime expiresAt);
-   
-   public static ImportOperationImpl of(){
-      return new ImportOperationImpl();
-   }
-   
+    public void setVersion(final Long version);
+    
+    public void setImportSinkKey(final String importSinkKey);
+    
+    public void setResourceKey(final String resourceKey);
+    
+    public void setId(final String id);
+    
+    public void setState(final ProcessingState state);
+    
+    public void setResourceVersion(final Long resourceVersion);
+    
+    public void setRetryCount(final Double retryCount);
+    
+    public void setErrors(final List<ErrorObject> errors);
+    
+    public void setCreatedAt(final ZonedDateTime createdAt);
+    
+    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+    
+    public void setExpiresAt(final ZonedDateTime expiresAt);
 
-   public static ImportOperationImpl of(final ImportOperation template) {
-      ImportOperationImpl instance = new ImportOperationImpl();
-      instance.setVersion(template.getVersion());
-      instance.setImportSinkKey(template.getImportSinkKey());
-      instance.setResourceKey(template.getResourceKey());
-      instance.setId(template.getId());
-      instance.setState(template.getState());
-      instance.setResourceVersion(template.getResourceVersion());
-      instance.setRetryCount(template.getRetryCount());
-      instance.setErrors(template.getErrors());
-      instance.setCreatedAt(template.getCreatedAt());
-      instance.setLastModifiedAt(template.getLastModifiedAt());
-      instance.setExpiresAt(template.getExpiresAt());
-      return instance;
-   }
+    public static ImportOperationImpl of(){
+        return new ImportOperationImpl();
+    }
+    
+
+    public static ImportOperationImpl of(final ImportOperation template) {
+        ImportOperationImpl instance = new ImportOperationImpl();
+        instance.setVersion(template.getVersion());
+        instance.setImportSinkKey(template.getImportSinkKey());
+        instance.setResourceKey(template.getResourceKey());
+        instance.setId(template.getId());
+        instance.setState(template.getState());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setRetryCount(template.getRetryCount());
+        instance.setErrors(template.getErrors());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setExpiresAt(template.getExpiresAt());
+        return instance;
+    }
 
 }

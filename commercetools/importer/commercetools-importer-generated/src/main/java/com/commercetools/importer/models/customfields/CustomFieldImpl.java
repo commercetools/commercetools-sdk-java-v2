@@ -46,20 +46,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomFieldImpl implements CustomField {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   CustomFieldImpl() {
-      this.type = "null";
-   }
-   
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    CustomFieldImpl() {
+        this.type = "null";
+    }
+    
+
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
 
 
 }

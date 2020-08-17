@@ -26,65 +26,65 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeImportImpl implements ProductTypeImport {
 
-   private String key;
-   
-   private String name;
-   
-   private String description;
-   
-   private java.util.List<com.commercetools.importer.models.producttypes.AttributeDefinition> attributes;
+    private String key;
+    
+    private String name;
+    
+    private String description;
+    
+    private java.util.List<com.commercetools.importer.models.producttypes.AttributeDefinition> attributes;
 
-   @JsonCreator
-   ProductTypeImportImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("attributes") final java.util.List<com.commercetools.importer.models.producttypes.AttributeDefinition> attributes) {
-      this.key = key;
-      this.name = name;
-      this.description = description;
-      this.attributes = attributes;
-   }
-   public ProductTypeImportImpl() {
-      
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
-   
-   /**
-   *  <p>Maps to <code>ProductType.name</code>.</p>
-   */
-   public String getName(){
-      return this.name;
-   }
-   
-   /**
-   *  <p>Maps to <code>ProductType.description</code>.</p>
-   */
-   public String getDescription(){
-      return this.description;
-   }
-   
-   /**
-   *  <p>The product type's attributes.</p>
-   */
-   public java.util.List<com.commercetools.importer.models.producttypes.AttributeDefinition> getAttributes(){
-      return this.attributes;
-   }
+    @JsonCreator
+    ProductTypeImportImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("attributes") final java.util.List<com.commercetools.importer.models.producttypes.AttributeDefinition> attributes) {
+        this.key = key;
+        this.name = name;
+        this.description = description;
+        this.attributes = attributes;
+    }
+    public ProductTypeImportImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setName(final String name){
-      this.name = name;
-   }
-   
-   public void setDescription(final String description){
-      this.description = description;
-   }
-   
-   public void setAttributes(final java.util.List<com.commercetools.importer.models.producttypes.AttributeDefinition> attributes){
-      this.attributes = attributes;
-   }
+    
+    public String getKey(){
+        return this.key;
+    }
+    
+    /**
+    *  <p>Maps to <code>ProductType.name</code>.</p>
+    */
+    public String getName(){
+        return this.name;
+    }
+    
+    /**
+    *  <p>Maps to <code>ProductType.description</code>.</p>
+    */
+    public String getDescription(){
+        return this.description;
+    }
+    
+    /**
+    *  <p>The product type's attributes.</p>
+    */
+    public java.util.List<com.commercetools.importer.models.producttypes.AttributeDefinition> getAttributes(){
+        return this.attributes;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
+    public void setName(final String name){
+        this.name = name;
+    }
+    
+    public void setDescription(final String description){
+        this.description = description;
+    }
+    
+    public void setAttributes(final java.util.List<com.commercetools.importer.models.producttypes.AttributeDefinition> attributes){
+        this.attributes = attributes;
+    }
 
 }

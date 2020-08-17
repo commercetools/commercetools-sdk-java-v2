@@ -25,42 +25,42 @@ import java.io.IOException;
 @JsonDeserialize(as = ImportOperationStatusImpl.class)
 public interface ImportOperationStatus  {
 
-   /**
-   *  <p>Id of the import operation.</p>
-   */
-   
-   @JsonProperty("operationId")
-   public String getOperationId();
-   /**
-   *  <p>Validation state of the import operation.</p>
-   */
-   @NotNull
-   @JsonProperty("state")
-   public ImportOperationState getState();
-   /**
-   *  <p>Validation errors for the import operation.</p>
-   */
-   @Valid
-   @JsonProperty("errors")
-   public List<ErrorObject> getErrors();
+    /**
+    *  <p>Id of the import operation.</p>
+    */
+    
+    @JsonProperty("operationId")
+    public String getOperationId();
+    /**
+    *  <p>Validation state of the import operation.</p>
+    */
+    @NotNull
+    @JsonProperty("state")
+    public ImportOperationState getState();
+    /**
+    *  <p>Validation errors for the import operation.</p>
+    */
+    @Valid
+    @JsonProperty("errors")
+    public List<ErrorObject> getErrors();
 
-   public void setOperationId(final String operationId);
-   
-   public void setState(final ImportOperationState state);
-   
-   public void setErrors(final List<ErrorObject> errors);
-   
-   public static ImportOperationStatusImpl of(){
-      return new ImportOperationStatusImpl();
-   }
-   
+    public void setOperationId(final String operationId);
+    
+    public void setState(final ImportOperationState state);
+    
+    public void setErrors(final List<ErrorObject> errors);
 
-   public static ImportOperationStatusImpl of(final ImportOperationStatus template) {
-      ImportOperationStatusImpl instance = new ImportOperationStatusImpl();
-      instance.setOperationId(template.getOperationId());
-      instance.setState(template.getState());
-      instance.setErrors(template.getErrors());
-      return instance;
-   }
+    public static ImportOperationStatusImpl of(){
+        return new ImportOperationStatusImpl();
+    }
+    
+
+    public static ImportOperationStatusImpl of(final ImportOperationStatus template) {
+        ImportOperationStatusImpl instance = new ImportOperationStatusImpl();
+        instance.setOperationId(template.getOperationId());
+        instance.setState(template.getState());
+        instance.setErrors(template.getErrors());
+        return instance;
+    }
 
 }

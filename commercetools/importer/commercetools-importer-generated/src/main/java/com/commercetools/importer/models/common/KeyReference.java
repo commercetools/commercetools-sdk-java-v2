@@ -48,10 +48,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.importer.models.common.TypeKeyReferenceImpl.class, name = "type")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "typeId",
-   defaultImpl = KeyReferenceImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "typeId",
+    defaultImpl = KeyReferenceImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -59,13 +59,13 @@ import java.io.IOException;
 )
 public interface KeyReference  {
 
-   
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
+    
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setKey(final String key);
-   
+    public void setKey(final String key);
+
 
 
 }

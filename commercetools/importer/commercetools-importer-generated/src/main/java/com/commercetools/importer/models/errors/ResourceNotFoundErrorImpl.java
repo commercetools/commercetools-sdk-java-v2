@@ -23,45 +23,45 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ResourceNotFoundErrorImpl implements ResourceNotFoundError {
 
-   private String code;
-   
-   private String message;
-   
-   private com.fasterxml.jackson.databind.JsonNode resource;
+    private String code;
+    
+    private String message;
+    
+    private com.fasterxml.jackson.databind.JsonNode resource;
 
-   @JsonCreator
-   ResourceNotFoundErrorImpl(@JsonProperty("message") final String message, @JsonProperty("resource") final com.fasterxml.jackson.databind.JsonNode resource) {
-      this.message = message;
-      this.resource = resource;
-      this.code = "ResourceNotFound";
-   }
-   public ResourceNotFoundErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   /**
-   *  <p>The error's description.</p>
-   */
-   public String getMessage(){
-      return this.message;
-   }
-   
-   
-   public com.fasterxml.jackson.databind.JsonNode getResource(){
-      return this.resource;
-   }
+    @JsonCreator
+    ResourceNotFoundErrorImpl(@JsonProperty("message") final String message, @JsonProperty("resource") final com.fasterxml.jackson.databind.JsonNode resource) {
+        this.message = message;
+        this.resource = resource;
+        this.code = "ResourceNotFound";
+    }
+    public ResourceNotFoundErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setResource(final com.fasterxml.jackson.databind.JsonNode resource){
-      this.resource = resource;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    /**
+    *  <p>The error's description.</p>
+    */
+    public String getMessage(){
+        return this.message;
+    }
+    
+    
+    public com.fasterxml.jackson.databind.JsonNode getResource(){
+        return this.resource;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setResource(final com.fasterxml.jackson.databind.JsonNode resource){
+        this.resource = resource;
+    }
 
 }

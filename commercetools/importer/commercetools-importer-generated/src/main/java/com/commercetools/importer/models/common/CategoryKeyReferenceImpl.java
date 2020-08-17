@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CategoryKeyReferenceImpl implements CategoryKeyReference {
 
-   private String key;
-   
-   private com.commercetools.importer.models.common.ReferenceType typeId;
+    private String key;
+    
+    private com.commercetools.importer.models.common.ReferenceType typeId;
 
-   @JsonCreator
-   CategoryKeyReferenceImpl(@JsonProperty("key") final String key) {
-      this.key = key;
-      this.typeId = ReferenceType.findEnumViaJsonName("category").get();
-   }
-   public CategoryKeyReferenceImpl() {
-      
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
-   
-   /**
-   *  <p>The type of the referenced resource.</p>
-   */
-   public com.commercetools.importer.models.common.ReferenceType getTypeId(){
-      return this.typeId;
-   }
+    @JsonCreator
+    CategoryKeyReferenceImpl(@JsonProperty("key") final String key) {
+        this.key = key;
+        this.typeId = ReferenceType.findEnumViaJsonName("category").get();
+    }
+    public CategoryKeyReferenceImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public String getKey(){
+        return this.key;
+    }
+    
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importer.models.common.ReferenceType getTypeId(){
+        return this.typeId;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

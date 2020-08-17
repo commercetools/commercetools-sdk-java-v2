@@ -15,31 +15,31 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ImportOperationState {
 
-  /**
-  	<p>The import resource was accepted.</p>
-  	
-  */
-  @JsonProperty("Accepted")
-  ACCEPTED("Accepted"),
-  
-  /**
-  	<p>The validation of the import resource failed.</p>
-  	
-  */
-  @JsonProperty("ValidationFailed")
-  VALIDATION_FAILED("ValidationFailed");
+    /**
+    	<p>The import resource was accepted.</p>
+    	
+    */
+    @JsonProperty("Accepted")
+    ACCEPTED("Accepted"),
+    
+    /**
+    	<p>The validation of the import resource failed.</p>
+    	
+    */
+    @JsonProperty("ValidationFailed")
+    VALIDATION_FAILED("ValidationFailed");
 
-  private final String jsonName;
+    private final String jsonName;
 
-  private ImportOperationState(final String jsonName) {
-    this.jsonName = jsonName;
-  }
+    private ImportOperationState(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  public String getJsonName() {
-     return jsonName;
-  }
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  public static Optional<ImportOperationState> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<ImportOperationState> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

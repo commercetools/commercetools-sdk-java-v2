@@ -15,32 +15,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class PriceImportRequestBuilder {
-   
-   
-   private java.util.List<com.commercetools.importer.models.prices.PriceImport> resources;
-   
-   public PriceImportRequestBuilder resources( final java.util.List<com.commercetools.importer.models.prices.PriceImport> resources) {
-      this.resources = resources;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.prices.PriceImport> getResources(){
-      return this.resources;
-   }
 
-   public PriceImportRequest build() {
-       return new PriceImportRequestImpl(resources);
-   }
-   
-   public static PriceImportRequestBuilder of() {
-      return new PriceImportRequestBuilder();
-   }
-   
-   public static PriceImportRequestBuilder of(final PriceImportRequest template) {
-      PriceImportRequestBuilder builder = new PriceImportRequestBuilder();
-      builder.resources = template.getResources();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.importer.models.prices.PriceImport> resources;
+
+    public PriceImportRequestBuilder resources( final java.util.List<com.commercetools.importer.models.prices.PriceImport> resources) {
+        this.resources = resources;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.importer.models.prices.PriceImport> getResources(){
+        return this.resources;
+    }
+
+    public PriceImportRequest build() {
+        return new PriceImportRequestImpl(resources);
+    }
+
+    public static PriceImportRequestBuilder of() {
+        return new PriceImportRequestBuilder();
+    }
+
+    public static PriceImportRequestBuilder of(final PriceImportRequest template) {
+        PriceImportRequestBuilder builder = new PriceImportRequestBuilder();
+        builder.resources = template.getResources();
+        return builder;
+    }
+
 }

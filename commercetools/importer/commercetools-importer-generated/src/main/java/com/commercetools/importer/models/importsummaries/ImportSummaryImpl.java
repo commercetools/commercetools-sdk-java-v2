@@ -26,39 +26,39 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ImportSummaryImpl implements ImportSummary {
 
-   private com.commercetools.importer.models.importsummaries.OperationStates states;
-   
-   private Integer total;
+    private com.commercetools.importer.models.importsummaries.OperationStates states;
+    
+    private Double total;
 
-   @JsonCreator
-   ImportSummaryImpl(@JsonProperty("states") final com.commercetools.importer.models.importsummaries.OperationStates states, @JsonProperty("total") final Integer total) {
-      this.states = states;
-      this.total = total;
-   }
-   public ImportSummaryImpl() {
-      
-   }
-   
-   /**
-   *  <p>The states summary for this import summary.</p>
-   */
-   public com.commercetools.importer.models.importsummaries.OperationStates getStates(){
-      return this.states;
-   }
-   
-   /**
-   *  <p>The total number of import operations received for this import group.</p>
-   */
-   public Integer getTotal(){
-      return this.total;
-   }
+    @JsonCreator
+    ImportSummaryImpl(@JsonProperty("states") final com.commercetools.importer.models.importsummaries.OperationStates states, @JsonProperty("total") final Double total) {
+        this.states = states;
+        this.total = total;
+    }
+    public ImportSummaryImpl() {
+       
+    }
 
-   public void setStates(final com.commercetools.importer.models.importsummaries.OperationStates states){
-      this.states = states;
-   }
-   
-   public void setTotal(final Integer total){
-      this.total = total;
-   }
+    /**
+    *  <p>The states summary for this import summary.</p>
+    */
+    public com.commercetools.importer.models.importsummaries.OperationStates getStates(){
+        return this.states;
+    }
+    
+    /**
+    *  <p>The total number of import operations received for this import group.</p>
+    */
+    public Double getTotal(){
+        return this.total;
+    }
+
+    public void setStates(final com.commercetools.importer.models.importsummaries.OperationStates states){
+        this.states = states;
+    }
+    
+    public void setTotal(final Double total){
+        this.total = total;
+    }
 
 }

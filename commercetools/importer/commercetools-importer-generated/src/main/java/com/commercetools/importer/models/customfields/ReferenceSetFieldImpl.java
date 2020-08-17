@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReferenceSetFieldImpl implements ReferenceSetField {
 
-   private String type;
-   
-   private java.util.List<com.commercetools.importer.models.common.KeyReference> value;
+    private String type;
+    
+    private java.util.List<com.commercetools.importer.models.common.KeyReference> value;
 
-   @JsonCreator
-   ReferenceSetFieldImpl(@JsonProperty("value") final java.util.List<com.commercetools.importer.models.common.KeyReference> value) {
-      this.value = value;
-      this.type = "ReferenceSet";
-   }
-   public ReferenceSetFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.common.KeyReference> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    ReferenceSetFieldImpl(@JsonProperty("value") final java.util.List<com.commercetools.importer.models.common.KeyReference> value) {
+        this.value = value;
+        this.type = "ReferenceSet";
+    }
+    public ReferenceSetFieldImpl() {
+       
+    }
 
-   public void setValue(final java.util.List<com.commercetools.importer.models.common.KeyReference> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<com.commercetools.importer.models.common.KeyReference> getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.util.List<com.commercetools.importer.models.common.KeyReference> value){
+        this.value = value;
+    }
 
 }

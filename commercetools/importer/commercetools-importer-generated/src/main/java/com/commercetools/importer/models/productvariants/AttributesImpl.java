@@ -22,30 +22,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributesImpl implements Attributes {
 
-   private Map<String, com.commercetools.importer.models.productvariants.Attribute> values;
+    private Map<String, com.commercetools.importer.models.productvariants.Attribute> values;
 
-   @JsonCreator
-   AttributesImpl(@JsonProperty("values") final Map<String, com.commercetools.importer.models.productvariants.Attribute> values) {
-      this.values = values;
-   }
-   public AttributesImpl() {
-      
-   }
-   
-   /**
-   *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself.
-   *  And since this property will be represented as a map, we can set individual attributes to null
-   *  to delete them (which follows JSON Merge Patch semantics).</p>
-   */
-   public Map<String,com.commercetools.importer.models.productvariants.Attribute> values() {
-       return values;
-   }
+    @JsonCreator
+    AttributesImpl(@JsonProperty("values") final Map<String, com.commercetools.importer.models.productvariants.Attribute> values) {
+        this.values = values;
+    }
+    public AttributesImpl() {
+       
+    }
 
-   public void setValue(String key, com.commercetools.importer.models.productvariants.Attribute value) {
-       if (values == null) {
-           values = new HashMap<>();
-       }
-       values.put(key, value);
-   }
+    /**
+    *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself.
+    *  And since this property will be represented as a map, we can set individual attributes to null
+    *  to delete them (which follows JSON Merge Patch semantics).</p>
+    */
+    public Map<String,com.commercetools.importer.models.productvariants.Attribute> values() {
+        return values;
+    }
+
+    public void setValue(String key, com.commercetools.importer.models.productvariants.Attribute value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+    }
 
 }

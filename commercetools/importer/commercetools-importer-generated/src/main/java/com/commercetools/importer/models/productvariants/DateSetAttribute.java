@@ -25,23 +25,23 @@ import java.io.IOException;
 @JsonDeserialize(as = DateSetAttributeImpl.class)
 public interface DateSetAttribute extends Attribute {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public List<LocalDate> getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public List<LocalDate> getValue();
 
-   public void setValue(final List<LocalDate> value);
-   
-   public static DateSetAttributeImpl of(){
-      return new DateSetAttributeImpl();
-   }
-   
+    public void setValue(final List<LocalDate> value);
 
-   public static DateSetAttributeImpl of(final DateSetAttribute template) {
-      DateSetAttributeImpl instance = new DateSetAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static DateSetAttributeImpl of(){
+        return new DateSetAttributeImpl();
+    }
+    
+
+    public static DateSetAttributeImpl of(final DateSetAttribute template) {
+        DateSetAttributeImpl instance = new DateSetAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

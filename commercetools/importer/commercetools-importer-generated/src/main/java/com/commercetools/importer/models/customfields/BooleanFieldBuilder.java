@@ -13,32 +13,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class BooleanFieldBuilder {
-   
-   
-   private Boolean value;
-   
-   public BooleanFieldBuilder value( final Boolean value) {
-      this.value = value;
-      return this;
-   }
-   
-   
-   public Boolean getValue(){
-      return this.value;
-   }
 
-   public BooleanField build() {
-       return new BooleanFieldImpl(value);
-   }
-   
-   public static BooleanFieldBuilder of() {
-      return new BooleanFieldBuilder();
-   }
-   
-   public static BooleanFieldBuilder of(final BooleanField template) {
-      BooleanFieldBuilder builder = new BooleanFieldBuilder();
-      builder.value = template.getValue();
-      return builder;
-   }
-   
+    
+    private Boolean value;
+
+    public BooleanFieldBuilder value( final Boolean value) {
+        this.value = value;
+        return this;
+    }
+
+    
+    public Boolean getValue(){
+        return this.value;
+    }
+
+    public BooleanField build() {
+        return new BooleanFieldImpl(value);
+    }
+
+    public static BooleanFieldBuilder of() {
+        return new BooleanFieldBuilder();
+    }
+
+    public static BooleanFieldBuilder of(final BooleanField template) {
+        BooleanFieldBuilder builder = new BooleanFieldBuilder();
+        builder.value = template.getValue();
+        return builder;
+    }
+
 }

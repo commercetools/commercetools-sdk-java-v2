@@ -25,24 +25,24 @@ import java.io.IOException;
 @JsonDeserialize(as = LocalizableTextAttributeImpl.class)
 public interface LocalizableTextAttribute extends Attribute {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public LocalizedString getValue();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public LocalizedString getValue();
 
-   public void setValue(final LocalizedString value);
-   
-   public static LocalizableTextAttributeImpl of(){
-      return new LocalizableTextAttributeImpl();
-   }
-   
+    public void setValue(final LocalizedString value);
 
-   public static LocalizableTextAttributeImpl of(final LocalizableTextAttribute template) {
-      LocalizableTextAttributeImpl instance = new LocalizableTextAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static LocalizableTextAttributeImpl of(){
+        return new LocalizableTextAttributeImpl();
+    }
+    
+
+    public static LocalizableTextAttributeImpl of(final LocalizableTextAttribute template) {
+        LocalizableTextAttributeImpl instance = new LocalizableTextAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

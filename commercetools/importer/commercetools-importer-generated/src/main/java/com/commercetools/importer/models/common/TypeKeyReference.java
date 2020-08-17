@@ -26,16 +26,16 @@ import java.io.IOException;
 public interface TypeKeyReference extends KeyReference {
 
 
-   
-   public static TypeKeyReferenceImpl of(){
-      return new TypeKeyReferenceImpl();
-   }
-   
 
-   public static TypeKeyReferenceImpl of(final TypeKeyReference template) {
-      TypeKeyReferenceImpl instance = new TypeKeyReferenceImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static TypeKeyReferenceImpl of(){
+        return new TypeKeyReferenceImpl();
+    }
+    
+
+    public static TypeKeyReferenceImpl of(final TypeKeyReference template) {
+        TypeKeyReferenceImpl instance = new TypeKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

@@ -25,28 +25,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class FieldContainerImpl implements FieldContainer {
 
-   private Map<String, com.commercetools.importer.models.customfields.CustomField> values;
+    private Map<String, com.commercetools.importer.models.customfields.CustomField> values;
 
-   @JsonCreator
-   FieldContainerImpl(@JsonProperty("values") final Map<String, com.commercetools.importer.models.customfields.CustomField> values) {
-      this.values = values;
-   }
-   public FieldContainerImpl() {
-      
-   }
-   
-   /**
-   *  <p>Mapping from the custom field name to the actual value.</p>
-   */
-   public Map<String,com.commercetools.importer.models.customfields.CustomField> values() {
-       return values;
-   }
+    @JsonCreator
+    FieldContainerImpl(@JsonProperty("values") final Map<String, com.commercetools.importer.models.customfields.CustomField> values) {
+        this.values = values;
+    }
+    public FieldContainerImpl() {
+       
+    }
 
-   public void setValue(String key, com.commercetools.importer.models.customfields.CustomField value) {
-       if (values == null) {
-           values = new HashMap<>();
-       }
-       values.put(key, value);
-   }
+    /**
+    *  <p>Mapping from the custom field name to the actual value.</p>
+    */
+    public Map<String,com.commercetools.importer.models.customfields.CustomField> values() {
+        return values;
+    }
+
+    public void setValue(String key, com.commercetools.importer.models.customfields.CustomField value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+    }
 
 }

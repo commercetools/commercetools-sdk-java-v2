@@ -25,16 +25,16 @@ import java.io.IOException;
 public interface InvalidScopeError extends ErrorObject {
 
 
-   
-   public static InvalidScopeErrorImpl of(){
-      return new InvalidScopeErrorImpl();
-   }
-   
 
-   public static InvalidScopeErrorImpl of(final InvalidScopeError template) {
-      InvalidScopeErrorImpl instance = new InvalidScopeErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static InvalidScopeErrorImpl of(){
+        return new InvalidScopeErrorImpl();
+    }
+    
+
+    public static InvalidScopeErrorImpl of(final InvalidScopeError template) {
+        InvalidScopeErrorImpl instance = new InvalidScopeErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

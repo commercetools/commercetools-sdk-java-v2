@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TimeSetFieldImpl implements TimeSetField {
 
-   private String type;
-   
-   private java.util.List<java.time.LocalTime> value;
+    private String type;
+    
+    private java.util.List<java.time.LocalTime> value;
 
-   @JsonCreator
-   TimeSetFieldImpl(@JsonProperty("value") final java.util.List<java.time.LocalTime> value) {
-      this.value = value;
-      this.type = "TimeSet";
-   }
-   public TimeSetFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<java.time.LocalTime> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    TimeSetFieldImpl(@JsonProperty("value") final java.util.List<java.time.LocalTime> value) {
+        this.value = value;
+        this.type = "TimeSet";
+    }
+    public TimeSetFieldImpl() {
+       
+    }
 
-   public void setValue(final java.util.List<java.time.LocalTime> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<java.time.LocalTime> getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.util.List<java.time.LocalTime> value){
+        this.value = value;
+    }
 
 }

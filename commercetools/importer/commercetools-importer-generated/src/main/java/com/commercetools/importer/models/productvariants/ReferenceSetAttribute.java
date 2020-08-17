@@ -25,24 +25,24 @@ import java.io.IOException;
 @JsonDeserialize(as = ReferenceSetAttributeImpl.class)
 public interface ReferenceSetAttribute extends Attribute {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public List<KeyReference> getValue();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public List<KeyReference> getValue();
 
-   public void setValue(final List<KeyReference> value);
-   
-   public static ReferenceSetAttributeImpl of(){
-      return new ReferenceSetAttributeImpl();
-   }
-   
+    public void setValue(final List<KeyReference> value);
 
-   public static ReferenceSetAttributeImpl of(final ReferenceSetAttribute template) {
-      ReferenceSetAttributeImpl instance = new ReferenceSetAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static ReferenceSetAttributeImpl of(){
+        return new ReferenceSetAttributeImpl();
+    }
+    
+
+    public static ReferenceSetAttributeImpl of(final ReferenceSetAttribute template) {
+        ReferenceSetAttributeImpl instance = new ReferenceSetAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

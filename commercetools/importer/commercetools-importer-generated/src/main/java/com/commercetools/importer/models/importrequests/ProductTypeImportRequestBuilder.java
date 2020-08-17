@@ -15,32 +15,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductTypeImportRequestBuilder {
-   
-   
-   private java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> resources;
-   
-   public ProductTypeImportRequestBuilder resources( final java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> resources) {
-      this.resources = resources;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> getResources(){
-      return this.resources;
-   }
 
-   public ProductTypeImportRequest build() {
-       return new ProductTypeImportRequestImpl(resources);
-   }
-   
-   public static ProductTypeImportRequestBuilder of() {
-      return new ProductTypeImportRequestBuilder();
-   }
-   
-   public static ProductTypeImportRequestBuilder of(final ProductTypeImportRequest template) {
-      ProductTypeImportRequestBuilder builder = new ProductTypeImportRequestBuilder();
-      builder.resources = template.getResources();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> resources;
+
+    public ProductTypeImportRequestBuilder resources( final java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> resources) {
+        this.resources = resources;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> getResources(){
+        return this.resources;
+    }
+
+    public ProductTypeImportRequest build() {
+        return new ProductTypeImportRequestImpl(resources);
+    }
+
+    public static ProductTypeImportRequestBuilder of() {
+        return new ProductTypeImportRequestBuilder();
+    }
+
+    public static ProductTypeImportRequestBuilder of(final ProductTypeImportRequest template) {
+        ProductTypeImportRequestBuilder builder = new ProductTypeImportRequestBuilder();
+        builder.resources = template.getResources();
+        return builder;
+    }
+
 }

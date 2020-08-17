@@ -7,23 +7,23 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder {
-   
-   private final ApiHttpClient apiHttpClient;
-   private final String projectKey;
-   private final String importSinkKey;
-   
-   
-   public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey) {
-      this.apiHttpClient = apiHttpClient;
-      this.projectKey = projectKey;
-      this.importSinkKey = importSinkKey;
-   }
-   
-   public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet get() {
-      return new ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet(apiHttpClient, projectKey, importSinkKey);
-   }
-   
-   public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdRequestBuilder withIdValue(String id) {
-      return new ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdRequestBuilder(apiHttpClient, projectKey, importSinkKey, id);
-   }
+
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+    private final String importSinkKey;
+    
+
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+        this.importSinkKey = importSinkKey;
+    }
+
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet get() {
+        return new ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet(apiHttpClient, projectKey, importSinkKey);
+    }
+
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdRequestBuilder withIdValue(String id) {
+        return new ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdRequestBuilder(apiHttpClient, projectKey, importSinkKey, id);
+    }
 }

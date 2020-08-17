@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class GenericErrorImpl implements GenericError {
 
-   private String code;
-   
-   private String message;
+    private String code;
+    
+    private String message;
 
-   @JsonCreator
-   GenericErrorImpl(@JsonProperty("message") final String message) {
-      this.message = message;
-      this.code = "Generic";
-   }
-   public GenericErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   /**
-   *  <p>The error's description.</p>
-   */
-   public String getMessage(){
-      return this.message;
-   }
+    @JsonCreator
+    GenericErrorImpl(@JsonProperty("message") final String message) {
+        this.message = message;
+        this.code = "Generic";
+    }
+    public GenericErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    /**
+    *  <p>The error's description.</p>
+    */
+    public String getMessage(){
+        return this.message;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
 
 }

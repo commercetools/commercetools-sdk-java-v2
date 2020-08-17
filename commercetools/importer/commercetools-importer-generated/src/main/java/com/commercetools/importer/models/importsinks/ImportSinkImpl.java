@@ -29,82 +29,82 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ImportSinkImpl implements ImportSink {
 
-   private String key;
-   
-   private com.commercetools.importer.models.common.ImportResourceType resourceType;
-   
-   private Long version;
-   
-   private java.time.ZonedDateTime createdAt;
-   
-   private java.time.ZonedDateTime lastModifiedAt;
+    private String key;
+    
+    private com.commercetools.importer.models.common.ImportResourceType resourceType;
+    
+    private Long version;
+    
+    private java.time.ZonedDateTime createdAt;
+    
+    private java.time.ZonedDateTime lastModifiedAt;
 
-   @JsonCreator
-   ImportSinkImpl(@JsonProperty("key") final String key, @JsonProperty("resourceType") final com.commercetools.importer.models.common.ImportResourceType resourceType, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
-      this.key = key;
-      this.resourceType = resourceType;
-      this.version = version;
-      this.createdAt = createdAt;
-      this.lastModifiedAt = lastModifiedAt;
-   }
-   public ImportSinkImpl() {
-      
-   }
-   
-   /**
-   *  <p>The unique key of the import sink.</p>
-   */
-   public String getKey(){
-      return this.key;
-   }
-   
-   /**
-   *  <p>The type of import resource sent to this import sink.
-   *  You can only send one resource type per import sink.</p>
-   */
-   public com.commercetools.importer.models.common.ImportResourceType getResourceType(){
-      return this.resourceType;
-   }
-   
-   /**
-   *  <p>The version of this resource.</p>
-   */
-   public Long getVersion(){
-      return this.version;
-   }
-   
-   /**
-   *  <p>When the import sink was created.</p>
-   */
-   public java.time.ZonedDateTime getCreatedAt(){
-      return this.createdAt;
-   }
-   
-   /**
-   *  <p>When the import sink was modified.</p>
-   */
-   public java.time.ZonedDateTime getLastModifiedAt(){
-      return this.lastModifiedAt;
-   }
+    @JsonCreator
+    ImportSinkImpl(@JsonProperty("key") final String key, @JsonProperty("resourceType") final com.commercetools.importer.models.common.ImportResourceType resourceType, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
+        this.key = key;
+        this.resourceType = resourceType;
+        this.version = version;
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+    }
+    public ImportSinkImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setResourceType(final com.commercetools.importer.models.common.ImportResourceType resourceType){
-      this.resourceType = resourceType;
-   }
-   
-   public void setVersion(final Long version){
-      this.version = version;
-   }
-   
-   public void setCreatedAt(final java.time.ZonedDateTime createdAt){
-      this.createdAt = createdAt;
-   }
-   
-   public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
-      this.lastModifiedAt = lastModifiedAt;
-   }
+    /**
+    *  <p>The unique key of the import sink.</p>
+    */
+    public String getKey(){
+        return this.key;
+    }
+    
+    /**
+    *  <p>The type of import resource sent to this import sink.
+    *  You can only send one resource type per import sink.</p>
+    */
+    public com.commercetools.importer.models.common.ImportResourceType getResourceType(){
+        return this.resourceType;
+    }
+    
+    /**
+    *  <p>The version of this resource.</p>
+    */
+    public Long getVersion(){
+        return this.version;
+    }
+    
+    /**
+    *  <p>When the import sink was created.</p>
+    */
+    public java.time.ZonedDateTime getCreatedAt(){
+        return this.createdAt;
+    }
+    
+    /**
+    *  <p>When the import sink was modified.</p>
+    */
+    public java.time.ZonedDateTime getLastModifiedAt(){
+        return this.lastModifiedAt;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
+    public void setResourceType(final com.commercetools.importer.models.common.ImportResourceType resourceType){
+        this.resourceType = resourceType;
+    }
+    
+    public void setVersion(final Long version){
+        this.version = version;
+    }
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
+        this.createdAt = createdAt;
+    }
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+        this.lastModifiedAt = lastModifiedAt;
+    }
 
 }

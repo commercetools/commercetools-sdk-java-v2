@@ -26,47 +26,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LocalizableTextAttributeImpl implements LocalizableTextAttribute {
 
-   private String name;
-   
-   private String type;
-   
-   private com.commercetools.importer.models.common.LocalizedString value;
+    private String name;
+    
+    private String type;
+    
+    private com.commercetools.importer.models.common.LocalizedString value;
 
-   @JsonCreator
-   LocalizableTextAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final com.commercetools.importer.models.common.LocalizedString value) {
-      this.name = name;
-      this.value = value;
-      this.type = "ltext";
-   }
-   public LocalizableTextAttributeImpl() {
-      
-   }
-   
-   /**
-   *  <p>The name of this attribute must match a name of the product types attribute definitions.
-   *  The name is required if this type is used in a product variant and must not be set when
-   *  used in a product variant patch.</p>
-   */
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.importer.models.common.LocalizedString getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    LocalizableTextAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final com.commercetools.importer.models.common.LocalizedString value) {
+        this.name = name;
+        this.value = value;
+        this.type = "ltext";
+    }
+    public LocalizableTextAttributeImpl() {
+       
+    }
 
-   public void setName(final String name){
-      this.name = name;
-   }
-   
-   public void setValue(final com.commercetools.importer.models.common.LocalizedString value){
-      this.value = value;
-   }
+    /**
+    *  <p>The name of this attribute must match a name of the product types attribute definitions.
+    *  The name is required if this type is used in a product variant and must not be set when
+    *  used in a product variant patch.</p>
+    */
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.importer.models.common.LocalizedString getValue(){
+        return this.value;
+    }
+
+    public void setName(final String name){
+        this.name = name;
+    }
+    
+    public void setValue(final com.commercetools.importer.models.common.LocalizedString value){
+        this.value = value;
+    }
 
 }

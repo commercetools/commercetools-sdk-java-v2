@@ -26,39 +26,39 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class CustomImpl implements Custom {
 
-   private com.commercetools.importer.models.common.TypeKeyReference type;
-   
-   private com.commercetools.importer.models.customfields.FieldContainer fields;
+    private com.commercetools.importer.models.common.TypeKeyReference type;
+    
+    private com.commercetools.importer.models.customfields.FieldContainer fields;
 
-   @JsonCreator
-   CustomImpl(@JsonProperty("type") final com.commercetools.importer.models.common.TypeKeyReference type, @JsonProperty("fields") final com.commercetools.importer.models.customfields.FieldContainer fields) {
-      this.type = type;
-      this.fields = fields;
-   }
-   public CustomImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type that provides the field definitions for this object.</p>
-   */
-   public com.commercetools.importer.models.common.TypeKeyReference getType(){
-      return this.type;
-   }
-   
-   /**
-   *  <p>The custom fields of this object.</p>
-   */
-   public com.commercetools.importer.models.customfields.FieldContainer getFields(){
-      return this.fields;
-   }
+    @JsonCreator
+    CustomImpl(@JsonProperty("type") final com.commercetools.importer.models.common.TypeKeyReference type, @JsonProperty("fields") final com.commercetools.importer.models.customfields.FieldContainer fields) {
+        this.type = type;
+        this.fields = fields;
+    }
+    public CustomImpl() {
+       
+    }
 
-   public void setType(final com.commercetools.importer.models.common.TypeKeyReference type){
-      this.type = type;
-   }
-   
-   public void setFields(final com.commercetools.importer.models.customfields.FieldContainer fields){
-      this.fields = fields;
-   }
+    /**
+    *  <p>The type that provides the field definitions for this object.</p>
+    */
+    public com.commercetools.importer.models.common.TypeKeyReference getType(){
+        return this.type;
+    }
+    
+    /**
+    *  <p>The custom fields of this object.</p>
+    */
+    public com.commercetools.importer.models.customfields.FieldContainer getFields(){
+        return this.fields;
+    }
+
+    public void setType(final com.commercetools.importer.models.common.TypeKeyReference type){
+        this.type = type;
+    }
+    
+    public void setFields(final com.commercetools.importer.models.customfields.FieldContainer fields){
+        this.fields = fields;
+    }
 
 }

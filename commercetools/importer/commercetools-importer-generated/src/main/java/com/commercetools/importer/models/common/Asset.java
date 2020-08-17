@@ -22,55 +22,55 @@ import java.io.IOException;
 @JsonDeserialize(as = AssetImpl.class)
 public interface Asset  {
 
-   /**
-   *  <p>User-defined identifier for the asset.
-   *  Asset keys are unique inside their container (a product variant or a category).</p>
-   */
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("sources")
-   public List<AssetSource> getSources();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("name")
-   public LocalizedString getName();
-   
-   @Valid
-   @JsonProperty("description")
-   public LocalizedString getDescription();
-   
-   
-   @JsonProperty("tags")
-   public List<String> getTags();
+    /**
+    *  <p>User-defined identifier for the asset.
+    *  Asset keys are unique inside their container (a product variant or a category).</p>
+    */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("sources")
+    public List<AssetSource> getSources();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("name")
+    public LocalizedString getName();
+    
+    @Valid
+    @JsonProperty("description")
+    public LocalizedString getDescription();
+    
+    
+    @JsonProperty("tags")
+    public List<String> getTags();
 
-   public void setKey(final String key);
-   
-   public void setSources(final List<AssetSource> sources);
-   
-   public void setName(final LocalizedString name);
-   
-   public void setDescription(final LocalizedString description);
-   
-   public void setTags(final List<String> tags);
-   
-   public static AssetImpl of(){
-      return new AssetImpl();
-   }
-   
+    public void setKey(final String key);
+    
+    public void setSources(final List<AssetSource> sources);
+    
+    public void setName(final LocalizedString name);
+    
+    public void setDescription(final LocalizedString description);
+    
+    public void setTags(final List<String> tags);
 
-   public static AssetImpl of(final Asset template) {
-      AssetImpl instance = new AssetImpl();
-      instance.setKey(template.getKey());
-      instance.setSources(template.getSources());
-      instance.setName(template.getName());
-      instance.setDescription(template.getDescription());
-      instance.setTags(template.getTags());
-      return instance;
-   }
+    public static AssetImpl of(){
+        return new AssetImpl();
+    }
+    
+
+    public static AssetImpl of(final Asset template) {
+        AssetImpl instance = new AssetImpl();
+        instance.setKey(template.getKey());
+        instance.setSources(template.getSources());
+        instance.setName(template.getName());
+        instance.setDescription(template.getDescription());
+        instance.setTags(template.getTags());
+        return instance;
+    }
 
 }

@@ -26,16 +26,16 @@ import java.io.IOException;
 public interface ShippingMethodKeyReference extends KeyReference {
 
 
-   
-   public static ShippingMethodKeyReferenceImpl of(){
-      return new ShippingMethodKeyReferenceImpl();
-   }
-   
 
-   public static ShippingMethodKeyReferenceImpl of(final ShippingMethodKeyReference template) {
-      ShippingMethodKeyReferenceImpl instance = new ShippingMethodKeyReferenceImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ShippingMethodKeyReferenceImpl of(){
+        return new ShippingMethodKeyReferenceImpl();
+    }
+    
+
+    public static ShippingMethodKeyReferenceImpl of(final ShippingMethodKeyReference template) {
+        ShippingMethodKeyReferenceImpl instance = new ShippingMethodKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

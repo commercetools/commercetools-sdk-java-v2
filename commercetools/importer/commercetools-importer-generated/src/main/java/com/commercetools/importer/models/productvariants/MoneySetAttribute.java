@@ -25,24 +25,24 @@ import java.io.IOException;
 @JsonDeserialize(as = MoneySetAttributeImpl.class)
 public interface MoneySetAttribute extends Attribute {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public List<Money> getValue();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public List<Money> getValue();
 
-   public void setValue(final List<Money> value);
-   
-   public static MoneySetAttributeImpl of(){
-      return new MoneySetAttributeImpl();
-   }
-   
+    public void setValue(final List<Money> value);
 
-   public static MoneySetAttributeImpl of(final MoneySetAttribute template) {
-      MoneySetAttributeImpl instance = new MoneySetAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static MoneySetAttributeImpl of(){
+        return new MoneySetAttributeImpl();
+    }
+    
+
+    public static MoneySetAttributeImpl of(final MoneySetAttribute template) {
+        MoneySetAttributeImpl instance = new MoneySetAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

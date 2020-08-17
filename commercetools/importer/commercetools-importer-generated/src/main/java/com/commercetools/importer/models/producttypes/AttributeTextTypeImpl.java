@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeTextTypeImpl implements AttributeTextType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   AttributeTextTypeImpl() {
-      this.name = "text";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    AttributeTextTypeImpl() {
+        this.name = "text";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

@@ -7,26 +7,26 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyRequestBuilder {
-   
-   private final ApiHttpClient apiHttpClient;
-   private final String projectKey;
-   private final String importSinkKey;
-   
-   
-   public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey) {
-      this.apiHttpClient = apiHttpClient;
-      this.projectKey = projectKey;
-      this.importSinkKey = importSinkKey;
-   }
-   
-   public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost post(com.commercetools.importer.models.importrequests.CategoryImportRequest categoryImportRequest) {
-      return new ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost(apiHttpClient, projectKey, importSinkKey, categoryImportRequest);
-   }
-   
-   public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder resourceKeyWithResourceKeyValue(String resourceKey) {
-      return new ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder(apiHttpClient, projectKey, importSinkKey, resourceKey);
-   }
-   public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder importOperations() {
-      return new ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder(apiHttpClient, projectKey, importSinkKey);
-   }
+
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+    private final String importSinkKey;
+    
+
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+        this.importSinkKey = importSinkKey;
+    }
+
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost post(com.commercetools.importer.models.importrequests.CategoryImportRequest categoryImportRequest) {
+        return new ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost(apiHttpClient, projectKey, importSinkKey, categoryImportRequest);
+    }
+
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder resourceKeyWithResourceKeyValue(String resourceKey) {
+        return new ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder(apiHttpClient, projectKey, importSinkKey, resourceKey);
+    }
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder importOperations() {
+        return new ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder(apiHttpClient, projectKey, importSinkKey);
+    }
 }

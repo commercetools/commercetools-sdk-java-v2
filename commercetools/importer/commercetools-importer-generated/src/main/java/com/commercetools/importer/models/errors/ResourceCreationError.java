@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ResourceCreationErrorImpl.class)
 public interface ResourceCreationError extends ErrorObject {
 
-   
-   
-   @JsonProperty("resource")
-   public JsonNode getResource();
+    
+    
+    @JsonProperty("resource")
+    public JsonNode getResource();
 
-   public void setResource(final JsonNode resource);
-   
-   public static ResourceCreationErrorImpl of(){
-      return new ResourceCreationErrorImpl();
-   }
-   
+    public void setResource(final JsonNode resource);
 
-   public static ResourceCreationErrorImpl of(final ResourceCreationError template) {
-      ResourceCreationErrorImpl instance = new ResourceCreationErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setResource(template.getResource());
-      return instance;
-   }
+    public static ResourceCreationErrorImpl of(){
+        return new ResourceCreationErrorImpl();
+    }
+    
+
+    public static ResourceCreationErrorImpl of(final ResourceCreationError template) {
+        ResourceCreationErrorImpl instance = new ResourceCreationErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setResource(template.getResource());
+        return instance;
+    }
 
 }

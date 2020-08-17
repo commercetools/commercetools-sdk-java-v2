@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MoneySetFieldImpl implements MoneySetField {
 
-   private String type;
-   
-   private java.util.List<com.commercetools.importer.models.common.Money> value;
+    private String type;
+    
+    private java.util.List<com.commercetools.importer.models.common.Money> value;
 
-   @JsonCreator
-   MoneySetFieldImpl(@JsonProperty("value") final java.util.List<com.commercetools.importer.models.common.Money> value) {
-      this.value = value;
-      this.type = "MoneySet";
-   }
-   public MoneySetFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.common.Money> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    MoneySetFieldImpl(@JsonProperty("value") final java.util.List<com.commercetools.importer.models.common.Money> value) {
+        this.value = value;
+        this.type = "MoneySet";
+    }
+    public MoneySetFieldImpl() {
+       
+    }
 
-   public void setValue(final java.util.List<com.commercetools.importer.models.common.Money> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<com.commercetools.importer.models.common.Money> getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.util.List<com.commercetools.importer.models.common.Money> value){
+        this.value = value;
+    }
 
 }

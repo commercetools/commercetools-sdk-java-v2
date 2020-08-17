@@ -21,26 +21,26 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributesImpl.class)
 public interface Attributes  {
 
-   /**
-   *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself.
-   *  And since this property will be represented as a map, we can set individual attributes to null
-   *  to delete them (which follows JSON Merge Patch semantics).</p>
-   */
-   @NotNull
-   @JsonAnyGetter
-   public Map<String, Attribute> values();
+    /**
+    *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself.
+    *  And since this property will be represented as a map, we can set individual attributes to null
+    *  to delete them (which follows JSON Merge Patch semantics).</p>
+    */
+    @NotNull
+    @JsonAnyGetter
+    public Map<String, Attribute> values();
 
-   @JsonAnySetter
-   public void setValue(String key, Attribute value);
-   
-   public static AttributesImpl of(){
-      return new AttributesImpl();
-   }
-   
+    @JsonAnySetter
+    public void setValue(String key, Attribute value);
 
-   public static AttributesImpl of(final Attributes template) {
-      AttributesImpl instance = new AttributesImpl();
-      return instance;
-   }
+    public static AttributesImpl of(){
+        return new AttributesImpl();
+    }
+    
+
+    public static AttributesImpl of(final Attributes template) {
+        AttributesImpl instance = new AttributesImpl();
+        return instance;
+    }
 
 }

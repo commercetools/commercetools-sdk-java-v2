@@ -22,16 +22,16 @@ import java.io.IOException;
 public interface ContentionError extends ErrorObject {
 
 
-   
-   public static ContentionErrorImpl of(){
-      return new ContentionErrorImpl();
-   }
-   
 
-   public static ContentionErrorImpl of(final ContentionError template) {
-      ContentionErrorImpl instance = new ContentionErrorImpl();
-      instance.setMessage(template.getMessage());
-      return instance;
-   }
+    public static ContentionErrorImpl of(){
+        return new ContentionErrorImpl();
+    }
+    
+
+    public static ContentionErrorImpl of(final ContentionError template) {
+        ContentionErrorImpl instance = new ContentionErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
 }

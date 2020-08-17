@@ -27,35 +27,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductVariantImportRequestImpl implements ProductVariantImportRequest {
 
-   private com.commercetools.importer.models.common.ImportResourceType type;
-   
-   private java.util.List<com.commercetools.importer.models.productvariants.ProductVariantImport> resources;
+    private com.commercetools.importer.models.common.ImportResourceType type;
+    
+    private java.util.List<com.commercetools.importer.models.productvariants.ProductVariantImport> resources;
 
-   @JsonCreator
-   ProductVariantImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importer.models.productvariants.ProductVariantImport> resources) {
-      this.resources = resources;
-      this.type = ImportResourceType.findEnumViaJsonName("product-variant").get();
-   }
-   public ProductVariantImportRequestImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of the import resource.</p>
-   */
-   public com.commercetools.importer.models.common.ImportResourceType getType(){
-      return this.type;
-   }
-   
-   /**
-   *  <p>The product variant import resources of this request.</p>
-   */
-   public java.util.List<com.commercetools.importer.models.productvariants.ProductVariantImport> getResources(){
-      return this.resources;
-   }
+    @JsonCreator
+    ProductVariantImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importer.models.productvariants.ProductVariantImport> resources) {
+        this.resources = resources;
+        this.type = ImportResourceType.findEnumViaJsonName("product-variant").get();
+    }
+    public ProductVariantImportRequestImpl() {
+       
+    }
 
-   public void setResources(final java.util.List<com.commercetools.importer.models.productvariants.ProductVariantImport> resources){
-      this.resources = resources;
-   }
+    /**
+    *  <p>The type of the import resource.</p>
+    */
+    public com.commercetools.importer.models.common.ImportResourceType getType(){
+        return this.type;
+    }
+    
+    /**
+    *  <p>The product variant import resources of this request.</p>
+    */
+    public java.util.List<com.commercetools.importer.models.productvariants.ProductVariantImport> getResources(){
+        return this.resources;
+    }
+
+    public void setResources(final java.util.List<com.commercetools.importer.models.productvariants.ProductVariantImport> resources){
+        this.resources = resources;
+    }
 
 }

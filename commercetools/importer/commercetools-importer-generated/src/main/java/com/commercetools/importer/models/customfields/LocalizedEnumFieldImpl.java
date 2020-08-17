@@ -25,33 +25,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LocalizedEnumFieldImpl implements LocalizedEnumField {
 
-   private String type;
-   
-   private String value;
+    private String type;
+    
+    private String value;
 
-   @JsonCreator
-   LocalizedEnumFieldImpl(@JsonProperty("value") final String value) {
-      this.value = value;
-      this.type = "LocalizedEnum";
-   }
-   public LocalizedEnumFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public String getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    LocalizedEnumFieldImpl(@JsonProperty("value") final String value) {
+        this.value = value;
+        this.type = "LocalizedEnum";
+    }
+    public LocalizedEnumFieldImpl() {
+       
+    }
 
-   public void setValue(final String value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public String getValue(){
+        return this.value;
+    }
+
+    public void setValue(final String value){
+        this.value = value;
+    }
 
 }

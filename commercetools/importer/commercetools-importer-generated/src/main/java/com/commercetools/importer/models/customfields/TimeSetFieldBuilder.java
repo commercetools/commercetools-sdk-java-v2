@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class TimeSetFieldBuilder {
-   
-   
-   private java.util.List<java.time.LocalTime> value;
-   
-   public TimeSetFieldBuilder value( final java.util.List<java.time.LocalTime> value) {
-      this.value = value;
-      return this;
-   }
-   
-   
-   public java.util.List<java.time.LocalTime> getValue(){
-      return this.value;
-   }
 
-   public TimeSetField build() {
-       return new TimeSetFieldImpl(value);
-   }
-   
-   public static TimeSetFieldBuilder of() {
-      return new TimeSetFieldBuilder();
-   }
-   
-   public static TimeSetFieldBuilder of(final TimeSetField template) {
-      TimeSetFieldBuilder builder = new TimeSetFieldBuilder();
-      builder.value = template.getValue();
-      return builder;
-   }
-   
+    
+    private java.util.List<java.time.LocalTime> value;
+
+    public TimeSetFieldBuilder value( final java.util.List<java.time.LocalTime> value) {
+        this.value = value;
+        return this;
+    }
+
+    
+    public java.util.List<java.time.LocalTime> getValue(){
+        return this.value;
+    }
+
+    public TimeSetField build() {
+        return new TimeSetFieldImpl(value);
+    }
+
+    public static TimeSetFieldBuilder of() {
+        return new TimeSetFieldBuilder();
+    }
+
+    public static TimeSetFieldBuilder of(final TimeSetField template) {
+        TimeSetFieldBuilder builder = new TimeSetFieldBuilder();
+        builder.value = template.getValue();
+        return builder;
+    }
+
 }

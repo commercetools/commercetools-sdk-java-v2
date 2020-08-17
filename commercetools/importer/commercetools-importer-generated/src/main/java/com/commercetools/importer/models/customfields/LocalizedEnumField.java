@@ -24,22 +24,22 @@ import java.io.IOException;
 @JsonDeserialize(as = LocalizedEnumFieldImpl.class)
 public interface LocalizedEnumField extends CustomField {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public String getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public String getValue();
 
-   public void setValue(final String value);
-   
-   public static LocalizedEnumFieldImpl of(){
-      return new LocalizedEnumFieldImpl();
-   }
-   
+    public void setValue(final String value);
 
-   public static LocalizedEnumFieldImpl of(final LocalizedEnumField template) {
-      LocalizedEnumFieldImpl instance = new LocalizedEnumFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static LocalizedEnumFieldImpl of(){
+        return new LocalizedEnumFieldImpl();
+    }
+    
+
+    public static LocalizedEnumFieldImpl of(final LocalizedEnumField template) {
+        LocalizedEnumFieldImpl instance = new LocalizedEnumFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

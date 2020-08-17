@@ -25,33 +25,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class StringSetFieldImpl implements StringSetField {
 
-   private String type;
-   
-   private java.util.List<String> value;
+    private String type;
+    
+    private java.util.List<String> value;
 
-   @JsonCreator
-   StringSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
-      this.value = value;
-      this.type = "StringSet";
-   }
-   public StringSetFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<String> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    StringSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
+        this.value = value;
+        this.type = "StringSet";
+    }
+    public StringSetFieldImpl() {
+       
+    }
 
-   public void setValue(final java.util.List<String> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<String> getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.util.List<String> value){
+        this.value = value;
+    }
 
 }

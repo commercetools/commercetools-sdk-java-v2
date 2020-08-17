@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductVariantKeyReferenceBuilder {
-   
-   
-   private String key;
-   
-   public ProductVariantKeyReferenceBuilder key( final String key) {
-      this.key = key;
-      return this;
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
 
-   public ProductVariantKeyReference build() {
-       return new ProductVariantKeyReferenceImpl(key);
-   }
-   
-   public static ProductVariantKeyReferenceBuilder of() {
-      return new ProductVariantKeyReferenceBuilder();
-   }
-   
-   public static ProductVariantKeyReferenceBuilder of(final ProductVariantKeyReference template) {
-      ProductVariantKeyReferenceBuilder builder = new ProductVariantKeyReferenceBuilder();
-      builder.key = template.getKey();
-      return builder;
-   }
-   
+    
+    private String key;
+
+    public ProductVariantKeyReferenceBuilder key( final String key) {
+        this.key = key;
+        return this;
+    }
+
+    
+    public String getKey(){
+        return this.key;
+    }
+
+    public ProductVariantKeyReference build() {
+        return new ProductVariantKeyReferenceImpl(key);
+    }
+
+    public static ProductVariantKeyReferenceBuilder of() {
+        return new ProductVariantKeyReferenceBuilder();
+    }
+
+    public static ProductVariantKeyReferenceBuilder of(final ProductVariantKeyReference template) {
+        ProductVariantKeyReferenceBuilder builder = new ProductVariantKeyReferenceBuilder();
+        builder.key = template.getKey();
+        return builder;
+    }
+
 }

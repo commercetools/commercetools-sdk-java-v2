@@ -27,35 +27,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductTypeImportRequestImpl implements ProductTypeImportRequest {
 
-   private com.commercetools.importer.models.common.ImportResourceType type;
-   
-   private java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> resources;
+    private com.commercetools.importer.models.common.ImportResourceType type;
+    
+    private java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> resources;
 
-   @JsonCreator
-   ProductTypeImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> resources) {
-      this.resources = resources;
-      this.type = ImportResourceType.findEnumViaJsonName("product-type").get();
-   }
-   public ProductTypeImportRequestImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of the import resource.</p>
-   */
-   public com.commercetools.importer.models.common.ImportResourceType getType(){
-      return this.type;
-   }
-   
-   /**
-   *  <p>The product type import resources of this request.</p>
-   */
-   public java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> getResources(){
-      return this.resources;
-   }
+    @JsonCreator
+    ProductTypeImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> resources) {
+        this.resources = resources;
+        this.type = ImportResourceType.findEnumViaJsonName("product-type").get();
+    }
+    public ProductTypeImportRequestImpl() {
+       
+    }
 
-   public void setResources(final java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> resources){
-      this.resources = resources;
-   }
+    /**
+    *  <p>The type of the import resource.</p>
+    */
+    public com.commercetools.importer.models.common.ImportResourceType getType(){
+        return this.type;
+    }
+    
+    /**
+    *  <p>The product type import resources of this request.</p>
+    */
+    public java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> getResources(){
+        return this.resources;
+    }
+
+    public void setResources(final java.util.List<com.commercetools.importer.models.producttypes.ProductTypeImport> resources){
+        this.resources = resources;
+    }
 
 }

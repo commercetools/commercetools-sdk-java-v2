@@ -22,47 +22,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ImageImpl implements Image {
 
-   private String url;
-   
-   private com.commercetools.importer.models.common.AssetDimensions dimensions;
-   
-   private String label;
+    private String url;
+    
+    private com.commercetools.importer.models.common.AssetDimensions dimensions;
+    
+    private String label;
 
-   @JsonCreator
-   ImageImpl(@JsonProperty("url") final String url, @JsonProperty("dimensions") final com.commercetools.importer.models.common.AssetDimensions dimensions, @JsonProperty("label") final String label) {
-      this.url = url;
-      this.dimensions = dimensions;
-      this.label = label;
-   }
-   public ImageImpl() {
-      
-   }
-   
-   
-   public String getUrl(){
-      return this.url;
-   }
-   
-   
-   public com.commercetools.importer.models.common.AssetDimensions getDimensions(){
-      return this.dimensions;
-   }
-   
-   
-   public String getLabel(){
-      return this.label;
-   }
+    @JsonCreator
+    ImageImpl(@JsonProperty("url") final String url, @JsonProperty("dimensions") final com.commercetools.importer.models.common.AssetDimensions dimensions, @JsonProperty("label") final String label) {
+        this.url = url;
+        this.dimensions = dimensions;
+        this.label = label;
+    }
+    public ImageImpl() {
+       
+    }
 
-   public void setUrl(final String url){
-      this.url = url;
-   }
-   
-   public void setDimensions(final com.commercetools.importer.models.common.AssetDimensions dimensions){
-      this.dimensions = dimensions;
-   }
-   
-   public void setLabel(final String label){
-      this.label = label;
-   }
+    
+    public String getUrl(){
+        return this.url;
+    }
+    
+    
+    public com.commercetools.importer.models.common.AssetDimensions getDimensions(){
+        return this.dimensions;
+    }
+    
+    
+    public String getLabel(){
+        return this.label;
+    }
+
+    public void setUrl(final String url){
+        this.url = url;
+    }
+    
+    public void setDimensions(final com.commercetools.importer.models.common.AssetDimensions dimensions){
+        this.dimensions = dimensions;
+    }
+    
+    public void setLabel(final String label){
+        this.label = label;
+    }
 
 }

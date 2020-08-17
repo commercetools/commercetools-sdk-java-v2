@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class AttributeNestedTypeBuilder {
-   
-   
-   private com.commercetools.importer.models.common.ProductTypeKeyReference typeReference;
-   
-   public AttributeNestedTypeBuilder typeReference( final com.commercetools.importer.models.common.ProductTypeKeyReference typeReference) {
-      this.typeReference = typeReference;
-      return this;
-   }
-   
-   
-   public com.commercetools.importer.models.common.ProductTypeKeyReference getTypeReference(){
-      return this.typeReference;
-   }
 
-   public AttributeNestedType build() {
-       return new AttributeNestedTypeImpl(typeReference);
-   }
-   
-   public static AttributeNestedTypeBuilder of() {
-      return new AttributeNestedTypeBuilder();
-   }
-   
-   public static AttributeNestedTypeBuilder of(final AttributeNestedType template) {
-      AttributeNestedTypeBuilder builder = new AttributeNestedTypeBuilder();
-      builder.typeReference = template.getTypeReference();
-      return builder;
-   }
-   
+    
+    private com.commercetools.importer.models.common.ProductTypeKeyReference typeReference;
+
+    public AttributeNestedTypeBuilder typeReference( final com.commercetools.importer.models.common.ProductTypeKeyReference typeReference) {
+        this.typeReference = typeReference;
+        return this;
+    }
+
+    
+    public com.commercetools.importer.models.common.ProductTypeKeyReference getTypeReference(){
+        return this.typeReference;
+    }
+
+    public AttributeNestedType build() {
+        return new AttributeNestedTypeImpl(typeReference);
+    }
+
+    public static AttributeNestedTypeBuilder of() {
+        return new AttributeNestedTypeBuilder();
+    }
+
+    public static AttributeNestedTypeBuilder of(final AttributeNestedType template) {
+        AttributeNestedTypeBuilder builder = new AttributeNestedTypeBuilder();
+        builder.typeReference = template.getTypeReference();
+        return builder;
+    }
+
 }

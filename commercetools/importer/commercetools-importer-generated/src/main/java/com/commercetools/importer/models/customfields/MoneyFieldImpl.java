@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MoneyFieldImpl implements MoneyField {
 
-   private String type;
-   
-   private com.commercetools.importer.models.common.Money value;
+    private String type;
+    
+    private com.commercetools.importer.models.common.Money value;
 
-   @JsonCreator
-   MoneyFieldImpl(@JsonProperty("value") final com.commercetools.importer.models.common.Money value) {
-      this.value = value;
-      this.type = "Money";
-   }
-   public MoneyFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public com.commercetools.importer.models.common.Money getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    MoneyFieldImpl(@JsonProperty("value") final com.commercetools.importer.models.common.Money value) {
+        this.value = value;
+        this.type = "Money";
+    }
+    public MoneyFieldImpl() {
+       
+    }
 
-   public void setValue(final com.commercetools.importer.models.common.Money value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public com.commercetools.importer.models.common.Money getValue(){
+        return this.value;
+    }
+
+    public void setValue(final com.commercetools.importer.models.common.Money value){
+        this.value = value;
+    }
 
 }

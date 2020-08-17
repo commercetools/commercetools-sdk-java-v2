@@ -26,16 +26,16 @@ import java.io.IOException;
 public interface TaxCategoryKeyReference extends KeyReference {
 
 
-   
-   public static TaxCategoryKeyReferenceImpl of(){
-      return new TaxCategoryKeyReferenceImpl();
-   }
-   
 
-   public static TaxCategoryKeyReferenceImpl of(final TaxCategoryKeyReference template) {
-      TaxCategoryKeyReferenceImpl instance = new TaxCategoryKeyReferenceImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static TaxCategoryKeyReferenceImpl of(){
+        return new TaxCategoryKeyReferenceImpl();
+    }
+    
+
+    public static TaxCategoryKeyReferenceImpl of(final TaxCategoryKeyReference template) {
+        TaxCategoryKeyReferenceImpl instance = new TaxCategoryKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

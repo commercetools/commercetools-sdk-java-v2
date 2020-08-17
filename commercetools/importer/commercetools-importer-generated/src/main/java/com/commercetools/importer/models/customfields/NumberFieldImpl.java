@@ -25,33 +25,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class NumberFieldImpl implements NumberField {
 
-   private String type;
-   
-   private Integer value;
+    private String type;
+    
+    private Double value;
 
-   @JsonCreator
-   NumberFieldImpl(@JsonProperty("value") final Integer value) {
-      this.value = value;
-      this.type = "Number";
-   }
-   public NumberFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public Integer getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    NumberFieldImpl(@JsonProperty("value") final Double value) {
+        this.value = value;
+        this.type = "Number";
+    }
+    public NumberFieldImpl() {
+       
+    }
 
-   public void setValue(final Integer value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public Double getValue(){
+        return this.value;
+    }
+
+    public void setValue(final Double value){
+        this.value = value;
+    }
 
 }

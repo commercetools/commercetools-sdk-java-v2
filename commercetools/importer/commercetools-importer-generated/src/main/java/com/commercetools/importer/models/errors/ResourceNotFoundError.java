@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ResourceNotFoundErrorImpl.class)
 public interface ResourceNotFoundError extends ErrorObject {
 
-   
-   
-   @JsonProperty("resource")
-   public JsonNode getResource();
+    
+    
+    @JsonProperty("resource")
+    public JsonNode getResource();
 
-   public void setResource(final JsonNode resource);
-   
-   public static ResourceNotFoundErrorImpl of(){
-      return new ResourceNotFoundErrorImpl();
-   }
-   
+    public void setResource(final JsonNode resource);
 
-   public static ResourceNotFoundErrorImpl of(final ResourceNotFoundError template) {
-      ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setResource(template.getResource());
-      return instance;
-   }
+    public static ResourceNotFoundErrorImpl of(){
+        return new ResourceNotFoundErrorImpl();
+    }
+    
+
+    public static ResourceNotFoundErrorImpl of(final ResourceNotFoundError template) {
+        ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setResource(template.getResource());
+        return instance;
+    }
 
 }

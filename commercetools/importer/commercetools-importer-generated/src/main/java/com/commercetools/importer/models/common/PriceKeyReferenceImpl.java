@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PriceKeyReferenceImpl implements PriceKeyReference {
 
-   private String key;
-   
-   private com.commercetools.importer.models.common.ReferenceType typeId;
+    private String key;
+    
+    private com.commercetools.importer.models.common.ReferenceType typeId;
 
-   @JsonCreator
-   PriceKeyReferenceImpl(@JsonProperty("key") final String key) {
-      this.key = key;
-      this.typeId = ReferenceType.findEnumViaJsonName("price").get();
-   }
-   public PriceKeyReferenceImpl() {
-      
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
-   
-   /**
-   *  <p>The type of the referenced resource.</p>
-   */
-   public com.commercetools.importer.models.common.ReferenceType getTypeId(){
-      return this.typeId;
-   }
+    @JsonCreator
+    PriceKeyReferenceImpl(@JsonProperty("key") final String key) {
+        this.key = key;
+        this.typeId = ReferenceType.findEnumViaJsonName("price").get();
+    }
+    public PriceKeyReferenceImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public String getKey(){
+        return this.key;
+    }
+    
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importer.models.common.ReferenceType getTypeId(){
+        return this.typeId;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

@@ -26,16 +26,16 @@ import java.io.IOException;
 public interface CustomerKeyReference extends KeyReference {
 
 
-   
-   public static CustomerKeyReferenceImpl of(){
-      return new CustomerKeyReferenceImpl();
-   }
-   
 
-   public static CustomerKeyReferenceImpl of(final CustomerKeyReference template) {
-      CustomerKeyReferenceImpl instance = new CustomerKeyReferenceImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static CustomerKeyReferenceImpl of(){
+        return new CustomerKeyReferenceImpl();
+    }
+    
+
+    public static CustomerKeyReferenceImpl of(final CustomerKeyReference template) {
+        CustomerKeyReferenceImpl instance = new CustomerKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

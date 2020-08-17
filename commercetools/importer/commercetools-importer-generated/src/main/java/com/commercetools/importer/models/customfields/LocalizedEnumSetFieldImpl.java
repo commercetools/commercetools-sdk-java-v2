@@ -25,33 +25,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LocalizedEnumSetFieldImpl implements LocalizedEnumSetField {
 
-   private String type;
-   
-   private java.util.List<String> value;
+    private String type;
+    
+    private java.util.List<String> value;
 
-   @JsonCreator
-   LocalizedEnumSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
-      this.value = value;
-      this.type = "LocalizedEnumSet";
-   }
-   public LocalizedEnumSetFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<String> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    LocalizedEnumSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
+        this.value = value;
+        this.type = "LocalizedEnumSet";
+    }
+    public LocalizedEnumSetFieldImpl() {
+       
+    }
 
-   public void setValue(final java.util.List<String> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<String> getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.util.List<String> value){
+        this.value = value;
+    }
 
 }

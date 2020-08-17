@@ -25,47 +25,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TextSetAttributeImpl implements TextSetAttribute {
 
-   private String name;
-   
-   private String type;
-   
-   private java.util.List<String> value;
+    private String name;
+    
+    private String type;
+    
+    private java.util.List<String> value;
 
-   @JsonCreator
-   TextSetAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.util.List<String> value) {
-      this.name = name;
-      this.value = value;
-      this.type = "text-set";
-   }
-   public TextSetAttributeImpl() {
-      
-   }
-   
-   /**
-   *  <p>The name of this attribute must match a name of the product types attribute definitions.
-   *  The name is required if this type is used in a product variant and must not be set when
-   *  used in a product variant patch.</p>
-   */
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<String> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    TextSetAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.util.List<String> value) {
+        this.name = name;
+        this.value = value;
+        this.type = "text-set";
+    }
+    public TextSetAttributeImpl() {
+       
+    }
 
-   public void setName(final String name){
-      this.name = name;
-   }
-   
-   public void setValue(final java.util.List<String> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The name of this attribute must match a name of the product types attribute definitions.
+    *  The name is required if this type is used in a product variant and must not be set when
+    *  used in a product variant patch.</p>
+    */
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<String> getValue(){
+        return this.value;
+    }
+
+    public void setName(final String name){
+        this.name = name;
+    }
+    
+    public void setValue(final java.util.List<String> value){
+        this.value = value;
+    }
 
 }

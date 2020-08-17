@@ -24,23 +24,23 @@ import java.io.IOException;
 @JsonDeserialize(as = NumberAttributeImpl.class)
 public interface NumberAttribute extends Attribute {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public Integer getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public Double getValue();
 
-   public void setValue(final Integer value);
-   
-   public static NumberAttributeImpl of(){
-      return new NumberAttributeImpl();
-   }
-   
+    public void setValue(final Double value);
 
-   public static NumberAttributeImpl of(final NumberAttribute template) {
-      NumberAttributeImpl instance = new NumberAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static NumberAttributeImpl of(){
+        return new NumberAttributeImpl();
+    }
+    
+
+    public static NumberAttributeImpl of(final NumberAttribute template) {
+        NumberAttributeImpl instance = new NumberAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

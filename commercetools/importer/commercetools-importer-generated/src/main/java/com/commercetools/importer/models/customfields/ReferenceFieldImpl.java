@@ -26,35 +26,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReferenceFieldImpl implements ReferenceField {
 
-   private String type;
-   
-   private com.commercetools.importer.models.common.KeyReference value;
+    private String type;
+    
+    private com.commercetools.importer.models.common.KeyReference value;
 
-   @JsonCreator
-   ReferenceFieldImpl(@JsonProperty("value") final com.commercetools.importer.models.common.KeyReference value) {
-      this.value = value;
-      this.type = "Reference";
-   }
-   public ReferenceFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   /**
-   *  <p>References a resource by its key.</p>
-   */
-   public com.commercetools.importer.models.common.KeyReference getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    ReferenceFieldImpl(@JsonProperty("value") final com.commercetools.importer.models.common.KeyReference value) {
+        this.value = value;
+        this.type = "Reference";
+    }
+    public ReferenceFieldImpl() {
+       
+    }
 
-   public void setValue(final com.commercetools.importer.models.common.KeyReference value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    /**
+    *  <p>References a resource by its key.</p>
+    */
+    public com.commercetools.importer.models.common.KeyReference getValue(){
+        return this.value;
+    }
+
+    public void setValue(final com.commercetools.importer.models.common.KeyReference value){
+        this.value = value;
+    }
 
 }

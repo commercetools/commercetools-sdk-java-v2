@@ -25,33 +25,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InvalidScopeErrorImpl implements InvalidScopeError {
 
-   private String code;
-   
-   private String message;
+    private String code;
+    
+    private String message;
 
-   @JsonCreator
-   InvalidScopeErrorImpl(@JsonProperty("message") final String message) {
-      this.message = message;
-      this.code = "invalid_scope";
-   }
-   public InvalidScopeErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   /**
-   *  <p>The error's description.</p>
-   */
-   public String getMessage(){
-      return this.message;
-   }
+    @JsonCreator
+    InvalidScopeErrorImpl(@JsonProperty("message") final String message) {
+        this.message = message;
+        this.code = "invalid_scope";
+    }
+    public InvalidScopeErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    /**
+    *  <p>The error's description.</p>
+    */
+    public String getMessage(){
+        return this.message;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
 
 }

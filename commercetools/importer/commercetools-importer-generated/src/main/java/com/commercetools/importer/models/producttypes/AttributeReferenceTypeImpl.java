@@ -23,33 +23,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeReferenceTypeImpl implements AttributeReferenceType {
 
-   private String name;
-   
-   private com.commercetools.importer.models.common.ReferenceType referenceTypeId;
+    private String name;
+    
+    private com.commercetools.importer.models.common.ReferenceType referenceTypeId;
 
-   @JsonCreator
-   AttributeReferenceTypeImpl(@JsonProperty("referenceTypeId") final com.commercetools.importer.models.common.ReferenceType referenceTypeId) {
-      this.referenceTypeId = referenceTypeId;
-      this.name = "reference";
-   }
-   public AttributeReferenceTypeImpl() {
-      
-   }
-   
-   
-   public String getName(){
-      return this.name;
-   }
-   
-   /**
-   *  <p>The type of the referenced resource.</p>
-   */
-   public com.commercetools.importer.models.common.ReferenceType getReferenceTypeId(){
-      return this.referenceTypeId;
-   }
+    @JsonCreator
+    AttributeReferenceTypeImpl(@JsonProperty("referenceTypeId") final com.commercetools.importer.models.common.ReferenceType referenceTypeId) {
+        this.referenceTypeId = referenceTypeId;
+        this.name = "reference";
+    }
+    public AttributeReferenceTypeImpl() {
+       
+    }
 
-   public void setReferenceTypeId(final com.commercetools.importer.models.common.ReferenceType referenceTypeId){
-      this.referenceTypeId = referenceTypeId;
-   }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+    public com.commercetools.importer.models.common.ReferenceType getReferenceTypeId(){
+        return this.referenceTypeId;
+    }
+
+    public void setReferenceTypeId(final com.commercetools.importer.models.common.ReferenceType referenceTypeId){
+        this.referenceTypeId = referenceTypeId;
+    }
 
 }

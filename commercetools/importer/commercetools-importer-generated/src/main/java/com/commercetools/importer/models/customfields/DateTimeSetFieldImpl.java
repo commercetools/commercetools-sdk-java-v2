@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DateTimeSetFieldImpl implements DateTimeSetField {
 
-   private String type;
-   
-   private java.util.List<java.time.ZonedDateTime> value;
+    private String type;
+    
+    private java.util.List<java.time.ZonedDateTime> value;
 
-   @JsonCreator
-   DateTimeSetFieldImpl(@JsonProperty("value") final java.util.List<java.time.ZonedDateTime> value) {
-      this.value = value;
-      this.type = "DateTimeSet";
-   }
-   public DateTimeSetFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<java.time.ZonedDateTime> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    DateTimeSetFieldImpl(@JsonProperty("value") final java.util.List<java.time.ZonedDateTime> value) {
+        this.value = value;
+        this.type = "DateTimeSet";
+    }
+    public DateTimeSetFieldImpl() {
+       
+    }
 
-   public void setValue(final java.util.List<java.time.ZonedDateTime> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<java.time.ZonedDateTime> getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.util.List<java.time.ZonedDateTime> value){
+        this.value = value;
+    }
 
 }

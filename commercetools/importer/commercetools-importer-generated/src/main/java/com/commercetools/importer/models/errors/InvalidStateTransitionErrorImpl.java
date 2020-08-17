@@ -23,61 +23,61 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class InvalidStateTransitionErrorImpl implements InvalidStateTransitionError {
 
-   private String code;
-   
-   private String message;
-   
-   private com.commercetools.importer.models.common.ProcessingState currentState;
-   
-   private com.commercetools.importer.models.common.ProcessingState newState;
+    private String code;
+    
+    private String message;
+    
+    private com.commercetools.importer.models.common.ProcessingState currentState;
+    
+    private com.commercetools.importer.models.common.ProcessingState newState;
 
-   @JsonCreator
-   InvalidStateTransitionErrorImpl(@JsonProperty("message") final String message, @JsonProperty("currentState") final com.commercetools.importer.models.common.ProcessingState currentState, @JsonProperty("newState") final com.commercetools.importer.models.common.ProcessingState newState) {
-      this.message = message;
-      this.currentState = currentState;
-      this.newState = newState;
-      this.code = "InvalidTransition";
-   }
-   public InvalidStateTransitionErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   /**
-   *  <p>The error's description.</p>
-   */
-   public String getMessage(){
-      return this.message;
-   }
-   
-   /**
-   *  <p>This enumeration describes the processing state of an import operation.</p>
-   */
-   public com.commercetools.importer.models.common.ProcessingState getCurrentState(){
-      return this.currentState;
-   }
-   
-   /**
-   *  <p>This enumeration describes the processing state of an import operation.</p>
-   */
-   public com.commercetools.importer.models.common.ProcessingState getNewState(){
-      return this.newState;
-   }
+    @JsonCreator
+    InvalidStateTransitionErrorImpl(@JsonProperty("message") final String message, @JsonProperty("currentState") final com.commercetools.importer.models.common.ProcessingState currentState, @JsonProperty("newState") final com.commercetools.importer.models.common.ProcessingState newState) {
+        this.message = message;
+        this.currentState = currentState;
+        this.newState = newState;
+        this.code = "InvalidTransition";
+    }
+    public InvalidStateTransitionErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setCurrentState(final com.commercetools.importer.models.common.ProcessingState currentState){
-      this.currentState = currentState;
-   }
-   
-   public void setNewState(final com.commercetools.importer.models.common.ProcessingState newState){
-      this.newState = newState;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    /**
+    *  <p>The error's description.</p>
+    */
+    public String getMessage(){
+        return this.message;
+    }
+    
+    /**
+    *  <p>This enumeration describes the processing state of an import operation.</p>
+    */
+    public com.commercetools.importer.models.common.ProcessingState getCurrentState(){
+        return this.currentState;
+    }
+    
+    /**
+    *  <p>This enumeration describes the processing state of an import operation.</p>
+    */
+    public com.commercetools.importer.models.common.ProcessingState getNewState(){
+        return this.newState;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setCurrentState(final com.commercetools.importer.models.common.ProcessingState currentState){
+        this.currentState = currentState;
+    }
+    
+    public void setNewState(final com.commercetools.importer.models.common.ProcessingState newState){
+        this.newState = newState;
+    }
 
 }

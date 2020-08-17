@@ -26,16 +26,16 @@ import java.io.IOException;
 public interface ChannelKeyReference extends KeyReference {
 
 
-   
-   public static ChannelKeyReferenceImpl of(){
-      return new ChannelKeyReferenceImpl();
-   }
-   
 
-   public static ChannelKeyReferenceImpl of(final ChannelKeyReference template) {
-      ChannelKeyReferenceImpl instance = new ChannelKeyReferenceImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ChannelKeyReferenceImpl of(){
+        return new ChannelKeyReferenceImpl();
+    }
+    
+
+    public static ChannelKeyReferenceImpl of(final ChannelKeyReference template) {
+        ChannelKeyReferenceImpl instance = new ChannelKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

@@ -25,23 +25,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ImportResponseImpl.class)
 public interface ImportResponse  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("operationStatus")
-   public List<ImportOperationStatus> getOperationStatus();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("operationStatus")
+    public List<ImportOperationStatus> getOperationStatus();
 
-   public void setOperationStatus(final List<ImportOperationStatus> operationStatus);
-   
-   public static ImportResponseImpl of(){
-      return new ImportResponseImpl();
-   }
-   
+    public void setOperationStatus(final List<ImportOperationStatus> operationStatus);
 
-   public static ImportResponseImpl of(final ImportResponse template) {
-      ImportResponseImpl instance = new ImportResponseImpl();
-      instance.setOperationStatus(template.getOperationStatus());
-      return instance;
-   }
+    public static ImportResponseImpl of(){
+        return new ImportResponseImpl();
+    }
+    
+
+    public static ImportResponseImpl of(final ImportResponse template) {
+        ImportResponseImpl instance = new ImportResponseImpl();
+        instance.setOperationStatus(template.getOperationStatus());
+        return instance;
+    }
 
 }

@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DateSetFieldImpl implements DateSetField {
 
-   private String type;
-   
-   private java.util.List<java.time.LocalDate> value;
+    private String type;
+    
+    private java.util.List<java.time.LocalDate> value;
 
-   @JsonCreator
-   DateSetFieldImpl(@JsonProperty("value") final java.util.List<java.time.LocalDate> value) {
-      this.value = value;
-      this.type = "DateSet";
-   }
-   public DateSetFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<java.time.LocalDate> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    DateSetFieldImpl(@JsonProperty("value") final java.util.List<java.time.LocalDate> value) {
+        this.value = value;
+        this.type = "DateSet";
+    }
+    public DateSetFieldImpl() {
+       
+    }
 
-   public void setValue(final java.util.List<java.time.LocalDate> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<java.time.LocalDate> getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.util.List<java.time.LocalDate> value){
+        this.value = value;
+    }
 
 }

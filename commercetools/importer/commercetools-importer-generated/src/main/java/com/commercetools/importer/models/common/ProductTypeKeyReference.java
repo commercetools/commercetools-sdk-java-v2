@@ -26,16 +26,16 @@ import java.io.IOException;
 public interface ProductTypeKeyReference extends KeyReference {
 
 
-   
-   public static ProductTypeKeyReferenceImpl of(){
-      return new ProductTypeKeyReferenceImpl();
-   }
-   
 
-   public static ProductTypeKeyReferenceImpl of(final ProductTypeKeyReference template) {
-      ProductTypeKeyReferenceImpl instance = new ProductTypeKeyReferenceImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ProductTypeKeyReferenceImpl of(){
+        return new ProductTypeKeyReferenceImpl();
+    }
+    
+
+    public static ProductTypeKeyReferenceImpl of(final ProductTypeKeyReference template) {
+        ProductTypeKeyReferenceImpl instance = new ProductTypeKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

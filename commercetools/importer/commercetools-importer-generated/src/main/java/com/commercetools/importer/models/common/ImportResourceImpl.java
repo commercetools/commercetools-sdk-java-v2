@@ -33,23 +33,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ImportResourceImpl implements ImportResource {
 
-   private String key;
+    private String key;
 
-   @JsonCreator
-   ImportResourceImpl(@JsonProperty("key") final String key) {
-      this.key = key;
-   }
-   public ImportResourceImpl() {
-      
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
+    @JsonCreator
+    ImportResourceImpl(@JsonProperty("key") final String key) {
+        this.key = key;
+    }
+    public ImportResourceImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
+    
+    public String getKey(){
+        return this.key;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
 
 }

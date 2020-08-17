@@ -24,22 +24,22 @@ import java.io.IOException;
 @JsonDeserialize(as = EnumFieldImpl.class)
 public interface EnumField extends CustomField {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public String getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public String getValue();
 
-   public void setValue(final String value);
-   
-   public static EnumFieldImpl of(){
-      return new EnumFieldImpl();
-   }
-   
+    public void setValue(final String value);
 
-   public static EnumFieldImpl of(final EnumField template) {
-      EnumFieldImpl instance = new EnumFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static EnumFieldImpl of(){
+        return new EnumFieldImpl();
+    }
+    
+
+    public static EnumFieldImpl of(final EnumField template) {
+        EnumFieldImpl instance = new EnumFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

@@ -25,47 +25,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class BooleanSetAttributeImpl implements BooleanSetAttribute {
 
-   private String name;
-   
-   private String type;
-   
-   private java.util.List<Boolean> value;
+    private String name;
+    
+    private String type;
+    
+    private java.util.List<Boolean> value;
 
-   @JsonCreator
-   BooleanSetAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.util.List<Boolean> value) {
-      this.name = name;
-      this.value = value;
-      this.type = "boolean-set";
-   }
-   public BooleanSetAttributeImpl() {
-      
-   }
-   
-   /**
-   *  <p>The name of this attribute must match a name of the product types attribute definitions.
-   *  The name is required if this type is used in a product variant and must not be set when
-   *  used in a product variant patch.</p>
-   */
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<Boolean> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    BooleanSetAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.util.List<Boolean> value) {
+        this.name = name;
+        this.value = value;
+        this.type = "boolean-set";
+    }
+    public BooleanSetAttributeImpl() {
+       
+    }
 
-   public void setName(final String name){
-      this.name = name;
-   }
-   
-   public void setValue(final java.util.List<Boolean> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The name of this attribute must match a name of the product types attribute definitions.
+    *  The name is required if this type is used in a product variant and must not be set when
+    *  used in a product variant patch.</p>
+    */
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<Boolean> getValue(){
+        return this.value;
+    }
+
+    public void setName(final String name){
+        this.name = name;
+    }
+    
+    public void setValue(final java.util.List<Boolean> value){
+        this.value = value;
+    }
 
 }

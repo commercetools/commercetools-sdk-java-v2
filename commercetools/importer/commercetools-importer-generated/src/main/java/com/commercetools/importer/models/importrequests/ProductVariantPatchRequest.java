@@ -26,25 +26,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantPatchRequestImpl.class)
 public interface ProductVariantPatchRequest extends ImportRequest {
 
-   /**
-   *  <p>The product variant patches of this request.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("patches")
-   public List<ProductVariantPatch> getPatches();
+    /**
+    *  <p>The product variant patches of this request.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("patches")
+    public List<ProductVariantPatch> getPatches();
 
-   public void setPatches(final List<ProductVariantPatch> patches);
-   
-   public static ProductVariantPatchRequestImpl of(){
-      return new ProductVariantPatchRequestImpl();
-   }
-   
+    public void setPatches(final List<ProductVariantPatch> patches);
 
-   public static ProductVariantPatchRequestImpl of(final ProductVariantPatchRequest template) {
-      ProductVariantPatchRequestImpl instance = new ProductVariantPatchRequestImpl();
-      instance.setPatches(template.getPatches());
-      return instance;
-   }
+    public static ProductVariantPatchRequestImpl of(){
+        return new ProductVariantPatchRequestImpl();
+    }
+    
+
+    public static ProductVariantPatchRequestImpl of(final ProductVariantPatchRequest template) {
+        ProductVariantPatchRequestImpl instance = new ProductVariantPatchRequestImpl();
+        instance.setPatches(template.getPatches());
+        return instance;
+    }
 
 }

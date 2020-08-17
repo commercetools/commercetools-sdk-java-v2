@@ -26,25 +26,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantImportRequestImpl.class)
 public interface ProductVariantImportRequest extends ImportRequest {
 
-   /**
-   *  <p>The product variant import resources of this request.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("resources")
-   public List<ProductVariantImport> getResources();
+    /**
+    *  <p>The product variant import resources of this request.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("resources")
+    public List<ProductVariantImport> getResources();
 
-   public void setResources(final List<ProductVariantImport> resources);
-   
-   public static ProductVariantImportRequestImpl of(){
-      return new ProductVariantImportRequestImpl();
-   }
-   
+    public void setResources(final List<ProductVariantImport> resources);
 
-   public static ProductVariantImportRequestImpl of(final ProductVariantImportRequest template) {
-      ProductVariantImportRequestImpl instance = new ProductVariantImportRequestImpl();
-      instance.setResources(template.getResources());
-      return instance;
-   }
+    public static ProductVariantImportRequestImpl of(){
+        return new ProductVariantImportRequestImpl();
+    }
+    
+
+    public static ProductVariantImportRequestImpl of(final ProductVariantImportRequest template) {
+        ProductVariantImportRequestImpl instance = new ProductVariantImportRequestImpl();
+        instance.setResources(template.getResources());
+        return instance;
+    }
 
 }

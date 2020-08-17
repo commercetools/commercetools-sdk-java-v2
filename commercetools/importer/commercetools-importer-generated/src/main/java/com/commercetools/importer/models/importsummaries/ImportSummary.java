@@ -25,34 +25,34 @@ import java.io.IOException;
 @JsonDeserialize(as = ImportSummaryImpl.class)
 public interface ImportSummary  {
 
-   /**
-   *  <p>The states summary for this import summary.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("states")
-   public OperationStates getStates();
-   /**
-   *  <p>The total number of import operations received for this import group.</p>
-   */
-   @NotNull
-   @JsonProperty("total")
-   public Integer getTotal();
+    /**
+    *  <p>The states summary for this import summary.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("states")
+    public OperationStates getStates();
+    /**
+    *  <p>The total number of import operations received for this import group.</p>
+    */
+    @NotNull
+    @JsonProperty("total")
+    public Double getTotal();
 
-   public void setStates(final OperationStates states);
-   
-   public void setTotal(final Integer total);
-   
-   public static ImportSummaryImpl of(){
-      return new ImportSummaryImpl();
-   }
-   
+    public void setStates(final OperationStates states);
+    
+    public void setTotal(final Double total);
 
-   public static ImportSummaryImpl of(final ImportSummary template) {
-      ImportSummaryImpl instance = new ImportSummaryImpl();
-      instance.setStates(template.getStates());
-      instance.setTotal(template.getTotal());
-      return instance;
-   }
+    public static ImportSummaryImpl of(){
+        return new ImportSummaryImpl();
+    }
+    
+
+    public static ImportSummaryImpl of(final ImportSummary template) {
+        ImportSummaryImpl instance = new ImportSummaryImpl();
+        instance.setStates(template.getStates());
+        instance.setTotal(template.getTotal());
+        return instance;
+    }
 
 }

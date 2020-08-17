@@ -24,23 +24,23 @@ import java.io.IOException;
 @JsonDeserialize(as = BooleanSetAttributeImpl.class)
 public interface BooleanSetAttribute extends Attribute {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public List<Boolean> getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public List<Boolean> getValue();
 
-   public void setValue(final List<Boolean> value);
-   
-   public static BooleanSetAttributeImpl of(){
-      return new BooleanSetAttributeImpl();
-   }
-   
+    public void setValue(final List<Boolean> value);
 
-   public static BooleanSetAttributeImpl of(final BooleanSetAttribute template) {
-      BooleanSetAttributeImpl instance = new BooleanSetAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static BooleanSetAttributeImpl of(){
+        return new BooleanSetAttributeImpl();
+    }
+    
+
+    public static BooleanSetAttributeImpl of(final BooleanSetAttribute template) {
+        BooleanSetAttributeImpl instance = new BooleanSetAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

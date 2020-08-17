@@ -22,34 +22,34 @@ import java.io.IOException;
 @JsonDeserialize(as = InvalidStateTransitionErrorImpl.class)
 public interface InvalidStateTransitionError extends ErrorObject {
 
-   /**
-   *  <p>This enumeration describes the processing state of an import operation.</p>
-   */
-   @NotNull
-   @JsonProperty("currentState")
-   public ProcessingState getCurrentState();
-   /**
-   *  <p>This enumeration describes the processing state of an import operation.</p>
-   */
-   @NotNull
-   @JsonProperty("newState")
-   public ProcessingState getNewState();
+    /**
+    *  <p>This enumeration describes the processing state of an import operation.</p>
+    */
+    @NotNull
+    @JsonProperty("currentState")
+    public ProcessingState getCurrentState();
+    /**
+    *  <p>This enumeration describes the processing state of an import operation.</p>
+    */
+    @NotNull
+    @JsonProperty("newState")
+    public ProcessingState getNewState();
 
-   public void setCurrentState(final ProcessingState currentState);
-   
-   public void setNewState(final ProcessingState newState);
-   
-   public static InvalidStateTransitionErrorImpl of(){
-      return new InvalidStateTransitionErrorImpl();
-   }
-   
+    public void setCurrentState(final ProcessingState currentState);
+    
+    public void setNewState(final ProcessingState newState);
 
-   public static InvalidStateTransitionErrorImpl of(final InvalidStateTransitionError template) {
-      InvalidStateTransitionErrorImpl instance = new InvalidStateTransitionErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setCurrentState(template.getCurrentState());
-      instance.setNewState(template.getNewState());
-      return instance;
-   }
+    public static InvalidStateTransitionErrorImpl of(){
+        return new InvalidStateTransitionErrorImpl();
+    }
+    
+
+    public static InvalidStateTransitionErrorImpl of(final InvalidStateTransitionError template) {
+        InvalidStateTransitionErrorImpl instance = new InvalidStateTransitionErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setCurrentState(template.getCurrentState());
+        instance.setNewState(template.getNewState());
+        return instance;
+    }
 
 }

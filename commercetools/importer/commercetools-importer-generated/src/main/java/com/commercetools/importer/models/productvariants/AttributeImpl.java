@@ -47,35 +47,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeImpl implements Attribute {
 
-   private String name;
-   
-   private String type;
+    private String name;
+    
+    private String type;
 
-   @JsonCreator
-   AttributeImpl(@JsonProperty("name") final String name) {
-      this.name = name;
-      this.type = "null";
-   }
-   public AttributeImpl() {
-      
-   }
-   
-   /**
-   *  <p>The name of this attribute must match a name of the product types attribute definitions.
-   *  The name is required if this type is used in a product variant and must not be set when
-   *  used in a product variant patch.</p>
-   */
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    AttributeImpl(@JsonProperty("name") final String name) {
+        this.name = name;
+        this.type = "null";
+    }
+    public AttributeImpl() {
+       
+    }
 
-   public void setName(final String name){
-      this.name = name;
-   }
+    /**
+    *  <p>The name of this attribute must match a name of the product types attribute definitions.
+    *  The name is required if this type is used in a product variant and must not be set when
+    *  used in a product variant patch.</p>
+    */
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public String getType(){
+        return this.type;
+    }
+
+    public void setName(final String name){
+        this.name = name;
+    }
 
 }

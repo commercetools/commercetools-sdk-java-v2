@@ -25,23 +25,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ReferenceSetFieldImpl.class)
 public interface ReferenceSetField extends CustomField {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public List<KeyReference> getValue();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public List<KeyReference> getValue();
 
-   public void setValue(final List<KeyReference> value);
-   
-   public static ReferenceSetFieldImpl of(){
-      return new ReferenceSetFieldImpl();
-   }
-   
+    public void setValue(final List<KeyReference> value);
 
-   public static ReferenceSetFieldImpl of(final ReferenceSetField template) {
-      ReferenceSetFieldImpl instance = new ReferenceSetFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static ReferenceSetFieldImpl of(){
+        return new ReferenceSetFieldImpl();
+    }
+    
+
+    public static ReferenceSetFieldImpl of(final ReferenceSetField template) {
+        ReferenceSetFieldImpl instance = new ReferenceSetFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

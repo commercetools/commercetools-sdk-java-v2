@@ -27,35 +27,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PriceImportRequestImpl implements PriceImportRequest {
 
-   private com.commercetools.importer.models.common.ImportResourceType type;
-   
-   private java.util.List<com.commercetools.importer.models.prices.PriceImport> resources;
+    private com.commercetools.importer.models.common.ImportResourceType type;
+    
+    private java.util.List<com.commercetools.importer.models.prices.PriceImport> resources;
 
-   @JsonCreator
-   PriceImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importer.models.prices.PriceImport> resources) {
-      this.resources = resources;
-      this.type = ImportResourceType.findEnumViaJsonName("price").get();
-   }
-   public PriceImportRequestImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of the import resource.</p>
-   */
-   public com.commercetools.importer.models.common.ImportResourceType getType(){
-      return this.type;
-   }
-   
-   /**
-   *  <p>The price import resources of this request.</p>
-   */
-   public java.util.List<com.commercetools.importer.models.prices.PriceImport> getResources(){
-      return this.resources;
-   }
+    @JsonCreator
+    PriceImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importer.models.prices.PriceImport> resources) {
+        this.resources = resources;
+        this.type = ImportResourceType.findEnumViaJsonName("price").get();
+    }
+    public PriceImportRequestImpl() {
+       
+    }
 
-   public void setResources(final java.util.List<com.commercetools.importer.models.prices.PriceImport> resources){
-      this.resources = resources;
-   }
+    /**
+    *  <p>The type of the import resource.</p>
+    */
+    public com.commercetools.importer.models.common.ImportResourceType getType(){
+        return this.type;
+    }
+    
+    /**
+    *  <p>The price import resources of this request.</p>
+    */
+    public java.util.List<com.commercetools.importer.models.prices.PriceImport> getResources(){
+        return this.resources;
+    }
+
+    public void setResources(final java.util.List<com.commercetools.importer.models.prices.PriceImport> resources){
+        this.resources = resources;
+    }
 
 }

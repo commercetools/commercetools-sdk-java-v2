@@ -34,10 +34,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.ProductVariantPatchRequestImpl.class, name = "product-variant-patch")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = ImportRequestImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = ImportRequestImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -46,7 +46,7 @@ import java.io.IOException;
 public interface ImportRequest  {
 
 
-   
+
 
 
 }

@@ -21,22 +21,22 @@ import java.io.IOException;
 @JsonDeserialize(as = LocalizedStringImpl.class)
 public interface LocalizedString  {
 
-   
-   @NotNull
-   @JsonAnyGetter
-   public Map<String, String> values();
+    
+    @NotNull
+    @JsonAnyGetter
+    public Map<String, String> values();
 
-   @JsonAnySetter
-   public void setValue(String key, String value);
-   
-   public static LocalizedStringImpl of(){
-      return new LocalizedStringImpl();
-   }
-   
+    @JsonAnySetter
+    public void setValue(String key, String value);
 
-   public static LocalizedStringImpl of(final LocalizedString template) {
-      LocalizedStringImpl instance = new LocalizedStringImpl();
-      return instance;
-   }
+    public static LocalizedStringImpl of(){
+        return new LocalizedStringImpl();
+    }
+    
+
+    public static LocalizedStringImpl of(final LocalizedString template) {
+        LocalizedStringImpl instance = new LocalizedStringImpl();
+        return instance;
+    }
 
 }

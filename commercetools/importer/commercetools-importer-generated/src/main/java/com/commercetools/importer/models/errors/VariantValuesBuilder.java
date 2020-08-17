@@ -14,60 +14,60 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class VariantValuesBuilder {
-   
-   @Nullable
-   private String sku;
-   
-   
-   private java.util.List<com.commercetools.importer.models.prices.PriceImport> prices;
-   
-   
-   private java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes;
-   
-   public VariantValuesBuilder sku(@Nullable final String sku) {
-      this.sku = sku;
-      return this;
-   }
-   
-   public VariantValuesBuilder prices( final java.util.List<com.commercetools.importer.models.prices.PriceImport> prices) {
-      this.prices = prices;
-      return this;
-   }
-   
-   public VariantValuesBuilder attributes( final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes) {
-      this.attributes = attributes;
-      return this;
-   }
-   
-   @Nullable
-   public String getSku(){
-      return this.sku;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.prices.PriceImport> getPrices(){
-      return this.prices;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.productvariants.Attribute> getAttributes(){
-      return this.attributes;
-   }
 
-   public VariantValues build() {
-       return new VariantValuesImpl(sku, prices, attributes);
-   }
-   
-   public static VariantValuesBuilder of() {
-      return new VariantValuesBuilder();
-   }
-   
-   public static VariantValuesBuilder of(final VariantValues template) {
-      VariantValuesBuilder builder = new VariantValuesBuilder();
-      builder.sku = template.getSku();
-      builder.prices = template.getPrices();
-      builder.attributes = template.getAttributes();
-      return builder;
-   }
-   
+    @Nullable
+    private String sku;
+    
+    
+    private java.util.List<com.commercetools.importer.models.prices.PriceImport> prices;
+    
+    
+    private java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes;
+
+    public VariantValuesBuilder sku(@Nullable final String sku) {
+        this.sku = sku;
+        return this;
+    }
+    
+    public VariantValuesBuilder prices( final java.util.List<com.commercetools.importer.models.prices.PriceImport> prices) {
+        this.prices = prices;
+        return this;
+    }
+    
+    public VariantValuesBuilder attributes( final java.util.List<com.commercetools.importer.models.productvariants.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    @Nullable
+    public String getSku(){
+        return this.sku;
+    }
+    
+    
+    public java.util.List<com.commercetools.importer.models.prices.PriceImport> getPrices(){
+        return this.prices;
+    }
+    
+    
+    public java.util.List<com.commercetools.importer.models.productvariants.Attribute> getAttributes(){
+        return this.attributes;
+    }
+
+    public VariantValues build() {
+        return new VariantValuesImpl(sku, prices, attributes);
+    }
+
+    public static VariantValuesBuilder of() {
+        return new VariantValuesBuilder();
+    }
+
+    public static VariantValuesBuilder of(final VariantValues template) {
+        VariantValuesBuilder builder = new VariantValuesBuilder();
+        builder.sku = template.getSku();
+        builder.prices = template.getPrices();
+        builder.attributes = template.getAttributes();
+        return builder;
+    }
+
 }

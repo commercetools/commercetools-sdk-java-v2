@@ -26,25 +26,25 @@ import java.io.IOException;
 @JsonDeserialize(as = CategoryImportRequestImpl.class)
 public interface CategoryImportRequest extends ImportRequest {
 
-   /**
-   *  <p>The category import resources of this request.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("resources")
-   public List<CategoryImport> getResources();
+    /**
+    *  <p>The category import resources of this request.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("resources")
+    public List<CategoryImport> getResources();
 
-   public void setResources(final List<CategoryImport> resources);
-   
-   public static CategoryImportRequestImpl of(){
-      return new CategoryImportRequestImpl();
-   }
-   
+    public void setResources(final List<CategoryImport> resources);
 
-   public static CategoryImportRequestImpl of(final CategoryImportRequest template) {
-      CategoryImportRequestImpl instance = new CategoryImportRequestImpl();
-      instance.setResources(template.getResources());
-      return instance;
-   }
+    public static CategoryImportRequestImpl of(){
+        return new CategoryImportRequestImpl();
+    }
+    
+
+    public static CategoryImportRequestImpl of(final CategoryImportRequest template) {
+        CategoryImportRequestImpl instance = new CategoryImportRequestImpl();
+        instance.setResources(template.getResources());
+        return instance;
+    }
 
 }

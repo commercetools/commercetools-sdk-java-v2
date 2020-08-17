@@ -27,47 +27,47 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesError {
 
-   private String code;
-   
-   private String message;
-   
-   private com.commercetools.importer.models.errors.VariantValues variantValues;
+    private String code;
+    
+    private String message;
+    
+    private com.commercetools.importer.models.errors.VariantValues variantValues;
 
-   @JsonCreator
-   DuplicateVariantValuesErrorImpl(@JsonProperty("message") final String message, @JsonProperty("variantValues") final com.commercetools.importer.models.errors.VariantValues variantValues) {
-      this.message = message;
-      this.variantValues = variantValues;
-      this.code = "DuplicateVariantValues";
-   }
-   public DuplicateVariantValuesErrorImpl() {
-      
-   }
-   
-   
-   public String getCode(){
-      return this.code;
-   }
-   
-   /**
-   *  <p>The error's description.</p>
-   */
-   public String getMessage(){
-      return this.message;
-   }
-   
-   /**
-   *  <p>The offending variant values.</p>
-   */
-   public com.commercetools.importer.models.errors.VariantValues getVariantValues(){
-      return this.variantValues;
-   }
+    @JsonCreator
+    DuplicateVariantValuesErrorImpl(@JsonProperty("message") final String message, @JsonProperty("variantValues") final com.commercetools.importer.models.errors.VariantValues variantValues) {
+        this.message = message;
+        this.variantValues = variantValues;
+        this.code = "DuplicateVariantValues";
+    }
+    public DuplicateVariantValuesErrorImpl() {
+       
+    }
 
-   public void setMessage(final String message){
-      this.message = message;
-   }
-   
-   public void setVariantValues(final com.commercetools.importer.models.errors.VariantValues variantValues){
-      this.variantValues = variantValues;
-   }
+    
+    public String getCode(){
+        return this.code;
+    }
+    
+    /**
+    *  <p>The error's description.</p>
+    */
+    public String getMessage(){
+        return this.message;
+    }
+    
+    /**
+    *  <p>The offending variant values.</p>
+    */
+    public com.commercetools.importer.models.errors.VariantValues getVariantValues(){
+        return this.variantValues;
+    }
+
+    public void setMessage(final String message){
+        this.message = message;
+    }
+    
+    public void setVariantValues(final com.commercetools.importer.models.errors.VariantValues variantValues){
+        this.variantValues = variantValues;
+    }
 
 }

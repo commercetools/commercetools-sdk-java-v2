@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeNumberTypeImpl implements AttributeNumberType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   AttributeNumberTypeImpl() {
-      this.name = "number";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    AttributeNumberTypeImpl() {
+        this.name = "number";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

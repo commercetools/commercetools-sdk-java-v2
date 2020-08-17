@@ -32,20 +32,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ImportRequestImpl implements ImportRequest {
 
-   private com.commercetools.importer.models.common.ImportResourceType type;
+    private com.commercetools.importer.models.common.ImportResourceType type;
 
-   @JsonCreator
-   ImportRequestImpl() {
-      this.type = ImportResourceType.findEnumViaJsonName("null").get();
-   }
-   
-   
-   /**
-   *  <p>The type of the import resource.</p>
-   */
-   public com.commercetools.importer.models.common.ImportResourceType getType(){
-      return this.type;
-   }
+    @JsonCreator
+    ImportRequestImpl() {
+        this.type = ImportResourceType.findEnumViaJsonName("null").get();
+    }
+    
+
+    /**
+    *  <p>The type of the import resource.</p>
+    */
+    public com.commercetools.importer.models.common.ImportResourceType getType(){
+        return this.type;
+    }
 
 
 }

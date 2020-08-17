@@ -24,22 +24,22 @@ import java.io.IOException;
 @JsonDeserialize(as = BooleanSetFieldImpl.class)
 public interface BooleanSetField extends CustomField {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public List<Boolean> getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public List<Boolean> getValue();
 
-   public void setValue(final List<Boolean> value);
-   
-   public static BooleanSetFieldImpl of(){
-      return new BooleanSetFieldImpl();
-   }
-   
+    public void setValue(final List<Boolean> value);
 
-   public static BooleanSetFieldImpl of(final BooleanSetField template) {
-      BooleanSetFieldImpl instance = new BooleanSetFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static BooleanSetFieldImpl of(){
+        return new BooleanSetFieldImpl();
+    }
+    
+
+    public static BooleanSetFieldImpl of(final BooleanSetField template) {
+        BooleanSetFieldImpl instance = new BooleanSetFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

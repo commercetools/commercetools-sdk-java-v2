@@ -24,52 +24,52 @@ import java.io.IOException;
 @JsonDeserialize(as = ImportOperationPagedResponseImpl.class)
 public interface ImportOperationPagedResponse  {
 
-   /**
-   *  <p>The maximum number of import operations returned for a page.</p>
-   */
-   @NotNull
-   @JsonProperty("limit")
-   public Integer getLimit();
-   /**
-   *  <p>The offset supplied by the client or the server default. It is the number of elements skipped.</p>
-   */
-   @NotNull
-   @JsonProperty("offset")
-   public Integer getOffset();
-   /**
-   *  <p>The actual number of results returned by this response.</p>
-   */
-   @NotNull
-   @JsonProperty("count")
-   public Integer getCount();
-   /**
-   *  <p>The results for this paged response.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("results")
-   public List<ImportOperation> getResults();
+    /**
+    *  <p>The maximum number of import operations returned for a page.</p>
+    */
+    @NotNull
+    @JsonProperty("limit")
+    public Double getLimit();
+    /**
+    *  <p>The offset supplied by the client or the server default. It is the number of elements skipped.</p>
+    */
+    @NotNull
+    @JsonProperty("offset")
+    public Double getOffset();
+    /**
+    *  <p>The actual number of results returned by this response.</p>
+    */
+    @NotNull
+    @JsonProperty("count")
+    public Double getCount();
+    /**
+    *  <p>The results for this paged response.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("results")
+    public List<ImportOperation> getResults();
 
-   public void setLimit(final Integer limit);
-   
-   public void setOffset(final Integer offset);
-   
-   public void setCount(final Integer count);
-   
-   public void setResults(final List<ImportOperation> results);
-   
-   public static ImportOperationPagedResponseImpl of(){
-      return new ImportOperationPagedResponseImpl();
-   }
-   
+    public void setLimit(final Double limit);
+    
+    public void setOffset(final Double offset);
+    
+    public void setCount(final Double count);
+    
+    public void setResults(final List<ImportOperation> results);
 
-   public static ImportOperationPagedResponseImpl of(final ImportOperationPagedResponse template) {
-      ImportOperationPagedResponseImpl instance = new ImportOperationPagedResponseImpl();
-      instance.setLimit(template.getLimit());
-      instance.setOffset(template.getOffset());
-      instance.setCount(template.getCount());
-      instance.setResults(template.getResults());
-      return instance;
-   }
+    public static ImportOperationPagedResponseImpl of(){
+        return new ImportOperationPagedResponseImpl();
+    }
+    
+
+    public static ImportOperationPagedResponseImpl of(final ImportOperationPagedResponse template) {
+        ImportOperationPagedResponseImpl instance = new ImportOperationPagedResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
+        instance.setCount(template.getCount());
+        instance.setResults(template.getResults());
+        return instance;
+    }
 
 }

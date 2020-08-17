@@ -24,22 +24,22 @@ import java.io.IOException;
 @JsonDeserialize(as = NumberFieldImpl.class)
 public interface NumberField extends CustomField {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public Integer getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public Double getValue();
 
-   public void setValue(final Integer value);
-   
-   public static NumberFieldImpl of(){
-      return new NumberFieldImpl();
-   }
-   
+    public void setValue(final Double value);
 
-   public static NumberFieldImpl of(final NumberField template) {
-      NumberFieldImpl instance = new NumberFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static NumberFieldImpl of(){
+        return new NumberFieldImpl();
+    }
+    
+
+    public static NumberFieldImpl of(final NumberField template) {
+        NumberFieldImpl instance = new NumberFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

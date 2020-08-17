@@ -25,22 +25,22 @@ import java.io.IOException;
 @JsonDeserialize(as = DateTimeSetFieldImpl.class)
 public interface DateTimeSetField extends CustomField {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public List<ZonedDateTime> getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public List<ZonedDateTime> getValue();
 
-   public void setValue(final List<ZonedDateTime> value);
-   
-   public static DateTimeSetFieldImpl of(){
-      return new DateTimeSetFieldImpl();
-   }
-   
+    public void setValue(final List<ZonedDateTime> value);
 
-   public static DateTimeSetFieldImpl of(final DateTimeSetField template) {
-      DateTimeSetFieldImpl instance = new DateTimeSetFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static DateTimeSetFieldImpl of(){
+        return new DateTimeSetFieldImpl();
+    }
+    
+
+    public static DateTimeSetFieldImpl of(final DateTimeSetField template) {
+        DateTimeSetFieldImpl instance = new DateTimeSetFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

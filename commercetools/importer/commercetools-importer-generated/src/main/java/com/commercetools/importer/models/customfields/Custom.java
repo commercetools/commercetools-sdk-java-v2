@@ -25,34 +25,34 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomImpl.class)
 public interface Custom  {
 
-   /**
-   *  <p>The type that provides the field definitions for this object.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("type")
-   public TypeKeyReference getType();
-   /**
-   *  <p>The custom fields of this object.</p>
-   */
-   @Valid
-   @JsonProperty("fields")
-   public FieldContainer getFields();
+    /**
+    *  <p>The type that provides the field definitions for this object.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("type")
+    public TypeKeyReference getType();
+    /**
+    *  <p>The custom fields of this object.</p>
+    */
+    @Valid
+    @JsonProperty("fields")
+    public FieldContainer getFields();
 
-   public void setType(final TypeKeyReference type);
-   
-   public void setFields(final FieldContainer fields);
-   
-   public static CustomImpl of(){
-      return new CustomImpl();
-   }
-   
+    public void setType(final TypeKeyReference type);
+    
+    public void setFields(final FieldContainer fields);
 
-   public static CustomImpl of(final Custom template) {
-      CustomImpl instance = new CustomImpl();
-      instance.setType(template.getType());
-      instance.setFields(template.getFields());
-      return instance;
-   }
+    public static CustomImpl of(){
+        return new CustomImpl();
+    }
+    
+
+    public static CustomImpl of(final Custom template) {
+        CustomImpl instance = new CustomImpl();
+        instance.setType(template.getType());
+        instance.setFields(template.getFields());
+        return instance;
+    }
 
 }

@@ -14,32 +14,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class MoneyFieldBuilder {
-   
-   
-   private com.commercetools.importer.models.common.Money value;
-   
-   public MoneyFieldBuilder value( final com.commercetools.importer.models.common.Money value) {
-      this.value = value;
-      return this;
-   }
-   
-   
-   public com.commercetools.importer.models.common.Money getValue(){
-      return this.value;
-   }
 
-   public MoneyField build() {
-       return new MoneyFieldImpl(value);
-   }
-   
-   public static MoneyFieldBuilder of() {
-      return new MoneyFieldBuilder();
-   }
-   
-   public static MoneyFieldBuilder of(final MoneyField template) {
-      MoneyFieldBuilder builder = new MoneyFieldBuilder();
-      builder.value = template.getValue();
-      return builder;
-   }
-   
+    
+    private com.commercetools.importer.models.common.Money value;
+
+    public MoneyFieldBuilder value( final com.commercetools.importer.models.common.Money value) {
+        this.value = value;
+        return this;
+    }
+
+    
+    public com.commercetools.importer.models.common.Money getValue(){
+        return this.value;
+    }
+
+    public MoneyField build() {
+        return new MoneyFieldImpl(value);
+    }
+
+    public static MoneyFieldBuilder of() {
+        return new MoneyFieldBuilder();
+    }
+
+    public static MoneyFieldBuilder of(final MoneyField template) {
+        MoneyFieldBuilder builder = new MoneyFieldBuilder();
+        builder.value = template.getValue();
+        return builder;
+    }
+
 }

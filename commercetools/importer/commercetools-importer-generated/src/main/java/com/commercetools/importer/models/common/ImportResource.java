@@ -32,22 +32,22 @@ import java.io.IOException;
 @JsonDeserialize(as = ImportResourceImpl.class)
 public interface ImportResource  {
 
-   
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
+    
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
 
-   public void setKey(final String key);
-   
-   public static ImportResourceImpl of(){
-      return new ImportResourceImpl();
-   }
-   
+    public void setKey(final String key);
 
-   public static ImportResourceImpl of(final ImportResource template) {
-      ImportResourceImpl instance = new ImportResourceImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static ImportResourceImpl of(){
+        return new ImportResourceImpl();
+    }
+    
+
+    public static ImportResourceImpl of(final ImportResource template) {
+        ImportResourceImpl instance = new ImportResourceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

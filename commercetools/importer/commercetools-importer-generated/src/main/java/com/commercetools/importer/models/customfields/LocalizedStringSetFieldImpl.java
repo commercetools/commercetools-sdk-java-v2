@@ -26,33 +26,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LocalizedStringSetFieldImpl implements LocalizedStringSetField {
 
-   private String type;
-   
-   private java.util.List<com.commercetools.importer.models.common.LocalizedString> value;
+    private String type;
+    
+    private java.util.List<com.commercetools.importer.models.common.LocalizedString> value;
 
-   @JsonCreator
-   LocalizedStringSetFieldImpl(@JsonProperty("value") final java.util.List<com.commercetools.importer.models.common.LocalizedString> value) {
-      this.value = value;
-      this.type = "LocalizedStringSet";
-   }
-   public LocalizedStringSetFieldImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of this field.</p>
-   */
-   public String getType(){
-      return this.type;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.common.LocalizedString> getValue(){
-      return this.value;
-   }
+    @JsonCreator
+    LocalizedStringSetFieldImpl(@JsonProperty("value") final java.util.List<com.commercetools.importer.models.common.LocalizedString> value) {
+        this.value = value;
+        this.type = "LocalizedStringSet";
+    }
+    public LocalizedStringSetFieldImpl() {
+       
+    }
 
-   public void setValue(final java.util.List<com.commercetools.importer.models.common.LocalizedString> value){
-      this.value = value;
-   }
+    /**
+    *  <p>The type of this field.</p>
+    */
+    public String getType(){
+        return this.type;
+    }
+    
+    
+    public java.util.List<com.commercetools.importer.models.common.LocalizedString> getValue(){
+        return this.value;
+    }
+
+    public void setValue(final java.util.List<com.commercetools.importer.models.common.LocalizedString> value){
+        this.value = value;
+    }
 
 }

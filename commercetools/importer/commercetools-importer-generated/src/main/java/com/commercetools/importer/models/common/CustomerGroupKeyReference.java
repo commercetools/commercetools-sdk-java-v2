@@ -26,16 +26,16 @@ import java.io.IOException;
 public interface CustomerGroupKeyReference extends KeyReference {
 
 
-   
-   public static CustomerGroupKeyReferenceImpl of(){
-      return new CustomerGroupKeyReferenceImpl();
-   }
-   
 
-   public static CustomerGroupKeyReferenceImpl of(final CustomerGroupKeyReference template) {
-      CustomerGroupKeyReferenceImpl instance = new CustomerGroupKeyReferenceImpl();
-      instance.setKey(template.getKey());
-      return instance;
-   }
+    public static CustomerGroupKeyReferenceImpl of(){
+        return new CustomerGroupKeyReferenceImpl();
+    }
+    
+
+    public static CustomerGroupKeyReferenceImpl of(final CustomerGroupKeyReference template) {
+        CustomerGroupKeyReferenceImpl instance = new CustomerGroupKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
 }

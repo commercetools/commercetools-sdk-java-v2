@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class LocalizedEnumValueImpl implements LocalizedEnumValue {
 
-   private String key;
-   
-   private com.commercetools.importer.models.common.LocalizedString label;
+    private String key;
+    
+    private com.commercetools.importer.models.common.LocalizedString label;
 
-   @JsonCreator
-   LocalizedEnumValueImpl(@JsonProperty("key") final String key, @JsonProperty("label") final com.commercetools.importer.models.common.LocalizedString label) {
-      this.key = key;
-      this.label = label;
-   }
-   public LocalizedEnumValueImpl() {
-      
-   }
-   
-   
-   public String getKey(){
-      return this.key;
-   }
-   
-   
-   public com.commercetools.importer.models.common.LocalizedString getLabel(){
-      return this.label;
-   }
+    @JsonCreator
+    LocalizedEnumValueImpl(@JsonProperty("key") final String key, @JsonProperty("label") final com.commercetools.importer.models.common.LocalizedString label) {
+        this.key = key;
+        this.label = label;
+    }
+    public LocalizedEnumValueImpl() {
+       
+    }
 
-   public void setKey(final String key){
-      this.key = key;
-   }
-   
-   public void setLabel(final com.commercetools.importer.models.common.LocalizedString label){
-      this.label = label;
-   }
+    
+    public String getKey(){
+        return this.key;
+    }
+    
+    
+    public com.commercetools.importer.models.common.LocalizedString getLabel(){
+        return this.label;
+    }
+
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
+    public void setLabel(final com.commercetools.importer.models.common.LocalizedString label){
+        this.label = label;
+    }
 
 }

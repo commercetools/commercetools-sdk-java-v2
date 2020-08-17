@@ -64,10 +64,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.importer.models.productvariants.TimeSetAttributeImpl.class, name = "time-set")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = AttributeImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = AttributeImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -75,17 +75,17 @@ import java.io.IOException;
 )
 public interface Attribute  {
 
-   /**
-   *  <p>The name of this attribute must match a name of the product types attribute definitions.
-   *  The name is required if this type is used in a product variant and must not be set when
-   *  used in a product variant patch.</p>
-   */
-   
-   @JsonProperty("name")
-   public String getName();
+    /**
+    *  <p>The name of this attribute must match a name of the product types attribute definitions.
+    *  The name is required if this type is used in a product variant and must not be set when
+    *  used in a product variant patch.</p>
+    */
+    
+    @JsonProperty("name")
+    public String getName();
 
-   public void setName(final String name);
-   
+    public void setName(final String name);
+
 
 
 }

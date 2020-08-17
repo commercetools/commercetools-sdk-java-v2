@@ -25,26 +25,26 @@ import java.io.IOException;
 @JsonDeserialize(as = ReferenceAttributeImpl.class)
 public interface ReferenceAttribute extends Attribute {
 
-   /**
-   *  <p>References a resource by its key.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("value")
-   public KeyReference getValue();
+    /**
+    *  <p>References a resource by its key.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("value")
+    public KeyReference getValue();
 
-   public void setValue(final KeyReference value);
-   
-   public static ReferenceAttributeImpl of(){
-      return new ReferenceAttributeImpl();
-   }
-   
+    public void setValue(final KeyReference value);
 
-   public static ReferenceAttributeImpl of(final ReferenceAttribute template) {
-      ReferenceAttributeImpl instance = new ReferenceAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static ReferenceAttributeImpl of(){
+        return new ReferenceAttributeImpl();
+    }
+    
+
+    public static ReferenceAttributeImpl of(final ReferenceAttribute template) {
+        ReferenceAttributeImpl instance = new ReferenceAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

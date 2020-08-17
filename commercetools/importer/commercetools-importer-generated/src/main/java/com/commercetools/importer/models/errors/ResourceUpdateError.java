@@ -22,23 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = ResourceUpdateErrorImpl.class)
 public interface ResourceUpdateError extends ErrorObject {
 
-   
-   
-   @JsonProperty("resource")
-   public JsonNode getResource();
+    
+    
+    @JsonProperty("resource")
+    public JsonNode getResource();
 
-   public void setResource(final JsonNode resource);
-   
-   public static ResourceUpdateErrorImpl of(){
-      return new ResourceUpdateErrorImpl();
-   }
-   
+    public void setResource(final JsonNode resource);
 
-   public static ResourceUpdateErrorImpl of(final ResourceUpdateError template) {
-      ResourceUpdateErrorImpl instance = new ResourceUpdateErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setResource(template.getResource());
-      return instance;
-   }
+    public static ResourceUpdateErrorImpl of(){
+        return new ResourceUpdateErrorImpl();
+    }
+    
+
+    public static ResourceUpdateErrorImpl of(final ResourceUpdateError template) {
+        ResourceUpdateErrorImpl instance = new ResourceUpdateErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setResource(template.getResource());
+        return instance;
+    }
 
 }

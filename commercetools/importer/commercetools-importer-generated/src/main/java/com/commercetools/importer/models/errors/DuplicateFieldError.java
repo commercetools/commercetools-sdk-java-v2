@@ -25,34 +25,34 @@ import java.io.IOException;
 @JsonDeserialize(as = DuplicateFieldErrorImpl.class)
 public interface DuplicateFieldError extends ErrorObject {
 
-   /**
-   *  <p>The name of the field.</p>
-   */
-   
-   @JsonProperty("field")
-   public String getField();
-   /**
-   *  <p>The offending duplicate value.</p>
-   */
-   
-   @JsonProperty("duplicateValue")
-   public JsonNode getDuplicateValue();
+    /**
+    *  <p>The name of the field.</p>
+    */
+    
+    @JsonProperty("field")
+    public String getField();
+    /**
+    *  <p>The offending duplicate value.</p>
+    */
+    
+    @JsonProperty("duplicateValue")
+    public JsonNode getDuplicateValue();
 
-   public void setField(final String field);
-   
-   public void setDuplicateValue(final JsonNode duplicateValue);
-   
-   public static DuplicateFieldErrorImpl of(){
-      return new DuplicateFieldErrorImpl();
-   }
-   
+    public void setField(final String field);
+    
+    public void setDuplicateValue(final JsonNode duplicateValue);
 
-   public static DuplicateFieldErrorImpl of(final DuplicateFieldError template) {
-      DuplicateFieldErrorImpl instance = new DuplicateFieldErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setField(template.getField());
-      instance.setDuplicateValue(template.getDuplicateValue());
-      return instance;
-   }
+    public static DuplicateFieldErrorImpl of(){
+        return new DuplicateFieldErrorImpl();
+    }
+    
+
+    public static DuplicateFieldErrorImpl of(final DuplicateFieldError template) {
+        DuplicateFieldErrorImpl instance = new DuplicateFieldErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setField(template.getField());
+        instance.setDuplicateValue(template.getDuplicateValue());
+        return instance;
+    }
 
 }

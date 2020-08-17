@@ -21,30 +21,30 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeLocalizedEnumValueImpl.class)
 public interface AttributeLocalizedEnumValue  {
 
-   
-   @NotNull
-   @JsonProperty("key")
-   public String getKey();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("label")
-   public LocalizedString getLabel();
+    
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("label")
+    public LocalizedString getLabel();
 
-   public void setKey(final String key);
-   
-   public void setLabel(final LocalizedString label);
-   
-   public static AttributeLocalizedEnumValueImpl of(){
-      return new AttributeLocalizedEnumValueImpl();
-   }
-   
+    public void setKey(final String key);
+    
+    public void setLabel(final LocalizedString label);
 
-   public static AttributeLocalizedEnumValueImpl of(final AttributeLocalizedEnumValue template) {
-      AttributeLocalizedEnumValueImpl instance = new AttributeLocalizedEnumValueImpl();
-      instance.setKey(template.getKey());
-      instance.setLabel(template.getLabel());
-      return instance;
-   }
+    public static AttributeLocalizedEnumValueImpl of(){
+        return new AttributeLocalizedEnumValueImpl();
+    }
+    
+
+    public static AttributeLocalizedEnumValueImpl of(final AttributeLocalizedEnumValue template) {
+        AttributeLocalizedEnumValueImpl instance = new AttributeLocalizedEnumValueImpl();
+        instance.setKey(template.getKey());
+        instance.setLabel(template.getLabel());
+        return instance;
+    }
 
 }

@@ -26,23 +26,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ImportResponseImpl implements ImportResponse {
 
-   private java.util.List<com.commercetools.importer.models.importoperations.ImportOperationStatus> operationStatus;
+    private java.util.List<com.commercetools.importer.models.importoperations.ImportOperationStatus> operationStatus;
 
-   @JsonCreator
-   ImportResponseImpl(@JsonProperty("operationStatus") final java.util.List<com.commercetools.importer.models.importoperations.ImportOperationStatus> operationStatus) {
-      this.operationStatus = operationStatus;
-   }
-   public ImportResponseImpl() {
-      
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.importoperations.ImportOperationStatus> getOperationStatus(){
-      return this.operationStatus;
-   }
+    @JsonCreator
+    ImportResponseImpl(@JsonProperty("operationStatus") final java.util.List<com.commercetools.importer.models.importoperations.ImportOperationStatus> operationStatus) {
+        this.operationStatus = operationStatus;
+    }
+    public ImportResponseImpl() {
+       
+    }
 
-   public void setOperationStatus(final java.util.List<com.commercetools.importer.models.importoperations.ImportOperationStatus> operationStatus){
-      this.operationStatus = operationStatus;
-   }
+    
+    public java.util.List<com.commercetools.importer.models.importoperations.ImportOperationStatus> getOperationStatus(){
+        return this.operationStatus;
+    }
+
+    public void setOperationStatus(final java.util.List<com.commercetools.importer.models.importoperations.ImportOperationStatus> operationStatus){
+        this.operationStatus = operationStatus;
+    }
 
 }

@@ -20,10 +20,10 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.importer.models.products.WhitespaceTokenizerImpl.class, name = "whitespace")
 })
 @JsonTypeInfo(
-   use = JsonTypeInfo.Id.NAME,
-   include = JsonTypeInfo.As.PROPERTY,
-   property = "type",
-   defaultImpl = SuggestTokenizerImpl.class
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "type",
+    defaultImpl = SuggestTokenizerImpl.class
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -32,7 +32,7 @@ import java.io.IOException;
 public interface SuggestTokenizer  {
 
 
-   
+
 
 
 }

@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class WhitespaceTokenizerImpl implements WhitespaceTokenizer {
 
-   private String type;
+    private String type;
 
-   @JsonCreator
-   WhitespaceTokenizerImpl() {
-      this.type = "whitespace";
-   }
-   
-   
-   
-   public String getType(){
-      return this.type;
-   }
+    @JsonCreator
+    WhitespaceTokenizerImpl() {
+        this.type = "whitespace";
+    }
+    
+
+    
+    public String getType(){
+        return this.type;
+    }
 
 
 }

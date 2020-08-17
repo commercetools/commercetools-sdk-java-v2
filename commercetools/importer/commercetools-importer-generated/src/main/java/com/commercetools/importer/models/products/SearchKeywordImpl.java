@@ -22,35 +22,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SearchKeywordImpl implements SearchKeyword {
 
-   private String text;
-   
-   private com.commercetools.importer.models.products.SuggestTokenizer suggestTokenizer;
+    private String text;
+    
+    private com.commercetools.importer.models.products.SuggestTokenizer suggestTokenizer;
 
-   @JsonCreator
-   SearchKeywordImpl(@JsonProperty("text") final String text, @JsonProperty("suggestTokenizer") final com.commercetools.importer.models.products.SuggestTokenizer suggestTokenizer) {
-      this.text = text;
-      this.suggestTokenizer = suggestTokenizer;
-   }
-   public SearchKeywordImpl() {
-      
-   }
-   
-   
-   public String getText(){
-      return this.text;
-   }
-   
-   
-   public com.commercetools.importer.models.products.SuggestTokenizer getSuggestTokenizer(){
-      return this.suggestTokenizer;
-   }
+    @JsonCreator
+    SearchKeywordImpl(@JsonProperty("text") final String text, @JsonProperty("suggestTokenizer") final com.commercetools.importer.models.products.SuggestTokenizer suggestTokenizer) {
+        this.text = text;
+        this.suggestTokenizer = suggestTokenizer;
+    }
+    public SearchKeywordImpl() {
+       
+    }
 
-   public void setText(final String text){
-      this.text = text;
-   }
-   
-   public void setSuggestTokenizer(final com.commercetools.importer.models.products.SuggestTokenizer suggestTokenizer){
-      this.suggestTokenizer = suggestTokenizer;
-   }
+    
+    public String getText(){
+        return this.text;
+    }
+    
+    
+    public com.commercetools.importer.models.products.SuggestTokenizer getSuggestTokenizer(){
+        return this.suggestTokenizer;
+    }
+
+    public void setText(final String text){
+        this.text = text;
+    }
+    
+    public void setSuggestTokenizer(final com.commercetools.importer.models.products.SuggestTokenizer suggestTokenizer){
+        this.suggestTokenizer = suggestTokenizer;
+    }
 
 }

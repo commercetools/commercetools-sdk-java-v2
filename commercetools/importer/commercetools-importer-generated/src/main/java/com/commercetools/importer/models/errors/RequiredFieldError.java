@@ -24,25 +24,25 @@ import java.io.IOException;
 @JsonDeserialize(as = RequiredFieldErrorImpl.class)
 public interface RequiredFieldError extends ErrorObject {
 
-   /**
-   *  <p>The name of the field.</p>
-   */
-   @NotNull
-   @JsonProperty("field")
-   public String getField();
+    /**
+    *  <p>The name of the field.</p>
+    */
+    @NotNull
+    @JsonProperty("field")
+    public String getField();
 
-   public void setField(final String field);
-   
-   public static RequiredFieldErrorImpl of(){
-      return new RequiredFieldErrorImpl();
-   }
-   
+    public void setField(final String field);
 
-   public static RequiredFieldErrorImpl of(final RequiredFieldError template) {
-      RequiredFieldErrorImpl instance = new RequiredFieldErrorImpl();
-      instance.setMessage(template.getMessage());
-      instance.setField(template.getField());
-      return instance;
-   }
+    public static RequiredFieldErrorImpl of(){
+        return new RequiredFieldErrorImpl();
+    }
+    
+
+    public static RequiredFieldErrorImpl of(final RequiredFieldError template) {
+        RequiredFieldErrorImpl instance = new RequiredFieldErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setField(template.getField());
+        return instance;
+    }
 
 }

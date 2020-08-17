@@ -14,46 +14,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class DuplicateAttributeValueErrorBuilder {
-   
-   
-   private String message;
-   
-   
-   private com.commercetools.importer.models.productvariants.Attribute attribute;
-   
-   public DuplicateAttributeValueErrorBuilder message( final String message) {
-      this.message = message;
-      return this;
-   }
-   
-   public DuplicateAttributeValueErrorBuilder attribute( final com.commercetools.importer.models.productvariants.Attribute attribute) {
-      this.attribute = attribute;
-      return this;
-   }
-   
-   
-   public String getMessage(){
-      return this.message;
-   }
-   
-   
-   public com.commercetools.importer.models.productvariants.Attribute getAttribute(){
-      return this.attribute;
-   }
 
-   public DuplicateAttributeValueError build() {
-       return new DuplicateAttributeValueErrorImpl(message, attribute);
-   }
-   
-   public static DuplicateAttributeValueErrorBuilder of() {
-      return new DuplicateAttributeValueErrorBuilder();
-   }
-   
-   public static DuplicateAttributeValueErrorBuilder of(final DuplicateAttributeValueError template) {
-      DuplicateAttributeValueErrorBuilder builder = new DuplicateAttributeValueErrorBuilder();
-      builder.message = template.getMessage();
-      builder.attribute = template.getAttribute();
-      return builder;
-   }
-   
+    
+    private String message;
+    
+    
+    private com.commercetools.importer.models.productvariants.Attribute attribute;
+
+    public DuplicateAttributeValueErrorBuilder message( final String message) {
+        this.message = message;
+        return this;
+    }
+    
+    public DuplicateAttributeValueErrorBuilder attribute( final com.commercetools.importer.models.productvariants.Attribute attribute) {
+        this.attribute = attribute;
+        return this;
+    }
+
+    
+    public String getMessage(){
+        return this.message;
+    }
+    
+    
+    public com.commercetools.importer.models.productvariants.Attribute getAttribute(){
+        return this.attribute;
+    }
+
+    public DuplicateAttributeValueError build() {
+        return new DuplicateAttributeValueErrorImpl(message, attribute);
+    }
+
+    public static DuplicateAttributeValueErrorBuilder of() {
+        return new DuplicateAttributeValueErrorBuilder();
+    }
+
+    public static DuplicateAttributeValueErrorBuilder of(final DuplicateAttributeValueError template) {
+        DuplicateAttributeValueErrorBuilder builder = new DuplicateAttributeValueErrorBuilder();
+        builder.message = template.getMessage();
+        builder.attribute = template.getAttribute();
+        return builder;
+    }
+
 }

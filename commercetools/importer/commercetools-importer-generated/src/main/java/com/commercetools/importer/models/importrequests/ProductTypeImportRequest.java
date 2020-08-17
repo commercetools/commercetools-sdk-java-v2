@@ -26,25 +26,25 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductTypeImportRequestImpl.class)
 public interface ProductTypeImportRequest extends ImportRequest {
 
-   /**
-   *  <p>The product type import resources of this request.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("resources")
-   public List<ProductTypeImport> getResources();
+    /**
+    *  <p>The product type import resources of this request.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("resources")
+    public List<ProductTypeImport> getResources();
 
-   public void setResources(final List<ProductTypeImport> resources);
-   
-   public static ProductTypeImportRequestImpl of(){
-      return new ProductTypeImportRequestImpl();
-   }
-   
+    public void setResources(final List<ProductTypeImport> resources);
 
-   public static ProductTypeImportRequestImpl of(final ProductTypeImportRequest template) {
-      ProductTypeImportRequestImpl instance = new ProductTypeImportRequestImpl();
-      instance.setResources(template.getResources());
-      return instance;
-   }
+    public static ProductTypeImportRequestImpl of(){
+        return new ProductTypeImportRequestImpl();
+    }
+    
+
+    public static ProductTypeImportRequestImpl of(final ProductTypeImportRequest template) {
+        ProductTypeImportRequestImpl instance = new ProductTypeImportRequestImpl();
+        instance.setResources(template.getResources());
+        return instance;
+    }
 
 }

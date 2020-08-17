@@ -25,23 +25,23 @@ import java.io.IOException;
 @JsonDeserialize(as = EnumAttributeImpl.class)
 public interface EnumAttribute extends Attribute {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public String getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public String getValue();
 
-   public void setValue(final String value);
-   
-   public static EnumAttributeImpl of(){
-      return new EnumAttributeImpl();
-   }
-   
+    public void setValue(final String value);
 
-   public static EnumAttributeImpl of(final EnumAttribute template) {
-      EnumAttributeImpl instance = new EnumAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static EnumAttributeImpl of(){
+        return new EnumAttributeImpl();
+    }
+    
+
+    public static EnumAttributeImpl of(final EnumAttribute template) {
+        EnumAttributeImpl instance = new EnumAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

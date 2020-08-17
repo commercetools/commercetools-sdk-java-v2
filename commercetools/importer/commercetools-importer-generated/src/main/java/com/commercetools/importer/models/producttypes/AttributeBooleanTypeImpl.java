@@ -22,18 +22,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeBooleanTypeImpl implements AttributeBooleanType {
 
-   private String name;
+    private String name;
 
-   @JsonCreator
-   AttributeBooleanTypeImpl() {
-      this.name = "boolean";
-   }
-   
-   
-   
-   public String getName(){
-      return this.name;
-   }
+    @JsonCreator
+    AttributeBooleanTypeImpl() {
+        this.name = "boolean";
+    }
+    
+
+    
+    public String getName(){
+        return this.name;
+    }
 
 
 }

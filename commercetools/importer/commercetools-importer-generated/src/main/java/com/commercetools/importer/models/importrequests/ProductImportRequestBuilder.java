@@ -15,32 +15,32 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class ProductImportRequestBuilder {
-   
-   
-   private java.util.List<com.commercetools.importer.models.products.ProductImport> resources;
-   
-   public ProductImportRequestBuilder resources( final java.util.List<com.commercetools.importer.models.products.ProductImport> resources) {
-      this.resources = resources;
-      return this;
-   }
-   
-   
-   public java.util.List<com.commercetools.importer.models.products.ProductImport> getResources(){
-      return this.resources;
-   }
 
-   public ProductImportRequest build() {
-       return new ProductImportRequestImpl(resources);
-   }
-   
-   public static ProductImportRequestBuilder of() {
-      return new ProductImportRequestBuilder();
-   }
-   
-   public static ProductImportRequestBuilder of(final ProductImportRequest template) {
-      ProductImportRequestBuilder builder = new ProductImportRequestBuilder();
-      builder.resources = template.getResources();
-      return builder;
-   }
-   
+    
+    private java.util.List<com.commercetools.importer.models.products.ProductImport> resources;
+
+    public ProductImportRequestBuilder resources( final java.util.List<com.commercetools.importer.models.products.ProductImport> resources) {
+        this.resources = resources;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.importer.models.products.ProductImport> getResources(){
+        return this.resources;
+    }
+
+    public ProductImportRequest build() {
+        return new ProductImportRequestImpl(resources);
+    }
+
+    public static ProductImportRequestBuilder of() {
+        return new ProductImportRequestBuilder();
+    }
+
+    public static ProductImportRequestBuilder of(final ProductImportRequest template) {
+        ProductImportRequestBuilder builder = new ProductImportRequestBuilder();
+        builder.resources = template.getResources();
+        return builder;
+    }
+
 }

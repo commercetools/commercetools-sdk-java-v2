@@ -13,46 +13,46 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public final class BooleanSetAttributeBuilder {
-   
-   @Nullable
-   private String name;
-   
-   
-   private java.util.List<Boolean> value;
-   
-   public BooleanSetAttributeBuilder name(@Nullable final String name) {
-      this.name = name;
-      return this;
-   }
-   
-   public BooleanSetAttributeBuilder value( final java.util.List<Boolean> value) {
-      this.value = value;
-      return this;
-   }
-   
-   @Nullable
-   public String getName(){
-      return this.name;
-   }
-   
-   
-   public java.util.List<Boolean> getValue(){
-      return this.value;
-   }
 
-   public BooleanSetAttribute build() {
-       return new BooleanSetAttributeImpl(name, value);
-   }
-   
-   public static BooleanSetAttributeBuilder of() {
-      return new BooleanSetAttributeBuilder();
-   }
-   
-   public static BooleanSetAttributeBuilder of(final BooleanSetAttribute template) {
-      BooleanSetAttributeBuilder builder = new BooleanSetAttributeBuilder();
-      builder.name = template.getName();
-      builder.value = template.getValue();
-      return builder;
-   }
-   
+    @Nullable
+    private String name;
+    
+    
+    private java.util.List<Boolean> value;
+
+    public BooleanSetAttributeBuilder name(@Nullable final String name) {
+        this.name = name;
+        return this;
+    }
+    
+    public BooleanSetAttributeBuilder value( final java.util.List<Boolean> value) {
+        this.value = value;
+        return this;
+    }
+
+    @Nullable
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public java.util.List<Boolean> getValue(){
+        return this.value;
+    }
+
+    public BooleanSetAttribute build() {
+        return new BooleanSetAttributeImpl(name, value);
+    }
+
+    public static BooleanSetAttributeBuilder of() {
+        return new BooleanSetAttributeBuilder();
+    }
+
+    public static BooleanSetAttributeBuilder of(final BooleanSetAttribute template) {
+        BooleanSetAttributeBuilder builder = new BooleanSetAttributeBuilder();
+        builder.name = template.getName();
+        builder.value = template.getValue();
+        return builder;
+    }
+
 }

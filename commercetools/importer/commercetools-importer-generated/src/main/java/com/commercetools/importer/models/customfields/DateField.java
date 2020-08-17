@@ -25,22 +25,22 @@ import java.io.IOException;
 @JsonDeserialize(as = DateFieldImpl.class)
 public interface DateField extends CustomField {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public LocalDate getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public LocalDate getValue();
 
-   public void setValue(final LocalDate value);
-   
-   public static DateFieldImpl of(){
-      return new DateFieldImpl();
-   }
-   
+    public void setValue(final LocalDate value);
 
-   public static DateFieldImpl of(final DateField template) {
-      DateFieldImpl instance = new DateFieldImpl();
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static DateFieldImpl of(){
+        return new DateFieldImpl();
+    }
+    
+
+    public static DateFieldImpl of(final DateField template) {
+        DateFieldImpl instance = new DateFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

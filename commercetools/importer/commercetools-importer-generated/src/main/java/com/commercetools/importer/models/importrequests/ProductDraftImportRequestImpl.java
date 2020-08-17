@@ -27,35 +27,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductDraftImportRequestImpl implements ProductDraftImportRequest {
 
-   private com.commercetools.importer.models.common.ImportResourceType type;
-   
-   private java.util.List<com.commercetools.importer.models.productdrafts.ProductDraftImport> resources;
+    private com.commercetools.importer.models.common.ImportResourceType type;
+    
+    private java.util.List<com.commercetools.importer.models.productdrafts.ProductDraftImport> resources;
 
-   @JsonCreator
-   ProductDraftImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importer.models.productdrafts.ProductDraftImport> resources) {
-      this.resources = resources;
-      this.type = ImportResourceType.findEnumViaJsonName("product-draft").get();
-   }
-   public ProductDraftImportRequestImpl() {
-      
-   }
-   
-   /**
-   *  <p>The type of the import resource.</p>
-   */
-   public com.commercetools.importer.models.common.ImportResourceType getType(){
-      return this.type;
-   }
-   
-   /**
-   *  <p>The product draft import resources of this request.</p>
-   */
-   public java.util.List<com.commercetools.importer.models.productdrafts.ProductDraftImport> getResources(){
-      return this.resources;
-   }
+    @JsonCreator
+    ProductDraftImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importer.models.productdrafts.ProductDraftImport> resources) {
+        this.resources = resources;
+        this.type = ImportResourceType.findEnumViaJsonName("product-draft").get();
+    }
+    public ProductDraftImportRequestImpl() {
+       
+    }
 
-   public void setResources(final java.util.List<com.commercetools.importer.models.productdrafts.ProductDraftImport> resources){
-      this.resources = resources;
-   }
+    /**
+    *  <p>The type of the import resource.</p>
+    */
+    public com.commercetools.importer.models.common.ImportResourceType getType(){
+        return this.type;
+    }
+    
+    /**
+    *  <p>The product draft import resources of this request.</p>
+    */
+    public java.util.List<com.commercetools.importer.models.productdrafts.ProductDraftImport> getResources(){
+        return this.resources;
+    }
+
+    public void setResources(final java.util.List<com.commercetools.importer.models.productdrafts.ProductDraftImport> resources){
+        this.resources = resources;
+    }
 
 }

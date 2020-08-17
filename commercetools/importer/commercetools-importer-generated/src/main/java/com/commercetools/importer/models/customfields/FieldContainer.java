@@ -24,25 +24,25 @@ import java.io.IOException;
 @JsonDeserialize(as = FieldContainerImpl.class)
 public interface FieldContainer  {
 
-   /**
-   *  <p>Mapping from the custom field name to the actual value.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonAnyGetter
-   public Map<String, CustomField> values();
+    /**
+    *  <p>Mapping from the custom field name to the actual value.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonAnyGetter
+    public Map<String, CustomField> values();
 
-   @JsonAnySetter
-   public void setValue(String key, CustomField value);
-   
-   public static FieldContainerImpl of(){
-      return new FieldContainerImpl();
-   }
-   
+    @JsonAnySetter
+    public void setValue(String key, CustomField value);
 
-   public static FieldContainerImpl of(final FieldContainer template) {
-      FieldContainerImpl instance = new FieldContainerImpl();
-      return instance;
-   }
+    public static FieldContainerImpl of(){
+        return new FieldContainerImpl();
+    }
+    
+
+    public static FieldContainerImpl of(final FieldContainer template) {
+        FieldContainerImpl instance = new FieldContainerImpl();
+        return instance;
+    }
 
 }

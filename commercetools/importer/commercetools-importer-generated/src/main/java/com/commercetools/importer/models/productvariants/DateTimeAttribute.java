@@ -25,23 +25,23 @@ import java.io.IOException;
 @JsonDeserialize(as = DateTimeAttributeImpl.class)
 public interface DateTimeAttribute extends Attribute {
 
-   
-   @NotNull
-   @JsonProperty("value")
-   public ZonedDateTime getValue();
+    
+    @NotNull
+    @JsonProperty("value")
+    public ZonedDateTime getValue();
 
-   public void setValue(final ZonedDateTime value);
-   
-   public static DateTimeAttributeImpl of(){
-      return new DateTimeAttributeImpl();
-   }
-   
+    public void setValue(final ZonedDateTime value);
 
-   public static DateTimeAttributeImpl of(final DateTimeAttribute template) {
-      DateTimeAttributeImpl instance = new DateTimeAttributeImpl();
-      instance.setName(template.getName());
-      instance.setValue(template.getValue());
-      return instance;
-   }
+    public static DateTimeAttributeImpl of(){
+        return new DateTimeAttributeImpl();
+    }
+    
+
+    public static DateTimeAttributeImpl of(final DateTimeAttribute template) {
+        DateTimeAttributeImpl instance = new DateTimeAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
 
 }

@@ -1,6 +1,6 @@
 package com.commercetools.importer.models.productvariants;
 
-import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.productvariants.Attribute;
 import com.commercetools.importer.models.productvariants.MoneySetAttribute;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class MoneySetAttributeBuilder {
     private String name;
     
     
-    private java.util.List<com.commercetools.importer.models.common.Money> value;
+    private java.util.List<com.commercetools.importer.models.common.TypedMoney> value;
 
     public MoneySetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
     
-    public MoneySetAttributeBuilder value( final java.util.List<com.commercetools.importer.models.common.Money> value) {
+    public MoneySetAttributeBuilder value( final java.util.List<com.commercetools.importer.models.common.TypedMoney> value) {
         this.value = value;
         return this;
     }
@@ -37,7 +37,7 @@ public final class MoneySetAttributeBuilder {
     }
     
     
-    public java.util.List<com.commercetools.importer.models.common.Money> getValue(){
+    public java.util.List<com.commercetools.importer.models.common.TypedMoney> getValue(){
         return this.value;
     }
 

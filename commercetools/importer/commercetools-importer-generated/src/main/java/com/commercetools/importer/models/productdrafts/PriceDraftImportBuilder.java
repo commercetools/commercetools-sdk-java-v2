@@ -3,8 +3,8 @@ package com.commercetools.importer.models.productdrafts;
 import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.DiscountedPrice;
-import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.PriceTier;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.customfields.Custom;
 import java.time.ZonedDateTime;
 import com.commercetools.importer.models.productdrafts.PriceDraftImport;
@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class PriceDraftImportBuilder {
 
     
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
     
     @Nullable
     private String country;
@@ -47,7 +47,7 @@ public final class PriceDraftImportBuilder {
     @Nullable
     private java.util.List<com.commercetools.importer.models.common.PriceTier> tiers;
 
-    public PriceDraftImportBuilder value( final com.commercetools.importer.models.common.Money value) {
+    public PriceDraftImportBuilder value( final com.commercetools.importer.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
@@ -93,7 +93,7 @@ public final class PriceDraftImportBuilder {
     }
 
     
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
     

@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class MoneyImpl implements Money {
+public final class HighPrecisionMoneyImpl implements HighPrecisionMoney {
 
     private com.commercetools.importer.models.common.MoneyType type;
     
@@ -30,15 +30,18 @@ public final class MoneyImpl implements Money {
     private Long centAmount;
     
     private String currencyCode;
+    
+    private Long preciseAmount;
 
     @JsonCreator
-    MoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
+    HighPrecisionMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("preciseAmount") final Long preciseAmount) {
         this.fractionDigits = fractionDigits;
         this.centAmount = centAmount;
         this.currencyCode = currencyCode;
-        this.type = MoneyType.findEnumViaJsonName("centPrecision").get();
+        this.preciseAmount = preciseAmount;
+        this.type = MoneyType.findEnumViaJsonName("highPrecision").get();
     }
-    public MoneyImpl() {
+    public HighPrecisionMoneyImpl() {
        
     }
 
@@ -63,6 +66,11 @@ public final class MoneyImpl implements Money {
     public String getCurrencyCode(){
         return this.currencyCode;
     }
+    
+    
+    public Long getPreciseAmount(){
+        return this.preciseAmount;
+    }
 
     public void setFractionDigits(final Integer fractionDigits){
         this.fractionDigits = fractionDigits;
@@ -74,6 +82,10 @@ public final class MoneyImpl implements Money {
     
     public void setCurrencyCode(final String currencyCode){
         this.currencyCode = currencyCode;
+    }
+    
+    public void setPreciseAmount(final Long preciseAmount){
+        this.preciseAmount = preciseAmount;
     }
 
 }

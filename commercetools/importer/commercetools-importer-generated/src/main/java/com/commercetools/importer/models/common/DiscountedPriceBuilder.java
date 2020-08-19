@@ -1,7 +1,7 @@
 package com.commercetools.importer.models.common;
 
-import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.ProductDiscountKeyReference;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.common.DiscountedPrice;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,12 +16,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class DiscountedPriceBuilder {
 
     
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
     
     
     private com.commercetools.importer.models.common.ProductDiscountKeyReference discount;
 
-    public DiscountedPriceBuilder value( final com.commercetools.importer.models.common.Money value) {
+    public DiscountedPriceBuilder value( final com.commercetools.importer.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
@@ -32,7 +32,7 @@ public final class DiscountedPriceBuilder {
     }
 
     
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
     

@@ -1,7 +1,8 @@
 package com.commercetools.importer.models.common;
 
+import com.commercetools.importer.models.common.HighPrecisionMoney;
+import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.MoneyType;
-import com.commercetools.importer.models.common.TypedMoney;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -21,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class MoneyImpl implements Money {
+public final class TypedMoneyImpl implements TypedMoney {
 
     private com.commercetools.importer.models.common.MoneyType type;
     
@@ -32,13 +33,13 @@ public final class MoneyImpl implements Money {
     private String currencyCode;
 
     @JsonCreator
-    MoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
+    TypedMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
         this.fractionDigits = fractionDigits;
         this.centAmount = centAmount;
         this.currencyCode = currencyCode;
-        this.type = MoneyType.findEnumViaJsonName("centPrecision").get();
+        this.type = MoneyType.findEnumViaJsonName("null").get();
     }
-    public MoneyImpl() {
+    public TypedMoneyImpl() {
        
     }
 

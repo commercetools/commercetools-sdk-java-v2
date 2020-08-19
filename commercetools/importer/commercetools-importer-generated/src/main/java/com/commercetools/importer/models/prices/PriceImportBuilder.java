@@ -4,10 +4,10 @@ import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.ImportResource;
-import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.PriceTier;
 import com.commercetools.importer.models.common.ProductKeyReference;
 import com.commercetools.importer.models.common.ProductVariantKeyReference;
+import com.commercetools.importer.models.common.TypedMoney;
 import java.time.ZonedDateTime;
 import com.commercetools.importer.models.prices.PriceImport;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class PriceImportBuilder {
     private String key;
     
     
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
     
     @Nullable
     private String country;
@@ -63,7 +63,7 @@ public final class PriceImportBuilder {
         return this;
     }
     
-    public PriceImportBuilder value( final com.commercetools.importer.models.common.Money value) {
+    public PriceImportBuilder value( final com.commercetools.importer.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
@@ -124,7 +124,7 @@ public final class PriceImportBuilder {
     }
     
     
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
     

@@ -1,6 +1,6 @@
 package com.commercetools.importer.models.common;
 
-import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.common.PriceTier;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -18,14 +18,14 @@ public final class PriceTierBuilder {
     private Long minimumQuantity;
     
     
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
 
     public PriceTierBuilder minimumQuantity( final Long minimumQuantity) {
         this.minimumQuantity = minimumQuantity;
         return this;
     }
     
-    public PriceTierBuilder value( final com.commercetools.importer.models.common.Money value) {
+    public PriceTierBuilder value( final com.commercetools.importer.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
@@ -36,7 +36,7 @@ public final class PriceTierBuilder {
     }
     
     
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
 

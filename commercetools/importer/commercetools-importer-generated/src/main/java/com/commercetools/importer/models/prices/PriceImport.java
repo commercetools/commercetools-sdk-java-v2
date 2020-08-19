@@ -4,10 +4,10 @@ import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.ImportResource;
-import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.PriceTier;
 import com.commercetools.importer.models.common.ProductKeyReference;
 import com.commercetools.importer.models.common.ProductVariantKeyReference;
+import com.commercetools.importer.models.common.TypedMoney;
 import java.time.ZonedDateTime;
 import com.commercetools.importer.models.prices.PriceImportImpl;
 
@@ -39,7 +39,7 @@ public interface PriceImport extends ImportResource {
     @NotNull
     @Valid
     @JsonProperty("value")
-    public Money getValue();
+    public TypedMoney getValue();
     /**
     *  <p>Maps to <code>Price.county</code>.</p>
     */
@@ -115,7 +115,7 @@ public interface PriceImport extends ImportResource {
     @JsonProperty("product")
     public ProductKeyReference getProduct();
 
-    public void setValue(final Money value);
+    public void setValue(final TypedMoney value);
     
     public void setCountry(final String country);
     

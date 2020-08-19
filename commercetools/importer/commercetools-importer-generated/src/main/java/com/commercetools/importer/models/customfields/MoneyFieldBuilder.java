@@ -1,6 +1,6 @@
 package com.commercetools.importer.models.customfields;
 
-import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.customfields.CustomField;
 import com.commercetools.importer.models.customfields.MoneyField;
 import javax.annotation.Nullable;
@@ -16,15 +16,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class MoneyFieldBuilder {
 
     
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
 
-    public MoneyFieldBuilder value( final com.commercetools.importer.models.common.Money value) {
+    public MoneyFieldBuilder value( final com.commercetools.importer.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
 
     
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
 

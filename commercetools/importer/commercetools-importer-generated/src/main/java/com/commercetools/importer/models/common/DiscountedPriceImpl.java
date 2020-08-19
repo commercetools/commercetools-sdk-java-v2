@@ -1,7 +1,7 @@
 package com.commercetools.importer.models.common;
 
-import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.ProductDiscountKeyReference;
+import com.commercetools.importer.models.common.TypedMoney;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -23,12 +23,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class DiscountedPriceImpl implements DiscountedPrice {
 
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
     
     private com.commercetools.importer.models.common.ProductDiscountKeyReference discount;
 
     @JsonCreator
-    DiscountedPriceImpl(@JsonProperty("value") final com.commercetools.importer.models.common.Money value, @JsonProperty("discount") final com.commercetools.importer.models.common.ProductDiscountKeyReference discount) {
+    DiscountedPriceImpl(@JsonProperty("value") final com.commercetools.importer.models.common.TypedMoney value, @JsonProperty("discount") final com.commercetools.importer.models.common.ProductDiscountKeyReference discount) {
         this.value = value;
         this.discount = discount;
     }
@@ -37,7 +37,7 @@ public final class DiscountedPriceImpl implements DiscountedPrice {
     }
 
     
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
     
@@ -48,7 +48,7 @@ public final class DiscountedPriceImpl implements DiscountedPrice {
         return this.discount;
     }
 
-    public void setValue(final com.commercetools.importer.models.common.Money value){
+    public void setValue(final com.commercetools.importer.models.common.TypedMoney value){
         this.value = value;
     }
     

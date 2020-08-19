@@ -1,6 +1,6 @@
 package com.commercetools.importer.models.productvariants;
 
-import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.productvariants.Attribute;
 import com.commercetools.importer.models.productvariants.MoneyAttributeImpl;
 
@@ -29,9 +29,9 @@ public interface MoneyAttribute extends Attribute {
     @NotNull
     @Valid
     @JsonProperty("value")
-    public Money getValue();
+    public TypedMoney getValue();
 
-    public void setValue(final Money value);
+    public void setValue(final TypedMoney value);
 
     public static MoneyAttributeImpl of(){
         return new MoneyAttributeImpl();

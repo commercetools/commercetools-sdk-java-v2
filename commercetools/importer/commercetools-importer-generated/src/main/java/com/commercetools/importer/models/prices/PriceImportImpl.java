@@ -4,10 +4,10 @@ import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.DiscountedPrice;
 import com.commercetools.importer.models.common.ImportResource;
-import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.PriceTier;
 import com.commercetools.importer.models.common.ProductKeyReference;
 import com.commercetools.importer.models.common.ProductVariantKeyReference;
+import com.commercetools.importer.models.common.TypedMoney;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -35,7 +35,7 @@ public final class PriceImportImpl implements PriceImport {
 
     private String key;
     
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
     
     private String country;
     
@@ -58,7 +58,7 @@ public final class PriceImportImpl implements PriceImport {
     private com.commercetools.importer.models.common.ProductKeyReference product;
 
     @JsonCreator
-    PriceImportImpl(@JsonProperty("key") final String key, @JsonProperty("value") final com.commercetools.importer.models.common.Money value, @JsonProperty("country") final String country, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("customerGroup") final com.commercetools.importer.models.common.CustomerGroupKeyReference customerGroup, @JsonProperty("channel") final com.commercetools.importer.models.common.ChannelKeyReference channel, @JsonProperty("discounted") final com.commercetools.importer.models.common.DiscountedPrice discounted, @JsonProperty("publish") final Boolean publish, @JsonProperty("tiers") final java.util.List<com.commercetools.importer.models.common.PriceTier> tiers, @JsonProperty("productVariant") final com.commercetools.importer.models.common.ProductVariantKeyReference productVariant, @JsonProperty("product") final com.commercetools.importer.models.common.ProductKeyReference product) {
+    PriceImportImpl(@JsonProperty("key") final String key, @JsonProperty("value") final com.commercetools.importer.models.common.TypedMoney value, @JsonProperty("country") final String country, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("customerGroup") final com.commercetools.importer.models.common.CustomerGroupKeyReference customerGroup, @JsonProperty("channel") final com.commercetools.importer.models.common.ChannelKeyReference channel, @JsonProperty("discounted") final com.commercetools.importer.models.common.DiscountedPrice discounted, @JsonProperty("publish") final Boolean publish, @JsonProperty("tiers") final java.util.List<com.commercetools.importer.models.common.PriceTier> tiers, @JsonProperty("productVariant") final com.commercetools.importer.models.common.ProductVariantKeyReference productVariant, @JsonProperty("product") final com.commercetools.importer.models.common.ProductKeyReference product) {
         this.key = key;
         this.value = value;
         this.country = country;
@@ -85,7 +85,7 @@ public final class PriceImportImpl implements PriceImport {
     *  <p>Maps to <code>Price.value</code>.</p>
     *  <p>The Import API <strong>only</strong> supports <code>centPrecision</code> prices.</p>
     */
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
     
@@ -175,7 +175,7 @@ public final class PriceImportImpl implements PriceImport {
         this.key = key;
     }
     
-    public void setValue(final com.commercetools.importer.models.common.Money value){
+    public void setValue(final com.commercetools.importer.models.common.TypedMoney value){
         this.value = value;
     }
     

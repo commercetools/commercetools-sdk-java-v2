@@ -1,6 +1,6 @@
 package com.commercetools.importer.models.customfields;
 
-import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.customfields.CustomField;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -28,10 +28,10 @@ public final class MoneyFieldImpl implements MoneyField {
 
     private String type;
     
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
 
     @JsonCreator
-    MoneyFieldImpl(@JsonProperty("value") final com.commercetools.importer.models.common.Money value) {
+    MoneyFieldImpl(@JsonProperty("value") final com.commercetools.importer.models.common.TypedMoney value) {
         this.value = value;
         this.type = "Money";
     }
@@ -47,11 +47,11 @@ public final class MoneyFieldImpl implements MoneyField {
     }
     
     
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
 
-    public void setValue(final com.commercetools.importer.models.common.Money value){
+    public void setValue(final com.commercetools.importer.models.common.TypedMoney value){
         this.value = value;
     }
 

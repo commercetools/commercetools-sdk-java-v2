@@ -1,7 +1,7 @@
 package com.commercetools.importer.models.common;
 
-import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.ProductDiscountKeyReference;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.common.DiscountedPriceImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -26,7 +26,7 @@ public interface DiscountedPrice  {
     @NotNull
     @Valid
     @JsonProperty("value")
-    public Money getValue();
+    public TypedMoney getValue();
     /**
     *  <p>Reference to a ProductDiscount.</p>
     */
@@ -35,7 +35,7 @@ public interface DiscountedPrice  {
     @JsonProperty("discount")
     public ProductDiscountKeyReference getDiscount();
 
-    public void setValue(final Money value);
+    public void setValue(final TypedMoney value);
     
     public void setDiscount(final ProductDiscountKeyReference discount);
 

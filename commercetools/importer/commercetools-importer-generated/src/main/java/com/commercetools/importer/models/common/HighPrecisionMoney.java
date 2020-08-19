@@ -2,7 +2,7 @@ package com.commercetools.importer.models.common;
 
 import com.commercetools.importer.models.common.MoneyType;
 import com.commercetools.importer.models.common.TypedMoney;
-import com.commercetools.importer.models.common.MoneyImpl;
+import com.commercetools.importer.models.common.HighPrecisionMoneyImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -19,21 +19,27 @@ import java.io.IOException;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-@JsonDeserialize(as = MoneyImpl.class)
-public interface Money extends TypedMoney {
+@JsonDeserialize(as = HighPrecisionMoneyImpl.class)
+public interface HighPrecisionMoney extends TypedMoney {
 
+    
+    @NotNull
+    @JsonProperty("preciseAmount")
+    public Long getPreciseAmount();
 
+    public void setPreciseAmount(final Long preciseAmount);
 
-    public static MoneyImpl of(){
-        return new MoneyImpl();
+    public static HighPrecisionMoneyImpl of(){
+        return new HighPrecisionMoneyImpl();
     }
     
 
-    public static MoneyImpl of(final Money template) {
-        MoneyImpl instance = new MoneyImpl();
+    public static HighPrecisionMoneyImpl of(final HighPrecisionMoney template) {
+        HighPrecisionMoneyImpl instance = new HighPrecisionMoneyImpl();
         instance.setFractionDigits(template.getFractionDigits());
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setPreciseAmount(template.getPreciseAmount());
         return instance;
     }
 

@@ -1,6 +1,6 @@
 package com.commercetools.importer.models.productvariants;
 
-import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.productvariants.Attribute;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -30,10 +30,10 @@ public final class MoneySetAttributeImpl implements MoneySetAttribute {
     
     private String type;
     
-    private java.util.List<com.commercetools.importer.models.common.Money> value;
+    private java.util.List<com.commercetools.importer.models.common.TypedMoney> value;
 
     @JsonCreator
-    MoneySetAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.util.List<com.commercetools.importer.models.common.Money> value) {
+    MoneySetAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.util.List<com.commercetools.importer.models.common.TypedMoney> value) {
         this.name = name;
         this.value = value;
         this.type = "money-set";
@@ -57,7 +57,7 @@ public final class MoneySetAttributeImpl implements MoneySetAttribute {
     }
     
     
-    public java.util.List<com.commercetools.importer.models.common.Money> getValue(){
+    public java.util.List<com.commercetools.importer.models.common.TypedMoney> getValue(){
         return this.value;
     }
 
@@ -65,7 +65,7 @@ public final class MoneySetAttributeImpl implements MoneySetAttribute {
         this.name = name;
     }
     
-    public void setValue(final java.util.List<com.commercetools.importer.models.common.Money> value){
+    public void setValue(final java.util.List<com.commercetools.importer.models.common.TypedMoney> value){
         this.value = value;
     }
 

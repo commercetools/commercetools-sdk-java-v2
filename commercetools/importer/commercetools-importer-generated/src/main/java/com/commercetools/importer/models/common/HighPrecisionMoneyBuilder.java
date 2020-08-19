@@ -2,7 +2,7 @@ package com.commercetools.importer.models.common;
 
 import com.commercetools.importer.models.common.MoneyType;
 import com.commercetools.importer.models.common.TypedMoney;
-import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.HighPrecisionMoney;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class MoneyBuilder {
+public final class HighPrecisionMoneyBuilder {
 
     @Nullable
     private Integer fractionDigits;
@@ -23,19 +23,27 @@ public final class MoneyBuilder {
     
     
     private String currencyCode;
+    
+    
+    private Long preciseAmount;
 
-    public MoneyBuilder fractionDigits(@Nullable final Integer fractionDigits) {
+    public HighPrecisionMoneyBuilder fractionDigits(@Nullable final Integer fractionDigits) {
         this.fractionDigits = fractionDigits;
         return this;
     }
     
-    public MoneyBuilder centAmount( final Long centAmount) {
+    public HighPrecisionMoneyBuilder centAmount( final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
     
-    public MoneyBuilder currencyCode( final String currencyCode) {
+    public HighPrecisionMoneyBuilder currencyCode( final String currencyCode) {
         this.currencyCode = currencyCode;
+        return this;
+    }
+    
+    public HighPrecisionMoneyBuilder preciseAmount( final Long preciseAmount) {
+        this.preciseAmount = preciseAmount;
         return this;
     }
 
@@ -53,20 +61,26 @@ public final class MoneyBuilder {
     public String getCurrencyCode(){
         return this.currencyCode;
     }
-
-    public Money build() {
-        return new MoneyImpl(fractionDigits, centAmount, currencyCode);
+    
+    
+    public Long getPreciseAmount(){
+        return this.preciseAmount;
     }
 
-    public static MoneyBuilder of() {
-        return new MoneyBuilder();
+    public HighPrecisionMoney build() {
+        return new HighPrecisionMoneyImpl(fractionDigits, centAmount, currencyCode, preciseAmount);
     }
 
-    public static MoneyBuilder of(final Money template) {
-        MoneyBuilder builder = new MoneyBuilder();
+    public static HighPrecisionMoneyBuilder of() {
+        return new HighPrecisionMoneyBuilder();
+    }
+
+    public static HighPrecisionMoneyBuilder of(final HighPrecisionMoney template) {
+        HighPrecisionMoneyBuilder builder = new HighPrecisionMoneyBuilder();
         builder.fractionDigits = template.getFractionDigits();
         builder.centAmount = template.getCentAmount();
         builder.currencyCode = template.getCurrencyCode();
+        builder.preciseAmount = template.getPreciseAmount();
         return builder;
     }
 

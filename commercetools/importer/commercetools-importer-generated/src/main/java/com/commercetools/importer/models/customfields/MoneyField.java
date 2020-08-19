@@ -1,6 +1,6 @@
 package com.commercetools.importer.models.customfields;
 
-import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.customfields.CustomField;
 import com.commercetools.importer.models.customfields.MoneyFieldImpl;
 
@@ -29,9 +29,9 @@ public interface MoneyField extends CustomField {
     @NotNull
     @Valid
     @JsonProperty("value")
-    public Money getValue();
+    public TypedMoney getValue();
 
-    public void setValue(final Money value);
+    public void setValue(final TypedMoney value);
 
     public static MoneyFieldImpl of(){
         return new MoneyFieldImpl();

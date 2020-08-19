@@ -3,8 +3,8 @@ package com.commercetools.importer.models.productdrafts;
 import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.DiscountedPrice;
-import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.PriceTier;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.customfields.Custom;
 import java.time.ZonedDateTime;
 import com.commercetools.importer.models.productdrafts.PriceDraftImportImpl;
@@ -31,7 +31,7 @@ public interface PriceDraftImport  {
     @NotNull
     @Valid
     @JsonProperty("value")
-    public Money getValue();
+    public TypedMoney getValue();
     /**
     *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
     */
@@ -77,7 +77,7 @@ public interface PriceDraftImport  {
     @JsonProperty("tiers")
     public List<PriceTier> getTiers();
 
-    public void setValue(final Money value);
+    public void setValue(final TypedMoney value);
     
     public void setCountry(final String country);
     

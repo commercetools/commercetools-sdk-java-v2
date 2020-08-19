@@ -1,6 +1,6 @@
 package com.commercetools.importer.models.productvariants;
 
-import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.productvariants.Attribute;
 import com.commercetools.importer.models.productvariants.MoneyAttribute;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class MoneyAttributeBuilder {
     private String name;
     
     
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
 
     public MoneyAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
     
-    public MoneyAttributeBuilder value( final com.commercetools.importer.models.common.Money value) {
+    public MoneyAttributeBuilder value( final com.commercetools.importer.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
@@ -37,7 +37,7 @@ public final class MoneyAttributeBuilder {
     }
     
     
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
 

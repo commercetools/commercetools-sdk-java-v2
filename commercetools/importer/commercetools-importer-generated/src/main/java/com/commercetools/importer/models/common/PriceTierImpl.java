@@ -1,6 +1,6 @@
 package com.commercetools.importer.models.common;
 
-import com.commercetools.importer.models.common.Money;
+import com.commercetools.importer.models.common.TypedMoney;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -27,10 +27,10 @@ public final class PriceTierImpl implements PriceTier {
 
     private Long minimumQuantity;
     
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
 
     @JsonCreator
-    PriceTierImpl(@JsonProperty("minimumQuantity") final Long minimumQuantity, @JsonProperty("value") final com.commercetools.importer.models.common.Money value) {
+    PriceTierImpl(@JsonProperty("minimumQuantity") final Long minimumQuantity, @JsonProperty("value") final com.commercetools.importer.models.common.TypedMoney value) {
         this.minimumQuantity = minimumQuantity;
         this.value = value;
     }
@@ -48,7 +48,7 @@ public final class PriceTierImpl implements PriceTier {
     /**
     *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
     */
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
 
@@ -56,7 +56,7 @@ public final class PriceTierImpl implements PriceTier {
         this.minimumQuantity = minimumQuantity;
     }
     
-    public void setValue(final com.commercetools.importer.models.common.Money value){
+    public void setValue(final com.commercetools.importer.models.common.TypedMoney value){
         this.value = value;
     }
 

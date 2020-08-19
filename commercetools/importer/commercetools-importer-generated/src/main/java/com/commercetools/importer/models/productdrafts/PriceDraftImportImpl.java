@@ -3,8 +3,8 @@ package com.commercetools.importer.models.productdrafts;
 import com.commercetools.importer.models.common.ChannelKeyReference;
 import com.commercetools.importer.models.common.CustomerGroupKeyReference;
 import com.commercetools.importer.models.common.DiscountedPrice;
-import com.commercetools.importer.models.common.Money;
 import com.commercetools.importer.models.common.PriceTier;
+import com.commercetools.importer.models.common.TypedMoney;
 import com.commercetools.importer.models.customfields.Custom;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -28,7 +28,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class PriceDraftImportImpl implements PriceDraftImport {
 
-    private com.commercetools.importer.models.common.Money value;
+    private com.commercetools.importer.models.common.TypedMoney value;
     
     private String country;
     
@@ -47,7 +47,7 @@ public final class PriceDraftImportImpl implements PriceDraftImport {
     private java.util.List<com.commercetools.importer.models.common.PriceTier> tiers;
 
     @JsonCreator
-    PriceDraftImportImpl(@JsonProperty("value") final com.commercetools.importer.models.common.Money value, @JsonProperty("country") final String country, @JsonProperty("customerGroup") final com.commercetools.importer.models.common.CustomerGroupKeyReference customerGroup, @JsonProperty("channel") final com.commercetools.importer.models.common.ChannelKeyReference channel, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("custom") final com.commercetools.importer.models.customfields.Custom custom, @JsonProperty("discounted") final com.commercetools.importer.models.common.DiscountedPrice discounted, @JsonProperty("tiers") final java.util.List<com.commercetools.importer.models.common.PriceTier> tiers) {
+    PriceDraftImportImpl(@JsonProperty("value") final com.commercetools.importer.models.common.TypedMoney value, @JsonProperty("country") final String country, @JsonProperty("customerGroup") final com.commercetools.importer.models.common.CustomerGroupKeyReference customerGroup, @JsonProperty("channel") final com.commercetools.importer.models.common.ChannelKeyReference channel, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("custom") final com.commercetools.importer.models.customfields.Custom custom, @JsonProperty("discounted") final com.commercetools.importer.models.common.DiscountedPrice discounted, @JsonProperty("tiers") final java.util.List<com.commercetools.importer.models.common.PriceTier> tiers) {
         this.value = value;
         this.country = country;
         this.customerGroup = customerGroup;
@@ -63,7 +63,7 @@ public final class PriceDraftImportImpl implements PriceDraftImport {
     }
 
     
-    public com.commercetools.importer.models.common.Money getValue(){
+    public com.commercetools.importer.models.common.TypedMoney getValue(){
         return this.value;
     }
     
@@ -119,7 +119,7 @@ public final class PriceDraftImportImpl implements PriceDraftImport {
         return this.tiers;
     }
 
-    public void setValue(final com.commercetools.importer.models.common.Money value){
+    public void setValue(final com.commercetools.importer.models.common.TypedMoney value){
         this.value = value;
     }
     

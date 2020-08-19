@@ -63,8 +63,7 @@ public interface ProductVariantImport extends ImportResource {
     @JsonProperty("assets")
     public List<Asset> getAssets();
     /**
-    *  <p>Set product Published field to <code>true</code> if there were no updates.
-    *  If there were Updates, only the updates will be published to <code>staged</code> and <code>current</code> projection.</p>
+    *  <p>If there were updates, only the updates will be published to <code>staged</code> and <code>current</code> projection.</p>
     */
     
     @JsonProperty("publish")

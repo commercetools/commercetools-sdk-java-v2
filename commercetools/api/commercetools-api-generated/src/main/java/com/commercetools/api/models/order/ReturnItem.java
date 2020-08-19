@@ -19,8 +19,8 @@ import java.time.*;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.api.models.order.LineItemReturnItemImpl.class, name = "LineItemReturnItem"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.order.CustomLineItemReturnItemImpl.class, name = "CustomLineItemReturnItem")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.order.CustomLineItemReturnItemImpl.class, name = "CustomLineItemReturnItem"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.order.LineItemReturnItemImpl.class, name = "LineItemReturnItem")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

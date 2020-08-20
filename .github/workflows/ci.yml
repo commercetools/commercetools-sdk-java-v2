@@ -22,13 +22,13 @@ jobs:
           java-version: '8'
 
       - name: Build and Test
-        run: ./gradlew --build-cache clean check
+        run: ./gradlew --build-cache clean test
 
-#      - name: Release
-#        run: ./gradlew --build-cache bintrayUpload --info --stacktrace
-#        env:
-#          BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
-#          BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
+      - name: Release
+        run: ./gradlew --build-cache bintrayUpload --info --stacktrace
+        env:
+          BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
+          BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
 
 #      - uses: stefanzweifel/git-auto-commit-action@v4
 #        with:

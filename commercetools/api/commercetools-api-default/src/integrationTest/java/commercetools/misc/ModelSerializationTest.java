@@ -6,6 +6,8 @@ import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.type.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -67,17 +69,17 @@ public class ModelSerializationTest {
                 .slug(localizedString)
                 .build();
 
-        String categoryDraftJson = "";
+        JsonElement categoryDraftJson = null;
         try{
-            categoryDraftJson = new String(VrapJsonUtils.toJsonByteArray(categoryDraft));
+            categoryDraftJson = JsonParser.parseString(VrapJsonUtils.toJsonString(categoryDraft));
         }catch (JsonProcessingException e){
             e.printStackTrace();
         }
 
         try{
             final URL url = Thread.currentThread().getContextClassLoader().getResource("json_examples/category-draft-example.json");
-            String categoryDraftExample = new String(Files.readAllBytes(Paths.get(url.getPath())));
-            Assert.assertEquals(categoryDraftJson, categoryDraftExample);
+            JsonElement categoryDraftExample = JsonParser.parseString(new String(Files.readAllBytes(Paths.get(url.getPath()))));
+            Assert.assertEquals(categoryDraftExample, categoryDraftJson);
         }catch (IOException e){
             e.printStackTrace();
             Assert.fail(e.getMessage());
@@ -103,7 +105,7 @@ public class ModelSerializationTest {
 
         CustomFields customFields = CustomFieldsBuilder.of()
                 .fields(fieldContainer)
-                .type(TypeReferenceBuilder.of().id(id).obj(Type.of()).build())
+                .type(TypeReferenceBuilder.of().id(id).build())
                 .build();
 
         Asset asset = AssetBuilder.of()
@@ -118,7 +120,6 @@ public class ModelSerializationTest {
 
         CategoryReference reference = CategoryReferenceBuilder.of()
                 .id(id)
-                .obj(Category.of())
                 .build();
 
         Category category = CategoryBuilder.of()
@@ -143,7 +144,7 @@ public class ModelSerializationTest {
             final URL url = Thread.currentThread().getContextClassLoader().getResource("json_examples/category-example.json");
             String categoryExampleJsonString = new String(Files.readAllBytes(Paths.get(url.getPath())));
             Category exampleCategory = VrapJsonUtils.fromJsonString(categoryExampleJsonString, Category.class);
-            Assert.assertEquals(VrapJsonUtils.toJsonString(category), VrapJsonUtils.toJsonString(exampleCategory));
+            Assert.assertEquals(JsonParser.parseString(VrapJsonUtils.toJsonString(exampleCategory)), JsonParser.parseString(VrapJsonUtils.toJsonString(category)));
         }catch (IOException e){
             e.printStackTrace();
             Assert.fail(e.getMessage());

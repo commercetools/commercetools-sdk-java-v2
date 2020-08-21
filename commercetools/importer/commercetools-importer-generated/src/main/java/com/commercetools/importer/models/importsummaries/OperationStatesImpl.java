@@ -22,28 +22,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OperationStatesImpl implements OperationStates {
 
-    private Double accepted;
+    private Long accepted;
     
-    private Double validationFailed;
+    private Long validationFailed;
     
-    private Double unresolved;
+    private Long unresolved;
     
-    private Double resolved;
+    private Long resolved;
     
-    private Double waitForMasterVariant;
+    private Long waitForMasterVariant;
     
-    private Double imported;
+    private Long imported;
     
-    private Double deleted;
+    private Long deleted;
     
-    private Double rejected;
+    private Long rejected;
     
-    private Double skipped;
+    private Long skipped;
     
-    private Double expired;
+    private Long expired;
 
     @JsonCreator
-    OperationStatesImpl(@JsonProperty("Accepted") final Double accepted, @JsonProperty("ValidationFailed") final Double validationFailed, @JsonProperty("Unresolved") final Double unresolved, @JsonProperty("Resolved") final Double resolved, @JsonProperty("WaitForMasterVariant") final Double waitForMasterVariant, @JsonProperty("Imported") final Double imported, @JsonProperty("Deleted") final Double deleted, @JsonProperty("Rejected") final Double rejected, @JsonProperty("Skipped") final Double skipped, @JsonProperty("Expired") final Double expired) {
+    OperationStatesImpl(@JsonProperty("Accepted") final Long accepted, @JsonProperty("ValidationFailed") final Long validationFailed, @JsonProperty("Unresolved") final Long unresolved, @JsonProperty("Resolved") final Long resolved, @JsonProperty("WaitForMasterVariant") final Long waitForMasterVariant, @JsonProperty("Imported") final Long imported, @JsonProperty("Deleted") final Long deleted, @JsonProperty("Rejected") final Long rejected, @JsonProperty("Skipped") final Long skipped, @JsonProperty("Expired") final Long expired) {
         this.accepted = accepted;
         this.validationFailed = validationFailed;
         this.unresolved = unresolved;
@@ -62,110 +62,110 @@ public final class OperationStatesImpl implements OperationStates {
     /**
     *  <p>The number of import operations that are in the state <code>Accepted</code>.</p>
     */
-    public Double getAccepted(){
+    public Long getAccepted(){
         return this.accepted;
     }
     
     /**
     *  <p>The number of import operations that are in the state <code>ValidationFailed</code>.</p>
     */
-    public Double getValidationFailed(){
+    public Long getValidationFailed(){
         return this.validationFailed;
     }
     
     /**
     *  <p>The number of import operations that are in the state <code>Unresolved</code>.</p>
     */
-    public Double getUnresolved(){
+    public Long getUnresolved(){
         return this.unresolved;
     }
     
     /**
     *  <p>The number of import operations that are in the state <code>Resolved</code>.</p>
     */
-    public Double getResolved(){
+    public Long getResolved(){
         return this.resolved;
     }
     
     /**
     *  <p>The number of import operations that are in the state <code>WaitForMasterVariant</code>.</p>
     */
-    public Double getWaitForMasterVariant(){
+    public Long getWaitForMasterVariant(){
         return this.waitForMasterVariant;
     }
     
     /**
     *  <p>The number of import operations that are in the state <code>Imported</code>.</p>
     */
-    public Double getImported(){
+    public Long getImported(){
         return this.imported;
     }
     
     /**
     *  <p>The number of import operations that are in the state <code>Deleted</code>.</p>
     */
-    public Double getDeleted(){
+    public Long getDeleted(){
         return this.deleted;
     }
     
     /**
     *  <p>The number of import operations that are in the state <code>Rejected</code>.</p>
     */
-    public Double getRejected(){
+    public Long getRejected(){
         return this.rejected;
     }
     
     /**
     *  <p>The number of import operations that are in the state <code>Skipped</code>.</p>
     */
-    public Double getSkipped(){
+    public Long getSkipped(){
         return this.skipped;
     }
     
     /**
     *  <p>The number of import operations that are in the state <code>Expired</code>.</p>
     */
-    public Double getExpired(){
+    public Long getExpired(){
         return this.expired;
     }
 
-    public void setAccepted(final Double accepted){
+    public void setAccepted(final Long accepted){
         this.accepted = accepted;
     }
     
-    public void setValidationFailed(final Double validationFailed){
+    public void setValidationFailed(final Long validationFailed){
         this.validationFailed = validationFailed;
     }
     
-    public void setUnresolved(final Double unresolved){
+    public void setUnresolved(final Long unresolved){
         this.unresolved = unresolved;
     }
     
-    public void setResolved(final Double resolved){
+    public void setResolved(final Long resolved){
         this.resolved = resolved;
     }
     
-    public void setWaitForMasterVariant(final Double waitForMasterVariant){
+    public void setWaitForMasterVariant(final Long waitForMasterVariant){
         this.waitForMasterVariant = waitForMasterVariant;
     }
     
-    public void setImported(final Double imported){
+    public void setImported(final Long imported){
         this.imported = imported;
     }
     
-    public void setDeleted(final Double deleted){
+    public void setDeleted(final Long deleted){
         this.deleted = deleted;
     }
     
-    public void setRejected(final Double rejected){
+    public void setRejected(final Long rejected){
         this.rejected = rejected;
     }
     
-    public void setSkipped(final Double skipped){
+    public void setSkipped(final Long skipped){
         this.skipped = skipped;
     }
     
-    public void setExpired(final Double expired){
+    public void setExpired(final Long expired){
         this.expired = expired;
     }
 

@@ -67,7 +67,7 @@ public interface ImportOperation  {
     */
     @NotNull
     @JsonProperty("retryCount")
-    public Double getRetryCount();
+    public Integer getRetryCount();
     /**
     *  <p>If an import resource does not import correctly, the state is set to <code>Rejected</code> or <code>ValidationFailed</code>
     *  and this property contains the errors.</p>
@@ -106,7 +106,7 @@ public interface ImportOperation  {
     
     public void setResourceVersion(final Long resourceVersion);
     
-    public void setRetryCount(final Double retryCount);
+    public void setRetryCount(final Integer retryCount);
     
     public void setErrors(final List<ErrorObject> errors);
     

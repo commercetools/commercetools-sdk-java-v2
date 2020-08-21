@@ -15,132 +15,132 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OperationStatesBuilder {
 
     
-    private Double Accepted;
+    private Long Accepted;
     
     
-    private Double ValidationFailed;
+    private Long ValidationFailed;
     
     
-    private Double Unresolved;
+    private Long Unresolved;
     
     
-    private Double Resolved;
+    private Long Resolved;
     
     
-    private Double WaitForMasterVariant;
+    private Long WaitForMasterVariant;
     
     
-    private Double Imported;
+    private Long Imported;
     
     
-    private Double Deleted;
+    private Long Deleted;
     
     
-    private Double Rejected;
+    private Long Rejected;
     
     
-    private Double Skipped;
+    private Long Skipped;
     
     
-    private Double Expired;
+    private Long Expired;
 
-    public OperationStatesBuilder Accepted( final Double Accepted) {
+    public OperationStatesBuilder Accepted( final Long Accepted) {
         this.Accepted = Accepted;
         return this;
     }
     
-    public OperationStatesBuilder ValidationFailed( final Double ValidationFailed) {
+    public OperationStatesBuilder ValidationFailed( final Long ValidationFailed) {
         this.ValidationFailed = ValidationFailed;
         return this;
     }
     
-    public OperationStatesBuilder Unresolved( final Double Unresolved) {
+    public OperationStatesBuilder Unresolved( final Long Unresolved) {
         this.Unresolved = Unresolved;
         return this;
     }
     
-    public OperationStatesBuilder Resolved( final Double Resolved) {
+    public OperationStatesBuilder Resolved( final Long Resolved) {
         this.Resolved = Resolved;
         return this;
     }
     
-    public OperationStatesBuilder WaitForMasterVariant( final Double WaitForMasterVariant) {
+    public OperationStatesBuilder WaitForMasterVariant( final Long WaitForMasterVariant) {
         this.WaitForMasterVariant = WaitForMasterVariant;
         return this;
     }
     
-    public OperationStatesBuilder Imported( final Double Imported) {
+    public OperationStatesBuilder Imported( final Long Imported) {
         this.Imported = Imported;
         return this;
     }
     
-    public OperationStatesBuilder Deleted( final Double Deleted) {
+    public OperationStatesBuilder Deleted( final Long Deleted) {
         this.Deleted = Deleted;
         return this;
     }
     
-    public OperationStatesBuilder Rejected( final Double Rejected) {
+    public OperationStatesBuilder Rejected( final Long Rejected) {
         this.Rejected = Rejected;
         return this;
     }
     
-    public OperationStatesBuilder Skipped( final Double Skipped) {
+    public OperationStatesBuilder Skipped( final Long Skipped) {
         this.Skipped = Skipped;
         return this;
     }
     
-    public OperationStatesBuilder Expired( final Double Expired) {
+    public OperationStatesBuilder Expired( final Long Expired) {
         this.Expired = Expired;
         return this;
     }
 
     
-    public Double getAccepted(){
+    public Long getAccepted(){
         return this.Accepted;
     }
     
     
-    public Double getValidationFailed(){
+    public Long getValidationFailed(){
         return this.ValidationFailed;
     }
     
     
-    public Double getUnresolved(){
+    public Long getUnresolved(){
         return this.Unresolved;
     }
     
     
-    public Double getResolved(){
+    public Long getResolved(){
         return this.Resolved;
     }
     
     
-    public Double getWaitForMasterVariant(){
+    public Long getWaitForMasterVariant(){
         return this.WaitForMasterVariant;
     }
     
     
-    public Double getImported(){
+    public Long getImported(){
         return this.Imported;
     }
     
     
-    public Double getDeleted(){
+    public Long getDeleted(){
         return this.Deleted;
     }
     
     
-    public Double getRejected(){
+    public Long getRejected(){
         return this.Rejected;
     }
     
     
-    public Double getSkipped(){
+    public Long getSkipped(){
         return this.Skipped;
     }
     
     
-    public Double getExpired(){
+    public Long getExpired(){
         return this.Expired;
     }
 

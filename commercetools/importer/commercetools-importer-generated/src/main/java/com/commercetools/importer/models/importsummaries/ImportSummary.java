@@ -37,11 +37,11 @@ public interface ImportSummary  {
     */
     @NotNull
     @JsonProperty("total")
-    public Double getTotal();
+    public Long getTotal();
 
     public void setStates(final OperationStates states);
     
-    public void setTotal(final Double total);
+    public void setTotal(final Long total);
 
     public static ImportSummaryImpl of(){
         return new ImportSummaryImpl();

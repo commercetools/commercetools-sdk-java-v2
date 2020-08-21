@@ -29,19 +29,19 @@ public interface ImportOperationPagedResponse  {
     */
     @NotNull
     @JsonProperty("limit")
-    public Double getLimit();
+    public Integer getLimit();
     /**
     *  <p>The offset supplied by the client or the server default. It is the number of elements skipped.</p>
     */
     @NotNull
     @JsonProperty("offset")
-    public Double getOffset();
+    public Long getOffset();
     /**
     *  <p>The actual number of results returned by this response.</p>
     */
     @NotNull
     @JsonProperty("count")
-    public Double getCount();
+    public Long getCount();
     /**
     *  <p>The results for this paged response.</p>
     */
@@ -50,11 +50,11 @@ public interface ImportOperationPagedResponse  {
     @JsonProperty("results")
     public List<ImportOperation> getResults();
 
-    public void setLimit(final Double limit);
+    public void setLimit(final Integer limit);
     
-    public void setOffset(final Double offset);
+    public void setOffset(final Long offset);
     
-    public void setCount(final Double count);
+    public void setCount(final Long count);
     
     public void setResults(final List<ImportOperation> results);
 

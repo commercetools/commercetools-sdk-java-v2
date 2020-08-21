@@ -28,10 +28,10 @@ public final class ImportSummaryImpl implements ImportSummary {
 
     private com.commercetools.importer.models.importsummaries.OperationStates states;
     
-    private Double total;
+    private Long total;
 
     @JsonCreator
-    ImportSummaryImpl(@JsonProperty("states") final com.commercetools.importer.models.importsummaries.OperationStates states, @JsonProperty("total") final Double total) {
+    ImportSummaryImpl(@JsonProperty("states") final com.commercetools.importer.models.importsummaries.OperationStates states, @JsonProperty("total") final Long total) {
         this.states = states;
         this.total = total;
     }
@@ -49,7 +49,7 @@ public final class ImportSummaryImpl implements ImportSummary {
     /**
     *  <p>The total number of import operations received for this import group.</p>
     */
-    public Double getTotal(){
+    public Long getTotal(){
         return this.total;
     }
 
@@ -57,7 +57,7 @@ public final class ImportSummaryImpl implements ImportSummary {
         this.states = states;
     }
     
-    public void setTotal(final Double total){
+    public void setTotal(final Long total){
         this.total = total;
     }
 

@@ -35,7 +35,7 @@ public final class ImportOperationBuilder {
     private Long resourceVersion;
     
     
-    private Double retryCount;
+    private Integer retryCount;
     
     @Nullable
     private java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors;
@@ -79,7 +79,7 @@ public final class ImportOperationBuilder {
         return this;
     }
     
-    public ImportOperationBuilder retryCount( final Double retryCount) {
+    public ImportOperationBuilder retryCount( final Integer retryCount) {
         this.retryCount = retryCount;
         return this;
     }
@@ -135,7 +135,7 @@ public final class ImportOperationBuilder {
     }
     
     
-    public Double getRetryCount(){
+    public Integer getRetryCount(){
         return this.retryCount;
     }
     

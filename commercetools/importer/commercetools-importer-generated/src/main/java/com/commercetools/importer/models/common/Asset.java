@@ -2,6 +2,7 @@ package com.commercetools.importer.models.common;
 
 import com.commercetools.importer.models.common.AssetSource;
 import com.commercetools.importer.models.common.LocalizedString;
+import com.commercetools.importer.models.customfields.Custom;
 import com.commercetools.importer.models.common.AssetImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -47,6 +48,12 @@ public interface Asset  {
     
     @JsonProperty("tags")
     public List<String> getTags();
+    /**
+    *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public Custom getCustom();
 
     public void setKey(final String key);
     
@@ -57,6 +64,8 @@ public interface Asset  {
     public void setDescription(final LocalizedString description);
     
     public void setTags(final List<String> tags);
+    
+    public void setCustom(final Custom custom);
 
     public static AssetImpl of(){
         return new AssetImpl();
@@ -70,6 +79,7 @@ public interface Asset  {
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setTags(template.getTags());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

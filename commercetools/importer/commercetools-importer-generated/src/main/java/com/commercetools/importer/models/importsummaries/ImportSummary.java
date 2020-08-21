@@ -16,7 +16,7 @@ import java.io.IOException;
 
 /**
 *  <p>An import summary describes the states of import resources of a given import sink.</p>
-*  <p>It is used to track the overall progress of of import resources.</p>
+*  <p>It is used to track the overall progress of import resources.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

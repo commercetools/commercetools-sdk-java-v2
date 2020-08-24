@@ -1,8 +1,7 @@
 on:
-  - push
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - master
 
 name: AutoRelease
 
@@ -30,9 +29,9 @@ jobs:
           CTP_BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
           CTP_BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
 
-#      - uses: stefanzweifel/git-auto-commit-action@v4
-#        with:
-#          commit_message: "TASK: Updating version in README"
-#          commit_user_name: Auto Mation
-#          commit_user_email: automation@commercetools.com
-#          commit_author: Auto Mation <automation@commercetools.com>
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "TASK: Updating version in README"
+          commit_user_name: Auto Mation
+          commit_user_email: automation@commercetools.com
+          commit_author: Auto Mation <automation@commercetools.com>

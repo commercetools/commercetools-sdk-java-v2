@@ -77,6 +77,13 @@ class Version {
     }
 }
 
+tasks.register("writeVersionToReadme") {
+    doLast {
+        ant.replaceregexp(match: 'sdkVersion = \"[^\\s]+\"', replace: "sdkVersion = \"${globalVersion}\"", flags:'g', byline:true) {
+            fileset(dir: projectDir, includes: 'README.md')
+        }
+    }
+}
 
 subprojects { project ->
     repositories {

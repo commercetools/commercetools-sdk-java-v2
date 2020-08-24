@@ -162,15 +162,6 @@ dependencies {
 </repositories>
 ```
 
-## Bintray upload
-
-Set environment variables CTP_BINTRAY_USER and CTP_BINTRAY_KEY to your bintray credentials.
-Run gradle with
-```
-./publish_sdk.sh
-```
-to upload the artifacts to the `commercetools-java-sdks` repository in the commercetools bintray project.
-
 
 [](definitions for the top badges)
 

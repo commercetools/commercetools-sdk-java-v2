@@ -1,0 +1,58 @@
+package com.commercetools.importer.models.orders;
+
+import com.commercetools.importer.models.common.TypedMoney;
+import com.commercetools.importer.models.orders.CustomLineItemTaxedPrice;
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Map;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public final class CustomLineItemTaxedPriceBuilder {
+
+    
+    private com.commercetools.importer.models.common.TypedMoney totalNet;
+    
+    
+    private com.commercetools.importer.models.common.TypedMoney totalGross;
+
+    public CustomLineItemTaxedPriceBuilder totalNet( final com.commercetools.importer.models.common.TypedMoney totalNet) {
+        this.totalNet = totalNet;
+        return this;
+    }
+    
+    public CustomLineItemTaxedPriceBuilder totalGross( final com.commercetools.importer.models.common.TypedMoney totalGross) {
+        this.totalGross = totalGross;
+        return this;
+    }
+
+    
+    public com.commercetools.importer.models.common.TypedMoney getTotalNet(){
+        return this.totalNet;
+    }
+    
+    
+    public com.commercetools.importer.models.common.TypedMoney getTotalGross(){
+        return this.totalGross;
+    }
+
+    public CustomLineItemTaxedPrice build() {
+        return new CustomLineItemTaxedPriceImpl(totalNet, totalGross);
+    }
+
+    public static CustomLineItemTaxedPriceBuilder of() {
+        return new CustomLineItemTaxedPriceBuilder();
+    }
+
+    public static CustomLineItemTaxedPriceBuilder of(final CustomLineItemTaxedPrice template) {
+        CustomLineItemTaxedPriceBuilder builder = new CustomLineItemTaxedPriceBuilder();
+        builder.totalNet = template.getTotalNet();
+        builder.totalGross = template.getTotalGross();
+        return builder;
+    }
+
+}

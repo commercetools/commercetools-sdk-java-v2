@@ -13,6 +13,7 @@ import com.commercetools.importer.models.common.ProductVariantKeyReference;
 import com.commercetools.importer.models.common.ReferenceType;
 import com.commercetools.importer.models.common.ShippingMethodKeyReference;
 import com.commercetools.importer.models.common.StateKeyReference;
+import com.commercetools.importer.models.common.StoreKeyReference;
 import com.commercetools.importer.models.common.TaxCategoryKeyReference;
 import com.commercetools.importer.models.common.TypeKeyReference;
 import io.vrap.rmf.base.client.utils.Generated;

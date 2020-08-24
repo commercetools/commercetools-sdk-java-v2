@@ -7,6 +7,7 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import com.commercetools.api.models.order_edit.StagedOrderAddLineItemActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -56,6 +57,10 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
     @JsonProperty("quantity")
     public Double getQuantity();
     
+    
+    @JsonProperty("addedAt")
+    public ZonedDateTime getAddedAt();
+    
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
@@ -86,6 +91,8 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
     
     public void setQuantity(final Double quantity);
     
+    public void setAddedAt(final ZonedDateTime addedAt);
+    
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
     
     public void setExternalPrice(final Money externalPrice);
@@ -108,6 +115,7 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
         instance.setQuantity(template.getQuantity());
+        instance.setAddedAt(template.getAddedAt());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());

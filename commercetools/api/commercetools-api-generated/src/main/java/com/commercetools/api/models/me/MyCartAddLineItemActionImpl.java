@@ -7,6 +7,7 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.me.MyCartUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -51,9 +52,11 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
     
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+    
+    private java.time.ZonedDateTime addedAt;
 
     @JsonCreator
-    MyCartAddLineItemActionImpl(@JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Double quantity, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+    MyCartAddLineItemActionImpl(@JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Double quantity, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt) {
         this.custom = custom;
         this.distributionChannel = distributionChannel;
         this.externalTaxRate = externalTaxRate;
@@ -65,6 +68,7 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
         this.shippingDetails = shippingDetails;
+        this.addedAt = addedAt;
         this.action = "addLineItem";
     }
     public MyCartAddLineItemActionImpl() {
@@ -130,6 +134,11 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
         return this.shippingDetails;
     }
+    
+    
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
+    }
 
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
@@ -173,6 +182,10 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
     
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
         this.shippingDetails = shippingDetails;
+    }
+    
+    public void setAddedAt(final java.time.ZonedDateTime addedAt){
+        this.addedAt = addedAt;
     }
 
 }

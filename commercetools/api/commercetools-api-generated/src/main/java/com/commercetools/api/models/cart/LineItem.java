@@ -14,6 +14,7 @@ import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.ProductTypeReference;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import com.commercetools.api.models.cart.LineItemImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -104,6 +105,13 @@ public interface LineItem  {
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
+    /**
+    *  <p>When the line item was added to the cart. Optional for backwards
+    *  compatibility reasons only.</p>
+    */
+    
+    @JsonProperty("addedAt")
+    public ZonedDateTime getAddedAt();
     
     @NotNull
     @Valid
@@ -175,6 +183,8 @@ public interface LineItem  {
     
     public void setQuantity(final Long quantity);
     
+    public void setAddedAt(final ZonedDateTime addedAt);
+    
     public void setState(final List<ItemState> state);
     
     public void setTaxRate(final TaxRate taxRate);
@@ -210,6 +220,7 @@ public interface LineItem  {
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setQuantity(template.getQuantity());
+        instance.setAddedAt(template.getAddedAt());
         instance.setState(template.getState());
         instance.setTaxRate(template.getTaxRate());
         instance.setSupplyChannel(template.getSupplyChannel());

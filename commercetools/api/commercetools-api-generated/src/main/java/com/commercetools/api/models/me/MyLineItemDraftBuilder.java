@@ -3,6 +3,7 @@ package com.commercetools.api.models.me;
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import com.commercetools.api.models.me.MyLineItemDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -24,6 +25,9 @@ public final class MyLineItemDraftBuilder {
     
     
     private Double quantity;
+    
+    @Nullable
+    private java.time.ZonedDateTime addedAt;
     
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
@@ -52,6 +56,11 @@ public final class MyLineItemDraftBuilder {
     
     public MyLineItemDraftBuilder quantity( final Double quantity) {
         this.quantity = quantity;
+        return this;
+    }
+    
+    public MyLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
         return this;
     }
     
@@ -96,6 +105,11 @@ public final class MyLineItemDraftBuilder {
     }
     
     @Nullable
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
+    }
+    
+    @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
@@ -121,7 +135,7 @@ public final class MyLineItemDraftBuilder {
     }
 
     public MyLineItemDraft build() {
-        return new MyLineItemDraftImpl(productId, variantId, quantity, supplyChannel, distributionChannel, custom, shippingDetails, sku);
+        return new MyLineItemDraftImpl(productId, variantId, quantity, addedAt, supplyChannel, distributionChannel, custom, shippingDetails, sku);
     }
 
     public static MyLineItemDraftBuilder of() {
@@ -133,6 +147,7 @@ public final class MyLineItemDraftBuilder {
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.quantity = template.getQuantity();
+        builder.addedAt = template.getAddedAt();
         builder.supplyChannel = template.getSupplyChannel();
         builder.distributionChannel = template.getDistributionChannel();
         builder.custom = template.getCustom();

@@ -6,6 +6,7 @@ import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -35,6 +36,8 @@ public final class LineItemDraftImpl implements LineItemDraft {
     
     private Long quantity;
     
+    private java.time.ZonedDateTime addedAt;
+    
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
     
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
@@ -50,11 +53,12 @@ public final class LineItemDraftImpl implements LineItemDraft {
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @JsonCreator
-    LineItemDraftImpl(@JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Long quantity, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+    LineItemDraftImpl(@JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Long quantity, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.productId = productId;
         this.variantId = variantId;
         this.sku = sku;
         this.quantity = quantity;
+        this.addedAt = addedAt;
         this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
         this.externalTaxRate = externalTaxRate;
@@ -88,6 +92,14 @@ public final class LineItemDraftImpl implements LineItemDraft {
     */
     public Long getQuantity(){
         return this.quantity;
+    }
+    
+    /**
+    *  <p>When the line item was added to the cart. Optional for backwards
+    *  compatibility reasons only.</p>
+    */
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
     }
     
     /**
@@ -157,6 +169,10 @@ public final class LineItemDraftImpl implements LineItemDraft {
     
     public void setQuantity(final Long quantity){
         this.quantity = quantity;
+    }
+    
+    public void setAddedAt(final java.time.ZonedDateTime addedAt){
+        this.addedAt = addedAt;
     }
     
     public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){

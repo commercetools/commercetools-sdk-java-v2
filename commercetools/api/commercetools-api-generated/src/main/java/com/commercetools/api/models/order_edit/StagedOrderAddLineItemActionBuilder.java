@@ -7,6 +7,7 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import com.commercetools.api.models.order_edit.StagedOrderAddLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -40,6 +41,9 @@ public final class StagedOrderAddLineItemActionBuilder {
     
     @Nullable
     private Double quantity;
+    
+    @Nullable
+    private java.time.ZonedDateTime addedAt;
     
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
@@ -85,6 +89,11 @@ public final class StagedOrderAddLineItemActionBuilder {
     
     public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Double quantity) {
         this.quantity = quantity;
+        return this;
+    }
+    
+    public StagedOrderAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
         return this;
     }
     
@@ -144,6 +153,11 @@ public final class StagedOrderAddLineItemActionBuilder {
     }
     
     @Nullable
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
+    }
+    
+    @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
@@ -164,7 +178,7 @@ public final class StagedOrderAddLineItemActionBuilder {
     }
 
     public StagedOrderAddLineItemAction build() {
-        return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId, sku, quantity, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
+        return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId, sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
     }
 
     public static StagedOrderAddLineItemActionBuilder of() {
@@ -180,6 +194,7 @@ public final class StagedOrderAddLineItemActionBuilder {
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();
         builder.quantity = template.getQuantity();
+        builder.addedAt = template.getAddedAt();
         builder.supplyChannel = template.getSupplyChannel();
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();

@@ -7,6 +7,7 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.me.MyCartUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import com.commercetools.api.models.me.MyCartAddLineItemActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -71,6 +72,10 @@ public interface MyCartAddLineItemAction extends MyCartUpdateAction {
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
+    
+    
+    @JsonProperty("addedAt")
+    public ZonedDateTime getAddedAt();
 
     public void setCustom(final CustomFieldsDraft custom);
     
@@ -93,6 +98,8 @@ public interface MyCartAddLineItemAction extends MyCartUpdateAction {
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
+    
+    public void setAddedAt(final ZonedDateTime addedAt);
 
     public static MyCartAddLineItemActionImpl of(){
         return new MyCartAddLineItemActionImpl();
@@ -112,6 +119,7 @@ public interface MyCartAddLineItemAction extends MyCartUpdateAction {
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setAddedAt(template.getAddedAt());
         return instance;
     }
 

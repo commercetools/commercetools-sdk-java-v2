@@ -2,6 +2,7 @@ package com.commercetools.importer.models.common;
 
 import com.commercetools.importer.models.common.AssetSource;
 import com.commercetools.importer.models.common.LocalizedString;
+import com.commercetools.importer.models.customfields.Custom;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -32,14 +33,17 @@ public final class AssetImpl implements Asset {
     private com.commercetools.importer.models.common.LocalizedString description;
     
     private java.util.List<String> tags;
+    
+    private com.commercetools.importer.models.customfields.Custom custom;
 
     @JsonCreator
-    AssetImpl(@JsonProperty("key") final String key, @JsonProperty("sources") final java.util.List<com.commercetools.importer.models.common.AssetSource> sources, @JsonProperty("name") final com.commercetools.importer.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.importer.models.common.LocalizedString description, @JsonProperty("tags") final java.util.List<String> tags) {
+    AssetImpl(@JsonProperty("key") final String key, @JsonProperty("sources") final java.util.List<com.commercetools.importer.models.common.AssetSource> sources, @JsonProperty("name") final com.commercetools.importer.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.importer.models.common.LocalizedString description, @JsonProperty("tags") final java.util.List<String> tags, @JsonProperty("custom") final com.commercetools.importer.models.customfields.Custom custom) {
         this.key = key;
         this.sources = sources;
         this.name = name;
         this.description = description;
         this.tags = tags;
+        this.custom = custom;
     }
     public AssetImpl() {
        
@@ -72,6 +76,13 @@ public final class AssetImpl implements Asset {
     public java.util.List<String> getTags(){
         return this.tags;
     }
+    
+    /**
+    *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+    */
+    public com.commercetools.importer.models.customfields.Custom getCustom(){
+        return this.custom;
+    }
 
     public void setKey(final String key){
         this.key = key;
@@ -91,6 +102,10 @@ public final class AssetImpl implements Asset {
     
     public void setTags(final java.util.List<String> tags){
         this.tags = tags;
+    }
+    
+    public void setCustom(final com.commercetools.importer.models.customfields.Custom custom){
+        this.custom = custom;
     }
 
 }

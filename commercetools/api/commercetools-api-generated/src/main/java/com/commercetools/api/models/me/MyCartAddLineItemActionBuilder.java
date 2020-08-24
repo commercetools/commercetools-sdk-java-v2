@@ -7,6 +7,7 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.me.MyCartUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import com.commercetools.api.models.me.MyCartAddLineItemAction;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -52,6 +53,9 @@ public final class MyCartAddLineItemActionBuilder {
     
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+    
+    @Nullable
+    private java.time.ZonedDateTime addedAt;
 
     public MyCartAddLineItemActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
@@ -105,6 +109,11 @@ public final class MyCartAddLineItemActionBuilder {
     
     public MyCartAddLineItemActionBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
+        return this;
+    }
+    
+    public MyCartAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
         return this;
     }
 
@@ -162,9 +171,14 @@ public final class MyCartAddLineItemActionBuilder {
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
         return this.shippingDetails;
     }
+    
+    @Nullable
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
+    }
 
     public MyCartAddLineItemAction build() {
-        return new MyCartAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId, sku, quantity, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
+        return new MyCartAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId, sku, quantity, supplyChannel, externalPrice, externalTotalPrice, shippingDetails, addedAt);
     }
 
     public static MyCartAddLineItemActionBuilder of() {
@@ -184,6 +198,7 @@ public final class MyCartAddLineItemActionBuilder {
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();
         builder.shippingDetails = template.getShippingDetails();
+        builder.addedAt = template.getAddedAt();
         return builder;
     }
 

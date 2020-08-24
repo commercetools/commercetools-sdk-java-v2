@@ -3,6 +3,7 @@ package com.commercetools.api.models.me;
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -30,6 +31,8 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
     
     private Double quantity;
     
+    private java.time.ZonedDateTime addedAt;
+    
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
     
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
@@ -41,10 +44,11 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
     private String sku;
 
     @JsonCreator
-    MyLineItemDraftImpl(@JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId, @JsonProperty("quantity") final Double quantity, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("sku") final String sku) {
+    MyLineItemDraftImpl(@JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId, @JsonProperty("quantity") final Double quantity, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("sku") final String sku) {
         this.productId = productId;
         this.variantId = variantId;
         this.quantity = quantity;
+        this.addedAt = addedAt;
         this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
         this.custom = custom;
@@ -68,6 +72,14 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
     
     public Double getQuantity(){
         return this.quantity;
+    }
+    
+    /**
+    *  <p>When the line item was added to the cart. Optional for backwards
+    *  compatibility reasons only.</p>
+    */
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
     }
     
     /**
@@ -116,6 +128,10 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
     
     public void setQuantity(final Double quantity){
         this.quantity = quantity;
+    }
+    
+    public void setAddedAt(final java.time.ZonedDateTime addedAt){
+        this.addedAt = addedAt;
     }
     
     public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){

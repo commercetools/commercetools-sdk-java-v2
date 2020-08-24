@@ -26,81 +26,81 @@ public interface OperationStates  {
     */
     @NotNull
     @JsonProperty("Accepted")
-    public Double getAccepted();
+    public Long getAccepted();
     /**
     *  <p>The number of import operations that are in the state <code>ValidationFailed</code>.</p>
     */
     @NotNull
     @JsonProperty("ValidationFailed")
-    public Double getValidationFailed();
+    public Long getValidationFailed();
     /**
     *  <p>The number of import operations that are in the state <code>Unresolved</code>.</p>
     */
     @NotNull
     @JsonProperty("Unresolved")
-    public Double getUnresolved();
+    public Long getUnresolved();
     /**
     *  <p>The number of import operations that are in the state <code>Resolved</code>.</p>
     */
     @NotNull
     @JsonProperty("Resolved")
-    public Double getResolved();
+    public Long getResolved();
     /**
     *  <p>The number of import operations that are in the state <code>WaitForMasterVariant</code>.</p>
     */
     @NotNull
     @JsonProperty("WaitForMasterVariant")
-    public Double getWaitForMasterVariant();
+    public Long getWaitForMasterVariant();
     /**
     *  <p>The number of import operations that are in the state <code>Imported</code>.</p>
     */
     @NotNull
     @JsonProperty("Imported")
-    public Double getImported();
+    public Long getImported();
     /**
     *  <p>The number of import operations that are in the state <code>Deleted</code>.</p>
     */
     @NotNull
     @JsonProperty("Deleted")
-    public Double getDeleted();
+    public Long getDeleted();
     /**
     *  <p>The number of import operations that are in the state <code>Rejected</code>.</p>
     */
     @NotNull
     @JsonProperty("Rejected")
-    public Double getRejected();
+    public Long getRejected();
     /**
     *  <p>The number of import operations that are in the state <code>Skipped</code>.</p>
     */
     @NotNull
     @JsonProperty("Skipped")
-    public Double getSkipped();
+    public Long getSkipped();
     /**
     *  <p>The number of import operations that are in the state <code>Expired</code>.</p>
     */
     @NotNull
     @JsonProperty("Expired")
-    public Double getExpired();
+    public Long getExpired();
 
-    public void setAccepted(final Double accepted);
+    public void setAccepted(final Long accepted);
     
-    public void setValidationFailed(final Double validationFailed);
+    public void setValidationFailed(final Long validationFailed);
     
-    public void setUnresolved(final Double unresolved);
+    public void setUnresolved(final Long unresolved);
     
-    public void setResolved(final Double resolved);
+    public void setResolved(final Long resolved);
     
-    public void setWaitForMasterVariant(final Double waitForMasterVariant);
+    public void setWaitForMasterVariant(final Long waitForMasterVariant);
     
-    public void setImported(final Double imported);
+    public void setImported(final Long imported);
     
-    public void setDeleted(final Double deleted);
+    public void setDeleted(final Long deleted);
     
-    public void setRejected(final Double rejected);
+    public void setRejected(final Long rejected);
     
-    public void setSkipped(final Double skipped);
+    public void setSkipped(final Long skipped);
     
-    public void setExpired(final Double expired);
+    public void setExpired(final Long expired);
 
     public static OperationStatesImpl of(){
         return new OperationStatesImpl();

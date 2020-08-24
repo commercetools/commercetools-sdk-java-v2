@@ -6,6 +6,7 @@ import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import com.commercetools.api.models.cart.LineItemDraft;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -30,6 +31,9 @@ public final class LineItemDraftBuilder {
     
     @Nullable
     private Long quantity;
+    
+    @Nullable
+    private java.time.ZonedDateTime addedAt;
     
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
@@ -69,6 +73,11 @@ public final class LineItemDraftBuilder {
     
     public LineItemDraftBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
+        return this;
+    }
+    
+    public LineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
         return this;
     }
     
@@ -128,6 +137,11 @@ public final class LineItemDraftBuilder {
     }
     
     @Nullable
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
+    }
+    
+    @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
@@ -163,7 +177,7 @@ public final class LineItemDraftBuilder {
     }
 
     public LineItemDraft build() {
-        return new LineItemDraftImpl(productId, variantId, sku, quantity, supplyChannel, distributionChannel, externalTaxRate, custom, externalPrice, externalTotalPrice, shippingDetails);
+        return new LineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel, externalTaxRate, custom, externalPrice, externalTotalPrice, shippingDetails);
     }
 
     public static LineItemDraftBuilder of() {
@@ -176,6 +190,7 @@ public final class LineItemDraftBuilder {
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();
         builder.quantity = template.getQuantity();
+        builder.addedAt = template.getAddedAt();
         builder.supplyChannel = template.getSupplyChannel();
         builder.distributionChannel = template.getDistributionChannel();
         builder.externalTaxRate = template.getExternalTaxRate();

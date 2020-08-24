@@ -6,6 +6,7 @@ import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import com.commercetools.api.models.cart.LineItemDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -45,6 +46,13 @@ public interface LineItemDraft  {
     
     @JsonProperty("quantity")
     public Long getQuantity();
+    /**
+    *  <p>When the line item was added to the cart. Optional for backwards
+    *  compatibility reasons only.</p>
+    */
+    
+    @JsonProperty("addedAt")
+    public ZonedDateTime getAddedAt();
     /**
     *  <p>By providing supply channel information, you can unique identify
     *  inventory entries that should be reserved.
@@ -100,6 +108,8 @@ public interface LineItemDraft  {
     
     public void setQuantity(final Long quantity);
     
+    public void setAddedAt(final ZonedDateTime addedAt);
+    
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
     
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
@@ -125,6 +135,7 @@ public interface LineItemDraft  {
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
         instance.setQuantity(template.getQuantity());
+        instance.setAddedAt(template.getAddedAt());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
         instance.setExternalTaxRate(template.getExternalTaxRate());

@@ -39,7 +39,7 @@ public final class ImportOperationImpl implements ImportOperation {
     
     private Long resourceVersion;
     
-    private Double retryCount;
+    private Integer retryCount;
     
     private java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors;
     
@@ -50,7 +50,7 @@ public final class ImportOperationImpl implements ImportOperation {
     private java.time.ZonedDateTime expiresAt;
 
     @JsonCreator
-    ImportOperationImpl(@JsonProperty("version") final Long version, @JsonProperty("importSinkKey") final String importSinkKey, @JsonProperty("resourceKey") final String resourceKey, @JsonProperty("id") final String id, @JsonProperty("state") final com.commercetools.importer.models.common.ProcessingState state, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("retryCount") final Double retryCount, @JsonProperty("errors") final java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
+    ImportOperationImpl(@JsonProperty("version") final Long version, @JsonProperty("importSinkKey") final String importSinkKey, @JsonProperty("resourceKey") final String resourceKey, @JsonProperty("id") final String id, @JsonProperty("state") final com.commercetools.importer.models.common.ProcessingState state, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("retryCount") final Integer retryCount, @JsonProperty("errors") final java.util.List<com.commercetools.importer.models.errors.ErrorObject> errors, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
         this.version = version;
         this.importSinkKey = importSinkKey;
         this.resourceKey = resourceKey;
@@ -112,7 +112,7 @@ public final class ImportOperationImpl implements ImportOperation {
     /**
     *  <p>The number of request retries for processing the import resource.</p>
     */
-    public Double getRetryCount(){
+    public Integer getRetryCount(){
         return this.retryCount;
     }
     
@@ -169,7 +169,7 @@ public final class ImportOperationImpl implements ImportOperation {
         this.resourceVersion = resourceVersion;
     }
     
-    public void setRetryCount(final Double retryCount){
+    public void setRetryCount(final Integer retryCount){
         this.retryCount = retryCount;
     }
     

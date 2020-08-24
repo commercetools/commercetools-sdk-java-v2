@@ -16,7 +16,7 @@ import java.io.IOException;
 
 /**
 *  <p>An import summary describes the states of import resources of a given import sink.</p>
-*  <p>It is used to track the overall progress of of import resources.</p>
+*  <p>It is used to track the overall progress of import resources.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -37,11 +37,11 @@ public interface ImportSummary  {
     */
     @NotNull
     @JsonProperty("total")
-    public Double getTotal();
+    public Long getTotal();
 
     public void setStates(final OperationStates states);
     
-    public void setTotal(final Double total);
+    public void setTotal(final Long total);
 
     public static ImportSummaryImpl of(){
         return new ImportSummaryImpl();

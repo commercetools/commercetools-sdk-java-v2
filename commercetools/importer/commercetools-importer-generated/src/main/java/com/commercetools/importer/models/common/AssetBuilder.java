@@ -2,6 +2,7 @@ package com.commercetools.importer.models.common;
 
 import com.commercetools.importer.models.common.AssetSource;
 import com.commercetools.importer.models.common.LocalizedString;
+import com.commercetools.importer.models.customfields.Custom;
 import com.commercetools.importer.models.common.Asset;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -29,6 +30,9 @@ public final class AssetBuilder {
     
     @Nullable
     private java.util.List<String> tags;
+    
+    @Nullable
+    private com.commercetools.importer.models.customfields.Custom custom;
 
     public AssetBuilder key( final String key) {
         this.key = key;
@@ -52,6 +56,11 @@ public final class AssetBuilder {
     
     public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
+        return this;
+    }
+    
+    public AssetBuilder custom(@Nullable final com.commercetools.importer.models.customfields.Custom custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -79,9 +88,14 @@ public final class AssetBuilder {
     public java.util.List<String> getTags(){
         return this.tags;
     }
+    
+    @Nullable
+    public com.commercetools.importer.models.customfields.Custom getCustom(){
+        return this.custom;
+    }
 
     public Asset build() {
-        return new AssetImpl(key, sources, name, description, tags);
+        return new AssetImpl(key, sources, name, description, tags, custom);
     }
 
     public static AssetBuilder of() {
@@ -95,6 +109,7 @@ public final class AssetBuilder {
         builder.name = template.getName();
         builder.description = template.getDescription();
         builder.tags = template.getTags();
+        builder.custom = template.getCustom();
         return builder;
     }
 

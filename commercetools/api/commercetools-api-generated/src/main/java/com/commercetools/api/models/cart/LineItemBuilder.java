@@ -14,6 +14,7 @@ import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.ProductTypeReference;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import com.commercetools.api.models.cart.LineItem;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -56,6 +57,9 @@ public final class LineItemBuilder {
     
     
     private Long quantity;
+    
+    @Nullable
+    private java.time.ZonedDateTime addedAt;
     
     
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
@@ -131,6 +135,11 @@ public final class LineItemBuilder {
     
     public LineItemBuilder quantity( final Long quantity) {
         this.quantity = quantity;
+        return this;
+    }
+    
+    public LineItemBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
         return this;
     }
     
@@ -229,6 +238,11 @@ public final class LineItemBuilder {
         return this.quantity;
     }
     
+    @Nullable
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
+    }
+    
     
     public java.util.List<com.commercetools.api.models.order.ItemState> getState(){
         return this.state;
@@ -275,7 +289,7 @@ public final class LineItemBuilder {
     }
 
     public LineItem build() {
-        return new LineItemImpl(id, productId, name, productSlug, productType, variant, price, taxedPrice, totalPrice, quantity, state, taxRate, supplyChannel, distributionChannel, discountedPricePerQuantity, priceMode, lineItemMode, custom, shippingDetails);
+        return new LineItemImpl(id, productId, name, productSlug, productType, variant, price, taxedPrice, totalPrice, quantity, addedAt, state, taxRate, supplyChannel, distributionChannel, discountedPricePerQuantity, priceMode, lineItemMode, custom, shippingDetails);
     }
 
     public static LineItemBuilder of() {
@@ -294,6 +308,7 @@ public final class LineItemBuilder {
         builder.taxedPrice = template.getTaxedPrice();
         builder.totalPrice = template.getTotalPrice();
         builder.quantity = template.getQuantity();
+        builder.addedAt = template.getAddedAt();
         builder.state = template.getState();
         builder.taxRate = template.getTaxRate();
         builder.supplyChannel = template.getSupplyChannel();

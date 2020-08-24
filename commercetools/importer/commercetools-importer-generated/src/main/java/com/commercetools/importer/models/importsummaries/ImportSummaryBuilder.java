@@ -18,14 +18,14 @@ public final class ImportSummaryBuilder {
     private com.commercetools.importer.models.importsummaries.OperationStates states;
     
     
-    private Double total;
+    private Long total;
 
     public ImportSummaryBuilder states( final com.commercetools.importer.models.importsummaries.OperationStates states) {
         this.states = states;
         return this;
     }
     
-    public ImportSummaryBuilder total( final Double total) {
+    public ImportSummaryBuilder total( final Long total) {
         this.total = total;
         return this;
     }
@@ -36,7 +36,7 @@ public final class ImportSummaryBuilder {
     }
     
     
-    public Double getTotal(){
+    public Long getTotal(){
         return this.total;
     }
 

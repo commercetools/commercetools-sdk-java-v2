@@ -7,6 +7,7 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -44,6 +45,8 @@ public final class StagedOrderAddLineItemActionImpl implements StagedOrderAddLin
     
     private Double quantity;
     
+    private java.time.ZonedDateTime addedAt;
+    
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
     
     private com.commercetools.api.models.common.Money externalPrice;
@@ -53,7 +56,7 @@ public final class StagedOrderAddLineItemActionImpl implements StagedOrderAddLin
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @JsonCreator
-    StagedOrderAddLineItemActionImpl(@JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Double quantity, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+    StagedOrderAddLineItemActionImpl(@JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Double quantity, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.custom = custom;
         this.distributionChannel = distributionChannel;
         this.externalTaxRate = externalTaxRate;
@@ -61,6 +64,7 @@ public final class StagedOrderAddLineItemActionImpl implements StagedOrderAddLin
         this.variantId = variantId;
         this.sku = sku;
         this.quantity = quantity;
+        this.addedAt = addedAt;
         this.supplyChannel = supplyChannel;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
@@ -112,6 +116,11 @@ public final class StagedOrderAddLineItemActionImpl implements StagedOrderAddLin
     }
     
     
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
+    }
+    
+    
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
@@ -157,6 +166,10 @@ public final class StagedOrderAddLineItemActionImpl implements StagedOrderAddLin
     
     public void setQuantity(final Double quantity){
         this.quantity = quantity;
+    }
+    
+    public void setAddedAt(final java.time.ZonedDateTime addedAt){
+        this.addedAt = addedAt;
     }
     
     public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){

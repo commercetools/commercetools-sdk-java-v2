@@ -14,6 +14,7 @@ import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.ProductTypeReference;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -55,6 +56,8 @@ public final class LineItemImpl implements LineItem {
     
     private Long quantity;
     
+    private java.time.ZonedDateTime addedAt;
+    
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
     
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
@@ -74,7 +77,7 @@ public final class LineItemImpl implements LineItem {
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
 
     @JsonCreator
-    LineItemImpl(@JsonProperty("id") final String id, @JsonProperty("productId") final String productId, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug, @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType, @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant, @JsonProperty("price") final com.commercetools.api.models.common.Price price, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice, @JsonProperty("quantity") final Long quantity, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelReference distributionChannel, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("priceMode") final com.commercetools.api.models.cart.LineItemPriceMode priceMode, @JsonProperty("lineItemMode") final com.commercetools.api.models.cart.LineItemMode lineItemMode, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails) {
+    LineItemImpl(@JsonProperty("id") final String id, @JsonProperty("productId") final String productId, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug, @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType, @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant, @JsonProperty("price") final com.commercetools.api.models.common.Price price, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice, @JsonProperty("quantity") final Long quantity, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelReference distributionChannel, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("priceMode") final com.commercetools.api.models.cart.LineItemPriceMode priceMode, @JsonProperty("lineItemMode") final com.commercetools.api.models.cart.LineItemMode lineItemMode, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails) {
         this.id = id;
         this.productId = productId;
         this.name = name;
@@ -85,6 +88,7 @@ public final class LineItemImpl implements LineItem {
         this.taxedPrice = taxedPrice;
         this.totalPrice = totalPrice;
         this.quantity = quantity;
+        this.addedAt = addedAt;
         this.state = state;
         this.taxRate = taxRate;
         this.supplyChannel = supplyChannel;
@@ -172,6 +176,14 @@ public final class LineItemImpl implements LineItem {
     */
     public Long getQuantity(){
         return this.quantity;
+    }
+    
+    /**
+    *  <p>When the line item was added to the cart. Optional for backwards
+    *  compatibility reasons only.</p>
+    */
+    public java.time.ZonedDateTime getAddedAt(){
+        return this.addedAt;
     }
     
     
@@ -269,6 +281,10 @@ public final class LineItemImpl implements LineItem {
     
     public void setQuantity(final Long quantity){
         this.quantity = quantity;
+    }
+    
+    public void setAddedAt(final java.time.ZonedDateTime addedAt){
+        this.addedAt = addedAt;
     }
     
     public void setState(final java.util.List<com.commercetools.api.models.order.ItemState> state){

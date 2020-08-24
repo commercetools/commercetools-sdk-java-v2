@@ -165,6 +165,6 @@ dependencies {
 
 [](definitions for the top badges)
 
-[travis]:https://travis-ci.com/commercetools/commercetools-java-sdks?branch=master
-[travis img]:https://travis-ci.com/commercetools/commercetools-java-sdks.svg?branch=master
+[travis]:https://travis-ci.com/commercetools/commercetools-sdk-java-v2?branch=master
+[travis img]:https://api.travis-ci.com/commercetools/commercetools-sdk-java-v2.svg?branch=master
 

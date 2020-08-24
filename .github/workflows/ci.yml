@@ -24,7 +24,7 @@ jobs:
         run: ./gradlew --build-cache clean test
 
       - name: Release
-        run: ./gradlew --build-cache bintrayUpload --info --stacktrace -Dpublish=true
+        run: ./gradlew --build-cache bintrayUpload writeVersionToReadme --info --stacktrace -Dpublish=true
         env:
           CTP_BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
           CTP_BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}

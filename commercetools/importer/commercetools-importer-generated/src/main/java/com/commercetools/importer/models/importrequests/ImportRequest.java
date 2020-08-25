@@ -2,6 +2,7 @@ package com.commercetools.importer.models.importrequests;
 
 import com.commercetools.importer.models.common.ImportResourceType;
 import com.commercetools.importer.models.importrequests.CategoryImportRequest;
+import com.commercetools.importer.models.importrequests.CustomerImportRequest;
 import com.commercetools.importer.models.importrequests.OrderImportRequest;
 import com.commercetools.importer.models.importrequests.PriceImportRequest;
 import com.commercetools.importer.models.importrequests.ProductDraftImportRequest;
@@ -33,7 +34,8 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.ProductVariantImportRequestImpl.class, name = "product-variant"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.PriceImportRequestImpl.class, name = "price"),
    @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.OrderImportRequestImpl.class, name = "order"),
-   @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.ProductVariantPatchRequestImpl.class, name = "product-variant-patch")
+   @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.ProductVariantPatchRequestImpl.class, name = "product-variant-patch"),
+   @JsonSubTypes.Type(value = com.commercetools.importer.models.importrequests.CustomerImportRequestImpl.class, name = "customer")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

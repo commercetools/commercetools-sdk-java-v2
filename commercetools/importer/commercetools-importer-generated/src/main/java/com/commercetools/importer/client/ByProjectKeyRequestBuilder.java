@@ -48,4 +48,7 @@ public class ByProjectKeyRequestBuilder {
     public ByProjectKeyOrdersRequestBuilder orders() {
         return new ByProjectKeyOrdersRequestBuilder(apiHttpClient, projectKey);
     }
+    public ByProjectKeyCustomersRequestBuilder customers() {
+        return new ByProjectKeyCustomersRequestBuilder(apiHttpClient, projectKey);
+    }
 }

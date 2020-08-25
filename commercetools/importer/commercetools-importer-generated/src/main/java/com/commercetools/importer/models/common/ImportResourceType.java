@@ -66,7 +66,14 @@ public enum ImportResourceType {
     	
     */
     @JsonProperty("product-variant-patch")
-    PRODUCT_VARIANT_PATCH("product-variant-patch");
+    PRODUCT_VARIANT_PATCH("product-variant-patch"),
+    
+    /**
+    	<p>The customer import resource type.</p>
+    	
+    */
+    @JsonProperty("customer")
+    CUSTOMER("customer");
 
     private final String jsonName;
 

@@ -67,3 +67,14 @@ jobs:
           CTP_BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
           CTP_BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
           SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
+
+      - name: Create GH Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          draft: true
+          prerelease: false

@@ -10,7 +10,7 @@ import java.util.concurrent.CompletionException;
 public class HttpMiddleware implements Middleware {
 
     private static final String USER_AGENT = "User-Agent";
-    
+
     private final TokenSupplier tokenSupplier;
     private final String apiBaseUrl;
     private CompletableFuture<AuthenticationToken> authenticationToken;
@@ -95,6 +95,6 @@ public class HttpMiddleware implements Middleware {
         String osName =  System.getenv("os.name");
         String osArch = System.getenv("os.arch");
         String sdkVersion = BuildInfo.VERSION;
-        return "commercetools-jvm-sdks/" + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";
+        return "commercetools-java-sdks/" + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";
     }
 }

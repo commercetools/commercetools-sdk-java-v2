@@ -102,7 +102,7 @@ subprojects { project ->
 
     apply plugin: 'com.softeq.gradle.itest'
 
-    group='com.commercetools'
+    group='com.commercetools.sdk'
     version = System.getProperty('publish') ? globalVersion : currentVersion
 
     bintray {

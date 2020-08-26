@@ -45,4 +45,10 @@ public class ByProjectKeyRequestBuilder {
     public ByProjectKeyProductVariantPatchesRequestBuilder productVariantPatches() {
         return new ByProjectKeyProductVariantPatchesRequestBuilder(apiHttpClient, projectKey);
     }
+    public ByProjectKeyOrdersRequestBuilder orders() {
+        return new ByProjectKeyOrdersRequestBuilder(apiHttpClient, projectKey);
+    }
+    public ByProjectKeyCustomersRequestBuilder customers() {
+        return new ByProjectKeyCustomersRequestBuilder(apiHttpClient, projectKey);
+    }
 }

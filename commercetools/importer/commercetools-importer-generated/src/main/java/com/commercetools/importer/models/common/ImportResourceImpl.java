@@ -1,6 +1,8 @@
 package com.commercetools.importer.models.common;
 
 import com.commercetools.importer.models.categories.CategoryImport;
+import com.commercetools.importer.models.customers.CustomerImport;
+import com.commercetools.importer.models.orders.OrderImport;
 import com.commercetools.importer.models.prices.PriceImport;
 import com.commercetools.importer.models.productdrafts.ProductDraftImport;
 import com.commercetools.importer.models.products.ProductImport;

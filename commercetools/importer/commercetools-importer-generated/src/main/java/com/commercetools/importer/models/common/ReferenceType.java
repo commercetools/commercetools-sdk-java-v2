@@ -97,6 +97,13 @@ public enum ReferenceType {
     STATE("state"),
     
     /**
+    	<p>References a store.</p>
+    	
+    */
+    @JsonProperty("store")
+    STORE("store"),
+    
+    /**
     	<p>References a tax-category.</p>
     	
     */

@@ -10,8 +10,15 @@ publishing {
 }
 
 dependencies {
-    compile project(':rmf:rmf-java-base')
+    compile project(':rmf:okhttp-client')
     compile 'com.google.code.findbugs:jsr305:3.0.2'
     compile 'javax.validation:validation-api:2.0.1.Final'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.assertj:assertj-core:3.8.0'
+
+    itestImplementation 'junit:junit:4.12'
+    itestImplementation 'org.assertj:assertj-core:3.8.0'
 }
+
+sourceSets.main.java.srcDirs += "src/main/java-generated"

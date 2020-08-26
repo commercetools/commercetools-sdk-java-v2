@@ -26,7 +26,7 @@ generate_api:
 	$(MAKE) -C commercetools LIB_NAME="api" GEN_RAML_FILE=../$(API_RAML) generate_sdk
 
 generate_import:
-	$(MAKE) -C commercetools LIB_NAME="importer" GEN_RAML_FILE=../$(IMPORT_RAML) generate_sdk
+	$(MAKE) -C commercetools LIB_NAME="importapi" GEN_RAML_FILE=../$(IMPORT_RAML) generate_sdk
 
 generate_ml:
 	$(MAKE) -C commercetools LIB_NAME="ml" PACKAGE_DIR="machine-learning" GEN_RAML_FILE=../$(ML_RAML) generate_sdk

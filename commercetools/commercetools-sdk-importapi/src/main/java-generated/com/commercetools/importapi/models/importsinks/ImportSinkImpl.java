@@ -30,13 +30,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ImportSinkImpl implements ImportSink {
 
     private String key;
-
+    
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
-
+    
     private Long version;
-
+    
     private java.time.ZonedDateTime createdAt;
-
+    
     private java.time.ZonedDateTime lastModifiedAt;
 
     @JsonCreator
@@ -48,7 +48,7 @@ public final class ImportSinkImpl implements ImportSink {
         this.lastModifiedAt = lastModifiedAt;
     }
     public ImportSinkImpl() {
-
+       
     }
 
     /**
@@ -57,7 +57,7 @@ public final class ImportSinkImpl implements ImportSink {
     public String getKey(){
         return this.key;
     }
-
+    
     /**
     *  <p>The type of import resource sent to this import sink.
     *  You can only send one resource type per import sink.</p>
@@ -65,21 +65,21 @@ public final class ImportSinkImpl implements ImportSink {
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType(){
         return this.resourceType;
     }
-
+    
     /**
     *  <p>The version of this resource.</p>
     */
     public Long getVersion(){
         return this.version;
     }
-
+    
     /**
     *  <p>When the import sink was created.</p>
     */
     public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
     *  <p>When the import sink was modified.</p>
     */
@@ -90,19 +90,19 @@ public final class ImportSinkImpl implements ImportSink {
     public void setKey(final String key){
         this.key = key;
     }
-
+    
     public void setResourceType(final com.commercetools.importapi.models.common.ImportResourceType resourceType){
         this.resourceType = resourceType;
     }
-
+    
     public void setVersion(final Long version){
         this.version = version;
     }
-
+    
     public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
+    
     public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }

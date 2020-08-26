@@ -26,11 +26,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ImportOperationPagedResponseImpl implements ImportOperationPagedResponse {
 
     private Integer limit;
-
+    
     private Long offset;
-
+    
     private Long count;
-
+    
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results;
 
     @JsonCreator
@@ -41,7 +41,7 @@ public final class ImportOperationPagedResponseImpl implements ImportOperationPa
         this.results = results;
     }
     public ImportOperationPagedResponseImpl() {
-
+       
     }
 
     /**
@@ -50,21 +50,21 @@ public final class ImportOperationPagedResponseImpl implements ImportOperationPa
     public Integer getLimit(){
         return this.limit;
     }
-
+    
     /**
     *  <p>The offset supplied by the client or the server default. It is the number of elements skipped.</p>
     */
     public Long getOffset(){
         return this.offset;
     }
-
+    
     /**
     *  <p>The actual number of results returned by this response.</p>
     */
     public Long getCount(){
         return this.count;
     }
-
+    
     /**
     *  <p>The results for this paged response.</p>
     */
@@ -75,15 +75,15 @@ public final class ImportOperationPagedResponseImpl implements ImportOperationPa
     public void setLimit(final Integer limit){
         this.limit = limit;
     }
-
+    
     public void setOffset(final Long offset){
         this.offset = offset;
     }
-
+    
     public void setCount(final Long count){
         this.count = count;
     }
-
+    
     public void setResults(final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results){
         this.results = results;
     }

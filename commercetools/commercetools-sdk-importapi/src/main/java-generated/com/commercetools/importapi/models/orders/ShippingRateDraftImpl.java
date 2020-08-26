@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShippingRateDraftImpl implements ShippingRateDraft {
 
     private com.commercetools.importapi.models.common.Money price;
-
+    
     private com.commercetools.importapi.models.common.Money freeAbove;
-
+    
     private java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers;
 
     @JsonCreator
@@ -36,20 +36,20 @@ public final class ShippingRateDraftImpl implements ShippingRateDraft {
         this.tiers = tiers;
     }
     public ShippingRateDraftImpl() {
-
+       
     }
 
-
+    
     public com.commercetools.importapi.models.common.Money getPrice(){
         return this.price;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.Money getFreeAbove(){
         return this.freeAbove;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers(){
         return this.tiers;
     }
@@ -57,11 +57,11 @@ public final class ShippingRateDraftImpl implements ShippingRateDraft {
     public void setPrice(final com.commercetools.importapi.models.common.Money price){
         this.price = price;
     }
-
+    
     public void setFreeAbove(final com.commercetools.importapi.models.common.Money freeAbove){
         this.freeAbove = freeAbove;
     }
-
+    
     public void setTiers(final java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers){
         this.tiers = tiers;
     }

@@ -26,13 +26,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ParcelImpl implements Parcel {
 
     private String id;
-
+    
     private java.time.ZonedDateTime createdAt;
-
+    
     private com.commercetools.importapi.models.orders.ParcelMeasurements measurements;
-
+    
     private com.commercetools.importapi.models.orders.TrackingData trackingData;
-
+    
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
     @JsonCreator
@@ -44,30 +44,30 @@ public final class ParcelImpl implements Parcel {
         this.items = items;
     }
     public ParcelImpl() {
-
+       
     }
 
-
+    
     public String getId(){
         return this.id;
     }
-
-
+    
+    
     public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.orders.ParcelMeasurements getMeasurements(){
         return this.measurements;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.orders.TrackingData getTrackingData(){
         return this.trackingData;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems(){
         return this.items;
     }
@@ -75,19 +75,19 @@ public final class ParcelImpl implements Parcel {
     public void setId(final String id){
         this.id = id;
     }
-
+    
     public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
+    
     public void setMeasurements(final com.commercetools.importapi.models.orders.ParcelMeasurements measurements){
         this.measurements = measurements;
     }
-
+    
     public void setTrackingData(final com.commercetools.importapi.models.orders.TrackingData trackingData){
         this.trackingData = trackingData;
     }
-
+    
     public void setItems(final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items){
         this.items = items;
     }

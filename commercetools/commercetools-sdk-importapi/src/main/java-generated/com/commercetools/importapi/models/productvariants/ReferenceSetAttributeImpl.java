@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReferenceSetAttributeImpl implements ReferenceSetAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
     @JsonCreator
@@ -39,7 +39,7 @@ public final class ReferenceSetAttributeImpl implements ReferenceSetAttribute {
         this.type = "reference-set";
     }
     public ReferenceSetAttributeImpl() {
-
+       
     }
 
     /**
@@ -50,13 +50,13 @@ public final class ReferenceSetAttributeImpl implements ReferenceSetAttribute {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.common.KeyReference> getValue(){
         return this.value;
     }
@@ -64,7 +64,7 @@ public final class ReferenceSetAttributeImpl implements ReferenceSetAttribute {
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final java.util.List<com.commercetools.importapi.models.common.KeyReference> value){
         this.value = value;
     }

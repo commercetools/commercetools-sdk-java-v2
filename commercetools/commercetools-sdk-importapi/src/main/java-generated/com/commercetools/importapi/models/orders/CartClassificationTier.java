@@ -23,37 +23,37 @@ import java.io.IOException;
 @JsonDeserialize(as = CartClassificationTierImpl.class)
 public interface CartClassificationTier extends ShippingRatePriceTier {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public String getValue();
-
+    
     @NotNull
     @Valid
     @JsonProperty("price")
     public Money getPrice();
-
+    
     @NotNull
     @Valid
     @JsonProperty("tiers")
     public List<ShippingRatePriceTier> getTiers();
-
-
+    
+    
     @JsonProperty("isMatching")
     public Boolean getIsMatching();
 
     public void setValue(final String value);
-
+    
     public void setPrice(final Money price);
-
+    
     public void setTiers(final List<ShippingRatePriceTier> tiers);
-
+    
     public void setIsMatching(final Boolean isMatching);
 
     public static CartClassificationTierImpl of(){
         return new CartClassificationTierImpl();
     }
-
+    
 
     public static CartClassificationTierImpl of(final CartClassificationTier template) {
         CartClassificationTierImpl instance = new CartClassificationTierImpl();

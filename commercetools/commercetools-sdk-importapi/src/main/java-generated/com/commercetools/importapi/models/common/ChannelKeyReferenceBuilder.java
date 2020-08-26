@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ChannelKeyReferenceBuilder {
 
-
+    
     private String key;
 
     public ChannelKeyReferenceBuilder key( final String key) {
@@ -23,7 +23,7 @@ public final class ChannelKeyReferenceBuilder {
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }

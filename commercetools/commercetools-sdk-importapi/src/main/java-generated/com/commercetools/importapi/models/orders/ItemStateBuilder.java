@@ -14,28 +14,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ItemStateBuilder {
 
-
+    
     private Double quantity;
-
-
+    
+    
     private com.commercetools.importapi.models.common.StateKeyReference state;
 
     public ItemStateBuilder quantity( final Double quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
     public ItemStateBuilder state( final com.commercetools.importapi.models.common.StateKeyReference state) {
         this.state = state;
         return this;
     }
 
-
+    
     public Double getQuantity(){
         return this.quantity;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.StateKeyReference getState(){
         return this.state;
     }

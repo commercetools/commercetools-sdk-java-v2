@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion {
 
     private com.commercetools.importapi.models.common.CartDiscountKeyReference discount;
-
+    
     private com.commercetools.importapi.models.common.Money discountedAmount;
 
     @JsonCreator
@@ -33,7 +33,7 @@ public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPo
         this.discountedAmount = discountedAmount;
     }
     public DiscountedLineItemPortionImpl() {
-
+       
     }
 
     /**
@@ -42,8 +42,8 @@ public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPo
     public com.commercetools.importapi.models.common.CartDiscountKeyReference getDiscount(){
         return this.discount;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.Money getDiscountedAmount(){
         return this.discountedAmount;
     }
@@ -51,7 +51,7 @@ public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPo
     public void setDiscount(final com.commercetools.importapi.models.common.CartDiscountKeyReference discount){
         this.discount = discount;
     }
-
+    
     public void setDiscountedAmount(final com.commercetools.importapi.models.common.Money discountedAmount){
         this.discountedAmount = discountedAmount;
     }

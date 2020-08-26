@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ContentionErrorBuilder {
 
-
+    
     private String message;
 
     public ContentionErrorBuilder message( final String message) {
@@ -22,7 +22,7 @@ public final class ContentionErrorBuilder {
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }

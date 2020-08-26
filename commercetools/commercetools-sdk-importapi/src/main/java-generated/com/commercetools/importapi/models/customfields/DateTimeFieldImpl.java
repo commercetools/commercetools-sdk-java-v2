@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DateTimeFieldImpl implements DateTimeField {
 
     private String type;
-
+    
     private java.time.ZonedDateTime value;
 
     @JsonCreator
@@ -36,7 +36,7 @@ public final class DateTimeFieldImpl implements DateTimeField {
         this.type = "DateTime";
     }
     public DateTimeFieldImpl() {
-
+       
     }
 
     /**
@@ -45,8 +45,8 @@ public final class DateTimeFieldImpl implements DateTimeField {
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.time.ZonedDateTime getValue(){
         return this.value;
     }

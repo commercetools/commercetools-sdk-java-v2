@@ -15,45 +15,45 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class MissingPricesProductCountBuilder {
 
+    
+    private Long total;
+    
+    
+    private Long missingPrices;
 
-   private Long total;
+    public MissingPricesProductCountBuilder total( final Long total) {
+        this.total = total;
+        return this;
+    }
+    
+    public MissingPricesProductCountBuilder missingPrices( final Long missingPrices) {
+        this.missingPrices = missingPrices;
+        return this;
+    }
 
+    
+    public Long getTotal(){
+        return this.total;
+    }
+    
+    
+    public Long getMissingPrices(){
+        return this.missingPrices;
+    }
 
-   private Long missingPrices;
+    public MissingPricesProductCount build() {
+        return new MissingPricesProductCountImpl(total, missingPrices);
+    }
 
-   public MissingPricesProductCountBuilder total( final Long total) {
-      this.total = total;
-      return this;
-   }
+    public static MissingPricesProductCountBuilder of() {
+        return new MissingPricesProductCountBuilder();
+    }
 
-   public MissingPricesProductCountBuilder missingPrices( final Long missingPrices) {
-      this.missingPrices = missingPrices;
-      return this;
-   }
-
-
-   public Long getTotal(){
-      return this.total;
-   }
-
-
-   public Long getMissingPrices(){
-      return this.missingPrices;
-   }
-
-   public MissingPricesProductCount build() {
-       return new MissingPricesProductCountImpl(total, missingPrices);
-   }
-
-   public static MissingPricesProductCountBuilder of() {
-      return new MissingPricesProductCountBuilder();
-   }
-
-   public static MissingPricesProductCountBuilder of(final MissingPricesProductCount template) {
-      MissingPricesProductCountBuilder builder = new MissingPricesProductCountBuilder();
-      builder.total = template.getTotal();
-      builder.missingPrices = template.getMissingPrices();
-      return builder;
-   }
+    public static MissingPricesProductCountBuilder of(final MissingPricesProductCount template) {
+        MissingPricesProductCountBuilder builder = new MissingPricesProductCountBuilder();
+        builder.total = template.getTotal();
+        builder.missingPrices = template.getMissingPrices();
+        return builder;
+    }
 
 }

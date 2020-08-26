@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductDiscountKeyReferenceImpl implements ProductDiscountKeyReference {
 
     private String key;
-
+    
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
@@ -36,14 +36,14 @@ public final class ProductDiscountKeyReferenceImpl implements ProductDiscountKey
         this.typeId = ReferenceType.findEnumViaJsonName("product-discount").get();
     }
     public ProductDiscountKeyReferenceImpl() {
-
+       
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
+    
     /**
     *  <p>The type of the referenced resource.</p>
     */

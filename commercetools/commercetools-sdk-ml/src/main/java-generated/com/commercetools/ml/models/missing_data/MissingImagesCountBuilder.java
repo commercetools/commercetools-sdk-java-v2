@@ -15,45 +15,45 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class MissingImagesCountBuilder {
 
+    
+    private Long missingImages;
+    
+    
+    private Long total;
 
-   private Long missingImages;
+    public MissingImagesCountBuilder missingImages( final Long missingImages) {
+        this.missingImages = missingImages;
+        return this;
+    }
+    
+    public MissingImagesCountBuilder total( final Long total) {
+        this.total = total;
+        return this;
+    }
 
+    
+    public Long getMissingImages(){
+        return this.missingImages;
+    }
+    
+    
+    public Long getTotal(){
+        return this.total;
+    }
 
-   private Long total;
+    public MissingImagesCount build() {
+        return new MissingImagesCountImpl(missingImages, total);
+    }
 
-   public MissingImagesCountBuilder missingImages( final Long missingImages) {
-      this.missingImages = missingImages;
-      return this;
-   }
+    public static MissingImagesCountBuilder of() {
+        return new MissingImagesCountBuilder();
+    }
 
-   public MissingImagesCountBuilder total( final Long total) {
-      this.total = total;
-      return this;
-   }
-
-
-   public Long getMissingImages(){
-      return this.missingImages;
-   }
-
-
-   public Long getTotal(){
-      return this.total;
-   }
-
-   public MissingImagesCount build() {
-       return new MissingImagesCountImpl(missingImages, total);
-   }
-
-   public static MissingImagesCountBuilder of() {
-      return new MissingImagesCountBuilder();
-   }
-
-   public static MissingImagesCountBuilder of(final MissingImagesCount template) {
-      MissingImagesCountBuilder builder = new MissingImagesCountBuilder();
-      builder.missingImages = template.getMissingImages();
-      builder.total = template.getTotal();
-      return builder;
-   }
+    public static MissingImagesCountBuilder of(final MissingImagesCount template) {
+        MissingImagesCountBuilder builder = new MissingImagesCountBuilder();
+        builder.missingImages = template.getMissingImages();
+        builder.total = template.getTotal();
+        return builder;
+    }
 
 }

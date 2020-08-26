@@ -38,7 +38,7 @@ public interface ReferenceAttribute extends Attribute {
     public static ReferenceAttributeImpl of(){
         return new ReferenceAttributeImpl();
     }
-
+    
 
     public static ReferenceAttributeImpl of(final ReferenceAttribute template) {
         ReferenceAttributeImpl instance = new ReferenceAttributeImpl();

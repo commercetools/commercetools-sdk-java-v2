@@ -13,27 +13,27 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ShipmentState {
 
-
+    
     @JsonProperty("Shipped")
     SHIPPED("Shipped"),
-
-
+    
+    
     @JsonProperty("Ready")
     READY("Ready"),
-
-
+    
+    
     @JsonProperty("Pending")
     PENDING("Pending"),
-
-
+    
+    
     @JsonProperty("Delayed")
     DELAYED("Delayed"),
-
-
+    
+    
     @JsonProperty("Partial")
     PARTIAL("Partial"),
-
-
+    
+    
     @JsonProperty("Backorder")
     BACKORDER("Backorder");
 

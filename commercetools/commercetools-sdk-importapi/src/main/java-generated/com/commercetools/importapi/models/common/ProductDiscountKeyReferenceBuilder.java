@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ProductDiscountKeyReferenceBuilder {
 
-
+    
     private String key;
 
     public ProductDiscountKeyReferenceBuilder key( final String key) {
@@ -23,7 +23,7 @@ public final class ProductDiscountKeyReferenceBuilder {
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }

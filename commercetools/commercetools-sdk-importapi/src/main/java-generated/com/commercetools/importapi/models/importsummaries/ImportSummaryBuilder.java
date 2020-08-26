@@ -14,28 +14,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ImportSummaryBuilder {
 
-
+    
     private com.commercetools.importapi.models.importsummaries.OperationStates states;
-
-
+    
+    
     private Long total;
 
     public ImportSummaryBuilder states( final com.commercetools.importapi.models.importsummaries.OperationStates states) {
         this.states = states;
         return this;
     }
-
+    
     public ImportSummaryBuilder total( final Long total) {
         this.total = total;
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.importsummaries.OperationStates getStates(){
         return this.states;
     }
-
-
+    
+    
     public Long getTotal(){
         return this.total;
     }

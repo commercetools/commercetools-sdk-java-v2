@@ -14,45 +14,45 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class MissingImagesProductLevelBuilder {
 
+    
+    private Long missingImages;
+    
+    
+    private Long total;
 
-   private Long missingImages;
+    public MissingImagesProductLevelBuilder missingImages( final Long missingImages) {
+        this.missingImages = missingImages;
+        return this;
+    }
+    
+    public MissingImagesProductLevelBuilder total( final Long total) {
+        this.total = total;
+        return this;
+    }
 
+    
+    public Long getMissingImages(){
+        return this.missingImages;
+    }
+    
+    
+    public Long getTotal(){
+        return this.total;
+    }
 
-   private Long total;
+    public MissingImagesProductLevel build() {
+        return new MissingImagesProductLevelImpl(missingImages, total);
+    }
 
-   public MissingImagesProductLevelBuilder missingImages( final Long missingImages) {
-      this.missingImages = missingImages;
-      return this;
-   }
+    public static MissingImagesProductLevelBuilder of() {
+        return new MissingImagesProductLevelBuilder();
+    }
 
-   public MissingImagesProductLevelBuilder total( final Long total) {
-      this.total = total;
-      return this;
-   }
-
-
-   public Long getMissingImages(){
-      return this.missingImages;
-   }
-
-
-   public Long getTotal(){
-      return this.total;
-   }
-
-   public MissingImagesProductLevel build() {
-       return new MissingImagesProductLevelImpl(missingImages, total);
-   }
-
-   public static MissingImagesProductLevelBuilder of() {
-      return new MissingImagesProductLevelBuilder();
-   }
-
-   public static MissingImagesProductLevelBuilder of(final MissingImagesProductLevel template) {
-      MissingImagesProductLevelBuilder builder = new MissingImagesProductLevelBuilder();
-      builder.missingImages = template.getMissingImages();
-      builder.total = template.getTotal();
-      return builder;
-   }
+    public static MissingImagesProductLevelBuilder of(final MissingImagesProductLevel template) {
+        MissingImagesProductLevelBuilder builder = new MissingImagesProductLevelBuilder();
+        builder.missingImages = template.getMissingImages();
+        builder.total = template.getTotal();
+        return builder;
+    }
 
 }

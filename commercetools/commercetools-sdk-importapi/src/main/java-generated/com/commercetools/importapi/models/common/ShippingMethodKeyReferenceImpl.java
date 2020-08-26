@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ShippingMethodKeyReferenceImpl implements ShippingMethodKeyReference {
 
     private String key;
-
+    
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
@@ -36,14 +36,14 @@ public final class ShippingMethodKeyReferenceImpl implements ShippingMethodKeyRe
         this.typeId = ReferenceType.findEnumViaJsonName("shipping-method").get();
     }
     public ShippingMethodKeyReferenceImpl() {
-
+       
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
+    
     /**
     *  <p>The type of the referenced resource.</p>
     */

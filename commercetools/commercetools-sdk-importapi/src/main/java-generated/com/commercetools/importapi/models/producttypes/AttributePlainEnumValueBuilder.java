@@ -14,28 +14,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AttributePlainEnumValueBuilder {
 
-
+    
     private String key;
-
-
+    
+    
     private String label;
 
     public AttributePlainEnumValueBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
     public AttributePlainEnumValueBuilder label( final String label) {
         this.label = label;
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
-
+    
+    
     public String getLabel(){
         return this.label;
     }

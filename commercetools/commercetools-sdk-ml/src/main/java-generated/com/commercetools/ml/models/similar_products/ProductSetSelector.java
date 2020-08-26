@@ -24,69 +24,69 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductSetSelectorImpl.class)
 public interface ProductSetSelector  {
 
-   /**
-   *  <p>The project containing the project set.</p>
-   */
-   @NotNull
-   @JsonProperty("projectKey")
-   public String getProjectKey();
-   /**
-   *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
-   */
+    /**
+    *  <p>The project containing the project set.</p>
+    */
+    @NotNull
+    @JsonProperty("projectKey")
+    public String getProjectKey();
+    /**
+    *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
+    */
+    
+    @JsonProperty("productIds")
+    public List<String> getProductIds();
+    /**
+    *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
+    */
+    
+    @JsonProperty("productTypeIds")
+    public List<String> getProductTypeIds();
+    /**
+    *  <p>Specifies use of staged or current product data.</p>
+    */
+    
+    @JsonProperty("staged")
+    public Boolean getStaged();
+    /**
+    *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
+    */
+    
+    @JsonProperty("includeVariants")
+    public Boolean getIncludeVariants();
+    /**
+    *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
+    */
+    
+    @JsonProperty("productSetLimit")
+    public Long getProductSetLimit();
 
-   @JsonProperty("productIds")
-   public List<String> getProductIds();
-   /**
-   *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
-   */
+    public void setProjectKey(final String projectKey);
+    
+    public void setProductIds(final List<String> productIds);
+    
+    public void setProductTypeIds(final List<String> productTypeIds);
+    
+    public void setStaged(final Boolean staged);
+    
+    public void setIncludeVariants(final Boolean includeVariants);
+    
+    public void setProductSetLimit(final Long productSetLimit);
 
-   @JsonProperty("productTypeIds")
-   public List<String> getProductTypeIds();
-   /**
-   *  <p>Specifies use of staged or current product data.</p>
-   */
+    public static ProductSetSelectorImpl of(){
+        return new ProductSetSelectorImpl();
+    }
+    
 
-   @JsonProperty("staged")
-   public Boolean getStaged();
-   /**
-   *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
-   */
-
-   @JsonProperty("includeVariants")
-   public Boolean getIncludeVariants();
-   /**
-   *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
-   */
-
-   @JsonProperty("productSetLimit")
-   public Long getProductSetLimit();
-
-   public void setProjectKey(final String projectKey);
-
-   public void setProductIds(final List<String> productIds);
-
-   public void setProductTypeIds(final List<String> productTypeIds);
-
-   public void setStaged(final Boolean staged);
-
-   public void setIncludeVariants(final Boolean includeVariants);
-
-   public void setProductSetLimit(final Long productSetLimit);
-
-   public static ProductSetSelectorImpl of(){
-      return new ProductSetSelectorImpl();
-   }
-
-
-   public static ProductSetSelectorImpl of(final ProductSetSelector template) {
-      ProductSetSelectorImpl instance = new ProductSetSelectorImpl();
-      instance.setProjectKey(template.getProjectKey());
-      instance.setProductIds(template.getProductIds());
-      instance.setProductTypeIds(template.getProductTypeIds());
-      instance.setStaged(template.getStaged());
-      instance.setIncludeVariants(template.getIncludeVariants());
-      instance.setProductSetLimit(template.getProductSetLimit());
-      return instance;
-   }
+    public static ProductSetSelectorImpl of(final ProductSetSelector template) {
+        ProductSetSelectorImpl instance = new ProductSetSelectorImpl();
+        instance.setProjectKey(template.getProjectKey());
+        instance.setProductIds(template.getProductIds());
+        instance.setProductTypeIds(template.getProductTypeIds());
+        instance.setStaged(template.getStaged());
+        instance.setIncludeVariants(template.getIncludeVariants());
+        instance.setProductSetLimit(template.getProductSetLimit());
+        return instance;
+    }
 
 }

@@ -33,7 +33,7 @@ public interface LineItemProductVariantImportDraft  {
     /**
     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
     */
-
+    
     @JsonProperty("sku")
     public String getSku();
     /**
@@ -56,19 +56,19 @@ public interface LineItemProductVariantImportDraft  {
     public List<Image> getImages();
 
     public void setProduct(final ProductKeyReference product);
-
+    
     public void setSku(final String sku);
-
+    
     public void setPrices(final List<LineItemPrice> prices);
-
+    
     public void setAttributes(final List<Attribute> attributes);
-
+    
     public void setImages(final List<Image> images);
 
     public static LineItemProductVariantImportDraftImpl of(){
         return new LineItemProductVariantImportDraftImpl();
     }
-
+    
 
     public static LineItemProductVariantImportDraftImpl of(final LineItemProductVariantImportDraft template) {
         LineItemProductVariantImportDraftImpl instance = new LineItemProductVariantImportDraftImpl();

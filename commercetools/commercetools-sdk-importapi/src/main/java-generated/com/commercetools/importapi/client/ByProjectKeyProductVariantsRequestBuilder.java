@@ -10,7 +10,7 @@ public class ByProjectKeyProductVariantsRequestBuilder {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
-
+    
 
     public ByProjectKeyProductVariantsRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey) {
         this.apiHttpClient = apiHttpClient;

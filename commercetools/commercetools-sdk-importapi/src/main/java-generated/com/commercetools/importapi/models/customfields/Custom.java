@@ -40,13 +40,13 @@ public interface Custom  {
     public FieldContainer getFields();
 
     public void setType(final TypeKeyReference type);
-
+    
     public void setFields(final FieldContainer fields);
 
     public static CustomImpl of(){
         return new CustomImpl();
     }
-
+    
 
     public static CustomImpl of(final Custom template) {
         CustomImpl instance = new CustomImpl();

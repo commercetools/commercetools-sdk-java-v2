@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class LocalizedStringBuilder {
 
-
+    
     private Map<String, String> values;
 
     public LocalizedStringBuilder values( final Map<String, String> values){
@@ -22,7 +22,7 @@ public final class LocalizedStringBuilder {
         return this;
     }
 
-
+    
     public Map<String, String> getValues(){
         return this.values;
     }

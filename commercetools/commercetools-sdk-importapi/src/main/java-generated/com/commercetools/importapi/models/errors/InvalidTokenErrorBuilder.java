@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class InvalidTokenErrorBuilder {
 
-
+    
     private String message;
 
     public InvalidTokenErrorBuilder message( final String message) {
@@ -22,7 +22,7 @@ public final class InvalidTokenErrorBuilder {
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }

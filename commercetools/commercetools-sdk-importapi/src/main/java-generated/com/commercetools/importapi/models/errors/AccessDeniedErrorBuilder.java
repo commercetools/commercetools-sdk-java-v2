@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AccessDeniedErrorBuilder {
 
-
+    
     private String message;
 
     public AccessDeniedErrorBuilder message( final String message) {
@@ -22,7 +22,7 @@ public final class AccessDeniedErrorBuilder {
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }

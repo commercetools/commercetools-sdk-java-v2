@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomImpl implements Custom {
 
     private com.commercetools.importapi.models.common.TypeKeyReference type;
-
+    
     private com.commercetools.importapi.models.customfields.FieldContainer fields;
 
     @JsonCreator
@@ -36,7 +36,7 @@ public final class CustomImpl implements Custom {
         this.fields = fields;
     }
     public CustomImpl() {
-
+       
     }
 
     /**
@@ -45,7 +45,7 @@ public final class CustomImpl implements Custom {
     public com.commercetools.importapi.models.common.TypeKeyReference getType(){
         return this.type;
     }
-
+    
     /**
     *  <p>The custom fields of this object.</p>
     */
@@ -56,7 +56,7 @@ public final class CustomImpl implements Custom {
     public void setType(final com.commercetools.importapi.models.common.TypeKeyReference type){
         this.type = type;
     }
-
+    
     public void setFields(final com.commercetools.importapi.models.customfields.FieldContainer fields){
         this.fields = fields;
     }

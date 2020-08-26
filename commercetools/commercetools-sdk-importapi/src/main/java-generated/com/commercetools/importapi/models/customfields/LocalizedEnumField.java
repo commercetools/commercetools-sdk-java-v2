@@ -24,7 +24,7 @@ import java.io.IOException;
 @JsonDeserialize(as = LocalizedEnumFieldImpl.class)
 public interface LocalizedEnumField extends CustomField {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public String getValue();
@@ -34,7 +34,7 @@ public interface LocalizedEnumField extends CustomField {
     public static LocalizedEnumFieldImpl of(){
         return new LocalizedEnumFieldImpl();
     }
-
+    
 
     public static LocalizedEnumFieldImpl of(final LocalizedEnumField template) {
         LocalizedEnumFieldImpl instance = new LocalizedEnumFieldImpl();

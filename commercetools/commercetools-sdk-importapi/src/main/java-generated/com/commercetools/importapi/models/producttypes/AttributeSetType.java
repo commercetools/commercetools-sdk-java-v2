@@ -21,7 +21,7 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeSetTypeImpl.class)
 public interface AttributeSetType extends AttributeType {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("elementType")
@@ -32,7 +32,7 @@ public interface AttributeSetType extends AttributeType {
     public static AttributeSetTypeImpl of(){
         return new AttributeSetTypeImpl();
     }
-
+    
 
     public static AttributeSetTypeImpl of(final AttributeSetType template) {
         AttributeSetTypeImpl instance = new AttributeSetTypeImpl();

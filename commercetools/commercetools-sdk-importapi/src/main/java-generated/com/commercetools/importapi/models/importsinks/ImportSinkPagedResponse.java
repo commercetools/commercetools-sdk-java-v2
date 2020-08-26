@@ -51,17 +51,17 @@ public interface ImportSinkPagedResponse  {
     public List<ImportSink> getResults();
 
     public void setLimit(final Integer limit);
-
+    
     public void setOffset(final Long offset);
-
+    
     public void setCount(final Long count);
-
+    
     public void setResults(final List<ImportSink> results);
 
     public static ImportSinkPagedResponseImpl of(){
         return new ImportSinkPagedResponseImpl();
     }
-
+    
 
     public static ImportSinkPagedResponseImpl of(final ImportSinkPagedResponse template) {
         ImportSinkPagedResponseImpl instance = new ImportSinkPagedResponseImpl();

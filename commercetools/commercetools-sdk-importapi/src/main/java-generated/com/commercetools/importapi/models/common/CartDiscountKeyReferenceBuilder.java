@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CartDiscountKeyReferenceBuilder {
 
-
+    
     private String key;
 
     public CartDiscountKeyReferenceBuilder key( final String key) {
@@ -23,7 +23,7 @@ public final class CartDiscountKeyReferenceBuilder {
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }

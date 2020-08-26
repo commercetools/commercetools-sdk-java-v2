@@ -24,7 +24,7 @@ import java.io.IOException;
 @JsonDeserialize(as = BooleanFieldImpl.class)
 public interface BooleanField extends CustomField {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public Boolean getValue();
@@ -34,7 +34,7 @@ public interface BooleanField extends CustomField {
     public static BooleanFieldImpl of(){
         return new BooleanFieldImpl();
     }
-
+    
 
     public static BooleanFieldImpl of(final BooleanField template) {
         BooleanFieldImpl instance = new BooleanFieldImpl();

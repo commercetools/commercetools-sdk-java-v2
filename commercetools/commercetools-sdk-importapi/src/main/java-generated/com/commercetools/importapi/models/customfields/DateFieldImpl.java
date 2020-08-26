@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DateFieldImpl implements DateField {
 
     private String type;
-
+    
     private java.time.LocalDate value;
 
     @JsonCreator
@@ -36,7 +36,7 @@ public final class DateFieldImpl implements DateField {
         this.type = "Date";
     }
     public DateFieldImpl() {
-
+       
     }
 
     /**
@@ -45,8 +45,8 @@ public final class DateFieldImpl implements DateField {
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.time.LocalDate getValue(){
         return this.value;
     }

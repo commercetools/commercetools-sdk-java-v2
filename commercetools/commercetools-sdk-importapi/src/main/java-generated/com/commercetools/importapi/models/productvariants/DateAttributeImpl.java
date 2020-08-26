@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DateAttributeImpl implements DateAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private java.time.LocalDate value;
 
     @JsonCreator
@@ -39,7 +39,7 @@ public final class DateAttributeImpl implements DateAttribute {
         this.type = "date";
     }
     public DateAttributeImpl() {
-
+       
     }
 
     /**
@@ -50,13 +50,13 @@ public final class DateAttributeImpl implements DateAttribute {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.time.LocalDate getValue(){
         return this.value;
     }
@@ -64,7 +64,7 @@ public final class DateAttributeImpl implements DateAttribute {
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final java.time.LocalDate value){
         this.value = value;
     }

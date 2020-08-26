@@ -11,6 +11,7 @@ import okhttp3.*;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +23,7 @@ public class VrapOkhttpClient implements VrapHttpClient {
             .writeTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
             .build();
-    
+
     private static final String CONTENT_TYPE =  "Content-Type";
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
     private static final byte[] emptyBody = new byte[0];
@@ -33,7 +34,7 @@ public class VrapOkhttpClient implements VrapHttpClient {
                 .thenApply(VrapOkhttpClient::toResponse);
 
     }
-    
+
     private static ApiHttpResponse<byte[]> toResponse(final Response response) {
         ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders();
         for (Map.Entry<String, List<String>> entry : response.headers().toMultimap().entrySet()) {
@@ -52,20 +53,20 @@ public class VrapOkhttpClient implements VrapHttpClient {
                 .url(apiHttpRequest.fullUrl());
 
         //set headers
-        for (Map.Entry<String, String> entry : apiHttpRequest.getHeaders().getHeaders().entrySet()) {
+        for (Map.Entry<String, String> entry : apiHttpRequest.getHeaders().getHeaders()) {
             httpRequestBuilder = httpRequestBuilder.header(entry.getKey(), entry.getValue());
         }
 
         if(apiHttpRequest.getMethod() == null){
             throw new IllegalStateException("apiHttpRequest method should be non null");
         }
-        
+
         //default media type is JSON, if other media type is set as a header, use it
         MediaType mediaType = JSON;
-        if(apiHttpRequest.getHeaders().getHeaders().keySet().stream().anyMatch(s -> s.equalsIgnoreCase(CONTENT_TYPE))){
-            mediaType = MediaType.get(apiHttpRequest.getHeaders().getHeaderValue(ApiHttpHeaders.CONTENT_TYPE));
+        if(apiHttpRequest.getHeaders().getHeaders().stream().anyMatch(s -> s.getKey().equalsIgnoreCase(CONTENT_TYPE))){
+            mediaType = MediaType.get(Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
         }
-        
+
         //set method and body
         switch (apiHttpRequest.getMethod()) {
             case GET:

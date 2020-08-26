@@ -24,7 +24,7 @@ import java.io.IOException;
 @JsonDeserialize(as = BooleanAttributeImpl.class)
 public interface BooleanAttribute extends Attribute {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public Boolean getValue();
@@ -34,7 +34,7 @@ public interface BooleanAttribute extends Attribute {
     public static BooleanAttributeImpl of(){
         return new BooleanAttributeImpl();
     }
-
+    
 
     public static BooleanAttributeImpl of(final BooleanAttribute template) {
         BooleanAttributeImpl instance = new BooleanAttributeImpl();

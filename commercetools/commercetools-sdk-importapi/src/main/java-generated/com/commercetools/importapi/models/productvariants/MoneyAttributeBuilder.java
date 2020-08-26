@@ -17,15 +17,15 @@ public final class MoneyAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private com.commercetools.importapi.models.common.TypedMoney value;
 
     public MoneyAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public MoneyAttributeBuilder value( final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         return this;
@@ -35,8 +35,8 @@ public final class MoneyAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.TypedMoney getValue(){
         return this.value;
     }

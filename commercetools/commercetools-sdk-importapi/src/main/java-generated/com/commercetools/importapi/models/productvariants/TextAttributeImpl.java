@@ -26,9 +26,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TextAttributeImpl implements TextAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private String value;
 
     @JsonCreator
@@ -38,7 +38,7 @@ public final class TextAttributeImpl implements TextAttribute {
         this.type = "text";
     }
     public TextAttributeImpl() {
-
+       
     }
 
     /**
@@ -49,13 +49,13 @@ public final class TextAttributeImpl implements TextAttribute {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public String getValue(){
         return this.value;
     }
@@ -63,7 +63,7 @@ public final class TextAttributeImpl implements TextAttribute {
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final String value){
         this.value = value;
     }

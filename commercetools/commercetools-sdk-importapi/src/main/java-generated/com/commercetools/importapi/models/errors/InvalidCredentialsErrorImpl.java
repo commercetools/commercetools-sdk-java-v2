@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InvalidCredentialsErrorImpl implements InvalidCredentialsError {
 
     private String code;
-
+    
     private String message;
 
     @JsonCreator
@@ -32,14 +32,14 @@ public final class InvalidCredentialsErrorImpl implements InvalidCredentialsErro
         this.code = "InvalidCredentials";
     }
     public InvalidCredentialsErrorImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */

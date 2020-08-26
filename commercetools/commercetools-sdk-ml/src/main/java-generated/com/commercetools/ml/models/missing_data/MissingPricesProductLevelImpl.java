@@ -22,39 +22,39 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingPricesProductLevelImpl implements MissingPricesProductLevel {
 
-   private Long total;
-   
-   private Long missingPrices;
+    private Long total;
+    
+    private Long missingPrices;
 
-   @JsonCreator
-   MissingPricesProductLevelImpl(@JsonProperty("total") final Long total, @JsonProperty("missingPrices") final Long missingPrices) {
-      this.total = total;
-      this.missingPrices = missingPrices;
-   }
-   public MissingPricesProductLevelImpl() {
-      
-   }
-   
-   /**
-   *  <p>Number of products scanned.</p>
-   */
-   public Long getTotal(){
-      return this.total;
-   }
-   
-   /**
-   *  <p>Number of products missing prices.</p>
-   */
-   public Long getMissingPrices(){
-      return this.missingPrices;
-   }
+    @JsonCreator
+    MissingPricesProductLevelImpl(@JsonProperty("total") final Long total, @JsonProperty("missingPrices") final Long missingPrices) {
+        this.total = total;
+        this.missingPrices = missingPrices;
+    }
+    public MissingPricesProductLevelImpl() {
+       
+    }
 
-   public void setTotal(final Long total){
-      this.total = total;
-   }
-   
-   public void setMissingPrices(final Long missingPrices){
-      this.missingPrices = missingPrices;
-   }
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+    public Long getTotal(){
+        return this.total;
+    }
+    
+    /**
+    *  <p>Number of products missing prices.</p>
+    */
+    public Long getMissingPrices(){
+        return this.missingPrices;
+    }
+
+    public void setTotal(final Long total){
+        this.total = total;
+    }
+    
+    public void setMissingPrices(final Long missingPrices){
+        this.missingPrices = missingPrices;
+    }
 
 }

@@ -16,15 +16,15 @@ public final class BooleanAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private Boolean value;
 
     public BooleanAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public BooleanAttributeBuilder value( final Boolean value) {
         this.value = value;
         return this;
@@ -34,8 +34,8 @@ public final class BooleanAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public Boolean getValue(){
         return this.value;
     }

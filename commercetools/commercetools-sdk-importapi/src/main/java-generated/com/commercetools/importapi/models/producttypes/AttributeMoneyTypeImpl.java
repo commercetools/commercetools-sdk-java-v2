@@ -28,9 +28,9 @@ public final class AttributeMoneyTypeImpl implements AttributeMoneyType {
     AttributeMoneyTypeImpl() {
         this.name = "money";
     }
+    
 
-
-
+    
     public String getName(){
         return this.name;
     }

@@ -30,7 +30,7 @@ public interface CategoryKeyReference extends KeyReference {
     public static CategoryKeyReferenceImpl of(){
         return new CategoryKeyReferenceImpl();
     }
-
+    
 
     public static CategoryKeyReferenceImpl of(final CategoryKeyReference template) {
         CategoryKeyReferenceImpl instance = new CategoryKeyReferenceImpl();

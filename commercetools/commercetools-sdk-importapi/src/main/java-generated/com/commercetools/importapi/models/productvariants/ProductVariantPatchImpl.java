@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductVariantPatchImpl implements ProductVariantPatch {
 
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
-
+    
     private com.commercetools.importapi.models.common.ProductKeyReference product;
-
+    
     private com.commercetools.importapi.models.productvariants.Attributes attributes;
 
     @JsonCreator
@@ -41,7 +41,7 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
         this.attributes = attributes;
     }
     public ProductVariantPatchImpl() {
-
+       
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant(){
         return this.productVariant;
     }
-
+    
     /**
     *  <p>The product in which the patched product variant resides. Maps to <code>ProductVariant.product</code>.</p>
     *  <p>The product referenced
@@ -63,7 +63,7 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct(){
         return this.product;
     }
-
+    
     /**
     *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
     *  <p>Each attribute referenced must be defined
@@ -77,11 +77,11 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
     public void setProductVariant(final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant){
         this.productVariant = productVariant;
     }
-
+    
     public void setProduct(final com.commercetools.importapi.models.common.ProductKeyReference product){
         this.product = product;
     }
-
+    
     public void setAttributes(final com.commercetools.importapi.models.productvariants.Attributes attributes){
         this.attributes = attributes;
     }

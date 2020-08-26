@@ -21,42 +21,42 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeCountImpl.class)
 public interface AttributeCount  {
 
-   /**
-   *  <p>Number of attributes defined in the product type.</p>
-   */
-   @NotNull
-   @JsonProperty("productTypeAttributes")
-   public Integer getProductTypeAttributes();
-   /**
-   *  <p>Number of attributes defined in the variant.</p>
-   */
-   @NotNull
-   @JsonProperty("variantAttributes")
-   public Integer getVariantAttributes();
-   /**
-   *  <p>Number of attributes missing values in the variant.</p>
-   */
-   @NotNull
-   @JsonProperty("missingAttributeValues")
-   public Integer getMissingAttributeValues();
+    /**
+    *  <p>Number of attributes defined in the product type.</p>
+    */
+    @NotNull
+    @JsonProperty("productTypeAttributes")
+    public Integer getProductTypeAttributes();
+    /**
+    *  <p>Number of attributes defined in the variant.</p>
+    */
+    @NotNull
+    @JsonProperty("variantAttributes")
+    public Integer getVariantAttributes();
+    /**
+    *  <p>Number of attributes missing values in the variant.</p>
+    */
+    @NotNull
+    @JsonProperty("missingAttributeValues")
+    public Integer getMissingAttributeValues();
 
-   public void setProductTypeAttributes(final Integer productTypeAttributes);
-   
-   public void setVariantAttributes(final Integer variantAttributes);
-   
-   public void setMissingAttributeValues(final Integer missingAttributeValues);
-   
-   public static AttributeCountImpl of(){
-      return new AttributeCountImpl();
-   }
-   
+    public void setProductTypeAttributes(final Integer productTypeAttributes);
+    
+    public void setVariantAttributes(final Integer variantAttributes);
+    
+    public void setMissingAttributeValues(final Integer missingAttributeValues);
 
-   public static AttributeCountImpl of(final AttributeCount template) {
-      AttributeCountImpl instance = new AttributeCountImpl();
-      instance.setProductTypeAttributes(template.getProductTypeAttributes());
-      instance.setVariantAttributes(template.getVariantAttributes());
-      instance.setMissingAttributeValues(template.getMissingAttributeValues());
-      return instance;
-   }
+    public static AttributeCountImpl of(){
+        return new AttributeCountImpl();
+    }
+    
+
+    public static AttributeCountImpl of(final AttributeCount template) {
+        AttributeCountImpl instance = new AttributeCountImpl();
+        instance.setProductTypeAttributes(template.getProductTypeAttributes());
+        instance.setVariantAttributes(template.getVariantAttributes());
+        instance.setMissingAttributeValues(template.getMissingAttributeValues());
+        return instance;
+    }
 
 }

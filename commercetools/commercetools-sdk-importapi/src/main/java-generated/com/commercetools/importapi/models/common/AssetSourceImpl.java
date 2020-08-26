@@ -23,11 +23,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AssetSourceImpl implements AssetSource {
 
     private String uri;
-
+    
     private String key;
-
+    
     private com.commercetools.importapi.models.common.AssetDimensions dimensions;
-
+    
     private String contentType;
 
     @JsonCreator
@@ -38,25 +38,25 @@ public final class AssetSourceImpl implements AssetSource {
         this.contentType = contentType;
     }
     public AssetSourceImpl() {
-
+       
     }
 
-
+    
     public String getUri(){
         return this.uri;
     }
-
-
+    
+    
     public String getKey(){
         return this.key;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.AssetDimensions getDimensions(){
         return this.dimensions;
     }
-
-
+    
+    
     public String getContentType(){
         return this.contentType;
     }
@@ -64,15 +64,15 @@ public final class AssetSourceImpl implements AssetSource {
     public void setUri(final String uri){
         this.uri = uri;
     }
-
+    
     public void setKey(final String key){
         this.key = key;
     }
-
+    
     public void setDimensions(final com.commercetools.importapi.models.common.AssetDimensions dimensions){
         this.dimensions = dimensions;
     }
-
+    
     public void setContentType(final String contentType){
         this.contentType = contentType;
     }

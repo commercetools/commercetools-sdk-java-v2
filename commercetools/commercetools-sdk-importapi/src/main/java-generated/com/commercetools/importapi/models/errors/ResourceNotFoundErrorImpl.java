@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ResourceNotFoundErrorImpl implements ResourceNotFoundError {
 
     private String code;
-
+    
     private String message;
-
+    
     private com.fasterxml.jackson.databind.JsonNode resource;
 
     @JsonCreator
@@ -36,22 +36,22 @@ public final class ResourceNotFoundErrorImpl implements ResourceNotFoundError {
         this.code = "ResourceNotFound";
     }
     public ResourceNotFoundErrorImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */
     public String getMessage(){
         return this.message;
     }
-
-
+    
+    
     public com.fasterxml.jackson.databind.JsonNode getResource(){
         return this.resource;
     }
@@ -59,7 +59,7 @@ public final class ResourceNotFoundErrorImpl implements ResourceNotFoundError {
     public void setMessage(final String message){
         this.message = message;
     }
-
+    
     public void setResource(final com.fasterxml.jackson.databind.JsonNode resource){
         this.resource = resource;
     }

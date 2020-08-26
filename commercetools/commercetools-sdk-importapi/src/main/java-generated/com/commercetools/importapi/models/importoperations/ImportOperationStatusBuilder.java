@@ -17,10 +17,10 @@ public final class ImportOperationStatusBuilder {
 
     @Nullable
     private String operationId;
-
-
+    
+    
     private com.commercetools.importapi.models.importoperations.ImportOperationState state;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
@@ -28,12 +28,12 @@ public final class ImportOperationStatusBuilder {
         this.operationId = operationId;
         return this;
     }
-
+    
     public ImportOperationStatusBuilder state( final com.commercetools.importapi.models.importoperations.ImportOperationState state) {
         this.state = state;
         return this;
     }
-
+    
     public ImportOperationStatusBuilder errors(@Nullable final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
         this.errors = errors;
         return this;
@@ -43,12 +43,12 @@ public final class ImportOperationStatusBuilder {
     public String getOperationId(){
         return this.operationId;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.importoperations.ImportOperationState getState(){
         return this.state;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors(){
         return this.errors;

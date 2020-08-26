@@ -38,13 +38,13 @@ public interface ItemShippingTarget  {
     public Double getQuantity();
 
     public void setAddressKey(final String addressKey);
-
+    
     public void setQuantity(final Double quantity);
 
     public static ItemShippingTargetImpl of(){
         return new ItemShippingTargetImpl();
     }
-
+    
 
     public static ItemShippingTargetImpl of(final ItemShippingTarget template) {
         ItemShippingTargetImpl instance = new ItemShippingTargetImpl();

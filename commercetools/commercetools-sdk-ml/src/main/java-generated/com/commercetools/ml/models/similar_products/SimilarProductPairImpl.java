@@ -25,37 +25,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SimilarProductPairImpl implements SimilarProductPair {
 
-   private Integer confidence;
-   
-   private java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products;
+    private Double confidence;
+    
+    private java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products;
 
-   @JsonCreator
-   SimilarProductPairImpl(@JsonProperty("confidence") final Integer confidence, @JsonProperty("products") final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products) {
-      this.confidence = confidence;
-      this.products = products;
-   }
-   public SimilarProductPairImpl() {
-      
-   }
-   
-   /**
-   *  <p>The probability of product similarity.</p>
-   */
-   public Integer getConfidence(){
-      return this.confidence;
-   }
-   
-   
-   public java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> getProducts(){
-      return this.products;
-   }
+    @JsonCreator
+    SimilarProductPairImpl(@JsonProperty("confidence") final Double confidence, @JsonProperty("products") final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products) {
+        this.confidence = confidence;
+        this.products = products;
+    }
+    public SimilarProductPairImpl() {
+       
+    }
 
-   public void setConfidence(final Integer confidence){
-      this.confidence = confidence;
-   }
-   
-   public void setProducts(final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products){
-      this.products = products;
-   }
+    /**
+    *  <p>The probability of product similarity.</p>
+    */
+    public Double getConfidence(){
+        return this.confidence;
+    }
+    
+    
+    public java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> getProducts(){
+        return this.products;
+    }
+
+    public void setConfidence(final Double confidence){
+        this.confidence = confidence;
+    }
+    
+    public void setProducts(final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products){
+        this.products = products;
+    }
 
 }

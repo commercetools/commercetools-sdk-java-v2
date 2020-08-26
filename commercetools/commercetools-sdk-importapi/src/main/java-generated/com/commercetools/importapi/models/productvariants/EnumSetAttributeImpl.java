@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class EnumSetAttributeImpl implements EnumSetAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private java.util.List<String> value;
 
     @JsonCreator
@@ -39,7 +39,7 @@ public final class EnumSetAttributeImpl implements EnumSetAttribute {
         this.type = "enum-set";
     }
     public EnumSetAttributeImpl() {
-
+       
     }
 
     /**
@@ -50,13 +50,13 @@ public final class EnumSetAttributeImpl implements EnumSetAttribute {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.util.List<String> getValue(){
         return this.value;
     }
@@ -64,7 +64,7 @@ public final class EnumSetAttributeImpl implements EnumSetAttribute {
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final java.util.List<String> value){
         this.value = value;
     }

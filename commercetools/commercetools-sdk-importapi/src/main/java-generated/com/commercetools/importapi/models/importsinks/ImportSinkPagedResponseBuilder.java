@@ -14,54 +14,54 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ImportSinkPagedResponseBuilder {
 
-
+    
     private Integer limit;
-
-
+    
+    
     private Long offset;
-
-
+    
+    
     private Long count;
-
-
+    
+    
     private java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results;
 
     public ImportSinkPagedResponseBuilder limit( final Integer limit) {
         this.limit = limit;
         return this;
     }
-
+    
     public ImportSinkPagedResponseBuilder offset( final Long offset) {
         this.offset = offset;
         return this;
     }
-
+    
     public ImportSinkPagedResponseBuilder count( final Long count) {
         this.count = count;
         return this;
     }
-
+    
     public ImportSinkPagedResponseBuilder results( final java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results) {
         this.results = results;
         return this;
     }
 
-
+    
     public Integer getLimit(){
         return this.limit;
     }
-
-
+    
+    
     public Long getOffset(){
         return this.offset;
     }
-
-
+    
+    
     public Long getCount(){
         return this.count;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> getResults(){
         return this.results;
     }

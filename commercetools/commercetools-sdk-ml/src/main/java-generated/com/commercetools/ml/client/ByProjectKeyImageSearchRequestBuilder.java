@@ -8,17 +8,20 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public class ByProjectKeyImageSearchRequestBuilder {
 
-   private final ApiHttpClient apiHttpClient;
-   private final String projectKey;
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+    
 
+    public ByProjectKeyImageSearchRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+    }
 
-   public ByProjectKeyImageSearchRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey) {
-      this.apiHttpClient = apiHttpClient;
-      this.projectKey = projectKey;
-   }
+    public ByProjectKeyImageSearchPost post(java.io.File file) {
+        return new ByProjectKeyImageSearchPost(apiHttpClient, projectKey, file);
+    }
 
-   public ByProjectKeyImageSearchPost post(java.io.File file) {
-      return new ByProjectKeyImageSearchPost(apiHttpClient, projectKey, file);
-   }
-
+    public ByProjectKeyImageSearchConfigRequestBuilder config() {
+        return new ByProjectKeyImageSearchConfigRequestBuilder(apiHttpClient, projectKey);
+    }
 }

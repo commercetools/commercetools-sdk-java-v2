@@ -25,39 +25,39 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ResultItemImpl implements ResultItem {
 
-   private String imageUrl;
+    private String imageUrl;
+    
+    private java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants;
 
-   private java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants;
+    @JsonCreator
+    ResultItemImpl(@JsonProperty("imageUrl") final String imageUrl, @JsonProperty("productVariants") final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
+        this.imageUrl = imageUrl;
+        this.productVariants = productVariants;
+    }
+    public ResultItemImpl() {
+       
+    }
 
-   @JsonCreator
-   ResultItemImpl(@JsonProperty("imageUrl") final String imageUrl, @JsonProperty("productVariants") final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
-      this.imageUrl = imageUrl;
-      this.productVariants = productVariants;
-   }
-   public ResultItemImpl() {
+    /**
+    *  <p>The URL of the image.</p>
+    */
+    public String getImageUrl(){
+        return this.imageUrl;
+    }
+    
+    /**
+    *  <p>An array of product variants containing the image URL.</p>
+    */
+    public java.util.List<com.commercetools.ml.models.common.ProductVariant> getProductVariants(){
+        return this.productVariants;
+    }
 
-   }
-
-   /**
-   *  <p>The URL of the image.</p>
-   */
-   public String getImageUrl(){
-      return this.imageUrl;
-   }
-
-   /**
-   *  <p>An array of product variants containing the image URL.</p>
-   */
-   public java.util.List<com.commercetools.ml.models.common.ProductVariant> getProductVariants(){
-      return this.productVariants;
-   }
-
-   public void setImageUrl(final String imageUrl){
-      this.imageUrl = imageUrl;
-   }
-
-   public void setProductVariants(final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants){
-      this.productVariants = productVariants;
-   }
+    public void setImageUrl(final String imageUrl){
+        this.imageUrl = imageUrl;
+    }
+    
+    public void setProductVariants(final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants){
+        this.productVariants = productVariants;
+    }
 
 }

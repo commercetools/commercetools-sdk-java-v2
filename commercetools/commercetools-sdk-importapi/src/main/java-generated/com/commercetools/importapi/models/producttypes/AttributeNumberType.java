@@ -26,7 +26,7 @@ public interface AttributeNumberType extends AttributeType {
     public static AttributeNumberTypeImpl of(){
         return new AttributeNumberTypeImpl();
     }
-
+    
 
     public static AttributeNumberTypeImpl of(final AttributeNumberType template) {
         AttributeNumberTypeImpl instance = new AttributeNumberTypeImpl();

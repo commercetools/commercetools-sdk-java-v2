@@ -26,7 +26,7 @@ public interface WhitespaceTokenizer extends SuggestTokenizer {
     public static WhitespaceTokenizerImpl of(){
         return new WhitespaceTokenizerImpl();
     }
-
+    
 
     public static WhitespaceTokenizerImpl of(final WhitespaceTokenizer template) {
         WhitespaceTokenizerImpl instance = new WhitespaceTokenizerImpl();

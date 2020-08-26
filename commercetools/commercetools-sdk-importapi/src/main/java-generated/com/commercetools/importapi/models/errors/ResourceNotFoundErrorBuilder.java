@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ResourceNotFoundErrorBuilder {
 
-
+    
     private String message;
-
+    
     @Nullable
     private com.fasterxml.jackson.databind.JsonNode resource;
 
@@ -25,17 +25,17 @@ public final class ResourceNotFoundErrorBuilder {
         this.message = message;
         return this;
     }
-
+    
     public ResourceNotFoundErrorBuilder resource(@Nullable final com.fasterxml.jackson.databind.JsonNode resource) {
         this.resource = resource;
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }
-
+    
     @Nullable
     public com.fasterxml.jackson.databind.JsonNode getResource(){
         return this.resource;

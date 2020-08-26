@@ -40,13 +40,13 @@ public interface ImportSummary  {
     public Long getTotal();
 
     public void setStates(final OperationStates states);
-
+    
     public void setTotal(final Long total);
 
     public static ImportSummaryImpl of(){
         return new ImportSummaryImpl();
     }
-
+    
 
     public static ImportSummaryImpl of(final ImportSummary template) {
         ImportSummaryImpl instance = new ImportSummaryImpl();

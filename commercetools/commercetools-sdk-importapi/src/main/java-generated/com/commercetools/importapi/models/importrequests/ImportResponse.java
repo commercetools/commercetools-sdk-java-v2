@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = ImportResponseImpl.class)
 public interface ImportResponse  {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("operationStatus")
@@ -36,7 +36,7 @@ public interface ImportResponse  {
     public static ImportResponseImpl of(){
         return new ImportResponseImpl();
     }
-
+    
 
     public static ImportResponseImpl of(final ImportResponse template) {
         ImportResponseImpl instance = new ImportResponseImpl();

@@ -26,53 +26,53 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SimilarProductImpl implements SimilarProduct {
 
-   private com.commercetools.ml.models.common.ProductReference product;
-   
-   private Long variantId;
-   
-   private com.commercetools.ml.models.similar_products.SimilarProductMeta meta;
+    private com.commercetools.ml.models.common.ProductReference product;
+    
+    private Long variantId;
+    
+    private com.commercetools.ml.models.similar_products.SimilarProductMeta meta;
 
-   @JsonCreator
-   SimilarProductImpl(@JsonProperty("product") final com.commercetools.ml.models.common.ProductReference product, @JsonProperty("variantId") final Long variantId, @JsonProperty("meta") final com.commercetools.ml.models.similar_products.SimilarProductMeta meta) {
-      this.product = product;
-      this.variantId = variantId;
-      this.meta = meta;
-   }
-   public SimilarProductImpl() {
-      
-   }
-   
-   /**
-   *  <p>Reference to Product</p>
-   */
-   public com.commercetools.ml.models.common.ProductReference getProduct(){
-      return this.product;
-   }
-   
-   /**
-   *  <p>ID of the ProductVariant that was compared.</p>
-   */
-   public Long getVariantId(){
-      return this.variantId;
-   }
-   
-   /**
-   *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
-   */
-   public com.commercetools.ml.models.similar_products.SimilarProductMeta getMeta(){
-      return this.meta;
-   }
+    @JsonCreator
+    SimilarProductImpl(@JsonProperty("product") final com.commercetools.ml.models.common.ProductReference product, @JsonProperty("variantId") final Long variantId, @JsonProperty("meta") final com.commercetools.ml.models.similar_products.SimilarProductMeta meta) {
+        this.product = product;
+        this.variantId = variantId;
+        this.meta = meta;
+    }
+    public SimilarProductImpl() {
+       
+    }
 
-   public void setProduct(final com.commercetools.ml.models.common.ProductReference product){
-      this.product = product;
-   }
-   
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
-   
-   public void setMeta(final com.commercetools.ml.models.similar_products.SimilarProductMeta meta){
-      this.meta = meta;
-   }
+    /**
+    *  <p>Reference to Product</p>
+    */
+    public com.commercetools.ml.models.common.ProductReference getProduct(){
+        return this.product;
+    }
+    
+    /**
+    *  <p>ID of the ProductVariant that was compared.</p>
+    */
+    public Long getVariantId(){
+        return this.variantId;
+    }
+    
+    /**
+    *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+    */
+    public com.commercetools.ml.models.similar_products.SimilarProductMeta getMeta(){
+        return this.meta;
+    }
+
+    public void setProduct(final com.commercetools.ml.models.common.ProductReference product){
+        this.product = product;
+    }
+    
+    public void setVariantId(final Long variantId){
+        this.variantId = variantId;
+    }
+    
+    public void setMeta(final com.commercetools.ml.models.similar_products.SimilarProductMeta meta){
+        this.meta = meta;
+    }
 
 }

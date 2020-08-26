@@ -30,7 +30,7 @@ public interface StateKeyReference extends KeyReference {
     public static StateKeyReferenceImpl of(){
         return new StateKeyReferenceImpl();
     }
-
+    
 
     public static StateKeyReferenceImpl of(final StateKeyReference template) {
         StateKeyReferenceImpl instance = new StateKeyReferenceImpl();

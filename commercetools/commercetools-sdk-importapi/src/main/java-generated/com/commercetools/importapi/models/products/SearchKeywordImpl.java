@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class SearchKeywordImpl implements SearchKeyword {
 
     private String text;
-
+    
     private com.commercetools.importapi.models.products.SuggestTokenizer suggestTokenizer;
 
     @JsonCreator
@@ -32,15 +32,15 @@ public final class SearchKeywordImpl implements SearchKeyword {
         this.suggestTokenizer = suggestTokenizer;
     }
     public SearchKeywordImpl() {
-
+       
     }
 
-
+    
     public String getText(){
         return this.text;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.products.SuggestTokenizer getSuggestTokenizer(){
         return this.suggestTokenizer;
     }
@@ -48,7 +48,7 @@ public final class SearchKeywordImpl implements SearchKeyword {
     public void setText(final String text){
         this.text = text;
     }
-
+    
     public void setSuggestTokenizer(final com.commercetools.importapi.models.products.SuggestTokenizer suggestTokenizer){
         this.suggestTokenizer = suggestTokenizer;
     }

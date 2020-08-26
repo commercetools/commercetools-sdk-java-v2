@@ -26,7 +26,7 @@ public interface AttributeLocalizableTextType extends AttributeType {
     public static AttributeLocalizableTextTypeImpl of(){
         return new AttributeLocalizableTextTypeImpl();
     }
-
+    
 
     public static AttributeLocalizableTextTypeImpl of(final AttributeLocalizableTextType template) {
         AttributeLocalizableTextTypeImpl instance = new AttributeLocalizableTextTypeImpl();

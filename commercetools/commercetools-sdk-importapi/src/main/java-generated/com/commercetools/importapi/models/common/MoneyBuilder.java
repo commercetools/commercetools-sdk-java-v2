@@ -17,23 +17,23 @@ public final class MoneyBuilder {
 
     @Nullable
     private Integer fractionDigits;
-
-
+    
+    
     private Long centAmount;
-
-
+    
+    
     private String currencyCode;
 
     public MoneyBuilder fractionDigits(@Nullable final Integer fractionDigits) {
         this.fractionDigits = fractionDigits;
         return this;
     }
-
+    
     public MoneyBuilder centAmount( final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
-
+    
     public MoneyBuilder currencyCode( final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -43,13 +43,13 @@ public final class MoneyBuilder {
     public Integer getFractionDigits(){
         return this.fractionDigits;
     }
-
-
+    
+    
     public Long getCentAmount(){
         return this.centAmount;
     }
-
-
+    
+    
     public String getCurrencyCode(){
         return this.currencyCode;
     }

@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = DateTimeAttributeImpl.class)
 public interface DateTimeAttribute extends Attribute {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public ZonedDateTime getValue();
@@ -35,7 +35,7 @@ public interface DateTimeAttribute extends Attribute {
     public static DateTimeAttributeImpl of(){
         return new DateTimeAttributeImpl();
     }
-
+    
 
     public static DateTimeAttributeImpl of(final DateTimeAttribute template) {
         DateTimeAttributeImpl instance = new DateTimeAttributeImpl();

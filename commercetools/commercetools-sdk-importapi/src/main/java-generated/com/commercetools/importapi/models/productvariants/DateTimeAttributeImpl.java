@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DateTimeAttributeImpl implements DateTimeAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private java.time.ZonedDateTime value;
 
     @JsonCreator
@@ -39,7 +39,7 @@ public final class DateTimeAttributeImpl implements DateTimeAttribute {
         this.type = "datetime";
     }
     public DateTimeAttributeImpl() {
-
+       
     }
 
     /**
@@ -50,13 +50,13 @@ public final class DateTimeAttributeImpl implements DateTimeAttribute {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.time.ZonedDateTime getValue(){
         return this.value;
     }
@@ -64,7 +64,7 @@ public final class DateTimeAttributeImpl implements DateTimeAttribute {
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final java.time.ZonedDateTime value){
         this.value = value;
     }

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ReferenceFieldBuilder {
 
-
+    
     private com.commercetools.importapi.models.common.KeyReference value;
 
     public ReferenceFieldBuilder value( final com.commercetools.importapi.models.common.KeyReference value) {
@@ -23,7 +23,7 @@ public final class ReferenceFieldBuilder {
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.common.KeyReference getValue(){
         return this.value;
     }

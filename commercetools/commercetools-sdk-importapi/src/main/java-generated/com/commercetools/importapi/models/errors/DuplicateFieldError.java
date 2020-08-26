@@ -28,24 +28,24 @@ public interface DuplicateFieldError extends ErrorObject {
     /**
     *  <p>The name of the field.</p>
     */
-
+    
     @JsonProperty("field")
     public String getField();
     /**
     *  <p>The offending duplicate value.</p>
     */
-
+    
     @JsonProperty("duplicateValue")
     public JsonNode getDuplicateValue();
 
     public void setField(final String field);
-
+    
     public void setDuplicateValue(final JsonNode duplicateValue);
 
     public static DuplicateFieldErrorImpl of(){
         return new DuplicateFieldErrorImpl();
     }
-
+    
 
     public static DuplicateFieldErrorImpl of(final DuplicateFieldError template) {
         DuplicateFieldErrorImpl instance = new DuplicateFieldErrorImpl();

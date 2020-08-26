@@ -10,7 +10,7 @@ public class ByProjectKeyOrdersRequestBuilder {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
-
+    
 
     public ByProjectKeyOrdersRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey) {
         this.apiHttpClient = apiHttpClient;

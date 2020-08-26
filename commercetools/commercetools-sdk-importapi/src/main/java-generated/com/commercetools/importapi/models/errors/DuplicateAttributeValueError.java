@@ -38,7 +38,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     public static DuplicateAttributeValueErrorImpl of(){
         return new DuplicateAttributeValueErrorImpl();
     }
-
+    
 
     public static DuplicateAttributeValueErrorImpl of(final DuplicateAttributeValueError template) {
         DuplicateAttributeValueErrorImpl instance = new DuplicateAttributeValueErrorImpl();

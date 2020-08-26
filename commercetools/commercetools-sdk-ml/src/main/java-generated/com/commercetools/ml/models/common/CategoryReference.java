@@ -23,16 +23,16 @@ import java.io.IOException;
 public interface CategoryReference extends Reference {
 
 
-   
-   public static CategoryReferenceImpl of(){
-      return new CategoryReferenceImpl();
-   }
-   
 
-   public static CategoryReferenceImpl of(final CategoryReference template) {
-      CategoryReferenceImpl instance = new CategoryReferenceImpl();
-      instance.setId(template.getId());
-      return instance;
-   }
+    public static CategoryReferenceImpl of(){
+        return new CategoryReferenceImpl();
+    }
+    
+
+    public static CategoryReferenceImpl of(final CategoryReference template) {
+        CategoryReferenceImpl instance = new CategoryReferenceImpl();
+        instance.setId(template.getId());
+        return instance;
+    }
 
 }

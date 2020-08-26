@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CustomerKeyReferenceBuilder {
 
-
+    
     private String key;
 
     public CustomerKeyReferenceBuilder key( final String key) {
@@ -23,7 +23,7 @@ public final class CustomerKeyReferenceBuilder {
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }

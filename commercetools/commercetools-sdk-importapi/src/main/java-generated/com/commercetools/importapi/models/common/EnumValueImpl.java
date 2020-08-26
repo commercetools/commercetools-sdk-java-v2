@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class EnumValueImpl implements EnumValue {
 
     private String key;
-
+    
     private String label;
 
     @JsonCreator
@@ -32,15 +32,15 @@ public final class EnumValueImpl implements EnumValue {
         this.label = label;
     }
     public EnumValueImpl() {
-
+       
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
-
+    
+    
     public String getLabel(){
         return this.label;
     }
@@ -48,7 +48,7 @@ public final class EnumValueImpl implements EnumValue {
     public void setKey(final String key){
         this.key = key;
     }
-
+    
     public void setLabel(final String label){
         this.label = label;
     }

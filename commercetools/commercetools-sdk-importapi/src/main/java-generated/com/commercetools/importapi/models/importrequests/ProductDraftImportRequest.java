@@ -39,7 +39,7 @@ public interface ProductDraftImportRequest extends ImportRequest {
     public static ProductDraftImportRequestImpl of(){
         return new ProductDraftImportRequestImpl();
     }
-
+    
 
     public static ProductDraftImportRequestImpl of(final ProductDraftImportRequest template) {
         ProductDraftImportRequestImpl instance = new ProductDraftImportRequestImpl();

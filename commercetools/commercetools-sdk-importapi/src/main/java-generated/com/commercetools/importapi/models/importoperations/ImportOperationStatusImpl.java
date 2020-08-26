@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ImportOperationStatusImpl implements ImportOperationStatus {
 
     private String operationId;
-
+    
     private com.commercetools.importapi.models.importoperations.ImportOperationState state;
-
+    
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
     @JsonCreator
@@ -39,7 +39,7 @@ public final class ImportOperationStatusImpl implements ImportOperationStatus {
         this.errors = errors;
     }
     public ImportOperationStatusImpl() {
-
+       
     }
 
     /**
@@ -48,14 +48,14 @@ public final class ImportOperationStatusImpl implements ImportOperationStatus {
     public String getOperationId(){
         return this.operationId;
     }
-
+    
     /**
     *  <p>Validation state of the import operation.</p>
     */
     public com.commercetools.importapi.models.importoperations.ImportOperationState getState(){
         return this.state;
     }
-
+    
     /**
     *  <p>Validation errors for the import operation.</p>
     */
@@ -66,11 +66,11 @@ public final class ImportOperationStatusImpl implements ImportOperationStatus {
     public void setOperationId(final String operationId){
         this.operationId = operationId;
     }
-
+    
     public void setState(final com.commercetools.importapi.models.importoperations.ImportOperationState state){
         this.state = state;
     }
-
+    
     public void setErrors(final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors){
         this.errors = errors;
     }

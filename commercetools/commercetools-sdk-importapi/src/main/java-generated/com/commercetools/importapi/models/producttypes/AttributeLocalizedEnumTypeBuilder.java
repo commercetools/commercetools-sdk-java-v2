@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AttributeLocalizedEnumTypeBuilder {
 
-
+    
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> values;
 
     public AttributeLocalizedEnumTypeBuilder values( final java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> values) {
@@ -23,7 +23,7 @@ public final class AttributeLocalizedEnumTypeBuilder {
         return this;
     }
 
-
+    
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> getValues(){
         return this.values;
     }

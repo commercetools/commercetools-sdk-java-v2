@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = LocalizableTextAttributeImpl.class)
 public interface LocalizableTextAttribute extends Attribute {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -36,7 +36,7 @@ public interface LocalizableTextAttribute extends Attribute {
     public static LocalizableTextAttributeImpl of(){
         return new LocalizableTextAttributeImpl();
     }
-
+    
 
     public static LocalizableTextAttributeImpl of(final LocalizableTextAttribute template) {
         LocalizableTextAttributeImpl instance = new LocalizableTextAttributeImpl();

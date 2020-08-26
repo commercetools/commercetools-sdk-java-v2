@@ -11,7 +11,7 @@ public class ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsRe
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
     private final String importSinkKey;
-
+    
 
     public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey) {
         this.apiHttpClient = apiHttpClient;

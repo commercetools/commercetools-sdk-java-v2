@@ -21,32 +21,32 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingPricesImpl.class)
 public interface MissingPrices  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("product")
-   public ProductReference getProduct();
-   /**
-   *  <p>Id of the <code>ProductVariant</code>.</p>
-   */
-   @NotNull
-   @JsonProperty("variantId")
-   public Long getVariantId();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
+    /**
+    *  <p>Id of the <code>ProductVariant</code>.</p>
+    */
+    @NotNull
+    @JsonProperty("variantId")
+    public Long getVariantId();
 
-   public void setProduct(final ProductReference product);
-   
-   public void setVariantId(final Long variantId);
-   
-   public static MissingPricesImpl of(){
-      return new MissingPricesImpl();
-   }
-   
+    public void setProduct(final ProductReference product);
+    
+    public void setVariantId(final Long variantId);
 
-   public static MissingPricesImpl of(final MissingPrices template) {
-      MissingPricesImpl instance = new MissingPricesImpl();
-      instance.setProduct(template.getProduct());
-      instance.setVariantId(template.getVariantId());
-      return instance;
-   }
+    public static MissingPricesImpl of(){
+        return new MissingPricesImpl();
+    }
+    
+
+    public static MissingPricesImpl of(final MissingPrices template) {
+        MissingPricesImpl instance = new MissingPricesImpl();
+        instance.setProduct(template.getProduct());
+        instance.setVariantId(template.getVariantId());
+        return instance;
+    }
 
 }

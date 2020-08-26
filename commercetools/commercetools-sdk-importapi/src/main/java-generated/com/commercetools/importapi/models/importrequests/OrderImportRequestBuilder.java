@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class OrderImportRequestBuilder {
 
-
+    
     private java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources;
 
     public OrderImportRequestBuilder resources( final java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources) {
@@ -24,7 +24,7 @@ public final class OrderImportRequestBuilder {
         return this;
     }
 
-
+    
     public java.util.List<com.commercetools.importapi.models.orders.OrderImport> getResources(){
         return this.resources;
     }

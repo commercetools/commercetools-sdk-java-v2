@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class MoneyFieldBuilder {
 
-
+    
     private com.commercetools.importapi.models.common.TypedMoney value;
 
     public MoneyFieldBuilder value( final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -23,7 +23,7 @@ public final class MoneyFieldBuilder {
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.common.TypedMoney getValue(){
         return this.value;
     }

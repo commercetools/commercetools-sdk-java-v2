@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = TimeSetFieldImpl.class)
 public interface TimeSetField extends CustomField {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public List<LocalTime> getValue();
@@ -35,7 +35,7 @@ public interface TimeSetField extends CustomField {
     public static TimeSetFieldImpl of(){
         return new TimeSetFieldImpl();
     }
-
+    
 
     public static TimeSetFieldImpl of(final TimeSetField template) {
         TimeSetFieldImpl instance = new TimeSetFieldImpl();

@@ -30,7 +30,7 @@ public interface CartDiscountKeyReference extends KeyReference {
     public static CartDiscountKeyReferenceImpl of(){
         return new CartDiscountKeyReferenceImpl();
     }
-
+    
 
     public static CartDiscountKeyReferenceImpl of(final CartDiscountKeyReference template) {
         CartDiscountKeyReferenceImpl instance = new CartDiscountKeyReferenceImpl();

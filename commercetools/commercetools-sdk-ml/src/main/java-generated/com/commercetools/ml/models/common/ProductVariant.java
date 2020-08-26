@@ -24,43 +24,43 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantImpl.class)
 public interface ProductVariant  {
 
-   /**
-   *  <p>The product that contains this variant.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("product")
-   public ProductReference getProduct();
-   /**
-   *  <p>The state of the product variant.</p>
-   */
-   @NotNull
-   @JsonProperty("staged")
-   public Boolean getStaged();
-   /**
-   *  <p>The id of the product variant.</p>
-   */
-   @NotNull
-   @JsonProperty("variantId")
-   public Integer getVariantId();
+    /**
+    *  <p>The product that contains this variant.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
+    /**
+    *  <p>The state of the product variant.</p>
+    */
+    @NotNull
+    @JsonProperty("staged")
+    public Boolean getStaged();
+    /**
+    *  <p>The id of the product variant.</p>
+    */
+    @NotNull
+    @JsonProperty("variantId")
+    public Integer getVariantId();
 
-   public void setProduct(final ProductReference product);
+    public void setProduct(final ProductReference product);
+    
+    public void setStaged(final Boolean staged);
+    
+    public void setVariantId(final Integer variantId);
 
-   public void setStaged(final Boolean staged);
+    public static ProductVariantImpl of(){
+        return new ProductVariantImpl();
+    }
+    
 
-   public void setVariantId(final Integer variantId);
-
-   public static ProductVariantImpl of(){
-      return new ProductVariantImpl();
-   }
-
-
-   public static ProductVariantImpl of(final ProductVariant template) {
-      ProductVariantImpl instance = new ProductVariantImpl();
-      instance.setProduct(template.getProduct());
-      instance.setStaged(template.getStaged());
-      instance.setVariantId(template.getVariantId());
-      return instance;
-   }
+    public static ProductVariantImpl of(final ProductVariant template) {
+        ProductVariantImpl instance = new ProductVariantImpl();
+        instance.setProduct(template.getProduct());
+        instance.setStaged(template.getStaged());
+        instance.setVariantId(template.getVariantId());
+        return instance;
+    }
 
 }

@@ -15,28 +15,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class DiscountedPriceBuilder {
 
-
+    
     private com.commercetools.importapi.models.common.TypedMoney value;
-
-
+    
+    
     private com.commercetools.importapi.models.common.ProductDiscountKeyReference discount;
 
     public DiscountedPriceBuilder value( final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
-
+    
     public DiscountedPriceBuilder discount( final com.commercetools.importapi.models.common.ProductDiscountKeyReference discount) {
         this.discount = discount;
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.common.TypedMoney getValue(){
         return this.value;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.ProductDiscountKeyReference getDiscount(){
         return this.discount;
     }

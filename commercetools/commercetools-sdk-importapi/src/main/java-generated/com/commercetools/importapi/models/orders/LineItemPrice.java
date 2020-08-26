@@ -37,19 +37,19 @@ public interface LineItemPrice  {
     /**
     *  <p>Maps to <code>Price.county</code>.</p>
     */
-
+    
     @JsonProperty("country")
     public String getCountry();
     /**
     *  <p>Maps to <code>Price.validFrom</code>.</p>
     */
-
+    
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
     /**
     *  <p>Maps to <code>Price.validUntil</code>.</p>
     */
-
+    
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
     /**
@@ -84,27 +84,27 @@ public interface LineItemPrice  {
     public Custom getCustom();
 
     public void setValue(final TypedMoney value);
-
+    
     public void setCountry(final String country);
-
+    
     public void setValidFrom(final ZonedDateTime validFrom);
-
+    
     public void setValidUntil(final ZonedDateTime validUntil);
-
+    
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
-
+    
     public void setChannel(final ChannelKeyReference channel);
-
+    
     public void setDiscounted(final DiscountedPrice discounted);
-
+    
     public void setTiers(final List<PriceTier> tiers);
-
+    
     public void setCustom(final Custom custom);
 
     public static LineItemPriceImpl of(){
         return new LineItemPriceImpl();
     }
-
+    
 
     public static LineItemPriceImpl of(final LineItemPrice template) {
         LineItemPriceImpl instance = new LineItemPriceImpl();

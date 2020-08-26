@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = LocalizedStringFieldImpl.class)
 public interface LocalizedStringField extends CustomField {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -36,7 +36,7 @@ public interface LocalizedStringField extends CustomField {
     public static LocalizedStringFieldImpl of(){
         return new LocalizedStringFieldImpl();
     }
-
+    
 
     public static LocalizedStringFieldImpl of(final LocalizedStringField template) {
         LocalizedStringFieldImpl instance = new LocalizedStringFieldImpl();

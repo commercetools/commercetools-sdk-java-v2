@@ -30,7 +30,7 @@ public interface PriceKeyReference extends KeyReference {
     public static PriceKeyReferenceImpl of(){
         return new PriceKeyReferenceImpl();
     }
-
+    
 
     public static PriceKeyReferenceImpl of(final PriceKeyReference template) {
         PriceKeyReferenceImpl instance = new PriceKeyReferenceImpl();

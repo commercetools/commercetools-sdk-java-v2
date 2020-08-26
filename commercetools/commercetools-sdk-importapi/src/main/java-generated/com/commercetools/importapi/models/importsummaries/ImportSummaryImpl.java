@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ImportSummaryImpl implements ImportSummary {
 
     private com.commercetools.importapi.models.importsummaries.OperationStates states;
-
+    
     private Long total;
 
     @JsonCreator
@@ -36,7 +36,7 @@ public final class ImportSummaryImpl implements ImportSummary {
         this.total = total;
     }
     public ImportSummaryImpl() {
-
+       
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ImportSummaryImpl implements ImportSummary {
     public com.commercetools.importapi.models.importsummaries.OperationStates getStates(){
         return this.states;
     }
-
+    
     /**
     *  <p>The total number of import operations received for this import group.</p>
     */
@@ -56,7 +56,7 @@ public final class ImportSummaryImpl implements ImportSummary {
     public void setStates(final com.commercetools.importapi.models.importsummaries.OperationStates states){
         this.states = states;
     }
-
+    
     public void setTotal(final Long total){
         this.total = total;
     }

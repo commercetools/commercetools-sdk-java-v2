@@ -29,20 +29,20 @@ public interface DiscountedLineItemPortion  {
     @Valid
     @JsonProperty("discount")
     public CartDiscountKeyReference getDiscount();
-
+    
     @NotNull
     @Valid
     @JsonProperty("discountedAmount")
     public Money getDiscountedAmount();
 
     public void setDiscount(final CartDiscountKeyReference discount);
-
+    
     public void setDiscountedAmount(final Money discountedAmount);
 
     public static DiscountedLineItemPortionImpl of(){
         return new DiscountedLineItemPortionImpl();
     }
-
+    
 
     public static DiscountedLineItemPortionImpl of(final DiscountedLineItemPortion template) {
         DiscountedLineItemPortionImpl instance = new DiscountedLineItemPortionImpl();

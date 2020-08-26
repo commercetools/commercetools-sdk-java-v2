@@ -21,33 +21,33 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingImagesProductLevelImpl.class)
 public interface MissingImagesProductLevel extends MissingImagesCount {
 
-   /**
-   *  <p>Number of products missing images.</p>
-   */
-   @NotNull
-   @JsonProperty("missingImages")
-   public Long getMissingImages();
-   /**
-   *  <p>Number of products scanned.</p>
-   */
-   @NotNull
-   @JsonProperty("total")
-   public Long getTotal();
+    /**
+    *  <p>Number of products missing images.</p>
+    */
+    @NotNull
+    @JsonProperty("missingImages")
+    public Long getMissingImages();
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+    @NotNull
+    @JsonProperty("total")
+    public Long getTotal();
 
-   public void setMissingImages(final Long missingImages);
-   
-   public void setTotal(final Long total);
-   
-   public static MissingImagesProductLevelImpl of(){
-      return new MissingImagesProductLevelImpl();
-   }
-   
+    public void setMissingImages(final Long missingImages);
+    
+    public void setTotal(final Long total);
 
-   public static MissingImagesProductLevelImpl of(final MissingImagesProductLevel template) {
-      MissingImagesProductLevelImpl instance = new MissingImagesProductLevelImpl();
-      instance.setMissingImages(template.getMissingImages());
-      instance.setTotal(template.getTotal());
-      return instance;
-   }
+    public static MissingImagesProductLevelImpl of(){
+        return new MissingImagesProductLevelImpl();
+    }
+    
+
+    public static MissingImagesProductLevelImpl of(final MissingImagesProductLevel template) {
+        MissingImagesProductLevelImpl instance = new MissingImagesProductLevelImpl();
+        instance.setMissingImages(template.getMissingImages());
+        instance.setTotal(template.getTotal());
+        return instance;
+    }
 
 }

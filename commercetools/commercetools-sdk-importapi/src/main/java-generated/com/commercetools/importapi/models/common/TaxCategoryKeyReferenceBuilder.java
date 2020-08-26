@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class TaxCategoryKeyReferenceBuilder {
 
-
+    
     private String key;
 
     public TaxCategoryKeyReferenceBuilder key( final String key) {
@@ -23,7 +23,7 @@ public final class TaxCategoryKeyReferenceBuilder {
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }

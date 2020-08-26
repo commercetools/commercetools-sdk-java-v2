@@ -21,33 +21,33 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingPricesVariantLevelImpl.class)
 public interface MissingPricesVariantLevel extends MissingPricesProductCount {
 
-   /**
-   *  <p>Number of product variants scanned.</p>
-   */
-   @NotNull
-   @JsonProperty("total")
-   public Long getTotal();
-   /**
-   *  <p>Number of product variants missing prices.</p>
-   */
-   @NotNull
-   @JsonProperty("missingPrices")
-   public Long getMissingPrices();
+    /**
+    *  <p>Number of product variants scanned.</p>
+    */
+    @NotNull
+    @JsonProperty("total")
+    public Long getTotal();
+    /**
+    *  <p>Number of product variants missing prices.</p>
+    */
+    @NotNull
+    @JsonProperty("missingPrices")
+    public Long getMissingPrices();
 
-   public void setTotal(final Long total);
+    public void setTotal(final Long total);
+    
+    public void setMissingPrices(final Long missingPrices);
 
-   public void setMissingPrices(final Long missingPrices);
+    public static MissingPricesVariantLevelImpl of(){
+        return new MissingPricesVariantLevelImpl();
+    }
+    
 
-   public static MissingPricesVariantLevelImpl of(){
-      return new MissingPricesVariantLevelImpl();
-   }
-
-
-   public static MissingPricesVariantLevelImpl of(final MissingPricesVariantLevel template) {
-      MissingPricesVariantLevelImpl instance = new MissingPricesVariantLevelImpl();
-      instance.setTotal(template.getTotal());
-      instance.setMissingPrices(template.getMissingPrices());
-      return instance;
-   }
+    public static MissingPricesVariantLevelImpl of(final MissingPricesVariantLevel template) {
+        MissingPricesVariantLevelImpl instance = new MissingPricesVariantLevelImpl();
+        instance.setTotal(template.getTotal());
+        instance.setMissingPrices(template.getMissingPrices());
+        return instance;
+    }
 
 }

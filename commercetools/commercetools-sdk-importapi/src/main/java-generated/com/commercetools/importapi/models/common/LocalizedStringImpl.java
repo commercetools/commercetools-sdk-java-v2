@@ -29,10 +29,10 @@ public final class LocalizedStringImpl implements LocalizedString {
         this.values = values;
     }
     public LocalizedStringImpl() {
-
+       
     }
 
-
+    
     public Map<String,String> values() {
         return values;
     }

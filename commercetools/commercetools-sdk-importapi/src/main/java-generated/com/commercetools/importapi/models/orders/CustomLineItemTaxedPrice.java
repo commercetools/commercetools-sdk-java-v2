@@ -21,25 +21,25 @@ import java.io.IOException;
 @JsonDeserialize(as = CustomLineItemTaxedPriceImpl.class)
 public interface CustomLineItemTaxedPrice  {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("totalNet")
     public TypedMoney getTotalNet();
-
+    
     @NotNull
     @Valid
     @JsonProperty("totalGross")
     public TypedMoney getTotalGross();
 
     public void setTotalNet(final TypedMoney totalNet);
-
+    
     public void setTotalGross(final TypedMoney totalGross);
 
     public static CustomLineItemTaxedPriceImpl of(){
         return new CustomLineItemTaxedPriceImpl();
     }
-
+    
 
     public static CustomLineItemTaxedPriceImpl of(final CustomLineItemTaxedPrice template) {
         CustomLineItemTaxedPriceImpl instance = new CustomLineItemTaxedPriceImpl();

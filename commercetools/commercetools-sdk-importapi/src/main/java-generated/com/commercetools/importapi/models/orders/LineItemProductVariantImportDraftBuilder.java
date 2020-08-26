@@ -19,16 +19,16 @@ public final class LineItemProductVariantImportDraftBuilder {
 
     @Nullable
     private com.commercetools.importapi.models.common.ProductKeyReference product;
-
+    
     @Nullable
     private String sku;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> prices;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
 
@@ -36,22 +36,22 @@ public final class LineItemProductVariantImportDraftBuilder {
         this.product = product;
         return this;
     }
-
+    
     public LineItemProductVariantImportDraftBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
     public LineItemProductVariantImportDraftBuilder prices(@Nullable final java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> prices) {
         this.prices = prices;
         return this;
     }
-
+    
     public LineItemProductVariantImportDraftBuilder attributes(@Nullable final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
-
+    
     public LineItemProductVariantImportDraftBuilder images(@Nullable final java.util.List<com.commercetools.importapi.models.common.Image> images) {
         this.images = images;
         return this;
@@ -61,22 +61,22 @@ public final class LineItemProductVariantImportDraftBuilder {
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct(){
         return this.product;
     }
-
+    
     @Nullable
     public String getSku(){
         return this.sku;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> getPrices(){
         return this.prices;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes(){
         return this.attributes;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages(){
         return this.images;

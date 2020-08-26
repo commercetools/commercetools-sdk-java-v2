@@ -30,15 +30,15 @@ import io.vrap.rmf.base.client.*;
 )
 public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdGet {
 
-
+    
     private ApiHttpHeaders headers = new ApiHttpHeaders();
     private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient;
-
+    private final ApiHttpClient apiHttpClient; 
+    
     private String projectKey;
     private String importSinkKey;
     private String id;
-
+    
 
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdGet(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey, String id){
         this.apiHttpClient = apiHttpClient;
@@ -50,17 +50,17 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByI
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>();
-
+        
         params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
         params.removeIf(String::isEmpty);
         String httpRequestPath = String.format("/%s/products/importSinkKey=%s/import-operations/%s", this.projectKey, this.importSinkKey, this.id);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath);
+        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
         httpRequest.setHeaders(headers);
-
+        
         return httpRequest;
     }
 
@@ -88,9 +88,9 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByI
 
 
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
-
+    
     public void setImportSinkKey(final String importSinkKey) {this.importSinkKey = importSinkKey;}
-
+    
     public void setId(final String id) {this.id = id;}
 
 
@@ -98,34 +98,30 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByI
         this.headers.addHeader(key, value);
         return this;
     }
-
+    
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdGet withHeaders(final ApiHttpHeaders headers) {
         this.headers = headers;
         return this;
     }
-
-    public String getHeaderValue(final String key) {
-        return this.headers.getHeaderValue(key);
-    }
-
+    
     public ApiHttpHeaders getHeaders() {
         return this.headers;
     }
-
+    
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdGet addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
         this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
         return this;
     }
-
+    
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdGet setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
         this.additionalQueryParams = additionalQueryParams;
         return this;
     }
-
+    
     public Map<String, String> getAdditionalQueryParams() {
         return this.additionalQueryParams;
     }
-
+    
     private String urlEncode(final String s){
         try{
              return URLEncoder.encode(s, "UTF-8");

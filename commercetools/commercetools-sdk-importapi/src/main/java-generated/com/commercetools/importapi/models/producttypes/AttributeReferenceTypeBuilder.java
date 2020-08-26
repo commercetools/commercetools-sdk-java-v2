@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AttributeReferenceTypeBuilder {
 
-
+    
     private com.commercetools.importapi.models.common.ReferenceType referenceTypeId;
 
     public AttributeReferenceTypeBuilder referenceTypeId( final com.commercetools.importapi.models.common.ReferenceType referenceTypeId) {
@@ -23,7 +23,7 @@ public final class AttributeReferenceTypeBuilder {
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.common.ReferenceType getReferenceTypeId(){
         return this.referenceTypeId;
     }

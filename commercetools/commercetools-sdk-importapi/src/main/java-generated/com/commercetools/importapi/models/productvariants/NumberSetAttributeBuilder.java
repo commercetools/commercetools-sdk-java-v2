@@ -16,15 +16,15 @@ public final class NumberSetAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private java.util.List<Double> value;
 
     public NumberSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public NumberSetAttributeBuilder value( final java.util.List<Double> value) {
         this.value = value;
         return this;
@@ -34,8 +34,8 @@ public final class NumberSetAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public java.util.List<Double> getValue(){
         return this.value;
     }

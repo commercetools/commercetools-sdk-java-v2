@@ -17,27 +17,27 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AttributeDefinitionBuilder {
 
-
+    
     private com.commercetools.importapi.models.producttypes.AttributeType type;
-
-
+    
+    
     private String name;
-
-
+    
+    
     private com.commercetools.importapi.models.common.LocalizedString label;
-
-
+    
+    
     private Boolean isRequired;
-
+    
     @Nullable
     private com.commercetools.importapi.models.producttypes.AttributeConstraintEnum attributeConstraint;
-
+    
     @Nullable
     private com.commercetools.importapi.models.common.LocalizedString inputTip;
-
+    
     @Nullable
     private com.commercetools.importapi.models.producttypes.TextInputHint inputHint;
-
+    
     @Nullable
     private Boolean isSearchable;
 
@@ -45,77 +45,77 @@ public final class AttributeDefinitionBuilder {
         this.type = type;
         return this;
     }
-
+    
     public AttributeDefinitionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
     public AttributeDefinitionBuilder label( final com.commercetools.importapi.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
-
+    
     public AttributeDefinitionBuilder isRequired( final Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
     }
-
+    
     public AttributeDefinitionBuilder attributeConstraint(@Nullable final com.commercetools.importapi.models.producttypes.AttributeConstraintEnum attributeConstraint) {
         this.attributeConstraint = attributeConstraint;
         return this;
     }
-
+    
     public AttributeDefinitionBuilder inputTip(@Nullable final com.commercetools.importapi.models.common.LocalizedString inputTip) {
         this.inputTip = inputTip;
         return this;
     }
-
+    
     public AttributeDefinitionBuilder inputHint(@Nullable final com.commercetools.importapi.models.producttypes.TextInputHint inputHint) {
         this.inputHint = inputHint;
         return this;
     }
-
+    
     public AttributeDefinitionBuilder isSearchable(@Nullable final Boolean isSearchable) {
         this.isSearchable = isSearchable;
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.producttypes.AttributeType getType(){
         return this.type;
     }
-
-
+    
+    
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.LocalizedString getLabel(){
         return this.label;
     }
-
-
+    
+    
     public Boolean getIsRequired(){
         return this.isRequired;
     }
-
+    
     @Nullable
     public com.commercetools.importapi.models.producttypes.AttributeConstraintEnum getAttributeConstraint(){
         return this.attributeConstraint;
     }
-
+    
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getInputTip(){
         return this.inputTip;
     }
-
+    
     @Nullable
     public com.commercetools.importapi.models.producttypes.TextInputHint getInputHint(){
         return this.inputHint;
     }
-
+    
     @Nullable
     public Boolean getIsSearchable(){
         return this.isSearchable;

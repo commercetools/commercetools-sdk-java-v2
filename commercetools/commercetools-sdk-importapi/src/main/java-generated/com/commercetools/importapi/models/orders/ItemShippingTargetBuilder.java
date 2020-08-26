@@ -14,28 +14,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ItemShippingTargetBuilder {
 
-
+    
     private String addressKey;
-
-
+    
+    
     private Double quantity;
 
     public ItemShippingTargetBuilder addressKey( final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
-
+    
     public ItemShippingTargetBuilder quantity( final Double quantity) {
         this.quantity = quantity;
         return this;
     }
 
-
+    
     public String getAddressKey(){
         return this.addressKey;
     }
-
-
+    
+    
     public Double getQuantity(){
         return this.quantity;
     }

@@ -30,15 +30,15 @@ import io.vrap.rmf.base.client.*;
 )
 public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete {
 
-
+    
     private ApiHttpHeaders headers = new ApiHttpHeaders();
     private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient;
-
+    private final ApiHttpClient apiHttpClient; 
+    
     private String projectKey;
     private String importSinkKey;
     private String resourceKey;
-
+    
 
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey, String resourceKey){
         this.apiHttpClient = apiHttpClient;
@@ -50,17 +50,17 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByR
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>();
-
+        
         params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
         params.removeIf(String::isEmpty);
         String httpRequestPath = String.format("/%s/product-drafts/importSinkKey=%s/resourceKey=%s", this.projectKey, this.importSinkKey, this.resourceKey);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath);
+        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.DELETE);
         httpRequest.setHeaders(headers);
-
+        
         return httpRequest;
     }
 
@@ -88,9 +88,9 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByR
 
 
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
-
+    
     public void setImportSinkKey(final String importSinkKey) {this.importSinkKey = importSinkKey;}
-
+    
     public void setResourceKey(final String resourceKey) {this.resourceKey = resourceKey;}
 
 
@@ -98,34 +98,30 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByR
         this.headers.addHeader(key, value);
         return this;
     }
-
+    
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete withHeaders(final ApiHttpHeaders headers) {
         this.headers = headers;
         return this;
     }
-
-    public String getHeaderValue(final String key) {
-        return this.headers.getHeaderValue(key);
-    }
-
+    
     public ApiHttpHeaders getHeaders() {
         return this.headers;
     }
-
+    
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
         this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
         return this;
     }
-
+    
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
         this.additionalQueryParams = additionalQueryParams;
         return this;
     }
-
+    
     public Map<String, String> getAdditionalQueryParams() {
         return this.additionalQueryParams;
     }
-
+    
     private String urlEncode(final String s){
         try{
              return URLEncoder.encode(s, "UTF-8");

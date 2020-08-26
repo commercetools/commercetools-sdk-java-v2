@@ -22,25 +22,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SimilarProductSearchRequestMetaImpl implements SimilarProductSearchRequestMeta {
 
-   private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
+    private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
 
-   @JsonCreator
-   SimilarProductSearchRequestMetaImpl(@JsonProperty("similarityMeasures") final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {
-      this.similarityMeasures = similarityMeasures;
-   }
-   public SimilarProductSearchRequestMetaImpl() {
-      
-   }
-   
-   /**
-   *  <p>The SimilarityMeasures used in this search.</p>
-   */
-   public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures(){
-      return this.similarityMeasures;
-   }
+    @JsonCreator
+    SimilarProductSearchRequestMetaImpl(@JsonProperty("similarityMeasures") final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {
+        this.similarityMeasures = similarityMeasures;
+    }
+    public SimilarProductSearchRequestMetaImpl() {
+       
+    }
 
-   public void setSimilarityMeasures(final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures){
-      this.similarityMeasures = similarityMeasures;
-   }
+    /**
+    *  <p>The SimilarityMeasures used in this search.</p>
+    */
+    public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures(){
+        return this.similarityMeasures;
+    }
+
+    public void setSimilarityMeasures(final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures){
+        this.similarityMeasures = similarityMeasures;
+    }
 
 }

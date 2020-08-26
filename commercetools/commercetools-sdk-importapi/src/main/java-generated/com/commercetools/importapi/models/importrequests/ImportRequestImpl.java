@@ -40,7 +40,7 @@ public final class ImportRequestImpl implements ImportRequest {
     ImportRequestImpl() {
         this.type = ImportResourceType.findEnumViaJsonName("null").get();
     }
-
+    
 
     /**
     *  <p>The type of the import resource.</p>

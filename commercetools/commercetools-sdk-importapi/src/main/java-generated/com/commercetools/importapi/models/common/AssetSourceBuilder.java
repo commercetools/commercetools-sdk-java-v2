@@ -14,15 +14,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AssetSourceBuilder {
 
-
+    
     private String uri;
-
+    
     @Nullable
     private String key;
-
+    
     @Nullable
     private com.commercetools.importapi.models.common.AssetDimensions dimensions;
-
+    
     @Nullable
     private String contentType;
 
@@ -30,37 +30,37 @@ public final class AssetSourceBuilder {
         this.uri = uri;
         return this;
     }
-
+    
     public AssetSourceBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
     public AssetSourceBuilder dimensions(@Nullable final com.commercetools.importapi.models.common.AssetDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
     }
-
+    
     public AssetSourceBuilder contentType(@Nullable final String contentType) {
         this.contentType = contentType;
         return this;
     }
 
-
+    
     public String getUri(){
         return this.uri;
     }
-
+    
     @Nullable
     public String getKey(){
         return this.key;
     }
-
+    
     @Nullable
     public com.commercetools.importapi.models.common.AssetDimensions getDimensions(){
         return this.dimensions;
     }
-
+    
     @Nullable
     public String getContentType(){
         return this.contentType;

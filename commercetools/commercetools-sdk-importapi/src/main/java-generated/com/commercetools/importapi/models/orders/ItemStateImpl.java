@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ItemStateImpl implements ItemState {
 
     private Double quantity;
-
+    
     private com.commercetools.importapi.models.common.StateKeyReference state;
 
     @JsonCreator
@@ -35,14 +35,14 @@ public final class ItemStateImpl implements ItemState {
         this.state = state;
     }
     public ItemStateImpl() {
-
+       
     }
 
-
+    
     public Double getQuantity(){
         return this.quantity;
     }
-
+    
     /**
     *  <p>Maps to <code>ItemState.state</code>.</p>
     */
@@ -53,7 +53,7 @@ public final class ItemStateImpl implements ItemState {
     public void setQuantity(final Double quantity){
         this.quantity = quantity;
     }
-
+    
     public void setState(final com.commercetools.importapi.models.common.StateKeyReference state){
         this.state = state;
     }

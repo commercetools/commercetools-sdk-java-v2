@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = MoneyAttributeImpl.class)
 public interface MoneyAttribute extends Attribute {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -36,7 +36,7 @@ public interface MoneyAttribute extends Attribute {
     public static MoneyAttributeImpl of(){
         return new MoneyAttributeImpl();
     }
-
+    
 
     public static MoneyAttributeImpl of(final MoneyAttribute template) {
         MoneyAttributeImpl instance = new MoneyAttributeImpl();

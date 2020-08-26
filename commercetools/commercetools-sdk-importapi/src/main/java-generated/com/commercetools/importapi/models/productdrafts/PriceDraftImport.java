@@ -27,7 +27,7 @@ import java.io.IOException;
 @JsonDeserialize(as = PriceDraftImportImpl.class)
 public interface PriceDraftImport  {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -35,7 +35,7 @@ public interface PriceDraftImport  {
     /**
     *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
     */
-
+    
     @JsonProperty("country")
     public String getCountry();
     /**
@@ -50,12 +50,12 @@ public interface PriceDraftImport  {
     @Valid
     @JsonProperty("channel")
     public ChannelKeyReference getChannel();
-
-
+    
+    
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
-
-
+    
+    
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
     /**
@@ -78,27 +78,27 @@ public interface PriceDraftImport  {
     public List<PriceTier> getTiers();
 
     public void setValue(final TypedMoney value);
-
+    
     public void setCountry(final String country);
-
+    
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
-
+    
     public void setChannel(final ChannelKeyReference channel);
-
+    
     public void setValidFrom(final ZonedDateTime validFrom);
-
+    
     public void setValidUntil(final ZonedDateTime validUntil);
-
+    
     public void setCustom(final Custom custom);
-
+    
     public void setDiscounted(final DiscountedPrice discounted);
-
+    
     public void setTiers(final List<PriceTier> tiers);
 
     public static PriceDraftImportImpl of(){
         return new PriceDraftImportImpl();
     }
-
+    
 
     public static PriceDraftImportImpl of(final PriceDraftImport template) {
         PriceDraftImportImpl instance = new PriceDraftImportImpl();

@@ -24,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class VariantValuesImpl implements VariantValues {
 
     private String sku;
-
+    
     private java.util.List<com.commercetools.importapi.models.prices.PriceImport> prices;
-
+    
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
     @JsonCreator
@@ -36,20 +36,20 @@ public final class VariantValuesImpl implements VariantValues {
         this.attributes = attributes;
     }
     public VariantValuesImpl() {
-
+       
     }
 
-
+    
     public String getSku(){
         return this.sku;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.prices.PriceImport> getPrices(){
         return this.prices;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes(){
         return this.attributes;
     }
@@ -57,11 +57,11 @@ public final class VariantValuesImpl implements VariantValues {
     public void setSku(final String sku){
         this.sku = sku;
     }
-
+    
     public void setPrices(final java.util.List<com.commercetools.importapi.models.prices.PriceImport> prices){
         this.prices = prices;
     }
-
+    
     public void setAttributes(final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes){
         this.attributes = attributes;
     }

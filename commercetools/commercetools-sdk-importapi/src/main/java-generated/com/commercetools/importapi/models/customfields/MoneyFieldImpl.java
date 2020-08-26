@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class MoneyFieldImpl implements MoneyField {
 
     private String type;
-
+    
     private com.commercetools.importapi.models.common.TypedMoney value;
 
     @JsonCreator
@@ -36,7 +36,7 @@ public final class MoneyFieldImpl implements MoneyField {
         this.type = "Money";
     }
     public MoneyFieldImpl() {
-
+       
     }
 
     /**
@@ -45,8 +45,8 @@ public final class MoneyFieldImpl implements MoneyField {
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.TypedMoney getValue(){
         return this.value;
     }

@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class StringSetFieldImpl implements StringSetField {
 
     private String type;
-
+    
     private java.util.List<String> value;
 
     @JsonCreator
@@ -35,7 +35,7 @@ public final class StringSetFieldImpl implements StringSetField {
         this.type = "StringSet";
     }
     public StringSetFieldImpl() {
-
+       
     }
 
     /**
@@ -44,8 +44,8 @@ public final class StringSetFieldImpl implements StringSetField {
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.util.List<String> getValue(){
         return this.value;
     }

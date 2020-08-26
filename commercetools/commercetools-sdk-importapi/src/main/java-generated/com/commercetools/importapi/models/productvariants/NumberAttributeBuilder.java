@@ -16,15 +16,15 @@ public final class NumberAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private Double value;
 
     public NumberAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public NumberAttributeBuilder value( final Double value) {
         this.value = value;
         return this;
@@ -34,8 +34,8 @@ public final class NumberAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public Double getValue(){
         return this.value;
     }

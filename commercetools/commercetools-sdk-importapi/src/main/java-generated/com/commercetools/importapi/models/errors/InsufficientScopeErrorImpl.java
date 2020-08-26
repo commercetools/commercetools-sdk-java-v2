@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InsufficientScopeErrorImpl implements InsufficientScopeError {
 
     private String code;
-
+    
     private String message;
 
     @JsonCreator
@@ -32,14 +32,14 @@ public final class InsufficientScopeErrorImpl implements InsufficientScopeError 
         this.code = "insufficient_scope";
     }
     public InsufficientScopeErrorImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */

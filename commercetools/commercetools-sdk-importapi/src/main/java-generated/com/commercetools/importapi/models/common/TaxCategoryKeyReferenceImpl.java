@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReference {
 
     private String key;
-
+    
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
@@ -36,14 +36,14 @@ public final class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReferenc
         this.typeId = ReferenceType.findEnumViaJsonName("tax-category").get();
     }
     public TaxCategoryKeyReferenceImpl() {
-
+       
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
+    
     /**
     *  <p>The type of the referenced resource.</p>
     */

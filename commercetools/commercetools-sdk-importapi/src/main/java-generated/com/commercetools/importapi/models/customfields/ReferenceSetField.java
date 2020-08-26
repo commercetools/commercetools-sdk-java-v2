@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = ReferenceSetFieldImpl.class)
 public interface ReferenceSetField extends CustomField {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -36,7 +36,7 @@ public interface ReferenceSetField extends CustomField {
     public static ReferenceSetFieldImpl of(){
         return new ReferenceSetFieldImpl();
     }
-
+    
 
     public static ReferenceSetFieldImpl of(final ReferenceSetField template) {
         ReferenceSetFieldImpl instance = new ReferenceSetFieldImpl();

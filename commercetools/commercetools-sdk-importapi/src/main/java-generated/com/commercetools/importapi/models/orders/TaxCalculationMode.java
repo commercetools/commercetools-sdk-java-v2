@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TaxCalculationMode {
 
-
+    
     @JsonProperty("LineItemLevel")
     LINE_ITEM_LEVEL("LineItemLevel"),
-
-
+    
+    
     @JsonProperty("UnitPriceLevel")
     UNIT_PRICE_LEVEL("UnitPriceLevel");
 

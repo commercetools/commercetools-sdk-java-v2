@@ -16,15 +16,15 @@ public final class EnumAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private String value;
 
     public EnumAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public EnumAttributeBuilder value( final String value) {
         this.value = value;
         return this;
@@ -34,8 +34,8 @@ public final class EnumAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getValue(){
         return this.value;
     }

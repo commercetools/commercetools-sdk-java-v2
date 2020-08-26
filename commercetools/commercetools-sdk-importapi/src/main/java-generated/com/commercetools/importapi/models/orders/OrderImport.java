@@ -33,13 +33,10 @@ import java.io.IOException;
 
 /**
 *  <p>Import representation for an order.</p>
-*  <p>In commercetools, the only way to create an order is using the
-*  <a href="https://docs.commercetools.com/http-api-projects-orders#create-order-from-cart">Create Order from Cart</a> endpoint.
-*  method. Unlike the Create Order from Cart endpoint, when importing an order
-*  using the Import API, you must provide all non-optional fields required for creating
-*  an order, rather than just a cart ID.</p>
-*  <p>The OrderImport type also contains draft subtypes. These types are normally populated
-*  by the Cart the order is created from, but in this case must be populated as a part of the import request.</p>
+*  <p>In commercetools, you can import an order using the
+*  <a href="https://docs.commercetools.com/http-api-projects-orders-import.html#create-an-order-by-import">Create Order by Import</a>
+*  endpoint method instead of creating it from a cart.</p>
+*  <p>The order import draft is a snapshot of an order at the time it was imported.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

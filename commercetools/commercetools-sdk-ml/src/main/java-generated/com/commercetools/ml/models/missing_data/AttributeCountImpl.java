@@ -22,53 +22,53 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class AttributeCountImpl implements AttributeCount {
 
-   private Integer productTypeAttributes;
-   
-   private Integer variantAttributes;
-   
-   private Integer missingAttributeValues;
+    private Integer productTypeAttributes;
+    
+    private Integer variantAttributes;
+    
+    private Integer missingAttributeValues;
 
-   @JsonCreator
-   AttributeCountImpl(@JsonProperty("productTypeAttributes") final Integer productTypeAttributes, @JsonProperty("variantAttributes") final Integer variantAttributes, @JsonProperty("missingAttributeValues") final Integer missingAttributeValues) {
-      this.productTypeAttributes = productTypeAttributes;
-      this.variantAttributes = variantAttributes;
-      this.missingAttributeValues = missingAttributeValues;
-   }
-   public AttributeCountImpl() {
-      
-   }
-   
-   /**
-   *  <p>Number of attributes defined in the product type.</p>
-   */
-   public Integer getProductTypeAttributes(){
-      return this.productTypeAttributes;
-   }
-   
-   /**
-   *  <p>Number of attributes defined in the variant.</p>
-   */
-   public Integer getVariantAttributes(){
-      return this.variantAttributes;
-   }
-   
-   /**
-   *  <p>Number of attributes missing values in the variant.</p>
-   */
-   public Integer getMissingAttributeValues(){
-      return this.missingAttributeValues;
-   }
+    @JsonCreator
+    AttributeCountImpl(@JsonProperty("productTypeAttributes") final Integer productTypeAttributes, @JsonProperty("variantAttributes") final Integer variantAttributes, @JsonProperty("missingAttributeValues") final Integer missingAttributeValues) {
+        this.productTypeAttributes = productTypeAttributes;
+        this.variantAttributes = variantAttributes;
+        this.missingAttributeValues = missingAttributeValues;
+    }
+    public AttributeCountImpl() {
+       
+    }
 
-   public void setProductTypeAttributes(final Integer productTypeAttributes){
-      this.productTypeAttributes = productTypeAttributes;
-   }
-   
-   public void setVariantAttributes(final Integer variantAttributes){
-      this.variantAttributes = variantAttributes;
-   }
-   
-   public void setMissingAttributeValues(final Integer missingAttributeValues){
-      this.missingAttributeValues = missingAttributeValues;
-   }
+    /**
+    *  <p>Number of attributes defined in the product type.</p>
+    */
+    public Integer getProductTypeAttributes(){
+        return this.productTypeAttributes;
+    }
+    
+    /**
+    *  <p>Number of attributes defined in the variant.</p>
+    */
+    public Integer getVariantAttributes(){
+        return this.variantAttributes;
+    }
+    
+    /**
+    *  <p>Number of attributes missing values in the variant.</p>
+    */
+    public Integer getMissingAttributeValues(){
+        return this.missingAttributeValues;
+    }
+
+    public void setProductTypeAttributes(final Integer productTypeAttributes){
+        this.productTypeAttributes = productTypeAttributes;
+    }
+    
+    public void setVariantAttributes(final Integer variantAttributes){
+        this.variantAttributes = variantAttributes;
+    }
+    
+    public void setMissingAttributeValues(final Integer missingAttributeValues){
+        this.missingAttributeValues = missingAttributeValues;
+    }
 
 }

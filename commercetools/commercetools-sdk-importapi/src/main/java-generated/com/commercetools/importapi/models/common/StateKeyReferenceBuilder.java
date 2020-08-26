@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class StateKeyReferenceBuilder {
 
-
+    
     private String key;
 
     public StateKeyReferenceBuilder key( final String key) {
@@ -23,7 +23,7 @@ public final class StateKeyReferenceBuilder {
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }

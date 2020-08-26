@@ -58,15 +58,15 @@ public interface ProductVariantPatch  {
     public Attributes getAttributes();
 
     public void setProductVariant(final ProductVariantKeyReference productVariant);
-
+    
     public void setProduct(final ProductKeyReference product);
-
+    
     public void setAttributes(final Attributes attributes);
 
     public static ProductVariantPatchImpl of(){
         return new ProductVariantPatchImpl();
     }
-
+    
 
     public static ProductVariantPatchImpl of(final ProductVariantPatch template) {
         ProductVariantPatchImpl instance = new ProductVariantPatchImpl();

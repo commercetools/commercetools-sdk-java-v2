@@ -14,45 +14,45 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class MissingImagesVariantLevelBuilder {
 
+    
+    private Long missingImages;
+    
+    
+    private Long total;
 
-   private Long missingImages;
+    public MissingImagesVariantLevelBuilder missingImages( final Long missingImages) {
+        this.missingImages = missingImages;
+        return this;
+    }
+    
+    public MissingImagesVariantLevelBuilder total( final Long total) {
+        this.total = total;
+        return this;
+    }
 
+    
+    public Long getMissingImages(){
+        return this.missingImages;
+    }
+    
+    
+    public Long getTotal(){
+        return this.total;
+    }
 
-   private Long total;
+    public MissingImagesVariantLevel build() {
+        return new MissingImagesVariantLevelImpl(missingImages, total);
+    }
 
-   public MissingImagesVariantLevelBuilder missingImages( final Long missingImages) {
-      this.missingImages = missingImages;
-      return this;
-   }
+    public static MissingImagesVariantLevelBuilder of() {
+        return new MissingImagesVariantLevelBuilder();
+    }
 
-   public MissingImagesVariantLevelBuilder total( final Long total) {
-      this.total = total;
-      return this;
-   }
-
-
-   public Long getMissingImages(){
-      return this.missingImages;
-   }
-
-
-   public Long getTotal(){
-      return this.total;
-   }
-
-   public MissingImagesVariantLevel build() {
-       return new MissingImagesVariantLevelImpl(missingImages, total);
-   }
-
-   public static MissingImagesVariantLevelBuilder of() {
-      return new MissingImagesVariantLevelBuilder();
-   }
-
-   public static MissingImagesVariantLevelBuilder of(final MissingImagesVariantLevel template) {
-      MissingImagesVariantLevelBuilder builder = new MissingImagesVariantLevelBuilder();
-      builder.missingImages = template.getMissingImages();
-      builder.total = template.getTotal();
-      return builder;
-   }
+    public static MissingImagesVariantLevelBuilder of(final MissingImagesVariantLevel template) {
+        MissingImagesVariantLevelBuilder builder = new MissingImagesVariantLevelBuilder();
+        builder.missingImages = template.getMissingImages();
+        builder.total = template.getTotal();
+        return builder;
+    }
 
 }

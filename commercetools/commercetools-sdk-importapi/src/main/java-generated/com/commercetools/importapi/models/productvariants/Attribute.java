@@ -80,7 +80,7 @@ public interface Attribute  {
     *  The name is required if this type is used in a product variant and must not be set when
     *  used in a product variant patch.</p>
     */
-
+    
     @JsonProperty("name")
     public String getName();
 

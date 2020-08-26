@@ -21,33 +21,33 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeCoverageImpl.class)
 public interface AttributeCoverage  {
 
-   /**
-   *  <p>The percentage of attributes from the product type defined in the product variant. A value of <code>1.0</code> indicates a product variant contains all attributes defined in the product type.</p>
-   */
-   @NotNull
-   @JsonProperty("names")
-   public Integer getNames();
-   /**
-   *  <p>Represents the percentage of attributes in the product variant that contain values.</p>
-   */
-   @NotNull
-   @JsonProperty("values")
-   public Integer getValues();
+    /**
+    *  <p>The percentage of attributes from the product type defined in the product variant. A value of <code>1.0</code> indicates a product variant contains all attributes defined in the product type.</p>
+    */
+    @NotNull
+    @JsonProperty("names")
+    public Double getNames();
+    /**
+    *  <p>Represents the percentage of attributes in the product variant that contain values.</p>
+    */
+    @NotNull
+    @JsonProperty("values")
+    public Double getValues();
 
-   public void setNames(final Integer names);
+    public void setNames(final Double names);
+    
+    public void setValues(final Double values);
 
-   public void setValues(final Integer values);
+    public static AttributeCoverageImpl of(){
+        return new AttributeCoverageImpl();
+    }
+    
 
-   public static AttributeCoverageImpl of(){
-      return new AttributeCoverageImpl();
-   }
-
-
-   public static AttributeCoverageImpl of(final AttributeCoverage template) {
-      AttributeCoverageImpl instance = new AttributeCoverageImpl();
-      instance.setNames(template.getNames());
-      instance.setValues(template.getValues());
-      return instance;
-   }
+    public static AttributeCoverageImpl of(final AttributeCoverage template) {
+        AttributeCoverageImpl instance = new AttributeCoverageImpl();
+        instance.setNames(template.getNames());
+        instance.setValues(template.getValues());
+        return instance;
+    }
 
 }

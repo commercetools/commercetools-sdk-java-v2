@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ReferenceSetFieldImpl implements ReferenceSetField {
 
     private String type;
-
+    
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
     @JsonCreator
@@ -36,7 +36,7 @@ public final class ReferenceSetFieldImpl implements ReferenceSetField {
         this.type = "ReferenceSet";
     }
     public ReferenceSetFieldImpl() {
-
+       
     }
 
     /**
@@ -45,8 +45,8 @@ public final class ReferenceSetFieldImpl implements ReferenceSetField {
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.common.KeyReference> getValue(){
         return this.value;
     }

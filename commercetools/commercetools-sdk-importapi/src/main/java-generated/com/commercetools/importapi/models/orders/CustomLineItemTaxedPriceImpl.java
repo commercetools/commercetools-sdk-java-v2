@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPrice {
 
     private com.commercetools.importapi.models.common.TypedMoney totalNet;
-
+    
     private com.commercetools.importapi.models.common.TypedMoney totalGross;
 
     @JsonCreator
@@ -32,15 +32,15 @@ public final class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPr
         this.totalGross = totalGross;
     }
     public CustomLineItemTaxedPriceImpl() {
-
+       
     }
 
-
+    
     public com.commercetools.importapi.models.common.TypedMoney getTotalNet(){
         return this.totalNet;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.TypedMoney getTotalGross(){
         return this.totalGross;
     }
@@ -48,7 +48,7 @@ public final class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPr
     public void setTotalNet(final com.commercetools.importapi.models.common.TypedMoney totalNet){
         this.totalNet = totalNet;
     }
-
+    
     public void setTotalGross(final com.commercetools.importapi.models.common.TypedMoney totalGross){
         this.totalGross = totalGross;
     }

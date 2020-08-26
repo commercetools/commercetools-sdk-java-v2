@@ -23,13 +23,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TrackingDataImpl implements TrackingData {
 
     private String trackingId;
-
+    
     private String carrier;
-
+    
     private String provider;
-
+    
     private String providerTransaction;
-
+    
     private Boolean isReturn;
 
     @JsonCreator
@@ -41,30 +41,30 @@ public final class TrackingDataImpl implements TrackingData {
         this.isReturn = isReturn;
     }
     public TrackingDataImpl() {
-
+       
     }
 
-
+    
     public String getTrackingId(){
         return this.trackingId;
     }
-
-
+    
+    
     public String getCarrier(){
         return this.carrier;
     }
-
-
+    
+    
     public String getProvider(){
         return this.provider;
     }
-
-
+    
+    
     public String getProviderTransaction(){
         return this.providerTransaction;
     }
-
-
+    
+    
     public Boolean getIsReturn(){
         return this.isReturn;
     }
@@ -72,19 +72,19 @@ public final class TrackingDataImpl implements TrackingData {
     public void setTrackingId(final String trackingId){
         this.trackingId = trackingId;
     }
-
+    
     public void setCarrier(final String carrier){
         this.carrier = carrier;
     }
-
+    
     public void setProvider(final String provider){
         this.provider = provider;
     }
-
+    
     public void setProviderTransaction(final String providerTransaction){
         this.providerTransaction = providerTransaction;
     }
-
+    
     public void setIsReturn(final Boolean isReturn){
         this.isReturn = isReturn;
     }

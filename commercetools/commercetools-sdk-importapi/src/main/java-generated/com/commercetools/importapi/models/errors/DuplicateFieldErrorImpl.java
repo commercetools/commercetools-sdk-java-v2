@@ -27,11 +27,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
 
     private String code;
-
+    
     private String message;
-
+    
     private String field;
-
+    
     private com.fasterxml.jackson.databind.JsonNode duplicateValue;
 
     @JsonCreator
@@ -42,28 +42,28 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
         this.code = "DuplicateField";
     }
     public DuplicateFieldErrorImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */
     public String getMessage(){
         return this.message;
     }
-
+    
     /**
     *  <p>The name of the field.</p>
     */
     public String getField(){
         return this.field;
     }
-
+    
     /**
     *  <p>The offending duplicate value.</p>
     */
@@ -74,11 +74,11 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
     public void setMessage(final String message){
         this.message = message;
     }
-
+    
     public void setField(final String field){
         this.field = field;
     }
-
+    
     public void setDuplicateValue(final com.fasterxml.jackson.databind.JsonNode duplicateValue){
         this.duplicateValue = duplicateValue;
     }

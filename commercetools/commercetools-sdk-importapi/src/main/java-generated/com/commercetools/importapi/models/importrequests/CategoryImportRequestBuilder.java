@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CategoryImportRequestBuilder {
 
-
+    
     private java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources;
 
     public CategoryImportRequestBuilder resources( final java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources) {
@@ -24,7 +24,7 @@ public final class CategoryImportRequestBuilder {
         return this;
     }
 
-
+    
     public java.util.List<com.commercetools.importapi.models.categories.CategoryImport> getResources(){
         return this.resources;
     }

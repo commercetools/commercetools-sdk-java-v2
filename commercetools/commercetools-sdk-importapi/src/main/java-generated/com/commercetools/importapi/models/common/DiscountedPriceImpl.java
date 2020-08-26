@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DiscountedPriceImpl implements DiscountedPrice {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
-
+    
     private com.commercetools.importapi.models.common.ProductDiscountKeyReference discount;
 
     @JsonCreator
@@ -33,14 +33,14 @@ public final class DiscountedPriceImpl implements DiscountedPrice {
         this.discount = discount;
     }
     public DiscountedPriceImpl() {
-
+       
     }
 
-
+    
     public com.commercetools.importapi.models.common.TypedMoney getValue(){
         return this.value;
     }
-
+    
     /**
     *  <p>Reference to a ProductDiscount.</p>
     */
@@ -51,7 +51,7 @@ public final class DiscountedPriceImpl implements DiscountedPrice {
     public void setValue(final com.commercetools.importapi.models.common.TypedMoney value){
         this.value = value;
     }
-
+    
     public void setDiscount(final com.commercetools.importapi.models.common.ProductDiscountKeyReference discount){
         this.discount = discount;
     }

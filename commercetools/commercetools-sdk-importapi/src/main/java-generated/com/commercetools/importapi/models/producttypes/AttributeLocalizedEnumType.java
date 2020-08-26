@@ -22,7 +22,7 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeLocalizedEnumTypeImpl.class)
 public interface AttributeLocalizedEnumType extends AttributeType {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("values")
@@ -33,7 +33,7 @@ public interface AttributeLocalizedEnumType extends AttributeType {
     public static AttributeLocalizedEnumTypeImpl of(){
         return new AttributeLocalizedEnumTypeImpl();
     }
-
+    
 
     public static AttributeLocalizedEnumTypeImpl of(final AttributeLocalizedEnumType template) {
         AttributeLocalizedEnumTypeImpl instance = new AttributeLocalizedEnumTypeImpl();

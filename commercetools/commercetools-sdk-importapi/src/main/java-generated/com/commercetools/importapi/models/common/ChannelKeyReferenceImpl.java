@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ChannelKeyReferenceImpl implements ChannelKeyReference {
 
     private String key;
-
+    
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
@@ -36,14 +36,14 @@ public final class ChannelKeyReferenceImpl implements ChannelKeyReference {
         this.typeId = ReferenceType.findEnumViaJsonName("channel").get();
     }
     public ChannelKeyReferenceImpl() {
-
+       
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
+    
     /**
     *  <p>The type of the referenced resource.</p>
     */

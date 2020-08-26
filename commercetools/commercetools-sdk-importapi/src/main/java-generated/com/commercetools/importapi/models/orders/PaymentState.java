@@ -13,23 +13,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum PaymentState {
 
-
+    
     @JsonProperty("BalanceDue")
     BALANCE_DUE("BalanceDue"),
-
-
+    
+    
     @JsonProperty("Failed")
     FAILED("Failed"),
-
-
+    
+    
     @JsonProperty("Pending")
     PENDING("Pending"),
-
-
+    
+    
     @JsonProperty("CreditOwed")
     CREDIT_OWED("CreditOwed"),
-
-
+    
+    
     @JsonProperty("Paid")
     PAID("Paid");
 

@@ -11,6 +11,7 @@ publishing {
 
 dependencies {
     testCompile 'junit:junit:4.12'
+    compile 'com.google.code.findbugs:jsr305:3.0.2'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
     compile 'com.fasterxml.jackson.core:jackson-core:2.9.9'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8'

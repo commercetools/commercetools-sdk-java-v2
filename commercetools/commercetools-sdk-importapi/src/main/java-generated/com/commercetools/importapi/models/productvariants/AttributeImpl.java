@@ -48,7 +48,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AttributeImpl implements Attribute {
 
     private String name;
-
+    
     private String type;
 
     @JsonCreator
@@ -57,7 +57,7 @@ public final class AttributeImpl implements Attribute {
         this.type = "null";
     }
     public AttributeImpl() {
-
+       
     }
 
     /**
@@ -68,8 +68,8 @@ public final class AttributeImpl implements Attribute {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }

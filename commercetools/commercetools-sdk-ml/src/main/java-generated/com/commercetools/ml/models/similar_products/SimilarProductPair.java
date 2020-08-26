@@ -24,32 +24,32 @@ import java.io.IOException;
 @JsonDeserialize(as = SimilarProductPairImpl.class)
 public interface SimilarProductPair  {
 
-   /**
-   *  <p>The probability of product similarity.</p>
-   */
-   @NotNull
-   @JsonProperty("confidence")
-   public Integer getConfidence();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("products")
-   public List<SimilarProduct> getProducts();
+    /**
+    *  <p>The probability of product similarity.</p>
+    */
+    @NotNull
+    @JsonProperty("confidence")
+    public Double getConfidence();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("products")
+    public List<SimilarProduct> getProducts();
 
-   public void setConfidence(final Integer confidence);
-   
-   public void setProducts(final List<SimilarProduct> products);
-   
-   public static SimilarProductPairImpl of(){
-      return new SimilarProductPairImpl();
-   }
-   
+    public void setConfidence(final Double confidence);
+    
+    public void setProducts(final List<SimilarProduct> products);
 
-   public static SimilarProductPairImpl of(final SimilarProductPair template) {
-      SimilarProductPairImpl instance = new SimilarProductPairImpl();
-      instance.setConfidence(template.getConfidence());
-      instance.setProducts(template.getProducts());
-      return instance;
-   }
+    public static SimilarProductPairImpl of(){
+        return new SimilarProductPairImpl();
+    }
+    
+
+    public static SimilarProductPairImpl of(final SimilarProductPair template) {
+        SimilarProductPairImpl instance = new SimilarProductPairImpl();
+        instance.setConfidence(template.getConfidence());
+        instance.setProducts(template.getProducts());
+        return instance;
+    }
 
 }

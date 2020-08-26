@@ -39,7 +39,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
     public static DuplicateVariantValuesErrorImpl of(){
         return new DuplicateVariantValuesErrorImpl();
     }
-
+    
 
     public static DuplicateVariantValuesErrorImpl of(final DuplicateVariantValuesError template) {
         DuplicateVariantValuesErrorImpl instance = new DuplicateVariantValuesErrorImpl();

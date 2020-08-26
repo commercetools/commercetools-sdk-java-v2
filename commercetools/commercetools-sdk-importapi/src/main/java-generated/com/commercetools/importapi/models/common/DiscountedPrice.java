@@ -22,7 +22,7 @@ import java.io.IOException;
 @JsonDeserialize(as = DiscountedPriceImpl.class)
 public interface DiscountedPrice  {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -36,13 +36,13 @@ public interface DiscountedPrice  {
     public ProductDiscountKeyReference getDiscount();
 
     public void setValue(final TypedMoney value);
-
+    
     public void setDiscount(final ProductDiscountKeyReference discount);
 
     public static DiscountedPriceImpl of(){
         return new DiscountedPriceImpl();
     }
-
+    
 
     public static DiscountedPriceImpl of(final DiscountedPrice template) {
         DiscountedPriceImpl instance = new DiscountedPriceImpl();

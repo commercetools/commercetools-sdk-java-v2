@@ -28,9 +28,9 @@ public final class AttributeTextTypeImpl implements AttributeTextType {
     AttributeTextTypeImpl() {
         this.name = "text";
     }
+    
 
-
-
+    
     public String getName(){
         return this.name;
     }

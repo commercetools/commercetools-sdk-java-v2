@@ -23,9 +23,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TaxPortionImpl implements TaxPortion {
 
     private String name;
-
+    
     private Double rate;
-
+    
     private com.commercetools.importapi.models.common.TypedMoney amount;
 
     @JsonCreator
@@ -35,20 +35,20 @@ public final class TaxPortionImpl implements TaxPortion {
         this.amount = amount;
     }
     public TaxPortionImpl() {
-
+       
     }
 
-
+    
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public Double getRate(){
         return this.rate;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.TypedMoney getAmount(){
         return this.amount;
     }
@@ -56,11 +56,11 @@ public final class TaxPortionImpl implements TaxPortion {
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setRate(final Double rate){
         this.rate = rate;
     }
-
+    
     public void setAmount(final com.commercetools.importapi.models.common.TypedMoney amount){
         this.amount = amount;
     }

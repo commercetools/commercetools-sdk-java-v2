@@ -26,41 +26,41 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingImagesTaskStatusImpl.class)
 public interface MissingImagesTaskStatus  {
 
-   
-   @NotNull
-   @JsonProperty("state")
-   public TaskStatusEnum getState();
-   /**
-   *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
-   */
-   @NotNull
-   @JsonProperty("expires")
-   public ZonedDateTime getExpires();
-   /**
-   *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("result")
-   public MissingImagesPagedQueryResult getResult();
+    
+    @NotNull
+    @JsonProperty("state")
+    public TaskStatusEnum getState();
+    /**
+    *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
+    */
+    @NotNull
+    @JsonProperty("expires")
+    public ZonedDateTime getExpires();
+    /**
+    *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("result")
+    public MissingImagesPagedQueryResult getResult();
 
-   public void setState(final TaskStatusEnum state);
-   
-   public void setExpires(final ZonedDateTime expires);
-   
-   public void setResult(final MissingImagesPagedQueryResult result);
-   
-   public static MissingImagesTaskStatusImpl of(){
-      return new MissingImagesTaskStatusImpl();
-   }
-   
+    public void setState(final TaskStatusEnum state);
+    
+    public void setExpires(final ZonedDateTime expires);
+    
+    public void setResult(final MissingImagesPagedQueryResult result);
 
-   public static MissingImagesTaskStatusImpl of(final MissingImagesTaskStatus template) {
-      MissingImagesTaskStatusImpl instance = new MissingImagesTaskStatusImpl();
-      instance.setState(template.getState());
-      instance.setExpires(template.getExpires());
-      instance.setResult(template.getResult());
-      return instance;
-   }
+    public static MissingImagesTaskStatusImpl of(){
+        return new MissingImagesTaskStatusImpl();
+    }
+    
+
+    public static MissingImagesTaskStatusImpl of(final MissingImagesTaskStatus template) {
+        MissingImagesTaskStatusImpl instance = new MissingImagesTaskStatusImpl();
+        instance.setState(template.getState());
+        instance.setExpires(template.getExpires());
+        instance.setResult(template.getResult());
+        return instance;
+    }
 
 }

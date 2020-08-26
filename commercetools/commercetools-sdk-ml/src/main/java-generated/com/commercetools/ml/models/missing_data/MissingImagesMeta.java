@@ -22,40 +22,40 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingImagesMetaImpl.class)
 public interface MissingImagesMeta  {
 
-   
-   @NotNull
-   @Valid
-   @JsonProperty("productLevel")
-   public MissingImagesProductLevel getProductLevel();
-   
-   @NotNull
-   @Valid
-   @JsonProperty("variantLevel")
-   public MissingImagesVariantLevel getVariantLevel();
-   /**
-   *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
-   */
-   @NotNull
-   @JsonProperty("threshold")
-   public Long getThreshold();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("productLevel")
+    public MissingImagesProductLevel getProductLevel();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("variantLevel")
+    public MissingImagesVariantLevel getVariantLevel();
+    /**
+    *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
+    */
+    @NotNull
+    @JsonProperty("threshold")
+    public Long getThreshold();
 
-   public void setProductLevel(final MissingImagesProductLevel productLevel);
-   
-   public void setVariantLevel(final MissingImagesVariantLevel variantLevel);
-   
-   public void setThreshold(final Long threshold);
-   
-   public static MissingImagesMetaImpl of(){
-      return new MissingImagesMetaImpl();
-   }
-   
+    public void setProductLevel(final MissingImagesProductLevel productLevel);
+    
+    public void setVariantLevel(final MissingImagesVariantLevel variantLevel);
+    
+    public void setThreshold(final Long threshold);
 
-   public static MissingImagesMetaImpl of(final MissingImagesMeta template) {
-      MissingImagesMetaImpl instance = new MissingImagesMetaImpl();
-      instance.setProductLevel(template.getProductLevel());
-      instance.setVariantLevel(template.getVariantLevel());
-      instance.setThreshold(template.getThreshold());
-      return instance;
-   }
+    public static MissingImagesMetaImpl of(){
+        return new MissingImagesMetaImpl();
+    }
+    
+
+    public static MissingImagesMetaImpl of(final MissingImagesMeta template) {
+        MissingImagesMetaImpl instance = new MissingImagesMetaImpl();
+        instance.setProductLevel(template.getProductLevel());
+        instance.setVariantLevel(template.getVariantLevel());
+        instance.setThreshold(template.getThreshold());
+        return instance;
+    }
 
 }

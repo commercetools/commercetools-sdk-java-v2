@@ -21,41 +21,41 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingImagesImpl.class)
 public interface MissingImages  {
 
+    
+    @NotNull
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
+    /**
+    *  <p>ID of the variant</p>
+    */
+    @NotNull
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    /**
+    *  <p>Number of images the variant contains.</p>
+    */
+    @NotNull
+    @JsonProperty("imageCount")
+    public Long getImageCount();
 
-   @NotNull
-   @Valid
-   @JsonProperty("product")
-   public ProductReference getProduct();
-   /**
-   *  <p>ID of the variant</p>
-   */
-   @NotNull
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   /**
-   *  <p>Number of images the variant contains.</p>
-   */
-   @NotNull
-   @JsonProperty("imageCount")
-   public Long getImageCount();
+    public void setProduct(final ProductReference product);
+    
+    public void setVariantId(final Long variantId);
+    
+    public void setImageCount(final Long imageCount);
 
-   public void setProduct(final ProductReference product);
+    public static MissingImagesImpl of(){
+        return new MissingImagesImpl();
+    }
+    
 
-   public void setVariantId(final Long variantId);
-
-   public void setImageCount(final Long imageCount);
-
-   public static MissingImagesImpl of(){
-      return new MissingImagesImpl();
-   }
-
-
-   public static MissingImagesImpl of(final MissingImages template) {
-      MissingImagesImpl instance = new MissingImagesImpl();
-      instance.setProduct(template.getProduct());
-      instance.setVariantId(template.getVariantId());
-      instance.setImageCount(template.getImageCount());
-      return instance;
-   }
+    public static MissingImagesImpl of(final MissingImages template) {
+        MissingImagesImpl instance = new MissingImagesImpl();
+        instance.setProduct(template.getProduct());
+        instance.setVariantId(template.getVariantId());
+        instance.setImageCount(template.getImageCount());
+        return instance;
+    }
 
 }

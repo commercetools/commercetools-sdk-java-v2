@@ -17,60 +17,60 @@ public enum ImportResourceType {
 
     /**
     	<p>The category import resource type.</p>
-
+    	
     */
     @JsonProperty("category")
     CATEGORY("category"),
-
+    
     /**
     	<p>The order import resource type.</p>
-
+    	
     */
     @JsonProperty("order")
     ORDER("order"),
-
+    
     /**
     	<p>The price import resource type.</p>
-
+    	
     */
     @JsonProperty("price")
     PRICE("price"),
-
+    
     /**
     	<p>The product import resource type.</p>
-
+    	
     */
     @JsonProperty("product")
     PRODUCT("product"),
-
-
+    
+    
     @JsonProperty("product-draft")
     PRODUCT_DRAFT("product-draft"),
-
+    
     /**
     	<p>The product type import resource type.</p>
-
+    	
     */
     @JsonProperty("product-type")
     PRODUCT_TYPE("product-type"),
-
+    
     /**
     	<p>The product variant import resource type.</p>
-
+    	
     */
     @JsonProperty("product-variant")
     PRODUCT_VARIANT("product-variant"),
-
+    
     /**
     	<p>The product variant patch import resource type.</p>
-
+    	
     */
     @JsonProperty("product-variant-patch")
     PRODUCT_VARIANT_PATCH("product-variant-patch"),
-
+    
     /**
     	<p>The customer import resource type.</p>
-
+    	
     */
     @JsonProperty("customer")
     CUSTOMER("customer");

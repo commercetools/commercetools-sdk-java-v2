@@ -16,15 +16,15 @@ public final class TextSetAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private java.util.List<String> value;
 
     public TextSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public TextSetAttributeBuilder value( final java.util.List<String> value) {
         this.value = value;
         return this;
@@ -34,8 +34,8 @@ public final class TextSetAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public java.util.List<String> getValue(){
         return this.value;
     }

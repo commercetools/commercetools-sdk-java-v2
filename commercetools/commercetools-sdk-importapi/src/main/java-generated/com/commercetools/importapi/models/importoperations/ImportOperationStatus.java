@@ -28,7 +28,7 @@ public interface ImportOperationStatus  {
     /**
     *  <p>Id of the import operation.</p>
     */
-
+    
     @JsonProperty("operationId")
     public String getOperationId();
     /**
@@ -45,15 +45,15 @@ public interface ImportOperationStatus  {
     public List<ErrorObject> getErrors();
 
     public void setOperationId(final String operationId);
-
+    
     public void setState(final ImportOperationState state);
-
+    
     public void setErrors(final List<ErrorObject> errors);
 
     public static ImportOperationStatusImpl of(){
         return new ImportOperationStatusImpl();
     }
-
+    
 
     public static ImportOperationStatusImpl of(final ImportOperationStatus template) {
         ImportOperationStatusImpl instance = new ImportOperationStatusImpl();

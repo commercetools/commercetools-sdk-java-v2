@@ -17,102 +17,102 @@ public enum ReferenceType {
 
     /**
     	<p>References a cart discount.</p>
-
+    	
     */
     @JsonProperty("cart-discount")
     CART_DISCOUNT("cart-discount"),
-
+    
     /**
     	<p>References a category.</p>
-
+    	
     */
     @JsonProperty("category")
     CATEGORY("category"),
-
+    
     /**
     	<p>References a channel.</p>
-
+    	
     */
     @JsonProperty("channel")
     CHANNEL("channel"),
-
+    
     /**
     	<p>References a customer.</p>
-
+    	
     */
     @JsonProperty("customer")
     CUSTOMER("customer"),
-
+    
     /**
     	<p>References a customer group.</p>
-
+    	
     */
     @JsonProperty("customer-group")
     CUSTOMER_GROUP("customer-group"),
-
+    
     /**
     	<p>References a price.</p>
-
+    	
     */
     @JsonProperty("price")
     PRICE("price"),
-
+    
     /**
     	<p>References a product.</p>
-
+    	
     */
     @JsonProperty("product")
     PRODUCT("product"),
-
-
+    
+    
     @JsonProperty("product-discount")
     PRODUCT_DISCOUNT("product-discount"),
-
+    
     /**
     	<p>References a product type.</p>
-
+    	
     */
     @JsonProperty("product-type")
     PRODUCT_TYPE("product-type"),
-
+    
     /**
     	<p>References a product variant.</p>
-
+    	
     */
     @JsonProperty("product-variant")
     PRODUCT_VARIANT("product-variant"),
-
+    
     /**
     	<p>References a shipping method.</p>
-
+    	
     */
     @JsonProperty("shipping-method")
     SHIPPING_METHOD("shipping-method"),
-
+    
     /**
     	<p>References a state.</p>
-
+    	
     */
     @JsonProperty("state")
     STATE("state"),
-
+    
     /**
     	<p>References a store.</p>
-
+    	
     */
     @JsonProperty("store")
     STORE("store"),
-
+    
     /**
     	<p>References a tax-category.</p>
-
+    	
     */
     @JsonProperty("tax-category")
     TAX_CATEGORY("tax-category"),
-
+    
     /**
     	<p>References a type.</p>
-
+    	
     */
     @JsonProperty("type")
     TYPE("type");

@@ -22,31 +22,31 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingPricesMetaImpl.class)
 public interface MissingPricesMeta  {
 
+    
+    @NotNull
+    @Valid
+    @JsonProperty("productLevel")
+    public MissingPricesProductLevel getProductLevel();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("variantLevel")
+    public MissingPricesVariantLevel getVariantLevel();
 
-   @NotNull
-   @Valid
-   @JsonProperty("productLevel")
-   public MissingPricesProductLevel getProductLevel();
+    public void setProductLevel(final MissingPricesProductLevel productLevel);
+    
+    public void setVariantLevel(final MissingPricesVariantLevel variantLevel);
 
-   @NotNull
-   @Valid
-   @JsonProperty("variantLevel")
-   public MissingPricesVariantLevel getVariantLevel();
+    public static MissingPricesMetaImpl of(){
+        return new MissingPricesMetaImpl();
+    }
+    
 
-   public void setProductLevel(final MissingPricesProductLevel productLevel);
-
-   public void setVariantLevel(final MissingPricesVariantLevel variantLevel);
-
-   public static MissingPricesMetaImpl of(){
-      return new MissingPricesMetaImpl();
-   }
-
-
-   public static MissingPricesMetaImpl of(final MissingPricesMeta template) {
-      MissingPricesMetaImpl instance = new MissingPricesMetaImpl();
-      instance.setProductLevel(template.getProductLevel());
-      instance.setVariantLevel(template.getVariantLevel());
-      return instance;
-   }
+    public static MissingPricesMetaImpl of(final MissingPricesMeta template) {
+        MissingPricesMetaImpl instance = new MissingPricesMetaImpl();
+        instance.setProductLevel(template.getProductLevel());
+        instance.setVariantLevel(template.getVariantLevel());
+        return instance;
+    }
 
 }

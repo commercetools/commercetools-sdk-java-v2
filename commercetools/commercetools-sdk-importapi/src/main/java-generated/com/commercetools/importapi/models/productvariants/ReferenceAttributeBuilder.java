@@ -17,15 +17,15 @@ public final class ReferenceAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private com.commercetools.importapi.models.common.KeyReference value;
 
     public ReferenceAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public ReferenceAttributeBuilder value( final com.commercetools.importapi.models.common.KeyReference value) {
         this.value = value;
         return this;
@@ -35,8 +35,8 @@ public final class ReferenceAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.KeyReference getValue(){
         return this.value;
     }

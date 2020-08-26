@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class LocalizedEnumValueImpl implements LocalizedEnumValue {
 
     private String key;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString label;
 
     @JsonCreator
@@ -32,15 +32,15 @@ public final class LocalizedEnumValueImpl implements LocalizedEnumValue {
         this.label = label;
     }
     public LocalizedEnumValueImpl() {
-
+       
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.LocalizedString getLabel(){
         return this.label;
     }
@@ -48,7 +48,7 @@ public final class LocalizedEnumValueImpl implements LocalizedEnumValue {
     public void setKey(final String key){
         this.key = key;
     }
-
+    
     public void setLabel(final com.commercetools.importapi.models.common.LocalizedString label){
         this.label = label;
     }

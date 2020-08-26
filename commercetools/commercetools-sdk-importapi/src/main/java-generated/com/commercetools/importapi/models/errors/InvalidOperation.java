@@ -30,7 +30,7 @@ public interface InvalidOperation extends ErrorObject {
     public static InvalidOperationImpl of(){
         return new InvalidOperationImpl();
     }
-
+    
 
     public static InvalidOperationImpl of(final InvalidOperation template) {
         InvalidOperationImpl instance = new InvalidOperationImpl();

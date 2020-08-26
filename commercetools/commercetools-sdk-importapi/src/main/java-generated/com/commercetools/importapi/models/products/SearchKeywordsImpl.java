@@ -29,10 +29,10 @@ public final class SearchKeywordsImpl implements SearchKeywords {
         this.values = values;
     }
     public SearchKeywordsImpl() {
-
+       
     }
 
-
+    
     public Map<String,java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> values() {
         return values;
     }

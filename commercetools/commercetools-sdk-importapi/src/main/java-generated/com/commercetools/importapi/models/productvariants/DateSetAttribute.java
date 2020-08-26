@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = DateSetAttributeImpl.class)
 public interface DateSetAttribute extends Attribute {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public List<LocalDate> getValue();
@@ -35,7 +35,7 @@ public interface DateSetAttribute extends Attribute {
     public static DateSetAttributeImpl of(){
         return new DateSetAttributeImpl();
     }
-
+    
 
     public static DateSetAttributeImpl of(final DateSetAttribute template) {
         DateSetAttributeImpl instance = new DateSetAttributeImpl();

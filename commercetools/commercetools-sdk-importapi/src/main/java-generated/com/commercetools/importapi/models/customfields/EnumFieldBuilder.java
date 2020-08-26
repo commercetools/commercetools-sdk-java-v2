@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class EnumFieldBuilder {
 
-
+    
     private String value;
 
     public EnumFieldBuilder value( final String value) {
@@ -22,7 +22,7 @@ public final class EnumFieldBuilder {
         return this;
     }
 
-
+    
     public String getValue(){
         return this.value;
     }

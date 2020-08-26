@@ -22,52 +22,52 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingImagesPagedQueryResultImpl.class)
 public interface MissingImagesPagedQueryResult  {
 
+    
+    @NotNull
+    @JsonProperty("count")
+    public Long getCount();
+    
+    @NotNull
+    @JsonProperty("total")
+    public Long getTotal();
+    
+    @NotNull
+    @JsonProperty("offset")
+    public Long getOffset();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("results")
+    public List<MissingImages> getResults();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("meta")
+    public MissingImagesMeta getMeta();
 
-   @NotNull
-   @JsonProperty("count")
-   public Long getCount();
+    public void setCount(final Long count);
+    
+    public void setTotal(final Long total);
+    
+    public void setOffset(final Long offset);
+    
+    public void setResults(final List<MissingImages> results);
+    
+    public void setMeta(final MissingImagesMeta meta);
 
-   @NotNull
-   @JsonProperty("total")
-   public Long getTotal();
+    public static MissingImagesPagedQueryResultImpl of(){
+        return new MissingImagesPagedQueryResultImpl();
+    }
+    
 
-   @NotNull
-   @JsonProperty("offset")
-   public Long getOffset();
-
-   @NotNull
-   @Valid
-   @JsonProperty("results")
-   public List<MissingImages> getResults();
-
-   @NotNull
-   @Valid
-   @JsonProperty("meta")
-   public MissingImagesMeta getMeta();
-
-   public void setCount(final Long count);
-
-   public void setTotal(final Long total);
-
-   public void setOffset(final Long offset);
-
-   public void setResults(final List<MissingImages> results);
-
-   public void setMeta(final MissingImagesMeta meta);
-
-   public static MissingImagesPagedQueryResultImpl of(){
-      return new MissingImagesPagedQueryResultImpl();
-   }
-
-
-   public static MissingImagesPagedQueryResultImpl of(final MissingImagesPagedQueryResult template) {
-      MissingImagesPagedQueryResultImpl instance = new MissingImagesPagedQueryResultImpl();
-      instance.setCount(template.getCount());
-      instance.setTotal(template.getTotal());
-      instance.setOffset(template.getOffset());
-      instance.setResults(template.getResults());
-      instance.setMeta(template.getMeta());
-      return instance;
-   }
+    public static MissingImagesPagedQueryResultImpl of(final MissingImagesPagedQueryResult template) {
+        MissingImagesPagedQueryResultImpl instance = new MissingImagesPagedQueryResultImpl();
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setOffset(template.getOffset());
+        instance.setResults(template.getResults());
+        instance.setMeta(template.getMeta());
+        return instance;
+    }
 
 }

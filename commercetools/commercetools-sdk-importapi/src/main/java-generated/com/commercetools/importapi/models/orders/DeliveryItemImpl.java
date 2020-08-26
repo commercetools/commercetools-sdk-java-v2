@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DeliveryItemImpl implements DeliveryItem {
 
     private String id;
-
+    
     private Double quantity;
 
     @JsonCreator
@@ -32,15 +32,15 @@ public final class DeliveryItemImpl implements DeliveryItem {
         this.quantity = quantity;
     }
     public DeliveryItemImpl() {
-
+       
     }
 
-
+    
     public String getId(){
         return this.id;
     }
-
-
+    
+    
     public Double getQuantity(){
         return this.quantity;
     }
@@ -48,7 +48,7 @@ public final class DeliveryItemImpl implements DeliveryItem {
     public void setId(final String id){
         this.id = id;
     }
-
+    
     public void setQuantity(final Double quantity){
         this.quantity = quantity;
     }

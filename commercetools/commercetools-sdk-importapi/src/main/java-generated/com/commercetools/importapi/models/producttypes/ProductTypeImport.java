@@ -45,15 +45,15 @@ public interface ProductTypeImport extends ImportResource {
     public List<AttributeDefinition> getAttributes();
 
     public void setName(final String name);
-
+    
     public void setDescription(final String description);
-
+    
     public void setAttributes(final List<AttributeDefinition> attributes);
 
     public static ProductTypeImportImpl of(){
         return new ProductTypeImportImpl();
     }
-
+    
 
     public static ProductTypeImportImpl of(final ProductTypeImport template) {
         ProductTypeImportImpl instance = new ProductTypeImportImpl();

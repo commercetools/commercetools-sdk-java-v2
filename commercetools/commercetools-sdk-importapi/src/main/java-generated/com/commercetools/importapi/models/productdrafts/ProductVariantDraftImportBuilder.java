@@ -19,19 +19,19 @@ public final class ProductVariantDraftImportBuilder {
 
     @Nullable
     private String sku;
-
+    
     @Nullable
     private String key;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> prices;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.Asset> assets;
 
@@ -39,27 +39,27 @@ public final class ProductVariantDraftImportBuilder {
         this.sku = sku;
         return this;
     }
-
+    
     public ProductVariantDraftImportBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
     public ProductVariantDraftImportBuilder prices(@Nullable final java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> prices) {
         this.prices = prices;
         return this;
     }
-
+    
     public ProductVariantDraftImportBuilder attributes(@Nullable final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
-
+    
     public ProductVariantDraftImportBuilder images(@Nullable final java.util.List<com.commercetools.importapi.models.common.Image> images) {
         this.images = images;
         return this;
     }
-
+    
     public ProductVariantDraftImportBuilder assets(@Nullable final java.util.List<com.commercetools.importapi.models.common.Asset> assets) {
         this.assets = assets;
         return this;
@@ -69,27 +69,27 @@ public final class ProductVariantDraftImportBuilder {
     public String getSku(){
         return this.sku;
     }
-
+    
     @Nullable
     public String getKey(){
         return this.key;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> getPrices(){
         return this.prices;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes(){
         return this.attributes;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages(){
         return this.images;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets(){
         return this.assets;

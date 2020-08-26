@@ -24,7 +24,7 @@ import java.io.IOException;
 @JsonDeserialize(as = StringFieldImpl.class)
 public interface StringField extends CustomField {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public String getValue();
@@ -34,7 +34,7 @@ public interface StringField extends CustomField {
     public static StringFieldImpl of(){
         return new StringFieldImpl();
     }
-
+    
 
     public static StringFieldImpl of(final StringField template) {
         StringFieldImpl instance = new StringFieldImpl();

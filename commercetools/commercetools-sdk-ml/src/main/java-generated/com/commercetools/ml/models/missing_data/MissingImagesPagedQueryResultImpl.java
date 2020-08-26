@@ -23,71 +23,71 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingImagesPagedQueryResultImpl implements MissingImagesPagedQueryResult {
 
-   private Long count;
-   
-   private Long total;
-   
-   private Long offset;
-   
-   private java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results;
-   
-   private com.commercetools.ml.models.missing_data.MissingImagesMeta meta;
+    private Long count;
+    
+    private Long total;
+    
+    private Long offset;
+    
+    private java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results;
+    
+    private com.commercetools.ml.models.missing_data.MissingImagesMeta meta;
 
-   @JsonCreator
-   MissingImagesPagedQueryResultImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results, @JsonProperty("meta") final com.commercetools.ml.models.missing_data.MissingImagesMeta meta) {
-      this.count = count;
-      this.total = total;
-      this.offset = offset;
-      this.results = results;
-      this.meta = meta;
-   }
-   public MissingImagesPagedQueryResultImpl() {
-      
-   }
-   
-   
-   public Long getCount(){
-      return this.count;
-   }
-   
-   
-   public Long getTotal(){
-      return this.total;
-   }
-   
-   
-   public Long getOffset(){
-      return this.offset;
-   }
-   
-   
-   public java.util.List<com.commercetools.ml.models.missing_data.MissingImages> getResults(){
-      return this.results;
-   }
-   
-   
-   public com.commercetools.ml.models.missing_data.MissingImagesMeta getMeta(){
-      return this.meta;
-   }
+    @JsonCreator
+    MissingImagesPagedQueryResultImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results, @JsonProperty("meta") final com.commercetools.ml.models.missing_data.MissingImagesMeta meta) {
+        this.count = count;
+        this.total = total;
+        this.offset = offset;
+        this.results = results;
+        this.meta = meta;
+    }
+    public MissingImagesPagedQueryResultImpl() {
+       
+    }
 
-   public void setCount(final Long count){
-      this.count = count;
-   }
-   
-   public void setTotal(final Long total){
-      this.total = total;
-   }
-   
-   public void setOffset(final Long offset){
-      this.offset = offset;
-   }
-   
-   public void setResults(final java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results){
-      this.results = results;
-   }
-   
-   public void setMeta(final com.commercetools.ml.models.missing_data.MissingImagesMeta meta){
-      this.meta = meta;
-   }
+    
+    public Long getCount(){
+        return this.count;
+    }
+    
+    
+    public Long getTotal(){
+        return this.total;
+    }
+    
+    
+    public Long getOffset(){
+        return this.offset;
+    }
+    
+    
+    public java.util.List<com.commercetools.ml.models.missing_data.MissingImages> getResults(){
+        return this.results;
+    }
+    
+    
+    public com.commercetools.ml.models.missing_data.MissingImagesMeta getMeta(){
+        return this.meta;
+    }
+
+    public void setCount(final Long count){
+        this.count = count;
+    }
+    
+    public void setTotal(final Long total){
+        this.total = total;
+    }
+    
+    public void setOffset(final Long offset){
+        this.offset = offset;
+    }
+    
+    public void setResults(final java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results){
+        this.results = results;
+    }
+    
+    public void setMeta(final com.commercetools.ml.models.missing_data.MissingImagesMeta meta){
+        this.meta = meta;
+    }
 
 }

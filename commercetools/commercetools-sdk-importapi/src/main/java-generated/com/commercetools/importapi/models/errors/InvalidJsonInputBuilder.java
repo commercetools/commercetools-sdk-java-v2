@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class InvalidJsonInputBuilder {
 
-
+    
     private String message;
 
     public InvalidJsonInputBuilder message( final String message) {
@@ -22,7 +22,7 @@ public final class InvalidJsonInputBuilder {
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }

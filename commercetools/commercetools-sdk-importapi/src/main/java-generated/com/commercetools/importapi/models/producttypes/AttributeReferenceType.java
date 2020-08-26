@@ -34,7 +34,7 @@ public interface AttributeReferenceType extends AttributeType {
     public static AttributeReferenceTypeImpl of(){
         return new AttributeReferenceTypeImpl();
     }
-
+    
 
     public static AttributeReferenceTypeImpl of(final AttributeReferenceType template) {
         AttributeReferenceTypeImpl instance = new AttributeReferenceTypeImpl();

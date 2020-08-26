@@ -15,12 +15,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class DuplicateFieldErrorBuilder {
 
-
+    
     private String message;
-
+    
     @Nullable
     private String field;
-
+    
     @Nullable
     private com.fasterxml.jackson.databind.JsonNode duplicateValue;
 
@@ -28,27 +28,27 @@ public final class DuplicateFieldErrorBuilder {
         this.message = message;
         return this;
     }
-
+    
     public DuplicateFieldErrorBuilder field(@Nullable final String field) {
         this.field = field;
         return this;
     }
-
+    
     public DuplicateFieldErrorBuilder duplicateValue(@Nullable final com.fasterxml.jackson.databind.JsonNode duplicateValue) {
         this.duplicateValue = duplicateValue;
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }
-
+    
     @Nullable
     public String getField(){
         return this.field;
     }
-
+    
     @Nullable
     public com.fasterxml.jackson.databind.JsonNode getDuplicateValue(){
         return this.duplicateValue;

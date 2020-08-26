@@ -28,9 +28,9 @@ public final class AttributeLocalizableTextTypeImpl implements AttributeLocaliza
     AttributeLocalizableTextTypeImpl() {
         this.name = "ltext";
     }
+    
 
-
-
+    
     public String getName(){
         return this.name;
     }

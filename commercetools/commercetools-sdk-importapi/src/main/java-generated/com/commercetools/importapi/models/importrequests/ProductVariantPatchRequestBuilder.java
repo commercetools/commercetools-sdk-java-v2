@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ProductVariantPatchRequestBuilder {
 
-
+    
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches;
 
     public ProductVariantPatchRequestBuilder patches( final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches) {
@@ -24,7 +24,7 @@ public final class ProductVariantPatchRequestBuilder {
         return this;
     }
 
-
+    
     public java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> getPatches(){
         return this.patches;
     }

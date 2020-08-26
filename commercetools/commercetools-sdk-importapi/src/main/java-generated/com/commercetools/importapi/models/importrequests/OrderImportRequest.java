@@ -39,7 +39,7 @@ public interface OrderImportRequest extends ImportRequest {
     public static OrderImportRequestImpl of(){
         return new OrderImportRequestImpl();
     }
-
+    
 
     public static OrderImportRequestImpl of(final OrderImportRequest template) {
         OrderImportRequestImpl instance = new OrderImportRequestImpl();

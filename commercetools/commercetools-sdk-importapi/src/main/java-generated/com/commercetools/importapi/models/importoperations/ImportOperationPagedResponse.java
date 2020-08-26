@@ -51,17 +51,17 @@ public interface ImportOperationPagedResponse  {
     public List<ImportOperation> getResults();
 
     public void setLimit(final Integer limit);
-
+    
     public void setOffset(final Long offset);
-
+    
     public void setCount(final Long count);
-
+    
     public void setResults(final List<ImportOperation> results);
 
     public static ImportOperationPagedResponseImpl of(){
         return new ImportOperationPagedResponseImpl();
     }
-
+    
 
     public static ImportOperationPagedResponseImpl of(final ImportOperationPagedResponse template) {
         ImportOperationPagedResponseImpl instance = new ImportOperationPagedResponseImpl();

@@ -22,51 +22,51 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingImagesImpl implements MissingImages {
 
-   private com.commercetools.ml.models.common.ProductReference product;
+    private com.commercetools.ml.models.common.ProductReference product;
+    
+    private Long variantId;
+    
+    private Long imageCount;
 
-   private Long variantId;
+    @JsonCreator
+    MissingImagesImpl(@JsonProperty("product") final com.commercetools.ml.models.common.ProductReference product, @JsonProperty("variantId") final Long variantId, @JsonProperty("imageCount") final Long imageCount) {
+        this.product = product;
+        this.variantId = variantId;
+        this.imageCount = imageCount;
+    }
+    public MissingImagesImpl() {
+       
+    }
 
-   private Long imageCount;
+    
+    public com.commercetools.ml.models.common.ProductReference getProduct(){
+        return this.product;
+    }
+    
+    /**
+    *  <p>ID of the variant</p>
+    */
+    public Long getVariantId(){
+        return this.variantId;
+    }
+    
+    /**
+    *  <p>Number of images the variant contains.</p>
+    */
+    public Long getImageCount(){
+        return this.imageCount;
+    }
 
-   @JsonCreator
-   MissingImagesImpl(@JsonProperty("product") final com.commercetools.ml.models.common.ProductReference product, @JsonProperty("variantId") final Long variantId, @JsonProperty("imageCount") final Long imageCount) {
-      this.product = product;
-      this.variantId = variantId;
-      this.imageCount = imageCount;
-   }
-   public MissingImagesImpl() {
-
-   }
-
-
-   public com.commercetools.ml.models.common.ProductReference getProduct(){
-      return this.product;
-   }
-
-   /**
-   *  <p>ID of the variant</p>
-   */
-   public Long getVariantId(){
-      return this.variantId;
-   }
-
-   /**
-   *  <p>Number of images the variant contains.</p>
-   */
-   public Long getImageCount(){
-      return this.imageCount;
-   }
-
-   public void setProduct(final com.commercetools.ml.models.common.ProductReference product){
-      this.product = product;
-   }
-
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
-
-   public void setImageCount(final Long imageCount){
-      this.imageCount = imageCount;
-   }
+    public void setProduct(final com.commercetools.ml.models.common.ProductReference product){
+        this.product = product;
+    }
+    
+    public void setVariantId(final Long variantId){
+        this.variantId = variantId;
+    }
+    
+    public void setImageCount(final Long imageCount){
+        this.imageCount = imageCount;
+    }
 
 }

@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = ReferenceSetAttributeImpl.class)
 public interface ReferenceSetAttribute extends Attribute {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -36,7 +36,7 @@ public interface ReferenceSetAttribute extends Attribute {
     public static ReferenceSetAttributeImpl of(){
         return new ReferenceSetAttributeImpl();
     }
-
+    
 
     public static ReferenceSetAttributeImpl of(final ReferenceSetAttribute template) {
         ReferenceSetAttributeImpl instance = new ReferenceSetAttributeImpl();

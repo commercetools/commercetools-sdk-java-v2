@@ -24,7 +24,7 @@ import java.io.IOException;
 @JsonDeserialize(as = NumberAttributeImpl.class)
 public interface NumberAttribute extends Attribute {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public Double getValue();
@@ -34,7 +34,7 @@ public interface NumberAttribute extends Attribute {
     public static NumberAttributeImpl of(){
         return new NumberAttributeImpl();
     }
-
+    
 
     public static NumberAttributeImpl of(final NumberAttribute template) {
         NumberAttributeImpl instance = new NumberAttributeImpl();

@@ -13,25 +13,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TaskStatusEnum {
 
+    
+    @JsonProperty("PENDING")
+    PENDING("PENDING"),
+    
+    
+    @JsonProperty("SUCCESS")
+    SUCCESS("SUCCESS");
 
-  @JsonProperty("PENDING")
-  PENDING("PENDING"),
+    private final String jsonName;
 
+    private TaskStatusEnum(final String jsonName) {
+        this.jsonName = jsonName;
+    }
 
-  @JsonProperty("SUCCESS")
-  SUCCESS("SUCCESS");
+    public String getJsonName() {
+        return jsonName;
+    }
 
-  private final String jsonName;
-
-  private TaskStatusEnum(final String jsonName) {
-    this.jsonName = jsonName;
-  }
-
-  public String getJsonName() {
-     return jsonName;
-  }
-
-  public static Optional<TaskStatusEnum> findEnumViaJsonName(String jsonName) {
-    return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
-  }
+    public static Optional<TaskStatusEnum> findEnumViaJsonName(String jsonName) {
+        return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
 }

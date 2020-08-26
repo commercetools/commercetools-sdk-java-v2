@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class InvalidCredentialsErrorBuilder {
 
-
+    
     private String message;
 
     public InvalidCredentialsErrorBuilder message( final String message) {
@@ -22,7 +22,7 @@ public final class InvalidCredentialsErrorBuilder {
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }

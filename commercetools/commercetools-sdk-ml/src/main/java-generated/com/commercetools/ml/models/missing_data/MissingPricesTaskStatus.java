@@ -26,41 +26,41 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingPricesTaskStatusImpl.class)
 public interface MissingPricesTaskStatus  {
 
-   
-   @NotNull
-   @JsonProperty("state")
-   public TaskStatusEnum getState();
-   /**
-   *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
-   */
-   @NotNull
-   @JsonProperty("expires")
-   public ZonedDateTime getExpires();
-   /**
-   *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("result")
-   public MissingPricesPagedQueryResult getResult();
+    
+    @NotNull
+    @JsonProperty("state")
+    public TaskStatusEnum getState();
+    /**
+    *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
+    */
+    @NotNull
+    @JsonProperty("expires")
+    public ZonedDateTime getExpires();
+    /**
+    *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("result")
+    public MissingPricesPagedQueryResult getResult();
 
-   public void setState(final TaskStatusEnum state);
-   
-   public void setExpires(final ZonedDateTime expires);
-   
-   public void setResult(final MissingPricesPagedQueryResult result);
-   
-   public static MissingPricesTaskStatusImpl of(){
-      return new MissingPricesTaskStatusImpl();
-   }
-   
+    public void setState(final TaskStatusEnum state);
+    
+    public void setExpires(final ZonedDateTime expires);
+    
+    public void setResult(final MissingPricesPagedQueryResult result);
 
-   public static MissingPricesTaskStatusImpl of(final MissingPricesTaskStatus template) {
-      MissingPricesTaskStatusImpl instance = new MissingPricesTaskStatusImpl();
-      instance.setState(template.getState());
-      instance.setExpires(template.getExpires());
-      instance.setResult(template.getResult());
-      return instance;
-   }
+    public static MissingPricesTaskStatusImpl of(){
+        return new MissingPricesTaskStatusImpl();
+    }
+    
+
+    public static MissingPricesTaskStatusImpl of(final MissingPricesTaskStatus template) {
+        MissingPricesTaskStatusImpl instance = new MissingPricesTaskStatusImpl();
+        instance.setState(template.getState());
+        instance.setExpires(template.getExpires());
+        instance.setResult(template.getResult());
+        return instance;
+    }
 
 }

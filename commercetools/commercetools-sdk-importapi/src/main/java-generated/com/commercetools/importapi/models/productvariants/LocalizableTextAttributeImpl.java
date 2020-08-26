@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class LocalizableTextAttributeImpl implements LocalizableTextAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString value;
 
     @JsonCreator
@@ -39,7 +39,7 @@ public final class LocalizableTextAttributeImpl implements LocalizableTextAttrib
         this.type = "ltext";
     }
     public LocalizableTextAttributeImpl() {
-
+       
     }
 
     /**
@@ -50,13 +50,13 @@ public final class LocalizableTextAttributeImpl implements LocalizableTextAttrib
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.LocalizedString getValue(){
         return this.value;
     }
@@ -64,7 +64,7 @@ public final class LocalizableTextAttributeImpl implements LocalizableTextAttrib
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final com.commercetools.importapi.models.common.LocalizedString value){
         this.value = value;
     }

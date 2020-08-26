@@ -26,15 +26,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductVariantDraftImportImpl implements ProductVariantDraftImport {
 
     private String sku;
-
+    
     private String key;
-
+    
     private java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> prices;
-
+    
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
-
+    
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
-
+    
     private java.util.List<com.commercetools.importapi.models.common.Asset> assets;
 
     @JsonCreator
@@ -47,35 +47,35 @@ public final class ProductVariantDraftImportImpl implements ProductVariantDraftI
         this.assets = assets;
     }
     public ProductVariantDraftImportImpl() {
-
+       
     }
 
-
+    
     public String getSku(){
         return this.sku;
     }
-
-
+    
+    
     public String getKey(){
         return this.key;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> getPrices(){
         return this.prices;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes(){
         return this.attributes;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages(){
         return this.images;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets(){
         return this.assets;
     }
@@ -83,23 +83,23 @@ public final class ProductVariantDraftImportImpl implements ProductVariantDraftI
     public void setSku(final String sku){
         this.sku = sku;
     }
-
+    
     public void setKey(final String key){
         this.key = key;
     }
-
+    
     public void setPrices(final java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> prices){
         this.prices = prices;
     }
-
+    
     public void setAttributes(final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes){
         this.attributes = attributes;
     }
-
+    
     public void setImages(final java.util.List<com.commercetools.importapi.models.common.Image> images){
         this.images = images;
     }
-
+    
     public void setAssets(final java.util.List<com.commercetools.importapi.models.common.Asset> assets){
         this.assets = assets;
     }

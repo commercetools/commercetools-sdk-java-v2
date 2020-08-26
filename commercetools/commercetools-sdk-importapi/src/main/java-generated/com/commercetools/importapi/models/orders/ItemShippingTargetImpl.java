@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ItemShippingTargetImpl implements ItemShippingTarget {
 
     private String addressKey;
-
+    
     private Double quantity;
 
     @JsonCreator
@@ -35,7 +35,7 @@ public final class ItemShippingTargetImpl implements ItemShippingTarget {
         this.quantity = quantity;
     }
     public ItemShippingTargetImpl() {
-
+       
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ItemShippingTargetImpl implements ItemShippingTarget {
     public String getAddressKey(){
         return this.addressKey;
     }
-
+    
     /**
     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
     */
@@ -55,7 +55,7 @@ public final class ItemShippingTargetImpl implements ItemShippingTarget {
     public void setAddressKey(final String addressKey){
         this.addressKey = addressKey;
     }
-
+    
     public void setQuantity(final Double quantity){
         this.quantity = quantity;
     }

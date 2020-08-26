@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class LocalizedEnumSetFieldImpl implements LocalizedEnumSetField {
 
     private String type;
-
+    
     private java.util.List<String> value;
 
     @JsonCreator
@@ -35,7 +35,7 @@ public final class LocalizedEnumSetFieldImpl implements LocalizedEnumSetField {
         this.type = "LocalizedEnumSet";
     }
     public LocalizedEnumSetFieldImpl() {
-
+       
     }
 
     /**
@@ -44,8 +44,8 @@ public final class LocalizedEnumSetFieldImpl implements LocalizedEnumSetField {
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.util.List<String> getValue(){
         return this.value;
     }

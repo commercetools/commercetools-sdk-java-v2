@@ -32,7 +32,7 @@ public interface ProductVariantImport extends ImportResource {
     /**
     *  <p>Maps to <code>ProductVariant.sku</code>.</p>
     */
-
+    
     @JsonProperty("sku")
     public String getSku();
     /**
@@ -65,7 +65,7 @@ public interface ProductVariantImport extends ImportResource {
     /**
     *  <p>If there were updates, only the updates will be published to <code>staged</code> and <code>current</code> projection.</p>
     */
-
+    
     @JsonProperty("publish")
     public Boolean getPublish();
     /**
@@ -80,23 +80,23 @@ public interface ProductVariantImport extends ImportResource {
     public ProductKeyReference getProduct();
 
     public void setSku(final String sku);
-
+    
     public void setIsMasterVariant(final Boolean isMasterVariant);
-
+    
     public void setAttributes(final List<Attribute> attributes);
-
+    
     public void setImages(final List<Image> images);
-
+    
     public void setAssets(final List<Asset> assets);
-
+    
     public void setPublish(final Boolean publish);
-
+    
     public void setProduct(final ProductKeyReference product);
 
     public static ProductVariantImportImpl of(){
         return new ProductVariantImportImpl();
     }
-
+    
 
     public static ProductVariantImportImpl of(final ProductVariantImport template) {
         ProductVariantImportImpl instance = new ProductVariantImportImpl();

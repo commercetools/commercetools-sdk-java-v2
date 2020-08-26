@@ -17,15 +17,15 @@ public final class MoneySetAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private java.util.List<com.commercetools.importapi.models.common.TypedMoney> value;
 
     public MoneySetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public MoneySetAttributeBuilder value( final java.util.List<com.commercetools.importapi.models.common.TypedMoney> value) {
         this.value = value;
         return this;
@@ -35,8 +35,8 @@ public final class MoneySetAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.common.TypedMoney> getValue(){
         return this.value;
     }

@@ -26,9 +26,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class BooleanSetAttributeImpl implements BooleanSetAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private java.util.List<Boolean> value;
 
     @JsonCreator
@@ -38,7 +38,7 @@ public final class BooleanSetAttributeImpl implements BooleanSetAttribute {
         this.type = "boolean-set";
     }
     public BooleanSetAttributeImpl() {
-
+       
     }
 
     /**
@@ -49,13 +49,13 @@ public final class BooleanSetAttributeImpl implements BooleanSetAttribute {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.util.List<Boolean> getValue(){
         return this.value;
     }
@@ -63,7 +63,7 @@ public final class BooleanSetAttributeImpl implements BooleanSetAttribute {
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final java.util.List<Boolean> value){
         this.value = value;
     }

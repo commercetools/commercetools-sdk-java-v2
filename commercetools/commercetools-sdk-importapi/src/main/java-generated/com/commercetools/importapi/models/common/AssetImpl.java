@@ -25,15 +25,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AssetImpl implements Asset {
 
     private String key;
-
+    
     private java.util.List<com.commercetools.importapi.models.common.AssetSource> sources;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString name;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString description;
-
+    
     private java.util.List<String> tags;
-
+    
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     @JsonCreator
@@ -46,7 +46,7 @@ public final class AssetImpl implements Asset {
         this.custom = custom;
     }
     public AssetImpl() {
-
+       
     }
 
     /**
@@ -56,27 +56,27 @@ public final class AssetImpl implements Asset {
     public String getKey(){
         return this.key;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.common.AssetSource> getSources(){
         return this.sources;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.LocalizedString getName(){
         return this.name;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
-
+    
+    
     public java.util.List<String> getTags(){
         return this.tags;
     }
-
+    
     /**
     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
     */
@@ -87,23 +87,23 @@ public final class AssetImpl implements Asset {
     public void setKey(final String key){
         this.key = key;
     }
-
+    
     public void setSources(final java.util.List<com.commercetools.importapi.models.common.AssetSource> sources){
         this.sources = sources;
     }
-
+    
     public void setName(final com.commercetools.importapi.models.common.LocalizedString name){
         this.name = name;
     }
-
+    
     public void setDescription(final com.commercetools.importapi.models.common.LocalizedString description){
         this.description = description;
     }
-
+    
     public void setTags(final java.util.List<String> tags){
         this.tags = tags;
     }
-
+    
     public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom){
         this.custom = custom;
     }

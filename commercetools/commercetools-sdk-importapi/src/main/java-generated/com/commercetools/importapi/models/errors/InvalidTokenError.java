@@ -26,7 +26,7 @@ public interface InvalidTokenError extends ErrorObject {
     public static InvalidTokenErrorImpl of(){
         return new InvalidTokenErrorImpl();
     }
-
+    
 
     public static InvalidTokenErrorImpl of(final InvalidTokenError template) {
         InvalidTokenErrorImpl instance = new InvalidTokenErrorImpl();

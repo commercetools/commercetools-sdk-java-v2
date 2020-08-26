@@ -21,19 +21,19 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxRateImpl.class)
 public interface TaxRate  {
 
-
-
+    
+    
     @JsonProperty("id")
     public String getId();
-
+    
     @NotNull
     @JsonProperty("name")
     public String getName();
-
+    
     @NotNull
     @JsonProperty("amount")
     public Double getAmount();
-
+    
     @NotNull
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
@@ -43,33 +43,33 @@ public interface TaxRate  {
     @NotNull
     @JsonProperty("country")
     public String getCountry();
-
-
+    
+    
     @JsonProperty("state")
     public String getState();
-
+    
     @Valid
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();
 
     public void setId(final String id);
-
+    
     public void setName(final String name);
-
+    
     public void setAmount(final Double amount);
-
+    
     public void setIncludedInPrice(final Boolean includedInPrice);
-
+    
     public void setCountry(final String country);
-
+    
     public void setState(final String state);
-
+    
     public void setSubRates(final List<SubRate> subRates);
 
     public static TaxRateImpl of(){
         return new TaxRateImpl();
     }
-
+    
 
     public static TaxRateImpl of(final TaxRate template) {
         TaxRateImpl instance = new TaxRateImpl();

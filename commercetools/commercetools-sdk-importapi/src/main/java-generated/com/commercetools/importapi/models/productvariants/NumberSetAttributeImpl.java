@@ -26,9 +26,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class NumberSetAttributeImpl implements NumberSetAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private java.util.List<Double> value;
 
     @JsonCreator
@@ -38,7 +38,7 @@ public final class NumberSetAttributeImpl implements NumberSetAttribute {
         this.type = "number-set";
     }
     public NumberSetAttributeImpl() {
-
+       
     }
 
     /**
@@ -49,13 +49,13 @@ public final class NumberSetAttributeImpl implements NumberSetAttribute {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.util.List<Double> getValue(){
         return this.value;
     }
@@ -63,7 +63,7 @@ public final class NumberSetAttributeImpl implements NumberSetAttribute {
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final java.util.List<Double> value){
         this.value = value;
     }

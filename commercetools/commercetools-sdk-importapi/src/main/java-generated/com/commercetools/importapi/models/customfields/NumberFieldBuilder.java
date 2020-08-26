@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class NumberFieldBuilder {
 
-
+    
     private Double value;
 
     public NumberFieldBuilder value( final Double value) {
@@ -22,7 +22,7 @@ public final class NumberFieldBuilder {
         return this;
     }
 
-
+    
     public Double getValue(){
         return this.value;
     }

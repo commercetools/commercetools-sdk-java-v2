@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class InvalidOperationBuilder {
 
-
+    
     private String message;
 
     public InvalidOperationBuilder message( final String message) {
@@ -22,7 +22,7 @@ public final class InvalidOperationBuilder {
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }

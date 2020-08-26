@@ -21,33 +21,33 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingPricesProductLevelImpl.class)
 public interface MissingPricesProductLevel extends MissingPricesProductCount {
 
-   /**
-   *  <p>Number of products scanned.</p>
-   */
-   @NotNull
-   @JsonProperty("total")
-   public Long getTotal();
-   /**
-   *  <p>Number of products missing prices.</p>
-   */
-   @NotNull
-   @JsonProperty("missingPrices")
-   public Long getMissingPrices();
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+    @NotNull
+    @JsonProperty("total")
+    public Long getTotal();
+    /**
+    *  <p>Number of products missing prices.</p>
+    */
+    @NotNull
+    @JsonProperty("missingPrices")
+    public Long getMissingPrices();
 
-   public void setTotal(final Long total);
-   
-   public void setMissingPrices(final Long missingPrices);
-   
-   public static MissingPricesProductLevelImpl of(){
-      return new MissingPricesProductLevelImpl();
-   }
-   
+    public void setTotal(final Long total);
+    
+    public void setMissingPrices(final Long missingPrices);
 
-   public static MissingPricesProductLevelImpl of(final MissingPricesProductLevel template) {
-      MissingPricesProductLevelImpl instance = new MissingPricesProductLevelImpl();
-      instance.setTotal(template.getTotal());
-      instance.setMissingPrices(template.getMissingPrices());
-      return instance;
-   }
+    public static MissingPricesProductLevelImpl of(){
+        return new MissingPricesProductLevelImpl();
+    }
+    
+
+    public static MissingPricesProductLevelImpl of(final MissingPricesProductLevel template) {
+        MissingPricesProductLevelImpl instance = new MissingPricesProductLevelImpl();
+        instance.setTotal(template.getTotal());
+        instance.setMissingPrices(template.getMissingPrices());
+        return instance;
+    }
 
 }

@@ -14,28 +14,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class SubRateBuilder {
 
-
+    
     private String name;
-
-
+    
+    
     private Double amount;
 
     public SubRateBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
     public SubRateBuilder amount( final Double amount) {
         this.amount = amount;
         return this;
     }
 
-
+    
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public Double getAmount(){
         return this.amount;
     }

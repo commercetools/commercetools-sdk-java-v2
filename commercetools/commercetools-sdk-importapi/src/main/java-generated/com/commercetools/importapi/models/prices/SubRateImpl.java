@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class SubRateImpl implements SubRate {
 
     private String name;
-
+    
     private Double amount;
 
     @JsonCreator
@@ -32,15 +32,15 @@ public final class SubRateImpl implements SubRate {
         this.amount = amount;
     }
     public SubRateImpl() {
-
+       
     }
 
-
+    
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public Double getAmount(){
         return this.amount;
     }
@@ -48,7 +48,7 @@ public final class SubRateImpl implements SubRate {
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setAmount(final Double amount){
         this.amount = amount;
     }

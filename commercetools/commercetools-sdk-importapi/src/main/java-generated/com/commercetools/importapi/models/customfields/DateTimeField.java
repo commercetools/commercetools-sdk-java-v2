@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = DateTimeFieldImpl.class)
 public interface DateTimeField extends CustomField {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public ZonedDateTime getValue();
@@ -35,7 +35,7 @@ public interface DateTimeField extends CustomField {
     public static DateTimeFieldImpl of(){
         return new DateTimeFieldImpl();
     }
-
+    
 
     public static DateTimeFieldImpl of(final DateTimeField template) {
         DateTimeFieldImpl instance = new DateTimeFieldImpl();

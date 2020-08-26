@@ -25,42 +25,42 @@ import java.io.IOException;
 @JsonDeserialize(as = SimilarProductImpl.class)
 public interface SimilarProduct  {
 
-   /**
-   *  <p>Reference to Product</p>
-   */
-   @Valid
-   @JsonProperty("product")
-   public ProductReference getProduct();
-   /**
-   *  <p>ID of the ProductVariant that was compared.</p>
-   */
-   
-   @JsonProperty("variantId")
-   public Long getVariantId();
-   /**
-   *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
-   */
-   @Valid
-   @JsonProperty("meta")
-   public SimilarProductMeta getMeta();
+    /**
+    *  <p>Reference to Product</p>
+    */
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
+    /**
+    *  <p>ID of the ProductVariant that was compared.</p>
+    */
+    
+    @JsonProperty("variantId")
+    public Long getVariantId();
+    /**
+    *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+    */
+    @Valid
+    @JsonProperty("meta")
+    public SimilarProductMeta getMeta();
 
-   public void setProduct(final ProductReference product);
-   
-   public void setVariantId(final Long variantId);
-   
-   public void setMeta(final SimilarProductMeta meta);
-   
-   public static SimilarProductImpl of(){
-      return new SimilarProductImpl();
-   }
-   
+    public void setProduct(final ProductReference product);
+    
+    public void setVariantId(final Long variantId);
+    
+    public void setMeta(final SimilarProductMeta meta);
 
-   public static SimilarProductImpl of(final SimilarProduct template) {
-      SimilarProductImpl instance = new SimilarProductImpl();
-      instance.setProduct(template.getProduct());
-      instance.setVariantId(template.getVariantId());
-      instance.setMeta(template.getMeta());
-      return instance;
-   }
+    public static SimilarProductImpl of(){
+        return new SimilarProductImpl();
+    }
+    
+
+    public static SimilarProductImpl of(final SimilarProduct template) {
+        SimilarProductImpl instance = new SimilarProductImpl();
+        instance.setProduct(template.getProduct());
+        instance.setVariantId(template.getVariantId());
+        instance.setMeta(template.getMeta());
+        return instance;
+    }
 
 }

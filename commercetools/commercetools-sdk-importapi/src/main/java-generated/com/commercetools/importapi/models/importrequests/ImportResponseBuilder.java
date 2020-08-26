@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ImportResponseBuilder {
 
-
+    
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus;
 
     public ImportResponseBuilder operationStatus( final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus) {
@@ -22,7 +22,7 @@ public final class ImportResponseBuilder {
         return this;
     }
 
-
+    
     public java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> getOperationStatus(){
         return this.operationStatus;
     }

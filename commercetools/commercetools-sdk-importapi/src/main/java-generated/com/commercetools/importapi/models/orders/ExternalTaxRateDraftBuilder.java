@@ -14,21 +14,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ExternalTaxRateDraftBuilder {
 
-
+    
     private String name;
-
+    
     @Nullable
     private Double amount;
-
-
+    
+    
     private String country;
-
+    
     @Nullable
     private String state;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates;
-
+    
     @Nullable
     private Boolean includedInPrice;
 
@@ -36,57 +36,57 @@ public final class ExternalTaxRateDraftBuilder {
         this.name = name;
         return this;
     }
-
+    
     public ExternalTaxRateDraftBuilder amount(@Nullable final Double amount) {
         this.amount = amount;
         return this;
     }
-
+    
     public ExternalTaxRateDraftBuilder country( final String country) {
         this.country = country;
         return this;
     }
-
+    
     public ExternalTaxRateDraftBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
-
+    
     public ExternalTaxRateDraftBuilder subRates(@Nullable final java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates) {
         this.subRates = subRates;
         return this;
     }
-
+    
     public ExternalTaxRateDraftBuilder includedInPrice(@Nullable final Boolean includedInPrice) {
         this.includedInPrice = includedInPrice;
         return this;
     }
 
-
+    
     public String getName(){
         return this.name;
     }
-
+    
     @Nullable
     public Double getAmount(){
         return this.amount;
     }
-
-
+    
+    
     public String getCountry(){
         return this.country;
     }
-
+    
     @Nullable
     public String getState(){
         return this.state;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.prices.SubRate> getSubRates(){
         return this.subRates;
     }
-
+    
     @Nullable
     public Boolean getIncludedInPrice(){
         return this.includedInPrice;

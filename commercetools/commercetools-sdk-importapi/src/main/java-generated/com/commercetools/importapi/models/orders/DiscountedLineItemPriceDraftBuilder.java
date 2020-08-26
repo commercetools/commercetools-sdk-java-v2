@@ -15,28 +15,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class DiscountedLineItemPriceDraftBuilder {
 
-
+    
     private com.commercetools.importapi.models.common.Money value;
-
-
+    
+    
     private java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPortion> includedDiscounts;
 
     public DiscountedLineItemPriceDraftBuilder value( final com.commercetools.importapi.models.common.Money value) {
         this.value = value;
         return this;
     }
-
+    
     public DiscountedLineItemPriceDraftBuilder includedDiscounts( final java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPortion> includedDiscounts) {
         this.includedDiscounts = includedDiscounts;
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.common.Money getValue(){
         return this.value;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPortion> getIncludedDiscounts(){
         return this.includedDiscounts;
     }

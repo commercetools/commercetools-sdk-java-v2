@@ -23,35 +23,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingPricesProductCountImpl implements MissingPricesProductCount {
 
-   private Long total;
+    private Long total;
+    
+    private Long missingPrices;
 
-   private Long missingPrices;
+    @JsonCreator
+    MissingPricesProductCountImpl(@JsonProperty("total") final Long total, @JsonProperty("missingPrices") final Long missingPrices) {
+        this.total = total;
+        this.missingPrices = missingPrices;
+    }
+    public MissingPricesProductCountImpl() {
+       
+    }
 
-   @JsonCreator
-   MissingPricesProductCountImpl(@JsonProperty("total") final Long total, @JsonProperty("missingPrices") final Long missingPrices) {
-      this.total = total;
-      this.missingPrices = missingPrices;
-   }
-   public MissingPricesProductCountImpl() {
+    
+    public Long getTotal(){
+        return this.total;
+    }
+    
+    
+    public Long getMissingPrices(){
+        return this.missingPrices;
+    }
 
-   }
-
-
-   public Long getTotal(){
-      return this.total;
-   }
-
-
-   public Long getMissingPrices(){
-      return this.missingPrices;
-   }
-
-   public void setTotal(final Long total){
-      this.total = total;
-   }
-
-   public void setMissingPrices(final Long missingPrices){
-      this.missingPrices = missingPrices;
-   }
+    public void setTotal(final Long total){
+        this.total = total;
+    }
+    
+    public void setMissingPrices(final Long missingPrices){
+        this.missingPrices = missingPrices;
+    }
 
 }

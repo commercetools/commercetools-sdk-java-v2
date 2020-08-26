@@ -28,7 +28,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CustomerImportRequestImpl implements CustomerImportRequest {
 
     private com.commercetools.importapi.models.common.ImportResourceType type;
-
+    
     private java.util.List<com.commercetools.importapi.models.customers.CustomerImport> resources;
 
     @JsonCreator
@@ -37,7 +37,7 @@ public final class CustomerImportRequestImpl implements CustomerImportRequest {
         this.type = ImportResourceType.findEnumViaJsonName("customer").get();
     }
     public CustomerImportRequestImpl() {
-
+       
     }
 
     /**
@@ -46,7 +46,7 @@ public final class CustomerImportRequestImpl implements CustomerImportRequest {
     public com.commercetools.importapi.models.common.ImportResourceType getType(){
         return this.type;
     }
-
+    
     /**
     *  <p>The customer import resources of this request.</p>
     */

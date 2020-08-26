@@ -24,34 +24,34 @@ import java.io.IOException;
 @JsonDeserialize(as = ResultItemImpl.class)
 public interface ResultItem  {
 
-   /**
-   *  <p>The URL of the image.</p>
-   */
-   @NotNull
-   @JsonProperty("imageUrl")
-   public String getImageUrl();
-   /**
-   *  <p>An array of product variants containing the image URL.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("productVariants")
-   public List<ProductVariant> getProductVariants();
+    /**
+    *  <p>The URL of the image.</p>
+    */
+    @NotNull
+    @JsonProperty("imageUrl")
+    public String getImageUrl();
+    /**
+    *  <p>An array of product variants containing the image URL.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("productVariants")
+    public List<ProductVariant> getProductVariants();
 
-   public void setImageUrl(final String imageUrl);
+    public void setImageUrl(final String imageUrl);
+    
+    public void setProductVariants(final List<ProductVariant> productVariants);
 
-   public void setProductVariants(final List<ProductVariant> productVariants);
+    public static ResultItemImpl of(){
+        return new ResultItemImpl();
+    }
+    
 
-   public static ResultItemImpl of(){
-      return new ResultItemImpl();
-   }
-
-
-   public static ResultItemImpl of(final ResultItem template) {
-      ResultItemImpl instance = new ResultItemImpl();
-      instance.setImageUrl(template.getImageUrl());
-      instance.setProductVariants(template.getProductVariants());
-      return instance;
-   }
+    public static ResultItemImpl of(final ResultItem template) {
+        ResultItemImpl instance = new ResultItemImpl();
+        instance.setImageUrl(template.getImageUrl());
+        instance.setProductVariants(template.getProductVariants());
+        return instance;
+    }
 
 }

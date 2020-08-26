@@ -66,7 +66,7 @@ public interface LineItemImportDraft  {
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();
-
+    
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
@@ -102,29 +102,29 @@ public interface LineItemImportDraft  {
     public ItemShippingDetailsDraft getShippingDetails();
 
     public void setProduct(final ProductKeyReference product);
-
+    
     public void setName(final LocalizedString name);
-
+    
     public void setVariant(final LineItemProductVariantImportDraft variant);
-
+    
     public void setPrice(final LineItemPrice price);
-
+    
     public void setQuantity(final Double quantity);
-
+    
     public void setState(final List<ItemState> state);
-
+    
     public void setSupplyChannel(final ChannelKeyReference supplyChannel);
-
+    
     public void setDistributionChannel(final ChannelKeyReference distributionChannel);
-
+    
     public void setTaxRate(final TaxRate taxRate);
-
+    
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
     public static LineItemImportDraftImpl of(){
         return new LineItemImportDraftImpl();
     }
-
+    
 
     public static LineItemImportDraftImpl of(final LineItemImportDraft template) {
         LineItemImportDraftImpl instance = new LineItemImportDraftImpl();

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class MoneySetFieldBuilder {
 
-
+    
     private java.util.List<com.commercetools.importapi.models.common.Money> value;
 
     public MoneySetFieldBuilder value( final java.util.List<com.commercetools.importapi.models.common.Money> value) {
@@ -23,7 +23,7 @@ public final class MoneySetFieldBuilder {
         return this;
     }
 
-
+    
     public java.util.List<com.commercetools.importapi.models.common.Money> getValue(){
         return this.value;
     }

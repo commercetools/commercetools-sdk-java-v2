@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class FieldContainerBuilder {
 
-
+    
     private Map<String, com.commercetools.importapi.models.customfields.CustomField> values;
 
     public FieldContainerBuilder values( final Map<String, com.commercetools.importapi.models.customfields.CustomField> values){
@@ -22,7 +22,7 @@ public final class FieldContainerBuilder {
         return this;
     }
 
-
+    
     public Map<String, com.commercetools.importapi.models.customfields.CustomField> getValues(){
         return this.values;
     }

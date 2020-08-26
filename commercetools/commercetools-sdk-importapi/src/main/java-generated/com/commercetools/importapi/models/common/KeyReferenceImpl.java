@@ -41,7 +41,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class KeyReferenceImpl implements KeyReference {
 
     private String key;
-
+    
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     @JsonCreator
@@ -50,14 +50,14 @@ public final class KeyReferenceImpl implements KeyReference {
         this.typeId = ReferenceType.findEnumViaJsonName("null").get();
     }
     public KeyReferenceImpl() {
-
+       
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
+    
     /**
     *  <p>The type of the referenced resource.</p>
     */

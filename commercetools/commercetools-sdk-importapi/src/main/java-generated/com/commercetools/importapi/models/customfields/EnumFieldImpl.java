@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class EnumFieldImpl implements EnumField {
 
     private String type;
-
+    
     private String value;
 
     @JsonCreator
@@ -35,7 +35,7 @@ public final class EnumFieldImpl implements EnumField {
         this.type = "Enum";
     }
     public EnumFieldImpl() {
-
+       
     }
 
     /**
@@ -44,8 +44,8 @@ public final class EnumFieldImpl implements EnumField {
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public String getValue(){
         return this.value;
     }

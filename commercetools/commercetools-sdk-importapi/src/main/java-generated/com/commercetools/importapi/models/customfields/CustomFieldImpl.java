@@ -52,7 +52,7 @@ public final class CustomFieldImpl implements CustomField {
     CustomFieldImpl() {
         this.type = "null";
     }
-
+    
 
     /**
     *  <p>The type of this field.</p>

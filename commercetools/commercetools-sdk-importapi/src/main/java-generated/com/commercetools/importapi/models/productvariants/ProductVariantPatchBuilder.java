@@ -16,12 +16,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ProductVariantPatchBuilder {
 
-
+    
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
-
-
+    
+    
     private com.commercetools.importapi.models.common.ProductKeyReference product;
-
+    
     @Nullable
     private com.commercetools.importapi.models.productvariants.Attributes attributes;
 
@@ -29,27 +29,27 @@ public final class ProductVariantPatchBuilder {
         this.productVariant = productVariant;
         return this;
     }
-
+    
     public ProductVariantPatchBuilder product( final com.commercetools.importapi.models.common.ProductKeyReference product) {
         this.product = product;
         return this;
     }
-
+    
     public ProductVariantPatchBuilder attributes(@Nullable final com.commercetools.importapi.models.productvariants.Attributes attributes) {
         this.attributes = attributes;
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant(){
         return this.productVariant;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct(){
         return this.product;
     }
-
+    
     @Nullable
     public com.commercetools.importapi.models.productvariants.Attributes getAttributes(){
         return this.attributes;

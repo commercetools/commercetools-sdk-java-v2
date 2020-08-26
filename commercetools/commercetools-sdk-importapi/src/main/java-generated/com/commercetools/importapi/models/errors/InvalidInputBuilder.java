@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class InvalidInputBuilder {
 
-
+    
     private String message;
 
     public InvalidInputBuilder message( final String message) {
@@ -22,7 +22,7 @@ public final class InvalidInputBuilder {
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }

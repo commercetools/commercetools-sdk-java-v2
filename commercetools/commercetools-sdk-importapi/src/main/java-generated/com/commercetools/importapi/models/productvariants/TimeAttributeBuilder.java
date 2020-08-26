@@ -17,15 +17,15 @@ public final class TimeAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private java.time.LocalTime value;
 
     public TimeAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public TimeAttributeBuilder value( final java.time.LocalTime value) {
         this.value = value;
         return this;
@@ -35,8 +35,8 @@ public final class TimeAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public java.time.LocalTime getValue(){
         return this.value;
     }

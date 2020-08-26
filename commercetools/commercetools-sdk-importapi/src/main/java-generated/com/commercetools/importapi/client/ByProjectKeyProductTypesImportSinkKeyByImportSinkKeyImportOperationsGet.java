@@ -30,17 +30,17 @@ import com.commercetools.importapi.models.common.ProcessingState;
 )
 public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet {
 
-
+    
     private ApiHttpHeaders headers = new ApiHttpHeaders();
     private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient;
+    private final ApiHttpClient apiHttpClient; 
     private List<Double> limit = new ArrayList<>();
     private List<Double> offset = new ArrayList<>();
     private List<String> resourceKey = new ArrayList<>();
     private List<ProcessingState> state = new ArrayList<>();
     private String projectKey;
     private String importSinkKey;
-
+    
 
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey){
         this.apiHttpClient = apiHttpClient;
@@ -61,10 +61,10 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath);
+        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
         httpRequest.setHeaders(headers);
-
+        
         return httpRequest;
     }
 
@@ -92,58 +92,58 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     public List<Double> getLimit() {
         return this.limit;
     }
-
+    
     public List<Double> getOffset() {
         return this.offset;
     }
-
+    
     public List<String> getResourceKey() {
         return this.resourceKey;
     }
-
+    
     public List<ProcessingState> getState() {
         return this.state;
     }
 
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
-
+    
     public void setImportSinkKey(final String importSinkKey) {this.importSinkKey = importSinkKey;}
 
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final Double limit){
         this.limit.add(limit);
         return this;
     }
-
+    
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final List<Double> limit){
         this.limit = limit;
         return this;
     }
-
+    
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final Double offset){
         this.offset.add(offset);
         return this;
     }
-
+    
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final List<Double> offset){
         this.offset = offset;
         return this;
     }
-
+    
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(final String resourceKey){
         this.resourceKey.add(resourceKey);
         return this;
     }
-
+    
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final List<String> resourceKey){
         this.resourceKey = resourceKey;
         return this;
     }
-
+    
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addState(final ProcessingState state){
         this.state.add(state);
         return this;
     }
-
+    
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withState(final List<ProcessingState> state){
         this.state = state;
         return this;
@@ -153,34 +153,30 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
         this.headers.addHeader(key, value);
         return this;
     }
-
+    
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withHeaders(final ApiHttpHeaders headers) {
         this.headers = headers;
         return this;
     }
-
-    public String getHeaderValue(final String key) {
-        return this.headers.getHeaderValue(key);
-    }
-
+    
     public ApiHttpHeaders getHeaders() {
         return this.headers;
     }
-
+    
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
         this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
         return this;
     }
-
+    
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
         this.additionalQueryParams = additionalQueryParams;
         return this;
     }
-
+    
     public Map<String, String> getAdditionalQueryParams() {
         return this.additionalQueryParams;
     }
-
+    
     private String urlEncode(final String s){
         try{
              return URLEncoder.encode(s, "UTF-8");

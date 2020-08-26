@@ -23,31 +23,31 @@ public final class LineItemImportDraftBuilder {
 
     @Nullable
     private com.commercetools.importapi.models.common.ProductKeyReference product;
-
-
+    
+    
     private com.commercetools.importapi.models.common.LocalizedString name;
-
-
+    
+    
     private com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft variant;
-
-
+    
+    
     private com.commercetools.importapi.models.orders.LineItemPrice price;
-
-
+    
+    
     private Double quantity;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.orders.ItemState> state;
-
+    
     @Nullable
     private com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel;
-
+    
     @Nullable
     private com.commercetools.importapi.models.common.ChannelKeyReference distributionChannel;
-
+    
     @Nullable
     private com.commercetools.importapi.models.prices.TaxRate taxRate;
-
+    
     @Nullable
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
@@ -55,47 +55,47 @@ public final class LineItemImportDraftBuilder {
         this.product = product;
         return this;
     }
-
+    
     public LineItemImportDraftBuilder name( final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-
+    
     public LineItemImportDraftBuilder variant( final com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft variant) {
         this.variant = variant;
         return this;
     }
-
+    
     public LineItemImportDraftBuilder price( final com.commercetools.importapi.models.orders.LineItemPrice price) {
         this.price = price;
         return this;
     }
-
+    
     public LineItemImportDraftBuilder quantity( final Double quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
     public LineItemImportDraftBuilder state(@Nullable final java.util.List<com.commercetools.importapi.models.orders.ItemState> state) {
         this.state = state;
         return this;
     }
-
+    
     public LineItemImportDraftBuilder supplyChannel(@Nullable final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
-
+    
     public LineItemImportDraftBuilder distributionChannel(@Nullable final com.commercetools.importapi.models.common.ChannelKeyReference distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
-
+    
     public LineItemImportDraftBuilder taxRate(@Nullable final com.commercetools.importapi.models.prices.TaxRate taxRate) {
         this.taxRate = taxRate;
         return this;
     }
-
+    
     public LineItemImportDraftBuilder shippingDetails(@Nullable final com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
@@ -105,47 +105,47 @@ public final class LineItemImportDraftBuilder {
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct(){
         return this.product;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.LocalizedString getName(){
         return this.name;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft getVariant(){
         return this.variant;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.orders.LineItemPrice getPrice(){
         return this.price;
     }
-
-
+    
+    
     public Double getQuantity(){
         return this.quantity;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.orders.ItemState> getState(){
         return this.state;
     }
-
+    
     @Nullable
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel(){
         return this.supplyChannel;
     }
-
+    
     @Nullable
     public com.commercetools.importapi.models.common.ChannelKeyReference getDistributionChannel(){
         return this.distributionChannel;
     }
-
+    
     @Nullable
     public com.commercetools.importapi.models.prices.TaxRate getTaxRate(){
         return this.taxRate;
     }
-
+    
     @Nullable
     public com.commercetools.importapi.models.orders.ItemShippingDetailsDraft getShippingDetails(){
         return this.shippingDetails;

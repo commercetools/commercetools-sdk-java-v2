@@ -24,7 +24,7 @@ import java.io.IOException;
 @JsonDeserialize(as = NumberSetAttributeImpl.class)
 public interface NumberSetAttribute extends Attribute {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public List<Double> getValue();
@@ -34,7 +34,7 @@ public interface NumberSetAttribute extends Attribute {
     public static NumberSetAttributeImpl of(){
         return new NumberSetAttributeImpl();
     }
-
+    
 
     public static NumberSetAttributeImpl of(final NumberSetAttribute template) {
         NumberSetAttributeImpl instance = new NumberSetAttributeImpl();

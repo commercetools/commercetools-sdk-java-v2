@@ -15,28 +15,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class DiscountedLineItemPortionBuilder {
 
-
+    
     private com.commercetools.importapi.models.common.CartDiscountKeyReference discount;
-
-
+    
+    
     private com.commercetools.importapi.models.common.Money discountedAmount;
 
     public DiscountedLineItemPortionBuilder discount( final com.commercetools.importapi.models.common.CartDiscountKeyReference discount) {
         this.discount = discount;
         return this;
     }
-
+    
     public DiscountedLineItemPortionBuilder discountedAmount( final com.commercetools.importapi.models.common.Money discountedAmount) {
         this.discountedAmount = discountedAmount;
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.common.CartDiscountKeyReference getDiscount(){
         return this.discount;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.Money getDiscountedAmount(){
         return this.discountedAmount;
     }

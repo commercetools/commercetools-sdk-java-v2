@@ -17,15 +17,15 @@ public final class DateTimeSetAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private java.util.List<java.time.ZonedDateTime> value;
 
     public DateTimeSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public DateTimeSetAttributeBuilder value( final java.util.List<java.time.ZonedDateTime> value) {
         this.value = value;
         return this;
@@ -35,8 +35,8 @@ public final class DateTimeSetAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public java.util.List<java.time.ZonedDateTime> getValue(){
         return this.value;
     }

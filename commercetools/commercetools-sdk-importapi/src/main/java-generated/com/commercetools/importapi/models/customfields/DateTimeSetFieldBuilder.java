@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class DateTimeSetFieldBuilder {
 
-
+    
     private java.util.List<java.time.ZonedDateTime> value;
 
     public DateTimeSetFieldBuilder value( final java.util.List<java.time.ZonedDateTime> value) {
@@ -23,7 +23,7 @@ public final class DateTimeSetFieldBuilder {
         return this;
     }
 
-
+    
     public java.util.List<java.time.ZonedDateTime> getValue(){
         return this.value;
     }

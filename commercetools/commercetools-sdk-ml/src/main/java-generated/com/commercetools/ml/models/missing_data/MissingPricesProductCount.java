@@ -22,29 +22,29 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingPricesProductCountImpl.class)
 public interface MissingPricesProductCount  {
 
-   
-   @NotNull
-   @JsonProperty("total")
-   public Long getTotal();
-   
-   @NotNull
-   @JsonProperty("missingPrices")
-   public Long getMissingPrices();
+    
+    @NotNull
+    @JsonProperty("total")
+    public Long getTotal();
+    
+    @NotNull
+    @JsonProperty("missingPrices")
+    public Long getMissingPrices();
 
-   public void setTotal(final Long total);
-   
-   public void setMissingPrices(final Long missingPrices);
-   
-   public static MissingPricesProductCountImpl of(){
-      return new MissingPricesProductCountImpl();
-   }
-   
+    public void setTotal(final Long total);
+    
+    public void setMissingPrices(final Long missingPrices);
 
-   public static MissingPricesProductCountImpl of(final MissingPricesProductCount template) {
-      MissingPricesProductCountImpl instance = new MissingPricesProductCountImpl();
-      instance.setTotal(template.getTotal());
-      instance.setMissingPrices(template.getMissingPrices());
-      return instance;
-   }
+    public static MissingPricesProductCountImpl of(){
+        return new MissingPricesProductCountImpl();
+    }
+    
+
+    public static MissingPricesProductCountImpl of(final MissingPricesProductCount template) {
+        MissingPricesProductCountImpl instance = new MissingPricesProductCountImpl();
+        instance.setTotal(template.getTotal());
+        instance.setMissingPrices(template.getMissingPrices());
+        return instance;
+    }
 
 }

@@ -39,7 +39,7 @@ public interface CustomerImportRequest extends ImportRequest {
     public static CustomerImportRequestImpl of(){
         return new CustomerImportRequestImpl();
     }
-
+    
 
     public static CustomerImportRequestImpl of(final CustomerImportRequest template) {
         CustomerImportRequestImpl instance = new CustomerImportRequestImpl();

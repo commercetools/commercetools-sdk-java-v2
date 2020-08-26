@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CustomTokenizerBuilder {
 
-
+    
     private java.util.List<String> inputs;
 
     public CustomTokenizerBuilder inputs( final java.util.List<String> inputs) {
@@ -22,7 +22,7 @@ public final class CustomTokenizerBuilder {
         return this;
     }
 
-
+    
     public java.util.List<String> getInputs(){
         return this.inputs;
     }

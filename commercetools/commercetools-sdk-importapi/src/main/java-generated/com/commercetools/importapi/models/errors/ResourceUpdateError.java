@@ -22,8 +22,8 @@ import java.io.IOException;
 @JsonDeserialize(as = ResourceUpdateErrorImpl.class)
 public interface ResourceUpdateError extends ErrorObject {
 
-
-
+    
+    
     @JsonProperty("resource")
     public JsonNode getResource();
 
@@ -32,7 +32,7 @@ public interface ResourceUpdateError extends ErrorObject {
     public static ResourceUpdateErrorImpl of(){
         return new ResourceUpdateErrorImpl();
     }
-
+    
 
     public static ResourceUpdateErrorImpl of(final ResourceUpdateError template) {
         ResourceUpdateErrorImpl instance = new ResourceUpdateErrorImpl();

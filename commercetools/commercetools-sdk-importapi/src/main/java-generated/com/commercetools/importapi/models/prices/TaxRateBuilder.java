@@ -16,22 +16,22 @@ public final class TaxRateBuilder {
 
     @Nullable
     private String id;
-
-
+    
+    
     private String name;
-
-
+    
+    
     private Double amount;
-
-
+    
+    
     private Boolean includedInPrice;
-
-
+    
+    
     private String country;
-
+    
     @Nullable
     private String state;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates;
 
@@ -39,32 +39,32 @@ public final class TaxRateBuilder {
         this.id = id;
         return this;
     }
-
+    
     public TaxRateBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
     public TaxRateBuilder amount( final Double amount) {
         this.amount = amount;
         return this;
     }
-
+    
     public TaxRateBuilder includedInPrice( final Boolean includedInPrice) {
         this.includedInPrice = includedInPrice;
         return this;
     }
-
+    
     public TaxRateBuilder country( final String country) {
         this.country = country;
         return this;
     }
-
+    
     public TaxRateBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
-
+    
     public TaxRateBuilder subRates(@Nullable final java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates) {
         this.subRates = subRates;
         return this;
@@ -74,32 +74,32 @@ public final class TaxRateBuilder {
     public String getId(){
         return this.id;
     }
-
-
+    
+    
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public Double getAmount(){
         return this.amount;
     }
-
-
+    
+    
     public Boolean getIncludedInPrice(){
         return this.includedInPrice;
     }
-
-
+    
+    
     public String getCountry(){
         return this.country;
     }
-
+    
     @Nullable
     public String getState(){
         return this.state;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.prices.SubRate> getSubRates(){
         return this.subRates;

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AttributeNestedTypeBuilder {
 
-
+    
     private com.commercetools.importapi.models.common.ProductTypeKeyReference typeReference;
 
     public AttributeNestedTypeBuilder typeReference( final com.commercetools.importapi.models.common.ProductTypeKeyReference typeReference) {
@@ -23,7 +23,7 @@ public final class AttributeNestedTypeBuilder {
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getTypeReference(){
         return this.typeReference;
     }

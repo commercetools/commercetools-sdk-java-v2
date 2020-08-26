@@ -15,28 +15,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class DuplicateAttributeValuesErrorBuilder {
 
-
+    
     private String message;
-
-
+    
+    
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
     public DuplicateAttributeValuesErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
     public DuplicateAttributeValuesErrorBuilder attributes( final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes(){
         return this.attributes;
     }

@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class LocalizableEnumSetAttributeImpl implements LocalizableEnumSetAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private java.util.List<String> value;
 
     @JsonCreator
@@ -39,7 +39,7 @@ public final class LocalizableEnumSetAttributeImpl implements LocalizableEnumSet
         this.type = "lenum-set";
     }
     public LocalizableEnumSetAttributeImpl() {
-
+       
     }
 
     /**
@@ -50,13 +50,13 @@ public final class LocalizableEnumSetAttributeImpl implements LocalizableEnumSet
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.util.List<String> getValue(){
         return this.value;
     }
@@ -64,7 +64,7 @@ public final class LocalizableEnumSetAttributeImpl implements LocalizableEnumSet
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final java.util.List<String> value){
         this.value = value;
     }

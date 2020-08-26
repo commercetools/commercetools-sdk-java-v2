@@ -23,67 +23,67 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class SimilarProductMetaImpl implements SimilarProductMeta {
 
-   private com.commercetools.ml.models.common.LocalizedString name;
-   
-   private com.commercetools.ml.models.common.LocalizedString description;
-   
-   private com.commercetools.ml.models.common.Money price;
-   
-   private Long variantCount;
+    private com.commercetools.ml.models.common.LocalizedString name;
+    
+    private com.commercetools.ml.models.common.LocalizedString description;
+    
+    private com.commercetools.ml.models.common.Money price;
+    
+    private Long variantCount;
 
-   @JsonCreator
-   SimilarProductMetaImpl(@JsonProperty("name") final com.commercetools.ml.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.ml.models.common.LocalizedString description, @JsonProperty("price") final com.commercetools.ml.models.common.Money price, @JsonProperty("variantCount") final Long variantCount) {
-      this.name = name;
-      this.description = description;
-      this.price = price;
-      this.variantCount = variantCount;
-   }
-   public SimilarProductMetaImpl() {
-      
-   }
-   
-   /**
-   *  <p>Localized product name used for similarity estimation.</p>
-   */
-   public com.commercetools.ml.models.common.LocalizedString getName(){
-      return this.name;
-   }
-   
-   /**
-   *  <p>Localized product description used for similarity estimation.</p>
-   */
-   public com.commercetools.ml.models.common.LocalizedString getDescription(){
-      return this.description;
-   }
-   
-   /**
-   *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
-   */
-   public com.commercetools.ml.models.common.Money getPrice(){
-      return this.price;
-   }
-   
-   /**
-   *  <p>Total number of variants associated with the product.</p>
-   */
-   public Long getVariantCount(){
-      return this.variantCount;
-   }
+    @JsonCreator
+    SimilarProductMetaImpl(@JsonProperty("name") final com.commercetools.ml.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.ml.models.common.LocalizedString description, @JsonProperty("price") final com.commercetools.ml.models.common.Money price, @JsonProperty("variantCount") final Long variantCount) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.variantCount = variantCount;
+    }
+    public SimilarProductMetaImpl() {
+       
+    }
 
-   public void setName(final com.commercetools.ml.models.common.LocalizedString name){
-      this.name = name;
-   }
-   
-   public void setDescription(final com.commercetools.ml.models.common.LocalizedString description){
-      this.description = description;
-   }
-   
-   public void setPrice(final com.commercetools.ml.models.common.Money price){
-      this.price = price;
-   }
-   
-   public void setVariantCount(final Long variantCount){
-      this.variantCount = variantCount;
-   }
+    /**
+    *  <p>Localized product name used for similarity estimation.</p>
+    */
+    public com.commercetools.ml.models.common.LocalizedString getName(){
+        return this.name;
+    }
+    
+    /**
+    *  <p>Localized product description used for similarity estimation.</p>
+    */
+    public com.commercetools.ml.models.common.LocalizedString getDescription(){
+        return this.description;
+    }
+    
+    /**
+    *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+    */
+    public com.commercetools.ml.models.common.Money getPrice(){
+        return this.price;
+    }
+    
+    /**
+    *  <p>Total number of variants associated with the product.</p>
+    */
+    public Long getVariantCount(){
+        return this.variantCount;
+    }
+
+    public void setName(final com.commercetools.ml.models.common.LocalizedString name){
+        this.name = name;
+    }
+    
+    public void setDescription(final com.commercetools.ml.models.common.LocalizedString description){
+        this.description = description;
+    }
+    
+    public void setPrice(final com.commercetools.ml.models.common.Money price){
+        this.price = price;
+    }
+    
+    public void setVariantCount(final Long variantCount){
+        this.variantCount = variantCount;
+    }
 
 }

@@ -28,9 +28,9 @@ public final class AttributeDateTypeImpl implements AttributeDateType {
     AttributeDateTypeImpl() {
         this.name = "date";
     }
+    
 
-
-
+    
     public String getName(){
         return this.name;
     }

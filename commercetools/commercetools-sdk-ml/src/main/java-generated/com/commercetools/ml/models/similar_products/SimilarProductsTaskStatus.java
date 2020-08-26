@@ -26,41 +26,41 @@ import java.io.IOException;
 @JsonDeserialize(as = SimilarProductsTaskStatusImpl.class)
 public interface SimilarProductsTaskStatus  {
 
-   
-   @NotNull
-   @JsonProperty("state")
-   public TaskStatusEnum getState();
-   /**
-   *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
-   */
-   
-   @JsonProperty("expires")
-   public ZonedDateTime getExpires();
-   /**
-   *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("result")
-   public SimilarProductsPagedQueryResult getResult();
+    
+    @NotNull
+    @JsonProperty("state")
+    public TaskStatusEnum getState();
+    /**
+    *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
+    */
+    
+    @JsonProperty("expires")
+    public ZonedDateTime getExpires();
+    /**
+    *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("result")
+    public SimilarProductsPagedQueryResult getResult();
 
-   public void setState(final TaskStatusEnum state);
-   
-   public void setExpires(final ZonedDateTime expires);
-   
-   public void setResult(final SimilarProductsPagedQueryResult result);
-   
-   public static SimilarProductsTaskStatusImpl of(){
-      return new SimilarProductsTaskStatusImpl();
-   }
-   
+    public void setState(final TaskStatusEnum state);
+    
+    public void setExpires(final ZonedDateTime expires);
+    
+    public void setResult(final SimilarProductsPagedQueryResult result);
 
-   public static SimilarProductsTaskStatusImpl of(final SimilarProductsTaskStatus template) {
-      SimilarProductsTaskStatusImpl instance = new SimilarProductsTaskStatusImpl();
-      instance.setState(template.getState());
-      instance.setExpires(template.getExpires());
-      instance.setResult(template.getResult());
-      return instance;
-   }
+    public static SimilarProductsTaskStatusImpl of(){
+        return new SimilarProductsTaskStatusImpl();
+    }
+    
+
+    public static SimilarProductsTaskStatusImpl of(final SimilarProductsTaskStatus template) {
+        SimilarProductsTaskStatusImpl instance = new SimilarProductsTaskStatusImpl();
+        instance.setState(template.getState());
+        instance.setExpires(template.getExpires());
+        instance.setResult(template.getResult());
+        return instance;
+    }
 
 }

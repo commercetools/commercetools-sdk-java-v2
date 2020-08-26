@@ -59,7 +59,7 @@ public interface ImportOperation  {
     /**
     *  <p>When the resource is successfully imported, this represents the imported resource version</p>
     */
-
+    
     @JsonProperty("resourceVersion")
     public Long getResourceVersion();
     /**
@@ -90,36 +90,36 @@ public interface ImportOperation  {
     /**
     *  <p>When the import operation expires.</p>
     */
-
+    
     @JsonProperty("expiresAt")
     public ZonedDateTime getExpiresAt();
 
     public void setVersion(final Long version);
-
+    
     public void setImportSinkKey(final String importSinkKey);
-
+    
     public void setResourceKey(final String resourceKey);
-
+    
     public void setId(final String id);
-
+    
     public void setState(final ProcessingState state);
-
+    
     public void setResourceVersion(final Long resourceVersion);
-
+    
     public void setRetryCount(final Integer retryCount);
-
+    
     public void setErrors(final List<ErrorObject> errors);
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
     public void setExpiresAt(final ZonedDateTime expiresAt);
 
     public static ImportOperationImpl of(){
         return new ImportOperationImpl();
     }
-
+    
 
     public static ImportOperationImpl of(final ImportOperation template) {
         ImportOperationImpl instance = new ImportOperationImpl();

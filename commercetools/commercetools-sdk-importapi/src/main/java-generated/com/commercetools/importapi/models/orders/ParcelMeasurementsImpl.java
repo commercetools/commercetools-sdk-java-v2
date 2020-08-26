@@ -23,11 +23,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ParcelMeasurementsImpl implements ParcelMeasurements {
 
     private Double heightInMillimeter;
-
+    
     private Double lengthInMillimeter;
-
+    
     private Double widthInMillimeter;
-
+    
     private Double weightInGram;
 
     @JsonCreator
@@ -38,25 +38,25 @@ public final class ParcelMeasurementsImpl implements ParcelMeasurements {
         this.weightInGram = weightInGram;
     }
     public ParcelMeasurementsImpl() {
-
+       
     }
 
-
+    
     public Double getHeightInMillimeter(){
         return this.heightInMillimeter;
     }
-
-
+    
+    
     public Double getLengthInMillimeter(){
         return this.lengthInMillimeter;
     }
-
-
+    
+    
     public Double getWidthInMillimeter(){
         return this.widthInMillimeter;
     }
-
-
+    
+    
     public Double getWeightInGram(){
         return this.weightInGram;
     }
@@ -64,15 +64,15 @@ public final class ParcelMeasurementsImpl implements ParcelMeasurements {
     public void setHeightInMillimeter(final Double heightInMillimeter){
         this.heightInMillimeter = heightInMillimeter;
     }
-
+    
     public void setLengthInMillimeter(final Double lengthInMillimeter){
         this.lengthInMillimeter = lengthInMillimeter;
     }
-
+    
     public void setWidthInMillimeter(final Double widthInMillimeter){
         this.widthInMillimeter = widthInMillimeter;
     }
-
+    
     public void setWeightInGram(final Double weightInGram){
         this.weightInGram = weightInGram;
     }

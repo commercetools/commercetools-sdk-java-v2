@@ -35,7 +35,7 @@ public interface AttributeNestedType extends AttributeType {
     public static AttributeNestedTypeImpl of(){
         return new AttributeNestedTypeImpl();
     }
-
+    
 
     public static AttributeNestedTypeImpl of(final AttributeNestedType template) {
         AttributeNestedTypeImpl instance = new AttributeNestedTypeImpl();

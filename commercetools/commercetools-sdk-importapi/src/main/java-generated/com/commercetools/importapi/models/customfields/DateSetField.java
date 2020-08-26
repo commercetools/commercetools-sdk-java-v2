@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = DateSetFieldImpl.class)
 public interface DateSetField extends CustomField {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public List<LocalDate> getValue();
@@ -35,7 +35,7 @@ public interface DateSetField extends CustomField {
     public static DateSetFieldImpl of(){
         return new DateSetFieldImpl();
     }
-
+    
 
     public static DateSetFieldImpl of(final DateSetField template) {
         DateSetFieldImpl instance = new DateSetFieldImpl();

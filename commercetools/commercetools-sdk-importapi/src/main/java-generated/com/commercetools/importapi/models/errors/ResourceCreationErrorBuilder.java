@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ResourceCreationErrorBuilder {
 
-
+    
     private String message;
-
+    
     @Nullable
     private com.fasterxml.jackson.databind.JsonNode resource;
 
@@ -25,17 +25,17 @@ public final class ResourceCreationErrorBuilder {
         this.message = message;
         return this;
     }
-
+    
     public ResourceCreationErrorBuilder resource(@Nullable final com.fasterxml.jackson.databind.JsonNode resource) {
         this.resource = resource;
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }
-
+    
     @Nullable
     public com.fasterxml.jackson.databind.JsonNode getResource(){
         return this.resource;

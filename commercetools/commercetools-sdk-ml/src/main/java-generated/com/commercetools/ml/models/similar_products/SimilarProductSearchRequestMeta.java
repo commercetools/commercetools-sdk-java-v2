@@ -21,25 +21,25 @@ import java.io.IOException;
 @JsonDeserialize(as = SimilarProductSearchRequestMetaImpl.class)
 public interface SimilarProductSearchRequestMeta  {
 
-   /**
-   *  <p>The SimilarityMeasures used in this search.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("similarityMeasures")
-   public SimilarityMeasures getSimilarityMeasures();
+    /**
+    *  <p>The SimilarityMeasures used in this search.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("similarityMeasures")
+    public SimilarityMeasures getSimilarityMeasures();
 
-   public void setSimilarityMeasures(final SimilarityMeasures similarityMeasures);
-   
-   public static SimilarProductSearchRequestMetaImpl of(){
-      return new SimilarProductSearchRequestMetaImpl();
-   }
-   
+    public void setSimilarityMeasures(final SimilarityMeasures similarityMeasures);
 
-   public static SimilarProductSearchRequestMetaImpl of(final SimilarProductSearchRequestMeta template) {
-      SimilarProductSearchRequestMetaImpl instance = new SimilarProductSearchRequestMetaImpl();
-      instance.setSimilarityMeasures(template.getSimilarityMeasures());
-      return instance;
-   }
+    public static SimilarProductSearchRequestMetaImpl of(){
+        return new SimilarProductSearchRequestMetaImpl();
+    }
+    
+
+    public static SimilarProductSearchRequestMetaImpl of(final SimilarProductSearchRequestMeta template) {
+        SimilarProductSearchRequestMetaImpl instance = new SimilarProductSearchRequestMetaImpl();
+        instance.setSimilarityMeasures(template.getSimilarityMeasures());
+        return instance;
+    }
 
 }

@@ -47,7 +47,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ErrorObjectImpl implements ErrorObject {
 
     private String code;
-
+    
     private String message;
 
     @JsonCreator
@@ -56,14 +56,14 @@ public final class ErrorObjectImpl implements ErrorObject {
         this.code = "null";
     }
     public ErrorObjectImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */

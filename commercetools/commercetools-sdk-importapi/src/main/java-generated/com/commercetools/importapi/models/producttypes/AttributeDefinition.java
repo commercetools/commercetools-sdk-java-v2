@@ -24,61 +24,61 @@ import java.io.IOException;
 @JsonDeserialize(as = AttributeDefinitionImpl.class)
 public interface AttributeDefinition  {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("type")
     public AttributeType getType();
-
+    
     @NotNull
     @JsonProperty("name")
     public String getName();
-
+    
     @NotNull
     @Valid
     @JsonProperty("label")
     public LocalizedString getLabel();
-
+    
     @NotNull
     @JsonProperty("isRequired")
     public Boolean getIsRequired();
-
-
+    
+    
     @JsonProperty("attributeConstraint")
     public AttributeConstraintEnum getAttributeConstraint();
-
+    
     @Valid
     @JsonProperty("inputTip")
     public LocalizedString getInputTip();
-
-
+    
+    
     @JsonProperty("inputHint")
     public TextInputHint getInputHint();
-
-
+    
+    
     @JsonProperty("isSearchable")
     public Boolean getIsSearchable();
 
     public void setType(final AttributeType type);
-
+    
     public void setName(final String name);
-
+    
     public void setLabel(final LocalizedString label);
-
+    
     public void setIsRequired(final Boolean isRequired);
-
+    
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
-
+    
     public void setInputTip(final LocalizedString inputTip);
-
+    
     public void setInputHint(final TextInputHint inputHint);
-
+    
     public void setIsSearchable(final Boolean isSearchable);
 
     public static AttributeDefinitionImpl of(){
         return new AttributeDefinitionImpl();
     }
-
+    
 
     public static AttributeDefinitionImpl of(final AttributeDefinition template) {
         AttributeDefinitionImpl instance = new AttributeDefinitionImpl();

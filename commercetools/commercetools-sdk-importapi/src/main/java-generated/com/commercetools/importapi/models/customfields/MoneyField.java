@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = MoneyFieldImpl.class)
 public interface MoneyField extends CustomField {
 
-
+    
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -36,7 +36,7 @@ public interface MoneyField extends CustomField {
     public static MoneyFieldImpl of(){
         return new MoneyFieldImpl();
     }
-
+    
 
     public static MoneyFieldImpl of(final MoneyField template) {
         MoneyFieldImpl instance = new MoneyFieldImpl();

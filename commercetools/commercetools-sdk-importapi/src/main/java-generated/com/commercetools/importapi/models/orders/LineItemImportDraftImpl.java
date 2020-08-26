@@ -35,23 +35,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class LineItemImportDraftImpl implements LineItemImportDraft {
 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString name;
-
+    
     private com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft variant;
-
+    
     private com.commercetools.importapi.models.orders.LineItemPrice price;
-
+    
     private Double quantity;
-
+    
     private java.util.List<com.commercetools.importapi.models.orders.ItemState> state;
-
+    
     private com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel;
-
+    
     private com.commercetools.importapi.models.common.ChannelKeyReference distributionChannel;
-
+    
     private com.commercetools.importapi.models.prices.TaxRate taxRate;
-
+    
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
     @JsonCreator
@@ -68,7 +68,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
         this.shippingDetails = shippingDetails;
     }
     public LineItemImportDraftImpl() {
-
+       
     }
 
     /**
@@ -77,40 +77,40 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct(){
         return this.product;
     }
-
+    
     /**
     *  <p>Maps to <code>LineItem.name</code>.</p>
     */
     public com.commercetools.importapi.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
     *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
     */
     public com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft getVariant(){
         return this.variant;
     }
-
+    
     /**
     *  <p>Maps to <code>LineItem.price</code>.</p>
     */
     public com.commercetools.importapi.models.orders.LineItemPrice getPrice(){
         return this.price;
     }
-
+    
     /**
     *  <p>Maps to <code>LineItem.quantity</code>.</p>
     */
     public Double getQuantity(){
         return this.quantity;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.orders.ItemState> getState(){
         return this.state;
     }
-
+    
     /**
     *  <p>References a supply channel. Maps to <code>LineItem.supplyChannel</code>.</p>
     *  <p>The supply channel referenced must already exist
@@ -120,7 +120,7 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel(){
         return this.supplyChannel;
     }
-
+    
     /**
     *  <p>References a distribution channel. Maps to <code>LineItem.distributionChannel</code>.</p>
     *  <p>The distribution channel referenced must already exist
@@ -130,14 +130,14 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
     public com.commercetools.importapi.models.common.ChannelKeyReference getDistributionChannel(){
         return this.distributionChannel;
     }
-
+    
     /**
     *  <p>Maps to <code>LineItem.taxRate</code>.</p>
     */
     public com.commercetools.importapi.models.prices.TaxRate getTaxRate(){
         return this.taxRate;
     }
-
+    
     /**
     *  <p>Maps to LineItem.shippingDetails.</p>
     */
@@ -148,39 +148,39 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
     public void setProduct(final com.commercetools.importapi.models.common.ProductKeyReference product){
         this.product = product;
     }
-
+    
     public void setName(final com.commercetools.importapi.models.common.LocalizedString name){
         this.name = name;
     }
-
+    
     public void setVariant(final com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft variant){
         this.variant = variant;
     }
-
+    
     public void setPrice(final com.commercetools.importapi.models.orders.LineItemPrice price){
         this.price = price;
     }
-
+    
     public void setQuantity(final Double quantity){
         this.quantity = quantity;
     }
-
+    
     public void setState(final java.util.List<com.commercetools.importapi.models.orders.ItemState> state){
         this.state = state;
     }
-
+    
     public void setSupplyChannel(final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel){
         this.supplyChannel = supplyChannel;
     }
-
+    
     public void setDistributionChannel(final com.commercetools.importapi.models.common.ChannelKeyReference distributionChannel){
         this.distributionChannel = distributionChannel;
     }
-
+    
     public void setTaxRate(final com.commercetools.importapi.models.prices.TaxRate taxRate){
         this.taxRate = taxRate;
     }
-
+    
     public void setShippingDetails(final com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails){
         this.shippingDetails = shippingDetails;
     }

@@ -25,31 +25,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ReferenceImpl implements Reference {
 
-   private com.commercetools.ml.models.common.ReferenceTypeId typeId;
-   
-   private String id;
+    private com.commercetools.ml.models.common.ReferenceTypeId typeId;
+    
+    private String id;
 
-   @JsonCreator
-   ReferenceImpl(@JsonProperty("id") final String id) {
-      this.id = id;
-      this.typeId = ReferenceTypeId.findEnumViaJsonName("null").get();
-   }
-   public ReferenceImpl() {
-      
-   }
-   
-   
-   public com.commercetools.ml.models.common.ReferenceTypeId getTypeId(){
-      return this.typeId;
-   }
-   
-   
-   public String getId(){
-      return this.id;
-   }
+    @JsonCreator
+    ReferenceImpl(@JsonProperty("id") final String id) {
+        this.id = id;
+        this.typeId = ReferenceTypeId.findEnumViaJsonName("null").get();
+    }
+    public ReferenceImpl() {
+       
+    }
 
-   public void setId(final String id){
-      this.id = id;
-   }
+    
+    public com.commercetools.ml.models.common.ReferenceTypeId getTypeId(){
+        return this.typeId;
+    }
+    
+    
+    public String getId(){
+        return this.id;
+    }
+
+    public void setId(final String id){
+        this.id = id;
+    }
 
 }

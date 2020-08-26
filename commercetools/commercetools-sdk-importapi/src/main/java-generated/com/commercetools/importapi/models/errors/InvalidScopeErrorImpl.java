@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InvalidScopeErrorImpl implements InvalidScopeError {
 
     private String code;
-
+    
     private String message;
 
     @JsonCreator
@@ -35,14 +35,14 @@ public final class InvalidScopeErrorImpl implements InvalidScopeError {
         this.code = "invalid_scope";
     }
     public InvalidScopeErrorImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class DateFieldBuilder {
 
-
+    
     private java.time.LocalDate value;
 
     public DateFieldBuilder value( final java.time.LocalDate value) {
@@ -23,7 +23,7 @@ public final class DateFieldBuilder {
         return this;
     }
 
-
+    
     public java.time.LocalDate getValue(){
         return this.value;
     }

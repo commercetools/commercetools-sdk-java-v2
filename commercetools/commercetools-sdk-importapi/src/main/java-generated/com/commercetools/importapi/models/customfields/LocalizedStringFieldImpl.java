@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class LocalizedStringFieldImpl implements LocalizedStringField {
 
     private String type;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString value;
 
     @JsonCreator
@@ -36,7 +36,7 @@ public final class LocalizedStringFieldImpl implements LocalizedStringField {
         this.type = "LocalizedString";
     }
     public LocalizedStringFieldImpl() {
-
+       
     }
 
     /**
@@ -45,8 +45,8 @@ public final class LocalizedStringFieldImpl implements LocalizedStringField {
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.LocalizedString getValue(){
         return this.value;
     }

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class BooleanSetFieldBuilder {
 
-
+    
     private java.util.List<Boolean> value;
 
     public BooleanSetFieldBuilder value( final java.util.List<Boolean> value) {
@@ -22,7 +22,7 @@ public final class BooleanSetFieldBuilder {
         return this;
     }
 
-
+    
     public java.util.List<Boolean> getValue(){
         return this.value;
     }

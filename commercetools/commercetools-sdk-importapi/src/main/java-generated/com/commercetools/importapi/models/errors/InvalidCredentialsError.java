@@ -26,7 +26,7 @@ public interface InvalidCredentialsError extends ErrorObject {
     public static InvalidCredentialsErrorImpl of(){
         return new InvalidCredentialsErrorImpl();
     }
-
+    
 
     public static InvalidCredentialsErrorImpl of(final InvalidCredentialsError template) {
         InvalidCredentialsErrorImpl instance = new InvalidCredentialsErrorImpl();

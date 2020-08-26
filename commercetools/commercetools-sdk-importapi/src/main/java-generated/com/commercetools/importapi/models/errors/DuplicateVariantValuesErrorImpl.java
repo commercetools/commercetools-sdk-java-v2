@@ -28,9 +28,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesError {
 
     private String code;
-
+    
     private String message;
-
+    
     private com.commercetools.importapi.models.errors.VariantValues variantValues;
 
     @JsonCreator
@@ -40,21 +40,21 @@ public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantVa
         this.code = "DuplicateVariantValues";
     }
     public DuplicateVariantValuesErrorImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */
     public String getMessage(){
         return this.message;
     }
-
+    
     /**
     *  <p>The offending variant values.</p>
     */
@@ -65,7 +65,7 @@ public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantVa
     public void setMessage(final String message){
         this.message = message;
     }
-
+    
     public void setVariantValues(final com.commercetools.importapi.models.errors.VariantValues variantValues){
         this.variantValues = variantValues;
     }

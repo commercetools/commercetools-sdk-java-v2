@@ -24,7 +24,7 @@ import java.io.IOException;
 @JsonDeserialize(as = EnumFieldImpl.class)
 public interface EnumField extends CustomField {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public String getValue();
@@ -34,7 +34,7 @@ public interface EnumField extends CustomField {
     public static EnumFieldImpl of(){
         return new EnumFieldImpl();
     }
-
+    
 
     public static EnumFieldImpl of(final EnumField template) {
         EnumFieldImpl instance = new EnumFieldImpl();

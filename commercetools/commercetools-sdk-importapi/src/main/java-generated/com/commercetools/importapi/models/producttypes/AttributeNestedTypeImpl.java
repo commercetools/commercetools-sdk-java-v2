@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AttributeNestedTypeImpl implements AttributeNestedType {
 
     private String name;
-
+    
     private com.commercetools.importapi.models.common.ProductTypeKeyReference typeReference;
 
     @JsonCreator
@@ -33,14 +33,14 @@ public final class AttributeNestedTypeImpl implements AttributeNestedType {
         this.name = "nested";
     }
     public AttributeNestedTypeImpl() {
-
+       
     }
 
-
+    
     public String getName(){
         return this.name;
     }
-
+    
     /**
     *  <p>References a product type by its key.</p>
     */

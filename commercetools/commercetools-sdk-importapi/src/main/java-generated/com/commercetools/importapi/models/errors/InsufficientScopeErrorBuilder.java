@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class InsufficientScopeErrorBuilder {
 
-
+    
     private String message;
 
     public InsufficientScopeErrorBuilder message( final String message) {
@@ -22,7 +22,7 @@ public final class InsufficientScopeErrorBuilder {
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }

@@ -14,28 +14,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class RequiredFieldErrorBuilder {
 
-
+    
     private String message;
-
-
+    
+    
     private String field;
 
     public RequiredFieldErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
     public RequiredFieldErrorBuilder field( final String field) {
         this.field = field;
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }
-
-
+    
+    
     public String getField(){
         return this.field;
     }

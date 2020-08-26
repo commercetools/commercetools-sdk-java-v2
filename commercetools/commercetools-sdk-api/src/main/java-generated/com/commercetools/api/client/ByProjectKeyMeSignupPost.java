@@ -93,10 +93,6 @@ public class ByProjectKeyMeSignupPost {
         return this;
     }
     
-    public String getHeaderValue(final String key) {
-        return this.headers.getHeaderValue(key);
-    }
-    
     public ApiHttpHeaders getHeaders() {
         return this.headers;
     }

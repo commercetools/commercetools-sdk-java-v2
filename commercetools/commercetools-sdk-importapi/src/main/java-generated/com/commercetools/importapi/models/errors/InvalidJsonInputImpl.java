@@ -28,7 +28,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class InvalidJsonInputImpl implements InvalidJsonInput {
 
     private String code;
-
+    
     private String message;
 
     @JsonCreator
@@ -37,14 +37,14 @@ public final class InvalidJsonInputImpl implements InvalidJsonInput {
         this.code = "InvalidJsonInput";
     }
     public InvalidJsonInputImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */

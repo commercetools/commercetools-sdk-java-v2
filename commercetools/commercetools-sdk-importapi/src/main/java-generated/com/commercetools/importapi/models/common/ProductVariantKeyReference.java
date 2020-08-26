@@ -30,7 +30,7 @@ public interface ProductVariantKeyReference extends KeyReference {
     public static ProductVariantKeyReferenceImpl of(){
         return new ProductVariantKeyReferenceImpl();
     }
-
+    
 
     public static ProductVariantKeyReferenceImpl of(final ProductVariantKeyReference template) {
         ProductVariantKeyReferenceImpl instance = new ProductVariantKeyReferenceImpl();

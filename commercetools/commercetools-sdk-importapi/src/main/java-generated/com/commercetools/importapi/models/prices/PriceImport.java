@@ -43,19 +43,19 @@ public interface PriceImport extends ImportResource {
     /**
     *  <p>Maps to <code>Price.county</code>.</p>
     */
-
+    
     @JsonProperty("country")
     public String getCountry();
     /**
     *  <p>Maps to <code>Price.validFrom</code>.</p>
     */
-
+    
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
     /**
     *  <p>Maps to <code>Price.validUntil</code>.</p>
     */
-
+    
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
     /**
@@ -85,7 +85,7 @@ public interface PriceImport extends ImportResource {
     /**
     *  <p>Only the Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
     */
-
+    
     @JsonProperty("publish")
     public Boolean getPublish();
     /**
@@ -116,31 +116,31 @@ public interface PriceImport extends ImportResource {
     public ProductKeyReference getProduct();
 
     public void setValue(final TypedMoney value);
-
+    
     public void setCountry(final String country);
-
+    
     public void setValidFrom(final ZonedDateTime validFrom);
-
+    
     public void setValidUntil(final ZonedDateTime validUntil);
-
+    
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
-
+    
     public void setChannel(final ChannelKeyReference channel);
-
+    
     public void setDiscounted(final DiscountedPrice discounted);
-
+    
     public void setPublish(final Boolean publish);
-
+    
     public void setTiers(final List<PriceTier> tiers);
-
+    
     public void setProductVariant(final ProductVariantKeyReference productVariant);
-
+    
     public void setProduct(final ProductKeyReference product);
 
     public static PriceImportImpl of(){
         return new PriceImportImpl();
     }
-
+    
 
     public static PriceImportImpl of(final PriceImport template) {
         PriceImportImpl instance = new PriceImportImpl();

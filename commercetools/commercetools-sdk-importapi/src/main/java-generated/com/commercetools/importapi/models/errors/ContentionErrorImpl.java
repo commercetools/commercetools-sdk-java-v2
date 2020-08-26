@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ContentionErrorImpl implements ContentionError {
 
     private String code;
-
+    
     private String message;
 
     @JsonCreator
@@ -32,14 +32,14 @@ public final class ContentionErrorImpl implements ContentionError {
         this.code = "Contention";
     }
     public ContentionErrorImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */

@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValueError {
 
     private String code;
-
+    
     private String message;
-
+    
     private com.commercetools.importapi.models.productvariants.Attribute attribute;
 
     @JsonCreator
@@ -39,21 +39,21 @@ public final class DuplicateAttributeValueErrorImpl implements DuplicateAttribut
         this.code = "DuplicateAttributeValue";
     }
     public DuplicateAttributeValueErrorImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */
     public String getMessage(){
         return this.message;
     }
-
+    
     /**
     *  <p>The conflicting attribute.</p>
     */
@@ -64,7 +64,7 @@ public final class DuplicateAttributeValueErrorImpl implements DuplicateAttribut
     public void setMessage(final String message){
         this.message = message;
     }
-
+    
     public void setAttribute(final com.commercetools.importapi.models.productvariants.Attribute attribute){
         this.attribute = attribute;
     }

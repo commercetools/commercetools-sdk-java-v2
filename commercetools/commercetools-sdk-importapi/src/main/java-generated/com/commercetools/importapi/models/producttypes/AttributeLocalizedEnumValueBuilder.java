@@ -14,28 +14,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AttributeLocalizedEnumValueBuilder {
 
-
+    
     private String key;
-
-
+    
+    
     private com.commercetools.importapi.models.common.LocalizedString label;
 
     public AttributeLocalizedEnumValueBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
     public AttributeLocalizedEnumValueBuilder label( final com.commercetools.importapi.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.LocalizedString getLabel(){
         return this.label;
     }

@@ -25,39 +25,39 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaskTokenImpl implements TaskToken {
 
-   private String taskId;
+    private String taskId;
+    
+    private String uriPath;
 
-   private String uriPath;
+    @JsonCreator
+    TaskTokenImpl(@JsonProperty("taskId") final String taskId, @JsonProperty("uriPath") final String uriPath) {
+        this.taskId = taskId;
+        this.uriPath = uriPath;
+    }
+    public TaskTokenImpl() {
+       
+    }
 
-   @JsonCreator
-   TaskTokenImpl(@JsonProperty("taskId") final String taskId, @JsonProperty("uriPath") final String uriPath) {
-      this.taskId = taskId;
-      this.uriPath = uriPath;
-   }
-   public TaskTokenImpl() {
+    /**
+    *  <p>The ID for the task. Used to find the status of the task.</p>
+    */
+    public String getTaskId(){
+        return this.taskId;
+    }
+    
+    /**
+    *  <p>The URI path to poll for the status of the task.</p>
+    */
+    public String getUriPath(){
+        return this.uriPath;
+    }
 
-   }
-
-   /**
-   *  <p>The ID for the task. Used to find the status of the task.</p>
-   */
-   public String getTaskId(){
-      return this.taskId;
-   }
-
-   /**
-   *  <p>The URI path to poll for the status of the task.</p>
-   */
-   public String getUriPath(){
-      return this.uriPath;
-   }
-
-   public void setTaskId(final String taskId){
-      this.taskId = taskId;
-   }
-
-   public void setUriPath(final String uriPath){
-      this.uriPath = uriPath;
-   }
+    public void setTaskId(final String taskId){
+        this.taskId = taskId;
+    }
+    
+    public void setUriPath(final String uriPath){
+        this.uriPath = uriPath;
+    }
 
 }

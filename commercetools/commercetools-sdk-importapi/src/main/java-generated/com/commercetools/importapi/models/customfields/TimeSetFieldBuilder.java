@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class TimeSetFieldBuilder {
 
-
+    
     private java.util.List<java.time.LocalTime> value;
 
     public TimeSetFieldBuilder value( final java.util.List<java.time.LocalTime> value) {
@@ -23,7 +23,7 @@ public final class TimeSetFieldBuilder {
         return this;
     }
 
-
+    
     public java.util.List<java.time.LocalTime> getValue(){
         return this.value;
     }

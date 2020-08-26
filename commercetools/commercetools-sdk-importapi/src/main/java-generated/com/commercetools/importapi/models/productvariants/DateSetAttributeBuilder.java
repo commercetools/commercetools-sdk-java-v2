@@ -17,15 +17,15 @@ public final class DateSetAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private java.util.List<java.time.LocalDate> value;
 
     public DateSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public DateSetAttributeBuilder value( final java.util.List<java.time.LocalDate> value) {
         this.value = value;
         return this;
@@ -35,8 +35,8 @@ public final class DateSetAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public java.util.List<java.time.LocalDate> getValue(){
         return this.value;
     }

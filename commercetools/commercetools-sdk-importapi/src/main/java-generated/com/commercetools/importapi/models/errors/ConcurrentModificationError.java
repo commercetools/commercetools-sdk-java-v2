@@ -30,7 +30,7 @@ public interface ConcurrentModificationError extends ErrorObject {
     /**
     *  <p>The version specified in the failed request.</p>
     */
-
+    
     @JsonProperty("specifiedVersion")
     public Long getSpecifiedVersion();
     /**
@@ -42,20 +42,20 @@ public interface ConcurrentModificationError extends ErrorObject {
     /**
     *  <p>The conflicted resource.</p>
     */
-
+    
     @JsonProperty("conflictedResource")
     public JsonNode getConflictedResource();
 
     public void setSpecifiedVersion(final Long specifiedVersion);
-
+    
     public void setCurrentVersion(final Long currentVersion);
-
+    
     public void setConflictedResource(final JsonNode conflictedResource);
 
     public static ConcurrentModificationErrorImpl of(){
         return new ConcurrentModificationErrorImpl();
     }
-
+    
 
     public static ConcurrentModificationErrorImpl of(final ConcurrentModificationError template) {
         ConcurrentModificationErrorImpl instance = new ConcurrentModificationErrorImpl();

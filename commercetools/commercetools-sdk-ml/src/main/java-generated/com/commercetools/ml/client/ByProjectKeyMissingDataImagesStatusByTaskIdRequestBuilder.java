@@ -7,20 +7,20 @@ import io.vrap.rmf.base.client.utils.Generated;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 public class ByProjectKeyMissingDataImagesStatusByTaskIdRequestBuilder {
-   
-   private final ApiHttpClient apiHttpClient;
-   private final String projectKey;
-   private final String taskId;
-   
-   
-   public ByProjectKeyMissingDataImagesStatusByTaskIdRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String taskId) {
-      this.apiHttpClient = apiHttpClient;
-      this.projectKey = projectKey;
-      this.taskId = taskId;
-   }
-   
-   public ByProjectKeyMissingDataImagesStatusByTaskIdGet get() {
-      return new ByProjectKeyMissingDataImagesStatusByTaskIdGet(apiHttpClient, projectKey, taskId);
-   }
-   
+
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+    private final String taskId;
+    
+
+    public ByProjectKeyMissingDataImagesStatusByTaskIdRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String taskId) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+        this.taskId = taskId;
+    }
+
+    public ByProjectKeyMissingDataImagesStatusByTaskIdGet get() {
+        return new ByProjectKeyMissingDataImagesStatusByTaskIdGet(apiHttpClient, projectKey, taskId);
+    }
+
 }

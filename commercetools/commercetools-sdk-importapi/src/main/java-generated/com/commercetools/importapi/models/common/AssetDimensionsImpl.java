@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AssetDimensionsImpl implements AssetDimensions {
 
     private Double w;
-
+    
     private Double h;
 
     @JsonCreator
@@ -32,15 +32,15 @@ public final class AssetDimensionsImpl implements AssetDimensions {
         this.h = h;
     }
     public AssetDimensionsImpl() {
-
+       
     }
 
-
+    
     public Double getW(){
         return this.w;
     }
-
-
+    
+    
     public Double getH(){
         return this.h;
     }
@@ -48,7 +48,7 @@ public final class AssetDimensionsImpl implements AssetDimensions {
     public void setW(final Double w){
         this.w = w;
     }
-
+    
     public void setH(final Double h){
         this.h = h;
     }

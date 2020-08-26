@@ -16,15 +16,15 @@ public final class LocalizableEnumAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private String value;
 
     public LocalizableEnumAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public LocalizableEnumAttributeBuilder value( final String value) {
         this.value = value;
         return this;
@@ -34,8 +34,8 @@ public final class LocalizableEnumAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getValue(){
         return this.value;
     }

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class StringSetFieldBuilder {
 
-
+    
     private java.util.List<String> value;
 
     public StringSetFieldBuilder value( final java.util.List<String> value) {
@@ -22,7 +22,7 @@ public final class StringSetFieldBuilder {
         return this;
     }
 
-
+    
     public java.util.List<String> getValue(){
         return this.value;
     }

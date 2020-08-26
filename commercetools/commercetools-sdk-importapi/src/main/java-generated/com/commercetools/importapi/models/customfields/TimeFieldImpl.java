@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TimeFieldImpl implements TimeField {
 
     private String type;
-
+    
     private java.time.LocalTime value;
 
     @JsonCreator
@@ -36,7 +36,7 @@ public final class TimeFieldImpl implements TimeField {
         this.type = "Time";
     }
     public TimeFieldImpl() {
-
+       
     }
 
     /**
@@ -45,8 +45,8 @@ public final class TimeFieldImpl implements TimeField {
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public java.time.LocalTime getValue(){
         return this.value;
     }

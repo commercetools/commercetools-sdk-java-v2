@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class LocalizableEnumAttributeImpl implements LocalizableEnumAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private String value;
 
     @JsonCreator
@@ -39,7 +39,7 @@ public final class LocalizableEnumAttributeImpl implements LocalizableEnumAttrib
         this.type = "lenum";
     }
     public LocalizableEnumAttributeImpl() {
-
+       
     }
 
     /**
@@ -50,13 +50,13 @@ public final class LocalizableEnumAttributeImpl implements LocalizableEnumAttrib
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public String getValue(){
         return this.value;
     }
@@ -64,7 +64,7 @@ public final class LocalizableEnumAttributeImpl implements LocalizableEnumAttrib
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final String value){
         this.value = value;
     }

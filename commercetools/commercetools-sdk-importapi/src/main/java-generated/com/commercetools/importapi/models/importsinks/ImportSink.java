@@ -61,19 +61,19 @@ public interface ImportSink  {
     public ZonedDateTime getLastModifiedAt();
 
     public void setKey(final String key);
-
+    
     public void setResourceType(final ImportResourceType resourceType);
-
+    
     public void setVersion(final Long version);
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     public static ImportSinkImpl of(){
         return new ImportSinkImpl();
     }
-
+    
 
     public static ImportSinkImpl of(final ImportSink template) {
         ImportSinkImpl instance = new ImportSinkImpl();

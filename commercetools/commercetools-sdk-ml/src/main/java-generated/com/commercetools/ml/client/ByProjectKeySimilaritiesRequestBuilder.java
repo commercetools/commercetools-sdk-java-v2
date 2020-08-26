@@ -8,17 +8,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public class ByProjectKeySimilaritiesRequestBuilder {
 
-   private final ApiHttpClient apiHttpClient;
-   private final String projectKey;
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+    
+
+    public ByProjectKeySimilaritiesRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+    }
 
 
-   public ByProjectKeySimilaritiesRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey) {
-      this.apiHttpClient = apiHttpClient;
-      this.projectKey = projectKey;
-   }
-
-
-   public ByProjectKeySimilaritiesProductsRequestBuilder products() {
-      return new ByProjectKeySimilaritiesProductsRequestBuilder(apiHttpClient, projectKey);
-   }
+    public ByProjectKeySimilaritiesProductsRequestBuilder products() {
+        return new ByProjectKeySimilaritiesProductsRequestBuilder(apiHttpClient, projectKey);
+    }
 }

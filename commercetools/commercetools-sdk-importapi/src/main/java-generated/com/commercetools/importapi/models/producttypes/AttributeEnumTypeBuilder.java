@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AttributeEnumTypeBuilder {
 
-
+    
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> values;
 
     public AttributeEnumTypeBuilder values( final java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> values) {
@@ -23,7 +23,7 @@ public final class AttributeEnumTypeBuilder {
         return this;
     }
 
-
+    
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> getValues(){
         return this.values;
     }

@@ -21,42 +21,42 @@ import java.io.IOException;
 @JsonDeserialize(as = ProjectCategoryRecommendationMetaImpl.class)
 public interface ProjectCategoryRecommendationMeta  {
 
-   /**
-   *  <p>The product name that was used to generate recommendations.</p>
-   */
-   
-   @JsonProperty("productName")
-   public String getProductName();
-   /**
-   *  <p>The product image that was used to generate recommendations.</p>
-   */
-   
-   @JsonProperty("productImageUrl")
-   public String getProductImageUrl();
-   /**
-   *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
-   */
-   @NotNull
-   @JsonProperty("generalCategoryNames")
-   public List<String> getGeneralCategoryNames();
+    /**
+    *  <p>The product name that was used to generate recommendations.</p>
+    */
+    
+    @JsonProperty("productName")
+    public String getProductName();
+    /**
+    *  <p>The product image that was used to generate recommendations.</p>
+    */
+    
+    @JsonProperty("productImageUrl")
+    public String getProductImageUrl();
+    /**
+    *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+    */
+    @NotNull
+    @JsonProperty("generalCategoryNames")
+    public List<String> getGeneralCategoryNames();
 
-   public void setProductName(final String productName);
-   
-   public void setProductImageUrl(final String productImageUrl);
-   
-   public void setGeneralCategoryNames(final List<String> generalCategoryNames);
-   
-   public static ProjectCategoryRecommendationMetaImpl of(){
-      return new ProjectCategoryRecommendationMetaImpl();
-   }
-   
+    public void setProductName(final String productName);
+    
+    public void setProductImageUrl(final String productImageUrl);
+    
+    public void setGeneralCategoryNames(final List<String> generalCategoryNames);
 
-   public static ProjectCategoryRecommendationMetaImpl of(final ProjectCategoryRecommendationMeta template) {
-      ProjectCategoryRecommendationMetaImpl instance = new ProjectCategoryRecommendationMetaImpl();
-      instance.setProductName(template.getProductName());
-      instance.setProductImageUrl(template.getProductImageUrl());
-      instance.setGeneralCategoryNames(template.getGeneralCategoryNames());
-      return instance;
-   }
+    public static ProjectCategoryRecommendationMetaImpl of(){
+        return new ProjectCategoryRecommendationMetaImpl();
+    }
+    
+
+    public static ProjectCategoryRecommendationMetaImpl of(final ProjectCategoryRecommendationMeta template) {
+        ProjectCategoryRecommendationMetaImpl instance = new ProjectCategoryRecommendationMetaImpl();
+        instance.setProductName(template.getProductName());
+        instance.setProductImageUrl(template.getProductImageUrl());
+        instance.setGeneralCategoryNames(template.getGeneralCategoryNames());
+        return instance;
+    }
 
 }

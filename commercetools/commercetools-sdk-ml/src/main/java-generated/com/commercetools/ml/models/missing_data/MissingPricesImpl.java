@@ -22,37 +22,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingPricesImpl implements MissingPrices {
 
-   private com.commercetools.ml.models.common.ProductReference product;
+    private com.commercetools.ml.models.common.ProductReference product;
+    
+    private Long variantId;
 
-   private Long variantId;
+    @JsonCreator
+    MissingPricesImpl(@JsonProperty("product") final com.commercetools.ml.models.common.ProductReference product, @JsonProperty("variantId") final Long variantId) {
+        this.product = product;
+        this.variantId = variantId;
+    }
+    public MissingPricesImpl() {
+       
+    }
 
-   @JsonCreator
-   MissingPricesImpl(@JsonProperty("product") final com.commercetools.ml.models.common.ProductReference product, @JsonProperty("variantId") final Long variantId) {
-      this.product = product;
-      this.variantId = variantId;
-   }
-   public MissingPricesImpl() {
+    
+    public com.commercetools.ml.models.common.ProductReference getProduct(){
+        return this.product;
+    }
+    
+    /**
+    *  <p>Id of the <code>ProductVariant</code>.</p>
+    */
+    public Long getVariantId(){
+        return this.variantId;
+    }
 
-   }
-
-
-   public com.commercetools.ml.models.common.ProductReference getProduct(){
-      return this.product;
-   }
-
-   /**
-   *  <p>Id of the <code>ProductVariant</code>.</p>
-   */
-   public Long getVariantId(){
-      return this.variantId;
-   }
-
-   public void setProduct(final com.commercetools.ml.models.common.ProductReference product){
-      this.product = product;
-   }
-
-   public void setVariantId(final Long variantId){
-      this.variantId = variantId;
-   }
+    public void setProduct(final com.commercetools.ml.models.common.ProductReference product){
+        this.product = product;
+    }
+    
+    public void setVariantId(final Long variantId){
+        this.variantId = variantId;
+    }
 
 }

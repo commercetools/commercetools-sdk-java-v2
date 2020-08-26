@@ -22,53 +22,53 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectCategoryRecommendationMetaImpl implements ProjectCategoryRecommendationMeta {
 
-   private String productName;
-   
-   private String productImageUrl;
-   
-   private java.util.List<String> generalCategoryNames;
+    private String productName;
+    
+    private String productImageUrl;
+    
+    private java.util.List<String> generalCategoryNames;
 
-   @JsonCreator
-   ProjectCategoryRecommendationMetaImpl(@JsonProperty("productName") final String productName, @JsonProperty("productImageUrl") final String productImageUrl, @JsonProperty("generalCategoryNames") final java.util.List<String> generalCategoryNames) {
-      this.productName = productName;
-      this.productImageUrl = productImageUrl;
-      this.generalCategoryNames = generalCategoryNames;
-   }
-   public ProjectCategoryRecommendationMetaImpl() {
-      
-   }
-   
-   /**
-   *  <p>The product name that was used to generate recommendations.</p>
-   */
-   public String getProductName(){
-      return this.productName;
-   }
-   
-   /**
-   *  <p>The product image that was used to generate recommendations.</p>
-   */
-   public String getProductImageUrl(){
-      return this.productImageUrl;
-   }
-   
-   /**
-   *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
-   */
-   public java.util.List<String> getGeneralCategoryNames(){
-      return this.generalCategoryNames;
-   }
+    @JsonCreator
+    ProjectCategoryRecommendationMetaImpl(@JsonProperty("productName") final String productName, @JsonProperty("productImageUrl") final String productImageUrl, @JsonProperty("generalCategoryNames") final java.util.List<String> generalCategoryNames) {
+        this.productName = productName;
+        this.productImageUrl = productImageUrl;
+        this.generalCategoryNames = generalCategoryNames;
+    }
+    public ProjectCategoryRecommendationMetaImpl() {
+       
+    }
 
-   public void setProductName(final String productName){
-      this.productName = productName;
-   }
-   
-   public void setProductImageUrl(final String productImageUrl){
-      this.productImageUrl = productImageUrl;
-   }
-   
-   public void setGeneralCategoryNames(final java.util.List<String> generalCategoryNames){
-      this.generalCategoryNames = generalCategoryNames;
-   }
+    /**
+    *  <p>The product name that was used to generate recommendations.</p>
+    */
+    public String getProductName(){
+        return this.productName;
+    }
+    
+    /**
+    *  <p>The product image that was used to generate recommendations.</p>
+    */
+    public String getProductImageUrl(){
+        return this.productImageUrl;
+    }
+    
+    /**
+    *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+    */
+    public java.util.List<String> getGeneralCategoryNames(){
+        return this.generalCategoryNames;
+    }
+
+    public void setProductName(final String productName){
+        this.productName = productName;
+    }
+    
+    public void setProductImageUrl(final String productImageUrl){
+        this.productImageUrl = productImageUrl;
+    }
+    
+    public void setGeneralCategoryNames(final java.util.List<String> generalCategoryNames){
+        this.generalCategoryNames = generalCategoryNames;
+    }
 
 }

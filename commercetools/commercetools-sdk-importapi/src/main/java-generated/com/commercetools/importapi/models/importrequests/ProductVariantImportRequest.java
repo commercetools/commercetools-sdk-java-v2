@@ -39,7 +39,7 @@ public interface ProductVariantImportRequest extends ImportRequest {
     public static ProductVariantImportRequestImpl of(){
         return new ProductVariantImportRequestImpl();
     }
-
+    
 
     public static ProductVariantImportRequestImpl of(final ProductVariantImportRequest template) {
         ProductVariantImportRequestImpl instance = new ProductVariantImportRequestImpl();

@@ -30,22 +30,22 @@ public interface Asset  {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
+    
     @NotNull
     @Valid
     @JsonProperty("sources")
     public List<AssetSource> getSources();
-
+    
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
+    
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
-
+    
+    
     @JsonProperty("tags")
     public List<String> getTags();
     /**
@@ -56,21 +56,21 @@ public interface Asset  {
     public Custom getCustom();
 
     public void setKey(final String key);
-
+    
     public void setSources(final List<AssetSource> sources);
-
+    
     public void setName(final LocalizedString name);
-
+    
     public void setDescription(final LocalizedString description);
-
+    
     public void setTags(final List<String> tags);
-
+    
     public void setCustom(final Custom custom);
 
     public static AssetImpl of(){
         return new AssetImpl();
     }
-
+    
 
     public static AssetImpl of(final Asset template) {
         AssetImpl instance = new AssetImpl();

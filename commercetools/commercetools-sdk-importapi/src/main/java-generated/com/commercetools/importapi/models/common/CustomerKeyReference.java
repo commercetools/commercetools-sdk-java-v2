@@ -30,7 +30,7 @@ public interface CustomerKeyReference extends KeyReference {
     public static CustomerKeyReferenceImpl of(){
         return new CustomerKeyReferenceImpl();
     }
-
+    
 
     public static CustomerKeyReferenceImpl of(final CustomerKeyReference template) {
         CustomerKeyReferenceImpl instance = new CustomerKeyReferenceImpl();

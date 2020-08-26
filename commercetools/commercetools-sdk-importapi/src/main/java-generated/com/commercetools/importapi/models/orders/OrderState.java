@@ -13,19 +13,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum OrderState {
 
-
+    
     @JsonProperty("Open")
     OPEN("Open"),
-
-
+    
+    
     @JsonProperty("Confirmed")
     CONFIRMED("Confirmed"),
-
-
+    
+    
     @JsonProperty("Complete")
     COMPLETE("Complete"),
-
-
+    
+    
     @JsonProperty("Cancelled")
     CANCELLED("Cancelled");
 

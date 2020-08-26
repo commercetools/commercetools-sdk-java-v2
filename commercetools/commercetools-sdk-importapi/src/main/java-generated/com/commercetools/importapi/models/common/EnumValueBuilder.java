@@ -14,28 +14,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class EnumValueBuilder {
 
-
+    
     private String key;
-
-
+    
+    
     private String label;
 
     public EnumValueBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
     public EnumValueBuilder label( final String label) {
         this.label = label;
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
-
+    
+    
     public String getLabel(){
         return this.label;
     }

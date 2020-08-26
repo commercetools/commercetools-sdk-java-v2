@@ -39,7 +39,7 @@ public interface CategoryImportRequest extends ImportRequest {
     public static CategoryImportRequestImpl of(){
         return new CategoryImportRequestImpl();
     }
-
+    
 
     public static CategoryImportRequestImpl of(final CategoryImportRequest template) {
         CategoryImportRequestImpl instance = new CategoryImportRequestImpl();

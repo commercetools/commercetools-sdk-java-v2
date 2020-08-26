@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum TextInputHint {
 
-
+    
     @JsonProperty("SingleLine")
     SINGLE_LINE("SingleLine"),
-
-
+    
+    
     @JsonProperty("MultiLine")
     MULTI_LINE("MultiLine");
 

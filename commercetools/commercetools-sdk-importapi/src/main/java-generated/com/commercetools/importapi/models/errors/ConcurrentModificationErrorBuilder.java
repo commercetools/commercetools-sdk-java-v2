@@ -15,15 +15,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ConcurrentModificationErrorBuilder {
 
-
+    
     private String message;
-
+    
     @Nullable
     private Long specifiedVersion;
-
-
+    
+    
     private Long currentVersion;
-
+    
     @Nullable
     private com.fasterxml.jackson.databind.JsonNode conflictedResource;
 
@@ -31,37 +31,37 @@ public final class ConcurrentModificationErrorBuilder {
         this.message = message;
         return this;
     }
-
+    
     public ConcurrentModificationErrorBuilder specifiedVersion(@Nullable final Long specifiedVersion) {
         this.specifiedVersion = specifiedVersion;
         return this;
     }
-
+    
     public ConcurrentModificationErrorBuilder currentVersion( final Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
     }
-
+    
     public ConcurrentModificationErrorBuilder conflictedResource(@Nullable final com.fasterxml.jackson.databind.JsonNode conflictedResource) {
         this.conflictedResource = conflictedResource;
         return this;
     }
 
-
+    
     public String getMessage(){
         return this.message;
     }
-
+    
     @Nullable
     public Long getSpecifiedVersion(){
         return this.specifiedVersion;
     }
-
-
+    
+    
     public Long getCurrentVersion(){
         return this.currentVersion;
     }
-
+    
     @Nullable
     public com.fasterxml.jackson.databind.JsonNode getConflictedResource(){
         return this.conflictedResource;

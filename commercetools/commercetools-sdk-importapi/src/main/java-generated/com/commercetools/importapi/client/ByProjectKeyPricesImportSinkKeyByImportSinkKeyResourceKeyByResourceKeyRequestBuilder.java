@@ -12,7 +12,7 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResource
     private final String projectKey;
     private final String importSinkKey;
     private final String resourceKey;
-
+    
 
     public ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey,final String resourceKey) {
         this.apiHttpClient = apiHttpClient;

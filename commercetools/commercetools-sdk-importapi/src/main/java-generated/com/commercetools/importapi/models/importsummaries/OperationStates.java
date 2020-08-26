@@ -83,29 +83,29 @@ public interface OperationStates  {
     public Long getExpired();
 
     public void setAccepted(final Long accepted);
-
+    
     public void setValidationFailed(final Long validationFailed);
-
+    
     public void setUnresolved(final Long unresolved);
-
+    
     public void setResolved(final Long resolved);
-
+    
     public void setWaitForMasterVariant(final Long waitForMasterVariant);
-
+    
     public void setImported(final Long imported);
-
+    
     public void setDeleted(final Long deleted);
-
+    
     public void setRejected(final Long rejected);
-
+    
     public void setSkipped(final Long skipped);
-
+    
     public void setExpired(final Long expired);
 
     public static OperationStatesImpl of(){
         return new OperationStatesImpl();
     }
-
+    
 
     public static OperationStatesImpl of(final OperationStates template) {
         OperationStatesImpl instance = new OperationStatesImpl();

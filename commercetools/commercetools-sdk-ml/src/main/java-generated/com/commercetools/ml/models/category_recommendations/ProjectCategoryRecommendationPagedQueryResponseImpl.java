@@ -23,71 +23,71 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProjectCategoryRecommendationPagedQueryResponseImpl implements ProjectCategoryRecommendationPagedQueryResponse {
 
-   private Long count;
+    private Long count;
+    
+    private Long total;
+    
+    private Long offset;
+    
+    private java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results;
+    
+    private com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta;
 
-   private Long total;
+    @JsonCreator
+    ProjectCategoryRecommendationPagedQueryResponseImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results, @JsonProperty("meta") final com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta) {
+        this.count = count;
+        this.total = total;
+        this.offset = offset;
+        this.results = results;
+        this.meta = meta;
+    }
+    public ProjectCategoryRecommendationPagedQueryResponseImpl() {
+       
+    }
 
-   private Long offset;
+    
+    public Long getCount(){
+        return this.count;
+    }
+    
+    
+    public Long getTotal(){
+        return this.total;
+    }
+    
+    
+    public Long getOffset(){
+        return this.offset;
+    }
+    
+    
+    public java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> getResults(){
+        return this.results;
+    }
+    
+    
+    public com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta getMeta(){
+        return this.meta;
+    }
 
-   private java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results;
-
-   private com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta;
-
-   @JsonCreator
-   ProjectCategoryRecommendationPagedQueryResponseImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results, @JsonProperty("meta") final com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta) {
-      this.count = count;
-      this.total = total;
-      this.offset = offset;
-      this.results = results;
-      this.meta = meta;
-   }
-   public ProjectCategoryRecommendationPagedQueryResponseImpl() {
-
-   }
-
-
-   public Long getCount(){
-      return this.count;
-   }
-
-
-   public Long getTotal(){
-      return this.total;
-   }
-
-
-   public Long getOffset(){
-      return this.offset;
-   }
-
-
-   public java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> getResults(){
-      return this.results;
-   }
-
-
-   public com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta getMeta(){
-      return this.meta;
-   }
-
-   public void setCount(final Long count){
-      this.count = count;
-   }
-
-   public void setTotal(final Long total){
-      this.total = total;
-   }
-
-   public void setOffset(final Long offset){
-      this.offset = offset;
-   }
-
-   public void setResults(final java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results){
-      this.results = results;
-   }
-
-   public void setMeta(final com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta){
-      this.meta = meta;
-   }
+    public void setCount(final Long count){
+        this.count = count;
+    }
+    
+    public void setTotal(final Long total){
+        this.total = total;
+    }
+    
+    public void setOffset(final Long offset){
+        this.offset = offset;
+    }
+    
+    public void setResults(final java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results){
+        this.results = results;
+    }
+    
+    public void setMeta(final com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta){
+        this.meta = meta;
+    }
 
 }

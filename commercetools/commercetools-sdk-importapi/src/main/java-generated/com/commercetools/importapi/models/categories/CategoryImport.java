@@ -61,13 +61,13 @@ public interface CategoryImport extends ImportResource {
     /**
     *  <p>Maps to <code>Category.orderHint</code>.</p>
     */
-
+    
     @JsonProperty("orderHint")
     public String getOrderHint();
     /**
     *  <p>Maps to <code>Category.externalId</code>.</p>
     */
-
+    
     @JsonProperty("externalId")
     public String getExternalId();
     /**
@@ -88,7 +88,7 @@ public interface CategoryImport extends ImportResource {
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
-
+    
     @Valid
     @JsonProperty("assets")
     public List<Asset> getAssets();
@@ -100,31 +100,31 @@ public interface CategoryImport extends ImportResource {
     public Custom getCustom();
 
     public void setName(final LocalizedString name);
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
     public void setDescription(final LocalizedString description);
-
+    
     public void setParent(final CategoryKeyReference parent);
-
+    
     public void setOrderHint(final String orderHint);
-
+    
     public void setExternalId(final String externalId);
-
+    
     public void setMetaTitle(final LocalizedString metaTitle);
-
+    
     public void setMetaDescription(final LocalizedString metaDescription);
-
+    
     public void setMetaKeywords(final LocalizedString metaKeywords);
-
+    
     public void setAssets(final List<Asset> assets);
-
+    
     public void setCustom(final Custom custom);
 
     public static CategoryImportImpl of(){
         return new CategoryImportImpl();
     }
-
+    
 
     public static CategoryImportImpl of(final CategoryImport template) {
         CategoryImportImpl instance = new CategoryImportImpl();

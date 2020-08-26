@@ -15,31 +15,31 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CategoryReferenceBuilder {
 
+    
+    private String id;
 
-   private String id;
+    public CategoryReferenceBuilder id( final String id) {
+        this.id = id;
+        return this;
+    }
 
-   public CategoryReferenceBuilder id( final String id) {
-      this.id = id;
-      return this;
-   }
+    
+    public String getId(){
+        return this.id;
+    }
 
+    public CategoryReference build() {
+        return new CategoryReferenceImpl(id);
+    }
 
-   public String getId(){
-      return this.id;
-   }
+    public static CategoryReferenceBuilder of() {
+        return new CategoryReferenceBuilder();
+    }
 
-   public CategoryReference build() {
-       return new CategoryReferenceImpl(id);
-   }
-
-   public static CategoryReferenceBuilder of() {
-      return new CategoryReferenceBuilder();
-   }
-
-   public static CategoryReferenceBuilder of(final CategoryReference template) {
-      CategoryReferenceBuilder builder = new CategoryReferenceBuilder();
-      builder.id = template.getId();
-      return builder;
-   }
+    public static CategoryReferenceBuilder of(final CategoryReference template) {
+        CategoryReferenceBuilder builder = new CategoryReferenceBuilder();
+        builder.id = template.getId();
+        return builder;
+    }
 
 }

@@ -10,7 +10,7 @@ public class ByProjectKeyImportSinksRequestBuilder {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
-
+    
 
     public ByProjectKeyImportSinksRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey) {
         this.apiHttpClient = apiHttpClient;
@@ -20,7 +20,7 @@ public class ByProjectKeyImportSinksRequestBuilder {
     public ByProjectKeyImportSinksPost post(com.commercetools.importapi.models.importsinks.ImportSinkDraft importSinkDraft) {
         return new ByProjectKeyImportSinksPost(apiHttpClient, projectKey, importSinkDraft);
     }
-
+    
     public ByProjectKeyImportSinksGet get() {
         return new ByProjectKeyImportSinksGet(apiHttpClient, projectKey);
     }

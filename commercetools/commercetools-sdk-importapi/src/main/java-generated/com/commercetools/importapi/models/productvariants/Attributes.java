@@ -36,7 +36,7 @@ public interface Attributes  {
     public static AttributesImpl of(){
         return new AttributesImpl();
     }
-
+    
 
     public static AttributesImpl of(final Attributes template) {
         AttributesImpl instance = new AttributesImpl();

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class NumberSetFieldBuilder {
 
-
+    
     private java.util.List<Double> value;
 
     public NumberSetFieldBuilder value( final java.util.List<Double> value) {
@@ -22,7 +22,7 @@ public final class NumberSetFieldBuilder {
         return this;
     }
 
-
+    
     public java.util.List<Double> getValue(){
         return this.value;
     }

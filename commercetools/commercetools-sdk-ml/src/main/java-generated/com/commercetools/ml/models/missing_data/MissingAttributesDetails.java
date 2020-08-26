@@ -21,42 +21,42 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingAttributesDetailsImpl.class)
 public interface MissingAttributesDetails  {
 
-   /**
-   *  <p>Number of products scanned.</p>
-   */
-   @NotNull
-   @JsonProperty("total")
-   public Integer getTotal();
-   /**
-   *  <p>Number of products missing attribute names.</p>
-   */
-   @NotNull
-   @JsonProperty("missingAttributeNames")
-   public Integer getMissingAttributeNames();
-   /**
-   *  <p>Number of products missing attribute values.</p>
-   */
-   @NotNull
-   @JsonProperty("missingAttributeValues")
-   public Integer getMissingAttributeValues();
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+    @NotNull
+    @JsonProperty("total")
+    public Integer getTotal();
+    /**
+    *  <p>Number of products missing attribute names.</p>
+    */
+    @NotNull
+    @JsonProperty("missingAttributeNames")
+    public Integer getMissingAttributeNames();
+    /**
+    *  <p>Number of products missing attribute values.</p>
+    */
+    @NotNull
+    @JsonProperty("missingAttributeValues")
+    public Integer getMissingAttributeValues();
 
-   public void setTotal(final Integer total);
-   
-   public void setMissingAttributeNames(final Integer missingAttributeNames);
-   
-   public void setMissingAttributeValues(final Integer missingAttributeValues);
-   
-   public static MissingAttributesDetailsImpl of(){
-      return new MissingAttributesDetailsImpl();
-   }
-   
+    public void setTotal(final Integer total);
+    
+    public void setMissingAttributeNames(final Integer missingAttributeNames);
+    
+    public void setMissingAttributeValues(final Integer missingAttributeValues);
 
-   public static MissingAttributesDetailsImpl of(final MissingAttributesDetails template) {
-      MissingAttributesDetailsImpl instance = new MissingAttributesDetailsImpl();
-      instance.setTotal(template.getTotal());
-      instance.setMissingAttributeNames(template.getMissingAttributeNames());
-      instance.setMissingAttributeValues(template.getMissingAttributeValues());
-      return instance;
-   }
+    public static MissingAttributesDetailsImpl of(){
+        return new MissingAttributesDetailsImpl();
+    }
+    
+
+    public static MissingAttributesDetailsImpl of(final MissingAttributesDetails template) {
+        MissingAttributesDetailsImpl instance = new MissingAttributesDetailsImpl();
+        instance.setTotal(template.getTotal());
+        instance.setMissingAttributeNames(template.getMissingAttributeNames());
+        instance.setMissingAttributeValues(template.getMissingAttributeValues());
+        return instance;
+    }
 
 }

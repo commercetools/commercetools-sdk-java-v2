@@ -30,14 +30,14 @@ import io.vrap.rmf.base.client.*;
 )
 public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost {
 
-
+    
     private ApiHttpHeaders headers = new ApiHttpHeaders();
     private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient;
-
+    private final ApiHttpClient apiHttpClient; 
+    
     private String projectKey;
     private String importSinkKey;
-
+    
     private com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest productVariantPatchRequest;
 
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey, com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest productVariantPatchRequest){
@@ -50,14 +50,14 @@ public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost {
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>();
-
+        
         params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
         params.removeIf(String::isEmpty);
         String httpRequestPath = String.format("/%s/product-variant-patches/importSinkKey=%s", this.projectKey, this.importSinkKey);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath);
+        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(headers);
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(productVariantPatchRequest));}catch(Exception e){e.printStackTrace();}
@@ -87,7 +87,7 @@ public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost {
 
 
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
-
+    
     public void setImportSinkKey(final String importSinkKey) {this.importSinkKey = importSinkKey;}
 
 
@@ -95,34 +95,30 @@ public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost {
         this.headers.addHeader(key, value);
         return this;
     }
-
+    
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost withHeaders(final ApiHttpHeaders headers) {
         this.headers = headers;
         return this;
     }
-
-    public String getHeaderValue(final String key) {
-        return this.headers.getHeaderValue(key);
-    }
-
+    
     public ApiHttpHeaders getHeaders() {
         return this.headers;
     }
-
+    
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
         this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
         return this;
     }
-
+    
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
         this.additionalQueryParams = additionalQueryParams;
         return this;
     }
-
+    
     public Map<String, String> getAdditionalQueryParams() {
         return this.additionalQueryParams;
     }
-
+    
     private String urlEncode(final String s){
         try{
              return URLEncoder.encode(s, "UTF-8");

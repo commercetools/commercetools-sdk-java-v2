@@ -22,31 +22,31 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingImagesCountImpl.class)
 public interface MissingImagesCount  {
 
-   
-   @NotNull
-   @JsonProperty("missingImages")
-   public Long getMissingImages();
-   /**
-   *  <p>Number of products scanned.</p>
-   */
-   @NotNull
-   @JsonProperty("total")
-   public Long getTotal();
+    
+    @NotNull
+    @JsonProperty("missingImages")
+    public Long getMissingImages();
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+    @NotNull
+    @JsonProperty("total")
+    public Long getTotal();
 
-   public void setMissingImages(final Long missingImages);
-   
-   public void setTotal(final Long total);
-   
-   public static MissingImagesCountImpl of(){
-      return new MissingImagesCountImpl();
-   }
-   
+    public void setMissingImages(final Long missingImages);
+    
+    public void setTotal(final Long total);
 
-   public static MissingImagesCountImpl of(final MissingImagesCount template) {
-      MissingImagesCountImpl instance = new MissingImagesCountImpl();
-      instance.setMissingImages(template.getMissingImages());
-      instance.setTotal(template.getTotal());
-      return instance;
-   }
+    public static MissingImagesCountImpl of(){
+        return new MissingImagesCountImpl();
+    }
+    
+
+    public static MissingImagesCountImpl of(final MissingImagesCount template) {
+        MissingImagesCountImpl instance = new MissingImagesCountImpl();
+        instance.setMissingImages(template.getMissingImages());
+        instance.setTotal(template.getTotal());
+        return instance;
+    }
 
 }

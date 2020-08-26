@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class BooleanFieldBuilder {
 
-
+    
     private Boolean value;
 
     public BooleanFieldBuilder value( final Boolean value) {
@@ -22,7 +22,7 @@ public final class BooleanFieldBuilder {
         return this;
     }
 
-
+    
     public Boolean getValue(){
         return this.value;
     }

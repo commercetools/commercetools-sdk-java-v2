@@ -23,17 +23,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class TaxRateImpl implements TaxRate {
 
     private String id;
-
+    
     private String name;
-
+    
     private Double amount;
-
+    
     private Boolean includedInPrice;
-
+    
     private String country;
-
+    
     private String state;
-
+    
     private java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates;
 
     @JsonCreator
@@ -47,42 +47,42 @@ public final class TaxRateImpl implements TaxRate {
         this.subRates = subRates;
     }
     public TaxRateImpl() {
-
+       
     }
 
-
+    
     public String getId(){
         return this.id;
     }
-
-
+    
+    
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public Double getAmount(){
         return this.amount;
     }
-
-
+    
+    
     public Boolean getIncludedInPrice(){
         return this.includedInPrice;
     }
-
+    
     /**
     *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
     */
     public String getCountry(){
         return this.country;
     }
-
-
+    
+    
     public String getState(){
         return this.state;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.prices.SubRate> getSubRates(){
         return this.subRates;
     }
@@ -90,27 +90,27 @@ public final class TaxRateImpl implements TaxRate {
     public void setId(final String id){
         this.id = id;
     }
-
+    
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setAmount(final Double amount){
         this.amount = amount;
     }
-
+    
     public void setIncludedInPrice(final Boolean includedInPrice){
         this.includedInPrice = includedInPrice;
     }
-
+    
     public void setCountry(final String country){
         this.country = country;
     }
-
+    
     public void setState(final String state){
         this.state = state;
     }
-
+    
     public void setSubRates(final java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates){
         this.subRates = subRates;
     }

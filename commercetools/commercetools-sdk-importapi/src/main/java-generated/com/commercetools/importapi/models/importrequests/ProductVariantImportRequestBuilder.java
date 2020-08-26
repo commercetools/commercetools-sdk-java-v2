@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ProductVariantImportRequestBuilder {
 
-
+    
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources;
 
     public ProductVariantImportRequestBuilder resources( final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources) {
@@ -24,7 +24,7 @@ public final class ProductVariantImportRequestBuilder {
         return this;
     }
 
-
+    
     public java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> getResources(){
         return this.resources;
     }

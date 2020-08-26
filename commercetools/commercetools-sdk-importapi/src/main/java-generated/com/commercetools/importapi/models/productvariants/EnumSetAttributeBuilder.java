@@ -16,15 +16,15 @@ public final class EnumSetAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private java.util.List<String> value;
 
     public EnumSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public EnumSetAttributeBuilder value( final java.util.List<String> value) {
         this.value = value;
         return this;
@@ -34,8 +34,8 @@ public final class EnumSetAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public java.util.List<String> getValue(){
         return this.value;
     }

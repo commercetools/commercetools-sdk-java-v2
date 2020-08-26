@@ -16,16 +16,16 @@ public final class TrackingDataBuilder {
 
     @Nullable
     private String trackingId;
-
+    
     @Nullable
     private String carrier;
-
+    
     @Nullable
     private String provider;
-
+    
     @Nullable
     private String providerTransaction;
-
+    
     @Nullable
     private Boolean isReturn;
 
@@ -33,22 +33,22 @@ public final class TrackingDataBuilder {
         this.trackingId = trackingId;
         return this;
     }
-
+    
     public TrackingDataBuilder carrier(@Nullable final String carrier) {
         this.carrier = carrier;
         return this;
     }
-
+    
     public TrackingDataBuilder provider(@Nullable final String provider) {
         this.provider = provider;
         return this;
     }
-
+    
     public TrackingDataBuilder providerTransaction(@Nullable final String providerTransaction) {
         this.providerTransaction = providerTransaction;
         return this;
     }
-
+    
     public TrackingDataBuilder isReturn(@Nullable final Boolean isReturn) {
         this.isReturn = isReturn;
         return this;
@@ -58,22 +58,22 @@ public final class TrackingDataBuilder {
     public String getTrackingId(){
         return this.trackingId;
     }
-
+    
     @Nullable
     public String getCarrier(){
         return this.carrier;
     }
-
+    
     @Nullable
     public String getProvider(){
         return this.provider;
     }
-
+    
     @Nullable
     public String getProviderTransaction(){
         return this.providerTransaction;
     }
-
+    
     @Nullable
     public Boolean getIsReturn(){
         return this.isReturn;

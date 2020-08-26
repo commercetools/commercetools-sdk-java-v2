@@ -24,7 +24,7 @@ import java.io.IOException;
 @JsonDeserialize(as = NumberSetFieldImpl.class)
 public interface NumberSetField extends CustomField {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public List<Double> getValue();
@@ -34,7 +34,7 @@ public interface NumberSetField extends CustomField {
     public static NumberSetFieldImpl of(){
         return new NumberSetFieldImpl();
     }
-
+    
 
     public static NumberSetFieldImpl of(final NumberSetField template) {
         NumberSetFieldImpl instance = new NumberSetFieldImpl();

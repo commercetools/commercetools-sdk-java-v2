@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ImportResourceBuilder {
 
-
+    
     private String key;
 
     public ImportResourceBuilder key( final String key) {
@@ -29,7 +29,7 @@ public final class ImportResourceBuilder {
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedEnumType {
 
     private String name;
-
+    
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> values;
 
     @JsonCreator
@@ -33,15 +33,15 @@ public final class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedE
         this.name = "lenum";
     }
     public AttributeLocalizedEnumTypeImpl() {
-
+       
     }
 
-
+    
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> getValues(){
         return this.values;
     }

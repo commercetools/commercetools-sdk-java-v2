@@ -13,11 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public enum ShippingMethodState {
 
-
+    
     @JsonProperty("DoesNotMatchCart")
     DOES_NOT_MATCH_CART("DoesNotMatchCart"),
-
-
+    
+    
     @JsonProperty("MatchesCart")
     MATCHES_CART("MatchesCart");
 

@@ -14,28 +14,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CustomLineItemTaxedPriceBuilder {
 
-
+    
     private com.commercetools.importapi.models.common.TypedMoney totalNet;
-
-
+    
+    
     private com.commercetools.importapi.models.common.TypedMoney totalGross;
 
     public CustomLineItemTaxedPriceBuilder totalNet( final com.commercetools.importapi.models.common.TypedMoney totalNet) {
         this.totalNet = totalNet;
         return this;
     }
-
+    
     public CustomLineItemTaxedPriceBuilder totalGross( final com.commercetools.importapi.models.common.TypedMoney totalGross) {
         this.totalGross = totalGross;
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.common.TypedMoney getTotalNet(){
         return this.totalNet;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.TypedMoney getTotalGross(){
         return this.totalGross;
     }

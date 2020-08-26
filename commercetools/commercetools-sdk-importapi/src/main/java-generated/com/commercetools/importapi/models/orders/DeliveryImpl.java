@@ -26,13 +26,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class DeliveryImpl implements Delivery {
 
     private String id;
-
+    
     private java.time.ZonedDateTime createdAt;
-
+    
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
-
+    
     private java.util.List<com.commercetools.importapi.models.orders.Parcel> parcels;
-
+    
     private com.commercetools.importapi.models.common.Address address;
 
     @JsonCreator
@@ -44,30 +44,30 @@ public final class DeliveryImpl implements Delivery {
         this.address = address;
     }
     public DeliveryImpl() {
-
+       
     }
 
-
+    
     public String getId(){
         return this.id;
     }
-
-
+    
+    
     public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems(){
         return this.items;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.orders.Parcel> getParcels(){
         return this.parcels;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.Address getAddress(){
         return this.address;
     }
@@ -75,19 +75,19 @@ public final class DeliveryImpl implements Delivery {
     public void setId(final String id){
         this.id = id;
     }
-
+    
     public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
+    
     public void setItems(final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items){
         this.items = items;
     }
-
+    
     public void setParcels(final java.util.List<com.commercetools.importapi.models.orders.Parcel> parcels){
         this.parcels = parcels;
     }
-
+    
     public void setAddress(final com.commercetools.importapi.models.common.Address address){
         this.address = address;
     }

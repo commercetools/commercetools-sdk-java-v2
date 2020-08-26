@@ -26,13 +26,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class LineItemProductVariantImportDraftImpl implements LineItemProductVariantImportDraft {
 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
-
+    
     private String sku;
-
+    
     private java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> prices;
-
+    
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
-
+    
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
 
     @JsonCreator
@@ -44,7 +44,7 @@ public final class LineItemProductVariantImportDraftImpl implements LineItemProd
         this.images = images;
     }
     public LineItemProductVariantImportDraftImpl() {
-
+       
     }
 
     /**
@@ -53,28 +53,28 @@ public final class LineItemProductVariantImportDraftImpl implements LineItemProd
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct(){
         return this.product;
     }
-
+    
     /**
     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
     */
     public String getSku(){
         return this.sku;
     }
-
+    
     /**
     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
     */
     public java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> getPrices(){
         return this.prices;
     }
-
+    
     /**
     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
     */
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes(){
         return this.attributes;
     }
-
+    
     /**
     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
     */
@@ -85,19 +85,19 @@ public final class LineItemProductVariantImportDraftImpl implements LineItemProd
     public void setProduct(final com.commercetools.importapi.models.common.ProductKeyReference product){
         this.product = product;
     }
-
+    
     public void setSku(final String sku){
         this.sku = sku;
     }
-
+    
     public void setPrices(final java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> prices){
         this.prices = prices;
     }
-
+    
     public void setAttributes(final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes){
         this.attributes = attributes;
     }
-
+    
     public void setImages(final java.util.List<com.commercetools.importapi.models.common.Image> images){
         this.images = images;
     }

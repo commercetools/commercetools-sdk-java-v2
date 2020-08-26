@@ -23,16 +23,16 @@ import java.io.IOException;
 public interface ProductReference extends Reference {
 
 
-   
-   public static ProductReferenceImpl of(){
-      return new ProductReferenceImpl();
-   }
-   
 
-   public static ProductReferenceImpl of(final ProductReference template) {
-      ProductReferenceImpl instance = new ProductReferenceImpl();
-      instance.setId(template.getId());
-      return instance;
-   }
+    public static ProductReferenceImpl of(){
+        return new ProductReferenceImpl();
+    }
+    
+
+    public static ProductReferenceImpl of(final ProductReference template) {
+        ProductReferenceImpl instance = new ProductReferenceImpl();
+        instance.setId(template.getId());
+        return instance;
+    }
 
 }

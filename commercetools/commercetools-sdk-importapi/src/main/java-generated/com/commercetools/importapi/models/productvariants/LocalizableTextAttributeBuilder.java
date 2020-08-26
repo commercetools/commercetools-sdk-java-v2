@@ -17,15 +17,15 @@ public final class LocalizableTextAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private com.commercetools.importapi.models.common.LocalizedString value;
 
     public LocalizableTextAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public LocalizableTextAttributeBuilder value( final com.commercetools.importapi.models.common.LocalizedString value) {
         this.value = value;
         return this;
@@ -35,8 +35,8 @@ public final class LocalizableTextAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public com.commercetools.importapi.models.common.LocalizedString getValue(){
         return this.value;
     }

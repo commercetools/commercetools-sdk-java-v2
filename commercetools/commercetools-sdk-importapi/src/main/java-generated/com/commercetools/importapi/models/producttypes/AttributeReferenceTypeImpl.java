@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class AttributeReferenceTypeImpl implements AttributeReferenceType {
 
     private String name;
-
+    
     private com.commercetools.importapi.models.common.ReferenceType referenceTypeId;
 
     @JsonCreator
@@ -33,14 +33,14 @@ public final class AttributeReferenceTypeImpl implements AttributeReferenceType 
         this.name = "reference";
     }
     public AttributeReferenceTypeImpl() {
-
+       
     }
 
-
+    
     public String getName(){
         return this.name;
     }
-
+    
     /**
     *  <p>The type of the referenced resource.</p>
     */

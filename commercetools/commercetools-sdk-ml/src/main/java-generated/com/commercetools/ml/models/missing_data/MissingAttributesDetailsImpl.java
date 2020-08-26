@@ -22,53 +22,53 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingAttributesDetailsImpl implements MissingAttributesDetails {
 
-   private Integer total;
+    private Integer total;
+    
+    private Integer missingAttributeNames;
+    
+    private Integer missingAttributeValues;
 
-   private Integer missingAttributeNames;
+    @JsonCreator
+    MissingAttributesDetailsImpl(@JsonProperty("total") final Integer total, @JsonProperty("missingAttributeNames") final Integer missingAttributeNames, @JsonProperty("missingAttributeValues") final Integer missingAttributeValues) {
+        this.total = total;
+        this.missingAttributeNames = missingAttributeNames;
+        this.missingAttributeValues = missingAttributeValues;
+    }
+    public MissingAttributesDetailsImpl() {
+       
+    }
 
-   private Integer missingAttributeValues;
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+    public Integer getTotal(){
+        return this.total;
+    }
+    
+    /**
+    *  <p>Number of products missing attribute names.</p>
+    */
+    public Integer getMissingAttributeNames(){
+        return this.missingAttributeNames;
+    }
+    
+    /**
+    *  <p>Number of products missing attribute values.</p>
+    */
+    public Integer getMissingAttributeValues(){
+        return this.missingAttributeValues;
+    }
 
-   @JsonCreator
-   MissingAttributesDetailsImpl(@JsonProperty("total") final Integer total, @JsonProperty("missingAttributeNames") final Integer missingAttributeNames, @JsonProperty("missingAttributeValues") final Integer missingAttributeValues) {
-      this.total = total;
-      this.missingAttributeNames = missingAttributeNames;
-      this.missingAttributeValues = missingAttributeValues;
-   }
-   public MissingAttributesDetailsImpl() {
-
-   }
-
-   /**
-   *  <p>Number of products scanned.</p>
-   */
-   public Integer getTotal(){
-      return this.total;
-   }
-
-   /**
-   *  <p>Number of products missing attribute names.</p>
-   */
-   public Integer getMissingAttributeNames(){
-      return this.missingAttributeNames;
-   }
-
-   /**
-   *  <p>Number of products missing attribute values.</p>
-   */
-   public Integer getMissingAttributeValues(){
-      return this.missingAttributeValues;
-   }
-
-   public void setTotal(final Integer total){
-      this.total = total;
-   }
-
-   public void setMissingAttributeNames(final Integer missingAttributeNames){
-      this.missingAttributeNames = missingAttributeNames;
-   }
-
-   public void setMissingAttributeValues(final Integer missingAttributeValues){
-      this.missingAttributeValues = missingAttributeValues;
-   }
+    public void setTotal(final Integer total){
+        this.total = total;
+    }
+    
+    public void setMissingAttributeNames(final Integer missingAttributeNames){
+        this.missingAttributeNames = missingAttributeNames;
+    }
+    
+    public void setMissingAttributeValues(final Integer missingAttributeValues){
+        this.missingAttributeValues = missingAttributeValues;
+    }
 
 }

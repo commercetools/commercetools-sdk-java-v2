@@ -34,7 +34,7 @@ public interface ItemShippingDetailsDraft  {
     public static ItemShippingDetailsDraftImpl of(){
         return new ItemShippingDetailsDraftImpl();
     }
-
+    
 
     public static ItemShippingDetailsDraftImpl of(final ItemShippingDetailsDraft template) {
         ItemShippingDetailsDraftImpl instance = new ItemShippingDetailsDraftImpl();

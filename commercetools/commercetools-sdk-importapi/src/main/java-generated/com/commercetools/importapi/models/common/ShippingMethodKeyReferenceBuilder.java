@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ShippingMethodKeyReferenceBuilder {
 
-
+    
     private String key;
 
     public ShippingMethodKeyReferenceBuilder key( final String key) {
@@ -23,7 +23,7 @@ public final class ShippingMethodKeyReferenceBuilder {
         return this;
     }
 
-
+    
     public String getKey(){
         return this.key;
     }

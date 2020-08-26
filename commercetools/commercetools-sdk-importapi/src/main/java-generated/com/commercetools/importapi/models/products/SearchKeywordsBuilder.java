@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class SearchKeywordsBuilder {
 
-
+    
     private Map<String, java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> values;
 
     public SearchKeywordsBuilder values( final Map<String, java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> values){
@@ -22,7 +22,7 @@ public final class SearchKeywordsBuilder {
         return this;
     }
 
-
+    
     public Map<String, java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> getValues(){
         return this.values;
     }

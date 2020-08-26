@@ -21,41 +21,41 @@ import java.io.IOException;
 @JsonDeserialize(as = TrackingDataImpl.class)
 public interface TrackingData  {
 
-
-
+    
+    
     @JsonProperty("trackingId")
     public String getTrackingId();
-
-
+    
+    
     @JsonProperty("carrier")
     public String getCarrier();
-
-
+    
+    
     @JsonProperty("provider")
     public String getProvider();
-
-
+    
+    
     @JsonProperty("providerTransaction")
     public String getProviderTransaction();
-
-
+    
+    
     @JsonProperty("isReturn")
     public Boolean getIsReturn();
 
     public void setTrackingId(final String trackingId);
-
+    
     public void setCarrier(final String carrier);
-
+    
     public void setProvider(final String provider);
-
+    
     public void setProviderTransaction(final String providerTransaction);
-
+    
     public void setIsReturn(final Boolean isReturn);
 
     public static TrackingDataImpl of(){
         return new TrackingDataImpl();
     }
-
+    
 
     public static TrackingDataImpl of(final TrackingData template) {
         TrackingDataImpl instance = new TrackingDataImpl();

@@ -14,28 +14,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class AssetDimensionsBuilder {
 
-
+    
     private Double w;
-
-
+    
+    
     private Double h;
 
     public AssetDimensionsBuilder w( final Double w) {
         this.w = w;
         return this;
     }
-
+    
     public AssetDimensionsBuilder h( final Double h) {
         this.h = h;
         return this;
     }
 
-
+    
     public Double getW(){
         return this.w;
     }
-
-
+    
+    
     public Double getH(){
         return this.h;
     }

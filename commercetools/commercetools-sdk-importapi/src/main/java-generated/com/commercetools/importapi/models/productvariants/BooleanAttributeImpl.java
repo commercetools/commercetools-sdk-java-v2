@@ -26,9 +26,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class BooleanAttributeImpl implements BooleanAttribute {
 
     private String name;
-
+    
     private String type;
-
+    
     private Boolean value;
 
     @JsonCreator
@@ -38,7 +38,7 @@ public final class BooleanAttributeImpl implements BooleanAttribute {
         this.type = "boolean";
     }
     public BooleanAttributeImpl() {
-
+       
     }
 
     /**
@@ -49,13 +49,13 @@ public final class BooleanAttributeImpl implements BooleanAttribute {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public Boolean getValue(){
         return this.value;
     }
@@ -63,7 +63,7 @@ public final class BooleanAttributeImpl implements BooleanAttribute {
     public void setName(final String name){
         this.name = name;
     }
-
+    
     public void setValue(final Boolean value){
         this.value = value;
     }

@@ -22,39 +22,39 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class GeneralCategoryRecommendationImpl implements GeneralCategoryRecommendation {
 
-   private String categoryName;
+    private String categoryName;
+    
+    private Double confidence;
 
-   private Integer confidence;
+    @JsonCreator
+    GeneralCategoryRecommendationImpl(@JsonProperty("categoryName") final String categoryName, @JsonProperty("confidence") final Double confidence) {
+        this.categoryName = categoryName;
+        this.confidence = confidence;
+    }
+    public GeneralCategoryRecommendationImpl() {
+       
+    }
 
-   @JsonCreator
-   GeneralCategoryRecommendationImpl(@JsonProperty("categoryName") final String categoryName, @JsonProperty("confidence") final Integer confidence) {
-      this.categoryName = categoryName;
-      this.confidence = confidence;
-   }
-   public GeneralCategoryRecommendationImpl() {
+    /**
+    *  <p>An English category name that is recommended for a product.</p>
+    */
+    public String getCategoryName(){
+        return this.categoryName;
+    }
+    
+    /**
+    *  <p>Probability score for the category recommendation.</p>
+    */
+    public Double getConfidence(){
+        return this.confidence;
+    }
 
-   }
-
-   /**
-   *  <p>An English category name that is recommended for a product.</p>
-   */
-   public String getCategoryName(){
-      return this.categoryName;
-   }
-
-   /**
-   *  <p>Probability score for the category recommendation.</p>
-   */
-   public Integer getConfidence(){
-      return this.confidence;
-   }
-
-   public void setCategoryName(final String categoryName){
-      this.categoryName = categoryName;
-   }
-
-   public void setConfidence(final Integer confidence){
-      this.confidence = confidence;
-   }
+    public void setCategoryName(final String categoryName){
+        this.categoryName = categoryName;
+    }
+    
+    public void setConfidence(final Double confidence){
+        this.confidence = confidence;
+    }
 
 }

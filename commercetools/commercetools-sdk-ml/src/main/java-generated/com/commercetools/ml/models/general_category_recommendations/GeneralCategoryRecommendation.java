@@ -21,33 +21,33 @@ import java.io.IOException;
 @JsonDeserialize(as = GeneralCategoryRecommendationImpl.class)
 public interface GeneralCategoryRecommendation  {
 
-   /**
-   *  <p>An English category name that is recommended for a product.</p>
-   */
-   @NotNull
-   @JsonProperty("categoryName")
-   public String getCategoryName();
-   /**
-   *  <p>Probability score for the category recommendation.</p>
-   */
-   @NotNull
-   @JsonProperty("confidence")
-   public Integer getConfidence();
+    /**
+    *  <p>An English category name that is recommended for a product.</p>
+    */
+    @NotNull
+    @JsonProperty("categoryName")
+    public String getCategoryName();
+    /**
+    *  <p>Probability score for the category recommendation.</p>
+    */
+    @NotNull
+    @JsonProperty("confidence")
+    public Double getConfidence();
 
-   public void setCategoryName(final String categoryName);
+    public void setCategoryName(final String categoryName);
+    
+    public void setConfidence(final Double confidence);
 
-   public void setConfidence(final Integer confidence);
+    public static GeneralCategoryRecommendationImpl of(){
+        return new GeneralCategoryRecommendationImpl();
+    }
+    
 
-   public static GeneralCategoryRecommendationImpl of(){
-      return new GeneralCategoryRecommendationImpl();
-   }
-
-
-   public static GeneralCategoryRecommendationImpl of(final GeneralCategoryRecommendation template) {
-      GeneralCategoryRecommendationImpl instance = new GeneralCategoryRecommendationImpl();
-      instance.setCategoryName(template.getCategoryName());
-      instance.setConfidence(template.getConfidence());
-      return instance;
-   }
+    public static GeneralCategoryRecommendationImpl of(final GeneralCategoryRecommendation template) {
+        GeneralCategoryRecommendationImpl instance = new GeneralCategoryRecommendationImpl();
+        instance.setCategoryName(template.getCategoryName());
+        instance.setConfidence(template.getConfidence());
+        return instance;
+    }
 
 }

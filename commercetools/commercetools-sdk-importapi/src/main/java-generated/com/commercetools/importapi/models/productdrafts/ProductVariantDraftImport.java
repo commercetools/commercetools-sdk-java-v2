@@ -24,47 +24,47 @@ import java.io.IOException;
 @JsonDeserialize(as = ProductVariantDraftImportImpl.class)
 public interface ProductVariantDraftImport  {
 
-
-
+    
+    
     @JsonProperty("sku")
     public String getSku();
-
-
+    
+    
     @JsonProperty("key")
     public String getKey();
-
+    
     @Valid
     @JsonProperty("prices")
     public List<PriceDraftImport> getPrices();
-
+    
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
-
+    
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
-
+    
     @Valid
     @JsonProperty("assets")
     public List<Asset> getAssets();
 
     public void setSku(final String sku);
-
+    
     public void setKey(final String key);
-
+    
     public void setPrices(final List<PriceDraftImport> prices);
-
+    
     public void setAttributes(final List<Attribute> attributes);
-
+    
     public void setImages(final List<Image> images);
-
+    
     public void setAssets(final List<Asset> assets);
 
     public static ProductVariantDraftImportImpl of(){
         return new ProductVariantDraftImportImpl();
     }
-
+    
 
     public static ProductVariantDraftImportImpl of(final ProductVariantDraftImport template) {
         ProductVariantDraftImportImpl instance = new ProductVariantDraftImportImpl();

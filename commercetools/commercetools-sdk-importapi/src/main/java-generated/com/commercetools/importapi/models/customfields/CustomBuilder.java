@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class CustomBuilder {
 
-
+    
     private com.commercetools.importapi.models.common.TypeKeyReference type;
-
+    
     @Nullable
     private com.commercetools.importapi.models.customfields.FieldContainer fields;
 
@@ -25,17 +25,17 @@ public final class CustomBuilder {
         this.type = type;
         return this;
     }
-
+    
     public CustomBuilder fields(@Nullable final com.commercetools.importapi.models.customfields.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
 
-
+    
     public com.commercetools.importapi.models.common.TypeKeyReference getType(){
         return this.type;
     }
-
+    
     @Nullable
     public com.commercetools.importapi.models.customfields.FieldContainer getFields(){
         return this.fields;

@@ -29,9 +29,9 @@ public final class ShippingRatePriceTierImpl implements ShippingRatePriceTier {
     ShippingRatePriceTierImpl() {
         this.type = ShippingRateTierType.findEnumViaJsonName("null").get();
     }
+    
 
-
-
+    
     public com.commercetools.importapi.models.orders.ShippingRateTierType getType(){
         return this.type;
     }

@@ -24,52 +24,52 @@ import java.io.IOException;
 @JsonDeserialize(as = ImageSearchResponseImpl.class)
 public interface ImageSearchResponse  {
 
-   /**
-   *  <p>The maximum number of results to return from a query.</p>
-   */
-   @NotNull
-   @JsonProperty("count")
-   public Integer getCount();
-   /**
-   *  <p>The offset into the results matching the query. An offset of 0 is the default value indicating that no results should be skipped.</p>
-   */
-   @NotNull
-   @JsonProperty("offset")
-   public Integer getOffset();
-   /**
-   *  <p>The total number of product images that were have been analyzed.</p>
-   */
-   @NotNull
-   @JsonProperty("total")
-   public Integer getTotal();
-   /**
-   *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
-   */
-   @NotNull
-   @Valid
-   @JsonProperty("results")
-   public List<ResultItem> getResults();
+    /**
+    *  <p>The maximum number of results to return from a query.</p>
+    */
+    @NotNull
+    @JsonProperty("count")
+    public Integer getCount();
+    /**
+    *  <p>The offset into the results matching the query. An offset of 0 is the default value indicating that no results should be skipped.</p>
+    */
+    @NotNull
+    @JsonProperty("offset")
+    public Double getOffset();
+    /**
+    *  <p>The total number of product images that were have been analyzed.</p>
+    */
+    @NotNull
+    @JsonProperty("total")
+    public Integer getTotal();
+    /**
+    *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("results")
+    public List<ResultItem> getResults();
 
-   public void setCount(final Integer count);
+    public void setCount(final Integer count);
+    
+    public void setOffset(final Double offset);
+    
+    public void setTotal(final Integer total);
+    
+    public void setResults(final List<ResultItem> results);
 
-   public void setOffset(final Integer offset);
+    public static ImageSearchResponseImpl of(){
+        return new ImageSearchResponseImpl();
+    }
+    
 
-   public void setTotal(final Integer total);
-
-   public void setResults(final List<ResultItem> results);
-
-   public static ImageSearchResponseImpl of(){
-      return new ImageSearchResponseImpl();
-   }
-
-
-   public static ImageSearchResponseImpl of(final ImageSearchResponse template) {
-      ImageSearchResponseImpl instance = new ImageSearchResponseImpl();
-      instance.setCount(template.getCount());
-      instance.setOffset(template.getOffset());
-      instance.setTotal(template.getTotal());
-      instance.setResults(template.getResults());
-      return instance;
-   }
+    public static ImageSearchResponseImpl of(final ImageSearchResponse template) {
+        ImageSearchResponseImpl instance = new ImageSearchResponseImpl();
+        instance.setCount(template.getCount());
+        instance.setOffset(template.getOffset());
+        instance.setTotal(template.getTotal());
+        instance.setResults(template.getResults());
+        return instance;
+    }
 
 }

@@ -16,15 +16,15 @@ public final class BooleanSetAttributeBuilder {
 
     @Nullable
     private String name;
-
-
+    
+    
     private java.util.List<Boolean> value;
 
     public BooleanSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
     public BooleanSetAttributeBuilder value( final java.util.List<Boolean> value) {
         this.value = value;
         return this;
@@ -34,8 +34,8 @@ public final class BooleanSetAttributeBuilder {
     public String getName(){
         return this.name;
     }
-
-
+    
+    
     public java.util.List<Boolean> getValue(){
         return this.value;
     }

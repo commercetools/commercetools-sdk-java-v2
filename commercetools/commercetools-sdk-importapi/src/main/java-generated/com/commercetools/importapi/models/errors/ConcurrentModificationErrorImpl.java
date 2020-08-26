@@ -29,13 +29,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ConcurrentModificationErrorImpl implements ConcurrentModificationError {
 
     private String code;
-
+    
     private String message;
-
+    
     private Long specifiedVersion;
-
+    
     private Long currentVersion;
-
+    
     private com.fasterxml.jackson.databind.JsonNode conflictedResource;
 
     @JsonCreator
@@ -47,35 +47,35 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
         this.code = "ConcurrentModification";
     }
     public ConcurrentModificationErrorImpl() {
-
+       
     }
 
-
+    
     public String getCode(){
         return this.code;
     }
-
+    
     /**
     *  <p>The error's description.</p>
     */
     public String getMessage(){
         return this.message;
     }
-
+    
     /**
     *  <p>The version specified in the failed request.</p>
     */
     public Long getSpecifiedVersion(){
         return this.specifiedVersion;
     }
-
+    
     /**
     *  <p>The current version of the resource.</p>
     */
     public Long getCurrentVersion(){
         return this.currentVersion;
     }
-
+    
     /**
     *  <p>The conflicted resource.</p>
     */
@@ -86,15 +86,15 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
     public void setMessage(final String message){
         this.message = message;
     }
-
+    
     public void setSpecifiedVersion(final Long specifiedVersion){
         this.specifiedVersion = specifiedVersion;
     }
-
+    
     public void setCurrentVersion(final Long currentVersion){
         this.currentVersion = currentVersion;
     }
-
+    
     public void setConflictedResource(final com.fasterxml.jackson.databind.JsonNode conflictedResource){
         this.conflictedResource = conflictedResource;
     }

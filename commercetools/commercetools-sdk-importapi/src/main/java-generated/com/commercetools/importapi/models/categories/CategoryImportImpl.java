@@ -30,27 +30,27 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class CategoryImportImpl implements CategoryImport {
 
     private String key;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString name;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString slug;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString description;
-
+    
     private com.commercetools.importapi.models.common.CategoryKeyReference parent;
-
+    
     private String orderHint;
-
+    
     private String externalId;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString metaTitle;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString metaDescription;
-
+    
     private com.commercetools.importapi.models.common.LocalizedString metaKeywords;
-
+    
     private java.util.List<com.commercetools.importapi.models.common.Asset> assets;
-
+    
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     @JsonCreator
@@ -69,21 +69,21 @@ public final class CategoryImportImpl implements CategoryImport {
         this.custom = custom;
     }
     public CategoryImportImpl() {
-
+       
     }
 
-
+    
     public String getKey(){
         return this.key;
     }
-
+    
     /**
     *  <p>Maps to <code>Category.name</code>.</p>
     */
     public com.commercetools.importapi.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
     *  <p>Maps to <code>Category.slug</code>.
     *  Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
@@ -91,14 +91,14 @@ public final class CategoryImportImpl implements CategoryImport {
     public com.commercetools.importapi.models.common.LocalizedString getSlug(){
         return this.slug;
     }
-
+    
     /**
     *  <p>Maps to <code>Category.description</code>.</p>
     */
     public com.commercetools.importapi.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
     *  <p>Maps to <code>Category.parent</code>.
     *  The parent category referenced must already exist
@@ -108,47 +108,47 @@ public final class CategoryImportImpl implements CategoryImport {
     public com.commercetools.importapi.models.common.CategoryKeyReference getParent(){
         return this.parent;
     }
-
+    
     /**
     *  <p>Maps to <code>Category.orderHint</code>.</p>
     */
     public String getOrderHint(){
         return this.orderHint;
     }
-
+    
     /**
     *  <p>Maps to <code>Category.externalId</code>.</p>
     */
     public String getExternalId(){
         return this.externalId;
     }
-
+    
     /**
     *  <p>Maps to <code>Category.metaTitle</code>.</p>
     */
     public com.commercetools.importapi.models.common.LocalizedString getMetaTitle(){
         return this.metaTitle;
     }
-
+    
     /**
     *  <p>Maps to <code>Category.metaDescription</code>.</p>
     */
     public com.commercetools.importapi.models.common.LocalizedString getMetaDescription(){
         return this.metaDescription;
     }
-
+    
     /**
     *  <p>Maps to <code>Category.metaKeywords</code>.</p>
     */
     public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords(){
         return this.metaKeywords;
     }
-
-
+    
+    
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets(){
         return this.assets;
     }
-
+    
     /**
     *  <p>The custom fields for this category.</p>
     */
@@ -159,47 +159,47 @@ public final class CategoryImportImpl implements CategoryImport {
     public void setKey(final String key){
         this.key = key;
     }
-
+    
     public void setName(final com.commercetools.importapi.models.common.LocalizedString name){
         this.name = name;
     }
-
+    
     public void setSlug(final com.commercetools.importapi.models.common.LocalizedString slug){
         this.slug = slug;
     }
-
+    
     public void setDescription(final com.commercetools.importapi.models.common.LocalizedString description){
         this.description = description;
     }
-
+    
     public void setParent(final com.commercetools.importapi.models.common.CategoryKeyReference parent){
         this.parent = parent;
     }
-
+    
     public void setOrderHint(final String orderHint){
         this.orderHint = orderHint;
     }
-
+    
     public void setExternalId(final String externalId){
         this.externalId = externalId;
     }
-
+    
     public void setMetaTitle(final com.commercetools.importapi.models.common.LocalizedString metaTitle){
         this.metaTitle = metaTitle;
     }
-
+    
     public void setMetaDescription(final com.commercetools.importapi.models.common.LocalizedString metaDescription){
         this.metaDescription = metaDescription;
     }
-
+    
     public void setMetaKeywords(final com.commercetools.importapi.models.common.LocalizedString metaKeywords){
         this.metaKeywords = metaKeywords;
     }
-
+    
     public void setAssets(final java.util.List<com.commercetools.importapi.models.common.Asset> assets){
         this.assets = assets;
     }
-
+    
     public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom){
         this.custom = custom;
     }

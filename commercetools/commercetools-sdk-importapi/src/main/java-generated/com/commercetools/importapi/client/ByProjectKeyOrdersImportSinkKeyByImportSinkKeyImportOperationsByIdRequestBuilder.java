@@ -12,7 +12,7 @@ public class ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsByIdR
     private final String projectKey;
     private final String importSinkKey;
     private final String id;
-
+    
 
     public ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsByIdRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importSinkKey,final String id) {
         this.apiHttpClient = apiHttpClient;

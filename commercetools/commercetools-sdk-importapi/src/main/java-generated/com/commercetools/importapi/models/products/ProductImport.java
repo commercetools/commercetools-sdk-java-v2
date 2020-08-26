@@ -72,15 +72,15 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("categories")
     public List<CategoryKeyReference> getCategories();
-
+    
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
-
+    
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
-
+    
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
@@ -93,7 +93,7 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryKeyReference getTaxCategory();
-
+    
     @Valid
     @JsonProperty("searchKeywords")
     public SearchKeywords getSearchKeywords();
@@ -109,38 +109,38 @@ public interface ProductImport extends ImportResource {
     /**
     *  <p>If there were updates, only the updates will be published to <code>staged</code> and <code>current</code> projection.</p>
     */
-
+    
     @JsonProperty("publish")
     public Boolean getPublish();
 
     public void setName(final LocalizedString name);
-
+    
     public void setProductType(final ProductTypeKeyReference productType);
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
     public void setDescription(final LocalizedString description);
-
+    
     public void setCategories(final List<CategoryKeyReference> categories);
-
+    
     public void setMetaTitle(final LocalizedString metaTitle);
-
+    
     public void setMetaDescription(final LocalizedString metaDescription);
-
+    
     public void setMetaKeywords(final LocalizedString metaKeywords);
-
+    
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);
-
+    
     public void setSearchKeywords(final SearchKeywords searchKeywords);
-
+    
     public void setState(final StateKeyReference state);
-
+    
     public void setPublish(final Boolean publish);
 
     public static ProductImportImpl of(){
         return new ProductImportImpl();
     }
-
+    
 
     public static ProductImportImpl of(final ProductImport template) {
         ProductImportImpl instance = new ProductImportImpl();

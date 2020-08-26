@@ -8,19 +8,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public class ByProjectKeyMissingDataPricesStatusByTaskIdRequestBuilder {
 
-   private final ApiHttpClient apiHttpClient;
-   private final String projectKey;
-   private final String taskId;
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+    private final String taskId;
+    
 
+    public ByProjectKeyMissingDataPricesStatusByTaskIdRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String taskId) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+        this.taskId = taskId;
+    }
 
-   public ByProjectKeyMissingDataPricesStatusByTaskIdRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String taskId) {
-      this.apiHttpClient = apiHttpClient;
-      this.projectKey = projectKey;
-      this.taskId = taskId;
-   }
-
-   public ByProjectKeyMissingDataPricesStatusByTaskIdGet get() {
-      return new ByProjectKeyMissingDataPricesStatusByTaskIdGet(apiHttpClient, projectKey, taskId);
-   }
+    public ByProjectKeyMissingDataPricesStatusByTaskIdGet get() {
+        return new ByProjectKeyMissingDataPricesStatusByTaskIdGet(apiHttpClient, projectKey, taskId);
+    }
 
 }

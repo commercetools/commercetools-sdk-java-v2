@@ -21,7 +21,7 @@ import java.io.IOException;
 @JsonDeserialize(as = LocalizedStringImpl.class)
 public interface LocalizedString  {
 
-
+    
     @NotNull
     @JsonAnyGetter
     public Map<String, String> values();
@@ -32,7 +32,7 @@ public interface LocalizedString  {
     public static LocalizedStringImpl of(){
         return new LocalizedStringImpl();
     }
-
+    
 
     public static LocalizedStringImpl of(final LocalizedString template) {
         LocalizedStringImpl instance = new LocalizedStringImpl();

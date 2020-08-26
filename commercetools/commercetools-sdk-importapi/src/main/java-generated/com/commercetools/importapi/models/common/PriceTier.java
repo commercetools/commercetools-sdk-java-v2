@@ -39,13 +39,13 @@ public interface PriceTier  {
     public TypedMoney getValue();
 
     public void setMinimumQuantity(final Long minimumQuantity);
-
+    
     public void setValue(final TypedMoney value);
 
     public static PriceTierImpl of(){
         return new PriceTierImpl();
     }
-
+    
 
     public static PriceTierImpl of(final PriceTier template) {
         PriceTierImpl instance = new PriceTierImpl();

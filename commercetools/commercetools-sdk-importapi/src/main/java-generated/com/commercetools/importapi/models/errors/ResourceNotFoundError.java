@@ -22,8 +22,8 @@ import java.io.IOException;
 @JsonDeserialize(as = ResourceNotFoundErrorImpl.class)
 public interface ResourceNotFoundError extends ErrorObject {
 
-
-
+    
+    
     @JsonProperty("resource")
     public JsonNode getResource();
 
@@ -32,7 +32,7 @@ public interface ResourceNotFoundError extends ErrorObject {
     public static ResourceNotFoundErrorImpl of(){
         return new ResourceNotFoundErrorImpl();
     }
-
+    
 
     public static ResourceNotFoundErrorImpl of(final ResourceNotFoundError template) {
         ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();

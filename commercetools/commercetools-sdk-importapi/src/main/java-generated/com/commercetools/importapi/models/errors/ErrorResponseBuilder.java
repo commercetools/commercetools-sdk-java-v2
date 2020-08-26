@@ -14,18 +14,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 )
 public final class ErrorResponseBuilder {
 
-
+    
     private Integer statusCode;
-
-
+    
+    
     private String message;
-
+    
     @Nullable
     private String error;
-
+    
     @Nullable
     private String error_description;
-
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
@@ -33,47 +33,47 @@ public final class ErrorResponseBuilder {
         this.statusCode = statusCode;
         return this;
     }
-
+    
     public ErrorResponseBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
     public ErrorResponseBuilder error(@Nullable final String error) {
         this.error = error;
         return this;
     }
-
+    
     public ErrorResponseBuilder error_description(@Nullable final String error_description) {
         this.error_description = error_description;
         return this;
     }
-
+    
     public ErrorResponseBuilder errors(@Nullable final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
         this.errors = errors;
         return this;
     }
 
-
+    
     public Integer getStatusCode(){
         return this.statusCode;
     }
-
-
+    
+    
     public String getMessage(){
         return this.message;
     }
-
+    
     @Nullable
     public String getError(){
         return this.error;
     }
-
+    
     @Nullable
     public String getError_description(){
         return this.error_description;
     }
-
+    
     @Nullable
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors(){
         return this.errors;

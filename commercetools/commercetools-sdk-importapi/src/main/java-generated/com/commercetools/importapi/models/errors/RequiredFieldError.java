@@ -36,7 +36,7 @@ public interface RequiredFieldError extends ErrorObject {
     public static RequiredFieldErrorImpl of(){
         return new RequiredFieldErrorImpl();
     }
-
+    
 
     public static RequiredFieldErrorImpl of(final RequiredFieldError template) {
         RequiredFieldErrorImpl instance = new RequiredFieldErrorImpl();

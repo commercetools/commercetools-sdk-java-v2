@@ -22,52 +22,52 @@ import java.io.IOException;
 @JsonDeserialize(as = SimilarProductsPagedQueryResultImpl.class)
 public interface SimilarProductsPagedQueryResult  {
 
+    
+    @NotNull
+    @JsonProperty("count")
+    public Long getCount();
+    
+    @NotNull
+    @JsonProperty("total")
+    public Long getTotal();
+    
+    @NotNull
+    @JsonProperty("offset")
+    public Long getOffset();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("results")
+    public List<SimilarProductPair> getResults();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("meta")
+    public SimilarProductSearchRequestMeta getMeta();
 
-   @NotNull
-   @JsonProperty("count")
-   public Long getCount();
+    public void setCount(final Long count);
+    
+    public void setTotal(final Long total);
+    
+    public void setOffset(final Long offset);
+    
+    public void setResults(final List<SimilarProductPair> results);
+    
+    public void setMeta(final SimilarProductSearchRequestMeta meta);
 
-   @NotNull
-   @JsonProperty("total")
-   public Long getTotal();
+    public static SimilarProductsPagedQueryResultImpl of(){
+        return new SimilarProductsPagedQueryResultImpl();
+    }
+    
 
-   @NotNull
-   @JsonProperty("offset")
-   public Long getOffset();
-
-   @NotNull
-   @Valid
-   @JsonProperty("results")
-   public List<SimilarProductPair> getResults();
-
-   @NotNull
-   @Valid
-   @JsonProperty("meta")
-   public SimilarProductSearchRequestMeta getMeta();
-
-   public void setCount(final Long count);
-
-   public void setTotal(final Long total);
-
-   public void setOffset(final Long offset);
-
-   public void setResults(final List<SimilarProductPair> results);
-
-   public void setMeta(final SimilarProductSearchRequestMeta meta);
-
-   public static SimilarProductsPagedQueryResultImpl of(){
-      return new SimilarProductsPagedQueryResultImpl();
-   }
-
-
-   public static SimilarProductsPagedQueryResultImpl of(final SimilarProductsPagedQueryResult template) {
-      SimilarProductsPagedQueryResultImpl instance = new SimilarProductsPagedQueryResultImpl();
-      instance.setCount(template.getCount());
-      instance.setTotal(template.getTotal());
-      instance.setOffset(template.getOffset());
-      instance.setResults(template.getResults());
-      instance.setMeta(template.getMeta());
-      return instance;
-   }
+    public static SimilarProductsPagedQueryResultImpl of(final SimilarProductsPagedQueryResult template) {
+        SimilarProductsPagedQueryResultImpl instance = new SimilarProductsPagedQueryResultImpl();
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setOffset(template.getOffset());
+        instance.setResults(template.getResults());
+        instance.setMeta(template.getMeta());
+        return instance;
+    }
 
 }

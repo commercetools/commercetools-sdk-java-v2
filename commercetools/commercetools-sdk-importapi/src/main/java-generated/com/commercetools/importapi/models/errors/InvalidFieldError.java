@@ -40,20 +40,20 @@ public interface InvalidFieldError extends ErrorObject {
     /**
     *  <p>A fixed set of allowed values for the field, if any.</p>
     */
-
+    
     @JsonProperty("allowedValues")
     public List<JsonNode> getAllowedValues();
 
     public void setField(final String field);
-
+    
     public void setInvalidValue(final JsonNode invalidValue);
-
+    
     public void setAllowedValues(final List<JsonNode> allowedValues);
 
     public static InvalidFieldErrorImpl of(){
         return new InvalidFieldErrorImpl();
     }
-
+    
 
     public static InvalidFieldErrorImpl of(final InvalidFieldError template) {
         InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();

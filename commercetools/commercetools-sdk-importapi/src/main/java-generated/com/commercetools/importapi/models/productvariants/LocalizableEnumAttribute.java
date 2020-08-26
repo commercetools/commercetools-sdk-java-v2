@@ -25,7 +25,7 @@ import java.io.IOException;
 @JsonDeserialize(as = LocalizableEnumAttributeImpl.class)
 public interface LocalizableEnumAttribute extends Attribute {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public String getValue();
@@ -35,7 +35,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     public static LocalizableEnumAttributeImpl of(){
         return new LocalizableEnumAttributeImpl();
     }
-
+    
 
     public static LocalizableEnumAttributeImpl of(final LocalizableEnumAttribute template) {
         LocalizableEnumAttributeImpl instance = new LocalizableEnumAttributeImpl();

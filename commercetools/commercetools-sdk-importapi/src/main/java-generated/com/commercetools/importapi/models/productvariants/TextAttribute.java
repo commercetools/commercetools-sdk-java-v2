@@ -24,7 +24,7 @@ import java.io.IOException;
 @JsonDeserialize(as = TextAttributeImpl.class)
 public interface TextAttribute extends Attribute {
 
-
+    
     @NotNull
     @JsonProperty("value")
     public String getValue();
@@ -34,7 +34,7 @@ public interface TextAttribute extends Attribute {
     public static TextAttributeImpl of(){
         return new TextAttributeImpl();
     }
-
+    
 
     public static TextAttributeImpl of(final TextAttribute template) {
         TextAttributeImpl instance = new TextAttributeImpl();

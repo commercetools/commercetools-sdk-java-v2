@@ -22,39 +22,39 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingImagesVariantLevelImpl implements MissingImagesVariantLevel {
 
-   private Long missingImages;
+    private Long missingImages;
+    
+    private Long total;
 
-   private Long total;
+    @JsonCreator
+    MissingImagesVariantLevelImpl(@JsonProperty("missingImages") final Long missingImages, @JsonProperty("total") final Long total) {
+        this.missingImages = missingImages;
+        this.total = total;
+    }
+    public MissingImagesVariantLevelImpl() {
+       
+    }
 
-   @JsonCreator
-   MissingImagesVariantLevelImpl(@JsonProperty("missingImages") final Long missingImages, @JsonProperty("total") final Long total) {
-      this.missingImages = missingImages;
-      this.total = total;
-   }
-   public MissingImagesVariantLevelImpl() {
+    /**
+    *  <p>Number of product variants missing images.</p>
+    */
+    public Long getMissingImages(){
+        return this.missingImages;
+    }
+    
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+    public Long getTotal(){
+        return this.total;
+    }
 
-   }
-
-   /**
-   *  <p>Number of product variants missing images.</p>
-   */
-   public Long getMissingImages(){
-      return this.missingImages;
-   }
-
-   /**
-   *  <p>Number of products scanned.</p>
-   */
-   public Long getTotal(){
-      return this.total;
-   }
-
-   public void setMissingImages(final Long missingImages){
-      this.missingImages = missingImages;
-   }
-
-   public void setTotal(final Long total){
-      this.total = total;
-   }
+    public void setMissingImages(final Long missingImages){
+        this.missingImages = missingImages;
+    }
+    
+    public void setTotal(final Long total){
+        this.total = total;
+    }
 
 }

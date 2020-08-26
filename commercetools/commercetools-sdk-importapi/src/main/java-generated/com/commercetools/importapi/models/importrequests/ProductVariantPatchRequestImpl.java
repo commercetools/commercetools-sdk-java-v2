@@ -28,7 +28,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class ProductVariantPatchRequestImpl implements ProductVariantPatchRequest {
 
     private com.commercetools.importapi.models.common.ImportResourceType type;
-
+    
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches;
 
     @JsonCreator
@@ -37,7 +37,7 @@ public final class ProductVariantPatchRequestImpl implements ProductVariantPatch
         this.type = ImportResourceType.findEnumViaJsonName("product-variant-patch").get();
     }
     public ProductVariantPatchRequestImpl() {
-
+       
     }
 
     /**
@@ -46,7 +46,7 @@ public final class ProductVariantPatchRequestImpl implements ProductVariantPatch
     public com.commercetools.importapi.models.common.ImportResourceType getType(){
         return this.type;
     }
-
+    
     /**
     *  <p>The product variant patches of this request.</p>
     */

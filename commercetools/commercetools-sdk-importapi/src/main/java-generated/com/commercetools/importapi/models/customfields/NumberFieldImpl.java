@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class NumberFieldImpl implements NumberField {
 
     private String type;
-
+    
     private Double value;
 
     @JsonCreator
@@ -35,7 +35,7 @@ public final class NumberFieldImpl implements NumberField {
         this.type = "Number";
     }
     public NumberFieldImpl() {
-
+       
     }
 
     /**
@@ -44,8 +44,8 @@ public final class NumberFieldImpl implements NumberField {
     public String getType(){
         return this.type;
     }
-
-
+    
+    
     public Double getValue(){
         return this.value;
     }

@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public final class PriceTierImpl implements PriceTier {
 
     private Long minimumQuantity;
-
+    
     private com.commercetools.importapi.models.common.TypedMoney value;
 
     @JsonCreator
@@ -35,7 +35,7 @@ public final class PriceTierImpl implements PriceTier {
         this.value = value;
     }
     public PriceTierImpl() {
-
+       
     }
 
     /**
@@ -44,7 +44,7 @@ public final class PriceTierImpl implements PriceTier {
     public Long getMinimumQuantity(){
         return this.minimumQuantity;
     }
-
+    
     /**
     *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
     */
@@ -55,7 +55,7 @@ public final class PriceTierImpl implements PriceTier {
     public void setMinimumQuantity(final Long minimumQuantity){
         this.minimumQuantity = minimumQuantity;
     }
-
+    
     public void setValue(final com.commercetools.importapi.models.common.TypedMoney value){
         this.value = value;
     }

@@ -23,37 +23,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingImagesCountImpl implements MissingImagesCount {
 
-   private Long missingImages;
+    private Long missingImages;
+    
+    private Long total;
 
-   private Long total;
+    @JsonCreator
+    MissingImagesCountImpl(@JsonProperty("missingImages") final Long missingImages, @JsonProperty("total") final Long total) {
+        this.missingImages = missingImages;
+        this.total = total;
+    }
+    public MissingImagesCountImpl() {
+       
+    }
 
-   @JsonCreator
-   MissingImagesCountImpl(@JsonProperty("missingImages") final Long missingImages, @JsonProperty("total") final Long total) {
-      this.missingImages = missingImages;
-      this.total = total;
-   }
-   public MissingImagesCountImpl() {
+    
+    public Long getMissingImages(){
+        return this.missingImages;
+    }
+    
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+    public Long getTotal(){
+        return this.total;
+    }
 
-   }
-
-
-   public Long getMissingImages(){
-      return this.missingImages;
-   }
-
-   /**
-   *  <p>Number of products scanned.</p>
-   */
-   public Long getTotal(){
-      return this.total;
-   }
-
-   public void setMissingImages(final Long missingImages){
-      this.missingImages = missingImages;
-   }
-
-   public void setTotal(final Long total){
-      this.total = total;
-   }
+    public void setMissingImages(final Long missingImages){
+        this.missingImages = missingImages;
+    }
+    
+    public void setTotal(final Long total){
+        this.total = total;
+    }
 
 }

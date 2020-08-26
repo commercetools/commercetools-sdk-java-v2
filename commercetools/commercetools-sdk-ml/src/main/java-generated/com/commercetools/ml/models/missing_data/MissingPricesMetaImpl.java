@@ -23,35 +23,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingPricesMetaImpl implements MissingPricesMeta {
 
-   private com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel;
-   
-   private com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel;
+    private com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel;
+    
+    private com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel;
 
-   @JsonCreator
-   MissingPricesMetaImpl(@JsonProperty("productLevel") final com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel, @JsonProperty("variantLevel") final com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel) {
-      this.productLevel = productLevel;
-      this.variantLevel = variantLevel;
-   }
-   public MissingPricesMetaImpl() {
-      
-   }
-   
-   
-   public com.commercetools.ml.models.missing_data.MissingPricesProductLevel getProductLevel(){
-      return this.productLevel;
-   }
-   
-   
-   public com.commercetools.ml.models.missing_data.MissingPricesVariantLevel getVariantLevel(){
-      return this.variantLevel;
-   }
+    @JsonCreator
+    MissingPricesMetaImpl(@JsonProperty("productLevel") final com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel, @JsonProperty("variantLevel") final com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel) {
+        this.productLevel = productLevel;
+        this.variantLevel = variantLevel;
+    }
+    public MissingPricesMetaImpl() {
+       
+    }
 
-   public void setProductLevel(final com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel){
-      this.productLevel = productLevel;
-   }
-   
-   public void setVariantLevel(final com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel){
-      this.variantLevel = variantLevel;
-   }
+    
+    public com.commercetools.ml.models.missing_data.MissingPricesProductLevel getProductLevel(){
+        return this.productLevel;
+    }
+    
+    
+    public com.commercetools.ml.models.missing_data.MissingPricesVariantLevel getVariantLevel(){
+        return this.variantLevel;
+    }
+
+    public void setProductLevel(final com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel){
+        this.productLevel = productLevel;
+    }
+    
+    public void setVariantLevel(final com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel){
+        this.variantLevel = variantLevel;
+    }
 
 }

@@ -23,49 +23,49 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class MissingImagesMetaImpl implements MissingImagesMeta {
 
-   private com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel;
-   
-   private com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel;
-   
-   private Long threshold;
+    private com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel;
+    
+    private com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel;
+    
+    private Long threshold;
 
-   @JsonCreator
-   MissingImagesMetaImpl(@JsonProperty("productLevel") final com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel, @JsonProperty("variantLevel") final com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel, @JsonProperty("threshold") final Long threshold) {
-      this.productLevel = productLevel;
-      this.variantLevel = variantLevel;
-      this.threshold = threshold;
-   }
-   public MissingImagesMetaImpl() {
-      
-   }
-   
-   
-   public com.commercetools.ml.models.missing_data.MissingImagesProductLevel getProductLevel(){
-      return this.productLevel;
-   }
-   
-   
-   public com.commercetools.ml.models.missing_data.MissingImagesVariantLevel getVariantLevel(){
-      return this.variantLevel;
-   }
-   
-   /**
-   *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
-   */
-   public Long getThreshold(){
-      return this.threshold;
-   }
+    @JsonCreator
+    MissingImagesMetaImpl(@JsonProperty("productLevel") final com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel, @JsonProperty("variantLevel") final com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel, @JsonProperty("threshold") final Long threshold) {
+        this.productLevel = productLevel;
+        this.variantLevel = variantLevel;
+        this.threshold = threshold;
+    }
+    public MissingImagesMetaImpl() {
+       
+    }
 
-   public void setProductLevel(final com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel){
-      this.productLevel = productLevel;
-   }
-   
-   public void setVariantLevel(final com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel){
-      this.variantLevel = variantLevel;
-   }
-   
-   public void setThreshold(final Long threshold){
-      this.threshold = threshold;
-   }
+    
+    public com.commercetools.ml.models.missing_data.MissingImagesProductLevel getProductLevel(){
+        return this.productLevel;
+    }
+    
+    
+    public com.commercetools.ml.models.missing_data.MissingImagesVariantLevel getVariantLevel(){
+        return this.variantLevel;
+    }
+    
+    /**
+    *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
+    */
+    public Long getThreshold(){
+        return this.threshold;
+    }
+
+    public void setProductLevel(final com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel){
+        this.productLevel = productLevel;
+    }
+    
+    public void setVariantLevel(final com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel){
+        this.variantLevel = variantLevel;
+    }
+    
+    public void setThreshold(final Long threshold){
+        this.threshold = threshold;
+    }
 
 }

@@ -38,7 +38,7 @@ public interface FieldContainer  {
     public static FieldContainerImpl of(){
         return new FieldContainerImpl();
     }
-
+    
 
     public static FieldContainerImpl of(final FieldContainer template) {
         FieldContainerImpl instance = new FieldContainerImpl();

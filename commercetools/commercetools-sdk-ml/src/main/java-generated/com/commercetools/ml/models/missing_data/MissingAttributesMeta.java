@@ -21,40 +21,40 @@ import java.io.IOException;
 @JsonDeserialize(as = MissingAttributesMetaImpl.class)
 public interface MissingAttributesMeta  {
 
+    
+    @NotNull
+    @Valid
+    @JsonProperty("productLevel")
+    public MissingAttributesDetails getProductLevel();
+    
+    @NotNull
+    @Valid
+    @JsonProperty("variantLevel")
+    public MissingAttributesDetails getVariantLevel();
+    /**
+    *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
+    */
+    
+    @JsonProperty("productTypeIds")
+    public List<String> getProductTypeIds();
 
-   @NotNull
-   @Valid
-   @JsonProperty("productLevel")
-   public MissingAttributesDetails getProductLevel();
+    public void setProductLevel(final MissingAttributesDetails productLevel);
+    
+    public void setVariantLevel(final MissingAttributesDetails variantLevel);
+    
+    public void setProductTypeIds(final List<String> productTypeIds);
 
-   @NotNull
-   @Valid
-   @JsonProperty("variantLevel")
-   public MissingAttributesDetails getVariantLevel();
-   /**
-   *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
-   */
+    public static MissingAttributesMetaImpl of(){
+        return new MissingAttributesMetaImpl();
+    }
+    
 
-   @JsonProperty("productTypeIds")
-   public List<String> getProductTypeIds();
-
-   public void setProductLevel(final MissingAttributesDetails productLevel);
-
-   public void setVariantLevel(final MissingAttributesDetails variantLevel);
-
-   public void setProductTypeIds(final List<String> productTypeIds);
-
-   public static MissingAttributesMetaImpl of(){
-      return new MissingAttributesMetaImpl();
-   }
-
-
-   public static MissingAttributesMetaImpl of(final MissingAttributesMeta template) {
-      MissingAttributesMetaImpl instance = new MissingAttributesMetaImpl();
-      instance.setProductLevel(template.getProductLevel());
-      instance.setVariantLevel(template.getVariantLevel());
-      instance.setProductTypeIds(template.getProductTypeIds());
-      return instance;
-   }
+    public static MissingAttributesMetaImpl of(final MissingAttributesMeta template) {
+        MissingAttributesMetaImpl instance = new MissingAttributesMetaImpl();
+        instance.setProductLevel(template.getProductLevel());
+        instance.setVariantLevel(template.getVariantLevel());
+        instance.setProductTypeIds(template.getProductTypeIds());
+        return instance;
+    }
 
 }

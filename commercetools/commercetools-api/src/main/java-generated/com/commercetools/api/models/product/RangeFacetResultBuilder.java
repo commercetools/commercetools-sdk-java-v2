@@ -1,0 +1,46 @@
+package com.commercetools.api.models.product;
+
+import com.commercetools.api.models.product.FacetResult;
+import com.commercetools.api.models.product.FacetResultRange;
+import com.commercetools.api.models.product.FacetTypes;
+import com.commercetools.api.models.product.RangeFacetResult;
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Map;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public final class RangeFacetResultBuilder {
+
+    
+    private java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges;
+
+    public RangeFacetResultBuilder ranges( final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges) {
+        this.ranges = ranges;
+        return this;
+    }
+
+    
+    public java.util.List<com.commercetools.api.models.product.FacetResultRange> getRanges(){
+        return this.ranges;
+    }
+
+    public RangeFacetResult build() {
+        return new RangeFacetResultImpl(ranges);
+    }
+
+    public static RangeFacetResultBuilder of() {
+        return new RangeFacetResultBuilder();
+    }
+
+    public static RangeFacetResultBuilder of(final RangeFacetResult template) {
+        RangeFacetResultBuilder builder = new RangeFacetResultBuilder();
+        builder.ranges = template.getRanges();
+        return builder;
+    }
+
+}

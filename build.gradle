@@ -6,9 +6,6 @@ buildscript {
             url "https://dl.bintray.com/vrapio/vrapio"
         }
     }
-//    dependencies {
-//        classpath "io.vrap.rmf.codegen:codegen-gradle-plugin:1.0.0-20200206130325"
-//    }
 }
 
 plugins {
@@ -28,24 +25,9 @@ plugins {
 
 }
 
-//apply plugin: io.vrap.rmf.codegen.plugin.RamlCodegenPlugin
-//
-//RamlGenerator {
-//    apiSpec {
-//        uri = file('../commercetools-importer/api-spec/api.raml')
-//        targets {
-//            importModels {
-//                path = file('commercetools/importer/import-api-generated/src/main/java')
-//                base_package = 'com/commercetools/importer'
-//                target = 'javaComplete'
-//            }
-//        }
-//    }
-//}
-
 import java.text.SimpleDateFormat
 
-def globalVersion = new Version("1.0.0-SNAPSHOT")
+def globalVersion = new Version(version)
 
 class Version {
     String originalVersion
@@ -103,7 +85,8 @@ subprojects { project ->
     apply plugin: 'com.softeq.gradle.itest'
 
     group='com.commercetools.sdk'
-    version = System.getProperty('publish') ? globalVersion : currentVersion
+
+    version = globalVersion
 
     bintray {
         user = System.getenv('CTP_BINTRAY_USER')

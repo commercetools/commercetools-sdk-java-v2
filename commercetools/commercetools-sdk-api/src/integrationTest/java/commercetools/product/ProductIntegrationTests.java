@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductIntegrationTests {
-    
+
     @Test
     public void createAndDeleteById() {
         Product product = ProductFixtures.createProduct();
@@ -19,7 +19,7 @@ public class ProductIntegrationTests {
         Product deletedProduct = ProductFixtures.deleteProductById(product.getId(), product.getVersion());
         Assert.assertNotNull(deletedProduct);
     }
-    
+
     @Test
     public void getById() {
         ProductFixtures.withProduct(product -> {
@@ -32,7 +32,7 @@ public class ProductIntegrationTests {
             Assert.assertEquals(product.getId(), queriedProduct.getId());
         });
     }
-    
+
     @Test
     public void getByKey() {
         ProductFixtures.withProduct(product -> {
@@ -45,14 +45,14 @@ public class ProductIntegrationTests {
             Assert.assertEquals(product.getKey(), queriedProduct.getKey());
         });
     }
-    
+
     @Test
     public void updateById(){
         ProductFixtures.withUpdateableProduct(product -> {
             List<ProductUpdateAction> updateActions = new ArrayList<>();
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(ProductChangeNameActionBuilder.of().name(newName).build());
-            
+
             Product updatedProduct = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .products()
                     .withId(product.getId())
@@ -63,7 +63,7 @@ public class ProductIntegrationTests {
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(updatedProduct);
-            
+
             return updatedProduct;
         });
     }
@@ -89,14 +89,14 @@ public class ProductIntegrationTests {
             return updatedProduct;
         });
     }
-    
+
     @Test
     public void query() {
         ProductFixtures.withProduct(product -> {
             ProductPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .products()
                     .get()
-                    .addWhere("id=" + "\"" + product.getId() + "\"")
+                    .withWhere("id=" + "\"" + product.getId() + "\"")
                     .executeBlocking().getBody();
             Assert.assertEquals(response.getResults().size(), 1);
             Assert.assertEquals(response.getResults().get(0).getId(), product.getId());

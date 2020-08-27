@@ -59,7 +59,7 @@ public class ProductTypeFixtures {
                 .productTypes()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedProductType);

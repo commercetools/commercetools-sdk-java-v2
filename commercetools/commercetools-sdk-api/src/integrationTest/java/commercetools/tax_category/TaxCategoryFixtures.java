@@ -58,7 +58,7 @@ public class TaxCategoryFixtures {
                 .taxCategories()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedTaxCategory);

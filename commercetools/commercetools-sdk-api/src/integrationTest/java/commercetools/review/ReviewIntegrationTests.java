@@ -29,7 +29,7 @@ public class ReviewIntegrationTests {
                 .reviews()
                 .withId(review.getId())
                 .delete()
-                .addVersion(review.getVersion())
+                .withVersion(review.getVersion())
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedReview);
@@ -68,7 +68,7 @@ public class ReviewIntegrationTests {
             ReviewPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .reviews()
                     .get()
-                    .addWhere("id=" + "\"" + review.getId() +"\"")
+                    .withWhere("id=" + "\"" + review.getId() +"\"")
                     .executeBlocking().getBody();
             Assert.assertNotNull(response);
             Assert.assertEquals(response.getResults().get(0).getId(), review.getId());

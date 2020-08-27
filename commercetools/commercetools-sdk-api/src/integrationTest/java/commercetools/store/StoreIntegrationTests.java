@@ -112,7 +112,7 @@ public class StoreIntegrationTests {
                 .stores()
                 .withKey(store.getKey())
                 .delete()
-                .addVersion(store.getVersion())
+                .withVersion(store.getVersion())
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedStore);

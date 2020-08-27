@@ -106,7 +106,7 @@ public class CustomerIntegrationTests {
                 .customers()
                 .withKey(customer.getKey())
                 .delete()
-                .addVersion(customer.getVersion())
+                .withVersion(customer.getVersion())
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedCustomer);

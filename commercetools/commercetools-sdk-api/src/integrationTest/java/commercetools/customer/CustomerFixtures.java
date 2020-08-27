@@ -62,7 +62,7 @@ public class CustomerFixtures {
                 .customers()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(customer);

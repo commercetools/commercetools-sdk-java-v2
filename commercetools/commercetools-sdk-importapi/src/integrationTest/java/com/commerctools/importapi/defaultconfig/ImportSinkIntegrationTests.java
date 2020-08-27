@@ -1,4 +1,4 @@
-package com.commerctools.importer.defaultconfig;
+package com.commerctools.importapi.defaultconfig;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.importsinks.ImportSink;

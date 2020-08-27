@@ -105,7 +105,7 @@ public class ShippingMethodIntegrationTests {
                 .shippingMethods()
                 .withKey(shippingMethod.getKey())
                 .delete()
-                .addVersion(shippingMethod.getVersion())
+                .withVersion(shippingMethod.getVersion())
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedShippingMethod);

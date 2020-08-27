@@ -111,7 +111,7 @@ public class ExtensionIntegrationTests {
                 .extensions()
                 .withId(extension.getId())
                 .delete()
-                .addVersion(extension.getVersion())
+                .withVersion(extension.getVersion())
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedExtension);

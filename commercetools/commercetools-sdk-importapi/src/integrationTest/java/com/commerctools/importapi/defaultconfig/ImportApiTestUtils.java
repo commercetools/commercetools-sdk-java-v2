@@ -1,4 +1,4 @@
-package com.commerctools.importer.defaultconfig;
+package com.commerctools.importapi.defaultconfig;
 
 import com.commercetools.importapi.client.ApiRoot;
 import com.commercetools.importapi.defaultconfig.ImportApiFactory;

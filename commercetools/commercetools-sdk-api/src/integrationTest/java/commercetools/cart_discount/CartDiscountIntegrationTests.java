@@ -12,13 +12,13 @@ import java.util.List;
 import java.util.Optional;
 
 public class CartDiscountIntegrationTests {
-    
+
     @Test
     public void ref(){
         Optional<ReferenceTypeId> optional = ReferenceTypeId.findEnumViaJsonName("product-type");
         Assert.assertTrue(optional.isPresent());
     }
-    
+
     @Test
     public void createAndDelete() {
         CartDiscountValueDraft cartDiscountValueDraft = CartDiscountValueRelativeDraftBuilder.of()
@@ -41,17 +41,17 @@ public class CartDiscountIntegrationTests {
 
         Assert.assertNotNull(cartDiscount);
         Assert.assertEquals(cartDiscountDraft.getKey(), cartDiscount.getKey());
-        
+
         CartDiscount deletedCartDiscount = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .cartDiscounts()
                 .withId(cartDiscount.getId())
                 .delete()
-                .addVersion(cartDiscount.getVersion())
+                .withVersion(cartDiscount.getVersion())
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedCartDiscount);
     }
-    
+
     @Test
     public void getById() {
         CartDiscountFixtures.withCartDiscount(cartDiscount -> {
@@ -93,7 +93,7 @@ public class CartDiscountIntegrationTests {
             Assert.assertEquals(response.getResults().get(0).getId(), cartDiscount.getId());
         });
     }
-    
+
     @Test
     public void updateById() {
         CartDiscountFixtures.withUpdateableCartDiscount(cartDiscount -> {
@@ -111,7 +111,7 @@ public class CartDiscountIntegrationTests {
 
             Assert.assertNotNull(updatedCartDiscount);
             Assert.assertEquals(updatedCartDiscount.getKey(), newKey);
-            
+
             return updatedCartDiscount;
         });
     }

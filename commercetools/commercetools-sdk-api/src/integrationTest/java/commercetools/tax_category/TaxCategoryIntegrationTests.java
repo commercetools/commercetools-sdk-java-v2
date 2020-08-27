@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaxCategoryIntegrationTests {
-    
+
     @Test
     public void createAndDelete() {
         TaxCategoryDraft taxCategoryDraft = TaxCategoryDraftBuilder.of()
@@ -25,18 +25,18 @@ public class TaxCategoryIntegrationTests {
         Assert.assertNotNull(taxCategory);
         Assert.assertEquals(taxCategoryDraft.getName(), taxCategory.getName());
         Assert.assertEquals(taxCategoryDraft.getKey(), taxCategory.getKey());
-        
+
         TaxCategory deletedTaxCategory = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .taxCategories()
                 .withId(taxCategory.getId())
                 .delete()
-                .addVersion(taxCategory.getVersion())
+                .withVersion(taxCategory.getVersion())
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedTaxCategory);
         Assert.assertEquals(deletedTaxCategory.getId(), taxCategory.getId());
     }
-    
+
     @Test
     public void getById() {
         TaxCategoryFixtures.withTaxCategory(taxCategory -> {
@@ -86,7 +86,7 @@ public class TaxCategoryIntegrationTests {
             List<TaxCategoryUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(TaxCategorySetKeyActionBuilder.of().key(newKey).build());
-            
+
             TaxCategory updatedTaxCategory = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .taxCategories()
                     .withId(taxCategory.getId())
@@ -99,7 +99,7 @@ public class TaxCategoryIntegrationTests {
 
             Assert.assertNotNull(updatedTaxCategory);
             Assert.assertEquals(updatedTaxCategory.getKey(), newKey);
-            
+
             return updatedTaxCategory;
         });
     }
@@ -127,5 +127,5 @@ public class TaxCategoryIntegrationTests {
             return updatedTaxCategory;
         });
     }
-    
+
 }

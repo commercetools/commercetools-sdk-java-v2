@@ -45,7 +45,7 @@ public class CustomerGroupFixtures {
                 .customerGroups()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(customerGroup);

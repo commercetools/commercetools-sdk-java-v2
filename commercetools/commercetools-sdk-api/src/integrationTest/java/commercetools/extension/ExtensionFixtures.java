@@ -48,7 +48,7 @@ public class ExtensionFixtures {
                 .extensions()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(extension);

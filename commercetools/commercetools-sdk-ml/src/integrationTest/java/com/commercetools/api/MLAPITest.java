@@ -22,7 +22,7 @@ public class MLAPITest extends TestBase {
                 .recommendations()
                 .generalCategories()
                 .get()
-                .addProductName("vase")
+                .withProductName("vase")
                 .executeBlocking();
         assertThat(response.getStatusCode()).isEqualTo(200);
     }

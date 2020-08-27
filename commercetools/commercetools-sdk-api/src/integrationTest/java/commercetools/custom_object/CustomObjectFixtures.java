@@ -47,7 +47,7 @@ public class CustomObjectFixtures {
                 .customObjects()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(customObject);

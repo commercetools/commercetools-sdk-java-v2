@@ -46,7 +46,7 @@ public class ZoneFixtures {
                 .zones()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(zone);

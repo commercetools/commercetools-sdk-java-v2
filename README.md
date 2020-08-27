@@ -123,7 +123,7 @@ Category deletedCategory = apiRoot.withProjectKey("project-key")
                 .categories()
                 .withKey(category.getKey())
                 .delete()
-                .addVersion(category.getVersion())
+                .withVersion(category.getVersion())
                 .executeBlocking().getBody();
                 
 ```

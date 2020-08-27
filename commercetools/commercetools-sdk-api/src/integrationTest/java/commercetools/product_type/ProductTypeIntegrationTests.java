@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductTypeIntegrationTests {
-    
+
     @Test
     public void createAndDeleteById() {
         ProductType productType = ProductTypeFixtures.createProductType();
@@ -17,7 +17,7 @@ public class ProductTypeIntegrationTests {
 
         Assert.assertEquals(productType.getId(), deleteProductType.getId());
     }
-    
+
     @Test
     public void getById() {
         ProductTypeFixtures.withProductType(productType -> {
@@ -26,7 +26,7 @@ public class ProductTypeIntegrationTests {
                     .withId(productType.getId())
                     .get()
                     .executeBlocking().getBody();
-            
+
             Assert.assertNotNull(queriedProductType);
             Assert.assertEquals(queriedProductType.getId(), productType.getId());
         });
@@ -45,7 +45,7 @@ public class ProductTypeIntegrationTests {
             Assert.assertEquals(queriedProductType.getId(), productType.getId());
         });
     }
-    
+
     @Test
     public void query() {
         ProductTypeFixtures.withProductType(productType -> {
@@ -60,7 +60,7 @@ public class ProductTypeIntegrationTests {
             Assert.assertEquals(response.getResults().get(0).getId(), productType.getId());
         });
     }
-    
+
     @Test
     public void updateById() {
         ProductTypeFixtures.withUpdateableProductType(productType -> {
@@ -78,7 +78,7 @@ public class ProductTypeIntegrationTests {
 
             Assert.assertNotNull(updatedProductType);
             Assert.assertEquals(updatedProductType.getKey(), newKey);
-            
+
             return updatedProductType;
         });
     }
@@ -104,7 +104,7 @@ public class ProductTypeIntegrationTests {
             return updatedProductType;
         });
     }
-    
+
     @Test
     public void deleteByKey() {
         ProductType productType = ProductTypeFixtures.createProductType();
@@ -112,10 +112,10 @@ public class ProductTypeIntegrationTests {
                 .productTypes()
                 .withKey(productType.getKey())
                 .delete()
-                .addVersion(productType.getVersion())
+                .withVersion(productType.getVersion())
                 .executeBlocking().getBody();
-        
+
         Assert.assertNotNull(deletedProductType);
     }
-    
+
 }

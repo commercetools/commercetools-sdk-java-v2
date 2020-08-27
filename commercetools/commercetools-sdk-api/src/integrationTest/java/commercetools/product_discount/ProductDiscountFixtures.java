@@ -40,7 +40,7 @@ public class ProductDiscountFixtures {
                     .productDiscounts()
                     .withId(productDiscountId)
                     .delete()
-                    .addVersion(productDiscountVersion)
+                    .withVersion(productDiscountVersion)
                     .executeBlocking();
         }
 
@@ -72,7 +72,7 @@ public class ProductDiscountFixtures {
                 .productDiscounts()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedProductDiscount);

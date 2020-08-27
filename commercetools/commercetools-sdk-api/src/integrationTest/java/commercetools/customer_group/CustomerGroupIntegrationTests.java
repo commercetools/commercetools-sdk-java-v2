@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerGroupIntegrationTests {
-    
+
     @Test
     public void createAndDeleteById() {
         CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
@@ -61,7 +61,7 @@ public class CustomerGroupIntegrationTests {
             Assert.assertEquals(response.getResults().get(0).getId(), customerGroup.getId());
         });
     }
-    
+
     @Test
     public void updateById() {
         CustomerGroupFixtures.withUpdateableCustomerGroup(customerGroup -> {
@@ -79,7 +79,7 @@ public class CustomerGroupIntegrationTests {
 
             Assert.assertNotNull(updatedCustomerGroup);
             Assert.assertEquals(updatedCustomerGroup.getKey(), newKey);
-            
+
             return updatedCustomerGroup;
         });
     }
@@ -105,7 +105,7 @@ public class CustomerGroupIntegrationTests {
             return updatedCustomerGroup;
         });
     }
-    
+
     @Test
     public void deleteByKey() {
         CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
@@ -113,11 +113,11 @@ public class CustomerGroupIntegrationTests {
                 .customerGroups()
                 .withId(customerGroup.getId())
                 .delete()
-                .addVersion(customerGroup.getVersion())
+                .withVersion(customerGroup.getVersion())
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedCustomerGroup);
         Assert.assertEquals(customerGroup.getId(), deletedCustomerGroup.getId());
     }
-    
+
 }

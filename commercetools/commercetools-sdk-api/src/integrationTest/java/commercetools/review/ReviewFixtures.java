@@ -75,7 +75,7 @@ public class ReviewFixtures {
                 .reviews()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedReview);

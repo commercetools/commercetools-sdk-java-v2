@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryIntegrationTests {
-    
+
     @Test
     public void createAndDelete() {
         Category category = CategoryFixtures.createCategory();
@@ -19,7 +19,7 @@ public class CategoryIntegrationTests {
         Category deletedCategory = CategoryFixtures.deleteCategory(category.getId(), category.getVersion());
         Assert.assertEquals(category.getId(), deletedCategory.getId());
     }
-    
+
     @Test
     public void getById() {
         CategoryFixtures.withCategory(category -> {
@@ -31,7 +31,7 @@ public class CategoryIntegrationTests {
             Assert.assertEquals(category.getId(), queriedCategory.getId());
         });
     }
-    
+
     @Test
     public void getByKey() {
         CategoryFixtures.withCategory(category -> {
@@ -44,7 +44,7 @@ public class CategoryIntegrationTests {
             Assert.assertEquals(category.getKey(), queriedCategory.getKey());
         });
     }
-    
+
     @Test
     public void deleteById() {
         Category category = CategoryFixtures.createCategory();
@@ -52,11 +52,11 @@ public class CategoryIntegrationTests {
                 .categories()
                 .withId(category.getId())
                 .delete()
-                .addVersion(category.getVersion())
+                .withVersion(category.getVersion())
                 .executeBlocking().getBody();
         Assert.assertEquals(category.getId(), deletedCategory.getId());
     }
-    
+
     @Test
     public void deleteByKey() {
         Category category = CategoryFixtures.createCategory();
@@ -64,7 +64,7 @@ public class CategoryIntegrationTests {
                 .categories()
                 .withKey(category.getKey())
                 .delete()
-                .addVersion(category.getVersion())
+                .withVersion(category.getVersion())
                 .executeBlocking().getBody();
         Assert.assertEquals(category.getId(), deletedCategory.getId());
     }
@@ -102,7 +102,7 @@ public class CategoryIntegrationTests {
                     .executeBlocking().getBody();
             Assert.assertEquals(category.getId(), updatedCategory.getId());
             Assert.assertEquals(newName.values(), updatedCategory.getName().values());
-            
+
             return updatedCategory;
         });
     }

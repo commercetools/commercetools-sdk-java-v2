@@ -49,7 +49,7 @@ public class ChannelFixtures {
                 .channels()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(channel);

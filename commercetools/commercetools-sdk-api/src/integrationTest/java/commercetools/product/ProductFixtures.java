@@ -84,7 +84,7 @@ public class ProductFixtures {
                     .productDiscounts()
                     .withId(productDiscountId)
                     .delete()
-                    .addVersion(productDiscountVersion)
+                    .withVersion(productDiscountVersion)
                     .executeBlocking();
         }
 
@@ -207,7 +207,7 @@ public class ProductFixtures {
                 .products()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
         Assert.assertNotNull(product);
         Assert.assertEquals(product.getId(), id);
@@ -219,7 +219,7 @@ public class ProductFixtures {
                 .products()
                 .withKey(key)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
         Assert.assertNotNull(product);
         Assert.assertEquals(product.getKey(), key);

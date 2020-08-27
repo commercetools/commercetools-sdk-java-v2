@@ -90,7 +90,7 @@ public class CategoryFixtures {
                 .categories()
                 .withId(id)
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking().getBody();
     }
 }

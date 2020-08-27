@@ -113,7 +113,7 @@ public class TypeIntegrationTests {
                 .types()
                 .withKey(type.getKey())
                 .delete()
-                .addVersion(type.getVersion())
+                .withVersion(type.getVersion())
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedType);

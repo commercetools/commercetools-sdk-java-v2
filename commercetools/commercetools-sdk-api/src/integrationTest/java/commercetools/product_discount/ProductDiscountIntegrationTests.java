@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDiscountIntegrationTests {
-    
+
     @Test
-    public void createAndDelete() { 
+    public void createAndDelete() {
         ProductDiscountDraft productDiscountDraft =  ProductDiscountDraftBuilder.of()
                 .name(CommercetoolsTestUtils.randomLocalizedString())
                 .key(CommercetoolsTestUtils.randomKey())
@@ -30,7 +30,7 @@ public class ProductDiscountIntegrationTests {
                 .productDiscounts()
                 .post(productDiscountDraft)
                 .executeBlocking().getBody();
-        
+
         Assert.assertNotNull(productDiscount);
         Assert.assertEquals(productDiscount.getKey(), productDiscountDraft.getKey());
 
@@ -38,13 +38,13 @@ public class ProductDiscountIntegrationTests {
                 .productDiscounts()
                 .withId(productDiscount.getId())
                 .delete()
-                .addVersion(productDiscount.getVersion())
+                .withVersion(productDiscount.getVersion())
                 .executeBlocking().getBody();
 
         Assert.assertNotNull(deletedProductDiscount);
         Assert.assertEquals(productDiscount.getId(), deletedProductDiscount.getId());
     }
-    
+
     @Test
     public void getById() {
         ProductDiscountFixtures.withProductDiscount(productDiscount -> {
@@ -72,7 +72,7 @@ public class ProductDiscountIntegrationTests {
             Assert.assertEquals(queriedProductDiscount.getKey(), productDiscount.getKey());
         });
     }
-    
+
     @Test
     public void query() {
         ProductDiscountFixtures.withProductDiscount(productDiscount -> {
@@ -104,7 +104,7 @@ public class ProductDiscountIntegrationTests {
 
             Assert.assertNotNull(updatedProductDiscount);
             Assert.assertEquals(updatedProductDiscount.getKey(), newKey);
-            return updatedProductDiscount; 
+            return updatedProductDiscount;
         });
     }
 
@@ -128,5 +128,5 @@ public class ProductDiscountIntegrationTests {
             return updatedProductDiscount;
         });
     }
-    
+
 }

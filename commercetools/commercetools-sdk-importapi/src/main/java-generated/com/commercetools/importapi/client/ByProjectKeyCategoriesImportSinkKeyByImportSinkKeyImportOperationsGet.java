@@ -76,11 +76,11 @@ public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsG
     public String getProjectKey() {return this.projectKey;}
     public String getImportSinkKey() {return this.importSinkKey;}
 
-    public List<Double> getLimit() {
+    public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
     
-    public List<Double> getOffset() {
+    public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
     
@@ -88,7 +88,7 @@ public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsG
         return this.getQueryParam("resourceKey");
     }
     
-    public List<ProcessingState> getState() {
+    public List<String> getState() {
         return this.getQueryParam("state");
     }
 

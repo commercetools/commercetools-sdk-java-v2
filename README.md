@@ -134,7 +134,7 @@ The latest unstable SDK release can be retrieved from [jcenter](https://bintray.
 
 ```gradle
 ext {
-    sdkVersion = "1.0.0-20200827112049"
+    sdkVersion = "1.0.0-20200827112448"
 }
 
 sourceCompatibility = 1.8
